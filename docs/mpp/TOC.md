@@ -665,3 +665,4 @@
 # [sys.master_files (SQL Server PDW)](sqlpdw/sys-master-files-sql-server-pdw.md)
 # [Install SQL Server Native Client (SQL Server PDW)](sqlpdw/install-sql-server-native-client-sql-server-pdw.md)
 # [Data Types (SQL Server PDW)](sqlpdw/data-types-sql-server-pdw.md)
+# [Index](index.md)

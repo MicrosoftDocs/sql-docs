@@ -26,7 +26,7 @@ Returns SQL Server modules, including user-defined and system objects.
 |execute_as_principal_id|**int**||Always NULL.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
-[sys.sql_modules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-sql-modules-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
+[sys.sql_modules &#40;SQL Server PDW&#41;](../sqlpdw/sys-sql-modules-sql-server-pdw.md)  
   

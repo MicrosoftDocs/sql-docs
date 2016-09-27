@@ -15,25 +15,25 @@ Follow these steps to import the System Center Operations Manager (SCOM) Managem
   
 ## Import the HDInsight Management Pack for System Center 2012  
   
-1.  Install the HDI Management Pack as described in [Install the SCOM Management Packs &#40;Analytics Platform System&#41;](../../mpp/management/install-the-scom-management-packs-analytics-platform-system.md).  
+1.  Install the HDI Management Pack as described in [Install the SCOM Management Packs &#40;Analytics Platform System&#41;](../management/install-the-scom-management-packs-analytics-platform-system.md).  
   
 2.  In System Center 2012, right-click the **Management Packs** node, and then click **Import Management Packs**.  
   
 3.  Point to **Add**, and then click **Add from disk**.  
   
-    ![HDI SCOM Pack install page 1](../../mpp/management/media/APS_HDI_SCOM1.png "APS_HDI_SCOM1")  
+    ![HDI SCOM Pack install page 1](../management/media/APS_HDI_SCOM1.png "APS_HDI_SCOM1")  
   
 4.  Navigate to the folder where you extracted the HDInsight Management Packs for System Center 2012 and select the three management packs in the **Selected Management packs to import** section, and then click **Open**.  
   
-    ![HDI SCOM Pack install page 2](../../mpp/management/media/APS_HDI_SCOM2.png "APS_HDI_SCOM2")  
+    ![HDI SCOM Pack install page 2](../management/media/APS_HDI_SCOM2.png "APS_HDI_SCOM2")  
   
 5.  In the **Select Management Packs** dialog box, with the three HDInsight Management Packs selected, click **Install**.  
   
-    ![HDI SCOM Pack install page 3](../../mpp/management/media/APS_HDI_SCOM3.png "APS_HDI_SCOM3")  
+    ![HDI SCOM Pack install page 3](../management/media/APS_HDI_SCOM3.png "APS_HDI_SCOM3")  
   
 6.  When the status for each pack is **Imported**, click **Close**.  
   
-    ![HDI SCOM Pack install page 4](../../mpp/management/media/APS_HDI_SCOM4.png "APS_HDI_SCOM4")  
+    ![HDI SCOM Pack install page 4](../management/media/APS_HDI_SCOM4.png "APS_HDI_SCOM4")  
   
 ## Configure the Account used by the Management Pack to Connect to HDInsight  
 The HDInsight Management Pack interacts with the cluster using the Ambari API. To configure the discovery wizard correctly, an account is needed for the connection to **RunAs**.  
@@ -42,23 +42,23 @@ The HDInsight Management Pack interacts with the cluster using the Ambari API. T
   
 2.  On the General Properties page, in the **Run As account type** box, click **Basic Authentication**, and then click **Next**. (HDInisght only supports Basic Authentication.)  
   
-    ![HDI SCOM Pack install page 5](../../mpp/management/media/APS_HDI_SCOM5.png "APS_HDI_SCOM5")  
+    ![HDI SCOM Pack install page 5](../management/media/APS_HDI_SCOM5.png "APS_HDI_SCOM5")  
   
 3.  On the **Credentials** page, enter an account name and password, and then click **Next**.  
   
     > [!IMPORTANT]  
-    > You should use a HDInsight Cluster Admin account created using Configuration Manager, not a high privileged account such as a HDInsight domain administrator. For more information, see [HDInsight User Management &#40;Analytics Platform System&#41;](../../mpp/management/hdinsight-user-management-analytics-platform-system.md).  
+    > You should use a HDInsight Cluster Admin account created using Configuration Manager, not a high privileged account such as a HDInsight domain administrator. For more information, see [HDInsight User Management &#40;Analytics Platform System&#41;](../management/hdinsight-user-management-analytics-platform-system.md).  
   
-    ![HDI SCOM Pack install page 6](../../mpp/management/media/APS_HDI_SCOM6.png "APS_HDI_SCOM6")  
+    ![HDI SCOM Pack install page 6](../management/media/APS_HDI_SCOM6.png "APS_HDI_SCOM6")  
   
 4.  On the Distribution Security page, typically select **Less secure**, and then click **Create**.  
   
     > [!IMPORTANT]  
     > Less secure is a reasonable option because the APS has limited outside connectivity. See your domain administrator for information about your company policy.  
   
-    ![HDI SCOM Pack install page 7](../../mpp/management/media/APS_HDI_SCOM7.png "APS_HDI_SCOM7")  
+    ![HDI SCOM Pack install page 7](../management/media/APS_HDI_SCOM7.png "APS_HDI_SCOM7")  
   
 ## See Also  
-[Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
-[HDInsight Management Tasks Using SCOM &#40;Analytics Platform System&#41;](../../mpp/management/hdinsight-management-tasks-using-scom-analytics-platform-system.md)  
+[Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
+[HDInsight Management Tasks Using SCOM &#40;Analytics Platform System&#41;](../management/hdinsight-management-tasks-using-scom-analytics-platform-system.md)  
   

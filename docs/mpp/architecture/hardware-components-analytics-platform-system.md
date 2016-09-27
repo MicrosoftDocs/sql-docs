@@ -29,7 +29,7 @@ Analytics Platform System hardware is architected with scalable components so th
 ## <a name="rackandnetwork"></a>Rack & Network  
 APS components are all stored in one or more racks that fit into your data center. Each rack comes with power distribution units (PDUs), two InfiniBand switches, and two Ethernet switches.  
   
-![APS Rack & Network](../../mpp/architecture/media/APS_HW_RackAndNetwork.png "APS_HW_RackAndNetwork")  
+![APS Rack & Network](../architecture/media/APS_HW_RackAndNetwork.png "APS_HW_RackAndNetwork")  
   
 ## <a name="datascaleunit"></a>Data Scale Unit  
 A Data Scale Unit contains the data hosts and direct attached storage (DAS) for processing and storing user data. To add capacity you add Data Scale Units according to configurations that are supported by your hardware vendor. As the number of Data Scale Units grows, you need to add additional Rack & Network components, as necessary, to provide more power, network, and rack infrastructure.  
@@ -41,10 +41,10 @@ direct attached storage (DAS)
 The direct attached storage is a pool of disks connected to the data hosts. All of the data hosts can access any of the disks. As part of the shared nothing architecture, the Compute nodes running on the data hosts do not share individual disks. However, for high availability, the storage access is shared and each of the data hosts can access any of the disks.  
   
 ### PDW Data Scale Unit Architecture - DELL and Quanta  
-![Scalability Unit for the Appliance](../../mpp/architecture/media/SQL_Server_PDW_HW_2012ScalabilityUnitDell.png "SQL_Server_PDW_HW_2012ScalabilityUnitDell")  
+![Scalability Unit for the Appliance](../architecture/media/SQL_Server_PDW_HW_2012ScalabilityUnitDell.png "SQL_Server_PDW_HW_2012ScalabilityUnitDell")  
   
 ### PDW Data Scale Unit Architecture - HPE  
-![HP Storage Unit](../../mpp/architecture/media/SQL_Server_PDW_HW_2012ScalabilityUnitHP.png "SQL_Server_PDW_HW_2012ScalabilityUnitHP")  
+![HP Storage Unit](../architecture/media/SQL_Server_PDW_HW_2012ScalabilityUnitHP.png "SQL_Server_PDW_HW_2012ScalabilityUnitHP")  
   
 ### Description  
 For PDW, a Data Scale Unit has one server (host) for each Compute Node and one direct-attached disk array that is attached with Serial Attached SCSI (SAS). Within the storage cabinet, the disk array is divided into two halves that each have redundant power supplies. Windows Server Storage Spaces manages user data by duplicating data across RAID 1 mirrored disk pairs. The disks in each disk pair are stored in different halves of the disk array.  
@@ -69,12 +69,12 @@ The HDI and PDW scale units use the same hardware, but have different hardware c
 #### DELL Scale Unit  
 The DELL scale unit has 3 servers and 96 disks, plus a few system disks. Each server hosts 2 DataNodes that each write to 16 simple disks in the Storage Spaces disk arrays. Altogether there are 6 DataNodes in the scale unit.  
   
-![HDInsight scale unit for datanodes](../../mpp/architecture/media/APS_HW_MultiRegion_DELL_HDIScaleUnit.png "APS_HW_MultiRegion_DELL_HDIScaleUnit")  
+![HDInsight scale unit for datanodes](../architecture/media/APS_HW_MultiRegion_DELL_HDIScaleUnit.png "APS_HW_MultiRegion_DELL_HDIScaleUnit")  
   
 #### HPE Scale Unit  
 The HPE scale unit has 2 servers and 64 disks, plus a few system disks. Each server hosts 2 Hadoop Data Nodes that each write to 16 simple disks in the Storage Spaces disk arrays. Altogether there are 4 Hadoop Data Nodes in the HP E scale unit.  
   
-![HP HDInsight Scale Unit](../../mpp/architecture/media/APS_HW_MultiRegion_HP_HDIScaleUnit.png "APS_HW_MultiRegion_HP_HDIScaleUnit")  
+![HP HDInsight Scale Unit](../architecture/media/APS_HW_MultiRegion_HP_HDIScaleUnit.png "APS_HW_MultiRegion_HP_HDIScaleUnit")  
   
 ## <a name="pdwbasescaleunit"></a>PDW Base Scale Unit  
 The PDW Base Scale unit contains the minimum number of brain-power hosts, data hosts, and direct attached storage that is required for a PDW Region. It includes these components.  
@@ -93,7 +93,7 @@ The PDW Base Scale Unit includes one Data Scale Unit which is placed at the bott
   
 This diagram shows the PDW Base Scale Unit plus the Rack and Network. This is the minimum configuration for an Analytics Platform System appliance.  
   
-![PDW Base Scale Unit](../../mpp/architecture/media/APS_HW_PDWBaseScaleUnit.png "APS_HW_PDWBaseScaleUnit")  
+![PDW Base Scale Unit](../architecture/media/APS_HW_PDWBaseScaleUnit.png "APS_HW_PDWBaseScaleUnit")  
   
 ## <a name="hdibasescaleunit"></a>HDI Base Scale Unit  
 In order to add an HDI Base Scale Unit, you must first have a PDW Base Scale Unit. The HDI Base Scale Unit contains the hosts and minimum storage that is required for an HDI Region. You can add more capacity to the HDI Region by adding more Data Scale Units.  
@@ -107,4 +107,4 @@ This is a passive server provided for high availability of the orchestration hos
 ### Data Scale Unit 
 The HDI Base Scale Unit contains one Data Scale Unit.  
   
-![HDI Base Scale Unit](../../mpp/architecture/media/APS_HW_HDIBaseScaleUnit.png "APS_HW_HDIBaseScaleUnit")  
+![HDI Base Scale Unit](../architecture/media/APS_HW_HDIBaseScaleUnit.png "APS_HW_HDIBaseScaleUnit")  

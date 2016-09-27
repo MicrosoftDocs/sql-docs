@@ -15,7 +15,7 @@ The **Firewall** page of the SQL Server PDW Configuration Manager enables you to
   
 ## To manage ports and firewall rules for appliance nodes  
   
-1.  Launch the Configuration Manager. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md).  
+1.  Launch the Configuration Manager. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
   
 2.  In the left pane of the Configuration Manager, expand **HDInsight Topology**, and then click **Firewall**.  
   
@@ -23,7 +23,7 @@ The **Firewall** page of the SQL Server PDW Configuration Manager enables you to
   
 4.  Click **Apply** to save your changes.  
   
-![DWConfig Appliance HDI Firewall](../../mpp/management/media/SQL_Server_PDW_DWConfig_ApplHDIFirewall.png "SQL_Server_PDW_DWConfig_ApplHDIFirewall")  
+![DWConfig Appliance HDI Firewall](../management/media/SQL_Server_PDW_DWConfig_ApplHDIFirewall.png "SQL_Server_PDW_DWConfig_ApplHDIFirewall")  
   
 ## External Ports  
 The following ports are opened for client connections coming from outside of HDInsight.  
@@ -39,5 +39,5 @@ The following ports are opened for client connections coming from outside of HDI
 > Creating external tables or external data sources uses TCP port 8020 by default. These statements can be configured to use other ports instead. The Hortonworks JOB_TRACKER_LOCATION default port is 50300. Integrating with other systems and tools may require additional ports.  
   
 ## See Also  
-[PDW Firewall Configuration &#40;Analytics Platform System&#41;](../../mpp/management/pdw-firewall-configuration-analytics-platform-system.md)  
+[PDW Firewall Configuration &#40;Analytics Platform System&#41;](../management/pdw-firewall-configuration-analytics-platform-system.md)  
   

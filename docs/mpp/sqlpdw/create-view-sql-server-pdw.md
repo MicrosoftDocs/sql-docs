@@ -19,7 +19,7 @@ Creates a view in SQL Server PDW. A view is a virtual table that contains the re
   
 -   A view does not have to be a simple subset of the rows and columns of one table. You can create a view based on a select statement that queries multiple tables or views from multiple databases.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -35,7 +35,7 @@ select_statement> ::=
   
 ## Arguments  
 [ *schema_name* . ] *view_name*  
-The two-part name of the view. View names must follow the rules for identifiers. See [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md) for full details on permitted view names.  
+The two-part name of the view. View names must follow the rules for identifiers. See [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md) for full details on permitted view names.  
   
 *column_name* [**,**...*n*]  
 One or more column names for the view.  
@@ -43,16 +43,16 @@ One or more column names for the view.
 If column names are not specified, the view columns will use the column names specified in the SELECT statement.  
   
 *common_table_expression*  
-Specifies a temporary named result set, known as a common table expression (CTE). For more information, see [WITH common_table_expression &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/with-common-table-expression-sql-server-pdw.md).  
+Specifies a temporary named result set, known as a common table expression (CTE). For more information, see [WITH common_table_expression &#40;SQL Server PDW&#41;](../sqlpdw/with-common-table-expression-sql-server-pdw.md).  
   
 SELECT <select_criteria>  
-The SELECT statement that defines the view. For more information about SELECT statements, see [SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md).  
+The SELECT statement that defines the view. For more information about SELECT statements, see [SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md).  
   
 The SELECT statement can contain almost everything that is supported for the SELECT statement. This includes rowstore and columnstore tables, functions, and multiple SELECT statements that are separated by UNION or UNION ALL.  
   
 The SELECT statement cannot contain:  
   
--   An ORDER BY clause, unless there is also a TOP  clause in the SELECT statement. The ORDER BY clause is used only to determine the rows that are returned by the TOP clause in the view definition. The ORDER BY clause does not guarantee ordered results when the view is queried, unless ORDER BY is also specified in the query itself. See [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md) for information on the TOP clause.  
+-   An ORDER BY clause, unless there is also a TOP  clause in the SELECT statement. The ORDER BY clause is used only to determine the rows that are returned by the TOP clause in the view definition. The ORDER BY clause does not guarantee ordered results when the view is queried, unless ORDER BY is also specified in the query itself. See [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md) for information on the TOP clause.  
   
 -   The INTO keyword.  
   
@@ -62,13 +62,13 @@ The SELECT statement cannot contain:
 Requires **CREATE VIEW** permission on the database and **ALTER SCHEMA** permission on the schema that will contain the view. Or requires membership in the **db_ddladmin** fixed database role.  
   
 ## Limitations and Restrictions  
-For information on minimum and maximum constraints on views, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+For information on minimum and maximum constraints on views, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
 ## Locking  
 Takes an exclusive lock on the VIEW. Takes a shared lock on the DATABASE, SCHEMA, and SCHEMARESOLUTION objects.  
   
 ## Metadata  
-To see the Data Definition Language (DDL) for a view, you can use the [sys.views](../../mpp/sqlpdw/sys-views-sql-server-pdw.md) metadata table.  
+To see the Data Definition Language (DDL) for a view, you can use the [sys.views](../sqlpdw/sys-views-sql-server-pdw.md) metadata table.  
   
 ## Examples  
   
@@ -95,7 +95,7 @@ ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md)  
-[DROP VIEW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-view-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md)  
+[DROP VIEW &#40;SQL Server PDW&#41;](../sqlpdw/drop-view-sql-server-pdw.md)  
   

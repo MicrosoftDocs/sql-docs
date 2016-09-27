@@ -13,7 +13,7 @@ author: BarbKess
 # ALTER ROLE (SQL Server PDW)
 Changes the name of a database role.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -46,12 +46,12 @@ GO
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-role-sql-server-pdw.md)  
-[DROP ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-role-sql-server-pdw.md)  
-[sp_addrolemember &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-addrolemember-sql-server-pdw.md)  
-[sp_droprolemember &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-droprolemember-sql-server-pdw.md)  
-[sys.database_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-principals-sql-server-pdw.md)  
-[sys.database_permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-permissions-sql-server-pdw.md)  
-[sys.database_role_members &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-role-members-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE ROLE &#40;SQL Server PDW&#41;](../sqlpdw/create-role-sql-server-pdw.md)  
+[DROP ROLE &#40;SQL Server PDW&#41;](../sqlpdw/drop-role-sql-server-pdw.md)  
+[sp_addrolemember &#40;SQL Server PDW&#41;](../sqlpdw/sp-addrolemember-sql-server-pdw.md)  
+[sp_droprolemember &#40;SQL Server PDW&#41;](../sqlpdw/sp-droprolemember-sql-server-pdw.md)  
+[sys.database_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-principals-sql-server-pdw.md)  
+[sys.database_permissions &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-permissions-sql-server-pdw.md)  
+[sys.database_role_members &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-role-members-sql-server-pdw.md)  
   

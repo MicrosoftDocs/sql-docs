@@ -15,17 +15,17 @@ This topic explains the appliance software and the non-appliance software compon
   
 To learn more about Analytics Platform System, see:  
   
--   [APS Architecture &#40;Analytics Platform System&#41;](../../mpp/architecture/aps-architecture-analytics-platform-system.md)  
+-   [APS Architecture &#40;Analytics Platform System&#41;](../architecture/aps-architecture-analytics-platform-system.md)  
   
--   [Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md)  
+-   [Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md)  
   
--   [PolyBase &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/polybase-sql-server-pdw.md)  
+-   [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  
   
--   [Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md)  
+-   [Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md)  
   
--   [Query Process &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/query-process-sql-server-pdw.md)  
+-   [Query Process &#40;SQL Server PDW&#41;](../sqlpdw/query-process-sql-server-pdw.md)  
   
--   [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md)  
+-   [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md)  
   
 ## Contents  
   
@@ -33,7 +33,7 @@ To learn more about Analytics Platform System, see:
   
 -   [Solution Software and Tools](#sec2)  
   
-![SQL Server PDW Software](../../mpp/sqlpdw/media/SQL_Server_PDW_Software.png "SQL_Server_PDW_Software")  
+![SQL Server PDW Software](../sqlpdw/media/SQL_Server_PDW_Software.png "SQL_Server_PDW_Software")  
   
 ## <a name="sec1"></a>Appliance Software – Query Processing and User Data Storage  
   
@@ -143,60 +143,60 @@ Queries are written with Transact\-SQL modified to fit the MPP nature of the que
 SQL Server database tooling  
 SQL Server database tooling (formerly called SQL Server Data Tools) runs inside of Visual Studio and is our recommended GUI tool for submitting queries to SQL Server PDW. It is similar to SQL Server Management Studio by allowing you to navigate through an object explorer.  
   
-If you don’t already have Visual Studio, you can download the tools that you need for free. For more information, see [Install SQL Server database tooling  for Visual Studio &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-database-tooling-for-visual-studio-sql-server-pdw.md).  
+If you don’t already have Visual Studio, you can download the tools that you need for free. For more information, see [Install SQL Server database tooling  for Visual Studio &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-database-tooling-for-visual-studio-sql-server-pdw.md).  
   
 sqlcmd Command-Line Query Tool  
 sqlcmd is the SQL Server command-line tool for running Transact\-SQL statements and system commands. It works with SQL Server PDW and is our recommended command-line tool for querying SQL Server PDW.With sqlcmd you can run Transact\-SQL statements interactively from the command-line, as a batch file, or from Windows PowerShell.  
   
-If you don’t have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md)  
+If you don’t have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md)  
   
 Integration Services  
-You can use Integration Services to query SQL Server PDW. For more information, see [Connect With SQL Server Integration Services for Querying &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-sql-server-integration-services-for-querying-sql-server-pdw.md).  
+You can use Integration Services to query SQL Server PDW. For more information, see [Connect With SQL Server Integration Services for Querying &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-integration-services-for-querying-sql-server-pdw.md).  
   
 Linked Server  
-By using a SQL Server linked server connection, you can use SQL Server to submit Transact\-SQL statements to SQL Server PDW. For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md).  
+By using a SQL Server linked server connection, you can use SQL Server to submit Transact\-SQL statements to SQL Server PDW. For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md).  
   
 **Business Intelligence Tools**  
   
 Analysis Services  
 SQL Server PDW is a valid data source for Analysis Services databases and Excel PowerPivot models. Using the OLE DB provider, you can configure an Analysis Services cube to use either multidimensional online analytical processing (MOLAP) or relational online analytical processing (ROLAP) storage.  
   
-For more information, see [Connect With SQL Server Analysis Services &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-sql-server-analysis-services-sql-server-pdw.md).  
+For more information, see [Connect With SQL Server Analysis Services &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-analysis-services-sql-server-pdw.md).  
   
 Report Builder  
 You can use SQL Server PDW as a SQL Server data source for reports that you develop for Reporting Services by using SQL Server Report Builder. You can also use SQL Server PDW as a SQL Server source for report models. By using Report Manager or the report server API, you can generate a model from a SQL Server PDW database.  
   
-For more information, see [Connect With SQL Server Report Builder &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-sql-server-report-builder-sql-server-pdw.md) and [Connect With SQL Server Reporting Services &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-sql-server-reporting-services-sql-server-pdw.md).  
+For more information, see [Connect With SQL Server Report Builder &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-report-builder-sql-server-pdw.md) and [Connect With SQL Server Reporting Services &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-reporting-services-sql-server-pdw.md).  
   
 Power Pivot for Excel  
 You can connect to SQL Server PDW with PowerPivot for Excel, a free download that significantly expands the data analysis capabilities of Excel.  
   
-For more information, see [Connect With PowerPivot for Excel &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-powerpivot-for-excel-sql-server-pdw.md).  
+For more information, see [Connect With PowerPivot for Excel &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-powerpivot-for-excel-sql-server-pdw.md).  
   
 **Loading Tools**  
   
 Integration Services  
 -   Install PDW-specific destination adapters that allow you to use SQL ServerIntegration Services to load data into SQL Server PDW.  
   
-    For more information, see [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md).  
+    For more information, see [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md).  
   
 dwloader Command-Line Loader  
-dwloader is a command-line loading tool that loads data in parallel from your loading server to the SQL Server PDW Compute nodes. For more information, see [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md)  
+dwloader is a command-line loading tool that loads data in parallel from your loading server to the SQL Server PDW Compute nodes. For more information, see [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md)  
   
 PolyBase for Hadoop Integration  
 With PolyBase technology, you can load non-relational data from an Hadoop Cluster into a relational table in SQL Server PDW. The Hadoop data can be located in an external Hadoop Cluster, the HDI Region on APS, or in a Azure Storage Blob.  
   
-For more information, see [PolyBase &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/polybase-sql-server-pdw.md).  
+For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md).  
   
 ### Database Backup and Restore  
 SQL Server PDW uses Transact\-SQL database backup and restore commands to backup and restore user databases, in parallel, to and from a backup server. SQL Server PDW writes the backup to a directory in a Windows file share, and then likewise restores data from a Windows file share.  
   
-For more information, see [Plan for Backup and Loading Hardware &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/plan-for-backup-and-loading-hardware-sql-server-pdw.md) and [Backup and Restore &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-and-restore-sql-server-pdw.md)  
+For more information, see [Plan for Backup and Loading Hardware &#40;SQL Server PDW&#41;](../sqlpdw/plan-for-backup-and-loading-hardware-sql-server-pdw.md) and [Backup and Restore &#40;SQL Server PDW&#41;](../sqlpdw/backup-and-restore-sql-server-pdw.md)  
   
 ### Remote Table Copy  
 The Remote Table Copy feature allows you to copy tables from SQL Server PDW databases to remote (non-appliance) SMP SQL Server databases. This enables hub and spoke scenarios for SQL Server PDW.  
   
-For more information, see [Remote Table Copy &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/remote-table-copy-sql-server-pdw.md).  
+For more information, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw/remote-table-copy-sql-server-pdw.md).  
   
 ### Monitoring  
 Analytics Platform System has several ways to monitor appliance activity  
@@ -204,13 +204,13 @@ Analytics Platform System has several ways to monitor appliance activity
 Admin Console  
 The Admin Console allows you to view current status about the appliance health. This runs as a web application on the Control node and is accessible over https.  
   
-For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
+For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
   
 System Views  
 The Admin Console is based on system view queries. You can query the system views individually to get the specific piece of information you need.  
   
-For more information, see [Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-system-views-analytics-platform-system.md)  
+For more information, see [Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-views-analytics-platform-system.md)  
   
 System Center Operations Manager  
-There are System Center Operations Manager (SCOM) Management Packs for SQL Server PDW. To configure the appliance for SCOM, see [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
+There are System Center Operations Manager (SCOM) Management Packs for SQL Server PDW. To configure the appliance for SCOM, see [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
   

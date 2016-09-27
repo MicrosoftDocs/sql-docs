@@ -11,7 +11,7 @@ caps.latest.revision: 11
 author: BarbKess
 ---
 # Grant Permissions to Monitor the Appliance (SQL Server PDW)
-The SQL Server PDW appliance can be monitored by using either the Admin Console or SQL Server PDW system views. Logins require the server level **VIEW SERVER STATE** permission to monitor the appliance. Logins require the **ALTER ANY CONNECTION** permission to terminate connections by using the Admin Console or the **KILL** command. For information on permissions required to use the Admin Console, see [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  
+The SQL Server PDW appliance can be monitored by using either the Admin Console or SQL Server PDW system views. Logins require the server level **VIEW SERVER STATE** permission to monitor the appliance. Logins require the **ALTER ANY CONNECTION** permission to terminate connections by using the Admin Console or the **KILL** command. For information on permissions required to use the Admin Console, see [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  
   
 ## <a name="PermsAdminConsole"></a>Grant Permission to Monitor the Appliance by Using System Views  
 The following SQL statements create a login named `monitor_login` and grants the **VIEW SERVER STATE** permission to the `monitor_login` login.  
@@ -36,9 +36,9 @@ GRANT ALTER ANY CONNECTION TO monitor_and_terminate_login;
 GO  
 ```  
   
-To create admin logins, see [Fixed Server Roles &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/fixed-server-roles-sql-server-pdw.md).  
+To create admin logins, see [Fixed Server Roles &#40;SQL Server PDW&#41;](../sqlpdw/fixed-server-roles-sql-server-pdw.md).  
   
 ## See Also  
-[Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

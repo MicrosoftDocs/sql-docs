@@ -13,7 +13,7 @@ author: BarbKess
 # CREATE CERTIFICATE (SQL Server PDW)
 Adds a certificate to a database in SQL Server PDW. Can only be executed in the master database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -45,13 +45,13 @@ CREATE CERTIFICATE certificate_name
 Is the name by which the certificate will be known in the database.  
   
 FILE ='*path_to_file*'  
-Specifies the complete path, including file name, to a DER-encoded file that contains the certificate. *path_to_file* must be a UNC path to a network location. The file will be accessed in the security context of a credential created by using the [sp_pdw_add_network_credentials](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) statement. This credential account must have the required file-system permissions.  
+Specifies the complete path, including file name, to a DER-encoded file that contains the certificate. *path_to_file* must be a UNC path to a network location. The file will be accessed in the security context of a credential created by using the [sp_pdw_add_network_credentials](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) statement. This credential account must have the required file-system permissions.  
   
 WITH PRIVATE KEY  
 Specifies that the private key of the certificate is loaded into SQL Server PDW. This clause is only valid when the certificate is being created from a file.  
   
 FILE ='*path_to_private_key*'  
-Specifies the complete path, including file name, to the private key. *path_to_private_key* must be a UNC path to a network location. The file will be accessed in the security context of a credential created by using the [sp_pdw_add_network_credentials](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) statement. This credential account must have the necessary file-system permissions.  
+Specifies the complete path, including file name, to the private key. *path_to_private_key* must be a UNC path to a network location. The file will be accessed in the security context of a credential created by using the [sp_pdw_add_network_credentials](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) statement. This credential account must have the necessary file-system permissions.  
   
 DECRYPTION BY PASSWORD ='*key_password*'  
 Specifies the password required to decrypt a private key that is retrieved from a file.  
@@ -103,8 +103,8 @@ GO
 ```  
   
 ## See Also  
-[ALTER CERTIFICATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-certificate-sql-server-pdw.md)  
-[DROP CERTIFICATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-certificate-sql-server-pdw.md)  
-[BACKUP CERTIFICATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-certificate-sql-server-pdw.md)  
-[sys.certificates &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-certificates-sql-server-pdw.md)  
+[ALTER CERTIFICATE &#40;SQL Server PDW&#41;](../sqlpdw/alter-certificate-sql-server-pdw.md)  
+[DROP CERTIFICATE &#40;SQL Server PDW&#41;](../sqlpdw/drop-certificate-sql-server-pdw.md)  
+[BACKUP CERTIFICATE &#40;SQL Server PDW&#41;](../sqlpdw/backup-certificate-sql-server-pdw.md)  
+[sys.certificates &#40;SQL Server PDW&#41;](../sqlpdw/sys-certificates-sql-server-pdw.md)  
   

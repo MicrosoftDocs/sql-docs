@@ -26,8 +26,8 @@ Contains information about ongoing and completed backup, restore, and load opera
 |database_name|**nvarchar(255)**|Name of the database that is the context of this operation||  
 |table_name|**nvarchar(255)**|Information not available.||  
 |Principal_id|**int**|ID of the user requesting the operation.||  
-|session_id|**nvarchar(32)**|ID of the session performing the operation.|See session_id in [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md).|  
-|request_id|**nvarchar(32)**|ID of the request performing the operation. For loads, this is the current or last request associated with this load..|See request_id in [sys.dm_pdw_exec_requests &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-requests-sql-server-pdw.md).|  
+|session_id|**nvarchar(32)**|ID of the session performing the operation.|See session_id in [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md).|  
+|request_id|**nvarchar(32)**|ID of the request performing the operation. For loads, this is the current or last request associated with this load..|See request_id in [sys.dm_pdw_exec_requests &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-requests-sql-server-pdw.md).|  
 |status|**nvarchar(16)**|Status of the run.|'CANCELLED','COMPLETED','FAILED','QUEUED','RUNNING'|  
 |progress|**int**|Percentage completed.|0 to 100|  
 |command|**nvarchar(4000)**|Full text of the command submitted by the user.|Will be truncated if longer than 4000 characters (counting spaces).|  
@@ -36,6 +36,6 @@ Contains information about ongoing and completed backup, restore, and load opera
 |rows_inserted|**bigint**|Number of rows inserted into the database table(s) as part of this operation.||  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

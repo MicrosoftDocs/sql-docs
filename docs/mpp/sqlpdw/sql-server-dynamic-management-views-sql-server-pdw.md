@@ -84,6 +84,6 @@ Each SQL Server DMV has a PDW-specific column called **pdw_node_id**, which is t
 |sys.dm_pdw_nodes_tran_top_version_generators|[sys.dm_tran_top_version_generators (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms188778(v=sql11).aspx)|  
   
 ## See Also  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

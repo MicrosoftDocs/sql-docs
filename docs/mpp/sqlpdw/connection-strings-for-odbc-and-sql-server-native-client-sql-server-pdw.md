@@ -26,7 +26,7 @@ This topic describes connecting to SQL Server PDW with ODBC by using SQL Server 
 ## <a name="BeforeBegin"></a>Before You Begin  
 **Software Requirements**  
   
--   SQL Server Native Client 10.0. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md)  
+-   SQL Server Native Client 10.0. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md)  
   
 ## <a name="AddODBC"></a>Add SQL Server PDW as an ODBC Data Source  
 Before an application can to connect to SQL Server PDW by using the SQL Server Native Client ODBC driver, you need to add SQL Server PDW as a data source.  
@@ -43,7 +43,7 @@ The following steps show how to add your SQL Server PDW appliance as a data sour
   
     2.  In the Create New Data Source window, select **SQL Server Native Client 10.0**, and click **Finish**.  
   
-    ![Add a data source connection.](../../mpp/sqlpdw/media/SQL_Server_PDW_Nexus_Data_Source_Connection.png "SQL_Server_PDW_Nexus_Data_Source_Connection")  
+    ![Add a data source connection.](../sqlpdw/media/SQL_Server_PDW_Nexus_Data_Source_Connection.png "SQL_Server_PDW_Nexus_Data_Source_Connection")  
   
 3.  In the **Create a New Data Source to SQL Server** window, enter the following:  
   
@@ -51,7 +51,7 @@ The following steps show how to add your SQL Server PDW appliance as a data sour
   
     -   **Server:** Enter the IP address of the appliance Control node. Append a comma and then port 17001. For example, 10.192.45.136**,**17001, and click **Next**.  
   
-        ![Specify the server IP , follows by 17001](../../mpp/sqlpdw/media/SQL_Server_PDW_ODBC_Source.png "SQL_Server_PDW_ODBC_Source")  
+        ![Specify the server IP , follows by 17001](../sqlpdw/media/SQL_Server_PDW_ODBC_Source.png "SQL_Server_PDW_ODBC_Source")  
   
 4.  In response to the question **How should SQL Server verify the authenticity of the login ID?**  
   
@@ -59,23 +59,23 @@ The following steps show how to add your SQL Server PDW appliance as a data sour
   
     2.  Uncheck **Connect to SQL Server to obtain default settings for the additional configuration options.**, and click **Next**.  
   
-        ![Choose SQL Server Authentication.](../../mpp/sqlpdw/media/SQL_Server_PDW_Nexus_ODBC_Source2.png "SQL_Server_PDW_Nexus_ODBC_Source2")  
+        ![Choose SQL Server Authentication.](../sqlpdw/media/SQL_Server_PDW_Nexus_ODBC_Source2.png "SQL_Server_PDW_Nexus_ODBC_Source2")  
   
 5.  On the page with database options and ANSI options, leave everything unchanged, and click **Next**.  
   
-    ![ODBC Ansi settings.](../../mpp/sqlpdw/media/SQL_Server_PDW_Nexus_ODBC_Source3.png "SQL_Server_PDW_Nexus_ODBC_Source3")  
+    ![ODBC Ansi settings.](../sqlpdw/media/SQL_Server_PDW_Nexus_ODBC_Source3.png "SQL_Server_PDW_Nexus_ODBC_Source3")  
   
 6.  Leave remaining options unchanged, and click **Finish**.  
   
-    ![Use SQL Server default settings.](../../mpp/sqlpdw/media/SQL_Server_PDW_Nexus_ODBC_Source4.png "SQL_Server_PDW_Nexus_ODBC_Source4")  
+    ![Use SQL Server default settings.](../sqlpdw/media/SQL_Server_PDW_Nexus_ODBC_Source4.png "SQL_Server_PDW_Nexus_ODBC_Source4")  
   
 7.  Click **OK** to skip running the **Test Connection**.  
   
-    ![Skip testing the data source.](../../mpp/sqlpdw/media/SQL_Server_PDW_Nexus_ODBC_Source5.png "SQL_Server_PDW_Nexus_ODBC_Source5")  
+    ![Skip testing the data source.](../sqlpdw/media/SQL_Server_PDW_Nexus_ODBC_Source5.png "SQL_Server_PDW_Nexus_ODBC_Source5")  
   
 8.  Verify that your new data source is listed in the System Data Sources, and uses the SQL Server Native Client 10.0 driver. Click **OK** to close the window.  
   
-    ![The new data source has been added.](../../mpp/sqlpdw/media/SQL_Server_PDW_ODBC_Final_Dialog.png "SQL_Server_PDW_ODBC_Final_Dialog")  
+    ![The new data source has been added.](../sqlpdw/media/SQL_Server_PDW_ODBC_Final_Dialog.png "SQL_Server_PDW_ODBC_Final_Dialog")  
   
 9. Your data source is now available for applications that need to connect to your appliance.  
   

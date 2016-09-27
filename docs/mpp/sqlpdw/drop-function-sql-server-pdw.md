@@ -13,7 +13,7 @@ author: BarbKess
 # DROP FUNCTION (SQL Server PDW)
 Removes a user-defined function from the current database. User-defined functions are created by using [CREATE FUNCTION](../Topic/CREATE%20FUNCTION.md) and modified by using [ALTER FUNCTION](../Topic/ALTER%20FUNCTION.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions (SQL Server PDW)](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions (SQL Server PDW)](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   

@@ -52,7 +52,7 @@ WHERE b.collation_name = 'Latin1_General_Bin2';
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Language Elements &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/language-elements-sql-server-pdw.md)  
-[SQL Reference &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-reference-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Language Elements &#40;SQL Server PDW&#41;](../sqlpdw/language-elements-sql-server-pdw.md)  
+[SQL Reference &#40;SQL Server PDW&#41;](../sqlpdw/sql-reference-sql-server-pdw.md)  
   

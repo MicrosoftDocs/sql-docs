@@ -70,5 +70,5 @@ order by c.BirthDate;
 In the resulting query plan, there is a SHUFFLE_MOVE operation which indicates that data movement is required before each distribution can run the join.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

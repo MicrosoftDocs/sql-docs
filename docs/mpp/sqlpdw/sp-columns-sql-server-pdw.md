@@ -13,7 +13,7 @@ author: BarbKess
 # sp_columns (SQL Server PDW)
 Returns column information for the specified objects that can be queried in the current environment.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -69,7 +69,7 @@ The **sp_columns** catalog stored procedure is equivalent to **SQLColumns** in O
 |**CHAR_OCTET_LENGTH**|**int**|Maximum length in bytes of a character or integer data type column. For all other data types, this column returns NULL.|  
 |**ORDINAL_POSITION**|**int**|Ordinal position of the column in the object. The first column in the object is 1. This column always returns a value.|  
 |**IS_NULLABLE**|**varchar(254)**|Nullability of the column in the object. ISO rules are followed to determine nullability. An ISO SQL-compliant DBMS cannot return an empty string.<br /><br />YES = Column can include NULLS.<br /><br />NO = Column cannot include NULLS.<br /><br />This column returns a zero-length string if nullability is unknown.<br /><br />The value returned for this column is different from the value returned for the **NULLABLE** column.|  
-|**SS_DATA_TYPE**|**tinyint**|SQL Server data type used by extended stored procedures. For more information, see [Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md).|  
+|**SS_DATA_TYPE**|**tinyint**|SQL Server data type used by extended stored procedures. For more information, see [Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md).|  
   
 <sup>1</sup> For more information, see the Microsoft ODBC documentation.  
   
@@ -90,6 +90,6 @@ EXEC sp_columns @table_name = N'DimEmployee',
 ```  
   
 ## See Also  
-[sp_tables &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-tables-sql-server-pdw.md)  
-[Procedures &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/procedures-sql-server-pdw.md)  
+[sp_tables &#40;SQL Server PDW&#41;](../sqlpdw/sp-tables-sql-server-pdw.md)  
+[Procedures &#40;SQL Server PDW&#41;](../sqlpdw/procedures-sql-server-pdw.md)  
   

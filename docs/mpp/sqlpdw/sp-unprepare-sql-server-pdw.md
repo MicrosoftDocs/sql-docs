@@ -13,7 +13,7 @@ author: BarbKess
 # sp_unprepare (SQL Server PDW)
 Discards the execution plan created by the sp_prepare stored procedure. sp_unprepare is invoked by specifying ID = 15 in a tabular data stream (TDS) packet.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -38,7 +38,7 @@ EXEC sp_unprepare @P1;
 ```  
   
 ## See Also  
-[Procedures &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/procedures-sql-server-pdw.md)  
-[sp_prepare &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-prepare-sql-server-pdw.md)  
-[sp_execute &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-execute-sql-server-pdw.md)  
+[Procedures &#40;SQL Server PDW&#41;](../sqlpdw/procedures-sql-server-pdw.md)  
+[sp_prepare &#40;SQL Server PDW&#41;](../sqlpdw/sp-prepare-sql-server-pdw.md)  
+[sp_execute &#40;SQL Server PDW&#41;](../sqlpdw/sp-execute-sql-server-pdw.md)  
   

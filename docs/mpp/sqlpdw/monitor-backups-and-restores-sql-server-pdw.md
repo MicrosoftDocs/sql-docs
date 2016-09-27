@@ -11,17 +11,17 @@ caps.latest.revision: 8
 author: BarbKess
 ---
 # Monitor Backups and Restores (SQL Server PDW)
-Active and recent backups and restores can be monitored by using either the [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md) or the [System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md). See [Backup and Restore &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-and-restore-sql-server-pdw.md) for information on how to use backup and restore on SQL Server PDW.  
+Active and recent backups and restores can be monitored by using either the [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md) or the [System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md). See [Backup and Restore &#40;SQL Server PDW&#41;](../sqlpdw/backup-and-restore-sql-server-pdw.md) for information on how to use backup and restore on SQL Server PDW.  
   
 ## Prerequisites  
-Regardless of the method used to monitor a backup or restore, the login must have permission to access the underlying data sources. See “Use All of the Admin Console” in [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md) for the permissions to grant.  
+Regardless of the method used to monitor a backup or restore, the login must have permission to access the underlying data sources. See “Use All of the Admin Console” in [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md) for the permissions to grant.  
   
 ## Monitoring Backups and Restores  
 The following sections describe how to monitor both backups and restores.  
   
 ### To monitor backups and restores by using the Admin Console  
   
-1.  Log on to the Admin Console. See [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md) for instructions.  
+1.  Log on to the Admin Console. See [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md) for instructions.  
   
 2.  On the top menu, click **Backups/Restores**. You will see a sortable table showing all recent and active backups and restores plus additional information, such as whether the action has completed or is still active. Click the column headers to sort the rows.  
   
@@ -29,18 +29,18 @@ The following sections describe how to monitor both backups and restores.
   
 See these system views for information on the metadata about the backup or restore that is shown in the Admin Console:  
   
--   [sys.dm_pdw_exec_requests &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-requests-sql-server-pdw.md)  
+-   [sys.dm_pdw_exec_requests &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-requests-sql-server-pdw.md)  
   
--   [sys.pdw_loader_run_stages &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-loader-run-stages-sql-server-pdw.md)  
+-   [sys.pdw_loader_run_stages &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-loader-run-stages-sql-server-pdw.md)  
   
--   [sys.pdw_loader_backup_runs &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-loader-backup-runs-sql-server-pdw.md)  
+-   [sys.pdw_loader_backup_runs &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-loader-backup-runs-sql-server-pdw.md)  
   
--   [sys.pdw_loader_backup_run_details &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-loader-backup-run-details-sql-server-pdw.md)  
+-   [sys.pdw_loader_backup_run_details &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-loader-backup-run-details-sql-server-pdw.md)  
   
 ### To monitor backups and restores by using system views  
 For each system view used, see the documentation for that view for information on the columns and potential values returned by the view.  
   
-1.  Find the `request_id` for the backup or restore in the [sys.dm_pdw_exec_requests &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-requests-sql-server-pdw.md) view by finding the backup or restore command in the `command` column for this view.  
+1.  Find the `request_id` for the backup or restore in the [sys.dm_pdw_exec_requests &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-requests-sql-server-pdw.md) view by finding the backup or restore command in the `command` column for this view.  
   
     For example,  
   
@@ -50,7 +50,7 @@ For each system view used, see the documentation for that view for information o
   
     The preceding command returns the command text and the current status, plus `request_id`.  
   
-2.  Use the `request_id` to retrieve additional information for the backup or restore, using the [sys.pdw_loader_run_stages &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-loader-run-stages-sql-server-pdw.md), [sys.pdw_loader_backup_runs &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-loader-backup-runs-sql-server-pdw.md), and [sys.pdw_loader_backup_run_details &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-loader-backup-run-details-sql-server-pdw.md) views. For example, this query returns the `run_id` and information on the start, end, and duration times of the backup or restore, plus any errors, and information on the number of rows processed:  
+2.  Use the `request_id` to retrieve additional information for the backup or restore, using the [sys.pdw_loader_run_stages &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-loader-run-stages-sql-server-pdw.md), [sys.pdw_loader_backup_runs &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-loader-backup-runs-sql-server-pdw.md), and [sys.pdw_loader_backup_run_details &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-loader-backup-run-details-sql-server-pdw.md) views. For example, this query returns the `run_id` and information on the start, end, and duration times of the backup or restore, plus any errors, and information on the number of rows processed:  
   
     ```  
     SELECT lbr.run_id,   
@@ -63,5 +63,5 @@ For each system view used, see the documentation for that view for information o
     ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

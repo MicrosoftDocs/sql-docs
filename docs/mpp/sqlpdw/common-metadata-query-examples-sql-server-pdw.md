@@ -30,7 +30,7 @@ This topic provides examples of common metadata queries for SQL Server PDW.
 ## Joining Tables for User-table Metadata  
 The following graphic shows some of the system tables and views that present metadata about your user-tables and indexes. The graphic can help you determine which tables and views you should join together in your queries. For a printable version of this graphic, see [System Table chart on the Yammer site](http://go.microsoft.com/fwlink/?LinkId=509888).  
   
-![APS system tables for metadata](../../mpp/sqlpdw/media/APS_sys_tables.png "APS_sys_tables")  
+![APS system tables for metadata](../sqlpdw/media/APS_sys_tables.png "APS_sys_tables")  
   
 ## <a name="DistRep"></a>Distributed and Replicated Table Queries  
 These queries show how to find distribution-related information. They apply to the **AdventureWorksPDW2012** database.  
@@ -256,7 +256,7 @@ WHERE pdw_node_id IN (2, 3, 4);
 ## <a name="Security"></a>Security Information  
 These queries show information about who can access databases and database objects. The graphic shows the relationships of the system views used to gather security information.  
   
-![APS security related system tables](../../mpp/sqlpdw/media/APS_security_system_tables.png "APS_security_system_tables")  
+![APS security related system tables](../sqlpdw/media/APS_security_system_tables.png "APS_security_system_tables")  
   
 ### A. List who can access a database  
 While in a database, execute the following statement to list the users and roles with access to that database.  
@@ -309,7 +309,7 @@ ORDER BY name;
 ```  
   
 ## <a name="WorkloadManagement"></a>Workload Management  
-For more information, about workload management, see [Workload Management &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/workload-management-sql-server-pdw.md)  
+For more information, about workload management, see [Workload Management &#40;SQL Server PDW&#41;](../sqlpdw/workload-management-sql-server-pdw.md)  
   
 ### A. Display the members of each resource class  
 CPU, memory, and concurrency resources are allocate to requests according to login membership in resource class server roles. The following query shows the membership in resource classes for each login.  
@@ -413,5 +413,5 @@ WHERE pr.name = '<proc_name>';
 ```  
   
 ## See Also  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

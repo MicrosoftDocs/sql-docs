@@ -13,7 +13,7 @@ author: BarbKess
 # SOUNDEX (SQL Server PDW)
 Returns a four-character (SOUNDEX) code to evaluate the similarity of two strings.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -86,7 +86,7 @@ Here is the result set. Valid for a Latin1_General collation.
 ```  
   
 ## See Also  
-[DIFFERENCE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/difference-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[DIFFERENCE &#40;SQL Server PDW&#41;](../sqlpdw/difference-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

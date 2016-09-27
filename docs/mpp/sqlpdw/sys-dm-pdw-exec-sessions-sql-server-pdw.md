@@ -27,12 +27,12 @@ Holds information about all sessions currently or recently open on the appliance
 |app_name|**nvarchar(255)**|Captures application name information optionally set as part of the connection process.|Any valid string.|  
 |sql_spid|**int**|The id number of the SPID. Use the `session_id` this session. Use the `sql_spid` column to join to **sys.dm_pdw_nodes_exec_sessions**.<br /><br />**Warning:** This column contains closed SPIDs.||  
   
-For information about the maximum rows retained by this view, see the Maximum System View Values section in the [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md) topic.  
+For information about the maximum rows retained by this view, see the Maximum System View Values section in the [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md) topic.  
   
 ## Permissions  
 Requires the `VIEW SERVER STATE` permission.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

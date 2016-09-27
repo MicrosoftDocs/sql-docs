@@ -15,8 +15,8 @@ Displays summary information on the entire Analytics Platform System.
   
 Expand the elements of this section to configure information that applies to the entire appliance. Select the Parallel Data Warehouse Topology or HDInsight Topology sections to configure information that applies to only that region of the appliance.  
   
-![SQL_Server_PDW_DWConfig_ApplTop](../../mpp/management/media/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
+![SQL_Server_PDW_DWConfig_ApplTop](../management/media/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## See Also  
-[Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md)  
+[Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md)  
   

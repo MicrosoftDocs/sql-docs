@@ -15,7 +15,7 @@ Sets the first day of the week to a number. In this SQL Server PDW release, 7 is
   
 For more information, see [SET DATEFIRST (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms181598(v=sql11).aspx)  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -27,7 +27,7 @@ SET DATEFIRST 7 ;
 Requires membership in the **public** role.  
   
 ## General Remarks  
-To see the current setting of SET DATEFIRST, use the [@@DATEFIRST &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/datefirst-sql-server-pdw.md) function.  
+To see the current setting of SET DATEFIRST, use the [@@DATEFIRST &#40;SQL Server PDW&#41;](../sqlpdw/datefirst-sql-server-pdw.md) function.  
   
 ## Example  
   
@@ -37,6 +37,6 @@ SET DATEFIRST 7;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[@@DATEFIRST &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/datefirst-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[@@DATEFIRST &#40;SQL Server PDW&#41;](../sqlpdw/datefirst-sql-server-pdw.md)  
   

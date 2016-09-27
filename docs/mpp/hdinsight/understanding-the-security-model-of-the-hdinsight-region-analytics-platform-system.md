@@ -35,7 +35,7 @@ A Power User, member of the HDInsight Cluster Admins group.
 HDInsight regular user  
 A user account created by using the HDInsight Topology, **User Management** page of the **DW Configuration Manager**. These accounts are used by developers and information workers. Example: **Melisa**.  
   
-For information about creating users, see [HDInsight User Management &#40;Analytics Platform System&#41;](../../mpp/management/hdinsight-user-management-analytics-platform-system.md).  
+For information about creating users, see [HDInsight User Management &#40;Analytics Platform System&#41;](../management/hdinsight-user-management-analytics-platform-system.md).  
   
 ## Duties and Functions of the HDInsight Administrator Account  
 The top level user of the HDInsight region is the **Administrator** user of the appliance domain (***appliance_domain*\Administrator**). The **Administrator** account is a member of  the **Domain Admins** group of the appliance domain Active Directory.  The **Administrator** user is created during the initial appliance deployment. The **Administrator** password can be changed using the **DWConfig** program, but the account cannot be renamed. Creating additional accounts which are member of Domain Admins group is not recommended.  
@@ -51,7 +51,7 @@ In addition to having all the permissions of the HDInsight Cluster Admin, the **
 ## Duties and Functions of the HDInsight Cluster Administrator Accounts  
 The Cluster admin account uses a remote desktop connection to access cluster nodes to manage, configure, and troubleshoot Hadoop components (name node, resource manager, data node, node manager and others).  
   
-Connecting by using remote desktop is a two-step operation: [Connecting to HDInsight Using Remote Desktop &#40;Analytics Platform System&#41;](../../mpp/hdinsight/connecting-to-hdinsight-using-remote-desktop-analytics-platform-system.md)  
+Connecting by using remote desktop is a two-step operation: [Connecting to HDInsight Using Remote Desktop &#40;Analytics Platform System&#41;](../hdinsight/connecting-to-hdinsight-using-remote-desktop-analytics-platform-system.md)  
   
 The **DW Configuration Manager** can change the password for the domain admin account. For all other users, the password is changed on the **Change password** page of **Developer Dashboard** which is available during login.  
   
@@ -63,7 +63,7 @@ In addition to having all the permissions of the HDInsight users, the HDInsight 
   
 -   Use HDP tools to perform advanced administrative tasks which are not exposed directly by appliance tools. Examples include: Hadoop commands (fs, fsck, balancer, dfsadmin, jar, job), sqoop, and pig consoles.  
   
--   Change whitelisted settings in Hadoop configuration files to adjust system to typical customer workloads. For more information, see [Changing Hadoop Configuration Settings &#40;Analytic Platform System&#41;](../../mpp/hdinsight/changing-hadoop-configuration-settings-analytic-platform-system.md).  
+-   Change whitelisted settings in Hadoop configuration files to adjust system to typical customer workloads. For more information, see [Changing Hadoop Configuration Settings &#40;Analytic Platform System&#41;](../hdinsight/changing-hadoop-configuration-settings-analytic-platform-system.md).  
   
 -   Install and uninstall additional Hadoop modules (such as encryption and serialization libraries)  
   
@@ -80,7 +80,7 @@ User accounts can:
   
 -   Use the **Change password** page of the **Developer Dashboard** to change their own passwords. To access the **Change password**, on the **Developer Dashboard** log in page, click **Change password**.  
   
-For more information about creating users, see [HDInsight User Management &#40;Analytics Platform System&#41;](../../mpp/management/hdinsight-user-management-analytics-platform-system.md).  
+For more information about creating users, see [HDInsight User Management &#40;Analytics Platform System&#41;](../management/hdinsight-user-management-analytics-platform-system.md).  
   
 ## Access to HDInsight Data  
 Hortonworks for Windows does not support user isolation therefore it’s not possible to run a job under security context of the user. In APS all HDInsight data access is performed by the Hadoop service account which has permission to read and alter any data in the HDInsight cluster. Therefore it is not possible to restrict an APS HDInsight user to only a limited subset of the data. One workaround for this problem is to access HDInsight data by using PolyBase queries that query HDInsight through a remote external table. You can use standard SQL Server permissions to control access to the remote external table.  
@@ -108,9 +108,9 @@ The **Developer Dashboard** serves as an endpoint to Hive, job submission, and a
 Secure Node Gateway communication only supports HTTPS.  
   
 ## Additional Information  
-For information about the system architecture, see the **Microsoft Analytics Platform System** section of [Product Documentation &#40;Analytics Platform System&#41;](../../mpp/product-documentation-analytics-platform-system.md).  
+For information about the system architecture, see the **Microsoft Analytics Platform System** section of [Product Documentation &#40;Analytics Platform System&#41;](.././/product-documentation-analytics-platform-system.md).  
   
-For information about SQL Server PDW authentication, see [Security - Windows Authentication and SQL Server Authentication &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/security-windows-authentication-and-sql-server-authentication-sql-server-pdw.md).  
+For information about SQL Server PDW authentication, see [Security - Windows Authentication and SQL Server Authentication &#40;SQL Server PDW&#41;](../sqlpdw/security-windows-authentication-and-sql-server-authentication-sql-server-pdw.md).  
   
-For information about SQL Server PDW Active Directory trusts, see [Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/security-configure-domain-trusts-sql-server-pdw.md).  
+For information about SQL Server PDW Active Directory trusts, see [Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../sqlpdw/security-configure-domain-trusts-sql-server-pdw.md).  
   

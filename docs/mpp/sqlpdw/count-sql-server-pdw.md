@@ -13,7 +13,7 @@ author: BarbKess
 # COUNT (SQL Server PDW)
 Returns the number of items in a group in SQL Server PDW. Use this function in the select list or HAVING clause of a SELECT statement to aggregate the number of rows in a table or partition.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -44,7 +44,7 @@ OVER
 Determines the partitioning and ordering of the rowset before the analytic function is applied.  
   
 < *partition_by_clause* >  
-Divides the result set produced by the FROM clause into partitions to which the COUNT function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/over-clause-sql-server-pdw.md).  
+Divides the result set produced by the FROM clause into partitions to which the COUNT function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../sqlpdw/over-clause-sql-server-pdw.md).  
   
 ## Return Types  
 **int**  
@@ -141,9 +141,9 @@ Here is the result set.
 1              SO55981</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[OVER Clause &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/over-clause-sql-server-pdw.md)  
-[COUNT_BIG &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/count-big-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[OVER Clause &#40;SQL Server PDW&#41;](../sqlpdw/over-clause-sql-server-pdw.md)  
+[COUNT_BIG &#40;SQL Server PDW&#41;](../sqlpdw/count-big-sql-server-pdw.md)  
   

@@ -15,21 +15,21 @@ This guide describes how to perform appliance administration tasks for SQL Serve
   
 ## Guide Sections  
   
--   [Appliance Installation and Configuration Overview &#40;Analytics Platform System&#41;](../../mpp/management/appliance-installation-and-configuration-overview-analytics-platform-system.md)  
+-   [Appliance Installation and Configuration Overview &#40;Analytics Platform System&#41;](../management/appliance-installation-and-configuration-overview-analytics-platform-system.md)  
   
--   [PDW Domain Security &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/pdw-domain-security-sql-server-pdw.md)  
+-   [PDW Domain Security &#40;SQL Server PDW&#41;](../sqlpdw/pdw-domain-security-sql-server-pdw.md)  
   
--   [Connect to Appliance Nodes &#40;Analytics Platform System&#41;](../../mpp/management/connect-to-appliance-nodes-analytics-platform-system.md)  
+-   [Connect to Appliance Nodes &#40;Analytics Platform System&#41;](../management/connect-to-appliance-nodes-analytics-platform-system.md)  
   
--   [Antivirus Software &#40;Analytics Platform System&#41;](../../mpp/management/antivirus-software-analytics-platform-system.md)  
+-   [Antivirus Software &#40;Analytics Platform System&#41;](../management/antivirus-software-analytics-platform-system.md)  
   
--   [Appliance Configuration &#40;Analytics Platform System&#41;](../../mpp/management/appliance-configuration-analytics-platform-system.md)  
+-   [Appliance Configuration &#40;Analytics Platform System&#41;](../management/appliance-configuration-analytics-platform-system.md)  
   
--   [Software Servicing &#40;Analytics Platform System&#41;](../../mpp/management/software-servicing-analytics-platform-system.md)  
+-   [Software Servicing &#40;Analytics Platform System&#41;](../management/software-servicing-analytics-platform-system.md)  
   
--   [PDW Services Status &#40;Analytics Platform System&#41;](../../mpp/management/pdw-services-status-analytics-platform-system.md)  
+-   [PDW Services Status &#40;Analytics Platform System&#41;](../management/pdw-services-status-analytics-platform-system.md)  
   
--   [Power the APS Appliance On or Off &#40;Analytics Platform System&#41;](../../mpp/management/power-the-aps-appliance-on-or-off-analytics-platform-system.md)  
+-   [Power the APS Appliance On or Off &#40;Analytics Platform System&#41;](../management/power-the-aps-appliance-on-or-off-analytics-platform-system.md)  
   
--   [Appliance Monitoring &#40;Analytics Platform System&#41;](../../mpp/management/appliance-monitoring-analytics-platform-system.md)  
+-   [Appliance Monitoring &#40;Analytics Platform System&#41;](../management/appliance-monitoring-analytics-platform-system.md)  
   

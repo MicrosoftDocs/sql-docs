@@ -49,7 +49,7 @@ After creating a session, use the **Mapping** tab to configure properties of the
     Connections  
     Select **Microsoft SQL Server PDW**.  
   
-![APS Informatica Session Extensions dialog box](../../mpp/sqlpdw/media/APS_Informatica_Session_Extensions.png "APS_Informatica_Session_Extensions")  
+![APS Informatica Session Extensions dialog box](../sqlpdw/media/APS_Informatica_Session_Extensions.png "APS_Informatica_Session_Extensions")  
   
 #### Configure the target connection  
   
@@ -68,7 +68,7 @@ After creating a session, use the **Mapping** tab to configure properties of the
     Connections  
     Select **Microsoft SQL Server PDW**.  
   
-![APS Informatica Session Target dialog box](../../mpp/sqlpdw/media/APS_Informatica_Session_Target.png "APS_Informatica_Session_Target")  
+![APS Informatica Session Target dialog box](../sqlpdw/media/APS_Informatica_Session_Target.png "APS_Informatica_Session_Target")  
   
 ### Setting Relational Connection  
 Additional information about relational connection session level properties.  
@@ -110,7 +110,7 @@ In upsert mode, you can map a source table to a target table without mapping all
 ## .NET Framework Security  
   
 ## See Also  
-[Installing the Informatica Connector &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
-[Using SQL Server PDW tables as Informatica Sources and Targets &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/using-sql-server-pdw-tables-as-informatica-sources-and-targets-sql-server-pdw.md)  
-[Using Informatica to create SQL Server PDW connections in workflow manager &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/using-informatica-to-create-sql-server-pdw-connections-in-workflow-manager-sql-server-pdw.md)  
+[Installing the Informatica Connector &#40;SQL Server PDW&#41;](../sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
+[Using SQL Server PDW tables as Informatica Sources and Targets &#40;SQL Server PDW&#41;](../sqlpdw/using-sql-server-pdw-tables-as-informatica-sources-and-targets-sql-server-pdw.md)  
+[Using Informatica to create SQL Server PDW connections in workflow manager &#40;SQL Server PDW&#41;](../sqlpdw/using-informatica-to-create-sql-server-pdw-connections-in-workflow-manager-sql-server-pdw.md)  
   

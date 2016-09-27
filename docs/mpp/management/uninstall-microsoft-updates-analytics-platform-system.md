@@ -33,8 +33,8 @@ To perform these steps, you will need:
     ```  
   
 ## See Also  
-[Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../../mpp/management/download-and-apply-microsoft-updates-analytics-platform-system.md)  
-[Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../../mpp/management/apply-analytics-platform-system-hotfixes-analytics-platform-system.md)  
-[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../../mpp/management/uninstall-analytics-platform-system-hotfixes-analytics-platform-system.md)  
-[Software Servicing &#40;Analytics Platform System&#41;](../../mpp/management/software-servicing-analytics-platform-system.md)  
+[Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../management/download-and-apply-microsoft-updates-analytics-platform-system.md)  
+[Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../management/apply-analytics-platform-system-hotfixes-analytics-platform-system.md)  
+[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../management/uninstall-analytics-platform-system-hotfixes-analytics-platform-system.md)  
+[Software Servicing &#40;Analytics Platform System&#41;](../management/software-servicing-analytics-platform-system.md)  
   

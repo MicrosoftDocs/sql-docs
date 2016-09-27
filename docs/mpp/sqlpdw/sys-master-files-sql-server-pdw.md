@@ -53,9 +53,9 @@ Contains a row per file of a database as stored in the master database. This is 
 The minimum permissions that are required to see the corresponding row are CREATE DATABASE, ALTER ANY DATABASE, or VIEW ANY DEFINITION.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SQL Server PDW Catalog Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-pdw-catalog-views-sql-server-pdw.md)  
-[sys.all_views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-all-views-sql-server-pdw.md)  
-[sys.databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-databases-sql-server-pdw.md)  
-[sys.database_files &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-files-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SQL Server PDW Catalog Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-pdw-catalog-views-sql-server-pdw.md)  
+[sys.all_views &#40;SQL Server PDW&#41;](../sqlpdw/sys-all-views-sql-server-pdw.md)  
+[sys.databases &#40;SQL Server PDW&#41;](../sqlpdw/sys-databases-sql-server-pdw.md)  
+[sys.database_files &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-files-sql-server-pdw.md)  
   

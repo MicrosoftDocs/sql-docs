@@ -13,9 +13,9 @@ author: BarbKess
 # CREATE STATISTICS (SQL Server PDW)
 Creates query optimization statistics on one or more columns of a SQL Server PDW table. The Control node uses statistics to improve the MPP distributed query plan for data movement operations, and the Compute nodes use statistics to improve the SMP query plan. Use this to improve query performance by pre-populating the Control node and the Compute nodes with user-defined single-column or multi-column statistics.  
   
-For more information, see [Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md).  
+For more information, see [Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -49,7 +49,7 @@ CREATE STATISTICS statistics_name
   
 ## Arguments  
 *statistics_name*  
-The name of the statistics to create. See [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md) for information on supported statistics names.  
+The name of the statistics to create. See [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md) for information on supported statistics names.  
   
 [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
 The one- to three-part name of the table that will contain the statistics.  
@@ -95,7 +95,7 @@ This statement creates SMP SQL Server statistics on the Compute nodes and then m
 External table statistics are stored on the Control node. When creating external table statistics, SQL Server PDW imports the external table into a temporary SQL Server PDW table, and then creates the statistics. For sampled statistics, only the sampled rows are imported. If you have a large external table, it will be much faster to created sampled statistics.  
   
 ## Limitations and Restrictions  
-For information on minimum and maximum constraints on statistics, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+For information on minimum and maximum constraints on statistics, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
 Updating statistics is not supported on external tables. To update statistics on an external table, drop the statistics and then re-create the statistics.  
   
@@ -165,9 +165,9 @@ GO
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md)  
-[UPDATE STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/update-statistics-sql-server-pdw.md)  
-[DROP STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-statistics-sql-server-pdw.md)  
-[STATS_DATE &#40;PDW&#41;](../../mpp/sqlpdw/stats-date-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md)  
+[UPDATE STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/update-statistics-sql-server-pdw.md)  
+[DROP STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/drop-statistics-sql-server-pdw.md)  
+[STATS_DATE &#40;PDW&#41;](../sqlpdw/stats-date-pdw.md)  
   

@@ -58,7 +58,7 @@ You will need an Analytics Platform System appliance domain account to login to 
 You will need a Windows account on the client server that has permission to configure the network adapters.  
   
 ### Prerequisites  
-These instructions assume the client server is already racked and cabled to the appliance InfiniBand network. For racking and cabling instructions, see [Acquire and Configure a Loading Server &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/acquire-and-configure-a-loading-server-sql-server-pdw.md).  
+These instructions assume the client server is already racked and cabled to the appliance InfiniBand network. For racking and cabling instructions, see [Acquire and Configure a Loading Server &#40;SQL Server PDW&#41;](../sqlpdw/acquire-and-configure-a-loading-server-sql-server-pdw.md).  
   
 ### General Remarks  
 By using **SQLCTL01**, the Analytics Platform System DNS will connect your client server to the Control node by using the active InfiniBand network. This applies only to getting connected; if the InfiniBand network goes down during a load or backup, you will need to restart the process.  
@@ -74,13 +74,13 @@ To meet your own business requirements, you can also join the client server to y
   
 3.  In the **Network Connections** window, right-click on **Team IB1** and select **Properties**.  
   
-    ![InfiniBand Connections on the Management node.](../../mpp/sqlpdw/media/SQL_Server_PDW_Network_TeamIB.png "SQL_Server_PDW_Network_TeamIB")  
+    ![InfiniBand Connections on the Management node.](../sqlpdw/media/SQL_Server_PDW_Network_TeamIB.png "SQL_Server_PDW_Network_TeamIB")  
   
 4.  From the Internet Protocol Version 4 (TCP/IPv4) Properties window, write down the values for the **IP address** and **Subnet mask**.  The IP address of the ***appliance_domain*-AD01** node is the IP address of the Analytics Platform System DNS server.  
   
 5.  Repeat steps 1-5 above for the TeamIB1 adapter on ***appliance_domain*-AD02** server.  
   
-    ![PDW Management Node InfiniBand 1 Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_Network_IP1_Properties.png "SQL_Server_PDW_Network_IP1_Properties")  
+    ![PDW Management Node InfiniBand 1 Properties](../sqlpdw/media/SQL_Server_PDW_Network_IP1_Properties.png "SQL_Server_PDW_Network_IP1_Properties")  
   
 6.  Click **Cancel** to close the window.  
   
@@ -94,7 +94,7 @@ To meet your own business requirements, you can also join the client server to y
   
 10. Repeat steps 8-9 above for the TeamIB2 adapter on ***appliance_domain*-AD02** server.  
   
-    ![Properties for TeamIB2](../../mpp/sqlpdw/media/SQL_Server_PDW_Network_IP2_Properties.png "SQL_Server_PDW_Network_IP2_Properties")  
+    ![Properties for TeamIB2](../sqlpdw/media/SQL_Server_PDW_Network_IP2_Properties.png "SQL_Server_PDW_Network_IP2_Properties")  
   
 11. Find an unused IP address on the **TeamIB2** network, and write it down.  
   
@@ -121,7 +121,7 @@ While performing these instructions:
   
 1.  In the **Network Connections** window, right-click on one of the unidentified network slots for the **Mellanox Adapter** and select **Properties**.  
   
-    ![Select the InfiniBand networks](../../mpp/sqlpdw/media/SQL_Server_PDW_NetworkConnections.png "SQL_Server_PDW_NetworkConnections")  
+    ![Select the InfiniBand networks](../sqlpdw/media/SQL_Server_PDW_NetworkConnections.png "SQL_Server_PDW_NetworkConnections")  
   
 2.  In the Properties window  
   
@@ -133,7 +133,7 @@ While performing these instructions:
   
     4.  Set the **Alternate DNS server** to the IP address of TeamIB1 that you wrote down earlier from the ***appliance_domain*-AD02** node.  
   
-        ![InfiniBand 1 Network Adapter Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_Network_IB1_properties.png "SQL_Server_PDW_Network_IB1_properties")  
+        ![InfiniBand 1 Network Adapter Properties](../sqlpdw/media/SQL_Server_PDW_Network_IB1_properties.png "SQL_Server_PDW_Network_IB1_properties")  
   
     5.  Click **OK** to apply the changes.  
   
@@ -143,7 +143,7 @@ While performing these instructions:
   
 2.  In the **Network Connections** window, right-click on the second unidentified network slot for the **Mellanox Adapter** and select **Properties**.  
   
-    ![Select the InfiniBand networks](../../mpp/sqlpdw/media/SQL_Server_PDW_NetworkConnections.png "SQL_Server_PDW_NetworkConnections")  
+    ![Select the InfiniBand networks](../sqlpdw/media/SQL_Server_PDW_NetworkConnections.png "SQL_Server_PDW_NetworkConnections")  
   
 3.  In the **Properties** window  
   
@@ -158,7 +158,7 @@ While performing these instructions:
         > [!NOTE]  
         > If you only have one network adapter, configure the preferred and the alternate DNS servers using either the appliance AD01 TeamIB1 and appliance AD02 TeamIB1 as the preferred and the alternate DNS servers respectively, or use the appliance AD01 TeamIB2 and appliance AD02 TeamIB2 as the preferred and the alternate DNS servers depending on if the AD virtual machine has failed over.  
   
-        ![InfiniBand 1 Network Adapter Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_Network_IB1_properties.png "SQL_Server_PDW_Network_IB1_properties")  
+        ![InfiniBand 1 Network Adapter Properties](../sqlpdw/media/SQL_Server_PDW_Network_IB1_properties.png "SQL_Server_PDW_Network_IB1_properties")  
   
     5.  Click **OK** to apply the changes.  
   
@@ -172,7 +172,7 @@ While performing these instructions:
   
 4.  If the **Append these DNS suffixes (in order):** option is greyed out, you can add the Analytics Platform System domain to this server by modifying the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient.  
   
-    ![TCP/IP Settings](../../mpp/sqlpdw/media/SQL_Server_PDW_Network_TCPIP.png "SQL_Server_PDW_Network_TCPIP")  
+    ![TCP/IP Settings](../sqlpdw/media/SQL_Server_PDW_Network_TCPIP.png "SQL_Server_PDW_Network_TCPIP")  
   
 5.  For faster address resolution, we recommend moving the appliance suffix to the top of the list.  
   
@@ -187,5 +187,5 @@ While performing these instructions:
     -   MyPDW-SQLCTL01  
   
 ## See Also  
-[Acquire and Configure a Loading Server &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/acquire-and-configure-a-loading-server-sql-server-pdw.md)  
+[Acquire and Configure a Loading Server &#40;SQL Server PDW&#41;](../sqlpdw/acquire-and-configure-a-loading-server-sql-server-pdw.md)  
   

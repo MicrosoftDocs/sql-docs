@@ -17,7 +17,7 @@ In this release, ANSI_NULL_DFLT_OFF is always OFF and ANSI_NULL_DFLT_ON is alway
   
 For more information, see the [SET ANSI_NULL_DFLT_OFF (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187356(v=sql11)) documentation on MSDN.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -34,5 +34,5 @@ This setting only affects the nullability of new columns when the nullability of
 The setting of SET ANSI_NULL_DFLT_OFF is set at execute or run time and not at parse time.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

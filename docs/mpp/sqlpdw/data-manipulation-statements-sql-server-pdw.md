@@ -17,12 +17,12 @@ Data manipulation statements are shown in the following table.
   
 |Command|Description|  
 |-----------|---------------|  
-|[DELETE](../../mpp/sqlpdw/delete-sql-server-pdw.md)|Removes rows from a table.|  
-|[INSERT](../../mpp/sqlpdw/insert-sql-server-pdw.md)|Adds rows to a table.|  
-|[UPDATE](../../mpp/sqlpdw/update-sql-server-pdw.md)|Changes existing data in a table.|  
+|[DELETE](../sqlpdw/delete-sql-server-pdw.md)|Removes rows from a table.|  
+|[INSERT](../sqlpdw/insert-sql-server-pdw.md)|Adds rows to a table.|  
+|[UPDATE](../sqlpdw/update-sql-server-pdw.md)|Changes existing data in a table.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Data Definition Statements &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-definition-statements-sql-server-pdw.md)  
-[Queries &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/queries-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Data Definition Statements &#40;SQL Server PDW&#41;](../sqlpdw/data-definition-statements-sql-server-pdw.md)  
+[Queries &#40;SQL Server PDW&#41;](../sqlpdw/queries-sql-server-pdw.md)  
   

@@ -17,7 +17,7 @@ BETWEEN returns TRUE if the value of *test_expression* is greater than or equal 
   
 NOT BETWEEN returns TRUE if the value of *test_expression* is less than the value of *begin_expression* or greater than the value of *end_expression*.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -98,12 +98,12 @@ ORDER BY BirthDate ASC;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[&#62; &#40;Greater Than&#41; &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/greater-than-sql-server-pdw.md)  
-[&#60; &#40;Less Than&#41; &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/less-than-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[Operators &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/operators-sql-server-pdw.md)  
-[SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md)  
-[WHERE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/where-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[&#62; &#40;Greater Than&#41; &#40;SQL Server PDW&#41;](../sqlpdw/greater-than-sql-server-pdw.md)  
+[&#60; &#40;Less Than&#41; &#40;SQL Server PDW&#41;](../sqlpdw/less-than-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[Operators &#40;SQL Server PDW&#41;](../sqlpdw/operators-sql-server-pdw.md)  
+[SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md)  
+[WHERE &#40;SQL Server PDW&#41;](../sqlpdw/where-sql-server-pdw.md)  
   

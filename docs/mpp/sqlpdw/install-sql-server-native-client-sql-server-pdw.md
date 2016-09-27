@@ -13,7 +13,7 @@ author: BarbKess
 # Install SQL Server Native Client (SQL Server PDW)
 This topic explains how to install the SQL Server Native Client onto the client that will connect to SQL Server PDW. SQL Server Native Client is required for many application connections to SQL Server PDW.  
   
-Parent Topic: [Client Tools and Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
+Parent Topic: [Client Tools and Applications &#40;SQL Server PDW&#41;](../sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
   
 ## Contents  
   
@@ -42,9 +42,9 @@ For more information, see these topics:
   
 -   [The SQL Server Native Client ...](http://msdn.microsoft.com/en-us/sqlserver/ff658532.aspx) on MSDN.  
   
--   [Connection Strings for OLE DB and SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connection-strings-for-ole-db-and-sql-server-native-client-sql-server-pdw.md)  
+-   [Connection Strings for OLE DB and SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/connection-strings-for-ole-db-and-sql-server-native-client-sql-server-pdw.md)  
   
--   [Connection Strings for ODBC and SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connection-strings-for-odbc-and-sql-server-native-client-sql-server-pdw.md)  
+-   [Connection Strings for ODBC and SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/connection-strings-for-odbc-and-sql-server-native-client-sql-server-pdw.md)  
   
 ## <a name="BeforeBegin"></a>Before You Begin  
   
@@ -105,7 +105,7 @@ You might already have SQL Server Native Client 10.0 and SQL Server Native Clien
   
 -   If you see SQL Server Native Client 10.0, verify the version is 2007.100.5500.00 or later. This is the version that ships with SQL Server 2008 R2. If the version is less than 2007.100.5500.00, you need to update the client.  
   
-    ![Version for SQL Server Native Client 10.0](../../mpp/sqlpdw/media/SQL_Server_PDW_SNAC_10R2Version.png "SQL_Server_PDW_SNAC_10R2Version")  
+    ![Version for SQL Server Native Client 10.0](../sqlpdw/media/SQL_Server_PDW_SNAC_10R2Version.png "SQL_Server_PDW_SNAC_10R2Version")  
   
 -   If you see SQL Server Native Client 11.0, then it is already installed. Both 10.0 and 11.0 can be installed on the same system.  
   

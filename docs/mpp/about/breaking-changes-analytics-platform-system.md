@@ -42,7 +42,7 @@ These breaking changes apply when upgrading to Appliance Update 1.
 ### Changes to SQL Server Data Tools  
 Update SQL Server Data Tools to the January 2014 (or later) release of SQL [Server Data Tools for Visual Studio 2012](http://msdn.microsoft.com/en-us/data/hh297027). SQL Server Data Tools is no longer supported for Visual Studio 2010.  
   
-For more information, see [Install SQL Server database tooling  for Visual Studio &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-database-tooling-for-visual-studio-sql-server-pdw.md)  
+For more information, see [Install SQL Server database tooling  for Visual Studio &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-database-tooling-for-visual-studio-sql-server-pdw.md)  
   
 ### Changes to input date formats for loading data with dwloader  
 Loading date and time data can have difference results in Appliance Udpate 1 than the previous release. dwloader enforces only the order of month, day, and year when loading datetime data from the input file; it allows, but no longer enforces custom date formats.  
@@ -78,7 +78,7 @@ Data that will *not* load in Appliance Update 1, but passed in previous release:
 -   Data ordered as ydm is supported only for loading into columns of datetime and smalldatetime. Ydm data cannot be loaded into columns of datetime2, date, and datetimeoffset, whereas previously this would pass.  
   
 ### Update scripts that use CREATE EXTERNAL TABLE before upgrading to the next appliance update.  
-The [CREATE EXTERNAL TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-sql-server-pdw.md)and [CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-as-select-sql-server-pdw.md) syntax has changed to use data source and file format objects. The previous syntax is deprecated in Appliance Update 1 and will be removed in the next appliance update.  
+The [CREATE EXTERNAL TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-sql-server-pdw.md)and [CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-as-select-sql-server-pdw.md) syntax has changed to use data source and file format objects. The previous syntax is deprecated in Appliance Update 1 and will be removed in the next appliance update.  
   
 Update scripts that use the former syntax to use the new syntax so that future upgrades will not break. When upgrading to Appliance Update 1, SQL Server PDW will re-create all existing external tables to use the new syntax and objects.  
   
@@ -99,7 +99,7 @@ The system view sys.pdw_external_tables has been removed from Appliance Update 1
 You no longer need to manually install Java onto the appliance. Upgrading SQL Server 2012 PDW to Appliance Update 1 will install Oracle Java SE Development Kit 7 on the SQL Server PDW nodes for use with PolyBase. Note that the upgrade will remove any existing non-Oracle Java versions from the appliance.  
   
 ### SET ROWCOUNT does not affect some statements  
-SET ROWCOUNT does not affect these statements: INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE AS SELECT, and CREATE EXTERNAL TABLE AS SELECT. Modify applications that use this. For a similar behavior, use the [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md) statement.  
+SET ROWCOUNT does not affect these statements: INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE AS SELECT, and CREATE EXTERNAL TABLE AS SELECT. Modify applications that use this. For a similar behavior, use the [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md) statement.  
   
 This was deprecated in the previous release, and is now in effect in Appliance Update 1.  
   

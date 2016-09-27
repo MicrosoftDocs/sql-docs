@@ -28,7 +28,7 @@ A *distributed table* is a table whose rows are dispersed across multiple storag
   
 The following diagram depicts how a full (non-distributed table) gets stored as a distributed table.  
   
-![Distributed Table](../../mpp/sqlpdw/media/SQL_Server_ADW_DistributedTable.png "SQL_Server_ADW_DistributedTable")  
+![Distributed Table](../sqlpdw/media/SQL_Server_ADW_DistributedTable.png "SQL_Server_ADW_DistributedTable")  
   
 -   The distributions are stored on the Compute nodes; the appliance has eight distributions per compute node.  
   
@@ -67,16 +67,16 @@ A *replicated table* is a table that is stored in its entirety on each Compute n
   
 The following diagram shows a replicated table that is stored on each Compute node. The replicated table is stored across all of the disks assigned to the Compute node. This is implemented by using SQL Server filegroups.  
   
-![Replicated Table Stored on All Compute Nodes](../../mpp/sqlpdw/media/SQL_Server_ADW_ReplicatedTable.png "SQL_Server_ADW_ReplicatedTable")  
+![Replicated Table Stored on All Compute Nodes](../sqlpdw/media/SQL_Server_ADW_ReplicatedTable.png "SQL_Server_ADW_ReplicatedTable")  
   
 ## <a name="BestPractices"></a>Best Practices  
 For more information about best practices for designing SQL Server PDW tables, see the following wiki articles on Technet. If you cannot access these links, see [NIB Join Our Communities  (Analytics Platform System)](../Topic/NIB%20Join%20Our%20Communities%20%20(Analytics%20Platform%20System).md)  
   
 -   [Choosing Distributed Versus Replicated Tables in SQL Server PDW](http://go.microsoft.com/fwlink/?LinkId=247627)  
   
--   [Minimize Data Movement When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimize-data-movement-when-choosing-a-distribution-column-sql-server-pdw.md)  
+-   [Minimize Data Movement When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../sqlpdw/minimize-data-movement-when-choosing-a-distribution-column-sql-server-pdw.md)  
   
--   [Minimize Data Skew When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimize-data-skew-when-choosing-a-distribution-column-sql-server-pdw.md)  
+-   [Minimize Data Skew When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../sqlpdw/minimize-data-skew-when-choosing-a-distribution-column-sql-server-pdw.md)  
   
--   [None of the Existing Columns Are a Good Choice for the Distribution Column &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/none-of-the-existing-columns-are-a-good-choice-for-the-distribution-column-sql-server-pdw.md)  
+-   [None of the Existing Columns Are a Good Choice for the Distribution Column &#40;SQL Server PDW&#41;](../sqlpdw/none-of-the-existing-columns-are-a-good-choice-for-the-distribution-column-sql-server-pdw.md)  
   

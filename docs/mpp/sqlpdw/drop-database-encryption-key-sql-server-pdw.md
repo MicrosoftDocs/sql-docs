@@ -11,12 +11,12 @@ caps.latest.revision: 10
 author: BarbKess
 ---
 # DROP DATABASE ENCRYPTION KEY (SQL Server PDW)
-Drops a SQL Server PDW database encryption key that is used in transparent database encryption. For more information about transparent database encryption, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
+Drops a SQL Server PDW database encryption key that is used in transparent database encryption. For more information about transparent database encryption, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
   
 > [!IMPORTANT]  
 > The backup of the certificate that was protecting the database encryption key should be retained even if the encryption is no longer enabled on a database. Even though the database is not encrypted anymore, parts of the transaction log may still remain protected, and the certificate may be needed for some operations until the full backup of the database is performed.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -25,7 +25,7 @@ DROP DATABASE ENCRYPTION KEY
 ```  
   
 ## Remarks  
-If the database is encrypted, you must first remove encryption from the database by using the **ALTER DATABASE** statement. Wait for decryption to complete before removing the database encryption key. For more information about the **ALTER DATABASE** statement, see [ALTER DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-database-sql-server-pdw.md). To view the state of the database, use the [sys.dm_pdw_nodes_database_encryption_keys &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-nodes-database-encryption-keys-sql-server-pdw.md) dynamic management view.  
+If the database is encrypted, you must first remove encryption from the database by using the **ALTER DATABASE** statement. Wait for decryption to complete before removing the database encryption key. For more information about the **ALTER DATABASE** statement, see [ALTER DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/alter-database-sql-server-pdw.md). To view the state of the database, use the [sys.dm_pdw_nodes_database_encryption_keys &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-nodes-database-encryption-keys-sql-server-pdw.md) dynamic management view.  
   
 ## Permissions  
 Requires **CONTROL** permission on the database.  
@@ -63,9 +63,9 @@ GO
 ```  
   
 ## See Also  
-[Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md)  
-[CREATE DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-database-encryption-key-sql-server-pdw.md)  
-[ALTER DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-database-encryption-key-sql-server-pdw.md)  
-[sys.dm_pdw_nodes_database_encryption_keys &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-nodes-database-encryption-keys-sql-server-pdw.md)  
-[sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-database-encryption-regenerate-system-keys-sql-server-pdw.md)  
+[Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md)  
+[CREATE DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../sqlpdw/create-database-encryption-key-sql-server-pdw.md)  
+[ALTER DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../sqlpdw/alter-database-encryption-key-sql-server-pdw.md)  
+[sys.dm_pdw_nodes_database_encryption_keys &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-nodes-database-encryption-keys-sql-server-pdw.md)  
+[sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-database-encryption-regenerate-system-keys-sql-server-pdw.md)  
   

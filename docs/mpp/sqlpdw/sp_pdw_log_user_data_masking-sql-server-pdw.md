@@ -18,7 +18,7 @@ Use **sp_pdw_log_user_data_masking** to enable user data masking in PDW activity
   
 **Background:** In the default configuration PDW activity logs contain full Transact\-SQL statements, and can in some cases include user data contained in operations such as **INSERT**, **UPDATE**, and **SELECT** statements. In case of a problem on the appliance, this permits the analysis of the conditions that caused the problem without a need to reproduce the issue. In order to prevent the user data from being written to PDW activity logs, customers can choose to turn on the user data masking by using this stored procedure. The statements will still be written to PDW activity logs, but all the literals in statements that may contain user data will be masked; replaced with some predefined constant values.  
   
-When transparent data encryption is enabled on the appliance, masking of the user data in PDW activity logs is automatically turned on. For more information about TDE, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
+When transparent data encryption is enabled on the appliance, masking of the user data in PDW activity logs is automatically turned on. For more information about TDE, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
   
 ## Syntax  
   
@@ -62,6 +62,6 @@ EXEC sp_pdw_log_user_data_masking 1;
 ```  
   
 ## See Also  
-[sp_pdw_database_encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-database-encryption-sql-server-pdw.md)  
-[sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-database-encryption-regenerate-system-keys-sql-server-pdw.md)  
+[sp_pdw_database_encryption &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-database-encryption-sql-server-pdw.md)  
+[sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-database-encryption-regenerate-system-keys-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # tempdb Database (SQL Server PDW)
 **tempdb** is a SQL Server PDW system database that stores local temporary tables for user databases. Temporary tables are often used to improve query performance. For example, you can use a temporary table to modularize a script, and reuse computed data.  
   
-For more information about system databases, see [System Databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-databases-sql-server-pdw.md)  
+For more information about system databases, see [System Databases &#40;SQL Server PDW&#41;](../sqlpdw/system-databases-sql-server-pdw.md)  
   
 ## Contents  
   
@@ -88,11 +88,11 @@ Any user can create temporary objects in tempdb. Users can only access their own
   
 |Tasks|Description|  
 |---------|---------------|  
-|Create a table in **tempdb**.|You can create a user temporary table with the CREATE TABLE and CREATE TABLE AS SELECT statements. For more information, see [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md) and [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md).|  
+|Create a table in **tempdb**.|You can create a user temporary table with the CREATE TABLE and CREATE TABLE AS SELECT statements. For more information, see [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md) and [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md).|  
 |View a list of existing tables in **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  
 |View a list of existing columns in **tempdb**.|`SELECT * FROM tempdb.sys.columns;`|  
 |View a list of existing objects in **tempdb**.|`SELECT * FROM tempdb.sys.objects;`|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

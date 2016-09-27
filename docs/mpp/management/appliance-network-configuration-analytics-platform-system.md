@@ -18,13 +18,13 @@ The SQL Server PDW appliance is built and configured with a fix set of IP addres
   
 The **Network Configuration** page enables you to view the externally facing network settings for the nodes on your Analytics Platform System appliance. This page is read-only.  
   
-![DWConfig Appliance Network](../../mpp/management/media/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig Appliance Network](../management/media/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## To update the network configuration on your appliance  
 Change the IP addresses of the fabric domain, workload domain, and HDInsight domains by editing the **AplianceInfo.xml** file and then running setup. This is an offline operation. Both the PDW and HDInsight (if present) regions will be automatically stopped during the IP address change.  
   
 > [!NOTE]  
-> Domain names are provided during setup and are specified as up to 6 alphanumeric characters, starting with a letter. A frequent naming system creates a fabric domain starting with F, a PDW workload domain starting with P, and an HDInsight domain starting with H. This format is presumed throughout the help file topics but is not required. For more information about the domain structure, see [PDW Domain Security &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/pdw-domain-security-sql-server-pdw.md) and [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../../mpp/hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md)  
+> Domain names are provided during setup and are specified as up to 6 alphanumeric characters, starting with a letter. A frequent naming system creates a fabric domain starting with F, a PDW workload domain starting with P, and an HDInsight domain starting with H. This format is presumed throughout the help file topics but is not required. For more information about the domain structure, see [PDW Domain Security &#40;SQL Server PDW&#41;](../sqlpdw/pdw-domain-security-sql-server-pdw.md) and [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md)  
   
 #### To change the IP addresses of the Analytics Platform System  
   
@@ -53,5 +53,5 @@ For additional information about Dell appliances, see:
 -   PDU's **Dell Metered Rack PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
 ## See Also  
-[Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md)  
+[Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # IS [NOT] NULL (SQL Server PDW)
 Determines whether a specified expression is null.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -36,7 +36,7 @@ If the value of *expression* is null, IS NULL returns TRUE; otherwise, it return
   
 If the value of *expression* is null, IS NOT NULL returns FALSE; otherwise, it returns TRUE.  
   
-To replace NULL values with a specified value, use [ISNULL](../../mpp/sqlpdw/isnull-sql-server-pdw.md).  
+To replace NULL values with a specified value, use [ISNULL](../sqlpdw/isnull-sql-server-pdw.md).  
   
 ## Remarks  
 To determine whether an expression is null, use IS NULL or IS NOT NULL instead of comparison operators (such as = or <>). Comparison operators return UNKNOWN when either or both arguments are null.  
@@ -54,12 +54,12 @@ ORDER BY LastName DESC;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/case-sql-server-pdw.md)  
-[Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md)  
-[NULL and UNKNOWN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/null-and-unknown-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[LIKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/like-sql-server-pdw.md)  
-[Operators &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/operators-sql-server-pdw.md)  
-[WHERE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/where-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CASE &#40;SQL Server PDW&#41;](../sqlpdw/case-sql-server-pdw.md)  
+[Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md)  
+[NULL and UNKNOWN &#40;SQL Server PDW&#41;](../sqlpdw/null-and-unknown-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[LIKE &#40;SQL Server PDW&#41;](../sqlpdw/like-sql-server-pdw.md)  
+[Operators &#40;SQL Server PDW&#41;](../sqlpdw/operators-sql-server-pdw.md)  
+[WHERE &#40;SQL Server PDW&#41;](../sqlpdw/where-sql-server-pdw.md)  
   

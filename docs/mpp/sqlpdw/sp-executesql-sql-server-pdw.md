@@ -16,7 +16,7 @@ Executes a Transact\-SQL statement or batch that can be reused many times, or on
 > [!IMPORTANT]  
 > Run time-compiled Transact\-SQL statements can expose applications to malicious attacks.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -122,6 +122,6 @@ EXECUTE sp_executesql
 For additional examples, see [sp_executesql (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms188001.aspx).  
   
 ## See Also  
-[EXECUTE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/execute-sql-server-pdw.md)  
-[Procedures &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/procedures-sql-server-pdw.md)  
+[EXECUTE &#40;SQL Server PDW&#41;](../sqlpdw/execute-sql-server-pdw.md)  
+[Procedures &#40;SQL Server PDW&#41;](../sqlpdw/procedures-sql-server-pdw.md)  
   

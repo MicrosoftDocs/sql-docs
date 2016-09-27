@@ -29,12 +29,12 @@ These diagrams show ways that the first rack of the appliance can be configured 
 ### First Rack Configurations - DELL  
 The minimum configuration for a DELL appliance has 3 Compute nodes. You can add up to 2 Data Scale Units to the first rack for a total of 9 Compute nodes.  
   
-![Base Scale Unit](../../mpp/architecture/media/SQL_Server_PDW_HW_DELL_BaseScaleUnit.png "SQL_Server_PDW_HW_DELL_BaseScaleUnit")  
+![Base Scale Unit](../architecture/media/SQL_Server_PDW_HW_DELL_BaseScaleUnit.png "SQL_Server_PDW_HW_DELL_BaseScaleUnit")  
   
 ### First Rack Configurations - HPE  
 The minimum configuration for an HPE appliance has 2 Compute nodes. You can add up to 3 Data Scale Units to the first rack for a total of 8 Compute nodes.  
   
-![PDW first rack configurations for HP](../../mpp/architecture/media/SQL_Server_PDW_HW_HP_BaseScaleUnit.png "SQL_Server_PDW_HW_HP_BaseScaleUnit")  
+![PDW first rack configurations for HP](../architecture/media/SQL_Server_PDW_HW_HP_BaseScaleUnit.png "SQL_Server_PDW_HW_HP_BaseScaleUnit")  
   
 ## <a name="section2"></a>PDW Multi-Rack Configurations  
 You add capacity to the PDW Region by adding Data Scale Units, along with additional Rack & Network components as necessary to provide the proper power, networking, and rack infrastructure. Each additional Rack & Network requires a PDW passive host.  
@@ -44,12 +44,12 @@ Each hardware vendor specifies the number of Data Scale Units you can add given 
 ### Scale Out Example - HPE  
 This diagram shows a 3 rack HP appliance that contains 20 Compute nodes.  
   
-![PDW Region with 20 Compute Nodes (HP)](../../mpp/architecture/media/APS_HW_PDWRegionGrowth_HP.png "APS_HW_PDWRegionGrowth_HP")  
+![PDW Region with 20 Compute Nodes (HP)](../architecture/media/APS_HW_PDWRegionGrowth_HP.png "APS_HW_PDWRegionGrowth_HP")  
   
 ### Scale Out Example – DELL, Quanta  
 This diagram shows a 3 rack DELL or Quanta appliance that contains 21 Compute nodes.  
   
-![Dell or Quanta PDW Region](../../mpp/architecture/media/APS_HW_PDW_RegionGrowth_DellQuanta.png "APS_HW_PDW_RegionGrowth_DellQuanta")  
+![Dell or Quanta PDW Region](../architecture/media/APS_HW_PDW_RegionGrowth_DellQuanta.png "APS_HW_PDW_RegionGrowth_DellQuanta")  
   
 ## <a name="section3"></a>HDI Minimum Configuration  
 To configure APS with an HDI Region, at a minimum you need the PDW Region plus the HDI Base Scale Unit. Data scale units in additional racks can also be dedicated to the HDI Region.  
@@ -57,5 +57,5 @@ To configure APS with an HDI Region, at a minimum you need the PDW Region plus t
 > [!NOTE]  
 > When you determine the capacity of the HDI Region, please take into consideration that you cannot expand the HDI Region by simply adding more hardware. If you need to expand with this version, you can do this by adding hardware and then rebuilding the HDI Region.  
   
-![Minimal HDI Region](../../mpp/architecture/media/APS_HW_MultiRegion_MinConfig.png "APS_HW_MultiRegion_MinConfig")  
+![Minimal HDI Region](../architecture/media/APS_HW_MultiRegion_MinConfig.png "APS_HW_MultiRegion_MinConfig")  
   

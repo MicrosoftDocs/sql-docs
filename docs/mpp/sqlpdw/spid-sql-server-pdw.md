@@ -13,7 +13,7 @@ author: BarbKess
 # @@SPID (SQL Server PDW)
 Returns the server process ID (SPID) for SMP SQL Server running on the SQL Server PDW Control node.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -25,7 +25,7 @@ Returns the server process ID (SPID) for SMP SQL Server running on the SQL Serve
 **smallint**  
   
 ## General Remarks  
-The @@SPID function does not return a SQL Server PDW[SESSION_ID &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/session-id-sql-server-pdw.md); it returns the server process ID (SPID) for SMP SQL Server running on the Control node. This behavior is slightly different from SMP SQL Server for which SESSION_ID(), @@SPID, and the SQL Server DMVs all refer to the same type of SQL Server session.  
+The @@SPID function does not return a SQL Server PDW[SESSION_ID &#40;SQL Server PDW&#41;](../sqlpdw/session-id-sql-server-pdw.md); it returns the server process ID (SPID) for SMP SQL Server running on the Control node. This behavior is slightly different from SMP SQL Server for which SESSION_ID(), @@SPID, and the SQL Server DMVs all refer to the same type of SQL Server session.  
   
 The SPID in SQL Server is not guaranteed to be unique and can be re-used from closed sessions. For more information, see the [@@SPID (Transact-SQL)](http://technet.microsoft.com/en-us/library/ms189535(v=sql.120).aspx) documentation on Technet.  
   
@@ -46,5 +46,5 @@ SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', 
 ```  
   
 ## See Also  
-[SESSION_ID &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/session-id-sql-server-pdw.md)  
+[SESSION_ID &#40;SQL Server PDW&#41;](../sqlpdw/session-id-sql-server-pdw.md)  
   

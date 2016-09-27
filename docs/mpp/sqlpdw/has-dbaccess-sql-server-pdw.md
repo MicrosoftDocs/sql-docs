@@ -13,7 +13,7 @@ author: BarbKess
 # HAS_DBACCESS (SQL Server PDW)
 Returns information about whether the user has access to the specified database. For more information, see the [HAS_DBACCESS (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187718.aspx) documentation on MSDN.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   

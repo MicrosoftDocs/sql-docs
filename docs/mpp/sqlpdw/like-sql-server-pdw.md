@@ -15,7 +15,7 @@ Determines whether a specific character string matches a specified pattern. A pa
   
 This topic includes discussions of both the LIKE operator and [Pattern Matching in Search Conditions](#PatternMatching).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -97,7 +97,7 @@ FROM DimEmployee
 WHERE Title LIKE '%Engine%' AND Title IS NOT NULL;  
 ```  
   
-Wildcards used without LIKE or PATINDEX are interpreted as constants instead of as a pattern; they represent only their own values. The following query tries to find any title that consist of the twelver characters `Engineering%` only. It will not find titles that start with `Engineering`. For more information about constants, see [Constants](../../mpp/sqlpdw/constants-sql-server-pdw.md).  
+Wildcards used without LIKE or PATINDEX are interpreted as constants instead of as a pattern; they represent only their own values. The following query tries to find any title that consist of the twelver characters `Engineering%` only. It will not find titles that start with `Engineering`. For more information about constants, see [Constants](../sqlpdw/constants-sql-server-pdw.md).  
   
 ```  
 USE AdventureWorksPDW2012;  
@@ -211,10 +211,10 @@ ORDER by LastName;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[PATINDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/patindex-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[HAVING &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/having-sql-server-pdw.md)  
-[WHERE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/where-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[PATINDEX &#40;SQL Server PDW&#41;](../sqlpdw/patindex-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[HAVING &#40;SQL Server PDW&#41;](../sqlpdw/having-sql-server-pdw.md)  
+[WHERE &#40;SQL Server PDW&#41;](../sqlpdw/where-sql-server-pdw.md)  
   

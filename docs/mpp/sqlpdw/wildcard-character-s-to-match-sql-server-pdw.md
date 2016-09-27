@@ -14,9 +14,9 @@ author: BarbKess
 The % character matches any string of zero or more characters. The % character can be used as either a prefix or a suffix.  
   
 > [!NOTE]  
-> For information about using % as the arithmetic modulo operator, see [Modulo &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/modulo-sql-server-pdw.md).  
+> For information about using % as the arithmetic modulo operator, see [Modulo &#40;SQL Server PDW&#41;](../sqlpdw/modulo-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Examples  
 The following example returns all the names of people in the `dimEmployee` table where the first name starts with `D`.  
@@ -30,6 +30,6 @@ WHERE FirstName LIKE 'D%';
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[LIKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/like-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[LIKE &#40;SQL Server PDW&#41;](../sqlpdw/like-sql-server-pdw.md)  
   

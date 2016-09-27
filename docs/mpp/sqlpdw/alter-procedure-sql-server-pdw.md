@@ -13,7 +13,7 @@ author: BarbKess
 # ALTER PROCEDURE (SQL Server PDW)
 Changes the definition of a stored procedure on a SQL Data Warehouse database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -36,7 +36,7 @@ The name of the procedure to change. Procedure names must comply with the rules 
 A parameter in the procedure. Up to 2,100 parameters can be specified.  
   
 { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
-One or more Transact\-SQL statements comprising the body of the procedure. You can use the optional BEGIN and END keywords to enclose the statements. For more information, see the Remarks section in [CREATE PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-procedure-sql-server-pdw.md).  
+One or more Transact\-SQL statements comprising the body of the procedure. You can use the optional BEGIN and END keywords to enclose the statements. For more information, see the Remarks section in [CREATE PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/create-procedure-sql-server-pdw.md).  
   
 ## General Remarks  
 For a general description of stored procedures, see the SQL Server documentation at [CREATE PROCEDURE (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187926.aspx).  
@@ -50,7 +50,7 @@ The *sql_statement* section of the stored procedure may require additional permi
 Takes an exclusive lock on the procedure. Takes a shared lock on the DATABASE, SCHEMA, and SCHEMARESOLUTION object.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-procedure-sql-server-pdw.md)  
-[DROP PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-procedure-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/create-procedure-sql-server-pdw.md)  
+[DROP PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/drop-procedure-sql-server-pdw.md)  
   

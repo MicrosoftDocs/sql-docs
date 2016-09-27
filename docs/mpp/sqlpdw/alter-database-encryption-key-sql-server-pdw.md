@@ -11,12 +11,12 @@ caps.latest.revision: 11
 author: BarbKess
 ---
 # ALTER DATABASE ENCRYPTION KEY (SQL Server PDW)
-Alters an encryption key and certificate that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
+Alters an encryption key and certificate that is used for transparently encrypting a database. For more information about transparent database encryption, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
   
 > [!WARNING]  
 > Regenerating the database encryption key requires decrypting and then re-encrypting the entire database. Changing the certificate occurs quickly because it only triggers re-encryption of the DEK that is protected by a certificate.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -62,9 +62,9 @@ GO
 ```  
   
 ## See Also  
-[Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md)  
-[CREATE DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-database-encryption-key-sql-server-pdw.md)  
-[DROP DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-database-encryption-key-sql-server-pdw.md)  
-[sys.dm_pdw_nodes_database_encryption_keys &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-nodes-database-encryption-keys-sql-server-pdw.md)  
-[sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-database-encryption-regenerate-system-keys-sql-server-pdw.md)  
+[Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md)  
+[CREATE DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../sqlpdw/create-database-encryption-key-sql-server-pdw.md)  
+[DROP DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../sqlpdw/drop-database-encryption-key-sql-server-pdw.md)  
+[sys.dm_pdw_nodes_database_encryption_keys &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-nodes-database-encryption-keys-sql-server-pdw.md)  
+[sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-database-encryption-regenerate-system-keys-sql-server-pdw.md)  
   

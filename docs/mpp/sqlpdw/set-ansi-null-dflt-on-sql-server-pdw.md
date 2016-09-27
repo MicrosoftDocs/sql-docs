@@ -17,7 +17,7 @@ In this release, ANSI_NULL_DFLT_ON is always ON and ANSI_NULL_DFLT_OFF is always
   
 For more information, see the [SET ANSI_NULL_DFLT_ON (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187375(v=sql11)) documentation on MSDN.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -37,5 +37,5 @@ The SET ANSI_NULL_DFLT_OFF is set at execute or run time and not at parse time.
 Requires membership in the **public** role.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

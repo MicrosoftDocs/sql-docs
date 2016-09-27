@@ -21,7 +21,7 @@ There are four layers where components can be configured.
   
 -   **PDW Region** – The Control and Compute VMs that belong to the **PDWRegion** organizational unit of the appliance domain.  
   
--   **HDInsight Region** – The HDI Management, Secure, Head, and Data VMs that belong to the **HDIRegion** organizational unit of the appliance domain. For more information about the HDInsight region, see [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../../mpp/hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md).  
+-   **HDInsight Region** – The HDI Management, Secure, Head, and Data VMs that belong to the **HDIRegion** organizational unit of the appliance domain. For more information about the HDInsight region, see [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md).  
   
 > [!NOTE]  
 > Domain names are provided during setup and are specified as up to 6 alphanumeric characters, starting with a letter. A frequent naming system creates an appliance domain starting with F, a PDW workload region starting with P, and an HDInsight region starting with H. This format is presumed throughout the help file topics but is not required.  
@@ -46,7 +46,7 @@ Use **Remote Desktop** to connect to the Control node ( ***PDW_region*-CTL01**) 
   
 -   Restore the **master** database.  
   
-For more information about the Configuration Manager tool, see [Appliance Configuration &#40;Analytics Platform System&#41;](../../mpp/management/appliance-configuration-analytics-platform-system.md).  
+For more information about the Configuration Manager tool, see [Appliance Configuration &#40;Analytics Platform System&#41;](../management/appliance-configuration-analytics-platform-system.md).  
   
 ## Do the following activities using the Active Directory Users and Computers program (dsa.msc)  
 Use **Remote Desktop** to the Active Directory virtual machine (**<*appliance_domain*>-AD01** or ***appliance_domain*-AD02**).  
@@ -59,11 +59,11 @@ Using Internet Explorer, connect to the IP address of the Control node cluster (
 -   Various tasks related to the SQL Server PDW health and performance.  
   
 ## Additional Domain and Security Topics  
-[Security - Windows Authentication and SQL Server Authentication &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/security-windows-authentication-and-sql-server-authentication-sql-server-pdw.md)  
+[Security - Windows Authentication and SQL Server Authentication &#40;SQL Server PDW&#41;](../sqlpdw/security-windows-authentication-and-sql-server-authentication-sql-server-pdw.md)  
   
-[Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/security-configure-domain-trusts-sql-server-pdw.md)  
+[Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../sqlpdw/security-configure-domain-trusts-sql-server-pdw.md)  
   
-[PDW Permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/pdw-permissions-sql-server-pdw.md)  
+[PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md)  
   
-[Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../../mpp/hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md)  
+[Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md)  
   

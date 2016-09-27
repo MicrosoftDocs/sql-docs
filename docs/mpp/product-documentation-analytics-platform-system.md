@@ -18,7 +18,7 @@ Help file version: Appliance Update 5, Date: 2016-08-08
 ## Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS), a data platform designed for data warehousing and Big Data analytics, offers deep data integration, high-speed query processing, highly scalable storage, and simple maintenance for your end-to-end business intelligence solutions.  
   
-![Analytics Platform System architecture](../mpp/media/APS_Architecture_HighLevel.png "APS_Architecture_HighLevel")  
+![Analytics Platform System architecture](.././/media/APS_Architecture_HighLevel.png "APS_Architecture_HighLevel")  
   
 Analytics Platform System hosts both Microsoft SQL Server Parallel Data Warehouse (PDW) and Microsoft HDInsight (HDI) workloads, all in the same appliance.  
   
@@ -45,7 +45,7 @@ HDInsight, running on APS, makes it easy to:
   
 -   Monitor and manage HDInsight by using centralized appliance management tools.  
   
-For information, see [HDInsight  &#40;Analytics Platform System&#41;](../mpp/hdinsight/hdinsight-analytics-platform-system.md) in this documentation and [HDInsight benefits](http://www.windowsazure.com/en-us/services/hdinsight/) on the Windows Azure web site.  
+For information, see [HDInsight  &#40;Analytics Platform System&#41;](../hdinsight/hdinsight-analytics-platform-system.md) in this documentation and [HDInsight benefits](http://www.windowsazure.com/en-us/services/hdinsight/) on the Windows Azure web site.  
   
 ## SQL Server Parallel Data Warehouse  
 Use SQL Server Parallel Data Warehouse as the core relational data warehousing component of your end-to-end business intelligence solutions. With PDW’s massively parallel processing (MPP) design, queries commonly complete 50 times faster than traditional data warehouses built on symmetric multi-processing (SMP) database management systems.  

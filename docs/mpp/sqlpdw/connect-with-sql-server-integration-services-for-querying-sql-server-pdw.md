@@ -36,7 +36,7 @@ To query data on SQL Server PDW, you need a SQL Server PDW login that has read p
   
 -   .NET Framework 3.5 SP1 or higher. See [Microsoft .NET Framework 3.5 Service Pack 1](http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=ab99342f-5d1a-413d-8319-81da479ab0d7&displayLang=en). If you have Windows 7 or later, you already have this.  
   
--   SQL Server Native Client (SNAC) 10.0. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+-   SQL Server Native Client (SNAC) 10.0. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
 ### Create an Integration Services Project  
 Create an Integration Services project by using Business Intelligence Development Studio. To do this:  
@@ -47,7 +47,7 @@ Create an Integration Services project by using Business Intelligence Developmen
   
 3.  In the **New Project** window, for **Project type**, select **Business Intelligence Projects**, and then select the template, **Integration Services Project**. Enter a project name and solution name, and click OK.  
   
-![Analysis Services 2008 R2 New Project](../../mpp/sqlpdw/media/SQL_Server_PDW_ConnectAS2008R2.png "SQL_Server_PDW_ConnectAS2008R2")  
+![Analysis Services 2008 R2 New Project](../sqlpdw/media/SQL_Server_PDW_ConnectAS2008R2.png "SQL_Server_PDW_ConnectAS2008R2")  
   
 ### Add a Data Source  
 To add a data source:  
@@ -58,7 +58,7 @@ To add a data source:
   
 3.  In the **Welcome to the Data Source Wizard** screen, click **Next**.  
   
-    ![Data Source Wizard](../../mpp/sqlpdw/media/SQL_Server_PDW_AS_Wizard_Welcome.png "SQL_Server_PDW_AS_Wizard_Welcome")  
+    ![Data Source Wizard](../sqlpdw/media/SQL_Server_PDW_AS_Wizard_Welcome.png "SQL_Server_PDW_AS_Wizard_Welcome")  
   
 4.  In the **Select how to define the connection** screen, choose **Create a data source based on an existing or new connection**, and click **New**.  
   
@@ -76,7 +76,7 @@ To add a data source:
   
     -   **Select or enter a Database Name**: Select or enter the name of the target database.  
   
-        ![Analysis Services Connection](../../mpp/sqlpdw/media/SQL_Server_PDW_AS_SNAC10_Connection.png "SQL_Server_PDW_AS_SNAC10_Connection")  
+        ![Analysis Services Connection](../sqlpdw/media/SQL_Server_PDW_AS_SNAC10_Connection.png "SQL_Server_PDW_AS_SNAC10_Connection")  
   
 6.  Click **Test Connection** to verify that the new data source is available.  
   
@@ -90,7 +90,7 @@ To add a data source:
   
 11. You can now see your data source listed in Solution Explorer under your Integration Services Project.  
   
-    ![Data source visible in BIDS Solution Explorer](../../mpp/sqlpdw/media/SQL_Server_PDW_AS_Solution_Explorer.png "SQL_Server_PDW_AS_Solution_Explorer")  
+    ![Data source visible in BIDS Solution Explorer](../sqlpdw/media/SQL_Server_PDW_AS_Solution_Explorer.png "SQL_Server_PDW_AS_Solution_Explorer")  
   
 ## <a name="SQLServer2012"></a>Connect With SQL Server 2012 Integration Services  
   
@@ -103,7 +103,7 @@ To add a data source:
   
 -   .NET Framework 3.5 SP1 or higher. See [Microsoft .NET Framework 3.5 Service Pack 1](http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=ab99342f-5d1a-413d-8319-81da479ab0d7&displayLang=en). If you have Windows 7 or later, you already have this.  
   
--   SQL Server Native Client (SNAC) 11.0. If you have SQL Server 2012, you already have this unless you unchecked Client Connectivity Tools during SQL Server 2012 setup. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+-   SQL Server Native Client (SNAC) 11.0. If you have SQL Server 2012, you already have this unless you unchecked Client Connectivity Tools during SQL Server 2012 setup. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
 ### Create an Integration Services Project  
 To create an Integration Services Project:  
@@ -114,13 +114,13 @@ To create an Integration Services Project:
   
     -   On Windows 8, press the Start key, select search, click Apps, find Microsoft SQL Server 2012. Under Microsoft SQL Server 2012, click SQL Server Data Tools.  
   
-    ![SQL Server Data Tools](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_2012_SSDT.png "SQL_Server_PDW_IS_2012_SSDT")  
+    ![SQL Server Data Tools](../sqlpdw/media/SQL_Server_PDW_IS_2012_SSDT.png "SQL_Server_PDW_IS_2012_SSDT")  
   
 2.  Open an existing Integration Services project or create a new one. To create a project:  
   
     -   Click on the **File** menu, choose **New**, choose **Project**.  
   
-        ![New SQL Server 2012 Integration Services Project](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_2012_NewProject.png "SQL_Server_PDW_IS_2012_NewProject")  
+        ![New SQL Server 2012 Integration Services Project](../sqlpdw/media/SQL_Server_PDW_IS_2012_NewProject.png "SQL_Server_PDW_IS_2012_NewProject")  
   
     -   In the new project window, choose Integration Services Project and click OK.  
   
@@ -133,7 +133,7 @@ To add a data source:
   
 3.  In the **Welcome to the Data Source Wizard** screen, click **Next**.  
   
-    ![Data Source Wizard](../../mpp/sqlpdw/media/SQL_Server_PDW_AS_Wizard_Welcome.png "SQL_Server_PDW_AS_Wizard_Welcome")  
+    ![Data Source Wizard](../sqlpdw/media/SQL_Server_PDW_AS_Wizard_Welcome.png "SQL_Server_PDW_AS_Wizard_Welcome")  
   
 4.  In the **Select how to define the connection** screen, choose **Create a data source based on an existing or new connection**, and click **New**.  
   
@@ -151,7 +151,7 @@ To add a data source:
   
     -   **Select or enter a Database Name**: Select or enter the name of the target database.  
   
-        ![Analysis Services Connection](../../mpp/sqlpdw/media/SQL_Server_PDW_AS_SNAC10_Connection.png "SQL_Server_PDW_AS_SNAC10_Connection")  
+        ![Analysis Services Connection](../sqlpdw/media/SQL_Server_PDW_AS_SNAC10_Connection.png "SQL_Server_PDW_AS_SNAC10_Connection")  
   
 6.  Click **Test Connection** to verify that the new data source is available.  
   
@@ -165,7 +165,7 @@ To add a data source:
   
 11. You can now see your data source listed in Solution Explorer under your Integration Services Project.  
   
-    ![Data source visible in BIDS Solution Explorer](../../mpp/sqlpdw/media/SQL_Server_PDW_AS_Solution_Explorer.png "SQL_Server_PDW_AS_Solution_Explorer")  
+    ![Data source visible in BIDS Solution Explorer](../sqlpdw/media/SQL_Server_PDW_AS_Solution_Explorer.png "SQL_Server_PDW_AS_Solution_Explorer")  
   
 ## <a name="SQLServer2014"></a>Connect With SQL Server 2014 Integration Services  
   
@@ -178,7 +178,7 @@ To add a data source:
   
 -   .NET Framework 3.5 SP1 or higher. See [Microsoft .NET Framework 3.5 Service Pack 1](http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=ab99342f-5d1a-413d-8319-81da479ab0d7&displayLang=en). If you have Windows 7 or later, you already have this.  
   
--   SQL Server Native Client (SNAC) 12.0. If you have SQL Server 2014, you already have this unless you unchecked Client Connectivity Tools during SQL Server 2014 setup. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+-   SQL Server Native Client (SNAC) 12.0. If you have SQL Server 2014, you already have this unless you unchecked Client Connectivity Tools during SQL Server 2014 setup. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
 ## See Also  
 [Connecting to SQL Server PDW (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808)  

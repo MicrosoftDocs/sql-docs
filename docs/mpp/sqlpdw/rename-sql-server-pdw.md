@@ -28,7 +28,7 @@ RENAME <class_type> [ :: ] entity_name TO new_entity_name
   
 ## Arguments  
 *entity_name*  
-The name of the table or database to be renamed. For tables, you can specify *entity_name* as a three-part table name. The table can any type of user-created table including distributed, replicated, or external. You cannot rename a database to any of these [Reserved Database Names &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/reserved-database-names-sql-server-pdw.md).  
+The name of the table or database to be renamed. For tables, you can specify *entity_name* as a three-part table name. The table can any type of user-created table including distributed, replicated, or external. You cannot rename a database to any of these [Reserved Database Names &#40;SQL Server PDW&#41;](../sqlpdw/reserved-database-names-sql-server-pdw.md).  
   
 *new_entity_name*  
 The new name of the table or database. For tables, you can specify *entity_name* as a two-part table name.  
@@ -68,5 +68,5 @@ RENAME OBJECT::Customer TO NewCustomer;
 RENAME OBJECT Customer TO NewCustomer;</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

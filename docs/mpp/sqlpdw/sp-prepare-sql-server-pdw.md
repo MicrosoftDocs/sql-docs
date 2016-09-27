@@ -13,7 +13,7 @@ author: BarbKess
 # sp_prepare (SQL Server PDW)
 Prepares a parameterized Transact\-SQL statement and returns a statement *handle* for execution. sp_prepare is invoked by specifying ID = 11 in a tabular data stream (TDS) packet.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -54,7 +54,7 @@ EXEC sp_unprepare @P1;
 ```  
   
 ## See Also  
-[Procedures &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/procedures-sql-server-pdw.md)  
-[sp_unprepare &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-unprepare-sql-server-pdw.md)  
-[sp_execute &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-execute-sql-server-pdw.md)  
+[Procedures &#40;SQL Server PDW&#41;](../sqlpdw/procedures-sql-server-pdw.md)  
+[sp_unprepare &#40;SQL Server PDW&#41;](../sqlpdw/sp-unprepare-sql-server-pdw.md)  
+[sp_execute &#40;SQL Server PDW&#41;](../sqlpdw/sp-execute-sql-server-pdw.md)  
   

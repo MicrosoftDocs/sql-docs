@@ -13,7 +13,7 @@ author: BarbKess
 # sp_pdw_remove_network_credentials (SQL Server PDW)
 This removes network credentials stored in SQL Server PDW to access a network file share. For example, use this stored procedure to remove permission for SQL Server PDW to perform backup and restore operations on a server that resides within your own network.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -40,9 +40,9 @@ An error occurs if removing credentials does not succeed on the Control node and
 This stored procedure removes network credentials from the NetworkService account for SQL Server PDW. The NetworkService account runs each instance of SMP SQL Server on the Control node and the Compute nodes. For example, when a backup operation runs, the Control node and each Compute node will use the NetworkService account credentials to access the target server.  
   
 ## Metadata  
-To list all credentials and to verify the credentials have been removed, use [sys.dm_pdw_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-network-credentials-sql-server-pdw.md).  
+To list all credentials and to verify the credentials have been removed, use [sys.dm_pdw_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-network-credentials-sql-server-pdw.md).  
   
-To add credentials, use [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md).  
+To add credentials, use [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md).  
   
 ## Examples  
   
@@ -54,6 +54,6 @@ EXEC sp_pdw_remove_network_credentials '10.192.147.63';
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[BACKUP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-database-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[BACKUP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/backup-database-sql-server-pdw.md)  
   

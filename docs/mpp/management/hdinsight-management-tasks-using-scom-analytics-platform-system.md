@@ -16,7 +16,7 @@ The System Center Operation Manager Management Pack for HDInsight allows you to 
 ## Management Pack Menu Option  
 Once imported, the management pack creates an additional menu in the **Monitoring** pane of Operations Console.  
   
-![APS HDI SCOM Monitoring Menu](../../mpp/management/media/APS_HDI_SCOM.png "APS_HDI_SCOM")  
+![APS HDI SCOM Monitoring Menu](../management/media/APS_HDI_SCOM.png "APS_HDI_SCOM")  
   
 Here is a short description of available options:  
   
@@ -65,16 +65,16 @@ Dashboard widgets displaying Resource Manager health and performance indicators.
 ### Manage Active Alerts  
 An administrator can click **Active Alerts** and see critical event for all monitored HDInsight clusters in the data center or Azure.  
   
-![APS HDI SCOM Alerts](../../mpp/management/media/APS_HDI_SCOM_Alerts.png "APS_HDI_SCOM_Alerts")  
+![APS HDI SCOM Alerts](../management/media/APS_HDI_SCOM_Alerts.png "APS_HDI_SCOM_Alerts")  
   
 For selected alerts, an administrator can see details including which cluster was affected and the recommended actions in that situation.  
   
-![APS HDI SCOM Alert Properties](../../mpp/management/media/APS_HDI_SCOM_AlertProps.png "APS_HDI_SCOM_AlertProps")  
+![APS HDI SCOM Alert Properties](../management/media/APS_HDI_SCOM_AlertProps.png "APS_HDI_SCOM_AlertProps")  
   
 ### Display Cluster Topology  
 The clusters diagram view shows all the monitored clusters and offers two perspectives: **Service** and **Host**. An administrator can learn how many nodes each cluster has, where the HDInsight components are deployed, and what their health is. The health monitors are rolled up from host component level through hosts (or services) up to the entire HDInsight cluster. The administrator can visualize where the problem is located.  
   
-![APS HDI SCOM Topology](../../mpp/management/media/APS_HDI_SCOM_Topology.png "APS_HDI_SCOM_Topology")  
+![APS HDI SCOM Topology](../management/media/APS_HDI_SCOM_Topology.png "APS_HDI_SCOM_Topology")  
   
 ### Cluster Summary Dashboard  
 The Cluster Summary is a view where the most important information is available for all monitored clusters. This includes:  
@@ -89,15 +89,15 @@ The Cluster Summary is a view where the most important information is available 
   
 -   Total space utilization widget  
   
-![APS HDI SCOM Dashboard](../../mpp/management/media/APS_HDI_SCOM_Dashboard.png "APS_HDI_SCOM_Dashboard")  
+![APS HDI SCOM Dashboard](../management/media/APS_HDI_SCOM_Dashboard.png "APS_HDI_SCOM_Dashboard")  
   
 The management pack offers other dashboards, specific to HDInsight services, and those dashboards contain the the most relevant widgets.  
   
 ### Tracking Performance Counters  
 Performance counters are available at the cluster level  (for front-end services) and at the level of each cluster node. To analyze the first set of counters, use the Cluster Services Performance,  while for later ones click the Host Components Performance from the main menu.  Performance counters are consumed in usual way by selecting counters and adjusting the time range on the graph.  
   
-![APS HDI SCOM Tracking Performance Counters](../../mpp/management/media/APS_HDI_SCOM_Tracking.png "APS_HDI_SCOM_Tracking")  
+![APS HDI SCOM Tracking Performance Counters](../management/media/APS_HDI_SCOM_Tracking.png "APS_HDI_SCOM_Tracking")  
   
 ## See Also  
-[Import the SCOM Management Pack for HDInsight &#40;Analytics Platform System&#41;](../../mpp/management/import-the-scom-management-pack-for-hdinsight-analytics-platform-system.md)  
+[Import the SCOM Management Pack for HDInsight &#40;Analytics Platform System&#41;](../management/import-the-scom-management-pack-for-hdinsight-analytics-platform-system.md)  
   

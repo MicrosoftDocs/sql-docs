@@ -11,7 +11,7 @@ caps.latest.revision: 4
 author: BarbKess
 ---
 # Change the System Resources Allocated to a Request (SQL Server PDW)
-Describes how to figure out which resource class a SQL Server PDW request is running under, and then how to change the system resources for that request. Changing the resources for a request requires changing the resource class membership of the login submitting the request, by using the [ALTER SERVER ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-server-role-sql-server-pdw.md) statement.  
+Describes how to figure out which resource class a SQL Server PDW request is running under, and then how to change the system resources for that request. Changing the resources for a request requires changing the resource class membership of the login submitting the request, by using the [ALTER SERVER ROLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-server-role-sql-server-pdw.md) statement.  
   
 ## Step 1: Determine the resource class for the login running the request.  
 This query displays logins which are members of the resource class server role memberships. There are three resource classes, **mediumrc**, **largerc**, and **xlargerc**.  
@@ -36,7 +36,7 @@ GO
   
 If there are no logins that are members of a resource class server role, the resulting table will be empty. In this case, if the query returns a login named Ching, then when Ching submits a request, the request will receive the default system resources, which is smaller than the resource class system resources. If a login is a member of more than one resource class, the largest class has precedence.  
   
-For a list of resource allocations for each resource class, see [Workload Management &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/workload-management-sql-server-pdw.md) topic.  
+For a list of resource allocations for each resource class, see [Workload Management &#40;SQL Server PDW&#41;](../sqlpdw/workload-management-sql-server-pdw.md) topic.  
   
 ## Step 2: Run the request under a login with different resource class membership  
 There are two ways to run a request with either larger or smaller system resources:  
@@ -69,8 +69,8 @@ Ching is now a member of the mediumrc server role.  The following example change
 ALTER SERVER ROLE mediumrc DROP MEMBER Ching;  
 ```  
   
-For more information about changing resource class role membership, see [ALTER SERVER ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-server-role-sql-server-pdw.md).  
+For more information about changing resource class role membership, see [ALTER SERVER ROLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-server-role-sql-server-pdw.md).  
   
 ## See Also  
-[Workload Management &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/workload-management-sql-server-pdw.md)  
+[Workload Management &#40;SQL Server PDW&#41;](../sqlpdw/workload-management-sql-server-pdw.md)  
   

@@ -32,9 +32,9 @@ Every login that can connect to SQL Server PDW is a member of the **public** ser
 > **public** is implemented differently than other roles. Because all server principals are members of public, the membership of the **public** role is not listed in the **sys.server_role_members** DMV.  
   
 ## Fixed Server Roles vs. Granting Permissions  
-The system of fixed server roles and fixed database roles is a legacy system originated in the 1980's. Fixed roles are still supported and are useful in environments where there are few users and the security needs are simple. Beginning with SQL Server 2005, a more detailed system of granting permission was created. This new system is more granular, providing many more options for both granting and denying permissions. The extra complexity of the more granular system makes it harder to learn, but most enterprise systems should grant permissions instead of using the fixed roles. The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  
+The system of fixed server roles and fixed database roles is a legacy system originated in the 1980's. Fixed roles are still supported and are useful in environments where there are few users and the security needs are simple. Beginning with SQL Server 2005, a more detailed system of granting permission was created. This new system is more granular, providing many more options for both granting and denying permissions. The extra complexity of the more granular system makes it harder to learn, but most enterprise systems should grant permissions instead of using the fixed roles. The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  
   
 ## See Also  
-[Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)  
-[PDW Permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/pdw-permissions-sql-server-pdw.md)  
+[Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)  
+[PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md)  
   

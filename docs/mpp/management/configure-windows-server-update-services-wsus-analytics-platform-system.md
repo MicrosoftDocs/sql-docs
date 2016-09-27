@@ -13,7 +13,7 @@ author: BarbKess
 # Configure Windows Server Update Services (WSUS) (Analytics Platform System)
 These instructions walk you through the steps for using the Windows Server Update Services (WSUS) Configuration Wizard to configure WSUS for Analytics Platform System. You need to configure WSUS before you can apply software updates to the appliance. WSUS is already installed on the VMM virtual machine of the appliance.  
   
-For more information about configuring WSUS, see the [WSUS Step-by-Step Installation Guide](http://go.microsoft.com/fwlink/?LinkId=202417) on the WSUS website. After configuring WSUS, see [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../../mpp/management/download-and-apply-microsoft-updates-analytics-platform-system.md) to initiate an update.  
+For more information about configuring WSUS, see the [WSUS Step-by-Step Installation Guide](http://go.microsoft.com/fwlink/?LinkId=202417) on the WSUS website. After configuring WSUS, see [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../management/download-and-apply-microsoft-updates-analytics-platform-system.md) to initiate an update.  
   
 > [!WARNING]  
 > If you encounter any errors during this configuration process, stop and contact support for assistance. Do not ignore errors or continue in the process after errors are received.  
@@ -29,7 +29,7 @@ To configure WSUS, you need to:
   
 -   Know the IP address of the proxy server if your appliance will be using a proxy server to access the upstream server or Microsoft Update.  
   
--   In most cases, WSUS needs to access servers outside of the appliance. To support this usage scenario the Analytics Platform System DNS can be configured to support an external name forwarder that will allow the Analytics Platform System hosts and Virtual Machines (VMs) to use external DNS servers to resolve names outside of the appliance. For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../../mpp/management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
+-   In most cases, WSUS needs to access servers outside of the appliance. To support this usage scenario the Analytics Platform System DNS can be configured to support an external name forwarder that will allow the Analytics Platform System hosts and Virtual Machines (VMs) to use external DNS servers to resolve names outside of the appliance. For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
   
 ## To configure Windows Server Update Services (WSUS)  
   
@@ -53,23 +53,23 @@ To configure WSUS, you need to:
   
     3.  In the **Options** pane, click **WSUS Server Configuration Wizard** to launch the configuration wizard.  
   
-        ![Server Manager Dashboard menu](../../mpp/management/media/WSUS_Wiz0.png "WSUS_Wiz0")  
+        ![Server Manager Dashboard menu](../management/media/WSUS_Wiz0.png "WSUS_Wiz0")  
   
     4.  If this is the first time you have run the WSUS wizard, you may be asked to configure a directory for storing the updates. `C:\wsus` is an appropriate location; however you may provide a different path.  
   
-        ![WSUS path](../../mpp/management/media/WSUS_Wiz1.png "WSUS_Wiz1")  
+        ![WSUS path](../management/media/WSUS_Wiz1.png "WSUS_Wiz1")  
   
     5.  Review the **Before You Begin** list of items to complete before you complete the wizard.  
   
-        ![WSUS Before You Begin](../../mpp/management/media/WSUS_Wiz2.png "WSUS_Wiz2")  
+        ![WSUS Before You Begin](../management/media/WSUS_Wiz2.png "WSUS_Wiz2")  
   
     6.  On the **Join the Microsoft Update Improvement Program** page, select **Yes, I would like to join the Microsoft Update Improvement Program**, and then click **Next**.  
   
-        ![WSUS Improvement Program](../../mpp/management/media/WSUS_Wiz3.png "WSUS_Wiz3")  
+        ![WSUS Improvement Program](../management/media/WSUS_Wiz3.png "WSUS_Wiz3")  
   
     You should now see the **Choose Upstream Server** page. The following screenshot is the starting point of the configuration wizard.  
   
-    ![WSUS Upstream Server Sync](../../mpp/management/media/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+    ![WSUS Upstream Server Sync](../management/media/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
 4.  Choose the upstream server.  
   
@@ -79,21 +79,21 @@ To configure WSUS, you need to:
   
     1.  If you choose to synchronize with Microsoft Update, you do not need to make any changes to the **Choose Upstream Server** page. Click **Next**.  
   
-        ![WSUS Upstream Server Sync](../../mpp/management/media/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+        ![WSUS Upstream Server Sync](../management/media/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
     #### To update from another WSUS server  
   
     1.  If you choose to synchronize with a source other than Microsoft Update (an upstream server), specify the server (enter the IP address) and the port on which this server will communicate with the upstream server.  
   
-        ![WSUS Upstream Server Sync from WSUS](../../mpp/management/media/WSUS_Wiz4b.png "WSUS_Wiz4b")  
+        ![WSUS Upstream Server Sync from WSUS](../management/media/WSUS_Wiz4b.png "WSUS_Wiz4b")  
   
     2.  To use Secure Sockets Layer (SSL), select the **Use SSL when synchronizing update information** check box. In that case the servers will use port 443 for synchronization.  
   
-        ![WSUS Upstream Server Sync from WSUS SSL](../../mpp/management/media/WSUS_Wiz4c.png "WSUS_Wiz4c")  
+        ![WSUS Upstream Server Sync from WSUS SSL](../management/media/WSUS_Wiz4c.png "WSUS_Wiz4c")  
   
     3.  If this is a replica server, select the **This is a replica of the upstream server** check box. It is possible to select both **Use SSL when synchronizing update information** and **This is a replica of the upstream server**.  
   
-        ![WSUS Upstream Server Replica](../../mpp/management/media/WSUS_Wiz4d.png "WSUS_Wiz4d")  
+        ![WSUS Upstream Server Replica](../management/media/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
     4.  At this point, you are finished with upstream server configuration. Click **Next**, or select **Specify proxy server** in the left navigation pane.  
   
@@ -101,7 +101,7 @@ To configure WSUS, you need to:
   
     If this server requires a proxy server to access Microsoft Update or a different upstream server, you can configure the proxy server settings here; otherwise, click **Next**.  
   
-    ![WSUS Proxy](../../mpp/management/media/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![WSUS Proxy](../management/media/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### To configure proxy server settings  
   
@@ -109,13 +109,13 @@ To configure WSUS, you need to:
   
     2.  If you want to connect to the proxy server by using specific user credentials, select the **Use user credentials to connect to the proxy server** check box, and then type the user name, domain, and password of the user in the corresponding boxes. If you want to enable basic authentication for the user connecting to the proxy server, select the **Allow basic authentication (password is sent in cleartext)** check box.  
   
-        ![WSUS Proxy Credentials](../../mpp/management/media/WSUS_Wiz5b.png "WSUS_Wiz5b")  
+        ![WSUS Proxy Credentials](../management/media/WSUS_Wiz5b.png "WSUS_Wiz5b")  
   
     3.  At this point, you are finished with proxy server configuration. Click **Next** to go to the next page, where you can start to set up the synchronization process.  
   
 6.  Start connecting.  
   
-    ![WSUS Proxy Start Connecting](../../mpp/management/media/WSUS_Wiz6.png "WSUS_Wiz6")  
+    ![WSUS Proxy Start Connecting](../management/media/WSUS_Wiz6.png "WSUS_Wiz6")  
   
     Click **Start Connecting**.  
   
@@ -127,7 +127,7 @@ To configure WSUS, you need to:
   
     Select **English**, and then click **Next**.  
   
-    ![Choose languages](../../mpp/management/media/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
+    ![Choose languages](../management/media/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
 8.  Choose products.  
   
@@ -147,13 +147,13 @@ To configure WSUS, you need to:
   
     Select **Critical Updates** and **Security Updates** for the updates that will be synchronized for the Analytics Platform System appliance, and then click **Next**.  
   
-    ![Choose classifications](../../mpp/management/media/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Choose classifications](../management/media/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. Configure the synchronization schedule.  
   
     Select **Synchronize Manually**, and then click **Next**.  
   
-    ![Set sync schedule](../../mpp/management/media/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
+    ![Set sync schedule](../management/media/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Begin initial synchronization.  
   
@@ -167,31 +167,31 @@ To configure WSUS, you need to:
 After configuring WSUS for Analytics Platform System, the next step is to group the appliance servers. By adding all of the appliance servers to a group, WSUS will be able to apply software updates to all servers in the appliance.  
   
 > [!NOTE]  
-> The WSUS system is designed to run asynchronously. Initiating activity does not always result in an immediately update. Therefore, you might need to wait a while until computers will be visible in the WSUS dialog boxes. Running the `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` command described at the end of the topic [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../../mpp/management/download-and-apply-microsoft-updates-analytics-platform-system.md) can help refresh the dialog boxes.  
+> The WSUS system is designed to run asynchronously. Initiating activity does not always result in an immediately update. Therefore, you might need to wait a while until computers will be visible in the WSUS dialog boxes. Running the `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` command described at the end of the topic [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../management/download-and-apply-microsoft-updates-analytics-platform-system.md) can help refresh the dialog boxes.  
   
 #### To group the appliance servers  
   
 1.  Open the WSUS console, right-click **All Computers** and then click **Add Computer Group**.  
   
-    ![Add a computer group.](../../mpp/management/media/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
+    ![Add a computer group.](../management/media/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
   
 2.  Enter the name “APS” for the computer group, and then click **Add**.  
   
-    ![Enter name for your new computer group.](../../mpp/management/media/SQL_Server_PDW_WSUSSpecifyGroupName.png "SQL_Server_PDW_WSUSSpecifyGroupName")  
+    ![Enter name for your new computer group.](../management/media/SQL_Server_PDW_WSUSSpecifyGroupName.png "SQL_Server_PDW_WSUSSpecifyGroupName")  
   
 3.  Click **All Computers** again, change the status in the **Status** drop-down menu to **Any**, and then click **Refresh**. You may need to expand **All Computers** by clicking it on the tree control on the left in order to see the new group you just added.  
   
-    ![Change status to Any and click Refresh.](../../mpp/management/media/SQL_Server_PDW_WSUSChangeStatusToAny.png "SQL_Server_PDW_WSUSChangeStatusToAny")  
+    ![Change status to Any and click Refresh.](../management/media/SQL_Server_PDW_WSUSChangeStatusToAny.png "SQL_Server_PDW_WSUSChangeStatusToAny")  
   
 4.  Select all computers that are part of the appliance, right-click, and then click **Change Membership**.  
   
-    ![Change membership for all PDW computers.](../../mpp/management/media/SQL_Server_PDW_WSUSChangeMembership.png "SQL_Server_PDW_WSUSChangeMembership")  
+    ![Change membership for all PDW computers.](../management/media/SQL_Server_PDW_WSUSChangeMembership.png "SQL_Server_PDW_WSUSChangeMembership")  
   
 5.  Select the new computer group that you created by clicking the check box and then clicking **OK**.  
   
-    ![Set Computer Group Membership](../../mpp/management/media/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
+    ![Set Computer Group Membership](../management/media/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
 6.  Select the new computer group, change its **Status** to **Any**, and then click **Refresh**. All computers should now be assigned to this group and listed in the right pane. It is generally safe to continue when nodes show warnings such as **This node has not reported status yet**.  
   
-    ![Change Status to Any and click Refresh.](../../mpp/management/media/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
+    ![Change Status to Any and click Refresh.](../management/media/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
   

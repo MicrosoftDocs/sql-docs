@@ -13,7 +13,7 @@ author: BarbKess
 # CREATE USER (SQL Server PDW)
 Adds a user to the current SQL Server PDW database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -64,7 +64,7 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
-Information about database users is visible in the [sys.database_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-principals-sql-server-pdw.md) catalog view.  
+Information about database users is visible in the [sys.database_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-principals-sql-server-pdw.md) catalog view.  
   
 ## Permissions  
 Requires ALTER ANY USER permission on the database.  
@@ -86,8 +86,8 @@ GO
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[ALTER USER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-user-sql-server-pdw.md)  
-[DROP USER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-user-sql-server-pdw.md)  
-[CREATE LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-login-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[ALTER USER &#40;SQL Server PDW&#41;](../sqlpdw/alter-user-sql-server-pdw.md)  
+[DROP USER &#40;SQL Server PDW&#41;](../sqlpdw/drop-user-sql-server-pdw.md)  
+[CREATE LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/create-login-sql-server-pdw.md)  
   

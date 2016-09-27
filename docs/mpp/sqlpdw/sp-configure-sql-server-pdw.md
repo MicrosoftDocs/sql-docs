@@ -13,7 +13,7 @@ author: BarbKess
 # sp_configure (SQL Server PDW)
 Displays or changes global configuration settings for SQL Server PDW. Only one configuration change (**hadoop connectivity**) is currently supported by SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -38,7 +38,7 @@ Is the name of a configuration option. *option_name* is **varchar(35)**, with a 
 Is the new configuration setting. *value* is **int**, with a default of NULL. The maximum value depends on the individual option.  
   
 **'hadoop connectivity'**  
-Specifies the type of Hadoop data source for all connections from SQL Server PDW to Hadoop clusters or Microsoft Azure blob storage (WASB). This setting is required in order to create an external data source for an external table. For more information, see [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-data-source-sql-server-pdw.md),  
+Specifies the type of Hadoop data source for all connections from SQL Server PDW to Hadoop clusters or Microsoft Azure blob storage (WASB). This setting is required in order to create an external data source for an external table. For more information, see [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-data-source-sql-server-pdw.md),  
   
 These are the Hadoop connectivity settings and their corresponding supported Hadoop data sources. Only one setting can be in effect at a time. Options 1, 4, and 7 allow multiple types of external data sources to be created and used.  
   
@@ -70,7 +70,7 @@ These are the Hadoop connectivity settings and their corresponding supported Had
   
 -   Option 7: Azure blob storage (WASB[S]  
   
-For the complete instructions on configuring Hadoop connectivity, including when and how to restart the PDW region, see [Configure PolyBase Connectivity to External Data &#40;Analytics Platform System&#41;](../../mpp/management/configure-polybase-connectivity-to-external-data-analytics-platform-system.md).  
+For the complete instructions on configuring Hadoop connectivity, including when and how to restart the PDW region, see [Configure PolyBase Connectivity to External Data &#40;Analytics Platform System&#41;](../management/configure-polybase-connectivity-to-external-data-analytics-platform-system.md).  
   
 **RECONFIGURE**  
 Updates the run value (run_value) to match the configuration value (config_value). See [Result Sets](#ResultSets)for definitions of run_value and config_value. The new configuration value that is set by sp_configure does not become effective until the run value is set by the RECONFIGURE statement. After running RECONFIGURE, some changes require a restart of the PDW region.  
@@ -92,7 +92,7 @@ When executed with no parameters, **sp_configure** returns a result set with fiv
 ## General Remarks  
   
 ### Configuration Settings that Require a Restart  
-Some changes require a restart of the PDW region before the run value will take effect. To restart the PDW region, [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md) and follow the on-screen instructions.  
+Some changes require a restart of the PDW region before the run value will take effect. To restart the PDW region, [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md) and follow the on-screen instructions.  
   
 These configuration settings require a restart after running RECONFIGURE.  
   
@@ -129,5 +129,5 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### C. Set Hadoop connectivity  
-Setting Hadoop connectivity requires a few more steps in addition to running sp_configure. For the full procedure, see [Configure PolyBase Connectivity to External Data &#40;Analytics Platform System&#41;](../../mpp/management/configure-polybase-connectivity-to-external-data-analytics-platform-system.md)  
+Setting Hadoop connectivity requires a few more steps in addition to running sp_configure. For the full procedure, see [Configure PolyBase Connectivity to External Data &#40;Analytics Platform System&#41;](../management/configure-polybase-connectivity-to-external-data-analytics-platform-system.md)  
   

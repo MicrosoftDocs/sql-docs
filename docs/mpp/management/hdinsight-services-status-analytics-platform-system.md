@@ -21,11 +21,11 @@ The HDInsight **Services Status** page in the Microsoft Analytics Platform Syste
   
 It is not necessary to click **Apply** when starting and stopping the services by using **Start Region** and **Stop Region**.  
   
-![DWConfig Appliance HDI Services](../../mpp/management/media/SQL_Server_PDW_DWConfig_ApplHDIServices.png "SQL_Server_PDW_DWConfig_ApplHDIServices")  
+![DWConfig Appliance HDI Services](../management/media/SQL_Server_PDW_DWConfig_ApplHDIServices.png "SQL_Server_PDW_DWConfig_ApplHDIServices")  
   
 > [!NOTE]  
 > Stopping the PDW Region also stops the PDW agent (sqldwagent) on the nodes of the HDInsight Region. The HDInsight Region is still functional, however health monitoring will not be available. (The PDW agent requires the PDW control node to report health monitoring.)  
   
 ## See Also  
-[Power the APS Appliance On or Off &#40;Analytics Platform System&#41;](../../mpp/management/power-the-aps-appliance-on-or-off-analytics-platform-system.md)  
+[Power the APS Appliance On or Off &#40;Analytics Platform System&#41;](../management/power-the-aps-appliance-on-or-off-analytics-platform-system.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # ALTER LOGIN (SQL Server PDW)
 Changes the properties of a login account.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -67,7 +67,7 @@ MUST_CHANGE
 Applies only to SQL Server authentication logins. If this option is included, SQL Server will prompt for an updated password the first time the altered login is used.  
   
 NAME = *login_name*  
-The new name of the login that is being renamed. The new name of a login must conform to the [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md). If this is a Windows login, the SID of the Windows principal corresponding to the new name must match the SID associated with the login in SQL Server. The new name of a SQL Server login cannot contain a backslash character (\\).  
+The new name of the login that is being renamed. The new name of a login must conform to the [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md). If this is a Windows login, the SID of the Windows principal corresponding to the new name must match the SID associated with the login in SQL Server. The new name of a SQL Server login cannot contain a backslash character (\\).  
   
 CHECK_EXPIRATION = { ON | OFF }  
 Applies only to SQL Server authentication logins. Specifies whether password expiration policy should be enforced on this login.  
@@ -97,7 +97,7 @@ If CHECK_POLICY is set to OFF, CHECK_EXPIRATION cannot be set to ON. An ALTER LO
   
 When a password has expired, the login can log in, but cannot perform any actions other than changing the password with the **ALTER LOGIN** statement.  
   
-For a list of policies inherited from Windows, see [CREATE LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-login-sql-server-pdw.md).  
+For a list of policies inherited from Windows, see [CREATE LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/create-login-sql-server-pdw.md).  
   
 You cannot use **ALTER_LOGIN** with the **DISABLE** argument to deny access to a Windows group. For example, `ALTER_LOGIN [`*domain\group*`] DISABLE` will return the following error message:  
   
@@ -149,7 +149,7 @@ ALTER LOGIN Mary5 WITH NAME = John2;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-login-sql-server-pdw.md)  
-[DROP LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-login-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/create-login-sql-server-pdw.md)  
+[DROP LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/drop-login-sql-server-pdw.md)  
   

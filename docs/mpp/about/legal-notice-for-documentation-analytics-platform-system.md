@@ -21,6 +21,6 @@ This document does not provide you with any legal rights to any intellectual pro
   
 |||  
 |-|-|  
-|![Microsoft Logo](../../mpp/about/media/APS_MS_Logo_for_legal.png "APS_MS_Logo_for_legal")|![Java Logo](../../mpp/about/media/APS_Java_Logo_for_legal.png "APS_Java_Logo_for_legal")|  
+|![Microsoft Logo](../about/media/APS_MS_Logo_for_legal.png "APS_MS_Logo_for_legal")|![Java Logo](../about/media/APS_Java_Logo_for_legal.png "APS_Java_Logo_for_legal")|  
 |The PolyBase technology and HDInsight are powered by Java.|Java is a registered trademark of Oracle and/or its affiliates.|  
   

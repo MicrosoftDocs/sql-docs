@@ -15,7 +15,7 @@ Contains a row for each table object that a principal either owns or on which th
   
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
-|<inherited columns>||For a list of columns that this view inherits, see [sys.objects](../../mpp/sqlpdw/sys-objects-sql-server-pdw.md).||  
+|<inherited columns>||For a list of columns that this view inherits, see [sys.objects](../sqlpdw/sys-objects-sql-server-pdw.md).||  
 |lob_data_space_id|**int**||Always 0.|  
 |filestream_data_space_id|**int**|Data space ID for a FILESTREAM filegroup or Information not available.|NULL|  
 |max_column_id_used|**int**|Maximum column ID used by this table.||  
@@ -33,6 +33,6 @@ Contains a row for each table object that a principal either owns or on which th
 |lock_escalation_desc|**nvarchar(60)**|A text description of the lock_escalation option.|Always ꞌAUTOꞌ.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

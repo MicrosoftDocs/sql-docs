@@ -13,7 +13,7 @@ author: BarbKess
 # DATEADD (SQL Server PDW)
 Returns a specified date with the specified number interval (signed int) added to a specified date part of that date in SQL Server PDW. Use this function in the SELECT <list>, WHERE, HAVING, GROUP BY and ORDER BY clauses to add a specified value to a part of a date column or expression.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -233,10 +233,10 @@ SELECT TOP (1) DATEADD(month,10/2, SYSDATETIME()) FROM DimCustomer;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[DATEPART &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/datepart-sql-server-pdw.md)  
-[DATEDIFF &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/datediff-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[DATEPART &#40;SQL Server PDW&#41;](../sqlpdw/datepart-sql-server-pdw.md)  
+[DATEDIFF &#40;SQL Server PDW&#41;](../sqlpdw/datediff-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # DROP SCHEMA (SQL Server PDW)
 Removes a schema from the database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -56,9 +56,9 @@ GO
 ```  
   
 ## See Also  
-[CREATE SCHEMA &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-schema-sql-server-pdw.md)  
-[ALTER SCHEMA &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-schema-sql-server-pdw.md)  
-[sys.schemas &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-schemas-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE SCHEMA &#40;SQL Server PDW&#41;](../sqlpdw/create-schema-sql-server-pdw.md)  
+[ALTER SCHEMA &#40;SQL Server PDW&#41;](../sqlpdw/alter-schema-sql-server-pdw.md)  
+[sys.schemas &#40;SQL Server PDW&#41;](../sqlpdw/sys-schemas-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

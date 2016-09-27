@@ -13,7 +13,7 @@ author: BarbKess
 # XACT_STATE (SQL Server PDW)
 Is a scalar function that reports the user transaction state of a current running request. XACT_STATE indicates whether the request has an active user transaction, and whether the transaction is capable of being committed.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -54,6 +54,6 @@ Example of an error handling flow and progression of XACT_STATE:
 |9|SELECT @err, @xact|0|No active transactions, SELECTs are allowed.|  
   
 ## See Also  
-[TRY...CATCH &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/try-catch-sql-server-pdw.md)  
-[THROW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/throw-sql-server-pdw.md)  
+[TRY...CATCH &#40;SQL Server PDW&#41;](../sqlpdw/try-catch-sql-server-pdw.md)  
+[THROW &#40;SQL Server PDW&#41;](../sqlpdw/throw-sql-server-pdw.md)  
   

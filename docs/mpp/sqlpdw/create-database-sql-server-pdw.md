@@ -13,7 +13,7 @@ author: BarbKess
 # CREATE DATABASE (SQL Server PDW)
 Creates a new database on a SQL Server PDW appliance. Use this statement to create all files associated with an appliance database and to set maximum size and auto-growth options for the database tables and transaction log.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -29,7 +29,7 @@ WITH (
   
 ## Arguments  
 *database_name*  
-The name of the new database. For more information on permitted database names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md). You cannot name a database any of these [Reserved Database Names &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/reserved-database-names-sql-server-pdw.md).  
+The name of the new database. For more information on permitted database names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md). You cannot name a database any of these [Reserved Database Names &#40;SQL Server PDW&#41;](../sqlpdw/reserved-database-names-sql-server-pdw.md).  
   
 AUTOGROW = ON | **OFF**  
 Specifies whether the *replicated_size*, *distributed_size*, and *log_size* parameters for this database will automatically grow as needed beyond their specified sizes. Default value is **OFF**.  
@@ -41,14 +41,14 @@ If AUTOGROW is OFF, the sizes will not grow automatically. SQL Server PDW will r
 AUTOGROW is either ON for all sizes or OFF for all sizes. For example, it is not possible to set AUTOGROW ON for *log_size*, but not set it for *replicated_size*.  
   
 *replicated_size* [ GB ]  
-A positive number. Sets the size (in integer or decimal gigabytes) for the total space allocated to replicated tables and corresponding data *on each Compute node*. For minimum and maximum *replicated_size* requirements, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+A positive number. Sets the size (in integer or decimal gigabytes) for the total space allocated to replicated tables and corresponding data *on each Compute node*. For minimum and maximum *replicated_size* requirements, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
 If AUTOGROW is ON, replicated tables will be permitted to grow beyond this limit.  
   
 If AUTOGROW is OFF, an error will be returned if a user attempts to create a new replicated table, insert data into an existing replicated table, or update an existing replicated table in a manner that would increase the size beyond *replicated_size*.  
   
 *distributed_size* [ GB ]  
-A positive number. The size, in integer or decimal gigabytes, for the total space allocated to distributed tables (and corresponding data) *across the appliance*. For minimum and maximum *distributed_size* requirements, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+A positive number. The size, in integer or decimal gigabytes, for the total space allocated to distributed tables (and corresponding data) *across the appliance*. For minimum and maximum *distributed_size* requirements, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
 If AUTOGROW is ON, distributed tables will be permitted to grow beyond this limit.  
   
@@ -57,9 +57,9 @@ If AUTOGROW is OFF, an error will be returned if a user attempts to create a new
 *log_size* [ GB ]  
 A positive number. The size (in integer or decimal gigabytes) for the transaction log *across the appliance*.  
   
-For minimum and maximum *log_size* requirements, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+For minimum and maximum *log_size* requirements, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
-If AUTOGROW is ON, the log file is permitted to grow beyond this limit. Use the [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dbcc-shrinklog-sql-server-pdw.md) statement to reduce the size of the log files to their original size.  
+If AUTOGROW is ON, the log file is permitted to grow beyond this limit. Use the [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../sqlpdw/dbcc-shrinklog-sql-server-pdw.md) statement to reduce the size of the log files to their original size.  
   
 If AUTOGROW is OFF, an error will be returned to the user for any action that would increase the log size on an individual Compute node beyond *log_size*.  
   
@@ -79,9 +79,9 @@ GO
 Databases are created with database compatibility level 120, which is the compatibility level for SQL Server 2014. This ensures the database will be able to use all of the SQL Server 2014 functionality that PDW uses.  
   
 ## Limitations and Restrictions  
-The CREATE DATABASE statement is not allowed in an explicit transaction. For more information, see [Transactions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transactions-sql-server-pdw.md).  
+The CREATE DATABASE statement is not allowed in an explicit transaction. For more information, see [Transactions &#40;SQL Server PDW&#41;](../sqlpdw/transactions-sql-server-pdw.md).  
   
-For information on minimum and maximum constraints on databases, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+For information on minimum and maximum constraints on databases, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
 At the time a database is created, there must be enough available free space *on each Compute node* to allocate the combined total of the following sizes:  
   
@@ -95,7 +95,7 @@ At the time a database is created, there must be enough available free space *on
 Takes a shared lock on the DATABASE object.  
   
 ## Metadata  
-After this operation succeeds, an entry for this database will appear in the [sys.databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-databases-sql-server-pdw.md) and [sys.objects &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-objects-sql-server-pdw.md)metadata views.  
+After this operation succeeds, an entry for this database will appear in the [sys.databases &#40;SQL Server PDW&#41;](../sqlpdw/sys-databases-sql-server-pdw.md) and [sys.objects &#40;SQL Server PDW&#41;](../sqlpdw/sys-objects-sql-server-pdw.md)metadata views.  
   
 ## Examples  
   
@@ -133,7 +133,7 @@ CREATE DATABASE mytest
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[ALTER DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-database-sql-server-pdw.md)  
-[DROP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-database-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[ALTER DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/alter-database-sql-server-pdw.md)  
+[DROP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/drop-database-sql-server-pdw.md)  
   

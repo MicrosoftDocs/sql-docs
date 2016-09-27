@@ -65,8 +65,8 @@ JOIN sys.server_permissions AS pe
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
-[sys.database_permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-permissions-sql-server-pdw.md)  
-[sys.server_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-server-principals-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
+[sys.database_permissions &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-permissions-sql-server-pdw.md)  
+[sys.server_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-server-principals-sql-server-pdw.md)  
   

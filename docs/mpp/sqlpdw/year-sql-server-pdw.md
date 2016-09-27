@@ -13,7 +13,7 @@ author: BarbKess
 # YEAR (SQL Server PDW)
 Returns an integer that represents the year of the specified date in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -29,7 +29,7 @@ An expression that can be resolved to a **time**, **date**, **smalldatetime**, *
 **int**  
   
 ## Return Value  
-YEAR returns the same value as [DATEPART](../../mpp/sqlpdw/datepart-sql-server-pdw.md) (**year**, *date*).  
+YEAR returns the same value as [DATEPART](../sqlpdw/datepart-sql-server-pdw.md) (**year**, *date*).  
   
 If *date* only contains a time part, the return value is 1900, the base year.  
   
@@ -47,7 +47,7 @@ SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[MONTH &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/month-sql-server-pdw.md)  
-[DAY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/day-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[MONTH &#40;SQL Server PDW&#41;](../sqlpdw/month-sql-server-pdw.md)  
+[DAY &#40;SQL Server PDW&#41;](../sqlpdw/day-sql-server-pdw.md)  
   

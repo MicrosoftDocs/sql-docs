@@ -13,7 +13,7 @@ author: BarbKess
 # SQL_VARIANT_PROPERTY (SQL Server PDW)
 Returns the base data type and other information about a **sql_variant** value.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -52,7 +52,7 @@ SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 ```  
   
 ## See Also  
-[DECLARE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/declare-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[DECLARE &#40;SQL Server PDW&#41;](../sqlpdw/declare-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

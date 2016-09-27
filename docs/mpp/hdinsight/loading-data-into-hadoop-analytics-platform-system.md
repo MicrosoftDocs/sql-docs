@@ -42,7 +42,7 @@ To protect data transferred over the network, administrators should configure SM
   
 After configuring a shared folder, the administrator should double-check that the settings are correct trying to access the data source by using windows explorer:  
   
-![Access a network share using Windows Explorer](../../mpp/hdinsight/media/APS_HDI_AccessNetworkShare.png "APS_HDI_AccessNetworkShare")  
+![Access a network share using Windows Explorer](../hdinsight/media/APS_HDI_AccessNetworkShare.png "APS_HDI_AccessNetworkShare")  
   
 Before getting access the user will be prompted for credentials. It is good practice to use credentials with low (read-only) privileges and limited validity period, as the credentials may be visible in the Hadoop logs if provided as job input parameters. Once the administrator makes sure the data is accessible and available, a map job can be configured for data loading.  
   
@@ -492,16 +492,16 @@ AS SELECT * FROM AdventureWorksPDW2012.dbo.dimCustomer
   
 This command also creates an external table in PDW with the name `HDI_dimCustomer`. After execution of this command, the `HDI_dimCustomer` file in HDFS will be populated with data from `AdventureWorksPDW2012.dbo.dimCustomer`. Once the external table is created it can be used in PDW DSQL queries as if it was created directly upon HDFS data.  
   
-PolyBase queries always access the HDInsight region directly (bypassing the Secure Node Gateway) by specifying the IP addresses or names from the internal InfiniBand network. No authentication is required for this type of request, regardless if data is transferred from HDInsight to PDW or the other way around (as in this example). For more information, see [PolyBase &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/polybase-sql-server-pdw.md).  
+PolyBase queries always access the HDInsight region directly (bypassing the Secure Node Gateway) by specifying the IP addresses or names from the internal InfiniBand network. No authentication is required for this type of request, regardless if data is transferred from HDInsight to PDW or the other way around (as in this example). For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md).  
   
 [HDInsight data loading scenarios](#top)  
   
 ## <a name="DevDash"></a>Using Developer Dashboard to upload files  
-Use the HDInsight Developer Dashboard for loading smaller utility files that support execution of MapReduce jobs or Oozie workflows, submitted and executed through REST API channels. Data loading in this scenario is limited in several ways: it’s manual, covering only files from client local file system, and supporting a size equal or less to 20 MB. However, this scenario, has its place as a file upload utility that facilitates job submission scenarios. For more information about uploading files with Developer Dashboard, see [Upload File - HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../../mpp/hdinsight/upload-file-hdinsight-region-developer-dashboard-analytics-platform-system.md).  
+Use the HDInsight Developer Dashboard for loading smaller utility files that support execution of MapReduce jobs or Oozie workflows, submitted and executed through REST API channels. Data loading in this scenario is limited in several ways: it’s manual, covering only files from client local file system, and supporting a size equal or less to 20 MB. However, this scenario, has its place as a file upload utility that facilitates job submission scenarios. For more information about uploading files with Developer Dashboard, see [Upload File - HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../hdinsight/upload-file-hdinsight-region-developer-dashboard-analytics-platform-system.md).  
   
 [HDInsight data loading scenarios](#top)  
   
 ## See Also  
-[Using Hadoop Tools with APS &#40;Analytics Platform System&#41;](../../mpp/hdinsight/using-hadoop-tools-with-aps-analytics-platform-system.md)  
-[Tips for Using the REST API &#40;Analytics Platform System&#41;](../../mpp/hdinsight/tips-for-using-the-rest-api-analytics-platform-system.md)  
+[Using Hadoop Tools with APS &#40;Analytics Platform System&#41;](../hdinsight/using-hadoop-tools-with-aps-analytics-platform-system.md)  
+[Tips for Using the REST API &#40;Analytics Platform System&#41;](../hdinsight/tips-for-using-the-rest-api-analytics-platform-system.md)  
   

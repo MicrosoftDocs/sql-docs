@@ -13,7 +13,7 @@ author: BarbKess
 # COALESCE (SQL Server PDW)
 Returns the first non-null expression among its arguments in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -29,7 +29,7 @@ An expression of any type.
 Returns the data type of *expression* with the highest data type precedence. If all expressions are non-nullable, the result is typed as non-nullable. If all arguments are null, COALESCE returns null. At least one of the null values must be a typed null.  
   
 ## General Remarks  
-COALESCE(*expression1,...n*) is equivalent to the following [CASE](../../mpp/sqlpdw/case-sql-server-pdw.md) expression:  
+COALESCE(*expression1,...n*) is equivalent to the following [CASE](../sqlpdw/case-sql-server-pdw.md) expression:  
   
 ```  
 CASE  
@@ -40,7 +40,7 @@ CASE
 END  
 ```  
   
-[ISNULL](../../mpp/sqlpdw/isnull-sql-server-pdw.md) and COALESCE, though closely related, can behave differently. An expression involving ISNULL with non-null parameters is considered to be NOT NULL, while expressions involving COALESCE with non-null parameters is considered to be NULL.  
+[ISNULL](../sqlpdw/isnull-sql-server-pdw.md) and COALESCE, though closely related, can behave differently. An expression involving ISNULL with non-null parameters is considered to be NOT NULL, while expressions involving COALESCE with non-null parameters is considered to be NULL.  
   
 ## Examples  
   
@@ -143,8 +143,8 @@ Here is the result set.
 120000.00</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[CASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/case-sql-server-pdw.md)  
-[CAST and CONVERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/cast-and-convert-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[CASE &#40;SQL Server PDW&#41;](../sqlpdw/case-sql-server-pdw.md)  
+[CAST and CONVERT &#40;SQL Server PDW&#41;](../sqlpdw/cast-and-convert-sql-server-pdw.md)  
   

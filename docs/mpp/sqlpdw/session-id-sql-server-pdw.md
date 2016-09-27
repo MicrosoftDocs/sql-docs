@@ -13,7 +13,7 @@ author: BarbKess
 # SESSION_ID (SQL Server PDW)
 Returns the ID of the current SQL Server PDW session.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -29,7 +29,7 @@ The session ID is assigned to each user connection when the connection is made. 
   
 The session ID begins with the alphabetical characters 'SID'. These are case-sensitive and must be capitalized when session ID is used in SQL commands.  
   
-You can query the view [sys.dm_pdw_exec_sessions](../../mpp/sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md) to retrieve the same information as this function.  
+You can query the view [sys.dm_pdw_exec_sessions](../sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md) to retrieve the same information as this function.  
   
 ## Examples  
 The following example returns the current session ID.  
@@ -39,7 +39,7 @@ SELECT SESSION_ID();
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[DB_NAME &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/db-name-sql-server-pdw.md)  
-[VERSION &#40;SQLServer PDW&#41;](../../mpp/sqlpdw/version-sqlserver-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[DB_NAME &#40;SQL Server PDW&#41;](../sqlpdw/db-name-sql-server-pdw.md)  
+[VERSION &#40;SQLServer PDW&#41;](../sqlpdw/version-sqlserver-pdw.md)  
   

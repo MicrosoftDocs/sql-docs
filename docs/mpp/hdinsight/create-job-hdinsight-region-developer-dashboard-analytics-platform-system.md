@@ -16,7 +16,7 @@ Use the **Create Job** page of the HDInsight Developer Dashboard to submit jobs 
 ## Create Job  
   
 ### Standalone JAR  
-![APS HDI Developer Dashboard Create Job](../../mpp/hdinsight/media/APS_HDI_DevDashboard_CreateJob.png "APS_HDI_DevDashboard_CreateJob")  
+![APS HDI Developer Dashboard Create Job](../hdinsight/media/APS_HDI_DevDashboard_CreateJob.png "APS_HDI_DevDashboard_CreateJob")  
   
 The **Standalone JAR** page has the following sections.  
   
@@ -46,7 +46,7 @@ The **Standalone JAR** page has the following sections.
   
 ##### To Submit a Job  
   
-1.  Open the Developer Dashboard. For more information on how to open the developer dashboard, see [HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../../mpp/hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md).  
+1.  Open the Developer Dashboard. For more information on how to open the developer dashboard, see [HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md).  
   
 2.  Click on **Create Job**.  
   
@@ -61,7 +61,7 @@ The **Standalone JAR** page has the following sections.
 7.  Click **Execute** to run the job.  
   
 ### Hadoop Streaming  
-![HDI Region Developer Dashboard Create Hadoop Job](../../mpp/hdinsight/media/APS_HDI_DevDashboard_CreateJobHadoop.png "APS_HDI_DevDashboard_CreateJobHadoop")  
+![HDI Region Developer Dashboard Create Hadoop Job](../hdinsight/media/APS_HDI_DevDashboard_CreateJobHadoop.png "APS_HDI_DevDashboard_CreateJobHadoop")  
   
 The **Hadoop Streaming** page has the following sections.  
   
@@ -84,5 +84,5 @@ The **Hadoop Streaming** page has the following sections.
     Replace the content of the Parameter 1 edit box with `-output < HDFS_path_to_output_directory>` that will contain the result files that the Reducers output. This path must not exist in HDFS prior to creating this job.  
   
 ## See Also  
-[HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../../mpp/hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
+[HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
   

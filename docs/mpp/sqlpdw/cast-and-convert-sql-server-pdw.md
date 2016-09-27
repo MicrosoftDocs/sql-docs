@@ -13,7 +13,7 @@ author: BarbKess
 # CAST and CONVERT (SQL Server PDW)
 Converts an expression of one data type to another data type in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -168,7 +168,7 @@ When you convert data types in which the target data type has fewer decimal plac
 SQL Server PDW returns an error message when nonnumeric **char**, **nchar**, **varchar**, or **nvarchar** data is converted to **int**, **float**, or **decimal**.  
   
 ### Implicit Conversions  
-Implicit conversions are those conversions that occur without specifying the CAST or CONVERT functions. Explicit conversions are those conversions that require the CAST or CONVERT function to be specified. See "Data Type Conversion" in [Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md) for information on all explicit and implicit data type conversions that are allowed for SQL Server PDW data types.  
+Implicit conversions are those conversions that occur without specifying the CAST or CONVERT functions. Explicit conversions are those conversions that require the CAST or CONVERT function to be specified. See "Data Type Conversion" in [Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md) for information on all explicit and implicit data type conversions that are allowed for SQL Server PDW data types.  
   
 ## Examples  
   
@@ -305,8 +305,8 @@ Here is the result set.
 2010-07-25T13:50:38.544 07/25/2010 1:50:38 PM   07/25/2010 1:50:38 PM</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md)  
-[Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md)  
+[Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md)  
   

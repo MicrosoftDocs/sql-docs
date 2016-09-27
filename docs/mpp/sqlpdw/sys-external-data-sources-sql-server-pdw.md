@@ -23,7 +23,7 @@ Contains a row for each external data source in SQL Server PDW.
 |job_tracker_location|**nvarchar(4000)**|IP and port location of the Hadoop job tracker. This is used for submitting a job on the external data source.||  
   
 ## See Also  
-[CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-file-format-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-file-format-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

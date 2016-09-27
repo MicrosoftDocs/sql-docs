@@ -43,13 +43,13 @@ The storage structure for each database table depends on the destination table.
 -   For loads into a rowstore clustered index, the staging table is a rowstore clustered index.  
   
 ## <a name="Permissions"></a>Permissions  
-Requires CREATE permission (for creating a temporary table) on the staging database. For more information, see [Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md).  
+Requires CREATE permission (for creating a temporary table) on the staging database. For more information, see [Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md).  
   
 ## <a name="CreatingStagingDatabase"></a>Best Practices: Creating a Staging Database  
   
 1.  There should only be one staging database per appliance. This can be shared by all load jobs for all destination databases.  
   
-2.  The size of the staging database is customer-specific. Initially, when first populating the appliance, the staging database should be large enough to accommodate the initial load jobs. These load jobs tend to be large because multiple loads can occur concurrently. After initial load jobs have completed and the system is in production, the size of each load job is likely to be smaller. When this occurs, you can reduce the size of the staging database to accommodate the smaller load sizes. To reduce the size, you can drop the staging database and create it again with smaller size allocations, or you can use the [ALTER DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-database-sql-server-pdw.md) statement.  
+2.  The size of the staging database is customer-specific. Initially, when first populating the appliance, the staging database should be large enough to accommodate the initial load jobs. These load jobs tend to be large because multiple loads can occur concurrently. After initial load jobs have completed and the system is in production, the size of each load job is likely to be smaller. When this occurs, you can reduce the size of the staging database to accommodate the smaller load sizes. To reduce the size, you can drop the staging database and create it again with smaller size allocations, or you can use the [ALTER DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/alter-database-sql-server-pdw.md) statement.  
   
     When creating the staging database, use the following guidelines.  
   
@@ -80,5 +80,5 @@ WITH (
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

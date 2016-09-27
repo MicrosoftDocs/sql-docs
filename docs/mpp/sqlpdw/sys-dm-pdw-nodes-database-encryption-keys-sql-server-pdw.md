@@ -11,7 +11,7 @@ caps.latest.revision: 8
 author: BarbKess
 ---
 # sys.dm_pdw_nodes_database_encryption_keys (SQL Server PDW)
-Returns information about the encryption state of a database and its associated database encryption keys. **sys.dm_pdw_nodes_database_encryption_keys** provides this information for each node. For more information about database encryption, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
+Returns information about the encryption state of a database and its associated database encryption keys. **sys.dm_pdw_nodes_database_encryption_keys** provides this information for each node. For more information about database encryption, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
   
 |Column Name|Data Type|Description|  
 |---------------|-------------|---------------|  
@@ -48,9 +48,9 @@ ORDER BY D.database_id, PD.pdw_node_ID;
 ```  
   
 ## See Also  
-[Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md)  
-[CREATE DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-database-encryption-key-sql-server-pdw.md)  
-[ALTER DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-database-encryption-key-sql-server-pdw.md)  
-[DROP DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-database-encryption-key-sql-server-pdw.md)  
-[sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-database-encryption-regenerate-system-keys-sql-server-pdw.md)  
+[Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md)  
+[CREATE DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../sqlpdw/create-database-encryption-key-sql-server-pdw.md)  
+[ALTER DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../sqlpdw/alter-database-encryption-key-sql-server-pdw.md)  
+[DROP DATABASE ENCRYPTION KEY &#40;SQL Server PDW&#41;](../sqlpdw/drop-database-encryption-key-sql-server-pdw.md)  
+[sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-database-encryption-regenerate-system-keys-sql-server-pdw.md)  
   

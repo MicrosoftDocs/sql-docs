@@ -13,7 +13,7 @@ author: BarbKess
 # Change a login to the default system resources for its requests
 Describes how to change the system resource allocations assigned to a SQL Server PDW login to the default amounts. This affects the system resources that SQL Server PDW assigns to requests submitted by the login.  
   
-For resource class descriptions, see [Workload Management &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/workload-management-sql-server-pdw.md)  
+For resource class descriptions, see [Workload Management &#40;SQL Server PDW&#41;](../sqlpdw/workload-management-sql-server-pdw.md)  
   
 ## Use the default level of system resources  
 When a login is not a member of any resource class server role, requests submitted by the login will receive the default amount of system resources.  

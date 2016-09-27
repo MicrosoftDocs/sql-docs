@@ -13,7 +13,7 @@ author: BarbKess
 # FROM (SQL Server PDW)
 Specifies the tables, views, and joined tables that are used in the SQL Server PDW DELETE, SELECT, and UPDATE statements for SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -84,7 +84,7 @@ Returns all rows from the right table not meeting the join condition. Sets to NU
 ON *search_condition*  
 Specifies the condition on which the join is based. The condition can specify any predicate, although columns and comparison operators are frequently used.  
   
-For more information about search conditions and predicates, see [Search Condition &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/search-condition-sql-server-pdw.md).  
+For more information about search conditions and predicates, see [Search Condition &#40;SQL Server PDW&#41;](../sqlpdw/search-condition-sql-server-pdw.md).  
   
 CROSS JOIN  
 Returns every possible combination of data from all joined tables regardless of relationship. If table1 has 100 rows and table2 has 5 rows, the result set will have 500 rows. Cross-joins are discouraged because the result set can grow unmanageably large.  
@@ -108,7 +108,7 @@ REPLICATE
 Causes the values in the joining column from the table on the left side of the join to be replicated to all nodes. The table on the right is joined to the replicated version of those columns.  
   
 REDISTRIBUTE  
-Forces two data sources to be distributed on columns specified in the JOIN clause. For a distributed table, SQL Server PDW will perform a shuffle move. For a replicated table, SQL Server PDW will perform a trim move. To understand these move types, see the DMS Query Plan Operations section in [Understanding Query Plans &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-plans-sql-server-pdw.md). This hint can improve performance when the query plan is using a broadcast move to resolve a distribution incompatible join.  
+Forces two data sources to be distributed on columns specified in the JOIN clause. For a distributed table, SQL Server PDW will perform a shuffle move. For a replicated table, SQL Server PDW will perform a trim move. To understand these move types, see the DMS Query Plan Operations section in [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md). This hint can improve performance when the query plan is using a broadcast move to resolve a distribution incompatible join.  
   
 ## Error Handling  
 The following error occurs if SQL Server PDW or SQL Server cannot honor the query hint:  
@@ -147,7 +147,7 @@ The REDISTRIBUTE hint has the following behaviors according to the join predicat
     -   When the ON clause combines multiple join predicates with the AND operator, the REDISTRIBUTE hint forces a Shuffle move on *both* of the non-distribution columns in the first predicate.  
   
 ## Limitations and Restrictions  
-There are limitations for using joins in the UDPATE and DELETE statements. For more information, see [UPDATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/update-sql-server-pdw.md) and [DELETE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/delete-sql-server-pdw.md).  
+There are limitations for using joins in the UDPATE and DELETE statements. For more information, see [UPDATE &#40;SQL Server PDW&#41;](../sqlpdw/update-sql-server-pdw.md) and [DELETE &#40;SQL Server PDW&#41;](../sqlpdw/delete-sql-server-pdw.md).  
   
 Only one of the join hints (REDUCE, REPLICATE, REDISTRIBUTE) is allowed in the ON clause. A join hint and the DISTRIBUTED_AGG query hint can exist together in the same query.  
   
@@ -347,6 +347,6 @@ ON dp.ProductKey = fis.ProductKey;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Queries &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/queries-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Queries &#40;SQL Server PDW&#41;](../sqlpdw/queries-sql-server-pdw.md)  
   

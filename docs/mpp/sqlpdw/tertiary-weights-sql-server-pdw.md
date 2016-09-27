@@ -16,7 +16,7 @@ Returns a binary string of weights for each character in a non-Unicode string ex
 > [!NOTE]  
 > APS does not currently support SQL tertiary collations.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -34,7 +34,7 @@ TERTIARY_WEIGHTS returns **varbinary** when *non_Unicode_character_string_expres
 ## Remarks  
   
 ## See Also  
-[Collations &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/collations-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Collations &#40;SQL Server PDW&#41;](../sqlpdw/collations-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

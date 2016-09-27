@@ -22,7 +22,7 @@ This topic describes how to connect to SQL Server PDW with PowerPivot for Excel.
 ## <a name="BeforeBegin"></a>Before You Begin  
 **Software Prerequisites**  
   
-SQL Server Native Client 10.0. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md)  
+SQL Server Native Client 10.0. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md)  
   
 .NET Framework 3.5 SP1 or higher. For installation details, see the [Microsoft .NET Framework 3.5 Service Pack 1](http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=ab99342f-5d1a-413d-8319-81da479ab0d7&displayLang=en) page on the Microsoft Download Center. If you have Windows 7, you already have this.  
   
@@ -43,7 +43,7 @@ To connect, follow these steps:
   
 5.  On the **Home** tab, in the Get External Data options, click **From Database**, and select **From SQL Server**.  
   
-    ![Choose Get External Data from Other Sources](../../mpp/sqlpdw/media/SQL_Server_PDW_PowerPivot_MPPSource.png "SQL_Server_PDW_PowerPivot_MPPSource")  
+    ![Choose Get External Data from Other Sources](../sqlpdw/media/SQL_Server_PDW_PowerPivot_MPPSource.png "SQL_Server_PDW_PowerPivot_MPPSource")  
   
 6.  In the Table Import Wizard,  
   
@@ -57,12 +57,12 @@ To connect, follow these steps:
   
     -   For **Log on to the server**, choose **Use Windows Authentication**, or choose **Use SQL Server Authentication** and enter your **login** and **password**.  
   
-        ![Connection Information](../../mpp/sqlpdw/media/SQL_Server_PDW_PowerPivot_MPPConnect.png "SQL_Server_PDW_PowerPivot_MPPConnect")  
+        ![Connection Information](../sqlpdw/media/SQL_Server_PDW_PowerPivot_MPPConnect.png "SQL_Server_PDW_PowerPivot_MPPConnect")  
   
     -   Click **Next** to connect.  
   
 7.  The connection to SQL Server PDW is finished. Continue through the Wizard to select the rows to import.  
   
 ## See Also  
-[Connect With Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-applications-sql-server-pdw.md)  
+[Connect With Applications &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-applications-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # DECLARE (SQL Server PDW)
 Variables are declared in the body of a batch with the DECLARE statement and are assigned values by using the SET statement or the SELECT statement. After declaration, all variables are initialized as NULL, unless a value is provided as part of the declaration.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -24,13 +24,13 @@ DECLARE
   
 ## Arguments  
 @*local_variable*  
-Is the name of a variable. Variable names must begin with an at (@) sign. Local variable names must comply with the rules for identifiers. For more information, see [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md).  
+Is the name of a variable. Variable names must begin with an at (@) sign. Local variable names must comply with the rules for identifiers. For more information, see [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md).  
   
 *data_type*  
-Is any system-supplied data type. For a list of data types, see [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md). The **sysname** and **sql_variant** data types can be used for variables but cannot be used in user-defined tables.  
+Is any system-supplied data type. For a list of data types, see [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md). The **sysname** and **sql_variant** data types can be used for variables but cannot be used in user-defined tables.  
   
 =*value*  
-Assigns a value to the variable in-line. The value can be a constant or an expression, but it must either match the variable declaration type or be implicitly convertible to that type. For more information, see [Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md).  
+Assigns a value to the variable in-line. The value can be a constant or an expression, but it must either match the variable declaration type or be implicitly convertible to that type. For more information, see [Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md).  
   
 ## General Remarks  
 Variables are often used in a batch as counters for WHILE or IF...ELSE blocks.  
@@ -106,5 +106,5 @@ WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

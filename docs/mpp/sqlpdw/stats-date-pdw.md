@@ -13,7 +13,7 @@ author: BarbKess
 # STATS_DATE (PDW)
 Returns the date of the most recent update for query optimization statistics in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -38,7 +38,7 @@ Requires membership in the db_owner fixed database role or permission to view th
 The STATS_DATE function, and other system functions, can be used in a SELECT list, a WHERE clause, and anywhere an expression can be used.  
   
 ## Limitations and Restrictions  
-The results include statistics stored in the Shell database at the Control node level. They do not show the date for statistics that are auto-created by SQL Server on the Compute nodes. For more information, see [Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md).  
+The results include statistics stored in the Shell database at the Control node level. They do not show the date for statistics that are auto-created by SQL Server on the Compute nodes. For more information, see [Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md).  
   
 ## Examples  
   
@@ -102,6 +102,6 @@ GO
 ```  
   
 ## See Also  
-[Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md)  
-[CREATE STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-statistics-sql-server-pdw.md)  
+[Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md)  
+[CREATE STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/create-statistics-sql-server-pdw.md)  
   

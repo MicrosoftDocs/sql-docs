@@ -19,7 +19,7 @@ Modifies the definition for a table in SQL Server PDW. Use ALTER TABLE to:
   
 -   Split, merge, or switch table partitions in a SQL Server PDW database. Table partitions are often used to manage data storage and archival.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -79,7 +79,7 @@ When using:
 ALTER COLUMN  
 Modifies the column definition for an existing column.  
   
-You cannot use ALTER COLUMN to modify a distribution column; if you need to do this, you can copy the data into a new table by using [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md).  
+You cannot use ALTER COLUMN to modify a distribution column; if you need to do this, you can copy the data into a new table by using [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md).  
   
 You cannot change the data type, length, precision, or scale of a column that has any of the following characteristics:  
   
@@ -113,7 +113,7 @@ For ADD, *column_name*  specifies the name of the column to add.
 *type_name* [ ( precision [ , scale ] ) ]  
 Specifies the new data type for the column.  
   
--   The data type must be one of the supported SQL Server PDW data types. For a complete list of data types, see the data type options and descriptions in [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md).  
+-   The data type must be one of the supported SQL Server PDW data types. For a complete list of data types, see the data type options and descriptions in [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md).  
   
 -   SQL Server PDW must support implicit conversions from the current data type to the new data type. For implicit type conversion rules, use the SQL Server rules. See the Implicit Conversions section in [CAST and CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187928(v=sql11).aspx). When reading the SQL Server topic, ignore data types that are not supported by SQL Server PDW.  
   
@@ -132,9 +132,9 @@ To use the collation clause, the source column:
   
 -   Cannot be included in any user-defined statistics. The column *can* have auto-generated statistics. All auto-generated statistics will be dropped on the column receiving the collation change, which is the source column.  
   
-For more information about collations in SQL Server PDW, see [Collations &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/collations-sql-server-pdw.md).  
+For more information about collations in SQL Server PDW, see [Collations &#40;SQL Server PDW&#41;](../sqlpdw/collations-sql-server-pdw.md).  
   
-For more information about column definitions in SQL Server PDW, see [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md).  
+For more information about column definitions in SQL Server PDW, see [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md).  
   
 **NULL** | NOT NULL  
 Defines whether or not column values can be set to NULL.  
@@ -171,7 +171,7 @@ Restrictions:
 ADD { <column_definition> | <column_constraint> FOR COLUMN *column_name*} [ ,...*n* ]  
 Specifies to add a column or a column constraint. Multiple columns and constraints are allowed.  
   
-For more information about defining a column or a column constraint, see [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md)  
+For more information about defining a column or a column constraint, see [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md)  
   
 DROP { [CONSTRAINT] *constraint_name* | COLUMN *column_name* } [ ,...*n* ]  
 Specifies to remove a column constraint or a column from the table. One or more constraints and columns can be listed.  
@@ -280,9 +280,9 @@ REBUILD is an online operation for rowstore tables, and a partially offline oper
 ALTER TABLE PARTITION takes a shared lock on the SCHEMARESOLUTION object.  
   
 ## Metadata  
-To view the system-supplied name of constraints, use the [sys.default_constraints &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-default-constraints-sql-server-pdw.md) catalog view.  
+To view the system-supplied name of constraints, use the [sys.default_constraints &#40;SQL Server PDW&#41;](../sqlpdw/sys-default-constraints-sql-server-pdw.md) catalog view.  
   
-To view partition metadata, you can use the [sys.partition_range_values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-partition-range-values-sql-server-pdw.md) catalog view.  
+To view partition metadata, you can use the [sys.partition_range_values &#40;SQL Server PDW&#41;](../sqlpdw/sys-partition-range-values-sql-server-pdw.md) catalog view.  
   
 ## Performance Considerations  
 Use caution when running ALTER TABLE to add, modify, or drop columns. ALTER TABLE can take a long time to run, especially when a large number of rows need to be updated.  
@@ -295,7 +295,7 @@ Performance tips:
   
 -   Conversely, dropping a column is a quick operation because the operation is performed in the metadata.  
   
--   Using [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md) to modify a table in lieu of ALTER TABLE ALTER could improve performance in some situations.  
+-   Using [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md) to modify a table in lieu of ALTER TABLE ALTER could improve performance in some situations.  
   
 The SPLIT and MERGE operations are usually IO intensive, unless they are applied to *empty* partitions, because they move the physical data among partitions. It is a best practice to perform SPLIT and MERGE operations on empty partitions.  
   
@@ -572,5 +572,5 @@ ALTER TABLE AdventureWorksPDW2012.dbo.dimEmployee
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

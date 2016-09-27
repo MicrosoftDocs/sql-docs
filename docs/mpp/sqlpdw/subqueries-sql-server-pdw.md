@@ -13,7 +13,7 @@ author: BarbKess
 # Subqueries (SQL Server PDW)
 This topic gives examples of using subqueries in SQL Server PDW.  
   
-For the SELECT statement, see [SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md)  
+For the SELECT statement, see [SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md)  
   
 ## Contents  
   
@@ -155,5 +155,5 @@ ORDER BY LastName
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

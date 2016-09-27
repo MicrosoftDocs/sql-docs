@@ -11,15 +11,15 @@ caps.latest.revision: 95
 author: BarbKess
 ---
 # BACKUP DATABASE (SQL Server PDW)
-Creates a backup of a SQL Server PDW database and stores the backup off the appliance in a user-specified network location. Use this statement with [RESTORE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/restore-database-sql-server-pdw.md) for disaster recovery, or to copy a database from one appliance to another.  
+Creates a backup of a SQL Server PDW database and stores the backup off the appliance in a user-specified network location. Use this statement with [RESTORE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/restore-database-sql-server-pdw.md) for disaster recovery, or to copy a database from one appliance to another.  
   
-**Before you begin**, see [Acquire and Configure a Backup Server &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/acquire-and-configure-a-backup-server-sql-server-pdw.md).  
+**Before you begin**, see [Acquire and Configure a Backup Server &#40;SQL Server PDW&#41;](../sqlpdw/acquire-and-configure-a-backup-server-sql-server-pdw.md).  
   
 There are two types of backups in SQL Server PDW. A *full database backup* is a backup of an entire SQL Server PDW database. A *differential database backup* only includes changes made since the last full backup. A backup of a user database includes database users, and database roles. A backup of the master database includes logins.  
   
-For more information about SQL Server PDW database backups, see [Backup and Restore &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-and-restore-sql-server-pdw.md).  
+For more information about SQL Server PDW database backups, see [Backup and Restore &#40;SQL Server PDW&#41;](../sqlpdw/backup-and-restore-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -89,7 +89,7 @@ For example:
 ## Permissions  
 Requires the **BACKUP DATABASE** permission or membership in the **db_backupoperator** fixed database role. The master database cannot be backed up but by a regular user that was added to the **db_backupoperator** fixed database role. The master database can only be backed up by **sa**, the fabric administrator, or members of the **sysadmin** fixed server role.  
   
-Requires a Windows account that has permission to access, create, and write to the backup directory. You must also store the Windows account name and password in SQL Server PDW. To add these network credentials to SQL Server PDW, use the [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) stored procedure.  
+Requires a Windows account that has permission to access, create, and write to the backup directory. You must also store the Windows account name and password in SQL Server PDW. To add these network credentials to SQL Server PDW, use the [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) stored procedure.  
   
 For more information about managing credentials in SQL Server PDW, see the [Security Notices](#Security) section.  
   
@@ -122,9 +122,9 @@ Full backups and differential backups are stored in separate directories. Naming
 ## Limitations and Restrictions  
 You cannot perform a differential backup of the master database. Only full backups of the master database are supported.  
   
-The backup files are stored in a format suitable only for restoring the backup to a SQL Server PDW appliance by using the [RESTORE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/restore-database-sql-server-pdw.md) statement.  
+The backup files are stored in a format suitable only for restoring the backup to a SQL Server PDW appliance by using the [RESTORE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/restore-database-sql-server-pdw.md) statement.  
   
-The backup with the BACKUP DATABASE statement cannot be used to transfer data or user information to SMP SQL Server databases. For that functionality, you can use the remote table copy feature. For more information, see [Remote Table Copy &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/remote-table-copy-sql-server-pdw.md).  
+The backup with the BACKUP DATABASE statement cannot be used to transfer data or user information to SMP SQL Server databases. For that functionality, you can use the remote table copy feature. For more information, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw/remote-table-copy-sql-server-pdw.md).  
   
 SQL Server PDW uses SQL Server backup technology to backup and restore databases. SQL Server backup options are preconfigured to use backup compression. You cannot set backup options such as compression, checksum, block size, and buffer count.  
   
@@ -141,11 +141,11 @@ A differential backup is only allowed if the last full backup completed successf
 ## Metadata  
 These dynamic management views contain information about all backup, restore, and load operations. The information persists across system restarts.  
   
--   [sys.pdw_loader_backup_runs &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-loader-backup-runs-sql-server-pdw.md)  
+-   [sys.pdw_loader_backup_runs &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-loader-backup-runs-sql-server-pdw.md)  
   
--   [sys.pdw_loader_backup_run_details &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-loader-backup-run-details-sql-server-pdw.md)  
+-   [sys.pdw_loader_backup_run_details &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-loader-backup-run-details-sql-server-pdw.md)  
   
--   [sys.pdw_loader_run_stages &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-loader-run-stages-sql-server-pdw.md)  
+-   [sys.pdw_loader_run_stages &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-loader-run-stages-sql-server-pdw.md)  
   
 ## Performance  
 To perform a backup, SQL Server PDW first backs up the metadata, and then it performs a parallel backup of the database data stored on the Compute nodes. Data is copied directly from each Compute nodes to the backup directory. To achieve the best performance for moving data from the Compute nodes to the backup directory, SQL Server PDW controls the number of Compute nodes that are copying data concurrently.  
@@ -163,11 +163,11 @@ Network access to the backup directory is based on standard Windows file sharing
 > [!IMPORTANT]  
 > To reduce security risks with your data, we advise that you designate one Windows account solely for the purpose of performing backup and restore operations. Allow this account to have permissions to the backup location and nowhere else.  
   
-You need to store the user name and password in SQL Server PDW by running the [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) stored procedure. SQL Server PDW uses Windows Credential Manager to store and encrypt user names and passwords on the Control node and Compute nodes. The credentials are not backed up with the BACKUP DATABASE command.  
+You need to store the user name and password in SQL Server PDW by running the [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) stored procedure. SQL Server PDW uses Windows Credential Manager to store and encrypt user names and passwords on the Control node and Compute nodes. The credentials are not backed up with the BACKUP DATABASE command.  
   
-To remove network credentials from SQL Server PDW, see [sp_pdw_remove_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-remove-network-credentials-sql-server-pdw.md)  
+To remove network credentials from SQL Server PDW, see [sp_pdw_remove_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-remove-network-credentials-sql-server-pdw.md)  
   
-To list all of the network credentials stored in SQL Server PDW, use the [sys.dm_pdw_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-network-credentials-sql-server-pdw.md) dynamic management view.  
+To list all of the network credentials stored in SQL Server PDW, use the [sys.dm_pdw_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-network-credentials-sql-server-pdw.md) dynamic management view.  
   
 ## Examples  
   
@@ -228,6 +228,6 @@ WITH (
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[RESTORE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/restore-database-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[RESTORE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/restore-database-sql-server-pdw.md)  
   

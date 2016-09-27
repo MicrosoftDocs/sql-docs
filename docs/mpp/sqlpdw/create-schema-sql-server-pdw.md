@@ -13,7 +13,7 @@ author: BarbKess
 # CREATE SCHEMA (SQL Server PDW)
 Creates a schema in the current database. The CREATE SCHEMA transaction can also create tables and views within the new schema, and set GRANT, DENY, or REVOKE permissions on those objects.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -83,9 +83,9 @@ GO
 ```  
   
 ## See Also  
-[ALTER SCHEMA &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-schema-sql-server-pdw.md)  
-[DROP SCHEMA &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-schema-sql-server-pdw.md)  
-[sys.schemas &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-schemas-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[ALTER SCHEMA &#40;SQL Server PDW&#41;](../sqlpdw/alter-schema-sql-server-pdw.md)  
+[DROP SCHEMA &#40;SQL Server PDW&#41;](../sqlpdw/drop-schema-sql-server-pdw.md)  
+[sys.schemas &#40;SQL Server PDW&#41;](../sqlpdw/sys-schemas-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

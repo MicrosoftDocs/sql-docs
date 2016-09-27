@@ -13,7 +13,7 @@ author: BarbKess
 # INDEXPROPERTY (SQL Server PDW)
 Returns the named index or statistics property value of a specified table identification number, index or statistics name, and property name. For more information, see the [INDEXPROPERTY (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187729.aspx) documentation on MSDN. Not all properties are valid in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   

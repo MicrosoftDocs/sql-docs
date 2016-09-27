@@ -13,7 +13,7 @@ author: BarbKess
 # SQRT (SQL Server PDW)
 Returns the square root of the specified **float** value in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -23,7 +23,7 @@ SQRT (float_expression )
   
 ## Arguments  
 *float_expression*  
-An expression of type **float** or of a type that can be implicitly converted to float. Otherwise, use [CAST](../../mpp/sqlpdw/cast-and-convert-sql-server-pdw.md) to explicitly convert *expression*.  
+An expression of type **float** or of a type that can be implicitly converted to float. Otherwise, use [CAST](../sqlpdw/cast-and-convert-sql-server-pdw.md) to explicitly convert *expression*.  
   
 ## Return Types  
 **float**  
@@ -41,10 +41,10 @@ Here is the result set.
 1.00        3.16</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md)  
-[CAST and CONVERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/cast-and-convert-sql-server-pdw.md)  
-[EXP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/exp-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md)  
+[CAST and CONVERT &#40;SQL Server PDW&#41;](../sqlpdw/cast-and-convert-sql-server-pdw.md)  
+[EXP &#40;SQL Server PDW&#41;](../sqlpdw/exp-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
   

@@ -20,7 +20,7 @@ The **Restore Master** page of the SQL Server PDW Configuration Manager enables 
   
 ## To restore the master database  
   
-1.  Launch the Configuration Manager. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md).  
+1.  Launch the Configuration Manager. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
   
 2.  In the left pane of the Configuration Manager, click **Restore Master**.  
   
@@ -30,5 +30,5 @@ The **Restore Master** page of the SQL Server PDW Configuration Manager enables 
   
 5.  To perform the restore, SQL Server PDW will shut down all appliance services and disconnect all users. After the restore completes, SQL Server PDW will restart the appliance services.  
   
-![DWConfig Appliance PDW Restore master](../../mpp/management/media/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
+![DWConfig Appliance PDW Restore master](../management/media/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
   

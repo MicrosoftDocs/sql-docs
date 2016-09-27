@@ -13,7 +13,7 @@ author: BarbKess
 # ERROR_PROCEDURE (SQL Server PDW)
 Returns the name of the stored procedure where an error occurred that caused the CATCH block of a TRY…CATCH construct to be run.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -98,11 +98,11 @@ GO
 ```  
   
 ## See Also  
-[TRY...CATCH &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/try-catch-sql-server-pdw.md)  
-[@@ERROR &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-sql-server-pdw.md)  
-[ERROR_MESSAGE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-message-sql-server-pdw.md)  
-[ERROR_NUMBER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-number-sql-server-pdw.md)  
-[ERROR_SEVERITY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-severity-sql-server-pdw.md)  
-[ERROR_STATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-state-sql-server-pdw.md)  
-[THROW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/throw-sql-server-pdw.md)  
+[TRY...CATCH &#40;SQL Server PDW&#41;](../sqlpdw/try-catch-sql-server-pdw.md)  
+[@@ERROR &#40;SQL Server PDW&#41;](../sqlpdw/error-sql-server-pdw.md)  
+[ERROR_MESSAGE &#40;SQL Server PDW&#41;](../sqlpdw/error-message-sql-server-pdw.md)  
+[ERROR_NUMBER &#40;SQL Server PDW&#41;](../sqlpdw/error-number-sql-server-pdw.md)  
+[ERROR_SEVERITY &#40;SQL Server PDW&#41;](../sqlpdw/error-severity-sql-server-pdw.md)  
+[ERROR_STATE &#40;SQL Server PDW&#41;](../sqlpdw/error-state-sql-server-pdw.md)  
+[THROW &#40;SQL Server PDW&#41;](../sqlpdw/throw-sql-server-pdw.md)  
   

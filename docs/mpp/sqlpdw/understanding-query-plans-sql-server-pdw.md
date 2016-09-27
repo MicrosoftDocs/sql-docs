@@ -13,7 +13,7 @@ author: BarbKess
 # Understanding Query Plans (SQL Server PDW)
 A SQL Server PDW query plan is the translation of sequential SQL statements into an execution plan that will run in parallel on the SQL Server PDW appliance. Use the query plan to understand how your query will be processed and find ways to optimize performance.  
   
-Use the [EXPLAIN](../../mpp/sqlpdw/explain-sql-server-pdw.md) command to generate a query plan without submitting the query for execution.  
+Use the [EXPLAIN](../sqlpdw/explain-sql-server-pdw.md) command to generate a query plan without submitting the query for execution.  
   
 ## Contents  
   
@@ -28,11 +28,11 @@ Use the [EXPLAIN](../../mpp/sqlpdw/explain-sql-server-pdw.md) command to generat
 ## <a name="UnderstandQueryProcess"></a>Understanding the Query Process  
 User-submitted SQL queries are processed by the Control node. The Control node engine parses the query and creates a query plan that defines the sequence of operations it will use to run the query on the appliance. The Control node distributed query plan operations run serially. When a query plan operation uses multiple parallel operations, the SQL Server PDW engine waits for all parallel operations to complete before starting the next distributed query plan operation.  
   
-![Parallel Query Processing](../../mpp/sqlpdw/media/SQL_Server_ADW_Query_Processing.png "SQL_Server_ADW_Query_Processing")  
+![Parallel Query Processing](../sqlpdw/media/SQL_Server_ADW_Query_Processing.png "SQL_Server_ADW_Query_Processing")  
   
 And this is the query execution sequence:  
   
-![SQL Server PDW Query Execution Sequence](../../mpp/sqlpdw/media/SQL_Server_PDW_Query_Execution.png "SQL_Server_PDW_Query_Execution")  
+![SQL Server PDW Query Execution Sequence](../sqlpdw/media/SQL_Server_PDW_Query_Execution.png "SQL_Server_PDW_Query_Execution")  
   
 ## <a name="DMSQueryOps"></a>DMS Query Plan Operations  
 A *Data Movement Service (DMS) operation* is a SQL Server PDW query plan operation that moves data among the nodes in the appliance. The data is always moved into temporary tables. The permanent data in user databases remains intact during DMS operations and is not removed from the original location in the appliance.  
@@ -44,7 +44,7 @@ SQL Server PDW query plans contain the following DMS operations.
 |Operation Name|OpType Name for EXPLAIN|Description|  
 |------------------|---------------------------|---------------|  
 |**BroadcastMoveOperation**|BROADCAST_MOVE|Moves distributed data into a replicated table. This operation is frequently used when running a distribution incompatible join.<br /><br />To perform this operation, each distribution broadcasts its rows to all other Compute nodes. The result is that each Compute node uses its own rows plus all the rows it receives from the other Compute nodes to create a replicated table.|  
-|**CopyOperation**|CopyOperation|Copies data from SQL Server PDW to a SMP SQL Server database. This operation is used only when running the [CREATE REMOTE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-remote-table-as-select-sql-server-pdw.md) statement. It is always preceded by a RemoteOperation.|  
+|**CopyOperation**|CopyOperation|Copies data from SQL Server PDW to a SMP SQL Server database. This operation is used only when running the [CREATE REMOTE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-remote-table-as-select-sql-server-pdw.md) statement. It is always preceded by a RemoteOperation.|  
 |**DistributedReplicatedTableMoveOperation**|DISTRIBUTE_REPLICATED_TABLE_MOVE|Copies a replicated table from one Compute node to all other Compute nodes. This operation guarantees data consistency among all copies of a replicated table after a non-deterministic query operation. For example, it might be necessary to perform this operation after an Insert, Update, Delete, or CTAS statement on a replicated table.|  
 |**MoveOperation**|MASTER_TABLE_MOVE|Moves data from the Control node to all Compute nodes. This operation is used to copy data into a replicated table.|  
 |**PartitionMoveOperation**|PARTITION_MOVE|Moves data from a distributed table to a single table on the Control node. This operation is used for aggregation operations on the Control node.|  

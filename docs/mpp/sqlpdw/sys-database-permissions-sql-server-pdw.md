@@ -90,8 +90,8 @@ JOIN sys.schemas AS s
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[sys.database_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-principals-sql-server-pdw.md)  
-[sys.server_permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-server-permissions-sql-server-pdw.md)  
-[sys.server_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-server-principals-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[sys.database_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-principals-sql-server-pdw.md)  
+[sys.server_permissions &#40;SQL Server PDW&#41;](../sqlpdw/sys-server-permissions-sql-server-pdw.md)  
+[sys.server_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-server-principals-sql-server-pdw.md)  
   

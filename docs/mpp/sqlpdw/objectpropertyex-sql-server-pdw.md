@@ -11,9 +11,9 @@ caps.latest.revision: 13
 author: BarbKess
 ---
 # OBJECTPROPERTYEX (SQL Server PDW)
-Returns information about schema-scoped objects in the current database. For a list of these objects, see [sys.objects &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-objects-sql-server-pdw.md). For more information, see the [OBJECTPROPERTYEX (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms188390.aspx) documentation on MSDN.  
+Returns information about schema-scoped objects in the current database. For a list of these objects, see [sys.objects &#40;SQL Server PDW&#41;](../sqlpdw/sys-objects-sql-server-pdw.md). For more information, see the [OBJECTPROPERTYEX (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms188390.aspx) documentation on MSDN.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   

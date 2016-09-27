@@ -11,14 +11,14 @@ caps.latest.revision: 66
 author: BarbKess
 ---
 # RESTORE DATABASE (SQL Server PDW)
-Restores a SQL Server PDW user database from a database backup to a SQL Server PDW appliance. The database is restored from a backup that was previously created by the SQL Server PDW[BACKUP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-database-sql-server-pdw.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
+Restores a SQL Server PDW user database from a database backup to a SQL Server PDW appliance. The database is restored from a backup that was previously created by the SQL Server PDW[BACKUP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/backup-database-sql-server-pdw.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
   
 > [!NOTE]  
-> Restoring master includes restoring appliance login information. To restore master, use the [Restore the Master Database &#40;Analytics Platform System&#41;](../../mpp/management/restore-the-master-database-analytics-platform-system.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation.  
+> Restoring master includes restoring appliance login information. To restore master, use the [Restore the Master Database &#40;Analytics Platform System&#41;](../management/restore-the-master-database-analytics-platform-system.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation.  
   
-For more information about SQL Server PDW database backups, see [Backup and Restore &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-and-restore-sql-server-pdw.md).  
+For more information about SQL Server PDW database backups, see [Backup and Restore &#40;SQL Server PDW&#41;](../sqlpdw/backup-and-restore-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -45,7 +45,7 @@ RESTORE HEADERONLY
   
 ## Arguments  
 RESTORE DATABASE *database_name*  
-Specifies to restore a user database to a database called *database_name*. The restored database can have a different name than the source database that was backed up. *database_name* cannot already exist as a database on the destination appliance. For more details on permitted database names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md).  
+Specifies to restore a user database to a database called *database_name*. The restored database can have a different name than the source database that was backed up. *database_name* cannot already exist as a database on the destination appliance. For more details on permitted database names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md).  
   
 Restoring a user database restores a full database backup and then optionally restores a differential backup to the appliance. A restore of a user database includes restoring database users, and database roles.  
   
@@ -79,11 +79,11 @@ Requires the **CREATE ANY DATABASE** permission.
   
 Requires a Windows account that has permission to access and read from the backup directory. You must also store the Windows account name and password in SQL Server PDW.  
   
-1.  To verify the credentials are already there, use [sys.dm_pdw_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-network-credentials-sql-server-pdw.md)  
+1.  To verify the credentials are already there, use [sys.dm_pdw_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-network-credentials-sql-server-pdw.md)  
   
-2.  To add or update the credentials, use [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md).  
+2.  To add or update the credentials, use [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md).  
   
-3.  To remove credentials from SQL Server PDW, use [sp_pdw_remove_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-remove-network-credentials-sql-server-pdw.md).  
+3.  To remove credentials from SQL Server PDW, use [sp_pdw_remove_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-remove-network-credentials-sql-server-pdw.md).  
   
 ## Error Handling  
 The RESTORE DATABASE command results in errors under the following conditions:  
@@ -115,7 +115,7 @@ Restoring a backup to an appliance with a larger number of Compute nodes grows t
   
 For example, when restoring a 60 GB database from a 2-node appliance (30 GB per node) to a 6-node appliance, SQL Server PDW creates a 180 GB database (6 nodes with 30 GB per node) on the 6-node appliance. SQL Server PDW initially restores the database to 2 nodes to match the source configuration, and then redistributes the data to all 6 nodes.  
   
-After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-database-sql-server-pdw.md) to shrink the database file sizes.  
+After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/alter-database-sql-server-pdw.md) to shrink the database file sizes.  
   
 ## Limitations and Restrictions  
 For these limitations and restrictions, the source appliance is the appliance from which the database backup was created, and the target appliance is the appliance to which the database will be restored.  
@@ -165,6 +165,6 @@ RESTORE HEADERONLY
 You can use the header information to check the contents of a backup, or to make sure the target restoration appliance is compatible with the source backup appliance before attempting to restore the backup.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[BACKUP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-database-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[BACKUP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/backup-database-sql-server-pdw.md)  
   

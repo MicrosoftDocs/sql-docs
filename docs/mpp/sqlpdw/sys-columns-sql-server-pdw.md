@@ -42,7 +42,7 @@ Shows columns for user-defined tables and user-defined views.
 |is_column_set|**bit**|1 = Column is a column set.|Always 0.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
-[sys.all_columns &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-all-columns-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
+[sys.all_columns &#40;SQL Server PDW&#41;](../sqlpdw/sys-all-columns-sql-server-pdw.md)  
   

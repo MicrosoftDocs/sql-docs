@@ -16,5 +16,5 @@ Contains a row for each column found in sys.columns that is a computed column. S
 For more information about this view, see the [sys.computed_columns (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms188744(v=sql11).aspx) documentation on MSDN.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

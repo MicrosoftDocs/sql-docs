@@ -17,9 +17,9 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
   
 1.  Open a query tool, such as sqlcmd or SQL Server Data Tools (SSDT), and run sp_configure to view the current 'hadoop connectivity' settings.  
   
-    ![hadoop connectivity setting](../../mpp/management/media/APS_PDW_sp_configure.png "APS_PDW_sp_configure")  
+    ![hadoop connectivity setting](../management/media/APS_PDW_sp_configure.png "APS_PDW_sp_configure")  
   
-2.  Decide which Hadoop connectivity setting you need and whether you need to change the current setting. This option applies to the entire SQL Server PDW region. For a full list of the configuration settings and versions, see [sp_configure &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-configure-sql-server-pdw.md).  
+2.  Decide which Hadoop connectivity setting you need and whether you need to change the current setting. This option applies to the entire SQL Server PDW region. For a full list of the configuration settings and versions, see [sp_configure &#40;SQL Server PDW&#41;](../sqlpdw/sp-configure-sql-server-pdw.md).  
   
 3.  To change the 'hadoop connectivity' setting, run sp_configure with RECONFIGURE. Here are some examples.  
   
@@ -47,11 +47,11 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
   
     1.  Find your Microsoft Azure storage account name. To view your storage accounts, login to the[Azure portal](https://portal.azure.com) and click **Storage accounts (classic)**.  
   
-        ![Windows Azure storage account name](../../mpp/management/media/APS_PDW_AzureStorageAccountName.png "APS_PDW_AzureStorageAccountName")  
+        ![Windows Azure storage account name](../management/media/APS_PDW_AzureStorageAccountName.png "APS_PDW_AzureStorageAccountName")  
   
     2.  Find your Azure storage account access key. To do this, click your storage account name, and on the Settings blade click **Keys**. This will show you your account name and storage keys.  
   
-        ![Windows Azure storage account access keys](../../mpp/management/media/APS_PDW_AzureStorageAccountAccessKey.png "APS_PDW_AzureStorageAccountAccessKey")  
+        ![Windows Azure storage account access keys](../management/media/APS_PDW_AzureStorageAccountAccessKey.png "APS_PDW_AzureStorageAccountAccessKey")  
   
     3.  Open a remote desktop connection to the PDW Control node.  
   
@@ -109,7 +109,7 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
   
     To run PolyBase against both the HDInsight Region and an external Hadoop 2.0 Cluster, use the yarn-site.xml default settings on your external Hadoop Cluster.  
   
-6.  Restart the PDW region. To do this, use the Configuration Manager tool. See [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md).  
+6.  Restart the PDW region. To do this, use the Configuration Manager tool. See [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
   
 7.  Verify security settings for Hadoop connections. If the **weak authentication** on Hadoop side is enabled by using `dfs.permission = true`, you must create a Hadoop user **pdw_user** and grant full read and write permissions to this user. SQL Server PDW and the corresponding calls from SQL Server PDW are always issued as **pdw_user** which is a fixed user name and cannot be changed in this version of Hadoop connectivity and SQL Server PDW release. If security on Hadoop is disabled by using `dfs.permission = false`, then no further actions need to be taken.  
   
@@ -117,11 +117,11 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
   
 9. For Hadoop connections, decide which users can create an external data source to Hadoop. Give each of these users the IP address and port number of each Hadoop name node, and give them **ALTER ANY EXTERNAL DATA SOURCE** OR **CONTROL SERVER** permission.  
   
-10. Connecting to WASB also requires DNS forwarding to be configured on the appliance. To configure DNS forwarding, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../../mpp/management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
+10. Connecting to WASB also requires DNS forwarding to be configured on the appliance. To configure DNS forwarding, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
   
 Authorized users can now create external data sources, external file formats, and external tables. They can use these to integrate data from multiple sources including Hadoop, Microsoft Azure blob storage, and SQL Server PDW.  
   
 ## See Also  
-[Appliance Configuration &#40;Analytics Platform System&#41;](../../mpp/management/appliance-configuration-analytics-platform-system.md)  
-[PolyBase &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/polybase-sql-server-pdw.md)  
+[Appliance Configuration &#40;Analytics Platform System&#41;](../management/appliance-configuration-analytics-platform-system.md)  
+[PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  
   

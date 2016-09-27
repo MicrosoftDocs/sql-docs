@@ -13,7 +13,7 @@ author: BarbKess
 # DATEPART (SQL Server PDW)
 Returns part of a date type value, such as the hour, year, or day in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -23,10 +23,10 @@ DATEPART (date_part,date_expression )
   
 ## Arguments  
 *date_part*  
-The part of the date or time to be retrieved. For a list of possible values, see the *datepart* parameter for [DATEADD](../../mpp/sqlpdw/dateadd-sql-server-pdw.md).  
+The part of the date or time to be retrieved. For a list of possible values, see the *datepart* parameter for [DATEADD](../sqlpdw/dateadd-sql-server-pdw.md).  
   
 *date_expression*  
-A datetime expression of any supported format or type. For more information about supported date or time data type, see [Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md).  
+A datetime expression of any supported format or type. For more information about supported date or time data type, see [Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md).  
   
 ## Return Types  
 **int**  
@@ -62,7 +62,7 @@ Here is the result set.
 1974</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
   

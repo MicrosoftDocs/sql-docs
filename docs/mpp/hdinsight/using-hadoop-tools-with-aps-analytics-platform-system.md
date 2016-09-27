@@ -50,5 +50,5 @@ Developers can submit requests by using the standard Hadoop REST APIs such as We
 For more information about **REST** APIs, see [WebHDFS REST API](http://hadoop.apache.org/docs/r1.0.4/webhdfs.html), [Chapter 1. Using WebHDFS REST API](http://docs.hortonworks.com/HDPDocuments/HDP1/HDP-1.3.2/bk_webhdfs/content/ch_webhdfs.html) and [2. Using WebHCat](http://docs.hortonworks.com/HDPDocuments/HDP1/HDP-1.3.2/bk_dataintegration/content/ch_using_hcatalog_1.html)  
   
 ## See Also  
-[Loading Data into Hadoop &#40;Analytics Platform System&#41;](../../mpp/hdinsight/loading-data-into-hadoop-analytics-platform-system.md)  
+[Loading Data into Hadoop &#40;Analytics Platform System&#41;](../hdinsight/loading-data-into-hadoop-analytics-platform-system.md)  
   

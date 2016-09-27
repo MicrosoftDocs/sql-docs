@@ -13,7 +13,7 @@ author: BarbKess
 # DBCC SHOW_STATISTICS (PDW)
 Displays the contents of query optimization statistics tables stored in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -83,7 +83,7 @@ To create the histogram, the query optimizer sorts the column values, computes t
   
 The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.  
   
-![](../../mpp/sqlpdw/media/SQL_Histogram.gif "SQL_Histogram")  
+![](../sqlpdw/media/SQL_Histogram.gif "SQL_Histogram")  
   
 For each histogram step:  
   
@@ -114,7 +114,7 @@ DBCC SHOW_STATISTICS requires SELECT permission on the table or membership in on
 -   db_ddladmin fixed database role  
   
 ## Limitations and Restrictions  
-DBCC SHOW_STATISTICS shows statistics stored in the Shell database at the Control node level. It does not show statistics that are auto-created by SQL Server on the Compute nodes. For more information, see [Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md).  
+DBCC SHOW_STATISTICS shows statistics stored in the Shell database at the Control node level. It does not show statistics that are auto-created by SQL Server on the Compute nodes. For more information, see [Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md).  
   
 DBCC SHOW_STATISTICS is not supported on external tables.  
   
@@ -136,7 +136,7 @@ GO
   
 The results show the header, the density vector, and part of the histogram.  
   
-![DBCC SHOW_STATISTICS results](../../mpp/sqlpdw/media/APS_SQL_DBCCSHOW_STATISTICS.png "APS_SQL_DBCCSHOW_STATISTICS")  
+![DBCC SHOW_STATISTICS results](../sqlpdw/media/APS_SQL_DBCCSHOW_STATISTICS.png "APS_SQL_DBCCSHOW_STATISTICS")  
   
 ### B. Specifying the HISTOGRAM option  
 This limits the statistics information displayed for Customer_LastName to the HISTOGRAM data.  
@@ -147,6 +147,6 @@ GO
 ```  
   
 ## See Also  
-[Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md)  
-[CREATE STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-statistics-sql-server-pdw.md)  
+[Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md)  
+[CREATE STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/create-statistics-sql-server-pdw.md)  
   

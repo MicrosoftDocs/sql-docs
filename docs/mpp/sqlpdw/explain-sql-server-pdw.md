@@ -13,7 +13,7 @@ author: BarbKess
 # EXPLAIN (SQL Server PDW)
 Returns the query plan for a SQL Server PDWSQL statement without running the statement. Use **EXPLAIN** to preview which operations will require data movement and to view the estimated costs of the query operations.  
   
-For more information about query plans, see [Understanding Query Plans &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-plans-sql-server-pdw.md).  
+For more information about query plans, see [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md).  
   
 ## Syntax  
   
@@ -27,7 +27,7 @@ EXPLAIN SQL_statement
 The SQL statement on which **EXPLAIN** will run. *SQL_statement* can be any of these commands: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
   
 ## Permissions  
-Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  
+Requires the **SHOWPLAN** permission, and permission to execute *SQL_statement*. See [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  
   
 ## Return Value  
 The return value from the **EXPLAIN** command is an XML document with the structure shown below. This XML document lists all operations in the query plan for the given query, each enclosed by the `<dsql_operation>` tag. The return value is of type **nvarchar(max)**.  
@@ -56,7 +56,7 @@ The XML tags contain this information:
 |<sql>|Echoes *SQL_statement*.|  
 |<params>|This tag is not used at this time.|  
 |<dsql_operations>|Summarizes and contains the query steps, and includes cost information for the query. Also contains all of the `<dsql_operation>` blocks. This tag contains count information for the entire query:<br /><br />`<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br />*total_cost* is the total estimated time for the query to run, in ms.<br /><br />*total_number_operations* is the total number of operations for the query. An operation that will be parallelized and run on multiple nodes is counted as a single operation.|  
-|<dsql_operation>|Describes a single operation within the query plan. The <dsql_operation> tag contains the operation type as an attribute:<br /><br />`<dsql_operation operation_type=operation_type>`<br /><br />*operation_type* is one of the values found in [Understanding Query Plans &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-plans-sql-server-pdw.md).<br /><br />The content in the `<dsql_operation>` block is dependent on the operation type, as indicated in the table below.|  
+|<dsql_operation>|Describes a single operation within the query plan. The <dsql_operation> tag contains the operation type as an attribute:<br /><br />`<dsql_operation operation_type=operation_type>`<br /><br />*operation_type* is one of the values found in [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md).<br /><br />The content in the `<dsql_operation>` block is dependent on the operation type, as indicated in the table below.|  
   
 The `<dsql_operation>` element contains the following content:  
   
@@ -292,5 +292,5 @@ The output above contains 144 numbered lines. Your output from this query may di
 -   Line 136 starts operation 9. Lines 137 through 140: On all nodes, drop temporary table **TEMP_ID_16894**.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

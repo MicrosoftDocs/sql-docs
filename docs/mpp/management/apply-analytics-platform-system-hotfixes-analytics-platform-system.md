@@ -24,7 +24,7 @@ This topic discusses how to apply hotfixes to the Analytics Platform System soft
 ### Prerequisites  
 To perform these steps, you will need:  
   
--   An Analytics Platform System login with permissions to access the Admin Console to monitor the appliance state. See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  
+-   An Analytics Platform System login with permissions to access the Admin Console to monitor the appliance state. See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  
   
 -   Knowledge of the Fabric Domain Administrator account to connect to the *<domain_name>***-HST01** node.  
   
@@ -33,7 +33,7 @@ Unlike the Microsoft updates, the hotfixes for the Analytics Platform System sof
   
 1.  **Verify appliance state indicators.**  
   
-    1.  Open the Admin Console and navigate to the Appliance State page. For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
+    1.  Open the Admin Console and navigate to the Appliance State page. For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
   
     2.  All red or yellow indicators must be resolved before you proceed to the next step. A couple exceptions to this are:  
   
@@ -56,8 +56,8 @@ Unlike the Microsoft updates, the hotfixes for the Analytics Platform System sof
     4.  Follow the steps as presented by the hotfix package.  
   
 ## See Also  
-[Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../../mpp/management/download-and-apply-microsoft-updates-analytics-platform-system.md)  
-[Uninstall Microsoft Updates &#40;Analytics Platform System&#41;](../../mpp/management/uninstall-microsoft-updates-analytics-platform-system.md)  
-[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../../mpp/management/uninstall-analytics-platform-system-hotfixes-analytics-platform-system.md)  
-[Software Servicing &#40;Analytics Platform System&#41;](../../mpp/management/software-servicing-analytics-platform-system.md)  
+[Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../management/download-and-apply-microsoft-updates-analytics-platform-system.md)  
+[Uninstall Microsoft Updates &#40;Analytics Platform System&#41;](../management/uninstall-microsoft-updates-analytics-platform-system.md)  
+[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../management/uninstall-analytics-platform-system-hotfixes-analytics-platform-system.md)  
+[Software Servicing &#40;Analytics Platform System&#41;](../management/software-servicing-analytics-platform-system.md)  
   

@@ -16,22 +16,22 @@ SQL is central to using SQL Server PDW. All applications that communicate with a
 ## SQL Reference Topics  
 The SQL reference topics are categorized into the following sections.  
   
--   [Language Elements &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/language-elements-sql-server-pdw.md)  
+-   [Language Elements &#40;SQL Server PDW&#41;](../sqlpdw/language-elements-sql-server-pdw.md)  
   
--   [Data Definition Statements &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-definition-statements-sql-server-pdw.md)  
+-   [Data Definition Statements &#40;SQL Server PDW&#41;](../sqlpdw/data-definition-statements-sql-server-pdw.md)  
   
--   [Data Manipulation Statements &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-manipulation-statements-sql-server-pdw.md)  
+-   [Data Manipulation Statements &#40;SQL Server PDW&#41;](../sqlpdw/data-manipulation-statements-sql-server-pdw.md)  
   
--   [Database Console Commands &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/database-console-commands-sql-server-pdw.md)  
+-   [Database Console Commands &#40;SQL Server PDW&#41;](../sqlpdw/database-console-commands-sql-server-pdw.md)  
   
--   [Queries &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/queries-sql-server-pdw.md)  
+-   [Queries &#40;SQL Server PDW&#41;](../sqlpdw/queries-sql-server-pdw.md)  
   
--   [CREATE DIAGNOSTICS SESSION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-diagnostics-session-sql-server-pdw.md)  
+-   [CREATE DIAGNOSTICS SESSION &#40;SQL Server PDW&#41;](../sqlpdw/create-diagnostics-session-sql-server-pdw.md)  
   
--   [Transactions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transactions-sql-server-pdw.md)  
+-   [Transactions &#40;SQL Server PDW&#41;](../sqlpdw/transactions-sql-server-pdw.md)  
   
 To view the individual language components such as operators, statements, functions, data types, and more, you can browse through the table of contents or search for topics in the index.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

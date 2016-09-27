@@ -131,5 +131,5 @@ namespace ConsoleApplication1
 ```  
   
 ## See Also  
-[Connection Strings &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connection-strings-sql-server-pdw.md)  
+[Connection Strings &#40;SQL Server PDW&#41;](../sqlpdw/connection-strings-sql-server-pdw.md)  
   

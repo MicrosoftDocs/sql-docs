@@ -19,9 +19,9 @@ A login with the appropriate permissions can manage the sessions of all logins o
   
 -   End active sessions.  
   
-These actions can be performed by using either the [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md) or [System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md) through SQL commands, as shown below.  
+These actions can be performed by using either the [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md) or [System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md) through SQL commands, as shown below.  
   
-The permissions required to manage sessions by using either method are the same, and are described in [Grant Permissions to Manage Logins, Users, and Database Roles &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-manage-logins-users-and-database-roles-sql-server-pdw.md).  
+The permissions required to manage sessions by using either method are the same, and are described in [Grant Permissions to Manage Logins, Users, and Database Roles &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-manage-logins-users-and-database-roles-sql-server-pdw.md).  
   
 ## Manage Sessions by Using the Admin Console  
   
@@ -37,7 +37,7 @@ The permissions required to manage sessions by using either method are the same,
   
 2.  In the results list, click the session ID of the desired session.  
   
-3.  The resulting queries list shows the recent queries for the session. For information on viewing query details, see [Monitoring Active Queries &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/monitoring-active-queries-sql-server-pdw.md).  
+3.  The resulting queries list shows the recent queries for the session. For information on viewing query details, see [Monitoring Active Queries &#40;SQL Server PDW&#41;](../sqlpdw/monitoring-active-queries-sql-server-pdw.md).  
   
 ### To end sessions by using the Admin Console  
   
@@ -50,7 +50,7 @@ The permissions required to manage sessions by using either method are the same,
 ## Manage Sessions by Using System Views and SQL Commands  
   
 ### To View Current Sessions by Using System Views  
-Use [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md) to generate a list of current sessions.  
+Use [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md) to generate a list of current sessions.  
   
 This example returns the session_id, login_name, and status for all sessions with a status of ‘Active’ or ‘Idle’.  
   
@@ -59,7 +59,7 @@ SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions WHERE status
 ```  
   
 ### To View Active and Recent Queries for a Session by Using System Views  
-To see the active and recently completed queries associated with a session, you use the [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md) and [sys.dm_pdw_exec_requests &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-requests-sql-server-pdw.md) views. This query returns a list of all active or idle sessions, plus any active or recent queries associated with each session ID.  
+To see the active and recently completed queries associated with a session, you use the [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md) and [sys.dm_pdw_exec_requests &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-requests-sql-server-pdw.md) views. This query returns a list of all active or idle sessions, plus any active or recent queries associated with each session ID.  
   
 ```  
 SELECT es.session_id, es.login_name, es.status AS sessionStatus,   
@@ -72,7 +72,7 @@ WHERE (es.status='Active' OR es.status='Idle') AND
 ```  
   
 ### To End Sessions by Using SQL Commands  
-Use the [KILL &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/kill-sql-server-pdw.md) command to end a current session. You will need the session ID for the process to terminate, which can be obtained using the [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md) view.  
+Use the [KILL &#40;SQL Server PDW&#41;](../sqlpdw/kill-sql-server-pdw.md) command to end a current session. You will need the session ID for the process to terminate, which can be obtained using the [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md) view.  
   
 In this example, select the login_name, session_id, and status values to find a session based on the login name.  
   
@@ -87,5 +87,5 @@ KILL 'SID137';
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

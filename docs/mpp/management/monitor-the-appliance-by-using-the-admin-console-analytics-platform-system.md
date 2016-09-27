@@ -22,7 +22,7 @@ The Admin Console is a SQL Server PDW web application that surfaces the applianc
 -   [Related Tasks](#RelatedTasks)  
   
 ## <a name="About"></a>About the Admin Console  
-![Appliance Console Home](../../mpp/management/media/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+![Appliance Console Home](../management/media/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Appliance**  
 Home  
@@ -95,7 +95,7 @@ To connect to the Admin Console, requires:
   
 -   At least Internet Explorer version 10.  
   
--   Permissions to access the Admin Console. See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  
+-   Permissions to access the Admin Console. See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  
   
 -   The IP address of the Control node cluster.  Obtain this from your SQL Server PDW administrator.  
   
@@ -108,12 +108,12 @@ The Admin Console provides the ability to monitor the following:
 |-|-|  
 |**Information Type**|**How to Access in the Admin Console**|  
 |Overall status of the appliance|Click **Appliance State** in the top menu, or **Home**.|  
-|Alerts|Click **Alerts**. For more information, see [Understanding Admin Console Alerts &#40;Analytics Platform System&#41;](../../mpp/management/understanding-admin-console-alerts-analytics-platform-system.md).|  
+|Alerts|Click **Alerts**. For more information, see [Understanding Admin Console Alerts &#40;Analytics Platform System&#41;](../management/understanding-admin-console-alerts-analytics-platform-system.md).|  
 |Appliance components and their status|Click **Appliance State** in the top menu, or **Home**.|  
 |Monitor requests (including queries, loads, backups, and restores)|Click **Sessions** to see currently active or recent sessions.<br /><br />Click **Queries** to see currently active or recent queries. The information displayed for queries includes loads, backups, and restores.<br /><br />Click **Locks** to see active locks.|  
 |Monitor additional information for loads, backups, and restores.|Click **Loads** or **Backups/Restores**.|  
 |Performance information|Click **Performance Monitor**.|  
   
 ## See Also  
-[Appliance Monitoring &#40;Analytics Platform System&#41;](../../mpp/management/appliance-monitoring-analytics-platform-system.md)  
+[Appliance Monitoring &#40;Analytics Platform System&#41;](../management/appliance-monitoring-analytics-platform-system.md)  
   

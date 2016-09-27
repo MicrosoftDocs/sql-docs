@@ -19,5 +19,5 @@ To move data to another location requires **SELECT** permission on the table con
 If the destination for the data is another SQL Server PDW, the user must have **CREATE TABLE** permission at the destination and **ALTER SCHEMA** permission on the schema that will contain the table.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

@@ -19,9 +19,9 @@ Create an external table in order to:
   
 -   Import and store Hadoop data into SQL Server PDW by using the CREATE TABLE AS SELECT statement.  
   
-For more information, see [PolyBase &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/polybase-sql-server-pdw.md).  
+For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -53,7 +53,7 @@ The one to three-part name of the table to create in SQL Server PDW. For an exte
 <column_definition> [ ,...*n* ]  
 CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. An exception to this, you cannot use the DEFAULT CONSTRAINT on external tables.  
   
-For the full details about column definitions and their data types, see [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md).  
+For the full details about column definitions and their data types, see [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md).  
   
 For external tables that use the Hive RCFile format, the column and type definitions must map to the exact schema of the external file. When defining data type, use the following mappings between SQL and Hive data types. The types include all versions of Hive unless stated otherwise.  
   
@@ -85,19 +85,19 @@ For external tables that use the Hive RCFile format, the column and type definit
 |decimal|Decimal|decimal|BigDecimalWritable|Applies to Hive0.11 and later.|  
   
 LOCATION =  '*hdfs_folder_or_filepath*'  
-Specifies the folder or the file path and file name where the data file is located in the Hadoop Cluster. The location starts from the root folder of the Hadoop Cluster; the root folder is specified in [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-data-source-sql-server-pdw.md).  
+Specifies the folder or the file path and file name where the data file is located in the Hadoop Cluster. The location starts from the root folder of the Hadoop Cluster; the root folder is specified in [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-data-source-sql-server-pdw.md).  
   
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will return files from the folder and all of the subfolders. Just like Hadoop, PolyBase does not return hidden folders. It also does not return files for which the file name begins with an underline (_) or a period (.).  
   
 In this example, if LOCATION='/webdata/', a query will return rows from mydata.txt and mydata2.txt.  It will not return mydata3.txt because it is a subfolder of a hidden folder. It will not return _hidden.txt because it is a hidden file.  
   
-![Recursive data for external tables](../../mpp/sqlpdw/media/APS_PolyBase_folder_traversal.png "APS_PolyBase_folder_traversal")  
+![Recursive data for external tables](../sqlpdw/media/APS_PolyBase_folder_traversal.png "APS_PolyBase_folder_traversal")  
   
 DATA_SOURCE = *external_data_source_name*  
-Specifies the name of the external data source that contains the location where the external data is stored or will be stored. The location is either a Hadoop Cluster or Azure blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-data-source-sql-server-pdw.md).  
+Specifies the name of the external data source that contains the location where the external data is stored or will be stored. The location is either a Hadoop Cluster or Azure blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-data-source-sql-server-pdw.md).  
   
 FILE_FORMAT = *external_file_format_name*  
-Specifies the name of the external file format that contains the format for the Hadoop data file. To create an external file format, use [CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-file-format-sql-server-pdw.md).  
+Specifies the name of the external file format that contains the format for the Hadoop data file. To create an external file format, use [CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-file-format-sql-server-pdw.md).  
   
 Reject Options  
 The reject options do not apply when CREATE EXTERNAL TABLE runs. Instead, they are stored with the table metadata so that SQL Server PDW can use them at a later time when it imports data from the external table into SQL Server PDW. For example, when a future SELECT statement or CREATE TABLE AS SELECT statement selects data from the external table, SQL Server PDW will use the reject options to determine the number or percentage of rows that can fail to import before it stops the import.  
@@ -165,7 +165,7 @@ The external Hadoop data is imported into SQL Server PDW when the data is requir
   
 When executing queries on external Hadoop tables, SQL Server PDW performs *predicate pushdown* to compute parts of the query in Hadoop before copying data into SQL Server PDW. To perform predicate pushdown, SQL Server PDW issues map-reduce jobs to run on Hadoop data by using the job tracker ID specified in the external data source. All SQL Server PDW supported data types can be part of a predicate or expression to be evaluated on Hadoop.  
   
-For more information, see [Queries on External Tables With Predicate Pushdown &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/queries-on-external-tables-with-predicate-pushdown-sql-server-pdw.md).  
+For more information, see [Queries on External Tables With Predicate Pushdown &#40;SQL Server PDW&#41;](../sqlpdw/queries-on-external-tables-with-predicate-pushdown-sql-server-pdw.md).  
   
 In AU2, by default a PolyBase query on an external table folder returned data stored in the root folder only. Beginning with AU3, by default a query on an external table returns data from the root folder and all of the subfolders. The root folder is specified by the LOCATION parameter in CREATE EXTERNAL TABLE. To avoid unwanted results, verify that subfolders in external file folders do not contain extra data that should not be returned in query results. For backwards compatibility, your appliance administrator can change the default setting to read data from only the root folder of the external file location. To do this, set <polybase.recursive.traversal> to 'false' in the appliance configuration file called core-site.xml.  
   
@@ -194,7 +194,7 @@ Takes a shared lock on the SCHEMARESOLUTION object.
 ## Examples  
   
 ### A. Create an external table with data in text-delimited format.  
-This example shows all the steps required to create an external table that has data formatted in text-delimited files. It defines an external data source mydatasource and an external file format myfileformat. These sever-level objects are then referenced in the CREATE EXTERNAL TABLE statement. For more information, see [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-data-source-sql-server-pdw.md) and [CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-file-format-sql-server-pdw.md).  
+This example shows all the steps required to create an external table that has data formatted in text-delimited files. It defines an external data source mydatasource and an external file format myfileformat. These sever-level objects are then referenced in the CREATE EXTERNAL TABLE statement. For more information, see [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-data-source-sql-server-pdw.md) and [CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-file-format-sql-server-pdw.md).  
   
 ```  
 CREATE EXTERNAL DATA SOURCE mydatasource  
@@ -223,7 +223,7 @@ WITH (
 ```  
   
 ### B. Create an external table with data in RCFile format.  
-This example shows all the steps required to create an external table that has data formatted as RCFiles. It defines an external data source mydatasource_rc and an external file format myfileformat_rc. These sever-level objects are then referenced in the CREATE EXTERNAL TABLE statement. For more information, see [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-data-source-sql-server-pdw.md) and [CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-file-format-sql-server-pdw.md).  
+This example shows all the steps required to create an external table that has data formatted as RCFiles. It defines an external data source mydatasource_rc and an external file format myfileformat_rc. These sever-level objects are then referenced in the CREATE EXTERNAL TABLE statement. For more information, see [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-data-source-sql-server-pdw.md) and [CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-file-format-sql-server-pdw.md).  
   
 > [!NOTE]  
 > SQL Server PDW requires that all data sources are of the same format type. You cannot have some data sources with text-delimited file formats and some with RCFILE formats.  
@@ -256,7 +256,7 @@ WITH (
 ```  
   
 ### C. Create an external table with data in ORC format.  
-This example shows all the steps required to create an external table that has data formatted as ORC files. It defines an external data source mydatasource_orc and an external file format myfileformat_orc. These sever-level objects are then referenced in the CREATE EXTERNAL TABLE statement. For more information, see [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-data-source-sql-server-pdw.md) and [CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-file-format-sql-server-pdw.md).  
+This example shows all the steps required to create an external table that has data formatted as ORC files. It defines an external data source mydatasource_orc and an external file format myfileformat_orc. These sever-level objects are then referenced in the CREATE EXTERNAL TABLE statement. For more information, see [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-data-source-sql-server-pdw.md) and [CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-file-format-sql-server-pdw.md).  
   
 > [!NOTE]  
 > SQL Server PDW requires that all data sources are of the same format type. You cannot have some data sources with text-delimited file formats, some with RCFILE formats, and some with ORC file formats.  
@@ -335,5 +335,5 @@ FROM ClickStream
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

@@ -69,5 +69,5 @@ To install the antivirus software on the VMs, exclude the following list of dire
 -   C:\iscsitarget  
   
 ## See Also  
-[Appliance Management Tasks &#40;Analytics Platform System&#41;](../../mpp/management/appliance-management-tasks-analytics-platform-system.md)  
+[Appliance Management Tasks &#40;Analytics Platform System&#41;](../management/appliance-management-tasks-analytics-platform-system.md)  
   

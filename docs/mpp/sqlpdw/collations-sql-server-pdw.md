@@ -34,7 +34,7 @@ SQL Server PDW has a case insensitive appliance-level collation, Latin1_General_
   
 For object names, the appliance-level collation is fixed and cannot be changed. For example, login names, database names, and database object names, are always Latin1_General_100_CI_AS_KS_WS.  
   
-For string data, the appliance-level collation is the default. However, there is a COLLATE clause that allows you to change the collation of columns and expressions to one of the Windows collations supported by SQL Server. You can specify the collation for a table column by using the COLLATE clause in the [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md) statement or in the SELECT portion of the [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md) statement. You can also apply the COLLATE clause to any scalar [Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md) that evaluates to a string data type.  
+For string data, the appliance-level collation is the default. However, there is a COLLATE clause that allows you to change the collation of columns and expressions to one of the Windows collations supported by SQL Server. You can specify the collation for a table column by using the COLLATE clause in the [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md) statement or in the SELECT portion of the [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md) statement. You can also apply the COLLATE clause to any scalar [Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md) that evaluates to a string data type.  
   
 ### <a name="KeyTerms"></a>Key Terms  
 collation  
@@ -51,7 +51,7 @@ The following table describes how collations are specified in SQL Server PDW.
 |Appliance|Appliance-level collation is Latin1_General_100_CI_AS_KS_WS. This is pre-configured and cannot be changed. This collation is case-insensitive. All system-wide metadata, login names and database names use this collation and are case-insensitive.|  
 |Database|The database collation is set to the appliance-level collation and cannot be changed. By default, all table names, view names, column names, variable names, expressions, string constants, and identifiers use the database-level collation and are case-insensitive.|  
 |Column|By default, the column collation is set to the database collation. Column collations only apply to columns of type char, varchar, nchar, or nvarchar.<br /><br />You can use the COLLATE clause to specify the collation of a string column when the table is created. This is supported in CREATE TABLE and also in the SELECT portion of the CREATE TABLE AS SELECT statement.|  
-|Expression|The collation of each expression is determined according to the SQL Server collation precedence rules. For more information, see [Collation Precedence](http://msdn.microsoft.com/en-us/library/ms179886.aspx) on MSDN.<br /><br />You can use the COLLATE clause to explicitly convert the collation of a scalar expression that evaluates to a string data type. For more information, see [Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)|  
+|Expression|The collation of each expression is determined according to the SQL Server collation precedence rules. For more information, see [Collation Precedence](http://msdn.microsoft.com/en-us/library/ms179886.aspx) on MSDN.<br /><br />You can use the COLLATE clause to explicitly convert the collation of a scalar expression that evaluates to a string data type. For more information, see [Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)|  
 |Identifier|The collation of an identifier depends on the level at which it is defined. Identifiers of appliance-level objects, such as logins and database names, are assigned the collation of the appliance. Identifiers of objects within a database, such as tables, views, and column names, are assigned the collation of the database, which in this release is equal to the appliance-level collation.|  
   
 ### <a name="Differences"></a>Differences between SQL Server PDW and SQL Server Collations  
@@ -177,7 +177,7 @@ FROM AdventureWorksPDW2012.dbo.DatabaseLog;
 ```  
   
 ### D. Use ALTER TABLE to change the collation of a column  
-This example uses [ALTER TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-table-sql-server-pdw.md) to change the collation of the LastName column in the dimEmployee table.  
+This example uses [ALTER TABLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-table-sql-server-pdw.md) to change the collation of the LastName column in the dimEmployee table.  
   
 This change affects only the metadata.  
   
@@ -192,10 +192,10 @@ ALTER TABLE AdventureWorksPDW2012.dbo.dimEmployee
   
 |Description|Links|  
 |---------------|---------|  
-|Use the COLLATE clause to specify the collation of a column in the [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md) statement.|[CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md)|  
-|Use the COLLATE clause to specify the collation of a column in the SELECT portion of the CREATE TABLE AS SELECT statement.|[CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md)|  
-|Use the COLLATE clause to change the collation of a column in an existing table.|[ALTER TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-table-sql-server-pdw.md)|  
+|Use the COLLATE clause to specify the collation of a column in the [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md) statement.|[CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md)|  
+|Use the COLLATE clause to specify the collation of a column in the SELECT portion of the CREATE TABLE AS SELECT statement.|[CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md)|  
+|Use the COLLATE clause to change the collation of a column in an existing table.|[ALTER TABLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-table-sql-server-pdw.md)|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

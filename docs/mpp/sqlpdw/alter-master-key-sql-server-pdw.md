@@ -13,7 +13,7 @@ author: BarbKess
 # ALTER MASTER KEY (SQL Server PDW)
 Changes the properties of a database master key.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -61,9 +61,9 @@ GO
 ```  
   
 ## See Also  
-[CREATE MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-master-key-sql-server-pdw.md)  
-[DROP MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-master-key-sql-server-pdw.md)  
-[OPEN MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/open-master-key-sql-server-pdw.md)  
-[CLOSE MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/close-master-key-sql-server-pdw.md)  
-[sys.databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-databases-sql-server-pdw.md)  
+[CREATE MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/create-master-key-sql-server-pdw.md)  
+[DROP MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/drop-master-key-sql-server-pdw.md)  
+[OPEN MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/open-master-key-sql-server-pdw.md)  
+[CLOSE MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/close-master-key-sql-server-pdw.md)  
+[sys.databases &#40;SQL Server PDW&#41;](../sqlpdw/sys-databases-sql-server-pdw.md)  
   

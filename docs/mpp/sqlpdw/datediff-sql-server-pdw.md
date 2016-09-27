@@ -13,7 +13,7 @@ author: BarbKess
 # DATEDIFF (SQL Server PDW)
 Returns the count (signed integer) of the specified *datepart* boundaries crossed between the specified *startdate* and *enddate* in SQL Server PDW. Use this function in the select list, WHERE, HAVING, GROUP BY and ORDER BY clauses to subtract **datetime** values and return their difference.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -41,7 +41,7 @@ The part of *startdate* and *enddate* that specifies the type of boundary crosse
 |**nanosecond**|**ns**|  
   
 *startdate*  
-An [expressions](../../mpp/sqlpdw/expressions-sql-server-pdw.md) that can be resolved to a **time**, **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset** value. *date* can be an expression, column expression, or string literal. *startdate* is subtracted from *enddate*.  
+An [expressions](../sqlpdw/expressions-sql-server-pdw.md) that can be resolved to a **time**, **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset** value. *date* can be an expression, column expression, or string literal. *startdate* is subtracted from *enddate*.  
   
 To avoid ambiguity, use four-digit years.  
   
@@ -158,8 +158,8 @@ FROM dbo.DimEmployee
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[DATEADD &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dateadd-sql-server-pdw.md)  
-[DATEPART &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/datepart-sql-server-pdw.md)  
-[Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[DATEADD &#40;SQL Server PDW&#41;](../sqlpdw/dateadd-sql-server-pdw.md)  
+[DATEPART &#40;SQL Server PDW&#41;](../sqlpdw/datepart-sql-server-pdw.md)  
+[Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md)  
   

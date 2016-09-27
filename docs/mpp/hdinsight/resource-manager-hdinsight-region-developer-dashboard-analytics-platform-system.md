@@ -14,7 +14,7 @@ author: BarbKess
 Use the Resource Manager page of the HDInsight Developer Dashboard to gain more insight and detailed information about job history, job tracker and task tracker logs.  
   
 ## Resource Manager  
-![APS HDI Developer Dashboard Resource Manager](../../mpp/hdinsight/media/APS_HDI_DevDashboard_MapReduceUI.png "APS_HDI_DevDashboard_MapReduceUI")  
+![APS HDI Developer Dashboard Resource Manager](../hdinsight/media/APS_HDI_DevDashboard_MapReduceUI.png "APS_HDI_DevDashboard_MapReduceUI")  
   
 > [!NOTE]  
 > This graphic represents only a portion of the available information.  
@@ -24,5 +24,5 @@ When jobs are retired after they become invisible to **WebHCat** (and Job Histor
 This page is part of Apache Hadoop and is exposed in the Developer Dashboard without any changes made by Microsoft.  
   
 ## See Also  
-[HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../../mpp/hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
+[HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
   

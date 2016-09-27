@@ -13,7 +13,7 @@ author: BarbKess
 # PERCENTILE_DISC (SQL Server PDW)
 PERCENTILE_DISC computes a specific percentile for sorted values in an entire rowset or within distinct partitions of a rowset in SQL Server PDW. For example, PERCENTILE_DISC (0.5) will compute the 50th percentile (that is, the median) of an expression. PERCENTILE_DISC calculates the percentile based on a discrete distribution of the column values; the result is equal to a specific value in the column.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -34,7 +34,7 @@ OVER
 Determines the partitioning of the rowset before the analytic function is applied.  
   
 <partition_by_clause>  
-Divides the result set produced by the [FROM](../../mpp/sqlpdw/from-sql-server-pdw.md) clause into partitions to which the percentile function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/over-clause-sql-server-pdw.md).  
+Divides the result set produced by the [FROM](../sqlpdw/from-sql-server-pdw.md) clause into partitions to which the percentile function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../sqlpdw/over-clause-sql-server-pdw.md).  
   
 ## Return Types  
 The return type is determined by the *order_by_expression* type.  
@@ -87,5 +87,5 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving  9.250000     9.0000</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

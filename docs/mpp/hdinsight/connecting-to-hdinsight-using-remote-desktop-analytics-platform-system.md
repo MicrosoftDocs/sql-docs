@@ -49,6 +49,6 @@ Using local machine accounts for **Remote Desktop** is not recommended.
 Only members of HDInsight **Cluster Administrators** group can connect by using **Remote Desktop**. Regular users are not allowed to remotely connect to region virtual machines.  
   
 ## See Also  
-[Product Documentation &#40;Analytics Platform System&#41;](../../mpp/product-documentation-analytics-platform-system.md)  
-[Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../../mpp/hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md)  
+[Product Documentation &#40;Analytics Platform System&#41;](.././/product-documentation-analytics-platform-system.md)  
+[Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md)  
   

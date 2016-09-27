@@ -14,7 +14,7 @@ author: BarbKess
 The **Certificates** page of the Analytics Platform System**Configuration Manager** imports or removes the certificate on the HDInsight region of the Analytics Platform System. Using a certificate to encrypt connections can help secure communication that connect to Analytics Platform System.  
   
 ## Before You Begin  
-Analytics Platform System supports using a certificate to encrypt connections to HDInsight. Use a certificate to help secure connections to the HDInsight gateway on port 443 and the HDInsight Developer dashboard on port 81. For more information about connecting to the Developer dashboard, see [HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../../mpp/hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md).  
+Analytics Platform System supports using a certificate to encrypt connections to HDInsight. Use a certificate to help secure connections to the HDInsight gateway on port 443 and the HDInsight Developer dashboard on port 81. For more information about connecting to the Developer dashboard, see [HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md).  
   
 If you are using the [Microsoft Hive ODBC Driver](http://www.microsoft.com/en-us/download/details.aspx?id=40886) to connect to HDInsight from BI, analytics, and reporting tools, a trusted certificate is required.  
   
@@ -30,7 +30,7 @@ The following instructions show how to use the Configuration Manager to import o
   
 ### To import the certificate  
   
-1.  Launch the Configuration Manager. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md).  
+1.  Launch the Configuration Manager. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
   
 2.  In the left pane of the **Configuration Manager**, expand **HDInsight Topology**, and then click **Certificates**.  
   
@@ -44,7 +44,7 @@ Analytics Platform System will not encrypt current connection by using the impor
   
 ### To remove the previously imported certificate  
   
-1.  Launch the **Configuration Manager**. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md).  
+1.  Launch the **Configuration Manager**. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
   
 2.  In the left pane of the **Configuration Manager**, expand **HDInsight Topology**, and then click **Certificates**.  
   
@@ -54,8 +54,8 @@ Analytics Platform System will not encrypt current connection by using the impor
   
 Analytics Platform System will continue to encrypt current connections, but will not use the removed certificate for new connections.  
   
-![DWConfig Appliance HDI Certificate](../../mpp/management/media/SQL_Server_PDW_DWConfig_ApplHDITopCert.png "SQL_Server_PDW_DWConfig_ApplHDITopCert")  
+![DWConfig Appliance HDI Certificate](../management/media/SQL_Server_PDW_DWConfig_ApplHDITopCert.png "SQL_Server_PDW_DWConfig_ApplHDITopCert")  
   
 ## See Also  
-[Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md)  
+[Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md)  
   

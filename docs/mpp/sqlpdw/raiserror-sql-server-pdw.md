@@ -11,9 +11,9 @@ caps.latest.revision: 10
 author: BarbKess
 ---
 # RAISERROR (SQL Server PDW)
-Generates an error message and initiates error processing for the session. The error number will always be 50000. The message text is built dynamically. The message is returned as a server error message to the calling application or to an associated CATCH block of a TRY…CATCH construct. New applications should use [THROW](../../mpp/sqlpdw/throw-sql-server-pdw.md) instead.  
+Generates an error message and initiates error processing for the session. The error number will always be 50000. The message text is built dynamically. The message is returned as a server error message to the calling application or to an associated CATCH block of a TRY…CATCH construct. New applications should use [THROW](../sqlpdw/throw-sql-server-pdw.md) instead.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -189,13 +189,13 @@ GO
 ```  
   
 ## See Also  
-[PRINT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/print-sql-server-pdw.md)  
-[@@ERROR &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-sql-server-pdw.md)  
-[TRY...CATCH &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/try-catch-sql-server-pdw.md)  
-[ERROR_MESSAGE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-message-sql-server-pdw.md)  
-[ERROR_NUMBER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-number-sql-server-pdw.md)  
-[ERROR_PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-procedure-sql-server-pdw.md)  
-[ERROR_SEVERITY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-severity-sql-server-pdw.md)  
-[ERROR_STATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-state-sql-server-pdw.md)  
-[THROW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/throw-sql-server-pdw.md)  
+[PRINT &#40;SQL Server PDW&#41;](../sqlpdw/print-sql-server-pdw.md)  
+[@@ERROR &#40;SQL Server PDW&#41;](../sqlpdw/error-sql-server-pdw.md)  
+[TRY...CATCH &#40;SQL Server PDW&#41;](../sqlpdw/try-catch-sql-server-pdw.md)  
+[ERROR_MESSAGE &#40;SQL Server PDW&#41;](../sqlpdw/error-message-sql-server-pdw.md)  
+[ERROR_NUMBER &#40;SQL Server PDW&#41;](../sqlpdw/error-number-sql-server-pdw.md)  
+[ERROR_PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/error-procedure-sql-server-pdw.md)  
+[ERROR_SEVERITY &#40;SQL Server PDW&#41;](../sqlpdw/error-severity-sql-server-pdw.md)  
+[ERROR_STATE &#40;SQL Server PDW&#41;](../sqlpdw/error-state-sql-server-pdw.md)  
+[THROW &#40;SQL Server PDW&#41;](../sqlpdw/throw-sql-server-pdw.md)  
   

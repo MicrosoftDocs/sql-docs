@@ -45,7 +45,7 @@ The loading server:
 ## <a name="Step1"></a>Step 1: Determine Capacity Requirements  
 The loading system can be designed as one or more Loading servers that perform concurrent loads. Each Loading server does not have to be dedicated only to loading, as long as it will handle the performance and storage requirements of your workload.  
   
-The system requirements for a Loading server depend almost completely on your own workload. Use the [Loading Server Capacity Planning Worksheet &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/loading-server-capacity-planning-worksheet-sql-server-pdw.md) to help determine your capacity requirements.  
+The system requirements for a Loading server depend almost completely on your own workload. Use the [Loading Server Capacity Planning Worksheet &#40;SQL Server PDW&#41;](../sqlpdw/loading-server-capacity-planning-worksheet-sql-server-pdw.md) to help determine your capacity requirements.  
   
 ## <a name="Step2"></a>Step 2: Acquire the Server  
 Now that you better understand your capacity requirements, you can plan the servers and networking components that you will need to purchase or provision. Incorporate the following list of requirements into your purchasing plan, and then purchase your server or provision an existing server.  
@@ -83,19 +83,19 @@ Use these steps to connect the loading server to the InfiniBand network. If the 
   
     -   InfiniBand drivers for Windows are developed by the OpenFabrics Alliance, an industry consortium of InfiniBand vendors.  The correct driver may have been distributed with your InfiniBand network adapter. If not, the driver can be downloaded from www.openfabrics.org.  
   
-5.  Configure the InfiniBand and DNS settings for the network adapters. For configuration instructions, see [Configure InfiniBand Network Adapters &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/configure-infiniband-network-adapters-sql-server-pdw.md).  
+5.  Configure the InfiniBand and DNS settings for the network adapters. For configuration instructions, see [Configure InfiniBand Network Adapters &#40;SQL Server PDW&#41;](../sqlpdw/configure-infiniband-network-adapters-sql-server-pdw.md).  
   
 ## <a name="Step4"></a>Step 4: Install the loading tools  
-To install dwloader, see [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md).  
+To install dwloader, see [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md).  
   
-If you plan to use Integration Services for loading, you will need to install Integration Services  and the Integration Services destination adapters. For instructions, see [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md).  
+If you plan to use Integration Services for loading, you will need to install Integration Services  and the Integration Services destination adapters. For instructions, see [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md).  
   
 ## <a name="Step5"></a>Step 5: Start Loading  
 You are now ready to start loading data. For more information, see:  
   
-1.  [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dwloader-command-line-loader-sql-server-pdw.md)  
+1.  [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/dwloader-command-line-loader-sql-server-pdw.md)  
   
-2.  [Load &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/load-sql-server-pdw.md)  
+2.  [Load &#40;SQL Server PDW&#41;](../sqlpdw/load-sql-server-pdw.md)  
   
 ## Performance  
 For best loading performance on Windows Server 2012 and beyond, turn on Instant File Initialization so that when data is overwritten, the operating system will not overwrite existing data with zeros. If this is a security risk because prior data still exists on the disks, then be sure to turn Instant File Initialization off.  
@@ -117,5 +117,5 @@ To reduce security risks with your data, we advise the following:
 -   Turn off Instant File Initialization on Windows Server 2012 and beyond. This is a tradeoff between performance and security, as noted in the Performance section. You need to decide what is best according to your security requirements.  
   
 ## See Also  
-[Backup and Restore &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-and-restore-sql-server-pdw.md)  
+[Backup and Restore &#40;SQL Server PDW&#41;](../sqlpdw/backup-and-restore-sql-server-pdw.md)  
   

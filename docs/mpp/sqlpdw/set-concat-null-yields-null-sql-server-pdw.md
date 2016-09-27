@@ -15,7 +15,7 @@ Specifies that concatenating a string with a NULL value yields a NULL result in 
   
 For more information, see [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms176056(v=sql11).aspx) on MSDN.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20(Transact-SQL).md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20(Transact-SQL).md)  
   
 ## Syntax  
   
@@ -24,5 +24,5 @@ SET CONCAT_NULL_YIELDS_NULL ON
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

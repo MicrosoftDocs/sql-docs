@@ -15,13 +15,13 @@ Find out information specific to this release of Analytics Platform System.
   
 ## In this section  
   
--   [What's New &#40;Analytics Platform System&#41;](../../mpp/about/what-s-new-analytics-platform-system.md)  
+-   [What's New &#40;Analytics Platform System&#41;](../about/what-s-new-analytics-platform-system.md)  
   
--   [Known Issues &#40;Analytics Platform System&#41;](../../mpp/about/known-issues-analytics-platform-system.md)  
+-   [Known Issues &#40;Analytics Platform System&#41;](../about/known-issues-analytics-platform-system.md)  
   
--   [Breaking Changes &#40;Analytics Platform System&#41;](../../mpp/about/breaking-changes-analytics-platform-system.md)  
+-   [Breaking Changes &#40;Analytics Platform System&#41;](../about/breaking-changes-analytics-platform-system.md)  
   
--   [Versions &#40;Analytics Platform System&#41;](../../mpp/about/versions-analytics-platform-system.md)  
+-   [Versions &#40;Analytics Platform System&#41;](../about/versions-analytics-platform-system.md)  
   
--   [Legal Notice for Documentation &#40;Analytics Platform System&#41;](../../mpp/about/legal-notice-for-documentation-analytics-platform-system.md)  
+-   [Legal Notice for Documentation &#40;Analytics Platform System&#41;](../about/legal-notice-for-documentation-analytics-platform-system.md)  
   

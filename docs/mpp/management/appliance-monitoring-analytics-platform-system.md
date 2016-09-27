@@ -40,19 +40,19 @@ There are multiple tools available to monitor the appliance.
 Admin Console  
 SQL Server PDW has an Admin Console. This is a web-based tool that displays information about queries, loads, backup and restore, locks, sessions, alerts, and appliance state. The Admin Console runs on the appliance; users connect to the Admin Console through Internet Explorer. For more information, see:  
   
--   [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
+-   [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
   
-![PDW Admin Console Alerts](../../mpp/management/media/SQL_Server_PDW_AdminConsol_Queries.png "SQL_Server_PDW_AdminConsol_Queries")  
+![PDW Admin Console Alerts](../management/media/SQL_Server_PDW_AdminConsol_Queries.png "SQL_Server_PDW_AdminConsol_Queries")  
   
 System Views  
 SQL Server PDW includes comprehensive system views that enable you to obtain detailed information about the appliance health, state, and performance. For a list of system views for monitoring tasks, see:  
   
--   [Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-system-views-analytics-platform-system.md)  
+-   [Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-views-analytics-platform-system.md)  
   
 System Center Operations Manager (SCOM)  
 SQL Server PDW has extensive integration with Systems Center Operations Manager. The management packs for SQL Server PDW are available as a free download. For more information about using System Center to monitor SQL Server PDW, see the following:  
   
--   [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
+-   [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
   
 Custom Solutions  
 For situations when System Center is not available with your data center monitoring tools, you can monitor the appliance by using a third-party monitoring solution. Most monitoring solutions support Transact\-SQL integration, so the system administrator can implement direct Transact\-SQL queries against your PDW appliance.  
@@ -67,20 +67,20 @@ If you can’t access this article, see [NIB Join Our Communities  (Analytics Pl
   
 |Monitoring Task|Description|  
 |-------------------|---------------|  
-|Monitor the appliance by using the Admin Console.|[Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)|  
-|Monitor the appliance by using System Views.|[Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-system-views-analytics-platform-system.md)|  
-|Monitor the appliance by using System Center|[Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)|  
-|Monitor the state of the appliance.|[Monitor Appliance Health State &#40;Analytics Platform System&#41;](../../mpp/management/monitor-appliance-health-state-analytics-platform-system.md)|  
-|Heartbeat Monitoring.|[Send Telemetry Feedback to Microsoft &#40;SQL Server PDW&#41;](../../mpp/management/send-telemetry-feedback-to-microsoft-sql-server-pdw.md)|  
-|Track appliance alerts.|[Track Appliance Alerts &#40;Analytics Platform System&#41;](../../mpp/management/track-appliance-alerts-analytics-platform-system.md)|  
-|Determine how much capacity is being used.|[View Capacity Utilization &#40;Analytics Platform System&#41;](../../mpp/management/view-capacity-utilization-analytics-platform-system.md)|  
-|Determine how often to poll the appliance.|[Determine Polling Frequency &#40;Analytics Platform System&#41;](../../mpp/management/determine-polling-frequency-analytics-platform-system.md)|  
-|When a cluster failure occurs, determine which cluster node failed.|[Determine Which Cluster Node Failed &#40;Analytics Platform System&#41;](../../mpp/management/determine-which-cluster-node-failed-analytics-platform-system.md)|  
-|Monitor loads.|[Monitor Loads &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/monitor-loads-sql-server-pdw.md)|  
-|Monitor backups and restores.|[Monitor Backups and Restores &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/monitor-backups-and-restores-sql-server-pdw.md)|  
-|Monitor the active queries.|[Monitoring Active Queries &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/monitoring-active-queries-sql-server-pdw.md)|  
+|Monitor the appliance by using the Admin Console.|[Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)|  
+|Monitor the appliance by using System Views.|[Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-views-analytics-platform-system.md)|  
+|Monitor the appliance by using System Center|[Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)|  
+|Monitor the state of the appliance.|[Monitor Appliance Health State &#40;Analytics Platform System&#41;](../management/monitor-appliance-health-state-analytics-platform-system.md)|  
+|Heartbeat Monitoring.|[Send Telemetry Feedback to Microsoft &#40;SQL Server PDW&#41;](../management/send-telemetry-feedback-to-microsoft-sql-server-pdw.md)|  
+|Track appliance alerts.|[Track Appliance Alerts &#40;Analytics Platform System&#41;](../management/track-appliance-alerts-analytics-platform-system.md)|  
+|Determine how much capacity is being used.|[View Capacity Utilization &#40;Analytics Platform System&#41;](../management/view-capacity-utilization-analytics-platform-system.md)|  
+|Determine how often to poll the appliance.|[Determine Polling Frequency &#40;Analytics Platform System&#41;](../management/determine-polling-frequency-analytics-platform-system.md)|  
+|When a cluster failure occurs, determine which cluster node failed.|[Determine Which Cluster Node Failed &#40;Analytics Platform System&#41;](../management/determine-which-cluster-node-failed-analytics-platform-system.md)|  
+|Monitor loads.|[Monitor Loads &#40;SQL Server PDW&#41;](../sqlpdw/monitor-loads-sql-server-pdw.md)|  
+|Monitor backups and restores.|[Monitor Backups and Restores &#40;SQL Server PDW&#41;](../sqlpdw/monitor-backups-and-restores-sql-server-pdw.md)|  
+|Monitor the active queries.|[Monitoring Active Queries &#40;SQL Server PDW&#41;](../sqlpdw/monitoring-active-queries-sql-server-pdw.md)|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Appliance Management Tasks &#40;Analytics Platform System&#41;](../../mpp/management/appliance-management-tasks-analytics-platform-system.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Appliance Management Tasks &#40;Analytics Platform System&#41;](../management/appliance-management-tasks-analytics-platform-system.md)  
   

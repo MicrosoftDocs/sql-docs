@@ -15,13 +15,13 @@ Maps the logical indexes to the physical name used on Compute nodes as reflected
   
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
-|object_id|**int**|The object ID for the logical table on which this index exists. See [sys.objects &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-objects-sql-server-pdw.md).<br /><br />**physical_name** and **object_id** form the key for this view.||  
-|index_id|**nvarchar(32)**|The ID for the index. See [sys.indexes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-indexes-sql-server-pdw.md).||  
+|object_id|**int**|The object ID for the logical table on which this index exists. See [sys.objects &#40;SQL Server PDW&#41;](../sqlpdw/sys-objects-sql-server-pdw.md).<br /><br />**physical_name** and **object_id** form the key for this view.||  
+|index_id|**nvarchar(32)**|The ID for the index. See [sys.indexes &#40;SQL Server PDW&#41;](../sqlpdw/sys-indexes-sql-server-pdw.md).||  
 |physical_name|**nvarchar(36)**|The name of the index in the databases on the Compute nodes.<br /><br />**physical_name** and **object_id** form the key for this view.||  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
-[sys.pdw_table_mappings &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-table-mappings-sql-server-pdw.md)  
-[sys.pdw_database_mappings &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-database-mappings-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
+[sys.pdw_table_mappings &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-table-mappings-sql-server-pdw.md)  
+[sys.pdw_database_mappings &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-database-mappings-sql-server-pdw.md)  
   

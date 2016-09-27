@@ -14,9 +14,9 @@ author: BarbKess
 Uses the % operator to returns the integer remainder of a division. For example, 12 % 5 = 2 because the remainder of 12 divided by 5 is 2.  
   
 > [!NOTE]  
-> For information about using % as a wildcard character, see [Wildcard Character&#40;s&#41; to Match &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/wildcard-character-s-to-match-sql-server-pdw.md).  
+> For information about using % as a wildcard character, see [Wildcard Character&#40;s&#41; to Match &#40;SQL Server PDW&#41;](../sqlpdw/wildcard-character-s-to-match-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -51,9 +51,9 @@ Here is the result set.
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Divide Operator &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/divide-operator-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[Constants &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/constants-sql-server-pdw.md)  
-[Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Divide Operator &#40;SQL Server PDW&#41;](../sqlpdw/divide-operator-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[Constants &#40;SQL Server PDW&#41;](../sqlpdw/constants-sql-server-pdw.md)  
+[Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # SELECT (SQL Server PDW)
 SQL query statement that retrieves data from tables or views in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -36,12 +36,12 @@ SELECT <select_criteria>
   
 ## Arguments  
 *common_table_expression*  
-Specifies a temporary named result set, known as a common table expression (CTE). For more information, see [WITH common_table_expression &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/with-common-table-expression-sql-server-pdw.md).  
+Specifies a temporary named result set, known as a common table expression (CTE). For more information, see [WITH common_table_expression &#40;SQL Server PDW&#41;](../sqlpdw/with-common-table-expression-sql-server-pdw.md).  
   
 TOP ( *top_expression* )  
 Returns only a specified top set of rows from the query result set. *top_expression* is a number.  
   
-For more information, see [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md).  
+For more information, see [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md).  
   
 **ALL** | DISTINCT  
 All specifies that duplicate rows can appear in the results. DISTINCT specifies that only unique rows will be returned in the results.  
@@ -53,28 +53,28 @@ The list of one or more columns or expressions to be selected for the result set
 Returns all columns from all tables and views in the FROM clause; the columns are returned in the order in which they exist in the table or view.  
   
 *column_name*  
-*column_name* is an expression. The maximum number of expressions that can be specified in the select list is 4096. For information on specifying a different name for a column, see [Aliasing &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/aliasing-sql-server-pdw.md).  
+*column_name* is an expression. The maximum number of expressions that can be specified in the select list is 4096. For information on specifying a different name for a column, see [Aliasing &#40;SQL Server PDW&#41;](../sqlpdw/aliasing-sql-server-pdw.md).  
   
 *expression*  
 *expression* can be a variable or a function that is used without a FROM clause. For example, `SELECT @@VERSION`, `SELECT CURRENT_TIMESTAMP`.  
   
 FROM { <table_source> } [ **,**...*n* ]  
-Limits the scope of the result set to a set of tables or views. For more information, see [FROM &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/from-sql-server-pdw.md).  
+Limits the scope of the result set to a set of tables or views. For more information, see [FROM &#40;SQL Server PDW&#41;](../sqlpdw/from-sql-server-pdw.md).  
   
 WHERE *< search_condition >*  
-Limits the scope of the returned values based on conditions. For more information, see [WHERE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/where-sql-server-pdw.md).  
+Limits the scope of the returned values based on conditions. For more information, see [WHERE &#40;SQL Server PDW&#41;](../sqlpdw/where-sql-server-pdw.md).  
   
 GROUP BY *< group_by_clause >*  
-Defines a grouping for the result set. For more information, see [GROUP BY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/group-by-sql-server-pdw.md).  
+Defines a grouping for the result set. For more information, see [GROUP BY &#40;SQL Server PDW&#41;](../sqlpdw/group-by-sql-server-pdw.md).  
   
 HAVING *< search_condition >*  
-Specifies requirements on the group or aggregate. For more information, see [HAVING &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/having-sql-server-pdw.md).  
+Specifies requirements on the group or aggregate. For more information, see [HAVING &#40;SQL Server PDW&#41;](../sqlpdw/having-sql-server-pdw.md).  
   
 ORDER BY *< order_by_expression >*  
-Orders the result set. For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/order-by-sql-server-pdw.md).  
+Orders the result set. For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../sqlpdw/order-by-sql-server-pdw.md).  
   
 OPTION ( <query_option> [ ,...*n* ] )  
-Specifies a query option, which is either a query label or a query join hint. A query label is useful for locating a query within the Admin Console. A query hint might be useful to improve query performance when SQL Server, running on the Compute nodes, does not generate an optimal query plan. For more information, see [OPTION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/option-sql-server-pdw.md).  
+Specifies a query option, which is either a query label or a query join hint. A query label is useful for locating a query within the Admin Console. A query hint might be useful to improve query performance when SQL Server, running on the Compute nodes, does not generate an optimal query plan. For more information, see [OPTION &#40;SQL Server PDW&#41;](../sqlpdw/option-sql-server-pdw.md).  
   
 ## Permissions  
 Requires SELECT permission on the table or view.  
@@ -82,7 +82,7 @@ Requires SELECT permission on the table or view.
 ## General Remarks  
 Queries on columnstore tables run in memory as much as possible to achieve maximum performance. SQL Server PDW has pre-set resource governor settings that moderate the memory available for in-memory queries. If a query does not have enough in-memory resources, SQL Server PDW uses disk resources to complete the query without failing.  
   
-Use the UNION operator between queries to combine their results into one result set. For more information, see [UNION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/union-sql-server-pdw.md).  
+Use the UNION operator between queries to combine their results into one result set. For more information, see [UNION &#40;SQL Server PDW&#41;](../sqlpdw/union-sql-server-pdw.md).  
   
 The order of the clauses in the SELECT statement is significant. Any one of the optional clauses can be omitted, but optional clauses must appear in the appropriate order when they are used.  
   
@@ -250,5 +250,5 @@ ORDER BY OrderDateKey;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

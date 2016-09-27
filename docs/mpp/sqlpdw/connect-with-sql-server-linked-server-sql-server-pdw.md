@@ -26,7 +26,7 @@ Describes how to register and use a linked server connection from SQL Server to 
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### Software Prerequisites  
-SNAC 10.0 for SQL Server 2008 R2. SNAC 11.0 for SQL Server 2012. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md)  
+SNAC 10.0 for SQL Server 2008 R2. SNAC 11.0 for SQL Server 2012. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md)  
   
 The server that will be configured to make a linked server connection to SQL Server PDW must be running SQL Server Enterprise or Data Center Edition. For example the **lazy schema validation** option, which we recommend setting to TRUE, is not available in SQL Server Standard Edition.  
   
@@ -45,14 +45,14 @@ The linked server provider must be run using the **AllowInProcess** option. The 
   
 To select this, in SQL Server Management Studio, in Object Explorer, expand Linked Servers, expand Providers, right click on SQLNCLI10 and choose Properties. In the Provider Options window, under **Provider Options**, enable **Allow inprocess**, and click OK.  
   
-![Provider options for Linked Server](../../mpp/sqlpdw/media/SQL_Server_PDW_LinkedServer_ProviderOptions.png "SQL_Server_PDW_LinkedServer_ProviderOptions")  
+![Provider options for Linked Server](../sqlpdw/media/SQL_Server_PDW_LinkedServer_ProviderOptions.png "SQL_Server_PDW_LinkedServer_ProviderOptions")  
   
 ## <a name="Security"></a>Security  
 One way to create a linked server script is to use the linked server UI in SQL Server Management Studio to generate the script. When using this approach, if you enter the user id and password as part of the connection string on the General properties page, the resulting script will contain the user id and password in plain text. To block the plain text password from appearing in the script, enter the user id and password on the Security properties page of the linked server UI.  
   
 The following diagram shows the Security page for the linked server UI in SQL Server Management Studio where you should enter your credentials.  
   
-![Security Properties for Linked Server Page](../../mpp/sqlpdw/media/SQL_Server_PDW_LinkedServerSecurityProperties.png "SQL_Server_PDW_LinkedServerSecurityProperties")  
+![Security Properties for Linked Server Page](../sqlpdw/media/SQL_Server_PDW_LinkedServerSecurityProperties.png "SQL_Server_PDW_LinkedServerSecurityProperties")  
   
 ## <a name="Examples"></a>Examples  
   
@@ -83,7 +83,7 @@ Open SQL Server Management Studio.
   
     -   Catalog: Same as the Database parameter.  
   
-    ![General Properties for Linked Server](../../mpp/sqlpdw/media/SQL_Server_PDW_Linked_Server_GeneralProperties.png "SQL_Server_PDW_Linked_Server_GeneralProperties")  
+    ![General Properties for Linked Server](../sqlpdw/media/SQL_Server_PDW_Linked_Server_GeneralProperties.png "SQL_Server_PDW_Linked_Server_GeneralProperties")  
   
 Enter information into the Security Page.  
   
@@ -97,7 +97,7 @@ Enter information into the Security Page.
   
 5.  With password: Enter the password for the connection. By using the remote login,  
   
-![Security Options for Linked Server](../../mpp/sqlpdw/media/SQL_Server_PDW_Linked_Server_SecurityOptions.png "SQL_Server_PDW_Linked_Server_SecurityOptions")  
+![Security Options for Linked Server](../sqlpdw/media/SQL_Server_PDW_Linked_Server_SecurityOptions.png "SQL_Server_PDW_Linked_Server_SecurityOptions")  
   
 Enter information into the Server Options Page.  
   
@@ -135,7 +135,7 @@ You are ready to create the Linked Server. You can either
   
 Click OK at the bottom right to generate the Linked Server.  
   
-![Server options for Linked Server](../../mpp/sqlpdw/media/SQL_Server_PDW_Linked_Server_ServerOptions.png "SQL_Server_PDW_Linked_Server_ServerOptions")  
+![Server options for Linked Server](../sqlpdw/media/SQL_Server_PDW_Linked_Server_ServerOptions.png "SQL_Server_PDW_Linked_Server_ServerOptions")  
   
 ### <a name="CreateLinked"></a>A. Use a Script That Creates a Linked Server From SQL Server to SQL Server PDW  
 To build a linked server in SQL Server that points to SQL Server PDW, run the script below after editing the connection string to point to your own SQL Server PDW.  
@@ -248,6 +248,6 @@ AND f.SalesOrderNumber LIKE ''SO67%'';') AT PDWLINK
 ```  
   
 ## See Also  
-[Connect With Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-applications-sql-server-pdw.md)  
+[Connect With Applications &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-applications-sql-server-pdw.md)  
 [Using Linked Server With SQL Server](http://go.microsoft.com/fwlink/?LinkId=247740)  
   

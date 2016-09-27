@@ -18,7 +18,7 @@ Specifies the number of milliseconds a SQL Server PDW statement waits for a lock
   
 For more information, see the [SET LOCK_TIMEOUT (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms189470(v=sql.11).aspx) documentation on MSDN.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -52,6 +52,6 @@ SET LOCK_TIMEOUT 1800;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SET Statements &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-statements-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SET Statements &#40;SQL Server PDW&#41;](../sqlpdw/set-statements-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # HDInsight Physical Components (Analytics Platform System)
 Names and descriptions for the HDInsight (HDI) Region physical components on the Analytics Platform System appliance.  
   
-This topic focuses on the HDI components. For explanations of the PDW and appliance fabric physical components, see [PDW and Appliance Fabric Physical Components &#40;Analytics Platform System&#41;](../../mpp/management/pdw-and-appliance-fabric-physical-components-analytics-platform-system.md).  
+This topic focuses on the HDI components. For explanations of the PDW and appliance fabric physical components, see [PDW and Appliance Fabric Physical Components &#40;Analytics Platform System&#41;](../management/pdw-and-appliance-fabric-physical-components-analytics-platform-system.md).  
   
 ## Contents  
   
@@ -26,13 +26,13 @@ This topic focuses on the HDI components. For explanations of the PDW and applia
 ## <a name="diagrams"></a>Component Diagrams  
 This shows the names of the physical components and where they are located in the first rack of an appliance. The appliance has both a PDW Region and an HDI Region. The PDW Region has 6 Compute nodes and the HDI Region has 4 Data nodes.  
   
-![HDInsight Region Component Names](../../mpp/management/media/APS_HW_ComponentNames-HDInsight-HP.png "APS_HW_ComponentNames-HDInsight-HP")  
+![HDInsight Region Component Names](../management/media/APS_HW_ComponentNames-HDInsight-HP.png "APS_HW_ComponentNames-HDInsight-HP")  
   
 The actual name for HDI components is the HDI Region name, followed by a dash, followed by the component name. For example, if the HDI Region name is HDI123, the actual names are **HDI123-HHN01**, **HDI123-HDN001**, etc.  
   
 Here is a consolidated view of an HDI Region with 12 Data nodes. It assumes that the appliance uses more than one rack, and that HSA01-HSA06 are being used for PDW Compute nodes.  
   
-![HDI Region physical component names](../../mpp/management/media/APS_HW_Names_HDInsight_HP.png "APS_HW_Names_HDInsight_HP")  
+![HDI Region physical component names](../management/media/APS_HW_Names_HDInsight_HP.png "APS_HW_Names_HDInsight_HP")  
   
 ## <a name="hdi"></a>HDI Virtual Machines  
 The HST03 virtual machines can failover to HST04. The Data nodes do not failover.  
@@ -79,7 +79,7 @@ The HDI cluster is named WFOHST02. It manages all of the physical hosts and virt
 This is the direct attached storage that is connected to the Data nodes. HP has one DAS for every four Data nodes. Dell and Quanta have one DAS for every six Data nodes.  
   
 ## See Also  
-[Hardware Configurations &#40;Analytics Platform System&#41;](../../mpp/architecture/hardware-configurations-analytics-platform-system.md)  
-[Appliance Configuration &#40;Analytics Platform System&#41;](../../mpp/management/appliance-configuration-analytics-platform-system.md)  
-[Appliance Management Tasks &#40;Analytics Platform System&#41;](../../mpp/management/appliance-management-tasks-analytics-platform-system.md)  
+[Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations-analytics-platform-system.md)  
+[Appliance Configuration &#40;Analytics Platform System&#41;](../management/appliance-configuration-analytics-platform-system.md)  
+[Appliance Management Tasks &#40;Analytics Platform System&#41;](../management/appliance-management-tasks-analytics-platform-system.md)  
   

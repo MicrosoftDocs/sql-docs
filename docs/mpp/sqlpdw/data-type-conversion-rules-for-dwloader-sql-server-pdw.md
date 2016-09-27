@@ -11,9 +11,9 @@ caps.latest.revision: 30
 author: BarbKess
 ---
 # Data Type Conversion Rules for dwloader (SQL Server PDW)
-This topic describes the input data formats and implicit data type conversions that [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dwloader-command-line-loader-sql-server-pdw.md) supports when it loads data into SQL Server PDW. The implicit data conversions occur when the input data does not match the data type in the SQL Server PDW target table. Use this information when designing your loading process to ensure your data will load successfully into SQL Server PDW.  
+This topic describes the input data formats and implicit data type conversions that [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/dwloader-command-line-loader-sql-server-pdw.md) supports when it loads data into SQL Server PDW. The implicit data conversions occur when the input data does not match the data type in the SQL Server PDW target table. Use this information when designing your loading process to ensure your data will load successfully into SQL Server PDW.  
   
-For more information about the loader, see. [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dwloader-command-line-loader-sql-server-pdw.md).  
+For more information about the loader, see. [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/dwloader-command-line-loader-sql-server-pdw.md).  
   
 ## Contents  
   
@@ -185,6 +185,6 @@ The following table defines the default format and rules for loading literal val
 **dwloader** performs the same implicit conversions that SMP SQL Server performs, but does not support all of the implicit conversions that SMP SQL Server supports.  
   
 ## See Also  
-[Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

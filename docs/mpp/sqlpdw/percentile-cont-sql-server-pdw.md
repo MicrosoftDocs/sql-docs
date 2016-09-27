@@ -13,7 +13,7 @@ author: BarbKess
 # PERCENTILE_CONT (SQL Server PDW)
 PERCENTILE_CONT calculates the percentile value based on a continuous distribution of the column values; the result is interpolated and might not be equal to any of the specific column values.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -34,10 +34,10 @@ Specifies a list of numeric values to use as input to the function. The *order_b
   
 -   Approximate numeric (float, real)  
   
-For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/order-by-sql-server-pdw.md).  
+For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../sqlpdw/order-by-sql-server-pdw.md).  
   
 OVER ( [ PARTITION BY *partition_by_expression* ] )  
-Determines the partitioning of the rowset before the analytic function is applied. The PERCENTILE_CONT function is used within a SELECT statement, and is applied to the results of the FROM clause. The percentile function is applied to each partition. For more information about the *partition_by_expression* syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/over-clause-sql-server-pdw.md).  
+Determines the partitioning of the rowset before the analytic function is applied. The PERCENTILE_CONT function is used within a SELECT statement, and is applied to the results of the FROM clause. The percentile function is applied to each partition. For more information about the *partition_by_expression* syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../sqlpdw/over-clause-sql-server-pdw.md).  
   
 ## Return Types  
 The return type is always FLOAT(53) and is not determined by the *order_by_expression* type. The result can be NULL.  
@@ -74,5 +74,5 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving 9.250000      9.0000</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

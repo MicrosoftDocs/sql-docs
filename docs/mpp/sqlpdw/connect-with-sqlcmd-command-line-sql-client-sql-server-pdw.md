@@ -13,7 +13,7 @@ author: BarbKess
 # Connect With sqlcmd Command-Line SQL Client (SQL Server PDW)
 Describes how to use the SQL Server**sqlcmd** Command-Line Tool to connect to SQL Server PDW. **sqlcmd** is a command-line tool that ships with SQL Server; you can also download it directly from MSDN if you don’t have SQL Server installed. Use this tool to send queries to SQL Server PDW.  
   
--   To install **sqlcmd**, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md).  
+-   To install **sqlcmd**, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md).  
   
 -   For the complete SQL Server documentation, see [sqlcmd Utility](http://msdn.microsoft.com/en-US/library/ms162773(v=sql.110).aspx) on MSDN.  
   

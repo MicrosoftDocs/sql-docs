@@ -23,7 +23,7 @@ Creates a user-defined function in SQL Server PDW. A user-defined function is a 
   
 -   To replace a stored procedure  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions (SQL Server PDW)](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions (SQL Server PDW)](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   

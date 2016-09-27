@@ -43,7 +43,7 @@ Use these software prerequisites if you plan to use SQL Server PDW as a data sou
   
 -   .NET Framework 3.5 SP1 or higher. For installation details, see [Microsoft .NET Framework 3.5 Service Pack 1](http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=ab99342f-5d1a-413d-8319-81da479ab0d7&displayLang=en). If you have Windows 7 or later, you already have this.  
   
--   SQL Server Native Client (SNAC) 10.0. Version 10.5, which was included as part of the SQL Server 2008 release, is also supported. For installation instructions, see [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+-   SQL Server Native Client (SNAC) 10.0. Version 10.5, which was included as part of the SQL Server 2008 release, is also supported. For installation instructions, see [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
 ### Software Prerequisites – SQL Server 2012  
 Use these software prerequisites if you plan to use SQL Server PDW as a data source for SQL Server 2012Analysis Services.  
@@ -54,7 +54,7 @@ Use these software prerequisites if you plan to use SQL Server PDW as a data sou
   
 -   .NET Framework 3.5 SP1 or higher. See [Microsoft .NET Framework 3.5 Service Pack 1](http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=ab99342f-5d1a-413d-8319-81da479ab0d7&displayLang=en). If you have Windows 7 or later, you already have this.  
   
--   SQL Server Native Client (SNAC) 11.0. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+-   SQL Server Native Client (SNAC) 11.0. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
 ## <a name="Connect2008R2"></a>Create a SQL Server PDW Data Source for SQL Server 2008 R2 Analysis Services  
 These steps explain how to create a data source that connects to SQL Server PDW. The connection uses SQL Server Native Client 10.0 and connects in the same manner that you would connect to SQL Server.  
@@ -65,7 +65,7 @@ These steps explain how to create a data source that connects to SQL Server PDW.
   
 3.  In Solution Explorer, under your new project, right-click **Data Sources**, and select **New Data Source**.  
   
-    ![Analysis Services 2008 R2 New Project](../../mpp/sqlpdw/media/SQL_Server_PDW_ConnectAS2008R2.png "SQL_Server_PDW_ConnectAS2008R2")  
+    ![Analysis Services 2008 R2 New Project](../sqlpdw/media/SQL_Server_PDW_ConnectAS2008R2.png "SQL_Server_PDW_ConnectAS2008R2")  
   
 4.  Click **Next** to connect.  
   
@@ -87,7 +87,7 @@ These steps explain how to create a data source that connects to SQL Server PDW.
   
     -   **Select or enter a Database Name**: Select or enter the name of the target database.  
   
-        ![Analysis Services Connection](../../mpp/sqlpdw/media/SQL_Server_PDW_AS_SNAC10_Connection.png "SQL_Server_PDW_AS_SNAC10_Connection")  
+        ![Analysis Services Connection](../sqlpdw/media/SQL_Server_PDW_AS_SNAC10_Connection.png "SQL_Server_PDW_AS_SNAC10_Connection")  
   
 8.  Click **Test Connection** to verify that the new data source is available.  
   
@@ -101,7 +101,7 @@ These steps explain how to create a data source that connects to SQL Server PDW.
   
 13. You can now see your data source listed in Solution Explorer under your Analysis Services Project.  
   
-    ![Data source visible in BIDS Solution Explorer](../../mpp/sqlpdw/media/SQL_Server_PDW_AS_Solution_Explorer.png "SQL_Server_PDW_AS_Solution_Explorer")  
+    ![Data source visible in BIDS Solution Explorer](../sqlpdw/media/SQL_Server_PDW_AS_Solution_Explorer.png "SQL_Server_PDW_AS_Solution_Explorer")  
   
 ## <a name="Connect2012Multi"></a>Create a SQL Server PDW Data Source for SQL Server 2012 Analysis Services – Multidimensional  
   
@@ -149,7 +149,7 @@ These steps explain how to create a data source that connects to SQL Server PDW.
   
 3.  Wait a few minutes as Analysis Services creates the model, and initializes all properties. At this point the model will contain no data.  
   
-    ![initialized tabular model with no data](../../mpp/sqlpdw/media/PDW-SSAS_initialized_tabular_model.png "PDW-SSAS_initialized_tabular_model")  
+    ![initialized tabular model with no data](../sqlpdw/media/PDW-SSAS_initialized_tabular_model.png "PDW-SSAS_initialized_tabular_model")  
   
 4.  On the **Model** menu, select **Import from Data Source**.  
   
@@ -160,7 +160,7 @@ These steps explain how to create a data source that connects to SQL Server PDW.
     > [!WARNING]  
     > Note: The data source, Microsoft SQL Server Parallel Data Warehouse, can be used only for connections using the MPP driver. This connection type is not supported from SQL Server 2012.  
   
-    ![choose the SQL Server connection for PDW 2](../../mpp/sqlpdw/media/PDW-SSAS_SelectProvider.png "PDW-SSAS_SelectProvider")  
+    ![choose the SQL Server connection for PDW 2](../sqlpdw/media/PDW-SSAS_SelectProvider.png "PDW-SSAS_SelectProvider")  
   
 6.  On the page, **Connect to a Microsoft SQL Server Database**, make the following selections:  
   
@@ -176,7 +176,7 @@ These steps explain how to create a data source that connects to SQL Server PDW.
   
     -   **Database name:** Type the name of the database to use, or select a database from the list of databases hosted in PDW 2.  
   
-    ![set connection properties for PDW](../../mpp/sqlpdw/media/PDW-SSAS_ConnectionProperties.png "PDW-SSAS_ConnectionProperties")  
+    ![set connection properties for PDW](../sqlpdw/media/PDW-SSAS_ConnectionProperties.png "PDW-SSAS_ConnectionProperties")  
   
 7.  Click **Next**.  
   
@@ -192,7 +192,7 @@ These steps explain how to create a data source that connects to SQL Server PDW.
   
         For example, the following diagram shows the filtering and data selection options in the query builder. To optimize performance and memory usage in Analysis Services tabular models, you should deselect columns that are not necessary, or create row-based filters.  
   
-    ![you can filter data before importing](../../mpp/sqlpdw/media/PDW-SSAS_filtered_model_data.png "PDW-SSAS_filtered_model_data")  
+    ![you can filter data before importing](../sqlpdw/media/PDW-SSAS_filtered_model_data.png "PDW-SSAS_filtered_model_data")  
   
     Note that the query builder does not support automatic relationship detection; therefore, there is no option to add related tables, nor can the model designer in SQL Server Data Tools automatically create relationships after the data has been imported to the model. If you know that related tables will be needed in the Analysis Services model, you must add them individually and create the relationships manually using the model designer.  
   
@@ -204,7 +204,7 @@ These steps explain how to create a data source that connects to SQL Server PDW.
   
     The Table Import Wizard will immediately begin to load the specified data into the tabular model. You can reopen the connection and add more tables or queries, or rename the tables in the model.  
   
-    ![status of data import](../../mpp/sqlpdw/media/PDW-SSAS_FactTable_import_complete.png "PDW-SSAS_FactTable_import_complete")  
+    ![status of data import](../sqlpdw/media/PDW-SSAS_FactTable_import_complete.png "PDW-SSAS_FactTable_import_complete")  
   
 ## <a name="General"></a>General Remarks - Managing Data Size in Analysis Services Applications  
 When you use SQL Server PDW as a data source for tabular models, consider the following techniques for managing relational data access.  
@@ -228,7 +228,7 @@ Note that, when you build a tabular model or a PowerPivot model, you do not crea
 ## <a name="LimitRest"></a>Restrictions  
 **Using SQL Server PDW data for ROLAP and MOLAP multidimensional models (cubes)**  
   
--   When using SQL Server PDW as a data source for ROLAP queries, we recommend that you consider the use of columnstore indexes to improve performance. For more information, see [Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md)  
+-   When using SQL Server PDW as a data source for ROLAP queries, we recommend that you consider the use of columnstore indexes to improve performance. For more information, see [Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md)  
   
 -   Auto-cube refresh is not supported in this release. The auto-cube refresh feature depends on notifications of table data changes to trigger refresh of the cube partitions, but these stored procedures are not available in SQL Server PDW. When you set up your Analysis Services multidimensional database, be sure to deselect all notification refresh options (**Tracking tables**, **Client initiated**, and **Scheduled polling**).  
   
@@ -257,5 +257,5 @@ Note that, when you build a tabular model or a PowerPivot model, you do not crea
     If your data contains a data type not supported in PDW and no compatible data type can be found, the data is loaded but the values are nullified. This can create problems in the model.  
   
 ## See Also  
-[Connect With Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-applications-sql-server-pdw.md)  
+[Connect With Applications &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-applications-sql-server-pdw.md)  
   

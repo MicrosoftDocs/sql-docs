@@ -16,7 +16,7 @@ Displays wait information for all resource types in SQL Server PDW.
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
 |wait_id|**bigint**|Position of the request in the waiting list.|0-based ordinal. This is not unique across all wait entries.|  
-|session_id|**nvarchar(32)**|ID of the session in which the wait state occurred.|See session_id in [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md).|  
+|session_id|**nvarchar(32)**|ID of the session in which the wait state occurred.|See session_id in [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md).|  
 |type|**nvarchar(255)**|Type of wait this entry represents.|Possible values:<br /><br />Connection<br /><br />Local Queries Concurrency<br /><br />Distributed Queries Concurrency<br /><br />DMS Concurrency<br /><br />Backup Concurrency|  
 |object_type|**nvarchar(255)**|Type of object that is affected by the wait.|Possible values:<br /><br />OBJECT<br /><br />DATABASE<br /><br />SYSTEM<br /><br />SCHEMA<br /><br />APPLICATION|  
 |object_name|**nvarchar(386)**|Name or GUID of the specified object that was affected by the wait.|Tables and views are displayed with three-part names.<br /><br />Indexes and statistics are displayed with four-part names.<br /><br />Names, principals, and databases are string names.|  
@@ -29,6 +29,6 @@ Displays wait information for all resource types in SQL Server PDW.
 |resource_class|**nvarchar(20)**|The resource class for this request.|SmallRC<br /><br />MediumRC<br /><br />LargeRC<br /><br />XLargeRC|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

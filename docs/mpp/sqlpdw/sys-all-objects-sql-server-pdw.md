@@ -17,7 +17,7 @@ Returns user-defined and system objects, including tables and views.
 |---------------|-------------|---------------|---------|  
 |name|sysname|Object name.||  
 |object_id|int|Object identification number. Is unique within a database.||  
-|principal_id|int|ID of the individual owner, if different from the schema owner.|See principal_id in [sys.database_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-principals-sql-server-pdw.md).|  
+|principal_id|int|ID of the individual owner, if different from the schema owner.|See principal_id in [sys.database_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-principals-sql-server-pdw.md).|  
 |schema_id|int|ID of the schema that the object is contained in. Schema-scoped system objects are always contained in the sys or INFORMATION_SCHEMA schemas.||  
 |parent_object_id|int|ID of the object to which this object belongs.<br /><br />0 = Not a child object.||  
 |type|char(2)|Object type:<br /><br />FN = SQL scalar function<br /><br />IT = Internal table<br /><br />S = System base table<br /><br />U = Table (user-defined)<br /><br />V = View|'FN', 'IT', 'S', 'U', 'V'|  
@@ -29,7 +29,7 @@ Returns user-defined and system objects, including tables and views.
 |is_schema_published|bit|Only the schema of the object is published.|Always 0.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
-[sys.objects &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-objects-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
+[sys.objects &#40;SQL Server PDW&#41;](../sqlpdw/sys-objects-sql-server-pdw.md)  
   

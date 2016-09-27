@@ -26,19 +26,19 @@ Describes the operators and operator precedence rules used in SQL Server PDWSQL 
 -   [Operator Precedence](#OperatorPrecedence)  
   
 ## <a name="ArithmeticOperators"></a>Arithmetic Operators  
-Arithmetic operators perform mathematical operations on two expressions of one or more of the data types of the numeric data type category. For more information about data type categories and rounding and truncation behaviors when performing mathematical operations on numeric data types, see [Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md).  
+Arithmetic operators perform mathematical operations on two expressions of one or more of the data types of the numeric data type category. For more information about data type categories and rounding and truncation behaviors when performing mathematical operations on numeric data types, see [Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md).  
   
 |Operator|Meaning|  
 |------------|-----------|  
-|[+ (Add)](../../mpp/sqlpdw/add-sql-server-pdw.md)|Addition|  
-|[- (Subtract)](../../mpp/sqlpdw/subtract-sql-server-pdw.md)|Subtraction|  
-|[* (Multiply)](../../mpp/sqlpdw/multiply-sql-server-pdw.md)|Multiplication|  
-|[/ (Divide)](../../mpp/sqlpdw/divide-operator-sql-server-pdw.md)|Division|  
-|[% (Modulo)](../../mpp/sqlpdw/modulo-sql-server-pdw.md)|Returns the integer remainder of a division. For example, 12 % 5 = 2 because the remainder of 12 divided by 5 is 2. (For use of % as a wildcard character, see [Wildcard Character&#40;s&#41; to Match &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/wildcard-character-s-to-match-sql-server-pdw.md).)|  
+|[+ (Add)](../sqlpdw/add-sql-server-pdw.md)|Addition|  
+|[- (Subtract)](../sqlpdw/subtract-sql-server-pdw.md)|Subtraction|  
+|[* (Multiply)](../sqlpdw/multiply-sql-server-pdw.md)|Multiplication|  
+|[/ (Divide)](../sqlpdw/divide-operator-sql-server-pdw.md)|Division|  
+|[% (Modulo)](../sqlpdw/modulo-sql-server-pdw.md)|Returns the integer remainder of a division. For example, 12 % 5 = 2 because the remainder of 12 divided by 5 is 2. (For use of % as a wildcard character, see [Wildcard Character&#40;s&#41; to Match &#40;SQL Server PDW&#41;](../sqlpdw/wildcard-character-s-to-match-sql-server-pdw.md).)|  
   
 The plus (+) and minus (-) operators can also be used to perform arithmetic operations on **datetime** values.  
   
-For more information about the precision and scale of the result of an arithmetic operation, see "Precision, Scale, and Length for Data Types" in the [Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md) topic.  
+For more information about the precision and scale of the result of an arithmetic operation, see "Precision, Scale, and Length for Data Types" in the [Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md) topic.  
   
 ### <a name="UnderstandingRounding"></a>Understanding Rounding and Truncation in Mathematical Operations  
   
@@ -57,20 +57,20 @@ The following table provides examples of rounding and truncation behavior.
 |-----------|----------|---------------|  
 |5/4<br /><br />7/4<br /><br />3/2<br /><br />5/2<br /><br />7/2<br /><br />9/2|1<br /><br />1<br /><br />1<br /><br />2<br /><br />3<br /><br />4|These are integer evaluations, so the results are truncated to an integer.|  
 |5*1.000/4<br /><br />7.000/4<br /><br />3.000/2<br /><br />5.000/2<br /><br />7\*1.000/2<br /><br />9\*1.00/2|1.250000...<br /><br />1.750000...<br /><br />1.500000...<br /><br />2.500000...<br /><br />3.500000...<br /><br />4.500000...|These are decimal evaluations, so the decimal precision is preserved.|  
-|ROUND(5*1.000/4)<br /><br />ROUND(7.000/4)<br /><br />ROUND(3.000/2,0)<br /><br />ROUND(5.000/2,0)<br /><br />ROUND(7\*1.000/2,0)<br /><br />ROUND(9\*1.000/2,0)|1.0<br /><br />2.0<br /><br />1.0<br /><br />3.0<br /><br />3.0<br /><br />5.0|Use of the ROUND function (see [ROUND &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/round-sql-server-pdw.md)) causes the decimal to be rounded up or down. Since the resulting type is a decimal type, the decimal place is preserved in the result.|  
+|ROUND(5*1.000/4)<br /><br />ROUND(7.000/4)<br /><br />ROUND(3.000/2,0)<br /><br />ROUND(5.000/2,0)<br /><br />ROUND(7\*1.000/2,0)<br /><br />ROUND(9\*1.000/2,0)|1.0<br /><br />2.0<br /><br />1.0<br /><br />3.0<br /><br />3.0<br /><br />5.0|Use of the ROUND function (see [ROUND &#40;SQL Server PDW&#41;](../sqlpdw/round-sql-server-pdw.md)) causes the decimal to be rounded up or down. Since the resulting type is a decimal type, the decimal place is preserved in the result.|  
   
 ## <a name="ComparisonOperators"></a>Comparison Operators  
 Comparison operators test whether two expressions are the same. Comparison operators can be used on all expression. The following table lists the SQL comparison operators.  
   
 |Operator|Meaning|  
 |------------|-----------|  
-|[= (Equals)](../../mpp/sqlpdw/equals-sql-server-pdw.md)|Equal to|  
-|[&gt; (Greater Than)](../../mpp/sqlpdw/greater-than-sql-server-pdw.md)|Greater than|  
-|[&lt; (Less Than)](../../mpp/sqlpdw/less-than-sql-server-pdw.md)|Less than|  
-|[&gt;= (Greater Than or Equal To)](../../mpp/sqlpdw/greater-than-or-equal-to-sql-server-pdw.md)|Greater than or equal to|  
-|[&lt;= (Less Than or Equal To)](../../mpp/sqlpdw/less-than-or-equal-to-sql-server-pdw.md)|Less than or equal to|  
-|[&lt;&gt; (Not Equal To)](../../mpp/sqlpdw/not-equal-to-sql-server-pdw.md)|Not equal to|  
-|[!= (Not Equal To)](../../mpp/sqlpdw/not-equal-to-sql-server-pdw.md)|Not equal to (not ISO standard)|  
+|[= (Equals)](../sqlpdw/equals-sql-server-pdw.md)|Equal to|  
+|[&gt; (Greater Than)](../sqlpdw/greater-than-sql-server-pdw.md)|Greater than|  
+|[&lt; (Less Than)](../sqlpdw/less-than-sql-server-pdw.md)|Less than|  
+|[&gt;= (Greater Than or Equal To)](../sqlpdw/greater-than-or-equal-to-sql-server-pdw.md)|Greater than or equal to|  
+|[&lt;= (Less Than or Equal To)](../sqlpdw/less-than-or-equal-to-sql-server-pdw.md)|Less than or equal to|  
+|[&lt;&gt; (Not Equal To)](../sqlpdw/not-equal-to-sql-server-pdw.md)|Not equal to|  
+|[!= (Not Equal To)](../sqlpdw/not-equal-to-sql-server-pdw.md)|Not equal to (not ISO standard)|  
   
 ### Boolean Data Types with Comparison Operators  
 The result of a comparison operator has the **Boolean** data type. This has three values: TRUE, FALSE, and UNKNOWN. Expressions that return a **Boolean** data type are known as Boolean expressions.  
@@ -90,14 +90,14 @@ Logical operators test for the truth of some condition. Logical operators, like 
   
 |Operator|Meaning|  
 |------------|-----------|  
-|[AND](../../mpp/sqlpdw/and-sql-server-pdw.md)|TRUE if both **Boolean** expressions are TRUE.|  
-|[BETWEEN](../../mpp/sqlpdw/between-sql-server-pdw.md)|TRUE if the operand is within a range.|  
-|[EXISTS](../../mpp/sqlpdw/exists-sql-server-pdw.md)|TRUE if a subquery contains any rows.|  
-|[IN](../../mpp/sqlpdw/in-sql-server-pdw.md)|TRUE if the operand is equal to one of a list of expressions.|  
+|[AND](../sqlpdw/and-sql-server-pdw.md)|TRUE if both **Boolean** expressions are TRUE.|  
+|[BETWEEN](../sqlpdw/between-sql-server-pdw.md)|TRUE if the operand is within a range.|  
+|[EXISTS](../sqlpdw/exists-sql-server-pdw.md)|TRUE if a subquery contains any rows.|  
+|[IN](../sqlpdw/in-sql-server-pdw.md)|TRUE if the operand is equal to one of a list of expressions.|  
 |[IS [NOT] NULL](../Topic/IS%20[NOT]%20NULL%20(SQL%20Server%20PDW).md)|TRUE if the following expression is null.|  
-|[LIKE](../../mpp/sqlpdw/like-sql-server-pdw.md)|TRUE if the operand matches a pattern.|  
-|[NOT](../../mpp/sqlpdw/not-sql-server-pdw.md)|Reverses the value of any other Boolean operator.|  
-|[OR](../../mpp/sqlpdw/or-sql-server-pdw.md)|TRUE if either **Boolean** expression is TRUE.|  
+|[LIKE](../sqlpdw/like-sql-server-pdw.md)|TRUE if the operand matches a pattern.|  
+|[NOT](../sqlpdw/not-sql-server-pdw.md)|Reverses the value of any other Boolean operator.|  
+|[OR](../sqlpdw/or-sql-server-pdw.md)|TRUE if either **Boolean** expression is TRUE.|  
   
 ## <a name="StringConcatenationOperators"></a>String Concatenation Operator  
 The plus sign (+) is the string concatenation operator. All other string manipulation is handled by using string functions such as SUBSTRING.  
@@ -152,7 +152,7 @@ Here is the result set.
 The due date is Jul 13 2001 12:00AM  
 ```  
   
-When the input strings both have the same collation, the output string has the same collation as the inputs. When the input strings have different collations, the rules of collation precedence determine the collation of the output string. See Collation Precedence in the [Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md) topic for more information.  
+When the input strings both have the same collation, the output string has the same collation as the inputs. When the input strings have different collations, the rules of collation precedence determine the collation of the output string. See Collation Precedence in the [Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md) topic for more information.  
   
 ## <a name="OperatorPrecedence"></a>Operator Precedence  
 When a complex expression has multiple operators, operator precedence determines the sequence in which the operations are performed. The order of execution can significantly affect the resulting value.  
@@ -197,7 +197,7 @@ SELECT id, first_name, last_name FROM Customer WHERE 2 * (4 + (5 - 3) ) > 100;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
   

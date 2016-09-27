@@ -13,7 +13,7 @@ author: BarbKess
 # sp_droprolemember (SQL Server PDW)
 Removes a security account from a SQL Server role in the current database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -38,7 +38,7 @@ Users cannot be removed from the **public** role, and **dbo** cannot be removed 
   
 **sp_droprolemember** cannot be executed within a user-defined transaction.  
   
-Query [sys.database_role_members &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-role-members-sql-server-pdw.md) to see the members of a database role. Use **sp_addrolemember** to add a member to a role.  
+Query [sys.database_role_members &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-role-members-sql-server-pdw.md) to see the members of a database role. Use **sp_addrolemember** to add a member to a role.  
   
 ## Permissions  
 Requires ALTER permission on the role.  
@@ -54,7 +54,7 @@ EXEC sp_droprolemember 'Sales', 'JonB'
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[sp_addrolemember &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-addrolemember-sql-server-pdw.md)  
-[DROP ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-role-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[sp_addrolemember &#40;SQL Server PDW&#41;](../sqlpdw/sp-addrolemember-sql-server-pdw.md)  
+[DROP ROLE &#40;SQL Server PDW&#41;](../sqlpdw/drop-role-sql-server-pdw.md)  
   

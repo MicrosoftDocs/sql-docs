@@ -13,7 +13,7 @@ author: BarbKess
 # EXP (SQL Server PDW)
 Returns the exponential value of the specified **float** expression in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -66,9 +66,9 @@ Here is the result set.
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[POWER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/power-sql-server-pdw.md)  
-[LOG &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/log-sql-server-pdw.md)  
-[&#42; &#40;Multiply&#41; &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/multiply-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[POWER &#40;SQL Server PDW&#41;](../sqlpdw/power-sql-server-pdw.md)  
+[LOG &#40;SQL Server PDW&#41;](../sqlpdw/log-sql-server-pdw.md)  
+[&#42; &#40;Multiply&#41; &#40;SQL Server PDW&#41;](../sqlpdw/multiply-sql-server-pdw.md)  
   

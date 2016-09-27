@@ -13,7 +13,7 @@ author: BarbKess
 # DROP VIEW (SQL Server PDW)
 Deletes a view from the current SQL Server PDW database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -33,7 +33,7 @@ Requires CONTROL permission on the view, ALTER permission on the schema containi
 When you drop a view, the view is removed from the system catalog. All permissions and all dependent views are dropped.  
   
 ## Metadata  
-To see the Data Definition Language (DDL) for a view, you can use the [sys.views](../../mpp/sqlpdw/sys-views-sql-server-pdw.md) catalog view.  
+To see the Data Definition Language (DDL) for a view, you can use the [sys.views](../sqlpdw/sys-views-sql-server-pdw.md) catalog view.  
   
 ## Locking  
 Takes an exclusive lock on the VIEW. Takes a shared lock on the DATABASE, SCHEMA, and SCHEMARESOLUTION objects.  
@@ -48,6 +48,6 @@ DROP VIEW Reorder;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE VIEW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-view-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE VIEW &#40;SQL Server PDW&#41;](../sqlpdw/create-view-sql-server-pdw.md)  
   

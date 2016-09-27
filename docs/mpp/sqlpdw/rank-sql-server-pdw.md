@@ -13,7 +13,7 @@ author: BarbKess
 # RANK (SQL Server PDW)
 Returns the rank of each row that is contained in each partition of a result set in SQL Server PDW. The rank of a row is one plus the number of ranks that come before the row in question. Use this analytic function to assign ranking values to a set of rows according to some criterion such as an increasing numeric value.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -23,16 +23,16 @@ RANK () OVER ( [ < partition_by_clause > ] < order_by_clause > )
   
 ## Arguments  
 < *partition_by_clause* >  
-Divides the result set produced by the FROM clause into partitions to which the RANK function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/over-clause-sql-server-pdw.md).  
+Divides the result set produced by the FROM clause into partitions to which the RANK function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../sqlpdw/over-clause-sql-server-pdw.md).  
   
 < *order_by_clause* >  
-Determines the order in which the RANK values are applied to the rows in a partition. For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/order-by-sql-server-pdw.md). An integer cannot represent a column when *order_by_clause* is used.  
+Determines the order in which the RANK values are applied to the rows in a partition. For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../sqlpdw/order-by-sql-server-pdw.md). An integer cannot represent a column when *order_by_clause* is used.  
   
 ## Return Types  
 **bigint**  
   
 ## Remarks  
-If two or more rows tie for a rank, each tied rows receives the same rank. For example, if the two top salespeople have the same year-to-date sales value, they are both ranked one. The salesperson with the next highest year-to-date sales value is ranked number three, because there are two rows that are ranked higher. Therefore, the RANK function does not always return consecutive integers. This behavior differs from the DENSE_RANK function. For more information, see [DENSE_RANK &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dense-rank-sql-server-pdw.md).  
+If two or more rows tie for a rank, each tied rows receives the same rank. For example, if the two top salespeople have the same year-to-date sales value, they are both ranked one. The salesperson with the next highest year-to-date sales value is ranked number three, because there are two rows that are ranked higher. Therefore, the RANK function does not always return consecutive integers. This behavior differs from the DENSE_RANK function. For more information, see [DENSE_RANK &#40;SQL Server PDW&#41;](../sqlpdw/dense-rank-sql-server-pdw.md).  
   
 The sort order that is used for the whole query determines the order in which the rows appear in a result set.  
   
@@ -71,7 +71,7 @@ Ito               7804000.0000   Southwest            2
 Pak               10514000.0000  United Kingdom       1</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[DENSE_RANK &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dense-rank-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[DENSE_RANK &#40;SQL Server PDW&#41;](../sqlpdw/dense-rank-sql-server-pdw.md)  
   

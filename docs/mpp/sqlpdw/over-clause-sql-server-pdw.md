@@ -13,9 +13,9 @@ author: BarbKess
 # OVER Clause (SQL Server PDW)
 Determines the partitioning and ordering of the rowset before the analytic function is applied.  
   
-For more information, see [Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md).  
+For more information, see [Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -31,7 +31,7 @@ Divides the result set into partitions. The analytic function is applied to each
 Specifies the column by which the rowset produced by the corresponding FROM clause is partitioned. *value_expression* can only refer to columns made available by the FROM clause. *value_expression* cannot refer to expressions or aliases in the select list. *value_expression* can be a column expression, scalar subquery, or scalar function.  
   
 *order_by_clause*  
-Specifies the order to apply the analytic function. For more information, see [ORDER BY](../../mpp/sqlpdw/order-by-sql-server-pdw.md).  
+Specifies the order to apply the analytic function. For more information, see [ORDER BY](../sqlpdw/order-by-sql-server-pdw.md).  
   
 > [!IMPORTANT]  
 > When used in the context of an analytic function, *order_by_clause* can only refer to columns made available by the FROM clause. An **integer** cannot be specified to represent the position of the name or alias of a column in the select list.  
@@ -124,6 +124,6 @@ SO43659      223      2    16     12.50
 SO43659      229      2    16     18.75</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
   

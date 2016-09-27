@@ -13,9 +13,9 @@ author: BarbKess
 # CREATE COLUMNSTORE INDEX (SQL Server PDW)
 Creates or rebuilds an xVelocity memory-optimized clustered columnstore index on a SQL Server PDW table. Use this primarily to rebuild all partitions of a clustered columnstore index or to convert a small rowstore dimension table to a columnstore table.  
   
-To better understand clustered columnstore indexes, see [Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md).  
+To better understand clustered columnstore indexes, see [Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -79,19 +79,19 @@ All of the columns in a clustered columnstore index are stored in the metadata a
   
 Related system catalog views:  
   
--   [sys.indexes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-indexes-sql-server-pdw.md)  
+-   [sys.indexes &#40;SQL Server PDW&#41;](../sqlpdw/sys-indexes-sql-server-pdw.md)  
   
--   [sys.index_columns &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-index-columns-sql-server-pdw.md)  
+-   [sys.index_columns &#40;SQL Server PDW&#41;](../sqlpdw/sys-index-columns-sql-server-pdw.md)  
   
--   [sys.partitions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-partitions-sql-server-pdw.md)  
+-   [sys.partitions &#40;SQL Server PDW&#41;](../sqlpdw/sys-partitions-sql-server-pdw.md)  
   
 Related dynamic management views (DMVs):  
   
--   [sys.pdw_nodes_column_store_segments &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-nodes-column-store-segments-sql-server-pdw.md)  
+-   [sys.pdw_nodes_column_store_segments &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-nodes-column-store-segments-sql-server-pdw.md)  
   
--   [sys.pdw_nodes_column_store_dictionaries &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-nodes-column-store-dictionaries-sql-server-pdw.md)  
+-   [sys.pdw_nodes_column_store_dictionaries &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-nodes-column-store-dictionaries-sql-server-pdw.md)  
   
--   [sys.pdw_nodes_column_store_row_groups &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-nodes-column-store-row-groups-sql-server-pdw.md)  
+-   [sys.pdw_nodes_column_store_row_groups &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-nodes-column-store-row-groups-sql-server-pdw.md)  
   
 ## Performance  
 CREATE COLUMNSTORE INDEX runs in parallel across the Compute nodes for both replicated and distributed tables, and runs serially across the distributions for each Compute node which is slow for large table. However, CREATE TABLE AS SELECT performs in parallel across the Compute nodes and in parallel across the distributions within each Compute node. This is one of the reasons why we recommend using CREATE TABLE AS SELECT instead of CREATE COLUMNSTORE INDEX for converting large tables from rowstore to columnstore.  
@@ -170,7 +170,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### E. Convert a columnstore table back to a rowstore heap  
-Use [DROP INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-index-sql-server-pdw.md) to drop the clustered columnstore index and convert the table to a rowstore heap. This example converts the cci_xDimProduct table to a rowstore heap. The table continues to be distributed, but is stored as a heap.  
+Use [DROP INDEX &#40;SQL Server PDW&#41;](../sqlpdw/drop-index-sql-server-pdw.md) to drop the clustered columnstore index and convert the table to a rowstore heap. This example converts the cci_xDimProduct table to a rowstore heap. The table continues to be distributed, but is stored as a heap.  
   
 ```  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
@@ -178,5 +178,5 @@ DROP INDEX cci_xdimProduct ON xdimProduct;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

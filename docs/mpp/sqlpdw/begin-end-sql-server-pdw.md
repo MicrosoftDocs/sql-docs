@@ -13,7 +13,7 @@ author: BarbKess
 # BEGIN...END (SQL Server PDW)
 Encloses a series of SQL statements in SQL Server PDW. BEGIN and END are provided for compatibility with SQL Server. BEGIN and END are control-of-flow language keywords.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -32,7 +32,7 @@ Is any valid SQL statement or statement grouping as defined by using a statement
 ## General Remarks  
 BEGIN...END blocks can be nested.  
   
-Although all SQL statements are valid within a BEGIN...END block, certain SQL statements should not be grouped together within the same batch, or statement block. For more information, see [Batches, Control-of-Flow, and Variables &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/batches-control-of-flow-and-variables-sql-server-pdw.md) and the individual statements used.  
+Although all SQL statements are valid within a BEGIN...END block, certain SQL statements should not be grouped together within the same batch, or statement block. For more information, see [Batches, Control-of-Flow, and Variables &#40;SQL Server PDW&#41;](../sqlpdw/batches-control-of-flow-and-variables-sql-server-pdw.md) and the individual statements used.  
   
 ## Examples  
 In the following example, `BEGIN` and `END` define a series of SQL statements that run together. If the `BEGIN...END` block are not included, the following example will be in a continuous loop.  
@@ -50,5 +50,5 @@ END;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

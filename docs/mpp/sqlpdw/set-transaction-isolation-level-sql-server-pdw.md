@@ -17,7 +17,7 @@ In this release, the isolation level is always READ UNCOMMITTED.
   
 For more information, see the [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms173763(v=sql11)) documentation on MSDN.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -31,5 +31,5 @@ READ UNCOMMITTED
 Specifies that statements can read rows that have been modified by other transactions but not yet committed.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

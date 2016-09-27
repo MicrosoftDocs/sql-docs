@@ -13,7 +13,7 @@ author: BarbKess
 # SQL Server Parallel Data Warehouse (SQL Server PDW)
 SQL Server PDW runs as a workload on Analytics Platform System. Use SQL Server PDW as the core relational data warehousing component of your end-to-end business intelligence solutions.  
   
-![PDW Region](../../mpp/sqlpdw/media/APS_PDW_Architecture_HighLevel.png "APS_PDW_Architecture_HighLevel")  
+![PDW Region](../sqlpdw/media/APS_PDW_Architecture_HighLevel.png "APS_PDW_Architecture_HighLevel")  
   
 ## SQL Server PDW Benefits  
 With PDW’s massively parallel processing (MPP) design, queries commonly complete 50 times faster than traditional data warehouses built on symmetric multi-processing (SMP) database management systems.  
@@ -37,21 +37,21 @@ To learn more, see the whitepaper [Parallel Data Warehouse: A Breakthrough Platf
   
 ### In this section  
   
--   [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md)  
+-   [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md)  
   
--   [Plan for Backup and Loading Hardware &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/plan-for-backup-and-loading-hardware-sql-server-pdw.md)  
+-   [Plan for Backup and Loading Hardware &#40;SQL Server PDW&#41;](../sqlpdw/plan-for-backup-and-loading-hardware-sql-server-pdw.md)  
   
--   [Client Tools and Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
+-   [Client Tools and Applications &#40;SQL Server PDW&#41;](../sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
   
--   [Query &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/query-sql-server-pdw.md)  
+-   [Query &#40;SQL Server PDW&#41;](../sqlpdw/query-sql-server-pdw.md)  
   
--   [Load &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/load-sql-server-pdw.md)  
+-   [Load &#40;SQL Server PDW&#41;](../sqlpdw/load-sql-server-pdw.md)  
   
--   [Database Administration &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/database-administration-sql-server-pdw.md)  
+-   [Database Administration &#40;SQL Server PDW&#41;](../sqlpdw/database-administration-sql-server-pdw.md)  
   
--   [SQL Reference &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-reference-sql-server-pdw.md)  
+-   [SQL Reference &#40;SQL Server PDW&#41;](../sqlpdw/sql-reference-sql-server-pdw.md)  
   
--   [System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+-   [System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   
--   [Glossary &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/glossary-sql-server-pdw.md)  
+-   [Glossary &#40;SQL Server PDW&#41;](../sqlpdw/glossary-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # Configure SQL Server PDW for Remote Table Copies (SQL Server PDW)
 Describes how to configure SQL Server PDW to use the remote table copy feature to copy tables to SMP SQL Server databases on non-appliance servers.  
   
-This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/remote-table-copy-sql-server-pdw.md)  
+This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw/remote-table-copy-sql-server-pdw.md)  
   
 ## Before You Begin  
 In order to configure SQL Server PDW to use remote table copy, you must:  
@@ -34,7 +34,7 @@ The following steps outline how to update the DNS server.
 3.  Use the DNS Manager to add the IP name.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../../mpp/management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md)  
-[Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/security-configure-domain-trusts-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md)  
+[Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../sqlpdw/security-configure-domain-trusts-sql-server-pdw.md)  
   

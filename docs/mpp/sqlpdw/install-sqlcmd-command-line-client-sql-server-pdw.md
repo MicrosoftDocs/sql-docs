@@ -33,7 +33,7 @@ Sqlcmd, when installed with SQL Server, is located in these directories:
 -   [Next Steps](#next)  
   
 ## <a name="before"></a>Before You Begin  
-To install SQL Server Native Client, see [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+To install SQL Server Native Client, see [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
 ### Software Prerequisites - SQL Server 2014  
 SQL Server Native Client 11.0  
@@ -58,10 +58,10 @@ To install sqlcmd as a standalone package, use the following download links. The
 ## <a name="next"></a>Next Steps  
 To run sqlcmd with SQL Server Native Client 11.0, use the –I option.  
   
-For more information on using sqlcmd with SQL Server PDW, see [Connect With sqlcmd Command-Line SQL Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-sqlcmd-command-line-sql-client-sql-server-pdw.md).  
+For more information on using sqlcmd with SQL Server PDW, see [Connect With sqlcmd Command-Line SQL Client &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sqlcmd-command-line-sql-client-sql-server-pdw.md).  
   
 For the sqlcmd reference for SQL Server 2012, see [sqlcmd Utility](http://msdn.microsoft.com/en-US/library/ms162773(v=sql.110).aspx).  
   
 ## See Also  
-[Client Tools and Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
+[Client Tools and Applications &#40;SQL Server PDW&#41;](../sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
   

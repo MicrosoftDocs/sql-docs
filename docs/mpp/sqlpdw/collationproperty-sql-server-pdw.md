@@ -13,7 +13,7 @@ author: BarbKess
 # COLLATIONPROPERTY (SQL Server PDW)
 Returns the property of a specified collation. For more information, see the [COLLATIONPROPERTY (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms190305.aspx)documentation on MSDN.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -53,5 +53,5 @@ Here is the result set.
 ```  
   
 ## See Also  
-[Collations &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/collations-sql-server-pdw.md)  
+[Collations &#40;SQL Server PDW&#41;](../sqlpdw/collations-sql-server-pdw.md)  
   

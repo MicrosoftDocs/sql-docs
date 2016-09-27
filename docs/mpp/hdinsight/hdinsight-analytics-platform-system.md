@@ -13,7 +13,7 @@ author: BarbKess
 # HDInsight  (Analytics Platform System)
 HDInsight is one of the Analytics Platform System workloads. Use HDInsight on Analytics Platform System to create your own on-premises Hadoop solution, and to quickly integrate and analyze HDInsight data with SQL Server PDW data since all of the data is stored in close proximity on the same appliance.  
   
-![HDInsight Region](../../mpp/hdinsight/media/APS_HDI_Architecture_HighLevel.png "APS_HDI_Architecture_HighLevel")  
+![HDInsight Region](../hdinsight/media/APS_HDI_Architecture_HighLevel.png "APS_HDI_Architecture_HighLevel")  
   
 ## HDInsight Benefits  
 Microsoft HDInsight is a 100 percent Apache Hadoop-based data platform that provides a Hadoop-based cloud solution for Azure services, and an on-premises solution for Analytics Platform System. HDInsight manages data of any type, whether relational or nonrelational, and of any size. With APS, you can store and analyze HDInsight data on your own premises.  
@@ -37,25 +37,25 @@ For information, see [HDInsight benefits](http://www.windowsazure.com/en-us/serv
 ## In This Section  
 This section of the documentation contains the following sections.  
   
--   [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../../mpp/hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md)  
+-   [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md)  
   
--   [HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../../mpp/hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
+-   [HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
   
--   [Using Hadoop Tools with APS &#40;Analytics Platform System&#41;](../../mpp/hdinsight/using-hadoop-tools-with-aps-analytics-platform-system.md)  
+-   [Using Hadoop Tools with APS &#40;Analytics Platform System&#41;](../hdinsight/using-hadoop-tools-with-aps-analytics-platform-system.md)  
   
--   [Loading Data into Hadoop &#40;Analytics Platform System&#41;](../../mpp/hdinsight/loading-data-into-hadoop-analytics-platform-system.md)  
+-   [Loading Data into Hadoop &#40;Analytics Platform System&#41;](../hdinsight/loading-data-into-hadoop-analytics-platform-system.md)  
   
--   [Tips for Using the REST API &#40;Analytics Platform System&#41;](../../mpp/hdinsight/tips-for-using-the-rest-api-analytics-platform-system.md)  
+-   [Tips for Using the REST API &#40;Analytics Platform System&#41;](../hdinsight/tips-for-using-the-rest-api-analytics-platform-system.md)  
   
--   [Connecting to HDInsight Using Remote Desktop &#40;Analytics Platform System&#41;](../../mpp/hdinsight/connecting-to-hdinsight-using-remote-desktop-analytics-platform-system.md)  
+-   [Connecting to HDInsight Using Remote Desktop &#40;Analytics Platform System&#41;](../hdinsight/connecting-to-hdinsight-using-remote-desktop-analytics-platform-system.md)  
   
--   [Changing Hadoop Configuration Settings &#40;Analytic Platform System&#41;](../../mpp/hdinsight/changing-hadoop-configuration-settings-analytic-platform-system.md)  
+-   [Changing Hadoop Configuration Settings &#40;Analytic Platform System&#41;](../hdinsight/changing-hadoop-configuration-settings-analytic-platform-system.md)  
   
--   [Supported Hadoop Configuration Changes &#40;Analytics Platform System&#41;](../../mpp/hdinsight/supported-hadoop-configuration-changes-analytics-platform-system.md)  
+-   [Supported Hadoop Configuration Changes &#40;Analytics Platform System&#41;](../hdinsight/supported-hadoop-configuration-changes-analytics-platform-system.md)  
   
--   [Unsupported HDInsight Actions &#40;Analytics Platform System&#41;](../../mpp/hdinsight/unsupported-hdinsight-actions-analytics-platform-system.md)  
+-   [Unsupported HDInsight Actions &#40;Analytics Platform System&#41;](../hdinsight/unsupported-hdinsight-actions-analytics-platform-system.md)  
   
 ## See Also  
-[Appliance Management Tasks &#40;Analytics Platform System&#41;](../../mpp/management/appliance-management-tasks-analytics-platform-system.md)  
-[Appliance Configuration &#40;Analytics Platform System&#41;](../../mpp/management/appliance-configuration-analytics-platform-system.md)  
+[Appliance Management Tasks &#40;Analytics Platform System&#41;](../management/appliance-management-tasks-analytics-platform-system.md)  
+[Appliance Configuration &#40;Analytics Platform System&#41;](../management/appliance-configuration-analytics-platform-system.md)  
   

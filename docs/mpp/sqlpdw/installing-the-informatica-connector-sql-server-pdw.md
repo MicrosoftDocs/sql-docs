@@ -29,11 +29,11 @@ The Informatica Connector server should be configured on the Informatica Server 
   
 See the related topic in this guide for additional post installation configuration tasks.  
   
--   [Using SQL Server PDW tables as Informatica Sources and Targets &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/using-sql-server-pdw-tables-as-informatica-sources-and-targets-sql-server-pdw.md)  
+-   [Using SQL Server PDW tables as Informatica Sources and Targets &#40;SQL Server PDW&#41;](../sqlpdw/using-sql-server-pdw-tables-as-informatica-sources-and-targets-sql-server-pdw.md)  
   
--   [Using Informatica to create SQL Server PDW connections in workflow manager &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/using-informatica-to-create-sql-server-pdw-connections-in-workflow-manager-sql-server-pdw.md)  
+-   [Using Informatica to create SQL Server PDW connections in workflow manager &#40;SQL Server PDW&#41;](../sqlpdw/using-informatica-to-create-sql-server-pdw-connections-in-workflow-manager-sql-server-pdw.md)  
   
--   [Creating Sessions and Workflows in Informatica &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/creating-sessions-and-workflows-in-informatica-sql-server-pdw.md)  
+-   [Creating Sessions and Workflows in Informatica &#40;SQL Server PDW&#41;](../sqlpdw/creating-sessions-and-workflows-in-informatica-sql-server-pdw.md)  
   
 ## Registering and Verifying a Plug-in  
   
@@ -64,5 +64,5 @@ See the related topic in this guide for additional post installation configurati
 3.  On **Sources** menu, confirm that the menu item **Import from SQL Server PDW** is now available.  
   
 ## See Also  
-[Uninstalling the Informatica Connector Server &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/uninstalling-the-informatica-connector-server-sql-server-pdw.md)  
+[Uninstalling the Informatica Connector Server &#40;SQL Server PDW&#41;](../sqlpdw/uninstalling-the-informatica-connector-server-sql-server-pdw.md)  
   

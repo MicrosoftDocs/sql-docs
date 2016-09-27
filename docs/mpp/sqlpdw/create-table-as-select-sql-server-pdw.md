@@ -21,7 +21,7 @@ For example, use the Create Table as Select (CTAS) statement to:
   
 -   Import data from an external table.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -66,10 +66,10 @@ To create a local temporary table:
   
 3.  Specify the `LOCATION = USER_DB` option.  
   
-For more details on permitted table names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md)  
+For more details on permitted table names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md)  
   
 *column_name*  [, …]  
-The list of one or more column names for the new table. For details on permitted column names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md).  
+The list of one or more column names for the new table. For details on permitted column names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md).  
   
 The column list is optional for the CTAS statement. When columns are listed, the column names do not need to match the column names in the select results. However, the number of columns in the column list must match the number of columns in the select results. You cannot specify NULL | NOT NULL for the columns in the CTAS statement; the nullability property is derived from the columns and expressions in the SELECT results.  
   
@@ -90,7 +90,7 @@ DISTRIBUTION = { HASH ( *distribution_column_name* ) | **REPLICATE** | ROUND_ROB
 The physical data storage method. This option is required for the CTAS statement.  
   
 HASH ( *distribution_column_name* )  
-Distributes table rows across the Compute nodes. Assigns each row to one distribution by hashing the value in *distribution_column_name*.  For more information about how to choose a hash distributed column, see [Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md).  
+Distributes table rows across the Compute nodes. Assigns each row to one distribution by hashing the value in *distribution_column_name*.  For more information about how to choose a hash distributed column, see [Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md).  
   
 REPLICATE  
 Stores each table in full once per Compute node.  
@@ -107,10 +107,10 @@ Specifies the column to partition the rows on. This column can be any data type.
 RANGE [ **LEFT** or RANGE RIGHT ]  
 Specifies whether the boundary value belongs to the partition on the left (lower values) or the partition on the right (higher values). The default is LEFT.  
   
-FOR VALUES( *boundary_value* \[WITH common_table_expression &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/with-common-table-expression-sql-server-pdw.md).  
+FOR VALUES( *boundary_value* \[WITH common_table_expression &#40;SQL Server PDW&#41;](../sqlpdw/with-common-table-expression-sql-server-pdw.md).  
   
 SELECT <select_criteria>  
-Populates the new table with the results from a SELECT statement. *select_criteria* is the body of the SELECT statement that determines which data to copy to the new table. For information about SELECT statements, see [SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md).  
+Populates the new table with the results from a SELECT statement. *select_criteria* is the body of the SELECT statement that determines which data to copy to the new table. For information about SELECT statements, see [SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md).  
   
 ## Permissions  
 Requires membership in the **db_ddladmin** fixed database role, or:  
@@ -122,12 +122,12 @@ Requires membership in the **db_ddladmin** fixed database role, or:
 Also requires **SELECT** permission on any objects referenced in the *select_criteria*.  
   
 ## <a name="GeneralRemarks"></a>General Remarks  
-For more information about creating tables and temporary tables, see [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md)  
+For more information about creating tables and temporary tables, see [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md)  
   
 The CTAS statement creates a non-partitioned table by default, even if the source table is partitioned. To create a partitioned table with the CTAS statement, you must specify the partition option.  
   
 ## Limitations and Restrictions  
-[SET ROWCOUNT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement. To achieve a similar behavior, use [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md).  
+[SET ROWCOUNT &#40;SQL Server PDW&#41;](../sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement. To achieve a similar behavior, use [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md).  
   
 ## Locking  
 Takes an exclusive lock on the table. Takes a shared lock on the DATABASE, SCHEMA, and SCHEMARESOLUTION objects.  
@@ -177,7 +177,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 ```  
   
 ### C. Use a Query Hint with CREATE TABLE AS SELECT (CTAS)  
-This query shows the basic syntax for using a query join hint with the CTAS statement. After the query is submitted to the Control node, SQL Server, running on the Compute nodes, will apply the hash join strategy when generating the SQL Server query plan. For more information on join hints and how to use the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/option-sql-server-pdw.md).  
+This query shows the basic syntax for using a query join hint with the CTAS statement. After the query is submitted to the Control node, SQL Server, running on the Compute nodes, will apply the hash join strategy when generating the SQL Server query plan. For more information on join hints and how to use the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../sqlpdw/option-sql-server-pdw.md).  
   
 ```  
 USE AdventureWorksPDW2012;  
@@ -249,10 +249,10 @@ AS SELECT * FROM ClickStreamExt
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md)  
-[CREATE EXTERNAL TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-sql-server-pdw.md)  
-[CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-as-select-sql-server-pdw.md)  
-[DROP TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-table-sql-server-pdw.md)  
-[ALTER TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-table-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md)  
+[CREATE EXTERNAL TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-sql-server-pdw.md)  
+[CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-as-select-sql-server-pdw.md)  
+[DROP TABLE &#40;SQL Server PDW&#41;](../sqlpdw/drop-table-sql-server-pdw.md)  
+[ALTER TABLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-table-sql-server-pdw.md)  
   

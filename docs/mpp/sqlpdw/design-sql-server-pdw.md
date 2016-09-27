@@ -13,9 +13,9 @@ author: BarbKess
 # Design (SQL Server PDW)
 Principles for designing SQL Server PDW databases.  
   
--   [Minimize Data Skew When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimize-data-skew-when-choosing-a-distribution-column-sql-server-pdw.md)  
+-   [Minimize Data Skew When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../sqlpdw/minimize-data-skew-when-choosing-a-distribution-column-sql-server-pdw.md)  
   
--   [Minimize Data Movement When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimize-data-movement-when-choosing-a-distribution-column-sql-server-pdw.md)  
+-   [Minimize Data Movement When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../sqlpdw/minimize-data-movement-when-choosing-a-distribution-column-sql-server-pdw.md)  
   
--   [None of the Existing Columns Are a Good Choice for the Distribution Column &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/none-of-the-existing-columns-are-a-good-choice-for-the-distribution-column-sql-server-pdw.md)  
+-   [None of the Existing Columns Are a Good Choice for the Distribution Column &#40;SQL Server PDW&#41;](../sqlpdw/none-of-the-existing-columns-are-a-good-choice-for-the-distribution-column-sql-server-pdw.md)  
   

@@ -15,17 +15,17 @@ This section contains statement for creating tables in SQL Server PDW.
   
 ## In This Section  
   
--   [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md)  
+-   [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md)  
   
--   [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md)  
+-   [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md)  
   
--   [CREATE EXTERNAL TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-sql-server-pdw.md)  
+-   [CREATE EXTERNAL TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-sql-server-pdw.md)  
   
--   [CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-as-select-sql-server-pdw.md)  
+-   [CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-as-select-sql-server-pdw.md)  
   
--   [CREATE REMOTE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-remote-table-as-select-sql-server-pdw.md)  
+-   [CREATE REMOTE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-remote-table-as-select-sql-server-pdw.md)  
   
 ## See Also  
-[Data Definition Statements &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-definition-statements-sql-server-pdw.md)  
-[SQL Reference &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-reference-sql-server-pdw.md)  
+[Data Definition Statements &#40;SQL Server PDW&#41;](../sqlpdw/data-definition-statements-sql-server-pdw.md)  
+[SQL Reference &#40;SQL Server PDW&#41;](../sqlpdw/sql-reference-sql-server-pdw.md)  
   

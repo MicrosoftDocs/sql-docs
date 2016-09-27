@@ -28,7 +28,7 @@ Contains a row for each external file format in SQL Server PDW.
 |data_compression|**nvarchar(255)**|For format_type = DELIMITEDTEXT, this is the data compression method.|Always NULL.<br /><br />Not supported in this release.|  
   
 ## See Also  
-[CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-file-format-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-file-format-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

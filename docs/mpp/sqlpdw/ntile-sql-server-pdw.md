@@ -13,7 +13,7 @@ author: BarbKess
 # NTILE (SQL Server PDW)
 Distributes the rows in an ordered partition into a specified number of groups in SQL Server PDW. The groups are numbered, starting at one. Use this analytic function to return the number of the group to which each row belongs.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -29,10 +29,10 @@ OVER
 Determines the partitioning and ordering of the rowset before the analytic function is applied.  
   
 <partition_by_clause>  
-Divides the result set produced by the [FROM](../../mpp/sqlpdw/from-sql-server-pdw.md) clause into partitions to which the NTILE function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/over-clause-sql-server-pdw.md).  
+Divides the result set produced by the [FROM](../sqlpdw/from-sql-server-pdw.md) clause into partitions to which the NTILE function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../sqlpdw/over-clause-sql-server-pdw.md).  
   
 < order_by_clause >  
-Determines the order in which the NTILE values are assigned to the rows in a partition. An integer cannot represent a column in <order_by_clause>. For more information about *order_by_clause*, see [ORDER BY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/order-by-sql-server-pdw.md).  
+Determines the order in which the NTILE values are assigned to the rows in a partition. An integer cannot represent a column in <order_by_clause>. For more information about *order_by_clause*, see [ORDER BY &#40;SQL Server PDW&#41;](../sqlpdw/order-by-sql-server-pdw.md).  
   
 ## Return Types  
 **bigint**  
@@ -123,8 +123,8 @@ Ito               2        2,644,000.00     United States
 Ansman-Wolfe      2        1,183,000.00     United States</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[RANK &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/rank-sql-server-pdw.md)  
-[DENSE_RANK &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dense-rank-sql-server-pdw.md)  
-[ROW_NUMBER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/row-number-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[RANK &#40;SQL Server PDW&#41;](../sqlpdw/rank-sql-server-pdw.md)  
+[DENSE_RANK &#40;SQL Server PDW&#41;](../sqlpdw/dense-rank-sql-server-pdw.md)  
+[ROW_NUMBER &#40;SQL Server PDW&#41;](../sqlpdw/row-number-sql-server-pdw.md)  
   

@@ -17,11 +17,11 @@ Lists the SQL Server compatibility views available in SQL Server PDW. These are 
   
 |Catalog View Name|Link to SQL ServerTransact\-SQL topic on MSDN|Results|  
 |---------------------|------------------------------------------------------------------------------------------------------------------|-----------|  
-|sys.sysdatabases|[sys.sysdatabases (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms179900(v=sql11).aspx)|Same results as [sys.databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-databases-sql-server-pdw.md).|  
-|sys.sysobjects|[sys.sysobjects (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms177596.aspx)|Same results as [sys.objects &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-objects-sql-server-pdw.md).|  
-|sys.systypes|[sys.systypes (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms175109.aspx)|Same results as [sys.types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-types-sql-server-pdw.md).|  
-|sys.sysusers|[sys.sysusers (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms179871.aspx)|Same results as [sys.database_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-principals-sql-server-pdw.md).|  
+|sys.sysdatabases|[sys.sysdatabases (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms179900(v=sql11).aspx)|Same results as [sys.databases &#40;SQL Server PDW&#41;](../sqlpdw/sys-databases-sql-server-pdw.md).|  
+|sys.sysobjects|[sys.sysobjects (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms177596.aspx)|Same results as [sys.objects &#40;SQL Server PDW&#41;](../sqlpdw/sys-objects-sql-server-pdw.md).|  
+|sys.systypes|[sys.systypes (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms175109.aspx)|Same results as [sys.types &#40;SQL Server PDW&#41;](../sqlpdw/sys-types-sql-server-pdw.md).|  
+|sys.sysusers|[sys.sysusers (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms179871.aspx)|Same results as [sys.database_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-principals-sql-server-pdw.md).|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

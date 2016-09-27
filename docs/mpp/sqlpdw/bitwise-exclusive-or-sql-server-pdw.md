@@ -13,7 +13,7 @@ author: BarbKess
 # ^ (Bitwise Exclusive OR) (SQL Server PDW)
 Performs a bitwise exclusive OR operation between two integer values.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -23,7 +23,7 @@ expression ^expression
   
 ## Arguments  
 *expression*  
-Is any valid [expression](../../mpp/sqlpdw/expressions-sql-server-pdw.md) of any one of the data types of the integer data type category, or the **bit**, or the **binary** or **varbinary** data types. *expression* is treated as a binary number for the bitwise operation.  
+Is any valid [expression](../sqlpdw/expressions-sql-server-pdw.md) of any one of the data types of the integer data type category, or the **bit**, or the **binary** or **varbinary** data types. *expression* is treated as a binary number for the bitwise operation.  
   
 > [!NOTE]  
 > Only one *expression* can be of either **binary** or **varbinary** data type in a bitwise operation.  
@@ -82,9 +82,9 @@ The binary representation of 170 (`a_int_value` or `A`) is `0000 0000 1010 1010`
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[Operators &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/operators-sql-server-pdw.md)  
-[Bitwise Operators &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/bitwise-operators-sql-server-pdw.md)  
-[^= &#40;Bitwise Exclusive OR EQUALS&#41; &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/bitwise-exclusive-or-equals-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[Operators &#40;SQL Server PDW&#41;](../sqlpdw/operators-sql-server-pdw.md)  
+[Bitwise Operators &#40;SQL Server PDW&#41;](../sqlpdw/bitwise-operators-sql-server-pdw.md)  
+[^= &#40;Bitwise Exclusive OR EQUALS&#41; &#40;SQL Server PDW&#41;](../sqlpdw/bitwise-exclusive-or-equals-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # DATENAME (SQL Server PDW)
 Returns a character string that represents the specified *datepart* of the specified *date*  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -55,9 +55,9 @@ To avoid ambiguity, use four-digit years. For information about two-digit years,
   
 -   Each *datepart* and its abbreviations return the same value.  
   
-The return value depends on the language environment which cannot be changed. The return value is dependent on [SET DATEFORMAT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-dateformat-sql-server-pdw.md) if *date* is a string literal of some formats. SET DATEFORMAT does not affect the return value when the date is a column expression of a date or time data type.  
+The return value depends on the language environment which cannot be changed. The return value is dependent on [SET DATEFORMAT &#40;SQL Server PDW&#41;](../sqlpdw/set-dateformat-sql-server-pdw.md) if *date* is a string literal of some formats. SET DATEFORMAT does not affect the return value when the date is a column expression of a date or time data type.  
   
-When the *date* parameter has a **date** data type argument, the return value depends on the setting specified by using [SET DATEFIRST &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-datefirst-sql-server-pdw.md).  
+When the *date* parameter has a **date** data type argument, the return value depends on the setting specified by using [SET DATEFIRST &#40;SQL Server PDW&#41;](../sqlpdw/set-datefirst-sql-server-pdw.md).  
   
 ## TZoffset datepart Argument  
 If *datepart* argument is **TZoffset** (**tz**) and the *date* argument has no time zone offset, 0 is returned.  
@@ -118,7 +118,7 @@ Here is the result set.
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 ## See Also  
-[CAST and CONVERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/cast-and-convert-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CAST and CONVERT &#40;SQL Server PDW&#41;](../sqlpdw/cast-and-convert-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

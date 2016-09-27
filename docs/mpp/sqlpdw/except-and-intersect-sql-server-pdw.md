@@ -23,7 +23,7 @@ The basic rules for combining the result sets of two queries that use EXCEPT or 
   
 -   The data types must be compatible.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -110,5 +110,5 @@ ORDER BY CustomerKey;
 ```  
   
 ## See Also  
-[UNION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/union-sql-server-pdw.md)  
+[UNION &#40;SQL Server PDW&#41;](../sqlpdw/union-sql-server-pdw.md)  
   

@@ -16,15 +16,15 @@ Creates a new table in SQL Server PDW. Use the CLUSTERED COLUMNSTORE INDEX table
 > [!NOTE]  
 > We view the clustered columnstore index as the standard for storing tables in SQL Server PDW, and expect it will be used in most scenarios.  
   
-For more information, see [Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md).  
+For more information, see [Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md).  
   
-**For copying data**, use the CREATE TABLE AS SELECT (CTAS) statement to create and populate a table with the results from a SELECT statement. For example, you can use the CTAS statement to redistribute a table using a different distribution column. For more information, see [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md).  
+**For copying data**, use the CREATE TABLE AS SELECT (CTAS) statement to create and populate a table with the results from a SELECT statement. For example, you can use the CTAS statement to redistribute a table using a different distribution column. For more information, see [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md).  
   
-**For storing data**, replicate the table to each Compute node, or hash-distribute the table across all of the Compute nodes. To distribute a table, you must specify a distribution column; SQL Server PDW assigns each row to be stored in one distribution of one Compute node by hashing the distribution column value. For more information about distributed and replicated tables, see [Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md).  
+**For storing data**, replicate the table to each Compute node, or hash-distribute the table across all of the Compute nodes. To distribute a table, you must specify a distribution column; SQL Server PDW assigns each row to be stored in one distribution of one Compute node by hashing the distribution column value. For more information about distributed and replicated tables, see [Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md).  
   
 **For managing data**, create table partitions that are logical subsets of rows tracked with metadata. To partition a table, you specify one partitioning column and a set of boundary values. This does not affect which distribution or Compute node where the data are stored. Instead, it allows you to perform data management operations on logical subsets of the table. For example, if you have monthly data, you can partition the table by month, and then archive an older month by switching its partitions to an archive table.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -94,17 +94,17 @@ The schema for the table. Specifying *schema* is optional. If blank, the users d
 *table_name*  
 The name of the new table. To create a local temporary table, precede the table name with #.  
   
-For more details on permitted table names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md)  
+For more details on permitted table names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md)  
   
-For more information about temporary tables, see [tempdb Database &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/tempdb-database-sql-server-pdw.md).  
+For more information about temporary tables, see [tempdb Database &#40;SQL Server PDW&#41;](../sqlpdw/tempdb-database-sql-server-pdw.md).  
   
 *column_name*  
-The name of a table column. For details on permitted column names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md).  
+The name of a table column. For details on permitted column names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md).  
   
 COLLATE *Windows_collation_name*  
 Specifies the collation for the expression. The collation must be one of the Windows collations supported by SQL Server. For a list of Windows collations supported by SQL Server, see [Windows Collation Name (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms188046(v=sql11).aspx).  
   
-The default collation is the appliance-level collation, Latin1_General_100_CI_AS_KS_WS. For more information about using collations in SQL Server PDW, see [Collations &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/collations-sql-server-pdw.md)  
+The default collation is the appliance-level collation, Latin1_General_100_CI_AS_KS_WS. For more information about using collations in SQL Server PDW, see [Collations &#40;SQL Server PDW&#41;](../sqlpdw/collations-sql-server-pdw.md)  
   
 **NULL** | NOT NULL  
 Specifies whether NULL values are allowed in the column. The default is NULL.  
@@ -235,7 +235,7 @@ Fixed-length binary data with a length of *n* bytes. *n* can be a value from 1 t
 For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187928.aspx).  
   
 AS SELECT *select_criteria*  
-Populates the new table with the results from a SELECT statement. *select_criteria* is the query that determines which data to copy to the new table. For information about SELECT statements, see [SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md).  
+Populates the new table with the results from a SELECT statement. *select_criteria* is the query that determines which data to copy to the new table. For information about SELECT statements, see [SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md).  
   
 LOCATION = USER_DB  
 This option is no longer required and no longer affects behavior.  Avoid using this option in preparation for eventual deprecation.  
@@ -254,7 +254,7 @@ DISTRIBUTION = { HASH ( *distribution_column_name* ) | **REPLICATE** }
 Determines whether the table is a distributed table or a replicated table. If omitted, the table is replicated.  
   
 HASH ( *distribution_column_name* )  
-Creates a distributed table, in which the rows are spread across the Compute nodes and stored into individual parallel processing units called distributions. The HASH algorithm assigns each row to one distribution by hashing the value in *distribution_column_name*. In most cases, the distribution column should not be nullable. For more information about how to choose a distribution column, see [Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md).  
+Creates a distributed table, in which the rows are spread across the Compute nodes and stored into individual parallel processing units called distributions. The HASH algorithm assigns each row to one distribution by hashing the value in *distribution_column_name*. In most cases, the distribution column should not be nullable. For more information about how to choose a distribution column, see [Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md).  
   
 **REPLICATE**  
 Stores a copy of the table in full on each Compute node. Within each Compute node, the table is stored in a SQL Server filegroup that spans the Compute node..  
@@ -287,7 +287,7 @@ The login that creates a local temporary table receives CONTROL, INSERT, SELECT 
   
 -   Clustered and nonclustered indexes on a rowstore table can be dropped at any time.  
   
--   You can change a rowstore table to a columnstore table by dropping all existing indexes on the table and creating a clustered columnstore index. For more information, see  [CREATE COLUMNSTORE INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-columnstore-index-sql-server-pdw.md).  
+-   You can change a rowstore table to a columnstore table by dropping all existing indexes on the table and creating a clustered columnstore index. For more information, see  [CREATE COLUMNSTORE INDEX &#40;SQL Server PDW&#41;](../sqlpdw/create-columnstore-index-sql-server-pdw.md).  
   
 -   All rowstore tables are created with page compression. This is not user-configurable in SQL Server PDW.  
   
@@ -301,17 +301,17 @@ The login that creates a local temporary table receives CONTROL, INSERT, SELECT 
   
 -   The columnstore index includes all columns in the table. These are displayed as included columns in the metadata. None of the columns are key columns.  
   
--   You can change a columnstore table to a rowstore table by using [CREATE INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-index-sql-server-pdw.md) with the DROP_EXISTING clause.  
+-   You can change a columnstore table to a rowstore table by using [CREATE INDEX &#40;SQL Server PDW&#41;](../sqlpdw/create-index-sql-server-pdw.md) with the DROP_EXISTING clause.  
   
 -   All columnstore tables are created with columnstore compression. This is not user-configurable in SQL Server PDW.  
   
 -   For a distributed table, the clustered columnstore index does not affect how the data is distributed; data is always distributed by row. The clustered columnstore index affects how the data is stored within each distribution.  
   
-For more information, see [Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md).  
+For more information, see [Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md).  
   
-**Local Temporary Tables** are stored in the tempdb database. For more information about temporary tables, see. [tempdb Database &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/tempdb-database-sql-server-pdw.md).  
+**Local Temporary Tables** are stored in the tempdb database. For more information about temporary tables, see. [tempdb Database &#40;SQL Server PDW&#41;](../sqlpdw/tempdb-database-sql-server-pdw.md).  
   
-For more information about how to choose a distribution column, see [Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md).  
+For more information about how to choose a distribution column, see [Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md).  
   
 For tables that are distributed and partitioned, each distribution contains all of the table partitions. For example, if there are eight distributions per Compute node and four table partitions, there will be 32 partitions per Compute node.  
   
@@ -342,7 +342,7 @@ Global temporary tables that begin with ## are not supported.
   
 -   If more than one local temporary table is used within a batch, each must have a unique name. If multiple sessions are running the same batch and creating the same local temporary table, SQL Server PDW internally appends a numeric suffix to the local temporary table name to maintain a unique name for each local temporary table.  
   
-For information on minimum and maximum constraints on tables, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+For information on minimum and maximum constraints on tables, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
 If *boundary_value* is a literal value that must be implicitly converted to the data type in *partition_column_name*, a discrepancy will occur. The literal value is displayed through the SQL Server PDW system views, but the converted value is used for SQL operations.  
   
@@ -540,8 +540,8 @@ WITH
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md)  
-[DROP TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-table-sql-server-pdw.md)  
-[ALTER TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-table-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md)  
+[DROP TABLE &#40;SQL Server PDW&#41;](../sqlpdw/drop-table-sql-server-pdw.md)  
+[ALTER TABLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-table-sql-server-pdw.md)  
   

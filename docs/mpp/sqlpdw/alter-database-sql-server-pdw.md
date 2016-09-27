@@ -13,7 +13,7 @@ author: BarbKess
 # ALTER DATABASE (SQL Server PDW)
 Modifies the maximum database size options for replicated tables, distributed tables, and the transaction log in SQL Server PDW. Use this statement to manage disk space allocations for a database as it grows or shrinks in size.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -36,7 +36,7 @@ ALTER DATABASE database_name
   
 ## Arguments  
 *database_name*  
-The name of the database to be modified. To display a list of databases on the appliance, use [sys.databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-databases-sql-server-pdw.md).  
+The name of the database to be modified. To display a list of databases on the appliance, use [sys.databases &#40;SQL Server PDW&#41;](../sqlpdw/sys-databases-sql-server-pdw.md).  
   
 AUTOGROW = { ON | OFF }  
 Updates the AUTOGROW option. When AUTOGROW is ON, SQL Server PDW automatically increases the allocated space for replicated tables, distributed tables, and the transaction log as necessary to accommodate growth in storage requirements. When AUTOGROW is OFF, SQL Server PDW returns an error if replicated tables, distributed tables, or the transaction log exceeds the maximum size setting.  
@@ -51,7 +51,7 @@ LOG_SIZE = *size* [GB]
 Specifies the new maximum gigabytes per database for storing all of the transaction logs in the database being altered. The size is distributed across all of the Compute nodes in the appliance.  
   
 ENCRYPTION { ON | OFF }  
-Sets the database to be encrypted (ON) or not encrypted (OFF). Encryption can only be configured for SQL Server PDW when [sp_pdw_database_encryption](../../mpp/sqlpdw/sp-pdw-database-encryption-sql-server-pdw.md) has been set to **1**. A database encryption key must be created before transparent data encryption can be configured. For more information about database encryption, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
+Sets the database to be encrypted (ON) or not encrypted (OFF). Encryption can only be configured for SQL Server PDW when [sp_pdw_database_encryption](../sqlpdw/sp-pdw-database-encryption-sql-server-pdw.md) has been set to **1**. A database encryption key must be created before transparent data encryption can be configured. For more information about database encryption, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
   
 ## Permissions  
 Requires the ALTER permission on the database.  
@@ -65,7 +65,7 @@ Grow and shrink operations are approximate. The resulting actual sizes can vary 
 SQL Server PDW does not perform the ALTER DATABASE statement as an atomic operation. If the statement is aborted during execution, changes that have already occurred will remain.  
   
 ## Locking Behavior  
-Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](../../mpp/sqlpdw/use-sql-server-pdw.md) statement on the database.  
+Takes a shared lock on the DATABASE object. You cannot alter a database that is in use by another user for reading or writing. This includes sessions that have issued a [USE](../sqlpdw/use-sql-server-pdw.md) statement on the database.  
   
 ## Performance  
 Shrinking a database can take a large amount of time and system resources, depending on the size of the actual data within the database, and the amount of fragmentation on disk. For example, shrinking a database could take serveral hours or more.  
@@ -115,7 +115,7 @@ INNER JOIN dek_percent_complete
 WHERE type = 'CONTROL';  
 ```  
   
-For a comprehensive example demonstrating all the steps in implementing TDE, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
+For a comprehensive example demonstrating all the steps in implementing TDE, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
   
 ## Examples  
   
@@ -152,7 +152,7 @@ ALTER DATABASE CustomerSales
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-database-sql-server-pdw.md)  
-[DROP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-database-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/create-database-sql-server-pdw.md)  
+[DROP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/drop-database-sql-server-pdw.md)  
   

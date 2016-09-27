@@ -11,12 +11,12 @@ caps.latest.revision: 26
 author: BarbKess
 ---
 # DROP SERVER ROLE (SQL Server PDW)
-User-defined server roles are not available in this release of SQL Server PDW. Use user-defined database roles instead. For more information, see [DROP ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-role-sql-server-pdw.md).  
+User-defined server roles are not available in this release of SQL Server PDW. Use user-defined database roles instead. For more information, see [DROP ROLE &#40;SQL Server PDW&#41;](../sqlpdw/drop-role-sql-server-pdw.md).  
   
 ## Syntax  
   
 ## Arguments  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

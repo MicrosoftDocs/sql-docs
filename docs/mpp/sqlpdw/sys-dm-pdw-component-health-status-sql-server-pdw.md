@@ -16,13 +16,13 @@ Holds information about the current health of appliance components.
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
 |pdw_node_id|**int**||Not NULL|  
-|component_id|int|The ID of the component. See [sys.pdw_health_components &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-health-components-sql-server-pdw.md).<br /><br />pdw_node_id, component_id, property_id, and component_instance_id form the key for this view.|Not NULL|  
-|property_id|**int**|The ID of the property. See [sys.pdw_health_component_properties &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-health-component-properties-sql-server-pdw.md).|NOT NULL|  
+|component_id|int|The ID of the component. See [sys.pdw_health_components &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-health-components-sql-server-pdw.md).<br /><br />pdw_node_id, component_id, property_id, and component_instance_id form the key for this view.|Not NULL|  
+|property_id|**int**|The ID of the property. See [sys.pdw_health_component_properties &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-health-component-properties-sql-server-pdw.md).|NOT NULL|  
 |component_instance_id|**nvarchar(255)**|Identifies an instance of a component. For example, an instance of a CPU might be identified by component_instance_id='CPU1'.<br /><br />pdw_node_id, component_id, property_id, and component_instance_id form the key for this view.|NOT NULL|  
 |property_value|**nvarchar(255)**|The current property value.|NULL|  
 |update_time|**datetime**|The last time the metric was updated.|NOT NULL|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

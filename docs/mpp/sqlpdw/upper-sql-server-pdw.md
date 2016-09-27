@@ -13,7 +13,7 @@ author: BarbKess
 # UPPER (SQL Server PDW)
 Returns a character expression with lowercase character data converted to uppercase in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -25,7 +25,7 @@ UPPER (character_expression )
 *character_expression*  
 An expression of character data. *character_expression* can be a constant or column of character data.  
   
-*character_expression* must be of a data type that is implicitly convertible to **varchar** or **nvarchar**. Otherwise, use [CAST](../../mpp/sqlpdw/cast-and-convert-sql-server-pdw.md) to explicitly convert *character_expression*.  
+*character_expression* must be of a data type that is implicitly convertible to **varchar** or **nvarchar**. Otherwise, use [CAST](../sqlpdw/cast-and-convert-sql-server-pdw.md) to explicitly convert *character_expression*.  
   
 ## Return Types  
 **varchar** or **nvarchar**  
@@ -50,10 +50,10 @@ ABERCROMBIE, Kim
 ABOLROUS, Hazem</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[CAST and CONVERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/cast-and-convert-sql-server-pdw.md)  
-[Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md)  
-[RTRIM &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/rtrim-sql-server-pdw.md)  
-[LOWER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/lower-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[CAST and CONVERT &#40;SQL Server PDW&#41;](../sqlpdw/cast-and-convert-sql-server-pdw.md)  
+[Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md)  
+[RTRIM &#40;SQL Server PDW&#41;](../sqlpdw/rtrim-sql-server-pdw.md)  
+[LOWER &#40;SQL Server PDW&#41;](../sqlpdw/lower-sql-server-pdw.md)  
   

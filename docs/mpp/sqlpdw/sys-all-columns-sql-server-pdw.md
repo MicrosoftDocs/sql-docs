@@ -43,7 +43,7 @@ Shows columns for both user-defined and system objects.
 |distribution_ordinal|**tinyint**|Ordinal (1-based) within set of distribution.<br /><br />0 = Not a distribution column.|1 = This is the distribution column. 0 = This is not the distribution column.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
-[sys.columns &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-columns-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
+[sys.columns &#40;SQL Server PDW&#41;](../sqlpdw/sys-columns-sql-server-pdw.md)  
   

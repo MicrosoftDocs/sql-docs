@@ -13,9 +13,9 @@ author: BarbKess
 # CREATE REMOTE TABLE AS SELECT (SQL Server PDW)
 Selects data from a SQL Server PDW database and copies that data to a new table in a SMP SQL Server database on a remote server. SQL Server PDW uses the appliance, with all the benefits of MPP query processing, to select the data for the remote copy. Use this for scenarios that require SQL Server functionality.  
   
-To configure the remote server, see [Remote Table Copy &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/remote-table-copy-sql-server-pdw.md).  
+To configure the remote server, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw/remote-table-copy-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -41,7 +41,7 @@ The database to create the remote table in. *database_name* is a SQL Server data
 The schema for the new table. Default is the default schema for the user login on the destination SQL Server instance.  
   
 *table_name*  
-The name of the new table. For details on permitted table names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md).  
+The name of the new table. For details on permitted table names, see [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md).  
   
 The remote table is created as a heap. It does not have check constraints or triggers. The collation of the remote table columns is the same as the collation of the source table columns. This applies to columns of type **char**, **nchar**, **varchar**, and **nvarchar**.  
   
@@ -60,7 +60,7 @@ TCP *port* number
 The TCP port number for the connection. You can specify a TCP port number from 0 to 65535 for an instance of SQL Server that is not listening on the default port 1433. For example: **ServerA,1450** or **10.192.14.27,1435**  
   
 > [!NOTE]  
-> We recommend connecting to a remote server by using the IP address. Depending on your network configuration, connecting by using the computer name might require additional steps to use your non-appliance DNS server to resolve the name to the correct server. This step is not necessary when connecting with an IP address. For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../../mpp/management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
+> We recommend connecting to a remote server by using the IP address. Depending on your network configuration, connecting by using the computer name might require additional steps to use your non-appliance DNS server to resolve the name to the correct server. This step is not necessary when connecting with an IP address. For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
   
 *user_name*  
 A valid SQL Server authentication login name. Maximum number of characters is 128.  
@@ -72,10 +72,10 @@ The login password. Maximum number of characters is 128.
 The maximum number of rows per batch. SQL Server PDW sends rows in batches to the destination server. *Batch_size* is a positive integer >= 0. Default is 0.  
   
 WITH *common_table_expression*  
-Specifies a temporary named result set, known as a common table expression (CTE). For more information, see [WITH common_table_expression &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/with-common-table-expression-sql-server-pdw.md).  
+Specifies a temporary named result set, known as a common table expression (CTE). For more information, see [WITH common_table_expression &#40;SQL Server PDW&#41;](../sqlpdw/with-common-table-expression-sql-server-pdw.md).  
   
 SELECT <select_criteria>  
-The query predicate that specifies which data will populate the new remote table. For information on the SELECT statement, see [SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md).  
+The query predicate that specifies which data will populate the new remote table. For information on the SELECT statement, see [SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md).  
   
 ## Permissions  
 Requires:  
@@ -106,13 +106,13 @@ If copying data to the remote database fails, SQL Server PDW will abort the oper
   
 -   CREATE REMOTE TABLE cannot be run inside an active transaction or when the AUTOCOMMIT OFF setting is active for the session.  
   
-[SET ROWCOUNT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement. To achieve a similar behavior, use [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md).  
+[SET ROWCOUNT &#40;SQL Server PDW&#41;](../sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement. To achieve a similar behavior, use [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md).  
   
 ## Locking Behavior  
 After creating the remote table, the destination table is not locked until the copy starts. Therefore, it is possible for another process to delete the remote table after it is created and before the copy starts. When this occurs, SQL Server PDW will generate an error and the copy will fail.  
   
 ## Metadata  
-Use [sys.dm_pdw_dms_workers &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-dms-workers-sql-server-pdw.md) to view the progress of copying the selected data to the remote SMP server. Rows with type PARALLEL_COPY_READER contain this information.  
+Use [sys.dm_pdw_dms_workers &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-dms-workers-sql-server-pdw.md) to view the progress of copying the selected data to the remote SMP server. Rows with type PARALLEL_COPY_READER contain this information.  
   
 ## Security  
 CREATE REMOTE TABLE uses SQL Server Authentication to connect to the remote SQL Server instance; it does not use Windows Authentication.  
@@ -143,7 +143,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ```  
   
 ### C. Using a query join hint with CREATE REMOTE TABLE  
-This query shows the basic syntax for using a query join hint with CREATE REMOTE TABLE. After the query is submitted to the Control node, SQL Server, running on the Compute nodes, will apply the hash join strategy when generating the SQL Server query plan. For more information on join hints and how to use the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/option-sql-server-pdw.md).  
+This query shows the basic syntax for using a query join hint with CREATE REMOTE TABLE. After the query is submitted to the Control node, SQL Server, running on the Compute nodes, will apply the hash join strategy when generating the SQL Server query plan. For more information on join hints and how to use the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../sqlpdw/option-sql-server-pdw.md).  
   
 ```  
 USE AdventureWorksPDW2012;  
@@ -155,5 +155,5 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

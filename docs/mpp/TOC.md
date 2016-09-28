@@ -21,7 +21,7 @@
 ## [Microsoft Data Sources (DW)---a Technical Reference Guide for Designing Mission-Critical DW Solutions](dwsolutions/microsoft-data-sources-dw-a-technical-reference-guide-for-designing-mission-critical-dw-solutions.md)
 ## [Custom Architecture (DW)---a Technical Reference Guide for Designing Mission-Critical DW Solutions](dwsolutions/custom-architecture-dw-a-technical-reference-guide-for-designing-mission-critical-dw-solutions.md)
 ## [High Availability and Disaster Recovery (DW)---a Technical Reference Guide for Designing Mission-Critical DW Solutions](dwsolutions/high-availability-and-disaster-recovery-dw-a-technical-reference-guide-for-designing-mission-critical-dw-solutions.md)
-# [Data Warehousing (DW)---a Technical Reference Guide for Designing Mission-Critical DW Solutions](dwsolutions/data-warehousing-dw-a-technical-reference-guide-for-designing-mission-critical-dw-solutions.md)
+## [Data Warehousing (DW)---a Technical Reference Guide for Designing Mission-Critical DW Solutions](dwsolutions/data-warehousing-dw-a-technical-reference-guide-for-designing-mission-critical-dw-solutions.md)
 ## [Database Maintenance (DW)---a Technical Reference Guide for Designing Mission-Critical DW Solutions](dwsolutions/database-maintenance-dw-a-technical-reference-guide-for-designing-mission-critical-dw-solutions.md)
 ## [Third-Party Consumers (DW)---a Technical Reference Guide for Designing Mission-Critical DW Solutions](dwsolutions/third-party-consumers-dw-a-technical-reference-guide-for-designing-mission-critical-dw-solutions.md)
 ## [Monitoring (DW)---a Technical Reference Guide for Designing Mission-Critical DW Solutions](dwsolutions/monitoring-dw-a-technical-reference-guide-for-designing-mission-critical-dw-solutions.md)

@@ -60,9 +60,7 @@ For situations when System Center is not available with your data center monitor
 If your monitoring solution does not support direct Transact\-SQL queries, or you do not have a monitoring tool, then you can use scripts to perform monitoring tasks, such as sending email when an alert occurs.  The TechNet wiki contains a scripted monitoring solution example.  
   
 -   [Power Shell Monitoring Example for SQL Server PDW](http://go.microsoft.com/fwlink/?LinkId=248020)  
-  
-If you can’t access this article, see [NIB Join Our Communities  (Analytics Platform System)](../Topic/NIB%20Join%20Our%20Communities%20%20(Analytics%20Platform%20System).md).  
-  
+   
 ## <a name="Tasks"></a>Related Monitoring Tasks  
   
 |Monitoring Task|Description|  

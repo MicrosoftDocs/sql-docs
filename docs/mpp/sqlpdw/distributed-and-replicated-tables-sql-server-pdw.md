@@ -70,7 +70,6 @@ The following diagram shows a replicated table that is stored on each Compute no
 ![Replicated Table Stored on All Compute Nodes](../sqlpdw/media/SQL_Server_ADW_ReplicatedTable.png "SQL_Server_ADW_ReplicatedTable")  
   
 ## <a name="BestPractices"></a>Best Practices  
-For more information about best practices for designing SQL Server PDW tables, see the following wiki articles on Technet. If you cannot access these links, see [NIB Join Our Communities  (Analytics Platform System)](../Topic/NIB%20Join%20Our%20Communities%20%20(Analytics%20Platform%20System).md)  
   
 -   [Choosing Distributed Versus Replicated Tables in SQL Server PDW](http://go.microsoft.com/fwlink/?LinkId=247627)  
   

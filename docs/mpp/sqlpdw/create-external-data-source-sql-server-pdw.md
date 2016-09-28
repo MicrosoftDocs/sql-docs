@@ -13,9 +13,9 @@ author: BarbKess
 # CREATE EXTERNAL DATA SOURCE (SQL Server PDW)
 Creates a SQL Server PDW external data source for use with PolyBase. The data are stored in Hadoop File System (HDFS) or Azure blob storage.  
   
-To use PolyBase integration, you need to create an external data source, an external file format, and an external table. For more information, see [PolyBase &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/polybase-sql-server-pdw.md).  
+To use PolyBase integration, you need to create an external data source, an external file format, and an external table. For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -166,7 +166,7 @@ For HDP 2.0 clusters, when you specify JOB_TRACKER_LOCATION, you must also speci
   
 All data sources defined on the same Hadoop cluster location must use the same setting for JOB_TRACKER_LOCATION. If there is inconsistency, a runtime error will occur.  
   
-For HDFS connections, if the Hadoop cluster is setup with a name and the external data source uses the IP address for the cluster location, SQL Server PDW must still be able to resolve the cluster name when the data source is used. To enable PDW to resolve the name, you can use a DNS forwarder. For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../../mpp/management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
+For HDFS connections, if the Hadoop cluster is setup with a name and the external data source uses the IP address for the cluster location, SQL Server PDW must still be able to resolve the cluster name when the data source is used. To enable PDW to resolve the name, you can use a DNS forwarder. For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
   
 ## Locking  
 Takes a shared lock on the EXTERNALDATASOURCE object.  
@@ -285,8 +285,8 @@ WITH (
 ```  
   
 ## See Also  
-[PolyBase &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/polybase-sql-server-pdw.md)  
-[CREATE EXTERNAL TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-sql-server-pdw.md)  
-[CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-as-select-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  
+[CREATE EXTERNAL TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-sql-server-pdw.md)  
+[CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-as-select-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

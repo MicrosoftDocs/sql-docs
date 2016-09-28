@@ -18,7 +18,7 @@ Make sure that Informatica and Microsoft SQL Server PDW Informatica Connector ar
 ## Import Table from SQL Server PDW into Informatica Source  
 The following steps configure PDW as a source.  
   
-![Informatica select DSN Source](../../mpp/sqlpdw/media/APS_Informatica_DSN_Source.png "APS_Informatica_DSN_Source")  
+![Informatica select DSN Source](../sqlpdw/media/APS_Informatica_DSN_Source.png "APS_Informatica_DSN_Source")  
   
 1.  Open the Informatica PowerCenter Designer and connect to the desired repository.  
   
@@ -45,7 +45,7 @@ The following steps configure PDW as a source.
 ## Import Table from PDW into Informatica Target  
 The following steps configure PDW as a target.  
   
-![Informatica select DSN Target](../../mpp/sqlpdw/media/APS_Informatica_DSN_Target.png "APS_Informatica_DSN_Target")  
+![Informatica select DSN Target](../sqlpdw/media/APS_Informatica_DSN_Target.png "APS_Informatica_DSN_Target")  
   
 1.  Open the Informatica PowerCenter Designer and connect to the desired repository.  
   
@@ -72,14 +72,14 @@ The following steps configure PDW as a target.
 ## Adding an Update Strategy Transformation  
 The user must specify a column used as a primary key if the **update strategy transformation** is going to be used in the mapping.  
   
-![Informatica select a primary key column](../../mpp/sqlpdw/media/APS_Informatica_DSN_SelectKey.png "APS_Informatica_DSN_SelectKey")  
+![Informatica select a primary key column](../sqlpdw/media/APS_Informatica_DSN_SelectKey.png "APS_Informatica_DSN_SelectKey")  
   
 1.  Right-click a table and select **Edit**.  
   
 2.  In the **Column Name** section, select the column that is a primary key. In the **Key Type** section, select **PRIMARYKEY** for that column.  
   
 ## See Also  
-[Installing the Informatica Connector &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
-[Using Informatica to create SQL Server PDW connections in workflow manager &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/using-informatica-to-create-sql-server-pdw-connections-in-workflow-manager-sql-server-pdw.md)  
-[Creating Sessions and Workflows in Informatica &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/creating-sessions-and-workflows-in-informatica-sql-server-pdw.md)  
+[Installing the Informatica Connector &#40;SQL Server PDW&#41;](../sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
+[Using Informatica to create SQL Server PDW connections in workflow manager &#40;SQL Server PDW&#41;](../sqlpdw/using-informatica-to-create-sql-server-pdw-connections-in-workflow-manager-sql-server-pdw.md)  
+[Creating Sessions and Workflows in Informatica &#40;SQL Server PDW&#41;](../sqlpdw/creating-sessions-and-workflows-in-informatica-sql-server-pdw.md)  
   

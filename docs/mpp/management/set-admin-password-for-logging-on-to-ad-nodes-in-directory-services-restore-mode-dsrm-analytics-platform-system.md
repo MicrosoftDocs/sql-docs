@@ -34,5 +34,5 @@ Directory Services Restore Mode (DSRM) is a boot mode for repairing or recoverin
 > If the Active Directory Domain Services or the virtual machine becomes corrupted for a specific AD virtual machine, running **ReplaceVM** for the affected AD virtual machine is the recommended corrective action. Contact CSS for assistance.  
   
 ## See Also  
-[Password Reset &#40;Analytics Platform System&#41;](../../mpp/management/password-reset-analytics-platform-system.md)  
+[Password Reset &#40;Analytics Platform System&#41;](../management/password-reset-analytics-platform-system.md)  
   

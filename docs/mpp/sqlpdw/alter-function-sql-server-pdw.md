@@ -13,7 +13,7 @@ author: BarbKess
 # ALTER FUNCTION (SQL Server PDW)
 Alters an existing user-defined function that was previously created by executing the CREATE FUNCTION statement, without changing permissions and without affecting any dependent functions, or stored procedures.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions (SQL Server PDW)](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions (SQL Server PDW)](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   

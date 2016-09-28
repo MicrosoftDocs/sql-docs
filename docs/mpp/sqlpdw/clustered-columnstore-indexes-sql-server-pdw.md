@@ -41,7 +41,7 @@ The clustered columnstore index:
 -   [Examples](#Examples)  
   
 ## <a name="Basics"></a>Basics  
-![Clustered Columnstore Index](../../mpp/sqlpdw/media/SQL_Server_PDW_Columnstore_PhysicalStorage.png "SQL_Server_PDW_Columnstore_PhysicalStorage")  
+![Clustered Columnstore Index](../sqlpdw/media/SQL_Server_PDW_Columnstore_PhysicalStorage.png "SQL_Server_PDW_Columnstore_PhysicalStorage")  
   
 A clustered columnstore index is a technology for storing, retrieving and managing data by using a columnar data format, called a columnstore. The data is compressed, stored, and managed as a collection of partial columns, called column segments.  
   
@@ -79,7 +79,7 @@ SQL Server takes advantage of the column-based data layout to significantly impr
 The following are key terms and concepts that you will need to know in order to better understand how to use clustered columnstore indexes.  
   
 rowgroup  
-A rowgroup is a group of rows that are compressed into columnstore format at the same time.  Each column in the rowgroup is compressed and stored separately onto the physical media. For the minimum and maximum rows per rowgroup, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+A rowgroup is a group of rows that are compressed into columnstore format at the same time.  Each column in the rowgroup is compressed and stored separately onto the physical media. For the minimum and maximum rows per rowgroup, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
 column segment  
 A column segment is the basic storage unit for a clustered columnstore index. It is a group of column values that are compressed and physically stored together on the physical media.  Rowgroups define the column values that are in each column segment.  
@@ -122,16 +122,16 @@ For each columnstore there can be multiple deltastores.
 ### Create a Clustered Columnstore Index  
 There are multiple ways to create a clustered columnstore index. For example:  
   
--   Use [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md) and the CLUSTERED COLUMNSTORE INDEX option to create a new table.  
+-   Use [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md) and the CLUSTERED COLUMNSTORE INDEX option to create a new table.  
   
--   Use [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md) and the CLUSTERED COLUMNSTORE INDEX option to create a new table based on copying data from an existing table. For best performance, we recommend this method for converting large fact tables from rowstore to columnstore.  
+-   Use [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md) and the CLUSTERED COLUMNSTORE INDEX option to create a new table based on copying data from an existing table. For best performance, we recommend this method for converting large fact tables from rowstore to columnstore.  
   
--   Use  [CREATE COLUMNSTORE INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-columnstore-index-sql-server-pdw.md) to convert a rowstore table to a columnstore table.  The syntax for this approach is simple and easy to use.  This approach is performed as an atomic operation within each Compute node. It runs serially across each Compute node, whereas CREATE TABLE AS SELECT is perfomed in parallel across the distributions and across the Compute nodes. For best performance, we recommend this approach to save syntax development time if you need to convert many small dimension tables from rowstore to columnstore.  
+-   Use  [CREATE COLUMNSTORE INDEX &#40;SQL Server PDW&#41;](../sqlpdw/create-columnstore-index-sql-server-pdw.md) to convert a rowstore table to a columnstore table.  The syntax for this approach is simple and easy to use.  This approach is performed as an atomic operation within each Compute node. It runs serially across each Compute node, whereas CREATE TABLE AS SELECT is perfomed in parallel across the distributions and across the Compute nodes. For best performance, we recommend this approach to save syntax development time if you need to convert many small dimension tables from rowstore to columnstore.  
   
 See [Examples](#Examples).  
   
 ### Add Data to a Clustered Columnstore Index  
-You can add data to an existing clustered columnstore index by using any of the standard loading methods.  For example, dwloader, Integration Services, and INSERT … SELECT can all load data into a clustered columnstore index. For more information about loading methods, see [Load &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/load-sql-server-pdw.md).  
+You can add data to an existing clustered columnstore index by using any of the standard loading methods.  For example, dwloader, Integration Services, and INSERT … SELECT can all load data into a clustered columnstore index. For more information about loading methods, see [Load &#40;SQL Server PDW&#41;](../sqlpdw/load-sql-server-pdw.md).  
   
 To load data into a clustered columnstore index, SQL Server PDW first moves the data the correct physical location on the appliance.  
   
@@ -143,7 +143,7 @@ To load data into a clustered columnstore index, SQL Server PDW first moves the 
   
 The following diagram shows how data gets added to a clustered columnstore index. This operation occurs per partition, and per distribution for a distributed table, and per Compute node for a replicated table.  
   
-![Loading into a clustered columnstore index](../../mpp/sqlpdw/media/SQL_Server_PDW_ColumnStore_LoadProcess.png "SQL_Server_PDW_ColumnStore_LoadProcess")  
+![Loading into a clustered columnstore index](../sqlpdw/media/SQL_Server_PDW_ColumnStore_LoadProcess.png "SQL_Server_PDW_ColumnStore_LoadProcess")  
   
 As the diagram suggests, to load data into a clustered columnstore index, SQL Server:  
   
@@ -190,7 +190,7 @@ The following example shows the results of loading 1,048,577 rows into a partiti
 SELECT * FROM sys. pdw_nodes_column_store_row_groups  
 ```  
   
-![Rowgroup and deltastore for a batch load](../../mpp/sqlpdw/media/SQL_Server_PDW_ColumnStore_batchload.png "SQL_Server_PDW_ColumnStore_batchload")  
+![Rowgroup and deltastore for a batch load](../sqlpdw/media/SQL_Server_PDW_ColumnStore_batchload.png "SQL_Server_PDW_ColumnStore_batchload")  
   
 ### <a name="DML"></a>Perform DML Operations on a Clustered Columnstore Index  
 Clustered columnstore indexes support the INSERT, UPDATE, DELETE DML options.  
@@ -252,10 +252,10 @@ Reorganizing is not required for moving CLOSED rowgroups into the columnstore. T
 ## <a name="RS"></a>Related Statements  
   
 ### A. CREATE TABLE  
-Use the [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md) statement and CLUSTERED COLUMNSTORE INDEX table option to create a new columnstore table with a clustered columnstore index.  
+Use the [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md) statement and CLUSTERED COLUMNSTORE INDEX table option to create a new columnstore table with a clustered columnstore index.  
   
 ### B. CREATE COLUMNSTORE INDEX  
-Use the [CREATE COLUMNSTORE INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-columnstore-index-sql-server-pdw.md) statement to rebuild an existing clustered columnstore index, or to convert a small dimension table from a rowstore to a columnstore.  
+Use the [CREATE COLUMNSTORE INDEX &#40;SQL Server PDW&#41;](../sqlpdw/create-columnstore-index-sql-server-pdw.md) statement to rebuild an existing clustered columnstore index, or to convert a small dimension table from a rowstore to a columnstore.  
   
 Using CREATE COLUMNSTORE INDEX to convert a rowstore table to a columnstore table:  
   
@@ -268,7 +268,7 @@ Using CREATE COLUMNSTORE INDEX to convert a rowstore table to a columnstore tabl
 For both rebuilding and converting operations, you can keep the same index name by using the DROP_EXISTING option.  
   
 ### C. CREATE TABLE AS SELECT  
-Use the [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md) statement to:  
+Use the [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md) statement to:  
   
 -   Convert a large rowstore table to a columnstore table. You can quickly start using the new table while the conversion occurs in parallel across all dimensions, and in the background.  
   
@@ -283,27 +283,27 @@ Using CREATE TABLE AS SELECT to convert a rowstore table to a columnstore table:
 -   Performs the conversions from rowstore to columnstore in parallel across the distributions.  
   
 ### D. DROP INDEX  
-Use the [DROP INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-index-sql-server-pdw.md) statement to drop a clustered columnstore index. This operation will drop the index and convert the columnstore table to a rowstore heap.  
+Use the [DROP INDEX &#40;SQL Server PDW&#41;](../sqlpdw/drop-index-sql-server-pdw.md) statement to drop a clustered columnstore index. This operation will drop the index and convert the columnstore table to a rowstore heap.  
   
 ### E. ALTER INDEX  
-Use the [ALTER INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-index-sql-server-pdw.md) statement to rebuild or reorganize an existing columnstore index.  
+Use the [ALTER INDEX &#40;SQL Server PDW&#41;](../sqlpdw/alter-index-sql-server-pdw.md) statement to rebuild or reorganize an existing columnstore index.  
   
 Using ALTER INDEX, the rebuild:  
   
 ## <a name="Metadata"></a>Metadata  
 All of the columns in a clustered columnstore index are stored in the metadata as included columns. The clustered columnstore index does not have key columns.  
   
--   [sys.indexes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-indexes-sql-server-pdw.md)  
+-   [sys.indexes &#40;SQL Server PDW&#41;](../sqlpdw/sys-indexes-sql-server-pdw.md)  
   
--   [sys.index_columns &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-index-columns-sql-server-pdw.md)  
+-   [sys.index_columns &#40;SQL Server PDW&#41;](../sqlpdw/sys-index-columns-sql-server-pdw.md)  
   
--   [sys.partitions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-partitions-sql-server-pdw.md)  
+-   [sys.partitions &#40;SQL Server PDW&#41;](../sqlpdw/sys-partitions-sql-server-pdw.md)  
   
--   [sys.pdw_nodes_column_store_segments &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-nodes-column-store-segments-sql-server-pdw.md)  
+-   [sys.pdw_nodes_column_store_segments &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-nodes-column-store-segments-sql-server-pdw.md)  
   
--   [sys.pdw_nodes_column_store_dictionaries &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-nodes-column-store-dictionaries-sql-server-pdw.md)  
+-   [sys.pdw_nodes_column_store_dictionaries &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-nodes-column-store-dictionaries-sql-server-pdw.md)  
   
--   [sys.pdw_nodes_column_store_row_groups &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-nodes-column-store-row-groups-sql-server-pdw.md)  
+-   [sys.pdw_nodes_column_store_row_groups &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-nodes-column-store-row-groups-sql-server-pdw.md)  
   
 ## <a name="Performance"></a>Performance Tips  
   
@@ -357,7 +357,7 @@ WITH (
 ```  
   
 ### B. Convert a small dimension table from rowstore to columnstore  
-This example uses [CREATE COLUMNSTORE INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-columnstore-index-sql-server-pdw.md) to convert a small dimension table from a rowstore table to a columnstore table with a clustered columnstore index. This conversion method is a simple way to convert small dimension tables; it is a slow way to convert large tables.  
+This example uses [CREATE COLUMNSTORE INDEX &#40;SQL Server PDW&#41;](../sqlpdw/create-columnstore-index-sql-server-pdw.md) to convert a small dimension table from a rowstore table to a columnstore table with a clustered columnstore index. This conversion method is a simple way to convert small dimension tables; it is a slow way to convert large tables.  
   
 > [!IMPORTANT]  
 > For large tables, use CREATE TABLE AS SELECT instead of CREATE COLUMNSTORE INDEX to convert fact tables and large dimension tables from rowstore to columnstore.  

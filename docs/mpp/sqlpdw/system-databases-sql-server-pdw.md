@@ -15,10 +15,10 @@ System databases are databases that SQL Server PDW uses to manage users, databas
   
 ## System Database Topics  
   
--   [master Database &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/master-database-sql-server-pdw.md)  
+-   [master Database &#40;SQL Server PDW&#41;](../sqlpdw/master-database-sql-server-pdw.md)  
   
--   [tempdb Database &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/tempdb-database-sql-server-pdw.md)  
+-   [tempdb Database &#40;SQL Server PDW&#41;](../sqlpdw/tempdb-database-sql-server-pdw.md)  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

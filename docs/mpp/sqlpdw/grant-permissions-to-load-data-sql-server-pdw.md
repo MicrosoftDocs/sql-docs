@@ -55,6 +55,6 @@ EXEC sp_addrolemember 'db_datawriter','BI_ETLUser';
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Load &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/load-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Load &#40;SQL Server PDW&#41;](../sqlpdw/load-sql-server-pdw.md)  
   

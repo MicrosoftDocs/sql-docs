@@ -18,7 +18,7 @@ Invocation of a stored procedure without using EXECUTE or EXEC is possible only 
 > [!IMPORTANT]  
 > Before you call EXECUTE with a character string, validate the character string. Never execute a command constructed from user input that has not been validated. For more information, see [SQL Injection](http://msdn.microsoft.com/en-us/library/ms161953(v=sql11).aspx).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)[Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20(Transact-SQL).md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)[Transact-SQL Syntax Conventions](../Topic/Transact-SQL%20Syntax%20Conventions%20(Transact-SQL).md)  
   
 ## Syntax  
   
@@ -147,8 +147,8 @@ GO
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-procedure-sql-server-pdw.md)  
-[ALTER PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-procedure-sql-server-pdw.md)  
-[DROP PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-procedure-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/create-procedure-sql-server-pdw.md)  
+[ALTER PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/alter-procedure-sql-server-pdw.md)  
+[DROP PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/drop-procedure-sql-server-pdw.md)  
   

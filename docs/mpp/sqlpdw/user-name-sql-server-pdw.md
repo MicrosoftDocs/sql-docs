@@ -13,7 +13,7 @@ author: BarbKess
 # USER_NAME (SQL Server PDW)
 Returns a database user name from a specified identification number.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -72,9 +72,9 @@ User7
 ```  
   
 ## See Also  
-[USER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/user-sql-server-pdw.md)  
-[SUSER_SNAME &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/suser-sname-sql-server-pdw.md)  
-[HAS_DBACCESS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/has-dbaccess-sql-server-pdw.md)  
-[sys.database_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-principals-sql-server-pdw.md)  
-[sys.database_permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-permissions-sql-server-pdw.md)  
+[USER &#40;SQL Server PDW&#41;](../sqlpdw/user-sql-server-pdw.md)  
+[SUSER_SNAME &#40;SQL Server PDW&#41;](../sqlpdw/suser-sname-sql-server-pdw.md)  
+[HAS_DBACCESS &#40;SQL Server PDW&#41;](../sqlpdw/has-dbaccess-sql-server-pdw.md)  
+[sys.database_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-principals-sql-server-pdw.md)  
+[sys.database_permissions &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-permissions-sql-server-pdw.md)  
   

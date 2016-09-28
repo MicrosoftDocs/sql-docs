@@ -42,9 +42,9 @@ The following table shows the results of applying an OR operator to two Boolean 
 |FALSE|NULL|UNKNOWN|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[AND &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/and-sql-server-pdw.md)  
-[OR &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/or-sql-server-pdw.md)  
-[NOT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/not-sql-server-pdw.md)  
-[IS &#91;NOT&#93; NULL &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/is-not-null-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[AND &#40;SQL Server PDW&#41;](../sqlpdw/and-sql-server-pdw.md)  
+[OR &#40;SQL Server PDW&#41;](../sqlpdw/or-sql-server-pdw.md)  
+[NOT &#40;SQL Server PDW&#41;](../sqlpdw/not-sql-server-pdw.md)  
+[IS &#91;NOT&#93; NULL &#40;SQL Server PDW&#41;](../sqlpdw/is-not-null-sql-server-pdw.md)  
   

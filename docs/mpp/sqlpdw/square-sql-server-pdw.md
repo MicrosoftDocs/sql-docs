@@ -13,7 +13,7 @@ author: BarbKess
 # SQUARE (SQL Server PDW)
 Returns the square of the specified **float** value in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -23,7 +23,7 @@ SQUARE (float_expression )
   
 ## Arguments  
 *float_expression*  
-An [expression](../../mpp/sqlpdw/expressions-sql-server-pdw.md) of type **float** or of a type that can be implicitly converted to float.  
+An [expression](../sqlpdw/expressions-sql-server-pdw.md) of type **float** or of a type that can be implicitly converted to float.  
   
 ## Return Types  
 **float**  
@@ -54,7 +54,7 @@ Cylinder       15680.05
 Cube             575.04</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[POWER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/power-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[POWER &#40;SQL Server PDW&#41;](../sqlpdw/power-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
   

@@ -13,9 +13,9 @@ author: BarbKess
 # GROUP BY (SQL Server PDW)
 The GROUP BY clause is used within a SELECT statement in SQL Server PDW to group the selected rows into summary rows. One row is returned for each group.  
   
-For the SELECT statement, see [SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md).  
+For the SELECT statement, see [SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -44,7 +44,7 @@ GROUP BY:
   
 -   Rows that do not meet the conditions of the WHERE clause are removed before any grouping operation is performed.  
   
--   The [HAVING &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/having-sql-server-pdw.md) clause is used with the GROUP BY clause to filter groups in the result set.  
+-   The [HAVING &#40;SQL Server PDW&#41;](../sqlpdw/having-sql-server-pdw.md) clause is used with the GROUP BY clause to filter groups in the result set.  
   
 -   The GROUP BY clause does not order the result set. Use the ORDER BY clause to order the result set.  
   
@@ -112,7 +112,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md)  
-[FROM &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/from-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md)  
+[FROM &#40;SQL Server PDW&#41;](../sqlpdw/from-sql-server-pdw.md)  
   

@@ -15,7 +15,7 @@ Contains a row for each external table in the current SQL Server PDW database.
   
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
-|<inherited columns>||For a list of columns that this view inherits, see [sys.objects](../../mpp/sqlpdw/sys-objects-sql-server-pdw.md).||  
+|<inherited columns>||For a list of columns that this view inherits, see [sys.objects](../sqlpdw/sys-objects-sql-server-pdw.md).||  
 |max_column_id_used|**int**|Maximum column ID for the lifetime of the table.|Always 0.|  
 |uses_ansi_nulls|**bit**|Table was created with the SET ANSI_NULLS database option ON.|Always 1 --- true.|  
 |data_source_id|**int**|Object ID for the external data source.||  
@@ -26,6 +26,6 @@ Contains a row for each external table in the current SQL Server PDW database.
 |reject_sample_value|**int**|For *reject_type* = percentage, this is the number of rows to load, either successfully or unsuccessfully, before calculating the percentage of rejected rows.|NULL if reject_type = value.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

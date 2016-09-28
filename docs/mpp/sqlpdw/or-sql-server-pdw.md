@@ -13,7 +13,7 @@ author: BarbKess
 # OR (SQL Server PDW)
 Combines two conditions. When more than one logical operator is used in a statement, OR operators are evaluated after AND operators. However, you can change the order of evaluation by using parentheses.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -23,7 +23,7 @@ boolean_expression OR boolean_expression
   
 ## Arguments  
 *boolean_expression*  
-Any valid expressions that returns TRUE, FALSE, or UNKNOWN. For more information about the UNKNOWN return value, see [NULL and UNKNOWN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/null-and-unknown-sql-server-pdw.md).  
+Any valid expressions that returns TRUE, FALSE, or UNKNOWN. For more information about the UNKNOWN return value, see [NULL and UNKNOWN &#40;SQL Server PDW&#41;](../sqlpdw/null-and-unknown-sql-server-pdw.md).  
   
 ## Result Types  
 **Boolean**  
@@ -55,11 +55,11 @@ WHERE BaseRate < 10 OR HireDate >= '2001-01-01';
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[AND &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/and-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[Operators &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/operators-sql-server-pdw.md)  
-[SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md)  
-[WHERE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/where-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[AND &#40;SQL Server PDW&#41;](../sqlpdw/and-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[Operators &#40;SQL Server PDW&#41;](../sqlpdw/operators-sql-server-pdw.md)  
+[SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md)  
+[WHERE &#40;SQL Server PDW&#41;](../sqlpdw/where-sql-server-pdw.md)  
   

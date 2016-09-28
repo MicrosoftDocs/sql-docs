@@ -32,18 +32,18 @@ Logins are individual user accounts for logging on to the SQL Server PDW. SQL Se
 Members of the **sysadmin** fixed server role (such as the **sa** login) can connect to a database without having being mapped to a database user. They are mapped to the **dbo** user. The owner of the database is also mapped as the **dbo** user.  
   
 Server Roles  
-There are four special server roles with a set of preconfigured roles that provide convenient group of server-level permissions. The **sysadmin**, **MediumRC**, **LargeRC**, and **XLargeRCfixed** server roles are the only server roles currently implemented in SQL Server PDW. The **sa** login is the only member of the **sysadmin** fixed server role, and additional logins cannot be added to the **sysadmin** role. Logins can be granted the **CONTROL SERVER** permission, which is similar, though not identical, to the **sysadmin** fixed server role. Use [ALTER SERVER ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-server-role-sql-server-pdw.md) to add members to the other server roles. SQL Server PDW does not support user-defined server roles.  
+There are four special server roles with a set of preconfigured roles that provide convenient group of server-level permissions. The **sysadmin**, **MediumRC**, **LargeRC**, and **XLargeRCfixed** server roles are the only server roles currently implemented in SQL Server PDW. The **sa** login is the only member of the **sysadmin** fixed server role, and additional logins cannot be added to the **sysadmin** role. Logins can be granted the **CONTROL SERVER** permission, which is similar, though not identical, to the **sysadmin** fixed server role. Use [ALTER SERVER ROLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-server-role-sql-server-pdw.md) to add members to the other server roles. SQL Server PDW does not support user-defined server roles.  
   
 Database Users  
 Logins are granted access to a database by creating a database user in a database and mapping that database user to a login. Typically the database user name is the same as the login name, though it does not have to be the same. Each database user maps to a single login. A login can be mapped to only one user in a database, but can be mapped as a database user in several different databases.  
   
 Fixed Database Roles  
-Fixed database roles are a set of preconfigured roles that provide convenient group of database-level permissions. Database users and user-defined database roles can be added to the fixed database roles using the [sp_addrolemember &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-addrolemember-sql-server-pdw.md) procedure. For more information about fixed database roles, see [Fixed Database Roles &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/fixed-database-roles-sql-server-pdw.md).  
+Fixed database roles are a set of preconfigured roles that provide convenient group of database-level permissions. Database users and user-defined database roles can be added to the fixed database roles using the [sp_addrolemember &#40;SQL Server PDW&#41;](../sqlpdw/sp-addrolemember-sql-server-pdw.md) procedure. For more information about fixed database roles, see [Fixed Database Roles &#40;SQL Server PDW&#41;](../sqlpdw/fixed-database-roles-sql-server-pdw.md).  
   
 User-defined Database Roles  
 Users with the **CREATE ROLE** permission can create new user-defined database roles to represent groups of users with common permissions. Typically permissions are granted or denied to the entire role, simplifying permissions management and monitoring.  
   
-Permissions are granted to security principals (logins, users, and roles) by using the **GRANT** statement. Permissions are explicitly denied by using the **DENY** command. A previously granted or denied permission is removed by using the **REVOKE** statement. Permissions are cumulative, with the user receiving all the permissions granted to the user, login, and any group memberships; however any permission denial overrides all grants. (For information, syntax, and available permissions with these commands, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)).  
+Permissions are granted to security principals (logins, users, and roles) by using the **GRANT** statement. Permissions are explicitly denied by using the **DENY** command. A previously granted or denied permission is removed by using the **REVOKE** statement. Permissions are cumulative, with the user receiving all the permissions granted to the user, login, and any group memberships; however any permission denial overrides all grants. (For information, syntax, and available permissions with these commands, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)).  
   
 The following example represents a common and recommended method of configuring permissions.  
   
@@ -57,9 +57,9 @@ The following example represents a common and recommended method of configuring 
   
 5.  Grant permissions to the user-defined database roles.  
   
-Logins are server-level objects and can be listed by viewing [sys.server_principals](../../mpp/sqlpdw/sys-server-principals-sql-server-pdw.md). Only server-level permissions can be granted to server principals.  
+Logins are server-level objects and can be listed by viewing [sys.server_principals](../sqlpdw/sys-server-principals-sql-server-pdw.md). Only server-level permissions can be granted to server principals.  
   
-Users and database roles are database-level objects and can be listed by viewing [sys.database_principals](../../mpp/sqlpdw/sys-database-principals-sql-server-pdw.md). Only database-level permissions can be granted to database principals.  
+Users and database roles are database-level objects and can be listed by viewing [sys.database_principals](../sqlpdw/sys-database-principals-sql-server-pdw.md). Only database-level permissions can be granted to database principals.  
   
 [[TOP]](#TOP)  
   
@@ -72,7 +72,7 @@ The following list describes the default permissions:
   
 -   All principals, including the PUBLIC role, have no explicit or implicit permissions by default because implicit permissions are inherited from explicit permissions. Therefore, when no explicit permissions are present, there can also be no implicit permissions.  
   
--   When a login becomes the owner of an object or database, the login always has all permissions on the object or database. The ownership permissions are not visible as explicit permissions. The **GRANT**, **REVOKE**, and **DENY** statements have no effect on ownership permissions. Ownership can be changed by using the [ALTER AUTHORIZATION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-authorization-sql-server-pdw.md) statement.  
+-   When a login becomes the owner of an object or database, the login always has all permissions on the object or database. The ownership permissions are not visible as explicit permissions. The **GRANT**, **REVOKE**, and **DENY** statements have no effect on ownership permissions. Ownership can be changed by using the [ALTER AUTHORIZATION &#40;SQL Server PDW&#41;](../sqlpdw/alter-authorization-sql-server-pdw.md) statement.  
   
 -   The sa login has all permissions on the appliance. Similar to ownership permissions, the sa permissions cannot be changed and are not visible as explicit permissions. The **GRANT**, **REVOKE**, and **DENY** statements have no effect on sa permissions.  
   
@@ -97,7 +97,7 @@ All new appliance logins automatically belong to the PUBLIC role. The PUBLIC ser
 Whether or not a login has permission to perform a specific action depends on the permissions granted or denied to login, user, and roles the user is a member of. Server-level permissions (such as **CREATE LOGIN** and **VIEW SERVER STATE**) are available to server-level principals (logins). Database-level permissions (such as **SELECT** from a table or **EXECUTE** on a procedure) are available to database-level principals (users and database roles).  
   
 ### Implicit and Explicit Permissions  
-An *explicit permission* is a **GRANT** or **DENY** permission given to a principal by a **GRANT** or **DENY** statement. Database-level permissions are listed in the [sys.database_permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-permissions-sql-server-pdw.md) view. Server-level permissions are listed in the [sys.server_permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-server-permissions-sql-server-pdw.md) view.  
+An *explicit permission* is a **GRANT** or **DENY** permission given to a principal by a **GRANT** or **DENY** statement. Database-level permissions are listed in the [sys.database_permissions &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-permissions-sql-server-pdw.md) view. Server-level permissions are listed in the [sys.server_permissions &#40;SQL Server PDW&#41;](../sqlpdw/sys-server-permissions-sql-server-pdw.md) view.  
   
 An *implicit permission* is a **GRANT** or **DENY** permission that a principal (login or server role) has inherited. A permission can be inherited in the following ways.  
   
@@ -194,24 +194,24 @@ To research the permissions of a user check the following.
   
 ## Related Topics  
   
--   [Fixed Server Roles &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/fixed-server-roles-sql-server-pdw.md)  
+-   [Fixed Server Roles &#40;SQL Server PDW&#41;](../sqlpdw/fixed-server-roles-sql-server-pdw.md)  
   
--   [Fixed Database Roles &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/fixed-database-roles-sql-server-pdw.md)  
+-   [Fixed Database Roles &#40;SQL Server PDW&#41;](../sqlpdw/fixed-database-roles-sql-server-pdw.md)  
   
--   [Grant Permissions to Submit Database Queries &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-submit-database-queries-sql-server-pdw.md)  
+-   [Grant Permissions to Submit Database Queries &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-submit-database-queries-sql-server-pdw.md)  
   
--   [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md)  
+-   [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md)  
   
--   [Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md)  
+-   [Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md)  
   
--   [Grant Permissions to Copy Data Off the Appliance &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-copy-data-off-the-appliance-sql-server-pdw.md)  
+-   [Grant Permissions to Copy Data Off the Appliance &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-copy-data-off-the-appliance-sql-server-pdw.md)  
   
--   [Grant Permissions to Manage Databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-manage-databases-sql-server-pdw.md)  
+-   [Grant Permissions to Manage Databases &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-manage-databases-sql-server-pdw.md)  
   
--   [Grant Permissions to Manage Logins, Users, and Database Roles &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-manage-logins-users-and-database-roles-sql-server-pdw.md)  
+-   [Grant Permissions to Manage Logins, Users, and Database Roles &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-manage-logins-users-and-database-roles-sql-server-pdw.md)  
   
--   [Grant Permissions to Monitor the Appliance &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-monitor-the-appliance-sql-server-pdw.md)  
+-   [Grant Permissions to Monitor the Appliance &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-monitor-the-appliance-sql-server-pdw.md)  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

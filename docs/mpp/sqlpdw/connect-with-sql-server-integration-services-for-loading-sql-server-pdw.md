@@ -32,9 +32,9 @@ You will need permission to connect to SQL Server PDW in order to test the conne
   
 -   .NET Framework 3.5 SP1 or higher. For installation details, see [Microsoft .NET Framework 3.5 Service Pack 1](http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=ab99342f-5d1a-413d-8319-81da479ab0d7&displayLang=en). If you have Windows 7 or later, you already have this.  
   
--   SQL Server Native Client (SNAC) 10.0 for SQL Server 2008 R2. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+-   SQL Server Native Client (SNAC) 10.0 for SQL Server 2008 R2. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
--   SQL Server 2008 R2Integration Services Destination Adapters for SQL Server PDW, both 32-bit and 64-bit. See [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md).  
+-   SQL Server 2008 R2Integration Services Destination Adapters for SQL Server PDW, both 32-bit and 64-bit. See [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md).  
   
 ### Create an Integration Services project  
 To create an Integration Services project:  
@@ -49,7 +49,7 @@ To create an Integration Services project:
   
     -   Click on the **File** menu, choose **New**, choose **Project**.  
   
-        ![Create a new Integration Services Project](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_NewProject.png "SQL_Server_PDW_IS_NewProject")  
+        ![Create a new Integration Services Project](../sqlpdw/media/SQL_Server_PDW_IS_NewProject.png "SQL_Server_PDW_IS_NewProject")  
   
     -   In the new project window, choose Integration Services Project. This opens the package design window.  
   
@@ -67,7 +67,7 @@ To create an Integration Services project:
   
     -   In the Toolbox, under Data Flow Destinations, left-click the **SQL Server PDW Destination** and drag it into the Data Flow pane. The SQL Server PDW destination will appear in the Data Flow pane.  
   
-    ![OLE DB data flow task](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_DataFlowTask.png "SQL_Server_PDW_IS_DataFlowTask")  
+    ![OLE DB data flow task](../sqlpdw/media/SQL_Server_PDW_IS_DataFlowTask.png "SQL_Server_PDW_IS_DataFlowTask")  
   
 ### Connect the SQL Server PDW Destination to Your Appliance  
 Configure the SQL Server PDW Destination to connect to your appliance. To do this:  
@@ -86,11 +86,11 @@ Configure the SQL Server PDW Destination to connect to your appliance. To do thi
   
     -   For **Destination database name**, enter the target database on SQL Server PDW.  
   
-    -   For **Staging database name**, enter the name of the staging database. This field must be empty for fastappend loading mode, and is optional for other load modes. For more information, see [Create the Staging Database &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-the-staging-database-sql-server-pdw.md).  
+    -   For **Staging database name**, enter the name of the staging database. This field must be empty for fastappend loading mode, and is optional for other load modes. For more information, see [Create the Staging Database &#40;SQL Server PDW&#41;](../sqlpdw/create-the-staging-database-sql-server-pdw.md).  
   
         SQL Server 2008 R2 Integration Services  
   
-        ![Your appliance connection information](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_DestinationEditorFinished.png "SQL_Server_PDW_IS_DestinationEditorFinished")  
+        ![Your appliance connection information](../sqlpdw/media/SQL_Server_PDW_IS_DestinationEditorFinished.png "SQL_Server_PDW_IS_DestinationEditorFinished")  
   
     -   Click OK to return to the Destination Editor window.  
   
@@ -143,9 +143,9 @@ To create the Integration Services package, you need permission to connect to SQ
   
 -   .NET Framework 3.5 SP1 or higher. See [Microsoft .NET Framework 3.5 Service Pack 1](http://www.microsoft.com/downloads/en/confirmation.aspx?familyId=ab99342f-5d1a-413d-8319-81da479ab0d7&displayLang=en). If you have Windows 7 or later, you already have this.  
   
--   SQL Server Native Client (SNAC) 11.0. If you have SQL Server 2012, you already have this unless you unchecked Client Connectivity Tools during SQL Server 2012 setup. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+-   SQL Server Native Client (SNAC) 11.0. If you have SQL Server 2012, you already have this unless you unchecked Client Connectivity Tools during SQL Server 2012 setup. See [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
--   SQL Server 2012Integration Services Destination Adapters for SQL Server PDW, both 32-bit and 64-bit. See [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md).  
+-   SQL Server 2012Integration Services Destination Adapters for SQL Server PDW, both 32-bit and 64-bit. See [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md).  
   
 ### Create an Integration Services Project  
 To create an Integration Services Project:  
@@ -156,13 +156,13 @@ To create an Integration Services Project:
   
     -   On Windows 8, press the Start key, select search, click Apps, locate Microsoft SQL Server 2012. Under Microsoft SQL Server 2012, click SQL Server Data Tools.  
   
-    ![SQL Server Data Tools](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_2012_SSDT.png "SQL_Server_PDW_IS_2012_SSDT")  
+    ![SQL Server Data Tools](../sqlpdw/media/SQL_Server_PDW_IS_2012_SSDT.png "SQL_Server_PDW_IS_2012_SSDT")  
   
 2.  Open an existing Integration Services project or create a new one. To create a project:  
   
     -   Click on the **File** menu, choose **New**, choose **Project**.  
   
-        ![New SQL Server 2012 Integration Services Project](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_2012_NewProject.png "SQL_Server_PDW_IS_2012_NewProject")  
+        ![New SQL Server 2012 Integration Services Project](../sqlpdw/media/SQL_Server_PDW_IS_2012_NewProject.png "SQL_Server_PDW_IS_2012_NewProject")  
   
     -   In the new project window, choose Integration Services Project and click OK.  
   
@@ -180,7 +180,7 @@ To create an Integration Services Project:
   
     2.  In the SSIS Toolbox, under Other Destinations, left-click the **SQL Server PDW Destination** and drag it into the Data Flow pane.  
   
-        ![Data Flow Tab](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_2012_DataFlowTask.png "SQL_Server_PDW_IS_2012_DataFlowTask")  
+        ![Data Flow Tab](../sqlpdw/media/SQL_Server_PDW_IS_2012_DataFlowTask.png "SQL_Server_PDW_IS_2012_DataFlowTask")  
   
 ### Connect the SQL Server PDW Destination to Your Appliance  
 Configure the SQL Server PDW Destination to connect to your appliance. To do this:  
@@ -199,7 +199,7 @@ Configure the SQL Server PDW Destination to connect to your appliance. To do thi
   
     **Destination database name**: Use the drop down menu to select the target database on SQL Server PDW.  
   
-    **Staging database name**: Use the drop down menu to select the staging database. This field must be empty for fastappend loading mode, and is optional for other load modes. For more information, see [Create the Staging Database &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-the-staging-database-sql-server-pdw.md).  
+    **Staging database name**: Use the drop down menu to select the staging database. This field must be empty for fastappend loading mode, and is optional for other load modes. For more information, see [Create the Staging Database &#40;SQL Server PDW&#41;](../sqlpdw/create-the-staging-database-sql-server-pdw.md).  
   
 5.  Test the connection and click OK to close the connection success message. Click OK to close the SQL Server PDW Connection Manager and return to the Destination Editor window.  
   
@@ -211,7 +211,7 @@ Configure the SQL Server PDW Destination to connect to your appliance. To do thi
   
     -   By checking the box, loads from the staging table to a distributed destination table are performed serially across the distributions within each Compute node, and in parallel across the Compute nodes. This performs slower than parallelizing the loads, but is transaction-safe. This is equivalent to not using the **–m** option in dwloader.  
   
-    ![Integration Services Connection to PDW](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_2012_DestinationEditorFinished.png "SQL_Server_PDW_IS_2012_DestinationEditorFinished")  
+    ![Integration Services Connection to PDW](../sqlpdw/media/SQL_Server_PDW_IS_2012_DestinationEditorFinished.png "SQL_Server_PDW_IS_2012_DestinationEditorFinished")  
   
 8.  Choose your Error Handling method.  
   
@@ -222,8 +222,8 @@ Configure the SQL Server PDW Destination to connect to your appliance. To do thi
 11. Save the package.  
   
 ## <a name="Next"></a>Next Steps  
-The connection to SQL Server PDW is configured. You are now ready to load data with Integration Services. See [Load Data With Integration Services &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/load-data-with-integration-services-sql-server-pdw.md)  
+The connection to SQL Server PDW is configured. You are now ready to load data with Integration Services. See [Load Data With Integration Services &#40;SQL Server PDW&#41;](../sqlpdw/load-data-with-integration-services-sql-server-pdw.md)  
   
 ## See Also  
-[Connect With Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-applications-sql-server-pdw.md)  
+[Connect With Applications &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-applications-sql-server-pdw.md)  
   

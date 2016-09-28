@@ -13,9 +13,9 @@ author: BarbKess
 # UPDATE STATISTICS (SQL Server PDW)
 Updates query optimization statistics on a SQL Server PDW table. Use the UPDATE STATISTICS statement to improve query performance. For example, we recommend updating statistics after loads.  
   
-For more information and best practices for updating statistics, see [Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md).  
+For more information and best practices for updating statistics, see [Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -63,10 +63,10 @@ Requires **ALTER** permission on the table, or the user must be the owner of the
 If UPDATE STATISTICS returns an error, re-run the command to ensure that statistics are updated on all Compute nodes.  
   
 ## General Remarks  
-For a distributed table, updating statistics encompasses updating SQL Server statistics on the Compute nodes, and then updating the corresponding merged MPP statistics on the Control node. For more information, see [Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md).  
+For a distributed table, updating statistics encompasses updating SQL Server statistics on the Compute nodes, and then updating the corresponding merged MPP statistics on the Control node. For more information, see [Understanding Query Optimization Statistics &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-optimization-statistics-sql-server-pdw.md).  
   
 ## Limitations and Restrictions  
-Updating statistics on external tables is not supported. To update external table statistics, drop the statistics with [DROP STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-statistics-sql-server-pdw.md)and then re-create the statistics with [CREATE STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-statistics-sql-server-pdw.md).  
+Updating statistics on external tables is not supported. To update external table statistics, drop the statistics with [DROP STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/drop-statistics-sql-server-pdw.md)and then re-create the statistics with [CREATE STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/create-statistics-sql-server-pdw.md).  
   
 ## Examples  
   
@@ -99,8 +99,8 @@ UPDATE STATISTICS Customer;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Query &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/query-sql-server-pdw.md)  
-[CREATE STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-statistics-sql-server-pdw.md)  
-[DROP STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-statistics-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Query &#40;SQL Server PDW&#41;](../sqlpdw/query-sql-server-pdw.md)  
+[CREATE STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/create-statistics-sql-server-pdw.md)  
+[DROP STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/drop-statistics-sql-server-pdw.md)  
   

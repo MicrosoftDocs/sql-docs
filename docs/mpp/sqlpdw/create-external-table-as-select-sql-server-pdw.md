@@ -21,9 +21,9 @@ Use the CREATE EXTERNAL TABLE AS SELECT (CETAS) statement to:
   
 -   Join a Hadoop table and a SQL Server PDW table, and then export the results in parallel back to Hadoop.  
   
-For more information, see [PolyBase &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/polybase-sql-server-pdw.md).  
+For more information, see [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -58,10 +58,10 @@ LOCATION =  '*hdfs_folder*'
 Specifies where to populate the data relative to the root folder of the Hadoop Cluster.  The location is a folder name and can optionally include a path.  PolyBase will create the path and folder under the root folder if it does not exist.  The root folder location is stored in the external data source.  
   
 DATA_SOURCE = *external_data_source_name*  
-Specifies the name of the external data source that contains the location where the external data is stored or will be stored. The location is either a Hadoop Cluster or Azure blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-data-source-sql-server-pdw.md).  
+Specifies the name of the external data source that contains the location where the external data is stored or will be stored. The location is either a Hadoop Cluster or Azure blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-data-source-sql-server-pdw.md).  
   
 FILE_FORMAT = *external_file_format_name*  
-Specifies the name of the external file format that contains the format for the Hadoop data file. To create an external file format, use [CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-file-format-sql-server-pdw.md).  
+Specifies the name of the external file format that contains the format for the Hadoop data file. To create an external file format, use [CREATE EXTERNAL FILE FORMAT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-file-format-sql-server-pdw.md).  
   
 Reject Options  
 The reject options do not apply when this statement is run. They need to be specified with CREATE EXTERNAL TABLE AS SELECT so that SQL Server PDW can use them at a later time when it imports data from the external table into SQL Server PDW. For example, when a future SELECT statement or CREATE TABLE AS SELECT statement selects data from the external table, SQL Server PDW will use the reject options to determine the number or percentage of rows that can fail to import before it stops the import.  
@@ -103,10 +103,10 @@ This example shows how the three REJECT options interact with each other. For ex
 -   The load fails with 50% failed rows after attempting to load 200 rows, which is larger than the specified 30% limit.  
   
 WITH *common_table_expression*  
-Specifies a temporary named result set, known as a common table expression (CTE). For more information, see [WITH common_table_expression &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/with-common-table-expression-sql-server-pdw.md).  
+Specifies a temporary named result set, known as a common table expression (CTE). For more information, see [WITH common_table_expression &#40;SQL Server PDW&#41;](../sqlpdw/with-common-table-expression-sql-server-pdw.md).  
   
 SELECT <select_criteria>  
-Populates the new table with the results from a SELECT statement. *select_criteria* is the body of the SELECT statement that determines which data to copy to the new table. For information about SELECT statements, see [SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md).  
+Populates the new table with the results from a SELECT statement. *select_criteria* is the body of the SELECT statement that determines which data to copy to the new table. For information about SELECT statements, see [SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md).  
   
 ## Permissions  
 The **CREATE EXTERNAL TABLE AS SELECT** statement requires the following permissions:  
@@ -135,7 +135,7 @@ If CREATE EXTERNAL TABLE AS SELECT is cancelled or fails, SQL Server PDW will ma
 SQL Server PDW will report any Java errors that occur on the Hadoop Cluster during the data export.  
   
 ## <a name="GeneralRemarks"></a>General Remarks  
-As a prerequisite for creating an external table, the PDW region administrator needs to configure hadoop connectivity. For more information, see [Configure PolyBase Connectivity to External Data &#40;Analytics Platform System&#41;](../../mpp/management/configure-polybase-connectivity-to-external-data-analytics-platform-system.md) in the Appliance Operations Guide.  
+As a prerequisite for creating an external table, the PDW region administrator needs to configure hadoop connectivity. For more information, see [Configure PolyBase Connectivity to External Data &#40;Analytics Platform System&#41;](../management/configure-polybase-connectivity-to-external-data-analytics-platform-system.md) in the Appliance Operations Guide.  
   
 After the CETAS statement finishes, you can run SQL queries on the external table. These operations will import data into SQL Server PDW for the duration of the query unless you import by using the CREATE TABLE AS SELECT statement.  
   
@@ -166,7 +166,7 @@ CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW, and D
   
 PolyBase can consume a maximum of 33k files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS which contain more than 33k files. Microsoft recommends users of Hadoop and PolyBase keep file paths short and use no more than 30k files per HDFS folder. When too many files are referenced a JVM out-of-memory exception occurs.  
   
-[SET ROWCOUNT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement. To achieve a similar behavior, use [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md).  
+[SET ROWCOUNT &#40;SQL Server PDW&#41;](../sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement. To achieve a similar behavior, use [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md).  
   
 When CREATE EXTERNAL TABLE AS SELECT selects from an RCFile, the column values in the RCFile must not contain the pipe '|' character.  
   
@@ -200,7 +200,7 @@ WITH (
 ```  
   
 ### B. Use a Query Hint with CREATE EXTERNAL TABLE AS SELECT (CETAS)  
-This query shows the basic syntax for using a query join hint with the CETAS statement. After the query is submitted to the Control node, SQL Server, running on the Compute nodes, will apply the hash join strategy when generating the SQL Server query plan. For more information on join hints and how to use the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/option-sql-server-pdw.md).  
+This query shows the basic syntax for using a query join hint with the CETAS statement. After the query is submitted to the Control node, SQL Server, running on the Compute nodes, will apply the hash join strategy when generating the SQL Server query plan. For more information on join hints and how to use the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../sqlpdw/option-sql-server-pdw.md).  
   
 > [!NOTE]  
 > This example specifies for 5000. If the port is not specified, SQL Server PDW uses 8020 as the default port.  
@@ -220,9 +220,9 @@ OPTION ( HASH JOIN );
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE EXTERNAL TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-sql-server-pdw.md)  
-[CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md)  
-[DROP TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-table-sql-server-pdw.md)  
-[ALTER TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-table-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE EXTERNAL TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-sql-server-pdw.md)  
+[CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md)  
+[DROP TABLE &#40;SQL Server PDW&#41;](../sqlpdw/drop-table-sql-server-pdw.md)  
+[ALTER TABLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-table-sql-server-pdw.md)  
   

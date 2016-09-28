@@ -11,7 +11,7 @@ caps.latest.revision: 22
 author: BarbKess
 ---
 # Supported Hadoop Configuration Changes (Analytics Platform System)
-Microsoft only supports changing the following specified (whitelisted) configuration settings. All setting not listed below, should not be changed. Changing items that are not listed, might affect your support contract. For more information about how to change settings, see [Changing Hadoop Configuration Settings &#40;Analytic Platform System&#41;](../../mpp/hdinsight/changing-hadoop-configuration-settings-analytic-platform-system.md).  
+Microsoft only supports changing the following specified (whitelisted) configuration settings. All setting not listed below, should not be changed. Changing items that are not listed, might affect your support contract. For more information about how to change settings, see [Changing Hadoop Configuration Settings &#40;Analytic Platform System&#41;](../hdinsight/changing-hadoop-configuration-settings-analytic-platform-system.md).  
   
 > [!NOTE]  
 > HDP 2.0 introduces changes with respect to Hadoop configuration. Some configuration parameters from HDP 1.3 are deprecated in HDP 2.0 and replaced with new parameters while others are not supported (i.e. do not affect system behavior). If you upgraded from previous version of APS and if you had customized configurations you will need to migrate your settings to HDP 2.0 format. For assistance, contact Microsoft Support for help with this scenario.  
@@ -91,6 +91,6 @@ These configuration files are located in `%HADOOP_HOME%/etc/Hadoop`.
 The HDInsight region uses the default settings. Changing these settings is not supported.  
   
 ## See Also  
-[Changing Hadoop Configuration Settings &#40;Analytic Platform System&#41;](../../mpp/hdinsight/changing-hadoop-configuration-settings-analytic-platform-system.md)  
-[Unsupported HDInsight Actions &#40;Analytics Platform System&#41;](../../mpp/hdinsight/unsupported-hdinsight-actions-analytics-platform-system.md)  
+[Changing Hadoop Configuration Settings &#40;Analytic Platform System&#41;](../hdinsight/changing-hadoop-configuration-settings-analytic-platform-system.md)  
+[Unsupported HDInsight Actions &#40;Analytics Platform System&#41;](../hdinsight/unsupported-hdinsight-actions-analytics-platform-system.md)  
   

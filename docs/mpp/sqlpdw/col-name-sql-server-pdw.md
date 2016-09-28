@@ -13,7 +13,7 @@ author: BarbKess
 # COL_NAME (SQL Server PDW)
 Returns the name of a column from a specified corresponding table identification number and column identification number. For more information, see the [COL_NAME (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms174974.aspx) documentation on MSDN.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   

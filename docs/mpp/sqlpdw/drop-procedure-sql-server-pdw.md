@@ -41,7 +41,7 @@ GO
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-procedure-sql-server-pdw.md)  
-[ALTER PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-procedure-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/create-procedure-sql-server-pdw.md)  
+[ALTER PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/alter-procedure-sql-server-pdw.md)  
   

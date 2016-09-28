@@ -11,7 +11,7 @@ caps.latest.revision: 14
 author: BarbKess
 ---
 # sys.dm_pdw_node_status (SQL Server PDW)
-Holds additional information (over [sys.dm_pdw_nodes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-nodes-sql-server-pdw.md)) about the performance and status of all appliance nodes. It lists one row per node in the appliance.  
+Holds additional information (over [sys.dm_pdw_nodes &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-nodes-sql-server-pdw.md)) about the performance and status of all appliance nodes. It lists one row per node in the appliance.  
   
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
@@ -31,6 +31,6 @@ Holds additional information (over [sys.dm_pdw_nodes &#40;SQL Server PDW&#41;](.
 |error_id|**nvarchar(36)**|Unique identifier of the last error that occurred on this node.||  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

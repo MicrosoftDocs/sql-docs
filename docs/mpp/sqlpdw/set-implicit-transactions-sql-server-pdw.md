@@ -13,7 +13,7 @@ author: BarbKess
 # SET IMPLICIT_TRANSACTIONS (SQL Server PDW)
 Sets the implicit transaction mode for the connection to SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -62,8 +62,8 @@ The IMPLICIT_TRANSACTIONS setting is set at run time and not at parse time.
 Implicit transactions must be explicitly committed or rolled back by the user at the end of the transaction. Otherwise, the transaction and all data changes within the transaction are rolled back when the user disconnects.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Connection Strings for JDBC and Microsoft JDBC Driver 4.0 for SQL Server &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connection-strings-for-jdbc-and-microsoft-jdbc-driver-4-0-for-sql-server-sql-server-pdw.md)  
-[@@TRANCOUNT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/trancount-sql-server-pdw.md)  
-[Transactions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transactions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Connection Strings for JDBC and Microsoft JDBC Driver 4.0 for SQL Server &#40;SQL Server PDW&#41;](../sqlpdw/connection-strings-for-jdbc-and-microsoft-jdbc-driver-4-0-for-sql-server-sql-server-pdw.md)  
+[@@TRANCOUNT &#40;SQL Server PDW&#41;](../sqlpdw/trancount-sql-server-pdw.md)  
+[Transactions &#40;SQL Server PDW&#41;](../sqlpdw/transactions-sql-server-pdw.md)  
   

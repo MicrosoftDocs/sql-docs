@@ -31,6 +31,6 @@ You can introduce an integer column in the ETL/ELT process or by using a ROW_NUM
 As a final resort, consider redesigning the schema entirely to make it more MPP friendly. I can honestly say that, in all my travels in the last 7 years, I’ve only had to do this once, but the client had an impossibly bad design to begin with.  
   
 ## See Also  
-[Minimize Data Skew When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimize-data-skew-when-choosing-a-distribution-column-sql-server-pdw.md)  
-[Minimize Data Movement When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimize-data-movement-when-choosing-a-distribution-column-sql-server-pdw.md)  
+[Minimize Data Skew When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../sqlpdw/minimize-data-skew-when-choosing-a-distribution-column-sql-server-pdw.md)  
+[Minimize Data Movement When Choosing a Distribution Column &#40;SQL Server PDW&#41;](../sqlpdw/minimize-data-movement-when-choosing-a-distribution-column-sql-server-pdw.md)  
   

@@ -11,13 +11,13 @@ caps.latest.revision: 37
 author: BarbKess
 ---
 # CREATE SERVER ROLE (SQL Server PDW)
-User-defined server roles are not available in this release of SQL Server PDW. Use user-defined database roles instead. For more information, see [CREATE ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-role-sql-server-pdw.md).  
+User-defined server roles are not available in this release of SQL Server PDW. Use user-defined database roles instead. For more information, see [CREATE ROLE &#40;SQL Server PDW&#41;](../sqlpdw/create-role-sql-server-pdw.md).  
   
 ## Syntax  
   
 ## Arguments  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[ALTER SERVER ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-server-role-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[ALTER SERVER ROLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-server-role-sql-server-pdw.md)  
   

@@ -45,8 +45,8 @@ If your IHV is not performing the hardware install, use the following steps to i
 |||  
 |-|-|  
 |**Task**|**Description**|  
-|Confirm documentation|Confirm that you have received all necessary documents and information from your independent hardware vendor (IHV). See [Information to Obtain from Your IHV &#40;Analytics Platform System&#41;](../../mpp/management/information-to-obtain-from-your-ihv-analytics-platform-system.md).|  
-|Install hardware|Verify the data center can accommodate the appliance. Move the appliance components to the data center. Rack the network switches, PDUs, and cabling. See [Hardware Installation &#40;Analytics Platform System&#41;](../../mpp/management/hardware-installation-analytics-platform-system.md).|  
+|Confirm documentation|Confirm that you have received all necessary documents and information from your independent hardware vendor (IHV). See [Information to Obtain from Your IHV &#40;Analytics Platform System&#41;](../management/information-to-obtain-from-your-ihv-analytics-platform-system.md).|  
+|Install hardware|Verify the data center can accommodate the appliance. Move the appliance components to the data center. Rack the network switches, PDUs, and cabling. See [Hardware Installation &#40;Analytics Platform System&#41;](../management/hardware-installation-analytics-platform-system.md).|  
   
 ## <a name="PowerOnAppliance"></a>2. Power On the Appliance  
   
@@ -61,7 +61,7 @@ If your IHV is not performing the hardware install, use the following steps to i
 |-|-|  
 |**Task**|**Description**|  
 |||  
-|Configure the appliance by using the SQL Server PDW**Configuration Manager**|Use the Configuration Manager to set appliance passwords, time zones, network and firewall settings, security certificates, and performance and other settings on your appliance. See [Appliance Configuration &#40;Analytics Platform System&#41;](../../mpp/management/appliance-configuration-analytics-platform-system.md).|  
+|Configure the appliance by using the SQL Server PDW**Configuration Manager**|Use the Configuration Manager to set appliance passwords, time zones, network and firewall settings, security certificates, and performance and other settings on your appliance. See [Appliance Configuration &#40;Analytics Platform System&#41;](../management/appliance-configuration-analytics-platform-system.md).|  
   
 > [!WARNING]  
 > Configuration changes should only be made using the SQL Server PDW**Configuration Manager**. Changes not exposed through **Configuration Manager** are not supported. For example, the SQL Server PDW appliance only supports the US-English language setting.  
@@ -71,8 +71,8 @@ If your IHV is not performing the hardware install, use the following steps to i
 |||  
 |-|-|  
 |**Task**|**Description**|  
-|Apply SQL Server PDW updates|(Optional) You may need to apply one or more SQL Server PDW updates to update your SQL Server PDW software to the latest version. See [Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../../mpp/management/apply-analytics-platform-system-hotfixes-analytics-platform-system.md).|  
-|Configure Windows Server Update Services|Configure the appliance to receive updates from Windows Server Update Services for supporting software. See [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../../mpp/management/download-and-apply-microsoft-updates-analytics-platform-system.md).|  
+|Apply SQL Server PDW updates|(Optional) You may need to apply one or more SQL Server PDW updates to update your SQL Server PDW software to the latest version. See [Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../management/apply-analytics-platform-system-hotfixes-analytics-platform-system.md).|  
+|Configure Windows Server Update Services|Configure the appliance to receive updates from Windows Server Update Services for supporting software. See [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../management/download-and-apply-microsoft-updates-analytics-platform-system.md).|  
   
 ## <a name="NextSteps"></a>Next Steps  
 After you have completed all of the preceding steps, your appliance is ready for use. You or other personnel at your location can proceed with the following tasks.  
@@ -81,9 +81,9 @@ After you have completed all of the preceding steps, your appliance is ready for
 |-|-|  
 |**Task**|**Description**|  
 |Install SQL Server PDW drivers and configure connectivity|Configure local computers to connect to SQL Server PDW by using SQL Server Data Tools, sqlcmd, business intelligence software, or other tools. See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).|  
-|Create logons and server roles, and assign permissions|Plan and create logons and server roles that will allow users to log on to SQL Server PDW with the appropriate permissions. See [PDW Permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/pdw-permissions-sql-server-pdw.md).|  
+|Create logons and server roles, and assign permissions|Plan and create logons and server roles that will allow users to log on to SQL Server PDW with the appropriate permissions. See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).|  
 |Configure the Azure Data Management Gateway|The Gateway enables Azure users to access on-premises APS data by exposing APS data as secure OData feeds. The Gateway is installed on the Control node already. Ask Microsoft for assistance with configuration.|  
-|Monitor queries and appliance users|Use the Admin Console and other resources to monitor the queries and appliance users. See [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md) and [User Sessions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/user-sessions-sql-server-pdw.md).|  
-|Load data to SQL Server PDW|Load data to your appliance. See [Load &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/load-sql-server-pdw.md).|  
-|Create a disaster recovery plan|Plan how you will protect your data from hardware failures or data overwrites. Create a plan using regular backups and restore plans in case of data corruption or loss. See [Create a Disaster Recovery Plan &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-a-disaster-recovery-plan-sql-server-pdw.md).|  
-|Monitor the appliance|Monitor the appliance state, health, and performance by using system views, logs, and the Admin Console. Correct or report any problems. See [Monitor Appliance Health State &#40;Analytics Platform System&#41;](../../mpp/management/monitor-appliance-health-state-analytics-platform-system.md) and [sys.dm_pdw_component_health_status &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-component-health-status-sql-server-pdw.md).|  
+|Monitor queries and appliance users|Use the Admin Console and other resources to monitor the queries and appliance users. See [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md) and [User Sessions &#40;SQL Server PDW&#41;](../sqlpdw/user-sessions-sql-server-pdw.md).|  
+|Load data to SQL Server PDW|Load data to your appliance. See [Load &#40;SQL Server PDW&#41;](../sqlpdw/load-sql-server-pdw.md).|  
+|Create a disaster recovery plan|Plan how you will protect your data from hardware failures or data overwrites. Create a plan using regular backups and restore plans in case of data corruption or loss. See [Create a Disaster Recovery Plan &#40;SQL Server PDW&#41;](../sqlpdw/create-a-disaster-recovery-plan-sql-server-pdw.md).|  
+|Monitor the appliance|Monitor the appliance state, health, and performance by using system views, logs, and the Admin Console. Correct or report any problems. See [Monitor Appliance Health State &#40;Analytics Platform System&#41;](../management/monitor-appliance-health-state-analytics-platform-system.md) and [sys.dm_pdw_component_health_status &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-component-health-status-sql-server-pdw.md).|  

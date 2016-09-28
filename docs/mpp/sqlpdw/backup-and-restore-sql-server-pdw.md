@@ -28,15 +28,15 @@ Describes how data backup and restore works for SQL Server PDW. Backup and resto
 ## <a name="BackupRestoreBasics"></a>Backup and Restore Basics  
 A SQL Server PDW *database backup* is a copy of an appliance database, stored in a format so that it can be used to restore the original database to an appliance.  
   
-A SQL Server PDW database backup is created with the [BACKUP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-database-sql-server-pdw.md) statement and formatted for use with the [RESTORE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/restore-database-sql-server-pdw.md) statement; it is unusable for any other purpose. The backup can only be restored to an appliance with the same number or a greater number of Compute nodes.  
+A SQL Server PDW database backup is created with the [BACKUP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/backup-database-sql-server-pdw.md) statement and formatted for use with the [RESTORE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/restore-database-sql-server-pdw.md) statement; it is unusable for any other purpose. The backup can only be restored to an appliance with the same number or a greater number of Compute nodes.  
   
-The [master Database &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/master-database-sql-server-pdw.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement, and restored by using the [Restore the Master Database &#40;Analytics Platform System&#41;](../../mpp/management/restore-the-master-database-analytics-platform-system.md) page of the Configuration Manager tool.  
+The [master Database &#40;SQL Server PDW&#41;](../sqlpdw/master-database-sql-server-pdw.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement, and restored by using the [Restore the Master Database &#40;Analytics Platform System&#41;](../management/restore-the-master-database-analytics-platform-system.md) page of the Configuration Manager tool.  
   
 SQL Server PDW uses SQL Server backup technology to backup and restore appliance databases. SQL Server backup options are preconfigured to use backup compression. You cannot set backup options such as compression, checksum, block size, and buffer count.  
   
 Database backups are stored on one or more Backup servers, which exist in your own customer network.  SQL Server PDW writes a user database backup in parallel directly from the Compute nodes to one backup server and restores a user database backup in parallel directly from the backup server to the Compute nodes.  
   
-Backups are stored on the backup server as a set of files in the Windows file system. A SQL Server PDW database backup can only be restored to SQL Server PDW. However, you can archive database backups from the backup server to another location by using standard Windows file backup processes. For more information about backup servers, see [Acquire and Configure a Backup Server &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/acquire-and-configure-a-backup-server-sql-server-pdw.md).  
+Backups are stored on the backup server as a set of files in the Windows file system. A SQL Server PDW database backup can only be restored to SQL Server PDW. However, you can archive database backups from the backup server to another location by using standard Windows file backup processes. For more information about backup servers, see [Acquire and Configure a Backup Server &#40;SQL Server PDW&#41;](../sqlpdw/acquire-and-configure-a-backup-server-sql-server-pdw.md).  
   
 ## <a name="BackupTypes"></a>Backup Types  
 There are two types of data that require a backup: user databases and system databases (e.g., the master database). A transaction log backup is not supported in this release.  
@@ -54,7 +54,7 @@ To backup the entire appliance, you need to perform a backup of all user databas
 ## <a name="BackupProc"></a>Backup Process  
 The following diagram shows the flow of data during a database backup.  
   
-![SQL Server PDW Backup Process](../../mpp/sqlpdw/media/SQL_Server_PDW_Backup_Process.png "SQL_Server_PDW_Backup_Process")  
+![SQL Server PDW Backup Process](../sqlpdw/media/SQL_Server_PDW_Backup_Process.png "SQL_Server_PDW_Backup_Process")  
   
 The backup process works as follows:  
   
@@ -94,7 +94,7 @@ An ***appliance restore*** is a restore of the entire appliance. This include a 
 ## <a name="RestoreProc"></a>Restore Process  
 The following diagram shows the flow of data during a database restore.  
   
-![Restore process](../../mpp/sqlpdw/media/SQL_Server_PDW_Restore_Process.png "SQL_Server_PDW_Restore_Process")  
+![Restore process](../sqlpdw/media/SQL_Server_PDW_Restore_Process.png "SQL_Server_PDW_Restore_Process")  
   
 **Restoring to an Appliance with the Same Number of Compute Nodes**  
   
@@ -102,7 +102,7 @@ When restoring data, the appliance detects the number of Compute nodes on the so
   
 1.  The database backup to be restored is available on a Windows file share on a non-appliance backup server. For best performance, this server is usually connected to the appliance InfiniBand network.  
   
-2.  User submits a [RESTORE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/restore-database-sql-server-pdw.md)SQL statement to the SQL Server PDW Control node.  
+2.  User submits a [RESTORE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/restore-database-sql-server-pdw.md)SQL statement to the SQL Server PDW Control node.  
   
     -   The restore is either a full restore or a header restore. The full restore restores a full backup and then optionally restores a differential backup.  
   
@@ -124,17 +124,17 @@ Restoring a backup to an appliance with a larger number of Compute nodes grows t
   
 For example, when restoring a 60 GB database from a 2-node appliance (30 GB per node) to a 6-node appliance, SQL Server PDW creates a 180 GB database (6 nodes with 30 GB per node) on the 6-node appliance. SQL Server PDW initially restores the database to 2 nodes to match the source configuration, and then redistributes the data to all 6 nodes.  
   
-After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-database-sql-server-pdw.md) to shrink the database file sizes.  
+After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/alter-database-sql-server-pdw.md) to shrink the database file sizes.  
   
 ## Related Tasks  
   
 |Backup and Restore Task|Description|  
 |---------------------------|---------------|  
-|Prepare a server as a backup server.|[Acquire and Configure a Backup Server &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/acquire-and-configure-a-backup-server-sql-server-pdw.md)|  
-|Create a disaster recovery plan.|[Create a Disaster Recovery Plan &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-a-disaster-recovery-plan-sql-server-pdw.md)|  
-|Backup a database.|[BACKUP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-database-sql-server-pdw.md)|  
-|Restore a database.|[RESTORE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/restore-database-sql-server-pdw.md)|  
-|Restore the master database.|To restore the master database, use the [Restore the Master Database &#40;Analytics Platform System&#41;](../../mpp/management/restore-the-master-database-analytics-platform-system.md) page in the Configuration Manager tool.|  
-|Copy a database from one appliance to another appliance.|[Copy a SQL Server PDW Database to Another Appliance &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/copy-a-sql-server-pdw-database-to-another-appliance-sql-server-pdw.md).|  
-|Monitor Backups and Restores.|[Monitor Backups and Restores &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/monitor-backups-and-restores-sql-server-pdw.md)|  
+|Prepare a server as a backup server.|[Acquire and Configure a Backup Server &#40;SQL Server PDW&#41;](../sqlpdw/acquire-and-configure-a-backup-server-sql-server-pdw.md)|  
+|Create a disaster recovery plan.|[Create a Disaster Recovery Plan &#40;SQL Server PDW&#41;](../sqlpdw/create-a-disaster-recovery-plan-sql-server-pdw.md)|  
+|Backup a database.|[BACKUP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/backup-database-sql-server-pdw.md)|  
+|Restore a database.|[RESTORE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/restore-database-sql-server-pdw.md)|  
+|Restore the master database.|To restore the master database, use the [Restore the Master Database &#40;Analytics Platform System&#41;](../management/restore-the-master-database-analytics-platform-system.md) page in the Configuration Manager tool.|  
+|Copy a database from one appliance to another appliance.|[Copy a SQL Server PDW Database to Another Appliance &#40;SQL Server PDW&#41;](../sqlpdw/copy-a-sql-server-pdw-database-to-another-appliance-sql-server-pdw.md).|  
+|Monitor Backups and Restores.|[Monitor Backups and Restores &#40;SQL Server PDW&#41;](../sqlpdw/monitor-backups-and-restores-sql-server-pdw.md)|  
   

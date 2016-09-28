@@ -69,10 +69,10 @@ ORDER BY css.hobt_id, css.column_id;
 Requires **VIEW SERVER STATE** permission.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
-[Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md)  
-[CREATE COLUMNSTORE INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-columnstore-index-sql-server-pdw.md)  
-[sys.pdw_nodes_column_store_row_groups &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-nodes-column-store-row-groups-sql-server-pdw.md)  
-[sys.pdw_nodes_column_store_dictionaries &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-nodes-column-store-dictionaries-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
+[Clustered Columnstore Indexes &#40;SQL Server PDW&#41;](../sqlpdw/clustered-columnstore-indexes-sql-server-pdw.md)  
+[CREATE COLUMNSTORE INDEX &#40;SQL Server PDW&#41;](../sqlpdw/create-columnstore-index-sql-server-pdw.md)  
+[sys.pdw_nodes_column_store_row_groups &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-nodes-column-store-row-groups-sql-server-pdw.md)  
+[sys.pdw_nodes_column_store_dictionaries &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-nodes-column-store-dictionaries-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # ALTER CERTIFICATE (SQL Server PDW)
 Removes the private key used to encrypt a certificate, or adds one if none is present. Can only be executed in the master database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -33,7 +33,7 @@ ALTER CERTIFICATE certificate_name
 Is the unique name by which the certificate is known in database.  
   
 FILE **='***path_to_private_key***'**  
-Specifies the complete path, including file name, to the private key. This parameter must be a UNC path to a network location. This file will be accessed within the security context of a credential added by using [sp_pdw_add_network_credential](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md). When you use this option, you must make sure that the credential account has access to the specified file.  
+Specifies the complete path, including file name, to the private key. This parameter must be a UNC path to a network location. This file will be accessed within the security context of a credential added by using [sp_pdw_add_network_credential](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md). When you use this option, you must make sure that the credential account has access to the specified file.  
   
 DECRYPTION BY PASSWORD **='***key_password***'**  
 Specifies the password that is required to decrypt the private key.  
@@ -52,7 +52,7 @@ When the private key of a certificate that already exists in the database is imp
 The REMOVE PRIVATE KEY option will delete the private key of the certificate from the database. Do not remove the private key of a certificate that protects a symmetric key.  
   
 > [!IMPORTANT]  
-> Always make an archival copy of a private key before removing it from a database. For more information, see [BACKUP CERTIFICATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-certificate-sql-server-pdw.md).  
+> Always make an archival copy of a private key before removing it from a database. For more information, see [BACKUP CERTIFICATE &#40;SQL Server PDW&#41;](../sqlpdw/backup-certificate-sql-server-pdw.md).  
   
 ## Permissions  
 Requires **CONTROL SERVER** permission.  
@@ -69,8 +69,8 @@ GO
 ```  
   
 ## See Also  
-[CREATE CERTIFICATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-certificate-sql-server-pdw.md)  
-[DROP CERTIFICATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-certificate-sql-server-pdw.md)  
-[BACKUP CERTIFICATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-certificate-sql-server-pdw.md)  
-[sys.certificates &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-certificates-sql-server-pdw.md)  
+[CREATE CERTIFICATE &#40;SQL Server PDW&#41;](../sqlpdw/create-certificate-sql-server-pdw.md)  
+[DROP CERTIFICATE &#40;SQL Server PDW&#41;](../sqlpdw/drop-certificate-sql-server-pdw.md)  
+[BACKUP CERTIFICATE &#40;SQL Server PDW&#41;](../sqlpdw/backup-certificate-sql-server-pdw.md)  
+[sys.certificates &#40;SQL Server PDW&#41;](../sqlpdw/sys-certificates-sql-server-pdw.md)  
   

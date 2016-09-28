@@ -13,7 +13,7 @@ author: BarbKess
 # Install dwloader Command-Line Loader (SQL Server PDW)
 Describes how to install the dwloader Command-Line Loader tool for SQL Server PDW.  
   
-Parent Topic: [Client Tools and Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
+Parent Topic: [Client Tools and Applications &#40;SQL Server PDW&#41;](../sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
   
 ## Before You Begin  
 Download the **dwloader-x64-pdwau4.msi** Windows Installer file from the [Analytics Platform System Appliance Update 4](https://www.microsoft.com/download/details.aspx?id=48241) page on the Microsoft Download Center.  
@@ -33,5 +33,5 @@ msiexec /i ClientTools.msi CONTROL_NODE_ADDRESS="PDW-CTLN"
   
 When running msiexec, the standard options are available. To learn more, run the command `msiexec /?`  
   
-For the dwloader reference, see [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dwloader-command-line-loader-sql-server-pdw.md)  
+For the dwloader reference, see [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/dwloader-command-line-loader-sql-server-pdw.md)  
   

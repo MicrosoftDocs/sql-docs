@@ -11,7 +11,7 @@ caps.latest.revision: 13
 author: BarbKess
 ---
 # sys.index_columns (SQL Server PDW)
-Contains one row per column that is part of a [sys.indexes](../../mpp/sqlpdw/sys-indexes-sql-server-pdw.md) index or unordered table.  
+Contains one row per column that is part of a [sys.indexes](../sqlpdw/sys-indexes-sql-server-pdw.md) index or unordered table.  
   
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
@@ -25,6 +25,6 @@ Contains one row per column that is part of a [sys.indexes](../../mpp/sqlpdw/sys
 |is_included_column|**bit**|0 = Column is not an included column.<br /><br />1 = Column is an included column.|Always 0 for rowstore index columns because all indexed columns are key columns.<br /><br />Always 1 for clustered columnstore index columns because all columns are included columns.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

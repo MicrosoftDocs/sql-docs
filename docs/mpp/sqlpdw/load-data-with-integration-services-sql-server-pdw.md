@@ -34,9 +34,9 @@ Provides reference and deployment information for loading data into SQL Server P
 ## <a name="BeforeBegin"></a>Before You Begin  
 Before you can start loading data, use the following topics to install the Integration Services Destination Adapters and to create an Integration Services package that connects to SQL Server PDW:  
   
--   [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md)  
+-   [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md)  
   
--   [Connect With SQL Server Integration Services for Loading &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-sql-server-integration-services-for-loading-sql-server-pdw.md)  
+-   [Connect With SQL Server Integration Services for Loading &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-integration-services-for-loading-sql-server-pdw.md)  
   
 For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/en-us/library/ms141091(v=sql11).aspx) on MSDN.  
   
@@ -137,7 +137,7 @@ To run an Integration Services load package, you need:
 When an Integration Services package has multiple SQL Server PDW destinations running and one of the connections is terminated, Integration Services stops pushing data to all of the SQL Server PDW destinations.  
   
 ## <a name="Limits"></a>Limitations and Restrictions  
-For an Integration Services package, the number of SQL Server PDW destinations for the same data source is limited by the maximum number of active loads. The maximum is pre-configured and is not user-configurable. For the maximum number of loads and queued loads per appliance, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+For an Integration Services package, the number of SQL Server PDW destinations for the same data source is limited by the maximum number of active loads. The maximum is pre-configured and is not user-configurable. For the maximum number of loads and queued loads per appliance, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
 Each Integration Services package destination for the same data source counts as one load when the package is running. For example, suppose the maximum active loads is 10. The package will not run if it attempts to open 11 or more destinations for the same data source.  
   
@@ -246,9 +246,9 @@ Run the package on your computer Integration Services.
 2.  The package will run and the progress plus any errors will be shown on the **Progress** pane. Use a SQL client to confirm the load, or monitor the load via the SQL Server PDW Admin Console.  
   
 ## See Also  
-[How to create a script task that uses the SSIS PDW destination adapter &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter-sql-server-pdw.md)  
-[Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[How to create a script task that uses the SSIS PDW destination adapter &#40;SQL Server PDW&#41;](../sqlpdw/how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter-sql-server-pdw.md)  
+[Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 [SQL Server Integration Services](http://msdn.microsoft.com/en-us/library/ms141026(v=sql11).aspx)  
 [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/en-us/library/ms141091(v=sql11).aspx)  
 [Tutorial: Creating a Basic Package Using a Wizard](http://technet.microsoft.com/en-us/library/ms365330(v=sql11).aspx)  

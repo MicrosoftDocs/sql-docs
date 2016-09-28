@@ -24,7 +24,7 @@ Holds information related to the SQL Server OS state related to instances runnin
 |**wait_time**|**bigint**|Total wait time for this wait type in millisecons. Inclusive of signal_time.||  
   
 ## See Also  
-[sys.dm_pdw_waits &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-waits-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[sys.dm_pdw_waits &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-waits-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

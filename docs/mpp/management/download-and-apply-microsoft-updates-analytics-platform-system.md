@@ -23,19 +23,19 @@ This topic discusses how to download updates from the Microsoft Update Catalog t
 ### Prerequisites  
 Before performing these steps, you need to:  
   
--   Configure WSUS on your appliance by following the instructions in [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](../../mpp/management/configure-windows-server-update-services-wsus-analytics-platform-system.md).  
+-   Configure WSUS on your appliance by following the instructions in [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](../management/configure-windows-server-update-services-wsus-analytics-platform-system.md).  
   
 -   Knowledge of a Fabric Domain Administrator account login information.  
   
 -   Have a login with permissions to access the Analytics Platform System Admin Console and view appliance state information.  
   
--   In most cases, WSUS needs to access servers outside of the appliance. To support this usage scenario the Analytics Platform System DNS can be configured to support an external name forwarder that will allow the Analytics Platform System hosts and Virtual Machines (VMs) to use external DNS servers to resolve names outside of the appliance. For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../../mpp/management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
+-   In most cases, WSUS needs to access servers outside of the appliance. To support this usage scenario the Analytics Platform System DNS can be configured to support an external name forwarder that will allow the Analytics Platform System hosts and Virtual Machines (VMs) to use external DNS servers to resolve names outside of the appliance. For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
   
 ## <a name="bkmk_ImportUpdates"></a>To download and apply Microsoft updates  
   
 #### Verify the appliance state indicators  
   
-1.  Open the Admin Console and navigate to the Appliance State page. For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
+1.  Open the Admin Console and navigate to the Appliance State page. For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
   
 2.  Verify the status indicators for all nodes on the Appliance State.  
   
@@ -65,29 +65,29 @@ Before performing these steps, you need to:
   
     You can also select **Critical Updates** or **Security Updates** in the left pane and view available updates for these categories.  
   
-    ![Select all updates and change status to Any.](../../mpp/management/media/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
+    ![Select all updates and change status to Any.](../management/media/SQL_Server_PDW_WSUSSelectAllUpdates.png "SQL_Server_PDW_WSUSSelectAllUpdates")  
   
 3.  Select all updates, and then click the **Approve** link in the right pane.  
   
     You can also right-click the selected updates, and then click **Approve**. You may be prompted to accept the “Microsoft Software License Terms”. If so, click **I Accept** in the window to continue.  
   
-    ![Select all updates that apply and click Approve.](../../mpp/management/media/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
+    ![Select all updates that apply and click Approve.](../management/media/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  Select the appliance server group you created in [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](../../mpp/management/configure-windows-server-update-services-wsus-analytics-platform-system.md).  
+4.  Select the appliance server group you created in [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](../management/configure-windows-server-update-services-wsus-analytics-platform-system.md).  
   
 5.  Click **Approved for Install**, and then click **OK**.  
   
-    ![Approve updates for your computer group.](../../mpp/management/media/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
+    ![Approve updates for your computer group.](../management/media/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
 6.  In the **Approval Progress** dialog box, when the approval process is complete, click **Close**.  
   
-    ![Close window when updates are approved.](../../mpp/management/media/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
+    ![Close window when updates are approved.](../management/media/SQL_Server_PDW_WSUSCloseApprovalProgressWindow.png "SQL_Server_PDW_WSUSCloseApprovalProgressWindow")  
   
 #### Verify that the updates are in WSUS  
   
 1.  Verify the file status of all updates. Each file needs to have a green arrow icon to the left of the title. This indicates the file is ready for installation.  
   
-    ![File status is successful](../../mpp/management/media/SQL_Server_PDW_WSUS_File_Status.png "SQL_Server_PDW_WSUS_File_Status")  
+    ![File status is successful](../management/media/SQL_Server_PDW_WSUS_File_Status.png "SQL_Server_PDW_WSUS_File_Status")  
   
     Before installing the updates, make sure that they are all downloaded and available in the WSUS console.  
   
@@ -95,11 +95,11 @@ Before performing these steps, you need to:
   
 1.  Check the **Download Status** of updates in the WSUS console as shown in the following screenshot. Check that **Updates needing files** is 0 to confirm that all updates are downloaded. If this number is more than zero, you may need to go back and approve additional updates.  
   
-    ![Verify that all updates are downloaded.](../../mpp/management/media/SQL_Server_PDS_WSUS_VerifyDownloadUpdateJPG.png "SQL_Server_PDS_WSUS_VerifyDownloadUpdateJPG")  
+    ![Verify that all updates are downloaded.](../management/media/SQL_Server_PDS_WSUS_VerifyDownloadUpdateJPG.png "SQL_Server_PDS_WSUS_VerifyDownloadUpdateJPG")  
   
 #### Apply Microsoft updates  
   
-1.  Before you start, open the [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md), click the **Appliance State** tab, and verify that the **Cluster** and **Network** columns show green (or NA) for all nodes. If any alerts exist in either of these columns, the appliance might not be able to install updates properly. Address all existing alerts in the **Cluster** and **Network** columns before proceeding.  
+1.  Before you start, open the [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md), click the **Appliance State** tab, and verify that the **Cluster** and **Network** columns show green (or NA) for all nodes. If any alerts exist in either of these columns, the appliance might not be able to install updates properly. Address all existing alerts in the **Cluster** and **Network** columns before proceeding.  
   
 2.  Log on to the *<domain_name>***-HST01** node as the Fabric Domain Administrator.  
   
@@ -113,7 +113,7 @@ Before performing these steps, you need to:
   
 3.  Expand **All Computers**.  
   
-4.  Select the appliance server group you created in [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](../../mpp/management/configure-windows-server-update-services-wsus-analytics-platform-system.md).  
+4.  Select the appliance server group you created in [Configure Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41;](../management/configure-windows-server-update-services-wsus-analytics-platform-system.md).  
   
 5.  In the **Status** drop-down menu, select **Any** and click **Refresh**.  
   
@@ -129,7 +129,7 @@ Before performing these steps, you need to:
   
 #### Ensure there are no critical alerts in the SQL Server PDW Admin Console  
   
-1.  Open the Admin Console, click the Appliance State tab. See [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md).  
+1.  Open the Admin Console, click the Appliance State tab. See [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md).  
   
 2.  Verify that the **Cluster** and **Network** columns show green (or NA) for all nodes. If any alerts exist in either of these columns, the appliance might not be able to install updates properly. Contact support if there are any critical alerts.  
   
@@ -158,8 +158,8 @@ C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAd
 ```  
   
 ## See Also  
-[Uninstall Microsoft Updates &#40;Analytics Platform System&#41;](../../mpp/management/uninstall-microsoft-updates-analytics-platform-system.md)  
-[Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../../mpp/management/apply-analytics-platform-system-hotfixes-analytics-platform-system.md)  
-[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../../mpp/management/uninstall-analytics-platform-system-hotfixes-analytics-platform-system.md)  
-[Software Servicing &#40;Analytics Platform System&#41;](../../mpp/management/software-servicing-analytics-platform-system.md)  
+[Uninstall Microsoft Updates &#40;Analytics Platform System&#41;](../management/uninstall-microsoft-updates-analytics-platform-system.md)  
+[Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../management/apply-analytics-platform-system-hotfixes-analytics-platform-system.md)  
+[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](../management/uninstall-analytics-platform-system-hotfixes-analytics-platform-system.md)  
+[Software Servicing &#40;Analytics Platform System&#41;](../management/software-servicing-analytics-platform-system.md)  
   

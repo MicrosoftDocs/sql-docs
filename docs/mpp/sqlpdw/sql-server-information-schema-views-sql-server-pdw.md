@@ -57,5 +57,5 @@ The following links point to the SQL Server documentation on MSDN.
 [VIEWS (Transact-SQL)](http://technet.microsoft.com/en-us/library/ms181381(v=sql11).aspx)  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

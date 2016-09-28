@@ -71,7 +71,7 @@ To connect to your SQL Server PDW appliance:
   
     -   **Password:** Enter your password if using SQL Server Authentication.  
   
-    ![Connection settings](../../mpp/sqlpdw/media/SQL_Server_PDW_SSDT_ConnectServer.png "SQL_Server_PDW_SSDT_ConnectServer")  
+    ![Connection settings](../sqlpdw/media/SQL_Server_PDW_SSDT_ConnectServer.png "SQL_Server_PDW_SSDT_ConnectServer")  
   
 5.  Click **Connect**.  
   
@@ -85,7 +85,7 @@ To connect to your SQL Server PDW appliance:
   
 3.  To run the query, click the Execute button.  
   
-    ![Running a query on SQL Server PDW](../../mpp/sqlpdw/media/SQL_Server_PDW_SSDT_QueryWindow.png "SQL_Server_PDW_SSDT_QueryWindow")  
+    ![Running a query on SQL Server PDW](../sqlpdw/media/SQL_Server_PDW_SSDT_QueryWindow.png "SQL_Server_PDW_SSDT_QueryWindow")  
   
 ## <a name="Limits"></a>Limitations and Restrictions  
 Some SQL Server Data Tools features are not supported in this release of SQL Server PDW. For example, these features are not supported:  
@@ -163,8 +163,8 @@ To verify which version of SQL Server Data Tools is installed
   
 3.  Find **SQL Server Data Tools** in the list and view the version information.  
   
-![SQL Server Data Tools Version](../../mpp/sqlpdw/media/SQL_Server_PDW_SSDT2012_VersionInfo.png "SQL_Server_PDW_SSDT2012_VersionInfo")  
+![SQL Server Data Tools Version](../sqlpdw/media/SQL_Server_PDW_SSDT2012_VersionInfo.png "SQL_Server_PDW_SSDT2012_VersionInfo")  
   
 ## See Also  
-[Client Tools and Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
+[Client Tools and Applications &#40;SQL Server PDW&#41;](../sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
   

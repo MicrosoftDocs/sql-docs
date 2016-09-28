@@ -14,6 +14,6 @@ author: BarbKess
 Returns a list of securable classes supported by SQL Server PDW. For more information, see [sys.securable_classes (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms408301(v=sql11).aspx).  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

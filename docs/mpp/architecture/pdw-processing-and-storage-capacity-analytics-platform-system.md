@@ -49,11 +49,11 @@ Uplift is the percent capacity gain by increasing the Data Scale Units from one 
   
 Explanation:  
   
--   **Data Scale Units** per appliance. To learn about Data Scale Units, see [Hardware Components &#40;Analytics Platform System&#41;](../../mpp/architecture/hardware-components-analytics-platform-system.md)  
+-   **Data Scale Units** per appliance. To learn about Data Scale Units, see [Hardware Components &#40;Analytics Platform System&#41;](../architecture/hardware-components-analytics-platform-system.md)  
   
 -   **Compute Nodes** per appliance.  
   
--   **CPU cores** per appliance. There are 16 cores per Compute node, one core per each mirrored disk-pair. For Compute node disk structure, see [Hardware Components &#40;Analytics Platform System&#41;](../../mpp/architecture/hardware-components-analytics-platform-system.md).  
+-   **CPU cores** per appliance. There are 16 cores per Compute node, one core per each mirrored disk-pair. For Compute node disk structure, see [Hardware Components &#40;Analytics Platform System&#41;](../architecture/hardware-components-analytics-platform-system.md).  
   
 -   **Memory** per appliance. Each core has 256 GB memory.  
   

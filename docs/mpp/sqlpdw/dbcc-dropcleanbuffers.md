@@ -12,7 +12,7 @@ caps.latest.revision: 4
 # DBCC DROPCLEANBUFFERS
 Removes all clean buffers from the buffer pool.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions (SQL Server PDW)](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions (SQL Server PDW)](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
 ```  
@@ -57,4 +57,4 @@ Requires **CONTROL** permission on SQL Data Warehouse.
 Requires **ALTER SERVER STATE** permission on SQL Server PDW.  
   
 ## See Also  
-[Database Console Commands(SQL Server PDW)](../../mpp/sqlpdw/database-console-commands-sql-server-pdw.md)  
+[Database Console Commands(SQL Server PDW)](../sqlpdw/database-console-commands-sql-server-pdw.md)  

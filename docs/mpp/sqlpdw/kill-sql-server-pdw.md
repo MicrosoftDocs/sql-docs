@@ -13,7 +13,7 @@ author: BarbKess
 # KILL (SQL Server PDW)
 Terminates a SQL Server PDW user session based on the session ID. Use KILL, for example, to terminate a process that is blocking other important processes with locks, or to terminate a long-running query process that is using too many system resources.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -34,19 +34,19 @@ You cannot use KILL to kill your current session.
 ## Metadata  
 Examples of system views that return PDW session IDs:  
   
--   [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md),  
+-   [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md),  
   
-    [sys.dm_pdw_exec_requests &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-requests-sql-server-pdw.md)  
+    [sys.dm_pdw_exec_requests &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-requests-sql-server-pdw.md)  
   
--   [sys.dm_pdw_query_stats_xe &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-query-stats-xe-sql-server-pdw.md)  
+-   [sys.dm_pdw_query_stats_xe &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-query-stats-xe-sql-server-pdw.md)  
   
--   [sys.dm_pdw_query_stats_xe_file &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys.dm_pdw_query_stats_xe_file-sql-server-pdw.md)  
+-   [sys.dm_pdw_query_stats_xe_file &#40;SQL Server PDW&#41;](../sqlpdw/sys.dm_pdw_query_stats_xe_file-sql-server-pdw.md)  
   
--   [sys.dm_pdw_resource_waits &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-resource-waits-sql-server-pdw.md)  
+-   [sys.dm_pdw_resource_waits &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-resource-waits-sql-server-pdw.md)  
   
--   [sys.dm_pdw_waits &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-waits-sql-server-pdw.md)  
+-   [sys.dm_pdw_waits &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-waits-sql-server-pdw.md)  
   
--   [sys.dm_pdw_lock_waits &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-lock-waits-sql-server-pdw.md)  
+-   [sys.dm_pdw_lock_waits &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-lock-waits-sql-server-pdw.md)  
   
 ## Permissions  
 Requires the **ALTER ANY CONNECTION** permission.  
@@ -62,6 +62,6 @@ KILL 'SID535';
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SESSION_ID &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/session-id-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SESSION_ID &#40;SQL Server PDW&#41;](../sqlpdw/session-id-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # INSERT (SQL Server PDW)
 Appends one or more new rows to a table in SQL Server PDW. You can add one row by listing the row values or you can add multiple rows by inserting the results of a SELECT statement.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -50,10 +50,10 @@ The list of one or more data values to insert as a new row in the table. If a li
 A constant or an expression. At this time, functions are not supported in *expression*.  
   
 SELECT <select_criteria>  
-A SELECT statement specifying source data that matches the column types to be inserted into the table. For more information, see [SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md).  
+A SELECT statement specifying source data that matches the column types to be inserted into the table. For more information, see [SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md).  
   
 OPTION ( <query_option> [ ,...n ] )  
-Specifies query options for the INSERT  statement. The possible options include a query label and one or more query join hints. For more information about the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/option-sql-server-pdw.md)  
+Specifies query options for the INSERT  statement. The possible options include a query label and one or more query join hints. For more information about the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../sqlpdw/option-sql-server-pdw.md)  
   
 ## Permissions  
 Requires **INSERT** permission on the target table or membership in the **db_datawriter** fixed database role. **INSERT** permission is denied to members of the **db_denydatawriter** fixed database role.  
@@ -68,14 +68,14 @@ Joins are supported with INSERT-SELECT, and are not supported for INSERT with va
   
 When an INSERT-SELECT is based on a self-join, a table joined to itself, the INSERT operations use the order of columns listed in the FROM clause.  
   
-For information about supported data formats, implicit data conversions, and explicit data conversions, see [Load Data With INSERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/load-data-with-insert-sql-server-pdw.md).  
+For information about supported data formats, implicit data conversions, and explicit data conversions, see [Load Data With INSERT &#40;SQL Server PDW&#41;](../sqlpdw/load-data-with-insert-sql-server-pdw.md).  
   
 For distributed tables, SQL Server PDW performs inserts in parallel across the Compute nodes, and sequentially across the distributions within each Compute node. This provides the ability to rollback inserts in case an insert operation fails.  
   
 ## Limitations and Restrictions  
 The INSERT statement cannot be used to modify or replace existing data; to modify column values in existing rows, use the Update statement.Examples  
   
-[SET ROWCOUNT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement. To achieve a similar behavior, use [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md).  
+[SET ROWCOUNT &#40;SQL Server PDW&#41;](../sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement. To achieve a similar behavior, use [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md).  
   
 ## Locking  
 INSERT (into replicated tables) requires an exclusive lock. INSERT into distributed table acquire SharedUpdate locks at some level on the table being changed.  
@@ -129,7 +129,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### E. Using a label and a query hint with the INSERT statement  
-This query shows the basic syntax for using a label and a query join hint with the INSERT statement. After the query is submitted to the Control node, SQL Server, running on the Compute nodes, will apply the hash join strategy when it generates the SQL Server query plan. For more information on join hints and how to use the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/option-sql-server-pdw.md).  
+This query shows the basic syntax for using a label and a query join hint with the INSERT statement. After the query is submitted to the Control node, SQL Server, running on the Compute nodes, will apply the hash join strategy when it generates the SQL Server query plan. For more information on join hints and how to use the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../sqlpdw/option-sql-server-pdw.md).  
   
 ```  
 USE AdventureWorksPDW2012;  
@@ -142,7 +142,7 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN)
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[UPDATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/update-sql-server-pdw.md)  
-[DELETE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/delete-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[UPDATE &#40;SQL Server PDW&#41;](../sqlpdw/update-sql-server-pdw.md)  
+[DELETE &#40;SQL Server PDW&#41;](../sqlpdw/delete-sql-server-pdw.md)  
   

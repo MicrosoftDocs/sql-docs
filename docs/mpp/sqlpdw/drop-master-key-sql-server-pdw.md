@@ -11,9 +11,9 @@ caps.latest.revision: 6
 author: BarbKess
 ---
 # DROP MASTER KEY (SQL Server PDW)
-Removes the master key. Must be executed in the master database. SQL Server PDW uses the master key to protect a certificate, which is used by transparent data encryption. For more information, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
+Removes the master key. Must be executed in the master database. SQL Server PDW uses the master key to protect a certificate, which is used by transparent data encryption. For more information, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -40,9 +40,9 @@ GO
 ```  
   
 ## See Also  
-[CREATE MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-master-key-sql-server-pdw.md)  
-[ALTER MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-master-key-sql-server-pdw.md)  
-[OPEN MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/open-master-key-sql-server-pdw.md)  
-[CLOSE MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/close-master-key-sql-server-pdw.md)  
-[sys.databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-databases-sql-server-pdw.md)  
+[CREATE MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/create-master-key-sql-server-pdw.md)  
+[ALTER MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/alter-master-key-sql-server-pdw.md)  
+[OPEN MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/open-master-key-sql-server-pdw.md)  
+[CLOSE MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/close-master-key-sql-server-pdw.md)  
+[sys.databases &#40;SQL Server PDW&#41;](../sqlpdw/sys-databases-sql-server-pdw.md)  
   

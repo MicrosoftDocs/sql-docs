@@ -14,10 +14,10 @@ author: BarbKess
 **Namenode** allows you to browse the file system from the Developer Dashboard and get insight into name node logs. It is also possible to explore via **WebHDFS**, however the **Name Node** page is generally more convenient for manual browsing.  
   
 ## Name Node  
-![APS Developer Dashboard NameNode](../../mpp/hdinsight/media/APS_HDI_DevDashboard_NameNode.png "APS_HDI_DevDashboard_NameNode")  
+![APS Developer Dashboard NameNode](../hdinsight/media/APS_HDI_DevDashboard_NameNode.png "APS_HDI_DevDashboard_NameNode")  
   
 This page is part of Apache Hadoop and is exposed in the Developer Dashboard without any changes made by Microsoft.  
   
 ## See Also  
-[HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../../mpp/hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
+[HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
   

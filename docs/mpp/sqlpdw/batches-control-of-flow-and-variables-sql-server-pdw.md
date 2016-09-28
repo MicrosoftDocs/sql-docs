@@ -39,7 +39,7 @@ If comments are used, they must start and end within the same batch.
 CREATE VIEW statements cannot be combined with other statements in a batch.  
   
 ### Error Handling  
-Statements useful for error handling include: [PRINT](../../mpp/sqlpdw/print-sql-server-pdw.md), [RAISERROR](../../mpp/sqlpdw/raiserror-sql-server-pdw.md), [THROW](../../mpp/sqlpdw/throw-sql-server-pdw.md), and [TRY...CATCH](../../mpp/sqlpdw/try-catch-sql-server-pdw.md).  
+Statements useful for error handling include: [PRINT](../sqlpdw/print-sql-server-pdw.md), [RAISERROR](../sqlpdw/raiserror-sql-server-pdw.md), [THROW](../sqlpdw/throw-sql-server-pdw.md), and [TRY...CATCH](../sqlpdw/try-catch-sql-server-pdw.md).  
   
 ## <a name="Security"></a>Security  
 Batch files might contain credentials stored in plain text. Credentials may be echoed to the screen of the user during batch execution.  
@@ -124,5 +124,5 @@ COMMIT;
     ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

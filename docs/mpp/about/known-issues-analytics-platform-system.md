@@ -46,16 +46,16 @@ These are the known issues for Appliance Update 1.
 ### Verify actual data row size before loading data with Integration Services  
 **dwloader** and Integration Services use different code paths when loading data into SQL Server PDW. It is possible to use Integration Services to load a row into SQL Server PDW that exceeds the DMS buffer size and will cause a failure when DMS tries to move the row.  
   
-To avoid this error, use **dwloader** to load data, or verify the length of your actual data before loading it with Integration Services. For more information, see the **Table, Bytes per row, DMS buffer defined size** description and the examples in [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+To avoid this error, use **dwloader** to load data, or verify the length of your actual data before loading it with Integration Services. For more information, see the **Table, Bytes per row, DMS buffer defined size** description and the examples in [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
 ### Statement execution delayed by locks  
 SQL Server prevents new lock requests from blocking older statements which are waiting for locks. SQL Server PDW has not fully implemented this process. In SQL Server PDW, continuous requests for new shared locks can sometimes block an older request for an exclusive lock. For example, an **UPDATE** statement requiring an exclusive lock, can be blocked by a series of shared locks granted for **SELECT** statements.  
   
-To resolve a blocked process (identified by reviewing the [sys.dm_pdw_waits &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-waits-sql-server-pdw.md) DVM), stop submitting new requests until the exclusive lock has been satisfied.  
+To resolve a blocked process (identified by reviewing the [sys.dm_pdw_waits &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-waits-sql-server-pdw.md) DVM), stop submitting new requests until the exclusive lock has been satisfied.  
   
 ### Restrictions on ROLAP operations  
-In this release of SQL Server PDW, some ROLAP operations are not supported. For more information, see [Connect With SQL Server Analysis Services &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-sql-server-analysis-services-sql-server-pdw.md).  
+In this release of SQL Server PDW, some ROLAP operations are not supported. For more information, see [Connect With SQL Server Analysis Services &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-analysis-services-sql-server-pdw.md).  
   
 ## See Also  
-[What's New &#40;Analytics Platform System&#41;](../../mpp/about/what-s-new-analytics-platform-system.md)  
+[What's New &#40;Analytics Platform System&#41;](../about/what-s-new-analytics-platform-system.md)  
   

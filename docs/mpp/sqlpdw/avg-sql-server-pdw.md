@@ -13,7 +13,7 @@ author: BarbKess
 # AVG (SQL Server PDW)
 Returns the average of the values in a group in SQL Server PDW. Use this function in the select list or HAVING clause of a SELECT statement.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -41,7 +41,7 @@ OVER
 Determines the partitioning and ordering of the rowset before the analytic function is applied.  
   
 < *partition_by_clause* >  
-Divides the result set produced by the FROM clause into partitions to which the AVG function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/over-clause-sql-server-pdw.md).  
+Divides the result set produced by the FROM clause into partitions to which the AVG function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../sqlpdw/over-clause-sql-server-pdw.md).  
   
 < *order_by_clause* >  
 Determines the order in which the AVG calculation is applied to the rows in a partition. An **integer** cannot represent a column in *order_by_clause*. When the *order_by_clause* is absent, all rows in the same partition (as specified by the *partition_by_clause*) are assigned the same value for the AVG() OVER computation. When the *order_by_clause* is present, the AVG() OVER computation gives you a cumulative average in the partition. Within the same partitions, rows with identical values for all elements of the *order_by_clause* return identical results for the AVG() OVER computation.  
@@ -59,7 +59,7 @@ The return type is determined by the type of the evaluated result of *expression
 |**float**|**float**|  
   
 ## Interoperability  
-A [GROUP BY](../../mpp/sqlpdw/group-by-sql-server-pdw.md) clause must be included in the query if selecting an aggregate value (such as AVG) and at least one column or value that is not an aggregate function.  
+A [GROUP BY](../sqlpdw/group-by-sql-server-pdw.md) clause must be included in the query if selecting an aggregate value (such as AVG) and at least one column or value that is not an aggregate function.  
   
 ## Limitations and Restrictions  
 The AVG() OVER analytic function does not support the use of the ALL or DISTINCT modifiers.  
@@ -162,8 +162,8 @@ Here is the result set.
 617.2562      M</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[ORDER BY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/order-by-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[ORDER BY &#40;SQL Server PDW&#41;](../sqlpdw/order-by-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # THROW (SQL Server PDW)
 Raises user specified errors with a fixed severity of 16 and transfers execution to a CATCH block of a TRY…CATCH construct in Analytics Platform System. It is similar to RAISERROR statement. When used without additional arguments, THROW can be used to re-throw the same error within a CATCH block.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -70,13 +70,13 @@ Here is the result set.
 The record does not exist.</pre>  
   
 ## See Also  
-[XACT_STATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/xact-state-sql-server-pdw.md)  
-[@@ERROR &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-sql-server-pdw.md)  
-[TRY...CATCH &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/try-catch-sql-server-pdw.md)  
-[ERROR_MESSAGE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-message-sql-server-pdw.md)  
-[ERROR_NUMBER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-number-sql-server-pdw.md)  
-[ERROR_PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-procedure-sql-server-pdw.md)  
-[ERROR_SEVERITY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-severity-sql-server-pdw.md)  
-[ERROR_STATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-state-sql-server-pdw.md)  
-[RAISERROR &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/raiserror-sql-server-pdw.md)  
+[XACT_STATE &#40;SQL Server PDW&#41;](../sqlpdw/xact-state-sql-server-pdw.md)  
+[@@ERROR &#40;SQL Server PDW&#41;](../sqlpdw/error-sql-server-pdw.md)  
+[TRY...CATCH &#40;SQL Server PDW&#41;](../sqlpdw/try-catch-sql-server-pdw.md)  
+[ERROR_MESSAGE &#40;SQL Server PDW&#41;](../sqlpdw/error-message-sql-server-pdw.md)  
+[ERROR_NUMBER &#40;SQL Server PDW&#41;](../sqlpdw/error-number-sql-server-pdw.md)  
+[ERROR_PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/error-procedure-sql-server-pdw.md)  
+[ERROR_SEVERITY &#40;SQL Server PDW&#41;](../sqlpdw/error-severity-sql-server-pdw.md)  
+[ERROR_STATE &#40;SQL Server PDW&#41;](../sqlpdw/error-state-sql-server-pdw.md)  
+[RAISERROR &#40;SQL Server PDW&#41;](../sqlpdw/raiserror-sql-server-pdw.md)  
   

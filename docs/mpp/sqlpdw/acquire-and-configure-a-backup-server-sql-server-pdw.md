@@ -43,7 +43,7 @@ The backup server:
 ## <a name="Step1"></a>Step 1: Determine Capacity Requirements  
 The system requirements for the Backup server depend almost completely on your own workload. Before purchasing or provisioning a backup server you need to figure out your capacity requirements. The Backup server does not have to be dedicated only to backups, as long as it will handle the performance and storage requirements of your workload. You can also have multiple backup servers in order to backup and restore each database to one of several servers.  
   
-Use the [Backup Server Capacity Planning Worksheet &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-server-capacity-planning-worksheet-sql-server-pdw.md) to help determine your capacity requirements.  
+Use the [Backup Server Capacity Planning Worksheet &#40;SQL Server PDW&#41;](../sqlpdw/backup-server-capacity-planning-worksheet-sql-server-pdw.md) to help determine your capacity requirements.  
   
 ## <a name="Step2"></a>Step 2: Acquire the Server  
 Now that you better understand your capacity requirements, you can plan the servers and networking components that you will need to purchase or provision. Incorporate the following list of requirements into your purchasing plan, and then purchase your server or provision an existing server.  
@@ -79,7 +79,7 @@ Use these steps to connect the loading server to the InfiniBand network. If the 
   
     -   InfiniBand drivers for Windows are developed by the OpenFabrics Alliance, an industry consortium of InfiniBand vendors.  The correct driver may have been distributed with your InfiniBand network adapter. If not, the driver can be downloaded from www.openfabrics.org.  
   
-5.  Configure the InfiniBand and DNS settings for the network adapters. For configuration instructions, see [Configure InfiniBand Network Adapters &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/configure-infiniband-network-adapters-sql-server-pdw.md).  
+5.  Configure the InfiniBand and DNS settings for the network adapters. For configuration instructions, see [Configure InfiniBand Network Adapters &#40;SQL Server PDW&#41;](../sqlpdw/configure-infiniband-network-adapters-sql-server-pdw.md).  
   
 ## <a name="Step4"></a>Step 4: Configure the backup file share  
 SQL Server PDW will access the backup server through a UNC file share. To set up the file share:  
@@ -102,9 +102,9 @@ SQL Server PDW will access the backup server through a UNC file share. To set up
   
     For more information, see these stored procedures:  
   
-    -   [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md)  
+    -   [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md)  
   
-    -   [sp_pdw_remove_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-remove-network-credentials-sql-server-pdw.md)  
+    -   [sp_pdw_remove_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-remove-network-credentials-sql-server-pdw.md)  
   
 ## <a name="Step5"></a>Step 5: Start Backing Up Your Data  
 You are now ready to start backing up data to your backup server.  
@@ -123,11 +123,11 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-For more information, see, and examples, see [BACKUP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-database-sql-server-pdw.md)  
+For more information, see, and examples, see [BACKUP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/backup-database-sql-server-pdw.md)  
   
 -   BACKUP DATABASE (SQL Server PDW)  
   
--   [RESTORE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/restore-database-sql-server-pdw.md)  
+-   [RESTORE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/restore-database-sql-server-pdw.md)  
   
 ## <a name="Security"></a>Security Notices  
 The backup server is not joined to the private domain for the appliance. It is in your own network, and there is no trust relationship between your own domain and private appliance domain.  
@@ -141,16 +141,16 @@ Network access to the backup directory is based on standard Windows file sharing
 > [!IMPORTANT]  
 > To reduce security risks with your data, we advise that you designate one Windows account solely for the purpose of performing backup and restore operations. Allow this account to have permissions to the backup location and nowhere else.  
   
-You need to store the user name and password in SQL Server PDW by running the [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) stored procedure. SQL Server PDW uses Windows Credential Manager to store and encrypt user names and passwords on the Control node and Compute nodes. The credentials are not backed up with the BACKUP DATABASE command.  
+You need to store the user name and password in SQL Server PDW by running the [sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) stored procedure. SQL Server PDW uses Windows Credential Manager to store and encrypt user names and passwords on the Control node and Compute nodes. The credentials are not backed up with the BACKUP DATABASE command.  
   
-To remove network credentials from SQL Server PDW, see [sp_pdw_remove_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-remove-network-credentials-sql-server-pdw.md)  
+To remove network credentials from SQL Server PDW, see [sp_pdw_remove_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-remove-network-credentials-sql-server-pdw.md)  
   
-To list all of the network credentials stored in SQL Server PDW, use the [sys.dm_pdw_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-network-credentials-sql-server-pdw.md) dynamic management view.  
+To list all of the network credentials stored in SQL Server PDW, use the [sys.dm_pdw_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-network-credentials-sql-server-pdw.md) dynamic management view.  
   
 **Secure Communications**  
   
 Operations on the loading server can accept an UNC path from which to pull data from outside the trusted internal network. And an attacker on the network or with ability to influence name resolution can intercept or modify data sent to the SQL Server PDW. This presents a tampering and information disclosure risk. Tampering should be mitigated by requiring signing on the connection. To help mitigate this risk, set the following group policy option in **Security Settings\Local Policies\Security Options** on the loading server:  **Microsoft network client: Digitally sign communications (always): Enabled**  
   
 ## See Also  
-[Backup and Restore &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-and-restore-sql-server-pdw.md)  
+[Backup and Restore &#40;SQL Server PDW&#41;](../sqlpdw/backup-and-restore-sql-server-pdw.md)  
   

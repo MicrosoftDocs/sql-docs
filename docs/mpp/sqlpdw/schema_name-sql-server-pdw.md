@@ -13,7 +13,7 @@ author: BarbKess
 # SCHEMA_NAME (SQL Server PDW)
 Returns the schema name associated with a schema ID.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -50,6 +50,6 @@ SELECT SCHEMA_NAME(1);
 ```  
   
 ## See Also  
-[SCHEMA_ID &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/schema-id-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SCHEMA_ID &#40;SQL Server PDW&#41;](../sqlpdw/schema-id-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

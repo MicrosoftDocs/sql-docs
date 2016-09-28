@@ -15,7 +15,7 @@ Shows user defined and system objects.
   
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
-|<inherited columns from sys.objects>||See [sys.objects &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-objects-sql-server-pdw.md)||  
+|<inherited columns from sys.objects>||See [sys.objects &#40;SQL Server PDW&#41;](../sqlpdw/sys-objects-sql-server-pdw.md)||  
 |is_replicated|**bit**|1 = View is replicated.|Always 0.|  
 |has_replication_filter|**bit**|1 = View has a replication filter.|Always 0.|  
 |has_opaque_metadata|**bit**|1 = VIEW_METADATA option specified for view.|Always 0.|  
@@ -24,6 +24,6 @@ Shows user defined and system objects.
 |is_date_correlation_view|**bit**|1 = View was created automatically by the system to store correlation information between **datetime** columns.|Always 0.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

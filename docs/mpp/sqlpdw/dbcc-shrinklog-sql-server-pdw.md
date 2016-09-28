@@ -13,7 +13,7 @@ author: BarbKess
 # DBCC SHRINKLOG (SQL Server PDW)
 Reduces the size of the transaction log *across the appliance* for the current SQL Server PDW database. The data is defragmented in order to shrink the transaction log. Over time, the database transaction log can become fragmented and inefficient. Use DBCC SHRINKLOG to reduce fragmentation and reduce the log size.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -30,7 +30,7 @@ SIZE = { *target_size* [ MB | **GB** | TB ]  } | **DEFAULT**.
   
 The log size is measured in megabytes (MB), gigabytes (GB), or terabytes (TB). It is the combined size of the transaction log on all of the Compute nodes.  
   
-By default, DBCC SHRINKLOG reduces the transaction log to the log size stored in the metadata for the database. The log size in the metadata is determined by the LOG_SIZE parameter in [CREATE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-database-sql-server-pdw.md) or [ALTER DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-database-sql-server-pdw.md). DBCC SHRINKLOG reduces the transaction log size to the default size when `SIZE=DEFAULT` is specified, or when the `SIZE` clause is omitted.  
+By default, DBCC SHRINKLOG reduces the transaction log to the log size stored in the metadata for the database. The log size in the metadata is determined by the LOG_SIZE parameter in [CREATE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/create-database-sql-server-pdw.md) or [ALTER DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/alter-database-sql-server-pdw.md). DBCC SHRINKLOG reduces the transaction log size to the default size when `SIZE=DEFAULT` is specified, or when the `SIZE` clause is omitted.  
   
 WITH NO_INFOMSGS  
 Informational messages are not displayed in the DBCC SHRINKLOG results.  
@@ -56,5 +56,5 @@ DBCC SHRINKLOG;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

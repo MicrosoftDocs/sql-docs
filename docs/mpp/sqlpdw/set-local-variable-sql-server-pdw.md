@@ -13,7 +13,7 @@ author: BarbKess
 # SET @local_variable (SQL Server PDW)
 Sets the value of a local variable in SQL Server PDW, previously created by using the DECLARE @*local_variable* statement.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -26,7 +26,7 @@ SET
   
 ## Arguments  
 @*local_variable*  
-Is the name of a variable of any type. Variable names must start with one at sign (@). Variable names must comply with the rules for identifiers which are explained in [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md).  
+Is the name of a variable of any type. Variable names must start with one at sign (@). Variable names must comply with the rules for identifiers which are explained in [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md).  
   
 { += | -= | *= | /= | %= | &= | ^= | |= }  
 Compound assignment operator:  
@@ -48,7 +48,7 @@ Compound assignment operator:
 8.  |=               Bitwise OR and assign  
   
 *expression*  
-Is any valid expression. For more information, see [Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md).  
+Is any valid expression. For more information, see [Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md).  
   
 ## Remarks  
   
@@ -104,5 +104,5 @@ SELECT TOP 1 @rows FROM sys.tables;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

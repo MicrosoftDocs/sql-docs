@@ -13,7 +13,7 @@ author: BarbKess
 # DATABASEPROPERTYEX (SQL Server PDW)
 Returns the current setting of the specified database option or property for the specified database. Not all SQL Server properties are supported by SQL Server PDW. For more information, see the [DATABASEPROPERTYEX (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms186823.aspx) documentation on MSDN.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   

@@ -65,5 +65,5 @@ For customers that choose to configure the appliance to look for updates on the 
 5.  In the **Alternate DNS server** box, add the IP address provided by the customer network administrator.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

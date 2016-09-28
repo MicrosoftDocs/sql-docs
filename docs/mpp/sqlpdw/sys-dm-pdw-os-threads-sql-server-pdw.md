@@ -15,7 +15,7 @@ author: BarbKess
   
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
-|pdw_node_id|**int**|The ID of the affected node.<br /><br />pdw_node_id and thread_id form the key for this view.|See node_id in sys.[sys.dm_pdw_nodes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-nodes-sql-server-pdw.md).|  
+|pdw_node_id|**int**|The ID of the affected node.<br /><br />pdw_node_id and thread_id form the key for this view.|See node_id in sys.[sys.dm_pdw_nodes &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-nodes-sql-server-pdw.md).|  
 |thread_id|**int**|pdw_node_id and thread_id form the key for this view.||  
 |process_id|**int**|||  
 |name|**nvarchar(255)**|||  
@@ -27,6 +27,6 @@ author: BarbKess
 |total_user_elapsed_time|**bigint**|Total user time used by the thread||  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

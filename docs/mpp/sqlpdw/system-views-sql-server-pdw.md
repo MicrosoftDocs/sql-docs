@@ -18,19 +18,19 @@ This topic explains basics about the system views in SQL Server PDW and points t
   
 **System View Topics**  
   
--   [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+-   [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   
--   [External Operations Catalog Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/external-operations-catalog-views-sql-server-pdw.md)  
+-   [External Operations Catalog Views &#40;SQL Server PDW&#41;](../sqlpdw/external-operations-catalog-views-sql-server-pdw.md)  
   
--   [SQL Server PDW Catalog Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-pdw-catalog-views-sql-server-pdw.md)  
+-   [SQL Server PDW Catalog Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-pdw-catalog-views-sql-server-pdw.md)  
   
--   [SQL Server PDW Dynamic Management Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-pdw-dynamic-management-views-sql-server-pdw.md)  
+-   [SQL Server PDW Dynamic Management Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-pdw-dynamic-management-views-sql-server-pdw.md)  
   
--   [SQL Server Catalog Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
+-   [SQL Server Catalog Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
   
--   [SQL Server Dynamic Management Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-dynamic-management-views-sql-server-pdw.md)  
+-   [SQL Server Dynamic Management Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-dynamic-management-views-sql-server-pdw.md)  
   
--   [SQL Server Information_Schema Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-information-schema-views-sql-server-pdw.md)  
+-   [SQL Server Information_Schema Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-information-schema-views-sql-server-pdw.md)  
   
 ## <a name="Basics"></a>System View Basics  
 System views describe the metadata, the system catalog, and the dynamic processes for SQL Server PDW.  
@@ -69,5 +69,5 @@ In SQL Server PDW:
 -   The name of each combined SQL Server catalog view is the same as the SQL Server name.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

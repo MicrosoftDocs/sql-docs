@@ -13,7 +13,7 @@ author: BarbKess
 # LOG10 (SQL Server PDW)
 Returns the base 10 logarithm of the specified **float** expression in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -23,7 +23,7 @@ LOG10 (float_expression )
   
 ## Arguments  
 *float_expression*  
-Is an expression of type **float** or of a type that can be implicitly converted to **float**. Otherwise, use [CAST](../../mpp/sqlpdw/cast-and-convert-sql-server-pdw.md) to convert the expression to the float type.  
+Is an expression of type **float** or of a type that can be implicitly converted to **float**. Otherwise, use [CAST](../sqlpdw/cast-and-convert-sql-server-pdw.md) to convert the expression to the float type.  
   
 ## Return Types  
 **float**  
@@ -41,8 +41,8 @@ Here is the result set.
 2.16</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[LOG &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/log-sql-server-pdw.md)  
-[EXP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/exp-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[LOG &#40;SQL Server PDW&#41;](../sqlpdw/log-sql-server-pdw.md)  
+[EXP &#40;SQL Server PDW&#41;](../sqlpdw/exp-sql-server-pdw.md)  
   

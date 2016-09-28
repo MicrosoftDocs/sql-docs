@@ -18,8 +18,8 @@ Each connection method listed in the table below has specific connection string 
   
 |Data Access API|Data Access Driver or Provider|Reference Topic|  
 |-------------------|----------------------------------|-------------------|  
-|ADO.NET|.NET Framework Data Provider for SQL Server|[Connection Strings for ADO.NET and .NET Framework Data Provider for SQL Server  &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connection-strings-for-ado-net-and-net-framework-data-provider-for-sql-server-sql-server-pdw.md)|  
-|OLE DB|SQL Server Native Client 10.0|[Connection Strings for OLE DB and SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connection-strings-for-ole-db-and-sql-server-native-client-sql-server-pdw.md)|  
-|ODBC|SQL Server Native Client 10.0|[Connection Strings for ODBC and SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connection-strings-for-odbc-and-sql-server-native-client-sql-server-pdw.md)|  
-|JDBC|Microsoft JDBC Driver 4.0 for SQL Server|[Connection Strings for JDBC and Microsoft JDBC Driver 4.0 for SQL Server &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connection-strings-for-jdbc-and-microsoft-jdbc-driver-4-0-for-sql-server-sql-server-pdw.md)|  
+|ADO.NET|.NET Framework Data Provider for SQL Server|[Connection Strings for ADO.NET and .NET Framework Data Provider for SQL Server  &#40;SQL Server PDW&#41;](../sqlpdw/connection-strings-for-ado-net-and-net-framework-data-provider-for-sql-server-sql-server-pdw.md)|  
+|OLE DB|SQL Server Native Client 10.0|[Connection Strings for OLE DB and SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/connection-strings-for-ole-db-and-sql-server-native-client-sql-server-pdw.md)|  
+|ODBC|SQL Server Native Client 10.0|[Connection Strings for ODBC and SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/connection-strings-for-odbc-and-sql-server-native-client-sql-server-pdw.md)|  
+|JDBC|Microsoft JDBC Driver 4.0 for SQL Server|[Connection Strings for JDBC and Microsoft JDBC Driver 4.0 for SQL Server &#40;SQL Server PDW&#41;](../sqlpdw/connection-strings-for-jdbc-and-microsoft-jdbc-driver-4-0-for-sql-server-sql-server-pdw.md)|  
   

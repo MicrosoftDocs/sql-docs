@@ -28,7 +28,7 @@ For more information about how hash join, loop join, and merge join work in SQL 
   
 -   [Summary of Join Properties](http://blogs.msdn.com/b/craigfr/archive/2006/08/16/702828.aspx)  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -49,7 +49,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## Arguments  
 *label_name*  
-A user-provided label name for the query, where *label_name* is a character string constant enclosed in single quotes. Labels identify queries in the query cache. For more information, see [Constants &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/constants-sql-server-pdw.md). The string literal can be a Unicode or non-Unicode string literal. For Unicode string literals, use of N prefix is allowed: (N’unicode_string’).  
+A user-provided label name for the query, where *label_name* is a character string constant enclosed in single quotes. Labels identify queries in the query cache. For more information, see [Constants &#40;SQL Server PDW&#41;](../sqlpdw/constants-sql-server-pdw.md). The string literal can be a Unicode or non-Unicode string literal. For Unicode string literals, use of N prefix is allowed: (N’unicode_string’).  
   
 > [!CAUTION]  
 > The label option is supported in PDW but is not a supported option in SQL Server.  
@@ -72,17 +72,17 @@ Force or disable the pushdown of the computation of qualifying expressions or op
 ## General Remarks  
 Query join hints are supported with the following statements:  
   
--   [SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md) statement  
+-   [SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md) statement  
   
--   SELECT statement within a [CREATE REMOTE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-remote-table-as-select-sql-server-pdw.md) statement  
+-   SELECT statement within a [CREATE REMOTE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-remote-table-as-select-sql-server-pdw.md) statement  
   
--   SELECT statement within a [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md) statement  
+-   SELECT statement within a [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md) statement  
   
--   [INSERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/insert-sql-server-pdw.md)  
+-   [INSERT &#40;SQL Server PDW&#41;](../sqlpdw/insert-sql-server-pdw.md)  
   
--   [UPDATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/update-sql-server-pdw.md)  
+-   [UPDATE &#40;SQL Server PDW&#41;](../sqlpdw/update-sql-server-pdw.md)  
   
--   [DELETE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/delete-sql-server-pdw.md)  
+-   [DELETE &#40;SQL Server PDW&#41;](../sqlpdw/delete-sql-server-pdw.md)  
   
 When multiple query hints are specified in the same OPTION clause, SQL Server applies the hint that is the most beneficial. For example, in the OPTION clause `OPTION ( HASH JOIN, LOOP JOIN, MERGE JOIN )`, SQL Server will apply either the hash, loop, or merge join hint.  
   
@@ -111,7 +111,7 @@ Query join hints:
   
 -   The same join hint cannot be duplicated in the OPTION clause. For example, `OPTION ( HASH JOIN, HASH JOIN)` is invalid.  
   
--   [CREATE VIEW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-view-sql-server-pdw.md) statements cannot contain query hints. For example, if you try to create a view based on a SELECT statement that contains query hints, the CREATE VIEW statement will not compile.  
+-   [CREATE VIEW &#40;SQL Server PDW&#41;](../sqlpdw/create-view-sql-server-pdw.md) statements cannot contain query hints. For example, if you try to create a view based on a SELECT statement that contains query hints, the CREATE VIEW statement will not compile.  
   
 ## Examples  
   
@@ -218,5 +218,5 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

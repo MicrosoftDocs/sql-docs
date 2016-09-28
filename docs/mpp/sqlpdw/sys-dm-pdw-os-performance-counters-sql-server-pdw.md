@@ -15,7 +15,7 @@ Contains information about Windows performance counters for the nodes in SQL Ser
   
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
-|pdw_node_id|**int**|The ID of the node that contains the counter.<br /><br />pdw_node_id and counter_name form the key for this view.|See node_id in sys.[sys.dm_pdw_nodes &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-nodes-sql-server-pdw.md).|  
+|pdw_node_id|**int**|The ID of the node that contains the counter.<br /><br />pdw_node_id and counter_name form the key for this view.|See node_id in sys.[sys.dm_pdw_nodes &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-nodes-sql-server-pdw.md).|  
 |counter_name|**nvarchar(255)**|Name of Windows performance counter.||  
 |counter_category|**nvarchar(255)**|Name of Windows performance counter category.||  
 |instance_name|**nvarchar(255)**|Name of the specific instance of the counter.||  
@@ -23,6 +23,6 @@ Contains information about Windows performance counters for the nodes in SQL Ser
 |last_update_time|**Datetime2(3)**|Timestamp of last time the value was updated.||  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

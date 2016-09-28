@@ -26,7 +26,7 @@ Returns one row for each function, or procedure that is defined by a common lang
 The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission. For more information, see [Metadata Visibility Configuration](http://msdn.microsoft.com/en-us/library/ms187113.aspx).  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
-[sys.all_sql_modules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-all-sql-modules-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
+[sys.all_sql_modules &#40;SQL Server PDW&#41;](../sqlpdw/sys-all-sql-modules-sql-server-pdw.md)  
   

@@ -13,7 +13,7 @@ author: BarbKess
 # PATINDEX (SQL Server PDW)
 Returns the starting position of the first occurrence of a pattern in a specified expression, or zeros if the pattern is not found, on all valid text and character data types in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -25,7 +25,7 @@ PATINDEX (%pattern% ,expression )
 *pattern*  
 A literal string or search pattern. Wildcard characters can be used; however, the % character must be included both before and after *pattern,* except when searching for starting or ending characters. *pattern* is an expression of the character string data type category.  
   
-For more information on pattern matching, see "Pattern Matching in Search Conditions" in [LIKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/like-sql-server-pdw.md).  
+For more information on pattern matching, see "Pattern Matching in Search Conditions" in [LIKE &#40;SQL Server PDW&#41;](../sqlpdw/like-sql-server-pdw.md).  
   
 *expression*  
 An expression, typically a column that is searched for the specified pattern. *expression* is of the character string data type category.  
@@ -77,7 +77,7 @@ ORDER BY ProductKey;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[CHARINDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/charindex-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[CHARINDEX &#40;SQL Server PDW&#41;](../sqlpdw/charindex-sql-server-pdw.md)  
   

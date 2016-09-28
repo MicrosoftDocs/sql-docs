@@ -26,7 +26,7 @@ SQL Server PDW object names can include the following characters
   
 SQL Server PDW object names must also meet the following requirements:  
   
-1.  Object names must not be Transact-SQL or SQL Server PDW reserved words. SQL Server PDW reserves the uppercase, lowercase, and mixed-case versions of reserved words. See [Transact-SQL Reserved Words](http://msdn.microsoft.com/en-us/library/ms189822(v=sql11).aspx) and [Reserved Keywords &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/reserved-keywords-sql-server-pdw.md).  
+1.  Object names must not be Transact-SQL or SQL Server PDW reserved words. SQL Server PDW reserves the uppercase, lowercase, and mixed-case versions of reserved words. See [Transact-SQL Reserved Words](http://msdn.microsoft.com/en-us/library/ms189822(v=sql11).aspx) and [Reserved Keywords &#40;SQL Server PDW&#41;](../sqlpdw/reserved-keywords-sql-server-pdw.md).  
   
 2.  Embedded spaces are not allowed in object names. (In most cases, leading and trailing spaces do not cause errors but are automatically removed, unless they are Delimited Object Names.)  
   
@@ -150,12 +150,12 @@ When using delimited object names, keep the following guidelines in mind.
     ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-database-sql-server-pdw.md)  
-[CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md)  
-[CREATE VIEW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-view-sql-server-pdw.md)  
-[CREATE INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-index-sql-server-pdw.md)  
-[CREATE STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-statistics-sql-server-pdw.md)  
-[CREATE LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-login-sql-server-pdw.md)  
-[CREATE SERVER ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-server-role-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/create-database-sql-server-pdw.md)  
+[CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md)  
+[CREATE VIEW &#40;SQL Server PDW&#41;](../sqlpdw/create-view-sql-server-pdw.md)  
+[CREATE INDEX &#40;SQL Server PDW&#41;](../sqlpdw/create-index-sql-server-pdw.md)  
+[CREATE STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/create-statistics-sql-server-pdw.md)  
+[CREATE LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/create-login-sql-server-pdw.md)  
+[CREATE SERVER ROLE &#40;SQL Server PDW&#41;](../sqlpdw/create-server-role-sql-server-pdw.md)  
   

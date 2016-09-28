@@ -15,24 +15,24 @@ These topics describe how database administrators can use the SQL Server PDW too
   
 ## Database Administration Topics  
   
--   [Backup and Restore &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-and-restore-sql-server-pdw.md)  
+-   [Backup and Restore &#40;SQL Server PDW&#41;](../sqlpdw/backup-and-restore-sql-server-pdw.md)  
   
--   [PDW Permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/pdw-permissions-sql-server-pdw.md)  
+-   [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md)  
   
--   [Error Messages &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-messages-sql-server-pdw.md)  
+-   [Error Messages &#40;SQL Server PDW&#41;](../sqlpdw/error-messages-sql-server-pdw.md)  
   
--   [Locking Behavior &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/locking-behavior-sql-server-pdw.md)  
+-   [Locking Behavior &#40;SQL Server PDW&#41;](../sqlpdw/locking-behavior-sql-server-pdw.md)  
   
--   [PDW Domain Security &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/pdw-domain-security-sql-server-pdw.md)  
+-   [PDW Domain Security &#40;SQL Server PDW&#41;](../sqlpdw/pdw-domain-security-sql-server-pdw.md)  
   
--   [Remote Table Copy &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/remote-table-copy-sql-server-pdw.md)  
+-   [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw/remote-table-copy-sql-server-pdw.md)  
   
--   [System Databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-databases-sql-server-pdw.md)  
+-   [System Databases &#40;SQL Server PDW&#41;](../sqlpdw/system-databases-sql-server-pdw.md)  
   
--   [User Sessions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/user-sessions-sql-server-pdw.md)  
+-   [User Sessions &#40;SQL Server PDW&#41;](../sqlpdw/user-sessions-sql-server-pdw.md)  
   
--   [Workload Management &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/workload-management-sql-server-pdw.md)  
+-   [Workload Management &#40;SQL Server PDW&#41;](../sqlpdw/workload-management-sql-server-pdw.md)  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

@@ -13,9 +13,9 @@ author: BarbKess
 # DROP TABLE (SQL Server PDW)
 Removes and deletes a user-defined table from  SQL Server PDW.  
   
-To drop an external table, see [DROP EXTERNAL TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-external-table-sql-server-pdw.md).  
+To drop an external table, see [DROP EXTERNAL TABLE &#40;SQL Server PDW&#41;](../sqlpdw/drop-external-table-sql-server-pdw.md).  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -65,8 +65,8 @@ DROP TABLE EasternDivision.dbo.SalesPerson;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[DROP EXTERNAL TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-external-table-sql-server-pdw.md)  
-[CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md)  
-[ALTER TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-table-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[DROP EXTERNAL TABLE &#40;SQL Server PDW&#41;](../sqlpdw/drop-external-table-sql-server-pdw.md)  
+[CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md)  
+[ALTER TABLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-table-sql-server-pdw.md)  
   

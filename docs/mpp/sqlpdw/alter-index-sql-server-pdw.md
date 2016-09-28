@@ -27,7 +27,7 @@ Use ALTER INDEX REORGANIZE to:
   
 -   Reorganize the data in the leaf level of a rowstore index while keeping the index online.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -78,7 +78,7 @@ Marks the index as disabled and unavailable for use. Any index can be disabled. 
   
 After disabling a clustered index, you cannot access the underlying table data until the index is enabled. Disabling a clustered columnstore index causes all table data to be unavailable until the index is enabled.  
   
-To enable an index use ALTER INDEX REBUILD or [CREATE INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-index-sql-server-pdw.md) with the DROP_EXISTING clause.  
+To enable an index use ALTER INDEX REBUILD or [CREATE INDEX &#40;SQL Server PDW&#41;](../sqlpdw/create-index-sql-server-pdw.md) with the DROP_EXISTING clause.  
   
 REORGANIZE [ PARTITION = *partition_number* ]  
 For clustered columnstore indexes, this specifies to move all CLOSED rowgroups into the columnstore.  
@@ -135,7 +135,7 @@ ALTER INDEX ALL ON table1 REBUILD;
 ALTER INDEX ALL ON dbo.table1 REBUILD;</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-index-sql-server-pdw.md)  
-[DROP INDEX &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-index-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE INDEX &#40;SQL Server PDW&#41;](../sqlpdw/create-index-sql-server-pdw.md)  
+[DROP INDEX &#40;SQL Server PDW&#41;](../sqlpdw/drop-index-sql-server-pdw.md)  
   

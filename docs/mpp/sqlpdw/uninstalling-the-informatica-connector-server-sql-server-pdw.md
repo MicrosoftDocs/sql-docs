@@ -23,19 +23,19 @@ Use the following steps to uninstall the SQL Server PDW Informatica Connector. T
   
 4.  In the **Edit Repository Properties** section, in the **Operating Mode** box, select **Exclusive**.  
   
-    ![Uninstall Informatica step 1](../../mpp/sqlpdw/media/APS_Informatica_Uninstall1.png "APS_Informatica_Uninstall1")  
+    ![Uninstall Informatica step 1](../sqlpdw/media/APS_Informatica_Uninstall1.png "APS_Informatica_Uninstall1")  
   
 5.  Restart the service when prompted.  
   
 6.  In the section for your repository, select **Plugins**, select the PDW plugin, and then click **Unregister Plug-in**.  
   
-    ![Uninstall Informatica step 2](../../mpp/sqlpdw/media/APS_Informatica_Uninstall2.png "APS_Informatica_Uninstall2")  
+    ![Uninstall Informatica step 2](../sqlpdw/media/APS_Informatica_Uninstall2.png "APS_Informatica_Uninstall2")  
   
 7.  In the Windows Control Panel, Programs and Features, Uninstall or change a program page, select the **Microsoft SQL Server PDW Connector for Informatica Server** for your version, and then click **Uninstall**.  
   
 ## .NET Framework Security  
   
 ## See Also  
-[Installing the Informatica Connector &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
-[Informatica Connector User Guide &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/informatica-connector-user-guide-sql-server-pdw.md)  
+[Installing the Informatica Connector &#40;SQL Server PDW&#41;](../sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
+[Informatica Connector User Guide &#40;SQL Server PDW&#41;](../sqlpdw/informatica-connector-user-guide-sql-server-pdw.md)  
   

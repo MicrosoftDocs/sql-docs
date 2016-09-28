@@ -38,34 +38,34 @@ The [Appliance Update 4](https://www.microsoft.com/download/details.aspx?id=4824
   
 Download the tools, and then see these topics for installation and configuration instructions.  
   
--   [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md) – the command line loading tool.  
+-   [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md) – the command line loading tool.  
   
--   [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md) – for loading data into PDW by using Integration Services.  
+-   [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md) – for loading data into PDW by using Integration Services.  
   
--   [Installing the Informatica Connector &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/installing-the-informatica-connector-sql-server-pdw.md) – for using Informatica with PDW.  
+-   [Installing the Informatica Connector &#40;SQL Server PDW&#41;](../sqlpdw/installing-the-informatica-connector-sql-server-pdw.md) – for using Informatica with PDW.  
   
--   [Install AdventureWorksPDW2012 &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-adventureworkspdw2012-sql-server-pdw.md) – to see a sample PDW database and to run code samples in the product documentation.  
+-   [Install AdventureWorksPDW2012 &#40;SQL Server PDW&#41;](../sqlpdw/install-adventureworkspdw2012-sql-server-pdw.md) – to see a sample PDW database and to run code samples in the product documentation.  
   
 ## <a name="Install2"></a>Install SQL-Based Client Tools  
 You might already have these SQL Server tools. They also work with PDW. If you don’t have them, use these links to install them.  
   
--   [Install SQL Server database tooling  for Visual Studio &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-database-tooling-for-visual-studio-sql-server-pdw.md) – the graphical interface for querying PDW.  
+-   [Install SQL Server database tooling  for Visual Studio &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-database-tooling-for-visual-studio-sql-server-pdw.md) – the graphical interface for querying PDW.  
   
--   [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md) – prerequisite for running SQL Server tools that work with PDW.  
+-   [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md) – prerequisite for running SQL Server tools that work with PDW.  
   
--   [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) – command-line interface for SQL Server that also works with PDW.  
+-   [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) – command-line interface for SQL Server that also works with PDW.  
   
 ## <a name="install3"></a>Locate Appliance Management Tools  
 These tools are already installed with your APS appliance and are ready to use for monitoring and managing APS.  
   
--   [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md)  
+-   [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md)  
   
--   [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
+-   [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
   
--   [HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../../mpp/hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
+-   [HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
   
 ## <a name="limits"></a>Limitations and Restrictions  
-For SQL Server compatibility, SQL Server PDW reports the SQL Server product version by using a SQL Server 2008 Service Pack 2 version number. Therefore, tools that connect to PDW as an instance of SQL Server will use operations that are compatible with SQL Server 2008. For more information, see Client Tools entry in [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+For SQL Server compatibility, SQL Server PDW reports the SQL Server product version by using a SQL Server 2008 Service Pack 2 version number. Therefore, tools that connect to PDW as an instance of SQL Server will use operations that are compatible with SQL Server 2008. For more information, see Client Tools entry in [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
   
 ## <a name="access"></a>Accessibility Notice  
 The Admin Console and dwloader applications meet Microsoft's standard for interacting with the application with the mouse and keyboard both together and independently. These applications support high-contrast displays and support accessibility assistance applications such as Narrator. These applications have multiple methods of interaction with the user interface and that the presentation of information is unambiguous and in multiple formats to ensure that regardless of customer needs the experience is consistent and without limit or restrictions.  

@@ -113,8 +113,8 @@ If you see any errors or information that leads you to believe that the command 
 There is no harm in running the `Disable-RemoteMonitoring` command multiple times.  
   
 ## See Also  
-[Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
-[Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-system-views-analytics-platform-system.md)  
-[Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
-[Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../../mpp/management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md)  
+[Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
+[Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-views-analytics-platform-system.md)  
+[Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
+[Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md)  
   

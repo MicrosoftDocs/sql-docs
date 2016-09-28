@@ -19,12 +19,12 @@ The console consists of two main components: The **Object Explorer** and a secon
 ## Object Explorer  
 The Object Explorer component represents available Hive objects in a Database/table/columns navigation tree. Double click on table objects in the Object Explorer to submit a query that retrieves the DDL statement of that table and automatically copy the DDL into the Query editor. After the query returns, the DDL can easily be modified and a similar table created. This feature is supported for databases and tables, but not for partitions.  
   
-![Developer Dashboard Hive Object Explorer](../../mpp/hdinsight/media/APS_HDI_DevDashboar_HiveExplorer.png "APS_HDI_DevDashboar_HiveExplorer")  
+![Developer Dashboard Hive Object Explorer](../hdinsight/media/APS_HDI_DevDashboar_HiveExplorer.png "APS_HDI_DevDashboar_HiveExplorer")  
   
 ## Editor Tab  
 Use the **Editor** tab to create queries. When complete, click **Run Query** to submit the query. Optionally, provide a unique query title to help identify the query later in the **Queries** history section.  
   
-![Developer Dashboard Hive Editor](../../mpp/hdinsight/media/APS_HDI_DevDashboar_HiveEditor.png "APS_HDI_DevDashboar_HiveEditor")  
+![Developer Dashboard Hive Editor](../hdinsight/media/APS_HDI_DevDashboar_HiveEditor.png "APS_HDI_DevDashboar_HiveEditor")  
   
 > [!TIP]  
 > The Hive Console submits queries using WebHCat (Templeton). Follow WebHCat formats, such as enclosing literal values in single quotes not double quotes. For example, use 'WesternRegion' not "WesternRegion".  
@@ -35,8 +35,8 @@ The **Queries** tab contains a list of all the queries run in the current user s
 > [!NOTE]  
 > The **Job History** page keeps data across all user sessions in the dashboard because it is retrieved from the Job Tracker. The **Queries** tab is limited to the current user session.  
   
-![HDI Region Developer Dashboard Hive Queries](../../mpp/hdinsight/media/APS_HDI_DevDashboard_HiveQueries.png "APS_HDI_DevDashboard_HiveQueries")  
+![HDI Region Developer Dashboard Hive Queries](../hdinsight/media/APS_HDI_DevDashboard_HiveQueries.png "APS_HDI_DevDashboard_HiveQueries")  
   
 ## See Also  
-[HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../../mpp/hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
+[HDInsight Region Developer Dashboard &#40;Analytics Platform System&#41;](../hdinsight/hdinsight-region-developer-dashboard-analytics-platform-system.md)  
   

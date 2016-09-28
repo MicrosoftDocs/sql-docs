@@ -52,7 +52,7 @@ The name of the diagnostics session. Diagnostics session names can include chara
 The number of events to be persisted in a view. For example, if 100 is specified, the 100 most recent events matching the filter criteria will be persisted to the diagnostics session. If fewer than 100 matching events are found, the diagnostics session will contain less than 100 events. *max_item_count_num* must be at least 100 and less than or equal to 100,000.  
   
 *event_name*  
-Defines the actual events to be collected in the diagnostics session.  *event_name* is one of the events listed in [sys.pdw_diag_events](../../mpp/sqlpdw/sys-pdw-diag-events-sql-server-pdw.md) where `sys.pdw_diag_events.is_enabled='True'`.  
+Defines the actual events to be collected in the diagnostics session.  *event_name* is one of the events listed in [sys.pdw_diag_events](../sqlpdw/sys-pdw-diag-events-sql-server-pdw.md) where `sys.pdw_diag_events.is_enabled='True'`.  
   
 *filter_property_name*  
 The name of the property on which to restrict results. For example, if you want to limit based on session id, *filter_property_name* should be *SessionId*. See *property_name* below for a list of potential values for *filter_property_name*.  
@@ -78,7 +78,7 @@ A property related to the event.  Property names can be part of the capture tag,
 |SPID|The Service Process ID.|  
   
 ## Remarks  
-Each user is allowed a maximum of 10 concurrent diagnostics sessions. See [sys.pdw_diag_sessions](../../mpp/sqlpdw/sys-pdw-diag-sessions-sql-server-pdw.md) for a list of your current sessions, and drop any unneeded sessions using `DROP DIAGNOSTICS SESSION`.  
+Each user is allowed a maximum of 10 concurrent diagnostics sessions. See [sys.pdw_diag_sessions](../sqlpdw/sys-pdw-diag-sessions-sql-server-pdw.md) for a list of your current sessions, and drop any unneeded sessions using `DROP DIAGNOSTICS SESSION`.  
   
 Diagnostics sessions will continue to collect metadata until dropped.  
   
@@ -192,6 +192,6 @@ DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

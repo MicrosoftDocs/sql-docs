@@ -19,7 +19,7 @@ Follow these steps to download and install the System Center Operations Manager 
   
 -   [Step 2: Acquire the Server](#Step2)  
   
-Parent Topic: [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
+Parent Topic: [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
   
 ## <a name="BeforeBegin"></a>Before You Begin  
 **Prerequisites**  
@@ -43,19 +43,19 @@ For the HDInsight workload, download the [System Center Management Pack for HDIn
   
 2.  Accept the License Agreement, and click **Next**.  
   
-    ![Accept the License Agreement](../../mpp/management/media/SCOM_licnse_agrmt.png "SCOM_licnse_agrmt")  
+    ![Accept the License Agreement](../management/media/SCOM_licnse_agrmt.png "SCOM_licnse_agrmt")  
   
 3.  Select your own installation folder, or use the default Management Pack Installation Folder.  
   
-    ![Select Installation Folder](../../mpp/management/media/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
+    ![Select Installation Folder](../management/media/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
 4.  Click **Install**.  
   
-    ![Confirm installation](../../mpp/management/media/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
+    ![Confirm installation](../management/media/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
 5.  Click **Close**.  
   
-    ![Click Close](../../mpp/management/media/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
+    ![Click Close](../management/media/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
 ### Install the Monitoring Pack for SQL Server PDW Appliance  
   
@@ -63,23 +63,23 @@ For the HDInsight workload, download the [System Center Management Pack for HDIn
   
 2.  Accept the License Agreement, and click **Next**.  
   
-    ![Accept the license agreeement](../../mpp/management/media/SCOM_licnse_agmtB.png "SCOM_licnse_agmtB")  
+    ![Accept the license agreeement](../management/media/SCOM_licnse_agmtB.png "SCOM_licnse_agmtB")  
   
 3.  Choose the directory that will hold the extracted files. The default Management Pack installation folder is shown by default. Select the default, or select your own installation folder.  
   
-    ![Select installation folder](../../mpp/management/media/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
+    ![Select installation folder](../management/media/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
 4.  Click **Install**.  
   
-    ![Confirm installation](../../mpp/management/media/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
+    ![Confirm installation](../management/media/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
 5.  Click **Close**.  
   
-    ![Installation complete](../../mpp/management/media/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
+    ![Installation complete](../management/media/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## Next Step  
-Now that you have the Management Packs installed, continue to the next step: [Import the SCOM Management Pack for PDW &#40;Analytics Platform System&#41;](../../mpp/management/import-the-scom-management-pack-for-pdw-analytics-platform-system.md).  
+Now that you have the Management Packs installed, continue to the next step: [Import the SCOM Management Pack for PDW &#40;Analytics Platform System&#41;](../management/import-the-scom-management-pack-for-pdw-analytics-platform-system.md).  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

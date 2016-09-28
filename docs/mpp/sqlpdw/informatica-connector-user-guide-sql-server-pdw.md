@@ -43,15 +43,15 @@ This plug-in configuration xml file contains all SQL Server PDW supported data t
 ## In This Section  
 This user guide has the following sections:  
   
--   [Installing the Informatica Connector &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
+-   [Installing the Informatica Connector &#40;SQL Server PDW&#41;](../sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
   
--   [Using SQL Server PDW tables as Informatica Sources and Targets &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/using-sql-server-pdw-tables-as-informatica-sources-and-targets-sql-server-pdw.md)  
+-   [Using SQL Server PDW tables as Informatica Sources and Targets &#40;SQL Server PDW&#41;](../sqlpdw/using-sql-server-pdw-tables-as-informatica-sources-and-targets-sql-server-pdw.md)  
   
--   [Using Informatica to create SQL Server PDW connections in workflow manager &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/using-informatica-to-create-sql-server-pdw-connections-in-workflow-manager-sql-server-pdw.md)  
+-   [Using Informatica to create SQL Server PDW connections in workflow manager &#40;SQL Server PDW&#41;](../sqlpdw/using-informatica-to-create-sql-server-pdw-connections-in-workflow-manager-sql-server-pdw.md)  
   
--   [Creating Sessions and Workflows in Informatica &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/creating-sessions-and-workflows-in-informatica-sql-server-pdw.md)  
+-   [Creating Sessions and Workflows in Informatica &#40;SQL Server PDW&#41;](../sqlpdw/creating-sessions-and-workflows-in-informatica-sql-server-pdw.md)  
   
--   [Troubleshooting the SQL Server PDW Informatica Connector &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/troubleshooting-the-sql-server-pdw-informatica-connector-sql-server-pdw.md)  
+-   [Troubleshooting the SQL Server PDW Informatica Connector &#40;SQL Server PDW&#41;](../sqlpdw/troubleshooting-the-sql-server-pdw-informatica-connector-sql-server-pdw.md)  
   
--   [Uninstalling the Informatica Connector Server &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/uninstalling-the-informatica-connector-server-sql-server-pdw.md)  
+-   [Uninstalling the Informatica Connector Server &#40;SQL Server PDW&#41;](../sqlpdw/uninstalling-the-informatica-connector-server-sql-server-pdw.md)  
   

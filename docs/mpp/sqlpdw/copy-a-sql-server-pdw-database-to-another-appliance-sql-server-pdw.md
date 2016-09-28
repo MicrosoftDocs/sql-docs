@@ -22,7 +22,7 @@ Verify that the destination appliance has the same number or more Compute nodes 
   
 #### To copy a SQL Server PDW database to another appliance  
   
-1.  Use the [BACKUP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-database-sql-server-pdw.md) statement to perform a backup of the database you want to copy. The backup must contain a full backup. A differential backup in addition to the full backup is optional.  
+1.  Use the [BACKUP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/backup-database-sql-server-pdw.md) statement to perform a backup of the database you want to copy. The backup must contain a full backup. A differential backup in addition to the full backup is optional.  
   
 2.  Locate the full and differential backup files. They are each stored in separate directories on the Backup server under G:\Backups. The name of the directories is determined by the parameters you enter in the Backup statement.  
   
@@ -34,12 +34,12 @@ Verify that the destination appliance has the same number or more Compute nodes 
   
     -   You can change the name of each backup directory when you copy it to the destination appliance. For example, you could copy G:\Backups\MyFullBackup on the source appliance to G:\Backups\MyFullBackupToRestore on the destination appliance.  
   
-4.  Use the [RESTORE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/restore-database-sql-server-pdw.md) statement to restore the database to the destination appliance.  
+4.  Use the [RESTORE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/restore-database-sql-server-pdw.md) statement to restore the database to the destination appliance.  
   
     -   You can specify the name for the restored database when you run the RESTORE DATABASE statement.  
   
     -   The database to restore cannot already exist on the destination appliance.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

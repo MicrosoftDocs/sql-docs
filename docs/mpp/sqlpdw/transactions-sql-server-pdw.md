@@ -19,7 +19,7 @@ The beginning and end of transactions depends on the AUTOCOMMIT setting and the 
   
 -   *Auto-commit transactions* initiate automatically within a session and do not start with the BEGIN TRANSACTION statement. When the AUTOCOMMIT setting is ON, each statement runs in a transaction and no explicit COMMIT or ROLLBACK is necessary. When the AUTOCOMMIT setting is OFF, a COMMIT or ROLLBACK statement is required to determine the outcome of the transaction. In SQL Server PDW, autocommit transactions begin immediately after a COMMIT or ROLLBACK statement, or after a SET AUTOCOMMIT OFF statement.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -55,7 +55,7 @@ If you change the AUTOCOMMIT setting within an active transaction, the setting d
 If AUTOCOMMIT is ON, running another SET AUTOCOMMIT ON statement has no effect. Likewise, if AUTOCOMMIT is OFF, running another SET AUTOCOMMIT OFF has no effect.  
   
 SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
-This toggles the same modes as SET AUTOCOMMIT. When ON, SET IMPLICIT_TRANSACTIONS sets the connection into implicit transaction mode. When OFF, it returns the connection to autocommit mode.  For more information, see [SET IMPLICIT_TRANSACTIONS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-implicit-transactions-sql-server-pdw.md)  
+This toggles the same modes as SET AUTOCOMMIT. When ON, SET IMPLICIT_TRANSACTIONS sets the connection into implicit transaction mode. When OFF, it returns the connection to autocommit mode.  For more information, see [SET IMPLICIT_TRANSACTIONS &#40;SQL Server PDW&#41;](../sqlpdw/set-implicit-transactions-sql-server-pdw.md)  
   
 ## Permissions  
 No specific permissions are required to run the transaction-related statements. Permissions are required to run the statements within the transaction.  
@@ -81,7 +81,7 @@ Transaction modes are managed at the session level. For example, if one session 
 ## Limitations and Restrictions  
 You cannot roll back a transaction after a COMMIT statement is issued because the data modifications have been made a permanent part of the database.  
   
-The [CREATE DATABASE](../../mpp/sqlpdw/create-database-sql-server-pdw.md) and [DROP DATABASE](../../mpp/sqlpdw/drop-database-sql-server-pdw.md) commands cannot be used inside an explicit transaction.  
+The [CREATE DATABASE](../sqlpdw/create-database-sql-server-pdw.md) and [DROP DATABASE](../sqlpdw/drop-database-sql-server-pdw.md) commands cannot be used inside an explicit transaction.  
   
 SQL Server PDW does not have a transaction sharing mechanism. This implies that at any given point in time, only one session can be doing work on any transaction in the system.  
   
@@ -134,8 +134,8 @@ COMMIT;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SET IMPLICIT_TRANSACTIONS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-implicit-transactions-sql-server-pdw.md)  
-[SET TRANSACTION ISOLATION LEVEL &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-transaction-isolation-level-sql-server-pdw.md)  
-[@@TRANCOUNT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/trancount-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SET IMPLICIT_TRANSACTIONS &#40;SQL Server PDW&#41;](../sqlpdw/set-implicit-transactions-sql-server-pdw.md)  
+[SET TRANSACTION ISOLATION LEVEL &#40;SQL Server PDW&#41;](../sqlpdw/set-transaction-isolation-level-sql-server-pdw.md)  
+[@@TRANCOUNT &#40;SQL Server PDW&#41;](../sqlpdw/trancount-sql-server-pdw.md)  
   

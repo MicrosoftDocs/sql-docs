@@ -13,7 +13,7 @@ author: BarbKess
 # TRY...CATCH (SQL Server PDW)
 Implements error handling for Transact\-SQL that is similar to the exception handling in the Microsoft Visual C# and Microsoft Visual C++ languages. A group of SQL statements can be enclosed in a TRY block. If an error occurs in the TRY block, control is passed to another group of statements that is enclosed in a CATCH block.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -138,7 +138,7 @@ After entering a **CATCH** block and up until **ROLLBACK** is issued by the user
   
 Since the transactional behavior of **TRY**.. **CATCH** blocks has been altered in PDW, and that change is manifested and can be detected by the altered value of **XACT_STATE** function in the catch block (**-2** in PDW versus **-1** in SQL Server), it would be a good practice for scripts which handle errors to check for negative values of **XACT_STATE**, instead of specifically checking for **-1** or **-2**.  
   
-For more information about uncommittable transactions and the **XACT_STATE** function, see [XACT_STATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/xact-state-sql-server-pdw.md).  
+For more information about uncommittable transactions and the **XACT_STATE** function, see [XACT_STATE &#40;SQL Server PDW&#41;](../sqlpdw/xact-state-sql-server-pdw.md).  
   
 ## Examples  
   
@@ -162,13 +162,13 @@ GO
 ```  
   
 ## See Also  
-[XACT_STATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/xact-state-sql-server-pdw.md)  
-[@@ERROR &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-sql-server-pdw.md)  
-[ERROR_MESSAGE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-message-sql-server-pdw.md)  
-[ERROR_NUMBER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-number-sql-server-pdw.md)  
-[ERROR_PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-procedure-sql-server-pdw.md)  
-[ERROR_SEVERITY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-severity-sql-server-pdw.md)  
-[ERROR_STATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-state-sql-server-pdw.md)  
-[RAISERROR &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/raiserror-sql-server-pdw.md)  
-[THROW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/throw-sql-server-pdw.md)  
+[XACT_STATE &#40;SQL Server PDW&#41;](../sqlpdw/xact-state-sql-server-pdw.md)  
+[@@ERROR &#40;SQL Server PDW&#41;](../sqlpdw/error-sql-server-pdw.md)  
+[ERROR_MESSAGE &#40;SQL Server PDW&#41;](../sqlpdw/error-message-sql-server-pdw.md)  
+[ERROR_NUMBER &#40;SQL Server PDW&#41;](../sqlpdw/error-number-sql-server-pdw.md)  
+[ERROR_PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/error-procedure-sql-server-pdw.md)  
+[ERROR_SEVERITY &#40;SQL Server PDW&#41;](../sqlpdw/error-severity-sql-server-pdw.md)  
+[ERROR_STATE &#40;SQL Server PDW&#41;](../sqlpdw/error-state-sql-server-pdw.md)  
+[RAISERROR &#40;SQL Server PDW&#41;](../sqlpdw/raiserror-sql-server-pdw.md)  
+[THROW &#40;SQL Server PDW&#41;](../sqlpdw/throw-sql-server-pdw.md)  
   

@@ -16,11 +16,11 @@ Defines the mapping between the SQL Server PDW component statuses and the manufa
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
 |property_id|**int**|Unique identifier of the property.<br /><br />property_id, component_id, and physical_name form the key for this view.|NOT NULL|  
-|component_id|**int**|The ID of the component. See [sys.pdw_health_components &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-health-components-sql-server-pdw.md).<br /><br />property_id, component_id, and physical_name form the key for this view.|NOT NULL|  
+|component_id|**int**|The ID of the component. See [sys.pdw_health_components &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-health-components-sql-server-pdw.md).<br /><br />property_id, component_id, and physical_name form the key for this view.|NOT NULL|  
 |physical_name|**nvarchar(32)**|Property name as defined by the manufacturer.<br /><br />property_id, component_id, and physical_name form the key for this view.|NOT NULL|  
 |logical_name|**nvarchar(255)**|Property name as defined by SQL Server PDW.|NOT NULL<br /><br />0 - Device instance is unique.<br /><br />1 - Device instance is not unique.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

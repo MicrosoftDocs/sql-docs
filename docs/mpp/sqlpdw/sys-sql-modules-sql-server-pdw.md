@@ -26,7 +26,7 @@ Returns SQL Server PDW views and stored procedures.
 |execute_as_principal_id|**int**||Always NULL.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
-[sys.all_sql_modules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-all-sql-modules-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
+[sys.all_sql_modules &#40;SQL Server PDW&#41;](../sqlpdw/sys-all-sql-modules-sql-server-pdw.md)  
   

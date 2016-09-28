@@ -13,7 +13,7 @@ author: BarbKess
 # DROP DATABASE (SQL Server PDW)
 Removes a user database in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -24,7 +24,7 @@ DROP DATABASE database_name
   
 ## Arguments  
 *database_name*  
-The name of the database to be removed. To display a list of databases on the appliance, use [sys.databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-databases-sql-server-pdw.md).  
+The name of the database to be removed. To display a list of databases on the appliance, use [sys.databases &#40;SQL Server PDW&#41;](../sqlpdw/sys-databases-sql-server-pdw.md).  
   
 ## Permissions  
 Requires the **CONTROL** permission on the database, or **ALTER ANY DATABASE** permission, or membership in the **db_owner** fixed database role.  
@@ -36,9 +36,9 @@ With regard to differences between SQL Server PDW and SQL Server, these products
 Dropping a database removes the database from an instance of SQL Server PDW and deletes the files used by the database.  
   
 ## Limitations and Restrictions  
-You cannot drop a database that is open for reading or writing by any user, including the [USE (DW-SQL)](../../mpp/sqlpdw/use-sql-server-pdw.md) statement.  
+You cannot drop a database that is open for reading or writing by any user, including the [USE (DW-SQL)](../sqlpdw/use-sql-server-pdw.md) statement.  
   
-The DROP DATABASE statement cannot be run from within an explicit transaction. For information on explicit transactions, see [Transactions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transactions-sql-server-pdw.md).  
+The DROP DATABASE statement cannot be run from within an explicit transaction. For information on explicit transactions, see [Transactions &#40;SQL Server PDW&#41;](../sqlpdw/transactions-sql-server-pdw.md).  
   
 You cannot drop the system databases master and tempdb.  
   
@@ -53,7 +53,7 @@ DROP DATABASE Sales;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-database-sql-server-pdw.md)  
-[ALTER DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-database-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/create-database-sql-server-pdw.md)  
+[ALTER DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/alter-database-sql-server-pdw.md)  
   

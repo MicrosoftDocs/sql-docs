@@ -73,5 +73,5 @@ The following table provides sample code for submitting prepared statements usin
 |OLEDB|OleDbCommand command = OleDbConnection.CreateCommand(“SELECT * FROM bing WHERE id=?”);<br /><br />OleDbParameter param1 = new OleDbParameter();<br /><br />param1.value = 1;<br /><br />command.Parameters.Add(param1);<br /><br />Command.Prepare();<br /><br />Command.Ecxecute();<br /><br />Command.Close();|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

@@ -16,7 +16,7 @@ This topic provides instructions for launching the **Configuration Manager** for
 ## Before You Begin  
   
 ### Prerequisites  
-The Analytics Platform System**Configuration Manager** can only be run by the appliance domain administrator. To run this tool, you need the password for the appliance domain administrator. To create additional APS administrators, see [Create an APS Domain Administrator &#40;APS&#41;](../../mpp/management/create-an-aps-domain-administrator-aps.md).  
+The Analytics Platform System**Configuration Manager** can only be run by the appliance domain administrator. To run this tool, you need the password for the appliance domain administrator. To create additional APS administrators, see [Create an APS Domain Administrator &#40;APS&#41;](../management/create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Launch the Configuration Manager Tool  
 To run the Configuration Manager, use Remote Desktop to connect to the PDW Control node (***PDW_region*-CTL01**)node, and log in as *appliance_domain***\Administrator**. When starting the **Configuration Manager** program, use the **Run as Administrator** option to ensure that your administrator credentials are used.  
@@ -39,8 +39,8 @@ After the **Configuration Manager** is started, you will see all available funct
   
 To close and exit **Configuration Manager**, click **Exit** in the lower-right corner of any screen.  
   
-![SQL_Server_PDW_DWConfig_ApplTop](../../mpp/management/media/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
+![SQL_Server_PDW_DWConfig_ApplTop](../management/media/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## See Also  
-[Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
+[Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
   

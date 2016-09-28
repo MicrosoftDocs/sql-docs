@@ -26,7 +26,7 @@ Important notes for all APIs:
   
     -   The end points themselves are not performing additional authentication but are accepting the user identity as a `tag` for requests and transferring the identity correctly into the Hadoop cluster (i.e. ownership of files/folders, jobs, etc.).  
   
-    -   For additional information about the HDInsight security model, see [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../../mpp/hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md).  
+    -   For additional information about the HDInsight security model, see [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region-analytics-platform-system.md).  
   
 -   `PUT` requests must contain a specified content length. A length of 0 can be provided. This is a requirement imposed by the Secure Node Gateway.  
   
@@ -123,6 +123,6 @@ curl -i -k -u <username>:<password> "https://<secure_node_IP>/oozie/v1/job/00000
 ```  
   
 ## See Also  
-[Loading Data into Hadoop &#40;Analytics Platform System&#41;](../../mpp/hdinsight/loading-data-into-hadoop-analytics-platform-system.md)  
-[Using Hadoop Tools with APS &#40;Analytics Platform System&#41;](../../mpp/hdinsight/using-hadoop-tools-with-aps-analytics-platform-system.md)  
+[Loading Data into Hadoop &#40;Analytics Platform System&#41;](../hdinsight/loading-data-into-hadoop-analytics-platform-system.md)  
+[Using Hadoop Tools with APS &#40;Analytics Platform System&#41;](../hdinsight/using-hadoop-tools-with-aps-analytics-platform-system.md)  
   

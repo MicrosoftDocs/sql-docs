@@ -11,7 +11,7 @@ caps.latest.revision: 6
 author: BarbKess
 ---
 # sys.assembly_types (SQL Server PDW)
-Contains a row for each user-defined type that is defined by a CLR assembly. The following **sys.assembly_types** appear in the list of inherited columns (see [sys.types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-types-sql-server-pdw.md)) after **rule_object_id**.  
+Contains a row for each user-defined type that is defined by a CLR assembly. The following **sys.assembly_types** appear in the list of inherited columns (see [sys.types &#40;SQL Server PDW&#41;](../sqlpdw/sys-types-sql-server-pdw.md)) after **rule_object_id**.  
   
 |Column name|Data type|Description|  
 |---------------|-------------|---------------|  
@@ -26,7 +26,7 @@ Contains a row for each user-defined type that is defined by a CLR assembly. The
 The visibility of the metadata in catalog views is limited to securables that a user either owns or on which the user has been granted some permission.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
-[sys.all_views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-all-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
+[sys.all_views &#40;SQL Server PDW&#41;](../sqlpdw/sys-all-views-sql-server-pdw.md)  
   

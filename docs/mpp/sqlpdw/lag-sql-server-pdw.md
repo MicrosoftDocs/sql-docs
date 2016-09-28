@@ -13,7 +13,7 @@ author: BarbKess
 # LAG (SQL Server PDW)
 Accesses data from a previous row in the same result set without the use of a self join in SQL Server PDW. Use this analytic function in a SELECT statement to compare values in the current row with values in a previous row.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -35,10 +35,10 @@ OVER
 Determines the partitioning and ordering of the rowset before the analytic function is applied.  
   
 *partition_by_clause*  
-Divides the result set produced by the FROM clause into partitions to which the LAG function is applied. For example, `PARTITION BY FirstName`. *partition_by_clause* can include one or more columns, a CASE expression, or another expression. NULL values in the partitioned columns are ignored. For more information about *partition_by_clause*, see [OVER Clause &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/over-clause-sql-server-pdw.md).  
+Divides the result set produced by the FROM clause into partitions to which the LAG function is applied. For example, `PARTITION BY FirstName`. *partition_by_clause* can include one or more columns, a CASE expression, or another expression. NULL values in the partitioned columns are ignored. For more information about *partition_by_clause*, see [OVER Clause &#40;SQL Server PDW&#41;](../sqlpdw/over-clause-sql-server-pdw.md).  
   
 *order_by_clause*  
-Specifies the return order of the data values within each partition. For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/order-by-sql-server-pdw.md). An **integer** cannot represent a column in *order_by_clause*.  
+Specifies the return order of the data values within each partition. For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../sqlpdw/order-by-sql-server-pdw.md). An **integer** cannot represent a column in *order_by_clause*.  
   
 ## Return Types  
 The data type of the specified *value_expression*.  
@@ -69,8 +69,8 @@ Here is the result set.
 2002 4       154000.0000   7000.0000   84000.0000</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[LEAD &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/lead-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[CASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/case-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[LEAD &#40;SQL Server PDW&#41;](../sqlpdw/lead-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[CASE &#40;SQL Server PDW&#41;](../sqlpdw/case-sql-server-pdw.md)  
   

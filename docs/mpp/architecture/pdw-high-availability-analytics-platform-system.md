@@ -14,12 +14,12 @@ author: BarbKess
 Describes how PDW and the Analytics Platform System appliance fabric are architected for high availability.  
   
 ## High Availability Architecture  
-![Appliance Architecture](../../mpp/architecture/media/SQL_Server_PDW_HW_ApplianceArchitectureV2.png "SQL_Server_PDW_HW_ApplianceArchitectureV2")  
+![Appliance Architecture](../architecture/media/SQL_Server_PDW_HW_ApplianceArchitectureV2.png "SQL_Server_PDW_HW_ApplianceArchitectureV2")  
   
 ## Network  
 For network availability, the appliance has two InfiniBand networks. If one of the InfiniBand networks goes down, the other one is still available. Also, Active Directory has replicated domain controllers to resolve incoming requests to the correct InfiniBand network.  
   
-For more information, see [Configure InfiniBand Network Adapters &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/configure-infiniband-network-adapters-sql-server-pdw.md).  
+For more information, see [Configure InfiniBand Network Adapters &#40;SQL Server PDW&#41;](../sqlpdw/configure-infiniband-network-adapters-sql-server-pdw.md).  
   
 ## Storage  
 To keep data safe, Analytics Platform System uses RAID 1 mirroring to maintain two copies of all user data. When a disk fails, the hardware system rebuilds the data onto a spare disk and sets an alert that there is a disk failure.  

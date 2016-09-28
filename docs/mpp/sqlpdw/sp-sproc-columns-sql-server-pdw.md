@@ -13,7 +13,7 @@ author: BarbKess
 # sp_sproc_columns (SQL Server PDW)
 Returns column information for a single stored procedure or user-defined function in the current database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -73,7 +73,7 @@ None
 |**CHAR_OCTET_LENGTH**|**int**|Maximum length in bytes of a **character** or **binary** data type column. For all other data types, this column returns a NULL.|  
 |**ORDINAL_POSITION**|**int**|Ordinal position of the column in the table. The first column in the table is 1. This column always returns a value.|  
 |**IS_NULLABLE**|**varchar(254)**|Nullability of the column in the table. ISO rules are followed to determine nullability. An ISO compliant DBMS cannot return an empty string.<br /><br />Displays YES if the column can include NULLS and NO if the column cannot include NULLS.<br /><br />This column returns a zero-length string if nullability is unknown.<br /><br />The value returned for this column is different from the value returned for the NULLABLE column.|  
-|**SS_DATA_TYPE**|**tinyint**|SQL Server data type used by extended stored procedures. For more information, see [Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md).|  
+|**SS_DATA_TYPE**|**tinyint**|SQL Server data type used by extended stored procedures. For more information, see [Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md).|  
   
 ## Remarks  
 **sp_sproc_columns** is equivalent to **SQLProcedureColumns** in ODBC. The results returned are ordered by **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **PROCEDURE_NAME**, and the order that the parameters appear in the procedure definition.  
@@ -82,5 +82,5 @@ None
 Requires **SELECT** permission on the schema of the stored procedure.  
   
 ## See Also  
-[Procedures &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/procedures-sql-server-pdw.md)  
+[Procedures &#40;SQL Server PDW&#41;](../sqlpdw/procedures-sql-server-pdw.md)  
   

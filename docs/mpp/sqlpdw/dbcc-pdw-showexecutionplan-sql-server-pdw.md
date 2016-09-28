@@ -15,7 +15,7 @@ Displays the SQL Server execution plan for a query running on a specific SQL Ser
   
 Once query performance problems are understood for SMP SQL Server queries running on the Compute nodes, there are several ways to improve performance. Possible ways to improve query performance on the Compute nodes include creating multi-column statistics, creating non-clustered indexes, or using query hints.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -37,7 +37,7 @@ Requires VIEW-SERVER-STATE permission.
 ## Examples  
   
 ### A. DBCC PDW_SHOWEXECUTIONPLAN Basic Syntax Examples  
-The query that is running too long is either running a DMS query plan operation or a SQL query plan operation. For a list of the operations and their types, see [Understanding Query Plans &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/understanding-query-plans-sql-server-pdw.md).  
+The query that is running too long is either running a DMS query plan operation or a SQL query plan operation. For a list of the operations and their types, see [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md).  
   
 If the query is running a DMS query plan operation, you can use the following query to retrieve a list of the node IDs and session IDs for steps that are not complete.  
   
@@ -56,5 +56,5 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

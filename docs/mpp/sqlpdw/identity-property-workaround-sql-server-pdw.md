@@ -61,5 +61,5 @@ SELECT * FROM Prod_Identity_Test ORDER BY IDCol;
 ```  
   
 ## See Also  
-[ROW_NUMBER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/row-number-sql-server-pdw.md)  
+[ROW_NUMBER &#40;SQL Server PDW&#41;](../sqlpdw/row-number-sql-server-pdw.md)  
   

@@ -78,5 +78,5 @@ This is the glossary of terms for SQL Server PDW.
 |Symmetric Multiprocessing (SMP)|A multi-processor computer architecture where identical processors share main memory. The architecture allows simultaneous processing to be distributed among the processors. In a symmetric multiprocessing (SMP) architecture, query processing occurs within one physical instance of a database. Conversely, in a massively parallel processing (MPP) architecture, query processing occurs within multiple instances of a database that each has dedicated CPU, memory, and storage.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

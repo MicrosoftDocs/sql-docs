@@ -13,7 +13,7 @@ author: BarbKess
 # sp_fkeys (SQL Server PDW)
 SQL Server PDW does not support foreign keys, but it supports this procedure to allow integration of tools and applications. Returns logical foreign key information for the current database. This procedure shows foreign key relationships including disabled foreign keys.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -94,6 +94,6 @@ EXEC sp_fkeys @pktable_name = N'DimDate;
 ```  
   
 ## See Also  
-[Procedures &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/procedures-sql-server-pdw.md)  
-[sp_pkeys &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pkeys-sql-server-pdw.md)  
+[Procedures &#40;SQL Server PDW&#41;](../sqlpdw/procedures-sql-server-pdw.md)  
+[sp_pkeys &#40;SQL Server PDW&#41;](../sqlpdw/sp-pkeys-sql-server-pdw.md)  
   

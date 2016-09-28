@@ -13,7 +13,7 @@ author: BarbKess
 # PDW and Appliance Fabric Physical Components (Analytics Platform System)
 Names and descriptions for the PDW and appliance fabric physical components. The PDW Region contains all of these components.  
   
-See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](../../mpp/management/hdinsight-physical-components-analytics-platform-system.md).  
+See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](../management/hdinsight-physical-components-analytics-platform-system.md).  
   
 ## Contents  
   
@@ -26,7 +26,7 @@ See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](../
 ## <a name="diagrams"></a>Component Diagrams  
 This shows the names of the physical components and where they are located in the first rack of a 6-Compute node appliance.  
   
-![PDW Region Component Names - HP](../../mpp/management/media/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
+![PDW Region Component Names - HP](../management/media/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
   
 The actual name for PDW components is the PDW Region name, followed by a dash, followed by the component name. For example, if the PDW Region name is PDW123, the actual names are **PDW123-CTL01**, **PDW123-CMP01**, etc.  
   
@@ -34,7 +34,7 @@ Similarly, the actual name for appliance fabric components is the appliance doma
   
 Here is a consolidated view of a PDW Region with 6 Compute nodes.  
   
-![PDW Component Names](../../mpp/management/media/APS_HW_Names.png "APS_HW_Names")  
+![PDW Component Names](../management/media/APS_HW_Names.png "APS_HW_Names")  
   
 ## <a name="pdw"></a>PDW Components  
 The PDW virtual machines are part of the PDW Region.  
@@ -82,7 +82,7 @@ The PDW cluster is named WFOHST01. It manages all of the physical hosts and virt
 This is the direct attached storage that is connected to the Compute nodes. HP has one DAS for every two Compute nodes. Dell and Quanta have one DAS for every three Compute nodes.  
   
 ## See Also  
-[Hardware Configurations &#40;Analytics Platform System&#41;](../../mpp/architecture/hardware-configurations-analytics-platform-system.md)  
-[Appliance Configuration &#40;Analytics Platform System&#41;](../../mpp/management/appliance-configuration-analytics-platform-system.md)  
-[Appliance Management Tasks &#40;Analytics Platform System&#41;](../../mpp/management/appliance-management-tasks-analytics-platform-system.md)  
+[Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations-analytics-platform-system.md)  
+[Appliance Configuration &#40;Analytics Platform System&#41;](../management/appliance-configuration-analytics-platform-system.md)  
+[Appliance Management Tasks &#40;Analytics Platform System&#41;](../management/appliance-management-tasks-analytics-platform-system.md)  
   

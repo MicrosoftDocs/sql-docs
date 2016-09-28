@@ -13,7 +13,7 @@ author: BarbKess
 # sp_execute (SQL Server PDW)
 Executes a prepared Transact\-SQL statement using a specified handle and optional parameter value. sp_execute is invoked by specifying ID =12 in a tabular data stream (TDS) packet.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -33,7 +33,7 @@ Signifies the use of additional parameters. *bound_param* is a required paramete
 > *bound_param* must match the declarations made by the sp_prepare*params* value and can be in the form *@name = value* or *value*.  
   
 ## See Also  
-[Procedures &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/procedures-sql-server-pdw.md)  
-[sp_prepare &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-prepare-sql-server-pdw.md)  
-[sp_unprepare &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-unprepare-sql-server-pdw.md)  
+[Procedures &#40;SQL Server PDW&#41;](../sqlpdw/procedures-sql-server-pdw.md)  
+[sp_prepare &#40;SQL Server PDW&#41;](../sqlpdw/sp-prepare-sql-server-pdw.md)  
+[sp_unprepare &#40;SQL Server PDW&#41;](../sqlpdw/sp-unprepare-sql-server-pdw.md)  
   

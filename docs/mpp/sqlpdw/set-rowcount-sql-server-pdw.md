@@ -13,7 +13,7 @@ author: BarbKess
 # SET ROWCOUNT (SQL Server PDW)
 Causes SQL Server PDW to stop processing the query after the specified number of rows are returned.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -41,19 +41,19 @@ SET ROWCOUNT is a run time setting, and stays in effect for the session or until
 ## Limitations and Restrictions  
 SET ROWCOUNT does not affect these statements:  
   
--   [DELETE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/delete-sql-server-pdw.md)  
+-   [DELETE &#40;SQL Server PDW&#41;](../sqlpdw/delete-sql-server-pdw.md)  
   
--   [INSERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/insert-sql-server-pdw.md)  
+-   [INSERT &#40;SQL Server PDW&#41;](../sqlpdw/insert-sql-server-pdw.md)  
   
--   [UPDATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/update-sql-server-pdw.md)  
+-   [UPDATE &#40;SQL Server PDW&#41;](../sqlpdw/update-sql-server-pdw.md)  
   
--   [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md)  
+-   [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md)  
   
--   [CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-as-select-sql-server-pdw.md)  
+-   [CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-as-select-sql-server-pdw.md)  
   
--   [CREATE REMOTE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-remote-table-as-select-sql-server-pdw.md)  
+-   [CREATE REMOTE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-remote-table-as-select-sql-server-pdw.md)  
   
-For a similar behavior, use the [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md) statement.  
+For a similar behavior, use the [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md) statement.  
   
 ## Permissions  
 Requires membership in the public role.  
@@ -80,5 +80,5 @@ WHERE AccountType = 'Assets';
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

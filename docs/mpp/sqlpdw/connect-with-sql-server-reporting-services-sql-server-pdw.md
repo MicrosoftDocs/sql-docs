@@ -28,7 +28,7 @@ This topic describes how to connect to SQL Server PDW Version 2 from SQL Server 
   
 -   Business Intelligence Development Studio (BIDS). For more information, see [Introducing Business Intelligence Development Studio](http://msdn.microsoft.com/en-us/library/ms173767(v=sql11).aspx).  
   
--   SQL Server Native Client (SNAC) 10.0. For installation instructions, see [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+-   SQL Server Native Client (SNAC) 10.0. For installation instructions, see [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
 **Software Prerequisites for SQL Server 2012 Reporting Services**  
   
@@ -36,7 +36,7 @@ This topic describes how to connect to SQL Server PDW Version 2 from SQL Server 
   
 -   SQL Server Data Tools \(SSDT\). For more information, see [Reporting Services in SQL Server Data Tools (SSDT)](assetId:///0903c7b2-ac59-45f1-b7d0-922ecd9d76f8).  
   
--   SQL Server Native Client (SNAC) 11.0. For installation instructions, see [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+-   SQL Server Native Client (SNAC) 11.0. For installation instructions, see [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
 ## <a name="DataSource2"></a>Create a Data Source (SQL Server 2008 R2 Reporting Services)  
 To create a Reporting Services data source that connects to your SQL Server PDW appliance  
@@ -47,7 +47,7 @@ To create a Reporting Services data source that connects to your SQL Server PDW 
   
 3.  In the **New Project** window, for **Project type**, select **Business Intelligence Projects**, and then select the template, **Report Server Project**. Click OK.  
   
-    ![New Reporting Services Project](../../mpp/sqlpdw/media/SQL_Server_PDW_RS_NewProjectBIDS.png "SQL_Server_PDW_RS_NewProjectBIDS")  
+    ![New Reporting Services Project](../sqlpdw/media/SQL_Server_PDW_RS_NewProjectBIDS.png "SQL_Server_PDW_RS_NewProjectBIDS")  
   
 4.  In Solution Explorer, you will see your new Report project. Under your project, right-click the **Shared Data Sources** folder, and select **Add New Data Source**.  
   
@@ -55,7 +55,7 @@ To create a Reporting Services data source that connects to your SQL Server PDW 
   
 6.  Click **Edit** to create the connection string.  
   
-    ![Reporting Services Data Source Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RS_SharedDataSourceProperties.png "SQL_Server_PDW_RS_SharedDataSourceProperties")  
+    ![Reporting Services Data Source Properties](../sqlpdw/media/SQL_Server_PDW_RS_SharedDataSourceProperties.png "SQL_Server_PDW_RS_SharedDataSourceProperties")  
   
 7.  In the Connection Properties window, make the following selections:  
   
@@ -69,7 +69,7 @@ To create a Reporting Services data source that connects to your SQL Server PDW 
   
     -   **Select or enter a Database Name**: Select or enter the name of the target database.  
   
-        ![Report Builder 3.0 Connection Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RB_Connection_Properties.png "SQL_Server_PDW_RB_Connection_Properties")  
+        ![Report Builder 3.0 Connection Properties](../sqlpdw/media/SQL_Server_PDW_RB_Connection_Properties.png "SQL_Server_PDW_RB_Connection_Properties")  
   
 8.  Click **Test Connection** to verify that the new data source is available.  
   
@@ -77,13 +77,13 @@ To create a Reporting Services data source that connects to your SQL Server PDW 
   
 10. You can now view your connection string in the Data Source Properties windows.  
   
-    ![Reporting Services Shared Data Source Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RS_DataSourcePropertiesFinished.png "SQL_Server_PDW_RS_DataSourcePropertiesFinished")  
+    ![Reporting Services Shared Data Source Properties](../sqlpdw/media/SQL_Server_PDW_RS_DataSourcePropertiesFinished.png "SQL_Server_PDW_RS_DataSourcePropertiesFinished")  
   
 11. Click **OK** to return to the Report Builder window.  
   
 12. In the **Solution Explorer** pane, view your new connection listed under Shared Data Sources.  
   
-    ![New Reporting Services data source](../../mpp/sqlpdw/media/SQL_Server_PDW_RS_SharedDataSourcesFinished.png "SQL_Server_PDW_RS_SharedDataSourcesFinished")  
+    ![New Reporting Services data source](../sqlpdw/media/SQL_Server_PDW_RS_SharedDataSourcesFinished.png "SQL_Server_PDW_RS_SharedDataSourcesFinished")  
   
 ## <a name="DataSource3"></a>Create a Data Source (SQL Server 2012 Reporting Services)  
 To create a Reporting Services data source that connects to your SQL Server PDW appliance  
@@ -100,7 +100,7 @@ To create a Reporting Services data source that connects to your SQL Server PDW 
   
 6.  Click **Edit** to create the connection string.  
   
-    ![Reporting Services Data Source Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RS_SharedDataSourceProperties.png "SQL_Server_PDW_RS_SharedDataSourceProperties")  
+    ![Reporting Services Data Source Properties](../sqlpdw/media/SQL_Server_PDW_RS_SharedDataSourceProperties.png "SQL_Server_PDW_RS_SharedDataSourceProperties")  
   
 7.  In the **Connection Properties** window, make the following selections:  
   
@@ -114,7 +114,7 @@ To create a Reporting Services data source that connects to your SQL Server PDW 
   
     -   **Select or enter a Database Name**: Select or enter the name of the target database.  
   
-        ![Report Builder 3.0 Connection Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RB_Connection_Properties.png "SQL_Server_PDW_RB_Connection_Properties")  
+        ![Report Builder 3.0 Connection Properties](../sqlpdw/media/SQL_Server_PDW_RB_Connection_Properties.png "SQL_Server_PDW_RB_Connection_Properties")  
   
 8.  Click **Test Connection** to verify that the new data source is available.  
   
@@ -122,15 +122,15 @@ To create a Reporting Services data source that connects to your SQL Server PDW 
   
 10. You can now view your connection string in the **Shared Data Source Properties** windows.  
   
-    ![Reporting Services Shared Data Source Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RS_DataSourcePropertiesFinished.png "SQL_Server_PDW_RS_DataSourcePropertiesFinished")  
+    ![Reporting Services Shared Data Source Properties](../sqlpdw/media/SQL_Server_PDW_RS_DataSourcePropertiesFinished.png "SQL_Server_PDW_RS_DataSourcePropertiesFinished")  
   
 11. Click **OK** to return to the Report Builder window.  
   
 12. In the **Solution Explorer** pane, view your new connection listed under Shared Data Sources.  
   
-    ![New Reporting Services data source](../../mpp/sqlpdw/media/SQL_Server_PDW_RS_SharedDataSourcesFinished.png "SQL_Server_PDW_RS_SharedDataSourcesFinished")  
+    ![New Reporting Services data source](../sqlpdw/media/SQL_Server_PDW_RS_SharedDataSourcesFinished.png "SQL_Server_PDW_RS_SharedDataSourcesFinished")  
   
 ## See Also  
-[Connect With Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/connect-with-applications-sql-server-pdw.md)  
-[Client Tools and Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
+[Connect With Applications &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-applications-sql-server-pdw.md)  
+[Client Tools and Applications &#40;SQL Server PDW&#41;](../sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
   

@@ -16,7 +16,7 @@ Describes how to purchase and configure a non-appliance Windows system connected
 > [!NOTE]  
 > Connecting through the InfiniBand network is not required for using remote table copy. Connecting through the Ethernet network can be done if the Ethernet bandwidth meets your needs.  
   
-This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/remote-table-copy-sql-server-pdw.md)  
+This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw/remote-table-copy-sql-server-pdw.md)  
   
 ## Before You Begin  
 Before you configure the external Windows system, you must:  
@@ -57,5 +57,5 @@ To configure the external Windows system, use the following steps:
 5.  If a two port adapter is used, or multiple external Windows systems are connected to an appliance, assign each system a different host number within each IP subnet.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

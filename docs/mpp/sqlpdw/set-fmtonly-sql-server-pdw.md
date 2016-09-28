@@ -13,7 +13,7 @@ author: BarbKess
 # SET FMTONLY (SQL Server PDW)
 Specifies whether or not a SQL Server PDW query will return only the column header information (e.g., the metadata) without returning any rows of data. Use this setting to view the format of the query results without actually running the query.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -44,6 +44,6 @@ END
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SET Statements &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-statements-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SET Statements &#40;SQL Server PDW&#41;](../sqlpdw/set-statements-sql-server-pdw.md)  
   

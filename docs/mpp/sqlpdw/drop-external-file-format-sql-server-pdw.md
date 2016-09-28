@@ -13,7 +13,7 @@ author: BarbKess
 # DROP EXTERNAL FILE FORMAT (SQL Server PDW)
 Removes a Hadoop external file format from SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -28,7 +28,7 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
 The name of the external file format to drop.  
   
 ## Metadata  
-To view a list of external file formats use the [sys.external_file_formats &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-external-file-formats-sql-server-pdw.md) system view.  
+To view a list of external file formats use the [sys.external_file_formats &#40;SQL Server PDW&#41;](../sqlpdw/sys-external-file-formats-sql-server-pdw.md) system view.  
   
 ```  
 SELECT * FROM sys.external_file_formats;  
@@ -52,5 +52,5 @@ DROP EXTERNAL FILE FORMAT myfileformat;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

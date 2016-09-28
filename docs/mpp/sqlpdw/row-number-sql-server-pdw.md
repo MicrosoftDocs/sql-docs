@@ -13,7 +13,7 @@ author: BarbKess
 # ROW_NUMBER (SQL Server PDW)
 Returns the sequential number of a row in a partition of a result set, starting at 1 for the first row in each partition in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -23,10 +23,10 @@ ROW_NUMBER () OVER ( [ <partition_by_clause> ] <order_by_clause> )
   
 ## Arguments  
 <*partition_by_clause*>  
-Divides the result set produced by the [FROM](../../mpp/sqlpdw/from-sql-server-pdw.md) clause into partitions to which the ROW_NUMBER function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/over-clause-sql-server-pdw.md).  
+Divides the result set produced by the [FROM](../sqlpdw/from-sql-server-pdw.md) clause into partitions to which the ROW_NUMBER function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../sqlpdw/over-clause-sql-server-pdw.md).  
   
 <*order_by_clause*>  
-Determines the order in which the ROW_NUMBER value is assigned to the rows in a partition. For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/order-by-sql-server-pdw.md). An integer cannot represent a column when the <order_by_clause> is used.  
+Determines the order in which the ROW_NUMBER value is assigned to the rows in a partition. For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../sqlpdw/order-by-sql-server-pdw.md). An integer cannot represent a column when the <order_by_clause> is used.  
   
 ## Return Types  
 **bigint**  
@@ -90,7 +90,7 @@ Here is a partial result set.
 2          Ito                 4           7,804,000.00</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
   

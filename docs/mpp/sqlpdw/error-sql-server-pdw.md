@@ -13,7 +13,7 @@ author: BarbKess
 # @@ERROR (SQL Server PDW)
 Returns the error number for the last Transact\-SQL statement executed. **@@ERROR** is a global variable.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -31,7 +31,7 @@ Returns an error number if the previous statement encountered an error.
   
 Because @@ERROR is cleared and reset on each statement executed, check it immediately following the statement being verified, or save it to a local variable that can be checked later.  
   
-Use the TRY...CATCH construct to handle errors. The TRY...CATCH construct also supports additional system functions (ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY, and ERROR_STATE) that return more error information than @@ERROR. TRY...CATCH also supports an ERROR_NUMBER function that is not limited to returning the error number in the statement immediately after the statement that generated an error. For more information, see [TRY...CATCH &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/try-catch-sql-server-pdw.md).  
+Use the TRY...CATCH construct to handle errors. The TRY...CATCH construct also supports additional system functions (ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY, and ERROR_STATE) that return more error information than @@ERROR. TRY...CATCH also supports an ERROR_NUMBER function that is not limited to returning the error number in the statement immediately after the statement that generated an error. For more information, see [TRY...CATCH &#40;SQL Server PDW&#41;](../sqlpdw/try-catch-sql-server-pdw.md).  
   
 ## Examples  
   
@@ -47,11 +47,11 @@ GO
 ```  
   
 ## See Also  
-[TRY...CATCH &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/try-catch-sql-server-pdw.md)  
-[ERROR_MESSAGE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-message-sql-server-pdw.md)  
-[ERROR_NUMBER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-number-sql-server-pdw.md)  
-[ERROR_PROCEDURE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-procedure-sql-server-pdw.md)  
-[ERROR_SEVERITY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-severity-sql-server-pdw.md)  
-[ERROR_STATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/error-state-sql-server-pdw.md)  
-[THROW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/throw-sql-server-pdw.md)  
+[TRY...CATCH &#40;SQL Server PDW&#41;](../sqlpdw/try-catch-sql-server-pdw.md)  
+[ERROR_MESSAGE &#40;SQL Server PDW&#41;](../sqlpdw/error-message-sql-server-pdw.md)  
+[ERROR_NUMBER &#40;SQL Server PDW&#41;](../sqlpdw/error-number-sql-server-pdw.md)  
+[ERROR_PROCEDURE &#40;SQL Server PDW&#41;](../sqlpdw/error-procedure-sql-server-pdw.md)  
+[ERROR_SEVERITY &#40;SQL Server PDW&#41;](../sqlpdw/error-severity-sql-server-pdw.md)  
+[ERROR_STATE &#40;SQL Server PDW&#41;](../sqlpdw/error-state-sql-server-pdw.md)  
+[THROW &#40;SQL Server PDW&#41;](../sqlpdw/throw-sql-server-pdw.md)  
   

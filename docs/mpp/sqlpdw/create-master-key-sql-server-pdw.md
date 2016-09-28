@@ -13,7 +13,7 @@ author: BarbKess
 # CREATE MASTER KEY (SQL Server PDW)
 Creates a database master key. This statement must be executed in the master database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -29,7 +29,7 @@ Is the password that is used to encrypt the master key in the database. *passwor
 > Communication traffic between components inside the SQL Server PDW is not encrypted. High privileged users could potentially install network sniffing software to obtain the DMK password. Mitigate this risk by controlling physical access to the SQL Server PDW.  
   
 ## Remarks  
-The database master key is a symmetric key used to protect the database encryption key during transparent data encryption. For more information about TDE, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md). When it is created, the master key is encrypted by using the AES_256 algorithm and a user-supplied password. To enable the automatic decryption of the master key, a copy of the key is encrypted by using the service master key and stored in in the master database. This default can be changed by using the `DROP ENCRYPTION BY SERVICE MASTER KEY` option of [ALTER MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-master-key-sql-server-pdw.md). A master key that is not encrypted by the service master key must be opened by using the [OPEN MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/open-master-key-sql-server-pdw.md) statement and a password.  
+The database master key is a symmetric key used to protect the database encryption key during transparent data encryption. For more information about TDE, see [Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md). When it is created, the master key is encrypted by using the AES_256 algorithm and a user-supplied password. To enable the automatic decryption of the master key, a copy of the key is encrypted by using the service master key and stored in in the master database. This default can be changed by using the `DROP ENCRYPTION BY SERVICE MASTER KEY` option of [ALTER MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/alter-master-key-sql-server-pdw.md). A master key that is not encrypted by the service master key must be opened by using the [OPEN MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/open-master-key-sql-server-pdw.md) statement and a password.  
   
 The is_master_key_encrypted_by_server column of the sys.databases catalog view in master indicates whether the database master key is encrypted by the service master key.  
   
@@ -50,9 +50,9 @@ GO
 ```  
   
 ## See Also  
-[ALTER MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-master-key-sql-server-pdw.md)  
-[DROP MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-master-key-sql-server-pdw.md)  
-[OPEN MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/open-master-key-sql-server-pdw.md)  
-[CLOSE MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/close-master-key-sql-server-pdw.md)  
-[sys.databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-databases-sql-server-pdw.md)  
+[ALTER MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/alter-master-key-sql-server-pdw.md)  
+[DROP MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/drop-master-key-sql-server-pdw.md)  
+[OPEN MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/open-master-key-sql-server-pdw.md)  
+[CLOSE MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/close-master-key-sql-server-pdw.md)  
+[sys.databases &#40;SQL Server PDW&#41;](../sqlpdw/sys-databases-sql-server-pdw.md)  
   

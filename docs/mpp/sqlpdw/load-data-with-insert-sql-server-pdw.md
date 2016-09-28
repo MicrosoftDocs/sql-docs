@@ -11,7 +11,7 @@ caps.latest.revision: 21
 author: BarbKess
 ---
 # Load Data With INSERT (SQL Server PDW)
-You can use the SQL INSERT statement to load data into a SQL Server PDW distributed or replicated table. For more information about INSERT, see [INSERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/insert-sql-server-pdw.md). For replicated tables and all non-distribution columns in a distributed table, SQL Server PDW uses SQL Server to implicitly convert the data values specified in the statement to the data type of the destination column. For more information about SQL Server data conversion rules, see [Data Type Conversion (Database Engine)](http://msdn.microsoft.com/en-us/library/ms191530(v=sql11).aspx) on MSDN. However, for distribution columns, SQL Server PDW supports only a subset of implicit conversions that SQL Server supports. Therefore, when you use the INSERT statement to load data into a distribution column, the source data must be specified in one of the formats defined in the following tables.  
+You can use the SQL INSERT statement to load data into a SQL Server PDW distributed or replicated table. For more information about INSERT, see [INSERT &#40;SQL Server PDW&#41;](../sqlpdw/insert-sql-server-pdw.md). For replicated tables and all non-distribution columns in a distributed table, SQL Server PDW uses SQL Server to implicitly convert the data values specified in the statement to the data type of the destination column. For more information about SQL Server data conversion rules, see [Data Type Conversion (Database Engine)](http://msdn.microsoft.com/en-us/library/ms191530(v=sql11).aspx) on MSDN. However, for distribution columns, SQL Server PDW supports only a subset of implicit conversions that SQL Server supports. Therefore, when you use the INSERT statement to load data into a distribution column, the source data must be specified in one of the formats defined in the following tables.  
   
 ## Contents  
   
@@ -159,8 +159,8 @@ The following table defines the accepted formats and rules for inserting literal
 ||||  
   
 ## See Also  
-[Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md)  
-[INSERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/insert-sql-server-pdw.md)  
+[Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Distributed and Replicated Tables &#40;SQL Server PDW&#41;](../sqlpdw/distributed-and-replicated-tables-sql-server-pdw.md)  
+[INSERT &#40;SQL Server PDW&#41;](../sqlpdw/insert-sql-server-pdw.md)  
   

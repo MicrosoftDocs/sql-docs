@@ -13,7 +13,7 @@ author: BarbKess
 # WITH common_table_expression (SQL Server PDW)
 Specifies a temporary named result set, known as a common table expression (CTE). This is derived from a simple query and defined within the execution scope of a single **SELECT** statement. This clause can also be used in a **CREATE VIEW**, **CREATE TABLE AS SELECT**, **CREATE EXTERNAL TABLE AS SELECT**, or **CREATE REMOTE TABLE AS SELECT** statement as part of its defining **SELECT** statement.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -195,10 +195,10 @@ SELECT TableName, TotalAvg FROM CountCustomer;
 ```  
   
 ## See Also  
-[CREATE VIEW &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-view-sql-server-pdw.md)  
-[UNION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/union-sql-server-pdw.md)  
-[SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md)  
-[CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-as-select-sql-server-pdw.md)  
-[CREATE REMOTE TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-remote-table-as-select-sql-server-pdw.md)  
-[CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-external-table-as-select-sql-server-pdw.md)  
+[CREATE VIEW &#40;SQL Server PDW&#41;](../sqlpdw/create-view-sql-server-pdw.md)  
+[UNION &#40;SQL Server PDW&#41;](../sqlpdw/union-sql-server-pdw.md)  
+[SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md)  
+[CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md)  
+[CREATE REMOTE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-remote-table-as-select-sql-server-pdw.md)  
+[CREATE EXTERNAL TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-external-table-as-select-sql-server-pdw.md)  
   

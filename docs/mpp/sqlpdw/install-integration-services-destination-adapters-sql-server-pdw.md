@@ -13,7 +13,7 @@ author: BarbKess
 # Install Integration Services Destination Adapters (SQL Server PDW)
 This topic describes how to install the Integration Services Destination Adapters for Parallel Data Warehouse.  
   
-Parent Topic: [Client Tools and Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
+Parent Topic: [Client Tools and Applications &#40;SQL Server PDW&#41;](../sqlpdw/client-tools-and-applications-sql-server-pdw.md)  
   
 ## Contents  
   
@@ -57,7 +57,7 @@ Integration Services for any of these versions of SQL Server.
 -   SQL Server 2008 R2  
   
 ## <a name="Obtain"></a>Step 1: Obtain the Installation files  
-Obtain the Windows Installer files for the destination adapters from your appliance administrator, or see [Client Tools and Applications &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/client-tools-and-applications-sql-server-pdw.md) for the location of the tools. You will need both the 32-bit and 64-bit installation files for your version of Integration Services.  
+Obtain the Windows Installer files for the destination adapters from your appliance administrator, or see [Client Tools and Applications &#40;SQL Server PDW&#41;](../sqlpdw/client-tools-and-applications-sql-server-pdw.md) for the location of the tools. You will need both the 32-bit and 64-bit installation files for your version of Integration Services.  
   
 General Remarks  
   
@@ -142,7 +142,7 @@ After the installation has finished, you can view your installed destination ada
   
     -   Scroll down through the SSIS Toolbox. You should now see **SQL Server PDW Destination** under **Other Destinations** in the SSIS Toolbox.  
   
-    -   The SQL Server PDW Destination is installed correctly! For next steps, see [Load Data With Integration Services &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/load-data-with-integration-services-sql-server-pdw.md)  
+    -   The SQL Server PDW Destination is installed correctly! For next steps, see [Load Data With Integration Services &#40;SQL Server PDW&#41;](../sqlpdw/load-data-with-integration-services-sql-server-pdw.md)  
   
 ## <a name="AddDataFlow"></a>Step 5 – SQL Server 2008 R2 only: Add SQL Server PDW as a Data Flow Destination  
   
@@ -163,7 +163,7 @@ In this step, you will add SQL Server PDW as a Data Flow Destination in the Inte
   
     -   Click on the **File** menu, choose **New**, choose **Project**.  
   
-        ![Create a new Integration Services Project](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_NewProject.png "SQL_Server_PDW_IS_NewProject")  
+        ![Create a new Integration Services Project](../sqlpdw/media/SQL_Server_PDW_IS_NewProject.png "SQL_Server_PDW_IS_NewProject")  
   
     -   In the new project window, choose Integration Services Project. This opens the package design window.  
   
@@ -177,15 +177,15 @@ In this step, you will add SQL Server PDW as a Data Flow Destination in the Inte
   
     -   Select **SQL Server PDW Destination**, and click OK.  
   
-        ![Check the SQL Server PDW box](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_DataFlowItems.png "SQL_Server_PDW_IS_DataFlowItems")  
+        ![Check the SQL Server PDW box](../sqlpdw/media/SQL_Server_PDW_IS_DataFlowItems.png "SQL_Server_PDW_IS_DataFlowItems")  
   
     -   You should now see **SQL Server PDW Destination** in the **Data Flow Destinations** of the Toolbox.  
   
-        ![SQL Server PDW is a Data Flow Destination](../../mpp/sqlpdw/media/SQL_Server_PDW_IS_PDWDestination.png "SQL_Server_PDW_IS_PDWDestination")  
+        ![SQL Server PDW is a Data Flow Destination](../sqlpdw/media/SQL_Server_PDW_IS_PDWDestination.png "SQL_Server_PDW_IS_PDWDestination")  
   
 ## Next Steps  
-Your computer is now setup to build and run Integration Services loading packages. For more information, see [Load Data With Integration Services &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/load-data-with-integration-services-sql-server-pdw.md).  
+Your computer is now setup to build and run Integration Services loading packages. For more information, see [Load Data With Integration Services &#40;SQL Server PDW&#41;](../sqlpdw/load-data-with-integration-services-sql-server-pdw.md).  
   
 ## See Also  
-[How to create a script task that uses the SSIS PDW destination adapter &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter-sql-server-pdw.md)  
+[How to create a script task that uses the SSIS PDW destination adapter &#40;SQL Server PDW&#41;](../sqlpdw/how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter-sql-server-pdw.md)  
   

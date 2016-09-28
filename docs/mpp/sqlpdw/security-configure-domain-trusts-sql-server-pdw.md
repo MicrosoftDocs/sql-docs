@@ -65,7 +65,7 @@ Perform the following steps to configure SQL Server PDW to accept Windows Authen
   
     4.  While on ***appliance_domain*-AD02**, perform steps 3 – 8 above.  
   
-![PDW Windows Authentication](../../mpp/sqlpdw/media/APS_PDW_Auth_1Forw.png "APS_PDW_Auth_1Forw")  
+![PDW Windows Authentication](../sqlpdw/media/APS_PDW_Auth_1Forw.png "APS_PDW_Auth_1Forw")  
   
 ## Steps to Set Up Active Directory and DNS on the Corporate Domain  
   
@@ -86,7 +86,7 @@ Perform the following steps to configure SQL Server PDW to accept Windows Authen
   
 2.  Complete the **New Zone Wizard** to create a **Primary zone**, and specifying an **IPv4 Reverse Lookup Zone**. In the Network ID box, provide enough of the IP address to indicate the IP addresses that belong to this zone. (Typically this will be the first 3 octets of the SQL Server PDW IP addresses.) See your domain administrator for the preferred selection for the other options or if your IP addresses are not typical.  
   
-![PDW Windows Authentication RLZ](../../mpp/sqlpdw/media/APS_PDW_Auth_3RLZ.png "APS_PDW_Auth_3RLZ")  
+![PDW Windows Authentication RLZ](../sqlpdw/media/APS_PDW_Auth_3RLZ.png "APS_PDW_Auth_3RLZ")  
   
 ### <a name="add"></a>Add Records for CTL and Appliance AD Nodes to the New FLZ on the Corporate DNS Server  
   
@@ -102,7 +102,7 @@ Perform the following steps to configure SQL Server PDW to accept Windows Authen
   
 2.  Repeat the **New Host** process to create a pointer record for both ***appliance_domain*-AD01** and ***appliance_domain*-AD02**.  
   
-![PDW Windows Authentication Host](../../mpp/sqlpdw/media/APS_PDW_Auth_4Host.png "APS_PDW_Auth_4Host")  
+![PDW Windows Authentication Host](../sqlpdw/media/APS_PDW_Auth_4Host.png "APS_PDW_Auth_4Host")  
   
 > [!TIP]  
 > At this point you should be able to successfully use **ping** to connect to the FQDN's of the SQL Server PDW**Control node**, ***appliance_domain*-AD01**, and ***appliance_domain*-AD02**, by using the following **ping** commands:  
@@ -131,7 +131,7 @@ Perform the following steps to configure SQL Server PDW to accept Windows Authen
   
 9. Repeat steps 4 – 8 to create **_ldap** and **_kerberos** records for ***appliance_domain*-AD02**.  
   
-![PDW Windows Authentication Kerberos](../../mpp/sqlpdw/media/APS_PDW_Auth_5Kerberos.png "APS_PDW_Auth_5Kerberos")  
+![PDW Windows Authentication Kerberos](../sqlpdw/media/APS_PDW_Auth_5Kerberos.png "APS_PDW_Auth_5Kerberos")  
   
 ### <a name="aliases"></a>Add Aliases for the CTL and AD Nodes to the Corporate DNS  
   
@@ -150,7 +150,7 @@ Perform the following steps to configure SQL Server PDW to accept Windows Authen
     > [!NOTE]  
     > These aliases should be used when accessing the PDW from corporate domain.  
   
-![PDW Windows Authentication Alias](../../mpp/sqlpdw/media/APS_PDW_Auth_6Alias.png "APS_PDW_Auth_6Alias")  
+![PDW Windows Authentication Alias](../sqlpdw/media/APS_PDW_Auth_6Alias.png "APS_PDW_Auth_6Alias")  
   
 > [!TIP]  
 > At this point you should be able to successfully use **ping** to connect to the alias names of the SQL Server PDW Control and Active Directory nodes, in the format **ping PdwControl** and **ping FabAd01** and **ping FabAD02**  
@@ -182,8 +182,8 @@ Perform the following steps to configure SQL Server PDW to accept Windows Authen
   
 2.  Choose **Yes, validate the incoming trust** and enter appliance domain administrator credentials.  
   
-![PDW Windows Authentication AD Services](../../mpp/sqlpdw/media/APS_PDW_Auth_8ADServices.png "APS_PDW_Auth_8ADServices")  
+![PDW Windows Authentication AD Services](../sqlpdw/media/APS_PDW_Auth_8ADServices.png "APS_PDW_Auth_8ADServices")  
   
 ## See Also  
-[Security - Windows Authentication and SQL Server Authentication &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/security-windows-authentication-and-sql-server-authentication-sql-server-pdw.md)  
+[Security - Windows Authentication and SQL Server Authentication &#40;SQL Server PDW&#41;](../sqlpdw/security-windows-authentication-and-sql-server-authentication-sql-server-pdw.md)  
   

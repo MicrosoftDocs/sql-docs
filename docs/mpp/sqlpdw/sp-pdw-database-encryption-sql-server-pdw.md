@@ -46,6 +46,6 @@ EXEC sys.sp_pdw_database_encryption 1;
 ```  
   
 ## See Also  
-[sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-database-encryption-regenerate-system-keys-sql-server-pdw.md)  
-[sp_pdw_log_user_data_masking &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp_pdw_log_user_data_masking-sql-server-pdw.md)  
+[sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-database-encryption-regenerate-system-keys-sql-server-pdw.md)  
+[sp_pdw_log_user_data_masking &#40;SQL Server PDW&#41;](../sqlpdw/sp_pdw_log_user_data_masking-sql-server-pdw.md)  
   

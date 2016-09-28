@@ -13,7 +13,7 @@ author: BarbKess
 # CREATE ROLE (SQL Server PDW)
 Creates a new database role in the SQL Server PDW current database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -29,7 +29,7 @@ AUTHORIZATION *owner_name*
 Is the database user or role that is to own the new role. If no user is specified, the role will be owned by the user that executes CREATE ROLE.  
   
 ## Remarks  
-Roles are database-level securables. After you create a role, configure the database-level permissions of the role by using GRANT, DENY, and REVOKE. To add members to a database role, use the sp_addrolemember stored procedure. For more information, see [sys.database_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-principals-sql-server-pdw.md).  
+Roles are database-level securables. After you create a role, configure the database-level permissions of the role by using GRANT, DENY, and REVOKE. To add members to a database role, use the sp_addrolemember stored procedure. For more information, see [sys.database_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-principals-sql-server-pdw.md).  
   
 Database roles are visible in the sys.database_role_members and sys.database_principals catalog views.  
   
@@ -63,11 +63,11 @@ GO
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[ALTER ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-role-sql-server-pdw.md)  
-[DROP ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-role-sql-server-pdw.md)  
-[sp_addrolemember &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-addrolemember-sql-server-pdw.md)  
-[sp_droprolemember &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-droprolemember-sql-server-pdw.md)  
-[sys.database_role_members &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-role-members-sql-server-pdw.md)  
-[sys.database_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-principals-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[ALTER ROLE &#40;SQL Server PDW&#41;](../sqlpdw/alter-role-sql-server-pdw.md)  
+[DROP ROLE &#40;SQL Server PDW&#41;](../sqlpdw/drop-role-sql-server-pdw.md)  
+[sp_addrolemember &#40;SQL Server PDW&#41;](../sqlpdw/sp-addrolemember-sql-server-pdw.md)  
+[sp_droprolemember &#40;SQL Server PDW&#41;](../sqlpdw/sp-droprolemember-sql-server-pdw.md)  
+[sys.database_role_members &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-role-members-sql-server-pdw.md)  
+[sys.database_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-principals-sql-server-pdw.md)  
   

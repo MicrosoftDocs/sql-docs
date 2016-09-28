@@ -15,7 +15,7 @@ Removes all query plan cache entries for all databases from the Compute nodes. U
   
 For example, when an existing query plan was generated with out-of-date statistics, you can improve query performance by updating statistics and then recompiling the query. To force SQL Server PDW to recompile the query instead of using the existing query plan, you can use DBCC FREEPROCCACHE to remove the existing query plans. Upon the next execution of the query, SQL Server PDW will recompile the query with the latest statistics.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -43,7 +43,7 @@ In SQL Server PDW, clearing the query plan cache can cause a temporary decrease 
 DBCC FREEPROCCACHE can be cancelled during execution.  
   
 ## Error Handling  
-Errors are reported in the [sys.dm_pdw_errors &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-errors-sql-server-pdw.md) system view.  
+Errors are reported in the [sys.dm_pdw_errors &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-errors-sql-server-pdw.md) system view.  
   
 ## Limitations and Restrictions  
 DBCC FREEPROCCACHE can not run within a transaction.  
@@ -80,5 +80,5 @@ GRANT ALTER SERVER STATE TO David;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

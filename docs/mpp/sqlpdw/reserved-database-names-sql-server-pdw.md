@@ -36,6 +36,6 @@ List of reserved database names:
 -   DWQueue  
   
 ## See Also  
-[Database Administration &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/database-administration-sql-server-pdw.md)  
-[System Databases &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-databases-sql-server-pdw.md)  
+[Database Administration &#40;SQL Server PDW&#41;](../sqlpdw/database-administration-sql-server-pdw.md)  
+[System Databases &#40;SQL Server PDW&#41;](../sqlpdw/system-databases-sql-server-pdw.md)  
   

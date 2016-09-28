@@ -15,20 +15,20 @@ The SQL programming language provides DBCC statements that act as Database Conso
   
 At this time, SQL Server PDW supports the following Database Console Command statements:  
   
-- [DBCC DROPCLEANBUFFERS](../../mpp/sqlpdw/dbcc-dropcleanbuffers.md)  
+- [DBCC DROPCLEANBUFFERS](../sqlpdw/dbcc-dropcleanbuffers.md)  
   
-- [DBCC FREEPROCCACHE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dbcc-freeproccache-sql-server-pdw.md)  
+- [DBCC FREEPROCCACHE &#40;SQL Server PDW&#41;](../sqlpdw/dbcc-freeproccache-sql-server-pdw.md)  
   
-- [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dbcc-shrinklog-sql-server-pdw.md)  
+- [DBCC SHRINKLOG &#40;SQL Server PDW&#41;](../sqlpdw/dbcc-shrinklog-sql-server-pdw.md)  
   
-- [DBCC PDW_SHOWEXECUTIONPLAN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dbcc-pdw-showexecutionplan-sql-server-pdw.md)  
+- [DBCC PDW_SHOWEXECUTIONPLAN &#40;SQL Server PDW&#41;](../sqlpdw/dbcc-pdw-showexecutionplan-sql-server-pdw.md)  
   
-- [DBCC PDW_SHOWPARTITIONSTATS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dbcc-pdw-showpartitionstats-sql-server-pdw.md)  
+- [DBCC PDW_SHOWPARTITIONSTATS &#40;SQL Server PDW&#41;](../sqlpdw/dbcc-pdw-showpartitionstats-sql-server-pdw.md)  
   
-- [DBCC PDW_SHOWSPACEUSED &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/dbcc-pdw-showspaceused-sql-server-pdw.md)  
+- [DBCC PDW_SHOWSPACEUSED &#40;SQL Server PDW&#41;](../sqlpdw/dbcc-pdw-showspaceused-sql-server-pdw.md)  
   
-- [DBCC SHOW_STATISTICS](../../mpp/sqlpdw/dbcc-show-statistics-pdw.md)  
+- [DBCC SHOW_STATISTICS](../sqlpdw/dbcc-show-statistics-pdw.md)  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

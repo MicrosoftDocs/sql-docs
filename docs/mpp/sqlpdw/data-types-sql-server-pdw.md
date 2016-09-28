@@ -20,7 +20,7 @@ SQL Server PDW data types are a subset of the SQL Server data types. Because SQL
 -   [Data Type Conversion](#Conversion)  
   
 ## <a name="DataTypes"></a>Data Types  
-The following tables list the supported SQL Server PDW data types and provide a link to the SQL Server documentation for each type. The [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md) statement gives the syntax and describes how to define each of the SQL Server PDW data types.  
+The following tables list the supported SQL Server PDW data types and provide a link to the SQL Server documentation for each type. The [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md) statement gives the syntax and describes how to define each of the SQL Server PDW data types.  
   
 |Data Type|SQL Server topic|Comments|  
 |-------------|--------------------|------------|  
@@ -42,9 +42,9 @@ The following tables list the supported SQL Server PDW data types and provide a 
 **Additional Data Types:** In addition to the supported data types, the data types **nvarchar(max)**, **uniqueidentifier**, **numeric**, and **sysname** are supported in the SQL Server catalog views only, and may not be used with or for user data.  
   
 ## <a name="Conversion"></a>Data Type Conversion  
-When using the [SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md) statement, SQL Server PDW supports the SQL Server data type conversion rules for both implicit and explicit data type conversions.  
+When using the [SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md) statement, SQL Server PDW supports the SQL Server data type conversion rules for both implicit and explicit data type conversions.  
   
-An *explicit* data type conversions uses the CAST or CONVERT function to perform the conversion. For more information, see [CAST and CONVERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/cast-and-convert-sql-server-pdw.md). An *implicit* data type conversion occurs when SQL Server PDW converts one data type to another data type without the CAST or CONVERT function.  
+An *explicit* data type conversions uses the CAST or CONVERT function to perform the conversion. For more information, see [CAST and CONVERT &#40;SQL Server PDW&#41;](../sqlpdw/cast-and-convert-sql-server-pdw.md). An *implicit* data type conversion occurs when SQL Server PDW converts one data type to another data type without the CAST or CONVERT function.  
   
 When an operator combines two expressions of different data types, the data type with the lower precedence is implicitly converted to the data type with the higher precedence. This applies to supported implicit conversions; if the conversion is not a supported implicit conversion, an error is returned.  
   
@@ -98,7 +98,7 @@ The following list shows the precedence order for implicit conversions, from hig
 **binary**  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 [Data Types (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187752.aspx(v=sql11))  
 [Data Types (Database Engine)](http://msdn.microsoft.com/en-us/library/ms191530(v=sql11).aspx)  
   

@@ -16,7 +16,7 @@ This topic explains how to monitor the state of a SQL Server PDW appliance by us
 ## To Monitor the Appliance State  
 A system administrator can use the Admin Console or the SQL Server PDW Dynamic Management Views (DMVs) to retrieve the full hierarchy of nodes, components, and software. The following diagram gives a high level understanding of the components that SQL Server PDW monitors.  
   
-![Monitoring overview](../../mpp/management/media/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
+![Monitoring overview](../management/media/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
 ### Monitor Component Status By Using the Admin Console  
 To retrieve component status by using the Admin Console:  
@@ -25,10 +25,10 @@ To retrieve component status by using the Admin Console:
   
 2.  On the Appliance State page, click on a specific node to view the node details.  
   
-    ![PDW Admin Console State](../../mpp/management/media/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
+    ![PDW Admin Console State](../management/media/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
 ### Monitor Component Status By Using System Views  
-To retrieve component status by using system views, use [sys.dm_pdw_component_health_status &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-component-health-status-sql-server-pdw.md). For example, the following query retrieves the status for all components.  
+To retrieve component status by using system views, use [sys.dm_pdw_component_health_status &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-component-health-status-sql-server-pdw.md). For example, the following query retrieves the status for all components.  
   
 ```  
 SELECT   
@@ -85,6 +85,6 @@ The **[update_time]** column shows the last time the component was polled by the
 > Be sure to investigate the issue when a component has not been polled for 5 minutes or longer; there could be an alert that indicates an issue with the software heartbeats.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Appliance Monitoring &#40;Analytics Platform System&#41;](../../mpp/management/appliance-monitoring-analytics-platform-system.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Appliance Monitoring &#40;Analytics Platform System&#41;](../management/appliance-monitoring-analytics-platform-system.md)  
   

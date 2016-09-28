@@ -27,7 +27,7 @@ These are the potential values for each field:
 |*Error_Indicator*|The word “ERROR” or other text alerting the user to a problem.|ERROR|  
 |*SQL_State_Code*|The SQL state code, according to ODBC specification. The driver generates the appropriate SQL State code any time it returns a message to an application. The text “Microsoft” indicates the source of the error.|42000|  
 |*Driver_Details*|Driver-dependent details, such as the type of driver used.|ODBC SQL Server 2008 R2 Parallel Data Warehouse driver|  
-|*QueryID*|The unique identifier for the query. Use this value to find additional information related to processing of the query. For example, the query execution details can be found in the Admin Console using the query ID. For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md).<br /><br />If a QueryID is not applicable, the text “Internal” is returned to the user.|QID2377|  
+|*QueryID*|The unique identifier for the query. Use this value to find additional information related to processing of the query. For example, the query execution details can be found in the Admin Console using the query ID. For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md).<br /><br />If a QueryID is not applicable, the text “Internal” is returned to the user.|QID2377|  
 |*Message_String*|A human-readable description of the error or problem. When returning SQL Server errors, this is the SQL Server message text.|Only equal assignment can appear in the set list of an UPDATE statement.|  
   
 These example values would be presented to the user like this:  
@@ -35,6 +35,6 @@ These example values would be presented to the user like this:
 `ERROR [42000] [Microsoft][ODBC SQL Server 2008 R2 Parallel Data Warehouse driver][QID2380]Only equal assignment can appear in the set list of an UPDATE statement.`  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Understanding Admin Console Alerts &#40;Analytics Platform System&#41;](../../mpp/management/understanding-admin-console-alerts-analytics-platform-system.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Understanding Admin Console Alerts &#40;Analytics Platform System&#41;](../management/understanding-admin-console-alerts-analytics-platform-system.md)  
   

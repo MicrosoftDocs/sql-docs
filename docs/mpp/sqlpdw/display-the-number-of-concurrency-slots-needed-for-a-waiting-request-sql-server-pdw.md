@@ -13,7 +13,7 @@ author: BarbKess
 # Display the Number of Concurrency Slots Needed for a Waiting Request (SQL Server PDW)
 Describes how to figure out the number of concurrency slots are needed by a request that is waiting to run on SQL Server PDW.  
   
-For more information, see [Workload Management &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/workload-management-sql-server-pdw.md)  
+For more information, see [Workload Management &#40;SQL Server PDW&#41;](../sqlpdw/workload-management-sql-server-pdw.md)  
   
 ## Display the Number of Concurrency Slots Needed for a Waiting Request  
 A request could be waiting too long without getting executed. One of the ways to troubleshoot this is to look at the number of concurrency slots the request needs.  The following example shows the number of concurrency slots needed by each waiting request.  

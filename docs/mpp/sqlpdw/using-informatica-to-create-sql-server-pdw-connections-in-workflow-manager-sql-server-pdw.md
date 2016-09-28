@@ -14,7 +14,7 @@ author: BarbKess
 Informatica can make connections to SQL Server PDW for use in relational queries, or for loading data.  
   
 ## How to create a relational connection  
-![Informatica Relational Connection dialog box](../../mpp/sqlpdw/media/APS_Informatica_Relational_Connection.png "APS_Informatica_Relational_Connection")  
+![Informatica Relational Connection dialog box](../sqlpdw/media/APS_Informatica_Relational_Connection.png "APS_Informatica_Relational_Connection")  
   
 1.  Open the Informatica Workflow Manager and connect to the desired repository.  
   
@@ -39,7 +39,7 @@ Informatica can make connections to SQL Server PDW for use in relational queries
 8.  Click **OK**.  
   
 ## How to create a loader connection  
-![Informatica Loader Connection dialog box](../../mpp/sqlpdw/media/APS_Informatica_Loader_Connection.png "APS_Informatica_Loader_Connection")  
+![Informatica Loader Connection dialog box](../sqlpdw/media/APS_Informatica_Loader_Connection.png "APS_Informatica_Loader_Connection")  
   
 1.  Open the Informatica Workflow Manager and connect to the desired repository.  
   
@@ -68,7 +68,7 @@ Informatica can make connections to SQL Server PDW for use in relational queries
 9. Click **OK**.  
   
 ## See Also  
-[Installing the Informatica Connector &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
-[Using SQL Server PDW tables as Informatica Sources and Targets &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/using-sql-server-pdw-tables-as-informatica-sources-and-targets-sql-server-pdw.md)  
-[Creating Sessions and Workflows in Informatica &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/creating-sessions-and-workflows-in-informatica-sql-server-pdw.md)  
+[Installing the Informatica Connector &#40;SQL Server PDW&#41;](../sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
+[Using SQL Server PDW tables as Informatica Sources and Targets &#40;SQL Server PDW&#41;](../sqlpdw/using-sql-server-pdw-tables-as-informatica-sources-and-targets-sql-server-pdw.md)  
+[Creating Sessions and Workflows in Informatica &#40;SQL Server PDW&#41;](../sqlpdw/creating-sessions-and-workflows-in-informatica-sql-server-pdw.md)  
   

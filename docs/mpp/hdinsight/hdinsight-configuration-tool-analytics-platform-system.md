@@ -44,7 +44,7 @@ This script is designed always to ask for confirmation. This behavior can be ove
 ## Permissions and Requirements  
 Requires an account that is a member of the **HDInsight Cluster Admins** security group.  
   
-Requires a remote desktop connection to the **<HDInsight Domain>-HHN01** head node in the HDInsight region. For more information, see [Connecting to HDInsight Using Remote Desktop &#40;Analytics Platform System&#41;](../../mpp/hdinsight/connecting-to-hdinsight-using-remote-desktop-analytics-platform-system.md).  
+Requires a remote desktop connection to the **<HDInsight Domain>-HHN01** head node in the HDInsight region. For more information, see [Connecting to HDInsight Using Remote Desktop &#40;Analytics Platform System&#41;](../hdinsight/connecting-to-hdinsight-using-remote-desktop-analytics-platform-system.md).  
   
 ## Error Handling  
 If the script encounters an error, and your appliance is in a healthy state, try re-running the script.  

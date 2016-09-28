@@ -13,7 +13,7 @@ author: BarbKess
 # DELETE (SQL Server PDW)
 Removes rows from a table in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -26,13 +26,13 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 ## Arguments  
 FROM [*database_name* . [*schema* ] . | *schema*. ] *table_name*  
-The name of the table that will have rows removed. Unlike SQL Server, only one table is allowed. The <from_clause> described in the [FROM &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/from-sql-server-pdw.md) topic does not apply to the DELETE statement.  
+The name of the table that will have rows removed. Unlike SQL Server, only one table is allowed. The <from_clause> described in the [FROM &#40;SQL Server PDW&#41;](../sqlpdw/from-sql-server-pdw.md) topic does not apply to the DELETE statement.  
   
 *WHERE <search_condition>*  
-Specifies the rows to be deleted. When the WHERE clause is omitted, all rows will be removed from the table. You cannot use a join to delete rows from multiple tables. You can use a join in a subquery of the search condition. For more details about the search conditions, see [Search Condition &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/search-condition-sql-server-pdw.md).  
+Specifies the rows to be deleted. When the WHERE clause is omitted, all rows will be removed from the table. You cannot use a join to delete rows from multiple tables. You can use a join in a subquery of the search condition. For more details about the search conditions, see [Search Condition &#40;SQL Server PDW&#41;](../sqlpdw/search-condition-sql-server-pdw.md).  
   
 OPTION ( <query_options> [ ,...*n* ]  )  
-Specifies one or more query options, including a label and query join hints. OPTION query hints apply to the entire DELETE statement. For more details, see [OPTION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/option-sql-server-pdw.md).  
+Specifies one or more query options, including a label and query join hints. OPTION query hints apply to the entire DELETE statement. For more details, see [OPTION &#40;SQL Server PDW&#41;](../sqlpdw/option-sql-server-pdw.md).  
   
 ## Error Handling  
 When a DELETE statement encounters an arithmetic error (overflow, divide by zero, or a domain error) during expression evaluation, the rest of the batch is canceled and an error message is returned.  
@@ -53,7 +53,7 @@ OPTION (HASH JOIN)
 Requires **DELETE** permission on the target table, or membership in the **db_datawriter** fixed database role. **SELECT** permissions are also required if the statement contains a **WHERE** clause. **DELETE** permission is denied to members of the **db_denydatawriter** fixed database role.  
   
 ## Limitations and Restrictions  
-[SET ROWCOUNT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement. To achieve a similar behavior, use [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md).  
+[SET ROWCOUNT &#40;SQL Server PDW&#41;](../sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement. To achieve a similar behavior, use [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md).  
   
 ## Locking  
 Takes an exclusive lock at some level on the table being changed.  
@@ -84,7 +84,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### D. Using a label and a query hint with the DELETE statement  
-This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/option-sql-server-pdw.md).  
+This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION &#40;SQL Server PDW&#41;](../sqlpdw/option-sql-server-pdw.md).  
   
 ```  
 USE AdventureWorksPDW2012;  
@@ -98,5 +98,5 @@ OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

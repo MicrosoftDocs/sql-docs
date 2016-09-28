@@ -18,7 +18,7 @@ This DMV is deprecated and will be removed in a future release. In this release,
 |event|**nvarchar(60)**|Key for this view.||  
 |event_id|**nvarchar(36)**|||  
 |create_time|**datetime**|||  
-|session_id|**int**|The id for the session.|See session_id in [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md).|  
+|session_id|**int**|The id for the session.|See session_id in [sys.dm_pdw_exec_sessions &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-exec-sessions-sql-server-pdw.md).|  
 |cpu|**int**|||  
 |reads|**int**|Number of logical reads since the start of the event.||  
 |writes|**int**|Number of logical writes since the start of the event.||  
@@ -28,6 +28,6 @@ This DMV is deprecated and will be removed in a future release. In this release,
 |pdw_node_id|**int**|Node on which this Xevent instance is running.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

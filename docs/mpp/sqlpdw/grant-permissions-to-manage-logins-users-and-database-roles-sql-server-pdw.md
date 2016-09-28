@@ -16,7 +16,7 @@ This topic describes how to grant permissions to manage logins, database users, 
 ## <a name="PermsAdminConsole"></a>Grant Permissions to Manage Logins  
 **Add or Manage Logins**  
   
-The following SQL statements create a Login named KimAbercrombie  that can create new logins by using the [CREATE LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-login-sql-server-pdw.md) statement and alter existing logins by using the [ALTER LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-login-sql-server-pdw.md) statement.  
+The following SQL statements create a Login named KimAbercrombie  that can create new logins by using the [CREATE LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/create-login-sql-server-pdw.md) statement and alter existing logins by using the [ALTER LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/alter-login-sql-server-pdw.md) statement.  
   
 The **ALTER ANY LOGIN** permission grants the ability to create new logins and drop exisiting. Once a login exists, the login can be managed by logins with the **ALTER ANY LOGIN** permission or the **ALTER** permission on that login. A login can change the password and default database for its own login.  
   
@@ -69,22 +69,22 @@ The following charts can be confusing, but they show how higher lever permission
   
 **Login permissions:**  
   
-![APS security login permissions](../../mpp/sqlpdw/media/APS_security_login_perms.png "APS_security_login_perms")  
+![APS security login permissions](../sqlpdw/media/APS_security_login_perms.png "APS_security_login_perms")  
   
 **User permissions:**  
   
-![APS security user permissions](../../mpp/sqlpdw/media/APS_security_user_perms.png "APS_security_user_perms")  
+![APS security user permissions](../sqlpdw/media/APS_security_user_perms.png "APS_security_user_perms")  
   
 **Role permissions:**  
   
-![APS security role permissions](../../mpp/sqlpdw/media/APS_security_role_perms.png "APS_security_role_perms")  
+![APS security role permissions](../sqlpdw/media/APS_security_role_perms.png "APS_security_role_perms")  
   
-For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  
+For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[CREATE LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-login-sql-server-pdw.md)  
-[CREATE USER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-user-sql-server-pdw.md)  
-[CREATE ROLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-role-sql-server-pdw.md)  
-[Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[CREATE LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/create-login-sql-server-pdw.md)  
+[CREATE USER &#40;SQL Server PDW&#41;](../sqlpdw/create-user-sql-server-pdw.md)  
+[CREATE ROLE &#40;SQL Server PDW&#41;](../sqlpdw/create-role-sql-server-pdw.md)  
+[Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)  
   

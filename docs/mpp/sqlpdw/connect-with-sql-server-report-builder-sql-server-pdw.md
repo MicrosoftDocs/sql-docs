@@ -47,7 +47,7 @@ Create a Report Builder project.
   
 3.  In the **Data Source Properties** window, choose **General**.  
   
-    ![Report Builder 3.0 Data Source Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RB_DataSourceEmpty.png "SQL_Server_PDW_RB_DataSourceEmpty")  
+    ![Report Builder 3.0 Data Source Properties](../sqlpdw/media/SQL_Server_PDW_RB_DataSourceEmpty.png "SQL_Server_PDW_RB_DataSourceEmpty")  
   
 4.  Fill in the General properties with the following selections:  
   
@@ -71,7 +71,7 @@ Create a Report Builder project.
   
     -   **Select or enter a Database Name**: Select or enter the name of the target database.  
   
-        ![Report Builder 3.0 Connection Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RB_Connection_Properties.png "SQL_Server_PDW_RB_Connection_Properties")  
+        ![Report Builder 3.0 Connection Properties](../sqlpdw/media/SQL_Server_PDW_RB_Connection_Properties.png "SQL_Server_PDW_RB_Connection_Properties")  
   
 6.  Click **Test Connection** to verify that the new data source is available.  
   
@@ -79,7 +79,7 @@ Create a Report Builder project.
   
 8.  You can now view your connection string in the Data Source Properties windows.  
   
-    ![Report Builder 3.0 Connection Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RB_DataSourceProperties.png "SQL_Server_PDW_RB_DataSourceProperties")  
+    ![Report Builder 3.0 Connection Properties](../sqlpdw/media/SQL_Server_PDW_RB_DataSourceProperties.png "SQL_Server_PDW_RB_DataSourceProperties")  
   
 9. Click **OK** to return to the Report Builder window.  
   
@@ -96,7 +96,7 @@ Create a Report Builder project.
   
 3.  In the **Data Source Properties** window, choose **General**.  
   
-    ![Report Builder 3.0 Data Source Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RB_DataSourceEmpty.png "SQL_Server_PDW_RB_DataSourceEmpty")  
+    ![Report Builder 3.0 Data Source Properties](../sqlpdw/media/SQL_Server_PDW_RB_DataSourceEmpty.png "SQL_Server_PDW_RB_DataSourceEmpty")  
   
 4.  Fill in the General properties with the following selections:  
   
@@ -120,7 +120,7 @@ Create a Report Builder project.
   
     -   **Select or enter a Database Name**: Select or enter the name of the target database.  
   
-        ![Report Builder 3.0 Connection Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RB_Connection_Properties.png "SQL_Server_PDW_RB_Connection_Properties")  
+        ![Report Builder 3.0 Connection Properties](../sqlpdw/media/SQL_Server_PDW_RB_Connection_Properties.png "SQL_Server_PDW_RB_Connection_Properties")  
   
 6.  Click **Test Connection** to verify that the new data source is available.  
   
@@ -128,7 +128,7 @@ Create a Report Builder project.
   
 8.  You can now view your connection string in the **Data Source Properties** windows.  
   
-    ![Report Builder 3.0 Connection Properties](../../mpp/sqlpdw/media/SQL_Server_PDW_RB_DataSourceProperties.png "SQL_Server_PDW_RB_DataSourceProperties")  
+    ![Report Builder 3.0 Connection Properties](../sqlpdw/media/SQL_Server_PDW_RB_DataSourceProperties.png "SQL_Server_PDW_RB_DataSourceProperties")  
   
 9. Click **OK** to return to the Report Builder window.  
   

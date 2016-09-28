@@ -43,6 +43,6 @@ Shows columns for system objects.
 |distribution_ordinal|**tinyint**|Ordinal (1-based) within a distribution set.<br /><br />0 = Not a distribution column.|1 = This column is used to distribute the table this column belongs to. 0 = This column is not used for distribution.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

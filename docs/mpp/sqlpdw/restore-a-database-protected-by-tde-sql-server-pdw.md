@@ -13,7 +13,7 @@ author: BarbKess
 # Restore a Database Protected by TDE (SQL Server PDW)
 Use the following steps to restore a database that is encrypted by using transparent data encryption.  
   
-The **Using Transparent Data Encryption** section of the topic [Transparent Data Encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/transparent-data-encryption-sql-server-pdw.md) contains example code to enable TDE on the `AdventureWorksPDW2012` database. The following code continues that example, by creating a backup of the database on the original SQL Server PDW, and then restoring the certificate and the database on a new SQL Server PDW.  
+The **Using Transparent Data Encryption** section of the topic [Transparent Data Encryption &#40;SQL Server PDW&#41;](../sqlpdw/transparent-data-encryption-sql-server-pdw.md) contains example code to enable TDE on the `AdventureWorksPDW2012` database. The following code continues that example, by creating a backup of the database on the original SQL Server PDW, and then restoring the certificate and the database on a new SQL Server PDW.  
   
 The first step is to create a backup of the source database.  
   
@@ -53,10 +53,10 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## See Also  
-[BACKUP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-database-sql-server-pdw.md)  
-[CREATE MASTER KEY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-master-key-sql-server-pdw.md)  
-[sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md)  
-[sp_pdw_database_encryption &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sp-pdw-database-encryption-sql-server-pdw.md)  
-[CREATE CERTIFICATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-certificate-sql-server-pdw.md)  
-[RESTORE DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/restore-database-sql-server-pdw.md)  
+[BACKUP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/backup-database-sql-server-pdw.md)  
+[CREATE MASTER KEY &#40;SQL Server PDW&#41;](../sqlpdw/create-master-key-sql-server-pdw.md)  
+[sp_pdw_add_network_credentials &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md)  
+[sp_pdw_database_encryption &#40;SQL Server PDW&#41;](../sqlpdw/sp-pdw-database-encryption-sql-server-pdw.md)  
+[CREATE CERTIFICATE &#40;SQL Server PDW&#41;](../sqlpdw/create-certificate-sql-server-pdw.md)  
+[RESTORE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/restore-database-sql-server-pdw.md)  
   

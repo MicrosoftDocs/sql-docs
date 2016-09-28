@@ -18,7 +18,7 @@ Before troubleshooting, check that Informatica and the SQL Server PDW Informatic
 ## The SQ Property Page  
 Use the following steps to set the value of the SQ property page.  
   
-![Informatica SQ Properties](../../mpp/sqlpdw/media/APS_Informatica_Trblst_SQProp.png "APS_Informatica_Trblst_SQProp")  
+![Informatica SQ Properties](../sqlpdw/media/APS_Informatica_Trblst_SQProp.png "APS_Informatica_Trblst_SQProp")  
   
 1.  Open the Informatica Mapping Designer and connect to the desired repository.  
   
@@ -45,7 +45,7 @@ Use the following steps to set the value of the SQ property page.
 ## Override Query at Session Level  
 Users can create a customized query at mapping level. Use this feature to override those queries.  
   
-![Informatica Query Override page](../../mpp/sqlpdw/media/APS_Informatica_Trblst_Override.png "APS_Informatica_Trblst_Override")  
+![Informatica Query Override page](../sqlpdw/media/APS_Informatica_Trblst_Override.png "APS_Informatica_Trblst_Override")  
   
 1.  Open the Informatica Workflow Manager and connect to the desired repository.  
   
@@ -86,45 +86,45 @@ Before importing, create sample tables as directed in the text file **Table Scri
   
     If you are already in the Informatica PowerCenter Designer, you can access the Repository Manager by clicking on the **R** icon on the toolbar.  
   
-    ![Informatica Sample A](../../mpp/sqlpdw/media/APS_Informatica_Trblst_SampleA.png "APS_Informatica_Trblst_SampleA")  
+    ![Informatica Sample A](../sqlpdw/media/APS_Informatica_Trblst_SampleA.png "APS_Informatica_Trblst_SampleA")  
   
 2.  Click on the folder in which the workflows are to be imported.  
   
 3.  On the **Repository**, click **Import Objects**.  
   
-    ![Informatica Sample B1](../../mpp/sqlpdw/media/APS_Informatica_Trblst_SampleB1.png "APS_Informatica_Trblst_SampleB1")  
+    ![Informatica Sample B1](../sqlpdw/media/APS_Informatica_Trblst_SampleB1.png "APS_Informatica_Trblst_SampleB1")  
   
 4.  Select the XML file installed at **INFA_HOME\client\Microsoft\Sample**, and then click **Next**. You must choose the appropriate file for your version of Informatica. (**INFA861_Sample_Workflows.xml** for INFA861 and **INFA901_Sample_Workflows.xml** for INFA901.)  
   
     Click **Add All**, and then click **Next**.  
   
-    ![Informatica Sample B2](../../mpp/sqlpdw/media/APS_Informatica_Trblst_SampleB2.png "APS_Informatica_Trblst_SampleB2")  
+    ![Informatica Sample B2](../sqlpdw/media/APS_Informatica_Trblst_SampleB2.png "APS_Informatica_Trblst_SampleB2")  
   
 5.  In the **Destination folder** box, select the folder where you want to import workflows, and then click **Next**.  
   
-    ![Informatica Sample B3](../../mpp/sqlpdw/media/APS_Informatica_Trblst_SampleB3.png "APS_Informatica_Trblst_SampleB3")  
+    ![Informatica Sample B3](../sqlpdw/media/APS_Informatica_Trblst_SampleB3.png "APS_Informatica_Trblst_SampleB3")  
   
 6.  In the **Sessions Configurations** area, select **default_session_config**, and then select the **Reuse** checkbox.  
   
-    ![Informatica Sample B4](../../mpp/sqlpdw/media/APS_Informatica_Trblst_SampleB4.png "APS_Informatica_Trblst_SampleB4")  
+    ![Informatica Sample B4](../sqlpdw/media/APS_Informatica_Trblst_SampleB4.png "APS_Informatica_Trblst_SampleB4")  
   
 7.  Click **Close** to return to the import wizard.  
   
 8.  Review the status, and then click **Import** to import the workflows in the selected folder.  
   
-    ![Informatica Sample B5](../../mpp/sqlpdw/media/APS_Informatica_Trblst_SampleB5.png "APS_Informatica_Trblst_SampleB5")  
+    ![Informatica Sample B5](../sqlpdw/media/APS_Informatica_Trblst_SampleB5.png "APS_Informatica_Trblst_SampleB5")  
   
 9. Informatica will import all the sample workflows into the repository. The user should see a final status message as **Completed importing selected objects**.  
   
-    ![Informatica Sample B6](../../mpp/sqlpdw/media/APS_Informatica_Trblst_SampleB6.png "APS_Informatica_Trblst_SampleB6")  
+    ![Informatica Sample B6](../sqlpdw/media/APS_Informatica_Trblst_SampleB6.png "APS_Informatica_Trblst_SampleB6")  
   
 10. After importing, copy the flat file source names **pdw_data.txt** from **INFA_HOME\client\Microsoft\Sample** to the **INFA_HOME\server\infa_shared\SrcFiles** folder.  
   
 11. When this is completed, you can run the imported mappings. You must make sure that connections are properly created and set to the mappings before running them.  
   
 ## See Also  
-[Installing the Informatica Connector &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
-[Using SQL Server PDW tables as Informatica Sources and Targets &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/using-sql-server-pdw-tables-as-informatica-sources-and-targets-sql-server-pdw.md)  
-[Using Informatica to create SQL Server PDW connections in workflow manager &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/using-informatica-to-create-sql-server-pdw-connections-in-workflow-manager-sql-server-pdw.md)  
-[Creating Sessions and Workflows in Informatica &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/creating-sessions-and-workflows-in-informatica-sql-server-pdw.md)  
+[Installing the Informatica Connector &#40;SQL Server PDW&#41;](../sqlpdw/installing-the-informatica-connector-sql-server-pdw.md)  
+[Using SQL Server PDW tables as Informatica Sources and Targets &#40;SQL Server PDW&#41;](../sqlpdw/using-sql-server-pdw-tables-as-informatica-sources-and-targets-sql-server-pdw.md)  
+[Using Informatica to create SQL Server PDW connections in workflow manager &#40;SQL Server PDW&#41;](../sqlpdw/using-informatica-to-create-sql-server-pdw-connections-in-workflow-manager-sql-server-pdw.md)  
+[Creating Sessions and Workflows in Informatica &#40;SQL Server PDW&#41;](../sqlpdw/creating-sessions-and-workflows-in-informatica-sql-server-pdw.md)  
   

@@ -19,7 +19,7 @@ Instant file initialization is a SQL Server feature that allows data file operat
 Instant file initialization is not available when TDE is enabled.  
   
 ## Add Permission for the Backup Account  
-The backup process requires a network credential (Windows user account) that can access the backup storage location. You authorize PDW to use account by using the [sp_pdw_add_network_credentials](../../mpp/sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) procedure. See [BACKUP DATABASE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/backup-database-sql-server-pdw.md) for the entire backup process. To use instant file initialization, the backup account must be granted the `Perform volume maintenance tasks` permission.  
+The backup process requires a network credential (Windows user account) that can access the backup storage location. You authorize PDW to use account by using the [sp_pdw_add_network_credentials](../sqlpdw/sp-pdw-add-network-credentials-sql-server-pdw.md) procedure. See [BACKUP DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/backup-database-sql-server-pdw.md) for the entire backup process. To use instant file initialization, the backup account must be granted the `Perform volume maintenance tasks` permission.  
   
 1.  On the backup server, open the **Local Security Policy** application (`secpol.msc`).  
   
@@ -33,7 +33,7 @@ The backup process requires a network credential (Windows user account) that can
   
 ## To Turn Instant File Initialization On or Off  
   
-1.  Launch the Configuration Manager. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md).  
+1.  Launch the Configuration Manager. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
   
 2.  In the left pane of the Configuration Manager, click **Instant File Initialization**.  
   
@@ -42,11 +42,11 @@ The backup process requires a network credential (Windows user account) that can
     > [!WARNING]  
     > When you turn instant file initialization off, the security consideration discussed above for the feature may still apply to files deleted while instant file initialization was enabled.  
   
-4.  Click **Apply**. The change will propagate through the SQL Server instances on SQL Server PDW the next time the appliance services are restarted. To restart the appliance services now, see [PDW Services Status &#40;Analytics Platform System&#41;](../../mpp/management/pdw-services-status-analytics-platform-system.md).  
+4.  Click **Apply**. The change will propagate through the SQL Server instances on SQL Server PDW the next time the appliance services are restarted. To restart the appliance services now, see [PDW Services Status &#40;Analytics Platform System&#41;](../management/pdw-services-status-analytics-platform-system.md).  
   
 5.  You might want to repeat the steps described above as **Add Permission for the Backup Account** to remove the **Perform volume maintenance tasks** permission.  
   
-![DWConfig Appliance PDW Instant File Initialization](../../mpp/management/media/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
+![DWConfig Appliance PDW Instant File Initialization](../management/media/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
 For more information about instant file initialization, see [Instant File Initialization](http://technet.microsoft.com/en-us/library/ms175935(v=SQL.105).aspx).  
   

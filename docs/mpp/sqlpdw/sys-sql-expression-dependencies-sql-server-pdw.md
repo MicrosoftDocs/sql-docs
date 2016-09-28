@@ -32,6 +32,6 @@ Contains one row for each by-name dependency on a user-defined entity in the cur
 |is_ambiguous|**bit**|1 = Reference is ambiguous.<br /><br />0 = Reference is unambiguous or the entity can be successfully bound when the view is called.<br /><br />Always 0 for schema bound references.|Always 0.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

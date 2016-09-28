@@ -13,7 +13,7 @@ author: BarbKess
 # Aliasing (SQL Server PDW)
 Aliasing allows the temporary substitution of a short and easy-to-remember string in place of a table or column name in SQL Server PDWSQL queries. Table aliases are often used in JOIN queries because the JOIN syntax requires fully qualified object names when referencing columns.  
   
-Aliases must be single words conforming to object naming rules. For more information, see [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md). Aliases cannot contain blank spaces and cannot be enclosed in either single or double quotes.  
+Aliases must be single words conforming to object naming rules. For more information, see [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md). Aliases cannot contain blank spaces and cannot be enclosed in either single or double quotes.  
   
 ## Syntax  
   
@@ -29,7 +29,7 @@ AS
 An optional alias preposition. When working with range variable aliasing, the AS keyword is prohibited.  
   
 *alias*  
-The desired temporary reference name for the table or column. Any valid object name can be used. For more information, see [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md).  
+The desired temporary reference name for the table or column. Any valid object name can be used. For more information, see [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md).  
   
 ## Examples  
 The following example shows a query with multiple joins. Both table and column aliasing are demonstrated in this example.  
@@ -65,8 +65,8 @@ GROUP BY LastName, SalesTerritoryRegion;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md)  
-[INSERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/insert-sql-server-pdw.md)  
-[UPDATE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/update-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md)  
+[INSERT &#40;SQL Server PDW&#41;](../sqlpdw/insert-sql-server-pdw.md)  
+[UPDATE &#40;SQL Server PDW&#41;](../sqlpdw/update-sql-server-pdw.md)  
   

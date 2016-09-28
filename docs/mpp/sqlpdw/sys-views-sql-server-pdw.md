@@ -15,7 +15,7 @@ Contains a row for each view object. The visibility of table objects is limited 
   
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
-|<inherited columns from sys.objects>||See [sys.objects &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-objects-sql-server-pdw.md)||  
+|<inherited columns from sys.objects>||See [sys.objects &#40;SQL Server PDW&#41;](../sqlpdw/sys-objects-sql-server-pdw.md)||  
 |is_replicated|**bit**|1 = View is replicated.|Always 0.|  
 |has_replication_filter|**bit**|1 = View has a replication filter.|Always 0.|  
 |has_opaque_metadata|**bit**|1 = VIEW_METADATA option specified for view.|Always 0.|  
@@ -25,7 +25,7 @@ Contains a row for each view object. The visibility of table objects is limited 
 |is_tracked_by_cdc|**bit**|Information not available.|Always 0.|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
-[sys.all_views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-all-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SQL Server Catalog Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-catalog-views-sql-server-pdw.md)  
+[sys.all_views &#40;SQL Server PDW&#41;](../sqlpdw/sys-all-views-sql-server-pdw.md)  
   

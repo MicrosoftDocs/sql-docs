@@ -23,7 +23,7 @@ To see what permissions have been granted and denied, query the sys.server_permi
   
 -   **REVOKE** removes existing **GRANT** or **DENY** permissions.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -74,7 +74,7 @@ The **ON** clause describes the securable parameter on which to grant, deny, or 
 The class type of the securable. This can be **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, or **USER**. Permissions can also be granted to the **SERVER***class_type*, but **SERVER** is not specified for those permissions. **DATABASE** is not specified when the permission includes the word **DATABASE** (for example **ALTER ANY DATABASE**). When no *class_type* is specified and the permission type is not restricted to the server or database class, the class is assumed to be **OBJECT**.  
   
 *securable*  
-The name of the login, database, table, view, schema, procedure, role, or user on which to grant, deny, or revoke permissions. The object name can be specified with the three-part naming rules that are described in [Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md).  
+The name of the login, database, table, view, schema, procedure, role, or user on which to grant, deny, or revoke permissions. The object name can be specified with the three-part naming rules that are described in [Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md).  
   
 TO *principal* [ **,**...*n* ]  
 One or more principals being granted, denied, or revoked permissions. Principal is the name of a login, database user, or database role.  
@@ -101,11 +101,11 @@ To grant a permission, the grantor must have either the permission itself with t
 Denying or revoking permissions to a principal will not affect requests that have passed authorization and are currently running. To restrict access immediately, you must cancel active requests or kill current sessions.  
   
 > [!NOTE]  
-> Most fixed server roles are not available in this release. Use user-defined database roles instead. Logins cannot be added to the **sysadmin** fixed server role. Granting the **CONTROL SERVER** permission approximates membership in the **sysadmin** fixed server role. For more information, see [Fixed Server Roles &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/fixed-server-roles-sql-server-pdw.md).  
+> Most fixed server roles are not available in this release. Use user-defined database roles instead. Logins cannot be added to the **sysadmin** fixed server role. Granting the **CONTROL SERVER** permission approximates membership in the **sysadmin** fixed server role. For more information, see [Fixed Server Roles &#40;SQL Server PDW&#41;](../sqlpdw/fixed-server-roles-sql-server-pdw.md).  
   
 Some statements require multiple permissions. For example, to create a table requires the **CREATE TABLE** permissions in the database, and the **ALTER SCHEMA** permission for the table that will contain the table.  
   
-For specific examples of setting permissions, see the topic [PDW Permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/pdw-permissions-sql-server-pdw.md) and its subordinate topics.  
+For specific examples of setting permissions, see the topic [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md) and its subordinate topics.  
   
 PDW sometimes executes stored procedures to distribute user actions to the compute nodes. Therefore, the execute permission for an entire database cannot be denied. (For example `DENY EXECUTE ON DATABASE::<name> TO <user>;` will fail.) As a work around, deny the execute permission to user-schemas or specific objects (procedures).  
   
@@ -232,7 +232,7 @@ For a definition of each type of permission, see [Permissions (Database Engine)]
 ### Chart of Permissions  
 All permissions are graphically represented on this poster. This is the easiest way to see nested hierarchy of permissions. For example the **ALTER ON LOGIN** permission can be granted by itself, but it is also included if a login is granted the **CONTROL** permission on that login, or if a login is granted the **ALTER ANY LOGIN** permission.  
   
-![APS security permissions poster](../../mpp/sqlpdw/media/APS_security_perms_poster.png "APS_security_perms_poster")  
+![APS security permissions poster](../sqlpdw/media/APS_security_perms_poster.png "APS_security_perms_poster")  
   
 To download a full size version of this poster, see [SQL Server PDW Permissions](http://go.microsoft.com/fwlink/?LinkId=244249)in the files section of the APS Yammer site (or request by e-mail from **apsdoc@microsoft.com**.  
   
@@ -311,5 +311,5 @@ GRANT UPDATE ON dbo.StatusTable TO [Ted];
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

@@ -26,7 +26,7 @@ Developers use these connection strings to programmatically connect to SQL Serve
 ## <a name="BeforeBegin"></a>Before You Begin  
 **Software Requirements**  
   
--   SQL Server Native Client. For the correct version, see [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
+-   SQL Server Native Client. For the correct version, see [Install SQL Server Native Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sql-server-native-client-sql-server-pdw.md).  
   
 ## <a name="ConnectionString"></a>Connection String Keywords  
 This section lists keywords that can be used with the SQL Server Native Client OLE DB driver to create connection strings for SQL Server PDW. This is a subset of keywords supported when connecting to SQL Server. Also included are additional instructions when keyword behavior with SQL Server PDW differs from SQL Server.  

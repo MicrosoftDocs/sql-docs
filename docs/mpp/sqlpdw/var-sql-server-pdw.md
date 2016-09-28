@@ -13,7 +13,7 @@ author: BarbKess
 # VAR (SQL Server PDW)
 Returns the statistical variance of all values within the specified expression in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -38,10 +38,10 @@ Specifies that each unique value is considered.
 An expression of the exact numeric or approximate numeric data type category, except for the **bit** data type. Aggregate functions, analytic functions, and subqueries are not permitted.  
   
 *partition_by_clause*  
-Divides the result set produced by the [FROM &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/from-sql-server-pdw.md) clause into partitions to which the VAR function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/over-clause-sql-server-pdw.md).  
+Divides the result set produced by the [FROM &#40;SQL Server PDW&#41;](../sqlpdw/from-sql-server-pdw.md) clause into partitions to which the VAR function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;SQL Server PDW&#41;](../sqlpdw/over-clause-sql-server-pdw.md).  
   
 *order_by_clause*  
-Determines the order in which the VAR values are applied to the rows in a partition. An integer cannot represent a column in *order_by_clause*. When the *order_by_clause* is absent, all rows in the same partition are assigned the same value for the VAR() OVER computation. When the *order_by_clause* is present, the VAR() OVER computation gives you a “cumulative var” in the partition. Within a partition, rows with identical values for all elements of the *order_by_clause* will return identical results for the VAR() OVER computation. For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/order-by-sql-server-pdw.md).  
+Determines the order in which the VAR values are applied to the rows in a partition. An integer cannot represent a column in *order_by_clause*. When the *order_by_clause* is absent, all rows in the same partition are assigned the same value for the VAR() OVER computation. When the *order_by_clause* is present, the VAR() OVER computation gives you a “cumulative var” in the partition. Within a partition, rows with identical values for all elements of the *order_by_clause* will return identical results for the VAR() OVER computation. For more information, see [ORDER BY &#40;SQL Server PDW&#41;](../sqlpdw/order-by-sql-server-pdw.md).  
   
 ## Return Types  
 **float**  
@@ -93,6 +93,6 @@ Here is the result set.
 2002  4        154000.0000             1580250000.00</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
   

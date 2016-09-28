@@ -13,7 +13,7 @@ author: BarbKess
 # View Login Members of Each Resource Class (SQL Server PDW)
 Describes how to display the login members of each resource class server role in SQL Server PDW. Use this query to figure out the class of resources allowed for requests submitted by each login.  
   
-For resource class descriptions, see [Workload Management &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/workload-management-sql-server-pdw.md).  
+For resource class descriptions, see [Workload Management &#40;SQL Server PDW&#41;](../sqlpdw/workload-management-sql-server-pdw.md).  
   
 ## View Login Members of Each Resource Class  
 This query displays the membership list for each resource class. There are three resource classes, mediumrc, largerc, and xlargerc.  
@@ -34,5 +34,5 @@ WHERE
   
 If a login is not in this list, its requests will receive the default resources. If a login is a member of more than one resource class, the largest class has precedence.  
   
-The resource allocations are listed in the [Workload Management &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/workload-management-sql-server-pdw.md) topic.  
+The resource allocations are listed in the [Workload Management &#40;SQL Server PDW&#41;](../sqlpdw/workload-management-sql-server-pdw.md) topic.  
   

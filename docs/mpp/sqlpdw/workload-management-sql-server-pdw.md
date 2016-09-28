@@ -49,7 +49,7 @@ On the Compute nodes, the implementation of resource classes uses the Resource G
 ### Understand Current Resource Utilization  
 To understand system resource utilization for the currently running requests, use the SQL Server PDW dynamic management views. For example, you can use DMVs to understand if a slow-running large hash join could benefit by having more memory.  
   
-For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md).  
+For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md).  
   
 ### Adjust Resource Allocations  
 To adjust resource utilization, change the resource class membership of the login that is submitting the request. The resource class server roles are named **mediumrc**, **largerc**, and **xlargerc**. They represent medium, large, and extra large resource allocations respectively.  
@@ -148,17 +148,17 @@ The resource classes govern memory and concurrency allocations.  They do not gov
 ## <a name="Metadata"></a>Metadata  
 DMVs that contain information about resource classes and resource class members.  
   
--   [sys.server_role_members &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-server-role-members-sql-server-pdw.md)  
+-   [sys.server_role_members &#40;SQL Server PDW&#41;](../sqlpdw/sys-server-role-members-sql-server-pdw.md)  
   
--   [sys.server_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-server-principals-sql-server-pdw.md)  
+-   [sys.server_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-server-principals-sql-server-pdw.md)  
   
 DMVs that contain information about the state of requests and the resources they require:  
   
--   [sys.dm_pdw_lock_waits &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-lock-waits-sql-server-pdw.md)  
+-   [sys.dm_pdw_lock_waits &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-lock-waits-sql-server-pdw.md)  
   
--   [sys.dm_pdw_resource_waits &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-resource-waits-sql-server-pdw.md)  
+-   [sys.dm_pdw_resource_waits &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-resource-waits-sql-server-pdw.md)  
   
-Related system views exposed from the SQL Server DMVs on the Compute nodes. See [SQL Server Dynamic Management Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-server-dynamic-management-views-sql-server-pdw.md) for links to these DMVs on MSDN.  
+Related system views exposed from the SQL Server DMVs on the Compute nodes. See [SQL Server Dynamic Management Views &#40;SQL Server PDW&#41;](../sqlpdw/sql-server-dynamic-management-views-sql-server-pdw.md) for links to these DMVs on MSDN.  
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
@@ -183,15 +183,15 @@ Related system views exposed from the SQL Server DMVs on the Compute nodes. See 
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
 ## <a name="RelatedTasks"></a>Related Tasks  
-[View Login Members of Each Resource Class &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/view-login-members-of-each-resource-class-sql-server-pdw.md)  
+[View Login Members of Each Resource Class &#40;SQL Server PDW&#41;](../sqlpdw/view-login-members-of-each-resource-class-sql-server-pdw.md)  
   
-[Change the System Resources Allocated to a Request &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/change-the-system-resources-allocated-to-a-request-sql-server-pdw.md)  
+[Change the System Resources Allocated to a Request &#40;SQL Server PDW&#41;](../sqlpdw/change-the-system-resources-allocated-to-a-request-sql-server-pdw.md)  
   
-[Change a login to the default system resources for its requests](../../mpp/sqlpdw/change-a-login-to-the-default-system-resources-for-its-requests.md)  
+[Change a login to the default system resources for its requests](../sqlpdw/change-a-login-to-the-default-system-resources-for-its-requests.md)  
   
-[Display the Number of Concurrency Slots Needed for a Waiting Request &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/display-the-number-of-concurrency-slots-needed-for-a-waiting-request-sql-server-pdw.md)  
+[Display the Number of Concurrency Slots Needed for a Waiting Request &#40;SQL Server PDW&#41;](../sqlpdw/display-the-number-of-concurrency-slots-needed-for-a-waiting-request-sql-server-pdw.md)  
   
-See the Workload Management section of [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md) for the following tasks:  
+See the Workload Management section of [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md) for the following tasks:  
   
 1.  Find the number of active requests for each resource group.  
   
@@ -202,5 +202,5 @@ See the Workload Management section of [Common Metadata Query Examples &#40;SQL 
 4.  Determine Average CPU time per request in each resource pool to date  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

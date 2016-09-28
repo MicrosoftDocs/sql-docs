@@ -16,10 +16,10 @@ Stores information about all components and devices that exist in the system. Th
 |Column Name|Data Type|Description|Range|  
 |---------------|-------------|---------------|---------|  
 |component_id|**int**|Unique identifier of a component or device.<br /><br />Key for this view.|NOT NULL|  
-|group_id|**Int**|The logical component group to which this component belongs. See [sys.pdw_health_component_groups &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-pdw-health-component-groups-sql-server-pdw.md).|NOT NULL|  
+|group_id|**Int**|The logical component group to which this component belongs. See [sys.pdw_health_component_groups &#40;SQL Server PDW&#41;](../sqlpdw/sys-pdw-health-component-groups-sql-server-pdw.md).|NOT NULL|  
 |component_name|**nvarchar(255)**|Name of the component.|NOT NULL|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[System Views &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/system-views-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[System Views &#40;SQL Server PDW&#41;](../sqlpdw/system-views-sql-server-pdw.md)  
   

@@ -69,5 +69,5 @@ For a full description of each string keyword, connection string creation inform
 |xopenStates|Boolean<br /><br />[“true”&#124;”false”]|false|No|  
   
 ## <a name="DataTypes"></a>Supported Data Types  
-All of the data types that SQL Server PDW supports are also supported when connecting to SQL Server PDW by using the Microsoft JDBC Driver 4.0 for SQL Server. For a list of the supported data types for SQL Server PDW, see [Data Types &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-types-sql-server-pdw.md).  
+All of the data types that SQL Server PDW supports are also supported when connecting to SQL Server PDW by using the Microsoft JDBC Driver 4.0 for SQL Server. For a list of the supported data types for SQL Server PDW, see [Data Types &#40;SQL Server PDW&#41;](../sqlpdw/data-types-sql-server-pdw.md).  
   

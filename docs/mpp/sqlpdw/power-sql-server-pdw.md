@@ -13,7 +13,7 @@ author: BarbKess
 # POWER (SQL Server PDW)
 Returns the exponential value of one expression raised to the power of the second expression in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -23,7 +23,7 @@ POWER (float_expression , y )
   
 ## Arguments  
 *float_expression*  
-An [expression](../../mpp/sqlpdw/expressions-sql-server-pdw.md) of type **float** or of a type that can be implicitly converted to **float**, except for the bit data type.  
+An [expression](../sqlpdw/expressions-sql-server-pdw.md) of type **float** or of a type that can be implicitly converted to **float**, except for the bit data type.  
   
 *y*  
 The power to which to raise *float_expression*. *y* can be an expression of the exact numeric or approximate numeric data type category, except for the **bit** data type.  
@@ -44,8 +44,8 @@ Here is the result set.
 8.0</pre>  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SQUARE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/square-sql-server-pdw.md)  
-[Expressions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/expressions-sql-server-pdw.md)  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SQUARE &#40;SQL Server PDW&#41;](../sqlpdw/square-sql-server-pdw.md)  
+[Expressions &#40;SQL Server PDW&#41;](../sqlpdw/expressions-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
   

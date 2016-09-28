@@ -13,7 +13,7 @@ author: BarbKess
 # ODBC Scalar Functions (SQL Server PDW)
 You can use [ODBC Scalar Functions](http://go.microsoft.com/fwlink/?LinkID=88579) in Transact\-SQL statements. These statements are interpreted by SQL Server. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Usage  
 `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -117,6 +117,6 @@ SELECT {fn WEEK( @date_exp )};
 ```  
   
 ## See Also  
-[Functions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/functions-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Functions &#40;SQL Server PDW&#41;](../sqlpdw/functions-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

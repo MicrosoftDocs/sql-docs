@@ -34,11 +34,11 @@ The **sa** login in SQL Server. **sa** is a member of the **sysadmin** fixed ser
 Both the domain administrator credentials and the system administrator credentials adhere to the password strength policies for each type of credential. When changing the domain administrator credentials, the new password is updated to the domain where needed throughout SQL Server PDW.  
   
 > [!IMPORTANT]  
-> SQL Server PDW does not support the dollar sign character (**$**) in the domain administrator or local administrator passwords. The characters **^ % &** are permitted in passwords, however PowerShell regards these as special characters. If any of these characters are used in passwords for the system administrator or SQL Server**sa** accounts (the **AdminPassword** and **PdwSAPassword** parameters during setup) then setup, including INSTALL, UPGRADE, REPLACENODE, and PATCHING, will fail. To ensure a successful upgrade when current passwords contain unsupported characters, change these passwords so that they do not contain such characters before running upgrade. After upgrade completes, you can set these passwords back to their original values. For more information about password requirements, see [ALTER LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-login-sql-server-pdw.md).  
+> SQL Server PDW does not support the dollar sign character (**$**) in the domain administrator or local administrator passwords. The characters **^ % &** are permitted in passwords, however PowerShell regards these as special characters. If any of these characters are used in passwords for the system administrator or SQL Server**sa** accounts (the **AdminPassword** and **PdwSAPassword** parameters during setup) then setup, including INSTALL, UPGRADE, REPLACENODE, and PATCHING, will fail. To ensure a successful upgrade when current passwords contain unsupported characters, change these passwords so that they do not contain such characters before running upgrade. After upgrade completes, you can set these passwords back to their original values. For more information about password requirements, see [ALTER LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/alter-login-sql-server-pdw.md).  
   
 ## To reset a password  
   
-1.  Connect to the Control node and launch the **Configuration Manager** (**dwconfig.exe**). For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md).  
+1.  Connect to the Control node and launch the **Configuration Manager** (**dwconfig.exe**). For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
   
 2.  In the left pane of the **Configuration Manager**, click **Password Reset**.  
   
@@ -46,9 +46,9 @@ Both the domain administrator credentials and the system administrator credentia
   
     Changes you make to these accounts do not affect any currently active sessions, but will be applied at the next logon attempt for each user.  
   
-    ![SQL Server DWConfig Password](../../mpp/management/media/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![SQL Server DWConfig Password](../management/media/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## See Also  
-[Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode &#40;DSRM&#41; &#40;Analytics Platform System&#41;](../../mpp/management/set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm-analytics-platform-system.md)  
-[Launch the Configuration Manager &#40;Analytics Platform System&#41;](../../mpp/management/launch-the-configuration-manager-analytics-platform-system.md)  
+[Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode &#40;DSRM&#41; &#40;Analytics Platform System&#41;](../management/set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm-analytics-platform-system.md)  
+[Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md)  
   

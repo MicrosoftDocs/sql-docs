@@ -13,7 +13,7 @@ author: BarbKess
 # CREATE LOGIN (SQL Server PDW)
 Creates a login account to access a SQL Server PDW appliance. Use this statement for managing appliance security.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -31,7 +31,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
 ## Arguments  
 *login_name*  
-Specifies the name of the login that is created. SQL Server PDW supports two types of logins: SQL Server logins and Windows logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format `[`*appliance_domain*`\`*<login_name>*`]`. You cannot use a UPN in the format `login_name@DomainName`. SQL Server authentication logins are type **sysname** and must conform to the rules for [Object Naming Rules &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/object-naming-rules-sql-server-pdw.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'.  
+Specifies the name of the login that is created. SQL Server PDW supports two types of logins: SQL Server logins and Windows logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format `[`*appliance_domain*`\`*<login_name>*`]`. You cannot use a UPN in the format `login_name@DomainName`. SQL Server authentication logins are type **sysname** and must conform to the rules for [Object Naming Rules &#40;SQL Server PDW&#41;](../sqlpdw/object-naming-rules-sql-server-pdw.md) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'.  
   
 *password*  
 Applies to SQL Server logins only. The password to use for the initial login. Passwords are case-sensitive. Passwords should always be at least 8 characters long, and cannot exceed 128 characters.  Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*. Additionally, passwords must contain at least three of the following:  
@@ -63,7 +63,7 @@ Specifies that the login be mapped to a Windows login.
 Requires **ALTER ANY LOGIN** permission.  
   
 ## General Remarks  
-Creating a login automatically enables the new login and grants the login **CONNECT SQL** permission to the SQL Server PDW. To connect to a database, create a database user for the login. For more information, see [CREATE USER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-user-sql-server-pdw.md). For more information about granting and denying permissions to logins and users, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  
+Creating a login automatically enables the new login and grants the login **CONNECT SQL** permission to the SQL Server PDW. To connect to a database, create a database user for the login. For more information, see [CREATE USER &#40;SQL Server PDW&#41;](../sqlpdw/create-user-sql-server-pdw.md). For more information about granting and denying permissions to logins and users, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  
   
 If **MUST_CHANGE** is specified, **CHECK_EXPIRATION** and **CHECK_POLICY** must be set to **ON**. Otherwise, the statement will fail.  
   
@@ -131,7 +131,7 @@ GO
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[DROP LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-login-sql-server-pdw.md)  
-[ALTER LOGIN &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-login-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[DROP LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/drop-login-sql-server-pdw.md)  
+[ALTER LOGIN &#40;SQL Server PDW&#41;](../sqlpdw/alter-login-sql-server-pdw.md)  
   

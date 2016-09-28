@@ -16,12 +16,12 @@ This topic explains how to view capacity utilization in the SQL Server PDW appli
 ## To View Capacity Utilization By Using Admin Console  
 To view the space used, open the Admin Console, and click the **Storage** tab. There is a **Storage** tab for both the PDW region and the HDI region.  
   
-![PDW Admin Console Storage](../../mpp/management/media/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![PDW Admin Console Storage](../management/media/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## To View Capacity Utilization By Using Queries  
 To understand if a node is running low on space, the SQL Server PDW health monitoring system already monitors the free space for all volumes within each node.  
   
-If the free space within a volume drops below 30%, SQL Server PDW generates a **warning** alert in [sys.dm_pdw_component_health_active_alerts &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-dm-pdw-component-health-active-alerts-sql-server-pdw.md).  The alert remains until free space is made available.  
+If the free space within a volume drops below 30%, SQL Server PDW generates a **warning** alert in [sys.dm_pdw_component_health_active_alerts &#40;SQL Server PDW&#41;](../sqlpdw/sys-dm-pdw-component-health-active-alerts-sql-server-pdw.md).  The alert remains until free space is made available.  
   
 If the free space within a volume drops under 10%, SQL Server PDW generates a **critical** alert. This is considered critical because queries could fail if they cause the database to expand.  
   
@@ -98,6 +98,6 @@ ORDER BY [db_name], [pdw_node_id];
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Appliance Monitoring &#40;Analytics Platform System&#41;](../../mpp/management/appliance-monitoring-analytics-platform-system.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Appliance Monitoring &#40;Analytics Platform System&#41;](../management/appliance-monitoring-analytics-platform-system.md)  
   

@@ -72,7 +72,7 @@ Requires ALTER permission on the target table, table ownership, membership in on
 |Run TRUNCATE TABLE within a transaction.|yes|no|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[Data Definition Statements &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/data-definition-statements-sql-server-pdw.md)  
-[SQL Reference &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sql-reference-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Data Definition Statements &#40;SQL Server PDW&#41;](../sqlpdw/data-definition-statements-sql-server-pdw.md)  
+[SQL Reference &#40;SQL Server PDW&#41;](../sqlpdw/sql-reference-sql-server-pdw.md)  
   

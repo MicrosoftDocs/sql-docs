@@ -102,7 +102,7 @@ The following table describes the similarities and differences between SQL Serve
 2.  Follow the SQL Server guidance for creating and updating statistics. For example, you might have queries for which multi-column statistics will improve performance. For more information, see [Statistics](http://msdn.microsoft.com/en-us/library/ms190397.aspx) on MSDN. (Note, this article refers to a Database Tuning Advisor, which is not available in SQL Server PDW.)  
   
 ### Updating Statistics  
-SQL Server automatically updates statistics on the Compute nodes as necessary to improve the SQL Server query plan. However, for distributed tables, SQL Server PDW does not automatically update statistics on the Control node. Using the [UPDATE STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/update-statistics-sql-server-pdw.md) statement is the only way to update statistics on the Control node.  
+SQL Server automatically updates statistics on the Compute nodes as necessary to improve the SQL Server query plan. However, for distributed tables, SQL Server PDW does not automatically update statistics on the Control node. Using the [UPDATE STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/update-statistics-sql-server-pdw.md) statement is the only way to update statistics on the Control node.  
   
 1.  Update statistics after loads or when significant changes have occurred.  
   
@@ -116,10 +116,10 @@ SQL Server automatically updates statistics on the Compute nodes as necessary to
   
 |Statistics Task|Description|  
 |-------------------|---------------|  
-|Create statistics.|[CREATE STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-statistics-sql-server-pdw.md)|  
-|Update statistics.|[UPDATE STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/update-statistics-sql-server-pdw.md)|  
-|Drop statistics.|[DROP STATISTICS &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/drop-statistics-sql-server-pdw.md)|  
+|Create statistics.|[CREATE STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/create-statistics-sql-server-pdw.md)|  
+|Update statistics.|[UPDATE STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/update-statistics-sql-server-pdw.md)|  
+|Drop statistics.|[DROP STATISTICS &#40;SQL Server PDW&#41;](../sqlpdw/drop-statistics-sql-server-pdw.md)|  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

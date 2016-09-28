@@ -13,7 +13,7 @@ author: BarbKess
 # DROP USER (SQL Server PDW)
 Removes a user from the current SQL Server PDW database.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -46,8 +46,8 @@ GO
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[ALTER USER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/alter-user-sql-server-pdw.md)  
-[CREATE USER &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-user-sql-server-pdw.md)  
-[sys.database_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-database-principals-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[ALTER USER &#40;SQL Server PDW&#41;](../sqlpdw/alter-user-sql-server-pdw.md)  
+[CREATE USER &#40;SQL Server PDW&#41;](../sqlpdw/create-user-sql-server-pdw.md)  
+[sys.database_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-database-principals-sql-server-pdw.md)  
   

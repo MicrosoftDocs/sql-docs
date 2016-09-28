@@ -13,7 +13,7 @@ author: BarbKess
 # Power the APS Appliance On or Off (Analytics Platform System)
 This topic describes how to power on or power off your Analytics Platform Systemappliance that is running Parallel Data Warehouse, and optionally running an HDInsight region. Use this topic when a Analytics Platform System appliance is moved, or to power on an appliance after a catastrophic power failure.  
   
-Powering the appliance on and off is not the same as starting and stopping the appliance services. For information on that subject, see [PDW Services Status &#40;Analytics Platform System&#41;](../../mpp/management/pdw-services-status-analytics-platform-system.md). For information about powering on or off a SQL Server 2008 Parallel Data Warehouse, see the SQL Server 2008 Parallel Data Warehouse help file. For information about powering on or off a SQL Server 2012 AU1 or AU2 Parallel Data Warehouse, see the help file for those versions.  
+Powering the appliance on and off is not the same as starting and stopping the appliance services. For information on that subject, see [PDW Services Status &#40;Analytics Platform System&#41;](../management/pdw-services-status-analytics-platform-system.md). For information about powering on or off a SQL Server 2008 Parallel Data Warehouse, see the SQL Server 2008 Parallel Data Warehouse help file. For information about powering on or off a SQL Server 2012 AU1 or AU2 Parallel Data Warehouse, see the help file for those versions.  
   
 When these instructions specify connecting to a SQL Server PDW node, the connection can be local using attached devices (KVM) or remote using Remote Desktop. Some actions must be physical (turning on a power switch), and some (such as shut down) can be physical or by using Windows commands.  
   
@@ -129,8 +129,8 @@ Before powering off the appliance, you should end all activity on the appliance.
 13. If the appliance has an HDInsight region, in the HDInsight Topology menu, click the **Services Status** tab, and click **Start Region** to start the HDInsight services.  
   
 ### To verify the appliance health  
-After the appliance has started, open the **Admin Console** and check the Health page for alerts that might indicate failure conditions. For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../../mpp/management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md).  
+After the appliance has started, open the **Admin Console** and check the Health page for alerts that might indicate failure conditions. For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md).  
   
 ## See Also  
-[Appliance Management Tasks &#40;Analytics Platform System&#41;](../../mpp/management/appliance-management-tasks-analytics-platform-system.md)  
+[Appliance Management Tasks &#40;Analytics Platform System&#41;](../management/appliance-management-tasks-analytics-platform-system.md)  
   

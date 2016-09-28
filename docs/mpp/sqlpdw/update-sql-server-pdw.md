@@ -13,7 +13,7 @@ author: BarbKess
 # UPDATE (SQL Server PDW)
 Changes existing data in a SQL Server PDW table.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -37,7 +37,7 @@ The schema of the table or view.
 The name of the table to update.  
   
 *from_clause*  
-Specifies a source table or view for the update. For more information, see [FROM &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/from-sql-server-pdw.md).  
+Specifies a source table or view for the update. For more information, see [FROM &#40;SQL Server PDW&#41;](../sqlpdw/from-sql-server-pdw.md).  
   
 *column_name*  
 A column that contains the data to be changed. *column_name* must exist in *table_name*.  
@@ -46,15 +46,15 @@ A column that contains the data to be changed. *column_name* must exist in *tabl
 A literal value, expression, or a subselect statement (enclosed within parentheses) that returns a single value. The value returned by *expression* replaces the existing value in *column_name*.  
   
 *search_condition*  
-Specifies the condition to be met for the rows to be updated. The search condition cannot contain a join. There is no limit to the number of predicates that can be included in a search condition. For more information about predicates and search conditions, see [Search Condition &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/search-condition-sql-server-pdw.md).  
+Specifies the condition to be met for the rows to be updated. The search condition cannot contain a join. There is no limit to the number of predicates that can be included in a search condition. For more information about predicates and search conditions, see [Search Condition &#40;SQL Server PDW&#41;](../sqlpdw/search-condition-sql-server-pdw.md).  
   
 *label_name*  
-A user-provided label name for the query, where *label_name* is a character string constant enclosed in single quotes. Labels identify queries in the query cache. For more information, see [Constants &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/constants-sql-server-pdw.md). The string literal can be a Unicode or non-Unicode string literal. For Unicode string literals, use of N prefix is allowed: (N’unicode_string’).  
+A user-provided label name for the query, where *label_name* is a character string constant enclosed in single quotes. Labels identify queries in the query cache. For more information, see [Constants &#40;SQL Server PDW&#41;](../sqlpdw/constants-sql-server-pdw.md). The string literal can be a Unicode or non-Unicode string literal. For Unicode string literals, use of N prefix is allowed: (N’unicode_string’).  
   
 ## General Remarks  
 If an update to a row violates a constraint for the column, or if the new value is an incompatible data type, the statement is canceled, an error is returned, and no records are updated.  
   
-The UPDATE statement cannot be used to modify the Distribution Key on a distributed table. See [CREATE TABLE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/create-table-sql-server-pdw.md) for information on Distribution Keys.  
+The UPDATE statement cannot be used to modify the Distribution Key on a distributed table. See [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md) for information on Distribution Keys.  
   
 When an UPDATE statement encounters an arithmetic error (overflow, divide by zero, or a domain error) during expression evaluation, the update is not performed. The rest of the batch is not run, and an error message is returned.  
   
@@ -62,12 +62,12 @@ For distributed tables, SQL Server PDW performs updates in parallel across the C
   
 All **char** and **nchar** columns are right-padded to the defined length.  
   
-The TOP clause cannot be used with the UPDATE statement.  For more information, see [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md)  
+The TOP clause cannot be used with the UPDATE statement.  For more information, see [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md)  
   
 ## Limitations and Restrictions  
-UPDATE statements cannot contain the TOP clause.  For more information, see [TOP &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/top-sql-server-pdw.md).  
+UPDATE statements cannot contain the TOP clause.  For more information, see [TOP &#40;SQL Server PDW&#41;](../sqlpdw/top-sql-server-pdw.md).  
   
-[SET ROWCOUNT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement.  
+[SET ROWCOUNT &#40;SQL Server PDW&#41;](../sqlpdw/set-rowcount-sql-server-pdw.md) has no effect on this statement.  
   
 UPDATE statements cannot contain a FROM clause and a subquery. For example, the following statement is not allowed:  
   
@@ -170,8 +170,8 @@ SELECT * FROM YearlyTotalSales;
 ```  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SELECT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/select-sql-server-pdw.md)  
-[INSERT &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/insert-sql-server-pdw.md)  
-[DELETE &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/delete-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[SELECT &#40;SQL Server PDW&#41;](../sqlpdw/select-sql-server-pdw.md)  
+[INSERT &#40;SQL Server PDW&#41;](../sqlpdw/insert-sql-server-pdw.md)  
+[DELETE &#40;SQL Server PDW&#41;](../sqlpdw/delete-sql-server-pdw.md)  
   

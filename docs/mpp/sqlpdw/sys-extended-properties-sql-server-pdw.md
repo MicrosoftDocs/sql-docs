@@ -16,5 +16,5 @@ Returns a row for each extended property in the current SQL Server PDW database.
 For more information about this view, see the [sys.extended_properties (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms177541(v=sql11)) documentation on MSDN.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
   

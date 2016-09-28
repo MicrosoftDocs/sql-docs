@@ -13,7 +13,7 @@ author: BarbKess
 # SUSER_SNAME (SQL Server PDW)
 Returns the current login name or the login name associated with a security identification number (SID). For more information, see the [SUSER_SNAME (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms174427.aspx) documentation on MSDN. All features in the MSDN documentation may not be available in SQL Server PDW.  
   
-![Topic link icon](../../mpp/sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -52,6 +52,6 @@ GO
 ```  
   
 ## See Also  
-[sys.server_principals &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-server-principals-sql-server-pdw.md)  
-[sys.server_permissions &#40;SQL Server PDW&#41;](../../mpp/sqlpdw/sys-server-permissions-sql-server-pdw.md)  
+[sys.server_principals &#40;SQL Server PDW&#41;](../sqlpdw/sys-server-principals-sql-server-pdw.md)  
+[sys.server_permissions &#40;SQL Server PDW&#41;](../sqlpdw/sys-server-permissions-sql-server-pdw.md)  
   

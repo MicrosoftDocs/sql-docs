@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # [Product Documentation (Analytics Platform System)](.//product-documentation-analytics-platform-system.md)
 # [How to Use This Documentation (Analytics Platform System)](.//how-to-use-this-documentation-analytics-platform-system.md)
 # [Known Issues (Analytics Platform System)](about/known-issues-analytics-platform-system.md)
@@ -667,6 +666,4 @@
 # [Install SQL Server Native Client (SQL Server PDW)](sqlpdw/install-sql-server-native-client-sql-server-pdw.md)
 # [Data Types (SQL Server PDW)](sqlpdw/data-types-sql-server-pdw.md)
 # [Index](index.md)
-=======
-# [Index](index.md)
->>>>>>> 211cd950393204d11e10d29ddb3df60970a916d3
+

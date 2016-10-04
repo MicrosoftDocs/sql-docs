@@ -31,7 +31,7 @@ The minimum configuration for a DELL appliance has 3 Compute nodes. You can add 
 ### First Rack Configurations - HPE  
 The minimum configuration for an HPE appliance has 2 Compute nodes. You can add up to 3 Data Scale units to the first rack for a total of 8 Compute nodes.  
   
-![HPE first rack configurations for HPE](media/first-rack-configurations-HPE.png "HPE first rack configurations")  
+![HPE first rack configurations for HPE](media/first-rack-configurations-hpe.png "HPE first rack configurations")  
   
 ## <a name="section2"></a>PDWMulti-rack configurations  
 You add capacity to PDW by adding Data Scale Units, along with additional Rack & Network components as necessary to provide the proper power, networking, and rack infrastructure. Each additional Rack & Network requires a passive host.  

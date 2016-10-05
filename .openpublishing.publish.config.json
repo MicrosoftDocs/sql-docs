@@ -16,6 +16,19 @@
         "RestApi": "Content"
       },
       "template_folder": "_themes.MSDN.Modern"
+    },
+    {
+      "docset_name": "aps",
+      "build_source_folder": "aps",
+      "build_output_subfolder": "sql/aps",
+      "locale": "en-us",
+      "version": 0,
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      }
     }
   ],
   "notification_subscribers": [],

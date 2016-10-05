@@ -144,5 +144,5 @@ Operations on the loading server can use a UNC path to pull data from outside th
 - On the loading server, set the following group policy option in Security Settings\Local Policies\Security Options:  Microsoft network client: Digitally sign communications (always): Enabled.  
   
 ## See Also  
-[Backup and restore](../manage/backup-and-restore-overview.md)  
+[Backup and restore](../backup-and-restore/backup-and-restore-overview.md)  
   

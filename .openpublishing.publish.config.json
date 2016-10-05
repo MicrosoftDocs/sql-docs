@@ -17,11 +17,27 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes.MSDN.Modern"
+    },
+    {
+      "docset_name": "analytics-platform-system",
+      "build_source_folder": "docs/analytics-platform-system",
+      "build_output_subfolder": "sql/analytics-platform-system",
+      "locale": "en-us",
+      "version": 0,
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes.MSDN.Modern"
     }
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes.MSDN.Modern",

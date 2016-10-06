@@ -19,7 +19,7 @@ Describes how Analytics Platform System (APS) is architected for high availabili
 ## Network  
 For network availability, the APS appliance has two InfiniBand networks. If one of the InfiniBand networks goes down, the other one is still available. Also, Active Directory has replicated domain controllers to resolve incoming requests to the correct InfiniBand network.  
   
-For more information, see [Configure InfiniBand network adapters](../backup-and-loading-hardware/configure-infiniband-network-adapters.md).  
+For more information, see [Configure InfiniBand network adapters](configure-infiniband-network-adapters.md).  
   
 ## Storage  
 To keep data safe, APS uses RAID 1 mirroring to maintain two copies of all user data. When a disk fails, the hardware system rebuilds the data onto a spare disk and sets an alert that there is a disk failure.  

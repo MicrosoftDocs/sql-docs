@@ -93,7 +93,7 @@ PDW will access the backup server through a UNC file share. To set up the file s
   
     -   [sp_pdw_add_network_credentials](https://msdn.microsoft.com/library/mt204011.aspx)  
   
-    -   [sp_pdw_remove_network_credentials](https://msdn.microsoft.com/en-us/library/mt204038.aspx)  
+    -   [sp_pdw_remove_network_credentials](https://msdn.microsoft.com/library/mt204038.aspx)  
   
 ## <a name="Step5"></a>Step 5: Start backing up your data  
 You are now ready to start backing up data to your backup server.  
@@ -144,5 +144,5 @@ Operations on the loading server can use a UNC path to pull data from outside th
 - On the loading server, set the following group policy option in Security Settings\Local Policies\Security Options:  Microsoft network client: Digitally sign communications (always): Enabled.  
   
 ## See Also  
-[Backup and restore](../backup-and-restore/backup-and-restore-overview.md)  
+[Backup and restore](backup-and-restore-overview.md)  
   

@@ -24,6 +24,6 @@ To backup a PDW database, you need one or more backup servers. You can use your 
 To load data, you need one or more loading servers. You can use your own existing ETL or other servers, or you can purchase new servers. For more information, see [Acquire and configure a loading server](media/acquire-and-configure-loading-server.md). These instructions include a [Loading server capacity planning worksheet](loading-server-capacity-planning-worksheet.md) to help you plan the right solution for loading.  
   
 ## See Also  
-[Backup and restore overview](../backup-and-restore/backup-and-restore-overview.md)  
-[Load overview](../load/load-overview.md)  
+[Backup and restore overview](backup-and-restore-overview.md)  
+[Load overview](load-overview.md)  
   

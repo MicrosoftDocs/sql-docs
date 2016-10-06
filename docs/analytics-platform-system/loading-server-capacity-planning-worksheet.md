@@ -36,5 +36,5 @@ Print this worksheet and fill it in with your own requirements.
   
 ## See Also  
 [Acquire and configure a loading server](acquire-and-configure-loading-server.md)  
-[dwloader Command-Line Loader](tools/dwloader.md)  
+[dwloader Command-Line Loader](dwloader.md)  
   

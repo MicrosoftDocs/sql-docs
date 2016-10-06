@@ -18,13 +18,13 @@ A PDW *database backup* is a copy of an appliance database, stored in a format s
   
 A PDW database backup is created with the [BACKUP DATABASE](https://msdn.microsoft.com/library/mt631607.aspx) t-sql statement and formatted for use with the [RESTORE DATABASE](https://msdn.microsoft.com/library/mt631612.aspx) statement; it is unusable for any other purpose. The backup can only be restored to an appliance with the same number or a greater number of Compute nodes.  
   
-The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-the-master-database.md) page of the Configuration Manager tool.  
+The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
   
 PDW uses SQL Server backup technology to backup and restore appliance databases. SQL Server backup options are preconfigured to use backup compression. You cannot set backup options such as compression, checksum, block size, and buffer count.  
   
 Database backups are stored on one or more backup servers, which exist in your own customer network.  PDW writes a user database backup in parallel directly from the Compute nodes to one backup server and restores a user database backup in parallel directly from the backup server to the Compute nodes.  
   
-Backups are stored on the backup server as a set of files in the Windows file system. A PDW database backup can only be restored to PDW. However, you can archive database backups from the backup server to another location by using standard Windows file backup processes. For more information about backup servers, see [Acquire and configure a backup server](../sqlpdwacquire-and-configure-backup.md).  
+Backups are stored on the backup server as a set of files in the Windows file system. A PDW database backup can only be restored to PDW. However, you can archive database backups from the backup server to another location by using standard Windows file backup processes. For more information about backup servers, see [Acquire and configure a backup server](acquire-and-configure-backup-server.md).  
   
 ## <a name="BackupTypes"></a>Database backup types  
 There are two types of data that require a backup: user databases and system databases (e.g., the master database). PDW does not backup the transaction log.  
@@ -82,7 +82,7 @@ An appliance restore is a restore of the entire appliance. This includes restori
 ## <a name="RestoreProc"></a>Restore Process  
 The following diagram shows the flow of data during a database restore.  
   
-![Restore process](media/restore-process.png "SQL_Server_PDW_Restore_Process")  
+![Restore process](media/restore-process.png "Restore process")  
   
 ## Restoring to an Appliance with the Same Number of Compute Nodes**  
   
@@ -119,7 +119,7 @@ After the redistribution each Compute node will contain less actual data and mor
 |Backup and Restore Task|Description|  
 |---------------------------|---------------|  
 |Prepare a server as a backup server.|[Acquire and configure a backup server ](acquire-and-configure-backup-server.md)|  
-|Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan-sql-server-pdw.md)|  
+|Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|  
 |Backup a database.|[BACKUP DATABASE](https://msdn.microsoft.com/library/mt631607.aspx)|  
 |Restore a database.|[RESTORE DATABASE](https://msdn.microsoft.com/library/mt631612.aspx)|  
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.|  

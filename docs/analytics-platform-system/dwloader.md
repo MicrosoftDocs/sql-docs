@@ -39,7 +39,7 @@ author: BarbKess
   
     You can check the failed rows file (specified with -R) to see if any rows failed to load. If this file is empty, all rows loaded successfully. **dwloader** is transactional, so if any step fails (other than rejected rows), all steps will roll back to their initial state.  
   
-![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions &#40;SQL Server PDW&#41;](../sqlpdw/syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions](syntax-conventions-sql-server-pdw.md)  
   
 ## Syntax  
   
@@ -113,7 +113,7 @@ A valid SQL Server Authentication login with appropriate permissions to perform 
 The password for a SQL Server Authentication *login_name*.  
   
 **-W**  
-Use Windows Authentication. (No *login_name* or *password* required.) For information about configuring Windows Authentication, see [Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../sqlpdw/security-configure-domain-trusts-sql-server-pdw.md).  
+Use Windows Authentication. (No *login_name* or *password* required.) For information about configuring Windows Authentication, see [Security - Configure Domain Trusts](security-configure-domain-trusts.md).  
   
 **-f** *parameter_file_name*  
 Use a parameter file, *parameter_file_name*, in place of command-line parameters. *parameter_file_name* can contain any command-line parameter except *user_name* and *password*. If a parameter is specified on the command line and in the parameter file, the command line overrides the file parameter.  
@@ -129,11 +129,11 @@ Examples:
 **-S***target_appliance*  
 Specifies the SQL Server PDW appliance that will receive the loaded data.  
   
-*For Infiniband connections*, *target_appliance* is specified as <appliance-name>-SQLCTL01. To configure this named connection, see [Configure InfiniBand Network Adapters &#40;SQL Server PDW&#41;](../sqlpdw/configure-infiniband-network-adapters-sql-server-pdw.md).  
+*For Infiniband connections*, *target_appliance* is specified as <appliance-name>-SQLCTL01. To configure this named connection, see [Configure InfiniBand Network Adapters](configure-infiniband-network-adapters.md).  
   
 For Ethernet connections, *target_appliance* is the IP address for the Control node cluster.  
   
-If omitted, dwloader defaults to the value that was specified when dwloader was installed. For more information about this install option, see [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md).  
+If omitted, dwloader defaults to the value that was specified when dwloader was installed. For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
   
 **-T** *target_database_name.*[*schema*].*table_name*  
 The three-part name for the destination table.  
@@ -286,7 +286,7 @@ Example lines in *source_data_file_name*:
   
 In the previous example, the first loaded row will have SalesCode='230' and SalesID='Shirts0056'. The second loaded row will have SalesCode='320' and SaleID='Towels1356'.  
   
-For information on how to handle leading and trailing spaces or data type conversion in fixed width mode, see [Data Type Conversion Rules for dwloader &#40;SQL Server PDW&#41;](../sqlpdw/data-type-conversion-rules-for-dwloader-sql-server-pdw.md).  
+For information on how to handle leading and trailing spaces or data type conversion in fixed width mode, see [Data Type Conversion Rules for dwloader](data-type-conversion-rules-for-dwloader.md).  
   
 **-e** *character_encoding*  
 Specifies a character-encoding type for the data to be loaded from the data file. Options are ASCII (default), UTF8, UTF16, or UTF16BE, where UTF16 is little endian and UTF16BE is big endian. These options are case insensitive.  
@@ -351,7 +351,7 @@ Input file examples for March 04, 2010: 04-2010-03, 4/2010/3
   
 For example, if you specify –D MM/dd/yyyy, dwloader expects all date input to be ordered with month first, then day, and then year (mdy). It does not enforce 2 character months, 2 digit days, and 4 digit years as specified by the custom date format. Here are some examples of ways dates can be formatted in the input file when the date format is –D MM/dd/yyyy: 01/02/2013, Jan.02.2013, 1/2/2013  
   
-For more comprehensive formatting information, see [Data Type Conversion Rules for dwloader &#40;SQL Server PDW&#41;](../sqlpdw/data-type-conversion-rules-for-dwloader-sql-server-pdw.md).  
+For more comprehensive formatting information, see [Data Type Conversion Rules for dwloader](data-type-conversion-rules-for-dwloader.md).  
   
 **-dt** *datetime_format_file*  
 Each datetime format is specified in a file named *datetime_format_file*. Unlike the command-line parameters, file parameters that include spaces must not be enclosed in double quotes. You cannot alter the datetime format as you load data. The source data file and its corresponding column in the destination table must have the same format.  
@@ -365,7 +365,7 @@ Examples:
 `ModifiedDate=dym`  
   
 **-d** *staging_database_name*  
-The database name that will contain the staging table. The default is the database specified with the -T option, which is the database for the destination table. For more information about using a staging database, see [Create the Staging Database &#40;SQL Server PDW&#41;](../sqlpdw/create-the-staging-database-sql-server-pdw.md).  
+The database name that will contain the staging table. The default is the database specified with the -T option, which is the database for the destination table. For more information about using a staging database, see [Create the Staging Database](create-staging-database.md).  
   
 **-M** *load_mode_option*  
 Specifies whether to append, upsert, or reload data. The default mode is append.  
@@ -477,10 +477,10 @@ if %errorlevel%==0 echo Success
 When using PowerShell, use `$LastExitCode`.  
   
 ## Permissions  
-Requires LOAD permission and applicable permissions (INSERT, UPDATE, DELETE) on the destination table. Requires CREATE permission (for creating a temporary table) on the staging database. If a staging database is not used, then CREATE permission is required on the destination database. For more information, see [Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md).  
+Requires LOAD permission and applicable permissions (INSERT, UPDATE, DELETE) on the destination table. Requires CREATE permission (for creating a temporary table) on the staging database. If a staging database is not used, then CREATE permission is required on the destination database. For more information, see [Grant permissions to load data](grant-permissions-to-load-data.md).  
   
 ## General Remarks  
-For information on data type conversions when loading with dwloader, see [Data Type Conversion Rules for dwloader &#40;SQL Server PDW&#41;](../sqlpdw/data-type-conversion-rules-for-dwloader-sql-server-pdw.md).  
+For information on data type conversions when loading with dwloader, see [Data type conversion rules for dwloader](data-type-conversion-rules-for-dwloader.md).  
   
 If a parameter includes one or more spaces, enclose the parameter with double quotes.  
   
@@ -488,14 +488,14 @@ You should run the Loader from its installed location. The dwloader executable i
   
 You can override a parameter that is specified in the parameter file (-f option) by specifying it as a command-line parameter.  
   
-You can run multiple instances of the Loader simultaneously. The maximum number of Loader instances is pre-configured and cannot be changed. For the maximum number of loads per appliance, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md)  
+You can run multiple instances of the Loader simultaneously. The maximum number of Loader instances is pre-configured and cannot be changed. For the maximum number of loads per appliance, see [Minimum and Maximum Values](minimum-maximum-values.md)  
   
 Loaded data might require more or less space on the appliance than in the source location. You can perform test imports with subsets of data to estimate disk consumption.  
   
 Although **dwloader** is a transaction process and will roll back gracefully on failure, it cannot be rolled back once the bulk load has been completed successfully. To cancel an active **dwloader** process, type CTRL+C.  
   
 ## Limitations and Restrictions  
-The total size of all loads occurring concurrently must be smaller than LOG_SIZE for the database, and we recommend the total size of all concurrent loads is less than 50% of the LOG_SIZE. To achieve this size limitation, you can split large loads  into multiple batches. For more information on LOG_SIZE, see [CREATE DATABASE &#40;SQL Server PDW&#41;](../sqlpdw/create-database-sql-server-pdw.md)  
+The total size of all loads occurring concurrently must be smaller than LOG_SIZE for the database, and we recommend the total size of all concurrent loads is less than 50% of the LOG_SIZE. To achieve this size limitation, you can split large loads  into multiple batches. For more information on LOG_SIZE, see [CREATE DATABASE](https://msdn.microsoft.com/library/mt631608.aspx)  
   
 When loading multiple files with one load command, all rejected rows are written to the same reject file. The reject file does not show which input file contains each rejected row.  
   
@@ -565,7 +565,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### B. Load Data into an AdventureWorks Table  
-The following example is part of a batch script that loads data into **AdventureWorksPDW2012**.  To view the full script, open the aw_create.bat file that ships with the **AdventureWorksPDW2012** installation package. For more information, see [Install AdventureWorksPDW2012 &#40;SQL Server PDW&#41;](../sqlpdw/install-adventureworkspdw2012-sql-server-pdw.md).  
+The following example is part of a batch script that loads data into **AdventureWorksPDW2012**.  To view the full script, open the aw_create.bat file that ships with the **AdventureWorksPDW2012** installation package. For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
   
 The following script snippet uses dwloader to load data into the DimAccount and DimCurrency tables. This script is using an Ethernet address. If it was using InfiniBand, server would be *<appliance_name>*`-SQLCTL01`.  
   
@@ -661,5 +661,5 @@ Description of the command-line parameters:
 -   *-U <login_name> -P <password>* specifies the login and password for the login that has permissions to perform the load.  
   
 ## See Also  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+[Common Metadata Query Examples](common-metadata-query-examples.md)  
   

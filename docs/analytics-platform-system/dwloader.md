@@ -1,5 +1,5 @@
 ---
-title: "dwloader Command-Line Loader (SQL Server PDW)"
+title: "dwloader Command-Line Loader for Parallel Data Warehouse"
 ms.custom: na
 ms.date: 07/27/2016
 ms.reviewer: na
@@ -10,8 +10,8 @@ ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: 90
 author: BarbKess
 ---
-# dwloader Command-Line Loader (SQL Server PDW)
-**dwloader** is a SQL Server PDW command-line tool that loads table rows in bulk into an existing table. When loading rows, you can add all rows to the end of the table (*append mode* or *fastappend mode*), append new rows and update existing rows (*upsert mode*), or delete all existing rows before loading and then insert all rows into an empty table (*reload mode*).  
+# dwloader Command-Line Loader
+**dwloader** is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table. When loading rows, you can add all rows to the end of the table (*append mode* or *fastappend mode*), append new rows and update existing rows (*upsert mode*), or delete all existing rows before loading and then insert all rows into an empty table (*reload mode*).  
   
 **Process for loading data**  
   
@@ -39,8 +39,11 @@ author: BarbKess
   
     You can check the failed rows file (specified with -R) to see if any rows failed to load. If this file is empty, all rows loaded successfully. **dwloader** is transactional, so if any step fails (other than rejected rows), all steps will roll back to their initial state.  
   
+<!-- 
 ![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions](syntax-conventions-sql-server-pdw.md)  
-  
+-->  
+
+
 ## Syntax  
   
 ```  
@@ -286,7 +289,7 @@ Example lines in *source_data_file_name*:
   
 In the previous example, the first loaded row will have SalesCode='230' and SalesID='Shirts0056'. The second loaded row will have SalesCode='320' and SaleID='Towels1356'.  
   
-For information on how to handle leading and trailing spaces or data type conversion in fixed width mode, see [Data Type Conversion Rules for dwloader](data-type-conversion-rules-for-dwloader.md).  
+For information on how to handle leading and trailing spaces or data type conversion in fixed width mode, see [Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md).  
   
 **-e** *character_encoding*  
 Specifies a character-encoding type for the data to be loaded from the data file. Options are ASCII (default), UTF8, UTF16, or UTF16BE, where UTF16 is little endian and UTF16BE is big endian. These options are case insensitive.  
@@ -351,7 +354,7 @@ Input file examples for March 04, 2010: 04-2010-03, 4/2010/3
   
 For example, if you specify –D MM/dd/yyyy, dwloader expects all date input to be ordered with month first, then day, and then year (mdy). It does not enforce 2 character months, 2 digit days, and 4 digit years as specified by the custom date format. Here are some examples of ways dates can be formatted in the input file when the date format is –D MM/dd/yyyy: 01/02/2013, Jan.02.2013, 1/2/2013  
   
-For more comprehensive formatting information, see [Data Type Conversion Rules for dwloader](data-type-conversion-rules-for-dwloader.md).  
+For more comprehensive formatting information, see [Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md).  
   
 **-dt** *datetime_format_file*  
 Each datetime format is specified in a file named *datetime_format_file*. Unlike the command-line parameters, file parameters that include spaces must not be enclosed in double quotes. You cannot alter the datetime format as you load data. The source data file and its corresponding column in the destination table must have the same format.  
@@ -365,7 +368,7 @@ Examples:
 `ModifiedDate=dym`  
   
 **-d** *staging_database_name*  
-The database name that will contain the staging table. The default is the database specified with the -T option, which is the database for the destination table. For more information about using a staging database, see [Create the Staging Database](create-staging-database.md).  
+The database name that will contain the staging table. The default is the database specified with the -T option, which is the database for the destination table. For more information about using a staging database, see [Create the Staging Database](staging-database.md).  
   
 **-M** *load_mode_option*  
 Specifies whether to append, upsert, or reload data. The default mode is append.  
@@ -480,7 +483,7 @@ When using PowerShell, use `$LastExitCode`.
 Requires LOAD permission and applicable permissions (INSERT, UPDATE, DELETE) on the destination table. Requires CREATE permission (for creating a temporary table) on the staging database. If a staging database is not used, then CREATE permission is required on the destination database. For more information, see [Grant permissions to load data](grant-permissions-to-load-data.md).  
   
 ## General Remarks  
-For information on data type conversions when loading with dwloader, see [Data type conversion rules for dwloader](data-type-conversion-rules-for-dwloader.md).  
+For information on data type conversions when loading with dwloader, see [Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md).  
   
 If a parameter includes one or more spaces, enclose the parameter with double quotes.  
   
@@ -661,5 +664,5 @@ Description of the command-line parameters:
 -   *-U <login_name> -P <password>* specifies the login and password for the login that has permissions to perform the load.  
   
 ## See Also  
-[Common Metadata Query Examples](common-metadata-query-examples.md)  
+[Common Metadata Query Examples](metadata-query-examples.md)  
   

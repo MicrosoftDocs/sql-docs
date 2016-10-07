@@ -1,7 +1,7 @@
 ---
 title: "Create the staging Database for Parallel Data Warehouse"
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

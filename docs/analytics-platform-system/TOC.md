@@ -13,4 +13,7 @@
 ## Client tools
 ### [dwloader command-line loading tool](dwloader.exe)
 ## [Backup and restore](backup-and-restore-overview.md)
-### 
+## [Load]
+### [Overview](load-overview.md)
+### [Create staging database](staging-database.md)
+ 

@@ -12,13 +12,11 @@ author: BarbKess
 ---
 # Load (SQL Server PDW)
 You can load or insert data into SQL Server Parallel Data Warehouse (PDW) by using Integration Services, [bcp Utility](https://msdn.microsoft.com/library/ms162802.aspx), **dwloader** command-line tool, or the SQL INSERT statement.  
-  
-## Data Loading Basics  
-  
-### Loading Environment  
+
+## Loading Environment  
 To load data, you need one or more loading servers. You can use your own existing ETL or other servers, or you can purchase new servers. For more information, see [Acquire and Configure a Loading Server](acquire-and-configure-a-loading-server-sql-server-pdw.md). These instructions include a [Loading Server Capacity Planning Worksheet](loading-server-capacity-planning-worksheet.md) to help you plan the right solution for loading.  
   
-### Loading with dwloader  
+## Load with dwloader  
 Using the [dwloader Command-Line Loading Tool](dwloader.md) is the fastest way to load data into SQL Server PDW.  
   
 ![Loading process](media/loading-process.png "Loading process")  
@@ -28,6 +26,10 @@ dwloader loads data directly to the Compute nodes without passing the data throu
 On each Compute node, Data Movement Service (DMS) receives and processes the chunks of data. Processing the data includes converting each row into SQL Server native format, and computing the distribution hash to determine the Compute node to which each row belongs.  
   
 After processing the rows, DMS uses a shuffle move to transfer each row to the correct Compute node and instance of SQL Server. As SQL Server receives the rows, it batches them according to the **–b** batch size parameter set in dwloader, and then bulk loads the batch.  
+
+## Load with prepared statements
+
+You can use prepared statements to load data into distributed and replicated tables. When the input data does not match the target data type, an implicit conversion is performed. The implicit conversions supported by PDW prepared statements are a subset of conversions supported by SQL Server. That is, only a subset of conversions are supported, but the supported conversions match SQL Server implicit conversions. Regardless of whether the target table to be loaded is defined as a distributed or replicated table, implicit conversions are applied (if needed) to all columns that exist in target table. For more information, see [Prepared statements](prepared-statements.md).
   
 ## Related Tasks  
   

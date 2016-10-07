@@ -11,6 +11,13 @@
 ### [Backup server capacity planning worksheet](backup-server-capacity-planning-worksheet.md)
 ### [Configure InfiniBand network adapters](configure-infiniband-network-adapters.md)
 ## Client tools
-### [dwloader command-line loading tool](dwloader.exe)
+### [dwloader command-line loading tool](dwloader.md)
 ## [Backup and restore](backup-and-restore-overview.md)
-### 
+## Load
+### [Overview](load-overview.md)
+### [Create staging database](staging-database.md)
+### [Load with Integration Services](load-with-integration-services.md)
+### [Create an Integration Services script task that uses the PDW destination adapter](create-ssis-script-task-using-pdw-destination-adapter.md)
+### [Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md)
+### [Load data with INSERT](load-data-with-insert-sql-server-pdw.md)
+### [Monitor loads](monitor-loads.md) 

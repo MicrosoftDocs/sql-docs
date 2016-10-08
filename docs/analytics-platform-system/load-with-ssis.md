@@ -1,5 +1,5 @@
 ---
-title: "Load Data With Integration Services (SQL Server PDW)"
+title: "Load Data With Integration Services"
 ms.custom: na
 ms.date: 07/27/2016
 ms.reviewer: na
@@ -10,46 +10,28 @@ ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
 caps.latest.revision: 69
 author: BarbKess
 ---
-# Load Data With Integration Services (SQL Server PDW)
-Provides reference and deployment information for loading data into SQL Server PDW by using Integration Services packages.  
-  
-## Contents  
-  
--   [Before You Begin](#BeforeBegin)  
-  
--   [Basics](#Basics)  
-  
--   [Methods for Running an Integration Services Package](#HowToDeployPackage)  
-  
--   [Supported Data Types](#DataTypes)  
-  
--   [General Remarks](#GenRemarks)  
-  
--   [Limitations and Restrictions](#Limits)  
-  
--   [Locking Behavior](#Locks)  
-  
--   [Examples](#Examples)  
+# Load data with Integration Services
+Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages.  
   
 ## <a name="BeforeBegin"></a>Before You Begin  
-Before you can start loading data, use the following topics to install the Integration Services Destination Adapters and to create an Integration Services package that connects to SQL Server PDW:  
+Before you can start loading data, use the following topics to install the Integration Services Destination Adapters and to create an Integration Services package that connects SQL Server PDW:  
   
--   [Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md)  
+-   [Install Integration Services destination adapters](install-integration-services-destination-adapters.md)  
   
--   [Connect With SQL Server Integration Services for Loading &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-integration-services-for-loading-sql-server-pdw.md)  
+-   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/en-us/library/ms141091(v=sql11).aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
   
 ## <a name="Basics"></a>Basics  
 Integration Services is the component of SQL Server for high-performance extraction, transformation, and loading (ETL) of data, and is commonly used to populate and update a data warehouse.  
   
-The SQL Server PDW Destination Adapter is an Integration Services component that lets you load data into SQL Server PDW by using Integration Services dtsx packages. In a package workflow for SQL Server PDW, you can load and merge data from multiple sources and load data to multiple destinations. The loads occur in parallel, both within a package and among multiple packages running concurrently, up to a maximum of 10 loads running in parallel on the same appliance.  
+The PDW Destination Adapter is an Integration Services component that lets you load data into PDW by using Integration Services dtsx packages. In a package workflow for SQL ServerPDW, you can load and merge data from multiple sources and load data to multiple destinations. The loads occur in parallel, both within a package and among multiple packages running concurrently, up to a maximum of 10 loads running in parallel on the same appliance.  
   
 In addition to the tasks described in this topic, you can use other features of Integration Services to filter, transform, analyze, and cleanse your data before loading it into the data warehouse. You can also enhance the workflow of the package by running SQL statements, running child packages, or sending mail.  
   
-For complete documentation of Integration Services, see [SQL Server Integration Services](http://msdn.microsoft.com/en-us/library/ms141026(v=sql11).aspx) on MSDN.  
+For complete documentation of Integration Services, see [SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026(v=sql11).aspx).  
   
-## <a name="HowToDeployPackage"></a>Methods for Running an Integration Services Package  
+## <a name="HowToDeployPackage"></a>Methods for running an Integration Services pPackage  
 Use one of these methods to run an Integration Services package.  
   
 ### Run from SQL Server 2008 R2 Business Intelligence Development Studio (BIDS)  
@@ -65,17 +47,17 @@ To run the package from Windows PowerShell, using the **dtexec** utility: `dtexe
   
 For example, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-### Run From a Windows Command Prompt  
+### Run From a Windows command prompt 
 To run the package from a Windows command prompt, using the **dtexec** utility: `dtexec /FILE <packagePath>`  
   
 For example: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-## <a name="DataTypes"></a>Data Types  
+## <a name="DataTypes"></a>Data types  
 When using Integration Services to load data from a data source to a SQL Server PDW database, the data is first mapped from the source data to Integration Services data types. This allows data from multiple data sources to map to a common set of data types.  
   
 Then the data is mapped from Integration Services to SQL Server PDW data types. For each SQL Server PDW data type, the following table lists the Integration Services data types that can be converted to the SQL Server PDW data type.  
   
-|SQL Server PDW Data Type|Integration Services Data Type(s) That Map to the SQL Server PDW Data Type|  
+|PDW data type|Integration Services data types(s) that map to PDW data type|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
 |BIGINT|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
@@ -100,9 +82,9 @@ Then the data is mapped from Integration Services to SQL Server PDW data types. 
 |VARBINARY|DT_BYTES|  
 |VARCHAR|DT_STR|  
   
-**Limited Support for Data Type Precision**  
+**Limited support for data type precision**  
   
-SQL Server PDW generates a validation error if you map a DT_NUMERIC or DT_DECIMAL input column that contains a value with precision greater than 28.  
+PDW generates a validation error if you map a DT_NUMERIC or DT_DECIMAL input column that contains a value with precision greater than 28.  
   
 **Unsupported Data Types**  
   
@@ -133,11 +115,11 @@ To run an Integration Services load package, you need:
   
 -   If no staging database is used, CREATE permission on the destination database. This is for creating a temporary table.  
   
-## <a name="GenRemarks"></a>General Remarks  
+## <a name="GenRemarks"></a>General remarks  
 When an Integration Services package has multiple SQL Server PDW destinations running and one of the connections is terminated, Integration Services stops pushing data to all of the SQL Server PDW destinations.  
   
-## <a name="Limits"></a>Limitations and Restrictions  
-For an Integration Services package, the number of SQL Server PDW destinations for the same data source is limited by the maximum number of active loads. The maximum is pre-configured and is not user-configurable. For the maximum number of loads and queued loads per appliance, see [Minimum and Maximum Values &#40;SQL Server PDW&#41;](../sqlpdw/minimum-and-maximum-values-sql-server-pdw.md).  
+## <a name="Limits"></a>Limitations and restrictions  
+For an Integration Services package, the number of SQL Server PDW destinations for the same data source is limited by the maximum number of active loads. The maximum is pre-configured and is not user-configurable. For the maximum number of loads and queued loads per appliance, see [Minimum and maximum values](minimum-and-maximum-values.md).  
   
 Each Integration Services package destination for the same data source counts as one load when the package is running. For example, suppose the maximum active loads is 10. The package will not run if it attempts to open 11 or more destinations for the same data source.  
   
@@ -145,12 +127,12 @@ Multiple packages can run concurrently as long as each package does not use more
   
 If the number of loads in the load queue exceeds the maximum queued loads, the package will not run. For example, if the maximum number of loads is 10 per appliance and the maximum number of queued loads is 40 per appliance, you can concurrently run five Integration Services packages that each open 10 destinations. If you try to run a sixth package, it will not run.  
   
-## <a name="Locks"></a>Locking Behavior  
-When loading data with Integration Services, SQL Server PDW uses row-level locks to update data in the destination table. This means that each row is locked for read and write while it is being updated. The rows in the destination table are not locked while the data is loaded into the staging table.  
+## <a name="Locks"></a>Locking behavior  
+When loading data with Integration Services, SQL ServerPDW uses row-level locks to update data in the destination table. This means that each row is locked for read and write while it is being updated. The rows in the destination table are not locked while the data is loaded into the staging table.  
   
 ## <a name="Examples"></a>Examples  
   
-### <a name="Walkthrough"></a>A. Simple Flat File Data Load  
+### <a name="Walkthrough"></a>A. Simple load from flat file  
 The following walkthrough demonstrates a simple data load using Integration Services to load flat file data to a SQL Server PDW appliance.  This example assumes that Integration Services has already been installed on the client machine, and the SQL Server PDW destination has been installed, as described above.  
   
 In this example we will load into the `Orders` table, which has the following DDL. The `Orders` table is part of the `LoadExampleDB` database.  
@@ -246,17 +228,17 @@ Run the package on your computer Integration Services.
 2.  The package will run and the progress plus any errors will be shown on the **Progress** pane. Use a SQL client to confirm the load, or monitor the load via the SQL Server PDW Admin Console.  
   
 ## See Also  
-[How to create a script task that uses the SSIS PDW destination adapter &#40;SQL Server PDW&#41;](../sqlpdw/how-to-create-a-script-task-that-uses-the-ssis-pdw-destination-adapter-sql-server-pdw.md)  
-[Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md)  
-[Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/en-us/library/ms141026(v=sql11).aspx)  
-[Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/en-us/library/ms141091(v=sql11).aspx)  
-[Tutorial: Creating a Basic Package Using a Wizard](http://technet.microsoft.com/en-us/library/ms365330(v=sql11).aspx)  
+[Create a script task that uses the SSIS PDW destination adapter](create-ssis-script-task-using-pdw-destination-adapter.md)  
+[Grant permissions to load data](grant-permissions-to-load-data.md)  
+[Common metadata query examples](metadata-query-examples.md)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026(&#40;v=sql11&#40;.aspx)  
+[Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.comlibrary/ms141091&#40;v=sql11&#40;.aspx)  
+[Tutorial: Creating a Basic Package Using a Wizard](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
 [Getting Started (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [Dynamic Package Generation Sample](http://go.microsoft.com/fwlink/?LinkId=202413)  
-[Designing Your SSIS Packages for Parallelism (SQL Server Video)](http://msdn.microsoft.com/en-us/library/dd795221.aspx)  
+[Designing Your SSIS Packages for Parallelism (SQL Server Video)](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Microsoft SQL Server Community Examples: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[Improving Incremental Loads with Change Data Capture](http://msdn.microsoft.com/en-us/library/bb895315(v=sql11).aspx)  
-[Slowly Changing Dimension Transformation](http://msdn.microsoft.com/en-us/library/ms141715(v=sql11).aspx)  
-[Bulk Insert Task](http://msdn.microsoft.com/en-us/library/ms141239(v=sql11).aspx)  
+[Improving Incremental Loads with Change Data Capture](http://msdn.microsoft.com/en-us/library/bb895315&#40;v=sql11&#40;.aspx)  
+[Slowly Changing Dimension Transformation](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
+[Bulk Insert Task](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
   

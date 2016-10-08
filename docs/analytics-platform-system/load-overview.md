@@ -1,7 +1,7 @@
 ---
 title: "Load (SQL Server PDW)"
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -11,13 +11,13 @@ caps.latest.revision: 22
 author: BarbKess
 ---
 # Load (SQL Server PDW)
-You can load or insert data into SQL Server Parallel Data Warehouse (PDW) by using Integration Services, [bcp Utility](https://msdn.microsoft.com/library/ms162802.aspx), **dwloader** command-line tool, or the SQL INSERT statement.  
+You can load or insert data into SQL Server Parallel Data Warehouse (PDW) by using Integration Services, [bcp Utility](https://msdn.microsoft.com/library/ms162802.aspx), **dwloader** Command-line Loader, or the SQL INSERT statement.  
 
 ## Loading Environment  
 To load data, you need one or more loading servers. You can use your own existing ETL or other servers, or you can purchase new servers. For more information, see [Acquire and Configure a Loading Server](acquire-and-configure-a-loading-server-sql-server-pdw.md). These instructions include a [Loading Server Capacity Planning Worksheet](loading-server-capacity-planning-worksheet.md) to help you plan the right solution for loading.  
   
 ## Load with dwloader  
-Using the [dwloader Command-Line Loading Tool](dwloader.md) is the fastest way to load data into SQL Server PDW.  
+Using the [dwloader Command-Line Loader](dwloader.md) is the fastest way to load data into PDW.  
   
 ![Loading process](media/loading-process.png "Loading process")  
   
@@ -36,13 +36,13 @@ You can use prepared statements to load data into distributed and replicated tab
 |Task|Description|  
 |--------|---------------|  
 |Create the staging database.|[Create the staging database](create-the-staging-database.md)|  
-|Load with Integration Services.|[Load with Integration Services](load-with-integration-services.md)|  
-|Understand type conversions for dwloader.|[Data type conversion rules for dwloader](data-type-conversion-rules-dwloader.md)|  
-|Load data with dwloader.|[dwloader Command-Line Loading Tool](dwloader.md)|  
-|Understand type conversions for INSERT.|[Load data with INSERT](load-data-with-insert.md)|  
+|Load with Integration Services.|[Load with Integration Services](load-with-ssis.md)|  
+|Understand type conversions for dwloader.|[Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md)|  
+|Load data with dwloader.|[dwloader Command-Line Loader](dwloader.md)|  
+|Understand type conversions for INSERT.|[Load data with INSERT](load-with-insert.md)|  
 |||  
   
 ## See Also  
 [Grant permissions to load data](grant-permissions-to-load-data.md)  
-[Common metadata query examles](common-metadata-query-examples.md)  
+[Common metadata query examles](metadata-query-examples.md)  
   

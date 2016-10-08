@@ -1,7 +1,7 @@
 ---
-title: "Data Type Conversion Rules for dwloader (SQL Server PDW)"
+title: "Data type conversion rules for dwloader"
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,20 +10,10 @@ ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
 caps.latest.revision: 30
 author: BarbKess
 ---
-# Data Type Conversion Rules for dwloader (SQL Server PDW)
+# Data type conversion rules for dwloader
 This topic describes the input data formats and implicit data type conversions that [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/dwloader-command-line-loader-sql-server-pdw.md) supports when it loads data into SQL Server PDW. The implicit data conversions occur when the input data does not match the data type in the SQL Server PDW target table. Use this information when designing your loading process to ensure your data will load successfully into SQL Server PDW.  
   
 For more information about the loader, see. [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/dwloader-command-line-loader-sql-server-pdw.md).  
-  
-## Contents  
-  
--   [Inserting Literals into Binary Types](#InsertBinaryTypes)  
-  
--   [Inserting Literals into Date and Time Types](#InsertDateTimeTypes)  
-  
--   [Inserting Literals into Numeric Types](#InsertNumerictypes)  
-  
--   [Inserting Literals into String Types](#InsertStringTypes)  
   
 ## <a name="InsertBinaryTypes"></a>Inserting Literals into Binary Types  
 The following table defines the accepted literal types, format, and conversion rules for loading a literal value into a SQL Server PDW column of type **binary** (*n*) or **varbinary**(*n*).  

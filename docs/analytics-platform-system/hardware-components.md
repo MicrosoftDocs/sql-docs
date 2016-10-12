@@ -1,7 +1,7 @@
 ---
 title: "Analytics Platform System hardware components"
 ms.custom: na
-ms.date: 07/21/2016
+ms.date: 10/10/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,18 +12,8 @@ author: BarbKess
 ---
 # Analytics Platform System hardware components
 
-Analytics Platform System (APS) uses scalable components so that you buy the right amount of processing and storage according to your business requirements. When you order APS, you will need a combination of these core hardware components. Specific hardware vendors might use different naming conventions or have additional components.  
-  
-  
-## Contents  
-  
--   [Rack & Network](#rackandnetwork)  
-  
--   [Data Scale unit](#datascaleunit)  
-  
--   [PDW Base Scale unit](#pdwbasescaleunit)  
-  
--   [HDI Base Scale unit](#hdibasescaleunit)  
+Analytics Platform System (APS) uses scalable components so that you can buy the right amount of processing and storage according to your business requirements. When you order APS, you will need a combination of these core hardware components. Specific hardware vendors might use different naming conventions or have additional components.  
+ 
   
 ## <a name="rackandnetwork"></a>Rack and network 
  

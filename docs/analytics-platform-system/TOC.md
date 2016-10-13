@@ -1,3 +1,4 @@
+
 # [Index](index.md)
 ## Architecture
 ### [Overview](architecture-overview.md)
@@ -29,7 +30,6 @@
 ## Security
 ### [Transparent Data Encryption](transparent-data-encryption.md)
 
-
-
 ## OTHER
 ### [Prepared statements](prepared-statements.md)
+

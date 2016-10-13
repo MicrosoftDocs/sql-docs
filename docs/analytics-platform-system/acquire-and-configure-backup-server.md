@@ -1,5 +1,8 @@
 ---
 title: "Acquire and Configure a Backup Server for Analytics Platform System and Parallel Data warehouse"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 10/04/2016
 ms.reviewer: na

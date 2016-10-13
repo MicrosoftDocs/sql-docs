@@ -1,5 +1,8 @@
 ---
 title: "Backup and restore"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 10/05/2016
 ms.reviewer: na

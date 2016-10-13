@@ -1,5 +1,8 @@
 ---
 title: "Restore a Database Protected by TDE in Parallel Data Warehouse"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 10/10/2016
 ms.reviewer: na

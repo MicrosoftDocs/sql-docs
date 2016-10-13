@@ -1,5 +1,8 @@
 ---
 title: "Configure InfiniBand network adapters for Analytics Platform System (APS)"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 10/04/2016
 ms.reviewer: na

@@ -4,9 +4,9 @@
   "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
-      "docset_name": "mpp",
-      "build_source_folder": "docs/mpp",
-      "build_output_subfolder": "sql/mpp",
+      "docset_name": "analytics-platform-system",
+      "build_source_folder": "docs/analytics-platform-system",
+      "build_output_subfolder": "sql/analytics-platform-system",
       "locale": "en-us",
       "version": 0,
       "open_to_public_contributors": false,
@@ -15,10 +15,10 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "docs",
       "template_folder": "_themes.MSDN.Modern"
     },
     {
+
       "docset_name": "analytics-platform-system",
       "build_source_folder": "docs/analytics-platform-system",
       "build_output_subfolder": "sql/analytics-platform-system",

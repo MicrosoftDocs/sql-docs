@@ -1,5 +1,8 @@
 ---
 title: "Transparent Data Encryption for Parallel Data Warehouse"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 10/07/2016
 ms.reviewer: na

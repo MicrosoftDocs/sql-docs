@@ -1,5 +1,8 @@
 ---
 title: "Acquire and Configure a Loading Server (SQL Server PDW)"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 07/27/2016
 ms.reviewer: na

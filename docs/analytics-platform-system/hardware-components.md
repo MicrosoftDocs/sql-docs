@@ -1,5 +1,8 @@
 ---
 title: "Analytics Platform System hardware components"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 10/10/2016
 ms.reviewer: na

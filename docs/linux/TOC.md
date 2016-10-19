@@ -1,7 +1,6 @@
 # [Understand and Explore](sql-server-linux-overview.md)
 ## [SQL Server on Linux overview](sql-server-linux-overview.md)
 ## [Supported features of SQL Server on Linux](sql-server-linux-supported-features.md)
-## [What’s New for SQL Server on Linux?](sql-server-linux-whats-new.md)
 ## [Release Notes for SQL Server on Linux](sql-server-linux-release-notes.md)
 # [Get Started](sql-server-linux-get-started-tutorial.md)
 ## [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md)

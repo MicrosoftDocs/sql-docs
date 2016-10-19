@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Release Notes for SQL Server on Linux | SQL Server vNext CTP1
+description: 
+author: rothja 
+ms.author: jroth 
+manager: jhubbard
+ms.date: 10-18-2016
+ms.topic: article
+ms.prod: sql-non-specified
+ms.service: 
+ms.technology: 
+ms.assetid: 
+
+# optional metadata
+
+# keywords: ""
+# ROBOTS: ""
+# audience: ""
+# ms.devlang: ""
+# ms.reviewer: ""
+# ms.suite: ""
+# ms.tgt_pltfrm: ""
+# ms.custom: ""
+
+---
 # Release Notes for SQL Server on Linux
 
 ## Release 13.0.2990.31 - September 30, 2016
@@ -37,7 +64,8 @@ The following release notes apply to SQL Server vNext CTP1 running on Linux.
 - Less than 64 cores. Using 64 or more cores will cause an error.
 - Less than 32 GB of memory. If more than 32 GB of memory is available, only 32 GB will be used.
 
->[Note] Any file systems that are not specified in the previous list are not supported.
+> [!NOTE] 
+> Any file systems that are not specified in the previous list are not supported.
 
 ## Known issues
 

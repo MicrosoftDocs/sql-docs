@@ -1,7 +1,8 @@
 ---
 # required metadata
 
-title: Overview | SQL Server vNext CTP1 on Linux
+title: Overview of SQL Server on Linux | SQL Server vNext CTP1
+description: 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -12,9 +13,8 @@ ms.service:
 ms.technology: 
 ms.assetid: 
 
+# optional metadata
 
-# optional metadata. 
-# description: ""
 # keywords: ""
 # ROBOTS: ""
 # audience: ""

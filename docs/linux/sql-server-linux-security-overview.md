@@ -35,4 +35,4 @@ SQL Server on Linux has the following restrictions:
 * Using keys stored in the Azure Key Vault is not supported.
 * Writing to the syslog file on Linux is not supported. 
 
-For more infomation on encrypting your connection to SQL Server, see Configuring SQL Server to use a Linux certificate for SSL and TLS.
+For more infomation on encrypting your connection to SQL Server, see [Configuring SQL Server to use a Linux certificate for SSL and TLS](https://msdn.microsoft.com/library/dd146365.aspx).

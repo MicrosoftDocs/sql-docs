@@ -40,7 +40,7 @@ You can use prepared statements to load data into distributed and replicated tab
 |Understand type conversions for dwloader.|[Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md)|  
 |Load data with dwloader.|[dwloader Command-Line Loader](dwloader.md)|  
 |Understand type conversions for INSERT.|[Load data with INSERT](load-with-insert.md)|  
-|||  
+ 
   
 ## See Also  
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

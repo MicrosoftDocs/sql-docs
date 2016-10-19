@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Backup a SQL Server database (Linux) | SQL Server vNext CTP1
+description: 
+author: MikeRayMSFT 
+ms.author: mikeray 
+manager: jhubbard
+ms.date: 10-18-2016
+ms.topic: article
+ms.prod: sql-non-specified
+ms.service: 
+ms.technology: 
+ms.assetid: 
+
+# optional metadata
+
+# keywords: ""
+# ROBOTS: ""
+# audience: ""
+# ms.devlang: ""
+# ms.reviewer: ""
+# ms.suite: ""
+# ms.tgt_pltfrm: ""
+# ms.custom: ""
+
+---
 # Restore a SQL Server database on Linux
 
 This topic provides a walkthrough for restoring a database backup to SQL Server 2017 CTP1 running on Linux. In this tutorial, you will:
@@ -6,7 +33,8 @@ This topic provides a walkthrough for restoring a database backup to SQL Server 
 - Transfer the backup to your Linux server (if necessary).
 - Restore the database using Transact-SQL commands.
 
->[NOTE] This tutorial assumes that you have installed SQL Server 2017 CTP1 and the SQL Server Tools on your target Linux server. If you have not done this, see [Backup a SQL Server database (Linux)](sql-server-linux-backup-database.md).
+> [!NOTE] 
+> This tutorial assumes that you have installed SQL Server 2017 CTP1 and the SQL Server Tools on your target Linux server. If you have not done this, see [Backup a SQL Server database (Linux)](sql-server-linux-backup-database.md).
 
 ## Download the AdventureWorks database backup
 
@@ -16,7 +44,8 @@ Although you can use the same steps to restore any database, the AdventureWorks 
 
 2. Open the zip file, and extract the AdventureWorks2014.bak file to your machine.
 
->[Note] At this time, you cannot restore SQL Server 2016 database backups to SQL Server on Linux. Database backups must have been created with SQL Server 2014 or prior.
+> [!NOTE] 
+> At this time, you cannot restore SQL Server 2016 database backups to SQL Server on Linux. Database backups must have been created with SQL Server 2014 or prior.
 
 If you have an existing database that you want to migrate to Linux, you can use a backup of that database with the steps in this article instead of AdventureWorks. Take a backup of your database using Transact-SQL or SQL Server Management Studio (SSMS). For more information, see [Create a Full Database Backup (SQL Server)](https://msdn.microsoft.com/library/ms187510.aspx).
 
@@ -68,7 +97,8 @@ At this point, the backup file is on your Linux server. Before restoring the dat
 
 To restore the backup, you can use the RESTORE DATABASE Transact-SQL (TQL) command.
 
->[NOTE] The following steps use the sqlcmd tool. If you haven’t install SQL Server Tools, see [Install SQL Server on Linux](sql-server-linux-setup.md).
+> [!NOTE] 
+> The following steps use the sqlcmd tool. If you haven’t install SQL Server Tools, see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
 1. In the same terminal, launch **sqlcmd**. The following example connects to the local SQL Server instance with the *SA* user. Enter the password when prompted or specify the password with the -P parameter.
 

@@ -1,3 +1,30 @@
+---
+# required metadata
+
+title: Overview of SQL Server on Linux | SQL Server vNext CTP1
+description: 
+author: rothja 
+ms.author: jroth 
+manager: jhubbard
+ms.date: 10-18-2016
+ms.topic: article
+ms.prod: sql-non-specified
+ms.service: 
+ms.technology: 
+ms.assetid: 
+
+# optional metadata
+
+# keywords: ""
+# ROBOTS: ""
+# audience: ""
+# ms.devlang: ""
+# ms.reviewer: ""
+# ms.suite: ""
+# ms.tgt_pltfrm: ""
+# ms.custom: ""
+
+---
 # SQL Server on Linux overview
 
 This topic provides and overview of SQL Server vNext CTP1 running on Linux. 

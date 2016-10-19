@@ -33,11 +33,19 @@ There are several ways to manage your SQL Server vNext CTP1 instances and databa
 
 The following tools can be used to help manage SQL Server on Linux.
 
+- [Transact-SQL commands and DMVs](sql-server-linux-management-overview.md)
+- [DMVTool](sql-server-linux-management-overview.md)
+- [SqlPackage](sql-server-linux-management-overview.md)
+- [SQL Server Managemet Studio](sql-server-linux-management-overview.md)
+
 ### Transact-SQL (TSQL)
 T-SQL commands cover many management tasks and DMVs provide detailed monitoring information. Link to additional resources. Can be run from sqlcmd.exe, VS Code, or any other supported T-SQL client to SQL Server. Point to new cross platform DMVs. Talk about mapping of C: for some commands.
 
 ### DMVTool
 Show how DMVTool is a Linux-specific way of working with DMVs on the file system.
+
+### SqlPackage
+Tool for exporting and importing databases. 
 
 ### SQL Server Management Studio (Windows client)
 Talk about the ability to connect to SQL Server on Linux from Windows. Firewall and port requirements. General steps for getting started with screenshot of object browser (mabye numbered).
@@ -50,4 +58,5 @@ The following table provides a list of some common management tasks along with a
 | Backup and Restore | TBD with links |
 | etc. | etc. |
 
-
+## Next Steps
+TBD

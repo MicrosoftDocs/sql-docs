@@ -4,7 +4,7 @@
 title: Security considerations for SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: BYHAM 
-ms.author: BYHAM 
+ms.author: rickbyh 
 manager: jhubbard
 ms.date: 10-18-2016
 ms.topic: article

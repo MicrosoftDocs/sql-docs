@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: onfigure high availability and disaster recovery for SQL Server on Linux | SQL Server vNext CTP1
+title: Configure high availability and disaster recovery for SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 

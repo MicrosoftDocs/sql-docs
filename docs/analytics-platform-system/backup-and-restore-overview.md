@@ -21,7 +21,11 @@ A PDW *database backup* is a copy of an appliance database, stored in a format s
   
 A PDW database backup is created with the [BACKUP DATABASE](https://msdn.microsoft.com/library/mt631607.aspx) t-sql statement and formatted for use with the [RESTORE DATABASE](https://msdn.microsoft.com/library/mt631612.aspx) statement; it is unusable for any other purpose. The backup can only be restored to an appliance with the same number or a greater number of Compute nodes.  
   
+<!-- MISSING LINKS
+
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
+
+-->
   
 PDW uses SQL Server backup technology to backup and restore appliance databases. SQL Server backup options are preconfigured to use backup compression. You cannot set backup options such as compression, checksum, block size, and buffer count.  
   
@@ -122,7 +126,7 @@ After the redistribution each Compute node will contain less actual data and mor
 |Backup and Restore Task|Description|  
 |---------------------------|---------------|  
 |Prepare a server as a backup server.|[Acquire and configure a backup server ](acquire-and-configure-backup-server.md)|  
-|Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|  
+|Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Backup a database.|[BACKUP DATABASE](https://msdn.microsoft.com/library/mt631607.aspx)|  
 |Restore a database.|[RESTORE DATABASE](https://msdn.microsoft.com/library/mt631612.aspx)|  
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.|  

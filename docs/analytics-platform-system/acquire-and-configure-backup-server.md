@@ -32,7 +32,7 @@ The backup server:
 ## <a name="Step1"></a>Step 1: Determine Capacity Requirements  
 The system requirements for the Backup server depend almost completely on your own workload. Before purchasing or provisioning a backup server you need to figure out your capacity requirements. The Backup server does not have to be dedicated only to backups, as long as it will handle the performance and storage requirements of your workload. You can also have multiple backup servers in order to backup and restore each database to one of several servers.  
   
-Use the [Backup server capacity planning worksheet](backup-server-capacity-planning-worksheet.md) to help determine your capacity requirements.  
+Use the [Backup server capacity planning worksheet](backup-capacity-planning-worksheet.md) to help determine your capacity requirements.  
   
 ## <a name="Step2"></a>Step 2: Acquire the backup server  
 Now that you better understand your capacity requirements, you can plan the servers and networking components that you will need to purchase or provision. Incorporate the following list of requirements into your purchasing plan, and then purchase your server or provision an existing server.  

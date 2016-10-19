@@ -1,7 +1,6 @@
 
 # [Index](index.md)
 ## Architecture
-### [Overview](architecture-overview.md)
 ### [Hardware components](hardware-components.md)
 ### [Hardware configurations](hardware-configurations.md)
 ### [Processing and storage capacity](processing-and-storage-capacity-planning.md)

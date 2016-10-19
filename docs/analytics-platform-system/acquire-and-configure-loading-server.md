@@ -73,9 +73,14 @@ Use these steps to connect the loading server to the InfiniBand network. If the 
 5.  Configure the InfiniBand and DNS settings for the network adapters. For configuration instructions, see [Configure InfiniBand network adapters](configure-infiniband-network-adapters.md).  
   
 ## <a name="Step4"></a>Step 4: Install the loading tools  
-To install dwloader, see [Install dwloader Command-Line Loading Tool](install-dwloader.md).  
+The Client Tools are available for download from the Microsoft Download Center. 
+
+To install dwloader, run the dwloader installation from the client tools.
   
-If you plan to use Integration Services for loading, you will need to install Integration Services  and the Integration Services destination adapters. For instructions, see [Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md).  
+If you plan to use Integration Services for loading, you will need to install Integration Services  and the Integration Services destination adapters. The adapters are available in the Client Tools.
+
+<!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
+--> 
   
 ## <a name="Step5"></a>Step 5: Start Loading  
 You are now ready to start loading data. For more information, see:  

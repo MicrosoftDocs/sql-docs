@@ -33,6 +33,6 @@ SQL Server on Linux has the following restrictions:
 * A standard password policy is provided. MUST_CHANGE is the only option you may configure.  
 * Extensible Key Management is not supported. 
 * Using keys stored in the Azure Key Vault is not supported.
-* Writing to the syslog file on Linux. 
+* Writing to the syslog file on Linux is not supported. 
 
 For more infomation on encrypting your connection to SQL Server, see Configuring SQL Server to use a Linux certificate for SSL and TLS.

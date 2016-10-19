@@ -85,11 +85,11 @@ The DMV tool needs a config file and an empty directory to mount and create the 
 
 2. Create a directory you want to mount to
 
-    $ mkdir dmv
+        $ mkdir dmv
 
 1.  Create a file to store the configuration
 
-    $ touch dmvtool.config
+        $ touch dmvtool.config
 
 1.  Edit the config file using an editor like VI
 

@@ -123,10 +123,14 @@ After the redistribution each Compute node will contain less actual data and mor
 |Backup and Restore Task|Description|  
 |---------------------------|---------------|  
 |Prepare a server as a backup server.|[Acquire and configure a backup server ](acquire-and-configure-backup-server.md)|  
-|Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Backup a database.|[BACKUP DATABASE](https://msdn.microsoft.com/library/mt631607.aspx)|  
 |Restore a database.|[RESTORE DATABASE](https://msdn.microsoft.com/library/mt631612.aspx)|  
-|Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.|  
+ 
+
+  
+<!-- MISSING LINKS
+|Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
+|Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.| 
 |Copy a database from one appliance to another appliance.|[Copy a PDW database to another appliance](copy-pdw-database-to-another-appliance.md).|  
 |Monitor backups and restores.|[Monitor backups and restores](monitor-backup-and-restore.md)|  
-  
+-->

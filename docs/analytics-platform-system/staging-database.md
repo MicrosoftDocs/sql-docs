@@ -33,7 +33,13 @@ The storage structure for each database table depends on the destination table.
 -   For loads into a rowstore clustered index, the staging table is a rowstore clustered index.  
   
 ## <a name="Permissions"></a>Permissions  
-Requires CREATE permission (for creating a temporary table) on the staging database. For more information, see [Grant Permissions to load data](grant-permissions-to-load-data.md).  
+Requires CREATE permission (for creating a temporary table) on the staging database. 
+
+<!-- MISSING LINKS
+
+For more information, see [Grant Permissions to load data](grant-permissions-to-load-data.md).  
+
+-->
   
 ## <a name="CreatingStagingDatabase"></a>Best practices for creating a staging database  
   
@@ -68,7 +74,11 @@ WITH (
   
 );  
 ```  
-  
+
+<!-- MISSING LINKS
+ 
 ## See Also  
 [Common metadata query examples](metadata-query-examples.md)  
+
+-->
   

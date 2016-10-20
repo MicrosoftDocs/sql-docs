@@ -11,7 +11,11 @@ caps.latest.revision: 22
 author: BarbKess
 ---
 # PDW Certificate Provisioning (Analytics Platform System)
-The **PDW Certificate Provisioning** page of the Analytics Platform System**Configuration Manager** imports or removes the certificate used by the PDW region. Using, a certificate to encrypt connections can help secure communication to the Control node through SQL Server clients, tools that use the SQL Server PDW drivers, the [Admin Console](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md), and Integration Services loads.  
+The **PDW Certificate Provisioning** page of the Analytics Platform System**Configuration Manager** imports or removes the certificate used by the PDW region. 
+
+<!-- MISSING LINKS
+Using, a certificate to encrypt connections can help secure communication to the Control node through SQL Server clients, tools that use the SQL Server PDW drivers, the [Admin Console](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md), and Integration Services loads. 
+--> 
   
 ## Prerequisites  
 Before installing the certificate, do the following:  
@@ -39,8 +43,11 @@ The following instructions show how to import or remove the appliance certificat
   
 ### To import the certificate  
   
-1.  Launch the **Configuration Manager**. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
-  
+1.  Launch the **Configuration Manager**. 
+<!-- MISSING LINKS
+For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
+-->  
+
 2.  In the left pane of the **Configuration Manager**, expand **Parallel Data Warehouse Topology**, and then click **Certificates**.  
   
 3.  Select **Import a certificate and configure the appliance to use it**, and then click **Browse** to browse to and select the certificate file.  
@@ -53,7 +60,11 @@ SQL Server PDW will not encrypt current connection by using the imported certifi
   
 ### To remove the previously imported certificate  
   
-1.  Launch the **Configuration Manager**. For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
+1.  Launch the **Configuration Manager**. 
+
+<!-- MISSING LINKS
+For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager-analytics-platform-system.md).  
+-->
   
 2.  In the left pane of the **Configuration Manager**, expand **Parallel Data Warehouse Topology**, and then click **Certificates**.  
   
@@ -63,9 +74,13 @@ SQL Server PDW will not encrypt current connection by using the imported certifi
   
 SQL Server PDW will continue to encrypt current connections, but will not use the removed certificate for new connections.  
   
-![DWConfig Appliance PDW Certificate](../management/media/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
+![DWConfig Appliance PDW Certificate](media/dwconfig-appl-pdw-cert.png "DWConfig Appliance PDW certificate")  
   
+<!-- MISSING LINKS
+
 ## See Also  
 [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md)  
-[HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](../management/hdinsight-certificate-provisioning-analytics-platform-system.md)  
+
+-->
+
   

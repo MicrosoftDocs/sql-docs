@@ -67,6 +67,9 @@ The following table provides sample code for submitting prepared statements usin
 |ODBC|OdbcCommand command = OdbcConnection.CreateCommand(“SELECT * FROM bing WHERE id=?”);<br /><br />OdbcParameter param1 = new OdbcParameter();<br /><br />param1.value = 1;<br /><br />command.Parameters.Add(param1);<br /><br />Command.Prepare();<br /><br />Command.Execute();<br /><br />Command.Close();|  
 |OLEDB|OleDbCommand command = OleDbConnection.CreateCommand(“SELECT * FROM bing WHERE id=?”);<br /><br />OleDbParameter param1 = new OleDbParameter();<br /><br />param1.value = 1;<br /><br />command.Parameters.Add(param1);<br /><br />Command.Prepare();<br /><br />Command.Ecxecute();<br /><br />Command.Close();|  
   
+
+<!-- MISSING LINKS
 ## See Also  
 [Common Metadata Query Examples](metadata-query-examples.md)  
   
+-->

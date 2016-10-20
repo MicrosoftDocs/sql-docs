@@ -14,7 +14,7 @@ author: BarbKess
 You can load or insert data into SQL Server Parallel Data Warehouse (PDW) by using Integration Services, [bcp Utility](https://msdn.microsoft.com/library/ms162802.aspx), **dwloader** Command-line Loader, or the SQL INSERT statement.  
 
 ## Loading Environment  
-To load data, you need one or more loading servers. You can use your own existing ETL or other servers, or you can purchase new servers. For more information, see [Acquire and Configure a Loading Server](acquire-and-configure-a-loading-server.md). These instructions include a [Loading Server Capacity Planning Worksheet](loading-server-capacity-planning-worksheet.md) to help you plan the right solution for loading.  
+To load data, you need one or more loading servers. You can use your own existing ETL or other servers, or you can purchase new servers. For more information, see [Acquire and Configure a Loading Server](acquire-and-configure-loading-server.md). These instructions include a [Loading Server Capacity Planning Worksheet](loading-server-capacity-planning-worksheet.md) to help you plan the right solution for loading.  
   
 ## Load with dwloader  
 Using the [dwloader Command-Line Loader](dwloader.md) is the fastest way to load data into PDW.  

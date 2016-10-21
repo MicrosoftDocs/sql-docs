@@ -1,5 +1,8 @@
 ---
 title: "Load data with INSERT"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na

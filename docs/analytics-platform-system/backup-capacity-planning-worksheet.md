@@ -1,5 +1,8 @@
 ---
 title: "Backup Server Capacity Planning Worksheet (SQL Server PDW)"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 07/27/2016
 ms.reviewer: na

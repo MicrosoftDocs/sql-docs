@@ -1,5 +1,8 @@
 ---
 title: "Hardware Configurations (Analytics Platform System)"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 07/21/2016
 ms.reviewer: na

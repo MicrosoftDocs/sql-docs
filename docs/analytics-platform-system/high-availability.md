@@ -1,5 +1,8 @@
 ---
 title: "Analytics Platform System high availability"
+ms.author: BarbKess
+manager: jhubbard
+ms.prod: analytics-platform-system
 ms.custom: na
 ms.date: 10/03/2016
 ms.reviewer: na

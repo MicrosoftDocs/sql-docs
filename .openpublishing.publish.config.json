@@ -32,6 +32,20 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes.MSDN.Modern"
+    },
+    {
+      "docset_name": "linux",
+      "build_source_folder": "docs/linux",
+      "build_output_subfolder": "sql/linux",
+      "locale": "en-us",
+      "version": 0,
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [],
@@ -42,6 +56,12 @@
     {
       "path_to_root": "_themes.MSDN.Modern",
       "url": "https://github.com/Microsoft/templates.msdn.msft",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
     }

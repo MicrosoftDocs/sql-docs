@@ -1,12 +1,15 @@
 ---
+
 title: "Acquire and Configure a Loading Server (SQL Server PDW)"
 description: "Acquire and configure a loading server as a non-appliance Windows system for submitting data loads to SQL Server Parallel Data Warehouse."
-author: "barbkess" # GitHub ID
-ms.author: "barbkess" # Microsoft ID
-ms.date: 10/20/2016
-ms.topic: article
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
 ms.assetid: a434b174-a818-4f73-b218-264619bab664
 caps.latest.revision: 19
+
 ---
 
 # Acquire and configure a loading server

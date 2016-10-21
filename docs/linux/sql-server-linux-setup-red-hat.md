@@ -43,7 +43,7 @@ First, install the mssql-server Package on RHEL.
 
 3. Pass the unique URL provided for you in your invitation email as a parameter to the script. This URL is labeled as **“Package script configuration URL parameter”**:
 
-    # ./configure-mssql-repo-2.sh <URL provided in email>
+    # ./configure-mssql-repo-2.sh \<URL provided in email\>
 
 4. Exit superuser mode.
 

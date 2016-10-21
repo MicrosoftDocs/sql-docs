@@ -29,4 +29,4 @@ ms.assetid:
 This topic is a walkthrough for using SQL Server Management Studio (SSMS) to connect and query SQL Server vNext CTP1 on Linux.
 
 # Next Steps
-For more information on how to use SSMS, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms174173.aspx).
+For more information on how to use SSMS, see [Use SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx).

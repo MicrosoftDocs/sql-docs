@@ -27,38 +27,15 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
-    "fileMetadata": {
-       "author": 
-       { 
-         "api/**.yml": "barbkess" 
-       },
-	   "manager": 
-       { 
-         "api/**.yml": "barbkess" 
-       } 
-	   "ms.author": 
-       { 
-         "api/**.yml": "barbkess" 
-       }, 
-	   "ms.date": 
-       { 
-         "api/**.yml": "Oct 20, 2016" 
-       } 	   
-	   "ms.prod": 
-       { 
-         "api/**.yml": "analytics-platform-system" 
-       }, 
-       "ms.technology": 
-       { 
-         "api/**.yml": "sql/analytics-platform-system" 
-       }, 
-       "ms.topic": 
-       { 
-         "api/**.yml": "" 
-       }, 
-       
+    "globalMetadata": {
+	      "author": "barbkess",
+	      "ms.author": "barbkess",
+	      "manager": "jhubbard",	  
+        "ms.topic": "article",
+	      "ms.prod": "analytics-platform-system",	  
+	      "ms.technology": "mpp-data-warehouse"
 	},
+    "fileMetadata": {},
     "template": [],
     "dest": "sql/analytics-platform-system"
   }

@@ -1,17 +1,15 @@
 ---
 title: "Create the staging Database for Parallel Data Warehouse"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "SQL Server Parallel Data Warehouse (PDW) uses a staging database to store data temporarily during the load process."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: 6d0b2726-4772-4858-b700-885cc12219b2
 caps.latest.revision: 20
-author: BarbKess
+
 ---
 # Staging database 
 SQL Server Parallel Data Warehouse (PDW) uses a staging database to store data temporarily during the load process. By default, SQL Server PDW uses the destination database as the staging database which can cause table fragmentation. To reduce table fragmentation, you can create a user-defined staging database. Or, when rollback from a load failure is not a concern, you can use the fastappend loading mode to improve performance by skipping the temporary table and loading directly into the destination table.  

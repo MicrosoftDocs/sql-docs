@@ -1,18 +1,18 @@
 ---
 title: "Backup and restore"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 10/05/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "Describes how data backup and restore works for SQL Server Parallel Data Warehouse (PDW)."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
 caps.latest.revision: 50
 author: BarbKess
+
 ---
+
 # Backup and restore
 Describes how data backup and restore works for SQL Server Parallel Data Warehouse (PDW). Backup and restore operations are used for disaster recovery. Backup and restore can also be used to copy a database from one appliance to another appliance.  
     

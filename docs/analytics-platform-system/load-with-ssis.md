@@ -1,18 +1,18 @@
 ---
 title: "Load Data With Integration Services"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 07/27/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages."
+
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
 caps.latest.revision: 69
-author: BarbKess
+
 ---
+
 # Load data with Integration Services
 Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages.  
   

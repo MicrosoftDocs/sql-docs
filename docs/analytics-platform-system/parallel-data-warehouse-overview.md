@@ -1,15 +1,18 @@
 ---
+
 title: "Parallel Data Warehouse overview"
-ms.custom: na
-ms.date: 10/10/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "This topic explains the appliance software and the non-appliance software components of Analytics Platform System."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
 caps.latest.revision: 20
-author: BarbKess
+
 ---
+
 # Parallel Data Warehouse overview
 This topic explains the appliance software and the non-appliance software components of Analytics Platform System.  
   

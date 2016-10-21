@@ -1,18 +1,18 @@
 ---
+
 title: "Prepared statements for Parallel Data Warehouse"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 07/27/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "This topic describes how to use prepared statements to submit queries to SQL Server Parallel Data Warehouse (PDW)."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: 6249a65e-2fa7-4cfc-866f-96ac4c19a653
 caps.latest.revision: 23
-author: BarbKess
+
 ---
+
 # Prepared statements
 This topic describes how to use prepared statements to submit queries to SQL Server Parallel Data Warehouse (PDW). Prepared statements, also called parameterized statements, are SQL statements that include one or more parameters in place of embedded values. Prepared statements are used by business intelligence tools and other applications that run the same query using different values in place of the parameters each time the query is submitted.  
  

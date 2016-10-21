@@ -39,9 +39,11 @@ SQL Server vNext CTP1 is supported on the following distributions:
 
 It also has support for the Docker Engine running on any supported Linux distribution or Docker for Mac/Windows.
 
-| Environment | Supported version |
+| Docker | Supported version |
 |-----|-----|
-| Docker Engine | 1.8+ |
+| Docker Engine (Linux) | 1.8+ |
+| Docker for Mac | Latest |
+| Docker for Windows | Latest |
 
 ## Installation guides
 

@@ -153,8 +153,11 @@ The following table defines the accepted formats and rules for inserting literal
 
   
 ## See Also  
-[Grant permissions to load data](grant-permissions-to-load-data.md)  
-[Metadata query examples](metadata-query-examples.md)  
-[Distributed and replicated tables](distributed-and-replicated-tables.md)  
+ 
+[Distributed data](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
 [INSERT](https://msdn.microsoft.com/library/ms174335.aspx)  
   
+<!-- MISSING LINKS
+[Grant permissions to load data](grant-permissions-to-load-data.md)  
+[Metadata query examples](metadata-query-examples.md) 
+-->

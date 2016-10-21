@@ -1,18 +1,18 @@
 ---
+
 title: "Acquire and Configure a Backup Server for Analytics Platform System and Parallel Data warehouse"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 10/04/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
+description: "Configure a non-appliance Windows system as a backup server for use with the backup and restore features in Analytics Platform System (APS) and SQL Server Parallel Data Warehouse (PDW)."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 caps.latest.revision: 20
-author: BarbKess
+ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
+
 ---
+
 # Acquire and configure a backup server
 This topic describes how to configure a non-appliance Windows system as a backup server for use with the backup and restore features in Analytics Platform System (APS) and SQL Server Parallel Data Warehouse (PDW).  
   

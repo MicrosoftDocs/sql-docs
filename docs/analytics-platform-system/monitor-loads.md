@@ -17,17 +17,26 @@ author: BarbKess
 You can monitor active and recent [dwloader](dwloader.md) loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) [System Views](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
   
 > [!TIP]  
-> Some loads are initiated by using INSERT statements or business intelligence tools that use SQL statements to perform the load. To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
+> Some loads are initiated by using INSERT statements or business intelligence tools that use SQL statements to perform the load. 
+
+<!-- MISSING LINKS
+To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
+-->
   
 ## Prerequisites  
-Regardless of the method used to monitor a load, the login must have permission to access the underlying data sources. For the permissions to grant, see “Use All of the Admin Console” in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md).  
+Regardless of the method used to monitor a load, the login must have permission to access the underlying data sources. 
+
+<!-- MISSING LINKS
+For the permissions to grant, see “Use All of the Admin Console” in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
+
+--> 
   
 ## Monitoring Loads  
 The following sections describe how to monitor loads.  
   
 ### To monitor loads by using the Admin Console  
   
-1.  Log on to the Admin Console. <!-- See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md)--> for instructions.  
+1.  Log on to the Admin Console. <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
   
 2.  On the top menu, click **Loads**. You will see a sortable table showing all recent and active loads plus additional information, such as whether the load has completed or is still active. Click the column headers to sort the rows.  
   
@@ -46,7 +55,7 @@ See these system views for information on the metadata about the load that is sh
 ### To monitor loads by using system views  
 To monitor active and recent loads by using SQL Server PDW views, follow the steps below. For each system view used, see the documentation for that view for information on the columns and potential values returned by the view.  
   
-1.  Find the `request_id` for the load in the [sys.dm_pdw_exec_requests](https://msdn.microsoft.com/en-us/library/mt203887.aspx) view by finding the loader command line in the `command` column for this view.  
+1.  Find the `request_id` for the load in the [sys.dm_pdw_exec_requests](https://msdn.microsoft.com/library/mt203887.aspx) view by finding the loader command line in the `command` column for this view.  
   
     For example, the following command returns the command text and current status, plus the `request_id`.  
   
@@ -66,6 +75,9 @@ To monitor active and recent loads by using SQL Server PDW views, follow the ste
     WHERE er.request_id=’12738’;  
     ```  
   
+<!-- MISSING LINKS
+
 ## See Also  
-[Common metadata query examples](metadata-query-examples.md)  
+[Common metadata query examples](metadata-query-examples.md)
+-->  
   

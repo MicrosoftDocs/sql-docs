@@ -1,18 +1,18 @@
 ---
+
 title: "Analytics Platform System hardware components"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 10/10/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "Analytics Platform System (APS) uses scalable components so that you can buy the right amount of processing and storage according to your business requirements."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: aa1cdcc7-cfee-4658-bbce-7d319bfb7483
 caps.latest.revision: 17
-author: BarbKess
+
 ---
+
 # Analytics Platform System hardware components
 
 Analytics Platform System (APS) uses scalable components so that you can buy the right amount of processing and storage according to your business requirements. When you order APS, you will need a combination of these core hardware components. Specific hardware vendors might use different naming conventions or have additional components.  

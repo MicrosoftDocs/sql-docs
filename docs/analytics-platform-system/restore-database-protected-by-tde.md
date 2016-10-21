@@ -1,17 +1,16 @@
 ---
+
 title: "Restore a Database Protected by TDE in Parallel Data Warehouse"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 10/10/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "Use the following steps to restore a database that is encrypted by using transparent data encryption."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: ffb681ca-8598-4614-b06c-660376333fc3
 caps.latest.revision: 4
-author: BarbKess
+
 ---
 # Restore a database protected by TDE
 Use the following steps to restore a database that is encrypted by using transparent data encryption.  

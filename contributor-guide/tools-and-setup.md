@@ -27,14 +27,13 @@ ms.assetid:
 ---
 #Install and set up tools for authoring in GitHub
 
-Follow the steps in this article to set up tools for contributing to the Azure technical documentation. Casual and occasional contributors probably can use the GitHub UI described in step 2.
+Follow the steps in this article to set up tools for contributing to the SQL Server technical documentation. Casual and occasional contributors can use the GitHub UI (web interface) described in step 2.
 
 If you're unfamiliar with Git, you might want to review some Git terminology: [https://help.github.com/articles/github-glossary](https://help.github.com/articles/github-glossary). In addition, this StackOverflow thread contains a glossary of Git terms you'll encounter in this set of steps: [http://stackoverflow.com/questions/7076164/terminology-used-by-git](http://stackoverflow.com/questions/7076164/terminology-used-by-git)
 
 ## Contents
 
 - [Create a GitHub account and set up your profile](#create-a-github-account-and-set-up-your-profile)
-- [Sign up for Disqus](#sign-up-for-disqus)
 - [Determine whether you really need to follow the rest of these steps](#determine-whether-you-really-need-to-follow-the-rest-of-these-steps)
 - [Permissions in GitHub](#permissions-in-github)
 - [Install Git for Windows](#install-git-for-windows)
@@ -47,35 +46,19 @@ If you're unfamiliar with Git, you might want to review some Git terminology: [h
 
 ## Create a GitHub account and set up your profile
 
-To contribute to the Azure technical content, you'll need a [GitHub](http://www.github.com) account.
+To contribute to the SQL Server technical content, you'll need a [GitHub](http://www.github.com) account.
 
 If you are a Microsoft contributor, you need to set up your GitHub account so you're clearly identified as a Microsoft employee. Set up your profile as follows:
 
 - **Profile picture**: a picture of you (required)
 - **Name**: your first and last name (required)
-- **Email**: your Microsoft email address (optional)
+- **Email**: your Microsoft email address (required)
 - **Company**: Microsoft Corporation (required)
-- **Location**: list your location (optional)
+- **Location**: list your location (required)
 
 Your profile should resemble this profile:
 
-<p align="center">
  ![GitHub profile example](./media/tools-and-setup/githubprofile.png)
-
-## Sign up for Disqus
-
-Every published Azure technical article has a comment stream provided by the Disqus service.
-
- ![Discus logo](./media/tools-and-setup/discus.png)
-
-If you are a Microsoft employee, and if you are the author of or a contributor to an article, you need to sign up for Disqus so you can participate in the comment stream for the article.
-
-1. Sign up for an account at [http://www.disqus.com/](http://www.disqus.com/)
-2. Fill out your profile as follows:
-
- - **Full Name**: your full name as displayed in your Microsoft address book listing, plus the bracketed info, which is your alias plus @MSFT. Format: *First Last [alias@MSFT]*
- - **Location**: Your location
- - **Short Bio**: Your title
 
 ## Determine whether you really need to follow the rest of these steps
 
@@ -93,8 +76,8 @@ If you only need or want to make textual updates to an existing article, you pro
 
  That opens the easy-to-use web editor that makes it easy to submit changes. You don't need to follow the other steps in this article.
 
-###All other changes
-The GitHub UI does support creation of new files and dragging and dropping images. However, when you work in the UI, managing branches can be confusing so we typically recommend you install the tools and learn the commands for creating and managing articles. If you want to use the UI, see:
+### All other changes
+The GitHub UI does support creation of new files and dragging and dropping images. However, when you work in the UI, managing branches can be confusing so we typically recommend you install the tools and learn the commandline process for creating and managing articles. If you want to use the UI, see:
 
 - [Creating files on Github](https://github.com/blog/1327-creating-files-on-github)
 - [Upload files to your repositories](https://github.com/blog/2105-upload-files-to-your-repositories)
@@ -109,9 +92,25 @@ For the following sorts of work, we strongly recommend you install and learn to 
 
 ##Permissions in GitHub
 
-Anybody with a GitHub account can contribute to Azure technical content through our public repository at [https://github.com/Azure/azure-content](https://github.com/Azure/azure-content). No special permissions are required.
+Anybody with a GitHub account can contribute to SQL Server technical content through our public repository at [https://github.com/Microsoft/sql-docs](https://github.com/Microsoft/sql-docs). No special permissions are required.
 
-If you are a Microsoft PM or writer who is working on Azure content, you must work in our private content repository, azure-content-pr. Visit [https://repos.opensource.microsoft.com ](https://repos.opensource.microsoft.com ) to request the read permissions that will let you make contributions through the private repo - sign in to GitHub using the button > click Azure > click **Join a team** or **Join another team**, and then search for and join the **azure-content-read** group.
+> Note: This sql-docs repo will not be public until the first public release of of SQL Server nNext CTP1. Only private contributions are allowed until this time.
+
+If you are a Microsoft PM or writer who is working on SQL Server content, you must work in our private content repository, sql-docs-pr. 
+1. Visit [https://repos.opensource.microsoft.com ](https://repos.opensource.microsoft.com) to request the read permissions that will let you make contributions through the private repo.
+2. Sign into your GitHub account using the button.
+3. Beside **Microsoft**, click the **Join** button. If you don't see this button, you're already a member.
+
+    ![Join the Microsoft organization](./media/tools-and-setup/join-the-microsoft-organization.png)
+
+4. On the next page, click the **Join Microsoft** button.
+5. Go back to the [https://repos.opensource.microsoft.com ](https://repos.opensource.microsoft.com) list of organizations. It should now show that you are a **Member** of the Microsoft organization. 
+6. Click **Microsoft**.
+7. Then click **Join a team**.
+
+    ![Join a team](./media/tools-and-setup/join-a-team.png)
+
+5. Search for **sql-docs-read**, and click the **Request to join** button.
 
 ## Install Git for Windows
 
@@ -160,29 +159,29 @@ We author content using simple "markdown" notation in the files, rather than com
 
 If you use Atom, you'll need to set a few things up.
 
-- Atom defaults to using 2 spaces for tabs, but Markdown expects 4 spaces. If you leave it at the default of two, your article will look great in local preview, but not when it’s imported into Azure. So, configure Atom to use 4 spaces - you can find this setting under File>Settings>Editor Settings>Tab Length.
+- Atom defaults to using 2 spaces for tabs, but Markdown expects 4 spaces. If you leave it at the default of two, your article will look great in local preview, but not when it’s imported into SQL Server. So, configure Atom to use 4 spaces - you can find this setting under File>Settings>Editor Settings>Tab Length.
 - You will probably also want to turn on Soft Wrap in this section too, which does the same as "word wrap" in Notepad.
 - To turn on the markdown preview, click Packages>Markdown Preview>Toggle Preview. You can use Ctrl-Shift-M to toggle the preview HTML view.
 
 ## Fork the repository and copy it to your computer
 
-1. Create a fork of the repository in GitHub - go to the top-right of the page and click the Fork button. If prompted, select your account as the location where the fork should be created. This creates a copy of the repository within your Git Hub account. Generally speaking, technical writers and program managers need to fork azure-content-pr, the private repo. Community contributors need to fork azure-content, the public repo. You only need to fork one time; after your first setup, if you want to copy your fork to another computer, you only have to run the commands that follow in this section to copy the repo to your computer.  If you choose to create forks of both repositories, you will need to create a fork for each repository.
+1. Create a fork of the repository in GitHub - go to the top-right of the page and click the Fork button. If prompted, select your account as the location where the fork should be created. This creates a copy of the repository within your Git Hub account. Generally speaking, technical writers and program managers need to fork sql-docs-pr, the private repo. Community contributors need to fork sql-docs, the public repo. You only need to fork one time; after your first setup, if you want to copy your fork to another computer, you only have to run the commands that follow in this section to copy the repo to your computer.  If you choose to create forks of both repositories, you will need to create a fork for each repository.
 
 2. Copy the Personal Access Token that you got from [https://github.com/settings/tokens](https://github.com/settings/tokens). You can accept the default permissions for the token.  Save the Personal Access Token in a text file for later reuse.
 
-3. Next, copy the repository to your computer with your credentials embedded in the command string.  To do this, open Git Bash and run it as an administrator. At the command prompt, enter the following command.  This command creates a azure-content(-pr) directory on your computer.  If you're using the default location, it will be at c:\users<your Windows user name>\azure-content(-pr).
+3. Next, copy the repository to your computer with your credentials embedded in the command string.  To do this, open Git Bash and run it as an administrator. At the command prompt, enter the following command.  This command creates a sql-docs(-pr) directory on your computer.  If you're using the default location, it will be at c:\users<your Windows user name>\sql-docs(-pr).
 
 Public repo:
 
-        git clone https://[your GitHub user name]:[token]@github.com/<your GitHub user name>/azure-content.git
+        git clone https://[your GitHub user name]:[token]@github.com/<your GitHub user name>/sql-docs.git
 
 Private repo:
 
-        git clone https://[your GitHub user name]:[token]@github.com/<your GitHub user name>/azure-content-pr.git
+        git clone https://[your GitHub user name]:[token]@github.com/<your GitHub user name>/sql-docs-pr.git
 
 For example, this clone command could look something like this:
 
-        git clone https://smithj:b428654321d613773d423ef2f173ddf4a312345@github.com/smithj/azure-content-pr.git  
+        git clone https://smithj:b428654321d613773d423ef2f173ddf4a312345@github.com/smithj/sql-docs-pr.git  
 
 ## Set remote repository connection and configure credentials
 
@@ -190,14 +189,14 @@ Create a reference to the root repository by entering these commands. This sets 
 
 Public repo:
 
-        cd azure-content
-        git remote add upstream https://[your GitHub user name]:[token]@github.com/Azure/azure-content.git
+        cd sql-docs
+        git remote add upstream https://[your GitHub user name]:[token]@github.com/Microsoft/sql-docs.git
         git fetch upstream
 
 Private repo:
 
-        cd azure-content-pr
-        git remote add upstream https://[your GitHub user name]:[token]@github.com/Azure/azure-content-pr.git
+        cd sql-docs-pr
+        git remote add upstream https://[your GitHub user name]:[token]@github.com/Microsoft/sql-docs-pr.git
         git fetch upstream
 
 This usually takes a while. After you do this, you won't have to fork again or enter your credentials again. You would only have to copy the forks to a local computer again if you set the tools up on another computer.
@@ -207,16 +206,16 @@ This usually takes a while. After you do this, you won't have to fork again or e
 
 To ensure you are listed correctly as a contributor, you need to configure your user name and email locally in Git.
 
-1. Start Git Bash, and switch into azure-content or azure-content-pr:
+1. Start Git Bash, and switch into sql-docs or sql-docs-pr:
 
    ````
-   cd azure-content
+   cd sql-docs
    ````
 
  or
 
    ````
-   cd azure-content-pr
+   cd sql-docs-pr
    ````
 
 2. Configure your user name so it matches your name as you set it up in your GitHub profile:

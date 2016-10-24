@@ -50,3 +50,4 @@ In addition to achieving breakthrough query performance, PDW makes it easy to:
 
 For more information about the benefits of PDW, see the whitepaper [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](http://msdn.microsoft.com/library/dn520808.aspx) on MSDN.  
   
+

@@ -24,7 +24,7 @@ WHILE Boolean_expression
   
 ## Arguments  
 *Boolean_expression*  
-Is an [expression](../Topic/Expressions%20(Transact-SQL).md) that returns **TRUE** or **FALSE**. If the Boolean expression contains a SELECT statement, the SELECT statement must be enclosed in parentheses.  
+Is an [expression](https://msdn.microsoft.com/library/ms190286.aspx) that returns **TRUE** or **FALSE**. If the Boolean expression contains a SELECT statement, the SELECT statement must be enclosed in parentheses.  
   
 {*sql_statement* | *statement_block*}  
 Is any SQL statement or statement grouping as defined with a statement block. To define a statement block, use the control-of-flow keywords BEGIN and END.  

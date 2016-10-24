@@ -7,7 +7,7 @@
         ],
         "exclude": [
           "**/obj/**",
-          "sql/analytics-platform-system/**",
+          "sql/aps/**",
           "**/includes/**"
         ]
       }
@@ -20,23 +20,16 @@
         ],
         "exclude": [
           "**/obj/**",
-          "sql/analytics-platform-system/**",
+          "sql/aps/**",
           "**/includes/**"
         ]
       }
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {
-	      "author": "barbkess",
-	      "ms.author": "barbkess",
-	      "manager": "jhubbard",	  
-        "ms.topic": "article",
-	      "ms.prod": "analytics-platform-system",	  
-	      "ms.technology": "mpp-data-warehouse"
-	},
+    "globalMetadata": {},
     "fileMetadata": {},
     "template": [],
-    "dest": "sql/analytics-platform-system"
+    "dest": "sql/aps"
   }
 }

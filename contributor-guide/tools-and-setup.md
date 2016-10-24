@@ -97,6 +97,7 @@ Anybody with a GitHub account can contribute to SQL Server technical content thr
 > Note: This sql-docs repo will not be public until the first public release of of SQL Server nNext CTP1. Only private contributions are allowed until this time.
 
 If you are a Microsoft PM or writer who is working on SQL Server content, you must work in our private content repository, sql-docs-pr. 
+
 1. Visit [https://repos.opensource.microsoft.com ](https://repos.opensource.microsoft.com) to request the read permissions that will let you make contributions through the private repo.
 2. Sign into your GitHub account using the button.
 3. Beside **Microsoft**, click the **Join** button. If you don't see this button, you're already a member.

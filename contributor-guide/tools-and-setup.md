@@ -1,20 +1,30 @@
-<properties
-pageTitle="Install and set up tools for authoring in GitHub"
-description="Tools and steps to get set up for authoring Azure content in GitHub."
-services="contributor-guide"
-documentationCenter=""
-authors="tysonn"  
-manager="carolz" />
+---
+# required metadata
 
-<tags
-ms.service="contributor-guide"
- ms.devlang=""
- ms.topic="article"
-  ms.tgt_pltfrm=""
-  ms.workload=""
-  ms.date="01/19/2015"
-  ms.author="tysonn" />
+title: Install and set up tools for authoring in GitHub | SQL Server Docs
+description: Tools and steps to get set up for authoring SQL Server content in GitHub.
+author: rothja 
+ms.author: jroth 
+manager: jhubbard
+ms.date: 10-24-2016
+ms.topic: article
+ms.prod: sql-non-specified
+ms.service: 
+ms.technology: 
+ms.assetid: 
 
+# optional metadata
+
+# keywords: ""
+# ROBOTS: ""
+# audience: ""
+# ms.devlang: ""
+# ms.reviewer: ""
+# ms.suite: ""
+# ms.tgt_pltfrm: ""
+# ms.custom: ""
+
+---
 #Install and set up tools for authoring in GitHub
 
 Follow the steps in this article to set up tools for contributing to the Azure technical documentation. Casual and occasional contributors probably can use the GitHub UI described in step 2.

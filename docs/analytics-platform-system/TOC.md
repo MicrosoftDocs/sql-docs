@@ -30,5 +30,3 @@
 ## [Transparent Data Encryption](transparent-data-encryption.md)
 ## [Provision a certificate](provision-certificate.md)
 
-# Reference
-## [Prepared statements](prepared-statements.md)

@@ -1,4 +1,5 @@
 Multiple OPS docsets publish from the sql-docs-pr repository and more coming.
+See the contributor-guide  folder for information on how to get permissions and setup your authoring environment.
 
 **\docs\analytics-platforms-system**
 - Content for the  Microsoft Analytics Platform System (APS)
@@ -8,6 +9,7 @@ Multiple OPS docsets publish from the sql-docs-pr repository and more coming.
 **\docs\linux**
 - Content for SQL Server on
 - to be published on docs.microsoft.com
-- [OPS Docset] (https://ops.microsoft.com/#/sites/Docs/docsets/linux)
+- [OPS Docset](https://ops.microsoft.com/#/sites/Docs/docsets/linux)
 
-- **\docs\tools**                      | future locaiton of content for SQL Server related tools such as SSDT and SSMS
+**\docs\tools**
+- future locaiton of content for SQL Server related tools such as SSDT and SSMS

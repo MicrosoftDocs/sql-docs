@@ -27,7 +27,7 @@ ms.assetid:
 ---
 # Release Notes for SQL Server on Linux
 
-## Release 13.0.2990.31 - September 30, 2016
+**Release 13.0.2990.31 - September 30, 2016**
 
 The following release notes apply to SQL Server vNext CTP1 running on Linux.
 

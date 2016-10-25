@@ -119,7 +119,7 @@ Install Git for Windows from [http://git-scm.com/download/win](http://git-scm.co
 
 You can accept the default settings; if you want the commands to be available within the Windows command line, select the option that enables it.
 
-<p align="center">
+
  ![GitHub profile example](./media/tools-and-setup/gitbashinstall.png)
 
 (Note: This is not the same as "Github for Windows". "Github for Windows" is a different GUI-based tool that will also work if you want to read up on yourself. [https://windows.github.com/](https://windows.github.com/))
@@ -137,7 +137,7 @@ When you create the token, select all the scopes available in the token-creation
 
 After you enable 2FA, you have to enter the access token instead of your GitHub password at the command prompt when you try to access a GitHub repository from the command line. The access token is not the authentication code that you get in a text message when you set up 2FA. It's a long string that looks something like this:  fdd3b7d3d4f0d2bb2cd3d58dba54bd6bafcd8dee. A few notes about this:
 
-- When you create your access token, save it in a text file to make it readily accessible when you need it.
+- When you create your access token, **save it in a text file** to make it readily accessible when you need it. This is a critical step.
 
 - Later, when you need to paste the token, know there are two ways to paste in the command line:
 
@@ -150,11 +150,11 @@ We author content using simple "markdown" notation in the files, rather than com
 
 - **Atom**: Most of us use GitHub's Atom markdown editor: [http://atom.io](http://atom.io). It does not require a license for business use. It has spell check.
 
+- **[Visual Studio Code](https://www.visualstudio.com/products/code-vs.aspx)** - Microsoft's entry in this space. You can install extensions for markdown, spell checking, and markdown preview.
+
 - **Notepad**: You can use Notepad for a very lightweight option.
 
 - **Prose**: This is a lightweight, elegant, on-line, and open source markdown editor that offers a preview. Visit [http://prose.io](http://prose.io) and authorize Prose in your repository.
-
-- **[Visual Studio Code](https://www.visualstudio.com/products/code-vs.aspx)** - Microsoft's entry in this space.
 
 ## Configure Atom
 
@@ -166,7 +166,12 @@ If you use Atom, you'll need to set a few things up.
 
 ## Fork the repository and copy it to your computer
 
-1. Create a fork of the repository in GitHub - go to the top-right of the page and click the Fork button. If prompted, select your account as the location where the fork should be created. This creates a copy of the repository within your Git Hub account. Generally speaking, technical writers and program managers need to fork sql-docs-pr, the private repo. Community contributors need to fork sql-docs, the public repo. You only need to fork one time; after your first setup, if you want to copy your fork to another computer, you only have to run the commands that follow in this section to copy the repo to your computer.  If you choose to create forks of both repositories, you will need to create a fork for each repository.
+1. Create a fork of the repository in GitHub (either [sql-docs](https://github.com/Microsoft/sql-docs) or [sql-docs-pr](https://github.com/Microsoft/sql-docs-pr):
+
+        - Go to the top-right of the page and click the **Fork** button. 
+        - If prompted, select your account as the location where the fork should be created. This creates a copy of the repository within your Git Hub account. Generally speaking, technical writers and program managers need to fork **sql-docs-pr**, the private repo. Community contributors need to fork **sql-docs**, the public repo. 
+        
+        > Note: You only need to fork one time; after your first setup, if you want to copy your fork to another computer, you only have to run the commands that follow in this section to copy the repo to your computer.  If you choose to create forks of both repositories, you will need to create a fork for each repository.
 
 2. Copy the Personal Access Token that you got from [https://github.com/settings/tokens](https://github.com/settings/tokens). You can accept the default permissions for the token.  Save the Personal Access Token in a text file for later reuse.
 
@@ -230,21 +235,6 @@ To ensure you are listed correctly as a contributor, you need to configure your 
     git config --global user.email "alias@example.com"
     ````
 4. Type `git config -l` and review your local settings to ensure the user name and email in the configuration are correct.
-
-##Next steps
-
-- Understand the type of content that belongs in the technical content repo, and know what does not belong. See the [content channel guidance](./content-channel-guidance.md)!
-- Follow [these steps to create or modify an article and then submit it for publishing](./git-commands-for-master.md).
-- Copy [the markdown template](../markdown templates/markdown-template-for-new-articles.md) as the basis for a new article.
-- Use [this checklist to verify your pull request will meet the quality criteria](./contributor-guide-pr-criteria.md) for merging.
-
-
-###Contributors' guide navigation
-
-- [Overview article](./../README.md)
-- [Index of guidance articles](./contributor-guide-index.md)
-
-
 
 <!--Anchors-->
 [Use a customer-friendly voice]: #use-a-customer-friendly-voice

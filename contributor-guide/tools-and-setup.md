@@ -33,6 +33,29 @@ Your profile should resemble this profile:
 
  ![GitHub profile example](./media/tools-and-setup/githubprofile.png)
 
+## Permissions in GitHub
+
+Anybody with a GitHub account can contribute to SQL Server technical content through our public repository at [https://github.com/Microsoft/sql-docs](https://github.com/Microsoft/sql-docs). No special permissions are required.
+
+> Note: This sql-docs repo will not be public until the first public release of of SQL Server nNext CTP1. Only private contributions are allowed until this time.
+
+If you are a Microsoft PM or writer who is working on SQL Server content, you must work in our private content repository, sql-docs-pr. 
+
+1. Visit [https://repos.opensource.microsoft.com ](https://repos.opensource.microsoft.com) to request the read permissions that will let you make contributions through the private repo.
+2. Sign into your GitHub account using the button.
+3. Beside **Microsoft**, click the **Join** button. If you don't see this button, you're already a member.
+
+    ![Join the Microsoft organization](./media/tools-and-setup/join-the-microsoft-organization.png)
+
+4. On the next page, click the **Join Microsoft** button.
+5. Go back to the [https://repos.opensource.microsoft.com ](https://repos.opensource.microsoft.com) list of organizations. It should now show that you are a **Member** of the Microsoft organization. 
+6. Click **Microsoft**.
+7. Then click **Join a team**.
+
+    ![Join a team](./media/tools-and-setup/join-a-team.png)
+
+5. Search for **sql-docs-read**, and click the **Request to join** button.
+
 ## Determine whether you really need to follow the rest of these steps
 
 You might not need to follow all the steps in this article. It depends on the sort of content contribution you want or need to make.
@@ -62,29 +85,6 @@ For the following sorts of work, we strongly recommend you install and learn to 
  - Adding new images or updating images
  - Updating an article over a period of days without publishing changes each of those days
  - Creating content for a release that has to go out on a certain day at a certain time
-
-## Permissions in GitHub
-
-Anybody with a GitHub account can contribute to SQL Server technical content through our public repository at [https://github.com/Microsoft/sql-docs](https://github.com/Microsoft/sql-docs). No special permissions are required.
-
-> Note: This sql-docs repo will not be public until the first public release of of SQL Server nNext CTP1. Only private contributions are allowed until this time.
-
-If you are a Microsoft PM or writer who is working on SQL Server content, you must work in our private content repository, sql-docs-pr. 
-
-1. Visit [https://repos.opensource.microsoft.com ](https://repos.opensource.microsoft.com) to request the read permissions that will let you make contributions through the private repo.
-2. Sign into your GitHub account using the button.
-3. Beside **Microsoft**, click the **Join** button. If you don't see this button, you're already a member.
-
-    ![Join the Microsoft organization](./media/tools-and-setup/join-the-microsoft-organization.png)
-
-4. On the next page, click the **Join Microsoft** button.
-5. Go back to the [https://repos.opensource.microsoft.com ](https://repos.opensource.microsoft.com) list of organizations. It should now show that you are a **Member** of the Microsoft organization. 
-6. Click **Microsoft**.
-7. Then click **Join a team**.
-
-    ![Join a team](./media/tools-and-setup/join-a-team.png)
-
-5. Search for **sql-docs-read**, and click the **Request to join** button.
 
 ## Install Git for Windows
 

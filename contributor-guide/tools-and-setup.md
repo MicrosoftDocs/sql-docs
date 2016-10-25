@@ -25,7 +25,7 @@ ms.assetid:
 # ms.custom: ""
 
 ---
-#Install and set up tools for authoring in GitHub
+# Install and set up tools for authoring in GitHub
 
 Follow the steps in this article to set up tools for contributing to the SQL Server technical documentation. Casual and occasional contributors can use the GitHub UI (web interface) described in step 2.
 

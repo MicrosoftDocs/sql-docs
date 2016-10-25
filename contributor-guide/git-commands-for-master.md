@@ -1,30 +1,3 @@
----
-# required metadata
-
-title: Git commands for creating a new article or updating an existing article | SQL Server Docs
-description: Git commands for updating SQL Server documentation on github
-author: rothja 
-ms.author: jroth 
-manager: jhubbard
-ms.date: 10-24-2016
-ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
----
 # Git commands for creating a new article or updating an existing article
 This article explains how to use the Git comamnds from the command-line to make changes to SQL Server documentation on github. If you have not setup a github account, permissions, and tools, see how to [Install and set up tools for authoring in GitHub](tools-and-setup.md).
 

@@ -1,48 +1,21 @@
----
-# required metadata
-
-title: Install and set up tools for authoring in GitHub | SQL Server Docs
-description: Tools and steps to get set up for authoring SQL Server content in GitHub.
-author: rothja 
-ms.author: jroth 
-manager: jhubbard
-ms.date: 10-24-2016
-ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
----
 # Install and set up tools for authoring in GitHub
 
-Follow the steps in this article to set up tools for contributing to the SQL Server technical documentation. Casual and occasional contributors can use the GitHub UI (web interface) described in step 2.
+Follow the steps in this article to set up tools for contributing to the SQL Server technical documentation. All contributors must create a github account (step 1). Internal Microsoft contributors also need to request permissions (step 2). Casual and occasional contributors can use the GitHub UI (web interface) described in step 3. For other changes, you should follow the rest of this guide to setup the git tools and a markdown editor. 
 
 If you're unfamiliar with Git, you might want to review some Git terminology: [https://help.github.com/articles/github-glossary](https://help.github.com/articles/github-glossary). In addition, this StackOverflow thread contains a glossary of Git terms you'll encounter in this set of steps: [http://stackoverflow.com/questions/7076164/terminology-used-by-git](http://stackoverflow.com/questions/7076164/terminology-used-by-git)
 
 ## Contents
 
-- [Create a GitHub account and set up your profile](#create-a-github-account-and-set-up-your-profile)
-- [Determine whether you really need to follow the rest of these steps](#determine-whether-you-really-need-to-follow-the-rest-of-these-steps)
-- [Permissions in GitHub](#permissions-in-github)
-- [Install Git for Windows](#install-git-for-windows)
-- [Enable two-factor authentication](#enable-two-factor-authentication)
-- [Install a markdown editor](#install-a-markdown-editor)
-- [Configure Atom](#configure-atom)
-- [Fork the repository and copy it to your computer](#fork-the-repository-and-copy-it-to-your-computer)
-- [Configure your user name and email locally](#configure-your-user-name-and-email-locally)
-- [Next steps](#next-steps)
+1. [Create a GitHub account and set up your profile](#create-a-github-account-and-set-up-your-profile)
+2. [Permissions in GitHub](#permissions-in-github)
+3. [Determine whether you really need to follow the rest of these steps](#determine-whether-you-really-need-to-follow-the-rest-of-these-steps)
+4. [Install Git for Windows](#install-git-for-windows)
+5. [Enable two-factor authentication](#enable-two-factor-authentication)
+6. [Install a markdown editor](#install-a-markdown-editor)
+7. [Configure Atom](#configure-atom)
+8. [Fork the repository and copy it to your computer](#fork-the-repository-and-copy-it-to-your-computer)
+9. [Configure your user name and email locally](#configure-your-user-name-and-email-locally)
+10. [Next steps](#next-steps)
 
 ## Create a GitHub account and set up your profile
 
@@ -64,7 +37,7 @@ Your profile should resemble this profile:
 
 You might not need to follow all the steps in this article. It depends on the sort of content contribution you want or need to make.
 
-###Submit a text-only change to an existing article
+### Submit a text-only change to an existing article
 
 If you only need or want to make textual updates to an existing article, you probably don't need to follow the rest of the steps. You can use GitHub's web-based markdown editor to submit your changes. Just click the GitHub link in the article you want to modify:
 
@@ -90,7 +63,7 @@ For the following sorts of work, we strongly recommend you install and learn to 
  - Updating an article over a period of days without publishing changes each of those days
  - Creating content for a release that has to go out on a certain day at a certain time
 
-##Permissions in GitHub
+## Permissions in GitHub
 
 Anybody with a GitHub account can contribute to SQL Server technical content through our public repository at [https://github.com/Microsoft/sql-docs](https://github.com/Microsoft/sql-docs). No special permissions are required.
 

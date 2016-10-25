@@ -27,7 +27,7 @@ ms.assetid:
 ---
 # Supported features of SQL Server on Linux
 
-For Linux, SQL Server vNext CTP1 supports the SQL Server [database engine](https://msdn.microsoft.com/library/ms187875.aspx). This topic describes supported features and tools.
+This topic describes supported features and tools for SQL Server vNext CTP1 running on Linux.
 
 The first section lists areas that are unsupported in this release. Other limitations are explained in the following sections. The last section provides version information for supported client tools. 
 

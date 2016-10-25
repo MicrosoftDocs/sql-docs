@@ -168,10 +168,10 @@ If you use Atom, you'll need to set a few things up.
 
 1. Create a fork of the repository in GitHub (either [sql-docs](https://github.com/Microsoft/sql-docs) or [sql-docs-pr](https://github.com/Microsoft/sql-docs-pr):
 
-        - Go to the top-right of the page and click the **Fork** button. 
-        - If prompted, select your account as the location where the fork should be created. This creates a copy of the repository within your Git Hub account. Generally speaking, technical writers and program managers need to fork **sql-docs-pr**, the private repo. Community contributors need to fork **sql-docs**, the public repo. 
+    - Go to the top-right of the page and click the **Fork** button. 
+    - If prompted, select your account as the location where the fork should be created. This creates a copy of the repository within your Git Hub account. Generally speaking, technical writers and program managers need to fork **sql-docs-pr**, the private repo. Community contributors need to fork **sql-docs**, the public repo. 
         
-        > Note: You only need to fork one time; after your first setup, if you want to copy your fork to another computer, you only have to run the commands that follow in this section to copy the repo to your computer.  If you choose to create forks of both repositories, you will need to create a fork for each repository.
+    > Note: You only need to fork one time; after your first setup, if you want to copy your fork to another computer, you only have to run the commands that follow in this section to copy the repo to your computer.  If you choose to create forks of both repositories, you will need to create a fork for each repository.
 
 2. Copy the Personal Access Token that you got from [https://github.com/settings/tokens](https://github.com/settings/tokens). You can accept the default permissions for the token.  Save the Personal Access Token in a text file for later reuse.
 
@@ -179,15 +179,15 @@ If you use Atom, you'll need to set a few things up.
 
 Public repo:
 
-        git clone https://[your GitHub user name]:[token]@github.com/<your GitHub user name>/sql-docs.git
+    git clone https://[your GitHub user name]:[token]@github.com/<your GitHub user name>/sql-docs.git
 
 Private repo:
 
-        git clone https://[your GitHub user name]:[token]@github.com/<your GitHub user name>/sql-docs-pr.git
+    git clone https://[your GitHub user name]:[token]@github.com/<your GitHub user name>/sql-docs-pr.git
 
 For example, this clone command could look something like this:
 
-        git clone https://smithj:b428654321d613773d423ef2f173ddf4a312345@github.com/smithj/sql-docs-pr.git  
+    git clone https://smithj:b428654321d613773d423ef2f173ddf4a312345@github.com/smithj/sql-docs-pr.git  
 
 ## Set remote repository connection and configure credentials
 
@@ -195,15 +195,15 @@ Create a reference to the root repository by entering these commands. This sets 
 
 Public repo:
 
-        cd sql-docs
-        git remote add upstream https://[your GitHub user name]:[token]@github.com/Microsoft/sql-docs.git
-        git fetch upstream
+    cd sql-docs
+    git remote add upstream https://[your GitHub user name]:[token]@github.com/Microsoft/sql-docs.git
+    git fetch upstream
 
 Private repo:
 
-        cd sql-docs-pr
-        git remote add upstream https://[your GitHub user name]:[token]@github.com/Microsoft/sql-docs-pr.git
-        git fetch upstream
+    cd sql-docs-pr
+    git remote add upstream https://[your GitHub user name]:[token]@github.com/Microsoft/sql-docs-pr.git
+    git fetch upstream
 
 This usually takes a while. After you do this, you won't have to fork again or enter your credentials again. You would only have to copy the forks to a local computer again if you set the tools up on another computer.
 

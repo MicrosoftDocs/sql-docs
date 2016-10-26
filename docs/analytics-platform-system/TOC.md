@@ -5,7 +5,7 @@
 ## [Processing and storage capacity](processing-and-storage-capacity-planning.md)
 ## [High availability](high-availability.md)
 # Backup and loading hardware
-## [Overview](backup-and-loading-hardware-overview.md)
+## [Overview](backup-and-loading-hardware.md)
 ## [Acquire and configure a loading server](acquire-and-configure-loading-server.md)
 ## [Loading server capacity planning worksheet](loading-server-capacity-planning-worksheet.md)
 ## [Acquire and configure a backup server](acquire-and-configure-backup-server.md)

@@ -33,9 +33,9 @@ SQL Server vNext CTP1 now runs on Linux. The topics in this section focuses on w
 
 The following Linux distributions are currently supported for this release.
 
-- Ubuntu 16.04
-- Red Hat Enterprise Linux 7.2
-- Docker Engine 1.8+, Docker for Mac/Windows
+- **Ubuntu 16.04**
+- **Red Hat Enterprise Linux 7.2**
+- **Docker Engine 1.8+, Docker for Mac/Windows**
 
 ## Supported features
 For specific information about what this release supports on Linux, see [Supported features of SQL Server on Linux](sql-server-linux-supported-features.md). For known issues, also review the [Release notes](sql-server-linux-release-notes.md).

@@ -210,7 +210,7 @@ To ensure you are listed correctly as a contributor, you need to configure your 
 4. Type `git config -l` and review your local settings to ensure the user name and email in the configuration are correct.
 
 ## Next Steps
-Start creating and editing files, either through the Github web site or with the Git command-line. For a reference of the commands you need to use the Git command-line, see [Git commands for master](git-commands-for-master.md).
+Start creating and editing files, either through the Github web site or with the Git command-line. For a reference of the commands you need to use the Git command-line, see [Git commands for master](https://github.com/Microsoft/sql-docs-pr/blob/master/contributor-guide/git-commands-for-master.md).
 
 <!--Anchors-->
 [Use a customer-friendly voice]: #use-a-customer-friendly-voice

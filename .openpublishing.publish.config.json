@@ -15,8 +15,7 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "docs",
-      "template_folder": "_themes.MSDN.Modern"
+      "build_entry_point": "op"
     },
     {
       "docset_name": "linux",
@@ -44,8 +43,7 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "docs",
-      "template_folder": "_themes.MSDN.Modern"
+      "build_entry_point": "op"
     }
   ],
   "notification_subscribers": [],
@@ -54,14 +52,14 @@
   "need_preview_pull_request": true,
   "dependent_repositories": [
     {
-      "path_to_root": "_themes.MSDN.Modern",
-      "url": "https://github.com/Microsoft/templates.msdn.msft",
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
     },
     {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "path_to_root": "_themes.MSDN.Modern",
+      "url": "https://github.com/Microsoft/templates.msdn.msft",
       "branch": "master",
       "branch_mapping": {}
     }

@@ -29,6 +29,12 @@ ms.assetid:
 
 SQL Server vNext CTP1 is supported on several distribution of Linux. It is also available as a Docker image which can run on Docker for Linux, Windows, and Mac. The topics in this section provide tutorials and general guidance for installing SQL Server vNext CTP1 on Linux. 
 
+If you want to go straight to a setup tutorial, select your Linux distribution:
+> [!div class="op_single_selector"]
+- [Ubuntu](sql-server-linux-setup-ubuntu.md)
+- [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
+- [Docker](sql-server-linux-setup-docker.md)
+
 ## Supported distributions
 SQL Server vNext CTP1 is supported on the following distributions:
 

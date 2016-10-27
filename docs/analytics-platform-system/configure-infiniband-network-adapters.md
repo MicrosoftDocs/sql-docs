@@ -1,18 +1,19 @@
 ---
+
 title: "Configure InfiniBand network adapters for Analytics Platform System (APS)"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 10/04/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on SQL Server Parallel Data Warehouse (PDW)."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
 caps.latest.revision: 15
 author: BarbKess
+
 ---
+
 # Configure InfiniBand network adapters for Analytics Platform System
 Describes how to configure the InfiniBand network adapters on a non-appliance client server to connect to the Control node on SQL Server Parallel Data Warehouse (PDW). Use these instructions for basic connectivity and for high availability, so that loading, backup, and other processes will automatically connect to the active InfiniBand network.  
   

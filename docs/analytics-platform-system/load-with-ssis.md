@@ -1,29 +1,34 @@
 ---
 title: "Load Data With Integration Services"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 07/27/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages."
+
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
 caps.latest.revision: 69
-author: BarbKess
+
 ---
+
 # Load data with Integration Services
 Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages.  
   
+<!-- MISSING LINKS
+
 ## <a name="BeforeBegin"></a>Before You Begin  
 Before you can start loading data, use the following topics to install the Integration Services Destination Adapters and to create an Integration Services package that connects SQL Server PDW:  
-  
+
+
 -   [Install Integration Services destination adapters](install-integration-services-destination-adapters.md)  
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
 For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+
+-->
   
 ## <a name="Basics"></a>Basics  
 Integration Services is the component of SQL Server for high-performance extraction, transformation, and loading (ETL) of data, and is commonly used to populate and update a data warehouse.  
@@ -122,7 +127,11 @@ To run an Integration Services load package, you need:
 When an Integration Services package has multiple SQL Server PDW destinations running and one of the connections is terminated, Integration Services stops pushing data to all of the SQL Server PDW destinations.  
   
 ## <a name="Limits"></a>Limitations and restrictions  
-For an Integration Services package, the number of SQL Server PDW destinations for the same data source is limited by the maximum number of active loads. The maximum is pre-configured and is not user-configurable. For the maximum number of loads and queued loads per appliance, see [Minimum and maximum values](minimum-and-maximum-values.md).  
+For an Integration Services package, the number of SQL Server PDW destinations for the same data source is limited by the maximum number of active loads. The maximum is pre-configured and is not user-configurable. 
+
+<!-- MISSING LINKS
+For the maximum number of loads and queued loads per appliance, see [Minimum and maximum values](minimum-and-maximum-values.md).  
+-->
   
 Each Integration Services package destination for the same data source counts as one load when the package is running. For example, suppose the maximum active loads is 10. The package will not run if it attempts to open 11 or more destinations for the same data source.  
   
@@ -232,8 +241,6 @@ Run the package on your computer Integration Services.
   
 ## See Also  
 [Create a script task that uses the SSIS PDW destination adapter](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[Grant permissions to load data](grant-permissions-to-load-data.md)  
-[Common metadata query examples](metadata-query-examples.md)  
 [SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026(&#40;v=sql11&#40;.aspx)  
 [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.comlibrary/ms141091&#40;v=sql11&#40;.aspx)  
 [Tutorial: Creating a Basic Package Using a Wizard](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
@@ -241,7 +248,11 @@ Run the package on your computer Integration Services.
 [Dynamic Package Generation Sample](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [Designing Your SSIS Packages for Parallelism (SQL Server Video)](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Microsoft SQL Server Community Examples: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[Improving Incremental Loads with Change Data Capture](http://msdn.microsoft.com/en-us/library/bb895315&#40;v=sql11&#40;.aspx)  
+[Improving Incremental Loads with Change Data Capture](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
 [Slowly Changing Dimension Transformation](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
 [Bulk Insert Task](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
   
+<!-- MISSING LINKS
+[Grant permissions to load data](grant-permissions-to-load-data.md)  
+[Common metadata query examples](metadata-query-examples.md)
+-->

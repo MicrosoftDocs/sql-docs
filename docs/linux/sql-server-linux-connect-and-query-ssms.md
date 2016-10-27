@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-18-2016
+ms.date: 10-20-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -26,3 +26,7 @@ ms.assetid:
 
 ---
 # Connect and query SQL Server on Linux (SSMS)
+This topic is a walkthrough for using SQL Server Management Studio (SSMS) to connect and query SQL Server vNext CTP1 on Linux.
+
+# Next Steps
+For more information on how to use SSMS, see [Use SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx).

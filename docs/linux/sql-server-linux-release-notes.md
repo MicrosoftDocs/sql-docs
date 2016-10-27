@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-18-2016
+ms.date: 10-25-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -27,7 +27,7 @@ ms.assetid:
 ---
 # Release Notes for SQL Server on Linux
 
-## Release 13.0.2990.31 - September 30, 2016
+**Release 13.0.2990.31 - September 30, 2016**
 
 The following release notes apply to SQL Server vNext CTP1 running on Linux.
 
@@ -84,3 +84,7 @@ The following release notes apply to SQL Server vNext CTP1 running on Linux.
 - SqlPackage shows the location of files with a “C:\” prefix.
 - Changing the locations of TempDB data and log files is not supported.
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
+
+## Supported features and limitations
+
+For a detailed list of supported features and limitations, see [Supported features of SQL Server on Linux](sql-server-linux-supported-features.md).

@@ -22,3 +22,4 @@
 # [Develop](sql-server-linux-connect-applications.md)
 ## [Connect applications to SQL Server on Linux](sql-server-linux-connect-applications.md)
 ## [Data types and formats for SQL Server on Linux](sql-server-linux-data-types-formats.md)
+

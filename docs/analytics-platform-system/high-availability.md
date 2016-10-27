@@ -1,18 +1,18 @@
 ---
+
 title: "Analytics Platform System high availability"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 10/03/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "Describes how Analytics Platform System (APS) is architected for high availability."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: 5ab245e9-0316-4d25-a626-4745ce856925
 caps.latest.revision: 9
-author: BarbKess
+
 ---
+
 # Analytics Platform System high availability
 Describes how Analytics Platform System (APS) is architected for high availability.  
   

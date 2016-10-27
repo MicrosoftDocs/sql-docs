@@ -1,22 +1,21 @@
 ---
+
 title: "Data type conversion rules for dwloader"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "This topic describes the input data formats and implicit data type conversions that dwloader Command-Line Loader supports when it loads data into PDW."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
 caps.latest.revision: 30
-author: BarbKess
+
 ---
+
 # Data type conversion rules for dwloader
-This topic describes the input data formats and implicit data type conversions that [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/dwloader-command-line-loader-sql-server-pdw.md) supports when it loads data into SQL Server PDW. The implicit data conversions occur when the input data does not match the data type in the SQL Server PDW target table. Use this information when designing your loading process to ensure your data will load successfully into SQL Server PDW.  
-  
-For more information about the loader, see. [dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/dwloader-command-line-loader-sql-server-pdw.md).  
+This topic describes the input data formats and implicit data type conversions that [dwloader Command-Line Loader](dwloader.md) supports when it loads data into PDW. The implicit data conversions occur when the input data does not match the data type in the SQL Server PDW target table. Use this information when designing your loading process to ensure your data will load successfully into SQL Server PDW.  
+   
   
 ## <a name="InsertBinaryTypes"></a>Inserting Literals into Binary Types  
 The following table defines the accepted literal types, format, and conversion rules for loading a literal value into a SQL Server PDW column of type **binary** (*n*) or **varbinary**(*n*).  
@@ -167,17 +166,20 @@ The following tables define the default format and conversion rules for loading 
 The following table defines the default format and rules for loading literal values into a column of type **char**, **varchar**, **nchar** and **nvarchar**. The data source length cannot exceed the size specified for the data type. If the data source length is less than size of the **char** or **nchar** data type, the data is padded to the right with blank spaces to reach the data type size.  
   
 |Input Data Type|Input Data Examples|Conversion to Character Data Types|  
-|-------------------|-----------------------|--------------------------------------|  
-|String literal|Format: 'character string'<br /><br />Example: 'abc'||  
-|Unicode string literal|Format: N'character string'<br /><br />Example: N'abc'||  
-|Integer literal|Format: ffffffffffn<br /><br />Example: 321312313123||  
-|Decimal literal|Format: ffffff.fffffff<br /><br />Example: 12344.34455||  
+|---------------|-------------------|----------------------------------|  
+|String literal|Format: 'character string'<br /><br />Example: 'abc'| NA |  
+|Unicode string literal|Format: N'character string'<br /><br />Example: N'abc'| NA |  
+|Integer literal|Format: ffffffffffn<br /><br />Example: 321312313123| NA |  
+|Decimal literal|Format: ffffff.fffffff<br /><br />Example: 12344.34455| NA |  
 |Money literal|Format: $ffffff.fffnn<br /><br />Example: $123456.99|The optional currency symbol is not inserted with the value. To insert the currency symbol, insert the value as a string literal. This will match the format of the loader, which treats every literal as a string literal.<br /><br />Commas are not allowed.<br /><br />If the number of digits after the decimal point exceed 2, the value is rounded up to the nearest value. For example, the value 123.946789 is inserted as 123.95.<br /><br />Only the default style 0 (no commas and 2 digits after the decimal point) is allowed when using the CONVERT function to insert money literals.|  
   
 ### General Remarks  
 **dwloader** performs the same implicit conversions that SMP SQL Server performs, but does not support all of the implicit conversions that SMP SQL Server supports.  
-  
+ 
+<!-- MISSING LINKS 
 ## See Also  
 [Grant Permissions to Load Data &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-load-data-sql-server-pdw.md)  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+
+-->
   

@@ -1,26 +1,21 @@
 ---
+
 title: "Analytics Platform processing and storage capacity"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 07/27/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "Your business requirements determine the number of Data Scale Units, and the size of the Compute node disks that you need in your Analytics Platform System (APS) appliance."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
 caps.latest.revision: 7
-author: BarbKess
+
 ---
+
 # Analytics Platform System processing and storage capacity
 Your business requirements determine the number of Data Scale Units, and the size of the Compute node disks that you need in your Analytics Platform System (APS) appliance. Use these processing and storage calculations to guide your capacity purchasing and planning decisions.  
   
-## Contents  
-  
--   [Planning for Processing Capacity](#section1)  
-  
--   [Planning for Storage Capacity](#section2)  
   
 ## <a name="section1"></a>Planning for processing capacity  
 Query performance for SQL Server Parallel Data Warehouse (PDW) depends heavily on the number of CPU cores working on your data in parallel. Within limits, increasing parallelism improves the massively parallel processing (MPP) query performance. Even if your data size is relatively small, the power of the MPP query engine is enhanced by having greater parallelism.  

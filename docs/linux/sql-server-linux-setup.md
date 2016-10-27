@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-20-2016
+ms.date: 10-27-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -66,6 +66,6 @@ The following guides provide step-by-step installation guides for the supported 
 - [Install SQL Server on Linux (Docker)](sql-server-linux-setup-docker.md)
 
 ## Next Steps
-After installing SQL Server on Linux, next see [how to connect to the server and run basic Transact-SQL queries](sql-server-linux-connect-and-query.md).
+After installation, connect to the SQL Server instance to create and manage databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md).
 
 

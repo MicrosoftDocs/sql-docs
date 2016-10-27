@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-18-2016
+ms.date: 10-27-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 

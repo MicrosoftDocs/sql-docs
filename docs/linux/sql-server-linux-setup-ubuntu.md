@@ -36,6 +36,9 @@ First, install the mssql-server Package on Ubuntu.
 
         $ sudo su
 
+> [!IMPORTANT]
+> The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
+
 2. Download the configuration script and make it executable.
 
         # curl -O https://private-repo.microsoft.com/tools/configure-mssql-repo-2.sh
@@ -70,9 +73,8 @@ Use the following command to print the installed package name and version:
 
       $ dpkg-query -W | grep mssql
 
-## TODO
-Section for upgrade
-Section for installing tools
+## Tools
+
 
 ## Next steps
-TBD   
+See [how to connect to the server and run basic Transact-SQL queries](sql-server-linux-connect-and-query.md).

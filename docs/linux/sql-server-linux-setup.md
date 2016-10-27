@@ -39,7 +39,7 @@ SQL Server vNext CTP1 is supported on the following distributions:
 
 It also has support for the Docker Engine 1.8+ running on any supported Linux distribution. In addition, you can use the latest version of Docker for Mac/Windows.
 
-## Command-line tools and ODBC drivers
+## <a id="Tools"> </a>Command-line tools and ODBC drivers
 You can optionally install the SQL Server command-line tools. It also installs the Microsoft ODBC drivers and dependencies. 
 
 The following tools are installed:
@@ -48,6 +48,8 @@ The following tools are installed:
 |-----|-----|
 | [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) | Run Transact-SQL queries or scripts on any SQL Server instance. |
 | [bcp](https://msdn.microsoft.com/library/ms162802.aspx) | Bulk copies data between an instance of Microsoft SQL Server and a data file in a user-specified format. |
+
+For the specific steps for installing the tools, see the installation guides in the next section.
 
 ## Installation guides
 

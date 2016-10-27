@@ -30,7 +30,7 @@
         "RestApi": "Content"
       },
       "template_folder": "_themes"
-    },
+    }
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],

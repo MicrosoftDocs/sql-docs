@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-18-2016
+ms.date: 10-27-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -35,6 +35,9 @@ First, install the mssql-server Package on Ubuntu.
 1. Enter superuser mode.
 
         $ sudo su
+
+> [!IMPORTANT]
+> The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
 
 2. Download the configuration script and make it executable.
 
@@ -68,11 +71,40 @@ First, install the mssql-server Package on Ubuntu.
 ## Verify the installation
 Use the following command to print the installed package name and version:
 
-      $ dpkg-query -W | grep mssql
+    $ dpkg-query -W | grep mssql
 
-## TODO
-Section for upgrade
-Section for installing tools
+## Install the tools
+The following steps installs the command-line tools, Microsoft ODBC drivers, and their dependencies. For the details on what gets installed, see [Command-line tools and ODBC drivers](sql-server-linux-setup.md#tools).
+
+> [!NOTE]
+> If you install these packages from the same Linux machine as your SQL Server installation, you do NOT need to perform steps 1-2 which were done as part of the SQL Server installation.
+
+> [!IMPORTANT]
+> The following steps will change when we get ready to release.
+
+2. Download the configuration script and make it executable.
+
+        # curl -O https://private-repo.microsoft.com/tools/configure-mssql-repo-2.sh
+        # sudo chmod a+x configure-mssql-repo-2.sh
+
+3. Pass the unique URL provided for you in your invitation email as a parameter to the script. This URL is labeled as **“Package script configuration URL parameter”**:
+
+        # sudo ./configure-mssql-repo-2.sh <URL provided in email>
+
+4. Add the private preview tools repository, and install the SQL Command Line Utilities with its dependencies by running the commands below.
+
+        echo "deb https://private-repo.microsoft.com/ubuntu/mssql-tools-private-preview mssql main" | sudo tee /etc/apt/sources.list.d/mssql-tools.list 
+
+5. Update the sources list and run the installation command:
+
+        $ sudo apt-get update 
+        $ sudo apt-get install mssql-tools
+
+If you are install these packages from the same Linux machine as your SQL Server installation, you can run a test by connecting to your local SQL Server instance (localhost) with your **SA** username and password:
+
+    $ sqlcmd -S localhost -U SA -P <password>
+
+Type **exit** to return to the command-line.
 
 ## Next steps
-TBD   
+After installation, connect to the SQL Server instance to create and manage databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md).

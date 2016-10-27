@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-18-2016
+ms.date: 10-27-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -35,6 +35,9 @@ First, install the mssql-server Package on RHEL.
 1. Enter superuser mode.
 
         $ sudo su
+
+> [!IMPORTANT]
+> The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
 
 2. Download the configuration script and make it executable.
 
@@ -77,9 +80,41 @@ After installation on Red Hat Enterprise Linux you will need to do the following
         $ sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
         $ sudo firewall-cmd --reload
 
-## TODO
-Section for upgrade
-Section for installing tools
+## Install the tools
+The following steps installs the command-line tools, Microsoft ODBC drivers, and their dependencies. For the details on what gets installed, see [Command-line tools and ODBC drivers](sql-server-linux-setup.md#tools).
+
+> [!IMPORTANT]
+> The following steps will change when we get ready to release.
+
+1. Start a terminal session as root:
+
+        $ sudo su
+
+2. Download an installation script for the SQL Server tools and ODBC drivers installation:
+
+        # wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL- 8d067754/file/162203/1/install.sh
+
+3. Run the installation script:
+
+        # sh install.sh
+
+4. Once completed, exit the root mode.
+
+        # exit
+
+If you are install these packages from the same Linux machine as your SQL Server installation, you can run a test by connecting to your local SQL Server instance (localhost) with your **SA** username and password:
+
+    $ sqlcmd -S localhost -U SA -P <password>
+
+Type **exit** to return to the command-line.
+
+To uninstall the tools, download the uninstall script and follow the same steps as described above:
+
+    $ sudo su
+    # wget https://gallery.technet.microsoft.com/ODBC-Driver-13-Tools-e419eed1/file/153767/2/uninstall.sh
+    # sh uninstall.sh 
+    # exit 
 
 ## Next steps
-TBD 
+After installation, connect to the SQL Server instance to create and manage databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md).
+

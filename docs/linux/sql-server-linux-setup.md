@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-20-2016
+ms.date: 10-27-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -29,7 +29,13 @@ ms.assetid:
 
 SQL Server vNext CTP1 is supported on several distribution of Linux. It is also available as a Docker image which can run on Docker for Linux, Windows, and Mac. The topics in this section provide tutorials and general guidance for installing SQL Server vNext CTP1 on Linux. 
 
-## Supported distirbutions
+If you want to go straight to a setup tutorial, select your Linux distribution:
+> [!div class="op_single_selector"]
+- [Ubuntu](sql-server-linux-setup-ubuntu.md)
+- [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
+- [Docker](sql-server-linux-setup-docker.md)
+
+## Supported distributions
 SQL Server vNext CTP1 is supported on the following distributions:
 
 | Distribution | Supported version |
@@ -37,23 +43,29 @@ SQL Server vNext CTP1 is supported on the following distributions:
 | Red Hat Enterprise Linux | 7 |
 | Ubuntu | 16.04 |
 
-It also has support for the Docker Engine running on any supported Linux distribution or Docker for Mac/Windows.
+It also has support for the Docker Engine 1.8+ running on any supported Linux distribution. In addition, you can use the latest version of Docker for Mac/Windows.
 
-| Docker | Supported version |
+## <a id="tools"> </a> Command-line tools and ODBC drivers
+You can optionally install the SQL Server command-line tools. It also installs the Microsoft ODBC drivers and dependencies. 
+
+The following tools are installed:
+
+| Tool | Description |
 |-----|-----|
-| Docker Engine (Linux) | 1.8+ |
-| Docker for Mac | Latest |
-| Docker for Windows | Latest |
+| [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) | Run Transact-SQL queries or scripts on any SQL Server instance. |
+| [bcp](https://msdn.microsoft.com/library/ms162802.aspx) | Bulk copies data between an instance of Microsoft SQL Server and a data file in a user-specified format. |
+
+For the specific steps for installing the tools, see the installation guides in the next section.
 
 ## Installation guides
 
-The following guides provide installation walkthroughs for the supported Linux distributions.
+The following guides provide step-by-step installation guides for the supported Linux distributions.
 
 - [Install SQL Server on Linux (Ubuntu)](sql-server-linux-setup-ubuntu.md)
 - [Install SQL Server on Linux (Red Hat Enterprise Linux)](sql-server-linux-setup-red-hat.md)
 - [Install SQL Server on Linux (Docker)](sql-server-linux-setup-docker.md)
 
 ## Next Steps
-After installing SQL Server on Linux, next see [how to connect to the server and run basic Transact-SQL queries](sql-server-linux-connect-and-query.md).
+After installation, connect to the SQL Server instance to create and manage databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md).
 
 

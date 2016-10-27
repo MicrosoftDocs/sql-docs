@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-18-2016
+ms.date: 10-27-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -27,11 +27,20 @@ ms.assetid:
 ---
 # Release Notes for SQL Server on Linux
 
-## Release 13.0.2990.31 - September 30, 2016
+**Release 13.0.2990.31 - September 30, 2016**
 
 The following release notes apply to SQL Server vNext CTP1 running on Linux.
 
+## Supported operating systems 
+
+- Ubuntu 16.04LTS (EXT4 file system)
+- Red Hat Enterprise Linux 7.2: Workstation, Server and Desktop. (XFS or EXT4 file systems).
+- Docker Engine 1.8+ on Windows, Mac or Linux.
+- Less than 64 cores. Using 64 or more cores will cause an error.
+- Less than 32 GB of memory. If more than 32 GB of memory is available, only 32 GB will be used.
+
 ## Package details
+The following sections provide the Debian and RPM package details.
 
 ### Debian
 
@@ -49,23 +58,16 @@ The following release notes apply to SQL Server vNext CTP1 running on Linux.
 - **Architecture**: x86_64
 - **Version**: 13.0.2990.31
 
-## Package file locations
+### Package file locations
+The following table provide direct links to the Debian and RPM packages for SQL Server vNext.
+
+> [!IMPORTANT]
+> These packages are not meant to be used in typical installation scenarios. For installation steps, see [Install SQL Server on Linux](sql-server-linux-setup.md). 
 
 | Distribution | Download |
 |-----|-----|
-| Red Hat Enterprise Linux 7.2 | [https://private-repo.microsoft.com/rhel7/mssql-private-preview/mssql-server-13.0.2990.31-12.x86_64.rpm](https://private-repo.microsoft.com/rhel7/mssql-private-preview/mssql-server-13.0.2990.31-12.x86_64.rpm) |
 | Ubuntu 16.04 | [https://private-repo.microsoft.com/ubuntu/mssql-private-preview/pool/main/m/mssql-server/mssql-server_13.0.2990-31-8_amd64.deb](https://private-repo.microsoft.com/ubuntu/mssql-private-preview/pool/main/m/mssql-server/mssql-server_13.0.2990-31-8_amd64.deb) |
-
-## Supported operating systems 
-
-- Ubuntu 16.04LTS (EXT4 file system)
-- Red Hat Enterprise Linux 7.2: Workstation, Server and Desktop. (XFS or EXT4 file systems).
-- Docker Engine 1.8+ on Windows, Mac or Linux.
-- Less than 64 cores. Using 64 or more cores will cause an error.
-- Less than 32 GB of memory. If more than 32 GB of memory is available, only 32 GB will be used.
-
-> [!NOTE] 
-> Any file systems that are not specified in the previous list are not supported.
+| Red Hat Enterprise Linux 7.2 | [https://private-repo.microsoft.com/rhel7/mssql-private-preview/mssql-server-13.0.2990.31-12.x86_64.rpm](https://private-repo.microsoft.com/rhel7/mssql-private-preview/mssql-server-13.0.2990.31-12.x86_64.rpm) |
 
 ## Known issues
 
@@ -84,3 +86,7 @@ The following release notes apply to SQL Server vNext CTP1 running on Linux.
 - SqlPackage shows the location of files with a “C:\” prefix.
 - Changing the locations of TempDB data and log files is not supported.
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
+
+## Supported features and limitations
+
+For a detailed list of supported features and limitations, see [Supported features of SQL Server on Linux](sql-server-linux-supported-features.md).

@@ -27,6 +27,11 @@ ms.assetid:
 ---
 # Install SQL Server on Linux (Red Hat)
 
+> [!div class="op_single_selector"]
+- [Ubuntu](sql-server-linux-setup-ubuntu.md)
+- [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
+- [Docker](sql-server-linux-setup-docker.md)
+
 This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Red Hat Enterprise Linux (RHEL) 7.
 
 ## Install SQL Server
@@ -36,8 +41,8 @@ First, install the mssql-server Package on RHEL.
 
         $ sudo su
 
-> [!IMPORTANT]
-> The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
+    > [!IMPORTANT]
+    > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the yum update / yum install commands. 
 
 2. Download the configuration script and make it executable.
 

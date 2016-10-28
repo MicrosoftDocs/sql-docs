@@ -27,6 +27,11 @@ ms.assetid:
 ---
 # Install SQL Server on Linux (Docker)
 
+> [!div class="op_single_selector"]
+- [Ubuntu](sql-server-linux-setup-ubuntu.md)
+- [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
+- [Docker](sql-server-linux-setup-docker.md)
+
 This topic explains how to pull and run the mssql-server Docker image. This image can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
 
 ## Requirements for Docker

@@ -30,9 +30,46 @@ This topic is a walkthrough for using SQL Server Management Studio (SSMS) to con
 
 This article shows how to connect to an Azure SQL database using SQL Server Management Studio (SSMS). After successfully connecting, we run a simple Transact-SQL (T-SQL) query to verify communication with the database.
 
-[!include[SSMS Install](../includes/sql-server-management-studio-install.md)]
+## Install the newest version of SQL Server Management Studio
 
-[!include[SSMS Connect](../includes/sql-database-sql-server-management-studio-connect-server-principal.md)]
+When working with SQL Database, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized to work with Azure and SQL Database. The latest version of SSMS works for all supported versions of SQL Server. To download and install the latest version, see [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
+
+After installing, type **Microsoft SQL Server Management Studio** in the Windows search box and run the app:
+
+![SQL Server Management Studio](./media/sql-server-linux-connect-query-ssms/ssms.png)
+
+
+## Connect to SQL Server on Linux
+
+The following steps show how to connect to an Azure SQL server and database with SSMS.
+
+1. Start SSMS by typing **Microsoft SQL Server Management Studio** in the Windows search box, and then click the desktop app.
+
+2. In the **Connect to Server** window, enter the following information (if SSMS is already running, click **Connect > Database Engine** to open the **Connect to Server** window):
+
+    - **Server type**: The default is database engine; do not change this value.
+    - **Server name**: Enter the name of your SQL Server machine, the IP address, or **localhost** if you are connecting locally.
+    - **Authentication type**: For SQL Server vNext CTP1 on Linux, use **SQL Server Authentication**.
+    - **User name**: Enter the name of a user with access to a database on the server (for example, the default **SA** account created during setup). 
+    - **Password**: Enter the password for the specified user (for the **SA** account, you created this during setup).
+   
+        ![SQL Server Management Studio: Connect to SQL Database server](./media/sql-server-linux-connect-query-ssms/connect.png)
+
+3. Click **Connect**.
+ 
+5. After successfully connecting to your Azure SQL database, **Object Explorer** opens and you can now access your database to perform administrative tasks or query data.
+ 
+     ![new server-level firewall](./media/sql-server-linux-connect-query-ssms/connect-server-principal-5.png)
+     
+## Troubleshoot connection failures
+
+The most common reasons for connection failures are mistakes in the server name, and network connectivity issues. Remember, <*servername*> is the name of the server, not the database, and you need to provide the fully qualified server name: `<servername>.database.windows.net`
+
+Also, verify the user name and password do not contain any typos or extra spaces (user names are not case-sensitive, but passwords are). 
+
+You can also explicitly set the protocol and port number with the server name like the following: `tcp:servername.database.windows.net,1433`
+
+Network connectivity issues can also cause connection errors and timeouts. Simply retrying to connect (when you know that the server name, credentials, and firewall rules are correct) can lead to success.
 
 ## Run sample queries
 

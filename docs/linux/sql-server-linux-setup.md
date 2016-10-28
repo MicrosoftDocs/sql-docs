@@ -57,9 +57,9 @@ The following tools are installed:
 | [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) | Run Transact-SQL queries or scripts on any SQL Server instance. |
 | [bcp](https://msdn.microsoft.com/library/ms162802.aspx) | Bulk copies data between an instance of Microsoft SQL Server and a data file in a user-specified format. |
 
-For the specific steps for installing the tools, see the installation guides in the next section.
+For the specific steps for installing the tools, see the links to the installation guides in the next section.
 
-## Next Steps
+## Next steps
 Use one of the following installation guides to install SQL Server on Linux:
 
 - [Install SQL Server on Linux (Ubuntu)](sql-server-linux-setup-ubuntu.md)

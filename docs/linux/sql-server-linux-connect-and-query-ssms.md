@@ -56,21 +56,14 @@ The following steps show how to connect to an Azure SQL server and database with
         ![SQL Server Management Studio: Connect to SQL Database server](./media/sql-server-linux-connect-query-ssms/connect.png)
 
 3. Click **Connect**.
+
+    > [!TIP]
+    > If you get a connection failure, note the error message and review the [connection troubleshooting recommendations](sql-server-linux-connect-and-query.md#troubleshoot).
  
 5. After successfully connecting to your Azure SQL database, **Object Explorer** opens and you can now access your database to perform administrative tasks or query data.
  
      ![new server-level firewall](./media/sql-server-linux-connect-query-ssms/connect-server-principal-5.png)
      
-## Troubleshoot connection failures
-
-The most common reasons for connection failures are mistakes in the server name, and network connectivity issues. Remember, <*servername*> is the name of the server, not the database, and you need to provide the fully qualified server name: `<servername>.database.windows.net`
-
-Also, verify the user name and password do not contain any typos or extra spaces (user names are not case-sensitive, but passwords are). 
-
-You can also explicitly set the protocol and port number with the server name like the following: `tcp:servername.database.windows.net,1433`
-
-Network connectivity issues can also cause connection errors and timeouts. Simply retrying to connect (when you know that the server name, credentials, and firewall rules are correct) can lead to success.
-
 ## Run sample queries
 
 After you connect to your server, you can connect to a database and run a sample query. If you are new to writing queries, see [Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx).

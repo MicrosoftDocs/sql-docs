@@ -4,7 +4,7 @@ When working with SQL Database, you should always use the most recent version of
 
 After installing, type **Microsoft SQL Server Management Studio** in the Windows search box and run the app:
 
-![SQL Server Management Studio](../docs/linux/media/sql-server-management-studio-install/ssms.png)
+![SQL Server Management Studio](./media/sql-server-management-studio-install/ssms.png)
 
 
 

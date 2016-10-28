@@ -36,8 +36,8 @@ First, install the mssql-server Package on RHEL.
 
         $ sudo su
 
-> [!IMPORTANT]
-> The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
+    > [!IMPORTANT]
+    > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the yum update / yum install commands. 
 
 2. Download the configuration script and make it executable.
 

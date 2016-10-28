@@ -28,6 +28,8 @@ ms.assetid:
 # Connect and query SQL Server on Linux (SSMS)
 This topic is a walkthrough for using SQL Server Management Studio (SSMS) to connect and query SQL Server vNext CTP1 on Linux.
 
+![SQL Server Management Studio](./media/sql-server-management-studio-install/ssms.png)
+
 This article shows how to connect to an Azure SQL database using SQL Server Management Studio (SSMS). After successfully connecting, we run a simple Transact-SQL (T-SQL) query to verify communication with the database.
 
 [!include[SSMS Install](../../includes/sql-server-management-studio-install.md)]

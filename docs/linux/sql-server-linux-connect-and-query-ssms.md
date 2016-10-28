@@ -36,7 +36,7 @@ When working with SQL Database, you should always use the most recent version of
 
 After installing, type **Microsoft SQL Server Management Studio** in the Windows search box and run the app:
 
-![SQL Server Management Studio](./media/sql-server-linux-connect-query-ssms/ssms.png)
+![SQL Server Management Studio](./media/sql-server-linux-connect-and-query-ssms/ssms.png)
 
 
 ## Connect to SQL Server on Linux
@@ -53,7 +53,7 @@ The following steps show how to connect to an Azure SQL server and database with
     - **User name**: Enter the name of a user with access to a database on the server (for example, the default **SA** account created during setup). 
     - **Password**: Enter the password for the specified user (for the **SA** account, you created this during setup).
    
-        ![SQL Server Management Studio: Connect to SQL Database server](./media/sql-server-linux-connect-query-ssms/connect.png)
+        ![SQL Server Management Studio: Connect to SQL Database server](./media/sql-server-linux-connect-and-query-ssms/connect.png)
 
 3. Click **Connect**.
 
@@ -62,7 +62,7 @@ The following steps show how to connect to an Azure SQL server and database with
  
 5. After successfully connecting to your Azure SQL database, **Object Explorer** opens and you can now access your database to perform administrative tasks or query data.
  
-     ![new server-level firewall](./media/sql-server-linux-connect-query-ssms/connect-server-principal-5.png)
+     ![new server-level firewall](./media/sql-server-linux-connect-and-query-ssms/connect-server-principal-5.png)
      
 ## Run sample queries
 
@@ -71,7 +71,7 @@ After you connect to your server, you can connect to a database and run a sample
 1. In **Object Explorer**, navigate to a database on the server, such as the **AdventureWorks** sample database.
 2. Right-click the database and then select **New Query**:
 
-	![New query. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-query-ssms/4-run-query.png)
+	![New query. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-ssms/4-run-query.png)
 
 3. In the query window, copy and paste the following:
 
@@ -85,7 +85,7 @@ After you connect to your server, you can connect to a database and run a sample
 
 4. Click the **Execute** button:
 
-	![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-query-ssms/5-success.png)
+	![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-ssms/5-success.png)
 
 ## Next steps
 

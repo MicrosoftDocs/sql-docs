@@ -29,7 +29,7 @@ ms.assetid:
 This topic provides an overview of how to connect and run Transact-SQL (TSQL) queries on SQL Server vNext CTP1 running on Linux. In many ways the connection techniques and T-SQL commands do not differ between platforms. But this topic looks at the requirements and tools for Linux and then provides references to other resources.
 
 ## Connection requirements
-To connect to SQL Server on Linux, you must use SQL Authentication (username and password). To connect remotely, you must ensure that the port SQL Server listens on is open. The default instance of SQL Server listens on TCP port 1433. Depending on your Linux distribution and configuration, you might have to open this port in the firewall.
+To connect to SQL Server on Linux, you must use SQL Authentication (username and password). To connect remotely, you must ensure that the port SQL Server listens on is open. The default instance of SQL Server listens on TCP port 1433. Depending on your Linux distribution and configuration, you might have to open this port in the firewall. If you are running Linux on an Azure virtual machine, you must also [create a network security group rule](#azure).
 
 ## Tools
 The following table lists several tools that connect to SQL Server and allow you to run queries.
@@ -47,11 +47,16 @@ If you are having difficulty connecting to your Linux SQL Server instance, there
 - Verify that the user name and password do not contain any typos or extra spaces or incorrect casing.
 - Try to explicitly set the protocol and port number with the server name like the following: **tcp:servername,1433**.
 - Network connectivity issues can also cause connection errors and timeouts. After verifying your connection information and network connectivity, try the connection again.
-- If you are running Linux in an Azure virtual machine (VM), you must create a Network Security Group rule for port 1433 to connect to SQL Server remotely.
-    1. In the Azure portal, select your Linux VM, and then select the **Network interfaces** setting. 
-    2. In the next blade, select your network interface to view its properties.
-    3. In the Network interface blade, click the **Network security group** link to manage the Network Security Group associated with your VM.
-    4. Create a Network Security Group rule. For step-by-step instructions, use the steps in [Create rules in an existing NSG](https://azure.microsoft.com/documentation/articles/virtual-networks-create-nsg-arm-pportal/#create-rules-in-an-existing-nsg). These provide the steps for creating an NSG rule, but you must customize your rule for incoming TCP traffic on port 1433. 
+
+### <a id="azure"></a> Requirements for Linux VMs in Azure
+If you are running Linux in an Azure virtual machine (VM), you must also create a Network Security Group rule for port 1433 to connect to SQL Server remotely.
+
+1. In the Azure portal, select your Linux VM, and then select the **Network interfaces** setting. 
+2. In the next blade, select your network interface to view its properties.
+3. In the Network interface blade, click the **Network security group** link to manage the Network Security Group associated with your VM.
+4. Create a Network Security Group rule. For step-by-step instructions, use the steps in [Create rules in an existing NSG](https://azure.microsoft.com/documentation/articles/virtual-networks-create-nsg-arm-pportal/#create-rules-in-an-existing-nsg). These provide the steps for creating an NSG rule, but you must customize your rule for incoming TCP traffic on port 1433. This is shown in the following screenshot.
+
+    ![SQL Server network security group rule](./media/sql-server-linux-connect-and-query/network-security-rule.png)
 
 ## Next Steps
 For more information on using SQL Server vNext on Linux, see [SQL Server on Linux overview](sql-server-linux-overview.md).

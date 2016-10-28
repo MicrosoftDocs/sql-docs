@@ -27,6 +27,11 @@ ms.assetid:
 ---
 # Install SQL Server on Linux (Ubuntu)
 
+> [!div class="op_single_selector"]
+- [Ubuntu](sql-server-linux-setup-ubuntu.md)
+- [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
+- [Docker](sql-server-linux-setup-docker.md)
+
 This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Ubuntu 16.04.
 
 ## Install SQL Server

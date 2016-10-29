@@ -29,7 +29,9 @@ ms.assetid:
 This topic provides an overview of how to connect and run Transact-SQL (TSQL) queries on SQL Server vNext CTP1 running on Linux. In many ways the connection techniques and T-SQL commands do not differ between platforms. But this topic looks at the requirements and tools for Linux and then provides references to other resources.
 
 ## Connection requirements
-To connect to SQL Server on Linux, you must use SQL Authentication (username and password). To connect remotely, you must ensure that the port SQL Server listens on is open. The default instance of SQL Server listens on TCP port 1433. Depending on your Linux distribution and configuration, you might have to open this port in the firewall. If you are running Linux on an Azure virtual machine, you must also [create a network security group rule](#azure).
+To connect to SQL Server on Linux, you must use SQL Authentication (username and password). To connect remotely, you must ensure that the port SQL Server listens on is open. The default instance of SQL Server listens on TCP port 1433. Depending on your Linux distribution and configuration, you might have to open this port in the firewall. 
+
+If you are running Linux on an Azure virtual machine, you must also [create a network security group rule](#azure).
 
 ## Tools
 The following table lists several tools that connect to SQL Server and allow you to run queries.

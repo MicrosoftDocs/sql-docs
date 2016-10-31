@@ -34,13 +34,22 @@ To connect to SQL Server on Linux, you must use SQL Authentication (username and
 If you are running Linux on an Azure virtual machine, you must also [create a network security group rule](#azure).
 
 ## Tools
-The following table lists several tools that connect to SQL Server and allow you to run queries.
+The following sections describe several tools that connect to SQL Server and allow you to run queries.
 
-| Tool | Description |
-|-----|-----|
-| [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) | **Sqlcmd.exe** is a command line tool that can be run from any Windows or Linux machine that has the SQL Server tools installed. It has a basic interface but is good for quickly connecting and running T-SQL commands. <br/>[Connect and query SQL Server on Linux (SqlCmd)](sql-server-linux-connect-and-query-sqlcmd.md) |
-| [Visual Studio Code](https://code.visualstudio.com) | **Visual Studio Code** is a lightweight, cross-platform development tool for writing code. The MSSQL extension provides the ability to execute TSQL commands. This is especially useful in development scenarios where you need to write both application code and database functionality. <br/>[Connect and query SQL Server on Linux (VS Code)](sql-server-linux-connect-and-query-vs-code.md) |
-| [SQL Server Management Studio (SSMS) for Windows](https://msdn.microsoft.com/library/mt238290.aspx) | **SQL Server Management Studio** is a Windows tool for both querying and managing SQL Server instances. This is best for when you are working with both Windows and Linux machines. You can connect SSMS running on Windows to SQL Server running on Linux. The advantage of SSMS is that it provide a graphical user interface for many server and database management tasks. <br/>[Connect and query SQL Server on Linux (SSMS)](sql-server-linux-connect-and-query-ssms.md) |
+### Sqlcmd
+[Sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) is a command line tool that can be run from any Windows or Linux machine that has the SQL Server tools installed. It has a basic interface but is good for quickly connecting and running T-SQL commands.
+
+For a tutorial for Sqlcmd, see [Connect and query SQL Server on Linux (Sqlcmd)](sql-server-linux-connect-and-query-sqlcmd.md).
+
+### Visual Studio Code
+[Visual Studio Code (VS Code)](https://code.visualstudio.com) is a lightweight, cross-platform development tool for writing code. The MSSQL extension provides the ability to execute TSQL commands. This is especially useful in development scenarios where you need to write both application code and database functionality.
+
+To see a tutorial for VS Code, see [Connect and query SQL Server on Linux (VS Code)](sql-server-linux-connect-and-query-vs-code.md).
+
+### SQL Server Management Studio for Windows
+[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) is a Windows tool for both querying and managing SQL Server instances. This is best for when you are working with both Windows and Linux machines. You can connect SSMS running on Windows to SQL Server running on Linux. The advantage of SSMS is that it provide a graphical user interface for many server and database management tasks. <br/>
+
+To see a tutorial for SSMS, see [Connect and query SQL Server on Linux (SSMS)](sql-server-linux-connect-and-query-ssms.md).
 
 ## <a id="troubleshoot"></a> Troubleshoot connection failures
 If you are having difficulty connecting to your Linux SQL Server instance, there are a few things to check. 

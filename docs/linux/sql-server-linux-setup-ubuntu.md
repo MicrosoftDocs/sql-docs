@@ -73,7 +73,7 @@ Use the following command to print the installed package name and version:
 
     $ dpkg-query -W | grep mssql
 
-## Install the tools
+## <a id="tools"></a> Install the tools
 The following steps installs the command-line tools, Microsoft ODBC drivers, and their dependencies. For the details on what gets installed, see [Command-line tools and ODBC drivers](sql-server-linux-setup.md#tools).
 
 > [!NOTE]

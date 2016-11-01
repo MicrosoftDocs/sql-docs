@@ -117,7 +117,7 @@ To configure shared storage, you need to create a network share and mount it to 
 1.   **On one node only**, save the database files to a temporary location. 
 
     > [AZURE.NOTE] The database files contain the login information for the “sa” user.  We will later copy them to the share so that a SQL server instance running on any node in the cluster can access them.
-The following script, creates a new temporary directory, copies the database files to the new directory, and removes the old database files. 
+The following script creates a new temporary directory, copies the database files to the new directory, and removes the old database files. 
 
 ```bash
 # mkdir /var/opt/mssql/tmp
@@ -170,25 +170,25 @@ The following script, creates a new temporary directory, copies the database fil
           domain=CORP
     ```
 
-6.  Get the SQL Server user ID (uid), and group ID (gid). To get the SQL Server uid and gid, run the folliwing command from the primary node.
+6.  Get the SQL Server user ID (uid), and group ID (gid). To get the SQL Server uid and gid, run the following command from the primary node.
 
     ```bash
          # id mssql
     ```
 
-         Update the following line and append it to `/etc/fstab` to instruct the operating system where and how to mount the file for SQL Server:
+    Update the following line and append it to `/etc/fstab` to instruct the operating system where and how to mount the file for SQL Server:
 
     ```bash
          //<storage server>/<share> /var/opt/mssql/data  cifs  credentials=<file>,uid=<mssql uid>,gid=<mssql gid> 0  0
     ```
-
-         For example, the following line adds the `\\StorageServer\SQL` share to the `/var/opt/mssql/data` with credentials for Linux cluster file with the SQL Server UID and gid. 
+    
+    For example, the following line adds the `\\StorageServer\SQL` share to the `/var/opt/mssql/data` with credentials for Linux cluster file with the SQL Server UID and gid. 
 
     ```bash
            //machine/share /var/opt/mssql/data  cifs  credentials=/.cifscredfile,uid=995,gid=996 0  0
     ```
 
-          If the `/etc/fstab` file was edited correctly, the share is mounted to`/var/opt/mssql/data` and will be automatically re-mounted when the node restarts.
+    If the `/etc/fstab` file was edited correctly, the share is mounted to`/var/opt/mssql/data` and will be automatically re-mounted when the node restarts.
 
 7.  Copy the database and log files that you saved to `/var/opt/mssql/tmp` to the newly mounted share `/var/opt/mssql/data`. This only needs to be done **on one node**.
 

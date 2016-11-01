@@ -27,6 +27,15 @@ ms.assetid:
 
 # Operate shared disk cluster
 
+This document shows how to:
+
+- Manually failover the cluster
+- Monitor a failover cluster SQL Server service
+- Add a cluster node
+- remove a cluster node
+- Change the SQL Server resource monitoring frequency
+
+
 ## Failover cluster manually
 
 The `resource move` command creates a constraint forcing the resource to remain on the target node.  After executing the `move` command, executing resource `clear` will remove the constraint so it is possible to move the resource again or have the resource automatically fail over. 
@@ -43,7 +52,7 @@ The following example moves the **mssql** resource to a node named **vm2**, and 
 # pcs resource clear mssql 
 ```
 
-## Monitor and troubleshoot failover cluster
+## Monitor a failover cluster SQL Server service
 
 View the current cluster status:
 
@@ -69,7 +78,7 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
 
 3. The new node needs a unique name that is 15 characters or less. By default in Red Hat Linux the computer name is `localhost.localdomain`. This default name may not be unique and is too long. Set the computer name the new node. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`. 
 
-    ```
+    ```bash
    # vi /etc/hosts
     ```
 
@@ -206,4 +215,6 @@ The following example sets the monitoring interval to 2 seconds for the mssql re
 # pcs resource op monitor interval=2s mssql 
 ```
 
+## Next Steps
 
+[Configure shared disk cluster for SQL Server on Linux](sql-server-linux-configure-shared-disk-cluster.md)

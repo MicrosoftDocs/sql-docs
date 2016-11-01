@@ -351,4 +351,6 @@ The following command disables the fencing agents.
      pcsd: active/enabled
    ```
 
+## Next steps
 
+[Operate shared disk cluster](sql-server-linux-operate-shared-disk-cluster.md)

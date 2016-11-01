@@ -36,8 +36,8 @@ First, install the mssql-server Package on Ubuntu.
 
         $ sudo su
 
-> [!IMPORTANT]
-> The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
+    > [!IMPORTANT]
+    > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
 
 2. Download the configuration script and make it executable.
 
@@ -73,7 +73,7 @@ Use the following command to print the installed package name and version:
 
     $ dpkg-query -W | grep mssql
 
-## Install the tools
+## <a id="tools"></a> Install the tools
 The following steps installs the command-line tools, Microsoft ODBC drivers, and their dependencies. For the details on what gets installed, see [Command-line tools and ODBC drivers](sql-server-linux-setup.md#tools).
 
 > [!NOTE]

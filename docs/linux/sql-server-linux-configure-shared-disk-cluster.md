@@ -167,7 +167,7 @@ To configure shared storage, you need to create a network share and mount it to 
     # id mssql
     ```
 
-    Update the following line and append it to `/etc/fstab` to instruct the operating system where and how to mount the file for SQL Server:
+1. Configure the operating system to mount the shared file. In the following line, update `//<storage server>/<share>` with the name of the file server and the shared disk. Update `<file>` with the name of the credential file. Update `<mssql uid>` with the SQL Server User ID, and `<gid>` with the Group ID. Update the following line and append it to `/etc/fstab` to instruct the operating system where and how to mount the file for SQL Server:
 
     ```bash
     //<storage server>/<share> /var/opt/mssql/data  cifs  credentials=<file>, uid=<mssql uid>, gid=<mssql gid> 0  0

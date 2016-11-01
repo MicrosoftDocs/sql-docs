@@ -99,6 +99,8 @@ You can also use sqlcmd to run Transact-SQL script files. Use the following step
 
 2. In the **vi** editor, press **i** to enter INSERT mode.
 
+        i
+
 3. Enter the same Transact-SQL commands from the previous example.
 
         USE AdventureWorks
@@ -110,7 +112,9 @@ You can also use sqlcmd to run Transact-SQL script files. Use the following step
 
 4. Press the Escape key to exit INSERT mode.
 
-5. Press **:**, type **x**, and then press enter to save the file and exit **vi**.
+5. Press **:x** to save and exit **vi**.
+
+        :x
 
 6. At the prompt, run sqlcmd with the sqlscript.sql file as an input file.
 

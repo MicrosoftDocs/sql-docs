@@ -56,6 +56,14 @@ If you are a Microsoft PM or writer who is working on SQL Server content, you mu
 
 5. Search for **sql-docs-read**, and click the **Request to join** button.
 
+### Log onto the OPS Portal
+
+If you are working in the private **sql-docs-pr** repository, there is one additional step you need to take. 
+
+1. Log into the [OPS Publishing Portal](http://ops.microsoft.com). 
+2. When prompted, select **Sign in with Github**.
+3. Once you have securely signed in, close the portal.
+
 ## Determine whether you really need to follow the rest of these steps
 
 You might not need to follow all the steps in this article. It depends on the sort of content contribution you want or need to make.

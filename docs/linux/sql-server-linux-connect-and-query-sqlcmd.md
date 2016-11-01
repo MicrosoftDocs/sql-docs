@@ -110,7 +110,7 @@ You can also use sqlcmd to run Transact-SQL script files. Use the following step
 
 4. Press the Escape key to exit INSERT mode.
 
-5. Press **:x** and then enter. This saves the file and exists **vi**.
+5. Press **:**, type **x**, and then press enter to save the file and exit **vi**.
 
 6. At the prompt, run sqlcmd with the sqlscript.sql file as an input file.
 
@@ -121,7 +121,7 @@ You can also use sqlcmd to run Transact-SQL script files. Use the following step
 > [!NOTE]
 > You can also send the output to a file with the **-o** parameter.
 >
->    sqlcmd -H localhost -U SA -P password -i sqlscript.sql -o output.txt
+> **sqlcmd -H localhost -U SA -P password -i sqlscript.sql -o output.txt**
 
 # Next Steps
 

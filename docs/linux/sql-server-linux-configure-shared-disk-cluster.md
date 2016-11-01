@@ -47,7 +47,7 @@ From a high level, this guide completes the following steps:
 6. Create the cluster and set the fencing agents 
 7. Setup the SQL Server Pacemaker agent resource
 
-Walkthrough to set up a failover cluster solution for demonstration purposes. 
+The following sections walk through the steps to set up a failover cluster solution for demonstration purposes. 
 
 ## Setup and configure the operating system on each cluster node
 
@@ -105,8 +105,6 @@ The first step is to configure the operating system on the cluster nodes. For th
    ```bash
    # systemctl stop mssql-server
    ```
-
-
 
 At this point, SQL Server should be stopped on both nodes. On one node, you have copied the SQL Server database files to a temporary directory and deleted the files from the original directory. The next step is to configure shared storage. 
 
@@ -175,7 +173,7 @@ To configure shared storage, you need to create a network share and mount it to 
     For example, the following line adds the `\\StorageServer\SQL` share to the `/var/opt/mssql/data` with credentials for Linux cluster file with the SQL Server UID and gid. 
 
     ```bash
-    //machine/share /var/opt/mssql/data  cifs  credentials=/.cifscredfile,uid=995,gid=996 0  0
+    //machine/share /var/opt/mssql/data cifs credentials=/.cifscredfile,uid=995,gid=996 0  0
     ```
 
     If the `/etc/fstab` file was edited correctly, the share is mounted to`/var/opt/mssql/data` and will be automatically re-mounted when the node restarts.
@@ -196,7 +194,9 @@ At this point both instances of SQL Server are configured to run with the databa
 
 To configure SQL Server for Pacemaker, you will need to create a SQL Server login, credentials, and configure the firewall for password. Before proceeding, start SQL Server on one node. 
 
-1. On the node that is running SQL Server, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. On the node that is running, connect to the SQL Server `master` database with the sa account and run the following:
+1. On the primary node, start SQL Server.
+
+1. Create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. On the node that is running, connect to the SQL Server `master` database with the sa account and run the following:
 
    ```sql
    USE [master]
@@ -206,7 +206,7 @@ To configure SQL Server for Pacemaker, you will need to create a SQL Server logi
    GRANT VIEW SERVER STATE TO <loginName>
    ```
 
-2. On both cluster nodes, create a file to store the SQL Server usename and password for the Pacemaker login. The following command creates and populates this file:
+2. On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
 
    ```bash
    # touch /var/opt/mssql/passwd

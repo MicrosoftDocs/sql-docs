@@ -181,14 +181,14 @@ To configure shared storage, you need to create a network share and mount it to 
     If the `/etc/fstab` file was edited correctly, the share is mounted to`/var/opt/mssql/data` and will be automatically re-mounted when the node restarts.
 
 7.  Copy the database and log files that you saved to `/var/opt/mssql/tmp` to the newly mounted share `/var/opt/mssql/data`. This only needs to be done **on the primary node**.
-
+ 
 8.  Validate that SQL Server starts successfully with the new file path. Do this on each node. At this point only one node should run SQL Server at a time. They cannot both run at the same time because they will both try to access the data files simultaneously.  The following commands start SQL Server, check the status, and then stop SQL Server.
-
-    ​```bash
-    systemctl start mssql-server
-    systemctl status mssql-server
-    systemctl stop mssql-server
-    ​```
+ 
+    ```
+    # systemctl start mssql-server
+    # systemctl status mssql-server
+    # systemctl stop mssql-server
+    ```
  
 At this point both instances of SQL Server are configured to run with the database files on the shared storage. The next step is to configure SQL Server for Pacemaker. 
 

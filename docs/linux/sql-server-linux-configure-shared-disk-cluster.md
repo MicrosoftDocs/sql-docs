@@ -117,13 +117,15 @@ To configure shared storage, you need to create a network share and mount it to 
 1.   **On one node only**, save the database files to a temporary location. 
 
     > [AZURE.NOTE] The database files contain the login information for the “sa” user.  We will later copy them to the share so that a SQL server instance running on any node in the cluster can access them.
-The following script creates a new temporary directory, copies the database files to the new directory, and removes the old database files. 
 
-```bash
-# mkdir /var/opt/mssql/tmp
-# cp /var/opt/mssql/data/* /var/opt/mssql/tmp
-# rm /var/opt/mssql/data/*
-```
+    The following script creates a new temporary directory, copies the database files to the new directory, and removes the old database files. 
+
+    ```bash
+    # mkdir /var/opt/mssql/tmp
+    # cp /var/opt/mssql/data/* /var/opt/mssql/tmp
+    # rm /var/opt/mssql/data/*
+    ```
+    
 2.  Install `cifs-utils` on both nodes. The following command installs `cifs-utils`.
 
     ```
@@ -173,7 +175,7 @@ The following script creates a new temporary directory, copies the database file
 6.  Get the SQL Server user ID (uid), and group ID (gid). To get the SQL Server uid and gid, run the following command from the primary node.
 
     ```bash
-         # id mssql
+    # id mssql
     ```
 
     Update the following line and append it to `/etc/fstab` to instruct the operating system where and how to mount the file for SQL Server:
@@ -194,11 +196,11 @@ The following script creates a new temporary directory, copies the database file
 
 8.  Validate that SQL Server starts successfully with the new file path. Do this on each node. At this point only one node should run SQL Server at a time. They cannot both run at the same time because they will both try to access the data files simultaneously.  The following commands start SQL Server, check the status, and then stop SQL Server.
 
-        ​```
-        # systemctl start mssql-server
-        # systemctl status mssql-server
-        # systemctl stop mssql-server
-        ​```
+    ​```
+    # systemctl start mssql-server
+    # systemctl status mssql-server
+    # systemctl stop mssql-server
+    ​```
 
 At this point both instances of SQL Server are configured to run with the database files on the shared storage. The next step is to configure SQL Server for Pacemaker. 
 

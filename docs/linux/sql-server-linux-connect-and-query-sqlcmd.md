@@ -89,7 +89,44 @@ After you connect to your server, you can connect to a database and run a sample
 
 5. Type **exit** and press enter to quit sqlcmd. 
 
-## TODO: Script section
+## Run a Transact-SQL Script
+
+You can also use sqlcmd to run Transact-SQL script files. Use the following steps to run a script.
+
+1. In a Linux command terminal, use **vi** to create a new script file named sqlscript.sql.
+
+        vi sqlscript.sql
+
+2. In the **vi** editor, press **i** to enter INSERT mode.
+
+3. Enter the same Transact-SQL commands from the previous example.
+
+        USE AdventureWorks
+        GO
+
+        SELECT TOP 10 Name, ProductNumber
+        FROM Production.Product
+        ORDER BY Name ASC
+
+4. Press the Escape key to exit INSERT mode.
+
+5. Press **:x** and then enter. This saves the file and exists **vi**.
+
+6. At the prompt, run sqlcmd with the sqlscript.sql file as an input file.
+
+        sqlcmd -H localhost -U SA -P password -i sqlscript.sql
+
+7. You should see 10 rows returned in the output window. Instead of staying at the sqlcmd prompt, you return immediately to the terminal prompt.
+
+> [!NOTE]
+> You can also send the output to a file with the **-o** parameter.
+>
+>    sqlcmd -H localhost -U SA -P password -i sqlscript.sql -o output.txt
 
 # Next Steps
+
+In addition to queries, you can use T-SQL statements to create and manage databases.
+
+If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx) and the [Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx).
+
 For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).

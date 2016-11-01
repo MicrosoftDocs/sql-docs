@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure high availability and disaster recovery for SQL Server on Linux | SQL Server vNext CTP1
+title: Configure shared disk cluster for SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -25,7 +25,7 @@ ms.assetid:
 
 ---
 
-# Configure high availability and disaster recovery for SQL Server on Linux
+# Configure shared disk cluster for SQL Server on Linux
 
 This guide provides instructions to create a two-node Linux shared disk cluster for SQL Server. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). 
 
@@ -77,6 +77,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    $ sudo firewall-cmd --reload 
    ```
 
+   For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md)
 
 
 2. Check the IP address for each node. The following script shows the IP address of your current node. 

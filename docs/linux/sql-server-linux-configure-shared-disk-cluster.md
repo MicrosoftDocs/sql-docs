@@ -77,7 +77,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    $ sudo firewall-cmd --reload 
    ```
 
-   For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md)
+   For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
 
 2. Check the IP address for each node. The following script shows the IP address of your current node. 
@@ -100,6 +100,8 @@ The first step is to configure the operating system on the cluster nodes. For th
    10.128.18.128 fcivm1
    10.128.16.77 fcivm2
    ```
+
+   The file should be identical on each node. 
 
 4. Stop the SQL Server service on both nodes. The following script stops the SQL Server service.
 
@@ -124,7 +126,7 @@ To configure shared storage, you need to create a network share and mount it to 
     # cp /var/opt/mssql/data/* /var/opt/mssql/tmp
     # rm /var/opt/mssql/data/*
     ```
-
+ 
 2.  Install `cifs-utils` on both nodes. The following command installs `cifs-utils`.
 
     ```
@@ -140,7 +142,7 @@ To configure shared storage, you need to create a network share and mount it to 
     ```bash
     # mkdir /var/opt/mssql/tmp
     # cp /var/opt/mssql/data/* /var/opt/mssql/tmp
-    # rm /var/opt/mssql/data/*Install `cifs-utils` on both nodes. The following command installs `cifs-utils` on both nodes.
+    # rm /var/opt/mssql/data/*
     ```
 
 5.  Create a file that contains credentials for mounting the share on both nodes. The file needs to identify the username, password and domain as follows:

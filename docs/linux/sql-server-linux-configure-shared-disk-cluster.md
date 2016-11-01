@@ -125,7 +125,7 @@ To configure shared storage, you need to create a network share and mount it to 
     # cp /var/opt/mssql/data/* /var/opt/mssql/tmp
     # rm /var/opt/mssql/data/*
     ```
-    
+
 2.  Install `cifs-utils` on both nodes. The following command installs `cifs-utils`.
 
     ```
@@ -159,17 +159,17 @@ To configure shared storage, you need to create a network share and mount it to 
 5.  Create a file that contains credentials for mounting the share. The file needs to identify the username, password and domain as follows:
 
     ```bash
-         username=<username>
-         password=<password>
-         domain=<domain>
+    username=<username>
+    password=<password>
+    domain=<domain>
     ```
 
-         For example, the credential file may contain the following values:
+    For example, the credential file may contain the following values:
 
     ```bash
-          username=sqlfci
-          password=KD(YE8e937!0008x
-          domain=CORP
+    username=sqlfci
+    password=KD(YE8e937!0008x
+    domain=CORP
     ```
 
 6.  Get the SQL Server user ID (uid), and group ID (gid). To get the SQL Server uid and gid, run the following command from the primary node.
@@ -181,13 +181,13 @@ To configure shared storage, you need to create a network share and mount it to 
     Update the following line and append it to `/etc/fstab` to instruct the operating system where and how to mount the file for SQL Server:
 
     ```bash
-         //<storage server>/<share> /var/opt/mssql/data  cifs  credentials=<file>,uid=<mssql uid>,gid=<mssql gid> 0  0
+    //<storage server>/<share> /var/opt/mssql/data  cifs  credentials=<file>,uid=<mssql uid>,gid=<mssql gid> 0  0
     ```
     
     For example, the following line adds the `\\StorageServer\SQL` share to the `/var/opt/mssql/data` with credentials for Linux cluster file with the SQL Server UID and gid. 
 
     ```bash
-           //machine/share /var/opt/mssql/data  cifs  credentials=/.cifscredfile,uid=995,gid=996 0  0
+    //machine/share /var/opt/mssql/data  cifs  credentials=/.cifscredfile,uid=995,gid=996 0  0
     ```
 
     If the `/etc/fstab` file was edited correctly, the share is mounted to`/var/opt/mssql/data` and will be automatically re-mounted when the node restarts.

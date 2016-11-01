@@ -70,6 +70,9 @@ This topic explains how to pull and run the mssql-server Docker image. This imag
     > [!NOTE]
     > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image.
 
+## <a id="tools"></a> SQL Server command-line tools
+The Docker image for SQL Server vNext comes with the SQL Server command-line tools and ODBC drivers pre-installed. For more details on these tools, see [Command-line tools and ODBC drivers](sql-server-linux-setup.md#tools).
+
 ## Next steps
 
 After installing SQL Server on Linux, next see [how to connect to the server and run basic Transact-SQL queries](sql-server-linux-connect-and-query.md).

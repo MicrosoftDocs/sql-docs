@@ -80,7 +80,7 @@ After installation on Red Hat Enterprise Linux you will need to do the following
         $ sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
         $ sudo firewall-cmd --reload
 
-## Install the tools
+## <a id="tools"></a> Install the tools
 The following steps installs the command-line tools, Microsoft ODBC drivers, and their dependencies. For the details on what gets installed, see [Command-line tools and ODBC drivers](sql-server-linux-setup.md#tools).
 
 > [!IMPORTANT]

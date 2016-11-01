@@ -26,7 +26,7 @@ ms.assetid:
 
 ---
 # Connect and query SQL Server on Linux (SSMS)
-This topic shows how to use SQL Server Management Studio (SSMS) to connect to SQL Server vNext CTP1 on Linux. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
+This topic shows how to use [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) to connect to SQL Server vNext CTP1 on Linux. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
 
 After successfully connecting, you run a simple Transact-SQL (T-SQL) query to verify communication with the database.
 
@@ -73,10 +73,11 @@ After you connect to your server, you can connect to a database and run a sample
 
 	![New query. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-ssms/new-query.png)
 
-3. In the query window, write a Transact-SQL query to select data from one of the tables. The following example selects data from the **SalesLT.Customer** table of the **AdventureWorks** database.
+3. In the query window, write a Transact-SQL query to select data from one of the tables. The following example selects data from the **Production.Product** table of the **AdventureWorks** database.
 
-        SELECT CustomerId, Title, FirstName, LastName, CompanyName
-        FROM SalesLT.Customer;
+        SELECT TOP 10 Name, ProductNumber
+        FROM Production.Product
+        ORDER BY Name ASC
 
 4. Click the **Execute** button:
 

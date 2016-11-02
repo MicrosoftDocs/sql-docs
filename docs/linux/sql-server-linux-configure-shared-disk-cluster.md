@@ -351,6 +351,27 @@ The following command disables the fencing agents.
      pcsd: active/enabled
    ```
 
+## Troubleshooting shared disk cluster 
+
+It may help troubleshoot the cluster to understand the three daemons work together cluster resources.
+
+| Daemon | Description 
+| ----- | -----
+| Corosync | Provides quorum membership and messaging between cluster nodes.
+| Pacemaker | Resides on top of Corosync and provides state machines for resources. 
+| PCSD | Manages both Pacemaker and Corosync through the `pcs` tools
+
+PCSD must be running in ordert o use `pcs`. 
+
+### pcs commands
+
+Use the following commands with `pcs`.
+
+| Command | Description 
+| ----- | -----
+| `# pcs status` | Check the status of Pacemaker and corosync.
+
 ## Next steps
 
 [Operate shared disk cluster](sql-server-linux-operate-shared-disk-cluster.md)
+

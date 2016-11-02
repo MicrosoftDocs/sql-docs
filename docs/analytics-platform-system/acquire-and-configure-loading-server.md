@@ -1,18 +1,17 @@
 ---
+
 title: "Acquire and Configure a Loading Server (SQL Server PDW)"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 07/27/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "Acquire and configure a loading server as a non-appliance Windows system for submitting data loads to SQL Server Parallel Data Warehouse."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
 ms.assetid: a434b174-a818-4f73-b218-264619bab664
 caps.latest.revision: 19
-author: BarbKess
+
 ---
+
 # Acquire and configure a loading server
 This topic describes how to acquire and configure a loading server as a non-appliance Windows system for submitting data loads to SQL Server Parallel Data Warehouse (PDW).  
   
@@ -73,9 +72,14 @@ Use these steps to connect the loading server to the InfiniBand network. If the 
 5.  Configure the InfiniBand and DNS settings for the network adapters. For configuration instructions, see [Configure InfiniBand network adapters](configure-infiniband-network-adapters.md).  
   
 ## <a name="Step4"></a>Step 4: Install the loading tools  
-To install dwloader, see [Install dwloader Command-Line Loading Tool](install-dwloader.md).  
+The Client Tools are available for download from the Microsoft Download Center. 
+
+To install dwloader, run the dwloader installation from the client tools.
   
-If you plan to use Integration Services for loading, you will need to install Integration Services  and the Integration Services destination adapters. For instructions, see [Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md).  
+If you plan to use Integration Services for loading, you will need to install Integration Services  and the Integration Services destination adapters. The adapters are available in the Client Tools.
+
+<!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
+--> 
   
 ## <a name="Step5"></a>Step 5: Start Loading  
 You are now ready to start loading data. For more information, see:  

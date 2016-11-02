@@ -1,23 +1,23 @@
 ---
-title: "Load (SQL Server PDW)"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+
+title: "Load"
+description: "You can load or insert data into SQL Server Parallel Data Warehouse (PDW) by using Integration Services, bcp Utility, dwloader, or the SQL INSERT statement."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: c7292108-4a48-409e-b0f4-e4ba84dce26f
 caps.latest.revision: 22
-author: BarbKess
+
 ---
+
 # Load (SQL Server PDW)
 You can load or insert data into SQL Server Parallel Data Warehouse (PDW) by using Integration Services, [bcp Utility](https://msdn.microsoft.com/library/ms162802.aspx), **dwloader** Command-line Loader, or the SQL INSERT statement.  
 
 ## Loading Environment  
-To load data, you need one or more loading servers. You can use your own existing ETL or other servers, or you can purchase new servers. For more information, see [Acquire and Configure a Loading Server](acquire-and-configure-a-loading-server-sql-server-pdw.md). These instructions include a [Loading Server Capacity Planning Worksheet](loading-server-capacity-planning-worksheet.md) to help you plan the right solution for loading.  
+To load data, you need one or more loading servers. You can use your own existing ETL or other servers, or you can purchase new servers. For more information, see [Acquire and Configure a Loading Server](acquire-and-configure-loading-server.md). These instructions include a [Loading Server Capacity Planning Worksheet](loading-server-capacity-planning-worksheet.md) to help you plan the right solution for loading.  
   
 ## Load with dwloader  
 Using the [dwloader Command-Line Loader](dwloader.md) is the fastest way to load data into PDW.  
@@ -38,14 +38,15 @@ You can use prepared statements to load data into distributed and replicated tab
   
 |Task|Description|  
 |--------|---------------|  
-|Create the staging database.|[Create the staging database](create-the-staging-database.md)|  
+|Create the staging database.|[Create the staging database](staging-database.md)|  
 |Load with Integration Services.|[Load with Integration Services](load-with-ssis.md)|  
 |Understand type conversions for dwloader.|[Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md)|  
 |Load data with dwloader.|[dwloader Command-Line Loader](dwloader.md)|  
 |Understand type conversions for INSERT.|[Load data with INSERT](load-with-insert.md)|  
-|||  
-  
+ 
+<!-- MISSING LINKS
 ## See Also  
 [Grant permissions to load data](grant-permissions-to-load-data.md)  
 [Common metadata query examles](metadata-query-examples.md)  
   
+-->

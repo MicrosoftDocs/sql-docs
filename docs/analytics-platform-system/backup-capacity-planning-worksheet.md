@@ -1,14 +1,12 @@
 ---
 title: "Backup Server Capacity Planning Worksheet (SQL Server PDW)"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 07/27/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "This capacity planning worksheet helps you to determine the requirements for a backup server for performing SQL Server PDW database backup and restore operations."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
 caps.latest.revision: 6
 author: BarbKess

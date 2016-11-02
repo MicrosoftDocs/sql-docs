@@ -2,22 +2,8 @@
   "build_entry_point": "docs",
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
+  "need_preview_pull_request": true,
   "docsets_to_publish": [
-    {
-      "docset_name": "mpp",
-      "build_source_folder": "docs/mpp",
-      "build_output_subfolder": "sql/mpp",
-      "locale": "en-us",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes.MSDN.Modern"
-    },
     {
       "docset_name": "analytics-platform-system",
       "build_source_folder": "docs/analytics-platform-system",
@@ -30,8 +16,7 @@
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
-      "build_entry_point": "docs",
-      "template_folder": "_themes.MSDN.Modern"
+      "build_entry_point": "op"
     },
     {
       "docset_name": "linux",
@@ -54,14 +39,14 @@
   "need_preview_pull_request": true,
   "dependent_repositories": [
     {
-      "path_to_root": "_themes.MSDN.Modern",
-      "url": "https://github.com/Microsoft/templates.msdn.msft",
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
     },
     {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "path_to_root": "_themes.MSDN.Modern",
+      "url": "https://github.com/Microsoft/templates.msdn.msft",
       "branch": "master",
       "branch_mapping": {}
     }

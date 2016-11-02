@@ -27,7 +27,14 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+	      "author": "barbkess",
+	      "ms.author": "barbkess",
+	      "manager": "jhubbard",	  
+        "ms.topic": "article",
+	      "ms.prod": "analytics-platform-system",	  
+	      "ms.technology": "mpp-data-warehouse"
+	},
     "fileMetadata": {},
     "template": [],
     "dest": "sql/analytics-platform-system"

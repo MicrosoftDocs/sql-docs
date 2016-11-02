@@ -1,18 +1,18 @@
 ---
+
 title: "Loading Server Capacity Planning Worksheet (SQL Server PDW)"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 07/27/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "This capacity planning worksheet helps you to determine the requirements for a loading server for loading data into SQL Server PDW."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: df2155be-a624-40ba-9a85-58af708f7ce7
 caps.latest.revision: 9
-author: BarbKess
+
 ---
+
 # Loading server capacity planning worksheet
 This capacity planning worksheet helps you to determine the requirements for a loading server for loading data into SQL Server PDW. Use this to create your plan for purchasing or provisioning existing loading servers.  
   

@@ -1,18 +1,18 @@
 ---
+
 title: "Transparent Data Encryption for Parallel Data Warehouse"
-ms.author: BarbKess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.custom: na
-ms.date: 10/07/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+description: "Transparent data encryption (TDE) performs real-time I/O encryption and decryption of the data and transaction log files and the special PDW log files."
+
+author: "barbkess" 
+ms.author: "barbkess"
+ms.date: "10/20/2016"
+ms.topic: "article"
+
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
 caps.latest.revision: 22
-author: BarbKess
+
 ---
+
 # Transparent Data Encryption
 You can take several precautions to help secure the database such as designing a secure system, encrypting confidential assets, and building a firewall around the database servers. However, in a scenario where the physical media (such as drives or backup tapes) are stolen, a malicious party can just restore or attach the database and browse the data. One solution is to encrypt the sensitive data in the database and protect the keys that are used to encrypt the data with a certificate. This prevents anyone without the keys from using the data, but this kind of protection must be planned in advance.  
   

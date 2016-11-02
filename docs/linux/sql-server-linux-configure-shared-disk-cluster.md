@@ -361,15 +361,43 @@ It may help troubleshoot the cluster to understand the three daemons work togeth
 | Pacemaker | Resides on top of Corosync and provides state machines for resources. 
 | PCSD | Manages both Pacemaker and Corosync through the `pcs` tools
 
-PCSD must be running in ordert o use `pcs`. 
+PCSD must be running in order to use `pcs`. 
 
 ### pcs commands
 
-Use the following commands with `pcs`.
+- `# pcs status` returns basic information about the cluster, quorum, nodes, resources, and daemon status for each node. 
 
-| Command | Description 
-| ----- | -----
-| `# pcs status` | Check the status of Pacemaker and corosync.
+    An example of a healthy pacemaker quorum output would be:
+
+    ```
+    Cluster name: sqlvmclus1 
+    Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+    Stack: corosync 
+    Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
+    3 nodes and 1 resource configured 
+    
+    Online: [ sqlvmnode1 sqlvmnode2 sqlvmnode3] 
+
+    Full list of resources: 
+
+    mssql (ocf::sql:fci): Started jomeisel-16 
+
+    PCSD Status: 
+    jomeisel-15: Online 
+    jomeisel-16: Online 
+    jomeisel-17: Online 
+
+    Daemon Status: 
+    corosync: active/disabled 
+    pacemaker: active/enabled 
+    ```    
+
+    In the example, `partition with quorum` means that a majoirity quorum of nodes is online. If the cluster loses a majority quorum of nodes it will stop all resources. If the cluster loses the majority of quorum nodes, `pcs status` will return `partition WITHOUT quorum`. 
+
+    `online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` returns the name of all online nodes. If any nodes are not online `pcs status` returns `OFFLINE [*nodename*]`.
+
+
+
 
 ## Next steps
 

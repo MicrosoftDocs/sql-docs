@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11-01-2016
+ms.date: 11-02-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -31,31 +31,32 @@ This topic shows how to use Visual Studio Code (VS Code) tool to connect and que
 
 VS Code is a cross-platform graphical code editor that supports extensions. The SQL Tools extension (vscode-mssql) for VS Code enables you to connect and query SQL Server using Transact-SQL.
 
+## Install Visual Studio Code
+If you have not already installed Visual Studio Code, [Download and install VS Code](https://code.visualstudio.com/Download) on your Linux machine.
+
 ## Install the SQL Tools extension
 The following steps explain how to install the SQL Tools extension (vscode-mssql). 
 
 > [!IMPORTANT] 
 > This section contains internal dogfood instructions for now and will be modified for customers later. It will either be a link to other installation instructions or a brief summary of the steps required.
 
-1. If you have not already installed Visual Studio Code, [Download and install VS Code](https://code.visualstudio.com/Download) on your Linux machine.
+1. Download and save the VSIX file for the SQL Tools extension from [\\\\dtnuget\\download\\vscode-mssql\\latest](file://dtnuget/download/vscode-mssql/latest). Choose the file that matches your target platform.
 
-2. Download and save the VSIX file for the SQL Tools extension from [\\\\dtnuget\\download\\vscode-mssql\\latest](file://dtnuget/download/vscode-mssql/latest). Choose the file that matches your target platform.
-
-3. Start VS Code.
+2. Start VS Code.
 
    ![VS Code Icon](./media/sql-server-linux-connect-and-query-vs-code/vs-code-launch.png)
 
-4. On the **File** menu, click **Open**.
+3. On the **File** menu, click **Open**.
 
-5. Open the previously saved VSIX file.
+4. Open the previously saved VSIX file.
 
-6. The **vscode-mssql** extension takes up to one minute to install. Wait for the prompt that tells you it installed successfully.
+5. The **vscode-mssql** extension takes up to one minute to install. Wait for the prompt that tells you it installed successfully.
 
     ![VS Code extension installed successfully](./media/sql-server-linux-connect-and-query-vs-code/vs-code-open-sql-tools-vsix.png)
 
-7. Restart VS Code to use the **vscode-mssql** extension.
+6. Restart VS Code to use the **vscode-mssql** extension.
 
-## Change the editor to SQL
+## Change your language to SQL
 Before you can connect to your SQL Server instance, you must change the Language Mode to **SQL**. This happens automatically if you open a file with a **.sql** extension. The following steps show you how to change to the **SQL** editor for any file.
 
 1. In VS Code, select the **File** menu, and then select **New File**.
@@ -158,3 +159,7 @@ The following steps show how to connect to SQL Server vNext on Linux with VS Cod
 ## Next steps
 
 In a real-world scenario, you might create a script that you need to save and run later (either for administration or as part of a larger development project). In this case, you can save the script with a **.sql** extension.
+
+If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx) and the [Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx).
+
+For more information on using VS Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).

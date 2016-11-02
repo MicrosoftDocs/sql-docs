@@ -217,4 +217,4 @@ The following example sets the monitoring interval to 2 seconds for the mssql re
 
 ## Next Steps
 
-[Configure shared disk cluster for SQL Server on Linux](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
+[Configure Red Hat Enterprise Linux 7.0 shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)

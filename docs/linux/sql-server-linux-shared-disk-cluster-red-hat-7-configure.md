@@ -35,7 +35,7 @@ You can configure a shared-storage high-availability cluster with Linux to allow
 
 The following diagram illustrates the components in a Linux cluster with SQL Server. 
 
-![Linux Shared Disk SQL Cluster](./media/sql-server-linux-configure-shared-disk-cluster/LinuxCluster.png) 
+![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 From a high level, this guide completes the following steps:
 

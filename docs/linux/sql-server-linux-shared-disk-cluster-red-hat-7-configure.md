@@ -29,7 +29,7 @@ ms.assetid:
 
 This guide provides instructions to create a two-node Linux shared disk cluster for SQL Server. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). 
 
-For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 You can configure a shared-storage high-availability cluster with Linux to allow the SQL Server resource to failover from one node to another. In this cluster two Linux servers are connected to shared storage. The Linux servers are the cluster nodes. Corosync and Pacemaker coordinate cluster communications and resource management. The SQL Server instance is active on either one node or the other.
 
@@ -417,5 +417,5 @@ Check the following items when a node is offline.
 
 ## Next steps
 
-[Operate shared disk cluster](sql-server-linux-operate-shared-disk-cluster.md)
+[Operate SQL Server on Red Hat Enterprise Linux 7 shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 

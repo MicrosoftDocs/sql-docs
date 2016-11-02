@@ -31,7 +31,7 @@ SQL Server failover clusters can provide improved recovery time by using redunda
 
 | Distribution | Topic 
 | ----- | -----
-| Red Hat Enterprise Linux 7.0 | [Configure Red Hat Enterprise Linux 7.0 shared disk cluster for SQL Server](sql-server-linux-configure-shared-disk-cluster-red-hat-7.md)
+| Red Hat Enterprise Linux 7.0 | [Configure Red Hat Enterprise Linux 7.0 shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 
 ## Next steps
 

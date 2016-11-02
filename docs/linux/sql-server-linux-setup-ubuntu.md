@@ -30,7 +30,7 @@ ms.assetid:
 This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Ubuntu 16.04.
 
 ## Install SQL Server
-First, install the mssql-server Package on Ubuntu.
+To install the mssql-server Package on Ubuntu, follow these steps:
 
 1. Enter superuser mode.
 
@@ -39,14 +39,13 @@ First, install the mssql-server Package on Ubuntu.
     > [!IMPORTANT]
     > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
 
-2. Download the configuration script and make it executable.
+2. Import the public repository keys:
 
-        # curl -O https://private-repo.microsoft.com/tools/configure-mssql-repo-2.sh
-        # chmod a+x configure-mssql-repo-2.sh
+        # apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv ABC12345
 
-3. Pass the unique URL provided for you in your invitation email as a parameter to the script. This URL is labeled as **“Package script configuration URL parameter”**:
+3. Register the Microsoft SQL Server Ubuntu repository:
 
-        # ./configure-mssql-repo-2.sh <URL provided in email>
+        # echo "deb https://repo.microsoft.com/ubuntu/mssql-server main mssql" > /etc/apt/sources.list.d/mssql-server.list
 
 4. Exit superuser mode.
 
@@ -57,11 +56,13 @@ First, install the mssql-server Package on Ubuntu.
         $ sudo apt-get update
         $ sudo apt-get install -y mssql-server
 
-6. You will receive a prompt to accept the End-User License Agreement. Select “Yes” to continue the installation.
+6. After the package installation finishes, run the configuration script and follow the prompts to accept the End-User License Agreement and set the initial password:
 
-7. Enter the System Administrator password for the instance. The username for the System Administrator account is ‘sa’. 
+        $ sudo /opt/mssql/bin/sqlservr-setup
 
-8. Confirm the System Administrator password.
+7. Once the configuration is done, verify that the service is running:
+
+        $ systemctl status mssql-server
 
 > [!NOTE]
 > Alternatively, you can run this command to install without being prompted for the license agreement and the System Administrator password:

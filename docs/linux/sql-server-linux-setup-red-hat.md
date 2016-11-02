@@ -30,32 +30,42 @@ ms.assetid:
 This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Red Hat Enterprise Linux (RHEL) 7.
 
 ## Install SQL Server
-First, install the mssql-server Package on RHEL.
+To install the mssql-server Package on Ubuntu, follow these steps:
 
 1. Enter superuser mode.
 
         $ sudo su
 
     > [!IMPORTANT]
-    > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the yum update / yum install commands. 
+    > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
 
-2. Download the configuration script and make it executable.
+2. Register the Microsoft SQL Server Red Hat repository by creating a repository file:
 
-        # curl -O https://private-repo.microsoft.com/tools/configure-mssql-repo-2.sh
-        # chmod a+x configure-mssql-repo-2.sh
+        $ vi /etc/yum.repos.d/mssql-server.repo
 
-3. Pass the unique URL provided for you in your invitation email as a parameter to the script. This URL is labeled as **“Package script configuration URL parameter”**:
+        [mssql-server]
+        name=mssql-server
+        baseurl=https://repo.microsoft.com/rhel7/mssql-server
+        gpgcheck=1
+        enabled=1
+        gpgkey=https://repo.microsoft.com/keys/dpgswdist.v1.asc
 
-        # ./configure-mssql-repo-2.sh \<URL provided in email\>
-
-4. Exit superuser mode.
+3. Exit superuser mode.
 
         # exit
 
-5. Run the following commands to install SQL Server:
+4. Run the following commands to install SQL Server:
 
         $ sudo yum update
         $ sudo yum install -y mssql-server
+
+5. After the package installation finishes, run the configuration script and follow the prompts to accept the End-User License Agreement and set the initial password:
+
+        $ sudo /opt/mssql/bin/sqlservr-setup
+
+6. Once the configuration is done, verify that the service is running:
+
+        $ systemctl status mssql-server
 
 ## Verify the installation
 Use the following command to print the installed package name and version:

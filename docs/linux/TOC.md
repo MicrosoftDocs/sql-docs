@@ -17,6 +17,7 @@
 ### [Monitor SQL Server on Linux with dmvtool](sql-server-linux-dmv-tool.md)
 ## [Security considerations for SQL Server on Linux](sql-server-linux-security-overview.md)
 ## [Configure high availability and disaster recovery for SQL Server on Linux](sql-server-linux-configure-high-availability-and-disaster-recovery.md)
+### [Operate a shared disk cluster](sql-server-linux-operate-shared-disk-cluster)
 ### [Backup a SQL Server database (Linux)](sql-server-linux-backup-database.md)
 ### [Restore a SQL Server database (Linux)](sql-server-linux-restore-database.md)
 # [Develop](sql-server-linux-connect-applications.md)

@@ -32,7 +32,11 @@ After processing the rows, DMS uses a shuffle move to transfer each row to the c
 
 ## Load with prepared statements
 
-You can use prepared statements to load data into distributed and replicated tables. When the input data does not match the target data type, an implicit conversion is performed. The implicit conversions supported by PDW prepared statements are a subset of conversions supported by SQL Server. That is, only a subset of conversions are supported, but the supported conversions match SQL Server implicit conversions. Regardless of whether the target table to be loaded is defined as a distributed or replicated table, implicit conversions are applied (if needed) to all columns that exist in target table. For more information, see [Prepared statements](prepared-statements.md).
+You can use prepared statements to load data into distributed and replicated tables. When the input data does not match the target data type, an implicit conversion is performed. The implicit conversions supported by PDW prepared statements are a subset of conversions supported by SQL Server. That is, only a subset of conversions are supported, but the supported conversions match SQL Server implicit conversions. Regardless of whether the target table to be loaded is defined as a distributed or replicated table, implicit conversions are applied (if needed) to all columns that exist in target table. 
+
+<!-- MISSING LINK
+For more information, see [Prepared statements](prepared-statements.md).
+-->
   
 ## Related Tasks  
   

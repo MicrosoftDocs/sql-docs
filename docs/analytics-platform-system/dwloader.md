@@ -492,7 +492,11 @@ You should run the Loader from its installed location. The dwloader executable i
   
 You can override a parameter that is specified in the parameter file (-f option) by specifying it as a command-line parameter.  
   
-You can run multiple instances of the Loader simultaneously. The maximum number of Loader instances is pre-configured and cannot be changed. For the maximum number of loads per appliance, see [Minimum and Maximum Values](minimum-maximum-values.md)  
+You can run multiple instances of the Loader simultaneously. The maximum number of Loader instances is pre-configured and cannot be changed. 
+
+<!-- MISSING LINK
+For the maximum number of loads per appliance, see [Minimum and Maximum Values](minimum-maximum-values.md)  
+-->
   
 Loaded data might require more or less space on the appliance than in the source location. You can perform test imports with subsets of data to estimate disk consumption.  
   

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure high availability and disaster recovery for SQL Server on Linux | SQL Server vNext CTP1
+title: High availability and disaster recovery for SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -25,7 +25,7 @@ ms.assetid:
 # ms.custom: ""
 
 ---
-# Configure high availability and disaster recovery for SQL Server on Linux
+# High availability and disaster recovery for SQL Server on Linux
 
 SQL Server on Linux supports high-availability and disaster recovery. On the most basic level, you can backup and restore databases in the same way you backup and restore SQL Server on Windows. In more advanced scenarios SQL Server also supports a shared-disk failover cluster on Linux servers with Red Hat Enterprise Linux 7.0 HA or greater. Future releases of SQL Server on Linux may include additional high-availability capabilities.
 

@@ -117,7 +117,11 @@ A valid SQL Server Authentication login with appropriate permissions to perform 
 The password for a SQL Server Authentication *login_name*.  
   
 **-W**  
-Use Windows Authentication. (No *login_name* or *password* required.) For information about configuring Windows Authentication, see [Security - Configure Domain Trusts](security-configure-domain-trusts.md).  
+Use Windows Authentication. (No *login_name* or *password* required.) 
+
+<!-- MISSING LINK
+For information about configuring Windows Authentication, see [Security - Configure Domain Trusts](security-configure-domain-trusts.md).  
+-->
   
 **-f** *parameter_file_name*  
 Use a parameter file, *parameter_file_name*, in place of command-line parameters. *parameter_file_name* can contain any command-line parameter except *user_name* and *password*. If a parameter is specified on the command line and in the parameter file, the command line overrides the file parameter.  

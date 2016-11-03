@@ -366,12 +366,12 @@ Online: [ sqlvmnode1 sqlvmnode2 sqlvmnode3]
 
 Full list of resources: 
 
-mssql (ocf::sql:fci): Started jomeisel-16 
+mssql (ocf::sql:fci): Started sqlvmnode1 
 
 PCSD Status: 
-jomeisel-15: Online 
-jomeisel-16: Online 
-jomeisel-17: Online 
+sqlvmnode1: Online 
+sqlvmnode2: Online 
+sqlvmnode3: Online 
 
 Daemon Status: 
 corosync: active/disabled 

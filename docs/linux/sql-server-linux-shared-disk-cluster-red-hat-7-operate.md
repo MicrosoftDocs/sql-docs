@@ -25,9 +25,9 @@ ms.assetid:
 
 ---
 
-# Operate shared disk cluster
+# Operate Red Hat Enterprise Linux 7.0 shared disk cluster for SQL Server
 
-This document shows how to:
+This document describes how to do the following tasks for SQL Server on a shared disk failover cluster with Red Hat Enterprise Linux 7.0.
 
 - Manually failover the cluster
 - Monitor a failover cluster SQL Server service
@@ -35,6 +35,15 @@ This document shows how to:
 - remove a cluster node
 - Change the SQL Server resource monitoring frequency
 
+## Architecture description
+
+The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). Corosync and Pacemaker coordinate cluster communications and resource management. The SQL Server instance is active on either one node or the other.
+
+The following diagram illustrates the components in a Linux cluster with SQL Server. 
+
+![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+
+For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 ## Failover cluster manually
 

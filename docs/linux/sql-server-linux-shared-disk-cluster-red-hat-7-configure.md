@@ -27,33 +27,19 @@ ms.assetid:
 
 # Configure Red Hat Enterprise Linux 7.0 shared disk cluster for SQL Server
 
-This guide provides instructions to create a two-node Linux shared disk cluster for SQL Server. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). 
-
-For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
-
-You can configure a shared-storage high-availability cluster with Linux to allow the SQL Server resource to failover from one node to another. In this cluster two Linux servers are connected to shared storage. The Linux servers are the cluster nodes. Corosync and Pacemaker coordinate cluster communications and resource management. The SQL Server instance is active on either one node or the other.
+This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux 7.0. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). Corosync and Pacemaker coordinate cluster communications and resource management. The SQL Server instance is active on either one node or the other.
 
 The following diagram illustrates the components in a Linux cluster with SQL Server. 
 
 ![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-From a high level, this guide completes the following steps:
-
-1. Setup and configure the operating system on each cluster node 
-2. Install and configure SQL Server on each cluster node
-3. Configure shared storage and move database files
-4. Configure SQL Server for Pacemaker
-5. Install and configure Pacemaker on each cluster node
-6. Create the cluster and set the fencing agents 
-7. Setup the SQL Server Pacemaker agent resource
+For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 The following sections walk through the steps to set up a failover cluster solution for demonstration purposes. 
 
 ## Setup and configure the operating system on each cluster node
 
 The first step is to configure the operating system on the cluster nodes. For this walk through, use RHEL 7.2 with a valid subscription for the HA add-on. 
-
-
 
 ## Install and configure SQL Server on each cluster node
 

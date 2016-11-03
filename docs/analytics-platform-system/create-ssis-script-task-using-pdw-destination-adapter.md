@@ -260,6 +260,9 @@ The Integration Services Script Task allows you to perform virtually any operati
     ```  
   
 ## See Also  
-[Load Data With Integration Services &#40;SQL Server PDW&#41;](../sqlpdw/load-data-with-integration-services-sql-server-pdw.md)  
-[Install Integration Services Destination Adapters &#40;SQL Server PDW&#41;](../sqlpdw/install-integration-services-destination-adapters-sql-server-pdw.md)  
+[Load Data With Integration Services](load-with-ssis.md)  
+
+<!-- MISSING LINK
+[Install Integration Services Destination Adapters](install-integration-services-destination-adapters-sql-server-pdw.md)
+-->
   

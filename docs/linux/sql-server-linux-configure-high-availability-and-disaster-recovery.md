@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: High availability and disaster recovery for SQL Server on Linux | SQL Server vNext CTP1
+title: Configure high availability and disaster recovery for SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -25,7 +25,7 @@ ms.assetid:
 # ms.custom: ""
 
 ---
-# High availability and disaster recovery for SQL Server on Linux
+# Configure high availability and disaster recovery for SQL Server on Linux
 
 SQL Server on Linux supports high-availability and disaster recovery. On the most basic level, you can backup and restore databases in the same way you backup and restore SQL Server on Windows. In more advanced scenarios SQL Server also supports a shared-disk failover cluster on Linux servers with Red Hat Enterprise Linux 7.0 HA or greater. Future releases of SQL Server on Linux may include additional high-availability capabilities.
 
@@ -39,5 +39,9 @@ SQL Server on Windows can restore databases from backups on either operating sys
 
 ## Shared-disk failover clusters
 
-You can create a shared disk failover cluster for SQL Server on Red Hat Enterprise Linux 7 with the HA add-on. On this type of cluster, storage is presented to cluster nodes. The instance of SQL Server can be active on any one node in the cluster. If the HA add on detects an interruption of the SQL Server service, the HA solution can move the service to another node. For details see [Configure shared disk cluster for SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
+SQL Server can integrate with various clustering solutions. You can create a shared disk failover cluster for SQL Server. On this type of cluster, storage is presented to cluster nodes. The instance of SQL Server can be active on any one node in the cluster. If the component responsible for monitoring the SQL cluster detects that SQL Server is not responding, it can move the service to another node. For details see [Configure shared disk cluster for SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
+
+## Additional capabilities
+
+Microsoft is continuing to enable high availability and disaster recovery capabilities that are available for SQL Server on Windows.
 

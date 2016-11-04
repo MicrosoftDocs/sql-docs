@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Release Notes for SQL Server on Linux | SQL Server vNext CTP1
+title: Release notes for SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-27-2016
+ms.date: 11-03-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -25,49 +25,21 @@ ms.assetid:
 # ms.custom: ""
 
 ---
-# Release Notes for SQL Server on Linux
-
-**Release 13.0.2990.31 - September 30, 2016**
-
+# Release notes for SQL Server on Linux
 The following release notes apply to SQL Server vNext CTP1 running on Linux.
 
 ## Supported operating systems 
 
 - Ubuntu 16.04LTS (EXT4 file system)
-- Red Hat Enterprise Linux 7.2: Workstation, Server and Desktop. (XFS or EXT4 file systems).
+- Red Hat Enterprise Linux 7.2: Workstation, Server, and Desktop. (XFS or EXT4 file systems).
 - Docker Engine 1.8+ on Windows, Mac or Linux.
+
+## Minimum requirements
+
+### Docker
+
 - Less than 64 cores. Using 64 or more cores will cause an error.
 - Less than 32 GB of memory. If more than 32 GB of memory is available, only 32 GB will be used.
-
-## Package details
-The following sections provide the Debian and RPM package details.
-
-### Debian
-
-- **Package**: mssql-server
-- **Size**: 255413904
-- **Installed-Size**: 1094290
-- **Version**: 13.0.2990.31-8
-- **Architecture**: amd64
-- **Depends**: libunwind8, libc6, adduser, libjemalloc1, libc++1, gdb, debconf, libcurl3, hostname
--  **SHA256**: 096dd77f31f28fada0fe62044dfb80e408c515461763f0b3d658ecb14d44f7c4
-
-### RPM
-
-- **Name**: mssql-server
-- **Architecture**: x86_64
-- **Version**: 13.0.2990.31
-
-### Package file locations
-The following table provide direct links to the Debian and RPM packages for SQL Server vNext.
-
-> [!IMPORTANT]
-> These packages are not meant to be used in typical installation scenarios. For installation steps, see [Install SQL Server on Linux](sql-server-linux-setup.md). 
-
-| Distribution | Download |
-|-----|-----|
-| Ubuntu 16.04 | [https://private-repo.microsoft.com/ubuntu/mssql-private-preview/pool/main/m/mssql-server/mssql-server_13.0.2990-31-8_amd64.deb](https://private-repo.microsoft.com/ubuntu/mssql-private-preview/pool/main/m/mssql-server/mssql-server_13.0.2990-31-8_amd64.deb) |
-| Red Hat Enterprise Linux 7.2 | [https://private-repo.microsoft.com/rhel7/mssql-private-preview/mssql-server-13.0.2990.31-12.x86_64.rpm](https://private-repo.microsoft.com/rhel7/mssql-private-preview/mssql-server-13.0.2990.31-12.x86_64.rpm) |
 
 ## Known issues
 
@@ -87,6 +59,6 @@ The following table provide direct links to the Debian and RPM packages for SQL 
 - Changing the locations of TempDB data and log files is not supported.
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
-## Supported features and limitations
+## See also
 
-For a detailed list of supported features and limitations, see [Supported features of SQL Server on Linux](sql-server-linux-supported-features.md).
+[Supported features of SQL Server on Linux](sql-server-linux-supported-features.md)

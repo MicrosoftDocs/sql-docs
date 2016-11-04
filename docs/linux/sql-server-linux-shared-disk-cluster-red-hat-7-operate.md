@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Operate shared disk cluster | SQL Server vNext CTP1
+title: Operate Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server | SQL Server vNext CTP1
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -25,7 +25,7 @@ ms.assetid:
 
 ---
 
-# Operate Red Hat Enterprise Linux 7.0 shared disk cluster for SQL Server
+# Operate Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
 
 This document describes how to do the following tasks for SQL Server on a shared disk failover cluster with Red Hat Enterprise Linux 7.0.
 

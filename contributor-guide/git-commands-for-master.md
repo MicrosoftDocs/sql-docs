@@ -55,9 +55,28 @@ Follow the steps in this article to create a local working branch on your comput
 
 12. When you are ready to submit your content to the upstream master branch for staging, validation, and/or publishing, in the GitHub UI, create a pull request from your fork to the master branch.
 
-13. If you are an employee working in the private repository, the changes you submit are automatically staged and a staging link is written to the pull request. Please review your staged content and sign off in the pull request comments by adding the **#sign-off** comment.  This indicates the changes are ready to be pushed live.  If you don't want the pull request to be accepted - if you are just staging the changes - add the **#hold-off** note to the pull request.
+## Pull requests
+1. When you create a pull request in the github UI, it immediately takes you to the pull request window. 
 
-14. The pull request acceptor reviews your pull request, provides feedback, and/or accepts your pull request. 
+    ![Pull request window](./media/github-pull-requests-in-the-web-interface/pr-window.png)
+
+2. After several minutes, you should see a link to a staged version of your topic with the changes you made. 
+
+3. If you need to make further edits, you click the **Files changed** option at the top of the PR window. Then you can repeat these steps by clicking the edit button on the changed files and committing them to the same branch for this PR. Each change results in a new link to review the staged changes.
+
+## Sign-off
+When you are ready to publish your changes, type **#sign-off** in the comment window of your pull request. Click the **Comment** button. Your request will be reviewed and merged.
+
+> [!NOTE]
+> If you are working in the private repository, after you sign off your changes are merged and published to the staging site.
+
+## Troubleshooting
+
+If you are having problems accessing the repository on github, make sure you have followed the github account and permissions steps in the [tools and setup](tools-and-setup.md) guide.
+
+If you get a **all checks have failed** error in the pull request window, you must [log onto the OPS portal](tools-and-setup.md#log-onto-the-ops-portal) as is described in the tools and setup guide.
+
+![All checks have failed](./media/github-pull-requests-in-the-web-interface/all-checks-have-failed.png)
 
 ## Working with release branches
 

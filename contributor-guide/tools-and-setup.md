@@ -8,6 +8,7 @@ If you're unfamiliar with Git, you might want to review some Git terminology: [h
 
 1. [Create a GitHub account and set up your profile](#create-a-github-account-and-set-up-your-profile)
 2. [Permissions in GitHub](#permissions-in-github)
+3. [Log onto the OPS portal](#log-onto-the-ops-portal)
 3. [Determine whether you really need to follow the rest of these steps](#determine-whether-you-really-need-to-follow-the-rest-of-these-steps)
 4. [Install Git for Windows](#install-git-for-windows)
 5. [Enable two-factor authentication](#enable-two-factor-authentication)
@@ -42,27 +43,40 @@ Anybody with a GitHub account can contribute to SQL Server technical content thr
 If you are a Microsoft PM or writer who is working on SQL Server content, you must work in our private content repository, sql-docs-pr. 
 
 1. Visit [https://repos.opensource.microsoft.com ](https://repos.opensource.microsoft.com) to request the read permissions that will let you make contributions through the private repo.
+
 2. Sign into your GitHub account using the button.
+
 3. Beside **Microsoft**, click the **Join** button. If you don't see this button, you're already a member.
 
     ![Join the Microsoft organization](./media/tools-and-setup/join-the-microsoft-organization.png)
 
 4. On the next page, click the **Join Microsoft** button.
+
 5. Go back to the [https://repos.opensource.microsoft.com ](https://repos.opensource.microsoft.com) list of organizations. It should now show that you are a **Member** of the Microsoft organization. 
+
 6. Click **Microsoft**.
+
 7. Then click **Join a team**.
 
     ![Join a team](./media/tools-and-setup/join-a-team.png)
 
 5. Search for **sql-docs-read**, and click the **Request to join** button.
 
-### Log onto the OPS Portal
+## Log onto the OPS Portal
 
-If you are working in the private **sql-docs-pr** repository, there is one additional step you need to take. 
+If you are working in the private **sql-docs-pr** repository, there is one additional step you must take to be able to submit pull requests. 
 
 1. Log into the [OPS Publishing Portal](http://ops.microsoft.com). 
+
 2. When prompted, select **Sign in with Github**.
-3. Once you have securely signed in, close the portal.
+
+    ![Sign in with Github](./media/tools-and-setup/ops-sign-in-with-github.png)
+
+3. You must then click the **Authorize application** button to allow OPS to access your github account.
+
+    ![Authorize account button](./media/tools-and-setup/authorize-your-account-button.png)
+
+3. After you successfully authorizing, close the portal. You now are setup to make pull requests.
 
 ## Determine whether you really need to follow the rest of these steps
 

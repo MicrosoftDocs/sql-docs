@@ -30,7 +30,11 @@ author: BarbKess
   
 4.  Install **dwloader**.  
   
-    Install dwloader onto the Loading server if it is not already installed. See [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md).  
+    Install dwloader onto the Loading server if it is not already installed. 
+
+<!-- MISSING LINK
+	See [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md). 
+--> 
   
 5.  Run **dwloader**.  
   
@@ -141,7 +145,11 @@ Specifies the SQL Server PDW appliance that will receive the loaded data.
   
 For Ethernet connections, *target_appliance* is the IP address for the Control node cluster.  
   
-If omitted, dwloader defaults to the value that was specified when dwloader was installed. For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
+If omitted, dwloader defaults to the value that was specified when dwloader was installed. 
+
+<!-- MISSING LINK
+For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
+-->
   
 **-T** *target_database_name.*[*schema*].*table_name*  
 The three-part name for the destination table.  

@@ -4,7 +4,7 @@ description: "**dwloader** is a Parallel Data Warehouse (PDW) command-line tool 
 
 author: "barbkess" 
 ms.author: "barbkess"
-ms.date: "11/03/2016"
+ms.date: "11/04/2016"
 ms.topic: "article"
 
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
@@ -18,7 +18,7 @@ author: BarbKess
   
 1.  Prepare the source data.  
   
-    Use your own ETL process to create the source data you wish to load. The source data must be formatted to match the schema of the destination table. Store the source data into one or more text files and copy the text files into the same directory on your Loading server. For information about the Loading server, see [Acquire and Configure a Loading Server &#40;SQL Server PDW&#41;](../sqlpdw/acquire-and-configure-a-loading-server-sql-server-pdw.md)  
+    Use your own ETL process to create the source data you wish to load. The source data must be formatted to match the schema of the destination table. Store the source data into one or more text files and copy the text files into the same directory on your Loading server. For information about the Loading server, see [Acquire and Configure a Loading Server](acquire-and-configure-loading-server.md)  
   
 2.  Prepare the loading options.  
   
@@ -33,7 +33,7 @@ author: BarbKess
     Install dwloader onto the Loading server if it is not already installed. 
 
 <!-- MISSING LINK
-	See [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md). 
+	See [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](install-dwloader-command-line-loader-sql-server-pdw.md). 
 --> 
   
 5.  Run **dwloader**.  

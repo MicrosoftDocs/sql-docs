@@ -53,7 +53,7 @@ Follow the steps in this article to create a local working branch on your comput
 
         git push origin <working branch>
 
-12. When you are ready to submit your content to the upstream master branch for staging, validation, and/or publishing, in the GitHub UI, create a pull request from your fork to the master branch.
+12. When you are ready to submit your content to the upstream master branch for staging, validation, and/or publishing, you must create a pull request. Go to the public, [sql-docs](https://github.com/Microsoft/sql-docs), or private, [sql-docs-pr](https://github.com/Microsoft/sql-docs-pr), repository and look for the green button to create a pull request for your recent changes. Click that button, and then click **Create pull request** to start the pull request. 
 
 ## Pull requests
 1. When you create a pull request in the github UI, it immediately takes you to the pull request window. 
@@ -62,7 +62,7 @@ Follow the steps in this article to create a local working branch on your comput
 
 2. After several minutes, you should see a link to a staged version of your topic with the changes you made. 
 
-3. If you need to make further edits, you click the **Files changed** option at the top of the PR window. Then you can repeat these steps by clicking the edit button on the changed files and committing them to the same branch for this PR. Each change results in a new link to review the staged changes.
+3. If you need to make further edits, make the changes on your local machine. Then repeat the add, commmit, and push origin steps. This is all in the same branch. Pushing the new commits will update the pull request and restage your content.
 
 ## Sign-off
 When you are ready to publish your changes, type **#sign-off** in the comment window of your pull request. Click the **Comment** button. Your request will be reviewed and merged.

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use the Sqlcmd command-line utility | SQL Server vNext CTP1
+title: Use the Sqlcmd command-line utility on Linux | SQL Server vNext CTP1
 description: 
 author: rothja 
 ms.author: jroth 
@@ -25,7 +25,7 @@ ms.assetid:
 # ms.custom: ""
 
 ---
-# Use the Sqlcmd command-line utility
+# Use the Sqlcmd command-line utility on Linux
 This topic shows how to use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext CTP1 on Linux. 
 
 After successfully connecting, you run a simple Transact-SQL (T-SQL) query to verify communication with the database.

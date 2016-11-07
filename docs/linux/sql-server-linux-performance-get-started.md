@@ -63,7 +63,7 @@ A columnstore index is a technology for storing and querying large stores of dat
 SQL Server provides In-Memory OLTP features that can greatly improve the performance of application systems.  This section of the Evaluation Guide will walk you through the steps to create a memory-optimized table stored in memory and a natively compiled stored procedure that can access the table without needing to be compiled or interpreted.
 
 ### Configure Database for In-Memory OLTP
-1.	It’s recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP.  Use the query below to check the current compatibility level of AdventureWorks:  
+1. It’s recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP.  Use the query below to check the current compatibility level of AdventureWorks:  
 
         USE AdventureWorks
 
@@ -76,11 +76,11 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
         ALTER DATABASE CURRENT
         SET COMPATIBILITY_LEVEL = 130;
 
-2.	When a transaction involves both a disk-based table and a memory-optimized table, it’s essential that the memory-optimized portion of the transaction operate at the transaction isolation level named SNAPSHOT.  To reliably enforce this level for memory-optimized tables in a cross-container transaction, execute the following:
+2. When a transaction involves both a disk-based table and a memory-optimized table, it’s essential that the memory-optimized portion of the transaction operate at the transaction isolation level named SNAPSHOT.  To reliably enforce this level for memory-optimized tables in a cross-container transaction, execute the following:
 
         ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 
-3.	Before you can create a memory-optimized table you must first create a Memory Optimized FILEGROUP and a container for data files:
+3. Before you can create a memory-optimized table you must first create a Memory Optimized FILEGROUP and a container for data files:
 
         ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
 
@@ -89,7 +89,7 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
 ### Create a Memory-Optimized Table
 The primary store for memory-optimized tables is main memory and so unlike disk-based tables, data does not need to be read in from disk into memory buffers.  To create a memory-optimized table, use the MEMORY_OPTIMIZED = ON clause.
 
-1.	Execute the following query to create the memory-optimized table dbo.ShoppingCart.  As a default, the data will be persisted on disk for durability purposes (Note that DURABILITY can also be set to persist the schema only). 
+1. Execute the following query to create the memory-optimized table dbo.ShoppingCart.  As a default, the data will be persisted on disk for durability purposes (Note that DURABILITY can also be set to persist the schema only). 
 
         CREATE TABLE dbo.ShoppingCart ( 
         ShoppingCartId INT IDENTITY(1,1) PRIMARY KEY NONCLUSTERED,
@@ -99,7 +99,7 @@ The primary store for memory-optimized tables is main memory and so unlike disk-
         ) WITH (MEMORY_OPTIMIZED=ON) 
         GO
 
-2.	Insert some records into the table:
+2. Insert some records into the table:
 
         INSERT dbo.ShoppingCart VALUES (8798, SYSDATETIME(), NULL) 
         INSERT dbo.ShoppingCart VALUES (23, SYSDATETIME(), 45.4) 
@@ -109,7 +109,7 @@ The primary store for memory-optimized tables is main memory and so unlike disk-
 ### Natively compiled Stored Procedure
 SQL Server supports natively compiled stored procedures that access memory-optimized tables. The T-SQL statements are compiled to machine code and stored as native DLLs, enabling faster data access and more efficient query execution than traditional T-SQL.   Stored procedures that are marked with NATIVE_COMPILATION are natively compiled. 
 
-1.	Execute the following script to create a natively compiled stored procedure that inserts a large number of records into the ShoppingCart table:
+1. Execute the following script to create a natively compiled stored procedure that inserts a large number of records into the ShoppingCart table:
 
         CREATE PROCEDURE dbo.usp_InsertSampleCarts @InsertCount int 
         WITH NATIVE_COMPILATION, SCHEMABINDING 
@@ -126,11 +126,11 @@ SQL Server supports natively compiled stored procedures that access memory-optim
         END
         END 
 
-2.	Insert 1,000,000 rows:
+2. Insert 1,000,000 rows:
 
         EXEC usp_InsertSampleCarts 1000000 
  
-3.	Verify the rows have been inserted:
+3. Verify the rows have been inserted:
 
         SELECT COUNT(*) FROM dbo.ShoppingCart 
 

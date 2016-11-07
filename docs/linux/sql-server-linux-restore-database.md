@@ -34,7 +34,7 @@ This topic provides a walkthrough for restoring a database backup to SQL Server 
 - Restore the database using Transact-SQL commands.
 
 > [!NOTE] 
-> This tutorial assumes that you have installed SQL Server 2017 CTP1 and the SQL Server Tools on your target Linux server. If you have not done this, see [Backup a SQL Server database (Linux)](sql-server-linux-backup-database.md).
+> This tutorial assumes that you have installed SQL Server 2017 CTP1 and the SQL Server Tools on your target Linux server. If you have not done this, see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Download the AdventureWorks database backup
 

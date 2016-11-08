@@ -38,11 +38,12 @@ If you do not already have a Linux machine, install Linux on a physical server o
 ## 2: Install SQL Server
 Next, set up SQL Server vNext on your Linux machine using one of the following guides:
 
-| Distribution | Installation |
+| Platform | Installation |
 |-----|-----|
-| Ubuntu | [Installation guide](sql-server-linux-setup-ubuntu.md) |
-| Red Hat Enterprise | [Installation guide](sql-server-linux-setup-red-hat.md) |
-| Docker | [Installation guide](sql-server-linux-setup-docker.md) |
+| Ubuntu 16.04 | [Installation guide](sql-server-linux-setup-ubuntu.md) |
+| Red Hat Enterprise 7.2 | [Installation guide](sql-server-linux-setup-red-hat.md) |
+
+You can also run SQL Server on a Docker image that can run on platforms that support Docker, including Linux, Mac, and Windows. For more information, see the [Docker installation guide](sql-server-linux-setup-docker.md).
 
 ## 3: Connect locally or remotely
 After installation, connect to the running SQL Server instance on your Linux machine. For a general discussion of connectivity, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md). Then run some Transact-SQL queries using a client tool. Examples include:

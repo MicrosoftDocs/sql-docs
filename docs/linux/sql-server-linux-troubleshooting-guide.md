@@ -25,7 +25,6 @@ ms.assetid:
 # ms.custom: ""
 ---
 # Troubleshoot SQL Server on Linux
-
 ## Introduction
 
 This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, please make remember the limitations of this private preview release. You can find a list of these in the [Release Notes](sql-server-linux-release-notes.md).
@@ -66,8 +65,8 @@ You can run a new container by using the following command:
 
 	$ docker run –e "ACCEPT_EULA=Y" –e "SA_PASSWORD=<your password>" [OPTIONS] private-repo.microsoft.com/mssql-private-preview/mssql-server 
 
-    > [!IMPORTANT]
-    > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
+> [!IMPORTANT]
+> The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
 
 
 ## Executing commands in a Docker container
@@ -81,7 +80,6 @@ To get the container ID run:
 To start a bash terminal in the container run:
 
     $ docker exec -ti <container ID> /bin/bash
-
 Now you can run commands as though you are running them at the terminal inside the container.
 
 Example of how you could read the contents of the error log in the terminal window:
@@ -110,7 +108,7 @@ Example:
     
 The SQL Server engine logs to the /var/opt/mssql/log/errorlog file in both the Linux and Docker installations. You need to be in ‘superuser’ mode to browse this directory.
 
-The installer logs here: /var/opt/mssql/setup-<a time stamp representing time of install>
+The installer logs here: /var/opt/mssql/setup-< time stamp representing time of install>
 You can browse the errorlog files with any UTF-16 compatible tool like ‘vim’ or ‘cat’ like this: 
 
     $ cat errorlog
@@ -121,7 +119,7 @@ If you prefer, you can also convert the files to UTF-8 to read them with ‘more
 
 ## Extended Events
 
- Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/en-us/library/bb630282.aspx):
+Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/en-us/library/bb630282.aspx):
 
 ## Sharing SQL Server on Linux Crash Dumps 
 

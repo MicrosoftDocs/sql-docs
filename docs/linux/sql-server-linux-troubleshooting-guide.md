@@ -31,7 +31,8 @@ This document describes how to troubleshoot Microsoft SQL Server running on Linu
 
 ## Support
 
-update this to reflect support for public preview
+Support will be available through the community and monitored by the engineering team. 
+For specific questions head to [Stack Overflow](http://stackoverflow.com/), discussions will be on [reddit.com/r/sqlserver](www.reddit.com/r/sqlserver) and report bugs to [connect](http://connect.microsoft.com/)
 
 ## Managing the SQL Server Service (start, stop, restart, status)
 
@@ -121,9 +122,15 @@ If you prefer, you can also convert the files to UTF-8 to read them with ‘more
 
 Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/en-us/library/bb630282.aspx):
 
-## Sharing SQL Server on Linux Crash Dumps 
+## SQL Server on Linux Crash Dumps 
 
-update for public preview
+Look for dumps in the log directory in Linux. Check under the /var/opt/mssql/log directory for Linux Core dumps (.tar.gz2 extension) or SQL minidumps (.mdmp extension)
+
+Looking for Core dumps 
+    $ ls /var/opt/mssql/log | grep .tar.gz2 
+ 
+Looking for SQL dumps 
+    $ ls /var/opt/mssql/log | grep .mdmp 
 
 ## Common Issues
 

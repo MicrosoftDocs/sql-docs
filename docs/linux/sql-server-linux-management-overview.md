@@ -8,7 +8,7 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 11-07-2016
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql-linux
 ms.service: 
 ms.technology: 
 ms.assetid: 

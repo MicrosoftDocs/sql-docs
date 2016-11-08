@@ -6,9 +6,9 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-26-2016
+ms.date: 11-07-2016
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql-linux
 ms.service: 
 ms.technology: 
 ms.assetid: 
@@ -27,46 +27,44 @@ ms.assetid:
 ---
 # Get started with SQL Server on Linux
 
-This topic is a guide for how to get started using SQL Server vNext CTP1 on Linux. It does not assume that you have experience with either Linux or SQL Server. If you do have a background in either area, you can scan this topic to find any additional information or links to other resources.
+This topic is a guide for how to get started using SQL Server vNext CTP1 on Linux. It contains a suggested learning plan with links to other resources for each step.
 
-## Install Linux
-If you do not already have a Linux machine, you must either install Linux on a physical server or a virtual machine (VM).
-
-### Manual installation
-To manually install Linux on a target machine, review the documentation provided for your target platform:
-
-- [Ubuntu 16.04](https://www.ubuntu.com/download)
-- [Red Hat Enterprise Linux 7.2](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux)
-- [Docker Engine 1.8+](http://www.docker.com/products/docker#/linux)
+## 1: Install Linux
+If you do not already have a Linux machine, install Linux on a physical server or a virtual machine (VM). Review the [Release notes](sql-server-linux-release-notes.md) on supported platforms and requirements.
 
 > [!NOTE]
-> Although the focus of this topic is on installing SQL Server vNext on Linux, you can also install it on the latest [Docker for Mac](http://www.docker.com/products/docker#/mac) and [Docker for Windows](http://www.docker.com/products/docker#/windows). 
+> One option is to create use a pre-configured Linux VM in Azure. In addition to OS-only VMs, there is also a VM image with SQL Server vNext CTP1 already installed. For more information, see [Provision a Linux VM in Azure for SQL Server](sql-server-linux-azure-virtual-machine.md). 
 
-### Azure VMs
-Another option is to install Linux on a virtual machine. Use the following topics to create virtual machines in Azure with Linux already installed. 
-
-- [Ubuntu 16.04 Azure VM](https://azure.microsoft.com/marketplace/partners/canonical/ubuntuserver1604lts/)
-- [Red Hat Enterprise Linux 7.2 Azure VM](https://azure.microsoft.com/marketplace/partners/redhat/redhatenterpriselinux72/)
-
-For a tutorial that walks you through the VM creation process, see [Create a Linux VM on Azure using the Portal](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-quick-create-portal/). For all other Azure Linux VM resources, see [Linux Virtual Machines documentation](https://azure.microsoft.com/documentation/services/virtual-machines/linux/).
-
-## Install SQL Server
+## 2: Install SQL Server
 Next, set up SQL Server vNext on your Linux machine using one of the following guides:
 
-| Distribution | Installation |
+| Platform | Installation |
 |-----|-----|
-| Ubuntu | [Installation guide](sql-server-linux-setup-ubuntu.md) |
-| Red Hat Enterprise | [Installation guide](sql-server-linux-setup-red-hat.md) |
-| Docker | [Installation guide](sql-server-linux-setup-docker.md) |
+| Ubuntu 16.04 | [Installation guide](sql-server-linux-setup-ubuntu.md) |
+| Red Hat Enterprise 7.2 | [Installation guide](sql-server-linux-setup-red-hat.md) |
 
-## Connect locally or remotely
-TODO: provide links to the connection topics and talk about local and remote connectivity
+You can also run SQL Server on a Docker image that can run on platforms that support Docker, including Linux, Mac, and Windows. For more information, see the [Docker installation guide](sql-server-linux-setup-docker.md).
 
-## Create a database
-TODO: provide the T-SQL for creating a database. Point to restore article that installs the AdventureWorks sample DB.
+## 3: Connect locally or remotely
+After installation, connect to the running SQL Server instance on your Linux machine. For a general discussion of connectivity, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md). Then run some Transact-SQL queries using a client tool. Examples include:
 
-## Explore SQL Server capabilities on Linux
-TODO: provide links to the main SQL Server documentation, maybe a table of the most popular ones with links and descriptions. Link to supportability topic here too for guidance on understanding how to read the main documentation set in relation to SQL Server.
+| Tool | Tutorial |
+|-----|-----|
+| Sqlcmd | [Use the Sqlcmd command-line utility on Linux](sql-server-linux-connect-and-query-sqlcmd.md)] |
+| Visual Studio Code (VS Code) | [Use the multi-platform VS Code tool for SQL Server on Linux](sql-server-linux-connect-and-query-vs-code.md) |
+| SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-connect-and-query-ssms.md) |
+
+## 4: Explore SQL Server capabilities on Linux
+SQL Server vNext has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux.
+
+If you are already familiar with SQL Server, you'll want to review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release.
+
+If you are new to SQL Server, there are a few additional resources to help you evaluate SQL Server:
+ - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)
+ - [Get started with security features](sql-server-linux-security-get-started.md)
+ - [Get started with performance features](sql-server-linux-performance-get-started.md)
 
 ## Next Steps
-TODO: point to other topics in this content set.
+For more information about this release of SQL Server vNext, see [Overview of SQL Server on Linux](sql-server-linux-overview.md).
+
+For the complete set of SQL Server documentation, see the [Microsoft SQL Server Documentation](https://msdn.microsoft.com/library/mt590198.aspx).

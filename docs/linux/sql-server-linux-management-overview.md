@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11-04-2016
+ms.date: 11-07-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -27,36 +27,23 @@ ms.assetid:
 ---
 # Manage SQL Server on Linux
 
-There are several ways to manage your SQL Server vNext CTP1 instances and databases running on Linux. This topic provides and orientation of the techniques and tools used for management with pointers to additional information. It also provides a list of common management tasks with links to additional information.
-
-## Management tools
-
-The following tools can be used to help manage SQL Server on Linux.
-
-- [Transact-SQL commands and DMVs](sql-server-linux-management-overview.md)
-- [DMVTool](sql-server-linux-management-overview.md)
-- [SqlPackage](sql-server-linux-management-overview.md)
-- [SQL Server Managemet Studio](sql-server-linux-management-overview.md)
-
-### Transact-SQL (TSQL)
-T-SQL commands cover many management tasks and DMVs provide detailed monitoring information. Link to additional resources. Can be run from sqlcmd.exe, VS Code, or any other supported T-SQL client to SQL Server. Point to new cross platform DMVs. Talk about mapping of C: for some commands.
-
-### DMVTool
-Show how DMVTool is a Linux-specific way of working with DMVs on the file system.
-
-### SqlPackage
-Tool for exporting and importing databases. 
-
-### SQL Server Management Studio (Windows client)
-Talk about the ability to connect to SQL Server on Linux from Windows. Firewall and port requirements. General steps for getting started with screenshot of object browser (mabye numbered).
+The topics in this section provide an overview of some common management tasks and associated tools for managing SQL Server vNext CTP1 on Linux. Some of these are introductions to techniques that are common to all platforms. Other scenarios are specific to SQL Server on Linux.
 
 ## Management tasks
-The following table provides a list of some common management tasks along with a pointer to more information.
+The following management tasks are covered in this section.
 
-| Task | Description |
+| Task | How-to |
 |------|------|
-| Backup and Restore | TBD with links |
-| etc. | etc. |
+| Configure | [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md) |
+| Monitor | [Monitor SQL Server on Linux with dmvtool](sql-server-linux-dmv-tool.md) |
+| Export and import | [Export and import databases with SqlPackage](sql-server-linux-export-import-with-sqlpackage.md) |
+| Bulk import | [Use bcp to bulk import data to SQL Server on Linux](sql-server-linux-import-data-with-bcp.md) |
+| Troubleshoot | [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md) |
 
-## Next Steps
-TBD
+## Next steps
+In addition to these management tutorials, also review the following topics:
+
+- [Security considerations for SQL Server on Linux](sql-server-linux-security-get-started.md)
+- [Get started with performance features of SQL Server on Linux](sql-server-linux-performance-get-started.md)
+- [Backup and restore SQL Server databases on Linux](sql-server-linux-backup-and-restore-database.md)
+- [Configure high availability and disaster recovery for SQL Server on Linux](sql-server-linux-configure-high-availability-and-disaster-recovery.md)

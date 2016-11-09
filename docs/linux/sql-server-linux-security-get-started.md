@@ -26,7 +26,7 @@ ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ---
 # Get started with security features of SQL Server on Linux
 
-If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the security tasks. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the depth documentation for that area.
+If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the security tasks. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the in-depth documentation for that area.
 
 >  [!NOTE]
 >  The following examples use the **AdventureWorks** sample database. For instructions on how to obtain and install this sample database, see [Restore a SQL Server database from Windows to Linux](../sql-server-linux-restore-database.md).
@@ -38,7 +38,11 @@ SQL Server has several types of users. The recommended type of user for most cus
 
 >  [!IMPORTANT]
 >  When connecting, the user-database must be specified in the connection string. When using Management Studio, in the **Connection** dialog box, click **Options**. The database can be specified on the **Connection Properties** tab.
-> INSERT GRAPHIC    
+> ![Connect as a contained database user](./media/sql-server-linux-security/user-connect.png)    
+
+
+    ![SQL Server network security group rule](./media/sql-server-linux-connect-and-query/network-security-rule.png)
+
 
 ### Who can create to a user-database without a user account? 
 
@@ -47,7 +51,7 @@ SQL Server has several types of users. The recommended type of user for most cus
 
 ### Create a user
 
-Connect to a user-database and use the CREATE USER statement to create more users. Always use a strong password in place of the asterisks below.
+Connect to a user-database and use the [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) statement to create more users. Always use a strong password in place of the asterisks below.
 
 The following statement, creates a contained database user named Jerry.
 
@@ -62,7 +66,7 @@ Later you can authorize any existing user to create a more database users, by gr
 
 The first people to connect to a user-database will be the administrator and database owner accounts. However these users have all the the permissions available on the database. This is more permission than most users should have. 
 
-When you are just getting started, you can assign some general categories of permissions by using the built-in *fixed database roles*. For example, the `db_datareader` fixed database role can read all tables in the database, but make no changes. Grant membership in a fixed database role by using the ALTER ROLE statement. The following example add the user `Jerry` to the `db_datareader` fixed database role.
+When you are just getting started, you can assign some general categories of permissions by using the built-in *fixed database roles*. For example, the `db_datareader` fixed database role can read all tables in the database, but make no changes. Grant membership in a fixed database role by using the [ALTER ROLE](https://msdn.microsoft.com/library/ms189775.aspx) statement. The following example add the user `Jerry` to the `db_datareader` fixed database role.
 
 ```
 ALTER ROLE db_datareader ADD MEMBER Jerry;
@@ -155,7 +159,7 @@ WITH (STATE = OFF);
 
 [Dynamic Data Masking](https://msdn.microsoft.com/library/mt130841.aspx) enables you to limit the exposure of sensitive data to users of an application by fully or partially masking certain columns. 
 
-Use an `ALTER TABLE` statement to add a masking function to the EmailAddress column in the Person.EmailAddress table: 
+Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
 ALTER TABLE Person.EmailAddress    
@@ -174,7 +178,8 @@ SELECT EmailAddresssID, EmailAddress FROM Person.EmailAddress;
 REVERT;    
 ```
  
-Verify that the masking function changes the email address in the first record from:  
+Verify that the masking function changes the email address in the first record from:
+  
 |EmailAddresssID |EmailAddress |  
 |----|---- |   
 |1 |ken0@adventure-works.com |    

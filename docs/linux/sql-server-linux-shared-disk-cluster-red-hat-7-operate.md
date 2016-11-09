@@ -8,7 +8,7 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 10-31-2016
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql-linux 
 ms.service: 
 ms.technology: 
 ms.assetid: 

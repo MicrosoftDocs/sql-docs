@@ -6,7 +6,7 @@ description:
 author: BYHAM 
 ms.author: rickbyh 
 manager: jhubbard
-ms.date: 10-18-2016
+ms.date: 11-07-2016
 ms.topic: article
 ms.prod: sql-non-specified
 ms.service: 
@@ -33,6 +33,6 @@ SQL Server on Linux has the following restrictions:
 * A standard password policy is provided. MUST_CHANGE is the only option you may configure.  
 * Extensible Key Management is not supported. 
 * Using keys stored in the Azure Key Vault is not supported.
-* Writing to the syslog file on Linux is not supported. 
+* SQL Server generates its own self-signed certificate for encrypting connections. Currently, SQL Server cannot be configured to use a user provided certificate for SSL or TWL. 
 
-For more infomation on encrypting your connection to SQL Server, see [Configuring SQL Server to use a Linux certificate for SSL and TLS](https://msdn.microsoft.com/library/dd146365.aspx).
+For more infomation about security features available in SQL Server, see the [Security Center for SQL Server Database Engine and Azure SQL Database](https://msdn.microsoft.com/library/bb510589.aspx).

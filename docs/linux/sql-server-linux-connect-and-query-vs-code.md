@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Connect and query SQL Server on Linux (VS Code) | SQL Server vNext CTP1
+title: Use the multi-platform VS Code tool for SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11-02-2016
+ms.date: 11-07-2016
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql-linux
 ms.service: 
 ms.technology: 
 ms.assetid: 
@@ -25,7 +25,7 @@ ms.assetid:
 # ms.custom: ""
 
 ---
-# Connect and query SQL Server on Linux (VS Code)
+# Use the multi-platform VS Code tool for SQL Server on Linux
 
 This topic shows how to use Visual Studio Code (VS Code) tool to connect and query SQL Server vNext CTP1 on Linux.
 

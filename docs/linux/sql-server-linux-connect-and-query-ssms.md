@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Connect and query SQL Server on Linux (SSMS) | SQL Server vNext CTP1
+title: Use SSMS on Windows to connect to SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: rothja 
 ms.author: jroth 
@@ -25,7 +25,7 @@ ms.assetid:
 # ms.custom: ""
 
 ---
-# Connect and query SQL Server on Linux (SSMS)
+# Use SSMS on Windows to connect to SQL Server on Linux
 This topic shows how to use [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) to connect to SQL Server vNext CTP1 on Linux. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
 
 After successfully connecting, you run a simple Transact-SQL (T-SQL) query to verify communication with the database.

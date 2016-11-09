@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Connect and query SQL Server on Linux | SQL Server vNext CTP1
-description: 
+title: Connect and query SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: Provides an overview of how to connect to SQL Server on Linux. Also includes links to topics that show how to use client tools to connect and query SQL Server on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-28-2016
+ms.date: 11/08/2016
 ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: 2b5aa551-3ad7-4f0d-b69b-4fe692dbbcee
 
 # optional metadata
 

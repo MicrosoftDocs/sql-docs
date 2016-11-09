@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Manage SQL Server on Linux | SQL Server vNext CTP1
-description: 
+title: Manage SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: This topic provides links to common management tasks and tools for SQL Server running on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11-07-2016
+ms.date: 11/08/2016
 ms.topic: article
 ms.prod: sql-linux
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.technology: database-engine
+ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 
 # optional metadata
 

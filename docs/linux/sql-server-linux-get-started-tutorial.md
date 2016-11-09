@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Get started with SQL Server on Linux | SQL Server vNext CTP1
-description: 
+title: Get started with SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: This topic provides a learning path for getting started with SQL Server vNext on Linux. It also includes links to other resources for each step.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11-07-2016
+ms.date: 11/07/2016
 ms.topic: article
 ms.prod: sql-linux
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.technology: database-engine
+ms.assetid: 66d96e59-2ded-4460-b350-fda80d93d79b
 
 # optional metadata
 

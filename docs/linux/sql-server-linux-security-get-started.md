@@ -41,9 +41,6 @@ SQL Server has several types of users. The recommended type of user for most cus
 > ![Connect as a contained database user](./media/sql-server-linux-security/user-connect.png)    
 
 
-    ![SQL Server network security group rule](./media/sql-server-linux-connect-and-query/network-security-rule.png)
-
-
 ### Who can create to a user-database without a user account? 
 
 - A SQL Server administrator account can connect to any database.  

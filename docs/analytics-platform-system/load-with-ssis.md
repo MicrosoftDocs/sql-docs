@@ -138,6 +138,10 @@ Each Integration Services package destination for the same data source counts as
 Multiple packages can run concurrently as long as each package does not use more than the maximum active loads. For example, if the maximum active loads is 10, you can concurrently run two packages that each use 10 destinations. One package will run while the other one waits in the load queue.  
   
 If the number of loads in the load queue exceeds the maximum queued loads, the package will not run. For example, if the maximum number of loads is 10 per appliance and the maximum number of queued loads is 40 per appliance, you can concurrently run five Integration Services packages that each open 10 destinations. If you try to run a sixth package, it will not run.  
+
+> [!IMPORTANT]
+> Using an OLE DB data source in SSIS with the PDW destination adapter, can cause data corruption if the source table contains char and varchar columns with SQL collations. We recommend using an ADO.NET source if the source table contains char or varchar columns with SQL collations. 
+
   
 ## <a name="Locks"></a>Locking behavior  
 When loading data with Integration Services, SQL ServerPDW uses row-level locks to update data in the destination table. This means that each row is locked for read and write while it is being updated. The rows in the destination table are not locked while the data is loaded into the staging table.  

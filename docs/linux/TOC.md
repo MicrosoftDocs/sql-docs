@@ -20,6 +20,7 @@
 ### [Import data with bcp](sql-server-linux-import-data-with-bcp.md)
 ### [Troubleshoot SQL Server on Linux](sql-server-linux-troubleshooting-guide.md)
 ## [Security](sql-server-linux-security-get-started.md)
+### [Security limitations](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)
 ## [Performance](sql-server-linux-performance-get-started.md)
 ### [Get started with performance features](sql-server-linux-performance-get-started.md)

@@ -2,16 +2,15 @@
 # required metadata
 
 title: Use bcp to bulk import data to SQL Server on Linux | SQL Server vNext CTP1
-description: 
+description: Describes how to use bcp to bulk import data into a SQL Server database on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11-07-2016
+ms.date: 11/08/2016
 ms.topic: article
 ms.prod: sql-linux
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.technology: database-engine
+ms.assetid: 5c3b8e75-5f98-4355-b2f5-daf1f7d442ef
 
 # optional metadata
 

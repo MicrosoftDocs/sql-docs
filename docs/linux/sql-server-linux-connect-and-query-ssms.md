@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Use SSMS on Windows to connect to SQL Server on Linux | SQL Server vNext CTP1
-description: 
+title: Use SSMS on Windows to connect to SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: This tutorial shows how to use SQL Server Management Studio on Windows to connect to SQL Server running on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-28-2016
+ms.date: 11/08/2016
 ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: cde56878-843d-4fb4-bc40-37e661c46eae
 
 # optional metadata
 

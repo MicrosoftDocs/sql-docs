@@ -27,15 +27,15 @@ ms.assetid:
 
 # Configure Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
 
-This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux 7.2. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). Corosync and Pacemaker coordinate cluster communications and resource management. The SQL Server instance is active on either one node or the other.
+This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux 7.2. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). corosync and Pacemaker coordinate cluster communications and resource management. The SQL Server instance is active on either one node or the other.
+
+> Access to Red Hat documentation requires a subscription. 
 
 The following diagram illustrates the components in a Linux cluster with SQL Server. 
 
 ![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
-
-> Access to Red Hat documentation may require a subscription. 
 
 The following sections walk through the steps to set up a failover cluster solution for demonstration purposes. 
 
@@ -45,29 +45,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ## Install and configure SQL Server on each cluster node
 
-1. Install and setup SQL Server on both nodes. 
-
-   To install SQL Server on RHEL, run the following commands: 
-
-   ```
-   $ sudo su 
-   # yum install wget
-   # curl -O https://private-repo.microsoft.com/tools/configure-mssql-repo-2.sh 
-   # chmod a+x configure-mssql-repo-2.sh 
-   # ./configure-mssql-repo-2.sh  <--!URL Provided in Email.-->
-   # exit 
-
-   $ sudo yum update 
-   $ sudo yum install -y mssql-server 
-   $ cd /opt/mssql/bin 
-   $ sudo ./sqlservr-setup 
-   $ sudo firewall-cmd --zone=public --add-port=1433/tcp--permanent 
-   $ sudo firewall-cmd --reload 
-   ```
-
-   For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
-
-
+1. Install and setup SQL Server on both nodes.  For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
 1. Configure the hosts file for each cluster node. On each node, the host file must include the IP address and name of every cluster node. 
 
@@ -227,7 +205,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password for on both nodes. 
+2. Set the password for for the default user that is created when installing Pacemaker and corosync packages. Use the same password for on both nodes. 
 
     ```bash
     # passwd hacluster
@@ -332,9 +310,9 @@ It may help troubleshoot the cluster to understand the three daemons work togeth
 
 | Daemon | Description 
 | ----- | -----
-| Corosync | Provides quorum membership and messaging between cluster nodes.
-| Pacemaker | Resides on top of Corosync and provides state machines for resources. 
-| PCSD | Manages both Pacemaker and Corosync through the `pcs` tools
+| corosync | Provides quorum membership and messaging between cluster nodes.
+| Pacemaker | Resides on top of corosync and provides state machines for resources. 
+| PCSD | Manages both Pacemaker and corosync through the `pcs` tools
 
 PCSD must be running in order to use `pcs`. 
 
@@ -369,7 +347,7 @@ pacemaker: active/enabled
 
 In the example, `partition with quorum` means that a majority quorum of nodes is online. If the cluster loses a majority quorum of nodes , `pcs status` will return `partition WITHOUT quorum` and all resources will be stopped. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` returns the name of all nodes currently participating in the cluster. If any nodes are not participating, `pcs status` returns `OFFLINE: [*nodename*]`.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` returns the name of all nodes currently participating in the cluster. If any nodes are not participating, `pcs status` returns `OFFLINE: [<nodename>]`.
 
 `PCSD Status` shows the cluster status for each node.
 
@@ -392,5 +370,5 @@ Check the following items when a node is offline.
 
 ## Next steps
 
-[Operate SQL Server on Red Hat Enterprise Linux 7 shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+[Operate SQL Server on Red Hat Enterprise Linux 7.2 shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 

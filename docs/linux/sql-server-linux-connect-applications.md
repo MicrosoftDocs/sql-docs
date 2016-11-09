@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Development tutorials for SQL Server on Linux | SQL Server vNext CTP1
-description: 
+title: Development tutorials for SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: This topic provides a link to development tutorials for SQL Server, including SQL Server vNext CTP1 running on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11-03-2016
+ms.date: 11/08/2016
 ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: 0ea3c91c-fec1-4eca-93f9-ff75ca86f951
 
 # optional metadata
 

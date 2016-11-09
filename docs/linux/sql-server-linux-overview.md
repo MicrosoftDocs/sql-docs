@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Overview of SQL Server on Linux | SQL Server vNext CTP1
+title: Overview of SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: This topic describes how SQL Server runs on Linux and provides information on how to learn more.
 author: rothja 
 ms.author: jroth 

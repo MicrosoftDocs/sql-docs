@@ -1,7 +1,6 @@
 # [Understand and Explore](sql-server-linux-overview.md)
 ## [Release Notes](sql-server-linux-release-notes.md)
 # [Get Started](sql-server-linux-get-started-tutorial.md)
-## [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md)
 ## [Install SQL Server](sql-server-linux-setup.md)
 ### [Provision an Azure VM](sql-server-linux-azure-virtual-machine.md)
 ### [Install on Ubuntu](sql-server-linux-setup-ubuntu.md)

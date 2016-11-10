@@ -39,7 +39,7 @@
 ## [Migrate with SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
 ## [Bulk copy with bcp to SQL Server on Linux](sql-server-linux-migrate-bcp.md)
 ## [Use SQL Server Integration Services (SSIS) to load data](sql-server-linux-migrate-ssis.md)
-# [Security](sql-server-linux-security-get-started.md)
+# [Security](sql-server-linux-security-overview.md)
 ## [Security limitations](sql-server-linux-security-overview.md)
 ## [Get started with security features](sql-server-linux-security-get-started.md)
 # [Troubleshoot](sql-server-linux-troubleshooting-guide.md)

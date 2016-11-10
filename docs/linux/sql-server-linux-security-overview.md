@@ -6,10 +6,9 @@ description: This topic describes SQL Server on Linux restrictions.
 author: BYHAM 
 ms.author: rickbyh 
 manager: jhubbard
-ms.date: 12-09-2016
+ms.date: 11/09/2016
 ms.topic: article
 ms.prod: sql-linux
-ms.service: 
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 

@@ -6,12 +6,11 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 10-31-2016
+ms.date: 11/08/2016
 ms.topic: article
 ms.prod: sql-linux 
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.technology: database-engine
+ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 
 # optional metadata
 # keywords: ""

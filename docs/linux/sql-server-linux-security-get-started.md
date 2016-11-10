@@ -246,61 +246,20 @@ WITH ALGORITHM = AES_256
 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
 GO
   
-ALTER DATABASE 
-The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.
->  [!WARNING]
->  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](https://msdn.microsoft.com/library/bb895327.aspx).
-For more information about TDE, see [Transparent Data Encryption (TDE)](https://msdn.microsoft.com/en-us/library/bb934049.aspx).
-## Configure backup encryption
-SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a certificate or asymmetric key) when creating a backup, you can create an encrypted backup file.    
-  
-> [!WARNING]  
->  It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable. 
- 
- 
-The following example creates a certificate, and then creates a backup protected by the certificate.
-```
-USE master;  
-GO  
-CREATE CERTIFICATE BackupEncryptCert   
-   WITH SUBJECT = 'Database backups';  
-GO 
-BACKUP DATABASE [  
-SET ENCRYPTION ON;  
-GO  
+ALTER DATABASE AdventureWorks2016   
+SET ENCRYPTION ON;   
 ```
 
-To remove TDE, execute `ALTER DATABASE AdventureWorks2016 SET ENCRYPTION OFF;`
+To remove TDE, execute `ALTER DATABASE AdventureWorks2016 SET ENCRYPTION OFF;`   
 
-The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.
+The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.   
 
 >  [!WARNING]
->  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](https://msdn.microsoft.com/library/bb895327.aspx).
+>  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](https://msdn.microsoft.com/library/bb895327.aspx).  
 
-For more information about TDE, see [Transparent Data Encryption (TDE)](https://msdn.microsoft.com/en-us/library/bb934049.aspx).
+For more information about TDE, see [Transparent Data Encryption (TDE)](https://msdn.microsoft.com/en-us/library/bb934049.aspx).   
 
-## Configure backup encryption
 
-SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a certificate or asymmetric key) when creating a backup, you can create an encrypted backup file.    
-  
-> [!WARNING]  
->  It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable. 
- 
- 
-The following example creates a certificate, and then creates a backup protected by the certificate.
-
-```
-USE master;  
-GO  
-CREATE CERTIFICATE BackupEncryptCert   
-   WITH SUBJECT = 'Database backups';  
-GO 
-
-BACKUP DATABASE 
-The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.
->  [!WARNING]
->  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](https://msdn.microsoft.com/library/bb895327.aspx).
-For more information about TDE, see [Transparent Data Encryption (TDE)](https://msdn.microsoft.com/en-us/library/bb934049.aspx).
 ## Configure backup encryption
 SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a certificate or asymmetric key) when creating a backup, you can create an encrypted backup file.    
   

@@ -57,14 +57,16 @@ GO
 
 Later you can authorize other logins to create a more logins by granting them the `ALTER ANY LOGIN` permission. Inside a database, you can authorize other users to create more users by granting them the  `ALTER ANY USER` permission. For example:   
 
-```GRANT ALTER ANY LOGIN TO Larry;
-GO
-
-USE AdventureWorks2014;
-GO
-GRANT ALTER ANY USER TO Jerry; 
-GO
 ```
+GRANT ALTER ANY LOGIN TO Larry;   
+GO   
+   
+USE AdventureWorks2014;   
+GO   
+GRANT ALTER ANY USER TO Jerry;    
+GO   
+```
+
 Now the login Jerry can create more logins, and the user Jerry can create more users.
 
 
@@ -72,28 +74,28 @@ Now the login Jerry can create more logins, and the user Jerry can create more u
 
 The first people to connect to a user-database will be the administrator and database owner accounts. However these users have all the the permissions available on the database. This is more permission than most users should have. 
 
-When you are just getting started, you can assign some general categories of permissions by using the built-in *fixed database roles*. For example, the `db_datareader` fixed database role can read all tables in the database, but make no changes. Grant membership in a fixed database role by using the [ALTER ROLE](https://msdn.microsoft.com/library/ms189775.aspx) statement. The following example add the user `Jerry` to the `db_datareader` fixed database role.
-
-```
-USE AdventureWorks2014;
-GO
-
-ALTER ROLE db_datareader ADD MEMBER Jerry;
-```
+When you are just getting started, you can assign some general categories of permissions by using the built-in *fixed database roles*. For example, the `db_datareader` fixed database role can read all tables in the database, but make no changes. Grant membership in a fixed database role by using the [ALTER ROLE](https://msdn.microsoft.com/library/ms189775.aspx) statement. The following example add the user `Jerry` to the `db_datareader` fixed database role.   
+   
+```   
+USE AdventureWorks2014;   
+GO   
+   
+ALTER ROLE db_datareader ADD MEMBER Jerry;   
+```   
 
 For a list of the fixed database roles, see [Database-Level Roles](https://msdn.microsoft.com/library/ms189121.aspx).
 
 Later, when you are ready to configure more precise access to your data (highly recommended), create your own user-defined database roles using [CREATE ROLE](https://msdn.microsoft.com/library/ms187936.aspx) statement. Then assign specific granular permissions to you custom roles.
 
-For example, the following statements create a database role named `Sales`, grants the `Sales` group the ability to see, update, and delete rows from the `Orders` table, and then adds the user `Jerry` to the `Sales` role.
-
-```
-CREATE ROLE Sales;
-GRANT SELECT ON Object::Sales TO Orders;
-GRANT UPDATE ON Object::Sales TO Orders;
-GRANT DELETE ON Object::Sales TO Orders;
-ALTER ROLE Sales ADD MEMBER Jerry;
-```
+For example, the following statements create a database role named `Sales`, grants the `Sales` group the ability to see, update, and delete rows from the `Orders` table, and then adds the user `Jerry` to the `Sales` role.   
+   
+```   
+CREATE ROLE Sales;   
+GRANT SELECT ON Object::Sales TO Orders;   
+GRANT UPDATE ON Object::Sales TO Orders;   
+GRANT DELETE ON Object::Sales TO Orders;   
+ALTER ROLE Sales ADD MEMBER Jerry;   
+```   
 
 For more information about the permission system, see [Getting Started with Database Engine Permissions](https://msdn.microsoft.com/library/mt667986.aspx).
 
@@ -104,38 +106,38 @@ For more information about the permission system, see [Getting Started with Data
 
 The steps below walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
 
-Create two user accounts to test the row level security: 
+Create two user accounts to test the row level security:    
+   
+```   
+USE AdventureWorks2014;   
+GO   
+   
+CREATE USER Manager WITHOUT LOGIN;     
+   
+CREATE USER SalesPerson280 WITHOUT LOGIN;    
+```   
 
-```
-USE AdventureWorks2014;
-GO
-
-CREATE USER Manager WITHOUT LOGIN;  
-
-CREATE USER SalesPerson280 WITHOUT LOGIN; 
-```
-
-Grant read access on the `Sales.SalesOrderHeader` table to both users: 
-
-```
-GRANT SELECT ON Sales.SalesOrderHeader TO Manager;   
-GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280; 
-```
-
-Create a new schema and inline table-valued function. The function returns 1 when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` login or if the user executing the query is the Manager user.  
-
-```  
+Grant read access on the `Sales.SalesOrderHeader` table to both users:    
+   
+```   
+GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
+GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
+```   
+   
+Create a new schema and inline table-valued function. The function returns 1 when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` login or if the user executing the query is the Manager user.   
+   
+```     
 CREATE SCHEMA Security;   
 GO   
-
+   
 CREATE FUNCTION Security.fn_securitypredicate(@SalesPersonID AS int)     
-    RETURNS TABLE 
-WITH SCHEMABINDING 
+    RETURNS TABLE   
+WITH SCHEMABINDING   
 AS     
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
-    OR (USER_NAME() = 'Manager'); 
-```
+    OR (USER_NAME() = 'Manager');    
+```   
 
 Create a security policy adding the function as both a filter and a block predicate on the table:  
 

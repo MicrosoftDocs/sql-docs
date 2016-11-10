@@ -6,12 +6,11 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 10-31-2016
+ms.date: 11/08/2016
 ms.topic: article
 ms.prod: sql-linux 
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.technology: database-engine
+ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 
 # optional metadata
 # keywords: ""
@@ -22,7 +21,6 @@ ms.assetid:
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
 # ms.custom: ""
-
 ---
 
 # Configure Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
@@ -75,26 +73,14 @@ At this point, SQL Server should be stopped on both nodes. On one node, you have
 ## Configure shared storage and move database files 
 
 To configure shared storage, you need to create a network share and mount it to the database file path on both nodes. In the following steps, you will move the SQL Server database files, install `cifs-utils`, configure the credentials for the share, mount the share, and move the SQL Server database files to the newly mounted share. To complete these steps, chose one node as the primary node. This node is only the primary node for the purpose of configuration. After the cluster service configuration is complete, either node can host the SQL Server service. 
-
-1.   **On the primary node only**, save the database files to a temporary location. 
-
-    > [AZURE.NOTE] The database files contain the login information for the “sa” user.  We will later copy them to the share so that a SQL server instance running on any node in the cluster can access them.
-
-    The following script creates a new temporary directory, copies the database files to the new directory, and removes the old database files. 
-
-    ```bash
-    # mkdir /var/opt/mssql/tmp
-    # cp /var/opt/mssql/data/* /var/opt/mssql/tmp
-    # rm /var/opt/mssql/data/*
-    ```
  
-2.  Install `cifs-utils` on both nodes. The following command installs `cifs-utils`.
+1.  Install `cifs-utils` on both nodes. The following command installs `cifs-utils`.
 
     ```
     # sudo yum install cifs-utils
     ```
 
-3.  **On the primary node only**, save the database files to a temporary location. 
+1.  **On the primary node only**, save the database files to a temporary location. 
 
     > [AZURE.NOTE] The database files contain the login information for the “sa” user.  We will later copy them to the share so that a SQL server instance running on any node in the cluster can access them.
 
@@ -106,7 +92,7 @@ To configure shared storage, you need to create a network share and mount it to 
     # rm /var/opt/mssql/data/*
     ```
 
-5.  Create a file that contains credentials for mounting the share on both nodes. The file needs to identify the username, password and domain as follows:
+1.  Create a file that contains credentials for mounting the share on both nodes. The file needs to identify the username, password and domain as follows:
 
     ```bash
     username=<username>
@@ -122,7 +108,7 @@ To configure shared storage, you need to create a network share and mount it to 
     domain=CORP
     ```
 
-6.  Get the SQL Server user ID (uid), and group ID (gid). To get the SQL Server uid and gid, run the following command **from the primary node**.
+1.  Get the SQL Server user ID (uid), and group ID (gid). To get the SQL Server uid and gid, run the following command **from the primary node**.
 
     ```bash
     # id mssql
@@ -142,9 +128,9 @@ To configure shared storage, you need to create a network share and mount it to 
 
     If the `/etc/fstab` file was edited correctly, the share is mounted to`/var/opt/mssql/data` and will be automatically re-mounted when the node restarts.
 
-7.  Copy the database and log files that you saved to `/var/opt/mssql/tmp` to the newly mounted share `/var/opt/mssql/data`. This only needs to be done **on the primary node**.
+1.  Copy the database and log files that you saved to `/var/opt/mssql/tmp` to the newly mounted share `/var/opt/mssql/data`. This only needs to be done **on the primary node**.
  
-8.  Validate that SQL Server starts successfully with the new file path. Do this on each node. At this point only one node should run SQL Server at a time. They cannot both run at the same time because they will both try to access the data files simultaneously.  The following commands start SQL Server, check the status, and then stop SQL Server.
+1.  Validate that SQL Server starts successfully with the new file path. Do this on each node. At this point only one node should run SQL Server at a time. They cannot both run at the same time because they will both try to access the data files simultaneously.  The following commands start SQL Server, check the status, and then stop SQL Server.
  
     ```
     # systemctl start mssql-server

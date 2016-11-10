@@ -24,5 +24,5 @@ ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 # ms.custom: ""
 
 ---
-# Backup and restore SQL Server databases on Linux
+# SQL Server Connectivity libraries
 

@@ -24,5 +24,5 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 # ms.custom: ""
 
 ---
-# Backup and restore SQL Server databases on Linux
+# Use the Visual Studio Code with SQL Server on Linux
 

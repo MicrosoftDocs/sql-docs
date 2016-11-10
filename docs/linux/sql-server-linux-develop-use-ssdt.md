@@ -24,5 +24,5 @@ ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 # ms.custom: ""
 
 ---
-# Backup and restore SQL Server databases on Linux
+# Use Visual Studio (SSDT) with SQL Server on Linux
 

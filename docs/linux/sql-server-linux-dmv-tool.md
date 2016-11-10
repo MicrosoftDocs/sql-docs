@@ -1,16 +1,17 @@
 ---
 # required metadata
 
-title: Monitor SQL Server on Linux with dmvtool - SQL Server vNext CTP1 | Microsoft Docs
-description: This topic describes how to monitor SQL Server running on Linux with the dmvtool.
+title: Monitor SQL Server on Linux with dmvtool | SQL Server vNext CTP1
+description: 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/08/2016
+ms.date: 10-19-2016
 ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
-ms.assetid: 2856cc89-d35b-4030-b12e-4c4ff9240706
+ms.prod: sql-non-specified
+ms.service: 
+ms.technology: 
+ms.assetid: 
 
 # optional metadata
 
@@ -37,46 +38,14 @@ DMVTool uses the FUSE file system module to create two zero byte files for each 
 > [!NOTE]
 > Viewing the contents of DMVs in JSON format is only available when connected to a SQL Server 2016 or higher version of SQL Server. DMVTool can connect to local SQL Servers running on Linux and remote SQL Servers running on Windows or Linux. For now, DMVTool is only a Linux-based tool.
 
-## Installing DMVTool
+## 1. Install DMVTool
 
+
+TODO: Find Install steps for Public Preview 
+### To install on RHEL
 ### To install on Ubuntu
 
-    $ sudo apt-get install dmvtool
-
-> [!NOTE] 
-> This assumes that you have already configured your server to install the mssql-tools package. If you have not done that already, please see the Installation Guide for instructions on doing that first.
-
-### To install on Red Hat Enterprise Linux (RHEL) 
-
-Configure the tools repo:
-
-    $ cd/etc/yum.repos.d
-    $ cp private-repo.microsoft.com.repo private-tools-repo.microsoft.com.repo
-    $ vi private-tools-repo.microsoft.com.repo 
-    
-Change **mssql-private-preview** in the first **three** lines to **mssql-tools-private-preview**.
-
-The private-tools-repo.microsoft.com.repo file should look like:
-
-    \[mssql-**tools**-private-preview\]
-    name=mssql-**tools**-private-preview
-    baseurl=https://private-repo.microsoft.com/rhel7/mssql-**tools**-private-preview/
-    enabled=1
-
-    gpgcheck=1
-
-    gpgkey=https://private-repo.microsoft.com/keys/dpgswdist.v1.asc
-
-    sslclientcert=/etc/sslyum/client.private-repo.microsoft.com.pem
-    sslclientkey=/et/ssl/yum/client.private-repo.microsoft.com.pem
-
-Install
-
-    $ sudo yum update
-
-    $ sudo yum install dmvtool
-
-## Configuring and Running DMVTool
+## 2. Configure DMVTool
 
 The DMV tool needs a config file and an empty directory to mount and create the virtual files in. The config file allows you to specify the hostname, username, password (optionally), and SQL Server version for all the servers you want to manage using DMVTool. The version attribute needs to be 14 (SQL Server 2014) or 16 (SQL Server 2016 or higher).
 
@@ -86,16 +55,16 @@ The DMV tool needs a config file and an empty directory to mount and create the 
 
         $ mkdir dmv
 
-1.  Create a file to store the configuration
+3.  Create a file to store the configuration
 
         $ touch dmvtool.config
 
-1.  Edit the config file using an editor like VI
+4.  Edit the config file using an editor like VI
 
-    $ vi dmvtool.config
+        $ vi dmvtool.config
 
 The config file should be in the following format: 
-    \[server friendlyname\] 
+    [server friendlyname] 
     hostname=&lt;HOSTNAME&gt; 
     username=&lt;USERNAME&gt;
     password=&lt;PASSWORD&gt; 
@@ -109,21 +78,21 @@ names.
 
 Example:
 
-    \[server1\]
+    [server1]
     hostname= 10.82.164.188 
     username=sa 
     password=password1 
     version=16
 
-    \[server2\]
+    [server2]
     hostname= 10.82.164.127 
     username=sa 
     password=password2 
     version=16
 
-### To run the DMVTool
+## 3. Run DMVTool
 
-    dmvtool -c ./\[Config File\] -m ./\[Mount Directory\]
+    dmvtool -c ./[Config File] -m ./[Mount Directory]
 
 Example:
 
@@ -138,20 +107,22 @@ Example:
 
  You should see the list of your server friendly names.
 
-    $ cd &lt;server friendly name&gt;
+    $ cd <server friendly name>
     $ ls
 
 You should see the list of DMVs as files. Look at the contents of one of the files:
 
-    $ more &lt;dmv file name&gt;
+    $ more <dmv file name>
 
 You can pipe the output from DMVTool to tools like [*cut*](https://en.wikipedia.org/wiki/Cut_(Unix)) (CSV) and [*jq*](https://stedolan.github.io/jq/) (JSON) to format the data for better readability.
+
+## 4. Stop DMVtool 
 
 By default, DMVTool runs in background. You can shut it down using the following commands: 
 
     ps -A | grep dmvtool
 
-    kill -2 &lt;dmvtool pid&gt;
+    kill -2 <dmvtool pid>;
 
 If you want to run it in the foreground you can pass the -f parameter. You can pass the -v parameter for verbose output if you are running the tool in the foreground.
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use SSMS with SQL Server on Linux | SQL Server vNext CTP1
+title: Use SQL Server Management Studio (SSMS) with SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: sanagama 
 ms.author: sanagama 

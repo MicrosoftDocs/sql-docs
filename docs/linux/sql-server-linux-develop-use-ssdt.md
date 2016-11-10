@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use Visual Studio (SSDT) with SQL Server on Linux | SQL Server vNext CTP1
+title: Use SQL Server Data Tools (SSDT) with SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: sanagama 
 ms.author: sanagama 
@@ -24,5 +24,5 @@ ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 # ms.custom: ""
 
 ---
-# Use Visual Studio (SSDT) with SQL Server on Linux
+# Use SQL Server Data Tools (SSDT) with SQL Server on Linux 
 

@@ -21,7 +21,7 @@
 ## [Use PowerShell to Manage](sql-server-linux-manage-powershell.md)
 ## [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
 ## [Monitor with dmvtool](sql-server-linux-dmv-tool.md)
-# [Configure Business continuity](sql-server-linux-backup-overview.md)
+# [Configure business continuity](sql-server-linux-backup-overview.md)
 ## [Backup](sql-server-linux-backup-and-restore-database.md)
 ## [Restore](sql-server-linux-restore-database.md)
 ## [Virtualize](sql-server-linux-configure-high-availability-virtualize.md)

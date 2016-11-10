@@ -15,6 +15,8 @@
 # [Develop](sql-server-linux-develop-overview.md)
 ## [Develop for SQL Server on Linux](sql-server-linux-develop-overview.md)
 ## [Connectivity libraries](sql-server-linux-develop-connectivity-libraries.md)
+## [Use Visual Studio Code with SQL Server on Linux](sql-server-linux-develop-use-vscode.md)
+## [Use Visual Studio (SSMS) with SQL Server on Linux](sql-server-linux-develop-use-ssms.md)
 ## [Use Visual Studio (SSDT) with SQL Server on Linux](sql-server-linux-develop-use-ssdt.md)
 ## [Development tutorials for SQL Server on Linux](sql-server-linux-connect-applications.md)
 # [Manage](sql-server-linux-management-overview.md)

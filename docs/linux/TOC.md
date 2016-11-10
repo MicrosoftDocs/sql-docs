@@ -12,7 +12,7 @@
 ### [Use the Sqlcmd command-line utility](sql-server-linux-connect-and-query-sqlcmd.md)
 ### [Use the multi-platform VS Code tool for SQL Server](sql-server-linux-connect-and-query-vs-code.md)
 ### [Use SSMS on Windows to connect to SQL Server](sql-server-linux-connect-and-query-ssms.md)
-# [Develop](sql-server-linux-develop-overview.md)
+# Develop 
 ## [Develop for SQL Server on Linux](sql-server-linux-develop-overview.md)
 ## [Connectivity libraries](sql-server-linux-develop-connectivity-libraries.md)
 ## [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)

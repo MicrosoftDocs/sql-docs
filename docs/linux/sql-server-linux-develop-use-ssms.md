@@ -24,5 +24,5 @@ ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 # ms.custom: ""
 
 ---
-# Backup and restore SQL Server databases on Linux
+# Use SQL Server Management Studio (SSMS) with SQL Server on Linux
 

@@ -29,7 +29,7 @@ ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the security tasks. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the in-depth documentation for that area.
 
 >  [!NOTE]
->  The following examples use the **AdventureWorks** sample database. For instructions on how to obtain and install this sample database, see [Restore a SQL Server database from Windows to Linux](../sql-server-linux-restore-database.md).
+>  The following examples use the **AdventureWorks** sample database. For instructions on how to obtain and install this sample database, see [Restore a SQL Server database from Windows to Linux](sql-server-linux-restore-database.md).
 
 
 ## Create a database User for authentication

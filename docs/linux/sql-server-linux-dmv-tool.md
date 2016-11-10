@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Monitor SQL Server on Linux with dmvtool | SQL Server vNext CTP1
-description: 
+title: Monitor SQL Server on Linux with dmvtool - SQL Server vNext CTP1 | Microsoft Docs
+description: This topic describes how to monitor SQL Server running on Linux with the dmvtool.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-19-2016
+ms.date: 11/09/2016
 ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: 2856cc89-d35b-4030-b12e-4c4ff9240706
 
 # optional metadata
 

@@ -3,14 +3,15 @@
 
 title: Use the multi-platform VS Code tool for SQL Server on Linux | SQL Server vNext CTP1
 description: 
-author: rothja 
+author: erickangMSFT
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/07/2016
+ms.date: 11-09-2016
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: database-engine
-ms.assetid: e0f703eb-8130-4b4b-8dcb-a479af3a03d4
+ms.service: 
+ms.technology: 
+ms.assetid: 
 
 # optional metadata
 

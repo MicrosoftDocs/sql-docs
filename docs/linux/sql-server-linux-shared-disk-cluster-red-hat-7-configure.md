@@ -25,11 +25,11 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 
 # Configure Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
 
-This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux 7.2. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). corosync and Pacemaker coordinate cluster communications and resource management. The SQL Server instance is active on either one node or the other.
+This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux 7.2. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). The SQL Server instance is active on either one node or the other.
 
-> Access to Red Hat documentation requires a subscription. 
+> [!NOTE] Access to Red Hat documentation requires a subscription. 
 
-The following diagram illustrates the components in a Linux cluster with SQL Server. 
+As the diagram below shows, storage is presented to two servers, both Corosync and Pacemaker are clustering components which coordinate cluster communications and resource management. One of the servers has the active connection to the storage resources and the SQL Server. When Pacemaker detects a failure the clustering components manage moving the resources to the other node.  
 
 ![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -191,7 +191,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and corosync packages. Use the same password for on both nodes. 
+2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password for on both nodes. 
 
     ```bash
     # passwd hacluster
@@ -296,9 +296,9 @@ It may help troubleshoot the cluster to understand the three daemons work togeth
 
 | Daemon | Description 
 | ----- | -----
-| corosync | Provides quorum membership and messaging between cluster nodes.
-| Pacemaker | Resides on top of corosync and provides state machines for resources. 
-| PCSD | Manages both Pacemaker and corosync through the `pcs` tools
+| Corosync | Provides quorum membership and messaging between cluster nodes.
+| Pacemaker | Resides on top of Corosync and provides state machines for resources. 
+| PCSD | Manages both Pacemaker and Corosync through the `pcs` tools
 
 PCSD must be running in order to use `pcs`. 
 
@@ -347,7 +347,7 @@ Check the following items when a node is offline.
     
     - **TCP: 2224, 3121, 21064
 
-- **Pacemaker or corosync services running**
+- **Pacemaker or Corosync services running**
 
 - **Node communication**
 

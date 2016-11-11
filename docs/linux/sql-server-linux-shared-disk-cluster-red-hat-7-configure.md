@@ -68,7 +68,7 @@ The first step is to configure the operating system on the cluster nodes. For th
     10.128.16.77 sqlfcivm2
     ```
 
-At this point, SQL Server should be stopped on both nodes. On one node, you have copied the SQL Server database files to a temporary directory and deleted the files from the original directory. The next step is to configure shared storage. 
+At this point, SQL Server should be stopped on both nodes. On one node, you have copied the SQL Server database files to a temporary directory and deleted the files from the original directory. In the next section you will configure shared storage and move your database files to that storage. 
 
 ## Configure shared storage and move database files 
 

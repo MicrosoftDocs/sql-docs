@@ -53,7 +53,7 @@ The first step is to configure the operating system on the cluster nodes. For th
     # ip addr show
     ```
 
-    Give each node a unique name that is 15 characters or less. By default in Red Hat Linux the computer name is `localhost.localdomain`. This default name may not be unique and is too long. Set the computer name on each node. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`. 
+    Set the computer name on each node. Give each node a unique name that is 15 characters or less. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`. 
 
     ```
     # vi /etc/hosts
@@ -64,8 +64,8 @@ The first step is to configure the operating system on the cluster nodes. For th
     ```
     127.0.0.1   localhost localhost4 localhost4.localdomain4
     ::1         localhost localhost6 localhost6.localdomain6
-    10.128.18.128 fcivm1
-    10.128.16.77 fcivm2
+    10.128.18.128 sqlfcivm1
+    10.128.16.77 sqlfcivm2
     ```
 
 At this point, SQL Server should be stopped on both nodes. On one node, you have copied the SQL Server database files to a temporary directory and deleted the files from the original directory. The next step is to configure shared storage. 

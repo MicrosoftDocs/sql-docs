@@ -8,7 +8,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="">
+        <a href="https://stage.docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup ">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -26,7 +26,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://stage.docs.microsoft.com/en-us/sql/linux/sql-server-linux-management-overview ">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -44,7 +44,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://msdn.microsoft.com/library/mt238290.aspx">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -72,7 +72,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Download SSSMS: Integrated environment for accessing, managing, and developing SQL Server</h3>
+                        <h3>Download SSMS: Integrated environment for accessing, managing, and developing SQL Server</h3>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://msdn.microsoft.com/en-us/library/mt204009.aspx">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -98,7 +98,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://marketplace.visualstudio.com/items?itemName=sanagama.vscode-mssql ">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

@@ -1,3 +1,7 @@
-- name: SQL Server on Linux
-  tocHref: /sql/linux/
-  topicHref: /sql/linux
+- name: Docs
+  href: /
+  homepage: /
+  items:
+  - name: SQL Server on Linux
+    href: /sql/linux/
+    homepage: /sql/linux

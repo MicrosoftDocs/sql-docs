@@ -4,7 +4,7 @@ layout: LandingPage
 
 #SQL Server on Linux Documentation
 
-SQL Server now runs on Linux! Use the docs to learn about the core relational database capabilities in this release of SQL Server, and how to install, manage, secure, and develop for this new release. 
+SQL Server now runs on Linux! Learn about the core relational database capabilities in this release of SQL Server, and how to install, manage, secure, and develop for this new release. 
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -14,7 +14,7 @@ SQL Server now runs on Linux! Use the docs to learn about the core relational da
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/sql-linux-landing-1.png" alt="" />
+                            <img src="media/landing-page/sql-linux-landing-1.png" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -32,7 +32,7 @@ SQL Server now runs on Linux! Use the docs to learn about the core relational da
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/sql-linux-landing-2.png" alt="" />
+                            <img src="media/landing-page/sql-linux-landing-2.png" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -50,7 +50,7 @@ SQL Server now runs on Linux! Use the docs to learn about the core relational da
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/sql-linux-landing-3.png" alt="" />
+                            <img src="media/landing-page/sql-linux-landing-3.png" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -68,11 +68,11 @@ SQL Server now runs on Linux! Use the docs to learn about the core relational da
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/sql-linux-landing-4.png" alt="" />
+                            <img src="media/landing-page/sql-linux-landing-4.png" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Download SQL Server Management Studio</h3>
+                        <h3>Download SQL Server Management Studio: Integrated environment for accessing, managing, and developing SQL Server</h3>
                     </div>
                 </div>
             </div>
@@ -86,11 +86,11 @@ SQL Server now runs on Linux! Use the docs to learn about the core relational da
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/sql-linux-landing-5.png" alt="" />
+                            <img src="media/landing-page/sql-linux-landing-5.png" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Download SQL Server Data Tools</h3>
+                        <h3>Download SQL Server Data Tools: Development tools for building SQL Server relational databases and SQL Azure databases</h3>
                     </div>
                 </div>
             </div>
@@ -104,11 +104,11 @@ SQL Server now runs on Linux! Use the docs to learn about the core relational da
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/sql-linux-landing-6.png" alt="" />
+                            <img src="media/landing-page/sql-linux-landing-6.png" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Visual Studio Code with the vscode-mssql extension</h3>
+                        <h3>Install Visual Studio Code with the vscode-mssql extension: SQL Server support in VS Code</h3>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@ SQL Server now runs on Linux! Use the docs to learn about the core relational da
     <a href="https://www.microsoft.com/en-us/sql-server/sql-server-on-linux">
         <div class="img"></div>
         <div class="text">
-            Download the bits!
+            Download SQL Server on Linux Documentation
         </div>
     </a>
 </div>

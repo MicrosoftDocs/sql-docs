@@ -8,7 +8,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="">
+        <a href="https://stage.docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup ">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -26,7 +26,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://stage.docs.microsoft.com/en-us/sql/linux/sql-server-linux-management-overview ">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -44,7 +44,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://msdn.microsoft.com/library/mt238290.aspx">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -62,7 +62,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://msdn.microsoft.com/en-us/library/mt238290.aspx">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -72,7 +72,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Download SQL Server Management Studio: Integrated environment for accessing, managing, and developing SQL Server</h3>
+                        <h3>Download SSMS: Integrated environment for accessing, managing, and developing SQL Server</h3>
                     </div>
                 </div>
             </div>
@@ -80,17 +80,17 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://msdn.microsoft.com/en-us/library/mt204009.aspx">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="media/landing-page/sql-linux-landing-5.png" alt="" />
+                            <img src="media/landing-page/sql-linux-landing-3.png" alt="" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Download SQL Server Data Tools: Development tools for building SQL Server relational databases and SQL Azure databases</h3>
+                        <h3>Download SSDT: Development tools for building SQL Server relational databases and SQL Azure databases</h3>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="">
+        <a href="https://marketplace.visualstudio.com/items?itemName=sanagama.vscode-mssql ">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -121,7 +121,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
     <a href="https://www.microsoft.com/en-us/sql-server/sql-server-on-linux">
         <div class="img"></div>
         <div class="text">
-            Download SQL Server on Linux Documentation
+            Download the documentation
         </div>
     </a>
 </div>

@@ -35,7 +35,7 @@ As the diagram below shows storage is presented to two servers. Clustering compo
 
 For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-The following sections walk through the steps to set up a failover cluster solution for demonstration purposes. 
+The following sections walk through the steps to set up a failover cluster solution. 
 
 ## Setup and configure the operating system on each cluster node
 

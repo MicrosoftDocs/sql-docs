@@ -47,6 +47,37 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Install and setup SQL Server on both nodes.  For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
+1. Designate one server as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.  
+
+1. On the secondary server, stop and disable SQL Server.
+
+    The following example stops and disables SQL Server: 
+
+    ```bash
+    # systemctl stop mssql-server
+    # systemctl disable mssql-server
+    ```
+
+1. On the primary server, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
+
+    On the primary node, start SQL Server.
+
+    ```bash
+    # systemctl start mssql-server
+    ```
+
+    On the node that is running, connect to the SQL Server `master` database with the sa account and run the following:
+
+    ```sql
+    USE [master]
+    GO
+    CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'
+
+    GRANT VIEW SERVER STATE TO <loginName>
+    ```
+
+1. On the primary server, stop and disable SQL Server. 
+
 1. Configure the hosts file for each cluster node. On each node, the host file must include the IP address and name of every cluster node. 
 
     Check the IP address for each node. The following script shows the IP address of your current node. 
@@ -147,28 +178,10 @@ At this point both instances of SQL Server are configured to run with the databa
 ## Install and configure Pacemaker on each cluster node
 
 
-1. Create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
-
-    On the primary node, start SQL Server.
-
-    ```bash
-    # systemctl start mssql-server
-    ```
-
-    On the node that is running, connect to the SQL Server `master` database with the sa account and run the following:
-
-    ```sql
-    USE [master]
-    GO
-    CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'
-
-    GRANT VIEW SERVER STATE TO <loginName>
-    ```
-
 2. On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
 
     ```bash
-    # touch /var/opt/mssql/passwd
+    # touch /var/opt/mssql/secrets/passwd
     # echo "<loginName>" >> /var/opt/mssql/secrets/passwd
     # echo "<loginPassword>" >> /var/opt/mssql/secrets/passwd
     # chown root:root /var/opt/mssql/passwd
@@ -224,7 +237,7 @@ At this point both instances of SQL Server are configured to run with the databa
     ```bash
     # pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
     # pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
-    # pcs cluster start --all
+    # sudo pcs cluster start --all
     ```
 
     > RHEL HA add-on has fencing agents for VMWare and KVM. Fencing needs to be disabled on all other hypervisors. Disabling fencing agents is not recommended in production environments. As of CTP1 timeframe, there are no fencing agents for HyperV or cloud environments. If you are running one of these configurations, you need to disable fencing. \**This is NOT recommended in a production system!**
@@ -232,15 +245,8 @@ At this point both instances of SQL Server are configured to run with the databa
     The following command disables the fencing agents.
 
     ```bash
-    # pcs property setstonith-enabled=false
-    # pcs property setstart-failure-is-fatal=false
-    ```
-
-1. Stop and disable SQL Server on each node with the following commands. 
-
-    ```bash
-    # systemctl stop mssql-server
-    # systemctl disable mssql-server
+    # pcs property set stonith-enabled=false
+    # pcs property set start-failure-is-fatal=false
     ```
 
 2. Configure the cluster resources for SQL Server and virtual IP resources and push the configuration to the cluster. You will need the following information:
@@ -255,7 +261,7 @@ At this point both instances of SQL Server are configured to run with the databa
    ```bash
    # pcs cluster cib cfg 
    # pcs -f cfg resource create <sqlServerResourceName> ocf:sql:fci timeout=<timeout_in_seconds>
-   # pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPAddr2 ip=<ipAddress>
+   # pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    # pcs -f cfg constraint colocation add <sqlResourceName> <virtualIPResourceName>
    # pcs cluster cib-push cfg
    ```
@@ -265,7 +271,7 @@ At this point both instances of SQL Server are configured to run with the databa
    ```bash
    # pcs cluster cib cfg
    # pcs -f cfg resource create MyAppSQL ocf:sql:fci timeout=60s
-   # pcs -f cfg resource create virtualip ocf:heartbeat:IPAddr2 ip=10.0.0.99
+   # pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    # pcs -f cfg constraint colocation add mssql virtualip
    # pcs cluster cib-push cfg
    ```

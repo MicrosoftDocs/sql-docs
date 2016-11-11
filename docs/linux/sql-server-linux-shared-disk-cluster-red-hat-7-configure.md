@@ -35,6 +35,8 @@ As the diagram below shows storage is presented to two servers. Clustering compo
 
 For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
+[!NOTE] This is not a production setup. This guide creates an architecture that is for high-level functional testing.
+
 The following sections walk through the steps to set up a failover cluster solution. 
 
 ## Setup and configure the operating system on each cluster node
@@ -71,6 +73,8 @@ The first step is to configure the operating system on the cluster nodes. For th
 At this point, SQL Server should be stopped on both nodes. On one node, you have copied the SQL Server database files to a temporary directory and deleted the files from the original directory. In the next section you will configure shared storage and move your database files to that storage. 
 
 ## Configure shared storage and move database files 
+
+One way to configure shared storage is with Common Internet File System (CIFS). 
 
 To configure shared storage, you need to create a network share and mount it to the database file path on both nodes. In the following steps, you will move the SQL Server database files, install `cifs-utils`, configure the credentials for the share, mount the share, and move the SQL Server database files to the newly mounted share. To complete these steps, chose one node as the primary node. This node is only the primary node for the purpose of configuration. After the cluster service configuration is complete, either node can host the SQL Server service. 
  
@@ -353,6 +357,9 @@ Check the following items when a node is offline.
 
 - **Node name mappings**
 
+## Additional resources
+
+* [Cluster from Scratch](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guide from Pacemaker
 
 ## Next steps
 

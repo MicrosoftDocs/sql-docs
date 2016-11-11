@@ -6,11 +6,12 @@ description:
 author: erickangMSFT
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/09/2016
+ms.date: 11-09-2016
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: database-engine
-ms.assetid: e0f703eb-8130-4b4b-8dcb-a479af3a03d4
+ms.service: 
+ms.technology: 
+ms.assetid: 
 
 # optional metadata
 
@@ -69,12 +70,13 @@ The following steps explain how to install the mssql extension.
     > [!NOTE]
     > For macOS, you will need to install OpenSSL which is a pre-requiste for DotNet Core that mssql extention uses. Follow the 'install pre-requisite' steps in [DotNet Core instruction page].
     > Or, simply run the following commands in your macOS Terminal.
-        > ```bash
-        > brew update
-        > brew install openssl
-        > ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-        > ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-        > ```
+    
+    ```bash
+    brew update
+    brew install openssl
+    ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
+    ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
+    ```
     > [!NOTE]
     > For Windows 8.1, Windows Server 2012 or lower versions, you will need to download and install [Windows 10 Universal C Runtime]. Download and open the zip file, then run the installer (.msu file) targetting your current OS configuration.
 
@@ -265,13 +267,13 @@ If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements] and the 
 
 For more information on using VS Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).
 
-[**mssql** extension for VS Code]:https://marketplace.visualstudio.com/items?itemName=Microsoft.mssql
+[**mssql** extension for VS Code]:https://aka.ms/mssql-marketplace
 [Download and install VS Code]:https://code.visualstudio.com/Download
 [DotNet Core instruction page]:https://www.microsoft.com/net/core
-[manage connection profiles]:sql-server-linux-connect-and-query-vs-code-manage-connection-profiles.md
+[manage connection profiles]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [connection troubleshooting recommendations]:./sql-server-linux-connect-and-query.md#troubleshoot
-[customize shortcuts]:./sql-server-linux-connect-and-query-vs-code-wiki-customize-shortcuts
+[customize shortcuts]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
 [Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
-[Windows 10 Universal C Runtime]:https://www.microsoft.com/en-us/download/details.aspx?id=48234
+[Windows 10 Universal C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement

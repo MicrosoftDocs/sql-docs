@@ -6,12 +6,11 @@ description:
 author: erickangMSFT
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11-09-2016
+ms.date: 11/09/2016
 ms.topic: article
 ms.prod: sql-linux
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.technology: database-engine
+ms.assetid: e0f703eb-8130-4b4b-8dcb-a479af3a03d4
 
 # optional metadata
 
@@ -267,13 +266,13 @@ If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements] and the 
 
 For more information on using VS Code, see the [Visual Studio Code documentation](https://code.visualstudio.com/docs).
 
-[**mssql** extension for VS Code]:https://aka.ms/mssql-marketplace
-[Download and install VS Code]:https://code.visualstudio.com/Download
-[DotNet Core instruction page]:https://www.microsoft.com/net/core
-[manage connection profiles]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
-[connection troubleshooting recommendations]:./sql-server-linux-connect-and-query.md#troubleshoot
-[customize shortcuts]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
-[Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
-[Visual Studio Code documentation]:https://code.visualstudio.com/docs
-[Windows 10 Universal C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
+[**mssql** extension for VS Code](https://aka.ms/mssql-marketplace)
+[Download and install VS Code](https://code.visualstudio.com/Download)
+[DotNet Core instruction page](https://www.microsoft.com/net/core)
+[manage connection profiles](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles)
+[connection troubleshooting recommendations](sql-server-linux-connect-and-query.md#troubleshoot)
+[customize shortcuts](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts)
+[Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx)
+[Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx)
+[Visual Studio Code documentation](https://code.visualstudio.com/docs)
+[Windows 10 Universal C Runtime](https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement)

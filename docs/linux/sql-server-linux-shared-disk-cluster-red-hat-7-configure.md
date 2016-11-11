@@ -29,7 +29,7 @@ This guide provides instructions to create a two-node shared disk cluster for SQ
 
 > [!NOTE] Access to Red Hat documentation requires a subscription. 
 
-As the diagram below shows, storage is presented to two servers, both Corosync and Pacemaker are clustering components which coordinate cluster communications and resource management. One of the servers has the active connection to the storage resources and the SQL Server. When Pacemaker detects a failure the clustering components manage moving the resources to the other node.  
+As the diagram below shows storage is presented to two servers. Clustering components - Corosync and Pacemaker - coordinate communications and resource management. One of the servers has the active connection to the storage resources and the SQL Server. When Pacemaker detects a failure the clustering components manage moving the resources to the other node.  
 
 ![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 

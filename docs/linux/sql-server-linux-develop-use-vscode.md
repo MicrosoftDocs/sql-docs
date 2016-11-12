@@ -4,7 +4,7 @@
 title: Use Visual Studio Code with SQL Server on Linux | SQL Server vNext CTP1
 description: 
 author: erickangMSFT 
-ms.author: erickangMSFT 
+ms.author: erickang 
 manager: jhubbard
 ms.date: 11/10/2016
 ms.topic: article

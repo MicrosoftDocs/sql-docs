@@ -25,17 +25,19 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 
 # Configure Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
 
-This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux 7.2. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). corosync and Pacemaker coordinate cluster communications and resource management. The SQL Server instance is active on either one node or the other.
+This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux 7.2. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). The SQL Server instance is active on either one node or the other.
 
-> Access to Red Hat documentation requires a subscription. 
+> [!NOTE] Access to Red Hat documentation requires a subscription. 
 
-The following diagram illustrates the components in a Linux cluster with SQL Server. 
+As the diagram below shows storage is presented to two servers. Clustering components - Corosync and Pacemaker - coordinate communications and resource management. One of the servers has the active connection to the storage resources and the SQL Server. When Pacemaker detects a failure the clustering components manage moving the resources to the other node.  
 
 ![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-The following sections walk through the steps to set up a failover cluster solution for demonstration purposes. 
+> [!NOTE] This is not a production setup. This guide creates an architecture that is for high-level functional testing.
+
+The following sections walk through the steps to set up a failover cluster solution. 
 
 ## Setup and configure the operating system on each cluster node
 
@@ -45,7 +47,36 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Install and setup SQL Server on both nodes.  For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
-1. Configure the hosts file for each cluster node. On each node, the host file must include the IP address and name of every cluster node. 
+1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.  
+
+1. On the secondary node, stop and disable SQL Server.
+
+    The following example stops and disables SQL Server: 
+
+    ```bash
+    # systemctl stop mssql-server
+    # systemctl disable mssql-server
+    ```
+
+1. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
+
+    ```bash
+    # systemctl start mssql-server
+    ```
+
+    Connect to the SQL Server `master` database with the sa account and run the following:
+
+    ```sql
+    USE [master]
+    GO
+    CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'
+
+    GRANT VIEW SERVER STATE TO <loginName>
+    ```
+
+1. On the primary node, stop and disable SQL Server. 
+
+1. Configure the hosts file for each cluster node. The host file must include the IP address and name of every cluster node. 
 
     Check the IP address for each node. The following script shows the IP address of your current node. 
 
@@ -53,7 +84,7 @@ The first step is to configure the operating system on the cluster nodes. For th
     # ip addr show
     ```
 
-    Give each node a unique name that is 15 characters or less. By default in Red Hat Linux the computer name is `localhost.localdomain`. This default name may not be unique and is too long. Set the computer name on each node. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`. 
+    Set the computer name on each node. Give each node a unique name that is 15 characters or less. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`. 
 
     ```
     # vi /etc/hosts
@@ -64,13 +95,15 @@ The first step is to configure the operating system on the cluster nodes. For th
     ```
     127.0.0.1   localhost localhost4 localhost4.localdomain4
     ::1         localhost localhost6 localhost6.localdomain6
-    10.128.18.128 fcivm1
-    10.128.16.77 fcivm2
+    10.128.18.128 sqlfcivm1
+    10.128.16.77 sqlfcivm2
     ```
 
-At this point, SQL Server should be stopped on both nodes. On one node, you have copied the SQL Server database files to a temporary directory and deleted the files from the original directory. The next step is to configure shared storage. 
+In the next section you will configure shared storage and move your database files to that storage. 
 
 ## Configure shared storage and move database files 
+
+One way to configure shared storage is with Common Internet File System (CIFS). 
 
 To configure shared storage, you need to create a network share and mount it to the database file path on both nodes. In the following steps, you will move the SQL Server database files, install `cifs-utils`, configure the credentials for the share, mount the share, and move the SQL Server database files to the newly mounted share. To complete these steps, chose one node as the primary node. This node is only the primary node for the purpose of configuration. After the cluster service configuration is complete, either node can host the SQL Server service. 
  
@@ -82,7 +115,7 @@ To configure shared storage, you need to create a network share and mount it to 
 
 1.  **On the primary node only**, save the database files to a temporary location. 
 
-    > [AZURE.NOTE] The database files contain the login information for the “sa” user.  We will later copy them to the share so that a SQL server instance running on any node in the cluster can access them.
+    > [!NOTE] The database files contain the login information for the “sa” user.  We will later copy them to the share so that a SQL server instance running on any node in the cluster can access them.
 
     The following script, creates a new temporary directory, copies the database files to the new directory, and removes the old database files. 
 
@@ -143,28 +176,10 @@ At this point both instances of SQL Server are configured to run with the databa
 ## Install and configure Pacemaker on each cluster node
 
 
-1. Create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
-
-    On the primary node, start SQL Server.
-
-    ```bash
-    # systemctl start mssql-server
-    ```
-
-    On the node that is running, connect to the SQL Server `master` database with the sa account and run the following:
-
-    ```sql
-    USE [master]
-    GO
-    CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'
-
-    GRANT VIEW SERVER STATE TO <loginName>
-    ```
-
 2. On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
 
     ```bash
-    # touch /var/opt/mssql/passwd
+    # touch /var/opt/mssql/secrets/passwd
     # echo "<loginName>" >> /var/opt/mssql/secrets/passwd
     # echo "<loginPassword>" >> /var/opt/mssql/secrets/passwd
     # chown root:root /var/opt/mssql/passwd
@@ -191,7 +206,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and corosync packages. Use the same password for on both nodes. 
+2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password for on both nodes. 
 
     ```bash
     # passwd hacluster
@@ -220,7 +235,7 @@ At this point both instances of SQL Server are configured to run with the databa
     ```bash
     # pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
     # pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
-    # pcs cluster start --all
+    # sudo pcs cluster start --all
     ```
 
     > RHEL HA add-on has fencing agents for VMWare and KVM. Fencing needs to be disabled on all other hypervisors. Disabling fencing agents is not recommended in production environments. As of CTP1 timeframe, there are no fencing agents for HyperV or cloud environments. If you are running one of these configurations, you need to disable fencing. \**This is NOT recommended in a production system!**
@@ -228,15 +243,8 @@ At this point both instances of SQL Server are configured to run with the databa
     The following command disables the fencing agents.
 
     ```bash
-    # pcs property setstonith-enabled=false
-    # pcs property setstart-failure-is-fatal=false
-    ```
-
-1. Stop and disable SQL Server on each node with the following commands. 
-
-    ```bash
-    # systemctl stop mssql-server
-    # systemctl disable mssql-server
+    # pcs property set stonith-enabled=false
+    # pcs property set start-failure-is-fatal=false
     ```
 
 2. Configure the cluster resources for SQL Server and virtual IP resources and push the configuration to the cluster. You will need the following information:
@@ -251,7 +259,7 @@ At this point both instances of SQL Server are configured to run with the databa
    ```bash
    # pcs cluster cib cfg 
    # pcs -f cfg resource create <sqlServerResourceName> ocf:sql:fci timeout=<timeout_in_seconds>
-   # pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPAddr2 ip=<ipAddress>
+   # pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    # pcs -f cfg constraint colocation add <sqlResourceName> <virtualIPResourceName>
    # pcs cluster cib-push cfg
    ```
@@ -261,7 +269,7 @@ At this point both instances of SQL Server are configured to run with the databa
    ```bash
    # pcs cluster cib cfg
    # pcs -f cfg resource create MyAppSQL ocf:sql:fci timeout=60s
-   # pcs -f cfg resource create virtualip ocf:heartbeat:IPAddr2 ip=10.0.0.99
+   # pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    # pcs -f cfg constraint colocation add mssql virtualip
    # pcs cluster cib-push cfg
    ```
@@ -288,71 +296,10 @@ At this point both instances of SQL Server are configured to run with the databa
      corosync: active/disabled
      pacemaker: active/enabled
      pcsd: active/enabled
-   ```
+    ```
+## Additional resources
 
-## Troubleshooting shared disk cluster 
-
-It may help troubleshoot the cluster to understand the three daemons work together cluster resources.
-
-| Daemon | Description 
-| ----- | -----
-| corosync | Provides quorum membership and messaging between cluster nodes.
-| Pacemaker | Resides on top of corosync and provides state machines for resources. 
-| PCSD | Manages both Pacemaker and corosync through the `pcs` tools
-
-PCSD must be running in order to use `pcs`. 
-
-### Current cluster status 
-
-`# pcs status` returns basic information about the cluster, quorum, nodes, resources, and daemon status for each node. 
-
-An example of a healthy pacemaker quorum output would be:
-
-```
-Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
-Stack: corosync 
-Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
-3 nodes and 1 resource configured 
-
-Online: [ sqlvmnode1 sqlvmnode2 sqlvmnode3] 
-
-Full list of resources: 
-
-mssql (ocf::sql:fci): Started sqlvmnode1 
-
-PCSD Status: 
-sqlvmnode1: Online 
-sqlvmnode2: Online 
-sqlvmnode3: Online 
-
-Daemon Status: 
-corosync: active/disabled 
-pacemaker: active/enabled 
-```
-
-In the example, `partition with quorum` means that a majority quorum of nodes is online. If the cluster loses a majority quorum of nodes , `pcs status` will return `partition WITHOUT quorum` and all resources will be stopped. 
-
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` returns the name of all nodes currently participating in the cluster. If any nodes are not participating, `pcs status` returns `OFFLINE: [<nodename>]`.
-
-`PCSD Status` shows the cluster status for each node.
-
-### Reasons why a node may be offline
-
-Check the following items when a node is offline.
-
-- **Firewall**
-
-    The following ports need to be open on all nodes for Pacemaker to be able to communicate.
-    
-    - **TCP: 2224, 3121, 21064
-
-- **Pacemaker or corosync services running**
-
-- **Node communication**
-
-- **Node name mappings**
-
+* [Cluster from Scratch](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guide from Pacemaker
 
 ## Next steps
 

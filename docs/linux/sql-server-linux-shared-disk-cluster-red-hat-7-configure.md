@@ -47,9 +47,9 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Install and setup SQL Server on both nodes.  For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
-1. Designate one server as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.  
+1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.  
 
-1. On the secondary server, stop and disable SQL Server.
+1. On the secondary node, stop and disable SQL Server.
 
     The following example stops and disables SQL Server: 
 
@@ -58,15 +58,13 @@ The first step is to configure the operating system on the cluster nodes. For th
     # systemctl disable mssql-server
     ```
 
-1. On the primary server, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
-
-    On the primary node, start SQL Server.
+1. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
 
     ```bash
     # systemctl start mssql-server
     ```
 
-    On the node that is running, connect to the SQL Server `master` database with the sa account and run the following:
+    Connect to the SQL Server `master` database with the sa account and run the following:
 
     ```sql
     USE [master]
@@ -76,9 +74,9 @@ The first step is to configure the operating system on the cluster nodes. For th
     GRANT VIEW SERVER STATE TO <loginName>
     ```
 
-1. On the primary server, stop and disable SQL Server. 
+1. On the primary node, stop and disable SQL Server. 
 
-1. Configure the hosts file for each cluster node. On each node, the host file must include the IP address and name of every cluster node. 
+1. Configure the hosts file for each cluster node. The host file must include the IP address and name of every cluster node. 
 
     Check the IP address for each node. The following script shows the IP address of your current node. 
 
@@ -101,7 +99,7 @@ The first step is to configure the operating system on the cluster nodes. For th
     10.128.16.77 sqlfcivm2
     ```
 
-At this point, SQL Server should be stopped on both nodes. On one node, you have copied the SQL Server database files to a temporary directory and deleted the files from the original directory. In the next section you will configure shared storage and move your database files to that storage. 
+In the next section you will configure shared storage and move your database files to that storage. 
 
 ## Configure shared storage and move database files 
 
@@ -117,7 +115,7 @@ To configure shared storage, you need to create a network share and mount it to 
 
 1.  **On the primary node only**, save the database files to a temporary location. 
 
-    > [AZURE.NOTE] The database files contain the login information for the “sa” user.  We will later copy them to the share so that a SQL server instance running on any node in the cluster can access them.
+    > [!NOTE] The database files contain the login information for the “sa” user.  We will later copy them to the share so that a SQL server instance running on any node in the cluster can access them.
 
     The following script, creates a new temporary directory, copies the database files to the new directory, and removes the old database files. 
 

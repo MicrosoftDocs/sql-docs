@@ -28,7 +28,6 @@
 ## [Configure high availability and disaster recovery](sql-server-linux-configure-high-availability-and-disaster-recovery.md)
 ### [Configure shared disk cluster](sql-server-linux-shared-disk-cluster-configure.md)
 #### [Configure RHEL 7.2 shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
-### [Operate shared disk cluster](sql-server-linux-shared-disk-cluster-operate.md)
 #### [Operate RHEL 7.2 shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 # [Migrate](sql-server-linux-migrate-overview.md)
 ## [Export and Import a BACPAC with SqlPackage](sql-server-linux-migrate-sqlpackage.md)

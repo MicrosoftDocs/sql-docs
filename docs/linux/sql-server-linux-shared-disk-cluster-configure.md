@@ -31,6 +31,5 @@ You can configure and a shared-storage high-availability cluster with Linux to a
 | Distribution | Topic 
 | ----- | -----
 | Red Hat Enterprise Linux 7.2 | [Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-| | 
 ## Next steps
 

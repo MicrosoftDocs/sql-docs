@@ -51,7 +51,7 @@ After installation, connect to the running SQL Server instance on your Linux mac
 |-----|-----|
 | Sqlcmd | [Use the Sqlcmd command-line utility on Linux](sql-server-linux-connect-and-query-sqlcmd.md) |
 | Visual Studio Code (VS Code) | [Use the multi-platform VS Code tool for SQL Server on Linux](sql-server-linux-connect-and-query-vs-code.md) |
-| SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-connect-and-query-ssms.md) |
+| SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) |
 
 ## 4: Explore SQL Server capabilities on Linux
 SQL Server vNext has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux.

@@ -28,7 +28,7 @@ ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 
 SQL Server on Linux allows organizations to achieve a wide array of service-level agreement goals to accommodate various business requirements.
 
-The simplest solutions an organization can leverage include:
+The simplest solutions leverage virtualization technologies to achieve a high degree of resiliency against host-level failures, fault tolerance against hardware failures, as well as elasticity and resource maximization. These systems can run on-premises, or in a private or public cloud, or hybrid environments. The simplest form of disaster recovery and protection is the database backup. Simple solutions available in SQL Server vNext CTP1 include:
 
 - **VM Failover**
     - Resilience against guest and OS level failures
@@ -38,8 +38,40 @@ The simplest solutions an organization can leverage include:
 
 
 - **Backup and Restore**
+    - Protection against accidental or malicious data corruption
+    - Disaster recovery protection
+    - RTO in minutes to hours
 
-The following business continuity and disaster recovery capabilities are available for SQL Server vNext CTP1 on Linux
+Standard high-availability and disaster recovery techniques provide instance-level protection combined with a reliable shared storage infrastructure. For SQL Server vNext CTP1 standard high-availability includes:
+
+- **Failover Cluster**
+    - Instance level protection
+    - Automatic failure detection and failover
+    - Resilience against OS and SQL Server failures
+    - RTO in seconds to minutes
+
+    Future releases of SQL Server vNext will include SQL server support for additional standard high availability capabilities, including database-level protection with basic Always On availability groups and disaster recovery with log shipping. The standard high availability features for SQL Server vNext will include:
+
+- **Basic Availability Groups** (In development)
+    - Availability Group with two replicas
+
+- **Log Shipping** (In development)
+    - Warm standby for disaster recovery
+
+SQL Server on Linux vNext will meet mission critical high-availability and disaster recovery SLAs with Always On availability groups. 
+
+- **Availability Groups** (In development)
+    - Database level protection 
+    - RTO in seconds
+    - No data loss
+    - Recover from unplanned outage
+    - No downtime for planned maintenance
+    - Offload read/backup workload to active secondaries
+    - Failover to geographically distributed secondary site
+
+## Summary
+
+SQL Server vNext CTP1 on Linux includes virtualization, backup and restore, and failover clusters to support high-availability and disaster recovery. For more information about these capabilities, see:
 
 - [Database backup and restore](sql-server-linux-backup-and-restore-database.md)
 - [Virtualize server for high available](sql-server-linux-configure-high-availability-virtualize.md)

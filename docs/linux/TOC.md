@@ -34,5 +34,6 @@
 ## [Load Data with (SSIS)](sql-server-linux-migrate-ssis.md)
 # [Security](sql-server-linux-security-overview.md)
 ## [Get started with security features](sql-server-linux-security-get-started.md)
-# [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
 # [Optimize Performance](sql-server-linux-performance-get-started.md)
+# [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
+

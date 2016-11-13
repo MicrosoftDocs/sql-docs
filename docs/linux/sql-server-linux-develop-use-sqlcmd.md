@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use the Sqlcmd command-line utility on Linux - SQL Server vNext CTP1 | Microsoft Docs
+title: Use the sqlcmd command-line utility on Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL queries.
 author: rothja 
 ms.author: jroth 
@@ -24,7 +24,7 @@ ms.assetid: 9e6c1ae1-59a4-4589-b839-18d6a52f2676
 # ms.custom: ""
 
 ---
-# Use the Sqlcmd command-line utility on Linux
+# Use the sqlcmd command-line utility on Linux
 
 This topic shows how to use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext CTP1 on Linux. 
 

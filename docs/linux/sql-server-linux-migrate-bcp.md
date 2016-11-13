@@ -25,5 +25,37 @@ ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ---
 # Bulk copy with bcp to SQL Server on Linux
 
-(sql-server-linux-migrate-bcp.md)
+TODO: provide an example of using BCP on SQL Server on Linux. Point to the BCP documentation as well. Focus on migrte scenario.
+
+Optional: consider whether this discussion of BULK INSERT is applicable in this topic (from evaluation guide) and whether the same workaround for line ending is necessary with BCP.
+
+## Bulk Insert
+
+The Bulk Insert feature allows you to import records into a
+table or view from a local data file.
+
+To test this feature, create a new directory /var/opt/mssql/Samples and a new file SampleLocations.txt with the following content:
+
+    1,Subassembly
+    2,Storage
+    3,Assembly
+    4,Final Assembly
+    5,Paint Shop
+
+Linux and Windows handle newlines differently and SQL Server on Linux only recognizes newline characters in the Windows format this preview release.  If you authored the SampleLocations.txt file in Linux, download the dos2unix package and use it to create a version of the file that will be interpreted correctly by SQL Server.  
+
+    $ apt-get install dos2unix
+    
+    $ unix2dos –n SampleLocations.txt WinSampleLocations.txt 
+
+Create a new table in tempdb for Location data:
+
+    use tempdb
+
+    CREATE TABLE Locations ( LocationID int, Location varchar(255) )
+
+Use Bulk Insert to populate the Locations table with data from your text file:
+
+    BULK INSERT Locations FROM 'C:\Samples\WinSampleLocations.txt' WITH (FIELDTERMINATOR = ',')
+
 

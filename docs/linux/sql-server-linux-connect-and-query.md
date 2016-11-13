@@ -48,7 +48,7 @@ To see a tutorial for VS Code, see [Connect and query SQL Server on Linux (VS Co
 ### SQL Server Management Studio for Windows
 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) is a Windows tool for both querying and managing SQL Server instances. This is best for when you are working with both Windows and Linux machines. You can connect SSMS running on Windows to SQL Server running on Linux. The advantage of SSMS is that it provide a graphical user interface for many server and database management tasks. <br/>
 
-To see a tutorial for SSMS, see [Connect and query SQL Server on Linux (SSMS)](sql-server-linux-connect-and-query-ssms.md).
+To see a tutorial for SSMS, see [Connect and query SQL Server on Linux (SSMS)](sql-server-linux-develop-use-ssms.md).
 
 ## <a id="troubleshoot"></a> Troubleshoot connection failures
 If you are having difficulty connecting to your Linux SQL Server instance, there are a few things to check. 

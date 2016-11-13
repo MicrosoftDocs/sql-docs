@@ -26,7 +26,7 @@ ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ---
 # Restore a SQL Server database from Windows to Linux
 
-This topic provides a walkthrough for restoring a database backup on Windows to SQL Server vNext CTP1 running on Linux. In this tutorial, you will:
+This topic provides a walk through for restoring a database backup on Windows to SQL Server vNext CTP1 running on Linux. In this tutorial, you will:
 
 - Download the AdventureWorks backup file on a Windows machine
 - Transfer the backup to your Linux machine
@@ -39,15 +39,14 @@ This topic provides a walkthrough for restoring a database backup on Windows to 
 
 Although you can use the same steps to restore any database, the AdventureWorks sample database provides a good example. It comes as an existing database backup file.
 
+>[!NOTE] To restore a database to SQL Server on Linux, the source backup must be taken from SQL Server 2014 or SQL Server 2016. The backup SQL Server build number must not be greater than the restore SQL Server build number.  
+
 1. On your Windows machine, go to [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) and download the **Adventure Works 2014 Full Database Backup.zip**.
 
 > [!TIP] 
 > Although this tutorial demonstrates backup and restore between Windows and Linux, you could also use a browser on Linux to directly download the AdventureWorks sample to your Linux machine.
 
 2. Open the zip file, and extract the AdventureWorks2014.bak file to a folder on your machine.
-
-> [!NOTE] 
-> At this time, you cannot restore SQL Server 2016 database backups to SQL Server on Linux. Database backups must have been created with SQL Server 2014 or prior.
 
 ## Transfer the backup file to Linux
 

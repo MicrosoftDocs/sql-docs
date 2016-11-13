@@ -26,6 +26,19 @@ ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 ---
 # Business continuity and database recovery SQL Server on Linux - SQL Server vNext CTP1
 
+SQL Server on Linux allows organizations to achieve a wide array of service-level agreement goals to accommodate various business requirements.
+
+The simplest solutions an organization can leverage include:
+
+- **VM Failover**
+    - Resilience against guest and OS level failures
+    - Unplanned and planned events
+    - Minimum downtime for patching and upgrades
+    - RTO in minutes
+
+
+- **Backup and Restore**
+
 The following business continuity and disaster recovery capabilities are available for SQL Server vNext CTP1 on Linux
 
 - [Database backup and restore](sql-server-linux-backup-and-restore-database.md)

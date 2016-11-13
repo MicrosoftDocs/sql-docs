@@ -28,7 +28,7 @@ ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 You can create applications that connect to and use SQL Server from a variety of programming languages such as C#, Java, Node.js, PHP, Python, Ruby and C++ and popular web frameworks and Object Relational Mapping (ORM) frameworks. Your applications can target SQL Server running on-premises or in the cloud, on Linux, Windows or Docker on macOS and also Azure SQL Database and Azure SQL Data Warehouse.
 
 The best way to get started and build applications with SQL Server on Linux, Docker on macOS and Windows is to try it out for yourself.
-- Browse to [Getting Started Tutorials](www.microsoft.com/sql-server/developer-get-started)
+- Browse to [Getting Started Tutorials](http://www.microsoft.com/sql-server/developer-get-started)
 - Select your language and development platform
 - Try the code samples
 

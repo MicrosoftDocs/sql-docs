@@ -58,4 +58,3 @@ See the topics below for more information:
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [sqlpackage](sql-server-linux-migrate-sqlpackage.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)
-- [dmvtool](sql-server-linux-dmv-tool.md)

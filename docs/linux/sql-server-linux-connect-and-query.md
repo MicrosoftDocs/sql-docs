@@ -38,7 +38,7 @@ The following sections describe several tools that connect to SQL Server and all
 ### Sqlcmd
 [Sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) is a command line tool that can be run from any Windows or Linux machine that has the SQL Server tools installed. It has a basic interface but is good for quickly connecting and running T-SQL commands.
 
-For a tutorial for Sqlcmd, see [Connect and query SQL Server on Linux (Sqlcmd)](sql-server-linux-connect-and-query-sqlcmd.md).
+For a tutorial for Sqlcmd, see [Connect and query SQL Server on Linux (Sqlcmd)](sql-server-linux-develop-use-sqlcmd.md).
 
 ### Visual Studio Code
 [Visual Studio Code (VS Code)](https://code.visualstudio.com) is a lightweight, cross-platform development tool for writing code. The MSSQL extension provides the ability to execute TSQL commands. This is especially useful in development scenarios where you need to write both application code and database functionality.

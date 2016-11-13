@@ -43,7 +43,7 @@ For a tutorial for Sqlcmd, see [Connect and query SQL Server on Linux (Sqlcmd)](
 ### Visual Studio Code
 [Visual Studio Code (VS Code)](https://code.visualstudio.com) is a lightweight, cross-platform development tool for writing code. The MSSQL extension provides the ability to execute TSQL commands. This is especially useful in development scenarios where you need to write both application code and database functionality.
 
-To see a tutorial for VS Code, see [Connect and query SQL Server on Linux (VS Code)](sql-server-linux-connect-and-query-vs-code.md).
+To see a tutorial for VS Code, see [Connect and query SQL Server on Linux (VS Code)](sql-server-linux-develop-use-vscode.md).
 
 ### SQL Server Management Studio for Windows
 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) is a Windows tool for both querying and managing SQL Server instances. This is best for when you are working with both Windows and Linux machines. You can connect SSMS running on Windows to SQL Server running on Linux. The advantage of SSMS is that it provide a graphical user interface for many server and database management tasks. <br/>

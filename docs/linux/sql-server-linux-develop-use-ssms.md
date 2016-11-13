@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use SQL Server Management Studio (SSMS) with SQL Server on Linux | SQL Server vNext CTP1
+title: Use SSMS on Windows to connect to SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: This tutorial shows how to use SQL Server Management Studio on Windows to connect to SQL Server running on Linux. 
 author: rothja 
 ms.author: jroth 
@@ -24,7 +24,7 @@ ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 # ms.custom: ""
 
 ---
-# Use SQL Server Management Studio (SSMS) with SQL Server on Linux
+# Use SSMS on Windows to connect to SQL Server on Linux
 
 This topic shows how to use [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) to connect to SQL Server vNext CTP1 on Linux. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
 
@@ -40,7 +40,7 @@ The following steps show how to connect to SQL Server vNext on Linux with SSMS.
 
 1. Start SSMS by typing **Microsoft SQL Server Management Studio** in the Windows search box, and then click the desktop app.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-connect-and-query-ssms/ssms.png)
+    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png)
 
 2. In the **Connect to Server** window, enter the following information (if SSMS is already running, click **Connect > Database Engine** to open the **Connect to Server** window):
 
@@ -52,7 +52,7 @@ The following steps show how to connect to SQL Server vNext on Linux with SSMS.
    | **Login** | Enter the name of a user with access to a database on the server (for example, the default **SA** account created during setup). |
    | **Password** | Enter the password for the specified user (for the **SA** account, you created this during setup). |
 
-    ![SQL Server Management Studio: Connect to SQL Database server](./media/sql-server-linux-connect-and-query-ssms/connect.png)
+    ![SQL Server Management Studio: Connect to SQL Database server](./media/sql-server-linux-develop-use-ssms/connect.png)
 
 3. Click **Connect**.
 
@@ -61,7 +61,7 @@ The following steps show how to connect to SQL Server vNext on Linux with SSMS.
  
 5. After successfully connecting to your SQL Sever, **Object Explorer** opens and you can now access your database to perform administrative tasks or query data.
  
-     ![Object explorer](./media/sql-server-linux-connect-and-query-ssms/object-explorer.png)
+     ![Object explorer](./media/sql-server-linux-develop-use-ssms/object-explorer.png)
      
 ## Run sample queries
 
@@ -71,7 +71,7 @@ After you connect to your server, you can connect to a database and run a sample
 2. In **Object Explorer**, navigate to the target database on the server.
 2. Right-click the database and then select **New Query**:
 
-	![New query. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-ssms/new-query.png)
+	![New query. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/new-query.png)
 
 3. In the query window, write a Transact-SQL query to select data from one of the tables. The following example selects data from the **Production.Product** table of the **AdventureWorks** database.
 
@@ -81,7 +81,7 @@ After you connect to your server, you can connect to a database and run a sample
 
 4. Click the **Execute** button:
 
-	![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-ssms/execute-query.png)
+	![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/execute-query.png)
 
 ## Next steps
 

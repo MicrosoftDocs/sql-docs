@@ -50,7 +50,7 @@ After installation, connect to the running SQL Server instance on your Linux mac
 | Tool | Tutorial |
 |-----|-----|
 | Sqlcmd | [Use the Sqlcmd command-line utility on Linux](sql-server-linux-develop-use-sqlcmd.md) |
-| Visual Studio Code (VS Code) | [Use the multi-platform VS Code tool for SQL Server on Linux](sql-server-linux-connect-and-query-vs-code.md) |
+| Visual Studio Code (VS Code) | [Use VS Code with SQL Server on Linux](sql-server-linux-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) |
 
 ## 4: Explore SQL Server capabilities on Linux

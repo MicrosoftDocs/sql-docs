@@ -36,7 +36,6 @@ Open the Azure portal
 3. Click See All under Featured Apps
 
 4. Click on the Red Hat Enterprise Linux Server with SQL Server
-TODO: update name of this when it's up
 
 5. Click Create and fill in the settings
 
@@ -57,11 +56,7 @@ Accept the License and enter a password for the system administrator account. Yo
 There is information on how to do this [here.](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-nsg-quickstart-portal/)
 
 
-Install SQL Server Tools 
-TODO: update package
-
-    $ sudo apt-get update
-    $ sudo apt-get install mssql-tools
+Install SQL Server Tools using the instructions [here](sql-server-linux-setup-red-hat.md#tools)
 
 Connect to your localchost with your SA username and password:
 

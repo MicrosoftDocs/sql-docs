@@ -60,8 +60,10 @@ There is information on how to do this [here.](https://azure.microsoft.com/en-us
 Install SQL Server Tools 
 TODO: update package
 
-    $ sudo apt-get update
-    $ sudo apt-get install mssql-tools
+    $ sudo u
+    # wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL8d067754/file/162203/1/install.sh 
+    # sh install.sh
+    # exit
 
 Connect to your localchost with your SA username and password:
 

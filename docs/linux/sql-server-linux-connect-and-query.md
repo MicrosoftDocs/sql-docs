@@ -60,4 +60,4 @@ If you are running Linux in an Azure virtual machine (VM), you must also create 
     ![SQL Server network security group rule](./media/sql-server-linux-connect-and-query/network-security-rule.png)
 
 ## Next Steps
-For more information on using SQL Server vNext on Linux, see [SQL Server on Linux](/).
+See the walkthrough for [how to connect and query using sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).

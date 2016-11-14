@@ -43,16 +43,12 @@ Open the Azure portal
 
 Navigate to the SQL Server directory
 
-    ```
     cd /opt/mssql/bin
-    ````
-
+    
 Setup SQL Server
 
-    ```
     sudo ./sqlservr-setup 
-    ````
-
+    
 Accept the License and enter a password for the system administrator account. You can start the server when prompted.
 
 > [!NOTE] The firewall on the VM is already open but you need to open it at the azure level. 
@@ -63,9 +59,9 @@ Install SQL Server Tools using the instructions [here](sql-server-linux-setup-re
 
 Connect to your localhost with your SA username and password:
 
-    ```
     $ sqlcmd -S localhost -U SA -P <password>
-    ```
+    
+    
 ## Connect to a Linux VM using SSH/Putty from a Windows PC
 
 PuTTY is a SSH client for Linux that you can run on your Windows PC.

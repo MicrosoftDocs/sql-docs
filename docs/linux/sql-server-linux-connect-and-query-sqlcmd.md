@@ -6,7 +6,7 @@ description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/12/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -30,7 +30,7 @@ This topic shows how to use [sqlcmd](https://msdn.microsoft.com/library/ms162773
 
 After successfully connecting, you run a simple Transact-SQL (T-SQL) query to verify communication with the database.
 
-> ![TIP]
+> [!TIP]
 > Sqlcmd is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
 
 ## Install the SQL Server command-line tools

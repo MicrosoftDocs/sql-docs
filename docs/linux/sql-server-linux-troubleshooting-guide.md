@@ -170,11 +170,11 @@ You will need to escape the $ anytime using the backslash character you are usin
 
 Does not work:
 
-    $ sqlcmd -S myserfver -U sa -P Test$$
+    $ sqlcmd -S myserver -U sa -P Test$$
 
 Works:
 
-    $ sqlcmd -S myserfver -U sa -P Test\$\$
+    $ sqlcmd -S myserver -U sa -P Test\$\$
 
 Resources:
 

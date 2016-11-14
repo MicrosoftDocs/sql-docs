@@ -28,7 +28,7 @@ ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 
 SQL Server on Linux allows organizations to achieve a wide array of service-level agreement goals to accommodate various business requirements.
 
-The simplest solutions leverage virtualization technologies to achieve a high degree of resiliency against host-level failures, fault tolerance against hardware failures, as well as elasticity and resource maximization. These systems can run on-premises, or in a private or public cloud, or hybrid environments. The simplest form of disaster recovery and protection is the database backup. Simple solutions available in SQL Server vNext CTP1 include:
+The simplest solutions leverage virtualization technologies to achieve a high degree of resiliency against host-level failures, fault tolerance against hardware failures, as well as elasticity and resource maximization. These systems can run on-premises, in a private or public cloud, or hybrid environments. The simplest form of disaster recovery and protection is the database backup. Simple solutions available in SQL Server vNext CTP1 include:
 
 - [**VM Failover**](sql-server-linux-configure-high-availability-virtualize.md)
     - Resilience against guest and OS level failures
@@ -50,11 +50,7 @@ Standard high-availability and disaster recovery techniques provide instance-lev
     - Resilience against OS and SQL Server failures
     - RTO in seconds to minutes
 
-SQL Server vNext CTP1 on Linux includes virtualization, backup and restore, and failover clusters to support high-availability and disaster recovery. Additional high-availability and disaster recovery technologies may be enabled in future releases.
 
 ## Summary
 
-
-
-
-## Next steps
+SQL Server vNext CTP1 on Linux includes virtualization, backup and restore, and failover clusters to support high-availability and disaster recovery. Additional high-availability and disaster recovery technologies may be enabled in future releases.

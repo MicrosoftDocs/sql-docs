@@ -27,5 +27,3 @@ ms.assetid: acf48018-0192-4bb8-99f8-82d3bdf3417e
 # Virtualize for high availability for SQL Server on Linux
 
 Virtualization platforms provide high availability solutions to allow rapid recovery from hardware failure. Refer to your virtualization vendor for specific information about high availability solutions. 
-
-## See also

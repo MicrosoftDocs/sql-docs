@@ -58,10 +58,14 @@ SQL Server vNext has the same underlying database engine on all supported platfo
 
 If you are already familiar with SQL Server, you'll want to review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release.
 
-If you are new to SQL Server, there are a few additional resources to help you evaluate SQL Server:
- - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)
+If you are new to SQL Server, you might find it helpful to quickly explore some of the security and performance capabilities in the following two guides:
  - [Get started with security features](sql-server-linux-security-get-started.md)
  - [Get started with performance features](sql-server-linux-performance-get-started.md)
+
+Then learn how to develop and manage SQL Server:
+ - [Develop for SQL Server on Linux](sql-server-linux-develop-overview.md)
+ - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)
+ - [Configure high availability](sql-server-linux-configure-high-availability-and-disaster-recovery.md)
 
 ## Next Steps
 For more information about this release of SQL Server vNext, see [Overview of SQL Server on Linux](sql-server-linux-overview.md).

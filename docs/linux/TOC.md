@@ -20,7 +20,7 @@
 # [Configure business continuity](sql-server-linux-backup-overview.md)
 ## [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 ## [Virtualize](sql-server-linux-configure-high-availability-virtualize.md)
-## [Configure Failover Cluster](sql-server-linux-shared-disk-cluster-configure.md)
+## [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-configure.md)
 ### [Configure RHEL 7.2 (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ### [Operate RHEL 7.2 (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 ### [Troubleshoot RHEL 7.2 (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md)

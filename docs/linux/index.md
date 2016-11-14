@@ -36,7 +36,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Manage: SSMS, PowerShell, mssql-conf, dmvtool</h3>
+                        <h3>Manage: SSMS (run on Windows to manage Linux), PowerShell, mssql-conf</h3>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="https://msdn.microsoft.com/library/mt238290.aspx">
+        <a href="https://review.docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-overview">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -98,7 +98,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
         </a>
     </li>
     <li>
-        <a href="https://marketplace.visualstudio.com/items?itemName=sanagama.vscode-mssql ">
+        <a href="https://aka.ms/mssql-marketplace">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

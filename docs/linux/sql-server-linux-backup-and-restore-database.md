@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Backup SQL Server databases on Linux | SQL Server vNext CTP1
+title: Backup and restore SQL Server databases on Linux | SQL Server vNext CTP1
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -24,7 +24,7 @@ ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 # ms.custom: ""
 
 ---
-# Backup SQL Server databases on Linux
+# Backup and restore SQL Server databases on Linux
 
 You can backup a SQL Server database on a Linux server database. 
 

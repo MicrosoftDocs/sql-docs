@@ -29,15 +29,15 @@ ms.assetid: 222e23b2-51e7-429b-b8e5-61e0ebe7df9b
 
 Open the Azure portal
 
-1. Click New on the left
+1. Click *New* on the left
 
-2. Click Virtual Machines
+2. Click *Virtual Machines*
 
-3. Click See All under Featured Apps
+3. Click *See All* under Featured Apps
 
-4. Click on the Red Hat Enterprise Linux Server with SQL Server
+4. Click on *SQL Server vNext on Red Hat Enterprise Linux 7.2*
 
-5. Click Create and fill in the settings
+5. Click *Create* and fill in the settings
 
 ## Configure SQL Server on the VM
 
@@ -58,7 +58,7 @@ There is information on how to do this [here.](https://azure.microsoft.com/en-us
 
 Install SQL Server Tools using the instructions [here](sql-server-linux-setup-red-hat.md#tools)
 
-Connect to your localchost with your SA username and password:
+Connect to your localhost with your SA username and password:
 
     $ sqlcmd -S localhost -U SA -P <password>
 

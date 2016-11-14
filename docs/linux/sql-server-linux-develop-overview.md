@@ -57,7 +57,7 @@ See the following topics for more information:
 > [!Note] 
 > Make sure that you are using the latest versions of these tools for the best experience.
 
-## Use new SQL tools on Linux and macOS
+## Use new SQL tools
 You can use the new [mssql extension](https://aka.ms/mssql-marketplace) for [Visual Studio Code](https://code.visualstudio.com) on Linux, macOS, and Windows. You can also use new command line tools that are natively for Linux.
 
 See the topics below for more information:

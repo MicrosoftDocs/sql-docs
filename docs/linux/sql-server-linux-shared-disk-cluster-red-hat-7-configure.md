@@ -111,30 +111,45 @@ On the NFS Server do the following:
 
 1. Install `nfs-utils`
 
+    ```
     $ sudo yum -y install nfs-utils
+    ```
 
 1. Enable and start `rpcbind`
 
+    ```
     $ sudo systemctl enable rpcbind && systemctl start rpcbind
+    ```
 
 1. Enable and start `nfs-server`
  
+    ```
     $ systemctl enable nfs-server && systemctl start nfs-server
+    ```
  
 1.	Edit `/etc/exports` to export the directory you want to share. You will need 1 line for each share you want. For example: 
 
+    ```
     /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,root_squash,all_squash)
+    ```
 
 1. Export the shares
 
+    ```
     $ sudo exportfs -rav
+    ```
+
 1. Verify that the paths are shared/exported, run from the NFS server
 
+    ```
     $ sudo showmount -e
+    ```
 
 1. Add exception in SELinux
 
+    ```
     $ sudo setsebool -P nfs_export_all_rw 1
+    ```
     
 1. Open the firewall the server.
 
@@ -149,7 +164,9 @@ On the NFS Server do the following:
 
 1.	From the NFS server, install `nfs-utils`
 
+    ```
     $ sudo yum -y install nfs-utils
+    ```
 
 1. Open up the firewall on clients and NFS server
 
@@ -162,15 +179,15 @@ On the NFS Server do the following:
 
 1. Verify that you can see the NFS shares on client machines
 
+    ```
     $ sudo showmount -e <IP OF NFS SERVER>
+    ```
 
 
 For additional information about using NFS, see the following resources:
 
 * [NFS servers and firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-
 * [Mounting an NFS Volume | Linux Network Administrators Guide](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-
 * [Set up NFS Server on CentOS 7 and Configure Client Automount | lisenet](http://www.lisenet.com/2016/setup-nfs-server-on-centos-7-and-configure-client-automount/)
 
 ### Move database files

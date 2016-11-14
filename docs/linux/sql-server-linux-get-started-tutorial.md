@@ -68,6 +68,5 @@ Then learn how to develop and manage SQL Server:
  - [Configure high availability](sql-server-linux-configure-high-availability-and-disaster-recovery.md)
 
 ## Next Steps
-For more information about this release of SQL Server vNext, see [Overview of SQL Server on Linux](sql-server-linux-overview.md).
 
 For the complete set of SQL Server documentation, see the [Microsoft SQL Server Documentation](https://msdn.microsoft.com/library/mt590198.aspx).

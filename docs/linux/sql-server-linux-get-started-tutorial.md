@@ -6,7 +6,7 @@ description: This topic provides a learning path for getting started with SQL Se
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/07/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,7 +26,7 @@ ms.assetid: 66d96e59-2ded-4460-b350-fda80d93d79b
 ---
 # Get started with SQL Server on Linux
 
-This topic is a guide for how to get started using SQL Server vNext CTP1 on Linux. It contains a suggested learning plan with links to other resources for each step.
+Get started using SQL Server vNext CTP1 on Linux. Here are basic steps with links to how-to information.
 
 ## 1: Install Linux
 If you do not already have a Linux machine, install Linux on a physical server or a virtual machine (VM). Review the [Release notes](sql-server-linux-release-notes.md) on supported platforms and requirements.
@@ -49,7 +49,7 @@ After installation, connect to the running SQL Server instance on your Linux mac
 
 | Tool | Tutorial |
 |-----|-----|
-| Sqlcmd | [Use the Sqlcmd command-line utility on Linux](sql-server-linux-develop-use-sqlcmd.md) |
+| Sqlcmd | [Use the Sqlcmd command-line utility on Linux](sql-server-linux-connect-and-query-sqlcmd.md) |
 | Visual Studio Code (VS Code) | [Use VS Code with SQL Server on Linux](sql-server-linux-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) |
 
@@ -58,12 +58,15 @@ SQL Server vNext has the same underlying database engine on all supported platfo
 
 If you are already familiar with SQL Server, you'll want to review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release.
 
-If you are new to SQL Server, there are a few additional resources to help you evaluate SQL Server:
- - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)
+If you are new to SQL Server, you might find it helpful to quickly explore some of the security and performance capabilities in the following two guides:
  - [Get started with security features](sql-server-linux-security-get-started.md)
  - [Get started with performance features](sql-server-linux-performance-get-started.md)
 
+Then learn how to develop and manage SQL Server:
+ - [Develop for SQL Server on Linux](sql-server-linux-develop-overview.md)
+ - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)
+ - [Configure high availability](sql-server-linux-configure-high-availability-and-disaster-recovery.md)
+
 ## Next Steps
-For more information about this release of SQL Server vNext, see [Overview of SQL Server on Linux](sql-server-linux-overview.md).
 
 For the complete set of SQL Server documentation, see the [Microsoft SQL Server Documentation](https://msdn.microsoft.com/library/mt590198.aspx).

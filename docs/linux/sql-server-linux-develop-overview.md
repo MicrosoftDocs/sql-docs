@@ -54,7 +54,7 @@ You can use the new [mssql extension](https://aka.ms/mssql-marketplace) for [Vis
 
 See the topics below for more information:
 - [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [sqlcmd](sql-server-linux-develop-use-sqlcmd.md)
+- [sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [sqlpackage](sql-server-linux-migrate-sqlpackage.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)

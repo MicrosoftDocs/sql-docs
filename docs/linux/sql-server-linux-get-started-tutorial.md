@@ -6,7 +6,7 @@ description: This topic provides a learning path for getting started with SQL Se
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/07/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,7 +26,7 @@ ms.assetid: 66d96e59-2ded-4460-b350-fda80d93d79b
 ---
 # Get started with SQL Server on Linux
 
-This topic is a guide for how to get started using SQL Server vNext CTP1 on Linux. It contains a suggested learning plan with links to other resources for each step.
+Get started using SQL Server vNext CTP1 on Linux. Here are basic steps with links to how-to information.
 
 ## 1: Install Linux
 If you do not already have a Linux machine, install Linux on a physical server or a virtual machine (VM). Review the [Release notes](sql-server-linux-release-notes.md) on supported platforms and requirements.

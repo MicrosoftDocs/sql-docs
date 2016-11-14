@@ -117,6 +117,7 @@ SQL Server vNext CTP1 now runs on Linux! Learn about the core relational databas
     </li>
 </ul>
 
+<!--
 <div class="downloadHolder">
     <a href="https://www.microsoft.com/sql-server/sql-server-on-linux">
         <div class="img"></div>
@@ -125,3 +126,4 @@ SQL Server vNext CTP1 now runs on Linux! Learn about the core relational databas
         </div>
     </a>
 </div>
+-->

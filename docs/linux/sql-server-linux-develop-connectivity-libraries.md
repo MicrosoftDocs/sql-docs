@@ -14,7 +14,7 @@ ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 
 # optional metadata
 
-# keywords: ""
+# keywords: "Python, Ruby, Java, Drivers, Connectors, Node.js, Javascript, SQL Server, C, SQL Server 2017, C++, C#, ADO.NET"
 # ROBOTS: ""
 # audience: ""
 # ms.devlang: ""
@@ -46,7 +46,7 @@ The table below lists a few examples of Object Relational Mapping (ORM) framewor
 | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Entity Framework](https://docs.microsoft.com/en-us/ef)<br>[Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/index) |
 | Java | Windows, Linux, macOS |[Hibernate ORM](http://hibernate.org/orm)|
-| PHP | Windows, Linux, macOS | [Laravel (Eloquent)](https://laravel.com/docs/5.0/eloquent) |
+| PHP | Windows, Linux | [Laravel (Eloquent)](https://laravel.com/docs/5.0/eloquent) |
 | Node.js | Windows, Linux, macOS | [Sequelize ORM](http://docs.sequelizejs.com) |
 | Python | Windows, Linux, macOS |[Django](https://www.djangoproject.com/) |
 | Ruby | Windows, Linux, macOS | [Ruby on Rails](http://rubyonrails.org/) |

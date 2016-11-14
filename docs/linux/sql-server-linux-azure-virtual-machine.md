@@ -57,24 +57,12 @@ Accept the License and enter a password for the system administrator account. Yo
 There is information on how to do this [here.](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-windows-nsg-quickstart-portal/)
 
 
-### Install SQL Server Tools 
+Install SQL Server Tools 
+TODO: update package
 
-1. Start a terminal session as root: 
+    $ sudo apt-get update
+    $ sudo apt-get install mssql-tools
 
-    $ sudo su
-
-2. Download an installation script for the SQL Server tools and ODBC drivers installation:
-
-    $ wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL- 8d067754/file/162203/1/install.sh
-
-3. Run the installation script
-
-    $ sh install.sh
-
-4. Once complete, exit the root mode
-
-    $ exit
-    
 Connect to your localchost with your SA username and password:
 
     $ sqlcmd -S localhost -U SA -P <password>
@@ -83,7 +71,7 @@ Connect to your localchost with your SA username and password:
 
 PuTTY is a SSH client for Linux that you can run on your Windows PC.
 
-1. Download and install PuTTY from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
+1. Download and instlal PuTTY from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 
 2. Run PuTTY
 

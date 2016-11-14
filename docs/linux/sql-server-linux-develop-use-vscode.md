@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Use Visual Studio Code with SQL Server on Linux | SQL Server vNext CTP1
-description: 
+title: Use Visual Studio Code with SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: This tutorial shows how to use the mssql extension for VS Code. This extension allows you to edit and run Transact-SQL scripts in VS Code.
 author: erickangMSFT 
 ms.author: erickang 
 manager: jhubbard
-ms.date: 11/10/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,56 +26,52 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ---
 # Use the Visual Studio Code with SQL Server on Linux
 
-This topic shows how to use mssql for Visual Studio Code (VS Code) to develop SQL Server vNext CTP1 databases on Linux.
+This topic shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server vNext CTP1 databases on Linux.
 
-Visual Studio Code is a graphical code editor for Linux, MAC OS and Windows that supports extensions. The [**mssql** extension for VS Code] enables you to connect to SQL Server, query using Transact-SQL and view the results.
+Visual Studio Code is a graphical code editor for Linux, Mac OS, and Windows that supports extensions. The [**mssql** extension for VS Code] enables you to connect to SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
-In this tutorial, we will walk you through how to:
-* Install VS Code and the **mssql** extension
+This tutorial consists of the following tasks:
+- Install VS Code and the **mssql** extension.
+- Connect to SQL Server vNext CTP1 on Linux.
+- Write and execute T-SQL scripts against the connected database.
+- View the results in a grid-based view.
+- Save results to a JSON or CSV file format.
 
-* Connect to SQL Server vNext CTP1 on Linux.
-
-* Easily write T-SQL scripts with IntelliSense, TSQL snippets, syntax colorization and real-time error validation.
-
-* Execute the scripts against the connected database.
-
-* View results in a grid based view.
-
-* Save results to json or csv file format.
-
-## Install Visual Studio Code
-1. If you have not already installed VS Code, [Download and install VS Code] on your Linux, Mac OS or Windows machine.
+## Install VS Code
+1. If you have not already installed VS Code, [Download and install VS Code] on your machine.
 
 2. Start VS Code.
 
 ## Install the mssql extension
 The following steps explain how to install the mssql extension. 
 
-1. Press **ctrl+shift+p** (or **F1**) to open the command palette in VS Code. Select **Install Extension** and type **mssql**.
+1. Press **CTRL+SHIFT+p** (or **F1**) to open the command palette in VS Code. 
+
+2. Select **Install Extension** and type **mssql**.
     > [!TIP] 
-    > For Mac OS, **cmd** key is equivalent to **ctrl** key on Linux and Windows.
+    > For Mac OS, the **CMD** key is equivalent to **CTRL** key on Linux and Windows.
 
 2. Click install **mssql**. 
     
     <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 300px;"/>
 
     > [!NOTE]
-    > **vscode-mssql** is a prototype version and it will retire from the extension Markeplace soon. If you have already installed the vscode-mssql extension, please remove it.
+    > Unlike **mssql**, **vscode-mssql** is a prototype version that will retire from the extension Marketplace soon. If you have already installed the vscode-mssql extension, please remove it.
 
-3. The **mssql** extension takes up to one minute to install. Wait for the prompt that tells you it is installed successfully.
+3. The **mssql** extension takes up to one minute to install. Wait for the prompt that tells you it successfully installed.
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Insatllation success notification" style="width: 480px;"/>
+    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 550px;"/>
 
     > [!NOTE]
-    > For Mac OS, you will need to install OpenSSL. This is a pre-requiste for .Net Core which mssql extension uses. Follow the 'install pre-requisite' steps in the [.Net Core instructions].
+    > For Mac OS, you must install OpenSSL. This is a pre-requisite for .Net Core used by the mssql extension. Follow the **install pre-requisite** steps in the [.Net Core instructions].
     > Or simply run the following commands in your Mac OS Terminal.
-    
-    ```bash
-    brew update
-    brew install openssl
-    ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-    ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-    ```
+    >
+    >    ```bash
+    >    brew update
+    >    brew install openssl
+    >    ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
+    >    ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
+    >    ```
     
     > [!NOTE]
     > For Windows 8.1, Windows Server 2012 or lower versions, you will need to download and install [Windows 10 Universal C Runtime]. Download and open the zip file, then run the installer (.msu file) targeting your current OS configuration.
@@ -93,7 +89,7 @@ The following steps explain how to install the mssql extension.
 
 The following steps show how to connect to SQL Server vNext on Linux with VS Code.
 
-1. In VS Code, press **ctrl+shift+p** (or **F1**) to open the Command Palette.
+1. In VS Code, press **CTRL+SHIFT+p** (or **F1**) to open the Command Palette.
 
 2. Type 'sql' to display the mssql commands.
 
@@ -151,7 +147,7 @@ The following steps show how to connect to SQL Server vNext on Linux with VS Cod
     GO
     ```
     
-4. Press **ctrl+shift+e** to execute the Transact-SQL commands. View the results in the query window.
+4. Press **CTRL+SHIFT+e** to execute the Transact-SQL commands. View the results in the query window.
 
     <img src="./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png" alt="create database messages" style="width: 480px;" />
 
@@ -197,7 +193,7 @@ The following steps show how to connect to SQL Server vNext on Linux with VS Cod
     GO
     ```
 
-7. Press **ctrl+shift+e** to create the table.
+7. Press **CTRL+SHIFT+e** to create the table.
 
 ## Insert and query
 
@@ -223,7 +219,7 @@ The following steps show how to connect to SQL Server vNext on Linux with VS Cod
     
     <img src="./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png" alt="TSQL IntelliSense" style="width: 480px;" />
 
-2. Press **ctrl+shift+e** to execute the commands. The two result sets display in the Results window. 
+2. Press **CTRL+SHIFT+e** to execute the commands. The two result sets display in the Results window. 
 
     <img src="./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png" alt="Results" style="width: 300px;" />
 

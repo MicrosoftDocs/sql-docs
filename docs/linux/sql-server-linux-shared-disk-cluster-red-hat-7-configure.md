@@ -139,10 +139,10 @@ On the NFS Server do the following:
 1. Open the firewall the server.
 
     ``` 
-    firewall-cmd --permanent --add-service=nfs
-    firewall-cmd --permanent --add-service=mountd
-    firewall-cmd --permanent --add-service=rpc-bind
-    firewall-cmd --reload
+    $ sudo firewall-cmd --permanent --add-service=nfs
+    $ sudo firewall-cmd --permanent --add-service=mountd
+    $ sudo firewall-cmd --permanent --add-service=rpc-bind
+    $ sudo firewall-cmd --reload
     ```
 
 ### Configure the cluster node to connect to the NFS shared storage
@@ -154,15 +154,15 @@ On the NFS Server do the following:
 1. Open up the firewall on clients and NFS server
 
     ```
-    firewall-cmd --permanent --add-service=nfs
-    firewall-cmd --permanent --add-service=mountd
-    firewall-cmd --permanent --add-service=rpc-bind
-    firewall-cmd --reload
+    $ sudo firewall-cmd --permanent --add-service=nfs
+    $ sudo firewall-cmd --permanent --add-service=mountd
+    $ sudo firewall-cmd --permanent --add-service=rpc-bind
+    $ sudo firewall-cmd --reload
     ```
 
 1. Verify that you can see the NFS shares on client machines
 
-    showmount -e <IP OF NFS SERVER>
+    $ sudo showmount -e <IP OF NFS SERVER>
 
 
 For additional information about using NFS, see the following resources:
@@ -283,21 +283,21 @@ At this point both instances of SQL Server are configured to run with the databa
    Update the values from the script below for your environment. Run on one node to configure and start the clustered service.  
 
    ```
-   # pcs cluster cib cfg 
-   # pcs -f cfg resource create <sqlServerResourceName> ocf:sql:fci timeout=<timeout_in_seconds>
-   # pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
-   # pcs -f cfg constraint colocation add <sqlResourceName> <virtualIPResourceName>
-   # pcs cluster cib-push cfg
+   # sudo pcscluster cib cfg 
+   # sudo pcs-f cfg resource create <sqlServerResourceName> ocf:sql:fci timeout=<timeout_in_seconds>
+   # sudo pcs-f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
+   # sudo pcs-f cfg constraint colocation add <sqlResourceName> <virtualIPResourceName>
+   # sudo pcscluster cib-push cfg
    ```
 
    For example, the following script creates a SQL Server clustered resource named `MyAppSQL`, and a floating IP resources with IP address `10.0.0.99`. It also starts the failover cluster instance on one node of the cluster. 
 
    ```
-   # pcs cluster cib cfg
-   # pcs -f cfg resource create MyAppSQL ocf:sql:fci timeout=60s
-   # pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
-   # pcs -f cfg constraint colocation add mssql virtualip
-   # pcs cluster cib-push cfg
+   # sudo pcscluster cib cfg
+   # sudo pcs-f cfg resource create MyAppSQL ocf:sql:fci timeout=60s
+   # sudo pcs-f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
+   # sudo pcs-f cfg constraint colocation add mssql virtualip
+   # sudo pcscluster cib-push cfg
    ```
 
     After the configuration is pushed, SQL Server will start on one node. 
@@ -305,7 +305,7 @@ At this point both instances of SQL Server are configured to run with the databa
 3. Verify that SQL Server is started. 
 
    ```
-   # pcs status 
+   # sudo pcsstatus 
    ```
 
    The following examples shows the results when Pacemaker has succesfully started a clustered instance of SQL Server. 

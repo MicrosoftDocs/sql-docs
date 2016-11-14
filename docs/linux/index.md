@@ -4,7 +4,7 @@ layout: LandingPage
 
 #SQL Server on Linux Documentation
 
-SQL Server now runs on Linux! Learn about the core relational database capabilities in this release of SQL Server, and how to install, manage, secure, and develop for this new release. 
+SQL Server vNext CTP1 now runs on Linux! Learn about the core relational database capabilities in this release of SQL Server, and how to install, manage, secure, and develop for this new release. 
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -36,7 +36,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Manage: SSMS (run on Windows to manage Linux), PowerShell, mssql-conf</h3>
+                        <h3>Manage: SSMS, PowerShell, mssql-conf</h3>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@ SQL Server now runs on Linux! Learn about the core relational database capabilit
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Download SSMS: Integrated environment for accessing, managing, and developing SQL Server</h3>
+                        <h3>Download SSMS: Run on Windows to access, manage, and develop SQL Server on Linux</h3>
                     </div>
                 </div>
             </div>

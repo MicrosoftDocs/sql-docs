@@ -10,7 +10,7 @@ ms.date: 11/03/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
-ms.assetid: 222e23b2-51e7-429b-b8e5-61e0ebe7df9b
+ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 
 # optional metadata
 

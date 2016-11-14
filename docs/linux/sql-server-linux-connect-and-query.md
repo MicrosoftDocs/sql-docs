@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Connect and query SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
-description: Provides an overview of how to connect to SQL Server on Linux. Also includes links to topics that show how to use client tools to connect and query SQL Server on Linux.
+title: Connect to SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: This topic provides an overview of connection requirements for SQL Server on Linux. The sqlcmd tool is used for an example.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/08/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -23,9 +23,9 @@ ms.assetid: 2b5aa551-3ad7-4f0d-b69b-4fe692dbbcee
 # ms.tgt_pltfrm: ""
 # ms.custom: ""
 ---
-# Connect and query SQL Server on Linux
+# Connect to SQL Server on Linux
 
-This topic provides an overview of how to connect and run Transact-SQL (TSQL) queries on SQL Server vNext CTP1 running on Linux. In many ways the connection techniques and T-SQL commands do not differ between platforms. But this topic looks at the requirements and tools for Linux and then provides references to other resources.
+This topic provides connection requirements and guidance for SQL Server vNext CTP1 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. But this topic approaches the subject in the context of Linux and then points to other resources.
 
 ## Connection requirements
 To connect to SQL Server on Linux, you must use SQL Authentication (username and password). To connect remotely, you must ensure that the port SQL Server listens on is open. The default instance of SQL Server listens on TCP port 1433. Depending on your Linux distribution and configuration, you might have to open this port in the firewall. 
@@ -33,22 +33,13 @@ To connect to SQL Server on Linux, you must use SQL Authentication (username and
 If you are running Linux on an Azure virtual machine, you must also [create a network security group rule](#azure).
 
 ## Tools
-The following sections describe several tools that connect to SQL Server and allow you to run queries.
+You can connect to SQL Server using a client tool or through code. For example, the following command uses the **sqlcmd** tool to connect to the local SQL Server instance and return a list of database names. 
 
-### Sqlcmd
-[Sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) is a command line tool that can be run from any Windows or Linux machine that has the SQL Server tools installed. It has a basic interface but is good for quickly connecting and running T-SQL commands.
+    sqlcmd -H localhost -U SA -P password -Q "SELECT Name from sys.Databases"
 
-For a tutorial for Sqlcmd, see [Connect and query SQL Server on Linux (Sqlcmd)](sql-server-linux-develop-use-sqlcmd.md).
+For a complete example of connecting and querying, see [Connect and query SQL Server on Linux with sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).
 
-### Visual Studio Code
-[Visual Studio Code (VS Code)](https://code.visualstudio.com) is a lightweight, cross-platform development tool for writing code. The MSSQL extension provides the ability to execute TSQL commands. This is especially useful in development scenarios where you need to write both application code and database functionality.
-
-To see a tutorial for VS Code, see [Connect and query SQL Server on Linux (VS Code)](sql-server-linux-develop-use-vscode.md).
-
-### SQL Server Management Studio for Windows
-[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) is a Windows tool for both querying and managing SQL Server instances. This is best for when you are working with both Windows and Linux machines. You can connect SSMS running on Windows to SQL Server running on Linux. The advantage of SSMS is that it provide a graphical user interface for many server and database management tasks. <br/>
-
-To see a tutorial for SSMS, see [Connect and query SQL Server on Linux (SSMS)](sql-server-linux-develop-use-ssms.md).
+For examples of how to connect with other tools, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
 
 ## <a id="troubleshoot"></a> Troubleshoot connection failures
 If you are having difficulty connecting to your Linux SQL Server instance, there are a few things to check. 
@@ -69,4 +60,4 @@ If you are running Linux in an Azure virtual machine (VM), you must also create 
     ![SQL Server network security group rule](./media/sql-server-linux-connect-and-query/network-security-rule.png)
 
 ## Next Steps
-For more information on using SQL Server vNext on Linux, see [SQL Server on Linux overview](sql-server-linux-overview.md).
+For more information on using SQL Server vNext on Linux, see [SQL Server on Linux](/).

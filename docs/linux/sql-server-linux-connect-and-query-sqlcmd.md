@@ -24,11 +24,14 @@ ms.assetid: 9e6c1ae1-59a4-4589-b839-18d6a52f2676
 # ms.custom: ""
 
 ---
-# Use the sqlcmd command-line utility on Linux
+# Connect and query SQL Server on Linux with sqlcmd
 
 This topic shows how to use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext CTP1 on Linux. 
 
 After successfully connecting, you run a simple Transact-SQL (T-SQL) query to verify communication with the database.
+
+> ![TIP]
+> Sqlcmd is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
 
 ## Install the SQL Server command-line tools
 
@@ -54,7 +57,7 @@ The following steps show how to connect to SQL Server vNext on Linux with sqlcmd
     > [!TIP]
     > You can omit the password on the command-line to be prompted to enter it manually.
 
-    If you are connecting to a remote instance, specify the machine name or IP address. 
+    If you were connecting to a remote instance, specify the machine name or IP address for the **-H** parameter. 
 
         sqlcmd -H 192.555.5.555 -U SA -P password
 
@@ -85,7 +88,7 @@ After you connect to your server, you can connect to a database and run a sample
 
 4. The results output to the command window.
 
-	![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-develop-use-sqlcmd/execute-query.png)
+	![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-sqlcmd/execute-query.png)
 
 5. Type **exit** and press enter to quit sqlcmd. 
 
@@ -129,8 +132,10 @@ You can also use sqlcmd to run Transact-SQL script files. Use the following step
 
 # Next Steps
 
-In addition to queries, you can use T-SQL statements to create and manage databases.
+In addition to queries, you can use T-SQL statements to create and manage databases. For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).
 
 If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx) and the [Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx).
 
-For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).
+For other ways to connect to SQL Server on Linux, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
+
+

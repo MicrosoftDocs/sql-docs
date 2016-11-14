@@ -6,7 +6,7 @@ description: This topic describes typical security actions.
 author: BYHAM   
 ms.author: rickbyh   
 manager: jhubbard  
-ms.date: 12/10/2016  
+ms.date: 12/14/2016  
 ms.topic: article  
 ms.prod: sql-linux   
 ms.technology: database-engine  
@@ -191,19 +191,19 @@ CREATE USER TestUser WITHOUT LOGIN;
 GRANT SELECT ON Person.EmailAddress TO TestUser;    
  
 EXECUTE AS USER = 'TestUser';   
-SELECT EmailAddresssID, EmailAddress FROM Person.EmailAddress;       
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
 REVERT;    
 ```
  
 Verify that the masking function changes the email address in the first record from:
   
-|EmailAddresssID |EmailAddress |  
+|EmailAddressID |EmailAddress |  
 |----|---- |   
 |1 |ken0@adventure-works.com |    
  
 into 
 
-|EmailAddresssID |EmailAddress |  
+|EmailAddressID |EmailAddress |  
 |----|---- |   
 |1 |kXXX@XXXX.com |   
 
@@ -225,7 +225,7 @@ Since the Database Engine can read the data, Transparent Data Encryption does no
 
 Configuring TDE requires `CONTROL` permission on the master database and `CONTROL` permission on the user database. Typically an administrator configures TDE. 
 
-The following example illustrates encrypting and decrypting the `AdventureWorks2016` database using a certificate installed on the server named `MyServerCert`.
+The following example illustrates encrypting and decrypting the `AdventureWorks2014` database using a certificate installed on the server named `MyServerCert`.
 
 
 ```
@@ -246,11 +246,11 @@ WITH ALGORITHM = AES_256
 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
 GO
   
-ALTER DATABASE AdventureWorks2016   
+ALTER DATABASE AdventureWorks2014  
 SET ENCRYPTION ON;   
 ```
 
-To remove TDE, execute `ALTER DATABASE AdventureWorks2016 SET ENCRYPTION OFF;`   
+To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
 The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.   
 

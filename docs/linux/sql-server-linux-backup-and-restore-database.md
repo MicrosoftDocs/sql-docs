@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Backup and restore SQL Server databases on Linux | SQL Server vNext CTP1
+title: Backup and restore SQL Server databases on Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 

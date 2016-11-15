@@ -45,11 +45,11 @@ If you are having difficulty connecting to your Linux SQL Server instance, there
 - Verify that the server name or IP address is reachable from your client machine.
 
     > [!TIP]
-    > To find the IP address of your Linux machine, you can run the ifconfig command.
+    > To find the IP address of your Linux machine, you can run the ifconfig command as in the following example.
     >
     >     ifconfig eth0 | grep 'inet'
     >
-    > One exception to this technique relate to Azure VMs. For Azure VMs, check the public IP for the VM in the Azure portal.
+    > One exception to this technique relates to Azure VMs. For Azure VMs, find the public IP for the VM in the Azure portal.
 
 - If applicable, check that you have opened the SQL Server port (default 1433) on the firewall.
 

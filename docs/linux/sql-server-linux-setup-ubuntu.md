@@ -45,7 +45,7 @@ To install the mssql-server Package on Ubuntu, follow these steps:
 
 3. Register the Microsoft SQL Server Ubuntu repository:
 
-        # echo "deb https://repo.microsoft.com/ubuntu/mssql-server main mssql" > /etc/apt/sources.list.d/mssql-server.list
+        # echo "deb https://packages.microsoft.com/ubuntu/mssql-server main mssql" > /etc/apt/sources.list.d/mssql-server.list
 
 4. Exit superuser mode.
 

@@ -30,7 +30,7 @@ ms.assetid:
 This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Red Hat Enterprise Linux (RHEL) 7.
 
 ## Install SQL Server
-To install the mssql-server Package on Ubuntu, follow these steps:
+To install the mssql-server Package on Red Hat, follow these steps:
 
 1. Enter superuser mode.
 
@@ -45,10 +45,10 @@ To install the mssql-server Package on Ubuntu, follow these steps:
 
         [mssql-server]
         name=mssql-server
-        baseurl=https://repo.microsoft.com/rhel7/mssql-server
+        baseurl=https://packages.microsoft.com/rhel7/mssql-server
         gpgcheck=1
         enabled=1
-        gpgkey=https://repo.microsoft.com/keys/dpgswdist.v1.asc
+        gpgkey=https://packages.microsoft.com/keys/dpgswdist.v1.asc
 
 3. Exit superuser mode.
 

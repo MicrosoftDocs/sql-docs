@@ -38,4 +38,5 @@ For more infomation about security features available in SQL Server, see the [Se
 
 ## Next steps
 
-For common security tasks, see [Get started with security features of SQL Server on Linux](/sql-server-linux-security-get-started).
+For common security tasks, see [Get started with security features of SQL Server on Linux](sql-server-linux-security-get-started.md).   
+For a script to change the TCP port number, the SQL Server directories, and configure traceflags or collation, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md).

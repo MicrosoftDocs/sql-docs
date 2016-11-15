@@ -27,7 +27,7 @@ ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the performance features. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the depth documentation for that area.
 
 > [!NOTE]
-> The following examples use the AdventureWorks sample database. For instructions on how to obtain and install this sample database, see [Restore a SQL Server database from Windows to Linux](sql-server-linux-restore-database.md).
+> The following examples use the AdventureWorks sample database. For instructions on how to obtain and install this sample database, see [Restore a SQL Server database from Windows to Linux](sql-server-linux-migrate-restore-database.md).
 
 ## Create a Columnstore Index
 A columnstore index is a technology for storing and querying large stores of data in a columnar data format, called a columnstore.  

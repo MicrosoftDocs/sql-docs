@@ -24,7 +24,7 @@
 ### [Operate RHEL 7.2 (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 ### [Troubleshoot RHEL 7.2 (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md)
 # [Migrate](sql-server-linux-migrate-overview.md)
-## [Restore from Windows](sql-server-linux-restore-database.md)
+## [Restore from Windows](sql-server-linux-migrate-restore-database.md)
 ## [Export and Import a BACPAC with SqlPackage](sql-server-linux-migrate-sqlpackage.md)
 ## [Export and Import a BACPAC with SSMS](sql-server-linux-migrate-ssms.md)
 ## [Migrate with SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)

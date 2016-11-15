@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshoot SQL Server on Linux | SQL Server vNext CTP1
+title: Troubleshoot SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 

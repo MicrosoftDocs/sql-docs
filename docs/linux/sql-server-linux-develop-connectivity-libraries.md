@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Connectivity libraries and frameworks | SQL Server vNext CTP1
+title: Connectivity libraries and frameworks - SQL Server vNext CTP1 | Microsoft Docs
 description: Lists the connectivity drivers that client apps can use from various languages to connect to Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and also to Azure SQL Database and Azure SQL Data Warehouse. 
 author: sanagama 
 ms.author: sanagama 
@@ -14,7 +14,7 @@ ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 
 # optional metadata
 
-# keywords: "Python, Ruby, Java, Drivers, Connectors, Node.js, Javascript, SQL Server, C, SQL Server 2017, C++, C#, ADO.NET"
+# keywords: ""
 # ROBOTS: ""
 # audience: ""
 # ms.devlang: ""

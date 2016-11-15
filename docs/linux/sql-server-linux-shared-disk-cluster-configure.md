@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure shared disk cluster for SQL Server on Linux | SQL Server vNext CTP1
+title: Configure shared disk cluster for SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 

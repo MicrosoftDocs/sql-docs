@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Load data with SQL Server Integration Services (SSIS) | SQL Server vNext CTP1
+title: Load data with SQL Server Integration Services (SSIS) - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Bulk copy data with bcp | SQL Server vNext CTP1
+title: Bulk copy data with bcp - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 

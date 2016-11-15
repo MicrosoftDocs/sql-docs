@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Provision a Linux VM in Azure for SQL Server | SQL Server vNext CTP1
+title: Provision a Linux VM in Azure for SQL Server - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 

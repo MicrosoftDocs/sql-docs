@@ -32,8 +32,8 @@ You can take backups of databases from SQL Server vNext CTP1 on Linux with the s
 
 In the following example `sqlcmd` connects to the local SQL Server instance and takes a full backup of a user database called `demodb`.
 
-```
-LinuxUser@linuxsqlvm2:~$ sqlcmd -H localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
+```bash
+sqlcmd -H localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
 When you run the command, SQL Server will prompt for a password. After you enter the password, the shell will return the results of the backup progress. For example:
@@ -59,8 +59,8 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 
 In the following example, `sqlcmd` connects to the local SQL Server instance and takes a tail-log backup. After the tail-log backup completes, the database will be in a restoring state. 
 
-```
-LinuxUser@linuxsqlvm2:~$ sqlcmd -H localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
+```bash
+sqlcmd -H localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
 ```
 
 
@@ -68,8 +68,8 @@ LinuxUser@linuxsqlvm2:~$ sqlcmd -H localhost -U SA -Q "BACKUP LOG [demodb] TO  D
 
 In the following example `sqlcmd` connects to the local instance of SQL Server and restores a database.
 
-```
-LinuxUser@linuxsqlvm2:~$ sqlcmd -H localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
+```bash
+sqlcmd -H localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
 ```
 
 ## Backup and Restore with SQL Server Management Studio (SSMS)

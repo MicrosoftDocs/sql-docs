@@ -33,9 +33,9 @@ To connect to SQL Server on Linux, you must use SQL Authentication (username and
 ## Tools
 You can connect to SQL Server using a client tool or through code. For example, the following command uses the **sqlcmd** tool to connect to the local SQL Server instance and return a list of database names. 
 
-    ```bash
-    sqlcmd -H localhost -U SA -P password -Q "SELECT Name from sys.Databases"
-    ```
+```bash
+sqlcmd -H localhost -U SA -P password -Q "SELECT Name from sys.Databases"
+```
 
 For a complete example of connecting and querying, see [Connect and query SQL Server on Linux with sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).
 

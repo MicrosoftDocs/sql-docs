@@ -36,7 +36,7 @@ In the following example `sqlcmd` connects to the local SQL Server instance and 
 LinuxUser@linuxsqlvm2:~$ sqlcmd -H localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-When you run the command, SQL Server will prompt for a password. After you enter the password, the shell will return the results of the backup progress. For example, 
+When you run the command, SQL Server will prompt for a password. After you enter the password, the shell will return the results of the backup progress. For example:
 
 ```
 Password:

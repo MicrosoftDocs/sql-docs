@@ -67,7 +67,7 @@ If you are new to SQL Server, you might find it helpful to quickly explore some 
 Then learn how to develop and manage SQL Server:
  - [Develop for SQL Server on Linux](sql-server-linux-develop-overview.md)
  - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)
- - [Configure high availability](sql-server-linux-configure-high-availability-and-disaster-recovery.md)
+ - [Configure high availability](sql-server-linux-backup-overview.md)
 
 ## Next steps
 

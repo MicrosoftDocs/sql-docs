@@ -50,6 +50,7 @@ If you have an existing database application, you can simply change its connecti
 Tools that currently run on Windows such as SSMS, SSDT, and PowerShell, also work with SQL Server vNext CTP1 on Linux. Although they do not run natively on Linux, you can still manage remote SQL Server instances on Linux. 
 
 See the following topics for more information:
+
 - [SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
 - [SQL PowerShell](sql-server-linux-manage-powershell.md)
@@ -57,11 +58,11 @@ See the following topics for more information:
 > [!Note] 
 > Make sure that you are using the latest versions of these tools for the best experience.
 
-## Use new SQL tools
-You can use the new [mssql extension](https://aka.ms/mssql-marketplace) for [Visual Studio Code](https://code.visualstudio.com) on Linux, macOS, and Windows. You can also use new command line tools that are natively for Linux.
+## Use new SQL tools for Linux
+You can use the new [mssql extension](https://aka.ms/mssql-marketplace) for [Visual Studio Code](https://code.visualstudio.com) on Linux, macOS, and Windows. For a step-by-step walkthrough, see the following tutorial:
+- [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
-See the topics below for more information:
-- [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+You can also use new command-line tools that are native for Linux. These tools include the following:
 - [sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [sqlpackage](sql-server-linux-migrate-sqlpackage.md)

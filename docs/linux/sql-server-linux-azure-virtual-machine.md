@@ -70,13 +70,13 @@ Open the [Azure portal](https://portal.azure.com/).
 
 PuTTY is a SSH client for Linux that you can run on your Windows PC.
 
-1. Download and instlal PuTTY from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
+1. Download and instlal PuTTY from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
-2. Run PuTTY
+2. Run PuTTY.
 
-3. On the PuTTY configuration screen enter your VM's public IP address
+3. On the PuTTY configuration screen enter your VM's public IP address.
 
-4. Click Open and enter your username and password at the prompts
+4. Click Open and enter your username and password at the prompts.
 
 ## Resources
 For more information about Linux virtual machines in Azure, see the [Linux Virtual Machine Documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/).

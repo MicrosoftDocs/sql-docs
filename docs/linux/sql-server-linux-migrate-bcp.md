@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Bulk copy data with bcp - SQL Server vNext CTP1 | Microsoft Docs
+title: Bulk copy data with bcp to SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
@@ -23,7 +23,7 @@ ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 # ms.custom: ""
 
 ---
-# Bulk copy data with bcp
+# Bulk copy data with bcp to SQL Server on Linux
 
 This topic shows how to use the [bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) command line utility to bulk copy data between an instance of SQL Server vNext CTP1 on Linux and a data file in a user-specified format.
 

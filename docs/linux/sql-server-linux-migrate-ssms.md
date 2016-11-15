@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Export and Import a database with SSMS - SQL Server vNext CTP1 | Microsoft Docs
+title: Export and import a database on Linux with SSMS - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
@@ -23,7 +23,7 @@ ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 # ms.custom: ""
 
 ---
-# Export and Import a database with SSMS
+# Export and import a database on Linux with SSMS
 
 [Restore a SQL Server database from Windows to Linux](sql-server-linux-migrate-restore-database.md) is the recommended method to migrate a database to SQL Server on Linux.
 

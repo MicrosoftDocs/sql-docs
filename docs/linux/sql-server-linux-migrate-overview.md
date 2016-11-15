@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Migrate databases to SQL Server Linux - SQL Server vNext CTP1 | Microsoft Docs
+title: Migrate databases to SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: This topic describes the different options for migrating databases and data to SQL Server on Linux.
 author: rothja 
 ms.author: jroth 
@@ -24,7 +24,7 @@ ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 # ms.custom: ""
 
 ---
-# Migrate databases to SQL Server Linux
+# Migrate databases to SQL Server on Linux
 You can migrate your databases and data to SQL Server vNext CTP1 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
 
 ## Migrate from SQL Server on Windows
@@ -40,8 +40,8 @@ For a tutorial on migrating a database with backup and restore, see the followin
 
 It is also possible to export your database to a BACPAC file (a compressed file that contains your database schema and data). If you have a BACPAC file, you can transfer this file to your Linux machine and then import it to SQL Server. For more information, see the following topics:
 
-- [Export and Import a database with sqlpackage](sql-server-linux-migrate-sqlpackage.md)
-- [Export and Import a database with SSMS](sql-server-linux-migrate-ssms.md)
+- [Export and import a database with sqlpackage](sql-server-linux-migrate-sqlpackage.md)
+- [Export and import a database with SSMS](sql-server-linux-migrate-ssms.md)
 
 ## Migrate from other database servers
 You can migrate databases on other database systems to SQL Server vNext on Linux. This includes Microsoft Access, DB2, MySQL, Oracle, and Sybase databases. In this scenario, use the SQL Server Management Assistant (SSMA) to automate the migration to SQL Server on Linux. For more information, see [Use SSMA to migrate databases to SQL Server on Linux](sql-server-linux-migrate-ssma.md).  
@@ -52,4 +52,4 @@ There are also techniques for importing raw data. You might have structured data
 For more information on these techniques, see the following topics:
 
 - [Bulk copy data with bcp](sql-server-linux-migrate-bcp.md)
-- [Extract, Transform and Load data with SQL Server Integration Services (SSIS)](sql-server-linux-migrate-ssis.md) 
+- [Extract, transform, and load data for SQL Server on Linux with SSIS](sql-server-linux-migrate-ssis.md) 

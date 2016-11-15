@@ -39,8 +39,8 @@ Next, set up SQL Server vNext on your Linux machine using one of the following g
 
 | Platform | Installation |
 |-----|-----|
-| Ubuntu 16.04 | [Installation guide](sql-server-linux-setup-ubuntu.md) |
 | Red Hat Enterprise 7.2 | [Installation guide](sql-server-linux-setup-red-hat.md) |
+| Ubuntu 16.04 | [Installation guide](sql-server-linux-setup-ubuntu.md) |
 | Docker | [Installation guide](sql-server-linux-setup-docker.md) |
 
 Note that Docker itself runs on multiple platforms, which means that you can run the Docker image on Linux, Mac, and Windows.

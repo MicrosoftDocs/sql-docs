@@ -53,15 +53,15 @@ The first step is to configure the operating system on the cluster nodes. For th
 
     The following example stops and disables SQL Server: 
 
-    ```bash
-    # systemctl stop mssql-server
-    # systemctl disable mssql-server
+    ```
+    $ sudo systemctl stop mssql-server
+    $ sudo systemctl disable mssql-server
     ```
 
 1. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
 
-    ```bash
-    # systemctl start mssql-server
+    ```
+    $ sudo systemctl start mssql-server
     ```
 
     Connect to the SQL Server `master` database with the sa account and run the following:
@@ -80,14 +80,14 @@ The first step is to configure the operating system on the cluster nodes. For th
 
     Check the IP address for each node. The following script shows the IP address of your current node. 
 
-    ```bash
-    # ip addr show
+    ```
+    $ sudo ip addr show
     ```
 
     Set the computer name on each node. Give each node a unique name that is 15 characters or less. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`. 
 
     ```
-    # vi /etc/hosts
+    $ sudo vi /etc/hosts
     ```
 
     The following example shows `/etc/hosts` with additions for two nodes named `sqlfcivm1` and `sqlfcivm2`.
@@ -103,15 +103,94 @@ In the next section you will configure shared storage and move your database fil
 
 ## Configure shared storage and move database files 
 
-One way to configure shared storage is with Common Internet File System (CIFS). 
+There are a variety of solutions for providing shared storage. This walk-through demonstrates configuring shared storage with NFS.
 
-To configure shared storage, you need to create a network share and mount it to the database file path on both nodes. In the following steps, you will move the SQL Server database files, install `cifs-utils`, configure the credentials for the share, mount the share, and move the SQL Server database files to the newly mounted share. To complete these steps, chose one node as the primary node. This node is only the primary node for the purpose of configuration. After the cluster service configuration is complete, either node can host the SQL Server service. 
+### Configure shared storage with NFS
+
+On the NFS Server do the following:
+
+1. Install `nfs-utils`
+
+    ```
+    $ sudo yum -y install nfs-utils
+    ```
+
+1. Enable and start `rpcbind`
+
+    ```
+    $ sudo systemctl enable rpcbind && systemctl start rpcbind
+    ```
+
+1. Enable and start `nfs-server`
  
-1.  Install `cifs-utils` on both nodes. The following command installs `cifs-utils`.
+    ```
+    $ systemctl enable nfs-server && systemctl start nfs-server
+    ```
+ 
+1.	Edit `/etc/exports` to export the directory you want to share. You will need 1 line for each share you want. For example: 
 
     ```
-    # sudo yum install cifs-utils
+    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,root_squash,all_squash)
     ```
+
+1. Export the shares
+
+    ```
+    $ sudo exportfs -rav
+    ```
+
+1. Verify that the paths are shared/exported, run from the NFS server
+
+    ```
+    $ sudo showmount -e
+    ```
+
+1. Add exception in SELinux
+
+    ```
+    $ sudo setsebool -P nfs_export_all_rw 1
+    ```
+    
+1. Open the firewall the server.
+
+    ``` 
+    $ sudo firewall-cmd --permanent --add-service=nfs
+    $ sudo firewall-cmd --permanent --add-service=mountd
+    $ sudo firewall-cmd --permanent --add-service=rpc-bind
+    $ sudo firewall-cmd --reload
+    ```
+
+### Configure the cluster node to connect to the NFS shared storage
+
+1.	From the NFS server, install `nfs-utils`
+
+    ```
+    $ sudo yum -y install nfs-utils
+    ```
+
+1. Open up the firewall on clients and NFS server
+
+    ```
+    $ sudo firewall-cmd --permanent --add-service=nfs
+    $ sudo firewall-cmd --permanent --add-service=mountd
+    $ sudo firewall-cmd --permanent --add-service=rpc-bind
+    $ sudo firewall-cmd --reload
+    ```
+
+1. Verify that you can see the NFS shares on client machines
+
+    ```
+    $ sudo showmount -e <IP OF NFS SERVER>
+    ```
+
+
+For additional information about using NFS, see the following resources:
+
+* [NFS servers and firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [Mounting an NFS Volume | Linux Network Administrators Guide](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [Set up NFS Server on CentOS 7 and Configure Client Automount | lisenet](http://www.lisenet.com/2016/setup-nfs-server-on-centos-7-and-configure-client-automount/)
+
+### Move database files
 
 1.  **On the primary node only**, save the database files to a temporary location. 
 
@@ -119,56 +198,20 @@ To configure shared storage, you need to create a network share and mount it to 
 
     The following script, creates a new temporary directory, copies the database files to the new directory, and removes the old database files. 
 
-    ```bash
-    # mkdir /var/opt/mssql/tmp
-    # cp /var/opt/mssql/data/* /var/opt/mssql/tmp
-    # rm /var/opt/mssql/data/*
     ```
-
-1.  Create a file that contains credentials for mounting the share on both nodes. The file needs to identify the username, password and domain as follows:
-
-    ```bash
-    username=<username>
-    password=<password>
-    domain=<domain>
+    $ sudo mkdir /var/opt/mssql/tmp
+    $ sudo cp /var/opt/mssql/data/* /var/opt/mssql/tmp
+    $ sudo rm /var/opt/mssql/data/*
     ```
-
-    For example, the credential file may contain the following values:
-
-    ```bash
-    username=sqlfci
-    password=KD(YE8e937!0008x
-    domain=CORP
-    ```
-
-1.  Get the SQL Server user ID (uid), and group ID (gid). To get the SQL Server uid and gid, run the following command **from the primary node**.
-
-    ```bash
-    # id mssql
-    ```
-
-1. Configure the operating system to mount the shared file. In the following line, update `//<storage server>/<share>` with the name of the file server and the shared disk. Update `<file>` with the name of the credential file. Update `<mssql uid>` with the SQL Server User ID, and `<gid>` with the Group ID. Update the following line and append it to `/etc/fstab` to instruct the operating system where and how to mount the file for SQL Server:
-
-    ```bash
-    //<storage server>/<share> /var/opt/mssql/data  cifs  credentials=<file>, uid=<mssql uid>, gid=<mssql gid> 0  0
-    ```
-    
-    For example, the following line adds the `\\StorageServer\SQL` share to the `/var/opt/mssql/data` with credentials for Linux cluster file with the SQL Server UID and gid. 
-
-    ```bash
-    //machine/share /var/opt/mssql/data cifs credentials=/.cifscredfile,uid=995,gid=996 0  0
-    ```
-
-    If the `/etc/fstab` file was edited correctly, the share is mounted to`/var/opt/mssql/data` and will be automatically re-mounted when the node restarts.
 
 1.  Copy the database and log files that you saved to `/var/opt/mssql/tmp` to the newly mounted share `/var/opt/mssql/data`. This only needs to be done **on the primary node**.
  
 1.  Validate that SQL Server starts successfully with the new file path. Do this on each node. At this point only one node should run SQL Server at a time. They cannot both run at the same time because they will both try to access the data files simultaneously.  The following commands start SQL Server, check the status, and then stop SQL Server.
  
     ```
-    # systemctl start mssql-server
-    # systemctl status mssql-server
-    # systemctl stop mssql-server
+    $ sudo systemctl start mssql-server
+    $ sudo systemctl status mssql-server
+    $ sudo systemctl stop mssql-server
     ```
  
 At this point both instances of SQL Server are configured to run with the database files on the shared storage. The next step is to configure SQL Server for Pacemaker. 
@@ -178,19 +221,19 @@ At this point both instances of SQL Server are configured to run with the databa
 
 2. On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
 
-    ```bash
-    # touch /var/opt/mssql/secrets/passwd
-    # echo "<loginName>" >> /var/opt/mssql/secrets/passwd
-    # echo "<loginPassword>" >> /var/opt/mssql/secrets/passwd
-    # chown root:root /var/opt/mssql/passwd
-    # chmod 600 /var/opt/mssql/passwd
+    ```
+    $ sudo touch /var/opt/mssql/secrets/passwd
+    $ sudo echo "<loginName>" >> /var/opt/mssql/secrets/passwd
+    $ sudo echo "<loginPassword>" >> /var/opt/mssql/secrets/passwd
+    $ sudo chown root:root /var/opt/mssql/passwd
+    $ sudo chmod 600 /var/opt/mssql/passwd
     ```
 
 3. On both cluster nodes, open the Pacemaker firewall ports. To open these ports with `firewalld`, run the following command:
 
-    ```bash
-    # firewall-cmd --permanent --add-service=high-availability
-    # firewall-cmd --reload
+    ```
+    $ sudo firewall-cmd --permanent --add-service=high-availability
+    $ sudo firewall-cmd --reload
     ```
 
     > If you’re using another firewall that doesn’t have a built-in high-availability configuration, the following ports need to be opened for Pacemaker to be able to communicate with other nodes in the cluster
@@ -200,51 +243,51 @@ At this point both instances of SQL Server are configured to run with the databa
 
 1. Install Pacemaker packages on each node.
 
-    ```bash
-    # yum install pacemaker pcs fence-agents-all resource-agents
+    ```
+    $ sudo yum install pacemaker pcs fence-agents-all resource-agents
     ```
 
    ​
 
 2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password for on both nodes. 
 
-    ```bash
-    # passwd hacluster
+    ```
+    $ sudo passwd hacluster
     ```
 
    ​
 
 3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on both nodes.
 
-    ```bash
-    # systemctl enable pcsd
-    # systemctl start pcsd
-    # systemctl enable pacemaker
+    ```
+    $ sudo systemctl enable pcsd
+    $ sudo systemctl start pcsd
+    $ sudo systemctl enable pacemaker
    ```
 
 4. Install the FCI resource agent for SQL Server. Run the following commands on both nodes. 
 
-    ```bash
-    # yum install mssql-server-ha
+    ```
+    $ sudo yum install mssql-server-ha
     ```
 
 ## Create the cluster 
 
 1. One one of the nodes, create the cluster.
 
-    ```bash
-    # pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-    # pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
-    # sudo pcs cluster start --all
+    ```
+    $ sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
+    $ sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+    $ sudo sudo pcs cluster start --all
     ```
 
     > RHEL HA add-on has fencing agents for VMWare and KVM. Fencing needs to be disabled on all other hypervisors. Disabling fencing agents is not recommended in production environments. As of CTP1 timeframe, there are no fencing agents for HyperV or cloud environments. If you are running one of these configurations, you need to disable fencing. \**This is NOT recommended in a production system!**
 
     The following command disables the fencing agents.
 
-    ```bash
-    # pcs property set stonith-enabled=false
-    # pcs property set start-failure-is-fatal=false
+    ```
+    $ sudo pcs property set stonith-enabled=false
+    $ sudo pcs property set start-failure-is-fatal=false
     ```
 
 2. Configure the cluster resources for SQL Server and virtual IP resources and push the configuration to the cluster. You will need the following information:
@@ -256,30 +299,30 @@ At this point both instances of SQL Server are configured to run with the databa
 
    Update the values from the script below for your environment. Run on one node to configure and start the clustered service.  
 
-   ```bash
-   # pcs cluster cib cfg 
-   # pcs -f cfg resource create <sqlServerResourceName> ocf:sql:fci timeout=<timeout_in_seconds>
-   # pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
-   # pcs -f cfg constraint colocation add <sqlResourceName> <virtualIPResourceName>
-   # pcs cluster cib-push cfg
+   ```
+   # sudo pcscluster cib cfg 
+   # sudo pcs-f cfg resource create <sqlServerResourceName> ocf:sql:fci timeout=<timeout_in_seconds>
+   # sudo pcs-f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
+   # sudo pcs-f cfg constraint colocation add <sqlResourceName> <virtualIPResourceName>
+   # sudo pcscluster cib-push cfg
    ```
 
    For example, the following script creates a SQL Server clustered resource named `MyAppSQL`, and a floating IP resources with IP address `10.0.0.99`. It also starts the failover cluster instance on one node of the cluster. 
 
-   ```bash
-   # pcs cluster cib cfg
-   # pcs -f cfg resource create MyAppSQL ocf:sql:fci timeout=60s
-   # pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
-   # pcs -f cfg constraint colocation add mssql virtualip
-   # pcs cluster cib-push cfg
+   ```
+   # sudo pcscluster cib cfg
+   # sudo pcs-f cfg resource create MyAppSQL ocf:sql:fci timeout=60s
+   # sudo pcs-f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
+   # sudo pcs-f cfg constraint colocation add mssql virtualip
+   # sudo pcscluster cib-push cfg
    ```
 
     After the configuration is pushed, SQL Server will start on one node. 
 
 3. Verify that SQL Server is started. 
 
-   ```bash
-   # pcs status 
+   ```
+   # sudo pcsstatus 
    ```
 
    The following examples shows the results when Pacemaker has succesfully started a clustered instance of SQL Server. 

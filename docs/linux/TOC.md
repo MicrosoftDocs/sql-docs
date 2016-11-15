@@ -17,7 +17,7 @@
 ## [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
 ## [Use SSMS to manage](sql-server-linux-manage-ssms.md)
 ## [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
-# [Configure Business Continuity](sql-server-linux-backup-overview.md)
+# [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ## [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 ## [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-configure.md)
 ### [Configure RHEL 7.2 (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)

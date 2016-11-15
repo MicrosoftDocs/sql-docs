@@ -26,13 +26,13 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 # Configure SQL Server on Linux with mssql-conf
 **mssql-conf** is a configuration script that installs with SQL Server vNext CTP1 for both Red Hat Enterprise Linux and Ubuntu. You can use this utility to set the following parameters:
 
-[TCP port](#tcpport): Change the port where SQL Server will listen for connections.
-[Default data directory](#datadir): Change the directory where the new SQL Server database data files (.mdf).
-[Default log directory](#datadir): Changes the directory where the new SQL Server database log (.ldf) files are created.
-[Default dump directory](#dumpdir): Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default.
-[Default backup directory](#backupdir): Change the directory where SQL Server will send the backup files by default. 
-[Set traceflags](#traceflags): Set the traceflags that the service is going to use.
-[Set collation](#collation): Set a new collation for SQL Server on Linux.
+- [TCP port](#tcpport): Change the port where SQL Server will listen for connections.
+- [Default data directory](#datadir): Change the directory where the new SQL Server database data files (.mdf).
+- [Default log directory](#datadir): Changes the directory where the new SQL Server database log (.ldf) files are created.
+- [Default dump directory](#dumpdir): Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default.
+- [Default backup directory](#backupdir): Change the directory where SQL Server will send the backup files by default. 
+- [Set traceflags](#traceflags): Set the traceflags that the service is going to use.
+- [Set collation](#collation): Set a new collation for SQL Server on Linux.
 
 The following sections show examples of how to use mssql-conf for each of these scenarios.
 

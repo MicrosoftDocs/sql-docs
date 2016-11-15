@@ -6,7 +6,7 @@ description: This topic shows how to take a SQL Server database backup on Window
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 11/09/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,7 +26,7 @@ ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ---
 # Restore a SQL Server database from Windows to Linux
 
-This topic provides a walk through for restoring a database backup on Windows to SQL Server vNext CTP1 running on Linux. In this tutorial, you will:
+SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server vNext CTP1 on Linux. This topic provides step-by-step instructions for this technique. In this tutorial, you will:
 
 - Download the AdventureWorks backup file on a Windows machine
 - Transfer the backup to your Linux machine
@@ -70,9 +70,9 @@ There are several alternatives to using scp. One is to use [Samba](https://help.
 
 ## Move the backup file
 
-At this point, the backup file is on your Linux server. Before restoring the database to SQL Server, you must place the backup in a subdirectory of **/var/opt/mssql**. The **C:\** path is mapped to this location for compatibility with current Transact-SQL commands.
+At this point, the backup file is on your Linux server. Before restoring the database to SQL Server, you must place the backup in a subdirectory of **/var/opt/mssql**.
 
-1. Open a Terminal on the taget Linux machine that contains the backup.
+1. Open a Terminal on the target Linux machine that contains the backup.
 
 2.	Enter super user mode.
 
@@ -103,14 +103,18 @@ To restore the backup, you can use the RESTORE DATABASE Transact-SQL (TQL) comma
 
 2. After connecting, enter the following **RESTORE DATABSE** command, pressing ENTER after each line. The example below restores the **AdventureWorks2014.bak** file from the */var/opt/mssql/backup* directory.
 
-        RESTORE DATABASE AdventureWorks 
-        FROM DISK = 'C:\backup\AdventureWorks2014.bak' 
-        WITH MOVE 'AdventureWorks2014_Data' TO 'C:\data\AdventureWorks2014_Data.mdf', 
-        MOVE 'AdventureWorks2014_Log' TO 'C:\data\AdventureWorks2014_Log.ldf'
+        RESTORE DATABASE AdventureWorks
+        FROM DISK = '/var/opt/mssql/backup/AdventureWorks2014.bak'
+        WITH MOVE 'AdventureWorks2014_Data' TO '/var/opt/mssql/data/AdventureWorks2014_Data.mdf',
+        MOVE 'AdventureWorks2014_Log' TO '/var/opt/mssql/data/AdventureWorks2014_Log.ldf'
+        GO
 
     You should get a message the database is successfully restored.
 
 3. Verify the restoration by first changing the context to the AdventureWorks database. 
+
+        USE AdventureWorks
+        GO
 
 4. Run the following query that lists the top 10 products in the **Production.Products** table.
 

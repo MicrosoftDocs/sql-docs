@@ -41,8 +41,9 @@ Next, set up SQL Server vNext on your Linux machine using one of the following g
 |-----|-----|
 | Ubuntu 16.04 | [Installation guide](sql-server-linux-setup-ubuntu.md) |
 | Red Hat Enterprise 7.2 | [Installation guide](sql-server-linux-setup-red-hat.md) |
+| Docker | [Installation guide](sql-server-linux-setup-docker.md) |
 
-You can also run SQL Server on a Docker image that can run on platforms that support Docker, including Linux, Mac, and Windows. For more information, see the [Docker installation guide](sql-server-linux-setup-docker.md).
+Note that Docker itself runs on multiple platforms, which means that you can run the Docker image on Linux, Mac, and Windows.
 
 ## 3: Connect locally or remotely
 After installation, connect to the running SQL Server instance on your Linux machine. For a general discussion of connectivity, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md). Then run some Transact-SQL queries using a client tool. Examples include:
@@ -52,6 +53,7 @@ After installation, connect to the running SQL Server instance on your Linux mac
 | Sqlcmd | [Use the Sqlcmd command-line utility on Linux](sql-server-linux-connect-and-query-sqlcmd.md) |
 | Visual Studio Code (VS Code) | [Use VS Code with SQL Server on Linux](sql-server-linux-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) |
+| SQL Server Data Tools (SSDT) | [Use SSDT with SQL Server on Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## 4: Explore SQL Server capabilities on Linux
 SQL Server vNext has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux.

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Install SQL Server on Linux (Red Hat) | SQL Server vNext CTP1
+title: Install SQL Server on Red Hat Enterprise Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/27/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -24,9 +24,9 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 # ms.custom: ""
 
 ---
-# Install SQL Server on Linux (Red Hat)
+# Install SQL Server on Red Hat Enterprise Linux
 
-This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Red Hat Enterprise Linux (RHEL) 7.
+This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Red Hat Enterprise Linux (RHEL) 7.2.
 
 ## Install SQL Server
 To install the mssql-server Package on Red Hat, follow these steps:

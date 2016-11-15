@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Install SQL Server on Linux (Ubuntu) | SQL Server vNext CTP1
+title: Install SQL Server on Ubuntu - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/27/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -24,7 +24,7 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 # ms.custom: ""
 
 ---
-# Install SQL Server on Linux (Ubuntu)
+# Install SQL Server on Ubuntu
 
 This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Ubuntu 16.04.
 

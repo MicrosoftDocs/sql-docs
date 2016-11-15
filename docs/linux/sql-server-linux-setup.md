@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install SQL Server on Linux | SQL Server vNext CTP1
+title: Install SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 
@@ -33,7 +33,7 @@ SQL Server vNext CTP1 is supported on the following distributions:
 
 | Distribution | Supported version |
 |-----|-----|
-| **Red Hat Enterprise Linux** | 7 |
+| **Red Hat Enterprise Linux** | 7.2 |
 | **Ubuntu** | 16.04 |
 | **Docker Engine** | 1.8+ |
 

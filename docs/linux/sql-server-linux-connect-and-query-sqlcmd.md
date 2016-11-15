@@ -6,7 +6,7 @@ description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/14/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -36,8 +36,9 @@ After successfully connecting, you run a simple Transact-SQL (T-SQL) query to ve
 ## Install the SQL Server command-line tools
 
 Sqlcmd is part of the SQL Server command-line tools, which are not installed automatically with SQL Server on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, select your Linux distribution from the following list:
-        - [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md#tools)
-        - [Ubuntu](sql-server-linux-setup-ubuntu.md#tools)
+
+- [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md#tools)
+- [Ubuntu](sql-server-linux-setup-ubuntu.md#tools)
 
 ## Connect to SQL Server on Linux
 

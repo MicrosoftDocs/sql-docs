@@ -69,6 +69,6 @@ Then learn how to develop and manage SQL Server:
  - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)
  - [Configure high availability](sql-server-linux-configure-high-availability-and-disaster-recovery.md)
 
-## Next Steps
+## Next steps
 
 For the complete set of SQL Server documentation, see the [Microsoft SQL Server Documentation](https://msdn.microsoft.com/library/mt590198.aspx).

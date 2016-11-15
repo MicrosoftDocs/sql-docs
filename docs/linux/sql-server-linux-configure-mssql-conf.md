@@ -26,19 +26,17 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 # Configure SQL Server on Linux with mssql-conf
 **mssql-conf** is a configuration script that installs with SQL Server vNext CTP1 for both Red Hat Enterprise Linux and Ubuntu. You can use this utility to set the following parameters:
 
-| Parameter | Description |
-|-----|-----|
-| TCP Port | Change the port where SQL Server will listen for connections. |
-| Default Backup Directory | Change the directory where SQL Server will send the backup files by default. | 
-| Default Dump Directory | Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default. |
-| Default Data Directory | Change the directory where the new SQL Server database data files (.mdf). |
-| Default Log Directory | Changes the directory where the new SQL Server database log (.ldf) files are created. |
-| Set Traceflags | Sets the traceflags that the service is going to use. |
-| Set Collation | Sets a new collation for SQL Server on Linux. |
+[TCP port](#tcpport): Change the port where SQL Server will listen for connections.
+[Default data directory](#datadir): Change the directory where the new SQL Server database data files (.mdf).
+[Default log directory](#datadir): Changes the directory where the new SQL Server database log (.ldf) files are created.
+[Default dump directory](#dumpdir): Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default.
+[Default backup directory](#backupdir): Change the directory where SQL Server will send the backup files by default. 
+[Set traceflags](#traceflags): Set the traceflags that the service is going to use.
+[Set collation](#collation): Set a new collation for SQL Server on Linux.
 
 The following sections show examples of how to use mssql-conf for each of these scenarios.
 
-## Change the TCP port
+## <a id="tcpport"></a> Change the TCP port
 
 This option will let you change the TCP port where SQL Server will listen for connections. By default, this port is set to 1433. To change the port, run the following commands:
 
@@ -54,7 +52,7 @@ This option will let you change the TCP port where SQL Server will listen for co
 
         $ sqlcmd -S localhost,<new_tcp_port> -U test -P test
 
-## Change the default data or log directory location
+## <a id="datadir"></a> Change the default data or log directory location
 
 This option will let you change the location where the new database and log files are created. By default, this location is /var/opt/mssql/data. To achieve this, follow these steps:
 
@@ -90,7 +88,7 @@ This option will let you change the location where the new database and log file
 
 8. This command also assumes that a /tmp/log directory exists, and that it is under the user and group "mssql".
 
-## Change the default dump directory location
+## <a id="dumpdir"></a> Change the default dump directory location
 
 This option will let you change the default location where the memory and SQL dumps are generated whenever there is a crash. By default, these files are generated in /var/opt/mssql/log.
 
@@ -113,7 +111,7 @@ To set up this new location, use the following commands:
 
         $ sudo systemctl restart mssql-server
 
-## Changing the default backup directory location
+## <a id="backupdir"></a> Change the default backup directory location
 
 This option will let you change the default location where the backup files are generaqted. By default, these files are generated in /var/opt/mssql/data.
 
@@ -136,7 +134,7 @@ To set up this new location, use the following commands:
 
         $ sudo systemctl restart mssql-server
 
-## Enable/Disable traceflags
+## <a id="traceflags"></a> Enable/Disable traceflags
 
 This option will let you enable or disable traceflags for the startup of the SQL Server service. To enable/disable a traceflag use the following commands:
 
@@ -156,7 +154,7 @@ This option will let you enable or disable traceflags for the startup of the SQL
 
         $ sudo systemctl restart mssql-server
 
-## Change the SQL Server collation
+## <a id="collation"></a> Change the SQL Server collation
 
 This option will let you change the collation value to any of the supported collations:
 

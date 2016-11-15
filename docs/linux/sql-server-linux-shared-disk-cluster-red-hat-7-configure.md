@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 11/13/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux 
 ms.technology: database-engine
@@ -27,7 +27,8 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 
 This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux 7.2. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). The SQL Server instance is active on either one node or the other.
 
-> [!NOTE] Access to Red Hat documentation requires a subscription. 
+> [!NOTE] 
+> Access to Red Hat documentation requires a subscription. 
 
 As the diagram below shows storage is presented to two servers. Clustering components - Corosync and Pacemaker - coordinate communications and resource management. One of the servers has the active connection to the storage resources and the SQL Server. When Pacemaker detects a failure the clustering components manage moving the resources to the other node.  
 
@@ -35,7 +36,8 @@ As the diagram below shows storage is presented to two servers. Clustering compo
 
 For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-> [!NOTE] This is not a production setup. This guide creates an architecture that is for high-level functional testing.
+> [!NOTE] 
+> This is not a production setup. This guide creates an architecture that is for high-level functional testing.
 
 The following sections walk through the steps to set up a failover cluster solution. 
 
@@ -194,7 +196,8 @@ For additional information about using NFS, see the following resources:
 
 1.  **On the primary node only**, save the database files to a temporary location. 
 
-    > [!NOTE] The database files contain the login information for the “sa” user.  We will later copy them to the share so that a SQL server instance running on any node in the cluster can access them.
+    > [!NOTE]
+    > The database files contain the login information for the “sa” user.  We will later copy them to the share so that a SQL server instance running on any node in the cluster can access them.
 
     The following script, creates a new temporary directory, copies the database files to the new directory, and removes the old database files. 
 

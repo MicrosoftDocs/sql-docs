@@ -38,16 +38,19 @@ To install the mssql-server Package on Red Hat, follow these steps:
     > [!IMPORTANT]
     > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
 
-2. Register the Microsoft SQL Server Red Hat repository by creating a repository file:
+2. Download the Microsoft SQL Server Red Hat repository configuration file:
 
-        $ vi /etc/yum.repos.d/mssql-server.repo
+        $ curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
 
-        [mssql-server]
-        name=mssql-server
-        baseurl=https://packages.microsoft.com/rhel7/mssql-server
-        gpgcheck=1
+        This file contains the following repository settings:
+
+        [packages-microsoft-com-mssql-server]
+        name=packages-microsoft-com-mssql-server
+        baseurl=https://packages.microsoft.com/rhel/7/mssql-server/
         enabled=1
-        gpgkey=https://packages.microsoft.com/keys/dpgswdist.v1.asc
+
+        gpgcheck=1
+        gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 
 3. Exit superuser mode.
 
@@ -58,7 +61,7 @@ To install the mssql-server Package on Red Hat, follow these steps:
         $ sudo yum update
         $ sudo yum install -y mssql-server
 
-5. After the package installation finishes, run the configuration script and follow the prompts to accept the End-User License Agreement and set the initial password:
+5. After the package installation finishes, run the configuration script and follow the prompts to accept the End-User License Agreement, set the initial password, enable the service and confirm if the service is going to run on boot:
 
         $ sudo /opt/mssql/bin/sqlservr-setup
 
@@ -66,63 +69,46 @@ To install the mssql-server Package on Red Hat, follow these steps:
 
         $ systemctl status mssql-server
 
+7. You will need to open a port on the firewall on RHEL.  If you are using firewalld as your firewall you can use these commands.
+
+        $ sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
+        $ sudo firewall-cmd --reload
+
 ## Verify the installation
 Use the following command to print the installed package name and version:
 
     $ rpm -qa | grep mssql
 
-## Post-install configuration
-After installation on Red Hat Enterprise Linux you will need to do the following to accept the license agreement and provide the system administrator (SA) password.
-
-1. Run the configuration script to accept the license agreement and provide the System Administrator (SA) password:
-
-        $ cd /opt/mssql/bin
-        $ sudo ./sqlservr-setup
-
-2. Enable and start the SQL Server service:
-
-        $ sudo systemctl enable mssql-server
-        $ sudo systemctl start mssql-server
-
-3. You will need to open a port on the firewall on RHEL.  If you are using firewalld as your firewall you can use these commands.
-
-        $ sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
-        $ sudo firewall-cmd --reload
-
 ## <a id="tools"></a> Install the tools
 The following steps installs the command-line tools, Microsoft ODBC drivers, and their dependencies. For the details on what gets installed, see [Command-line tools and ODBC drivers](sql-server-linux-setup.md#tools).
-
-> [!IMPORTANT]
-> The following steps will change when we get ready to release.
 
 1. Start a terminal session as root:
 
         $ sudo su
 
-2. Download an installation script for the SQL Server tools and ODBC drivers installation:
+2. Create a file under /etc/yum.repos.d/mssql-tools.repo with the following contents:
 
-        # wget https://gallery.technet.microsoft.com/ODBC-Driver-13-for-SQL- 8d067754/file/162203/1/install.sh
+        [mssql-tools]
+        name=mssql-tools
+        baseurl=https://apt-mo.trafficmanager.net/yumrepos/mssql-rhel7-release/
+        enabled=1
+        gpgcheck=1
+        gpgkey=http://aka.ms/msodbcrhelpublickey/dpgswdist.v1.asc
 
-3. Run the installation script:
-
-        # sh install.sh
-
-4. Once completed, exit the root mode.
+3. Exit superuser mode:
 
         # exit
+
+4. Run the following commands to install mssql-tools:
+
+        $ sudo yum update
+        $ sudo yum install mssql-tools
 
 If you are install these packages from the same Linux machine as your SQL Server installation, you can run a test by connecting to your local SQL Server instance (localhost) with your **SA** username and password:
 
     $ sqlcmd -S localhost -U SA -P <password>
 
 Type **exit** to return to the command-line.
-
-To uninstall the tools, download the uninstall script and follow the same steps as described above:
-
-    $ sudo su
-    # wget https://gallery.technet.microsoft.com/ODBC-Driver-13-Tools-e419eed1/file/153767/2/uninstall.sh
-    # sh uninstall.sh 
-    # exit 
 
 ## Next steps
 After installation, connect to the SQL Server instance to create and manage databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md).

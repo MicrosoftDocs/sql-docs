@@ -30,10 +30,10 @@ The following release notes apply to SQL Server vNext CTP1 running on Linux. Thi
     - RPM package version: 14.0.1.246-6. 
     - Debian package version: 14.0.1.246-6
 
-Download the [mssql-server 14.0.1.246-6 Engine Debian package](https://preview.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.1.246-6_amd64.deb)
-Download the [mssql-server 14.0.1.246-6 High Availability Debian package](https://preview.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1.246-6_amd64.deb)
-Download the [mssql-server 14.0.1.246-6 Engine RPM package](https://preview.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.1.246-6.x86_64.rpm)
-Download the [mssql-server 14.0.1.246-6 High Availability RPM package](https://preview.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.1.246-6.x86_64.rpm)
+Download the [mssql-server 14.0.1.246-6 Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.1.246-6.x86_64.rpm)
+Download the [mssql-server 14.0.1.246-6 High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.1.246-6.x86_64.rpm)
+Download the [mssql-server 14.0.1.246-6 Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.1.246-6_amd64.deb)
+Download the [mssql-server 14.0.1.246-6 High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1.246-6_amd64.deb)
 
 ## Supported platforms 
 
@@ -47,7 +47,7 @@ Download the [mssql-server 14.0.1.246-6 High Availability RPM package](https://p
 
 | Tool | Minimum version |
 |-----|-----|
-| [SQL Server Management Studio (SSMS) for Windows](https://msdn.microsoft.com/library/mt238290.aspx) | 13.0.11000.78 |
+| [SQL Server Management Studio (SSMS) for Windows](https://msdn.microsoft.com/library/mt238290.aspx) | 17.0.1 |
 | [SQL Server Data Tools for Visual Studio](https://msdn.microsoft.com/library/mt204009.aspx) | 14.0.60203.0 |
 | [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/vscodemssql) | Latest (0.1.5) |
 
@@ -115,7 +115,7 @@ The following sections describe known issues with this release of SQL Server vNe
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
 ### In-Memory OLTP
-- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](https://stage.docs.microsoft.com/en-us/sql/linux/sql-server-linux-performance-get-started#use-in-memory-oltp).  
+- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
 ### SqlPackage
 - Using SqlPackage requires to specify an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 

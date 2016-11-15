@@ -2,16 +2,14 @@
   "build": {
     "content": [
       {
-        "files": [
-          "**/*.md"
-        ],
+        "files": ["**/*.md", "**/**.yml"],
         "exclude": [
           "**/obj/**",
           "sql/linux/**",
           "**/includes/**"
         ]
       }
-    ],
+    ],      
     "resource": [
       {
         "files": [
@@ -27,7 +25,11 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "layout": "Conceptual",
+      "breadcrumb_path": "~/breadcrumb/toc.yml",
+      "ms.locale": "en-us"
+    },
     "fileMetadata": {},
     "template": [],
     "dest": "sql/linux"

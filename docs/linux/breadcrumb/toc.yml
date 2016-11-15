@@ -1,0 +1,7 @@
+- name: Docs
+  href: /
+  homepage: /
+  items:
+  - name: SQL Server on Linux
+    href: /sql/linux/
+    homepage: /sql/linux

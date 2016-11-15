@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Manage SQL Server on Linux | SQL Server vNext CTP1
-description: 
+title: Manage SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: This topic provides links to common management tasks and tools for SQL Server running on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-19-2016
+ms.date: 11/14/2016
 ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 
 # optional metadata
 
@@ -27,36 +26,20 @@ ms.assetid:
 ---
 # Manage SQL Server on Linux
 
-There are several ways to manage your SQL Server vNext CTP1 instances and databases running on Linux. This topic provides and orientation of the techniques and tools used for management with pointers to additional information. It also provides a list of common management tasks with links to additional information.
+There are several ways to manage SQL Server vNext CTP1 on Linux. The following section provide a quick overview of different management tools and techniques with pointers to more resources.
 
-## Management tools
+## mssql-conf 
+The **mssql-conf** tool configures SQL Server on Linux. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
-The following tools can be used to help manage SQL Server on Linux.
+## Transact-SQL
+Almost everything you can do in a client tool can also be accomplished with Transact-SQL statements. SQL Server provides [Dynamic Management Views (DMVs)](https://msdn.microsoft.com/library/ms188754.aspx) that query the status and configuration of SQL Server. There are also [Transact-SQL commands](https://msdn.microsoft.com/library/bb510741.aspx) for database management tasks. You can run these commands in any client tool that supports connecting to SQL Server and running Transact-SQL queries. Examples include [sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md), [Visual Studio Code](sql-server-linux-develop-use-vscode.md), and [SQL Server Management Studio](sql-server-linux-manage-ssms.md).  
 
-- [Transact-SQL commands and DMVs](sql-server-linux-management-overview.md)
-- [DMVTool](sql-server-linux-management-overview.md)
-- [SqlPackage](sql-server-linux-management-overview.md)
-- [SQL Server Managemet Studio](sql-server-linux-management-overview.md)
+## SQL Server Management Studio on Windows
+SQL Server Management Studio (SSMS) is a Windows application that provides a graphical user interface for managing SQL Server. Although it currently runs only on Windows, you can use it to remotely connect to your Linux SQL Server instances. For more information on using SSMS to manage SQL Server, see [Use SSMS to Manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
 
-### Transact-SQL (TSQL)
-T-SQL commands cover many management tasks and DMVs provide detailed monitoring information. Link to additional resources. Can be run from sqlcmd.exe, VS Code, or any other supported T-SQL client to SQL Server. Point to new cross platform DMVs. Talk about mapping of C: for some commands.
+## PowerShell
+PowerShell provides a rich command-line environment to manage SQL Server on Linux. For more information, see [Use PowerShell to Manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
 
-### DMVTool
-Show how DMVTool is a Linux-specific way of working with DMVs on the file system.
+## Next steps
+For more information on how to get started using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
 
-### SqlPackage
-Tool for exporting and importing databases. 
-
-### SQL Server Management Studio (Windows client)
-Talk about the ability to connect to SQL Server on Linux from Windows. Firewall and port requirements. General steps for getting started with screenshot of object browser (mabye numbered).
-
-## Management tasks
-The following table provides a list of some common management tasks along with a pointer to more information.
-
-| Task | Description |
-|------|------|
-| Backup and Restore | TBD with links |
-| etc. | etc. |
-
-## Next Steps
-TBD

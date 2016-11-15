@@ -6,12 +6,11 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-27-2016
+ms.date: 10/27/2016
 ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 
 # optional metadata
 

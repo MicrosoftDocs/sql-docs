@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Connect and query SQL Server on Linux (sqlcmd) | SQL Server vNext CTP1
-description: 
+title: Use the sqlcmd command-line utility on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL queries.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-31-2016
+ms.date: 11/14/2016
 ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: 9e6c1ae1-59a4-4589-b839-18d6a52f2676
 
 # optional metadata
 
@@ -25,18 +24,22 @@ ms.assetid:
 # ms.custom: ""
 
 ---
-# Connect and query SQL Server on Linux (sqlcmd)
+# Connect and query SQL Server on Linux with sqlcmd
+
 This topic shows how to use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext CTP1 on Linux. 
 
 After successfully connecting, you run a simple Transact-SQL (T-SQL) query to verify communication with the database.
+
+> [!TIP]
+> Sqlcmd is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
 
 ## Install the SQL Server command-line tools
 
 Sqlcmd is part of the SQL Server command-line tools, which are not installed automatically with SQL Server on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, select your Linux distribution from the following drop-down list.
 
 > [!div class="op_single_selector"]
-- [Ubuntu](sql-server-linux-setup-ubuntu.md#tools)
 - [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md#tools)
+- [Ubuntu](sql-server-linux-setup-ubuntu.md#tools)
 - [Docker](sql-server-linux-setup-docker.md#tools)
 
 ## Connect to SQL Server on Linux
@@ -54,7 +57,7 @@ The following steps show how to connect to SQL Server vNext on Linux with sqlcmd
     > [!TIP]
     > You can omit the password on the command-line to be prompted to enter it manually.
 
-    If you are connecting to a remote instance, specify the machine name or IP address. 
+    If you were connecting to a remote instance, specify the machine name or IP address for the **-H** parameter. 
 
         sqlcmd -H 192.555.5.555 -U SA -P password
 
@@ -129,8 +132,10 @@ You can also use sqlcmd to run Transact-SQL script files. Use the following step
 
 # Next Steps
 
-In addition to queries, you can use T-SQL statements to create and manage databases.
+In addition to queries, you can use T-SQL statements to create and manage databases. For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).
 
 If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx) and the [Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx).
 
-For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).
+For other ways to connect to SQL Server on Linux, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
+
+

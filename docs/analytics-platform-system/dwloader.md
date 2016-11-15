@@ -4,7 +4,7 @@ description: "**dwloader** is a Parallel Data Warehouse (PDW) command-line tool 
 
 author: "barbkess" 
 ms.author: "barbkess"
-ms.date: "10/20/2016"
+ms.date: "11/04/2016"
 ms.topic: "article"
 
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
@@ -18,7 +18,7 @@ author: BarbKess
   
 1.  Prepare the source data.  
   
-    Use your own ETL process to create the source data you wish to load. The source data must be formatted to match the schema of the destination table. Store the source data into one or more text files and copy the text files into the same directory on your Loading server. For information about the Loading server, see [Acquire and Configure a Loading Server &#40;SQL Server PDW&#41;](../sqlpdw/acquire-and-configure-a-loading-server-sql-server-pdw.md)  
+    Use your own ETL process to create the source data you wish to load. The source data must be formatted to match the schema of the destination table. Store the source data into one or more text files and copy the text files into the same directory on your Loading server. For information about the Loading server, see [Acquire and Configure a Loading Server](acquire-and-configure-loading-server.md)  
   
 2.  Prepare the loading options.  
   
@@ -30,7 +30,11 @@ author: BarbKess
   
 4.  Install **dwloader**.  
   
-    Install dwloader onto the Loading server if it is not already installed. See [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](../sqlpdw/install-dwloader-command-line-loader-sql-server-pdw.md).  
+    Install dwloader onto the Loading server if it is not already installed. 
+
+<!-- MISSING LINK
+	See [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](install-dwloader-command-line-loader-sql-server-pdw.md). 
+--> 
   
 5.  Run **dwloader**.  
   
@@ -41,7 +45,7 @@ author: BarbKess
     You can check the failed rows file (specified with -R) to see if any rows failed to load. If this file is empty, all rows loaded successfully. **dwloader** is transactional, so if any step fails (other than rejected rows), all steps will roll back to their initial state.  
   
 <!-- 
-![Topic link icon](../sqlpdw/media/Topic_Link.gif "Topic_Link")[Syntax Conventions](syntax-conventions-sql-server-pdw.md)  
+![Topic link icon](media/topic-link.gif "Topic_Link")[Syntax Conventions](syntax-conventions-sql-server-pdw.md)  
 -->  
 
 
@@ -117,7 +121,11 @@ A valid SQL Server Authentication login with appropriate permissions to perform 
 The password for a SQL Server Authentication *login_name*.  
   
 **-W**  
-Use Windows Authentication. (No *login_name* or *password* required.) For information about configuring Windows Authentication, see [Security - Configure Domain Trusts](security-configure-domain-trusts.md).  
+Use Windows Authentication. (No *login_name* or *password* required.) 
+
+<!-- MISSING LINK
+For information about configuring Windows Authentication, see [Security - Configure Domain Trusts](security-configure-domain-trusts.md).  
+-->
   
 **-f** *parameter_file_name*  
 Use a parameter file, *parameter_file_name*, in place of command-line parameters. *parameter_file_name* can contain any command-line parameter except *user_name* and *password*. If a parameter is specified on the command line and in the parameter file, the command line overrides the file parameter.  
@@ -137,7 +145,11 @@ Specifies the SQL Server PDW appliance that will receive the loaded data.
   
 For Ethernet connections, *target_appliance* is the IP address for the Control node cluster.  
   
-If omitted, dwloader defaults to the value that was specified when dwloader was installed. For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
+If omitted, dwloader defaults to the value that was specified when dwloader was installed. 
+
+<!-- MISSING LINK
+For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
+-->
   
 **-T** *target_database_name.*[*schema*].*table_name*  
 The three-part name for the destination table.  
@@ -481,7 +493,11 @@ if %errorlevel%==0 echo Success
 When using PowerShell, use `$LastExitCode`.  
   
 ## Permissions  
-Requires LOAD permission and applicable permissions (INSERT, UPDATE, DELETE) on the destination table. Requires CREATE permission (for creating a temporary table) on the staging database. If a staging database is not used, then CREATE permission is required on the destination database. For more information, see [Grant permissions to load data](grant-permissions-to-load-data.md).  
+Requires LOAD permission and applicable permissions (INSERT, UPDATE, DELETE) on the destination table. Requires CREATE permission (for creating a temporary table) on the staging database. If a staging database is not used, then CREATE permission is required on the destination database. 
+
+<!-- MISSING LINK
+For more information, see [Grant permissions to load data](grant-permissions-to-load-data.md).  
+-->
   
 ## General Remarks  
 For information on data type conversions when loading with dwloader, see [Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md).  
@@ -492,7 +508,11 @@ You should run the Loader from its installed location. The dwloader executable i
   
 You can override a parameter that is specified in the parameter file (-f option) by specifying it as a command-line parameter.  
   
-You can run multiple instances of the Loader simultaneously. The maximum number of Loader instances is pre-configured and cannot be changed. For the maximum number of loads per appliance, see [Minimum and Maximum Values](minimum-maximum-values.md)  
+You can run multiple instances of the Loader simultaneously. The maximum number of Loader instances is pre-configured and cannot be changed. 
+
+<!-- MISSING LINK
+For the maximum number of loads per appliance, see [Minimum and Maximum Values](minimum-maximum-values.md)  
+-->
   
 Loaded data might require more or less space on the appliance than in the source location. You can perform test imports with subsets of data to estimate disk consumption.  
   
@@ -569,8 +589,12 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### B. Load Data into an AdventureWorks Table  
-The following example is part of a batch script that loads data into **AdventureWorksPDW2012**.  To view the full script, open the aw_create.bat file that ships with the **AdventureWorksPDW2012** installation package. For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
-  
+The following example is part of a batch script that loads data into **AdventureWorksPDW2012**.  To view the full script, open the aw_create.bat file that ships with the **AdventureWorksPDW2012** installation package. 
+
+<!-- Missing link
+For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
+-->
+
 The following script snippet uses dwloader to load data into the DimAccount and DimCurrency tables. This script is using an Ethernet address. If it was using InfiniBand, server would be *<appliance_name>*`-SQLCTL01`.  
   
 ```  
@@ -664,6 +688,11 @@ Description of the command-line parameters:
   
 -   *-U <login_name> -P <password>* specifies the login and password for the login that has permissions to perform the load.  
   
+
+<!-- MISSING LINK
+
 ## See Also  
 [Common Metadata Query Examples](metadata-query-examples.md)  
+
+-->
   

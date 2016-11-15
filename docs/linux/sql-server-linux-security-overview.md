@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Security considerations for SQL Server on Linux | SQL Server vNext CTP1
-description: 
+title: Security limitations for SQL Server on Linux | SQL Server vNext CTP1 | Microsoft Docs
+description: This topic describes SQL Server on Linux restrictions.
 author: BYHAM 
 ms.author: rickbyh 
 manager: jhubbard
-ms.date: 10-18-2016
+ms.date: 11/09/2016
 ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 
 # optional metadata
 
@@ -25,14 +24,18 @@ ms.assetid:
 # ms.custom: ""
 
 ---
-# Security considerations for SQL Server on Linux
+# Security limitations for SQL Server on Linux
 
-SQL Server on Linux has the following restrictions: 
+SQL Server on Linux has the following limitations: 
 
 * Only SQL Server authentication is currently available.
 * A standard password policy is provided. MUST_CHANGE is the only option you may configure.  
 * Extensible Key Management is not supported. 
 * Using keys stored in the Azure Key Vault is not supported.
-* Writing to the syslog file on Linux is not supported. 
+* SQL Server generates its own self-signed certificate for encrypting connections. Currently, SQL Server cannot be configured to use a user provided certificate for SSL or TWL. 
 
-For more infomation on encrypting your connection to SQL Server, see [Configuring SQL Server to use a Linux certificate for SSL and TLS](https://msdn.microsoft.com/library/dd146365.aspx).
+For more infomation about security features available in SQL Server, see the [Security Center for SQL Server Database Engine and Azure SQL Database](https://msdn.microsoft.com/library/bb510589.aspx).
+
+## Next steps
+
+For common security tasks, see [Get started with security features of SQL Server on Linux](/sql-server-linux-security-get-started).

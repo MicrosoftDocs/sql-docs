@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Get started with SQL Server on Linux | SQL Server vNext CTP1
-description: 
+title: Get started with SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: This topic provides a learning path for getting started with SQL Server vNext on Linux. It also includes links to other resources for each step.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-26-2016
+ms.date: 11/14/2016
 ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: 66d96e59-2ded-4460-b350-fda80d93d79b
 
 # optional metadata
 
@@ -27,46 +26,49 @@ ms.assetid:
 ---
 # Get started with SQL Server on Linux
 
-This topic is a guide for how to get started using SQL Server vNext CTP1 on Linux. It does not assume that you have experience with either Linux or SQL Server. If you do have a background in either area, you can scan this topic to find any additional information or links to other resources.
+Get started using SQL Server vNext CTP1 on Linux. Here are basic steps with links to how-to information.
 
-## Install Linux
-If you do not already have a Linux machine, you must either install Linux on a physical server or a virtual machine (VM).
-
-### Manual installation
-To manually install Linux on a target machine, review the documentation provided for your target platform:
-
-- [Ubuntu 16.04](https://www.ubuntu.com/download)
-- [Red Hat Enterprise Linux 7.2](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux)
-- [Docker Engine 1.8+](http://www.docker.com/products/docker#/linux)
+## 1: Install Linux
+If you do not already have a Linux machine, install Linux on a physical server or a virtual machine (VM). Review the [Release notes](sql-server-linux-release-notes.md) on supported platforms and requirements.
 
 > [!NOTE]
-> Although the focus of this topic is on installing SQL Server vNext on Linux, you can also install it on the latest [Docker for Mac](http://www.docker.com/products/docker#/mac) and [Docker for Windows](http://www.docker.com/products/docker#/windows). 
+> One option is to create use a pre-configured Linux VM in Azure. In addition to OS-only VMs, there is also a VM image with SQL Server vNext CTP1 already installed. For more information, see [Provision a Linux VM in Azure for SQL Server](sql-server-linux-azure-virtual-machine.md). 
 
-### Azure VMs
-Another option is to install Linux on a virtual machine. Use the following topics to create virtual machines in Azure with Linux already installed. 
-
-- [Ubuntu 16.04 Azure VM](https://azure.microsoft.com/marketplace/partners/canonical/ubuntuserver1604lts/)
-- [Red Hat Enterprise Linux 7.2 Azure VM](https://azure.microsoft.com/marketplace/partners/redhat/redhatenterpriselinux72/)
-
-For a tutorial that walks you through the VM creation process, see [Create a Linux VM on Azure using the Portal](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-quick-create-portal/). For all other Azure Linux VM resources, see [Linux Virtual Machines documentation](https://azure.microsoft.com/documentation/services/virtual-machines/linux/).
-
-## Install SQL Server
+## 2: Install SQL Server
 Next, set up SQL Server vNext on your Linux machine using one of the following guides:
 
-| Distribution | Installation |
+| Platform | Installation |
 |-----|-----|
-| Ubuntu | [Installation guide](sql-server-linux-setup-ubuntu.md) |
-| Red Hat Enterprise | [Installation guide](sql-server-linux-setup-red-hat.md) |
+| Red Hat Enterprise 7.2 | [Installation guide](sql-server-linux-setup-red-hat.md) |
+| Ubuntu 16.04 | [Installation guide](sql-server-linux-setup-ubuntu.md) |
 | Docker | [Installation guide](sql-server-linux-setup-docker.md) |
 
-## Connect locally or remotely
-TODO: provide links to the connection topics and talk about local and remote connectivity
+Note that Docker itself runs on multiple platforms, which means that you can run the Docker image on Linux, Mac, and Windows.
 
-## Create a database
-TODO: provide the T-SQL for creating a database. Point to restore article that installs the AdventureWorks sample DB.
+## 3: Connect locally or remotely
+After installation, connect to the running SQL Server instance on your Linux machine. For a general discussion of connectivity, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md). Then run some Transact-SQL queries using a client tool. Examples include:
 
-## Explore SQL Server capabilities on Linux
-TODO: provide links to the main SQL Server documentation, maybe a table of the most popular ones with links and descriptions. Link to supportability topic here too for guidance on understanding how to read the main documentation set in relation to SQL Server.
+| Tool | Tutorial |
+|-----|-----|
+| Sqlcmd | [Use the Sqlcmd command-line utility on Linux](sql-server-linux-connect-and-query-sqlcmd.md) |
+| Visual Studio Code (VS Code) | [Use VS Code with SQL Server on Linux](sql-server-linux-develop-use-vscode.md) |
+| SQL Server Management Studio (SSMS) | [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) |
+| SQL Server Data Tools (SSDT) | [Use SSDT with SQL Server on Linux](sql-server-linux-develop-use-ssdt.md) |
 
-## Next Steps
-TODO: point to other topics in this content set.
+## 4: Explore SQL Server capabilities on Linux
+SQL Server vNext has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux.
+
+If you are already familiar with SQL Server, you'll want to review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release.
+
+If you are new to SQL Server, you might find it helpful to quickly explore some of the security and performance capabilities in the following two guides:
+ - [Get started with security features](sql-server-linux-security-get-started.md)
+ - [Get started with performance features](sql-server-linux-performance-get-started.md)
+
+Then learn how to develop and manage SQL Server:
+ - [Develop for SQL Server on Linux](sql-server-linux-develop-overview.md)
+ - [Manage SQL Server on Linux](sql-server-linux-management-overview.md)
+ - [Configure high availability](sql-server-linux-configure-high-availability-and-disaster-recovery.md)
+
+## Next steps
+
+For the complete set of SQL Server documentation, see the [Microsoft SQL Server Documentation](https://msdn.microsoft.com/library/mt590198.aspx).

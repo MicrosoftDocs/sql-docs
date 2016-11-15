@@ -1,17 +1,16 @@
 ---
 # required metadata
 
-title: Overview of SQL Server on Linux | SQL Server vNext CTP1
-description: 
+title: Overview of SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+description: This topic describes how SQL Server runs on Linux and provides information on how to learn more.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10-27-2016
+ms.date: 11/14/2016
 ms.topic: article
-ms.prod: sql-non-specified
-ms.service: 
-ms.technology: 
-ms.assetid: 
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 
 # optional metadata
 
@@ -25,25 +24,13 @@ ms.assetid:
 # ms.custom: ""
 
 ---
-# SQL Server on Linux overview
+# SQL Server on Linux
 
-SQL Server vNext CTP1 now runs on Linux. The topics in this section focuses on what you need to know to use SQL Server on Linux. In many ways, SQL Server capabilities and features work the same regardless of your operating system. The content in this section highlights Linux-specific guidance. 
+SQL Server now runs on Linux! This latest release, SQL Server vNext CTP1, runs on Linux and is in
+many ways simply SQL Server. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
 
-## Supported distributions
+- [Install SQL Server on Linux](sql-server-linux-setup.md).
 
-The following Linux distributions are currently supported for this release.
+- Learn about the platforms and features in the [Release Notes](sql-server-linux-release-notes.md).
 
-- **Ubuntu 16.04**
-- **Red Hat Enterprise Linux 7.2**
-- **Docker Engine 1.8+, Docker for Mac/Windows**
-
-## Supported features
-For specific information about what this release supports on Linux, see [Supported features of SQL Server on Linux](sql-server-linux-supported-features.md). For known issues, also review the [Release notes](sql-server-linux-release-notes.md).
-
-## Get started
-
-Use the following resources to get started using SQL Server on Linux:
-
-- Go through the topics in the [Get started](sql-server-linux-get-started-tutorial.md) section.
-- [Install the AdventureWorks sample database](sql-server-linux-restore-database.md).
-- Review the complete set of [SQL Server documentation](https://msdn.microsoft.com/library/mt590198.aspx). This content applies to SQL Server running on any platform (except for areas that are not yet [supported on Linux](sql-server-linux-supported-features.md)).
+- Start using SQL Server on Linux in [Get started](sql-server-linux-get-started-tutorial.md).

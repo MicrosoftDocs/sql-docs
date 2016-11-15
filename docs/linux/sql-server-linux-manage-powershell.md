@@ -6,7 +6,7 @@ description: This topic provides an overview of using PowerShell on Windows with
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 11/14/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,11 +26,11 @@ ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ---
 # Use PowerShell on Windows to Manage SQL Server on Linux
 
-This topic introduces [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/hh245198.aspx) and walks you through a couple of examples on how to use it with SQL Server vNext CTP1 on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
+This topic introduces [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) and walks you through a couple of examples on how to use it with SQL Server vNext CTP1 on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 ## Install the newest version of SQL PowerShell on Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/hh245198.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server vNext CTP1 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server vNext CTP1 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
 
 ## Before you begin
 - Read the [Known Issues](sql-server-linux-release-notes.ms) for SQL Server vNext CTP1 on Linux.
@@ -63,7 +63,7 @@ Script     0.0        SqlServer
 
 ## Connect to SQL Server and get server information
 
-Let's use PowerShell on Windows to connect to your SQL Server vNext instance on Linux and display a couple of server propeties.
+Let's use PowerShell on Windows to connect to your SQL Server vNext instance on Linux and display a couple of server properties.
 
 Copy and paste the commands below at the PowerShell prompt. When you run these commands, PowerShell will:
 - display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server vNect CTP1 instance on Linux
@@ -82,7 +82,7 @@ $credential = Get-Credential
 $server = New-Object ('Microsoft.SqlServer.Management.Smo.Server') $serverInstance
 
 # Set credentials
-$server.ConnectionContext.LoginSecure=$false; 
+$server.ConnectionContext.LoginSecure=$false
 $server.ConnectionContext.set_Login($credential.UserName)
 $server.ConnectionContext.set_SecurePassword($credential.Password)
 

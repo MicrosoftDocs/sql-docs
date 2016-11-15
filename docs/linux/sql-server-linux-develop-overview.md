@@ -44,7 +44,7 @@ The best way to get started and build applications with SQL Server is to try it 
 If you're creating a new application, take a look at a list of the [Connectivity libraries](sql-server-linux-develop-connectivity-libraries.md) for a summary of the connectors and popular frameworks available for various programming languages.
 
 ## Use existing applications
-If you have an existing database application, you can simply change its connection string to target SQL Server vNext CTP1 on Linux. Make sure to read about the [Known Issues](sql-server-linux-release-notes.ms) in SQL Server vNext CTP1 on Linux.
+If you have an existing database application, you can simply change its connection string to target SQL Server vNext CTP1 on Linux. Make sure to read about the [Known Issues](sql-server-linux-release-notes.md) in SQL Server vNext CTP1 on Linux.
 
 ## Use existing SQL tools on Windows with SQL Server on Linux
 Tools that currently run on Windows such as SSMS, SSDT, and PowerShell, also work with SQL Server vNext CTP1 on Linux. Although they do not run natively on Linux, you can still manage remote SQL Server instances on Linux. 

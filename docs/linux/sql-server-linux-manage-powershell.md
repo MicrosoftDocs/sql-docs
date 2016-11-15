@@ -45,12 +45,12 @@ powershell -ExecutionPolicy bypass
 SQL Server provides a Windows PowerShell module named `sqlserver` that you can use to import the SQL Server components (SQL Server provider and cmdlets) into a PowerShell environment or script.
 Copy and paste the command below at the PowerShell prompt to import the `sqlserver` module into your current PowerShell session:
 ```
-PS> Import-Module sqlserver -DisableNameChecking;
+Import-Module sqlserver -DisableNameChecking;
 ```
 
 Type the command below at the PowerShell prompt to verify that the `sqlserver` module was imported correctly:
 ```
-PS> Get-Module -Name "sqlserver"
+Get-Module -Name "sqlserver"
 ```
 
 PowerShell should display information similar to what's below:
@@ -101,13 +101,11 @@ HostDistribution : Ubuntu
 
 ## Examine SQL Server error logs
 
-Let's use PowerShell on Windows to examine error logs connect on your SQL Server vNext instance on Linux. We will also use the `Out-GridView` cmdlet to 
-
-show the error logs in a grid view display.
+Let's use PowerShell on Windows to examine error logs connect on your SQL Server vNext instance on Linux. We will also use the `Out-GridView` cmdlet to show information from the error logs in a grid view display.
 
 Copy and paste the commands below at the PowerShell prompt. These commands may take a few minutes to run and do the following:
 - display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server vNect CTP1 instance on Linux
-- use the `Get-SqlErrorLog` cmdlet to connect to the SQL Server vNext instance on Linux and retrieve error logs since yesterday
+- use the `Get-SqlErrorLog` cmdlet to connect to the SQL Server vNext instance on Linux and retrieve error logs since `yesterday`
 - pipe the output to the `Out-GridView` cmdlet
 
 Remember to replace `<your_server_instance>` with the IP address or the hostname of your SQL Server vNext CTP1 instance on Linux.

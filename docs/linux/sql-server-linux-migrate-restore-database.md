@@ -42,10 +42,10 @@ Although you can use the same steps to restore any database, the AdventureWorks 
 >[!NOTE] 
 > To restore a database to SQL Server on Linux, the source backup must be taken from SQL Server 2014 or SQL Server 2016. The backup SQL Server build number must not be greater than the restore SQL Server build number.  
 
-    1. On your Windows machine, go to [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) and download the **Adventure Works 2014 Full Database Backup.zip**.
+1. On your Windows machine, go to [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) and download the **Adventure Works 2014 Full Database Backup.zip**.
 
-> [!TIP] 
-> Although this tutorial demonstrates backup and restore between Windows and Linux, you could also use a browser on Linux to directly download the AdventureWorks sample to your Linux machine.
+    > [!TIP] 
+    > Although this tutorial demonstrates backup and restore between Windows and Linux, you could also use a browser on Linux to directly download the AdventureWorks sample to your Linux machine.
 
 2. Open the zip file, and extract the AdventureWorks2014.bak file to a folder on your machine.
 
@@ -77,21 +77,29 @@ At this point, the backup file is on your Linux server. Before restoring the dat
 
 1. Open a Terminal on the target Linux machine that contains the backup.
 
-2.	Enter super user mode.
+2. Enter super user mode.
 
-        sudo su
+    ```
+    sudo su
+    ```
 
-3.	Create a new backup directory. The -p parameter does nothing if the directory already exists.
+3. Create a new backup directory. The -p parameter does nothing if the directory already exists.
 
-        mkdir -p /var/opt/mssql/backup
+    ```
+    mkdir -p /var/opt/mssql/backup
+    ```
 
-4.	Move the backup file to that directory. In the following example, the backup file resides in the home directory of *user1*. Change the command to match the location of **AdventureWorks2014.bak** on your machine.
+4. Move the backup file to that directory. In the following example, the backup file resides in the home directory of *user1*. Change the command to match the location of **AdventureWorks2014.bak** on your machine.
 
-        mv /home/user1/AdventureWorks2014.bak /var/opt/mssql/backup/
+    ```
+    mv /home/user1/AdventureWorks2014.bak /var/opt/mssql/backup/
+    ```
 
-5.	Exit super user mode.
+5. Exit super user mode.
 
-        exit
+    ```
+    exit
+    ```
 
 ## Restore the database backup
 
@@ -102,27 +110,35 @@ To restore the backup, you can use the RESTORE DATABASE Transact-SQL (TQL) comma
 
 1. In the same terminal, launch **sqlcmd**. The following example connects to the local SQL Server instance with the *SA* user. Enter the password when prompted or specify the password with the -P parameter.
 
-        sqlcmd -S localhost -U SA
+    ```
+    sqlcmd -S localhost -U SA
+    ```
 
 2. After connecting, enter the following **RESTORE DATABSE** command, pressing ENTER after each line. The example below restores the **AdventureWorks2014.bak** file from the */var/opt/mssql/backup* directory.
 
-        RESTORE DATABASE AdventureWorks
-        FROM DISK = '/var/opt/mssql/backup/AdventureWorks2014.bak'
-        WITH MOVE 'AdventureWorks2014_Data' TO '/var/opt/mssql/data/AdventureWorks2014_Data.mdf',
-        MOVE 'AdventureWorks2014_Log' TO '/var/opt/mssql/data/AdventureWorks2014_Log.ldf'
-        GO
+    ```
+    RESTORE DATABASE AdventureWorks
+    FROM DISK = '/var/opt/mssql/backup/AdventureWorks2014.bak'
+    WITH MOVE 'AdventureWorks2014_Data' TO '/var/opt/mssql/data/AdventureWorks2014_Data.mdf',
+    MOVE 'AdventureWorks2014_Log' TO '/var/opt/mssql/data/AdventureWorks2014_Log.ldf'
+    GO
+    ```
 
     You should get a message the database is successfully restored.
 
 3. Verify the restoration by first changing the context to the AdventureWorks database. 
 
-        USE AdventureWorks
-        GO
+    ```
+    USE AdventureWorks
+    GO
+    ```
 
 4. Run the following query that lists the top 10 products in the **Production.Products** table.
 
-        SELECT TOP 10 Name, ProductNumber FROM Production.Product ORDER BY Name
-        GO
+    ```
+    SELECT TOP 10 Name, ProductNumber FROM Production.Product ORDER BY Name
+    GO
+    ```
 
 ![Output from Production.Products query](./media/sql-server-linux-migrate-restore-database/sql-server-linux-adventureworks-query.png)
 

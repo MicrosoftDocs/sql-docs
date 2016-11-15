@@ -35,9 +35,6 @@ To install the mssql-server Package on Ubuntu, follow these steps:
 
         $ sudo su
 
-    > [!IMPORTANT]
-    > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
-
 2. Import the public repository GPG keys:
 
         # curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -

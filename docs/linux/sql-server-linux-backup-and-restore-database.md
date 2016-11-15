@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 11/10/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,7 +26,7 @@ ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ---
 # Backup and restore SQL Server databases on Linux
 
-You can take backups of databases from SQL Server vNext CTP1 on Linux with the same tools as other platforms. On a Linux server, you can use `sqlcmd` to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup fuctionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](http://msdn.microsoft.com/library/dn435916.aspx). 
+You can take backups of databases from SQL Server vNext CTP1 on Linux with the same tools as other platforms. On a Linux server, you can use `sqlcmd` to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](http://msdn.microsoft.com/library/dn435916.aspx). 
 
 ## Backup with sqlcmd
 

@@ -36,7 +36,7 @@ You should always install and use the most recent version of SQL Server Manageme
 
 1. Start SSMS by typing **Microsoft SQL Server Management Studio** in the Windows search box, and then click the desktop app.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-connect-and-query-ssms/ssms.png)
+    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
 
 2. Connect to your source database in Object Explorer. The source database can be in Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and Azure SQL Database or Azure SQL Data Warehouse.
 
@@ -54,7 +54,7 @@ The *.BACPAC file is successfully created at the location you chose and you are 
 
 1. Start SSMS by typing **Microsoft SQL Server Management Studio** in the Windows search box, and then click the desktop app.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-connect-and-query-ssms/ssms.png)
+    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
 
 2. Connect to your target server in Object Explorer. The target server can be Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and Azure SQL Database or Azure SQL Data Warehouse.
 

@@ -1,4 +1,4 @@
----
+--
 # required metadata
 
 title: Restore a SQL Server database from Windows to Linux - SQL Server vNext CTP1 | Microsoft Docs
@@ -6,7 +6,7 @@ description: This topic shows how to take a SQL Server database backup on Window
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 11/15/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -39,9 +39,10 @@ SQL Server's backup and restore feature is the recommended way to migrate a data
 
 Although you can use the same steps to restore any database, the AdventureWorks sample database provides a good example. It comes as an existing database backup file.
 
->[!NOTE] To restore a database to SQL Server on Linux, the source backup must be taken from SQL Server 2014 or SQL Server 2016. The backup SQL Server build number must not be greater than the restore SQL Server build number.  
+>[!NOTE] 
+> To restore a database to SQL Server on Linux, the source backup must be taken from SQL Server 2014 or SQL Server 2016. The backup SQL Server build number must not be greater than the restore SQL Server build number.  
 
-1. On your Windows machine, go to [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) and download the **Adventure Works 2014 Full Database Backup.zip**.
+    1. On your Windows machine, go to [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) and download the **Adventure Works 2014 Full Database Backup.zip**.
 
 > [!TIP] 
 > Although this tutorial demonstrates backup and restore between Windows and Linux, you could also use a browser on Linux to directly download the AdventureWorks sample to your Linux machine.
@@ -62,8 +63,10 @@ To restore the database, you must first transfer the backup file from the Window
 
 3. Use the **scp** (secure copy) command to transfer the file to the target Linux machine. The following example transfers **AdventureWorks2014.bak** to the home directory of *user1* on the server named *linuxserver1*.
 
-        scp AdventureWorks2014.bak user1@linuxserver1:./
-
+    ```
+    scp AdventureWorks2014.bak user1@linuxserver1:./
+    ```
+    
     In the previous example, you could instead provide the IP address in place of the server name.
 
 There are several alternatives to using scp. One is to use [Samba](https://help.ubuntu.com/community/Samba) to setup an SMB network share between Windows and Linux. For a walkthrough on Ubuntu, see [How to Create a Network Share Via Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). Once established, you can access it as a network file share from Windows, such as **\\\\machinenameorip\\share**.

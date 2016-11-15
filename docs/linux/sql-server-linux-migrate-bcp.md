@@ -38,8 +38,8 @@ This topic will show you how to:
 `bcp` is part of the SQL Server command-line tools package, which is not installed by default with SQL Server vNext CTP1 on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, select your Linux distribution from the following drop-down list.
 
 > [!div class="op_single_selector"]
-- [Ubuntu](sql-server-linux-setup-ubuntu.md#tools)
 - [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md#tools)
+- [Ubuntu](sql-server-linux-setup-ubuntu.md#tools)
 - [Docker](sql-server-linux-setup-docker.md#tools)
 
 ## Import data with bcp

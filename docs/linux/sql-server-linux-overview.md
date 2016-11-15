@@ -29,6 +29,8 @@ ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 SQL Server now runs on Linux! This latest release, SQL Server vNext CTP1, runs on Linux and is in
 many ways simply SQL Server. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
 
+- [Install SQL Server on Linux](sql-server-linux-setup.md).
+
 - Learn about the platforms and features in the [Release Notes](sql-server-linux-release-notes.md).
 
 - Start using SQL Server on Linux in [Get started](sql-server-linux-get-started-tutorial.md).

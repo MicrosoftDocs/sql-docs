@@ -171,4 +171,4 @@ Looking for SQL dumps
 
 ## Support
 
-Support is available through the community and monitored by the engineering team. For specific questions head to [Stack Overflow](http://stackoverflow.com/), discuss  on [reddit.com/r/sqlserver](www.reddit.com/r/sqlserver), and report bugs to [connect](http://connect.microsoft.com/).
+Support is available through the community and monitored by the engineering team. For specific questions head to [Stack Overflow](http://stackoverflow.com/), discuss  on [reddit.com/r/sqlserver](http://www.reddit.com/r/sqlserver), and report bugs to [connect](http://connect.microsoft.com/).

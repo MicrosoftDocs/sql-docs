@@ -274,7 +274,7 @@ GO  
 CREATE CERTIFICATE BackupEncryptCert   
    WITH SUBJECT = 'Database backups';  
 GO 
-BACKUP DATABASE [  
+BACKUP DATABASE [AdventureWorks2014]  
 TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 WITH  
   COMPRESSION,  

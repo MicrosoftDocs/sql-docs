@@ -31,11 +31,11 @@ This topic shows how to use [sqlcmd](https://msdn.microsoft.com/library/ms162773
 After successfully connecting, you run a simple Transact-SQL (T-SQL) query to verify communication with the database.
 
 > [!TIP]
-> Sqlcmd is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
+> `sqlcmd` is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
 
 ## Install the SQL Server command-line tools
 
-Sqlcmd is part of the SQL Server command-line tools, which are not installed automatically with SQL Server on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, select your Linux distribution from the following list:
+`sqlcmd` is part of the SQL Server command-line tools, which are not installed automatically with SQL Server on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, select your Linux distribution from the following list:
 
 - [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md#tools)
 - [Ubuntu](sql-server-linux-setup-ubuntu.md#tools)
@@ -48,16 +48,20 @@ The following steps show how to connect to SQL Server vNext on Linux with sqlcmd
 
 2. Run **sqlcmd** with parameters for your SQL Server instance name (-H), the user name (-U), and the password (-P). 
 
-    The following command connects to the local SQL Server instance (**localhost**) on Linux.
+   The following command connects to the local SQL Server instance (**localhost**) on Linux.
 
+        ```bash
         sqlcmd -H localhost -U SA -P password
+        ```
 
     > [!TIP]
     > You can omit the password on the command-line to be prompted to enter it manually.
 
     If you were connecting to a remote instance, specify the machine name or IP address for the **-H** parameter. 
 
+        ```bash
         sqlcmd -H 192.555.5.555 -U SA -P password
+        ```
 
     > [!TIP]
     > If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-connect-and-query.md#troubleshoot).
@@ -70,23 +74,31 @@ After you connect to your server, you can connect to a database and run a sample
 
 2. At the sqlcmd prompt, change the context to your target database. The following Transact-SQL statement changes the context to the **AdventureWorks** database.
 
-        USE AdventureWorks
+    ```transact-sql
+    USE AdventureWorks
+    ```
 
-3. On a new line type **GO**, and press enter.
+3. On a new line type `GO`, and press enter.
 
-        GO
+    ```transact-sql
+    GO
+    ```
 
 2. Next, write a Transact-SQL query to select data from one of the tables. You can press enter between lines of your query. The following example selects data from the **Production.Product** table of the **AdventureWorks** database.
 
-        SELECT TOP 10 Name, ProductNumber
-        FROM Production.Product
-        ORDER BY Name ASC
+    ```transact-sql
+    SELECT TOP 10 Name, ProductNumber
+    FROM Production.Product
+    ORDER BY Name ASC
+    ```
 
-3. Then type **GO** and press enter.
+3. Then type `GO` and press enter.
 
 4. The results output to the command window.
 
-	![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-sqlcmd/execute-query.png)
+    ```
+    ![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-sqlcmd/execute-query.png)
+    ```
 
 5. Type **exit** and press enter to quit sqlcmd. 
 

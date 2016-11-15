@@ -6,7 +6,7 @@ description:
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 11/10/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -25,11 +25,12 @@ ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ---
 # Export and import a database on Linux with SSMS
 
-[Restore a SQL Server database from Windows to Linux](sql-server-linux-migrate-restore-database.md) is the recommended method to migrate a database to SQL Server on Linux.
-
 This topic shows how to use [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) to export and import a database on SQL Server vNext CTP1 on Linux. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
 
 You should always install and use the most recent version of SQL Server Management Studio (SSMS) as described in [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md)
+
+> [!NOTE]
+> If you are migrating a database from one SQL Server instance to another, the recommendation is to use [Backup and restore](sql-server-linux-migrate-restore-database.md).
 
 ## Export a database with SSMS
 

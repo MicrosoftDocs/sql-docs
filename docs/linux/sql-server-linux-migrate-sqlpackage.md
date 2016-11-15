@@ -6,7 +6,7 @@ description:
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 11/14/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -25,8 +25,12 @@ ms.assetid: e239793b-e630-4110-81cc-19b1ef8bb8b0
 ---
 # Export and import a database on Linux with sqlpackage
 
-[Restore a SQL Server database from Windows to Linux](sql-server-linux-migrate-restore-database.md) is the recommended method to migrate a database to SQL Server on Linux.
+This topic shows how to the **sqlpackage** tool to export and import databases to SQL Server vNext CTP1 on Linux. 
 
+> [!NOTE]
+> If you are migrating a database from one SQL Server instance to another, the recommendation is to use [Backup and restore](sql-server-linux-migrate-restore-database.md).
+
+## Overview
 The sqlpackage command line utility can be used to perform a number of operations on databases such as:
 - export a database (database schema and user data) to a .bacpac file
 - import a database (database schema and/or user data) from a .bacpac file

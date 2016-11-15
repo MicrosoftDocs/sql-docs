@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Install SQL Server on Linux (Docker) | SQL Server vNext CTP1
+title: Run the SQL Server Docker image on Linux, Mac, or Windows - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/09/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -24,7 +24,7 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 # ms.custom: ""
 
 ---
-# Install SQL Server on Linux (Docker)
+# Run the SQL Server Docker image on Linux, Mac, or Windows
 
 This topic explains how to pull and run the mssql-server Docker image. This image can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
 

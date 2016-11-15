@@ -2,11 +2,11 @@
 # required metadata
 
 title: Troubleshoot SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
-description: 
-author: rothja 
-ms.author: jroth 
+description: Provides troubleshooting tips for using SQL Server vNext on Linux.
+author: annashres 
+ms.author: anshrest 
 manager: jhubbard
-ms.date: 11/03/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -24,18 +24,14 @@ ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 # ms.custom: ""
 ---
 # Troubleshoot SQL Server on Linux
-## Introduction
 
 This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, please make remember the limitations of this private preview release. You can find a list of these in the [Release Notes](sql-server-linux-release-notes.md).
 
-## Support
+## Manage the SQL Server service
 
-Support will be available through the community and monitored by the engineering team. 
-For specific questions head to [Stack Overflow](http://stackoverflow.com/), discussions will be on [reddit.com/r/sqlserver](www.reddit.com/r/sqlserver) and report bugs to [connect](http://connect.microsoft.com/)
+The following sections show how to start, stop, restart, and check the status of the SQL Server service. 
 
-## Managing the SQL Server Service (start, stop, restart, status)
-
-### Managing the mssql-server service in Red Hat Enterprise Linux (RHEL) and Ubuntu 
+### Manage the mssql-server service in Red Hat Enterprise Linux (RHEL) and Ubuntu 
 
 Check the status of the status of the SQL Server service using this command:
 
@@ -49,7 +45,7 @@ You can stop, start, or restart the SQL Server service as needed using the follo
     
     $ sudo systemctl restart mssql-server
 
-### Managing the execution of the mssql Docker container
+### Manage the execution of the mssql Docker container
 
 You can get the status and container ID of the latest created SQL Server Docker container by running the following command (The ID will be under the “CONTAINER ID” column):
 
@@ -68,8 +64,7 @@ You can run a new container by using the following command:
 > [!IMPORTANT]
 > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
 
-
-## Executing commands in a Docker container
+## Execute commands in a Docker container
 
 If you have a running Docker container, you can execute commands within the container from a host terminal.
 
@@ -86,7 +81,7 @@ Example of how you could read the contents of the error log in the terminal wind
 
     $ docker exec -ti d6b75213ef80 /bin/bash root@d6b75213ef80:/# cat /var/opt/mssql/log/errorlog
 
-### Copying files from a Docker container
+### Copy files from a Docker container
 
 To copy a file out of the container you could do something like this:
     
@@ -104,7 +99,7 @@ Example:
     
     $ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 
-## Accessing the Log Files
+## Access the log files
     
 The SQL Server engine logs to the /var/opt/mssql/log/errorlog file in both the Linux and Docker installations. You need to be in ‘superuser’ mode to browse this directory.
 
@@ -117,11 +112,11 @@ If you prefer, you can also convert the files to UTF-8 to read them with ‘more
     
     $ iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
 
-## Extended Events
+## Extended events
 
 Extended events can be queried via a SQL command.  More information about extended events can be found [here](https://technet.microsoft.com/en-us/library/bb630282.aspx):
 
-## SQL Server on Linux Crash Dumps 
+## Crash dumps 
 
 Look for dumps in the log directory in Linux. Check under the /var/opt/mssql/log directory for Linux Core dumps (.tar.gz2 extension) or SQL minidumps (.mdmp extension)
 
@@ -131,43 +126,49 @@ Looking for Core dumps
 Looking for SQL dumps 
     $ ls /var/opt/mssql/log | grep .mdmp 
 
-## Common Issues
+## Common issues
 
-1. Port 1433 conflicts when using the Docker image and SQL Server on Linux simultaneously
+1. You can not connect to your remote SQL Server instance.
 
- When trying to run the SQL Server Docker image in parallel to SQL Server running on Ubuntu, check for the port number that it is running under. If it tries to run on the same port number, it will throw the following error: “failed to create endpoint <container name> on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.” This can also happen when running two Docker containers under the same port number.
+    See the troubleshooting section of the topic, [Connect to SQL Server on Linux](sql-server-linux-connect-and-query.md#troubleshoot).
 
-2. ERROR: Hostname must be 15 characters or less
+2. Port 1433 conflicts when using the Docker image and SQL Server on Linux simultaneously.
 
- This is a known-issue that happens whenever the name of the machine that is trying to install the SQL Server Debian package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
+    When trying to run the SQL Server Docker image in parallel to SQL Server running on Ubuntu, check for the port number that it is running under. If it tries to run on the same port number, it will throw the following error: “failed to create endpoint <container name> on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.” This can also happen when running two Docker containers under the same port number.
 
-3. Resetting the system administration (SA) password
+3. ERROR: Hostname must be 15 characters or less.
 
- If you have forgotten the system administrator (SA) password or need to reset it for some other reason please follow these steps.
+    This is a known-issue that happens whenever the name of the machine that is trying to install the SQL Server Debian package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
 
- > [!NOTE]
- > Following these steps will stop the SQL Server service temporarily.
+4. Resetting the system administration (SA) password.
 
- Log into the host terminal, run the following commands and follow the prompts to reset the SA password:
+    If you have forgotten the system administrator (SA) password or need to reset it for some other reason please follow these steps.
+
+    > [!NOTE]
+    > Following these steps will stop the SQL Server service temporarily.
+
+    Log into the host terminal, run the following commands and follow the prompts to reset the SA password:
 
         $ systemctl stop mssql-server.service
         $ sudo /opt/mssql/bin/sqlservr-setup
         $ systemctl start mssql-server.service
 
-4. Using special characters in password
+5. Using special characters in password.
 
-If you use some characters in the SQL Server login password you may need to escape them when using them in the Linux terminal. You will need to escape the $ anytime using the backslash character you are using it in a terminal command/shell script:
+    If you use some characters in the SQL Server login password you may need to escape them when using them in the Linux terminal. You will need to escape the $ anytime using the backslash character you are using it in a terminal command/shell script:
 
-Does not work:
+    Does not work:
 
-    $ sqlcmd -S myserver -U sa -P Test$$
+        $ sqlcmd -S myserver -U sa -P Test$$
 
-Works:
+    Works:
 
-    $ sqlcmd -S myserver -U sa -P Test\$\$
+        $ sqlcmd -S myserver -U sa -P Test\$\$
 
-Resources:
+    Resources:
+    [Special characters](http://tldp.org/LDP/abs/html/special-chars.html)
+    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-[Special characters](http://tldp.org/LDP/abs/html/special-chars.html)
+## Support
 
-[Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+Support is available through the community and monitored by the engineering team. For specific questions head to [Stack Overflow](http://stackoverflow.com/), discuss  on [reddit.com/r/sqlserver](www.reddit.com/r/sqlserver), and report bugs to [connect](http://connect.microsoft.com/).

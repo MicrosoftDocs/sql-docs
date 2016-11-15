@@ -57,24 +57,26 @@ The following features and services are not available on Linux at this time. The
 | Area | Unsupported feature or service |
 |-----|-----|
 | **Database engine** | Full-text Search |
-| &nbsp; | Replication|
-| &nbsp; | Stretch DB|
-| &nbsp; | Polybase|
-| &nbsp; | Distributed Query|
+| &nbsp; | Replication |
+| &nbsp; | Stretch DB |
+| &nbsp; | Polybase |
+| &nbsp; | Distributed Query |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
-| &nbsp; | Filetable|
+| &nbsp; | Filetable |
 | **High Availability** | Always On Availability Groups |
-| &nbsp; | Database mirroring |
+| &nbsp; | Database mirroring  |
 | **Security** | Active Directory authentication |
 | &nbsp; | Windows Authentication |
+| &nbsp; | Extensible Key Management |
+| &nbsp; | Use of user-provided certificate for SSL or TWL |
 | **Services** | SQL Server Agent |
-| &nbsp; | SQL Server Browser|
-| &nbsp; | SQL Server R services|
-| &nbsp; | StreamInsight|
-| &nbsp; | Analysis Services|
-| &nbsp; | Reporting Services|
-| &nbsp; | Integration Services|
-| &nbsp; | Data Quality Services|
+| &nbsp; | SQL Server Browser |
+| &nbsp; | SQL Server R services |
+| &nbsp; | StreamInsight |
+| &nbsp; | Analysis Services |
+| &nbsp; | Reporting Services |
+| &nbsp; | Integration Services | 
+| &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
 
 ## Known issues

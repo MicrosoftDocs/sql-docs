@@ -35,7 +35,7 @@ If you do not already have a Linux machine, install Linux on a physical server o
 > One option is to create use a pre-configured Linux VM in Azure. In addition to OS-only VMs, there is also a VM image with SQL Server vNext CTP1 already installed. For more information, see [Provision a Linux VM in Azure for SQL Server](sql-server-linux-azure-virtual-machine.md). 
 
 ## 2: Install SQL Server
-Next, set up SQL Server vNext on your Linux machine using one of the following guides:
+Next, set up SQL Server vNext on your Linux machine, or run the Docker image, using one of the following guides:
 
 | Platform | Installation |
 |-----|-----|

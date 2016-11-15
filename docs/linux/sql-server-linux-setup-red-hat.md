@@ -35,9 +35,6 @@ To install the mssql-server Package on Red Hat, follow these steps:
 
         $ sudo su
 
-    > [!IMPORTANT]
-    > The following steps will change when we get ready to release. They will look something like this. There will be steps for importing the public keys and registering the repository before the apt-get update / apt-get install commands. 
-
 2. Download the Microsoft SQL Server Red Hat repository configuration file:
 
         $ curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo

@@ -49,7 +49,7 @@ The SQL Server engine version for this release is 14.0.1.246. Package details an
 |-----|-----|
 | [SQL Server Management Studio (SSMS) for Windows](https://msdn.microsoft.com/library/mt238290.aspx) | 17.0.1 |
 | [SQL Server Data Tools for Visual Studio](https://msdn.microsoft.com/library/mt204009.aspx) | 14.0.60203.0 |
-| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/vscodemssql) | Latest (0.1.5) |
+| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (0.1.5) |
 
 ## Unsupported features and services
 The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.

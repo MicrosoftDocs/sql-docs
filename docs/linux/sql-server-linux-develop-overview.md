@@ -60,7 +60,7 @@ See the following topics for more information:
 
 ## Use new SQL tools for Linux
 You can use the new [mssql extension](https://aka.ms/mssql-marketplace) for [Visual Studio Code](https://code.visualstudio.com) on Linux, macOS, and Windows. For a step-by-step walkthrough, see the following tutorial:
-- [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+- [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 
 You can also use new command-line tools that are native for Linux. These tools include the following:
 - [sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md)

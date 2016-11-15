@@ -2,11 +2,11 @@
 # required metadata
 
 title: Install SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
-description: 
+description: SQL Server vNext CTP1 now runs on Linux. This topic provides an overview on how to install SQL Server on Linux with links to the guides for specific platforms. 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/27/2016
+ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -42,8 +42,8 @@ SQL Server vNext CTP1 is supported on the following distributions:
 
 If you want to go straight to a step-by-step installation guide, select your Linux distribution from the following list: 
 > [!div class="op_single_selector"]
-- [Ubuntu](sql-server-linux-setup-ubuntu.md)
 - [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
+- [Ubuntu](sql-server-linux-setup-ubuntu.md)
 - [Docker](sql-server-linux-setup-docker.md)
 
 ## <a id="tools"> </a> Command-line tools and ODBC drivers
@@ -66,5 +66,3 @@ Use one of the following installation guides to install SQL Server on Linux:
 - [Install SQL Server on Linux (Docker)](sql-server-linux-setup-docker.md)
 
 After installation, connect to the SQL Server instance to begin creating and managing databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md).
-
-

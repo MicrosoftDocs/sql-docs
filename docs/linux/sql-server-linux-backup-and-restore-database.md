@@ -26,7 +26,7 @@ ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ---
 # Backup and restore SQL Server databases on Linux
 
-You can take backups of databases from SQL Server vNext CTP1 on Linux with the same tools as other platforms. On a Linux Server, you can use `sqlcmd` to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface.
+You can take backups of databases from SQL Server vNext CTP1 on Linux with the same tools as other platforms. On a Linux server, you can use `sqlcmd` to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface.
 
 ## Backup with sqlcmd
 
@@ -55,7 +55,7 @@ Processed 2 pages for database 'demodb', file 'demodb_log' on file 1.
 BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec).
 ```
 
-### Backup log with sqldmd
+### Backup log with sqlcmd
 
 In the following example, `sqlcmd` connects to the local SQL Server instance and takes a tail-log backup. After the tail-log backup completes, the database will be in a restoring state. 
 

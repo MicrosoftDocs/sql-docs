@@ -53,4 +53,4 @@ Standard high-availability and disaster recovery techniques provide instance-lev
 
 ## Summary
 
-SQL Server vNext CTP1 on Linux includes virtualization, backup and restore, and failover clusters to support high-availability and disaster recovery. Additional high-availability and disaster recovery technologies may be enabled in future releases.
+SQL Server vNext CTP1 on Linux includes virtualization, backup and restore, and failover clusters to support high-availability and disaster recovery. 

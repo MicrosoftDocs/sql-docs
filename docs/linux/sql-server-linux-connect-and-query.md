@@ -45,9 +45,13 @@ If you are having difficulty connecting to your Linux SQL Server instance, there
 - Verify that the server name or IP address is reachable from your client machine.
 
     > [!TIP]
-    > To find the IP address of your Linux machine, you can run the ifconfig command as in the following example.
+    > To find the IP address of your Ubuntu machine, you can run the ifconfig command as in the following example:
     >
-    >     ifconfig eth0 | grep 'inet'
+    >     ifconfig eth0 | grep 'inet addr'
+    >
+    > For Red Hat, you can use the ip addr as in the following example:
+    >
+    >     ip addr show eth0 | grep "inet"
     >
     > One exception to this technique relates to Azure VMs. For Azure VMs, find the public IP for the VM in the Azure portal.
 

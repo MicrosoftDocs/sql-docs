@@ -148,25 +148,15 @@ Looking for SQL dumps
  > [!NOTE]
  > Following these steps will stop the SQL Server service temporarily.
 
- Log into the host terminal and run the following commands:
+ Log into the host terminal, run the following commands and follow the prompts to reset the SA password:
 
         $ systemctl stop mssql-server.service
-        $ cd /var/opt/mssql
-        $ sudo chsh mssql -s /bin/bash
-        $ su mssql
-        $ /opt/mssql/bin/sqlservr --setup --sa-password <password>
-        $ exit
+        $ sudo /opt/mssql/bin/sqlservr-setup
         $ systemctl start mssql-server.service
 
 4. Using special characters in password
 
-If you use some characters in the SQL Server login password you may need to escape them when using them in the Linux terminal.
-
-For example, if you create your SA account password as follows:
-
-    $ sudo ACCEPT_EULA=Y MSSQL_SERVER_SA_PASSWORD=Test$$ apt-get install mssql-server -y
-
-You will need to escape the $ anytime using the backslash character you are using it in a terminal command/shell script:
+If you use some characters in the SQL Server login password you may need to escape them when using them in the Linux terminal. You will need to escape the $ anytime using the backslash character you are using it in a terminal command/shell script:
 
 Does not work:
 

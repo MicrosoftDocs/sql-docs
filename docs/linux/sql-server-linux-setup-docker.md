@@ -50,27 +50,20 @@ This topic explains how to pull and run the mssql-server Docker image. This imag
 5. Click the **Apply** button.
 
 ## Pull and run the Docker image
-1. Login to the preview Docker registry by using the credentials provided to you in the welcome email.
+1. Pull the Docker image from Docker Hub.
 
-        $ sudo docker login private-repo.microsoft.com
+        $ sudo docker pull microsoft/mssql-server-linux:latest
 
-2. You can now pull the Docker image from the Docker registry.
+2. To run the Docker image, you can use the following commands:
 
-        $ sudo docker pull private-repo.microsoft.com/mssql-private-preview/mssql-server:latest
+        $ sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=your_password_here" -p 1433:1433 -d microsoft/mssql-server-linux:latest
 
-3. To run the Docker image, you can use the following commands:
+3. To persist the data generated from your Docker container, you must map volume to the host machine. To do that, use the run command with the **-v \<host_folder\>:/var/opt/mssql** flag. This will allow the data to be restored between container executions.
 
-        $ sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=\<your_password_here\>" -p 1433:1433 -d private-repo.microsoft.com/mssql-private-preview/mssql-server:latest
-
-4. To persist the data generated from your Docker container, you must map volume to the host machine. To do that, use the run command with the **-v \<host_folder\>:/var/opt/mssql** flag. This will allow the data to be restored between container executions.
-
-        $ sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=\<your_password_here\>" -p 1433:1433 -v \<host folder\>:/var/opt/mssql -d private-repo.microsoft.com/mssql-private-preview/mssql- server:latest
+        $ sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=your_password_here" -p 1433:1433 -v \<host folder\>:/var/opt/mssql -d private-repo.microsoft.com/mssql-private-preview/mssql- server:latest
 
     > [!NOTE]
     > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image.
-
-## <a id="tools"></a> SQL Server command-line tools
-The Docker image for SQL Server vNext comes with the SQL Server command-line tools and ODBC drivers pre-installed. For more details on these tools, see [Command-line tools and ODBC drivers](sql-server-linux-setup.md#tools).
 
 ## Next steps
 

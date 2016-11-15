@@ -76,7 +76,8 @@ LinuxUser@linuxsqlvm2:~$ sqlcmd -H localhost -U SA -Q "RESTORE DATABASE [demodb]
 
 You can use SSMS from a Windows computer to connect to a Linux database and take a backup through the user-interface. 
 
->[!NOTE] Use the latest version of SSMS to connect to SQL Server. To download and install the latest version, see [Download SSMS](http://msdn.microsoft.com/library/mt238290.aspx). 
+>[!NOTE] 
+> Use the latest version of SSMS to connect to SQL Server. To download and install the latest version, see [Download SSMS](http://msdn.microsoft.com/library/mt238290.aspx). 
 
 The following steps walk through taking a backup with SSMS. 
 

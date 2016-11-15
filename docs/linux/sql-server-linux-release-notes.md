@@ -26,14 +26,22 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ---
 # Release notes for SQL Server on Linux
 The following release notes apply to SQL Server vNext CTP1 running on Linux. This release supports many of the SQL Server database engine features for Linux. See the information in the following sections for supported platforms, tools, features, and known issues.
+    - SQL Server Engine version: 14.0.1.246
+    - RPM package version: 14.0.1.246-6. 
+    - Debian package version: 14.0.1.246-6
 
-## Supported operating systems 
+Download the [mssql-server 14.0.1.246-6 Engine Debian package](https://preview.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.1.246-6_amd64.deb)
+Download the [mssql-server 14.0.1.246-6 High Availability Debian package](https://preview.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1.246-6_amd64.deb)
+Download the [mssql-server 14.0.1.246-6 Engine RPM package](https://preview.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.1.246-6.x86_64.rpm)
+Download the [mssql-server 14.0.1.246-6 High Availability RPM package](https://preview.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.1.246-6.x86_64.rpm)
 
-| Platform | File System |
-|-----|-----|
-| Ubuntu 16.04LTS | EXT4 |
-| Red Hat Enterprise Linux 7.2 Workstation, Server, and Desktop | XFS or EXT4 |
-| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A |
+## Supported platforms 
+
+| Platform | File System | Installation Guide |
+|-----|-----|-----|
+| Ubuntu 16.04LTS | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
+| Red Hat Enterprise Linux 7.2 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
+| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
 
 ## Supported client tools
 
@@ -41,10 +49,10 @@ The following release notes apply to SQL Server vNext CTP1 running on Linux. Thi
 |-----|-----|
 | [SQL Server Management Studio (SSMS) for Windows](https://msdn.microsoft.com/library/mt238290.aspx) | 13.0.11000.78 |
 | [SQL Server Data Tools for Visual Studio](https://msdn.microsoft.com/library/mt204009.aspx) | 14.0.60203.0 |
-| [Visual Studio Code](https://code.visualstudio.com) with the [vscode-mssql extension](https://aka.ms/vscodemssql) | Latest |
+| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/vscodemssql) | Latest (0.1.5) |
 
 ## Unsupported features and services
-The following features and services are not available on Linux at this time.
+The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.
 
 | Area | Unsupported feature or service |
 |-----|-----|
@@ -53,11 +61,9 @@ The following features and services are not available on Linux at this time.
 | &nbsp; | Stretch DB|
 | &nbsp; | Polybase|
 | &nbsp; | Distributed Query|
-| &nbsp; | Filestream|
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable|
 | **High Availability** | Always On Availability Groups |
-| &nbsp; | Clustering |
 | &nbsp; | Database mirroring |
 | **Security** | Active Directory authentication |
 | &nbsp; | Windows Authentication |
@@ -65,7 +71,6 @@ The following features and services are not available on Linux at this time.
 | &nbsp; | SQL Server Browser|
 | &nbsp; | SQL Server R services|
 | &nbsp; | StreamInsight|
-| &nbsp; | Business Intelligence Suite|
 | &nbsp; | Analysis Services|
 | &nbsp; | Reporting Services|
 | &nbsp; | Integration Services|
@@ -76,6 +81,10 @@ The following features and services are not available on Linux at this time.
 The following sections describe known issues with this release of SQL Server vNext CTP1 on Linux.
 
 ### General
+- The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
+
+    - **Resolution**: Change the name in /etc/hostname to something 15 characters long or less.
+
 - Manually setting the system time backwards in time will cause SQL Server to stop updating the internal system time within SQL Server.
 
     - **Resolution**: Restart SQL Server.
@@ -83,10 +92,6 @@ The following sections describe known issues with this release of SQL Server vNe
 - Some time zone names in Linux don’t map exactly to Windows time zone names.
 
     - **Resolution**: Use time zone names from TZID column in the ‘Mapping for: Windows’ section table on the [Unicode.org documentation page](http://www.unicode.org/cldr/charts/latest/supplemental/zone_tzid.html).
-
-- The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
-
-    - **Resolution**: Change the name in /etc/hostname to something 15 characters long or less.
 
 - SQL Server Engine expects lines in text files to be terminated with CR-LF (Windows-style line formatting).
 
@@ -98,8 +103,6 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
-- SQL Server Engine has only been tested up to 256GB of memory at this time.
-
 - **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now.
 
 ### Databases
@@ -107,10 +110,10 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - System databases can not be moved with the mssql-conf utility.
 
-- When restoring a database backed up on SQL Server on Linux, you must use the **WITH MOVE** clause in the Transact-SQL statement.
+- When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
 ### In-Memory OLTP
-- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. If you require more space than what is available at that location, one solution is to mount a drive under var/opt/mssql. 
+- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](https://stage.docs.microsoft.com/en-us/sql/linux/sql-server-linux-performance-get-started#use-in-memory-oltp).  
 
 ### SqlPackage
 - Using SqlPackage requires to specify an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 
@@ -128,7 +131,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 - SSMS UI components that have Windows Authentication or Windows event log options do not work with Linux. You can still use these features with other options, such as SQL logins. 
 
-- The SQL Server Agent only supports TSQL-based jobs. Agent functionality in SSMS which relies on other job types do not work on Linux.
+- The SQL Server Agent is not supported yet. Therefore, SQL Server Agent functionality in SSMS does not work on Linux at the moment.
 
 - The file browser is restricted to the  “C:\” scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\ paths with Linux paths. Then execute the script manually in SSMS.
 

@@ -3,8 +3,8 @@
 
 title: Configure SQL Server on Linux with mssql-conf | SQL Server vNext CTP1
 description: 
-author: rothja 
-ms.author: jroth 
+author: luisbosquez 
+ms.author: lbosq 
 manager: jhubbard
 ms.date: 11/10/2016
 ms.topic: article

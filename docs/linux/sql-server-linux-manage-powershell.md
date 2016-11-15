@@ -66,7 +66,7 @@ Script     0.0        SqlServer
 Let's use PowerShell on Windows to connect to your SQL Server vNext instance on Linux and display a couple of server properties.
 
 Copy and paste the commands below at the PowerShell prompt. When you run these commands, PowerShell will:
-- display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server vNect CTP1 instance on Linux
+- display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server vNext CTP1 instance on Linux
 - load the SQL Server Management Objects (SMO) assembly
 - create an instance of the [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) object
 - connect to the `Server` and display a few properties
@@ -104,7 +104,7 @@ HostDistribution : Ubuntu
 Let's use PowerShell on Windows to examine error logs connect on your SQL Server vNext instance on Linux. We will also use the `Out-GridView` cmdlet to show information from the error logs in a grid view display.
 
 Copy and paste the commands below at the PowerShell prompt. These commands may take a few minutes to run and do the following:
-- display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server vNect CTP1 instance on Linux
+- display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server vNext CTP1 instance on Linux
 - use the `Get-SqlErrorLog` cmdlet to connect to the SQL Server vNext instance on Linux and retrieve error logs since `yesterday`
 - pipe the output to the `Out-GridView` cmdlet
 

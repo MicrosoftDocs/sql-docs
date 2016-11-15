@@ -50,9 +50,9 @@ The following steps show how to connect to SQL Server vNext on Linux with sqlcmd
 
    The following command connects to the local SQL Server instance (**localhost**) on Linux.
 
-        ```bash
-        sqlcmd -H localhost -U SA -P password
-        ```
+    ```bash
+    sqlcmd -H localhost -U SA -P password
+    ```
 
     > [!TIP]
     > You can omit the password on the command-line to be prompted to enter it manually.
@@ -100,19 +100,23 @@ After you connect to your server, you can connect to a database and run a sample
     ![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-sqlcmd/execute-query.png)
     ```
 
-5. Type **exit** and press enter to quit sqlcmd. 
+5. Type `exit` and press enter to quit sqlcmd. 
 
 ## Run a Transact-SQL Script
 
 You can also use sqlcmd to run Transact-SQL script files. Use the following steps to run a script.
 
-1. In a Linux command terminal, use **vi** to create a new script file named sqlscript.sql.
+1. In a Linux command terminal, use `vi` to create a new script file named sqlscript.sql.
 
-        vi sqlscript.sql
+    ```bash
+    vi sqlscript.sql
+    ```
 
-2. In the **vi** editor, press **i** to enter INSERT mode.
+2. In the `vi` editor, press `i` to enter INSERT mode.
 
-        i
+    ```bash
+    i
+    ```
 
 3. Enter the same Transact-SQL commands from the previous example.
 

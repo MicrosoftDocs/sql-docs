@@ -46,7 +46,7 @@ When working with SQL Server, you should always use the most recent version of S
 
 ## Before you begin
 - See [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) for how to Connect and Query using SSMS
-- Read the [Known Issues](sql-server-linux-release-notes.ms) for SQL Server vNext CTP1 on Linux
+- Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server vNext CTP1 on Linux
 
 ## Create and manage databases
 While connected to the *master* database, you can create databases on the server and modify or drop existing databases. The following steps describe how to accomplish several common database management tasks through Management Studio. To perform these tasks, make sure you are connected to the *master* database with the server-level principal login that you created when you set up SQL Server vNext CTP1 on Linux.

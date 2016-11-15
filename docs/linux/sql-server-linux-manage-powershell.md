@@ -33,7 +33,7 @@ This topic introduces [SQL Server PowerShell](https://msdn.microsoft.com/en-us/l
 [SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server vNext CTP1 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
 
 ## Before you begin
-- Read the [Known Issues](sql-server-linux-release-notes.ms) for SQL Server vNext CTP1 on Linux.
+- Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server vNext CTP1 on Linux.
 
 ## Launch PowerShell and import the *sqlserver* module
 

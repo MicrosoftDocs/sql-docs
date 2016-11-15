@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Load data with SQL Server Integration Services (SSIS) - SQL Server vNext CTP1 | Microsoft Docs
+title: Extract, transform, and load data for SQL Server on Linux with SSIS - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 11/12/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -23,7 +23,7 @@ ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 # ms.custom: ""
 
 ---
-# Extract, Transform and Load data with SQL Server Integration Services (SSIS)
+# Extract, transform, and load data for SQL Server on Linux with SSIS
 
 This topic introduces [Microsoft SQL Server Integration Services (SSIS)](https://msdn.microsoft.com/library/ms141026.aspx) which is a platform for building high performance data integration solutions, including extraction, transformation, and load (ETL) packages for data warehousing and includes:
 - graphical tools and wizards for building and debugging packages

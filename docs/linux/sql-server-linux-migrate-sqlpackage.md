@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Export and Import a database with sqlpackage - SQL Server vNext CTP1 | Microsoft Docs
+title: Export and import a database on Linux with sqlpackage - SQL Server vNext CTP1 | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 11/10/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -23,7 +23,7 @@ ms.assetid: e239793b-e630-4110-81cc-19b1ef8bb8b0
 # ms.custom: ""
 
 ---
-# Export and Import a database with sqlpackage
+# Export and import a database on Linux with sqlpackage
 
 [Restore a SQL Server database from Windows to Linux](sql-server-linux-migrate-restore-database.md) is the recommended method to migrate a database to SQL Server on Linux.
 

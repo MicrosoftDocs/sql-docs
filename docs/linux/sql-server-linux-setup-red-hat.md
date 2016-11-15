@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install SQL Server on Red Hat Enterprise Linux - SQL Server vNext CTP1 | Microsoft Docs
-description: 
+description: Describes how to install SQL Server vNext CTP1 on Red Hat Enterprise Linux 7.2.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -39,7 +39,7 @@ To install the mssql-server Package on Red Hat, follow these steps:
 
         $ curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
 
-        This file contains the following repository settings:
+    This file contains the following repository settings:
 
         [packages-microsoft-com-mssql-server]
         name=packages-microsoft-com-mssql-server

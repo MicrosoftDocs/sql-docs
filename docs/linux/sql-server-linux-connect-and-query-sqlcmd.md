@@ -31,11 +31,11 @@ This topic shows how to use [sqlcmd](https://msdn.microsoft.com/library/ms162773
 After successfully connecting, you run a simple Transact-SQL (T-SQL) query to verify communication with the database.
 
 > [!TIP]
-> `sqlcmd` is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
+> **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
 
 ## Install the SQL Server command-line tools
 
-`sqlcmd` is part of the SQL Server command-line tools, which are not installed automatically with SQL Server on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, select your Linux distribution from the following list:
+**Sqlcmd** is part of the SQL Server command-line tools, which are not installed automatically with SQL Server on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, select your Linux distribution from the following list:
 
 - [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md#tools)
 - [Ubuntu](sql-server-linux-setup-ubuntu.md#tools)
@@ -59,9 +59,9 @@ The following steps show how to connect to SQL Server vNext on Linux with sqlcmd
 
     If you were connecting to a remote instance, specify the machine name or IP address for the **-H** parameter. 
 
-        ```bash
-        sqlcmd -H 192.555.5.555 -U SA -P password
-        ```
+    ```bash
+    sqlcmd -H 192.555.5.555 -U SA -P password
+    ```
 
     > [!TIP]
     > If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-connect-and-query.md#troubleshoot).
@@ -74,25 +74,26 @@ After you connect to your server, you can connect to a database and run a sample
 
 2. At the sqlcmd prompt, change the context to your target database. The following Transact-SQL statement changes the context to the **AdventureWorks** database.
 
-    ```transact-sql
+    ```sql
     USE AdventureWorks
     ```
 
 3. On a new line type `GO`, and press enter.
 
-    ```transact-sql
+    ```sql
     GO
     ```
 
 2. Next, write a Transact-SQL query to select data from one of the tables. You can press enter between lines of your query. The following example selects data from the **Production.Product** table of the **AdventureWorks** database.
-
-    ```transact-sql
+    
+    ```sql
     SELECT TOP 10 Name, ProductNumber
     FROM Production.Product
     ORDER BY Name ASC
     ```
 
 3. Then type `GO` and press enter.
+
 
 4. The results output to the command window.
 
@@ -120,23 +121,29 @@ You can also use sqlcmd to run Transact-SQL script files. Use the following step
 
 3. Enter the same Transact-SQL commands from the previous example.
 
-        USE AdventureWorks
-        GO
+    ```sql
+    USE AdventureWorks
+    GO
+    
+    SELECT TOP 10 Name, ProductNumber
+    FROM Production.Product
+    ORDER BY Name ASC
+    ```sql
 
-        SELECT TOP 10 Name, ProductNumber
-        FROM Production.Product
-        ORDER BY Name ASC
-
-4. Press the Escape key to exit INSERT mode.
+4. Press the **Escape** key to exit INSERT mode.
 
 5. Press **:x** to save and exit **vi**.
 
-        :x
+    ```bash
+    :x
+    ```
 
 6. At the prompt, run sqlcmd with the sqlscript.sql file as an input file.
 
-        sqlcmd -H localhost -U SA -P password -i sqlscript.sql
-
+    ```bash
+    sqlcmd -H localhost -U SA -P password -i sqlscript.sql
+    ```
+    
 7. You should see 10 rows returned in the output window. Instead of staying at the sqlcmd prompt, you return immediately to the terminal prompt.
 
 > [!NOTE]

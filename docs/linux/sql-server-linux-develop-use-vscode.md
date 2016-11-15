@@ -24,9 +24,9 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 # ms.custom: ""
 
 ---
-# Use the Visual Studio Code with SQL Server on Linux
+# Use the mssql extension for Visual Studio Code
 
-This topic shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server vNext CTP1 databases on Linux.
+This topic shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server databases.
 
 Visual Studio Code is a graphical code editor for Linux, Mac OS, and Windows that supports extensions. The [**mssql** extension for VS Code] enables you to connect to SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
@@ -82,7 +82,7 @@ The **mssql** extension enables mssql commands and T-SQL IntelliSense in the edi
 
 ## Connect to SQL Server
 
-The following steps show how to connect to SQL Server vNext on Linux with VS Code.
+The following steps show how to connect to SQL Server with VS Code.
 
 1. In VS Code, press **CTRL+SHIFT+P** (or **F1**) to open the Command Palette.
 

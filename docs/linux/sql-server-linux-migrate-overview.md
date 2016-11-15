@@ -36,7 +36,7 @@ If you want to migrate SQL Server databases on Windows to SQL Server vNext on Li
 
 For a tutorial on migrating a database with backup and restore, see the following topic:
 
-- [Restore a SQL Server database from Windows to Linux](sql-server-linux-restore-database.md).
+- [Restore a SQL Server database from Windows to Linux](sql-server-linux-migrate-restore-database.md).
 
 It is also possible to export your database to a BACPAC file (a compressed file that contains your database schema and data). If you have a BACPAC file, you can transfer this file to your Linux machine and then import it to SQL Server. For more information, see the following topics:
 

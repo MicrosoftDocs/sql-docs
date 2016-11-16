@@ -80,7 +80,9 @@ If you are running Linux in an Azure virtual machine (VM), you must also create 
 
 4. Create a Network Security Group rule. For step-by-step instructions, use the steps in [Create rules in an existing NSG](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal#create-rules-in-an-existing-nsg). These provide the steps for creating an NSG rule, but you must customize your rule for incoming TCP traffic on port 1433. This is shown in the following screenshot.
 
+    ```
     ![SQL Server network security group rule](./media/sql-server-linux-connect-and-query/network-security-rule.png)
-
+    ```
+    
 ## Next Steps
 See the walkthrough for [how to connect and query using sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).

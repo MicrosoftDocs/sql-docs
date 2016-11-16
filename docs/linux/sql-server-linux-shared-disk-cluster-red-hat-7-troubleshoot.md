@@ -25,7 +25,7 @@ ms.assetid: 158f6861-d551-4753-b1c9-2b62e2901d67
 
 # Troubleshoot Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
 
-It may help troubleshoot the cluster to understand the three daemons work together cluster resources.
+In troubleshooting the cluster it may help to understand how the three daemons work together to manage cluster resources. 
 
 | Daemon | Description 
 | ----- | -----
@@ -33,7 +33,7 @@ It may help troubleshoot the cluster to understand the three daemons work togeth
 | Pacemaker | Resides on top of Corosync and provides state machines for resources. 
 | PCSD | Manages both Pacemaker and Corosync through the `pcs` tools
 
-PCSD must be running in order to use `pcs`. 
+PCSD must be running in order to use `pcs` tools. 
 
 ### Current cluster status 
 

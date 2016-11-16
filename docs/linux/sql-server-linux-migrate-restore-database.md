@@ -33,7 +33,7 @@ SQL Server's backup and restore feature is the recommended way to migrate a data
 - Restore the database using Transact-SQL commands
 
 > [!NOTE] 
-> This tutorial assumes that you have installed SQL Server vNext CTP1 and the SQL Server Tools on your target Linux server. If you have not done this, see [Install SQL Server on Linux](sql-server-linux-setup.md).
+> This tutorial assumes that you have installed [SQL Server vNext CTP1](sql-server-linux-setup.md) and the [SQL Server Tools](sql-server-linux-setup-tools.md) on your target Linux server.
 
 ## Download the AdventureWorks database backup
 
@@ -144,4 +144,4 @@ To restore the backup, you can use the RESTORE DATABASE Transact-SQL (TQL) comma
 
 ## Next steps
 
-For more information on SQL Server vNext running on Linux, see [SQL Server on Linux overview](sql-server-linux-overview.md). 
+For more information on other database and data migration techniques, see [Migrate databases to SQL Server on Linux](sql-server-linux-migrate-overview.md). 

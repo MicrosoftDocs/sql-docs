@@ -50,21 +50,21 @@ The following steps show how to connect to SQL Server vNext on Linux with sqlcmd
 
    The following command connects to the local SQL Server instance (**localhost**) on Linux.
 
-    ```bash
-    sqlcmd -H localhost -U SA -P password
-    ```
+   ```bash
+   sqlcmd -H localhost -U SA -P password
+   ```
 
-    > [!TIP]
-    > You can omit the password on the command-line to be prompted to enter it manually.
+   > [!TIP]
+   > You can omit the password on the command-line to be prompted to enter it manually.
 
-    If you were connecting to a remote instance, specify the machine name or IP address for the **-H** parameter. 
+   If you were connecting to a remote instance, specify the machine name or IP address for the **-H** parameter. 
 
-    ```bash
-    sqlcmd -H 192.555.5.555 -U SA -P password
-    ```
+   ```bash
+   sqlcmd -H 192.555.5.555 -U SA -P password
+   ```
 
-    > [!TIP]
-    > If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-connect-and-query.md#troubleshoot).
+   > [!TIP]
+   > If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-connect-and-query.md#troubleshoot).
 
 ## Run sample queries
 
@@ -74,30 +74,30 @@ After you connect to your server, you can connect to a database and run a sample
 
 2. At the sqlcmd prompt, change the context to your target database. The following Transact-SQL statement changes the context to the **AdventureWorks** database.
 
-    ```sql
-    USE AdventureWorks
-    ```
+   ```sql
+   USE AdventureWorks
+   ```
 
 3. On a new line type `GO`, and press enter.
 
-    ```sql
-    GO
-    ```
+   ```sql
+   GO
+   ```
 
 2. Next, write a Transact-SQL query to select data from one of the tables. You can press enter between lines of your query. The following example selects data from the **Production.Product** table of the **AdventureWorks** database.
-    
-    ```sql
-    SELECT TOP 10 Name, ProductNumber
-    FROM Production.Product
-    ORDER BY Name ASC
-    ```
+   
+   ```sql
+   SELECT TOP 10 Name, ProductNumber
+   FROM Production.Product
+   ORDER BY Name ASC
+   ```
 
 3. Then type `GO` and press enter.
 
 
 4. The results output to the command window.
 
-    ![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-sqlcmd/execute-query.png)
+   ![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-sqlcmd/execute-query.png)
 
 5. Type `exit` and press enter to quit sqlcmd. 
 
@@ -107,41 +107,41 @@ You can also use sqlcmd to run Transact-SQL script files. Use the following step
 
 1. In a Linux command terminal, use `vi` to create a new script file named sqlscript.sql.
 
-    ```bash
-    vi sqlscript.sql
-    ```
+   ```bash
+   vi sqlscript.sql
+   ```
 
 2. In the `vi` editor, press `i` to enter INSERT mode.
 
-    ```bash
-    i
-    ```
+   ```bash
+   i
+   ```
 
 3. Enter the same Transact-SQL commands from the previous example.
 
-    ```sql 
-    USE AdventureWorks
-    GO
-    
-    SELECT TOP 10 Name, ProductNumber
-    FROM Production.Product
-    ORDER BY Name ASC
-    ```sql
+   ```sql 
+   USE AdventureWorks
+   GO
+   
+   SELECT TOP 10 Name, ProductNumber
+   FROM Production.Product
+   ORDER BY Name ASC
+   ```sql
 
 4. Press the **Escape** key to exit INSERT mode.
 
 5. Press **:x** to save and exit **vi**.
 
-    ```bash
-    :x
-    ```
+   ```bash
+   :x
+   ```
 
 6. At the prompt, run sqlcmd with the sqlscript.sql file as an input file.
 
-    ```bash
-    sqlcmd -H localhost -U SA -P password -i sqlscript.sql
-    ```
-    
+   ```bash
+   sqlcmd -H localhost -U SA -P password -i sqlscript.sql
+   ```
+   
 7. You should see 10 rows returned in the output window. Instead of staying at the sqlcmd prompt, you return immediately to the terminal prompt.
 
 > [!NOTE]

@@ -35,60 +35,60 @@ The following steps install the command-line tools, Microsoft ODBC drivers, and 
 
 1. Enter superuser mode.
 
-    ```
-    sudo su
-    ```
+   ```
+   sudo su
+   ```
 1. Download the Microsoft Red Hat repository configuration file.
 
-    ```bash
-    curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
-    ```
+   ```bash
+   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   ```
 
 1. Exit superuser mode.
 
-    ```bash
-    exit
-    ```
+   ```bash
+   exit
+   ```
 
 1. Run the following commands to install mssql-tools.
 
-    ```bash
-    sudo yum install mssql-tools
-    ```
+   ```bash
+   sudo yum install mssql-tools
+   ```
 
 
 ## Install tools on Ubuntu
 
 1. Enter superuser mode.
 
-    ```bash
-    sudo su
-    ```
+   ```bash
+   sudo su
+   ```
 
 1. Import the public repository GPG keys:
 
-    ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-    ```
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+   ```
 
 1. Register the Microsoft Ubuntu repository:
 
-    ```bash
-    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/msprod.list
-    ```
+   ```bash
+   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/msprod.list
+   ```
 
 1. Exit superuser mode:
 
-    ```bash
-    exit
-    ```
+   ```bash
+   exit
+   ```
 
 1. Update the sources list and run the installation command:
 
-    ```bash
-    sudo apt-get update 
-    sudo apt-get install mssql-tools
-    ```
+   ```bash
+   sudo apt-get update 
+   sudo apt-get install mssql-tools
+   ```
 
 
 ## Next steps

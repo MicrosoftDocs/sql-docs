@@ -97,9 +97,7 @@ After you connect to your server, you can connect to a database and run a sample
 
 4. The results output to the command window.
 
-    ```
     ![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-sqlcmd/execute-query.png)
-    ```
 
 5. Type `exit` and press enter to quit sqlcmd. 
 

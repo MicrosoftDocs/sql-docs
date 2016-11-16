@@ -23,18 +23,18 @@ ms.assetid: 2b5aa551-3ad7-4f0d-b69b-4fe692dbbcee
 # ms.tgt_pltfrm: ""
 # ms.custom: ""
 ---
-# Connect to SQL Server on Linux
+# Connect to SQL Server on Linux remotely
 
 This topic provides connection requirements and guidance for SQL Server vNext CTP1 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. But this topic approaches the subject in the context of Linux and then points to other resources.
 
 ## Connection requirements
-To connect to SQL Server on Linux, you must use SQL Authentication (username and password). To connect remotely, you must ensure that the port SQL Server listens on is open. The default instance of SQL Server listens on TCP port 1433. Depending on your Linux distribution and configuration, you might have to open this port in the firewall. 
+To connect to SQL Server on Linux, you must use SQL Authentication (username and password). To connect remotely, you must ensure that the port SQL Server listens on is open. By default, SQL Server listens on TCP port 1433. Depending on your Linux distribution and configuration, you might have to open this port in the firewall. 
 
 ## Tools
-You can connect to SQL Server using a client tool or through code. For example, the following command uses the **sqlcmd** tool to connect to the local SQL Server instance and return a list of database names. 
+You can connect to SQL Server using a client tool or through code. For example, the following command uses the **sqlcmd** tool to connect to the local SQL Server and return a list of database names. 
 
 ```bash
-sqlcmd -H localhost -U SA -P password -Q "SELECT Name from sys.Databases"
+sqlcmd -H <localhost | SQL Server IP Address> -U SA -P <YourPassword> -Q "SELECT Name from sys.Databases"
 ```
 
 For a complete example of connecting and querying, see [Connect and query SQL Server on Linux with sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).
@@ -42,7 +42,7 @@ For a complete example of connecting and querying, see [Connect and query SQL Se
 For examples of how to connect with other tools, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
 
 ## <a id="troubleshoot"></a> Troubleshoot connection failures
-If you are having difficulty connecting to your Linux SQL Server instance, there are a few things to check. 
+If you are having difficulty connecting to your Linux SQL Server, there are a few things to check. 
 
 - Verify that the server name or IP address is reachable from your client machine.
 
@@ -80,9 +80,7 @@ If you are running Linux in an Azure virtual machine (VM), you must also create 
 
 4. Create a Network Security Group rule. For step-by-step instructions, use the steps in [Create rules in an existing NSG](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal#create-rules-in-an-existing-nsg). These provide the steps for creating an NSG rule, but you must customize your rule for incoming TCP traffic on port 1433. This is shown in the following screenshot.
 
-    ```
-    ![SQL Server network security group rule](./media/sql-server-linux-connect-and-query/network-security-rule.png)
-    ```
+![SQL Server network security group rule](./media/sql-server-linux-connect-and-query/network-security-rule.png)
     
 ## Next Steps
 See the walkthrough for [how to connect and query using sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).

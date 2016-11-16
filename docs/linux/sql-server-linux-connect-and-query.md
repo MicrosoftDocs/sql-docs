@@ -54,7 +54,7 @@ If you are having difficulty connecting to your Linux SQL Server instance, there
     >    ```
     > For Red Hat, you can use the ip addr as in the following example:
     >
-    >    ```
+    >    ```bash
     >    ip addr show eth0 | grep "inet"
     >    ```
     > One exception to this technique relates to Azure VMs. For Azure VMs, find the public IP for the VM in the Azure portal.

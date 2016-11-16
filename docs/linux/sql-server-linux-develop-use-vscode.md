@@ -28,7 +28,7 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 
 This topic shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server databases.
 
-Visual Studio Code is a graphical code editor for Linux, Mac OS, and Windows that supports extensions. The [**mssql** extension for VS Code] enables you to connect to SQL Server, query with Transact-SQL (T-SQL), and view the results.
+Visual Studio Code is a graphical code editor for Linux, macOS, and Windows that supports extensions. The [**mssql** extension for VS Code] enables you to connect to SQL Server, query with Transact-SQL (T-SQL), and view the results.
 
 ## Install VS Code
 1. If you have not already installed VS Code, [Download and install VS Code] on your machine.
@@ -42,7 +42,7 @@ The following steps explain how to install the mssql extension.
 
 2. Select **Install Extension** and type **mssql**.
    > [!TIP] 
-   > For Mac OS, the **CMD** key is equivalent to **CTRL** key on Linux and Windows.
+   > For macOS, the **CMD** key is equivalent to **CTRL** key on Linux and Windows.
 
 2. Click install **mssql**. 
    
@@ -56,7 +56,7 @@ The following steps explain how to install the mssql extension.
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 550px;"/>
 
    > [!NOTE]
-   > For Mac OS, you must install OpenSSL. This is a pre-requisite for .Net Core used by the mssql extension. Follow the **install pre-requisite** steps in the [.Net Core instructions]. Or, you can run the following commands in your Mac OS Terminal.
+   > For macOS, you must install OpenSSL. This is a pre-requisite for .Net Core used by the mssql extension. Follow the **install pre-requisite** steps in the [.Net Core instructions]. Or, you can run the following commands in your macOS Terminal.
    >
    >   ```bash
    >   brew update
@@ -181,7 +181,7 @@ The following steps show how to connect to SQL Server with VS Code.
    -- Create the table in the specified schema
    CREATE TABLE dbo.Employees
    (
-      EmployeeId        INT    NOT NULL   PRIMARY KEY, -- primary key column
+      EmployeesId        INT    NOT NULL   PRIMARY KEY, -- primary key column
       Name      [NVARCHAR](50)  NOT NULL,
       Location   [NVARCHAR](50)  NOT NULL
    );

@@ -10,7 +10,7 @@ ms.date: 11/15/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
-ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
+ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 
 # optional metadata
 
@@ -24,7 +24,7 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 # ms.custom: ""
 
 ---
-# Install the tools
+# Install SQL Server tools on Linux
 
 The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The mssql-tools package contains:
 

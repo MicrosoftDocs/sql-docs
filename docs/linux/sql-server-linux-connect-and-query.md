@@ -33,7 +33,9 @@ To connect to SQL Server on Linux, you must use SQL Authentication (username and
 ## Tools
 You can connect to SQL Server using a client tool or through code. For example, the following command uses the **sqlcmd** tool to connect to the local SQL Server instance and return a list of database names. 
 
-    sqlcmd -H localhost -U SA -P password -Q "SELECT Name from sys.Databases"
+```bash
+sqlcmd -H localhost -U SA -P password -Q "SELECT Name from sys.Databases"
+```
 
 For a complete example of connecting and querying, see [Connect and query SQL Server on Linux with sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).
 
@@ -47,12 +49,14 @@ If you are having difficulty connecting to your Linux SQL Server instance, there
     > [!TIP]
     > To find the IP address of your Ubuntu machine, you can run the ifconfig command as in the following example:
     >
-    >     ifconfig eth0 | grep 'inet addr'
-    >
+    >    ```bash
+    >    ifconfig eth0 | grep 'inet addr'
+    >    ```
     > For Red Hat, you can use the ip addr as in the following example:
     >
-    >     ip addr show eth0 | grep "inet"
-    >
+    >    ```bash
+    >    ip addr show eth0 | grep "inet"
+    >    ```
     > One exception to this technique relates to Azure VMs. For Azure VMs, find the public IP for the VM in the Azure portal.
 
 - If applicable, check that you have opened the SQL Server port (default 1433) on the firewall.
@@ -76,7 +80,9 @@ If you are running Linux in an Azure virtual machine (VM), you must also create 
 
 4. Create a Network Security Group rule. For step-by-step instructions, use the steps in [Create rules in an existing NSG](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal#create-rules-in-an-existing-nsg). These provide the steps for creating an NSG rule, but you must customize your rule for incoming TCP traffic on port 1433. This is shown in the following screenshot.
 
+    ```
     ![SQL Server network security group rule](./media/sql-server-linux-connect-and-query/network-security-rule.png)
-
+    ```
+    
 ## Next Steps
 See the walkthrough for [how to connect and query using sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).

@@ -121,7 +121,7 @@ You can also use sqlcmd to run Transact-SQL script files. Use the following step
 
 3. Enter the same Transact-SQL commands from the previous example.
 
-    ```sql
+    ```sql 
     USE AdventureWorks
     GO
     
@@ -149,7 +149,9 @@ You can also use sqlcmd to run Transact-SQL script files. Use the following step
 > [!NOTE]
 > You can also send the output to a file with the **-o** parameter.
 >
-> **sqlcmd -H localhost -U SA -P password -i sqlscript.sql -o output.txt**
+> ```bash
+> sqlcmd -H localhost -U SA -P password -i sqlscript.sql -o output.txt
+> ```
 
 # Next Steps
 

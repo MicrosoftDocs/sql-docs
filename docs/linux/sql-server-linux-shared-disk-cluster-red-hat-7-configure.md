@@ -189,17 +189,13 @@ Do the following steps on all cluster nodes.
 
 1. Repeat these steps on all cluster nodes.
 
-### Mount database files directory to point to the shared storage
-
-
-
 For additional information about using NFS, see the following resources:
 
 * [NFS servers and firewalld | Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Mounting an NFS Volume | Linux Network Administrators Guide](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [Set up NFS Server on CentOS 7 and Configure Client Automount | lisenet](http://www.lisenet.com/2016/setup-nfs-server-on-centos-7-and-configure-client-automount/)
 
-### Move database files
+### Mount database files directory to point to the shared storage
 
 1.  **On the primary node only**, save the database files to a temporary location. 
 

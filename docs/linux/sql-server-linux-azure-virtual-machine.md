@@ -36,7 +36,7 @@ Open the [Azure portal](https://portal.azure.com/).
 
 3. Click **See All** next to the **Featured Apps** heading.
 
-    ![See all VM images](./media/sql-server-linux-azure-virtual-machine/azure-compute-blade.png)
+   ![See all VM images](./media/sql-server-linux-azure-virtual-machine/azure-compute-blade.png)
 
 4. Select **SQL Server vNext on Red Hat Enterprise Linux 7.2**
 
@@ -46,30 +46,30 @@ Open the [Azure portal](https://portal.azure.com/).
 
 1. Connect to the Linux virtual machine you just created. The public IP address of your VM is displayed in the properties for your VM in the Azure portal.
 
-    > [!TIP]
-    > If you're not sure how to connect, see the section of this Azure tutorial that explains [how to use SSH](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-quick-create-portal#ssh-to-the-vm). There is also information at the end of this article on how to use [Putty/SSH](#putty) for a Windows client.  
+   > [!TIP]
+   > If you're not sure how to connect, see the section of this Azure tutorial that explains [how to use SSH](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-quick-create-portal#ssh-to-the-vm). There is also information at the end of this article on how to use [Putty/SSH](#putty) for a Windows client.  
 
 2. Navigate to the SQL Server directory
 
-    ```bash
-    cd /opt/mssql/bin
-    ```
-    
+   ```bash
+   cd /opt/mssql/bin
+   ```
+   
 3. Setup SQL Server
 
-    ```bash
-    sudo ./sqlservr-setup 
-    ```
-    
-    Accept the License and enter a password for the system administrator account. You can start the server when prompted.
+   ```bash
+   sudo ./sqlservr-setup 
+   ```
+   
+   Accept the License and enter a password for the system administrator account. You can start the server when prompted.
 
-    > [!NOTE] 
-    > The firewall on the VM is already open but you need to open it at the azure level. There is information on how to do this [here](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-nsg-quickstart-portal).
+   > [!NOTE] 
+   > The firewall on the VM is already open but you need to open it at the azure level. There is information on how to do this [here](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-nsg-quickstart-portal).
 
 4. Install SQL Server Tools using the instructions [here](sql-server-linux-setup-red-hat.md#tools).
 
 5. Connect to your localhost with your SA username and password. For more information, see [Connect and query SQL Server on Linux with sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).
-    
+   
 ## <a id="putty"></a> Connect to a Linux VM using SSH/Putty from a Windows PC
 
 PuTTY is a SSH client for Linux that you can run on your Windows PC.

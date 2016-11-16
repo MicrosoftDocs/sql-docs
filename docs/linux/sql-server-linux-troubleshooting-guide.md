@@ -171,7 +171,7 @@ Looking for SQL dumps
 
 1. You can not connect to your remote SQL Server instance.
 
-    See the troubleshooting section of the topic, [Connect to SQL Server on Linux](sql-server-linux-connect-and-query.md#connection).
+    See the troubleshooting section of the topic, [Connect to SQL Server on Linux](#connection).
 
 2. Port 1433 conflicts when using the Docker image and SQL Server on Linux simultaneously.
 

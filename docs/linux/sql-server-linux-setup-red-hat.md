@@ -77,5 +77,5 @@ To install the mssql-server package on RHEL, follow these steps:
 
 - [Install tools](sql-server-linux-setup-tools.md#RHEL)
 
-- If you already have SQL Server tools, [connect to the SQL Server](sql-server-linux-connect-and-query-sqlcmd.md#RHEL).
+- If you already have SQL Server tools, [connect to the SQL Server](sql-server-linux-connect-and-query-sqlcmd.md).
 

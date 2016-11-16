@@ -213,4 +213,4 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 ## Next Steps
 
-[Configure Red Hat Enterprise Linux 7.0 shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
+[Configure Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)

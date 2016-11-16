@@ -31,12 +31,12 @@ The following release notes apply to SQL Server vNext CTP1 running on Linux. Thi
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Ubuntu 16.04LTS | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
 | Red Hat Enterprise Linux 7.2 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
+| Ubuntu 16.04LTS | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
 
 ## Package details
-The SQL Server engine version for this release is 14.0.1.246. Package details and download locatins for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).
+The SQL Server engine version for this release is 14.0.1.246. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).
 
 | Package | Version | Downloads |
 |-----|-----|-----|
@@ -48,7 +48,7 @@ The SQL Server engine version for this release is 14.0.1.246. Package details an
 | Tool | Minimum version |
 |-----|-----|
 | [SQL Server Management Studio (SSMS) for Windows](https://msdn.microsoft.com/library/mt238290.aspx) | 17.0.1 |
-| [SQL Server Data Tools for Visual Studio](https://msdn.microsoft.com/library/mt204009.aspx) | 14.0.60203.0 |
+| [SQL Server Data Tools for Visual Studio](https://msdn.microsoft.com/library/mt204009.aspx) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (0.1.5) |
 
 ## Unsupported features and services

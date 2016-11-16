@@ -41,32 +41,32 @@ The following steps explain how to install the mssql extension.
 1. Press **CTRL+SHIFT+P** (or **F1**) to open the Command Palette in VS Code. 
 
 2. Select **Install Extension** and type **mssql**.
-    > [!TIP] 
-    > For Mac OS, the **CMD** key is equivalent to **CTRL** key on Linux and Windows.
+   > [!TIP] 
+   > For Mac OS, the **CMD** key is equivalent to **CTRL** key on Linux and Windows.
 
 2. Click install **mssql**. 
-    
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 350px;"/>
+   
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 350px;"/>
 
-    > [!NOTE]
-    > Unlike **mssql**, **vscode-mssql** is a prototype version that will retire from the extension Marketplace soon. If you have already installed the vscode-mssql extension, please remove it.
+   > [!NOTE]
+   > Unlike **mssql**, **vscode-mssql** is a prototype version that will retire from the extension Marketplace soon. If you have already installed the vscode-mssql extension, please remove it.
 
 3. The **mssql** extension takes up to one minute to install. Wait for the prompt that tells you it successfully installed.
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 550px;"/>
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 550px;"/>
 
-    > [!NOTE]
-    > For Mac OS, you must install OpenSSL. This is a pre-requisite for .Net Core used by the mssql extension. Follow the **install pre-requisite** steps in the [.Net Core instructions]. Or, you can run the following commands in your Mac OS Terminal.
-    >
-    >    ```bash
-    >    brew update
-    >    brew install openssl
-    >    ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-    >    ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-    >    ```
-    
-    > [!NOTE]
-    > For Windows 8.1, Windows Server 2012 or lower versions, you must download and install the [Windows 10 Universal C Runtime]. Download and open the zip file. Then run the installer (.msu file) targeting your current OS configuration.
+   > [!NOTE]
+   > For Mac OS, you must install OpenSSL. This is a pre-requisite for .Net Core used by the mssql extension. Follow the **install pre-requisite** steps in the [.Net Core instructions]. Or, you can run the following commands in your Mac OS Terminal.
+   >
+   >   ```bash
+   >   brew update
+   >   brew install openssl
+   >   ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
+   >   ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
+   >   ```
+   
+   > [!NOTE]
+   > For Windows 8.1, Windows Server 2012 or lower versions, you must download and install the [Windows 10 Universal C Runtime]. Download and open the zip file. Then run the installer (.msu file) targeting your current OS configuration.
 
 ## Create or open a SQL file
 
@@ -76,7 +76,7 @@ The **mssql** extension enables mssql commands and T-SQL IntelliSense in the edi
 
 2. Press **CTRL+K,M** and change the language mode to **SQL**. 
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png" alt="SQL language mode" style="width: 350px;" />
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png" alt="SQL language mode" style="width: 350px;" />
 
 3. Alternatively, open an existing file with .sql file extension. The language mode is automatically **SQL** for files that have the .sql extension.  
 
@@ -88,7 +88,7 @@ The following steps show how to connect to SQL Server with VS Code.
 
 2. Type **sql** to display the mssql commands.
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-commands.png" alt="mssql commands" style="width: 480px;" />
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-commands.png" alt="mssql commands" style="width: 480px;" />
    
 
 3. Select the **MS SQL: Connect** command. You can simply type **sqlcon** and press **ENTER**.
@@ -97,7 +97,7 @@ The following steps show how to connect to SQL Server with VS Code.
 
 5. Follow the prompts to specify the connection properties for the new connection profile. After specifying each value, press **ENTER** to continue. 
 
-    The following table describes the Connection Profile properties.
+   The following table describes the Connection Profile properties.
 
    | Setting | Description |
    |-----|-----|
@@ -108,13 +108,13 @@ The following steps show how to connect to SQL Server with VS Code.
    | **Save Password?** | Type **Yes** to save the password. Otherwise, type **No** to be prompted for the password each time the Connection Profile is used. |
    | **[Optional] Enter a name for this profile** | The Connection Profile name. For example, you could name the profile **localhost profile**. 
 
-    > [!Tip] 
-    > You can create and edit connection profiles in User Settings file (settings.json). Open the settings file by selecting **Preference** and then **User Settings** in the VS Code menu. For more details, see [manage connection profiles].
+   > [!Tip] 
+   > You can create and edit connection profiles in User Settings file (settings.json). Open the settings file by selecting **Preference** and then **User Settings** in the VS Code menu. For more details, see [manage connection profiles].
 
 6. Press the **ESC** key to close the info message that informs you that the profile is created and connected.
 
-    > [!TIP]
-    > If you get a connection failure, first attempt to diagnose the problem from the error message in the **Output** panel in VS Code (select **Output** on the **View** menu). Then review the [connection troubleshooting recommendations].
+   > [!TIP]
+   > If you get a connection failure, first attempt to diagnose the problem from the error message in the **Output** panel in VS Code (select **Output** on the **View** menu). Then review the [connection troubleshooting recommendations].
 
 7. Verify your connection in the status bar.
 
@@ -130,24 +130,24 @@ The following steps show how to connect to SQL Server with VS Code.
 
 3. In the snippet, type **TutorialDB** for the database name.
 
-    ```sql
-    USE master
-    GO
-    IF NOT EXISTS (
-        SELECT name
-        FROM sys.databases
-        WHERE name = N'TutorialDB'
-    )
-    CREATE DATABASE [TutorialDB]
-    GO
-    ```
-    
+   ```sql
+   USE master
+   GO
+   IF NOT EXISTS (
+      SELECT name
+      FROM sys.databases
+      WHERE name = N'TutorialDB'
+   )
+   CREATE DATABASE [TutorialDB]
+   GO
+   ```
+   
 4. Press **CTRL+SHIFT+E** to execute the Transact-SQL commands. View the results in the query window.
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png" alt="create database messages" style="width: 480px;" />
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png" alt="create database messages" style="width: 480px;" />
 
-    > [!TIP]
-    > You can customize shortcut key bindings for the mssql extension commands. See [customize shortcuts].
+   > [!TIP]
+   > You can customize shortcut key bindings for the mssql extension commands. See [customize shortcuts].
 
 ## Create a table
 
@@ -159,7 +159,7 @@ The following steps show how to connect to SQL Server with VS Code.
 
 4. Click **MS SQL:Use Database**, and select the **TutorialDB** database. This changes the context to the new database created in the previous section.
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-use-database.png" alt="use database" style="width: 480px;" />
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-use-database.png" alt="use database" style="width: 480px;" />
 
 3. In the editor, type **sql** to display the snippets, and then select **sqlCreateTable** and press **enter**.
 
@@ -167,26 +167,26 @@ The following steps show how to connect to SQL Server with VS Code.
 
 5. Press **Tab**, and then type **dbo** for the schema name.
 
-    > [!NOTE]
-    > After adding the snippet, you must type the table and schema names without changing focus away from the VS Code editor.
+   > [!NOTE]
+   > After adding the snippet, you must type the table and schema names without changing focus away from the VS Code editor.
 
 6. Change the column name for **Column1** to **Name** and **Column2** to **Location**.
 
-    ```sql
-    -- Create a new table called 'Employees' in schema 'dbo'
-    -- Drop the table if it already exists
-    IF OBJECT_ID('dbo.Employees', 'U') IS NOT NULL
-    DROP TABLE dbo.Employees
-    GO
-    -- Create the table in the specified schema
-    CREATE TABLE dbo.Employees
-    (
-        EmployeeId          INT     NOT NULL    PRIMARY KEY, -- primary key column
-        Name        [NVARCHAR](50)  NOT NULL,
-        Location    [NVARCHAR](50)  NOT NULL
-    );
-    GO
-    ```
+   ```sql
+   -- Create a new table called 'Employees' in schema 'dbo'
+   -- Drop the table if it already exists
+   IF OBJECT_ID('dbo.Employees', 'U') IS NOT NULL
+   DROP TABLE dbo.Employees
+   GO
+   -- Create the table in the specified schema
+   CREATE TABLE dbo.Employees
+   (
+      EmployeeId        INT    NOT NULL   PRIMARY KEY, -- primary key column
+      Name      [NVARCHAR](50)  NOT NULL,
+      Location   [NVARCHAR](50)  NOT NULL
+   );
+   GO
+   ```
 
 7. Press **CTRL+SHIFT+E** to create the table.
 
@@ -194,55 +194,55 @@ The following steps show how to connect to SQL Server with VS Code.
 
 1. Add the following statements to insert four rows into the **Employees** table. Then select all the rows.
 
-    ```sql
-    -- Insert rows into table 'Employees'
-    INSERT INTO Employees
-        ([EmployeesId],[Name],[Location])
-    VALUES
-        ( 1, N'Jared', N'Australia'),
-        ( 2, N'Nikita', N'India'),
-        ( 3, N'Tom', N'Germany'),
-        ( 4, N'Jake', N'United States')   
-    GO    
-    -- Query the total count of employees
-    SELECT COUNT(*) as EmployeeCount FROM dbo.Employees;
-    -- Query all employee information
-    SELECT e.EmployeesId, e.Name, e.Location 
-    FROM dbo.Employees as e
-    GO
-    ```
+   ```sql
+   -- Insert rows into table 'Employees'
+   INSERT INTO Employees
+      ([EmployeesId],[Name],[Location])
+   VALUES
+      ( 1, N'Jared', N'Australia'),
+      ( 2, N'Nikita', N'India'),
+      ( 3, N'Tom', N'Germany'),
+      ( 4, N'Jake', N'United States')   
+   GO   
+   -- Query the total count of employees
+   SELECT COUNT(*) as EmployeeCount FROM dbo.Employees;
+   -- Query all employee information
+   SELECT e.EmployeesId, e.Name, e.Location 
+   FROM dbo.Employees as e
+   GO
+   ```
 
-    > [!TIP]
-    > While you type, use the assistance of the T-SQL IntelliSense.
-    >    <img src="./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png" alt="TSQL IntelliSense" style="width: 480px;" />
+   > [!TIP]
+   > While you type, use the assistance of the T-SQL IntelliSense.
+   >   <img src="./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png" alt="TSQL IntelliSense" style="width: 480px;" />
 
 2. Press **CTRL+SHIFT+E** to execute the commands. The two result sets display in the **Results** window. 
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png" alt="Results" style="width: 300px;" />
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png" alt="Results" style="width: 300px;" />
 
 ## View and save the result
 
 1. On the **View** menu, select **Toggle Editor Group Layout** to switch to vertical or horizontal split layout.
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-split.png" alt="Vertical split" style="width: 480px;" />
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-split.png" alt="Vertical split" style="width: 480px;" />
 
 2. Click the **Results** and **Messages** panel header to collapse and expand the panel.
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png" alt="Toggle Messages" style="width: 480px;" />
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png" alt="Toggle Messages" style="width: 480px;" />
 
-    > [!TIP]
-    > You can customize the default behavior of the mssql extension. See [customize extension options].
+   > [!TIP]
+   > You can customize the default behavior of the mssql extension. See [customize extension options].
 
 2. Click the maximize grid icon on the second result grid to zoom in.
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png" alt="Maximize grid" style="width: 480px;" />
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png" alt="Maximize grid" style="width: 480px;" />
 
-    > [!NOTE]
-    > The maximize icon displays when your T-SQL script has two or more result grids.
+   > [!NOTE]
+   > The maximize icon displays when your T-SQL script has two or more result grids.
 
 3. Open the grid context menu with the right mouse button on a grid. 
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png" alt="Context menu" style="width: 480px;" />
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png" alt="Context menu" style="width: 480px;" />
 
 4. Select **Save All**.
 
@@ -252,7 +252,7 @@ The following steps show how to connect to SQL Server with VS Code.
 
 7. Verify that the JSON file is saved and opened in VS Code.
 
-    <img src="./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png" alt="Save as Json" style="width: 480px;" />
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png" alt="Save as Json" style="width: 480px;" />
 
 ## Next steps
 

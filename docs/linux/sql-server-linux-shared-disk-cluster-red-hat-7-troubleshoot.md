@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 11/08/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux 
 ms.technology: database-engine
@@ -37,7 +37,7 @@ PCSD must be running in order to use `pcs` tools.
 
 ### Current cluster status 
 
-`# pcs status` returns basic information about the cluster, quorum, nodes, resources, and daemon status for each node. 
+`sudo pcs status` returns basic information about the cluster, quorum, nodes, resources, and daemon status for each node. 
 
 An example of a healthy pacemaker quorum output would be:
 

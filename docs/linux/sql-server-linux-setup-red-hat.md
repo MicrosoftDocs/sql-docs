@@ -38,44 +38,44 @@ To install the mssql-server package on RHEL, follow these steps:
 
 2. Download the Microsoft SQL Server Red Hat repository configuration file:
 
-    ```bash
-    curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
-    ```
-    
+   ```bash
+   curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
+   ```
+   
 3. Exit superuser mode.
 
-    ```bash
-    exit
-    ```
+   ```bash
+   exit
+   ```
 
 4. Run the following commands to install SQL Server:
 
-    ```bash
-    sudo yum install -y mssql-server
-    ```
-    
+   ```bash
+   sudo yum install -y mssql-server
+   ```
+   
 5. After the package installation finishes, run the configuration script and follow the prompts.
 
-    ```bash
-    sudo /opt/mssql/bin/sqlservr-setup
-    ```
+   ```bash
+   sudo /opt/mssql/bin/sqlservr-setup
+   ```
 
 6. Once the configuration is done, verify that the service is running:
 
-    ```bash
-    systemctl status mssql-server
-    ```
-    
+   ```bash
+   systemctl status mssql-server
+   ```
+   
 7. You may need to open a port on the firewall on RHEL.  If you are using firewalld as your firewall you can use these commands.
 
-    ```bash
-    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
-    sudo firewall-cmd --reload
-    ```
+   ```bash
+   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
+   sudo firewall-cmd --reload
+   ```
 
 ## Next steps
 
-- [Install tools](sql-server-linux-setup-tools.md)
+- [Install tools](sql-server-linux-setup-tools.md#RHEL)
 
 - If you already have SQL Server tools, [connect to the SQL Server](sql-server-linux-connect-and-query.md).
 

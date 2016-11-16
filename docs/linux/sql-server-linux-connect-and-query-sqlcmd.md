@@ -48,7 +48,8 @@ To connect to SQL Server on Linux, you must use SQL Authentication (username and
 
 In the following steps, connect to SQL Server vNext on Linux with sqlcmd.
 
->[!TIP] On macOS, use [sql-cli](https://www.npmjs.com/package/sql-cli) because sqlcmd and bcp are not available.
+> [!TIP] 
+> On macOS, use [sql-cli](https://www.npmjs.com/package/sql-cli) because sqlcmd and bcp are not available.
 
 1. On your Linux box, open a command terminal.
 

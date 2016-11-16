@@ -42,7 +42,7 @@ Open the [Azure portal](https://portal.azure.com/).
 
 5. Click **Create** and fill in the settings.
 
-## <a id="putty"></a> Connect to the VM using SSH/Putty
+## <a id="putty"></a> Connect to the VM using SSH/PuTTY
 
 If you already use a BASH shell, connect to the Azure VM using the **ssh** command. In the following command, replace the VM user name and IP address to connect to your Linux VM. You can find the IP address of your VM in the Azure portal.   
 

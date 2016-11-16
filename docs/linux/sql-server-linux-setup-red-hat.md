@@ -32,9 +32,9 @@ To install the mssql-server package on RHEL, follow these steps:
 
 1. Enter superuser mode.
 
-    ```bash
-    sudo su
-    ```
+   ```bash
+   sudo su
+   ```
 
 2. Download the Microsoft SQL Server Red Hat repository configuration file:
 
@@ -44,8 +44,8 @@ To install the mssql-server package on RHEL, follow these steps:
     
 3. Exit superuser mode.
 
-     ```bash
-     exit
+    ```bash
+    exit
     ```
 
 4. Run the following commands to install SQL Server:

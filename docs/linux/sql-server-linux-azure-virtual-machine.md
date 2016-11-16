@@ -32,22 +32,39 @@ Open the [Azure portal](https://portal.azure.com/).
 
 1. Click **New** on the left.
 
-2. In the **New** blade, click **Virtual Machines**
+2. In the **New** blade, click **Compute**
 
 3. Click **See All** next to the **Featured Apps** heading.
 
    ![See all VM images](./media/sql-server-linux-azure-virtual-machine/azure-compute-blade.png)
 
-4. Select **SQL Server vNext on Red Hat Enterprise Linux 7.2**
+4. Select **SQL Server vNext on Red Hat Enterprise Linux 7.2**.
 
-5. Click **Create** and fill in the settings
+5. Click **Create** and fill in the settings.
+
+## <a id="putty"></a> Connect to the VM using SSH/PuTTY
+
+If you already use a BASH shell, connect to the Azure VM using the **ssh** command. In the following command, replace the VM user name and IP address to connect to your Linux VM. You can find the IP address of your VM in the Azure portal.   
+
+```bash
+ssh -l AzureAdmin 100.55.555.555
+```
+
+If you are running on Windows and do not have a BASH shell, you can install an SSH client, such as PuTTY.
+
+1. [Download and install PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+
+2. Run PuTTY.
+
+3. On the PuTTY configuration screen enter your VM's public IP address.
+
+4. Click Open and enter your username and password at the prompts.
+
+For more information about connecting to Linux VMs, see [Create a Linux VM on Azure using the Portal](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-quick-create-portal#ssh-to-the-vm).
 
 ## Configure SQL Server on the VM
 
-1. Connect to the Linux virtual machine you just created. The public IP address of your VM is displayed in the properties for your VM in the Azure portal.
-
-   > [!TIP]
-   > If you're not sure how to connect, see the section of this Azure tutorial that explains [how to use SSH](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-quick-create-portal#ssh-to-the-vm). There is also information at the end of this article on how to use [Putty/SSH](#putty) for a Windows client.  
+1. After connecting to your Linux VM, open a new command terminal.
 
 2. Navigate to the SQL Server directory
 
@@ -70,17 +87,5 @@ Open the [Azure portal](https://portal.azure.com/).
 
 5. Connect to your localhost with your SA username and password. For more information, see [Connect and query SQL Server on Linux with sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).
    
-## <a id="putty"></a> Connect to a Linux VM using SSH/Putty from a Windows PC
-
-PuTTY is a SSH client for Linux that you can run on your Windows PC.
-
-1. Download and instlal PuTTY from [here](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
-
-2. Run PuTTY.
-
-3. On the PuTTY configuration screen enter your VM's public IP address.
-
-4. Click Open and enter your username and password at the prompts.
-
 ## Resources
 For more information about Linux virtual machines in Azure, see the [Linux Virtual Machine Documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/).

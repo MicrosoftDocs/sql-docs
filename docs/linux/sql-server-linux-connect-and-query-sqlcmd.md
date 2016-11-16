@@ -26,9 +26,9 @@ ms.assetid: 9e6c1ae1-59a4-4589-b839-18d6a52f2676
 ---
 # Connect and query SQL Server on Linux with sqlcmd
 
-This topic provides connection requirements and guidance for SQL Server vNext CTP1 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. This topic approaches the subject in the context of Linux and then points to other resources.
+This topic provides connection requirements and guidance for SQL Server vNext CTP1 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. This topic approaches the subject in the context of Linux and then points to other resources. 
 
-This topic shows how to use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext on Linux. After successfully connecting, run a simple Transact-SQL (T-SQL) query to verify communication with the database.
+This topic is a walk-through. In this walk-through, you will use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext on Linux. After successfully connecting, you will use Transact-SQL (T-SQL) queries to create and populate a small database.
 
 > [!TIP]
 > **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
@@ -45,7 +45,7 @@ To connect to SQL Server on Linux, you must use SQL Authentication (username and
 
 ## Connect to SQL Server on Linux
 
-The following steps show how to connect to SQL Server vNext on Linux with sqlcmd.
+In the following steps, connect to SQL Server vNext on Linux with sqlcmd.
 
 1. On your Linux box, open a command terminal.
 
@@ -71,7 +71,17 @@ The following steps show how to connect to SQL Server vNext on Linux with sqlcmd
 
 ## Query SQL Server
 
-After you connect to your server, run some queries. If you are new to writing queries, see [Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx).
+After you connect to SQL Server you can run queries to return information or create database objects. If you are new to writing queries, see [Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx). In the following steps, you will use sqlcmd to:
+
+1. Query SQL Server for a list of the databases.
+
+1. Use Transact SQL to create a database.
+
+1. Create and populate a table in the new database. 
+
+1. Query the table.
+
+To to complete each of these tasks, copy the Transact-SQL from the examples below into the sqlcmd session that you created in the previous step. 
 
 For example, this query returns the name of all of the databases.
 
@@ -80,7 +90,7 @@ SELECT Name from sys.Databases;
 GO
 ```
 
-This query creates a database using the SQL Server default settings.
+Create a database using the SQL Server default settings.
 
 ```sql
 CREATE DATABASE testdb;
@@ -121,7 +131,8 @@ To end your sqlcmd session, type `QUIT`.
 ```sql
 QUIT
 ```
-In this walk-through you connected to SQL Server, and created and populated a database. For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).
+
+In this walk-through you connected to SQL Server with sqlcmd, and created and populated a database. For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).
 
 ## Next Steps
 

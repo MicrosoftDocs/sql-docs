@@ -31,7 +31,12 @@ The following steps install the command-line tools, Microsoft ODBC drivers, and 
 * sqlcmd: Command-line query utility.
 * bcp: Bulk import-export utility.
 
-## Install tools on RHEL
+Install the tools for your platform.
+
+* [RHEL](#RHEL)
+* [Ubuntu](#ubuntu)
+
+## <a name="RHEL">Install tools on RHEL</a>
 
 1. Enter superuser mode.
 
@@ -57,7 +62,7 @@ The following steps install the command-line tools, Microsoft ODBC drivers, and 
    ```
 
 
-## Install tools on Ubuntu
+## <a name="ubuntu">Install tools on Ubuntu</a>
 
 1. Enter superuser mode.
 

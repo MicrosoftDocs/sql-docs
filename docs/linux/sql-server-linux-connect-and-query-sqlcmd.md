@@ -35,10 +35,10 @@ After successfully connecting, you run a simple Transact-SQL (T-SQL) query to ve
 
 ## Install the SQL Server command-line tools
 
-**Sqlcmd** is part of the SQL Server command-line tools, which are not installed automatically with SQL Server on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, select your Linux distribution from the following list:
+**Sqlcmd** is part of the SQL Server command-line tools, which are not installed automatically with SQL Server on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, follow the instructions for your Linux distribution at [Install SQL Server tools on Linux](sql-server-linux-setup-tools.md)
 
-- [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md#tools)
-- [Ubuntu](sql-server-linux-setup-ubuntu.md#tools)
+- [Red Hat Enterprise Linux](sql-server-linux-setup-tools.md#RHEL)
+- [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
 
 ## Connect to SQL Server on Linux
 

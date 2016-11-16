@@ -52,26 +52,27 @@ This topic explains how to pull and run the mssql-server Docker image. This imag
 ## Pull and run the Docker image
 1. Pull the Docker image from Docker Hub.
 
-   ```bash
-   sudo docker pull microsoft/mssql-server-linux
-   ```
+    ```bash
+    sudo docker pull microsoft/mssql-server-linux
+    ```
 
 2. To run the Docker image, you can use the following commands:
 
-   ```
-   docker run –e 'ACCEPT_EULA=Y' –e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
-   ```
+    ```
+    docker run –e 'ACCEPT_EULA=Y' –e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
+    ```
 
 3. To persist the data generated from your Docker container, you must map volume to the host machine. To do that, use the run command with the **-v \<host directory\>:/var/opt/mssql** flag. This will allow the data to be restored between container executions.
 
-Volume mapping for Docker on Mac is not supported.
+    > [!NOTE]
+    > Volume mapping for Docker-machine on Mac with the SQL Server on Linux image is not supported at this time.
 
-   ```
-   sudo docker run –e 'ACCEPT_EULA=Y' –e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
-   ```
+    ```
+    sudo docker run –e 'ACCEPT_EULA=Y' –e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+    ```
 
-   > [!NOTE]
-   > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image.
+    > [!NOTE]
+    > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image.
 
 ## Next steps
 

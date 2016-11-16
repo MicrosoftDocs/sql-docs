@@ -66,7 +66,7 @@ To install the mssql-server package on RHEL, follow these steps:
    systemctl status mssql-server
    ```
    
-7. You may need to open a port on the firewall on RHEL.  If you are using firewalld as your firewall you can use these commands.
+7. You may need to open a port on the firewall on RHEL.  If you are using **FirewallD** for your firewall, you can use the following commands.
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent

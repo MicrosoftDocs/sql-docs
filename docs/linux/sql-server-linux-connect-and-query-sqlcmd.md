@@ -71,7 +71,7 @@ In the following steps, connect to SQL Server vNext on Linux with sqlcmd.
    ```
 
    > [!TIP]
-   > If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md).
+   > If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection).
 
 ## Query SQL Server
 

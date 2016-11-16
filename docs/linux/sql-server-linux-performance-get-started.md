@@ -86,14 +86,18 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
 
 2. When a transaction involves both a disk-based table and a memory-optimized table, it’s essential that the memory-optimized portion of the transaction operate at the transaction isolation level named SNAPSHOT.  To reliably enforce this level for memory-optimized tables in a cross-container transaction, execute the following:
 
+   ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
+   ```
 
 3. Before you can create a memory-optimized table you must first create a Memory Optimized FILEGROUP and a container for data files:
 
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
-   GO
-   ALTER DATABASE AdventureWorks ADD FILE (NAME='AdventureWorks_mod', FILENAME='c:\data\AdventureWorks_mod') TO FILEGROUP AdventureWorks_mod
+   ```
+   
+   ```sql   
+   ALTER DATABASE AdventureWorks ADD FILE (NAME='AdventureWorks_mod', FILENAME='c:\var\opt\mssql\data\AdventureWorks_mod') TO FILEGROUP AdventureWorks_mod
    ```
 
 ### Create a Memory-Optimized Table

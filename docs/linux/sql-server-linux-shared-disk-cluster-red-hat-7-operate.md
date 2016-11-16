@@ -49,15 +49,15 @@ For more details on cluster configuration, resource agents options, and manageme
 The `resource move` command creates a constraint forcing the resource to remain on the target node.  After executing the `move` command, executing resource `clear` will remove the constraint so it is possible to move the resource again or have the resource automatically fail over. 
 
 ```bash
-# pcs resource move <sqlResourceName> <targetNodeName>  
-# pcs resource clear <sqlResourceName> 
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource clear <sqlResourceName> 
 ```
 
 The following example moves the **mssql** resource to a node named **vm2**, and then removes the constraint so that the resource can move to a different node later.  
 
 ```bash
-# pcs resource move mssql vm2 
-# pcs resource clear mssql 
+sudo pcs resource move mssql vm2 
+sudo pcs resource clear mssql 
 ```
 
 ## Monitor a failover cluster SQL Server service
@@ -65,13 +65,13 @@ The following example moves the **mssql** resource to a node named **vm2**, and 
 View the current cluster status:
 
 ```bash
-# pcs status  
+sudo pcs status  
 ```
 
 View live status of cluster and resources:
 
 ```bash
-# crm_mon 
+sudo crm_mon 
 ```
 
 View the resource agent logs at `/var/log/cluster/corosync.log`
@@ -81,26 +81,26 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
 1. Check the IP address for each node. The following script shows the IP address of your current node. 
 
    ```bash
-   # ip addr show
+   ip addr show
    ```
 
 3. The new node needs a unique name that is 15 characters or less. By default in Red Hat Linux the computer name is `localhost.localdomain`. This default name may not be unique and is too long. Set the computer name the new node. Set the computer name by adding it to `/etc/hosts`. The following script lets you edit `/etc/hosts` with `vi`. 
 
-    ```bash
-   # vi /etc/hosts
-    ```
+   ```bash
+   sudo vi /etc/hosts
+   ```
 
    The following example shows `/etc/hosts` with additions for three nodes named `sqlfcivm1`, `sqlfcivm2`, and`sqlfcivm3`.
 
-    ```
-    127.0.0.1   localhost localhost4 localhost4.localdomain4
-    ::1         localhost localhost6 localhost6.localdomain6
-    10.128.18.128 fcivm1
-    10.128.16.77 fcivm2
-    10.128.14.26 fcivm3
+   ```
+   127.0.0.1   localhost localhost4 localhost4.localdomain4
+   ::1         localhost localhost6 localhost6.localdomain6
+   10.128.18.128 fcivm1
+   10.128.16.77 fcivm2
+   10.128.14.26 fcivm3
     ```
     
-    The file should be the same on every node. 
+   The file should be the same on every node. 
 
 1. Stop the SQL Server service on the new node.
 
@@ -108,19 +108,20 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
 
 1. Create a file that contains credentials for mounting the share. The file needs to identify the username, password and domain as follows:
 
-    ```bash
-    username=<username>
-    password=<password>
-    domain=<domain>
-    ```
+   ```bash
+   username=<username>
+   password=<password>
+   domain=<domain>
+   ```
 
-    For example, the credential file may contain the following values:
+   For example, the credential file may contain the following values:
 
     ```bash
-    username=sqlfci
-    password=KD(YE8e937!0008x
-    domain=CORP
-    ```
+   username=sqlfci
+   password=KD(YE8e937!0008x
+   domain=CORP
+   ```
+
 6.  Get the SQL Server user ID (uid), and group ID (gid). To get the SQL Server uid and gid, run the following command **from the primary node**.
 
     ```bash
@@ -192,15 +193,15 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
 1. On an existing node from the cluster, authenticate the new node and add it to the cluster:
 
     ```bash
-    # pcs cluster auth <nodeName3> -u hacluster 
-    # pcs cluster node add <nodeName3> 
+    sudo pcs    cluster auth <nodeName3> -u hacluster 
+    sudo pcs    cluster node add <nodeName3> 
     ```
 
     The following example ads a node named **vm3** to the cluster.
 
     ```bash
-    # pcs cluster auth  
-    # pcs cluster start 
+    sudo pcs    cluster auth  
+    sudo pcs    cluster start 
     ```
 
 ## Remove nodes from a cluster
@@ -208,19 +209,19 @@ View the resource agent logs at `/var/log/cluster/corosync.log`
 To remove a  node from a cluster run the following command:
 
 ```bash
-# pcs cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## Change the frequency of sqlservr resource monitoring interval
 
 ```bash
-# pcs resource op monitor interval=<interval>s <sqlResourceName> 
+sudo pcs    resource op monitor interval=<interval>s <sqlResourceName> 
 ```
 
 The following example sets the monitoring interval to 2 seconds for the mssql resource:
 
 ```bash
-# pcs resource op monitor interval=2s mssql 
+sudo pcs    resource op monitor interval=2s mssql 
 ```
 
 ## Next Steps

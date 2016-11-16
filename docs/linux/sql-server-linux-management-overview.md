@@ -43,3 +43,4 @@ PowerShell provides a rich command-line environment to manage SQL Server on Linu
 ## Next steps
 For more information on how to get started using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
 
+

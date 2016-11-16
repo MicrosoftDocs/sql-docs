@@ -6,7 +6,7 @@ description: This topic describes the different options for migrating databases 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/14/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

@@ -6,7 +6,7 @@ description: SQL Server vNext CTP1 now runs on Linux. This topic provides an ove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/15/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

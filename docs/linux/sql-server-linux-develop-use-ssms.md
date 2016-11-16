@@ -6,7 +6,7 @@ description: This tutorial shows how to use SQL Server Management Studio on Wind
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/12/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

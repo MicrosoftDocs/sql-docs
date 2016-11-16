@@ -6,7 +6,7 @@ description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/15/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -39,6 +39,7 @@ This topic is a walk-through. In this walk-through, you will use [sqlcmd](https:
 
 - [Red Hat Enterprise Linux](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
+- [MacOS](sql-server-linux-setup-tools.md#macos)
 
 ## Connection requirements
 To connect to SQL Server on Linux, you must use SQL Authentication (username and password). To connect remotely, you must ensure that the port SQL Server listens on is open. By default, SQL Server listens on TCP port 1433. Depending on your Linux distribution and configuration, you might have to open this port in the firewall. 
@@ -46,6 +47,8 @@ To connect to SQL Server on Linux, you must use SQL Authentication (username and
 ## Connect to SQL Server on Linux
 
 In the following steps, connect to SQL Server vNext on Linux with sqlcmd.
+
+>[!TIP] On macOS, use [sql-cli](https://www.npmjs.com/package/sql-cli) because sqlcmd and bcp are not available.
 
 1. On your Linux box, open a command terminal.
 

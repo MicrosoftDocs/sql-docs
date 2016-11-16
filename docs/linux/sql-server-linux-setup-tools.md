@@ -6,7 +6,7 @@ description: Describes how to install SQL Server vNext CTP1 on Red Hat Enterpris
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/15/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -35,6 +35,7 @@ Install the tools for your platform.
 
 * [RHEL](#RHEL)
 * [Ubuntu](#ubuntu)
+* [macOS](#macos)
 
 ## <a name="RHEL">Install tools on RHEL</a>
 
@@ -95,6 +96,11 @@ Install the tools for your platform.
    sudo apt-get install mssql-tools
    ```
 
+## <a name="macos">Install tools on macOS</a>
+
+Sqlcmd and bcp are not available on macOS. 
+
+Use sql-cli from macOS. For more information, see [sql-cli](https://www.npmjs.com/package/sql-cli).  
 
 ## Next steps
 

@@ -6,7 +6,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/15/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -68,7 +68,7 @@ The following features and services are not available on Linux at this time. The
 | **Security** | Active Directory authentication |
 | &nbsp; | Windows Authentication |
 | &nbsp; | Extensible Key Management |
-| &nbsp; | Use of user-provided certificate for SSL or TWL |
+| &nbsp; | Use of user-provided certificate for SSL or TLS |
 | **Services** | SQL Server Agent |
 | &nbsp; | SQL Server Browser |
 | &nbsp; | SQL Server R services |

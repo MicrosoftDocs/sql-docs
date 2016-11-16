@@ -44,4 +44,4 @@ SQL Server vNext CTP1 is supported on the following platforms:
 
 ## Next steps
 
-After installation, connect to the SQL Server instance to begin creating and managing databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md).
+After installation, connect to the SQL Server instance to begin creating and managing databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query-sqlcmd.md).

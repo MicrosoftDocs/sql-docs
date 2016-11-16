@@ -78,4 +78,4 @@ To install the mssql-server Package on Ubuntu, follow these steps:
 
 - [Install tools](sql-server-linux-setup-tools.md#ubuntu)
 
-- If you already have SQL Server tools, [connect to the SQL Server](sql-server-linux-connect-and-query.md).
+- If you already have SQL Server tools, [connect to the SQL Server](sql-server-linux-connect-and-query-sqlcmd.md#ubuntu).

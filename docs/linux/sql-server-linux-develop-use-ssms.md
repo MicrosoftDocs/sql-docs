@@ -57,7 +57,7 @@ The following steps show how to connect to SQL Server vNext on Linux with SSMS.
 3. Click **Connect**.
 
     > [!TIP]
-    > If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-connect-and-query.md#troubleshoot).
+    > If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md)).
  
 5. After successfully connecting to your SQL Sever, **Object Explorer** opens and you can now access your database to perform administrative tasks or query data.
  

@@ -66,7 +66,7 @@ Open the [Azure portal](https://portal.azure.com/).
    > [!NOTE] 
    > The firewall on the VM is already open but you need to open it at the azure level. There is information on how to do this [here](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-nsg-quickstart-portal).
 
-4. Install SQL Server Tools using the instructions [here](sql-server-linux-setup-red-hat.md#tools).
+4. Install SQL Server Tools using the instructions [here](sql-server-linux-setup-tools.md#RHEL).
 
 5. Connect to your localhost with your SA username and password. For more information, see [Connect and query SQL Server on Linux with sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).
    

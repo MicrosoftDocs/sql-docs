@@ -268,7 +268,7 @@ For more information on using VS Code, see the [Visual Studio Code documentation
 [Download and install VS Code]:https://code.visualstudio.com/Download
 [.Net Core instructions]:https://www.microsoft.com/net/core
 [manage connection profiles]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
-[connection troubleshooting recommendations]:./sql-server-linux-connect-and-query.md#troubleshoot
+[connection troubleshooting recommendations]:./sql-server-linux-troubleshooting-guide.md)
 [customize shortcuts]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
 [Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

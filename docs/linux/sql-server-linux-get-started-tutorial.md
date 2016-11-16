@@ -46,7 +46,7 @@ Next, set up SQL Server vNext on your Linux machine, or run the Docker image, us
 Note that Docker itself runs on multiple platforms, which means that you can run the Docker image on Linux, Mac, and Windows.
 
 ## 3: Connect locally or remotely
-After installation, connect to the running SQL Server instance on your Linux machine. For a general discussion of connectivity, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query.md). Then run some Transact-SQL queries using a client tool. Examples include:
+After installation, connect to the running SQL Server instance on your Linux machine. For a general discussion of connectivity, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query-sqlcmd.md). Then run some Transact-SQL queries using a client tool. Examples include:
 
 | Tool | Tutorial |
 |-----|-----|

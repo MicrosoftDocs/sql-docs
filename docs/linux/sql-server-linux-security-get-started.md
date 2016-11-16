@@ -6,7 +6,7 @@ description: This topic describes typical security actions.
 author: BYHAM   
 ms.author: rickbyh   
 manager: jhubbard  
-ms.date: 12/14/2016  
+ms.date: 12/16/2016  
 ms.topic: article  
 ms.prod: sql-linux   
 ms.technology: database-engine  

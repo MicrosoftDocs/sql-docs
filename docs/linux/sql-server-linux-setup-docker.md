@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/15/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -52,19 +52,27 @@ This topic explains how to pull and run the mssql-server Docker image. This imag
 ## Pull and run the Docker image
 1. Pull the Docker image from Docker Hub.
 
-        $ sudo docker pull microsoft/mssql-server-linux:latest
+   ```bash
+   sudo docker pull microsoft/mssql-server-linux
+   ```
 
 2. To run the Docker image, you can use the following commands:
 
-        $ sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=your_password_here" -p 1433:1433 -d microsoft/mssql-server-linux:latest
+   ```
+   docker run –e 'ACCEPT_EULA=Y' –e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
+   ```
 
-3. To persist the data generated from your Docker container, you must map volume to the host machine. To do that, use the run command with the **-v \<host_folder\>:/var/opt/mssql** flag. This will allow the data to be restored between container executions.
+3. To persist the data generated from your Docker container, you must map volume to the host machine. To do that, use the run command with the **-v \<host directory\>:/var/opt/mssql** flag. This will allow the data to be restored between container executions.
 
-        $ sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=your_password_here" -p 1433:1433 -v \<host folder\>:/var/opt/mssql -d private-repo.microsoft.com/mssql-private-preview/mssql- server:latest
+Volume mapping for Docker on Mac is not supported.
 
-    > [!NOTE]
-    > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image.
+   ```
+   sudo docker run –e 'ACCEPT_EULA=Y' –e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+   ```
+
+   > [!NOTE]
+   > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image.
 
 ## Next steps
 
-After installing SQL Server on Linux, next see [how to connect to the server and run basic Transact-SQL queries](sql-server-linux-connect-and-query.md).
+After installing SQL Server on Linux, next see [how to connect to the server and run basic Transact-SQL queries](sql-server-linux-connect-and-query-sqlcmd.md).

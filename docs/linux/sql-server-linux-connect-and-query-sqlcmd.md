@@ -6,7 +6,7 @@ description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/15/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,136 +26,118 @@ ms.assetid: 9e6c1ae1-59a4-4589-b839-18d6a52f2676
 ---
 # Connect and query SQL Server on Linux with sqlcmd
 
-This topic shows how to use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext CTP1 on Linux. 
+This topic provides connection requirements and guidance for SQL Server vNext CTP1 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. This topic approaches the subject in the context of Linux and then points to other resources. 
 
-After successfully connecting, you run a simple Transact-SQL (T-SQL) query to verify communication with the database.
+This topic is a walk-through. In this walk-through, you will use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext on Linux. After successfully connecting, you will use Transact-SQL (T-SQL) queries to create and populate a small database.
 
 > [!TIP]
 > **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
 
 ## Install the SQL Server command-line tools
 
-**Sqlcmd** is part of the SQL Server command-line tools, which are not installed automatically with SQL Server on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, select your Linux distribution from the following list:
+**Sqlcmd** is part of the SQL Server command-line tools, which are not installed automatically with SQL Server on Linux. If you have not already installed the SQL Server command-line tools on your Linux machine, you must install them. For more information on how to install the tools, follow the instructions for your Linux distribution:
 
-- [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md#tools)
-- [Ubuntu](sql-server-linux-setup-ubuntu.md#tools)
+- [Red Hat Enterprise Linux](sql-server-linux-setup-tools.md#RHEL)
+- [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
+- [MacOS](sql-server-linux-setup-tools.md#macos)
+
+## Connection requirements
+To connect to SQL Server on Linux, you must use SQL Authentication (username and password). To connect remotely, you must ensure that the port SQL Server listens on is open. By default, SQL Server listens on TCP port 1433. Depending on your Linux distribution and configuration, you might have to open this port in the firewall. 
 
 ## Connect to SQL Server on Linux
 
-The following steps show how to connect to SQL Server vNext on Linux with sqlcmd.
+In the following steps, connect to SQL Server vNext on Linux with sqlcmd.
+
+>[!TIP] On macOS, use [sql-cli](https://www.npmjs.com/package/sql-cli) because sqlcmd and bcp are not available.
 
 1. On your Linux box, open a command terminal.
 
-2. Run **sqlcmd** with parameters for your SQL Server instance name (-H), the user name (-U), and the password (-P). 
+2. Run **sqlcmd** with parameters for your SQL Server name (-S), the user name (-U), and the password (-P). 
 
    The following command connects to the local SQL Server instance (**localhost**) on Linux.
 
-    ```bash
-    sqlcmd -H localhost -U SA -P password
-    ```
+   ```bash
+   sqlcmd -S localhost -U SA -P '<YourPassword>'
+   ```
 
-    > [!TIP]
-    > You can omit the password on the command-line to be prompted to enter it manually.
+   > [!TIP]
+   > You can omit the password on the command-line to be prompted to enter it.
 
-    If you were connecting to a remote instance, specify the machine name or IP address for the **-H** parameter. 
+   To connect to a remote instance, specify the machine name or IP address for the **-S** parameter. 
 
-    ```bash
-    sqlcmd -H 192.555.5.555 -U SA -P password
-    ```
+   ```bash
+   sqlcmd -S 192.555.5.555 -U SA -P '<YourPassword>'
+   ```
 
-    > [!TIP]
-    > If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-connect-and-query.md#troubleshoot).
+   > [!TIP]
+   > If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md).
 
-## Run sample queries
+## Query SQL Server
 
-After you connect to your server, you can connect to a database and run a sample query. If you are new to writing queries, see [Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx).
+After you connect to SQL Server you can run queries to return information or create database objects. If you are new to writing queries, see [Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx). In the following steps, you will use sqlcmd to:
 
-1. Identify a database to use to run a query against. This could be a new database you created in the [Transact-SQL tutorial](https://msdn.microsoft.com/library/ms365303.aspx). Or it could be the **AdventureWorks** sample database that you [downloaded and restored](sql-server-linux-migrate-restore-database.md).
+1. Query SQL Server for a list of the databases.
 
-2. At the sqlcmd prompt, change the context to your target database. The following Transact-SQL statement changes the context to the **AdventureWorks** database.
+1. Use Transact SQL to create a database.
 
-    ```sql
-    USE AdventureWorks
-    ```
+1. Create and populate a table in the new database. 
 
-3. On a new line type `GO`, and press enter.
+1. Query the table.
 
-    ```sql
-    GO
-    ```
+To to complete each of these tasks, copy the Transact-SQL from the examples below into the sqlcmd session that you created in the previous step. 
 
-2. Next, write a Transact-SQL query to select data from one of the tables. You can press enter between lines of your query. The following example selects data from the **Production.Product** table of the **AdventureWorks** database.
-    
-    ```sql
-    SELECT TOP 10 Name, ProductNumber
-    FROM Production.Product
-    ORDER BY Name ASC
-    ```
+For example, this query returns the name of all of the databases.
 
-3. Then type `GO` and press enter.
+```sql
+SELECT Name from sys.Databases;
+GO
+```
 
+Create a database using the SQL Server default settings.
 
-4. The results output to the command window.
+```sql
+CREATE DATABASE testdb;
+GO
+```
 
-    ```
-    ![Success. Connect to SQL Database server: SQL Server Management Studio](./media/sql-server-linux-connect-and-query-sqlcmd/execute-query.png)
-    ```
+Use the database:
 
-5. Type `exit` and press enter to quit sqlcmd. 
+```sql
+USE testdb;
+GO
+```
 
-## Run a Transact-SQL Script
+Create a table in the current database:
 
-You can also use sqlcmd to run Transact-SQL script files. Use the following steps to run a script.
+```sql
+CREATE TABLE inventory (id INT, name NVARCHAR(50), quantity INT);
+GO
+```
 
-1. In a Linux command terminal, use `vi` to create a new script file named sqlscript.sql.
+Insert data into the new table:
 
-    ```bash
-    vi sqlscript.sql
-    ```
+```sql
+INSERT INTO inventory VALUES (1, 'banana', 150);
+INSERT INTO inventory VALUES (2, 'orange', 154);
+GO
+```
 
-2. In the `vi` editor, press `i` to enter INSERT mode.
+Select from the table:
 
-    ```bash
-    i
-    ```
+```sql
+SELECT * FROM inventory WHERE quantity > 152;
+GO
+```
 
-3. Enter the same Transact-SQL commands from the previous example.
+To end your sqlcmd session, type `QUIT`.
 
-    ```sql 
-    USE AdventureWorks
-    GO
-    
-    SELECT TOP 10 Name, ProductNumber
-    FROM Production.Product
-    ORDER BY Name ASC
-    ```sql
+```sql
+QUIT
+```
 
-4. Press the **Escape** key to exit INSERT mode.
+In this walk-through you connected to SQL Server with sqlcmd, and created and populated a database. For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).
 
-5. Press **:x** to save and exit **vi**.
-
-    ```bash
-    :x
-    ```
-
-6. At the prompt, run sqlcmd with the sqlscript.sql file as an input file.
-
-    ```bash
-    sqlcmd -H localhost -U SA -P password -i sqlscript.sql
-    ```
-    
-7. You should see 10 rows returned in the output window. Instead of staying at the sqlcmd prompt, you return immediately to the terminal prompt.
-
-> [!NOTE]
-> You can also send the output to a file with the **-o** parameter.
->
-> ```bash
-> sqlcmd -H localhost -U SA -P password -i sqlscript.sql -o output.txt
-> ```
-
-# Next Steps
-
-In addition to queries, you can use T-SQL statements to create and manage databases. For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).
+## Next Steps
 
 If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx) and the [Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx).
 

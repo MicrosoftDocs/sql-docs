@@ -44,15 +44,15 @@ Open the [Azure portal](https://portal.azure.com/).
 
 ## <a id="putty"></a> Connect to the VM using SSH/Putty
 
-If you already use a BASH shell, connect to the Azure VM using the **ssh** command. Replace the example machine user name and IP address with ones that match your Linux VM in the command below. You can find the IP address of your VM in the Azure portal.   
+If you already use a BASH shell, connect to the Azure VM using the **ssh** command. In the following command, replace the VM user name and IP address to connect to your Linux VM. You can find the IP address of your VM in the Azure portal.   
 
-    ```bash
-    ssh -l AzureAdmin 100.55.555.555
-    ```
+```bash
+ssh -l AzureAdmin 100.55.555.555
+```
 
 If you are running on Windows and do not have a BASH shell, you can install an SSH client, such as PuTTY.
 
-1. [Download and install PuTT](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+1. [Download and install PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 2. Run PuTTY.
 

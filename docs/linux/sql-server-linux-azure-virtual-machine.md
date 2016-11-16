@@ -64,10 +64,7 @@ For more information about connecting to Linux VMs, see [Create a Linux VM on Az
 
 ## Configure SQL Server on the VM
 
-1. Connect to the Linux virtual machine you just created. The public IP address of your VM is displayed in the properties for your VM in the Azure portal.
-
-   > [!TIP]
-   > If you're not sure how to connect, see the section of this Azure tutorial that explains There is also information at the end of this article on how to use [Putty/SSH](#putty) for a Windows client.  
+1. After connecting to your Linux VM, open a new command terminal.
 
 2. Navigate to the SQL Server directory
 

@@ -7,7 +7,6 @@
 ### [Run the Docker image](sql-server-linux-setup-docker.md)
 ### [Provision a SQL Server VM in Azure](sql-server-linux-azure-virtual-machine.md)
 ### [Install SQL Server tools on Linux](sql-server-linux-setup-tools.md)
-## [Connect](sql-server-linux-connect-and-query.md)
 ## [Query](sql-server-linux-connect-and-query-sqlcmd.md)
 # [Develop](sql-server-linux-develop-overview.md)
 ## [Connectivity libraries](sql-server-linux-develop-connectivity-libraries.md)

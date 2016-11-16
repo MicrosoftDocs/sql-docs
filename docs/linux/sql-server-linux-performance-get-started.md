@@ -38,6 +38,7 @@ A columnstore index is a technology for storing and querying large stores of dat
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
       ON Sales.SalesOrderDetail
       (UnitPrice, OrderQty, ProductID)
+   GO
    ```
 
 2. Execute the following query that will use the Columnstore Index to scan the table:
@@ -54,7 +55,6 @@ A columnstore index is a technology for storing and querying large stores of dat
 
    ```sql
    SELECT * FROM sys.indexes WHERE name = 'IX_SalesOrderDetail_ColumnStore'
-
    GO
 
    SELECT * 
@@ -75,6 +75,7 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
    SELECT d.compatibility_level
    FROM sys.databases as d
      WHERE d.name = Db_Name();
+   GO
    ```
    
    If necessary, update the level to 130:
@@ -82,22 +83,23 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
    ```sql
    ALTER DATABASE CURRENT
    SET COMPATIBILITY_LEVEL = 130;
+   GO
    ```
 
 2. When a transaction involves both a disk-based table and a memory-optimized table, it’s essential that the memory-optimized portion of the transaction operate at the transaction isolation level named SNAPSHOT.  To reliably enforce this level for memory-optimized tables in a cross-container transaction, execute the following:
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
+   GO
    ```
 
 3. Before you can create a memory-optimized table you must first create a Memory Optimized FILEGROUP and a container for data files:
 
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
-   ```
-   
-   ```sql   
+   GO  
    ALTER DATABASE AdventureWorks ADD FILE (NAME='AdventureWorks_mod', FILENAME='c:\var\opt\mssql\data\AdventureWorks_mod') TO FILEGROUP AdventureWorks_mod
+   GO
    ```
 
 ### Create a Memory-Optimized Table

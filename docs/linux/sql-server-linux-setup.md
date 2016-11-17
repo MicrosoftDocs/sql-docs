@@ -42,6 +42,10 @@ SQL Server vNext CTP1 is supported on the following platforms:
 - [Install on Ubuntu](sql-server-linux-setup-ubuntu.md)
 - [Run on Docker](sql-server-linux-setup-docker.md)
 
+> [!NOTE] 
+> You need at least 3.25GB of memory to run SQL Server on Linux.
+> SQL Server Engine has only been tested up to 256GB of memory at this time.
+
 ## Next steps
 
 After installation, connect to the SQL Server instance to begin creating and managing databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query-sqlcmd.md).

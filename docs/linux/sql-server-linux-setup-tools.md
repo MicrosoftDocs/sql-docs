@@ -6,7 +6,7 @@ description: Describes how to install SQL Server vNext CTP1 on Red Hat Enterpris
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 11/17/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -28,14 +28,14 @@ ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 
 The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The mssql-tools package contains:
 
-* sqlcmd: Command-line query utility.
-* bcp: Bulk import-export utility.
+- **sqlcmd**: Command-line query utility.
+- **bcp**: Bulk import-export utility.
 
-Install the tools for your platform.
+Install the tools for your platform:
 
-* [RHEL](#RHEL)
-* [Ubuntu](#ubuntu)
-* [macOS](#macos)
+- [Red Hat Enterprise Linux](#RHEL)
+- [Ubuntu](#ubuntu)
+- [macOS](#macos)
 
 ## <a name="RHEL">Install tools on RHEL</a>
 

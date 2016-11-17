@@ -106,7 +106,7 @@ For more information about connecting to Linux VMs, see [Create a Linux VM on Az
 4. Optionally, [install the SQL Server Tools](sql-server-linux-setup-tools.md#RHEL).
 
 ## Configure for remote connections
-If you want to be able to connect to this SQL Server remotely, you have to configure an inbound rule on the Network Security Group for the port that your SQL Server instance is listening. By default, this is TCP port 1433.
+The VM pre-configures the firewall to open the SQL Server port (default of TCP 1433). But if you want to be able to connect to SQL Server remotely, you have to configure an inbound rule on the Network Security Group for the port this port. 
 
 1. In the portal, select **Virtual machines**, and then select your SQL Server VM.
 

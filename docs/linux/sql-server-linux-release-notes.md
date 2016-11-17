@@ -35,6 +35,10 @@ The following release notes apply to SQL Server vNext CTP1 running on Linux. Thi
 | Ubuntu 16.04LTS | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
 
+> [!NOTE] 
+> You need at least 3.25GB of memory to run SQL Server on Linux.
+> SQL Server Engine has only been tested up to 256GB of memory at this time.
+
 ## Package details
 The SQL Server engine version for this release is 14.0.1.246. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).
 

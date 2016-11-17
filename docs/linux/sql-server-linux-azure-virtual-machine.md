@@ -52,7 +52,11 @@ Open the [Azure portal](https://portal.azure.com/).
 
 7. Click **OK**.
 
-8. On the **Size** blade, choose a machine size. To see more sizes, select **View all**.
+8. On the **Size** blade, choose a machine size. The recommended machine sizes for this virtual machine image are **DS12_V2**, **DS11_V2**, and **DS13_V2**.
+
+    ![Choose a VM size](./media/sql-server-linux-azure-virtual-machine/vmsizes.png)
+
+    To see other sizes, select **View all**. For more information about VM machine sizes, see [Linux VM sizes](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-sizes).
 
 9. Click **Select**.
 

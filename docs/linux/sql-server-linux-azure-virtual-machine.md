@@ -48,7 +48,8 @@ Open the [Azure portal](https://portal.azure.com/).
 
     ![Basics blade](./media/sql-server-linux-azure-virtual-machine/basics.png)
 
-    > [!Note] You have the choice of using an SSH public key or a Password for authentication. SSH is more secure. For instructions on how to generate an SSH key, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys). 
+    > [!Note]
+    > You have the choice of using an SSH public key or a Password for authentication. SSH is more secure. For instructions on how to generate an SSH key, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys). 
 
 7. Click **OK**.
 

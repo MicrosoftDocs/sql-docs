@@ -40,8 +40,10 @@ Open the [Azure portal](https://portal.azure.com/).
 
 4. In the search box, type **SQL Server vNext**, and press **Enter** to start the search.
 
+    ![Search filter for SQL Server vNext VM images](./media/sql-server-linux-azure-virtual-machine/searchfilter.png)
+
     > [!TIP]
-    > This filter shows the available Linux virtual machine image(s) for SQL Server vNext. Over time, SQL Server vNext images for other supported Linux distributions will be listed.
+    > This filter shows the available Linux virtual machine image(s) for SQL Server vNext. Over time, SQL Server vNext images for other supported Linux distributions will be listed. You can also click this [link](https://ms.portal.azure.com/#blade/Microsoft_Azure_Marketplace/GalleryFeaturedMenuItemBlade/selectedMenuItemId/home/searchQuery/sql%20server%20vnext) to go directly to the search results for SQL Server vNext. 
 
 5. Select a SQL Server vNext image from the search results.
 

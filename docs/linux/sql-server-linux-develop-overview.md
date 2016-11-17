@@ -33,7 +33,7 @@ You can create applications that connect to and use SQL Server vNext CTP1 on Lin
 ## Try the tutorials
 The best way to get started and build applications with SQL Server is to try it out for yourself.
 
-- Browse to [Getting Started Tutorials](http://www.microsoft.com/sql-server/developer-get-started).
+- Browse to [Getting Started Tutorials](http://aka.ms/sqldev).
 - Select your language and development platform.
 - Try the code samples.
 

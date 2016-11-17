@@ -106,7 +106,7 @@ For more information about connecting to Linux VMs, see [Create a Linux VM on Az
 4. Optionally, [install the SQL Server Tools](sql-server-linux-setup-tools.md#RHEL).
 
 ## Configure for remote connections
-The VM pre-configures the firewall to open the SQL Server port (default of TCP 1433). But if you want to be able to connect to SQL Server remotely, you have to configure an inbound rule on the Network Security Group for the port this port. 
+The Azure VM image pre-configures the firewall to open the SQL Server port (default of TCP 1433). But if you want to be able to remotely connect to SQL Server, you must configure an inbound rule on the Network Security Group for the Azure VM. 
 
 1. In the portal, select **Virtual machines**, and then select your SQL Server VM.
 

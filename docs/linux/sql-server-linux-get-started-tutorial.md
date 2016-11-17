@@ -45,6 +45,10 @@ Next, set up SQL Server vNext on your Linux machine, or run the Docker image, us
 
 Note that Docker itself runs on multiple platforms, which means that you can run the Docker image on Linux, Mac, and Windows.
 
+> [!NOTE] 
+> You need at least 3.25GB of memory to run SQL Server on Linux.
+> SQL Server Engine has only been tested up to 256GB of memory at this time.
+
 ## 3: Connect locally or remotely
 After installation, connect to the running SQL Server instance on your Linux machine. For a general discussion of connectivity, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query-sqlcmd.md). Then run some Transact-SQL queries using a client tool. Examples include:
 

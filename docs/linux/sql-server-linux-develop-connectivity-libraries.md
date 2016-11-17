@@ -26,7 +26,7 @@ ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ---
 # Connectivity libraries and frameworks for Microsoft SQL Server
 
-Check out our [Getting Started Tutorials](http://www.microsoft.com/sql-server/developer-get-started) to quickly get started with programming languages such as C#, Java, Node.js, PHP and Python and build an app using SQL Server on Linux or Windows or Docker on macOS.
+Check out our [Getting Started Tutorials](http://aka.ms/sqldev) to quickly get started with programming languages such as C#, Java, Node.js, PHP and Python and build an app using SQL Server on Linux or Windows or Docker on macOS.
 
 The table below lists connectivity libraries or *drivers* that client applications can use from a variety of languages to connect to and use Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and also to Azure SQL Database and Azure SQL Data Warehouse. 
 

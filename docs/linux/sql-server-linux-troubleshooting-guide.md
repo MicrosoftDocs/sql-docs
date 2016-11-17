@@ -43,30 +43,17 @@ If you are having difficulty connecting to your Linux SQL Server, there are a fe
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > One exception to this technique relates to Azure VMs. For Azure VMs, find the public IP for the VM in the Azure portal.
+   > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](sql-server-linux-azure-virtual-machine.md#connect).
 
 - If applicable, check that you have opened the SQL Server port (default 1433) on the firewall.
 
-- For Azure VMs, check that you have a [network security group rule for the default SQL Server port](#azure).
+- For Azure VMs, check that you have a [network security group rule for the default SQL Server port](sql-server-linux-azure-virtual-machine.md#remote).
 
 - Verify that the user name and password do not contain any typos or extra spaces or incorrect casing.
 
 - Try to explicitly set the protocol and port number with the server name like the following: **tcp:servername,1433**.
 
 - Network connectivity issues can also cause connection errors and timeouts. After verifying your connection information and network connectivity, try the connection again.
-
-### <a id="azure"></a> Requirements for Linux VMs in Azure
-If you are running Linux in an Azure virtual machine (VM), you must also create a Network Security Group rule for port 1433 to connect to SQL Server remotely.
-
-1. In the Azure portal, select your Linux VM, and then select the **Network interfaces** setting. 
-
-2. In the next blade, select your network interface to view its properties.
-
-3. In the Network interface blade, click the **Network security group** link to manage the Network Security Group associated with your VM.
-
-4. Create a Network Security Group rule. For step-by-step instructions, use the steps in [Create rules in an existing NSG](https://docs.microsoft.com/azure/virtual-network/virtual-networks-create-nsg-arm-pportal#create-rules-in-an-existing-nsg). These provide the steps for creating an NSG rule, but you must customize your rule for incoming TCP traffic on port 1433. This is shown in the following screenshot.
-
-![SQL Server network security group rule](./media/sql-server-linux-connect-and-query/network-security-rule.png)
 
 ## Manage the SQL Server service
 

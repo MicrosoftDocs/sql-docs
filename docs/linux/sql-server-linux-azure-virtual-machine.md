@@ -38,17 +38,40 @@ Open the [Azure portal](https://portal.azure.com/).
 
    ![See all VM images](./media/sql-server-linux-azure-virtual-machine/azure-compute-blade.png)
 
-4. Select **SQL Server vNext on Red Hat Enterprise Linux 7.2**.
+4. In the search box, type **SQL Server vNext on Red Hat Enterprise Linux 7.2**, and press **Enter** to start the search.
 
-5. Click **Create** and fill in the settings.
+5. Select the **SQL Server vNext on Red Hat Enterprise Linux 7.2** image.
 
-## <a id="putty"></a> Connect to the VM using SSH/PuTTY
+5. Click **Create**.
 
-If you already use a BASH shell, connect to the Azure VM using the **ssh** command. In the following command, replace the VM user name and IP address to connect to your Linux VM. You can find the IP address of your VM in the Azure portal.   
+6. On the **Basics** blade, fill in the details for your Linux VM. 
+
+    ![Basics blade](./media/sql-server-linux-azure-virtual-machine/basics.png)
+
+    > [!Note] You have the choice of using an SSH public key or a Password for authentication. SSH is more secure. For instructions on how to generate an SSH key, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys). 
+
+7. Click **OK**.
+
+8. On the **Size** blade, choose a machine size. To see more sizes, select **View all**.
+
+9. Click **Select**.
+
+10. On the **Settings** blade, you can make changes to the settings or keep the default settings.
+
+11. Click **OK**.
+
+12. On the **Summary** page, click **OK** to create the VM.
+
+## <a id="connect"></a> Connect to the Linux VM
+
+If you already use a BASH shell, connect to the Azure VM using the **ssh** command. In the following command, replace the VM user name and IP address to connect to your Linux VM.  
 
 ```bash
 ssh -l AzureAdmin 100.55.555.555
 ```
+You can find the IP address of your VM in the Azure portal. 
+
+![IP address in Azure portal](./media/sql-server-linux-azure-virtual-machine/vmproperties.png)
 
 If you are running on Windows and do not have a BASH shell, you can install an SSH client, such as PuTTY.
 
@@ -62,7 +85,7 @@ If you are running on Windows and do not have a BASH shell, you can install an S
 
 For more information about connecting to Linux VMs, see [Create a Linux VM on Azure using the Portal](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-quick-create-portal#ssh-to-the-vm).
 
-## Configure SQL Server on the VM
+## Configure SQL Server
 
 1. After connecting to your Linux VM, open a new command terminal.
 
@@ -80,12 +103,38 @@ For more information about connecting to Linux VMs, see [Create a Linux VM on Az
    
    Accept the License and enter a password for the system administrator account. You can start the server when prompted.
 
-   > [!NOTE] 
-   > The firewall on the VM is already open but you need to open it at the azure level. There is information on how to do this [here](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-nsg-quickstart-portal).
+4. Optionally, [install the SQL Server Tools](sql-server-linux-setup-tools.md#RHEL).
 
-4. Install SQL Server Tools using the instructions [here](sql-server-linux-setup-tools.md#RHEL).
+## Configure for remote connections
+If you want to be able to connect to this SQL Server remotely, you have to configure an inbound rule on the Network Security Group for the port that your SQL Server instance is listening. By default, this is TCP port 1433.
 
-5. Connect to your localhost with your SA username and password. For more information, see [Connect and query SQL Server on Linux with sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md).
-   
-## Resources
-For more information about Linux virtual machines in Azure, see the [Linux Virtual Machine Documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/).
+1. In the portal, select **Virtual machines**, and then select your SQL Server VM.
+
+2. In the list of properties, select **Network interfaces**.
+
+3. Then select the Network Interface for your VM.
+
+    ![Network interfaces](./media/sql-server-linux-azure-virtual-machine/networkinterfaces.png)
+
+4. Click the Network security group link.
+
+    ![Network security group](./media/sql-server-linux-azure-virtual-machine/networksecuritygroup.png)
+
+5. In the properties of the Network Security Group, selct **Inbound security rules**.
+
+6. Click the **+Add** button.
+
+7. Provide a Name of "SQLServerRemoteConnections".
+
+8. In the **Service** list, select **MS SQL**.
+
+    ![MS SQL security group rule](./media/sql-server-linux-azure-virtual-machine/sqlnsgrule.png)
+
+11. Click **OK** to save the rule for your VM.
+
+## Next steps
+Now that you have a SQL Server vNext virtual machine in Azure, you can [connect locally and run a test query](sql-server-linux-connect-and-query-sqlcmd.md).
+
+If you configured the Azure VM for remote SQL Server connections, you should also be able to connect remotely. For an example of connecting to SQL Server on Linux from a remote Windows machine, see [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md).
+
+For more general information about Linux virtual machines in Azure, see the [Linux Virtual Machine Documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/).

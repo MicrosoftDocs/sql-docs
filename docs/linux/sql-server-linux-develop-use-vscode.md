@@ -46,7 +46,7 @@ The following steps explain how to install the mssql extension.
 
 2. Click install **mssql**. 
    
-   <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 350px;"/>
+   <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 500px;"/>
 
    > [!NOTE]
    > Unlike **mssql**, **vscode-mssql** is a prototype version that will retire from the extension Marketplace soon. If you have already installed the vscode-mssql extension, please remove it.

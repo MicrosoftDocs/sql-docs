@@ -30,24 +30,12 @@ This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Red
 ## Install SQL Server
 To install the mssql-server package on RHEL, follow these steps:
 
-1. Enter superuser mode.
+1. Download the Microsoft SQL Server Red Hat repository configuration file:
 
    ```bash
-   sudo su
-   ```
-
-2. Download the Microsoft SQL Server Red Hat repository configuration file:
-
-   ```bash
-   curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
+   curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo | sudo tee /etc/yum.repos.d/mssql-server.repo
    ```
    
-3. Exit superuser mode.
-
-   ```bash
-   exit
-   ```
-
 4. Run the following commands to install SQL Server:
 
    ```bash

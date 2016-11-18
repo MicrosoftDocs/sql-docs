@@ -59,13 +59,13 @@ This topic explains how to pull and run the mssql-server Docker image. This imag
 2. To run the Docker image, you can use the following commands:
 
     ```
-    docker run –e 'ACCEPT_EULA=Y' –e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
+    docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
     ```
 
 3. To persist the data generated from your Docker container, you must map volume to the host machine. To do that, use the run command with the **-v \<host directory\>:/var/opt/mssql** flag. This will allow the data to be restored between container executions.
 
     ```
-    sudo docker run –e 'ACCEPT_EULA=Y' –e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
     ```
 
     > [!NOTE]

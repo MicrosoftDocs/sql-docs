@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 11/18/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -31,28 +31,16 @@ This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Ubu
 ## Install SQL Server
 To install the mssql-server Package on Ubuntu, follow these steps:
 
-1. Enter superuser mode.
+1. Import the public repository GPG keys:
 
    ```bash
-   sudo su
-   ```
-
-2. Import the public repository GPG keys:
-
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 3. Register the Microsoft SQL Server Ubuntu repository:
 
    ```bash
-   curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list > /etc/apt/sources.list.d/mssql-server.list
-   ```
-
-4. Exit superuser mode.
-
-   ```bash
-   exit
+   curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
    ```
 
 5. Run the following commands to install SQL Server:

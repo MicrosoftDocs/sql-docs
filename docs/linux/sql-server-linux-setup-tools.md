@@ -39,10 +39,22 @@ Install the tools for your platform:
 
 ## <a name="RHEL">Install tools on RHEL</a>
 
+1. Enter superuser mode.
+
+   ```
+   sudo su
+   ```
+
 1. Download the Microsoft Red Hat repository configuration file.
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   ```
+
+1. Exit superuser mode.
+
+   ```bash
+   exit
    ```
 
 1. Run the following commands to install mssql-tools.
@@ -50,6 +62,7 @@ Install the tools for your platform:
    ```bash
    sudo yum install mssql-tools
    ```
+
 
 ## <a name="ubuntu">Install tools on Ubuntu</a>
 

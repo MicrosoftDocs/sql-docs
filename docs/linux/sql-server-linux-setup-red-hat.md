@@ -27,6 +27,11 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 
 This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Red Hat Enterprise Linux (RHEL) 7.2.
 
+> [!NOTE] 
+> You need at least 3.25GB of memory to run SQL Server on Linux.
+> SQL Server Engine has only been tested up to 256GB of memory at this time.
+
+
 ## Install SQL Server
 To install the mssql-server package on RHEL, follow these steps:
 
@@ -54,7 +59,7 @@ To install the mssql-server package on RHEL, follow these steps:
    sudo yum install -y mssql-server
    ```
    
-5. After the package installation finishes, run the configuration script and follow the prompts.
+5. After the package installation finishes, run the configuration script and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
    ```bash
    sudo /opt/mssql/bin/sqlservr-setup

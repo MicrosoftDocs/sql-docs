@@ -56,6 +56,9 @@ This topic explains how to pull and run the mssql-server Docker image. This imag
     sudo docker pull microsoft/mssql-server-linux
     ```
 
+    > [!TIP]
+    > If you using Docker for Windows, omit the Linux command **sudo** in this step and step three.
+
 2. To run the Docker image, you can use the following commands:
 
     ```

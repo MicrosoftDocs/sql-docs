@@ -5,7 +5,7 @@ title: Configure Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-lmanager: jhubbard
+manager: jhubbard
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux 
@@ -15,7 +15,7 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 # optional metadata
 # keywords: ""
 # ROBOTS: ""
-e# audience: ""
+# audience: ""
 # ms.devlang: ""
 # ms.reviewer: ""
 # ms.suite: ""

@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 11/18/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -28,31 +28,23 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 
 This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Ubuntu 16.04.
 
+> [!NOTE] 
+> You need at least 3.25GB of memory to run SQL Server on Linux.
+> SQL Server Engine has only been tested up to 256GB of memory at this time.
+
 ## Install SQL Server
 To install the mssql-server Package on Ubuntu, follow these steps:
 
-1. Enter superuser mode.
+1. Import the public repository GPG keys:
 
    ```bash
-   sudo su
-   ```
-
-2. Import the public repository GPG keys:
-
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 3. Register the Microsoft SQL Server Ubuntu repository:
 
    ```bash
-   curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list > /etc/apt/sources.list.d/mssql-server.list
-   ```
-
-4. Exit superuser mode.
-
-   ```bash
-   exit
+   curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
    ```
 
 5. Run the following commands to install SQL Server:
@@ -62,7 +54,7 @@ To install the mssql-server Package on Ubuntu, follow these steps:
    sudo apt-get install -y mssql-server
    ```
 
-6. After the package installation finishes, run the configuration script and follow the prompts.
+6. After the package installation finishes, run the configuration script and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
  
    ```bash
    sudo /opt/mssql/bin/sqlservr-setup

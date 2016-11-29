@@ -6,7 +6,7 @@ description: Describes how to install SQL Server vNext CTP1 on Red Hat Enterpris
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/17/2016
+ms.date: 11/18/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -44,6 +44,7 @@ Install the tools for your platform:
    ```
    sudo su
    ```
+
 1. Download the Microsoft Red Hat repository configuration file.
 
    ```bash
@@ -65,28 +66,16 @@ Install the tools for your platform:
 
 ## <a name="ubuntu">Install tools on Ubuntu</a>
 
-1. Enter superuser mode.
-
-   ```bash
-   sudo su
-   ```
-
 1. Import the public repository GPG keys:
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Register the Microsoft Ubuntu repository:
 
    ```bash
-   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/msprod.list
-   ```
-
-1. Exit superuser mode:
-
-   ```bash
-   exit
+   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
 1. Update the sources list and run the installation command:

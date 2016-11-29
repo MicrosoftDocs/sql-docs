@@ -6,7 +6,7 @@ description: This topic describes how to use the mssql-conf tool to  configure S
 author: luisbosquez 
 ms.author: lbosq 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 11/18/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -43,7 +43,7 @@ This option will let you change the TCP port where SQL Server will listen for co
 1. Run the mssql-conf script as root with the "set" command for "tcpport":
 
    ```bash
-   sudo /opt/mssql/bin/mssql.conf set tcpport <new_tcp_port>
+   sudo /opt/mssql/bin/mssql-conf set tcpport <new_tcp_port>
    ```
 
 2. Restart the SQL Server service as instructed by the configuration utility:

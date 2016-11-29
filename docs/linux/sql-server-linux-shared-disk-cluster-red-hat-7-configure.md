@@ -5,7 +5,7 @@ title: Configure Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
-manager: jhubbard
+lmanager: jhubbard
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux 
@@ -15,7 +15,7 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 # optional metadata
 # keywords: ""
 # ROBOTS: ""
-# audience: ""
+e# audience: ""
 # ms.devlang: ""
 # ms.reviewer: ""
 # ms.suite: ""
@@ -40,6 +40,10 @@ For more details on cluster configuration, resource agents options, and manageme
 > This is not a production setup. This guide creates an architecture that is for high-level functional testing.
 
 The following sections walk through the steps to set up a failover cluster solution. 
+
+## Prerequisites
+
+To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server to configure the NFS share. Below steps outline how these servers will be configured.
 
 ## Setup and configure the operating system on each cluster node
 
@@ -232,8 +236,8 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo "<loginName>" >> /var/opt/mssql/secrets/passwd
-   sudo echo "<loginPassword>" >> /var/opt/mssql/secrets/passwd
+   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
+   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd 
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
@@ -258,7 +262,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password for on both nodes. 
+2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster

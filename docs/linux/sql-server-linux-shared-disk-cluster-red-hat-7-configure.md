@@ -41,6 +41,10 @@ For more details on cluster configuration, resource agents options, and manageme
 
 The following sections walk through the steps to set up a failover cluster solution. 
 
+## Prerequisites
+
+To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server to configure the NFS share. Below steps outline how these servers will be configured.
+
 ## Setup and configure the operating system on each cluster node
 
 The first step is to configure the operating system on the cluster nodes. For this walk through, use RHEL 7.2 with a valid subscription for the HA add-on. 
@@ -232,8 +236,8 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo "<loginName>" >> /var/opt/mssql/secrets/passwd
-   sudo echo "<loginPassword>" >> /var/opt/mssql/secrets/passwd
+   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
+   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd 
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
@@ -258,7 +262,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password for on both nodes. 
+2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster

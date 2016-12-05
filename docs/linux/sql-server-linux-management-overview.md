@@ -6,7 +6,7 @@ description: This topic provides links to common management tasks and tools for 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -38,7 +38,7 @@ Almost everything you can do in a client tool can also be accomplished with Tran
 SQL Server Management Studio (SSMS) is a Windows application that provides a graphical user interface for managing SQL Server. Although it currently runs only on Windows, you can use it to remotely connect to your Linux SQL Server instances. For more information on using SSMS to manage SQL Server, see [Use SSMS to Manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
 
 ## PowerShell
-PowerShell provides a rich command-line environment to manage SQL Server on Linux. For more information, see [Use PowerShell to Manage SQL Server on Linux](sql-server-linux-manage-ssms.md).
+PowerShell provides a rich command-line environment to manage SQL Server on Linux. For more information, see [Use PowerShell to Manage SQL Server on Linux](sql-server-linux-manage-powershell.md).
 
 ## Next steps
 For more information on how to get started using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).

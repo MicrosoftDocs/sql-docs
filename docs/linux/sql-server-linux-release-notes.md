@@ -111,10 +111,6 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now.
 
-- SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql) depends on a custom unixODBC Driver Manager. This causes conflicts if you have a previously installed unixODBC Driver Manager. 
-
-    - **Resolution**: On Ubuntu, the conflict will be resolved automatically. When prompted if you would like to unisntall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC`. We are working on fixing this limitation for RHEL and SUSE and should have an update for you soon.  
-
 ### Databases
 - Changing the locations of TempDB data and log files is not supported.
 
@@ -132,6 +128,11 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - SqlPackage shows the location of files with a “C:\” prefix.
 
+### Sqlcmd/BCP & ODBC 
+- SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql) depends on a custom unixODBC Driver Manager. This causes conflicts if you have a previously installed unixODBC Driver Manager. 
+
+    - **Resolution**: On Ubuntu, the conflict will be resolved automatically. When prompted if you would like to unisntall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC`. We are working on fixing this limitation for RHEL and SUSE and should have an update for you soon.  
+    
 ### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
 

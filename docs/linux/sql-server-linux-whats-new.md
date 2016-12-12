@@ -24,7 +24,7 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 # ms.custom: ""
 
 ---
-# What's New for SQL Server vNext on Linux
+# What's new for SQL Server vNext on Linux
 
 This topic describes what's new for SQL Server vNext running on Linux.
 

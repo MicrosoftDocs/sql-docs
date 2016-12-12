@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Release notes for SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+title: Release notes for SQL Server vNext on Linux - SQL Server vNext CTP1 | Microsoft Docs
 description: This topic contains the release notes and supported features for SQL Server vNext CTP1 running on Linux.
 author: rothja 
 ms.author: jroth 
@@ -24,7 +24,7 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 # ms.custom: ""
 
 ---
-# Release notes for SQL Server on Linux
+# Release notes for SQL Server vNext on Linux
 The following release notes apply to SQL Server vNext CTP1 running on Linux. This release supports many of the SQL Server database engine features for Linux. See the information in the following sections for supported platforms, tools, features, and known issues.
 
 ## Supported platforms 

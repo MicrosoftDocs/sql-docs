@@ -36,4 +36,4 @@ Many database engine improvements apply to both Windows and Linux. The only exce
 
 ## See also
 
-For installation requirements, unsupported feature areas, and known issues, see [Release notes for SQL Server vNext on Linux](sql-server-linux-release-notes.md)
+For installation requirements, unsupported feature areas, and known issues, see [Release notes for SQL Server vNext on Linux](sql-server-linux-release-notes.md).

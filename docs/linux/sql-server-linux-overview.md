@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Overview of SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+title: Overview of SQL Server on Linux - SQL Server vNext | Microsoft Docs
 description: This topic describes how SQL Server runs on Linux and provides information on how to learn more.
 author: rothja 
 ms.author: jroth 
@@ -26,7 +26,7 @@ ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ---
 # SQL Server on Linux
 
-SQL Server now runs on Linux! This latest release, SQL Server vNext CTP1, runs on Linux and is in
+SQL Server now runs on Linux! This latest release, SQL Server vNext CTP 1.1, runs on Linux and is in
 many ways simply SQL Server. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
 
 - [Install SQL Server on Linux](sql-server-linux-setup.md).

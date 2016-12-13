@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Install SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
-description: SQL Server vNext CTP1 now runs on Linux. This topic provides an overview on how to install SQL Server on Linux with links to the guides for specific platforms. 
+title: Install SQL Server on Linux - SQL Server vNext | Microsoft Docs
+description: SQL Server vNext CTP 1.1 now runs on Linux. This topic provides an overview on how to install SQL Server on Linux with links to the guides for specific platforms. 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -26,10 +26,10 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
 # Install SQL Server on Linux
 
-SQL Server vNext CTP1 is supported on Red Hat Enterprise Linux and Ubuntu. It is also available as a Docker image which can run on Docker Engine on Linux or Docker for Windows/Mac. The topics in this section provide tutorials and general guidance for installing SQL Server vNext CTP1 on Linux. 
+SQL Server vNext CTP 1.1 is supported on Red Hat Enterprise Linux and Ubuntu. It is also available as a Docker image which can run on Docker Engine on Linux or Docker for Windows/Mac. The topics in this section provide tutorials and general guidance for installing SQL Server vNext CTP 1.1 on Linux. 
 
 ## Supported platforms
-SQL Server vNext CTP1 is supported on the following platforms:
+SQL Server vNext CTP 1.1 is supported on the following platforms:
 
 | Platform | Supported version | Get
 |-----|-----|-----

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install SQL Server on Ubuntu - SQL Server vNext CTP1 | Microsoft Docs
+title: Install SQL Server on Ubuntu - SQL Server vNext | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 
@@ -26,7 +26,7 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
 # Install SQL Server on Ubuntu
 
-This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Ubuntu 16.04.
+This topic provides a walkthrough of how to install SQL Server vNext CTP 1.1 on Ubuntu 16.04.
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.

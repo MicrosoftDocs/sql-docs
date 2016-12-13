@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Operate Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server - SQL Server vNext CTP1 | Microsoft Docs
+title: Operate Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server - SQL Server vNext | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 

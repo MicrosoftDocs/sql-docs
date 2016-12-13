@@ -1,7 +1,7 @@
 ---
 # required metadata
-title: Install SQL Server on Red Hat Enterprise Linux - SQL Server vNext CTP1 | Microsoft Docs
-description: Describes how to install SQL Server vNext CTP1 on Red Hat Enterprise Linux 7.2.
+title: Install SQL Server on Red Hat Enterprise Linux - SQL Server vNext | Microsoft Docs
+description: Describes how to install SQL Server vNext CTP 1.1 on Red Hat Enterprise Linux 7.2.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -25,7 +25,7 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ---
 # Install SQL Server on Red Hat Enterprise Linux
 
-This topic provides a walkthrough of how to install SQL Server vNext CTP1 on Red Hat Enterprise Linux (RHEL) 7.2.
+This topic provides a walkthrough of how to install SQL Server vNext CTP 1.1 on Red Hat Enterprise Linux (RHEL) 7.2.
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.

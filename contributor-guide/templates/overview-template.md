@@ -1,7 +1,7 @@
 ---
 
 title:="Up to 60 chars, include subject, service name, prime benefit | Microsoft Docs" 
-description: "15-145 characters including spaces. Duplicate of the first sentence in introduction. This is the abstract that displays in search engine results."
+description: "115-145 characters including spaces. Duplicate of the first sentence in introduction. This is the abstract that displays in search engine results."
 services: "service-name-with-dashes"
 documentationCenter: ""
 authors: "github alias"

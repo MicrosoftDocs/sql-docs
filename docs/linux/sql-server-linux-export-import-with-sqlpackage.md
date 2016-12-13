@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Export and import databases with SqlPackage - SQL Server vNext CTP1 | Microsoft Docs
+title: Export and import databases with SqlPackage - SQL Server vNext | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 

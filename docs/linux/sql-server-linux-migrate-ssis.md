@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Extract, transform, and load data for SQL Server on Linux with SSIS - SQL Server vNext CTP1 | Microsoft Docs
+title: Extract, transform, and load data for SQL Server on Linux with SSIS - SQL Server vNext | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 

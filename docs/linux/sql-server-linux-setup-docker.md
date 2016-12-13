@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Run the SQL Server Docker image on Linux, Mac, or Windows - SQL Server vNext CTP1 | Microsoft Docs
+title: Run the SQL Server Docker image on Linux, Mac, or Windows - SQL Server vNext | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 

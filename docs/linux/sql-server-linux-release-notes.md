@@ -153,6 +153,8 @@ To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](s
 <br/>
 <br/>
 
+![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+
 ## CTP 1.0 release notes
 
 ### Supported platforms 

@@ -33,3 +33,8 @@
 ## [Transparent Data Encryption](transparent-data-encryption.md)
 ## [Provision a certificate](provision-certificate.md)
 
+# Appliance management
+## Appliance configuration
+### [Configure Windows Server Update Services](configure-wsus.md)
+
+

@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/18/2016
+ms.date: 12/14/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -65,7 +65,7 @@ To install the mssql-server Package on Ubuntu, follow these steps:
    ```bash
    systemctl status mssql-server
    ```
-# Upgrade SQL Server on Ubuntu
+## Upgrade SQL Server on Ubuntu
 
 In order to upgrade the mssql-server package, follow these steps:
 
@@ -81,7 +81,7 @@ In order to upgrade the mssql-server package, follow these steps:
 
 These commands will download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases will not be affected by this operation. 
 
-# Uninstall SQL Server on Ubuntu
+## Uninstall SQL Server on Ubuntu
 
 In order to remove the mssql-server package, follow these steps:
 

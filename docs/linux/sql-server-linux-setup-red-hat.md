@@ -78,6 +78,30 @@ To install the mssql-server package on RHEL, follow these steps:
    sudo firewall-cmd --reload
    ```
 
+# Upgrade SQL Server on Red Hat Enterprise Linux
+
+In order to upgrade the mssql-server package, execute the following command:
+
+   ```bash
+   sudo yum update mssql-server
+   ```
+
+These commands will download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases will not be affected by this operation. 
+
+# Uninstall SQL Server on Red Hat Enterprise Linux
+
+In order to remove the mssql-server package, follow these steps:
+
+1. Run the `remove` command. This will delete the package and remove the files under `/opt/mssql/`. However, this command will not affect user-generated and system database files, which are located under `/var/opt/mssql`.
+   ```bash
+   sudo yum remove mssql-server
+   ```
+
+2. Removing the package will not delete the generated database files. If you want to delete the database files use the following command:
+   ```bash
+   sudo rm -rf /var/opt/mssql/
+   ```
+
 ## Next steps
 
 - [Install tools](sql-server-linux-setup-tools.md#RHEL)

@@ -78,7 +78,7 @@ This topic explains how to pull and run the mssql-server Docker image. This imag
 Upgrading the Docker image will require just pulling the latest version from the registry. In order to do so, you just need to execute the `pull` command:
 
 ```bash
-    sudo docker pull microsoft/mssql-server-linux
+    sudo docker pull microsoft/mssql-server-linux:latest
 ```
 
 You can now create new containers that will have the latest version of SQL Server in Linux on Docker.

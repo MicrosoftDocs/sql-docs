@@ -78,7 +78,7 @@ To install the mssql-server package on RHEL, follow these steps:
    sudo firewall-cmd --reload
    ```
 
-# Upgrade SQL Server on Red Hat Enterprise Linux
+## Upgrade SQL Server on Red Hat Enterprise Linux
 
 In order to upgrade the mssql-server package, execute the following command:
 
@@ -88,7 +88,7 @@ In order to upgrade the mssql-server package, execute the following command:
 
 These commands will download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases will not be affected by this operation. 
 
-# Uninstall SQL Server on Red Hat Enterprise Linux
+## Uninstall SQL Server on Red Hat Enterprise Linux
 
 In order to remove the mssql-server package, follow these steps:
 

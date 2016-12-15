@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 12/14/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 
 # optional metadata
 
-# keywords: ""
+# keywords: "" 
 # ROBOTS: ""
 # audience: ""
 # ms.devlang: ""
@@ -76,6 +76,15 @@ This topic explains how to pull and run the mssql-server Docker image. This imag
 
     > [!IMPORTANT]
     > Volume mapping for Docker-machine on Mac with the SQL Server on Linux image is not supported at this time.
+
+## Upgrading the Docker image
+Upgrading the Docker image will require just pulling the latest version from the registry. In order to do so, you just need to execute the `pull` command:
+
+```bash
+    sudo docker pull microsoft/mssql-server-linux:latest
+```
+
+You can now create new containers that will have the latest version of SQL Server in Linux on Docker.
 
 ## Next steps
 

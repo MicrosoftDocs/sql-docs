@@ -63,6 +63,8 @@ The first step is to configure the operating system on the cluster nodes. For th
    sudo systemctl stop mssql-server
    sudo systemctl disable mssql-server
    ```
+> [!NOTE] 
+> At setup time, a Server Master Key is generated for the SQL Server instance and placed at var/opt/mssql/secrets/machine-key. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key.
 
 1. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
 
@@ -84,7 +86,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Configure the hosts file for each cluster node. The host file must include the IP address and name of every cluster node. 
 
-   Check the IP address for each node. The following script shows the IP address of your current node. 
+    Check the IP address for each node. The following script shows the IP address of your current node. 
 
    ```bash
    sudo ip addr show
@@ -95,7 +97,6 @@ The first step is to configure the operating system on the cluster nodes. For th
    ```bash
    sudo vi /etc/hosts
    ```
-
    The following example shows `/etc/hosts` with additions for two nodes named `sqlfcivm1` and `sqlfcivm2`.
 
    ```bash
@@ -136,7 +137,7 @@ On the NFS Server do the following:
 1.	Edit `/etc/exports` to export the directory you want to share. You will need 1 line for each share you want. For example: 
 
    ```bash
-   /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,root_squash,all_squash)
+   /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
    ```
 
 1. Export the shares
@@ -314,9 +315,9 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs-f cfg resource create <sqlServerResourceName> ocf:sql:fci op defaults timeout=<timeout_in_seconds>
-   sudo pcs-f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
-   sudo pcs-f cfg constraint colocation add <sqlResourceName> <virtualIPResourceName>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:sql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
+   sudo pcs -f cfg constraint colocation add <sqlResourceName> <virtualIPResourceName>
    sudo pcs cluster cib-push cfg
    ```
 
@@ -324,9 +325,9 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs-f cfg resource create mssqlha ocf:sql:fci op defaults timeout=60s
-   sudo pcs-f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
-   sudo pcs-f cfg constraint colocation add mssqlha virtualip
+   sudo pcs -f cfg resource create mssqlha ocf:sql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
+   sudo pcs -f cfg constraint colocation add mssqlha virtualip
    sudo pcs cluster cib-push cfg
    ```
 

@@ -111,7 +111,7 @@ Transact-SQL (T-SQL) statements for Analytic Platform System (APS) SQL Server Pa
 * [OPEN MASTER KEY](https://msdn.microsoft.com/library/ms174433.aspx)
 
 ## Next steps
-For more reference information, see [T-SQL language elements](tsql-language-elements) and [T-SQL system views](tsql-system-views).
+For more reference information, see [T-SQL language elements](tsql-language-elements.md) and [T-SQL system views](tsql-system-views.md).
 
 <!--Image references-->
 

@@ -225,7 +225,7 @@ Each of these DMV's has a specific column called pdw_node_id. This is the the id
 * [VIEWS](http://msdn.microsoft.com/library/ms181381.aspx)
 
 ## Next steps
-For more reference information, see [T-SQL language elements](tsql-language-elements) and [T-SQL statements](tsql-statements).
+For more reference information, see [T-SQL language elements](tsql-language-elements.md) and [T-SQL statements](tsql-statements.md).
 
 <!--Image references-->
 

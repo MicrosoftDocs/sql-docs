@@ -34,3 +34,12 @@ many ways simply SQL Server. It’s the same SQL Server database engine, with ma
 - Learn about the platforms and features in the [Release Notes](sql-server-linux-release-notes.md).
 
 - Start using SQL Server on Linux in [Get started](sql-server-linux-get-started-tutorial.md).
+
+## See Also
+- [Summary of what's new in the current release of SQL Server vNext](https://msdn.microsoft.com/library/mt788653(SQL.130).aspx)
+
+##  ![info_tip](./media/general/info_tip.png) Engage with the SQL Server engineering team 
+- [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
+- [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
+- [Reddit - general discussion about R](https://www.reddit.com/r/SQLServer/)

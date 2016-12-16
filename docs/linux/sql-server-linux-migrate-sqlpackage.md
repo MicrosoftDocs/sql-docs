@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Export and import a database on Linux with sqlpackage - SQL Server vNext CTP1 | Microsoft Docs
+title: Export and import a database on Linux with sqlpackage - SQL Server vNext | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
@@ -25,7 +25,7 @@ ms.assetid: e239793b-e630-4110-81cc-19b1ef8bb8b0
 ---
 # Export and import a database on Linux with sqlpackage
 
-This topic shows how to the **sqlpackage** tool to export and import databases to SQL Server vNext CTP1 on Linux. 
+This topic shows how to the **sqlpackage** tool to export and import databases to SQL Server vNext CTP 1.1 on Linux. 
 
 > [!NOTE]
 > If you are migrating a database from one SQL Server instance to another, the recommendation is to use [Backup and restore](sql-server-linux-migrate-restore-database.md).

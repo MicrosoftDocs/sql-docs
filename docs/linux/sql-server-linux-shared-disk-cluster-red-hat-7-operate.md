@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Operate Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server - SQL Server vNext CTP1 | Microsoft Docs
+title: Operate Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server - SQL Server vNext | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -24,9 +24,9 @@ ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 
 ---
 
-# Operate Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
+# Operate Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server
 
-This document describes how to do the following tasks for SQL Server on a shared disk failover cluster with Red Hat Enterprise Linux 7.2.
+This document describes how to do the following tasks for SQL Server on a shared disk failover cluster with Red Hat Enterprise Linux 7.3.
 
 - Manually failover the cluster
 - Monitor a failover cluster SQL Server service
@@ -214,4 +214,4 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 ## Next Steps
 
-[Configure Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
+[Configure Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)

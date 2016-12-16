@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use the sqlcmd command-line utility on Linux - SQL Server vNext CTP1 | Microsoft Docs
+title: Use the sqlcmd command-line utility on Linux - SQL Server vNext | Microsoft Docs
 description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL queries.
 author: rothja 
 ms.author: jroth 
@@ -26,7 +26,7 @@ ms.assetid: 9e6c1ae1-59a4-4589-b839-18d6a52f2676
 ---
 # Connect and query SQL Server on Linux with sqlcmd
 
-This topic provides connection requirements and guidance for SQL Server vNext CTP1 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. This topic approaches the subject in the context of Linux and then points to other resources. 
+This topic provides connection requirements and guidance for SQL Server vNext CTP 1.1 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. This topic approaches the subject in the context of Linux and then points to other resources. 
 
 This topic is a walk-through. In this walk-through, you will use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext on Linux. After successfully connecting, you will use Transact-SQL (T-SQL) queries to create and populate a small database.
 
@@ -137,6 +137,15 @@ QUIT
 ```
 
 In this walk-through you connected to SQL Server with sqlcmd, and created and populated a database. For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).
+
+## Connect and query from Windows
+
+It is important to note that SQL Server tools on Windows connect to SQL Server instances on Linux in the same way they would connect to any remote SQL Server instance. So, you can follow the same steps in this topic running sqlcmd.exe from a remote Windows machine. Just verify that you use the target Linux machine name or IP address rather than localhost. For other connection requirements, see [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection).
+
+For other tools that run on Windows but connect to SQL Server on Linux, see:
+- [SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [Windows PowerShell](sql-server-linux-manage-powershell.md)
+- [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
 
 ## Next Steps
 

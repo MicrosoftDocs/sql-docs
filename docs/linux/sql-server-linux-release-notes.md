@@ -42,7 +42,7 @@ The following release notes apply to SQL Server vNext running on Linux. This rel
 > SQL Server Engine has only been tested up to 256GB of memory at this time.
 
 ### Package details
-The SQL Server engine version for this release is 14.0.1.246. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).
+The SQL Server engine version for this release is 14.0.100.187. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).
 
 | Package | Version | Downloads |
 |-----|-----|-----|
@@ -97,6 +97,8 @@ The following sections describe known issues with this release of SQL Server vNe
     - **Resolution**: Change the name in /etc/hostname to something 15 characters long or less.
 
 - Do not run the command `ALTER SERVICE MASTER KEY REGENERATE`. There is a known bug that will cause SQL Server to become unstable. If you need to regenerate the Service Master Key, you should back up your database files, uninstall and then re-install SQL Server, and then restore your database files again.
+
+- Resource name for SQL resource changed from ocf:sql:fci to ocf:mssql:fci. More details about configuring a shared disk failover cluster you can find [here](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-configure).
 
 - Manually setting the system time backwards in time will cause SQL Server to stop updating the internal system time within SQL Server.
 

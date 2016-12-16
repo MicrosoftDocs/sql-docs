@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get started with performance features of SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+title: Get started with performance features of SQL Server on Linux - SQL Server vNext | Microsoft Docs
 description: This topic provides an introduction of SQL Server performance features for Linux users who are new to SQL Server. Many of these examples work on all platforms, but the context of this article is Linux. 
 author: rothja 
 ms.author: jroth 

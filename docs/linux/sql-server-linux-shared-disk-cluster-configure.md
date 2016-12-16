@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure shared disk cluster for SQL Server on Linux - SQL Server vNext CTP1 | Microsoft Docs
+title: Configure shared disk cluster for SQL Server on Linux - SQL Server vNext | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -30,6 +30,6 @@ You can configure a shared-storage high-availability cluster with Linux to allow
 
 |Distribution |Topic 
 |----- |-----
-|**Red Hat Enterprise Linux 7.2 with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)<br/>[Troubleshoot](sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md)
+|**Red Hat Enterprise Linux 7.3 with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)<br/>[Troubleshoot](sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md)
 ## Next steps
 

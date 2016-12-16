@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server - SQL Server vNext | Microsoft Docs
+title: Configure Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server - SQL Server vNext | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -23,9 +23,9 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 # ms.custom: ""
 ---
 
-# Configure Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
+# Configure Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server
 
-This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux 7.2. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). The SQL Server instance is active on either one node or the other.
+This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux 7.3. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). The SQL Server instance is active on either one node or the other.
 
 > [!NOTE] 
 > Access to Red Hat documentation requires a subscription. 
@@ -47,7 +47,7 @@ To complete the end-to-end scenario below you need two machines to deploy the tw
 
 ## Setup and configure the operating system on each cluster node
 
-The first step is to configure the operating system on the cluster nodes. For this walk through, use RHEL 7.2 with a valid subscription for the HA add-on. 
+The first step is to configure the operating system on the cluster nodes. For this walk through, use RHEL 7.3 with a valid subscription for the HA add-on. 
 
 ## Install and configure SQL Server on each cluster node
 
@@ -361,5 +361,5 @@ At this point both instances of SQL Server are configured to run with the databa
 
 ## Next steps
 
-[Operate SQL Server on Red Hat Enterprise Linux 7.2 shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+[Operate SQL Server on Red Hat Enterprise Linux 7.3 shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 

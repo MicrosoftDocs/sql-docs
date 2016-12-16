@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshoot Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server - SQL Server vNext | Microsoft Docs
+title: Troubleshoot Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server - SQL Server vNext | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -23,7 +23,7 @@ ms.assetid: 158f6861-d551-4753-b1c9-2b62e2901d67
 # ms.custom: ""
 ---
 
-# Troubleshoot Red Hat Enterprise Linux 7.2 shared disk cluster for SQL Server
+# Troubleshoot Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server
 
 In troubleshooting the cluster it may help to understand how the three daemons work together to manage cluster resources. 
 
@@ -92,5 +92,5 @@ Check the following items when a node is offline.
 
 ## Next steps
 
-[Operate SQL Server on Red Hat Enterprise Linux 7.2 shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+[Operate SQL Server on Red Hat Enterprise Linux 7.3 shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 

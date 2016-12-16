@@ -52,7 +52,7 @@ Online: [ sqlvmnode1 sqlvmnode2 sqlvmnode3]
 
 Full list of resources: 
 
-mssql (ocf::sql:fci): Started sqlvmnode1 
+mssqlha (ocf::mssql:fci): Started sqlvmnode1 
 
 PCSD Status: 
 sqlvmnode1: Online 

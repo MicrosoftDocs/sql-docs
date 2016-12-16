@@ -33,8 +33,8 @@ The following release notes apply to SQL Server vNext running on Linux. This rel
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.2 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
-| Ubuntu 16.04LTS | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
+| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
+| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
 
 > [!NOTE] 
@@ -46,8 +46,8 @@ The SQL Server engine version for this release is 14.0.1.246. Package details an
 
 | Package | Version | Downloads |
 |-----|-----|-----|
-| RPM package | xx.x.x.xxx-x | [mssql-server xx.x.x.xxx-x Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-xx.x.x.xxx-x.x86_64.rpm)</br>[mssql-server xx.x.x.xxx-x High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-xx.x.x.xxx-x.x86_64.rpm) | 
-| Debian package | xx.x.x.xxx-x | [mssql-server xx.x.x.xxx-x Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_xx.x.x.xxx-x_amd64.deb) |
+| RPM package | 14.0.100.187-1 | [mssql-server 14.0.100.187-1 Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.100.187-1.x86_64.rpm)</br>[mssql-server 14.0.100.187-1 High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.100.187-1.x86_64.rpm) | 
+| Debian package | 14.0.100.187-1 | [mssql-server 14.0.100.187-1 Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.100.187-1_amd64.deb) |
 
 ### Supported client tools
 
@@ -55,7 +55,7 @@ The SQL Server engine version for this release is 14.0.1.246. Package details an
 |-----|-----|
 | [SQL Server Management Studio (SSMS) for Windows - Release Candidate 1](https://go.microsoft.com/fwlink/?LinkID=835608) | 17.0 |
 | [SQL Server Data Tools for Visual Studio - Release Candidate 1](https://go.microsoft.com/fwlink/?LinkID=835150) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (0.1.5) |
+| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (0.2) |
 
 > [!NOTE] 
 > The SQL Server Management Studio and SQL Server Data Tools versions specified above are Release Candidates, hence not recommended for use in production.
@@ -74,7 +74,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Filetable |
 | **High Availability** | Always On Availability Groups |
 | &nbsp; | Database mirroring  |
-| **Security** | Active Directory authentication |
+| **Security** | Active Directory Authentication |
 | &nbsp; | Windows Authentication |
 | &nbsp; | Extensible Key Management |
 | &nbsp; | Use of user-provided certificate for SSL or TLS |
@@ -96,6 +96,8 @@ The following sections describe known issues with this release of SQL Server vNe
 
     - **Resolution**: Change the name in /etc/hostname to something 15 characters long or less.
 
+- Do not run the command `ALTER SERVICE MASTER KEY REGENERATE`. There is a known bug that will cause SQL Server to become unstable. If you need to regenerate the Service Master Key, you should back up your database files, uninstall and then re-install SQL Server, and then restore your database files again.
+
 - Manually setting the system time backwards in time will cause SQL Server to stop updating the internal system time within SQL Server.
 
     - **Resolution**: Restart SQL Server.
@@ -114,9 +116,7 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
-- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now.
-
-- There is a known issue with regenerating the Service Master Key, which is currently not supported yet. Running the command **ALTER SERVICE MASTER KEY FORCE REGENERATE** will cause SQL Server to become unstable. If you need to regenerate the Service Master Key, you should back up your database files, uninstall and then re-install SQL Server, and then restore your database files again. 
+- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now. 
 
 #### Databases
 - Changing the locations of TempDB data and log files is not supported.
@@ -129,7 +129,7 @@ The following sections describe known issues with this release of SQL Server vNe
 - In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
 #### SqlPackage
-- Using SqlPackage requires to specify an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 
+- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 
 
     - **Resolution**: Use absolute file paths.
 

@@ -31,6 +31,8 @@ This topic describes what's new for SQL Server vNext running on Linux.
 ## CTP 1.1
 
 The CTP 1.1 release contains the following improvements and fixes:
+- Support for Red Hat Enterprise Linux version 7.3.
+- Support for Ubuntu 16.10
 - Upgraded Docker OS layer to Ubuntu 16.04.
 - Fixed telemetry issues in Docker image.
 - Fixed SQL Server Setup script related bugs
@@ -48,9 +50,9 @@ Under compatibility mode 140:
 - Batch mode queries now support "memory grant feedback loops". This will improve concurrency and throughput on systems running repeated queries that use batch mode. This can allow more queries to run on systems that are otherwise blocking on memory before starting queries.
 - Improved performance in batch mode parallelism by ignoring trivial plan for batch mode plans to allow for parallel plans to be picked instead against columnstores. 
 
-[Sustained engineering improvements from Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in this CTP1.1 release:
+[Improvements from Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in this CTP1.1 release:
 - Database cloning for CLR, Filestream/Filetable, In-memory and Query Store objects.
-- `CREATE` or `ALTER` for operators for programmability objects. 
+- `CREATE` or `ALTER` operators for programmability objects. 
 - New `USE HINT` query option to provide hints for the query processor. Learn more here: [Query Hints](https://msdn.microsoft.com/en-us/library/ms181714.aspx).
 - SQL service account can now programmatically identify Enable Lock Pages in Memory and Instant File Initialization permissions.
 - Support for TempDB file count, file size and file growth settings. 

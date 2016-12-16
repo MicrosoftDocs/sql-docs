@@ -65,6 +65,7 @@ To install the mssql-server Package on Ubuntu, follow these steps:
    ```bash
    systemctl status mssql-server
    ```
+
 ## Upgrade SQL Server on Ubuntu
 
 In order to upgrade the mssql-server package, follow these steps:

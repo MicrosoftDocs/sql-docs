@@ -46,16 +46,19 @@ The SQL Server engine version for this release is 14.0.1.246. Package details an
 
 | Package | Version | Downloads |
 |-----|-----|-----|
-| RPM package | 14.0.1.246-6 | [mssql-server 14.0.1.246-6 Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.1.246-6.x86_64.rpm)</br>[mssql-server 14.0.1.246-6 High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.1.246-6.x86_64.rpm) | 
-| Debian package | 14.0.1.246-6 | [mssql-server 14.0.1.246-6 Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.1.246-6_amd64.deb) |
+| RPM package | xx.x.x.xxx-x | [mssql-server xx.x.x.xxx-x Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-xx.x.x.xxx-x.x86_64.rpm)</br>[mssql-server xx.x.x.xxx-x High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-xx.x.x.xxx-x.x86_64.rpm) | 
+| Debian package | xx.x.x.xxx-x | [mssql-server xx.x.x.xxx-x Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_xx.x.x.xxx-x_amd64.deb) |
 
 ### Supported client tools
 
 | Tool | Minimum version |
 |-----|-----|
-| [SQL Server Management Studio (SSMS) for Windows](https://msdn.microsoft.com/library/mt238290.aspx) | 17.0.1 |
-| [SQL Server Data Tools for Visual Studio](https://msdn.microsoft.com/library/mt204009.aspx) | 17.0 |
+| [SQL Server Management Studio (SSMS) for Windows - Release Candidate 1](https://go.microsoft.com/fwlink/?LinkID=835608) | 17.0 |
+| [SQL Server Data Tools for Visual Studio - Release Candidate 1](https://go.microsoft.com/fwlink/?LinkID=835150) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (0.1.5) |
+
+> [!NOTE] 
+> The SQL Server Management Studio and SQL Server Data Tools versions specified above are Release Candidates, hence not recommended for use in production.
 
 ### Unsupported features and services
 The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.
@@ -112,6 +115,8 @@ The following sections describe known issues with this release of SQL Server vNe
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
 - **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now.
+
+- There is a known issue with regenerating the Service Master Key, which is currently not supported yet. Running the command **ALTER SERVICE MASTER KEY FORCE REGENERATE** will cause SQL Server to become unstable. If you need to regenerate the Service Master Key, you should back up your database files, uninstall and then re-install SQL Server, and then restore your database files again. 
 
 #### Databases
 - Changing the locations of TempDB data and log files is not supported.
@@ -181,9 +186,12 @@ The SQL Server engine version for this release is 14.0.1.246. Package details an
 
 | Tool | Minimum version |
 |-----|-----|
-| [SQL Server Management Studio (SSMS) for Windows](https://msdn.microsoft.com/library/mt238290.aspx) | 17.0.1 |
-| [SQL Server Data Tools for Visual Studio](https://msdn.microsoft.com/library/mt204009.aspx) | 17.0 |
+| [SQL Server Management Studio (SSMS) for Windows - Release Candidate 1](https://go.microsoft.com/fwlink/?LinkID=835608) | 17.0 |
+| [SQL Server Data Tools for Visual Studio - Release Candidate 1](https://go.microsoft.com/fwlink/?LinkID=835150) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (0.1.5) |
+
+> [!NOTE] 
+> The SQL Server Management Studio and SQL Server Data Tools versions specified above are Release Candidates, hence not recommended for use in production.
 
 ### Unsupported features and services
 The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.

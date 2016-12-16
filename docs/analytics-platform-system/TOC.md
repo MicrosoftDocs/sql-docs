@@ -37,4 +37,9 @@
 ## Appliance configuration
 ### [Configure Windows Server Update Services](configure-wsus.md)
 
+# Reference
+## [T-SQL language elements](tsql-language-elements.md)
+## [T-SQL statements](tsql-statements.md)
+## [T-SQL system views](tsql-system-views.md) 
+
 

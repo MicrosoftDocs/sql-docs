@@ -315,7 +315,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:sql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci op defaults timeout=<timeout_in_seconds>
    sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    sudo pcs -f cfg constraint colocation add <sqlResourceName> <virtualIPResourceName>
    sudo pcs cluster cib-push cfg
@@ -325,7 +325,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs -f cfg resource create mssqlha ocf:sql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci op defaults timeout=60s
    sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg constraint colocation add mssqlha virtualip
    sudo pcs cluster cib-push cfg

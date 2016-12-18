@@ -6,7 +6,7 @@ description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 12/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

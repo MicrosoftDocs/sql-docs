@@ -6,7 +6,7 @@ description: This topic highlights what's new for this release of SQL Server vNe
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 12/12/2016
+ms.date: 12/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

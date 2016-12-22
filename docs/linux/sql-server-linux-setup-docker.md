@@ -26,7 +26,10 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ---
 # Run the SQL Server Docker image on Linux, Mac, or Windows
 
-This topic explains how to pull and run the mssql-server Docker image. This image can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
+This topic explains how to pull and run the [mssql-server Docker image](https://hub.docker.com/r/microsoft/mssql-server-linux/). This image consists of SQL Server running on Linux and can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. 
+
+> [!NOTE]
+> This image is running SQL Server on an Ubuntu Linux base image. To run the SQL Server on Windows Containers Docker image, check out the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows/).
 
 ## Requirements for Docker
 - Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows.
@@ -42,7 +45,7 @@ This topic explains how to pull and run the mssql-server Docker image. This imag
 3. Move the memory indicator to 4GB or more.
 4. Click the **restart** button at the button of the screen.
 
-### For Windows users:
+### Docker for Windows:
 1. Right-click on the Docker icon from the task bar.
 2. Click **Settings** under that menu.
 3. Click on the **Advanced** Tab.
@@ -79,7 +82,7 @@ This topic explains how to pull and run the mssql-server Docker image. This imag
 
 ## Upgrading the Docker image
 Upgrading the Docker image will require just pulling the latest version from the registry. In order to do so, you just need to execute the `pull` command:
-
+    
 ```bash
     sudo docker pull microsoft/mssql-server-linux:latest
 ```

@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 12/16/2016
+ms.date: 01/03/2017
 ms.topic: article
 ms.prod: sql-linux 
 ms.technology: database-engine
@@ -292,7 +292,7 @@ At this point both instances of SQL Server are configured to run with the databa
    ```bash
    sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
    sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
-   sudo sudo pcs cluster start --all
+   sudo pcs cluster start --all
    ```
 
    > RHEL HA add-on has fencing agents for VMWare and KVM. Fencing needs to be disabled on all other hypervisors. Disabling fencing agents is not recommended in production environments. As of CTP 1.1 timeframe, there are no fencing agents for HyperV or cloud environments. If you are running one of these configurations, you need to disable fencing. \**This is NOT recommended in a production system!**

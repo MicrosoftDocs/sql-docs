@@ -1,7 +1,7 @@
 ---
 title: "Monitor the Appliance by Using System Views (Analytics Platform System)"
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 01/04/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na

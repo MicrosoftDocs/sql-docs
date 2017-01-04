@@ -13,7 +13,7 @@ author: BarbKess
 # PDW and Appliance Fabric Physical Components (Analytics Platform System)
 Names and descriptions for the PDW and appliance fabric physical components. The PDW Region contains all of these components.  
   
-See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  
+<!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
 ## <a name="diagrams"></a>Component Diagrams  
 This shows the names of the physical components and where they are located in the first rack of a 6-Compute node appliance.  

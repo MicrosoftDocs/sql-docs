@@ -29,9 +29,9 @@ The following topics describe how to manage software servicing on the appliance:
   
 -   [Uninstall Microsoft Updates &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
   
--   [Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](apply-hotfixes.md)  
+-   [Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
   
--   [Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](uninstall-hotfixes.md)  
+-   [Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

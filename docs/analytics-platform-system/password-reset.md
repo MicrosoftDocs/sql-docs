@@ -49,6 +49,6 @@ Both the domain administrator credentials and the system administrator credentia
     ![SQL Server DWConfig Password](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
 ## See Also  
-[Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm.md)  
+[Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
 [Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

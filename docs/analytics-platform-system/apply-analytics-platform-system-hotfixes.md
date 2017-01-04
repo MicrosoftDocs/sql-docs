@@ -58,6 +58,6 @@ Unlike the Microsoft updates, the hotfixes for the Analytics Platform System sof
 ## See Also  
 [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
 [Uninstall Microsoft Updates &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
-[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](uninstall-hotfixes.md)  
+[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
 [Software Servicing &#40;Analytics Platform System&#41;](software-servicing.md)  
   

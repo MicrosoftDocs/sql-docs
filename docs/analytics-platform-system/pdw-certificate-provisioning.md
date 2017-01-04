@@ -67,5 +67,5 @@ SQL Server PDW will continue to encrypt current connections, but will not use th
   
 ## See Also  
 [Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
-[HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  
+<!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   

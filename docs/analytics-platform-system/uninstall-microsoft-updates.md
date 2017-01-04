@@ -34,7 +34,7 @@ To perform these steps, you will need:
   
 ## See Also  
 [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
-[Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](apply-hotfixes.md)  
-[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](uninstall-hotfixes.md)  
+[Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
+[Uninstall Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
 [Software Servicing &#40;Analytics Platform System&#41;](software-servicing.md)  
   

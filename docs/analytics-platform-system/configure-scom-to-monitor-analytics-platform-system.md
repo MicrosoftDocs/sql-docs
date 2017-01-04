@@ -33,37 +33,37 @@ Here are detailed instructions on how you can do this:
   
     1.  Navigate to the **Administration** pane, right-click on **Run As Configuration** -> **Accounts** and select **Create Run As Account…**  
   
-        ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
+        ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
     2.  The **Create Run As Account Wizard** dialog will open. On the **Introduction** page click **Next**.  
   
     3.  On the **General Properties** page select **Windows** from **Run As Account type** and specify “APS Watcher” as the **Display name**.  
   
-        ![CreateRunAsAccountWizardGeneralProperties](./media/configure-scom-to-monitor/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
+        ![CreateRunAsAccountWizardGeneralProperties](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
   
     4.  On the **Credentials** page provide “APS Watcher” domain user credentials.  
   
-        ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
+        ![CreateRunAsAccountWizardCredentials](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials.png "CreateRunAsAccountWizardCredentials")  
   
     5.  On the **Distribution Security** page select **Less secure** and click the **Create** button to finish.  
   
-        ![CreateRunAsAccountWizardDistributionSecurity](./media/configure-scom-to-monitor/CreateRunAsAccountWizardDistributionSecurity.png "CreateRunAsAccountWizardDistributionSecurity")  
+        ![CreateRunAsAccountWizardDistributionSecurity](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardDistributionSecurity.png "CreateRunAsAccountWizardDistributionSecurity")  
   
         1.  If you decide to use the **More secure** option you have to manually specify computers to which credentials will be distributed. To do this, after creating the Run As account, right-click on it and select **Properties**.  
   
         2.  Navigate to the **Distribution** tab and **Add** desired computers.  
   
-            ![RunAsAccountProperties](./media/configure-scom-to-monitor/RunAsAccountProperties.png "RunAsAccountProperties")  
+            ![RunAsAccountProperties](./media/configure-scom-to-monitor-analytics-platform-system/RunAsAccountProperties.png "RunAsAccountProperties")  
   
 2.  Set the **Microsoft APS Watcher Account** profile to use **APS Watcher** Run As account.  
   
     1.  Navigate to **Administration** -> **Run As Configuration** -> **Profiles**.  
   
-        ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
+        ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
     2.  Right click on **Microsoft APS Watcher Account** from the list and select **Properties**.  
   
-        ![MicrosoftApsWatcherAccountProperties](./media/configure-scom-to-monitor/MicrosoftApsWatcherAccountProperties.png "MicrosoftApsWatcherAccountProperties")  
+        ![MicrosoftApsWatcherAccountProperties](./media/configure-scom-to-monitor-analytics-platform-system/MicrosoftApsWatcherAccountProperties.png "MicrosoftApsWatcherAccountProperties")  
   
     3.  The **Run As Profile Wizard** dialog will open. Skip the **Introduction** page by clicking **Next**.  
   
@@ -71,7 +71,7 @@ Here are detailed instructions on how you can do this:
   
     5.  On the **Run As Accounts** page click the **Add…** button and select the previously created **APS Watcher** Run As account.  
   
-        ![RunAsProfileWizardAdd](./media/configure-scom-to-monitor/RunAsProfileWizardAdd.png "RunAsProfileWizardAdd")  
+        ![RunAsProfileWizardAdd](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd.png "RunAsProfileWizardAdd")  
   
     6.  Click **Save** to finish profile assignment.  
   
@@ -79,7 +79,7 @@ Here are detailed instructions on how you can do this:
   
     1.  Navigate to the **Monitoring** pane and open the **SQL Server Appliance** -> **Microsoft Analytics Platform System** -> **Appliances** state view.  
   
-        ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
+        ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   
     2.  Wait until the appliance appears in the list. The name of the appliance should be equal to one specified in the registry.  
   
@@ -94,11 +94,11 @@ Here are detailed instructions on how you can do this:
   
     2.  On the **General Properties** page select **Basic Authentication** account type.  
   
-        ![CreateRunAsAccountWizardGeneralProperties2](./media/configure-scom-to-monitor/CreateRunAsAccountWizardGeneralProperties2.png "CreateRunAsAccountWizardGeneralProperties2")  
+        ![CreateRunAsAccountWizardGeneralProperties2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties2.png "CreateRunAsAccountWizardGeneralProperties2")  
   
     3.  On the **Credentials** page supply valid credentials to access APS health state DMVs.  
   
-        ![CreateRunAsAccountWizardCredentials2](./media/configure-scom-to-monitor/CreateRunAsAccountWizardCredentials2.png "CreateRunAsAccountWizardCredentials2")  
+        ![CreateRunAsAccountWizardCredentials2](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardCredentials2.png "CreateRunAsAccountWizardCredentials2")  
   
 5.  Configure the **Microsoft APS Action Account** profile to use the newly created Run As account for the APS instance.  
   
@@ -106,7 +106,7 @@ Here are detailed instructions on how you can do this:
   
     2.  On the **Run As Accounts** page click **Add…** and select the newly created Run As account.  
   
-        ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
+        ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## Next Step  
 Now that you have configured the Management Packs, you are ready to start monitoring the appliance. For more information, see [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  

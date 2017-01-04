@@ -56,6 +56,6 @@ The following ports are used by PDW for internal communication, but are not open
 > [!NOTE]  
 > Creating external tables or external data sources uses TCP port 8020 by default. These statements can be configured to use other ports instead. The Hortonworks JOB_TRACKER_LOCATION default port is 50300. Integrating with other systems and tools may require additional ports.  
   
-## See Also  
-[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)  
+<!-- MISSING LINKS ## See Also  
+[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)  -->  
   

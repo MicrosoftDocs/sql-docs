@@ -71,7 +71,7 @@ The management packs must be installed. See [Install the SCOM Management Packs &
     ![Click Close](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
 ## Next Step  
-Now that you have imported the Management Packs, continue to the next step: [Configure SCOM to Monitor Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor.md).  
+Now that you have imported the Management Packs, continue to the next step: [Configure SCOM to Monitor Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

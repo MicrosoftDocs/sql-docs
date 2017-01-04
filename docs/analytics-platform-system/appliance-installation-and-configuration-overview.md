@@ -58,7 +58,7 @@ If your IHV is not performing the hardware install, use the following steps to i
 |||  
 |-|-|  
 |**Task**|**Description**|  
-|Apply SQL Server PDW updates|(Optional) You may need to apply one or more SQL Server PDW updates to update your SQL Server PDW software to the latest version. See [Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](apply-hotfixes.md).|  
+|Apply SQL Server PDW updates|(Optional) You may need to apply one or more SQL Server PDW updates to update your SQL Server PDW software to the latest version. See [Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md).|  
 |Configure Windows Server Update Services|Configure the appliance to receive updates from Windows Server Update Services for supporting software. See [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md).|  
   
 ## <a name="NextSteps"></a>Next Steps  

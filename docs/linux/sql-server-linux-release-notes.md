@@ -6,7 +6,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 12/16/2016
+ms.date: 01/04/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -72,6 +72,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Distributed Query |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable |
+| &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | **High Availability** | Always On Availability Groups |
 | &nbsp; | Database mirroring  |
 | **Security** | Active Directory Authentication |
@@ -207,6 +208,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Distributed Query |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable |
+| &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | **High Availability** | Always On Availability Groups |
 | &nbsp; | Database mirroring  |
 | **Security** | Active Directory authentication |

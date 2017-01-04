@@ -68,6 +68,8 @@ If your monitoring solution does not support direct Transact\-SQL queries, or yo
 |Determine how much capacity is being used.|[View Capacity Utilization &#40;Analytics Platform System&#41;](view-capacity-utilization.md)|  
 |Determine how often to poll the appliance.|[Determine Polling Frequency &#40;Analytics Platform System&#41;](determine-polling-frequency.md)|  
 |When a cluster failure occurs, determine which cluster node failed.|[Determine Which Cluster Node Failed &#40;Analytics Platform System&#41;](determine-which-cluster-node-failed.md)|  
+
+
 <!-- MISSING LINKS |Monitor loads.|[Monitor Loads &#40;SQL Server PDW&#41;](../sqlpdw/monitor-loads-sql-server-pdw.md)|  -->  
 <!-- MISSING LINKS |Monitor backups and restores.|[Monitor Backups and Restores &#40;SQL Server PDW&#41;](../sqlpdw/monitor-backups-and-restores-sql-server-pdw.md)|  -->  
 <!-- MISSING LINKS |Monitor the active queries.|[Monitoring Active Queries &#40;SQL Server PDW&#41;](../sqlpdw/monitoring-active-queries-sql-server-pdw.md)|  -->  

@@ -33,16 +33,7 @@
 ## [Transparent Data Encryption](transparent-data-encryption.md)
 ## [Provision a certificate](provision-certificate.md)
 
-# Appliance management
-## Appliance configuration
-### [Configure Windows Server Update Services](configure-wsus.md)
-
-# Reference
-## [T-SQL language elements](tsql-language-elements.md)
-## [T-SQL statements](tsql-statements.md)
-## [T-SQL system views](tsql-system-views.md) 
-
-# [Appliance Mangement Tasks](appliance-management-tasks.md)
+# [Appliance mangement tasks](appliance-management-tasks.md)
 ## [Appliance installation and configuration overview](appliance-installation-and-configuration-overview.md)
 ### [Information to obtain from your IHV](information-to-obtain-from-your-ihv.md)
 ### [Hardware installation](hardware-installation.md)
@@ -86,3 +77,8 @@
 ### [Determine polling frequency](determine-polling-frequency.md)
 ### [Determine which cluster node failed](determine-which-cluster-node-failed.md)
 ### [Understanding Admin Console alerts](understanding-admin-console-alerts.md)
+
+# Reference
+## [T-SQL language elements](tsql-language-elements.md)
+## [T-SQL statements](tsql-statements.md)
+## [T-SQL system views](tsql-system-views.md) 

@@ -136,11 +136,17 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
    rpm --import microsoft.asc
    ```
 
+1. Exit superuser mode.
+
+   ```bash
+   exit
+   ```
+
 1. Update the sources and install mssql-tools.
 
    ```bash
-   zypper update
-   zypper install mssql-tools
+   sudo zypper update
+   sudo zypper install mssql-tools
    ```
 
 > [!Note] 
@@ -158,11 +164,6 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
    ```
 
 
-1. Exit superuser mode.
-
-   ```bash
-   exit
-   ```
 
 
 > [!TIP]

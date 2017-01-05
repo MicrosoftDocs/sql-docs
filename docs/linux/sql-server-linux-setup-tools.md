@@ -71,9 +71,9 @@ Install the tools for your platform:
 >   yum update mssql-tools
 >   ```
 
-1. Create symlinks to SQLCMD and BCP under /usr/bin/.
+Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
 
-   ```bash (optional)
+   ```bash
    ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
    ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
    ```
@@ -106,13 +106,12 @@ Install the tools for your platform:
 >   apt-get update mssql-tools
 >   ```
 
-1. Create symlinks to SQLCMD and BCP under /usr/bin/.
+Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
 
-   ```bash (OPTIONAL)
+   ```bash
    ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
    ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
    ```
-
 
 ## <a name="SLES">Install tools on SLES</a>
 
@@ -151,12 +150,13 @@ Install the tools for your platform:
 >   zypper update mssql-tools
 >   ```
 
-1. Create symlinks to SQLCMD and BCP under /usr/bin/.
+Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
 
-   ```bash (OPTIONAL)
+   ```bash
    ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
    ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
    ```
+
 
 1. Exit superuser mode.
 

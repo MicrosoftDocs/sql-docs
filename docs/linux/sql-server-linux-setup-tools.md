@@ -6,7 +6,7 @@ description: This topic describes how to install the SQL Server Tools on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 12/16/2016
+ms.date: 1/05/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -99,6 +99,7 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
    sudo apt-get update 
    sudo apt-get upgrade mssql-tools
    ```
+
 > [!Note] 
 > To update to the latest version of mssql-tools run the following commands:
 >    ```bash
@@ -162,7 +163,6 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
    ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
    ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
    ```
-
 
 
 

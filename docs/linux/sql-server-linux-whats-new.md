@@ -2,7 +2,7 @@
 # required metadata
 
 title: What's New for SQL Server vNext on Linux - SQL Server vNext CTP 1.1 | Microsoft Docs
-description: This topic highlights what's new for this release of SQL Server vNext on Linux.
+description: This topic highlights what's new for the current release of SQL Server vNext on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard

@@ -73,7 +73,7 @@ Install the tools for your platform:
 
 1. Create symlinks to SQLCMD and BCP under /usr/bin/.
 
-   ```bash
+   ```bash (optional)
    ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
    ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
    ```

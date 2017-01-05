@@ -1,7 +1,7 @@
 ---
 title: "Appliance Time Zone Configuration (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: cea9eeb9-fe05-4e65-b229-539de02ab20a
 caps.latest.revision: 18
 author: BarbKess
 ---
-# Appliance Time Zone Configuration (Analytics Platform System)
+# Appliance Time Zone Configuration
 The **Time Zone** page enables you to set the time zone for all nodes on your SQL Server PDW appliance.  
   
 ## To set the time zone  

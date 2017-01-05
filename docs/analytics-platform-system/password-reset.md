@@ -1,7 +1,7 @@
 ---
 title: "Password Reset (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: a0f808fc-e120-430b-b6c9-11f2b1c90bf3
 caps.latest.revision: 26
 author: BarbKess
 ---
-# Password Reset (Analytics Platform System)
+# Password Reset
 The **Password Reset** page enables you to change the password for the administrator accounts used by Analytics Platform System.  
   
 > [!WARNING]  

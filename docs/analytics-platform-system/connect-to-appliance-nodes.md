@@ -1,7 +1,7 @@
 ---
 title: "Connect to Appliance Nodes (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
 caps.latest.revision: 19
 author: BarbKess
 ---
-# Connect to Appliance Nodes (Analytics Platform System)
+# Connect to Appliance Nodes
 This topic explains the various ways to connect to each node in the Analytics Platform System appliance.  
   
 ## Connecting with Hadoop  

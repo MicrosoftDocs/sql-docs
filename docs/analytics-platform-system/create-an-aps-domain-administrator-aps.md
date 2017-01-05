@@ -1,7 +1,7 @@
 ---
 title: "Create an APS Domain Administrator (APS)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
 caps.latest.revision: 7
 author: BarbKess
 ---
-# Create an APS Domain Administrator (APS)
+# Create an APS Domain Administrator
 Some operations require Analytics Platform System domain administrator privileges. This explains how to create additional appliance domain administrators.  
   
 ## Create a Domain Administrator  

@@ -1,7 +1,7 @@
 ---
 title: "Monitor the Appliance by Using System Views (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
 caps.latest.revision: 8
 author: BarbKess
 ---
-# Monitor the Appliance by Using System Views (Analytics Platform System)
+# Monitor the Appliance by Using System Views
 This topic lists the system views that you can use for monitoring SQL Server PDW.  
   
 ## To Monitor the Appliance by Using System Views  

@@ -1,7 +1,7 @@
 ---
 title: "Determine Polling Frequency (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 062c0e3d-f7d0-44f1-aeab-a9bd17dc6fdd
 caps.latest.revision: 7
 author: BarbKess
 ---
-# Determine Polling Frequency (Analytics Platform System)
+# Determine Polling Frequency
 This topic explains how to determine the polling frequency for SQL Server PDW appliance alerts.  
   
 ## To Determine the Polling Frequency  

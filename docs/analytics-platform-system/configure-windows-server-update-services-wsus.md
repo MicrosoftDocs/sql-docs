@@ -1,7 +1,7 @@
 ---
 title: "Configure Windows Server Update Services (WSUS) (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
 caps.latest.revision: 41
 author: BarbKess
 ---
-# Configure Windows Server Update Services (WSUS) (Analytics Platform System)
+# Configure Windows Server Update Services (WSUS)
 These instructions walk you through the steps for using the Windows Server Update Services (WSUS) Configuration Wizard to configure WSUS for Analytics Platform System. You need to configure WSUS before you can apply software updates to the appliance. WSUS is already installed on the VMM virtual machine of the appliance.  
   
 For more information about configuring WSUS, see the [WSUS Step-by-Step Installation Guide](http://go.microsoft.com/fwlink/?LinkId=202417) on the WSUS website. After configuring WSUS, see [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) to initiate an update.  

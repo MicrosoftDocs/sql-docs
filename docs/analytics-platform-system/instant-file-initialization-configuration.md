@@ -1,7 +1,7 @@
 ---
 title: "Instant File Initialization Configuration (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 58be8982-4d2e-4aa3-bcdd-874a062d2f9d
 caps.latest.revision: 20
 author: BarbKess
 ---
-# Instant File Initialization Configuration (Analytics Platform System)
+# Instant File Initialization Configuration
 Instant file initialization is a SQL Server feature that allows data file operations to run more quickly. Checking the box to turn Instant File Initialization on will improve performance of SQL Server PDW. However, if this poses a security risk for you business, then leave the box unchecked.  
   
 > [!IMPORTANT]  

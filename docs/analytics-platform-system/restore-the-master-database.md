@@ -1,7 +1,7 @@
 ---
 title: "Restore the Master Database (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 7870021a-0d89-422e-b8ea-1cc95b45c139
 caps.latest.revision: 11
 author: BarbKess
 ---
-# Restore the Master Database (Analytics Platform System)
+# Restore the Master Database
 The **Restore Master** page of the SQL Server PDW Configuration Manager enables you to restore the master database from a backup.  
   
 ## Before You Begin  

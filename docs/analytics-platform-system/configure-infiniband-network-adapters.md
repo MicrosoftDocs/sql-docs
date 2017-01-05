@@ -5,7 +5,7 @@ description: "Describes how to configure the InfiniBand network adapters on a no
 
 author: "barbkess" 
 ms.author: "barbkess"
-ms.date: "10/20/2016"
+ms.date: "01/05/2017"
 ms.topic: "article"
 
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646

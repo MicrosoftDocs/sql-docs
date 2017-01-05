@@ -5,7 +5,7 @@ description: "The Analytics Platform System (APS) hardware is architected with s
 
 author: "barbkess" 
 ms.author: "barbkess"
-ms.date: "10/20/2016"
+ms.date: "01/05/2017"
 ms.topic: "article"
 
 ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea

@@ -1,7 +1,7 @@
 ---
 title: "Configure PolyBase Connectivity to External Data (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
 caps.latest.revision: 43
 author: BarbKess
 ---
-# Configure PolyBase Connectivity to External Data (Analytics Platform System)
+# Configure PolyBase Connectivity to External Data
 Explains how to configure PolyBase in SQL Server PDW to connect to external Hadoop or Microsoft Azure storage blob data sources. Use PolyBase to run queries that integrate data from multiple sources, including Hadoop, Azure blob storage, and SQL Server PDW.  
   
 ### To configure connectivity  

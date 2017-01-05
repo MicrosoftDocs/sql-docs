@@ -35,13 +35,14 @@ Install the tools for your platform:
 
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
+- [SUSE Enterprise Linux](#SLES)
 - [macOS](#macos)
 
 ## <a name="RHEL">Install tools on RHEL</a>
 
 1. Enter superuser mode.
 
-   ```
+   ```bash
    sudo su
    ```
 
@@ -63,27 +64,118 @@ Install the tools for your platform:
    sudo yum install mssql-tools
    ```
 
+> [!Note] 
+> To update to the latest version of mssql-tools run the following commands:
+>    ```bash
+>   yum check-update
+>   yum update mssql-tools
+>   ```
+
+1. Create symlinks to SQLCMD and BCP under /usr/bin/.
+
+   ```bash (OPTIONAL)
+   ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
+   ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
+   ```
 
 ## <a name="ubuntu">Install tools on Ubuntu</a>
 
-1. Import the public repository GPG keys:
+1. Import the public repository GPG keys.
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Register the Microsoft Ubuntu repository:
+1. Register the Microsoft Ubuntu repository.
 
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Update the sources list and run the installation command:
+1. Update the sources list and run the installation command.
 
    ```bash
    sudo apt-get update 
-   sudo apt-get install mssql-tools
+   sudo apt-get upgrade mssql-tools
    ```
+> [!Note] 
+> To update to the latest version of mssql-tools run the following commands:
+>    ```bash
+>   apt-get refresh
+>   apt-get update mssql-tools
+>   ```
+
+1. Create symlinks to SQLCMD and BCP under /usr/bin/.
+
+   ```bash (OPTIONAL)
+   ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
+   ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
+   ```
+
+
+## <a name="SLES">Install tools on SLES</a>
+
+1. Enter superuser mode.
+
+   ```bash
+   sudo su
+   ```
+
+1. Add the Microsoft SQL Server repository to Zypper.
+
+   ```bash
+   zypper ar https://packages.microsoft.com/yumrepos/mssql-suse12-release/ "mssql"
+   ```
+
+1. Download and import GPG keys.
+
+   ```bash
+   wget "http://aka.ms/msodbcrhelpublickey/dpgswdist.v1.asc"
+   rpm --import dpgswdist.v1.asc
+   wget "https://apt-mo.trafficmanager.net/keys/microsoft.asc"
+   rpm --import microsoft.asc
+   ```
+
+1. Update the sources and install mssql-tools.
+
+   ```bash
+   zypper update
+   zypper install mssql-tools
+   ```
+
+> [!Note] 
+> To update to the latest version of mssql-tools run the following commands:
+>    ```bash
+>   zypper refresh
+>   zypper update mssql-tools
+>   ```
+
+1. Create symlinks to SQLCMD and BCP under /usr/bin/.
+
+   ```bash (OPTIONAL)
+   ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
+   ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
+   ```
+
+1. Exit superuser mode.
+
+   ```bash
+   exit
+   ```
+
+
+> [!TIP]
+> In addition to accessing mssql-tools in its installed directory, you can access the tools anywhere by creating symlinks for ‘sqlcmd’ and ‘bcp’
+> To create a new symlink run:
+> ln -s {path to target} {path to link}
+> To update an existing symlink run:
+> ln -sfn {path to target} {path to link}
+> 
+> Examples:
+> Running ‘ln -s /opt/mssql-tools/bin/sqlcmd13.0.0.1 /usr/bin/sqlcmd’ will create a symlink to the sqlcmd13.0.0.1 binary under /usr/bin which a part of the PATH env variable by default. The ‘sqlcmd’ command will now launch the sqlcmd13.0.0.1 utility.
+> 
+> Running ‘ln -sfn /opt/mssql-tools/bin/sqlcmd13.0.0.1 /usr/bin/sqlcmd’ will update the existing /usr/bin/sqlcmd to point to /opt/mssql-tools/bin/sqlcmd13.0.0.1.
+
 
 ## <a name="macos">Install tools on macOS</a>
 

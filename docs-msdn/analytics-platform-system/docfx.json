@@ -33,7 +33,7 @@
 	      "manager": "jhubbard",	  
         "ms.topic": "article",
 	      "ms.prod": "analytics-platform-system",	  
-	      "ms.technology": "mpp-data-warehouse"
+	      "ms.technology": "mpp-data-warehouse",
 		  "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","craigg-msft"]
 	},
     "fileMetadata": {},

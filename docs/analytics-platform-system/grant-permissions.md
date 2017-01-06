@@ -12,9 +12,8 @@ author: BarbKess
 # Grant permissions
 
 ## Grant Permissions to Submit Database Queries
-This topic describes how to grant permissions to database roles and users to query data on the SQL Server PDW appliance.  
+This section describes how to grant permissions to database roles and users to query data on the SQL Server PDW appliance.  
   
-### <a name="PermsAdminConsole"></a>Grant Permissions to Query Data  
 The statements used to grant permissions to query data depend on the scope of access desired. The following SQL statements create a login named KimAbercrombie that can access the appliance, create a database user named KimAbercrombie in the **AdventureWorksPDW2012** database, create a database role named PDWQueryData, adds the use KimAbercrombie to the PDWQueryData role, and then show options for granting query access, based on whether the access is granted at the object, or database level.  
   
 ```  
@@ -52,9 +51,8 @@ GO
 ```  
   
 ## Grant Permissions to Use the Admin Console
-This topic describes how to grant permissions to logins to use the Admin Console.  
+This section describes how to grant permissions to logins to use the Admin Console.  
   
-### <a name="PermsAdminConsole"></a>Grant Permissions to Monitor Appliance Health and Use the Admin Console  
 **Use the Admin Console**  
   
 To use the Admin Console a login requires the server level **VIEW SERVER STATE** permission. The following SQL statement grants the **VIEW SERVER STATE** permission to the login `KimAbercrombie` so that Kim can use the Admin Console to monitor the SQL Server PDW appliance.  
@@ -75,9 +73,8 @@ GRANT ALTER ANY CONNECTION TO KimAbercrombie;
 ```  
   
 ## Grant Permissions to Load Data
-This topic describes how to grant permissions to database roles and database users to load data onto the SQL Server PDWappliance.  
+This section describes how to grant permissions to database roles and database users to load data onto the SQL Server PDWappliance.  
   
-### <a name="PermsAdminConsole"></a>Grant Permissions to Load Data  
 The following script shows which permissions are required for each loading option. You can modify this to meet your specific needs.  
   
 ```  
@@ -119,17 +116,15 @@ EXEC sp_addrolemember 'db_datawriter','BI_ETLUser';
 ```  
   
 ## Grant Permissions to Copy Data Off the Appliance
-This topic describes how to grant permissions to a user or database role to copy data off the SQL Server PDW appliance.  
+This section describes how to grant permissions to a user or database role to copy data off the SQL Server PDW appliance.  
   
-### <a name="PermsAdminConsole"></a>Grant Permissions to Copy Data Off the Appliance  
 To move data to another location requires **SELECT** permission on the table containing the data to be moved.  
   
 If the destination for the data is another SQL Server PDW, the user must have **CREATE TABLE** permission at the destination and **ALTER SCHEMA** permission on the schema that will contain the table.  
   
 ## Grant Permissions to Manage Databases
-This topic describes how to grant permissions to a database user to manage a database on the SQL Server PDW appliance.  
+This section describes how to grant permissions to a database user to manage a database on the SQL Server PDW appliance.  
   
-### <a name="PermsAdminConsole"></a>Grant Permissions to Manage Databases  
 In some situations, a company assigns a manager for a database. The manager controls the access that other logins have to the database, as well as the data and objects in the database. To manage all objects, roles, and users in a database grant the user the **CONTROL** permission on the database. The following statement grants the **CONTROL** permission on the **AdventureWorksPDW2012** database to the user `KimAbercrombie`.  
   
 ```Transact-SQL  
@@ -141,7 +136,7 @@ GRANT CONTROL ON DATABASE:: AdventureWorksPDW2012 TO KimAbercrombie;
 To grant someone the permission to control all the databases on the appliance, grant the **ALTER ANY DATABASE** permission in the master database.  
   
 ## Grant Permissions to Manage Logins, Users, and Database Roles
-This topic describes how to grant permissions to manage logins, database users, and database roles.  
+This section describes how to grant permissions to manage logins, database users, and database roles.  
   
 ### <a name="PermsAdminConsole"></a>Grant Permissions to Manage Logins  
 **Add or Manage Logins**  

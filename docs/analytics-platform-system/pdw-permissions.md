@@ -179,7 +179,6 @@ SQL Server provides pre-configured (fixed) database-level roles to help you mana
   
 Roles are security principals that group other principals. Database roles are database-wide in their permissions scope. Database users and other database roles can be added as members of database roles. The fixed database roles cannot be added to each other. (*Roles* are like *groups* in the Windows operating system.)  
   
-### Fixed Database Roles  
 There are 9 fixed database roles.  
   
 -   **db_owner**  

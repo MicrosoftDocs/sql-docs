@@ -5,7 +5,7 @@
   "docsets_to_publish": [
     {
       "docset_name": "analytics-platform-system",
-      "build_source_folder": "docs/analytics-platform-system",
+      "build_source_folder": "docs-msdn/analytics-platform-system",
       "build_output_subfolder": "sql/analytics-platform-system",
       "locale": "en-us",
       "version": 0,

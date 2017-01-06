@@ -1,7 +1,7 @@
 ---
 title: "Monitor Appliance Health State (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
 caps.latest.revision: 12
 author: BarbKess
 ---
-# Monitor Appliance Health State (Analytics Platform System)
+# Monitor Appliance Health State
 This topic explains how to monitor the state of a SQL Server PDW appliance by using the Admin Console, or by directly querying the SQL Server PDW Dynamic Management Views.  
   
 ## To Monitor the Appliance State  

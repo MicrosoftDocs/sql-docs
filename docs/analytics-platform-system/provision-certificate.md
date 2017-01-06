@@ -4,7 +4,7 @@ description: "The PDW Certificate Provisioning page of the Analytics Platform Sy
 
 author: "barbkess" 
 ms.author: "barbkess"
-ms.date: "10/20/2016"
+ms.date: "01/05/2017"
 ms.topic: "article"
 
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
@@ -12,12 +12,10 @@ caps.latest.revision: 22
 
 ---
 
-# PDW Certificate Provisioning (Analytics Platform System)
+# PDW Certificate Provisioning
 The **PDW Certificate Provisioning** page of the Analytics Platform System**Configuration Manager** imports or removes the certificate used by PDW. 
 
-<!-- MISSING LINKS
-Using, a certificate to encrypt connections can help secure communication to the Control node through SQL Server clients, tools that use the SQL Server PDW drivers, the [Admin Console](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md), and Integration Services loads. 
---> 
+Using, a certificate to encrypt connections can help secure communication to the Control node through SQL Server clients, tools that use the SQL Server PDW drivers, the [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), and Integration Services loads. 
   
 ## Prerequisites  
 Before installing the certificate, do the following:  
@@ -45,10 +43,8 @@ The following instructions show how to import or remove the appliance certificat
   
 ### To import the certificate  
   
-1.  Launch the **Configuration Manager**. 
-<!-- MISSING LINKS
-For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md).  
--->  
+1.  Launch the **Configuration Manager**.  
+For more information, see [Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
 
 2.  In the left pane of the **Configuration Manager**, expand **Parallel Data Warehouse Topology**, and then click **Certificates**.  
   
@@ -78,11 +74,5 @@ SQL Server PDW will continue to encrypt current connections, but will not use th
   
 ![DWConfig Appliance PDW Certificate](media/dwconfig-appl-pdw-cert.png "DWConfig Appliance PDW certificate")  
   
-<!-- MISSING LINKS
-
 ## See Also  
-[Launch the Configuration Manager &#40;Analytics Platform System&#41;](../management/launch-the-configuration-manager-analytics-platform-system.md)  
-
--->
-
-  
+[Launch the Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Software Servicing (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: cec4d924-c88f-470c-84bb-0af3e21aabf1
 caps.latest.revision: 33
 author: BarbKess
 ---
-# Software Servicing (Analytics Platform System)
+# Software Servicing
 This section summarizes the software servicing requirements for Analytics Platform System appliances, including WSUS and Analytics Platform System hotfixes.  
   
 ## <a name="Basics"></a>Software Servicing Basics  

@@ -1,7 +1,7 @@
 ---
 title: "View Capacity Utilization (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
 caps.latest.revision: 9
 author: BarbKess
 ---
-# View Capacity Utilization (Analytics Platform System)
+# View Capacity Utilization
 This topic explains how to view capacity utilization in the SQL Server PDW appliance.  
   
 ## To View Capacity Utilization By Using Admin Console  

@@ -5,7 +5,7 @@ description: "This topic explains the appliance software and the non-appliance s
 
 author: "barbkess" 
 ms.author: "barbkess"
-ms.date: "11/03/2016"
+ms.date: "01/05/2017"
 ms.topic: "article"
 
 ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
@@ -240,23 +240,15 @@ Analytics Platform System has several ways to monitor appliance activity
 ### Admin Console  
 The Admin Console allows you to view current status about the appliance health. This runs as a web application on the Control node and is accessible over https.  
   
-<!-- MISSING LINKS
-For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-the-admin-console-analytics-platform-system.md)  
--->
+For more information, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
 ### System Views  
 The Admin Console is based on system view queries. You can query the system views individually to get the specific piece of information you need.  
 
-<!-- MISSING LINKS  
-
-For more information, see [Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-views-analytics-platform-system.md) 
-
---> 
+For more information, see [Monitor the Appliance by Using System Views &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md) 
   
 ### System Center Operations Manager  
 There are System Center Operations Manager (SCOM) Management Packs for SQL Server PDW. 
 
-<!-- MISSING LINKS
-To configure the appliance for SCOM, see [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](../management/monitor-the-appliance-by-using-system-center-operations-manager-analytics-platform-system.md)  
+To configure the appliance for SCOM, see [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
--->

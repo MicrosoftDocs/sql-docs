@@ -1,7 +1,7 @@
 ---
 title: "Determine Which Cluster Node Failed (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
 caps.latest.revision: 21
 author: BarbKess
 ---
-# Determine Which Cluster Node Failed (Analytics Platform System)
+# Determine Which Cluster Node Failed
 This topic describes how to determine the name of the SQL Server PDW node that failed after a cluster failover has occurred and a cluster failover alert has been raised. As part of troubleshooting a cluster failover, you must determine the name of the node that failed before contacting Microsoft to help resolve the problem.  
   
 ## <a name="Background"></a>Background  

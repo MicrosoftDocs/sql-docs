@@ -1,7 +1,7 @@
 ---
 title: "Appliance Installation and Configuration Overview (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
 caps.latest.revision: 23
 author: BarbKess
 ---
-# Appliance Installation and Configuration Overview (Analytics Platform System)
+# Appliance Installation and Configuration Overview
 Walks SQL Server PDW appliance administrators through the initial steps to set up and get started using your new SQL Server PDW appliance.  
   
 <!-- MISSING LINKS ## <a name="BeforeYouBegin"></a>Before You Begin  

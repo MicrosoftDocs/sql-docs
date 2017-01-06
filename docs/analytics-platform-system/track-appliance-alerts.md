@@ -1,7 +1,7 @@
 ---
 title: "Track Appliance Alerts (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
 caps.latest.revision: 14
 author: BarbKess
 ---
-# Track Appliance Alerts (Analytics Platform System)
+# Track Appliance Alerts
 This topic explains how to use the Admin Console and system views to track alerts in a SQL Server PDW appliance.  
   
 ## To Track Appliance Alerts  

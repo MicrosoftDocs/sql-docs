@@ -1,7 +1,7 @@
 ---
 title: "Appliance Monitoring (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
 caps.latest.revision: 25
 author: BarbKess
 ---
-# Appliance Monitoring (Analytics Platform System)
+# Appliance Monitoring
 This Appliance Monitoring Guide describes the tools and tasks for monitoring the SQL Server PDW appliance.  
   
 ## <a name="Basics"></a>Monitoring Basics and Tools  

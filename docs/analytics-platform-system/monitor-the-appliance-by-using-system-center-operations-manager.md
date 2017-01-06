@@ -1,7 +1,7 @@
 ---
 title: "Monitor the Appliance by Using System Center Operations Manager (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
 caps.latest.revision: 14
 author: BarbKess
 ---
-# Monitor the Appliance by Using System Center Operations Manager (Analytics Platform System)
+# Monitor the Appliance by Using System Center Operations Manager
 This describes how to use System Center Operations Manager to monitor SQL Server PDW and HDInsight.  
   
 ## Before You Begin  

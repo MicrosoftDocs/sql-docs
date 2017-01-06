@@ -5,22 +5,20 @@ description: "Configure Windows Server Update Services (WSUS) for Analytics Plat
 
 author: "barbkess" 
 ms.author: "barbkess"
-ms.date: "12/13/2016"
+ms.date: "01/05/2017"
 ms.topic: "article"
 
 
 
 ---
-# Configure Windows Server Update Services (WSUS) (Analytics Platform System)
+# Configure Windows Server Update Services (WSUS)
 This tutorial uses the Windows Server Update Services (WSUS) Configuration Wizard to configure WSUS for Analytics Platform System. When you are finished, you can apply software updates to the appliance. 
 
 WSUS is already installed on the VMM virtual machine of the appliance.  
   
 For more information about configuring WSUS, see the [WSUS Step-by-Step Installation Guide](http://go.microsoft.com/fwlink/?LinkId=202417) on the WSUS website. 
 
-<!-- MISSING LINKS
-After configuring WSUS, see [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../management/download-and-apply-microsoft-updates-analytics-platform-system.md) to initiate an update.  
--->
+After configuring WSUS, see [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) to initiate an update.  
   
 > [!WARNING]  
 > If you encounter any errors during this configuration process, stop and contact support for assistance. Do not ignore errors or continue in the process after errors are received.  
@@ -39,9 +37,7 @@ To configure WSUS, you need to:
 -   In most cases, WSUS needs to access servers outside of the appliance. To support this usage scenario the Analytics Platform System DNS can be configured to support an external name forwarder that will allow the Analytics Platform System hosts and Virtual Machines (VMs) to use external DNS servers to resolve names outside of the appliance. 
 
 
-<!-- MISSING LINKS
-For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](../management/use-a-dns-forwarder-to-resolve-non-appliance-dns-names-analytics-platform-system.md).  
--->
+For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## To configure Windows Server Update Services (WSUS)  
   
@@ -178,12 +174,10 @@ For more information, see [Use a DNS Forwarder to Resolve Non-Appliance DNS Name
 ## <a name="bkmk_WSUSGroup"></a>Group the Appliance Servers in WSUS  
 After configuring WSUS for Analytics Platform System, the next step is to group the appliance servers. By adding all of the appliance servers to a group, WSUS will be able to apply software updates to all servers in the appliance.  
   
-<!-- MISSING LINKS
 
 > [!NOTE]  
-> The WSUS system is designed to run asynchronously. Initiating activity does not always result in an immediately update. Therefore, you might need to wait a while until computers will be visible in the WSUS dialog boxes. Running the `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` command described at the end of the topic [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](../management/download-and-apply-microsoft-updates-analytics-platform-system.md) can help refresh the dialog boxes.  
+> The WSUS system is designed to run asynchronously. Initiating activity does not always result in an immediately update. Therefore, you might need to wait a while until computers will be visible in the WSUS dialog boxes. Running the `setup.exe /action=ReportMicrosoftUpdateClientStatus /DomainAdminPassword="<password>"` command described at the end of the topic [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) can help refresh the dialog boxes.  
 
--->
   
 #### To group the appliance servers  
   

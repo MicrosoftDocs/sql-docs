@@ -1,7 +1,7 @@
 ---
 title: "Uninstall Microsoft Updates (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: df61570a-210d-4154-822f-98acd721f075
 caps.latest.revision: 19
 author: BarbKess
 ---
-# Uninstall Microsoft Updates (Analytics Platform System)
+# Uninstall Microsoft Updates
 This topic describes how to uninstall a previously installed Microsoft update on the Analytics Platform System appliance.  
   
 ## Before You Begin  

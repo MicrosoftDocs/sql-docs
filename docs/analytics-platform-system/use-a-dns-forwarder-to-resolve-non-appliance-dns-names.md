@@ -1,7 +1,7 @@
 ---
 title: "Use a DNS Forwarder to Resolve Non-Appliance DNS Names (Analytics Platform System)"
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
 caps.latest.revision: 21
 author: BarbKess
 ---
-# Use a DNS Forwarder to Resolve Non-Appliance DNS Names (Analytics Platform System)
+# Use a DNS Forwarder to Resolve Non-Appliance DNS Names
 A DNS forwarder can be configured on the Active Directory Domain Services nodes (***appliance_domain*-AD01** and ***appliance_domain*-AD02**) of your Analytics Platform System appliance to allow scripts and software applications to access external servers.  
   
 ## <a name="ResolveDNS"></a>Using a DNS Forwarder  

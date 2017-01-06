@@ -1,7 +1,7 @@
 ---
 title: "Appliance Management Tasks (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 516d05a9-b791-4ad3-b8cf-ba34a854e309
 caps.latest.revision: 25
 author: BarbKess
 ---
-# Appliance Management Tasks (Analytics Platform System)
+# Appliance Management Tasks
 This guide describes how to perform appliance administration tasks for SQL Server PDW.  
   
 ## Guide Sections  

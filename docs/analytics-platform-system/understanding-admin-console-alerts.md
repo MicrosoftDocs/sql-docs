@@ -1,7 +1,7 @@
 ---
 title: "Understanding Admin Console Alerts (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
 caps.latest.revision: 10
 author: BarbKess
 ---
-# Understanding Admin Console Alerts (Analytics Platform System)
+# Understanding Admin Console Alerts
 Alerts appear in the appliance **Admin Console** and in **System Center Operations Manager** (SCOM). Use this list of alerts to help identify which alerts require additional investigation.  
   
 For information about connecting to the **Admin Console** by using Internet Explorer, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). For information about **SCOM**, see [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Antivirus Software (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
 caps.latest.revision: 29
 author: BarbKess
 ---
-# Antivirus Software (Analytics Platform System)
+# Antivirus Software
 If your data center requires antivirus software, use these guidelines to install antivirus software on Analytics Platform System. We recommend not installing antivirus software unless it is a firm requirement of your data center.  
   
 > [!WARNING]  

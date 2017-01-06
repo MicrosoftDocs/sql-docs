@@ -4,14 +4,14 @@ description: "The Integration Services Script Task allows you to perform virtual
 
 author: "barbkess" 
 ms.author: "barbkess"
-ms.date: "10/20/2016"
+ms.date: "01/05/2017"
 ms.topic: "article"
 
 ms.assetid: e2a9b254-5a66-44b1-863a-fa831555e7e0
 caps.latest.revision: 8
 author: BarbKess
 ---
-# How to create a script task that uses the SSIS PDW destination adapter (SQL Server PDW)
+# How to create a script task that uses the SSIS PDW destination adapter
 The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow. This SSIS package script code is a code example for using the SSIS PDW destination adaptor.  
   
 ## Sample Code  

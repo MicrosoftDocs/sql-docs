@@ -1,7 +1,7 @@
 ---
 title: "Launch the Configuration Manager (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
 caps.latest.revision: 22
 author: BarbKess
 ---
-# Launch the Configuration Manager (Analytics Platform System)
+# Launch the Configuration Manager
 This topic provides instructions for launching the **Configuration Manager** for the Analytics Platform System appliance.  
   
 ## Before You Begin  

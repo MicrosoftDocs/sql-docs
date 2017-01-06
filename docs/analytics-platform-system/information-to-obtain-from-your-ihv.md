@@ -1,7 +1,7 @@
 ---
 title: "Information to Obtain from Your IHV (Analytics Platform System)"
 ms.custom: na
-ms.date: 07/21/2016
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: 2bce301a-704c-4236-a0a1-851bd17e2b6c
 caps.latest.revision: 11
 author: BarbKess
 ---
-# Information to Obtain from Your IHV (Analytics Platform System)
+# Information to Obtain from Your IHV
 When your independent hardware vendor (IHV) delivers your new SQL Server PDW appliance to you, they will also deliver information on the appliance hardware and the configuration they have performed on your appliance. You will need this information to administer your appliance.  
   
 The following list shows information that is usually needed from your IHV. In some cases, additional or other information is needed. Check with your IHV to make sure all relevant information has been transferred to you with the appliance delivery.  

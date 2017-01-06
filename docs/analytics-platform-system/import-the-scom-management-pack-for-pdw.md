@@ -1,7 +1,7 @@
 ---
 title: "Import the SCOM Management Pack for PDW (Analytics Platform System)"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,7 +10,7 @@ ms.assetid: fa735041-8e58-4886-ae3b-36f3c6298b12
 caps.latest.revision: 6
 author: BarbKess
 ---
-# Import the SCOM Management Pack for PDW (Analytics Platform System)
+# Import the SCOM Management Pack for PDW
 Follow these steps to import the System Center Operations Manager (SCOM) Management Packs for SQL Server PDW. The Management Packs are required to monitor SQL Server PDW from SCOM.  
   
 ## <a name="BeforeBegin"></a>Before You Begin  

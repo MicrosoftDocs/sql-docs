@@ -6,7 +6,7 @@ description: This tutorial shows how to use the mssql extension for VS Code. Thi
 author: erickangMSFT 
 ms.author: erickang 
 manager: jhubbard
-ms.date: 11/18/2016
+ms.date: 01/06/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -47,9 +47,6 @@ The following steps explain how to install the mssql extension.
 2. Click install **mssql**. 
    
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-extension.png" alt="Install the extension" style="width: 600px;"/>
-
-   > [!NOTE]
-   > Unlike **mssql**, **vscode-mssql** is a prototype version that will retire from the extension Marketplace soon. If you have already installed the vscode-mssql extension, please remove it.
 
 3. The **mssql** extension takes up to one minute to install. Wait for the prompt that tells you it successfully installed.
 

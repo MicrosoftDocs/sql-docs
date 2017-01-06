@@ -32,6 +32,8 @@
 # Security
 ## [Transparent Data Encryption](transparent-data-encryption.md)
 ## [Provision a certificate](provision-certificate.md)
+## [PDW permissions](pdw-permissions.md)
+### [Grant permissions](grant-permissions.md)
 
 # [Appliance mangement tasks](appliance-management-tasks.md)
 ## [Appliance installation and configuration overview](appliance-installation-and-configuration-overview.md)

@@ -77,7 +77,7 @@ Copy and paste the commands below at the PowerShell prompt. When you run these c
 - Create an instance of the [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) object
 - Connect to the **Server** and display a few properties
 
-Remember to replace **<your_server_instance>** with the IP address or the hostname of your SQL Server vNext CTP 1.1 instance on Linux.
+Remember to replace **\<your_server_instance\>** with the IP address or the hostname of your SQL Server vNext CTP 1.1 instance on Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -117,7 +117,7 @@ Copy and paste the commands below at the PowerShell prompt. They might take a fe
 - Use the **Get-SqlErrorLog** cmdlet to connect to the SQL Server vNext instance on Linux and retrieve error logs since **Yesterday**
 - Pipe the output to the **Out-GridView** cmdlet
 
-Remember to replace **<your_server_instance>** with the IP address or the hostname of your SQL Server vNext CTP 1.1 instance on Linux.
+Remember to replace **\<your_server_instance\>** with the IP address or the hostname of your SQL Server vNext CTP 1.1 instance on Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server

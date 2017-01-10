@@ -33,7 +33,7 @@
     },
     {
       "docset_name": "sql-content",
-      "build_source_folder": "sql",
+      "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "en-us",
       "version": 0,

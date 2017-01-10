@@ -31,7 +31,8 @@
     "externalReference": [],
     "globalMetadata": {
       "layout": "Conceptual",
-      "breadcrumb_path": "~/breadcrumb/toc.yml"
+      "breadcrumb_path": "~/breadcrumb/toc.yml",
+	  "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana"]
     },
     "fileMetadata": {},
     "template": [],

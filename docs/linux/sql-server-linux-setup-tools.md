@@ -75,8 +75,8 @@ Install the tools for your platform:
 Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 
    ```bash
-   ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
-   ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
+   ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
+   ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
    ```
 
 
@@ -111,37 +111,17 @@ Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 
    ```bash
-   ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
-   ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
+   ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
+   ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
    ```
 
 ## <a name="SLES">Install tools on SLES</a>
 
-1. Enter superuser mode.
-
-   ```bash
-   sudo su
-   ```
 
 1. Add the Microsoft SQL Server repository to Zypper.
 
    ```bash
-   zypper ar https://packages.microsoft.com/config/sles/12/prod.repo 
-   ```
-
-1. Download and import GPG keys.
-
-   ```bash
-   wget "http://aka.ms/msodbcrhelpublickey/dpgswdist.v1.asc"
-   rpm --import dpgswdist.v1.asc
-   wget "https://apt-mo.trafficmanager.net/keys/microsoft.asc"
-   rpm --import microsoft.asc
-   ```
-
-1. Exit superuser mode.
-
-   ```bash
-   exit
+   sudo zypper ar https://packages.microsoft.com/config/sles/12/prod.repo 
    ```
 
 1. Update the sources, and install 'mssql-tools' with the unixODBC developer package.
@@ -161,8 +141,8 @@ Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 
    ```bash
-   ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
-   ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
+   ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
+   ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
    ```
 
 

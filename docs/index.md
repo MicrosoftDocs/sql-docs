@@ -1,1 +1,3 @@
-# Welcome to sql-content!
+---
+redirect_url: /sql/linux
+---

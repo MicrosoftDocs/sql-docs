@@ -34,24 +34,25 @@ This topic introduces [SQL Server PowerShell](https://msdn.microsoft.com/en-us/l
 
 ## Before you begin
 
-First, read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server vNext CTP 1.1 on Linux.
+Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server vNext CTP 1.1 on Linux.
 
 ## Launch PowerShell and import the *sqlserver* module
 
-Let's start by launching PowerShell on Windows. Open a *command prompt* on your Windows computer and copy and paste the commands below to launch `powershell`.
+Let's start by launching PowerShell on Windows. Open a *command prompt* on your Windows computer and copy and paste the commands below to launch **PowerShell**.
 
 ```powershell
 PowerShell
 ```
 
-SQL Server provides a Windows PowerShell module named `sqlserver` that you can use to import the SQL Server components (SQL Server provider and cmdlets) into a PowerShell environment or script.
-Copy and paste the command below at the PowerShell prompt to import the `sqlserver` module into your current PowerShell session:
+SQL Server provides a Windows PowerShell module named **SqlServer** that you can use to import the SQL Server components (SQL Server provider and cmdlets) into a PowerShell environment or script.
+
+Copy and paste the command below at the PowerShell prompt to import the **SqlServer** module into your current PowerShell session:
 
 ```powershell
 Import-Module SqlServer
 ```
 
-Type the command below at the PowerShell prompt to verify that the `sqlserver` module was imported correctly:
+Type the command below at the PowerShell prompt to verify that the **SqlServer** module was imported correctly:
 
 ```powershell
 Get-Module -Name SqlServer
@@ -74,9 +75,9 @@ Copy and paste the commands below at the PowerShell prompt. When you run these c
 - Display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server vNext CTP 1.1 instance on Linux
 - Load the SQL Server Management Objects (SMO) assembly
 - Create an instance of the [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) object
-- Connect to the `Server` and display a few properties
+- Connect to the **Server** and display a few properties
 
-Remember to replace `<your_server_instance>` with the IP address or the hostname of your SQL Server vNext CTP 1.1 instance on Linux.
+Remember to replace **<your_server_instance>** with the IP address or the hostname of your SQL Server vNext CTP 1.1 instance on Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -109,14 +110,14 @@ HostDistribution : Ubuntu
 
 ## Examine SQL Server error logs
 
-Let's use PowerShell on Windows to examine error logs connect on your SQL Server vNext instance on Linux. We will also use the `Out-GridView` cmdlet to show information from the error logs in a grid view display.
+Let's use PowerShell on Windows to examine error logs connect on your SQL Server vNext instance on Linux. We will also use the **Out-GridView** cmdlet to show information from the error logs in a grid view display.
 
 Copy and paste the commands below at the PowerShell prompt. They might take a few minutes to run. These commands do the following:
 - Display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server vNext CTP 1.1 instance on Linux
-- Use the `Get-SqlErrorLog` cmdlet to connect to the SQL Server vNext instance on Linux and retrieve error logs since `yesterday`
-- Pipe the output to the `Out-GridView` cmdlet
+- Use the **Get-SqlErrorLog** cmdlet to connect to the SQL Server vNext instance on Linux and retrieve error logs since **Yesterday**
+- Pipe the output to the **Out-GridView** cmdlet
 
-Remember to replace `<your_server_instance>` with the IP address or the hostname of your SQL Server vNext CTP 1.1 instance on Linux.
+Remember to replace **<your_server_instance>** with the IP address or the hostname of your SQL Server vNext CTP 1.1 instance on Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server

@@ -58,7 +58,7 @@ Install the tools for your platform:
    exit
    ```
 
-1. Run the following commands to install mssql-tools with the unixODBC developer package.
+1. Run the following commands to install 'mssql-tools' with the unixODBC developer package.
 
    ```bash
    sudo yum update
@@ -66,13 +66,13 @@ Install the tools for your platform:
    ```
 
 > [!Note] 
-> To update to the latest version of mssql-tools run the following commands:
+> To update to the latest version of 'mssql-tools' run the following commands:
 >    ```bash
 >   yum check-update
 >   yum update mssql-tools
 >   ```
 
-Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
+Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 
    ```bash
    ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
@@ -102,13 +102,13 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
    ```
 
 > [!Note] 
-> To update to the latest version of mssql-tools run the following commands:
+> To update to the latest version of 'mssql-tools' run the following commands:
 >    ```bash
 >   apt-get refresh
 >   apt-get update mssql-tools
 >   ```
 
-Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
+Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 
    ```bash
    ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
@@ -144,7 +144,7 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
    exit
    ```
 
-1. Update the sources, and install mssql-tools with the unixODBC developer package.
+1. Update the sources, and install 'mssql-tools' with the unixODBC developer package.
 
    ```bash
    sudo zypper update
@@ -152,13 +152,13 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
    ```
 
 > [!Note] 
-> To update to the latest version of mssql-tools run the following commands:
+> To update to the latest version of 'mssql-tools' run the following commands:
 >    ```bash
 >   zypper refresh
 >   zypper update mssql-tools
 >   ```
 
-Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
+Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 
    ```bash
    ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd

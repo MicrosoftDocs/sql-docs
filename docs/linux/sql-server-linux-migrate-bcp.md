@@ -39,6 +39,7 @@ This topic will show you how to:
 
 - [Red Hat Enterprise Linux](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
+- [SLES](sql-server-linux-setup-tools.md#SLES)
 
 ## Import data with bcp
 

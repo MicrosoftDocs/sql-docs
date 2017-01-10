@@ -18,20 +18,6 @@
       "build_entry_point": "op"
     },
     {
-      "docset_name": "linux",
-      "build_source_folder": "docs/linux",
-      "build_output_subfolder": "sql/linux",
-      "locale": "en-us",
-      "version": 0,
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "template_folder": "_themes"
-    },
-    {
       "docset_name": "sql-content",
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",

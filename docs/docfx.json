@@ -3,11 +3,11 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/**.yml"
         ],
         "exclude": [
           "**/obj/**",
-          "sql/**",
           "**/includes/**",
           "README.md",
           "LICENSE",
@@ -23,16 +23,18 @@
         ],
         "exclude": [
           "**/obj/**",
-          "sql/**",
           "**/includes/**"
         ]
       }
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "layout": "Conceptual",
+      "breadcrumb_path": "~/breadcrumb/toc.yml"
+    },
     "fileMetadata": {},
     "template": [],
-    "dest": "sql"
+    "dest": "docs"
   }
 }

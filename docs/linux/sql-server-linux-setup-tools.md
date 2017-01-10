@@ -58,10 +58,11 @@ Install the tools for your platform:
    exit
    ```
 
-1. Run the following commands to install mssql-tools.
+1. Run the following commands to install mssql-tools with the unixODBC developer package.
 
    ```bash
-   sudo yum install mssql-tools
+   sudo yum update
+   sudo yum install mssql-tools unixODBC-utf16-devel
    ```
 
 > [!Note] 
@@ -93,11 +94,11 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Update the sources list and run the installation command.
+1. Update the sources list and run the installation command with the unixODBC developer package.
 
    ```bash
    sudo apt-get update 
-   sudo apt-get upgrade mssql-tools
+   sudo apt-get install mssql-tools unixodbc-dev-utf16
    ```
 
 > [!Note] 
@@ -125,7 +126,7 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
 1. Add the Microsoft SQL Server repository to Zypper.
 
    ```bash
-   zypper ar https://packages.microsoft.com/yumrepos/mssql-suse12-release/ "mssql"
+   zypper ar https://packages.microsoft.com/config/sles/12/prod.repo 
    ```
 
 1. Download and import GPG keys.
@@ -143,11 +144,11 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
    exit
    ```
 
-1. Update the sources and install mssql-tools.
+1. Update the sources, and install mssql-tools with the unixODBC developer package.
 
    ```bash
    sudo zypper update
-   sudo zypper install mssql-tools
+   sudo zypper install mssql-tools unixODBC-utf16-devel
    ```
 
 > [!Note] 
@@ -163,20 +164,6 @@ Optional Step: Create symlinks to SQLCMD and BCP under /usr/bin/.
    ln -sfn /opt/mssql-tools/bin/sqlcmd{Fill-Version-Here} /usr/bin/sqlcmd
    ln -sfn /opt/mssql-tools/bin/bcp{Fill-Version-Here} /usr/bin/bcp
    ```
-
-
-
-> [!TIP]
-> In addition to accessing mssql-tools in its installed directory, you can access the tools anywhere by creating symlinks for ‘sqlcmd’ and ‘bcp’
-> To create a new symlink run:
-> ln -s {path to target} {path to link}
-> To update an existing symlink run:
-> ln -sfn {path to target} {path to link}
-> 
-> Examples:
-> Running ‘ln -s /opt/mssql-tools/bin/sqlcmd13.0.0.1 /usr/bin/sqlcmd’ will create a symlink to the sqlcmd13.0.0.1 binary under /usr/bin which a part of the PATH env variable by default. The ‘sqlcmd’ command will now launch the sqlcmd13.0.0.1 utility.
-> 
-> Running ‘ln -sfn /opt/mssql-tools/bin/sqlcmd13.0.0.1 /usr/bin/sqlcmd’ will update the existing /usr/bin/sqlcmd to point to /opt/mssql-tools/bin/sqlcmd13.0.0.1.
 
 
 ## <a name="macos">Install tools on macOS</a>

@@ -38,9 +38,9 @@ Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server vNext 
 
 ## Launch PowerShell and import the *sqlserver* module
 
-Let's start by launching PowerShell on Windows. Open a *command prompt* on your Windows computer and copy and paste the commands below to launch **PowerShell**.
+Let's start by launching PowerShell on Windows. Open a *command prompt* on your Windows computer, and type **PowerShell** to launch a new Windows PowerShell session.
 
-```powershell
+```
 PowerShell
 ```
 

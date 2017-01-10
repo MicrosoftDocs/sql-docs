@@ -30,6 +30,21 @@
         "RestApi": "Content"
       },
       "template_folder": "_themes"
+    },
+    {
+      "docset_name": "sql-content",
+      "build_source_folder": "sql",
+      "build_output_subfolder": "sql",
+      "locale": "en-us",
+      "version": 0,
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [],

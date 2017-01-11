@@ -5,7 +5,7 @@
   "docsets_to_publish": [
     {
       "docset_name": "analytics-platform-system",
-      "build_source_folder": "docs/analytics-platform-system",
+      "build_source_folder": "docs-msdn/analytics-platform-system",
       "build_output_subfolder": "sql/analytics-platform-system",
       "locale": "en-us",
       "version": 0,
@@ -18,17 +18,18 @@
       "build_entry_point": "op"
     },
     {
-      "docset_name": "linux",
-      "build_source_folder": "docs/linux",
-      "build_output_subfolder": "sql/linux",
+      "docset_name": "sql-content",
+      "build_source_folder": "docs",
+      "build_output_subfolder": "sql",
       "locale": "en-us",
       "version": 0,
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content"
       },
+      "build_entry_point": "docs",
       "template_folder": "_themes"
     }
   ],

@@ -39,6 +39,7 @@ This topic will show you how to:
 
 - [Red Hat Enterprise Linux](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
+- [SLES](sql-server-linux-setup-tools.md#SLES)
 
 ## Import data with bcp
 
@@ -61,7 +62,7 @@ Create the table **TestEmployees** in the database **BcpSampleDB**:
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### Create the source data file
-Copy and paste the command below in your terminal window. We will use the built-in `cat` command to create a sample text data file with 3 records save the file in your home directory as **~/test_data.txt**. The fields in the records are delimited by a `comma`.
+Copy and paste the command below in your terminal window. We will use the built-in `cat` command to create a sample text data file with 3 records save the file in your home directory as **~/test_data.txt**. The fields in the records are delimited by a comma.
 
 ```bash
 cat > ~/test_data.txt << EOF
@@ -84,7 +85,7 @@ This should display the following in your terminal window:
 ```
 
 ### Import data from the source data file
-Copy and paste the commands below into the terminal window. This command uses `bcp` to connect to the local SQL Server instance (**localhost**) and import the data from the data file (**~/test_data.txt**) into the table (**TestEmployees**) in the database (**BcpSampleDB**). Remember to replace the `username` and `<your_password>` as necessary before running the commands.
+Copy and paste the commands below into the terminal window. This command uses `bcp` to connect to the local SQL Server instance (**localhost**) and import the data from the data file (**~/test_data.txt**) into the table (**TestEmployees**) in the database (**BcpSampleDB**). Remember to replace the username and `<your_password>` as necessary before running the commands.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','
@@ -121,7 +122,7 @@ Id          Name                Location
 
 In this tutorial, you will use `bcp` to export data from the sample table we created earlier to a new data file.
 
-Copy and paste the commands below into the terminal window. These commands use the `bcp` command line utility to export data from the table **TestEmployees** in the in the database **BcpSampleDB** to a new data file called **~/test_export.txt**.  Remember to replace the `username` and `<your_password>` as necessary before running the command.
+Copy and paste the commands below into the terminal window. These commands use the `bcp` command line utility to export data from the table **TestEmployees** in the in the database **BcpSampleDB** to a new data file called **~/test_export.txt**.  Remember to replace the username and `<your_password>` as necessary before running the command.
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','

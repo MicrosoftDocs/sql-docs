@@ -27,7 +27,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-server-1.svg" src="images/sql-server-1.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-server-1.svg" src="media/index/sql-server-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -46,7 +46,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-server-2.svg" src="images/sql-server-2.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-server-2.svg" src="media/index/sql-server-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -65,7 +65,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-server-3.svg" src="images/sql-server-3.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-server-3.svg" src="media/index/sql-server-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -84,7 +84,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-server-4.svg" src="images/sql-server-4.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-server-4.svg" src="media/index/sql-server-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -103,7 +103,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-server-5.svg" src="images/sql-server-5.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-server-5.svg" src="media/index/sql-server-5.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -122,7 +122,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-server-6.svg" src="images/sql-server-6.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-server-6.svg" src="media/index/sql-server-6.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -141,7 +141,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-server-7.svg" src="images/sql-server-7.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-server-7.svg" src="media/index/sql-server-7.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -160,7 +160,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-server-8.svg" src="images/sql-server-8.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-server-8.svg" src="media/index/sql-server-8.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -189,7 +189,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-1.svg" src="images/sql-azure-1.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-1.svg" src="media/index/sql-azure-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -208,7 +208,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-2.svg" src="images/sql-azure-2.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-2.svg" src="media/index/sql-azure-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -227,7 +227,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-3.svg" src="images/sql-azure-3.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-3.svg" src="media/index/sql-azure-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -246,7 +246,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-4.svg" src="images/sql-azure-4.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-4.svg" src="media/index/sql-azure-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -265,7 +265,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-5.svg" src="images/sql-azure-5.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-5.svg" src="media/index/sql-azure-5.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -284,7 +284,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-6.svg" src="images/sql-azure-6.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-6.svg" src="media/index/sql-azure-6.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -303,7 +303,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-7.svg" src="images/sql-azure-7.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-7.svg" src="media/index/sql-azure-7.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -332,7 +332,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-linux-1.svg" src="images/sql-linux-1.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-linux-1.svg" src="media/index/sql-linux-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -351,7 +351,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-linux-2.svg" src="images/sql-linux-2.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-linux-2.svg" src="media/index/sql-linux-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -370,7 +370,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-linux-3.svg" src="images/sql-linux-3.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-linux-3.svg" src="media/index/sql-linux-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -389,7 +389,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-linux-4.svg" src="images/sql-linux-4.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-linux-4.svg" src="media/index/sql-linux-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -408,7 +408,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-linux-5.svg" src="images/sql-linux-5.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-linux-5.svg" src="media/index/sql-linux-5.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -427,7 +427,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-linux-6.svg" src="images/sql-linux-6.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-linux-6.svg" src="media/index/sql-linux-6.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -446,7 +446,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-linux-7.svg" src="images/sql-linux-7.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-linux-7.svg" src="media/index/sql-linux-7.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -475,7 +475,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-1.svg" src="images/sql-azure-db-1.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-1.svg" src="media/index/sql-azure-db-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -494,7 +494,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-2.svg" src="images/sql-azure-db-2.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-2.svg" src="media/index/sql-azure-db-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -513,7 +513,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-3.svg" src="images/sql-azure-db-3.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-3.svg" src="media/index/sql-azure-db-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -532,7 +532,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-4.svg" src="images/sql-azure-db-4.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-4.svg" src="media/index/sql-azure-db-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -551,7 +551,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-5.svg" src="images/sql-azure-db-5.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-5.svg" src="media/index/sql-azure-db-5.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -570,7 +570,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-6.svg" src="images/sql-azure-db-6.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-6.svg" src="media/index/sql-azure-db-6.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -589,7 +589,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-7.svg" src="images/sql-azure-db-7.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-7.svg" src="media/index/sql-azure-db-7.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -608,7 +608,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-8.svg" src="images/sql-azure-db-8.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-8.svg" src="media/index/sql-azure-db-8.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -627,7 +627,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-9.svg" src="images/sql-azure-db-9.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-9.svg" src="media/index/sql-azure-db-9.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -646,7 +646,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-10.svg" src="images/sql-azure-db-10.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-10.svg" src="media/index/sql-azure-db-10.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -665,7 +665,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-11.svg" src="images/sql-azure-db-11.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-11.svg" src="media/index/sql-azure-db-11.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -684,7 +684,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-db-12.svg" src="images/sql-azure-db-12.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-db-12.svg" src="media/index/sql-azure-db-12.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -713,7 +713,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-data-warehouse-1.svg" src="images/sql-azure-data-warehouse-1.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-data-warehouse-1.svg" src="media/index/sql-azure-data-warehouse-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -732,7 +732,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-data-warehouse-2.svg" src="images/sql-azure-data-warehouse-2.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-data-warehouse-2.svg" src="media/index/sql-azure-data-warehouse-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -751,7 +751,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-data-warehouse-3.svg" src="images/sql-azure-data-warehouse-3.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-data-warehouse-3.svg" src="media/index/sql-azure-data-warehouse-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -770,7 +770,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-data-warehouse-4.svg" src="images/sql-azure-data-warehouse-4.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-data-warehouse-4.svg" src="media/index/sql-azure-data-warehouse-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -789,7 +789,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-data-warehouse-5.svg" src="images/sql-azure-data-warehouse-5.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-data-warehouse-5.svg" src="media/index/sql-azure-data-warehouse-5.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -808,7 +808,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-data-warehouse-6.svg" src="images/sql-azure-data-warehouse-6.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-data-warehouse-6.svg" src="media/index/sql-azure-data-warehouse-6.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -827,7 +827,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="images/sql-azure-data-warehouse-7.svg" src="images/sql-azure-data-warehouse-7.svg" alt="" />
+                                                        <img data-scaleimage="media/index/sql-azure-data-warehouse-7.svg" src="media/index/sql-azure-data-warehouse-7.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">

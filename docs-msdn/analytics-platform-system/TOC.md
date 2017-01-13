@@ -29,6 +29,9 @@
 ## [dwloader Command-line Loading Tool](dwloader.md)
 ## [Monitor loads](monitor-loads.md)
 
+# [Workload management](workload-management.md)
+## [Workload management tasks](workload-management-tasks.md)
+
 # Security
 ## [Transparent Data Encryption](transparent-data-encryption.md)
 ## [Provision a certificate](provision-certificate.md)

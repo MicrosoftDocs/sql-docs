@@ -1,7 +1,7 @@
 ---
 title: "Configure an External SMP SQL Server to Receive Remote Table Copies (SQL Server PDW)"
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,15 +10,15 @@ ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
 caps.latest.revision: 13
 author: BarbKess
 ---
-# Configure an External SMP SQL Server to Receive Remote Table Copies (SQL Server PDW)
+# Configure an External SMP SQL Server to Receive Remote Table Copies
 Describes how to configure an external SQL Server instance to receive remote table copies from SQL Server PDW.  
   
-This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw/remote-table-copy-sql-server-pdw.md)  
+This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md)  
   
 ## Before You Begin  
 Before you can configure the external SQL Server, you must:  
   
--   Have a Windows system with SQL Server 2008 Enterprise Edition or a later version ready to be installed or already installed. The Windows system must already be configured according to the instructions in [Configure an External Windows System To Receive Remote Table Copies Using InfiniBand &#40;SQL Server PDW&#41;](../sqlpdw/configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband-sql-server-pdw.md)  
+-   Have a Windows system with SQL Server 2008 Enterprise Edition or a later version ready to be installed or already installed. The Windows system must already be configured according to the instructions in [Configure an External Windows System To Receive Remote Table Copies Using InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)  
   
 -   A Windows admin account with the ability to configure the SQL Server instance and the Windows system.  
   
@@ -42,7 +42,7 @@ To configure SQL Server, use the following steps:
 ## <a name="BPSQLConfig"></a>Best Practices for SMP SQL Server Configuration for Remote Table Copy  
 When configuring the SMP SQL Server to receive remote table copies, use the following best practices to improve performance.  
   
-1.  Follow best practices as documented in SQL Server product documentation. For example, enable data encryption. For more information about securing SQL Server, see [Securing SQL Server](http://msdn.microsoft.com/en-us/library/bb283235(v=sql11).aspx) on MSDN.  
+1.  Follow best practices as documented in SQL Server product documentation. For example, enable data encryption. For more information about securing SQL Server, see [Securing SQL Server](https://msdn.microsoft.com/library/bb283235.aspx) on MSDN.  
   
 2.  Use the bulk-logged or simple recovery model.  
   
@@ -52,6 +52,8 @@ When configuring the SMP SQL Server to receive remote table copies, use the foll
   
     Although the bulk-logged or simple recovery models use minimal logging for the bulk inserted data, some logging still occurs. To prevent the log files from growing too large, use the SQL Server batch_size option to periodically reclaim log space.  
   
+<!-- MISSING LINKS 
 ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+-->
   

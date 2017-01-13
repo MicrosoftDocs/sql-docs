@@ -1,7 +1,7 @@
 ---
 title: "tempdb Database (SQL Server PDW)"
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,18 +10,10 @@ ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
 caps.latest.revision: 22
 author: BarbKess
 ---
-# tempdb Database (SQL Server PDW)
+# tempdb Database
 **tempdb** is a SQL Server PDW system database that stores local temporary tables for user databases. Temporary tables are often used to improve query performance. For example, you can use a temporary table to modularize a script, and reuse computed data.  
   
-For more information about system databases, see [System Databases &#40;SQL Server PDW&#41;](../sqlpdw/system-databases-sql-server-pdw.md)  
-  
-## Contents  
-  
--   [Basics](#Basics)  
-  
--   [Limitations and Restrictions](#LimitationsRestrictions)  
-  
--   [Related Tasks](#RelatedTasks)  
+For more information about system databases, see [System Databases](system-databases.md)  
   
 ## <a name="Basics"></a>Key Terms and Concepts  
 *local temporary table*  
@@ -88,11 +80,13 @@ Any user can create temporary objects in tempdb. Users can only access their own
   
 |Tasks|Description|  
 |---------|---------------|  
-|Create a table in **tempdb**.|You can create a user temporary table with the CREATE TABLE and CREATE TABLE AS SELECT statements. For more information, see [CREATE TABLE &#40;SQL Server PDW&#41;](../sqlpdw/create-table-sql-server-pdw.md) and [CREATE TABLE AS SELECT &#40;SQL Server PDW&#41;](../sqlpdw/create-table-as-select-sql-server-pdw.md).|  
+|Create a table in **tempdb**.|You can create a user temporary table with the CREATE TABLE and CREATE TABLE AS SELECT statements. For more information, see [CREATE TABLE](https://msdn.microsoft.com/library/mt203953.aspx) and [CREATE TABLE AS SELECT](https://msdn.microsoft.com/library/mt204041.aspx).|  
 |View a list of existing tables in **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  
 |View a list of existing columns in **tempdb**.|`SELECT * FROM tempdb.sys.columns;`|  
 |View a list of existing objects in **tempdb**.|`SELECT * FROM tempdb.sys.objects;`|  
   
+<!-- MISSING LINKS 
 ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+-->
   

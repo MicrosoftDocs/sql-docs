@@ -13,12 +13,12 @@ author: BarbKess
 # Configure an External SMP SQL Server to Receive Remote Table Copies
 Describes how to configure an external SQL Server instance to receive remote table copies from SQL Server PDW.  
   
-This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md)  
+This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md).  
   
 ## Before You Begin  
 Before you can configure the external SQL Server, you must:  
   
--   Have a Windows system with SQL Server 2008 Enterprise Edition or a later version ready to be installed or already installed. The Windows system must already be configured according to the instructions in [Configure an External Windows System To Receive Remote Table Copies Using InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)  
+-   Have a Windows system with SQL Server 2008 Enterprise Edition or a later version ready to be installed or already installed. The Windows system must already be configured according to the instructions in [Configure an External Windows System To Receive Remote Table Copies Using InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md).  
   
 -   A Windows admin account with the ability to configure the SQL Server instance and the Windows system.  
   

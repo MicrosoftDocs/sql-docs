@@ -13,7 +13,7 @@ author: BarbKess
 # Configure SQL Server PDW for Remote Table Copies
 Describes how to configure SQL Server PDW to use the remote table copy feature to copy tables to SMP SQL Server databases on non-appliance servers.  
   
-This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md)  
+This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md).  
   
 ## Before You Begin  
 In order to configure SQL Server PDW to use remote table copy, you must:  
@@ -37,7 +37,7 @@ The following steps outline how to update the DNS server.
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[Use a DNS Forwarder to Resolve Non-Appliance DNS Names &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+[Use a DNS Forwarder to Resolve Non-Appliance DNS Names](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
 <!-- MISSING LINKS 
 [Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../sqlpdw/security-configure-domain-trusts-sql-server-pdw.md)  
 -->

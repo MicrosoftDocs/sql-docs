@@ -13,7 +13,7 @@ author: BarbKess
 # master Database
 The SQL Server PDW master database stores appliance-level login information and the database catalog. It is a SQL Server master database that resides on the Control node. As such, it provides similar functionality to SQL Server PDW as master provides to SQL Server.  
   
-For more information about system databases, see [System Databases](system-databases.md)  
+For more information about system databases, see [System Databases](system-databases.md).  
   
 ## Limitations and Restrictions  
 The following list describes the operations you cannot perform on the SQL Server PDW master database.  

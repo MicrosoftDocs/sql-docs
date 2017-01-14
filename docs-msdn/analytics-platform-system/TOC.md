@@ -7,6 +7,7 @@
 ## [Hardware configurations](hardware-configurations.md)
 ## [Processing and storage capacity](processing-and-storage-capacity-planning.md)
 ## [High availability](high-availability.md)
+
 # Backup and loading hardware
 ## [Overview](backup-and-loading-hardware.md)
 ## [Acquire and configure a loading server](acquire-and-configure-loading-server.md)
@@ -15,9 +16,8 @@
 ## [Backup server capacity planning worksheet](backup-capacity-planning-worksheet.md)
 ## [Configure InfiniBand network adapters](configure-infiniband-network-adapters.md)
 
-# Backup and restore
-## [Overview](backup-and-restore-overview.md)
-## [Restore a database protected by TDE](restore-database-protected-by-tde.md)
+# Query
+## [Monitoring active queries](monitoring-active-queries.md)
 
 # Load
 ## [Overview](load-overview.md)
@@ -29,14 +29,29 @@
 ## [dwloader Command-line Loading Tool](dwloader.md)
 ## [Monitor loads](monitor-loads.md)
 
-# [Workload management](workload-management.md)
-## [Workload management tasks](workload-management-tasks.md)
+# Database administration
+## Backup and restore
+### [Overview](backup-and-restore-overview.md)
+### [Restore a database protected by TDE](restore-database-protected-by-tde.md)
+## [PDW permissions](pdw-permissions.md)
+### [Grant permissions](grant-permissions.md)
+## [Error messages](error-messages.md)
+## [Locking behavior](locking-behavior.md)
+## [Remote table copy](remote-table-copy.md)
+### [Configure an external Windows system to receive remote table copies using InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)
+### [Configure an external SMP SQL Server to receive remote table copies](configure-an-external-smp-sql-server-to-receive-remote-table-copies.md)
+### [Configure SQL Server PDW for remote table copies](configure-sql-server-pdw-for-remote-table-copies.md)
+## [System databases](system-databases.md)
+### [Reserved database names](reserved-database-names.md)
+### [tempdb database](tempdb-database.md)
+### [master database](master-database.md)
+## [User sessions](user-sessions.md)
+## [Workload management](workload-management.md)
+### [Workload management tasks](workload-management-tasks.md)
 
 # Security
 ## [Transparent Data Encryption](transparent-data-encryption.md)
 ## [Provision a certificate](provision-certificate.md)
-## [PDW permissions](pdw-permissions.md)
-### [Grant permissions](grant-permissions.md)
 
 # [Appliance mangement tasks](appliance-management-tasks.md)
 ## [Appliance installation and configuration overview](appliance-installation-and-configuration-overview.md)

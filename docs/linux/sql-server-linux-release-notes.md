@@ -25,9 +25,9 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 
 ---
 # Release notes for SQL Server vNext on Linux
-The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into two sections: CTP 1.1 release notes and CTP 1.0 release notes. See the information in the each section for supported platforms, tools, features, and known issues.
+The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into three sections: [CTP 1.2](#ctp12), [CTP 1.1](#ctp11), and [CTP 1.0](#ctp10) release notes. See the information in the each section for supported platforms, tools, features, and known issues.
 
-## CTP 1.2 release notes (January 2017)
+## <a id="ctp12"> CTP 1.2 (January 2017)
 
 ### Supported platforms 
 
@@ -163,7 +163,7 @@ To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](s
 
 ![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
-## CTP 1.1 release notes (December 2016)
+## <a id="ctp11"> CTP 1.1 (December 2016)
 
 ### Supported platforms 
 
@@ -299,7 +299,7 @@ To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](s
 
 ![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
-## CTP 1.0 release notes (November 2016)
+## <a id="ctp10"> CTP 1.0 (November 2016)
 
 ### Supported platforms 
 

@@ -104,8 +104,8 @@ Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 > [!Note] 
 > To update to the latest version of 'mssql-tools' run the following commands:
 >    ```bash
->   apt-get refresh
->   apt-get update mssql-tools
+>   apt-get update 
+>   apt-get install mssql-tools 
 >   ```
 
 Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
@@ -134,8 +134,8 @@ Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 > [!Note] 
 > To update to the latest version of 'mssql-tools' run the following commands:
 >    ```bash
->   apt-get update 
->   apt-get install mssql-tools 
+>   zypper refresh
+>   zypper update mssql-tools
 >   ```
 
 Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.

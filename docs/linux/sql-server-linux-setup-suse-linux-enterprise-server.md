@@ -1,7 +1,7 @@
 ---
 # required metadata
-title: Install SQL Server on Red Hat Enterprise Linux - SQL Server vNext | Microsoft Docs
-description: Describes how to install SQL Server vNext CTP 1.2 on Red Hat Enterprise Linux 7.3.
+title: Install SQL Server on SUSE Linux Enterprise Server - SQL Server vNext | Microsoft Docs
+description: Describes how to install SQL Server vNext CTP 1.2 on SUSE Linux Enterprise Server 7.3.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -9,7 +9,7 @@ ms.date: 11/16/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
-ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
+ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 
 # optional metadata
 
@@ -23,9 +23,9 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 # ms.custom: ""
 
 ---
-# Install SQL Server on Red Hat Enterprise Linux
+# Install SQL Server on SUSE Linux Enterprise Server
 
-This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on Red Hat Enterprise Linux (RHEL) 7.3.
+This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on SUSE Linux Enterprise Server (SLES) v12 SP2.
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -33,7 +33,7 @@ This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on 
 
 
 ## Install SQL Server
-To install the mssql-server package on RHEL, follow these steps:
+To install the mssql-server package on SLES, follow these steps:
 
 1. Enter superuser mode.
 
@@ -41,10 +41,11 @@ To install the mssql-server package on RHEL, follow these steps:
    sudo su
    ```
 
-2. Download the Microsoft SQL Server Red Hat repository configuration file:
+2. Download the Microsoft SQL Server SLES repository configuration file:
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
+   zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+   zypper --gpg-auto-import-keys refresh
    ```
    
 3. Exit superuser mode.
@@ -56,7 +57,7 @@ To install the mssql-server package on RHEL, follow these steps:
 4. Run the following commands to install SQL Server:
 
    ```bash
-   sudo yum install -y mssql-server
+   sudo zypper install mssql-server
    ```
    
 5. After the package installation finishes, run the configuration script and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
@@ -71,30 +72,23 @@ To install the mssql-server package on RHEL, follow these steps:
    systemctl status mssql-server
    ```
    
-7. You may need to open a port on the firewall on RHEL.  If you are using **FirewallD** for your firewall, you can use the following commands.
-
-   ```bash
-   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
-   sudo firewall-cmd --reload
-   ```
-
 ## Upgrade SQL Server
 
-In order to upgrade the mssql-server package on RHEL, execute the following command:
+In order to upgrade the mssql-server package on SLES, execute the following command:
 
    ```bash
-   sudo yum update mssql-server
+   sudo zypper update mssql-server
    ```
 
 These commands will download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases will not be affected by this operation. 
 
 ## Uninstall SQL Server
 
-In order to remove the mssql-server package on RHEL, follow these steps:
+In order to remove the mssql-server package on SLES, follow these steps:
 
 1. Run the `remove` command. This will delete the package and remove the files under `/opt/mssql/`. However, this command will not affect user-generated and system database files, which are located under `/var/opt/mssql`.
    ```bash
-   sudo yum remove mssql-server
+   sudo zypper remove mssql-server
    ```
 
 2. Removing the package will not delete the generated database files. If you want to delete the database files use the following command:
@@ -104,7 +98,6 @@ In order to remove the mssql-server package on RHEL, follow these steps:
 
 ## Next steps
 
-- [Install tools](sql-server-linux-setup-tools.md#RHEL)
+- [Install tools](sql-server-linux-setup-tools.md#SLES)
 
 - If you already have SQL Server tools, [connect to the SQL Server](sql-server-linux-connect-and-query-sqlcmd.md).
-

@@ -6,7 +6,7 @@ description: This topic describes how to install the SQL Server Tools on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 1/05/2017
+ms.date: 1/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -33,9 +33,9 @@ The following steps install the command-line tools, Microsoft ODBC drivers, and 
 
 Install the tools for your platform:
 
-- [Red Hat Enterprise Linux](#RHEL)
+- [Red Hat Enterprise Linux (RHEL)](#RHEL)
 - [Ubuntu](#ubuntu)
-- [SUSE Enterprise Linux](#SLES)
+- [SUSE Linux Enterprise Server (SLES)](#SLES)
 - [macOS](#macos)
 
 ## <a name="RHEL">Install tools on RHEL</a>

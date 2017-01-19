@@ -1,7 +1,7 @@
 ---
 title: "Configure an External Windows System To Receive Remote Table Copies Using InfiniBand (SQL Server PDW)"
 ms.custom: na
-ms.date: 07/27/2016
+ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -10,13 +10,13 @@ ms.assetid: f866890b-cad5-49ac-bbeb-848bfb26c2d5
 caps.latest.revision: 11
 author: BarbKess
 ---
-# Configure an External Windows System To Receive Remote Table Copies Using InfiniBand (SQL Server PDW)
+# Configure an External Windows System To Receive Remote Table Copies Using InfiniBand
 Describes how to purchase and configure a non-appliance Windows system connected using the InfiniBand network for use with the remote table copy feature in SQL Server PDW. The Windows system will host the SQL Server database that receives the remote table copy from a SQL Server PDW database. It is purchased separately from the appliance and connected to the appliance InfiniBand network.  
   
 > [!NOTE]  
 > Connecting through the InfiniBand network is not required for using remote table copy. Connecting through the Ethernet network can be done if the Ethernet bandwidth meets your needs.  
   
-This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw/remote-table-copy-sql-server-pdw.md)  
+This topic describes one of the configuration steps for configuring remote table copy. For a list of all the configuration steps, see [Remote Table Copy](remote-table-copy.md)  
   
 ## Before You Begin  
 Before you configure the external Windows system, you must:  
@@ -56,6 +56,8 @@ To configure the external Windows system, use the following steps:
   
 5.  If a two port adapter is used, or multiple external Windows systems are connected to an appliance, assign each system a different host number within each IP subnet.  
   
+<!-- MISSING LINKS 
 ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
+-->
   

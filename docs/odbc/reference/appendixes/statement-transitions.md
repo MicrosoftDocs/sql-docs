@@ -83,7 +83,7 @@ ODBC statements have the following states.
   
 |S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|HY010|24000|See next table|HY010|NS [c] (HY010) o|  
+|IH|HY010|HY010|24000|See next table|HY010|NS [c] HY010 o|  
   
 ## SQLBulkOperations (Cursor States)  
   
@@ -232,7 +232,7 @@ ODBC statements have the following states.
   
 |S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|S4 [s] and [nr] S5 [s] and [r] S8 [d]  S11 [x]|-- [e] and [1] S1 [e] and [2] S4 [s] and [nr] S5 [s] and [r] S8 [d]  S11 [x]|-- [e], [1], and [3] S1 [e], [2], and [3] S4 [s], [nr], and [3] S5 [s], [r], and [3] S8 [d] and [3] S11 [x] and [3] 24000 [4]|See next table|(HY010)|NS [c] (HY010) [o]|  
+|(IH)|S4 [s] and [nr] S5 [s] and [r] S8 [d]  S11 [x]|-- [e] and [1] S1 [e] and [2] S4 [s] and [nr] S5 [s] and [r] S8 [d]  S11 [x]|-- [e], [1], and [3] S1 [e], [2], and [3] S4 [s], [nr], and [3] S5 [s], [r], and [3] S8 [d] and [3] S11 [x] and [3] 24000 [4]|See next table|HY010|NS [c] HY010 [o]|  
   
  [1]   The error was returned by the Driver Manager.  
   

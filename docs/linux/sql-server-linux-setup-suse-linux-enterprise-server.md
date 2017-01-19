@@ -35,38 +35,27 @@ This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on 
 ## Install SQL Server
 To install the mssql-server package on SLES, follow these steps:
 
-1. Enter superuser mode.
+1. Download the Microsoft SQL Server SLES repository configuration file:
 
    ```bash
-   sudo su
-   ```
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
 
-2. Download the Microsoft SQL Server SLES repository configuration file:
-
-   ```bash
-   zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
-   zypper --gpg-auto-import-keys refresh
+   sudo zypper --gpg-auto-import-keys refresh
    ```
    
-3. Exit superuser mode.
-
-   ```bash
-   exit
-   ```
-
-4. Run the following commands to install SQL Server:
+1. Run the following commands to install SQL Server:
 
    ```bash
    sudo zypper install mssql-server
    ```
    
-5. After the package installation finishes, run the configuration script and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+1. After the package installation finishes, run the configuration script and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
    ```bash
    sudo /opt/mssql/bin/sqlservr-setup
    ```
 
-6. Once the configuration is done, verify that the service is running:
+1. Once the configuration is done, verify that the service is running:
 
    ```bash
    systemctl status mssql-server

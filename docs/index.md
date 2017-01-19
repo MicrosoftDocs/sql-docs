@@ -1,3 +1,2 @@
----
-redirect_url: /sql/linux
----
+#index
+Hello SQL Content!

@@ -192,7 +192,7 @@ ODBC connections have the following states.
   
 |C0<br /><br /> No Env.|C1<br /><br /> Unallocated|C2<br /><br /> Allocated|C3<br /><br /> Need Data|C4<br /><br /> Connected|C5<br /><br /> Statement|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|--[1] (08003)[2]|(HY010)|--|--|--|  
+|IH|IH|--[1] 08003[2]|HY010|--|--|--|  
   
  [1]   The *Attribute* argument was SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE, or SQL_ATTR_TRACEFILE, or a value had been set for the connection attribute.  
   
@@ -219,19 +219,19 @@ ODBC connections have the following states.
   
 |C0<br /><br /> No Env.|C1<br /><br /> Unallocated|C2<br /><br /> Allocated|C3<br /><br /> Need Data|C4<br /><br /> Connected|C5<br /><br /> Statement|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|--|--|--|--|--|--|  
+|IH|--|--|--|--|--|--|  
   
 ## SQLGetFunctions  
   
 |C0<br /><br /> No Env.|C1<br /><br /> Unallocated|C2<br /><br /> Allocated|C3<br /><br /> Need Data|C4<br /><br /> Connected|C5<br /><br /> Statement|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(HY010)|(HY010)|--|--|--|  
+|IH|IH|HY010|HY010|--|--|--|  
   
 ## SQLGetInfo  
   
 |C0<br /><br /> No Env.|C1<br /><br /> Unallocated|C2<br /><br /> Allocated|C3<br /><br /> Need Data|C4<br /><br /> Connected|C5<br /><br /> Statement|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|--[1] (08003)[2]|(08003)|--|--|--|  
+|IH|IH|--[1] 08003[2]|08003|--|--|--|  
   
  [1]   The *InfoType* argument was SQL_ODBC_VER.  
   
@@ -269,7 +269,7 @@ ODBC connections have the following states.
   
 |C0<br /><br /> No Env.|C1<br /><br /> Unallocated|C2<br /><br /> Allocated|C3<br /><br /> Need Data|C4<br /><br /> Connected|C5<br /><br /> Statement|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|--[1] (08003)[2]|(HY010)|--[3] (08002)[4] HY011[5]|--[3] (08002)[4] HY011[5]|--[3] and [6] C5[8] (08002)[4] HY011[5] or [7]|  
+|IH|IH|--[1] 08003[2]|HY010|--[3] 08002[4] HY011[5]|--[3] 08002[4] HY011[5]|--[3] and [6] C5[8] 08002[4] HY011[5] or [7]|  
   
  [1]   The *Attribute* argument was not SQL_ATTR_TRANSLATE_LIB or SQL_ATTR_TRANSLATE_OPTION.  
   

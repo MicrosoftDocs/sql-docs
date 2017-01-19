@@ -1,2 +1,2 @@
 #index
-Hello SQL Server Management Studio Content!
+Hello SQL Server Management Studio (SSMS) Content!

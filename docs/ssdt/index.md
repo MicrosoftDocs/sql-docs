@@ -1,2 +1,2 @@
 #index
-Hello SQL Server Data tools content!
+Hello SQL Server Data tools (SSDT) content!

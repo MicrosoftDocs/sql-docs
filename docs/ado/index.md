@@ -1,2 +1,2 @@
 #index
-Hello SQL Content!
+Hello ActiveX Data Objects (ADO) Content!

@@ -1,3 +1,8 @@
+# [Download SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
+# [SQL Server Management Studio (SSMS)](sql-server-management-studio-ssms.md)
+# [SQL Server Management Studio - Changelog (SSMS)](sql-server-management-studio-changelog-ssms.md)
+# [SQL Server Management Studio -  Release Notes](sql-server-management-studio-release-notes.md)
+
 # [Introduction to SQL Server Management Studio for Business Intelligence](introduction-to-sql-server-management-studio-for-business-intelligence.md)
 # [Customize Menus and Shortcut Keys](customize-menus-and-shortcut-keys.md)
 # [Use SQL Server Management Studio](use-sql-server-management-studio.md)
@@ -6,7 +11,7 @@
 # [Build Database Projects by Using SQL Server Management Studio](build-database-projects-by-using-sql-server-management-studio.md)
 # [Understand SQL Server Management Studio Windows Management](understand-sql-server-management-studio-windows-management.md)
 # [External Tools Dialog Box](external-tools-dialog-box.md)
-# [Download SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
+
 # [SQL Server Management Studio (SSMS) - Release Candidate](sql-server-management-studio-ssms-release-candidate.md)
 # [Arguments Dialog Box](arguments-dialog-box.md)
 # [Administer Servers with SQL Server Management Studio](administer-servers-with-sql-server-management-studio.md)
@@ -16,14 +21,14 @@
 # [The SQL Server Management Studio Environment](the-sql-server-management-studio-environment.md)
 # [Property Pages in SQL Server Management Studio](property-pages-in-sql-server-management-studio.md)
 # [Properties Window (Management Studio)](properties-window-management-studio.md)
-# [SQL Server Management Studio (SSMS)](sql-server-management-studio-ssms.md)
+
 # [About Dialog Box](about-dialog-box.md)
 # [SQL Server Management Studio Web Browser](sql-server-management-studio-web-browser.md)
 # [General User Interface Elements](general-user-interface-elements.md)
-# [SQL Server Management Studio - Changelog (SSMS)](sql-server-management-studio-changelog-ssms.md)
+
 # [User Assistance in SQL Server Management Studio](user-assistance-in-sql-server-management-studio.md)
 # [Arguments for External Tools](use-of-sql-server-features-and-capabilities-wwi-oltp.md)
 # [Add an External Tool to the Tools Menu (SQL Server Management Studio)](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [Configure Login Auditing (SQL Server Management Studio)](configure-login-auditing-sql-server-management-studio.md)
 # [Use the Toolbox](use-the-toolbox.md)
-# [SQL Server Management Studio -  Release Notes](sql-server-management-studio-release-notes.md)
+

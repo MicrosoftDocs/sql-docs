@@ -40,8 +40,7 @@
 #### [install](odbc\reference\install\TOC.md)
 #### [syntax](odbc\reference\syntax\TOC.md)
 
-# SQL Server Samples
-## [sample](sample\TOC.md)
+# [SQL Server Samples] (sample/microsoft-sql-server-samples.md)
 ## [world-wide-importers](sample\world-wide-importers\TOC.md)
 
 # SQL Server Data Tools (SSDT)

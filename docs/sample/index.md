@@ -1,2 +1,3 @@
-#index
-Hello SQL Samples Content!
+---
+redirect_url: /sql/sample/microsoft-sql-server-samples
+---

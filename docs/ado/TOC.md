@@ -4,7 +4,7 @@
 ## [ADO Development Guide](./guide/TOC.md)
 ## [appendixes](./guide/appendixes/TOC.md)
 ## [data](./guide/data/TOC.md)
-## [extensions](.guide//extensions/TOC.md)
+## [extensions](.guide/extensions/TOC.md)
 ## [multidimensional](.guide/multidimensional/TOC.md)
 ## [remote-data-service](.guide/remote-data-service/TOC.md)
 

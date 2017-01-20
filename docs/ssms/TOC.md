@@ -32,3 +32,11 @@
 # [Configure Login Auditing (SQL Server Management Studio)](configure-login-auditing-sql-server-management-studio.md)
 # [Use the Toolbox](use-the-toolbox.md)
 
+# More
+## [f1-help](./f1-help/TOC.md)
+## [menu-help](./menu-help/TOC.md)
+## [object](./object/TOC.md)
+## [solution](./solution/TOC.md)
+## [template](./template/TOC.md)
+## [visual-db-tools](./visual-db-tools/TOC.md)
+

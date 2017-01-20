@@ -1,2 +1,3 @@
-#index
-Hello SQL Server Migration Assistant (SSMA) Content!
+---
+redirect_url: /sql/ssma/sql-server-migration-assistant
+---

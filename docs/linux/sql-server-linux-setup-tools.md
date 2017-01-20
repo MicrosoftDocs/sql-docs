@@ -62,7 +62,7 @@ Install the tools for your platform:
 
    ```bash
    sudo yum update
-   sudo yum install mssql-tools unixODBC-utf16-devel
+   sudo yum install mssql-tools unixODBC-devel
    ```
 
 > [!Note] 
@@ -98,7 +98,7 @@ Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 
    ```bash
    sudo apt-get update 
-   sudo apt-get install mssql-tools unixodbc-dev-utf16
+   sudo apt-get install mssql-tools unixodbc-dev
    ```
 
 > [!Note] 
@@ -128,7 +128,7 @@ Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 
    ```bash
    sudo zypper update
-   sudo zypper install mssql-tools unixODBC-utf16-devel
+   sudo zypper install mssql-tools unixODBC-devel
    ```
 
 > [!Note] 

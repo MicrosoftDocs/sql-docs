@@ -1,2 +1,3 @@
-#index
-Hello ActiveX Data Objects (ADO) Content!
+---
+redirect_url: /sql/ado/microsoft-activex-data-objects-ado.md
+---

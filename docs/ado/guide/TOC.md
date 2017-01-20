@@ -8,8 +8,3 @@
 # [Prerequisites for Using the ADO Documentation](prerequisites-for-using-the-ado-documentation.md)
 # [ADO Technology Table](ado-technology-table.md)
 # [ADO Task Table](ado-task-table.md)
-## [appendixes](./appendixes/TOC.md)
-## [data](./data/TOC.md)
-## [extensions](./extensions/TOC.md)
-## [multidimensional](./multidimensional/TOC.md)
-## [remote-data-service](./remote-data-service/TOC.md)

@@ -1,2 +1,3 @@
-#index
-Hello SQL Server Data tools (SSDT) content!
+---
+redirect_url: /sql/ssdt/download-sql-server-data-tools-ssdt
+---

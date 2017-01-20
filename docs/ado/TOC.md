@@ -1,2 +1,3 @@
-# [ADO Glossary](ado-glossary.md)
 # [Microsoft ActiveX Data Objects (ADO)](microsoft-activex-data-objects-ado.md)
+## [ADO Development Guide](ado\guide\TOC.md)
+# [ADO Glossary](ado-glossary.md)

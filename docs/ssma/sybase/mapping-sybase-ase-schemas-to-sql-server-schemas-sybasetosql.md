@@ -2,6 +2,7 @@
 title: "Mapping Sybase ASE Schemas to SQL Server Schemas (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
+ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

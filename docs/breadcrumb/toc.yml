@@ -2,6 +2,21 @@
   href: /
   homepage: /
   items:
+  - name: ActiveX Data Objects
+    href: /sql/ado/
+    homepage: /sql/ado
+  - name: SQL Drivers
+    href: /sql/connect/
+    homepage: /sql/connect
   - name: SQL Server on Linux
     href: /sql/linux/
     homepage: /sql/linux
+  - name: ODBC
+    href: /sql/odbc/
+    homepage: /sql/odbc
+  - name: SQL Server Samples
+    href: /sql/sample/
+    homepage: /sql/sample
+  - name: SQL Server Management Studio
+    href: /sql/ssms/
+    homepage: /sql/ssms

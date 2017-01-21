@@ -1,4 +1,4 @@
-# [SQL Server on linux](linux\TOC.md)
+# [SQL Server on Linux](linux\TOC.md)
 
 # [ActiveX Data Objects (ADO)](ado\TOC.md)
 ## [ADO Development Guide](ado\guide\TOC.md)

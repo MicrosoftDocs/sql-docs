@@ -2,6 +2,7 @@
 title: "SQL Server Migration Assistant | Microsoft Docs"
 ms.custom: ""
 ms.date: "2016-02-29"
+ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

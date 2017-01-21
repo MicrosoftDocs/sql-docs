@@ -40,11 +40,11 @@
 #### [install](odbc\reference\install\TOC.md)
 #### [syntax](odbc\reference\syntax\TOC.md)
 
-# [SQL Server Samples] (sample/microsoft-sql-server-samples.md)
+# [SQL Server Samples](sample/microsoft-sql-server-samples.md)
 ## [world-wide-importers](sample\world-wide-importers\TOC.md)
 
 # SQL Server Data Tools (SSDT)
-## [ssdt](ssdt\TOC.md)
+## [SSDT](ssdt\TOC.md)
 
 # SQL Server Migration Assistant (SSMA)
 ## [ssma](ssma\TOC.md)

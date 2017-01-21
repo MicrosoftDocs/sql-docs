@@ -5,3 +5,9 @@
   - name: SQL Server on Linux
     href: /sql/linux/
     homepage: /sql/linux
+  - name: ActiveX Data Objects
+    href: /sql/ado/
+    homepage: /sql/ado
+  - name: SQL Server Management Studio
+    href: /sql/ssms/
+    homepage: /sql/ssms

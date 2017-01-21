@@ -1,5 +1,5 @@
 ---
-title: "How to: Retrieve Input and Output Parameters Using the SQLSRV Driver | Microsoft Docs"
+title: "How to: Retrieve I/O Parameters Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

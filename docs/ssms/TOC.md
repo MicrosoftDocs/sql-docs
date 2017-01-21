@@ -1,5 +1,5 @@
+# [What is SSMS?](sql-server-management-studio-ssms.md)
 # [Download SSMS](download-sql-server-management-studio-ssms.md)
-# [SQL Server Management Studio (SSMS)](sql-server-management-studio-ssms.md)
 # [Changelog](sql-server-management-studio-changelog-ssms.md)
 # [Release notes](sql-server-management-studio-release-notes.md)
 
@@ -8,7 +8,7 @@
 # [Use SQL Server Management Studio](use-sql-server-management-studio.md)
 # [Features in SQL Server Management Studio](features-in-sql-server-management-studio.md)
 # [Tool Windows in SQL Server Management Studio](tool-windows-in-sql-server-management-studio.md)
-# [Build Database Projects by Using SQL Server Management Studio](build-database-projects-by-using-sql-server-management-studio.md)
+# [Use SSMS to Build Database Projects](build-database-projects-by-using-sql-server-management-studio.md)
 # [Understand SQL Server Management Studio Windows Management](understand-sql-server-management-studio-windows-management.md)
 # [External Tools Dialog Box](external-tools-dialog-box.md)
 

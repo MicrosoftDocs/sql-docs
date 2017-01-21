@@ -1,5 +1,5 @@
 ---
-title: "PHP Driver for SQL Server Support for High Availability, Disaster Recovery | Microsoft Docs"
+title: "PHP Driver for SQL Server High Availability, Disaster Recovery | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

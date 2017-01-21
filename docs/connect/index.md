@@ -1,2 +1,3 @@
-#index
-Hello SQL Drivers Content!
+---
+redirect_url: /sql/connect/sql-server-driver-documentation
+---

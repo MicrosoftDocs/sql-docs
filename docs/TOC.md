@@ -1,8 +1,6 @@
-#SQL Server on linux
-## [Linux](linux\TOC.md)
+# [SQL Server on linux](linux\TOC.md)
 
-# ActiveX Data Objects (ADO)
-## [ADO](ado\TOC.md)
+# [ActiveX Data Objects (ADO)](ado\TOC.md)
 ## [ADO Development Guide](ado\guide\TOC.md)
 ### [appendixes](ado\guide\appendixes\TOC.md)
 ### [data](ado\guide\data\TOC.md)
@@ -15,8 +13,7 @@
 ### [adox-api](ado\reference\adox-api\TOC.md)
 ### [rds-api](ado\reference\rds-api\TOC.md)
 
-# SQL Server Drivers
-## [connect](connect\TOC.md)
+# [SQL Server Drivers](connect\TOC.md)
 ## [ado-net](connect\ado-net\TOC.md)
 ## [jdbc](connect\jdbc\TOC.md)
 ## [code-samples](connect\jdbc\code-samples\TOC.md)
@@ -43,23 +40,20 @@
 # [SQL Server Samples](sample/microsoft-sql-server-samples.md)
 ## [world-wide-importers](sample\world-wide-importers\TOC.md)
 
-# SQL Server Data Tools (SSDT)
-## [SSDT](ssdt\TOC.md)
+# [SQL Server Data Tools (SSDT)](ssdt\TOC.md)
 
-# SQL Server Migration Assistant (SSMA)
-## [ssma](ssma\TOC.md)
+# [SQL Server Migration Assistant (SSMA)](ssma\TOC.md)
 ## [access](ssma\access\TOC.md)
 ## [db2](ssma\db2\TOC.md)
 ## [mysql](ssma\mysql\TOC.md)
 ## [oracle](ssma\oracle\TOC.md)
 ## [sybase](ssma\sybase\TOC.md)
 
-# SQl Server Management Studio (SSMS)
-## [ssms](ssms\TOC.md)
-## [agent](ssms\agent\TOC.md)
-## [f1-help](ssms\f1-help\TOC.md)
-## [menu-help](ssms\menu-help\TOC.md)
+# [SQl Server Management Studio (SSMS)](ssms\TOC.md)
+## [SSMS and SQL Agent](ssms\agent\TOC.md)
+## [F1-help](ssms\f1-help\TOC.md)
+## [Menu Help](ssms\menu-help\TOC.md)
 ## [object](ssms\object\TOC.md)
 ## [solution](ssms\solution\TOC.md)
-## [template](ssms\template\TOC.md)
-## [visual-db-tools](ssms\visual-db-tools\TOC.md)
+## [Templates](ssms\template\TOC.md)
+## [Visual DB Tools](ssms\visual-db-tools\TOC.md)

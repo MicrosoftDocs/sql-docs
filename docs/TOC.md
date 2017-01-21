@@ -37,8 +37,7 @@
 #### [install](odbc\reference\install\TOC.md)
 #### [syntax](odbc\reference\syntax\TOC.md)
 
-# [SQL Server Samples](sample/microsoft-sql-server-samples.md)
-## [world-wide-importers](sample\world-wide-importers\TOC.md)
+# [SQL Server Samples](sample/TOC.md)
 
 # [SQL Server Data Tools (SSDT)](ssdt\TOC.md)
 
@@ -49,7 +48,7 @@
 ## [oracle](ssma\oracle\TOC.md)
 ## [sybase](ssma\sybase\TOC.md)
 
-# [SQl Server Management Studio (SSMS)](ssms\TOC.md)
+# [SQL Server Management Studio (SSMS)](ssms\TOC.md)
 ## [SSMS and SQL Agent](ssms\agent\TOC.md)
 ## [F1-help](ssms\f1-help\TOC.md)
 ## [Menu Help](ssms\menu-help\TOC.md)

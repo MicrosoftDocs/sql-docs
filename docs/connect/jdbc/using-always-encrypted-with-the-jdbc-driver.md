@@ -18,8 +18,6 @@ manager: "jhubbard"
 # Using Always Encrypted with the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/appliesto-ss2016-asdb-xxxx-xxx_md.md)]
-
 This article provides information on how to develop Java applications using [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7) and the Microsoft JDBC Driver 6.0 (or higher) for SQL Server.
 
 Always Encrypted allows clients to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the Microsoft JDBC Driver 6.0 (or higher) for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and  encrypts the values of those parameters before passing the values to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information,visit [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_7) and [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).  

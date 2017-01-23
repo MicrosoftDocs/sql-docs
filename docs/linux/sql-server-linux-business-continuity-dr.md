@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Business continuity and database recovery SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Business continuity and database recovery SQL Server on Linux - SQL Server | Microsoft Docs
 description: 
 author: mihaelab 
 ms.author: mihaelab 

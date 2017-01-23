@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use SQL Server Data Tools (SSDT) with SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Use SQL Server Data Tools (SSDT) with SQL Server on Linux - SQL Server | Microsoft Docs
 description: 
 author: erickangMSFT 
 ms.author: erickang 

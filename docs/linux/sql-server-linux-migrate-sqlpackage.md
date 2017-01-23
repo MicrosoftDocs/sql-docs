@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Export and import a database on Linux with sqlpackage - SQL Server vNext | Microsoft Docs
+title: Export and import a database on Linux with sqlpackage - SQL Server | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 

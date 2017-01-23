@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use the sqlcmd command-line utility on Linux - SQL Server vNext | Microsoft Docs
+title: Use the sqlcmd command-line utility on Linux - SQL Server | Microsoft Docs
 description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL queries.
 author: rothja 
 ms.author: jroth 

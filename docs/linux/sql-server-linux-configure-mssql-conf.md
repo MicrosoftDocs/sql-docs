@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure SQL Server on Linux with mssql-conf - SQL Server vNext | Microsoft Docs
+title: Configure SQL Server on Linux with mssql-conf - SQL Server | Microsoft Docs
 description: This topic describes how to use the mssql-conf tool to  configure SQL Server vNext settings on Linux.
 author: luisbosquez 
 ms.author: lbosq 

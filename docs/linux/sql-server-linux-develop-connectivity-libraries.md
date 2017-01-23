@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Connectivity libraries and frameworks - SQL Server vNext | Microsoft Docs
+title: Connectivity libraries and frameworks - SQL Server | Microsoft Docs
 description: Lists the connectivity drivers that client apps can use from various languages to connect to Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and also to Azure SQL Database and Azure SQL Data Warehouse. 
 author: sanagama 
 ms.author: sanagama 

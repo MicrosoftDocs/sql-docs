@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Install SQL Server on Linux - SQL Server | Microsoft Docs
 description: SQL Server vNext CTP 1.2 now runs on Linux. This topic provides an overview on how to install SQL Server on Linux with links to the guides for specific platforms. 
 author: rothja 
 ms.author: jroth 

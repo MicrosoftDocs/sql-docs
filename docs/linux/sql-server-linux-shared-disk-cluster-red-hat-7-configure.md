@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server - SQL Server vNext | Microsoft Docs
+title: Configure Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server - SQL Server | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 

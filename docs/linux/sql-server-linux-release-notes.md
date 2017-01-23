@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Release notes for SQL Server vNext on Linux - SQL Server vNext | Microsoft Docs
+title: Release notes for SQL Server vNext on Linux - SQL Server | Microsoft Docs
 description: This topic contains the release notes and supported features for SQL Server vNext running on Linux. Release notes for 1.2, 1.1, and 1.0 are included.
 author: rothja 
 ms.author: jroth 

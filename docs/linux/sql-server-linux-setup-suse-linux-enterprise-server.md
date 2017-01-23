@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Install SQL Server on SUSE Linux Enterprise Server - SQL Server | Microsoft Docs
+title: Install SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
 description: Describes how to install SQL Server vNext CTP 1.2 on SUSE Linux Enterprise Server 7.3.
 author: rothja 
 ms.author: jroth 

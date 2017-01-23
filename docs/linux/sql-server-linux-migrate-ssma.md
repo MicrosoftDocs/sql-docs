@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use SSMA to migrate databases to SQL Server on Linux - SQL Server | Microsoft Docs
+title: Migrate SQL Server databases to Linux with SSMA | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 

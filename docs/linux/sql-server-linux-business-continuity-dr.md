@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Business continuity and database recovery SQL Server on Linux - SQL Server | Microsoft Docs
+title: Disaster recovery for SQL Server on Linux | Microsoft Docs
 description: 
 author: mihaelab 
 ms.author: mihaelab 
@@ -24,7 +24,7 @@ ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 # ms.custom: ""
 
 ---
-# Business continuity and database recovery SQL Server on Linux - SQL Server vNext CTP 1.2
+# Business continuity and database recovery SQL Server on Linux
 
 SQL Server on Linux allows organizations to achieve a wide array of service-level agreement goals to accommodate various business requirements.
 

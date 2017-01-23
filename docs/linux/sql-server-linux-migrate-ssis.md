@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Extract, transform, and load data for SQL Server on Linux with SSIS - SQL Server | Microsoft Docs
+title: Extract, transform, and load data for SQL Server on Linux | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Export and import a database on Linux with SSMS - SQL Server | Microsoft Docs
+title: Export and import a database on Linux with SSMS | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 

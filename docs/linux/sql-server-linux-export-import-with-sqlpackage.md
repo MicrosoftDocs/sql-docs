@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Export and import databases with SqlPackage - SQL Server | Microsoft Docs
+title: Export and import databases with SqlPackage | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 

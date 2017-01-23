@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Overview of development for SQL Server on Linux - SQL Server | Microsoft Docs
+title: Overview of development for SQL Server on Linux | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 

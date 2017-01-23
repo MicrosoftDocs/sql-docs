@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Run the SQL Server Docker image on Linux, Mac, or Windows - SQL Server | Microsoft Docs
+title: Run the SQL Server Docker image on Linux, Mac, or Windows | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 

@@ -24,7 +24,7 @@ ms.assetid: 222e23b2-51e7-429b-b8e5-61e0ebe7df9b
 # ms.custom: ""
 ---
 # Provision a Linux SQL Server VM in Azure
-Azure provides Linux virtual machine images that have SQL Server vNext CTP 1.1 installed. This topic provides a short walkthrough on how to use the Azure portal to create a Linux SQL Server virtual machine. 
+Azure provides Linux virtual machine images that have SQL Server vNext CTP 1.2 installed. This topic provides a short walkthrough on how to use the Azure portal to create a Linux SQL Server virtual machine. 
 
 ## Create a Linux VM with SQL Server installed
 

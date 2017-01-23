@@ -1,7 +1,7 @@
 ---
 # required metadata
 title: Install SQL Server on Red Hat Enterprise Linux - SQL Server vNext | Microsoft Docs
-description: Describes how to install SQL Server vNext CTP 1.1 on Red Hat Enterprise Linux 7.3.
+description: Describes how to install SQL Server vNext CTP 1.2 on Red Hat Enterprise Linux 7.3.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -25,7 +25,7 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ---
 # Install SQL Server on Red Hat Enterprise Linux
 
-This topic provides a walkthrough of how to install SQL Server vNext CTP 1.1 on Red Hat Enterprise Linux (RHEL) 7.3.
+This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on Red Hat Enterprise Linux (RHEL) 7.3.
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -78,9 +78,9 @@ To install the mssql-server package on RHEL, follow these steps:
    sudo firewall-cmd --reload
    ```
 
-## Upgrade SQL Server on Red Hat Enterprise Linux
+## Upgrade SQL Server
 
-In order to upgrade the mssql-server package, execute the following command:
+In order to upgrade the mssql-server package on RHEL, execute the following command:
 
    ```bash
    sudo yum update mssql-server
@@ -88,9 +88,9 @@ In order to upgrade the mssql-server package, execute the following command:
 
 These commands will download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases will not be affected by this operation. 
 
-## Uninstall SQL Server on Red Hat Enterprise Linux
+## Uninstall SQL Server
 
-In order to remove the mssql-server package, follow these steps:
+In order to remove the mssql-server package on RHEL, follow these steps:
 
 1. Run the `remove` command. This will delete the package and remove the files under `/opt/mssql/`. However, this command will not affect user-generated and system database files, which are located under `/var/opt/mssql`.
    ```bash

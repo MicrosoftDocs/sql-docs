@@ -2,11 +2,11 @@
 # required metadata
 
 title: Install SQL Server on Linux - SQL Server vNext | Microsoft Docs
-description: SQL Server vNext CTP 1.1 now runs on Linux. This topic provides an overview on how to install SQL Server on Linux with links to the guides for specific platforms. 
+description: SQL Server vNext CTP 1.2 now runs on Linux. This topic provides an overview on how to install SQL Server on Linux with links to the guides for specific platforms. 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 12/16/2016
+ms.date: 01/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,19 +26,21 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
 # Install SQL Server on Linux
 
-SQL Server vNext CTP 1.1 is supported on Red Hat Enterprise Linux and Ubuntu. It is also available as a Docker image which can run on Docker Engine on Linux or Docker for Windows/Mac. The topics in this section provide tutorials and general guidance for installing SQL Server vNext CTP 1.1 on Linux. 
+SQL Server vNext CTP 1.2 is supported on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. It is also available as a Docker image which can run on Docker Engine on Linux or Docker for Windows/Mac. The topics in this section provide tutorials and general guidance for installing SQL Server vNext CTP 1.2 on Linux. 
 
 ## Supported platforms
-SQL Server vNext CTP 1.1 is supported on the following platforms:
+SQL Server vNext CTP 1.2 is supported on the following platforms:
 
 | Platform | Supported version(s) | Get
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3 | [Get RHEL 7.3](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 and 16.10| [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)
 
 ## Select the platform to install on
 - [Install on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
+- [Instal on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
 - [Install on Ubuntu](sql-server-linux-setup-ubuntu.md)
 - [Run on Docker](sql-server-linux-setup-docker.md)
 

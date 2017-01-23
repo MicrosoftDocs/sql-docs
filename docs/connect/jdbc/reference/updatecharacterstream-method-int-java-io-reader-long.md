@@ -1,5 +1,5 @@
 ---
-title: "updateCharacterStream Method (int, java.io.Reader, long) | Microsoft Docs"
+title: "updateCharacterStream Method (java.io.Reader, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

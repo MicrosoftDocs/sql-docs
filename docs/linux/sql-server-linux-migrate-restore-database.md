@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Restore a SQL Server database from Windows to Linux - SQL Server vNext | Microsoft Docs
+title: Migrate a SQL Server database from Windows to Linux | Microsoft Docs
 description: This topic shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server vNext CTP 1.2.
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -24,7 +24,7 @@ ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 # ms.custom: ""
 
 ---
-# Restore a SQL Server database from Windows to Linux
+# Migrate a SQL Server database from Windows to Linux using backup and restore
 
 SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server vNext CTP 1.2 on Linux. This topic provides step-by-step instructions for this technique. In this tutorial, you will:
 

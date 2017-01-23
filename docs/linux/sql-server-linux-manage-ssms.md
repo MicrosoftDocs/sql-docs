@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use SSMS to Manage SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Use SSMS to Manage SQL Server on Linux | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 

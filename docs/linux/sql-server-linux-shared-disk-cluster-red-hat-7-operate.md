@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Operate Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server - SQL Server vNext | Microsoft Docs
+title: Operate Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 

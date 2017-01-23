@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Security limitations for SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Security limitations for SQL Server on Linux | Microsoft Docs
 description: This topic describes SQL Server on Linux restrictions.
 author: BYHAM 
 ms.author: rickbyh 

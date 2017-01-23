@@ -1,5 +1,5 @@
 ---
-title: "supportsOpenCursorsAcrossRollback Method (SQLServerDatabaseMetaData) | Microsoft Docs"
+title: "supportsOpenCursorsAcrossRollback Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

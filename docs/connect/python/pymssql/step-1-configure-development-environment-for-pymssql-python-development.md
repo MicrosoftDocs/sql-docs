@@ -1,5 +1,5 @@
 ---
-title: "Step 1: Configure development environment for pymssql Python development | Microsoft Docs"
+title: "Step 1: Configure pymssql Python development environment | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

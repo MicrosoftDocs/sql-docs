@@ -1,5 +1,5 @@
 ---
-title: "supportsCatalogsInPrivilegeDefinitions Method (SQLServerDatabaseMetaData) | Microsoft Docs"
+title: "supportsCatalogsInPrivilegeDefinitions Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

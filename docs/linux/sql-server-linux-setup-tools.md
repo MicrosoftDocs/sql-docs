@@ -68,8 +68,8 @@ Install the tools for your platform:
 > [!Note] 
 > To update to the latest version of 'mssql-tools' run the following commands:
 >    ```bash
->   yum check-update
->   yum update mssql-tools
+>   sudo yum check-update
+>   sudo yum update mssql-tools
 >   ```
 
 Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
@@ -104,15 +104,15 @@ Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 > [!Note] 
 > To update to the latest version of 'mssql-tools' run the following commands:
 >    ```bash
->   apt-get update 
->   apt-get install mssql-tools 
+>   sudo apt-get update 
+>   sudo apt-get install mssql-tools 
 >   ```
 
 Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 
    ```bash
-   ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
-   ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
+   sudo ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
+   sudo ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
    ```
 
 ## <a name="SLES">Install tools on SLES</a>
@@ -121,28 +121,28 @@ Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 1. Add the Microsoft SQL Server repository to Zypper.
 
    ```bash
-   sudo zypper ar https://packages.microsoft.com/config/sles/12/prod.repo 
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
+   sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. Update the sources, and install 'mssql-tools' with the unixODBC developer package.
+1. Install 'mssql-tools' with the unixODBC developer package.
 
    ```bash
-   sudo zypper update
    sudo zypper install mssql-tools unixODBC-devel
    ```
 
 > [!Note] 
 > To update to the latest version of 'mssql-tools' run the following commands:
 >    ```bash
->   zypper refresh
->   zypper update mssql-tools
+>   sudo zypper refresh
+>   sudo zypper update mssql-tools
 >   ```
 
 Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 
    ```bash
-   ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
-   ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
+   sudo ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
+   sudo ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
    ```
 
 

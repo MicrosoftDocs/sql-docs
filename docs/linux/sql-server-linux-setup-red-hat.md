@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Install SQL Server on Red Hat Enterprise Linux - SQL Server vNext | Microsoft Docs
+title: Install SQL Server on Red Hat Enterprise Linux | Microsoft Docs
 description: Describes how to install SQL Server vNext CTP 1.2 on Red Hat Enterprise Linux 7.3.
 author: rothja 
 ms.author: jroth 

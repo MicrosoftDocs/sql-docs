@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Provision a Linux SQL Server VM in Azure - SQL Server vNext | Microsoft Docs
+title: Provision a Linux SQL Server VM in Azure | Microsoft Docs
 description: This tutorial shows how to create a Linux SQL Server vNext virtual machine in Azure.
 author: rothja 
 ms.author: jroth 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Manage SQL Server on Linux | Microsoft Docs
 description: This topic provides links to common management tasks and tools for SQL Server running on Linux.
 author: rothja 
 ms.author: jroth 

@@ -1,5 +1,5 @@
 ---
-title: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VB) | Microsoft Docs"
+title: "Move Record Pointer of Recordset Example (VB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

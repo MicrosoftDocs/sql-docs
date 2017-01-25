@@ -1,5 +1,5 @@
 ---
-title: "DataFactory Object, Query Method, and CreateObject Method Example (VBScript) | Microsoft Docs"
+title: "Create RDSServer.DataFactory Object using CreateObject Example (VBScript) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,5 +1,5 @@
 ---
-title: "ConnectionString, ConnectionTimeout, and State Properties Example (VJ++) | Microsoft Docs"
+title: "Connection Properties Example (VJ++) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

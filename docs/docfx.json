@@ -36,7 +36,7 @@
       "_op_documentIdPathDepotMapping": {
         "linux": {
           "depot_name": "SQL.linux",
-          "folder_relative_path_in_docset": "."
+          "folder_relative_path_in_docset": "./"
         }
       }
     },

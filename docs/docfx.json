@@ -34,9 +34,9 @@
       "breadcrumb_path": "~/breadcrumb/toc.yml",
       "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana"],
       "_op_documentIdPathDepotMapping": {
-        "linux": {
+        "linux/": {
           "depot_name": "SQL.linux",
-          "folder_relative_path_in_docset": "./"
+          "folder_relative_path_in_docset": "."
         }
       }
     },

@@ -5,5 +5,5 @@
 -  [SQL Server Drivers](./connect/)
 -  [SQL Server Samples](./sample/)
 -  [SQL Server Data Tools (SSDT)](./ssdt/)
--  [SQL Server Migration Assistant (SSMS)](./ssma/)
--  [SQL Server Management Studio](./ssms/)
+-  [SQL Server Migration Assistant (SSMA)](./ssma/)
+-  [SQL Server Management Studio (SSMS)](./ssms/)

@@ -1,5 +1,5 @@
 ---
-title: "getDate Method (java.lang.String) | Microsoft Docs"
+title: "getDate Method (java.lang.String) parameter | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

@@ -1,5 +1,5 @@
 ---
-title: "BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events (ADO) | Microsoft Docs"
+title: "BeginTrans, CommitTrans, RollbackTrans Events (ADO) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

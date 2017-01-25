@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get started with SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Get started with SQL Server on Linux | Microsoft Docs
 description: This topic provides a learning path for getting started with SQL Server vNext on Linux. It also includes links to other resources for each step.
 author: rothja 
 ms.author: jroth 

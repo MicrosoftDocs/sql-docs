@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install SQL Server on Ubuntu - SQL Server vNext | Microsoft Docs
+title: Install SQL Server on Ubuntu | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 

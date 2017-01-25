@@ -1,5 +1,5 @@
 ---
-title: "Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VJ++) | Microsoft Docs"
+title: "Error Object Properties Example (VJ++) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,5 +1,5 @@
 ---
-title: "Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO) | Microsoft Docs"
+title: "Control Changes to Recordset Base Table (ADO) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

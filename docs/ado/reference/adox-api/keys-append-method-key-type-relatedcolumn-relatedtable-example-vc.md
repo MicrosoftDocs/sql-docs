@@ -1,5 +1,5 @@
 ---
-title: "Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VC++) | Microsoft Docs"
+title: "Create a New Foreign Key Example (VC++) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,5 +1,5 @@
 ---
-title: "ConnectionString, ConnectionTimeout, and State Properties Example (VB) | Microsoft Docs"
+title: "Connection Properties Example (VB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

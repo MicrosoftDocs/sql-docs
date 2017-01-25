@@ -1,5 +1,5 @@
 ---
-title: "FilterColumn, FilterCriterion, FilterValue, SortColumn, and SortDirection Properties and Reset Method Example (VBScript) | Microsoft Docs"
+title: "Set RDS.DataControl Server and Bind to HTML table Example (VBScript) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

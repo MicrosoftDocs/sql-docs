@@ -1,5 +1,5 @@
 ---
-title: "setTime Method (java.lang.String, java.sql.Time) | Microsoft Docs"
+title: "setTime Method to time value | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

@@ -1,5 +1,5 @@
 ---
-title: "SQLServerSavepoint Constructor (SQLServerConnection, java.lang.StringName) | Microsoft Docs"
+title: "SQLServerSavepoint Constructor - savepoint | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

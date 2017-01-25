@@ -1,5 +1,5 @@
 ---
-title: "registerOutParameter Method (java.lang.String, int, java.lang.String) | Microsoft Docs"
+title: "registerOutParameter Method to type and name | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

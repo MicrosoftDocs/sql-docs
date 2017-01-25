@@ -1,5 +1,5 @@
 ---
-title: "setTimestamp Method (java.lang.String, java.sql.Timestamp) | Microsoft Docs"
+title: "setTimestamp Method to timestamp value | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

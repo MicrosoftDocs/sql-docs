@@ -1,5 +1,5 @@
 ---
-title: "setDate Method (int, java.sql.Date) | Microsoft Docs"
+title: "setDate Method to date value - int | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

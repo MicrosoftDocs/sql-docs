@@ -1,5 +1,5 @@
 ---
-title: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VJ++) | Microsoft Docs"
+title: "Move Record Pointer of Recordset Example (VJ++) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -21,7 +21,6 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # execute Method (java.lang.String, int[])
-[!INCLUDE[Driver_JDBC_Download](..%2FToken%2FDriver_JDBC_Download.md)]
 
   Runs the given SQL statement, which can return multiple results, and signals [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion-md.md)] that the auto-generated keys that are indicated in the given array should be made available for retrieval.  
   

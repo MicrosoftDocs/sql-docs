@@ -21,7 +21,6 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # prepareStatement Method (java.lang.String)
-[!INCLUDE[Driver_JDBC_Download](..%2FToken%2FDriver_JDBC_Download.md)]
 
   Creates a [SQLServerPreparedStatement](../Topic/SQLServerPreparedStatement%20Class.md) object for sending parameterized SQL statements to the database.  
   

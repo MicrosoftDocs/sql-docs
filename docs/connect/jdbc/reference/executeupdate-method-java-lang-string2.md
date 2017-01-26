@@ -21,7 +21,6 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # executeUpdate Method (java.lang.String)
-[!INCLUDE[Driver_JDBC_Download](..%2FToken%2FDriver_JDBC_Download.md)]
 
   Runs the given SQL statement, which can be an INSERT, UPDATE, MERGE, or DELETE statement; or an SQL statement that returns nothing, such as an SQL DDL statement.  
   

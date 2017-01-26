@@ -1,0 +1,342 @@
+---
+# required metadata
+
+title: Configure SLES shared disk cluster for SQL Server | Microsoft Docs
+description: Implement high availability by configuring SUSE Linux Enterprise Server (SLES) shared disk cluster for SQL Server.
+author: MikeRayMSFT 
+ms.author: mikeray 
+manager: jhubbard
+ms.date: 01/26/2017
+ms.topic: article
+ms.prod: sql-linux 
+ms.technology: database-engine
+ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
+
+# optional metadata
+# keywords: ""
+# ROBOTS: ""
+# audience: ""
+# ms.devlang: ""
+# ms.reviewer: ""
+# ms.suite: ""
+# ms.tgt_pltfrm: ""
+# ms.custom: ""
+---
+
+# Configure SLES 12 SP2 shared disk cluster for SQL Server
+
+This guide provides instructions to create a two-nodes shared disk cluster for SQL Server on SLES 12 SP2. The clustering layer is based on SUSE High Availability Extension built on top of Pacemaker. 
+
+For more details on cluster configuration, resource agent options, and management, best practices and recommendations visit SUSE reference documentation.
+
+> [!NOTE]
+> At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. It is expected that @@servername and sys.servers to return the node name, while the cluster dmvs sys.dm_os_cluster_nodes and sys.dm_os_cluster_properties will no records. To use a connection string that points to a string server name and not use the IP, they will have to register in their DNS server the IP used to create the virtual IP resource (as explained below) with the chosen server name.
+
+## Prerequisites
+
+To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server to configure the NFS share. Below steps outline how these servers will be configured.
+
+## Setup and configure the operating system on each cluster node
+
+The first step is to configure the operating system on the cluster nodes. For this walk through, use SLES 12 SP2 with a valid subscription for the HA add-on.
+
+## Install and configure SQL Server on each cluster node
+
+1. Install and setup SQL Server on both nodes. For detailed instructions see Install SQL Server on Linux.
+2. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide. 
+3. On the secondary node, stop and disable SQL Server.
+
+    The following example stops and disables SQL Server:
+
+    ```bash
+    sudo systemctl stop mssql-server
+    sudo systemctl disable mssql-server
+    ```
+
+    > [!NOTE]
+    > At setup time, a Server Master Key is generated for the SQL Server instance and placed at var/opt/mssql/secrets/machine-key. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key.
+4. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server.
+
+    ```bash
+    sudo systemctl start mssql-server
+    ```
+    Connect to the SQL Server master database with the ‘sa’ account and run the following:
+
+    ```tsql
+    USE [master]
+    GO
+    CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'
+    GRANT VIEW SERVER STATE TO <loginName>
+    ```
+5. On the primary node, stop and disable SQL Server.
+6. Follow directions here to configure and update the hosts file for each cluster node. The ‘hosts’ file must include the IP address and name of every cluster node.
+
+    To check the IP address of the current node run:
+
+    ```bash
+    sudo ip addr show
+    ```
+
+    Set the computer name on each node. Give each node a unique name that is 15 characters or less. Set the computer name by adding it to `/etc/hostname` using yast or manually.
+
+    The following example shows `/etc/hosts` with additions for two nodes named `SLES1` and `SLES2`.
+
+    ```
+    127.0.0.1   localhost
+    10.128.18.128 SLES1
+    10.128.16.77 SLES2
+    ```
+
+    > [!NOTE]
+    > All cluster nodes must be able to access each other via SSH. Tools like hb_report or crm_report (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes, otherwise they can only collect data from the current node. In case you use a non-standard SSH port, use the -X option (see man page). For example, if your SSH port is 3479, invoke an hb_report with:
+    >```bash
+    >hb_report -X "-p 3479" [...]
+    >```
+    >For more information, see [https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)
+
+In the next section you will configure shared storage and move your database files to that storage.  
+
+## Configure shared storage and move database files
+
+There are a variety of solutions for providing shared storage. This walk-through demonstrates configuring shared storage with NFS. We recommend to follow best practices and use Kerberos to secure NFS: 
+
+https://www.suse.com/documentation/sled11/book_sle_admin/data/cha_nfs.html
+
+https://www.suse.com/communities/blog/configuring-nfsv4-server-and-client-suse-linux-enterprise-server-10/ 
+
+If you do not, then anyone who can access your network and spoof the IP address of a SQL node will be able to access your data files. As always, make sure you threat model your system before using it in production. 
+
+Another storage option is to use SMB file share:
+
+https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html  
+
+## Configure NFS server
+
+https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_nfs_configuring-nfs-server.html  
+
+## Configure all cluster nodes to connect to the NFS shared storage
+
+Before configuring the client NFS to mount the SQL Server database files path to point to the shared storage location, make sure you save the database files to a temporary location to be able to copy them later on the share:
+
+1. **On the primary node only**, save the database files to a temporary location. The following script, creates a new temporary directory, copies the database files to the new directory, and removes the old database files. As SQL Server runs as local user mssql, you need to make sure that after data transfer to the mounted share, local user has read-write access to the share. 
+
+    ```bash
+    su mssql
+    mkdir /var/opt/mssql/tmp
+    cp /var/opt/mssql/data/* /var/opt/mssql/tmp
+    rm /var/opt/mssql/data/*
+    exit
+    ```
+
+    Configure the NFS client on all cluster nodes:
+
+    https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_nfs_configuring-nfs-clients.html   
+
+    > [!NOTE]
+    > It is recommended to follow SUSE’s best practices and recommendations regarding Highly Available NFS storage:
+    > https://www.suse.com/documentation/sle_ha/book_sleha_techguides/data/art_ha_quick_nfs.html 
+
+2. Validate that SQL Server starts successfully with the new file path. Do this on each node. At this point only one node should run SQL Server at a time. They cannot both run at the same time because they will both try to access the data files simultaneously (to avoid accidentally starting SQL Server on both nodes, use a File System cluster resource to make sure the share is not mounted twice by the different nodes). The following commands start SQL Server, check the status, and then stop SQL Server.
+    ```bash
+    sudo systemctl start mssql-server
+    sudo systemctl status mssql-server
+    sudo systemctl stop mssql-server
+    ```
+
+At this point both instances of SQL Server are configured to run with the database files on the shared storage. The next step is to configure SQL Server for Pacemaker. 
+
+## Install and configure Pacemaker on each cluster node
+
+1. **On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login**. The following command creates and populates this file:
+
+    ```bash
+    sudo touch /var/opt/mssql/secrets/passwd
+    sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
+    sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
+    sudo chown root:root /var/opt/mssql/secrets/passwd 
+    sudo chmod 600 /var/opt/mssql/secrets/passwd
+    ```
+2. **All cluster nodes must be able to access each other via SSH**. Tools like hb_report or crm_report (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes, otherwise they can only collect data from the current node. In case you use a non-standard SSH port, use the -X option (see man page). For example, if your SSH port is 3479, invoke an hb_report with:
+
+    ```bash
+    hb_report -X "-p 3479" [...]
+    ```
+
+    For more information, ss [https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)
+
+3. **Install the High Availability Extension**:
+
+    https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_add-on.html 
+
+4. Install the FCI resource agent for SQL Server. Run the following commands on both nodes:
+
+    ```bash
+    sudo zypper install mssql-server-ha
+    ```
+
+5. **Automatically Setting Up the First Node**
+
+    From: https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html 
+
+    1. Log in as root to the physical or virtual machine you want to use as cluster node.
+    2. Start the bootstrap script by executing:
+        
+        ```bash
+        sleha-init
+        ```
+        
+        If NTP has not been configured to start at boot time, a message appears. 
+
+        If you decide to continue anyway, the script will automatically generate keys for SSH access and for the Csync2 synchronization tool and start the services needed for both. 
+    3. To configure the cluster communication layer (Corosync):
+        - Enter a network address to bind to. By default, the script will propose the network address of eth0. Alternatively, enter a different network address, for example the address of bond0. 
+        - Enter a multicast address. The script proposes a random address that you can use as default. 
+        - Enter a multicast port. The script proposes 5405 as default. 
+        - To configure SBD (optional), enter a persistent path to the partition of your block device that you want to use for SBD. The path must be consistent across all nodes in the cluster. 
+
+        Finally, the script will start the OpenAIS service to bring the one-node cluster online and enable the Web management interface Hawk. The URL to use for Hawk is displayed on the screen. 
+    4. For any details of the setup process, check /var/log/sleha-bootstrap.log.
+
+        You now have a running one-node cluster. Check the cluster status with crm status:
+
+        ```bash
+        crm status
+        ```
+    5. The bootstrap procedure creates a Linux user named hacluster with the password linux. Replace the default password with a secure one as soon as possible:
+        ```bash
+        passwd hacluster
+        ```
+
+6. Adding Nodes to an Existing Cluster
+    If you have a cluster up and running (with one or more nodes), add more cluster nodes with the sleha-join bootstrap script. The script only needs access to an existing cluster node and will complete the basic setup on the current machine automatically. Follow the steps below. 
+    
+    If you have configured the existing cluster nodes with the YaST cluster module, make sure the following prerequisites are fulfilled before you run sleha-join: 
+        - The root user on the existing nodes has SSH keys in place for passwordless login. 
+        - Csync2 is configured on the existing nodes. For details, refer to Configuring Csync2 with YaST. 
+    
+    1. Log in as root to the physical or virtual machine supposed to join the cluster. 
+    2. Start the bootstrap script by executing: 
+        ```bash
+        sleha-join
+        ```
+        If NTP has not been configured to start at boot time, a message appears. 
+    3. If you decide to continue anyway, you will be prompted for the IP address of an existing node. Enter the IP address. 
+    4. If you have not already configured a passwordless SSH access between both machines, you will also be prompted for the root password of the existing node. 
+    
+        After logging in to the specified node, the script will copy the Corosync configuration, configure SSH and Csync2, and will bring the current machine online as new cluster node. Apart from that, it will start the service needed for Hawk. If you have configured shared storage with OCFS2, it will also automatically create the mountpoint directory for the OCFS2 file system. 
+    5. Repeat the steps above for all machines you want to add to the cluster. 
+    6. For details of the process, check /var/log/sleha-bootstrap.log. 
+    
+    Check the cluster status with crm status. If you have successfully added a second node, the output will be similar to the following:
+    ```bash
+    crm status
+    ```
+    The output should look similar to the following:
+    ```
+    2 nodes configured
+    1 resource configured
+    Online: [ SLES1 SLES2 ]
+    Full list of resources:
+    admin_addr     (ocf::heartbeat:IPaddr2):       Started SLES1
+    ```
+
+    > [!NOTE]
+    > **admin_addr** is the virtual IP cluster resource which is configured during initial one-node cluster setup.
+
+    > [!NOTE]
+    > After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information, refer to Section 4.1.2, Option no-quorum-policy. 
+
+7.	Removing Nodes From An Existing Cluster
+    If you have a cluster up and running (with at least two nodes), you can remove single nodes from the cluster with the sleha-remove bootstrap script. You need to know the IP address or host name of the node you want to remove from the cluster. Follow the steps below. 
+    1. Log in as root to one of the cluster nodes. 
+    2. Start the bootstrap script by executing: 
+        ```bash
+        sleha-remove -c IP_ADDR_OR_HOSTNAME
+        ```
+        
+        The script enables the sshd, stops the OpenAIS service on the specified node, and propagates the files to synchronize with Csync2 across the remaining nodes. 
+        
+        If you specified a host name and the node to remove cannot be contacted (or the host name cannot be resolved), the script will inform you and ask whether to remove the node anyway. If you specified an IP address and the node cannot be contacted, you will be asked to enter the host name and to confirm whether to remove the node anyway. 
+    3. To remove more nodes, repeat the step above. 
+    4. For details of the process, check `/var/log/sleha-bootstrap.log`.
+
+8.	Removing the High Availability Extension Software From a Machine
+    To remove the High Availability Extension software from a machine that you no longer need as cluster node, proceed as follows.
+    1. Stop the cluster service:
+        ```bash
+        rcopenais stop
+        ```
+    2. Remove the High Availability Extension add-on:
+        ```bash
+        zypper rm -t products sle-hae
+        ```
+
+## Configure the cluster resources for SQL Server
+
+https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html 
+
+- **SQL Server Resource Name**: A name for the clustered SQL Server resource. 
+- **Timeout Value**: The timeout value is the amount of time that the cluster waits while a resource is brought online. For SQL Server, this is the time that you expect SQL Server to take to bring the `master` database online. 
+
+Update the values from the script below for your environment. Run on one node to configure and start the clustered service.
+
+```bash
+sudo crm configure
+primitive <sqlServerResourceName> ocf:mssql:fci op start timeout=<timeout_in_seconds>
+colocation <constraintName> inf: <virtualIPResourceName> <sqlServerResourceName>
+#show
+#commit
+#exit
+```
+
+For example, the following script creates a SQL Server clustered resource named mssqlha. 
+
+```bash
+sudo crm configure
+primitive mssqlha ocf:mssql:fci op start timeout=60s
+colocation admin_addr_mssqlha inf: admin_addr mssqlha
+show
+commit
+exit
+```
+
+After the configuration is committed, SQL Server will start on the same node as the virtual IP resource. 
+
+### Verify that SQL Server is started. 
+
+```bash
+crm status
+```
+
+The following examples shows the results when Pacemaker has successfully started as clustered resource. 
+```
+2 nodes configured
+2 resources configured
+
+Online: [ SLES1 SLES2 ]
+
+Full list of resources:
+
+ admin_addr     (ocf::heartbeat:IPaddr2):       Started SLES1
+ mssqlha        (ocf::mssql:fci):       Started SLES1
+```
+
+## Managing cluster resources
+
+https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm.html 
+
+### Manual failover
+
+Although resources are configured to automatically fail over (or migrate) to other nodes of the cluster in the event of a hardware or software failure, you can also manually move a resource to another node in the cluster using either the Pacemaker GUI or the command line. 
+
+Use the migrate command for this task. For example, to migrate the SQL resource to a cluster node names SLES2 execute: 
+
+```bash
+crm resource
+migrate mssqlha SLES2
+```
+
+## Additional resources
+https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts   
+
+## Next steps

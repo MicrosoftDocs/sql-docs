@@ -81,21 +81,18 @@ The project toolbar contains buttons for working with projects, connecting to Or
 #### Migration Toolbar  
 The following table shows the migration toolbar commands:  
   
-|||  
-|-|-|  
 |Button|Function|  
+|------|--------|  
 |**Create Report**|Converts the selected Oracle objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax, and then creates a report that shows how successful the conversion was.<br /><br />This command is disabled unless objects are selected in Oracle Metadata Explorer.|  
 |**Convert Schema**|Converts the selected Oracle objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects.<br /><br />This command is disabled unless objects are selected in Oracle Metadata Explorer.|  
-|||  
 |**Migrate Data**|Migrates data from the Oracle database to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Before you run this command, you must convert the Oracle schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schemas, and then load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].<br /><br />This command is disabled unless objects are selected in Oracle Metadata Explorer.|  
 |**Stop**|Stops the current process.|  
   
 ### Menus  
 The following table shows the SSMA menus.  
   
-|||  
-|-|-|  
 |Menu|Description|  
+|----|-----------|  
 |**File**|Contains commands for working with projects, connecting to Oracle, and connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**Edit**|Contains commands for finding and working with text in the details pages, such as copying [!INCLUDE[tsql](../../includes/tsql_md.md)] from the SQL details pane. Also contains the **Manage Bookmarks** option, where you will be able to see a list of existing bookmarks. You can use the buttons on the right side of the dialog to manage the bookmarks.|  
 |**View**|Contains the **Synchronize Metadata Explorers** command. That synchronizes the objects between Oracle Metadata Explorer and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer. Also contains commands to show and hide the **Output** and **Error List** panes and an option **Layouts** to manage the Layouts.|  

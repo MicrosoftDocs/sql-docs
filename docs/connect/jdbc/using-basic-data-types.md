@@ -55,7 +55,6 @@ manager: "jhubbard"
 |uniqueidentifier|CHAR|String|  
 |varbinary|VARBINARY|byte[]|  
 |varbinary(max)|VARBINARY|byte[]|  
-||||  
 |varchar|VARCHAR|String|  
 |varchar(max)|VARCHAR|String|  
 |xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String<br /><br /> SQLXML|  

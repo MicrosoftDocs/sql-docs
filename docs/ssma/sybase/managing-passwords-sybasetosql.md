@@ -50,8 +50,8 @@ Specify a valid password using one of the following three methods:
   
             The server definition ids and its corresponding encrypted passwords are stored in a file on the local machine  
   
-        ||  
-        |-|  
+        |Examples:|  
+        |---------|  
         |**Example 1:**<br /><br />*Specify password*<br /><br />`C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –add all –s “ D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\AssessmentReportGenerationSample.xml” –v “D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml”`<br /><br />`Enter password for server_id ‘XXX_1’: xxxxxxx`<br /><br />`Re-enter password for server_id ‘XXX_1’: xxxxxxx`|  
         |**Example 2:**<br /><br />`C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –add “source_1,target_1” –c “D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml” – v “D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml” -o`<br /><br />`Enter password for server_id ‘source_1’: xxxxxxx`<br /><br />`Re-enter password for server_id ‘source_1’: xxxxxxx`<br /><br />`Enter password for server_id ‘target_1’: xxxxxxx`<br /><br />`Re-enter password for server_id ‘target _1’: xxxxxxx`|  
   
@@ -59,18 +59,16 @@ Specify a valid password using one of the following three methods:
   
         Execute the `SSMAforSybaseConsole.exe` with the`–securepassword` and `–remove` switch at command line passing the server ids, to remove the encrypted passwords from the protected storage file present on the local machine.  
   
-        |||  
-        |-|-|  
-        |**Example:**||  
+        |Example:|  
+        |--------|  
         |`C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –remove all`C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –remove “source_1,target_1”|  
   
     -   **Listing Server Ids whose passwords are encrypted**  
   
         Execute the `SSMAforSybaseConsole.exe` with the `–securepassword` and `–list` switch at command line to list all the server ids whose passwords have been encrypted.  
   
-        |||  
-        |-|-|  
-        |**Example:**||  
+        |Example:|  
+        |--------|  
         |`C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –list`|  
   
     > [!NOTE]  
@@ -80,13 +78,13 @@ Specify a valid password using one of the following three methods:
 ## Exporting or Importing Encrypted Passwords  
 The SSMA Console application allows you to export encrypted database passwords present in a file on the local machine to a secured file and vice-versa. It helps in making the encrypted passwords machine independent. Export functionality reads the server id and password from the local protected storage and saves the information in an encrypted file. The user is prompted to enter the password for the secured file. Make sure the password entered is 8 character length or more. This secured file is portable across different machines. Import functionality reads the server id and password information from the secured file. The user is prompted to enter the password for the secured file and appends the information to the local protected storage.  
   
-||  
-|-|  
-|**Example:**<br /><br />*Export password*<br /><br />`Enter password for protecting the exported file C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –export all “machine1passwords.file”`<br /><br />`Enter password for protecting the exported file: xxxxxxxx`<br /><br />`Please confirm password: xxxxxxxx`<br /><br />`C:\SSMA\SSMAforSybaseConsole.EXE –p –e “SybaseDB_1_1,Sql_1” “machine2passwords.file”`<br /><br />`Enter password for protecting the exported file: xxxxxxxx`<br /><br />`Please confirm password: xxxxxxxx`|  
+|Example:|  
+|--------|  
+|*Export password*<br /><br />`Enter password for protecting the exported file C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –export all “machine1passwords.file”`<br /><br />`Enter password for protecting the exported file: xxxxxxxx`<br /><br />`Please confirm password: xxxxxxxx`<br /><br />`C:\SSMA\SSMAforSybaseConsole.EXE –p –e “SybaseDB_1_1,Sql_1” “machine2passwords.file”`<br /><br />`Enter password for protecting the exported file: xxxxxxxx`<br /><br />`Please confirm password: xxxxxxxx`|  
   
-||  
-|-|  
-|**Example:**<br /><br />*Import an encrypted password*<br /><br />`Enter password for protecting the imported file C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –import all “machine1passwords.file”`<br /><br />`Enter password to import the servers from encrypted file: xxxxxxxx`<br /><br />`Please confirm password: xxxxxxxx`<br /><br />`C:\SSMA\SSMAforSybaseConsole.EXE –p –i “SybaseDB_1,Sql_1” “machine2passwords.file”`<br /><br />`Enter password to import the servers from encrypted file: xxxxxxxx`<br /><br />`Please confirm password: xxxxxxxx`|  
+|Example:|  
+|--------|  
+|*Import an encrypted password*<br /><br />`Enter password for protecting the imported file C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –import all “machine1passwords.file”`<br /><br />`Enter password to import the servers from encrypted file: xxxxxxxx`<br /><br />`Please confirm password: xxxxxxxx`<br /><br />`C:\SSMA\SSMAforSybaseConsole.EXE –p –i “SybaseDB_1,Sql_1” “machine2passwords.file”`<br /><br />`Enter password to import the servers from encrypted file: xxxxxxxx`<br /><br />`Please confirm password: xxxxxxxx`|  
   
 ## See Also  
 [Executing the SSMA Console (Sybase)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  

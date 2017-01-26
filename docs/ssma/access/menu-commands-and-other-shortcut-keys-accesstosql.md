@@ -36,7 +36,6 @@ To access File menu, the keyboard shortcut used is ALT + F. The following table 
 |Remove database.|ALT + F + R|  
 |Display the find databases wizard dialog box.|ALT + F + F|  
 |Exit SSMA application.|ALT + F + X|  
-|||  
   
 ## Edit menu commands  
 To access Edit menu, the keyboard shortcut used is ALT + E. The following table describes the keyboard shortcuts used to access menu items under Edit menu.  

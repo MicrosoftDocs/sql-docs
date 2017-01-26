@@ -82,9 +82,9 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
 ## Applies To  
   
-||||  
-|-|-|-|  
-|[Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)||  
+|||  
+|-|-|  
+|[Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|  
   
 ## See Also  
  [Append and CreateParameter Methods Example (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   

@@ -1,7 +1,15 @@
 # [What is SSMS?](sql-server-management-studio-ssms.md)
 # [Download SSMS](download-sql-server-management-studio-ssms.md)
-# [Changelog](sql-server-management-studio-changelog-ssms.md)
+# [SSMS Changelog](sql-server-management-studio-changelog-ssms.md)
 # [Release notes](sql-server-management-studio-release-notes.md)
+
+# [SQL Server Agent](./agent/TOC.md)
+# [F1-Help](./f1-help/TOC.md)
+# [Menu Help](./menu-help/TOC.md)
+# [Object Explorer](./object/TOC.md)
+# [Solution Explorer](./solution/TOC.md)
+# [Templates](./template/TOC.md)
+# [visual DB Tools](./visual-db-tools/TOC.md)
 
 # [Introduction SSMS for BI](introduction-to-sql-server-management-studio-for-business-intelligence.md)
 # [Customize Menus and Shortcut Keys](customize-menus-and-shortcut-keys.md)
@@ -32,10 +40,3 @@
 # [Configure Login Auditing (SSMS)](configure-login-auditing-sql-server-management-studio.md)
 # [Use the Toolbox](use-the-toolbox.md)
 
-# More
-## [f1-help](./f1-help/TOC.md)
-## [menu-help](./menu-help/TOC.md)
-## [object](./object/TOC.md)
-## [solution](./solution/TOC.md)
-## [template](./template/TOC.md)
-## [visual-db-tools](./visual-db-tools/TOC.md)

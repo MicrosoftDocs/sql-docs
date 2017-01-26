@@ -124,7 +124,7 @@ A subsystem is a predefined object that represents functionality that is availab
   
 |Subsystem name|Description|  
 |--------------|-----------|  
-|Microsoft ActiveX Script|Run an ActiveX scripting job step.<br /><br />**\&#42;\&#42; Warning \&#42;\&#42;** The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
+|Microsoft ActiveX Script|Run an ActiveX scripting job step.<br /><br />**Warning** The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
 |Operating System (**CmdExec**)|Run an executable program.|  
 |PowerShell|Run a PowerShell scripting job step.|  
 |Replication Distributor|Run a job step that activates the replication Distribution Agent.|  

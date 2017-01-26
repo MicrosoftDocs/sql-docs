@@ -82,8 +82,8 @@ SQLRETURN SQLGetFunctions(
   
  The following is a list of valid values for *FunctionId* for functions that conform to the ISO 92 standards–compliance level:  
   
-|||  
-|-|-|  
+|FunctionId Value|FunctionId Value|  
+|----------|----------|  
 |SQL_API_SQLALLOCHANDLE|SQL_API_SQLGETDESCFIELD|  
 |SQL_API_SQLBINDCOL|SQL_API_SQLGETDESCREC|  
 |SQL_API_SQLCANCEL|SQL_API_SQLGETDIAGFIELD|  
@@ -104,18 +104,18 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFREESTMT|SQL_API_SQLSETDESCREC|  
 |SQL_API_SQLGETCONNECTATTR|SQL_API_SQLSETENVATTR|  
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
-|SQL_API_SQLGETDATA||  
+|SQL_API_SQLGETDATA| |  
   
  The following is a list of valid values for *FunctionId* for functions conforming to the Open Group standards–compliance level:  
   
-|||  
+|FunctionId Value|FunctionId Value|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
  The following is a list of valid values for *FunctionId* for functions conforming to the ODBC standards–compliance level.  
   
-|||  
+|FunctionId Value|FunctionId Value|  
 |-|-|  
 |SQL_API_SQLBINDPARAMETER|SQL_API_SQLNATIVESQL|  
 |SQL_API_SQLBROWSECONNECT|SQL_API_SQLNUMPARAMS|  
@@ -124,13 +124,13 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLDESCRIBEPARAM|SQL_API_SQLPROCEDURES|  
 |SQL_API_SQLDRIVERCONNECT|SQL_API_SQLSETPOS|  
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
-|SQL_API_SQLMORERESULTS||  
+|SQL_API_SQLMORERESULTS| |  
   
  [1]   When working with an ODBC 2*.x* driver, **SQLBulkOperations** will be returned as supported only if both of the following are true: the ODBC 2*.x* driver supports **SQLSetPos**, and the information type SQL_POS_OPERATIONS returns the SQL_POS_ADD bit as set.  
   
  The following is a list of valid values for *FunctionId* for functions introduced in ODBC 3.8 or later:  
   
-||  
+|FunctionId Value|  
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   

@@ -29,9 +29,7 @@ Describes column characteristics.
   
 ## Applies To  
   
-||  
-|-|  
-|[Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|  
+- [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## See Also  
  [Attributes Property Example (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)

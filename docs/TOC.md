@@ -2,7 +2,6 @@
 # [SQL Server Management Studio (SSMS)](ssms\TOC.md)
 # [SQL Server Data Tools (SSDT)](ssdt\TOC.md)
 # [SQL Server Samples](sample/TOC.md)
-
 # [ActiveX Data Objects (ADO)](ado\TOC.md)
 # [SQL Server Drivers](connect\TOC.md)
 # [ODBC](odbc\TOC.md)

@@ -62,6 +62,7 @@ Install the tools for your platform:
 
    ```bash
    sudo yum update
+   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #necessary if you had a previous version of mssql-tools installed
    sudo yum install mssql-tools unixODBC-devel
    ```
 

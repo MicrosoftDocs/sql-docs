@@ -34,7 +34,7 @@
 # [Using SQLConfigDatasource with the ODBC Driver for Oracle](using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md)
 # [Driver Version Scheme](driver-version-scheme.md)
 # [Index Name Limitations](index-name-limitations.md)
-# [Support for Rules, Triggers, Default Values, and Stored Procedures (Visual FoxPro ODBC Driver)](support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)
+# [Support for Rules, Triggers, Default Values (Visual FoxPro ODBC Driver)](support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)
 # [Text File Data Types](text-file-data-types.md)
 # [Connecting to a Visual FoxPro Data Source](connecting-to-a-visual-foxpro-data-source.md)
 # [Installing the Software (ODBC)](installing-the-software-odbc.md)

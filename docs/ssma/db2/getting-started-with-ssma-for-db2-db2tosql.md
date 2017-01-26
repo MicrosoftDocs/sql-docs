@@ -90,7 +90,7 @@ The following table shows the migration toolbar commands:
 The following table shows the SSMA menus.  
   
 |Menu|Description|  
-|===-|-----------|  
+|----|-----------|  
 |**File**|Contains commands for working with projects, connecting to DB2, and connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**Edit**|Contains commands for finding and working with text in the details pages, such as copying [!INCLUDE[tsql](../../includes/tsql_md.md)] from the SQL details pane. Also contains the **Manage Bookmarks** option, where you will be able to see a list of existing bookmarks. You can use the buttons on the right side of the dialog to manage the bookmarks.|  
 |**View**|Contains the **Synchronize Metadata Explorers** command. That synchronizes the objects between DB2 Metadata Explorer and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer. Also contains commands to show and hide the **Output** and **Error List** panes and an option **Layouts** to manage the Layouts.|  

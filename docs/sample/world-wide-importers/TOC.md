@@ -15,5 +15,3 @@
 ## [installation-and-configuration-wwi-oltp.md](installation-and-configuration-wwi-oltp.md)
 ## [sample-queries-oltp.md](sample-queries-oltp.md)
 ## [use-of-sql-server-features-and-capabilities-wwi-oltp.md](use-of-sql-server-features-and-capabilities-wwi-oltp.md)
-
-

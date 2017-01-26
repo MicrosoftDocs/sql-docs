@@ -123,7 +123,7 @@ A subsystem is a predefined object that represents functionality that is availab
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] defines the subsystems listed in the following table:  
   
 |Subsystem name|Description|  
-|------------------|---------------|  
+|--------------|-----------|  
 |Microsoft ActiveX Script|Run an ActiveX scripting job step.<br /><br />**\&#42;\&#42; Warning \&#42;\&#42;** The ActiveX Scripting subsystem will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
 |Operating System (**CmdExec**)|Run an executable program.|  
 |PowerShell|Run a PowerShell scripting job step.|  
@@ -162,14 +162,12 @@ If you are running multiple instances of [!INCLUDE[ssNoVersion](../../includes/s
   
 Use the following tasks to get started with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent:  
   
-|||  
-|-|-|  
-|**Description**|**Topic**|  
+|Description|Topic|  
+|-----------|-----|  
 |Describes how to configure SQL Server Agent.|[Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)|  
 |Describes how to start, stop, and pause the SQL Server Agent service.|[Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Describes considerations for specifying an account for the SQL Server Agent service.|[Select an Account for the SQL Server Agent Service](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |Describes how to use the SQL Server Agent error log.|[SQL Server Agent Error Log](../../ssms/agent/sql-server-agent-error-log.md)|  
-|||  
 |Describes how to use performance objects.|[Use Performance Objects](../../ssms/agent/use-performance-objects.md)|  
 |Describes the Maintenance Plan Wizard, which is a utility that you can use to help create jobs, alerts, and operators to automate administration of an instance of SQL Server.|[Use the Maintenance Plan Wizard](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
 |Describes how to automate administrative tasks using SQL Server Agent.|[Automated Administration Tasks &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  

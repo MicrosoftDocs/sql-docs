@@ -31,9 +31,8 @@ Before converting objects, review the project conversion options in the **Projec
 ## Conversion Results  
 The following table shows which DB2 objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objects:  
   
-|||  
-|-|-|  
 |DB2 Objects|Resulting SQL Server Objects|  
+|-----------|----------------------------|  
 |Data Types|**SSMA maps every type except the following listed below:**<br /><br />CLOB: Some native functions for work with this type are not supported (e.g. CLOB_EMPTY())<br /><br />BLOB: Some native functions for work with this type are not supported  (e.g. BLOB_EMPTY())<br /><br />DBLOB: Some native functions for work with this type are not supported  (e.g. DBLOB_EMPTY())|  
 |User-Defined Types|**SSMA maps the following User-Defined:**<br /><br />Distinct Type<br /><br />Structured Type<br /><br />SQL PL data types – Note: Weak cursor type are not supported.|  
 |Special Registers|**SSMA only maps registers listed below:**<br /><br />CURRENT TIMESTAMP<br /><br />CURRENT DATE<br /><br />CURRENT TIME<br /><br />CURRENT TIMEZONE<br /><br />CURRENT USER<br /><br />SESSION_USER and USER<br /><br />SYSTEM_USER<br /><br />CURRENT CLIENT_APPLNAME<br /><br />CURRENT CLIENT_WRKSTNNAME<br /><br />CURRENT LOCK TIMEOUT<br /><br />CURRENT SCHEMA<br /><br />CURRENT SERVER<br /><br />CURRENT ISOLATION<br /><br />Other Special Registers are not mapped to SQL server semantic.|  
@@ -80,8 +79,6 @@ The following table shows which DB2 objects are converted, and the resulting [!I
 |SELECT INTO statement|Not mapped.|  
 |VALUES INTO statement|Not mapped.|  
 |Transaction control|Not mapped.|  
-|||  
-|||  
   
 ## Converting DB2 Database Objects  
 To convert DB2 database objects, you first select the objects that you want to convert, and then have SSMA perform the conversion. To view output messages during the conversion, on the **View** menu, select **Output**.  

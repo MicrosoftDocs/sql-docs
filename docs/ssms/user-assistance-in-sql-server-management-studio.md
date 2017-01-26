@@ -42,7 +42,7 @@ The **Contents** and **Index** provide functionality and an interface already fa
   
     Stores user topic bookmarks for easy access later.  
   
-Help on Help ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer Help) links users to the documentation about the Help Viewer, but the topics are in a collection separate from [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] Books Online. For information about the Help Viewer, select **Help on Help** from the Help menu of [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] Books Online. For information about adding the Help on Help collection of topics to the Books Online collection, see [Adding Help Collections](http://msdn.microsoft.com/en-us/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  
+Help on Help ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer Help) links users to the documentation about the Help Viewer, but the topics are in a collection separate from [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] Books Online. For information about the Help Viewer, select **Help on Help** from the Help menu of [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] Books Online.  
   
 ## MSDN Online and SQL Server Communities  
 Help in [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] also provides users ways to contact MSDN Online and [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]-focused communities on the Web for information. You can:  

@@ -66,7 +66,7 @@ SQLRETURN SQLGetFunctions(
  When **SQLGetFunctions** returns SQL_ERROR or SQL_SUCCESS_WITH_INFO, an associated SQLSTATE value can be obtained by calling **SQLGetDiagRec** with a *HandleType* of SQL_HANDLE_DBC and a *Handle* of *ConnectionHandle*. The following table lists the SQLSTATE values commonly returned by **SQLGetFunctions** and explains each one in the context of this function; the notation "(DM)" precedes the descriptions of SQLSTATEs returned by the Driver Manager. The return code associated with each SQLSTATE value is SQL_ERROR, unless noted otherwise.  
   
 |SQLSTATE|Error|Description|  
-|--------------|-----------|-----------------|  
+|--------|-----|-----------|  
 |01000|General warning|Driver-specific informational message. (Function returns SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Communication link failure|The communication link between the driver and the data source to which the driver was connected failed before the function completed processing.|  
 |HY000|General error|An error occurred for which there was no specific SQLSTATE and for which no implementation-specific SQLSTATE was defined. The error message returned by **SQLGetDiagRec** in the *\*MessageText* buffer describes the error and its cause.|  
@@ -130,9 +130,9 @@ SQLRETURN SQLGetFunctions(
   
  The following is a list of valid values for *FunctionId* for functions introduced in ODBC 3.8 or later:  
   
-|||  
-|-|-|  
-|SQL_API_SQLCANCELHANDLE [2]||  
+||  
+|-|  
+|SQL_API_SQLCANCELHANDLE [2]|  
   
  [2]   **SQLCancelHandle** will be returned as supported only if the driver supports both **SQLCancel** and **SQLCancelHandle**. If **SQLCancel** is supported but **SQLCancelHandle** is not, the application can still call **SQLCancelHandle** on a statement handle, because it will be mapped to **SQLCancel**.  
   

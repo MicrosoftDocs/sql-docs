@@ -275,7 +275,7 @@ Generally available | Version number: 13.0.15000.23
 
 * **New quick find dialog in SSMS that is better integrated into the current document and allows searching via regular expressions.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2735513/quick-find-replace-in-ssms-2016-rc3/>
+<https://connect.microsoft.com/SQLServer/feedback/details/2735513/quick-find-replace-in-ssms-2016-rc3/>
 
 * **Improvements in SSMS installer to allow you to track installation progress and process exit codes for unattended installations via scripts.**
 
@@ -287,9 +287,9 @@ Generally available | Version number: 13.0.15000.23
 
 * **Bug fix in SSMS Connection dialog to show the connection dialog on the same monitor as the main SSMS window in multi-monitor systems.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/724909/connection-dialog-appears-off-screen/>
-\<https://connect.microsoft.com/SQLServer/feedback/details/755689/sql-server-management-studio-connect-to-server-popup-dialog/>  
-\<https://connect.microsoft.com/SQLServer/feedback/details/389165/sql-server-management-studio-gets-confused-dealing-with-multiple-displays/>
+<https://connect.microsoft.com/SQLServer/feedback/details/724909/connection-dialog-appears-off-screen/>
+<https://connect.microsoft.com/SQLServer/feedback/details/755689/sql-server-management-studio-connect-to-server-popup-dialog/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/389165/sql-server-management-studio-gets-confused-dealing-with-multiple-displays/>
 
 * **Bug fixes in Always Encrypted experience. Fixed bug where Always Encrypted menu option was not enabled correctly for Stretch databases. Also fixed bug in the Always Encrypted wizard where it was not properly using the SafeNet (Luna SA) HSM provider.**
 
@@ -305,7 +305,7 @@ Version number: 13.0.14000.36
   
 * **Bug fix to turn off IntelliSense in the SSMS toolbar if it has been disabled in the Tools,Options dialog.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2555163/sql-2016-rc2-turning-off-intellisense-from-options-does-not-turn-it-off-on-toolbar/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2555163/sql-2016-rc2-turning-off-intellisense-from-options-does-not-turn-it-off-on-toolbar/>  
     
 * **Improvements and bug fixes in the Showplan comparison user interface to reduce the spacing used by long query plans**.  
   
@@ -321,7 +321,7 @@ Version number: 13.0.13000.55
   
 * **SSMS now uses the Visual Studio 2015 Isolated Shell.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2390544/update-ssms-to-use-visual-studio-2015-dependencies/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2390544/update-ssms-to-use-visual-studio-2015-dependencies/>  
   
 * **New quick launch toolbar that helps you to quickly find menu items, and options. (VS 2015 Isolated shell)**  
   
@@ -333,39 +333,39 @@ Version number: 13.0.13000.55
   
 * **Resolved error with viewing the SQL Agent job history in SSMS.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2458860/error-viewing-job-history-microsoft-datawarehouse-sqm/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2458860/error-viewing-job-history-microsoft-datawarehouse-sqm/>  
     
 * **Bug fix to allow off-line installation of SSMS. This allows you to install without the need for an Internet connection. (VS 2015 Isolated shell)**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2497178/cannot-install-ssms-when-server-has-no-internet-access/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2497178/cannot-install-ssms-when-server-has-no-internet-access/>  
     
 * **Bug fix to keep user's current directory when SQL Server PowerShell (SQLPS) module is imported.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2434605/loading-sqlps-module-changes-current-directory-to-ps-sqlserver/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2434605/loading-sqlps-module-changes-current-directory-to-ps-sqlserver/>  
     
 * **Bug fix in SQL Server PowerShell (SQLPS) module to use approved PowerShell verbs.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2432891/sqlps-module-uses-unapproved-powershell-verbs/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2432891/sqlps-module-uses-unapproved-powershell-verbs/>  
     
 * **Bug fix in SQL Server Powershell (SQLPS) module to load module faster.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2429153/sqlps-module-is-slow-to-load/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2429153/sqlps-module-is-slow-to-load/>  
     
 * **Bug fix in SQL Agent Job Steps to allow modifying a job step.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2453996/issues-with-agent-in-ssms-2016-rc0-13-0-12000-65/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2453996/issues-with-agent-in-ssms-2016-rc0-13-0-12000-65/>  
     
 * **Bug fix in SSMS Object explorer to list tables alphabetically.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2424718/sql-server-2016-ssms-table-list-confusing/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2424718/sql-server-2016-ssms-table-list-confusing/>  
     
 * **Bug fix in 'available databases' drop down to show accurate list of database names when a SQL Server connection is changed.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2513420/available-databases-drop-down-box-does-not-update-when-connection-changes-in-ssms/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2513420/available-databases-drop-down-box-does-not-update-when-connection-changes-in-ssms/>  
     
 * **Bug fix in SSMS Keyboard shortcuts to move focus to 'available databases' dropdown if 'CTRL+U' keystroke pressed**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2534820/ssms-ctrl-u-doesnt-work/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2534820/ssms-ctrl-u-doesnt-work/>  
   
 ---  
 ### SSMS March 2016 Preview 
@@ -376,11 +376,11 @@ Version number: 13.0.12500.29
 * **Improvement in AlwaysEncrypted wizard to support alias data types for encryption.**  
   
 * **Bug Fix in AlwaysOn 'New Availability Group' wizard to display the correct number of maximum automatic failover targets.**  
-*Linked customer bug requests:* \<https://connect.microsoft.com/SQLServer/feedback/details/2333670/ssms-is-showing-the-wrong-number-of-maximum-automatic-failover-targets/>  
+*Linked customer bug requests:* <https://connect.microsoft.com/SQLServer/feedback/details/2333670/ssms-is-showing-the-wrong-number-of-maximum-automatic-failover-targets/>  
     
 * **Bug fix in SSMS web installer to fix errors affecting installation.**  
 *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2181548/sql-server-2016-ctp-3-2-management-studio-setup/>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2181548/sql-server-2016-ctp-3-2-management-studio-setup/>  
     
 * **Bug fix in SSMS preview release to enable saving maintenance plans on SQL Server 2012 and below.**  
       
@@ -410,19 +410,19 @@ Version number: 13.0.11000.78
   
 * **Bug fix to open properties dialog for a SQL Server 2014 availability group.**  
  *Linked customer bug requests:*  
- \<https://connect.microsoft.com/SQLServer/feedback/details/1609719/>  
+ <https://connect.microsoft.com/SQLServer/feedback/details/1609719/>  
      
 * **Bug fix to enable the ability to add an Azure replica to an availability group.**  
  *Linked customer bug requests:*  
- \<https://connect.microsoft.com/SQLServer/feedback/details/2029135/>  
+ <https://connect.microsoft.com/SQLServer/feedback/details/2029135/>  
      
 * **Bug fix to open properties dialog for SQL Server 2014 databases.**  
  *Linked customer bug requests:*  
- \<https://connect.microsoft.com/SQLServer/feedback/details/2080209/>  
+ <https://connect.microsoft.com/SQLServer/feedback/details/2080209/>  
      
 * **Bug fix to remove duplicate columns that appear for each table when connected to an Azure SQL database.**  
  *Linked customer bug requests:*  
- \<https://connect.microsoft.com/SQLServer/feedback/details/2103116/>  
+ <https://connect.microsoft.com/SQLServer/feedback/details/2103116/>  
 ---  
 ### SSMS December 2015 Preview 
 Version number: 13.0.900.73
@@ -437,16 +437,16 @@ Version number: 13.0.900.73
   
 * **Bug fix to enable functionality to "Switch to results tab after query execution" if SSMS is set to display results in grid format.**   
  *Linked customer bug requests:*  
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1390296/switch-to-results-tab-after-query-execution-grid-mode-in-ssms-2016>  
+  <https://connect.microsoft.com/SQLServer/feedback/details/1390296/switch-to-results-tab-after-query-execution-grid-mode-in-ssms-2016>  
   
 * **Bug fix to display un-truncated column headers if SSMS is set to display results in grid format.**  
  *Linked customer bug requests:*  
-  \<https://connect.microsoft.com/SQLServer/feedback/details/2004111/bugbash-column-headers-in-grid-mode-truncated-with-courier-new-8>  
+  <https://connect.microsoft.com/SQLServer/feedback/details/2004111/bugbash-column-headers-in-grid-mode-truncated-with-courier-new-8>  
       
 * **Bug fixes to allow proper installation of SSMS web installer.**  
  *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2003865/ssms-october-preview-incoherent-error-message>  
-\<https://connect.microsoft.com/SQLServer/feedback/details/2079557/unable-to-instal-sql-server-update-13-0-800-111-over-13-0-700-242-error-code-2711>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2003865/ssms-october-preview-incoherent-error-message>  
+<https://connect.microsoft.com/SQLServer/feedback/details/2079557/unable-to-instal-sql-server-update-13-0-800-111-over-13-0-700-242-error-code-2711>  
   
 ---  
 ### SSMS November 2015 Preview
@@ -460,16 +460,16 @@ Version number: 13.0.800.111
   
 * **Bug fix to enable proper uninstall of SSMS preview releases on client machines.**  
   *Linked customer bug requests:*  
-  \<http://connect.microsoft.com/SQLServer/feedback/details/1868474/ssms-2016-preview-can-be-installed-but-not-uninstalled>  
+  <https://connect.microsoft.com/SQLServer/feedback/details/1868474/ssms-2016-preview-can-be-installed-but-not-uninstalled>  
   
 * **Bug fix to allow editing of job steps in SQL Job Agent even when a file is missing**.  
   *Linked customer bug requests:*  
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
-    \<https://connect.microsoft.com/SQLServer/feedback/details/1502100/ssms-preview-error>  
+  <https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
+    <https://connect.microsoft.com/SQLServer/feedback/details/1502100/ssms-preview-error>  
       
 * **Bug fix in "View Target Data" menu option for an Extended Events Session on a database running in an Azure virtual machine.**  
   *Linked customer bug requests*:  
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
+  <https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
 ***  
 
 ### SSMS October 2015 Preview 
@@ -484,16 +484,16 @@ Version number: 13.0.700.242
   
 * **Improvements to the Stretch database wizard to support choosing a Microsoft Azure server that is not in the default Microsoft Azure subscription.**  
   *Linked customer bug requests:*  
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1687063/cannot-choose-from-multiple-microsoft-azure-subscriptions>  
+  <https://connect.microsoft.com/SQLServer/feedback/details/1687063/cannot-choose-from-multiple-microsoft-azure-subscriptions>  
 * **Bug fix to allow proper display of live execution plan in SSMS.**  
   *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/1774446/viewing-live-execution-plan-from-activity-monitor-crashes-ssms>    
+<https://connect.microsoft.com/SQLServer/feedback/details/1774446/viewing-live-execution-plan-from-activity-monitor-crashes-ssms>    
 * **Bug fix to remove invalid options in SSMS scripting of database snapshots**  
   *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/1515168/ssms-scripting-of-database-snapshots-includes-invalid-options>  
+<https://connect.microsoft.com/SQLServer/feedback/details/1515168/ssms-scripting-of-database-snapshots-includes-invalid-options>  
 * **Bug fix in Query Data Store UI to show details in the "Top Resource Consuming Queries" pane.**  
   *Linked customer bug requests:*  
-\<https://connect.microsoft.com/SQLServer/feedback/details/1737185/sql-server-2016-overall-resource-consumption-query-store-pane-issue>  
+<https://connect.microsoft.com/SQLServer/feedback/details/1737185/sql-server-2016-overall-resource-consumption-query-store-pane-issue>  
 ***  
 
 ### SSMS September 2015 Preview 
@@ -502,25 +502,25 @@ Version number: 13.0.600.65
     
 * **Updated "New index" dialog allowing the creation of non-clustered rowstore indexes even when a clustered columnstore index is present. This functionality is available for SQL 2016 and beyond.**      
   *Linked customer bug requests:*    
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1552617/creation-of-nc-index-when-clustered-columnstore-index>  
+  <https://connect.microsoft.com/SQLServer/feedback/details/1552617/creation-of-nc-index-when-clustered-columnstore-index>  
       
 * **Bug fix to allow viewing and editing SQL Agent job steps in SSMS preview releases running on Windows 7.**      
   *Linked customer bug requests:*    
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1548140/cannot-view-or-edit-any-sql-agent-job-step>,    
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1626895/unable-to-load-dll-dts>,    
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1576662/error-creating-new-job-step>     
+  <https://connect.microsoft.com/SQLServer/feedback/details/1548140/cannot-view-or-edit-any-sql-agent-job-step>,    
+  <https://connect.microsoft.com/SQLServer/feedback/details/1626895/unable-to-load-dll-dts>,    
+  <https://connect.microsoft.com/SQLServer/feedback/details/1576662/error-creating-new-job-step>     
       
 * **Bug fix to display trigger nodes in SSMS for SQL Server 2014 and later.**      
   *Linked customer bug requests:*    
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1617533/trigger-node-missing>   
+  <https://connect.microsoft.com/SQLServer/feedback/details/1617533/trigger-node-missing>   
       
 * **Bug fixes in database and server standard report user interface to exclude version information from header.**      
   *Linked customer bug requests:*    
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1387471/report-headings-wrongly-named>  
+  <https://connect.microsoft.com/SQLServer/feedback/details/1387471/report-headings-wrongly-named>  
       
 * **Bug fix to prevent a Live Query Statistics node from displaying as complete when it's incomplete.**      
   *Linked customer bug requests:*    
-  \<https://connect.microsoft.com/SQLServer/feedback/details/1589096/live-query-statistics-node-shows-as-completed>  
+  <https://connect.microsoft.com/SQLServer/feedback/details/1589096/live-query-statistics-node-shows-as-completed>  
   
 ***      
 ### SSMS August 2015 Preview 

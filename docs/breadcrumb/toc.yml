@@ -17,7 +17,7 @@
   - name: SQL Server Samples
     href: /sql/sample/
     homepage: /sql/sample
-  - name: SSql Server Data Tools
+  - name: SQL Server Data Tools
     href: /sql/ssdt/
     homepage: /sql/ssdt
   - name: SQL Server Migration Assistant

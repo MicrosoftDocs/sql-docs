@@ -4,7 +4,7 @@
 
 # [SQL Server Drivers](connect\TOC.md)
 
-# [odbc](odbc\TOC.md)
+# [ODBC](odbc\TOC.md)
 
 # [SQL Server Samples](sample/TOC.md)
 

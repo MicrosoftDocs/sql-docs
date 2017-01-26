@@ -9,8 +9,8 @@
 # [ADO Technology Table](ado-technology-table.md)
 # [ADO Task Table](ado-task-table.md)
 
-# [appendixes](./guide/appendixes/TOC.md)
-# [data](./guide/data/TOC.md)
-# [extensions](./guide/extensions/TOC.md)
-# [multidimensional](./guide/multidimensional/TOC.md)
-# [remote-data-service](./guide/remote-data-service/TOC.md)
+# [Appendixes](./appendixes/TOC.md)
+# [Data](./data/TOC.md)
+# [Extensions](./extensions/TOC.md)
+# [Multidimensional](./multidimensional/TOC.md)
+# [Remote Data service](./remote-data-service/TOC.md)

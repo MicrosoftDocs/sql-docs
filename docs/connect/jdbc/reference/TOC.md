@@ -905,7 +905,6 @@
 # [supportstransactions-method-sqlserverdatabasemetadata.md](supportstransactions-method-sqlserverdatabasemetadata.md)
 # [supportsunionall-method-sqlserverdatabasemetadata.md](supportsunionall-method-sqlserverdatabasemetadata.md)
 # [supportsunion-method-sqlserverdatabasemetadata.md](supportsunion-method-sqlserverdatabasemetadata.md)
-# [TOC.md](TOC.md)
 # [tostring-method-datetimeoffset.md](tostring-method-datetimeoffset.md)
 # [transaction-snapshot-field-sqlserverconnection.md](transaction-snapshot-field-sqlserverconnection.md)
 # [truncate-method-sqlserverblob.md](truncate-method-sqlserverblob.md)

@@ -1,5 +1,5 @@
 ---
-title: "ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (JScript) | Microsoft Docs"
+title: "Stored Procedure Properties Example (JScript) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,5 +1,5 @@
 ---
-title: "NumericScale and Precision Properties of the Column Object Example (VC++) | Microsoft Docs"
+title: "NumericScale and Precision Properties of Column Example (VC++) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

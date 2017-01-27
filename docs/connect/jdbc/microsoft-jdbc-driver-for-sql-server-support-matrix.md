@@ -49,19 +49,18 @@ manager: "jhubbard"
   
 ## SQL Version Compatibility  
   
-|||||||||||  
-|-|-|-|-|-|-|-|-|-|-|  
-|Driver Version|SQL Server 2000|SQL Server 2005|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|  
-|6.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
-|4.2|N|N|Y|Y|Y|Y|Y|Y|Y|  
-|4.1|N|N|Y|Y|Y|Y|Y|Y|Y|  
-|4.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
-|3.0|Y|Y|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|  
-|2.0|Y|Y|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|  
-|1.2|Y|Y|Y<sup>3</sup>|N|N|N|N|N|N|  
-|1.1|Y|Y|N|N|N|N|N|N|N|  
-|1.0|Y|Y|N|N|N|N|N|N|N|  
-|2000|Y|N|N|N|N|N|N|N|N|  
+|Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|  
+|-|-|-|-|-|-|-|-|  
+|6.0|Y|Y|Y|Y|Y|Y|Y|  
+|4.2|Y|Y|Y|Y|Y|Y|Y|  
+|4.1|Y|Y|Y|Y|Y|Y|Y|  
+|4.0|Y|Y|Y|Y|Y|Y|Y|  
+|3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|  
+|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|  
+|1.2|Y<sup>3</sup>|N|N|N|N|N|N|  
+|1.1|N|N|N|N|N|N|N|  
+|1.0|N|N|N|N|N|N|N|  
+|2000|N|N|N|N|N|N|N|  
   
  <sup>1</sup>Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2012 as a down-level client.  
   

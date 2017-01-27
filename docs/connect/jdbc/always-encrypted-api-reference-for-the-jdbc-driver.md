@@ -63,16 +63,16 @@ manager: "jhubbard"
   
 |Name|Description|  
 |----------|-----------------|  
-|public SQLServerColumnEncryptionJavaKeyStoreProvider(String keyStoreLocation, char[] keyStoreSecret)|Key store provider for the Java Key Store.|  
+|public SQLServerColumnEncryptionJavaKeyStoreProvider (String keyStoreLocation, char[] keyStoreSecret)|Key store provider for the Java Key Store.|  
   
  Methods  
   
 |Name|Description|  
 |----------|-----------------|  
-|public byte[] decryptColumnEncryptionKey(String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|Decrypts the specified encrypted value of a column encryption key. The encrypted value is expected to be encrypted using the certificate with the specified key path and using the specified algorithm.<br /><br /> **The format of the key path should be one of the following:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider.decryptColumnEncryptionKey(String, String, Byte[]).)|  
-|public byte[] encryptColumnEncryptionKey(String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)|Encrypts a column encryption key using the certificate with the specified key path and using the specified algorithm.<br /><br /> **The format of the key path should be one of the following:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider.encryptColumnEncryptionKey(String, String, Byte[]).)|  
-|public void setName(String name)|Sets the name of this key store provider.|
-|public String getName()|Gets the name of this key store provider.|
+|public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|Decrypts the specified encrypted value of a column encryption key. The encrypted value is expected to be encrypted using the certificate with the specified key path and using the specified algorithm.<br /><br /> **The format of the key path should be one of the following:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)|Encrypts a column encryption key using the certificate with the specified key path and using the specified algorithm.<br /><br /> **The format of the key path should be one of the following:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|public void setName (String name)|Sets the name of this key store provider.|
+|public String getName ()|Gets the name of this key store provider.|
   
  **SQLServerColumnEncryptionAzureKeyVaultProvider Class**  
   
@@ -82,16 +82,16 @@ manager: "jhubbard"
   
 |Name|Description|  
 |----------|-----------------|  
-|public SQLServerColumnEncryptionAzureKeyVaultProvider(SQLServerKeyVaultAuthenticationCallback authenticationCallback, ExecutorService executorService)|Key store provider for Azure Key Vault.  You need to provide an implementation for the SQLServerKeyVaultAuthenticationCallback interface to retrieve an access token for the key in Azure Key Vault.|  
+|public SQLServerColumnEncryptionAzureKeyVaultProvider (SQLServerKeyVaultAuthenticationCallback authenticationCallback, ExecutorService executorService)|Key store provider for Azure Key Vault.  You need to provide an implementation for the SQLServerKeyVaultAuthenticationCallback interface to retrieve an access token for the key in Azure Key Vault.|  
   
  Methods  
   
 |Name|Description|  
 |----------|-----------------|  
-|public byte[] decryptColumnEncryptionKey(String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|Decrypts the specified encrypted value of a column encryption key. The encrypted value is expected to be encrypted using the specified column key IDmaster key and using the specified algorithm. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider.decryptColumnEncryptionKey(String, String, Byte[]).)|  
-|public byte[] encryptColumnEncryptionKey(String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)|Encrypts a column encryption key using the specified column master key and using the specified algorithm. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider.encryptColumnEncryptionKey(String, String, Byte[]).)|  
-|public void setName(String name)|Sets the name of this key store provider.|
-|public String getName()|Gets the name of this key store provider.|  
+|public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|Decrypts the specified encrypted value of a column encryption key. The encrypted value is expected to be encrypted using the specified column key IDmaster key and using the specified algorithm. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)|Encrypts a column encryption key using the specified column master key and using the specified algorithm. <br />(Overrides SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|public void setName (String name)|Sets the name of this key store provider.|
+|public String getName ()|Gets the name of this key store provider.|  
   
   
  **SQLServerKeyVaultAuthenticationCallback Interface**  
@@ -110,7 +110,7 @@ manager: "jhubbard"
   
 |Name|Description|  
 |----------|-----------------|  
-|SQLServerColumnEncryptionKeyStoreProvider|Base class for all key store providers. A custom provider must derive from this class and override its member functions and then register it using SQLServerConnection.registerColumnEncryptionKeyStoreProviders().|  
+|SQLServerColumnEncryptionKeyStoreProvider|Base class for all key store providers. A custom provider must derive from this class and override its member functions and then register it using SQLServerConnection. registerColumnEncryptionKeyStoreProviders().|  
   
  Methods  
   

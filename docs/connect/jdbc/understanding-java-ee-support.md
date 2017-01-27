@@ -33,11 +33,11 @@ manager: "jhubbard"
 ### Datasource Names  
  You can make database connections by using data sources. The data sources available with JDBC driver are described in the following table:  
   
-|DataSource Type|Class Name|Description|  
-|---------------------|----------------|-----------------|  
-|DataSource|com.microsoft.sqlserver.jdbc.SQLServerDataSource|The non pooling data source.|  
-|ConnectionPoolDataSource|com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource|The data source to configure JAVA EE application server connection pools. Typically used when the application runs within a JAVA EE application server.|  
-|XADataSource|com.microsoft.sqlserver.jdbc.SQLServerXADataSource|The data source to configure JAVA EE XA data sources. Typically used when the application runs within a JAVA EE application server and an XA transaction manager.|  
+|DataSource Type|Class Name and Description|  
+|---------------|--------------------------|  
+|DataSource|com.microsoft.sqlserver.jdbc.SQLServerDataSource <br/> <br/> The non pooling data source.|  
+|ConnectionPoolDataSource|com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource <br/> <br/> The data source to configure JAVA EE application server connection pools. Typically used when the application runs within a JAVA EE application server.|  
+|XADataSource|com.microsoft.sqlserver.jdbc.SQLServerXADataSource <br/> <br/> The data source to configure JAVA EE XA data sources. Typically used when the application runs within a JAVA EE application server and an XA transaction manager.|  
   
 ### Data Source Properties  
  All data sources support the ability to set and get any property that is associated with the underlying driver's property set.  

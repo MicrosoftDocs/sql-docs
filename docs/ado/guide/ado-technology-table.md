@@ -5,6 +5,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
+ms.prod: "sql-non-specified"
 ms.topic: "article"
 helpviewer_keywords: 
   - "ADO, technologies"

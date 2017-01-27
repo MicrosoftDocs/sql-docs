@@ -12,9 +12,24 @@
       - name: Ado-Net
         href: /sql/connect/ado-net/
         homepage: /sql/connect/ado-net
-        - name: JDBC
+      - name: JDBC
         href: /sql/connect/jdbc/
         homepage: /sql/connect/jdbc
+      - name: Node-JS
+        href: /sql/connect/node-js/
+        homepage: /sql/connect/node-js
+      - name: ODBC
+        href: /sql/connect/odbc/
+        homepage: /sql/connect/odbc
+      - name: PHP
+        href: /sql/connect/php/
+        homepage: /sql/connect/php
+      - name: Python
+        href: /sql/connect/python/
+        homepage: /sql/connect/oython
+      - name: Ruby
+        href: /sql/connect/ruby/
+        homepage: /sql/connect/ruby
   - name: SQL Server on Linux
     href: /sql/linux/
     homepage: /sql/linux

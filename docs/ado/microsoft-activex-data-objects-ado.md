@@ -4,6 +4,7 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: ""
+ms.prod: "sql-non-specified"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 

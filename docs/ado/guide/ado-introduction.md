@@ -5,13 +5,14 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
+ms.prod: "sql-non-specified"
 ms.topic: "article"
 helpviewer_keywords: 
   - "ADO, programming"
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "MightyPen"
 manager: "sonalm"
 ---
 # ADO Introduction

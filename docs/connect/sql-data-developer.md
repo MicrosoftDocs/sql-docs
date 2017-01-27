@@ -5,6 +5,8 @@ ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
+ms.technology: 
+  - "tools-ssma"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c

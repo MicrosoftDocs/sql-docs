@@ -5,6 +5,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
+ms.prod: "sql-non-specified"
 ms.topic: "article"
 ms.assetid: aec3469e-3bdb-4a5a-b814-d37a81291e5e
 caps.latest.revision: 3

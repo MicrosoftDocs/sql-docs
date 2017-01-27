@@ -73,7 +73,8 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- creates a PowerShell job step that finds the processes that use more than 1000 MB of memory and kills them  
+    -- creates a PowerShell job step that finds the processes
+    -- that use more than 1000 MB of memory and kills them  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  

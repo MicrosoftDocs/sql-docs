@@ -129,8 +129,10 @@ Only members of the **sysadmin** fixed server role can create operators.
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- sets up the operator information for user 'danwi.' The operator is enabled.   
-    -- SQL Server Agent sends notifications by pager from Monday through Friday from 8 A.M. to 5 P.M.  
+    -- sets up the operator information for user 'danwi.'
+    -- The operator is enabled.   
+    -- SQL Server Agent sends notifications by pager 
+    -- from Monday through Friday from 8 A.M. to 5 P.M.  
     USE msdb ;  
     GO  
   

@@ -83,7 +83,8 @@ Only members of the **sysadmin** fixed server role can define the response to an
   
     ```  
     -- adds an e-mail notification for Test Alert.  
-    -- assumes that Test Alert already exists and that François Ajenstat is a valid operator name   
+    -- assumes that Test Alert already exists and that
+    -- François Ajenstat is a valid operator name   
     USE msdb ;  
     GO  
   

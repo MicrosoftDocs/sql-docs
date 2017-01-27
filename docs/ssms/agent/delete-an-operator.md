@@ -75,7 +75,8 @@ Members of the **sysadmin** fixed server role can delete operators.
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- deletes operator 'Test Operator' and reassigns all alerts and jobs sent to that operator to 'François Ajenstat'  
+    -- deletes operator 'Test Operator' and reassigns all alerts and jobs
+    --  sent to that operator to 'François Ajenstat'  
     USE msdb ;  
     GO  
   

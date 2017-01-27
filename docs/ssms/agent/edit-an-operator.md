@@ -86,7 +86,8 @@ Only members of the **sysadmin** fixed server role can edit operators.
   
     ```  
     -- updates the operator status to enabled, and sets the days   
-    -- (from Monday through Friday, from 8 A.M. through 5 P.M.) when the operator can be paged.   
+    -- (from Monday through Friday, from 8 A.M. through 5 P.M.)
+    --  when the operator can be paged.   
     USE msdb ;  
     GO  
   

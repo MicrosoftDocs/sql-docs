@@ -90,7 +90,8 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert).  
-    -- This example assumes that Test Alert already exists and that François Ajenstat is a valid operator name.  
+    -- This example assumes that Test Alert already exists
+    --  and that François Ajenstat is a valid operator name.  
     USE msdb ;  
     GO  
     EXEC dbo.sp_add_notification   

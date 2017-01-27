@@ -97,14 +97,16 @@ A [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxy account 
     CREATE CREDENTIAL CatalogApplicationCredential WITH IDENTITY = 'REDMOND/TestUser',   
         SECRET = 'G3$1o)lkJ8HNd!';  
     GO  
-    -- creates proxy "Catalog application proxy" and assigns the credential 'CatalogApplicationCredential' to it.  
+    -- creates proxy "Catalog application proxy" and assigns
+    -- the credential 'CatalogApplicationCredential' to it.  
     EXEC dbo.sp_add_proxy  
         @proxy_name = 'Catalog application proxy',  
         @enabled = 1,  
         @description = 'Maintenance tasks on catalog application.',  
         @credential_name = 'CatalogApplicationCredential' ;  
     GO  
-    -- grants the proxy "Catalog application proxy" access to the ActiveX Scripting subsystem.  
+    -- grants the proxy "Catalog application proxy" access to 
+    -- the ActiveX Scripting subsystem.  
     EXEC dbo.sp_grant_proxy_to_subsystem  
         @proxy_name = N'Catalog application proxy',  
         @subsystem_id = 2 ;  

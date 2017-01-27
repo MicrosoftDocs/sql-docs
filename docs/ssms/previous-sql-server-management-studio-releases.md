@@ -257,7 +257,7 @@ The setup page for the July Update hotfix says August due to an internal build s
 2. **SSMS cannot connect to SQL Server instances after installing the 'July 2016 hotfix' release.**
 We are aware of an issue regarding the latest SSMS update where attempting to connect to a server results in the following error message: 
    ```
-    "Method not found: 'Void Microsoft.SqlServer.Management.Common.SqlConnectionInfo.set_ApplicationIntent(System.String)'. (ConnectionDlg)"
+    "Method not found: 'Void Microsoft.SqlServer.Management.Common.SqlConnectionInfo.set_ApplicationIntent(System.String)'"
     ```
   
     The fix for this problem will be available in the next SSMS release. As a workaround for this issue, you can uninstall and reinstall SSMS. For more details, [visit this Microsoft Connect thread on the issue](https://connect.microsoft.com/SQLServer/feedback/details/2925257/not-able-to-connect-to-sql-server-instances-after-installing-ssms-2016-july-update).

@@ -85,8 +85,10 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- adds an alert (Test Alert) that runs the Back up the AdventureWorks2012 Database job when fired   
-    -- assumes that the message 55001 and the Back up the AdventureWorks2012 Database job already exist.  
+    -- adds an alert (Test Alert) that runs the Back up
+    -- the AdventureWorks2012 Database job when fired   
+    -- assumes that the message 55001 and the Back up
+    -- the AdventureWorks2012 Database job already exist.  
     USE msdb ;  
     GO  
   
@@ -94,7 +96,7 @@ By default, only members of the **sysadmin** fixed server role can execute **sp_
         @name = N'Test Alert',  
         @message_id = 55001,   
        @severity = 0,   
-       @notification_message = N'Error 55001 has occurred. The database will be backed up...',   
+       @notification_message = N'Error 55001 has occurred. The DB will be backed up...',   
        @job_name = N'Back up the AdventureWorks2012 Database' ;  
     GO  
     ```  

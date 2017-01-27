@@ -84,7 +84,8 @@ Only members of the **sysadmin** fixed server role can assign alerts to operator
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert)  
-    -- This example assumes that Test Alert already exists and that François Ajenstat is a valid operator name.  
+    -- This example assumes that Test Alert already exists
+    -- and that François Ajenstat is a valid operator name.  
     USE msdb ;  
     GO  
   

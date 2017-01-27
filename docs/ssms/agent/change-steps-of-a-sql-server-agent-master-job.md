@@ -73,7 +73,8 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- changes the number of retry attempts for the first step of the Weekly Sales Data Backup job.   
+    -- changes the number of retry attempts for the first step
+    -- of the Weekly Sales Data Backup job.   
     -- After running this example, the number of retry attempts is 10   
     USE msdb ;  
     GO  

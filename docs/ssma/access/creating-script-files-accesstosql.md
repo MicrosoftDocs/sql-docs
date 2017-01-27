@@ -84,9 +84,9 @@ The user-configurable options include:
   
     Only one or the other specified attribute can be used i.e.:  
   
-    -   source-use-last-used="true" (default) or source-server="source_servername"  
+    - source-use-last-used="true" (default) or source-server="source_servername"  
   
-    -   target-use-last-used="true" (default) or target-server="target_servername"  
+    - target-use-last-used="true" (default) or target-server="target_servername"  
   
     **Example:**  
   
@@ -159,9 +159,9 @@ The user-configurable options include:
     ```xml  
     <output-providers>  
   
-      <reconnect-manager  on-source-reconnect="<reconnect-to-last-used-server/generate-an-error>"  
+     <reconnect-manager on-source-reconnect="<reconnect-to-last-used-server/generate-an-error>"  
   
-                          on-target-reconnect="<reconnect-to-last-used-server/generate-an-error>"/>  
+                        on-target-reconnect="<reconnect-to-last-used-server/generate-an-error>"/>  
   
     </output-providers>  
     ```  
@@ -256,11 +256,11 @@ The user-configurable options include:
     ```xml  
     <output-providers>  
   
-      <progress-reporting   enable="<true|false>"              (optional)  
+     <progress-reporting enable="<true|false>"           (optional)  
   
-                            report-messages="<true|false>"     (optional)  
+                         report-messages="<true|false>"  (optional)  
   
-                            report-progress="every-1%|every-2%|every-5%|every-10%|every-20%|off"  (optional)/>  
+                         report-progress="every-1%|every-2%|every-5%|every-10%|every-20%|off" (optional)/>  
   
     </output-providers>  
     ```  

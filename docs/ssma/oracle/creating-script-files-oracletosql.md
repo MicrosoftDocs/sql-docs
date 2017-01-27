@@ -94,9 +94,9 @@ The user-configurable options include:
     ```xml  
     <output-providers>  
   
-      <data-migration-connection   source-use-last-used="true"  
+      <data-migration-connection source-use-last-used="true"  
   
-                                   target-server="<target-server-unique-name>"/>  
+                                 target-server="<target-server-unique-name>"/>  
   
     </output-providers>  
     ```  
@@ -160,9 +160,9 @@ The user-configurable options include:
     ```xml  
     <output-providers>  
   
-      <reconnect-manager  on-source-reconnect="<reconnect-to-last-used-server/generate-an-error>"  
+      <reconnect-manager on-source-reconnect="<reconnect-to-last-used-server/generate-an-error>"  
   
-                          on-target-reconnect="<reconnect-to-last-used-server/generate-an-error>"/>  
+                         on-target-reconnect="<reconnect-to-last-used-server/generate-an-error>"/>  
   
     </output-providers>  
     ```  
@@ -257,11 +257,11 @@ The user-configurable options include:
     ```xml  
     <output-providers>  
   
-      <progress-reporting   enable="<true/false>"              (optional)  
+      <progress-reporting enable="<true/false>"            (optional)  
   
-                            report-messages="<true/false>"     (optional)  
+                          report-messages="<true/false>"   (optional)  
   
-                            report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off"   (optional)/>  
+                          report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off" (optional)/>  
   
     </output-providers>  
     ```  
@@ -272,9 +272,9 @@ The user-configurable options include:
   
       <progress-reporting  
   
-        enable="<true/false>"              (optional)  
+        enable="<true/false>"            (optional)  
   
-        report-messages="<true/false>"     (optional)  
+        report-messages="<true/false>"   (optional)  
   
         report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off"     (optional)/>  
   

@@ -9,11 +9,11 @@
 # [Object Explorer](./object/TOC.md)
 # [Solution Explorer](./solution/TOC.md)
 # [Templates](./template/TOC.md)
-# [visual DB Tools](./visual-db-tools/TOC.md)
+# [Visual Database Tools](./visual-db-tools/TOC.md)
 
-# [Introduction SSMS for BI](introduction-to-sql-server-management-studio-for-business-intelligence.md)
+# [Introduction to SSMS for BI](introduction-to-sql-server-management-studio-for-business-intelligence.md)
 # [Customize Menus and Shortcut Keys](customize-menus-and-shortcut-keys.md)
-# [Use SQL Server Management Studio](use-sql-server-management-studio.md)
+# [Use SSMS](use-sql-server-management-studio.md)
 # [Features in SQL Server Management Studio](features-in-sql-server-management-studio.md)
 # [Tool Windows in SQL Server Management Studio](tool-windows-in-sql-server-management-studio.md)
 # [Use SSMS to Build Database Projects](build-database-projects-by-using-sql-server-management-studio.md)
@@ -39,4 +39,3 @@
 # [Add an External Tool to the Tools Menu (SSMS)](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [Configure Login Auditing (SSMS)](configure-login-auditing-sql-server-management-studio.md)
 # [Use the Toolbox](use-the-toolbox.md)
-

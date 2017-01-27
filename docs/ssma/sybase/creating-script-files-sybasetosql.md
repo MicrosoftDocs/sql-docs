@@ -262,11 +262,11 @@ The user-configurable options include:
     ```xml  
     <output-providers>  
   
-      <progress-reporting   enable="<true/false>"              (optional)  
+      <progress-reporting enable="<true/false>"           (optional)  
   
-                            report-messages="<true/false>"     (optional)  
+                          report-messages="<true/false>"  (optional)  
   
-                            report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off"   (optional)/>  
+                          report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off" (optional)/>  
   
     </output-providers>  
     ```  
@@ -277,11 +277,11 @@ The user-configurable options include:
   
       <progress-reporting  
   
-        enable="<true/false>"              (optional)  
+        enable="<true/false>"          (optional)  
   
-        report-messages="<true/false>"     (optional)  
+        report-messages="<true/false>" (optional)  
   
-        report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off   (optional)/>  
+        report-progress="every-1%/every-2%/every-5%/every-10%/every-20%/off (optional)/>  
   
     </…All commands…>  
     ```  

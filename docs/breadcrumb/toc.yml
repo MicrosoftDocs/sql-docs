@@ -5,7 +5,7 @@
   - name: ActiveX Data Objects
     href: /sql/ado/
     homepage: /sql/ado
-  - name: SQL Drivers
+  - name: SQL Data Drivers
     href: /sql/connect/
     homepage: /sql/connect
   - name: SQL Server on Linux
@@ -26,3 +26,7 @@
   - name: SQL Server Management Studio
     href: /sql/ssms/
     homepage: /sql/ssms
+    items:
+      - name: SQL Server Agent
+        href: /sql/ssms/agent
+        homepage: /sql/ssms/agent

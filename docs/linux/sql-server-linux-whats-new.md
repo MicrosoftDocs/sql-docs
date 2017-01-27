@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: What's New for SQL Server vNext on Linux - SQL Server vNext CTP 1.1 | Microsoft Docs
+title: What's New for SQL Server vNext CTP 1.2 on Linux | Microsoft Docs
 description: This topic highlights what's new for the current release of SQL Server vNext on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 12/16/2016
+ms.date: 01/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -27,6 +27,15 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 # What's new for SQL Server vNext on Linux
 
 This topic describes what's new for SQL Server vNext running on Linux.
+
+## CTP 1.2
+The CTP 1.2 release contains the following improvements and fixes:
+- Support for SUSE Linux Enterprise Server v12 SP2
+- Bug fixes for core engine and stability improvements.
+- Docker image: 
+    - Fixed [issue #1](https://github.com/Microsoft/mssql-docker/issues/1) by adding Python to the image.
+    - Removed `/opt/mssql/data` as the default volume.
+- Updated to .NET 4.6.2.
 
 ## CTP 1.1
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: SQL Server security on Linux - SQL Server vNext | Microsoft Docs 
+title: SQL Server security on Linux | Microsoft Docs 
 description: This topic describes typical security actions.  
 author: BYHAM   
 ms.author: rickbyh   

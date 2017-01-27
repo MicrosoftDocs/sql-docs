@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure shared disk cluster for SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Configure shared disk cluster for SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 

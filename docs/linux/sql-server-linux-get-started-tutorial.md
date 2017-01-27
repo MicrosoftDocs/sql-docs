@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get started with SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Get started with SQL Server on Linux | Microsoft Docs
 description: This topic provides a learning path for getting started with SQL Server vNext on Linux. It also includes links to other resources for each step.
 author: rothja 
 ms.author: jroth 
@@ -26,13 +26,13 @@ ms.assetid: 66d96e59-2ded-4460-b350-fda80d93d79b
 ---
 # Get started with SQL Server on Linux
 
-Get started using SQL Server vNext CTP 1.1 on Linux. Here are basic steps with links to how-to information.
+Get started using SQL Server vNext CTP 1.2 on Linux. Here are basic steps with links to how-to information.
 
 ## 1: Install Linux
 If you do not already have a Linux machine, install Linux on a physical server or a virtual machine (VM). Review the [Release notes](sql-server-linux-release-notes.md) on supported platforms and requirements.
 
 > [!NOTE]
-> One option is to create use a pre-configured Linux VM in Azure. In addition to OS-only VMs, there is also a VM image with SQL Server vNext CTP 1.1 already installed. For more information, see [Provision a Linux VM in Azure for SQL Server](sql-server-linux-azure-virtual-machine.md). 
+> One option is to create use a pre-configured Linux VM in Azure. In addition to OS-only VMs, there is also a VM image with SQL Server vNext CTP 1.2 already installed. For more information, see [Provision a Linux VM in Azure for SQL Server](sql-server-linux-azure-virtual-machine.md). 
 
 ## 2: Install SQL Server
 Next, set up SQL Server vNext on your Linux machine, or run the Docker image, using one of the following guides:
@@ -40,6 +40,7 @@ Next, set up SQL Server vNext on your Linux machine, or run the Docker image, us
 | Platform | Installation |
 |-----|-----|
 | Red Hat Enterprise 7.3 | [Installation guide](sql-server-linux-setup-red-hat.md) |
+| SUSE Linux Enterprise Server v12 SP2 | [Installation guide](sql-server-linux-setup-suse-linux-enterprise-server.md) |
 | Ubuntu 16.04 and 16.10 | [Installation guide](sql-server-linux-setup-ubuntu.md) |
 | Docker | [Installation guide](sql-server-linux-setup-docker.md) |
 

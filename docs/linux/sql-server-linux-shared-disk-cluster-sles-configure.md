@@ -162,7 +162,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
     For more information, see [System Requirements and Recommendations in the SUSE documentation](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html).
 
-3. **Install the High Availability Extension**. To install the extension, follow the steps in the following SUSE topic:
+3. **Install the High Availability extension**. To install the extension, follow the steps in the following SUSE topic:
     
     [Installation as Add-on](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_add-on.html)
 
@@ -172,7 +172,7 @@ At this point both instances of SQL Server are configured to run with the databa
     sudo zypper install mssql-server-ha
     ```
 
-5. **Automatically Set Up the First Node**. The next step is to setup a running one-node cluster by configuring the first node, SLES1. Follow the instructions in the **Automatically Setting Up the First Node** section of the SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).
+5. **Automatically set up the first node**. The next step is to setup a running one-node cluster by configuring the first node, SLES1. Follow the instructions in the **Automatically Setting Up the First Node** section of the SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).
 
     When finished, check the cluster status with `crm status`:
     ```bash
@@ -181,7 +181,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
     It should show that one node, SLES1, is configured.
 
-6. **Add Nodes to an Existing Cluster**. Next join the SLES2 node to the cluster. Follow the instructions in the **Adding Nodes to an Existing Cluster** in the same SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).
+6. **Add nodes to an existing cluster**. Next join the SLES2 node to the cluster. Follow the instructions in the **Adding Nodes to an Existing Cluster** in the same SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).
     
     When finished, check the cluster status with **crm status**. If you have successfully added a second node, the output will be similar to the following:
         

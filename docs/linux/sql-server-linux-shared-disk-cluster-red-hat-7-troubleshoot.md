@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshoot Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server - SQL Server vNext | Microsoft Docs
+title: Troubleshoot Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -52,7 +52,7 @@ Online: [ sqlvmnode1 sqlvmnode2 sqlvmnode3]
 
 Full list of resources: 
 
-mssqlha (ocf::mssql:fci): Started sqlvmnode1 
+mssqlha (ocf::sql:fci): Started sqlvmnode1 
 
 PCSD Status: 
 sqlvmnode1: Online 

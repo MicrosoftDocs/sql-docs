@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Run the SQL Server Docker image on Linux, Mac, or Windows - SQL Server vNext | Microsoft Docs
+title: Run the SQL Server Docker image on Linux, Mac, or Windows | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 
@@ -26,7 +26,7 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ---
 # Run the SQL Server Docker image on Linux, Mac, or Windows
 
-This topic explains how to pull and run the [mssql-server Docker image](https://hub.docker.com/r/microsoft/mssql-server-linux/). This image consists of SQL Server running on Linux and can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. 
+This topic explains how to pull and run the [mssql-server Docker image](https://hub.docker.com/r/microsoft/mssql-server-linux/). This image consists of SQL Server running on Linux and can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. We are currently tracking all issues with the Docker image in our [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker).
 
 > [!NOTE]
 > This image is running SQL Server on an Ubuntu Linux base image. To run the SQL Server on Windows Containers Docker image, check out the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows/).
@@ -91,4 +91,4 @@ You can now create new containers that will have the latest version of SQL Serve
 
 ## Next steps
 
-After installing SQL Server on Linux, next see [how to connect to the server and run basic Transact-SQL queries](sql-server-linux-connect-and-query-sqlcmd.md).
+After installing SQL Server on Linux, next see [how to connect to the server and run basic Transact-SQL queries](sql-server-linux-connect-and-query-sqlcmd.md). Also, check out the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources and feedback.

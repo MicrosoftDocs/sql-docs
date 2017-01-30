@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Troubleshoot SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Troubleshoot SQL Server on Linux | Microsoft Docs
 description: Provides troubleshooting tips for using SQL Server vNext on Linux.
 author: annashres 
 ms.author: anshrest 

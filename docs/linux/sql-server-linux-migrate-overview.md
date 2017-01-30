@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Migrate databases to SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Migrate databases to SQL Server on Linux | Microsoft Docs
 description: This topic describes the different options for migrating databases and data to SQL Server on Linux.
 author: rothja 
 ms.author: jroth 
@@ -25,7 +25,7 @@ ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 
 ---
 # Migrate databases to SQL Server on Linux
-You can migrate your databases and data to SQL Server vNext CTP 1.1 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
+You can migrate your databases and data to SQL Server vNext CTP 1.2 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
 
 ## Migrate from SQL Server on Windows
 If you want to migrate SQL Server databases on Windows to SQL Server vNext on Linux, the recommended technique is to use SQL Server backup and restore.

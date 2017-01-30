@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install SQL Server on Ubuntu - SQL Server vNext | Microsoft Docs
+title: Install SQL Server on Ubuntu | Microsoft Docs
 description: 
 author: rothja 
 ms.author: jroth 
@@ -26,7 +26,7 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
 # Install SQL Server on Ubuntu
 
-This topic provides a walkthrough of how to install SQL Server vNext CTP 1.1 on Ubuntu 16.04 and 16.10.
+This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on Ubuntu 16.04 and 16.10.
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -66,9 +66,9 @@ To install the mssql-server Package on Ubuntu, follow these steps:
    systemctl status mssql-server
    ```
 
-## Upgrade SQL Server on Ubuntu
+## Upgrade SQL Server
 
-In order to upgrade the mssql-server package, follow these steps:
+In order to upgrade the mssql-server package on RHEL, follow these steps:
 
 1. Update the apt-get repository lists:
    ```bash
@@ -82,9 +82,9 @@ In order to upgrade the mssql-server package, follow these steps:
 
 These commands will download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases will not be affected by this operation. 
 
-## Uninstall SQL Server on Ubuntu
+## Uninstall SQL Server
 
-In order to remove the mssql-server package, follow these steps:
+In order to remove the mssql-server package on RHEL, follow these steps:
 
 1. Run the `remove` command. This will delete the package and remove the files under `/opt/mssql/`. However, this command will not affect user-generated and system databases.
    ```bash

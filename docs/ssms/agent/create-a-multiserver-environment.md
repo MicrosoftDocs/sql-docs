@@ -1,7 +1,7 @@
 ---
 title: "Create a Multiserver Environment | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-06"
+ms.date: "01/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

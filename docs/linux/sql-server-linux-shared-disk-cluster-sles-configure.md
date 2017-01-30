@@ -25,7 +25,7 @@ ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 
 # Configure SLES shared disk cluster for SQL Server
 
-This guide provides instructions to create a two-nodes shared disk cluster for SQL Server on SUSE Linux Enterprise Server (SLES) 12 SP2. The clustering layer is based on SUSE [High Availability Extension](https://www.suse.com/products/highavailability) built on top of [Pacemaker](http://clusterlabs.org/). 
+This guide provides instructions to create a two-nodes shared disk cluster for SQL Server on SUSE Linux Enterprise Server (SLES). The clustering layer is based on SUSE [High Availability Extension](https://www.suse.com/products/highavailability) built on top of [Pacemaker](http://clusterlabs.org/). 
 
 For more details on cluster configuration, resource agent options, and management, best practices and recommendations visit [SUSE reference documentation](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html).
 
@@ -38,7 +38,7 @@ To complete the end-to-end scenario below you need two machines to deploy the tw
 
 ## Setup and configure the operating system on each cluster node
 
-The first step is to configure the operating system on the cluster nodes. For this walk through, use SLES 12 SP2 with a valid subscription for the HA add-on.
+The first step is to configure the operating system on the cluster nodes. For this walk through, use SLES with a valid subscription for the HA add-on.
 
 ## Install and configure SQL Server on each cluster node
 

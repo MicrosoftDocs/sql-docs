@@ -5,4 +5,3 @@
 # [ODBC Administration](./admin/TOC.md)
 # [ODBC Reference](./reference/TOC.md)
 # [ODBC Glossary](odbc-glossary.md)
-# [Reference-Appendixes](./reference/appendixes/TOC.md)

@@ -6,6 +6,8 @@ ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.prod: "sql-non-specified"
+ms.technology: 
+  - "drivers"
 ms.topic: "article"
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11

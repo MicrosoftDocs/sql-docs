@@ -6,6 +6,8 @@ ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.prod: "sql-non-specified"
+ms.technology: 
+  - " database-engine "
 ms.topic: "article"
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
 caps.latest.revision: 4

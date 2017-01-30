@@ -6,6 +6,7 @@ ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.prod: "sql-non-specified"
+ms.technology: “drivers”
 ms.topic: "article"
 helpviewer_keywords: 
   - "ADO, security"

@@ -6,7 +6,7 @@ description: Implement high availability by configuring SUSE Linux Enterprise Se
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 01/26/2017
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod: sql-linux 
 ms.technology: database-engine
@@ -23,9 +23,9 @@ ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 # ms.custom: ""
 ---
 
-# Configure SLES 12 SP2 shared disk cluster for SQL Server
+# Configure SLES shared disk cluster for SQL Server
 
-This guide provides instructions to create a two-nodes shared disk cluster for SQL Server on SLES 12 SP2. The clustering layer is based on SUSE [High Availability Extension](https://www.suse.com/products/highavailability) built on top of [Pacemaker](http://clusterlabs.org/). 
+This guide provides instructions to create a two-nodes shared disk cluster for SQL Server on SUSE Linux Enterprise Server (SLES) 12 SP2. The clustering layer is based on SUSE [High Availability Extension](https://www.suse.com/products/highavailability) built on top of [Pacemaker](http://clusterlabs.org/). 
 
 For more details on cluster configuration, resource agent options, and management, best practices and recommendations visit [SUSE reference documentation](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html).
 
@@ -172,67 +172,19 @@ At this point both instances of SQL Server are configured to run with the databa
     sudo zypper install mssql-server-ha
     ```
 
-5. **Automatically Set Up the First Node**. The remaining steps in this section are taken from the SUSE guidance in [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).
+5. **Automatically Set Up the First Node**. The next step is to setup a running one-node cluster by configuring the first node, SLES1. Follow the instructions in the **Automatically Setting Up the First Node** section of the SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).
 
-    1. Log in as root to the physical or virtual machine you want to use as cluster node.
-    2. Start the bootstrap script by executing:
-        
-        ```bash
-        sleha-init
-        ```
-        
-        If NTP has not been configured to start at boot time, a message appears. 
-
-        If you decide to continue anyway, the script will automatically generate keys for SSH access and for the Csync2 synchronization tool and start the services needed for both. 
-    3. To configure the cluster communication layer (Corosync):
-        - Enter a network address to bind to. By default, the script will propose the network address of eth0. Alternatively, enter a different network address, for example the address of bond0. 
-        - Enter a multicast address. The script proposes a random address that you can use as default. 
-        - Enter a multicast port. The script proposes 5405 as default. 
-        - To configure SBD (optional), enter a persistent path to the partition of your block device that you want to use for SBD. The path must be consistent across all nodes in the cluster. 
-
-        Finally, the script will start the OpenAIS service to bring the one-node cluster online and enable the Web management interface Hawk. The URL to use for Hawk is displayed on the screen. 
-    4. For any details of the setup process, check /var/log/sleha-bootstrap.log.
-
-        You now have a running one-node cluster. Check the cluster status with `crm status`:
-
-        ```bash
-        crm status
-        ```
-    5. The bootstrap procedure creates a Linux user named hacluster with the password linux. Replace the default password with a secure one as soon as possible:
-
-        ```bash
-        passwd hacluster
-        ```
-
-6. **Add Nodes to an Existing Cluster**. If you have a cluster up and running (with one or more nodes), add more cluster nodes with the sleha-join bootstrap script. The script only needs access to an existing cluster node and will complete the basic setup on the current machine automatically. Follow the steps below. 
-    
-    If you have configured the existing cluster nodes with the YaST cluster module, make sure the following prerequisites are fulfilled before you run sleha-join: 
-        - The root user on the existing nodes has SSH keys in place for passwordless login. 
-        - Csync2 is configured on the existing nodes. For details, refer to [Configuring Csync2 with YaST](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_manual.html#pro_ha_installation_setup_csync2_yast). 
-    
-    1. Log in as root to the physical or virtual machine supposed to join the cluster. 
-    2. Start the bootstrap script by executing: 
-
-        ```bash
-        sleha-join
-        ```
-    
-        If NTP has not been configured to start at boot time, a message appears. 
-    3. If you decide to continue anyway, you will be prompted for the IP address of an existing node. Enter the IP address. 
-    4. If you have not already configured a passwordless SSH access between both machines, you will also be prompted for the root password of the existing node. 
-    
-        After logging in to the specified node, the script will copy the Corosync configuration, configure SSH and Csync2, and will bring the current machine online as new cluster node. Apart from that, it will start the service needed for Hawk. If you have configured shared storage with OCFS2, it will also automatically create the mountpoint directory for the OCFS2 file system. 
-    5. Repeat the steps above for all machines you want to add to the cluster. 
-    6. For details of the process, check /var/log/sleha-bootstrap.log. 
-    
-    Check the cluster status with crm status. If you have successfully added a second node, the output will be similar to the following:
-    
+    When finished, check the cluster status with `crm status`:
     ```bash
     crm status
     ```
+
+    It should show that one node, SLES1, is configured.
+
+6. **Add Nodes to an Existing Cluster**. Next join the SLES2 node to the cluster. Follow the instructions in the **Adding Nodes to an Existing Cluster** in the same SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).
     
-    The output should look similar to the following:
-    
+    When finished, check the cluster status with **crm status**. If you have successfully added a second node, the output will be similar to the following:
+        
     ```
     2 nodes configured
     1 resource configured
@@ -244,41 +196,11 @@ At this point both instances of SQL Server are configured to run with the databa
     > [!NOTE]
     > **admin_addr** is the virtual IP cluster resource which is configured during initial one-node cluster setup.
 
-    > [!NOTE]
-    > After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information, refer to [Section 4.1.2, Option no-quorum-policy](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_basics_global.html#sec_ha_config_basics_global_quorum). 
-
-7.	Removing Nodes From An Existing Cluster
-    If you have a cluster up and running (with at least two nodes), you can remove single nodes from the cluster with the sleha-remove bootstrap script. You need to know the IP address or host name of the node you want to remove from the cluster. Follow the steps below. 
-    1. Log in as root to one of the cluster nodes. 
-    2. Start the bootstrap script by executing: 
-    
-        ```bash
-        sleha-remove -c IP_ADDR_OR_HOSTNAME
-        ```
-        
-        The script enables the sshd, stops the OpenAIS service on the specified node, and propagates the files to synchronize with Csync2 across the remaining nodes. 
-        
-        If you specified a host name and the node to remove cannot be contacted (or the host name cannot be resolved), the script will inform you and ask whether to remove the node anyway. If you specified an IP address and the node cannot be contacted, you will be asked to enter the host name and to confirm whether to remove the node anyway. 
-    3. To remove more nodes, repeat the step above. 
-    4. For details of the process, check `/var/log/sleha-bootstrap.log`.
-
-8.	Removing the High Availability Extension Software From a Machine
-    To remove the High Availability Extension software from a machine that you no longer need as cluster node, proceed as follows.
-    1. Stop the cluster service:
-    
-        ```bash
-        rcopenais stop
-        ```
-    
-    2. Remove the High Availability Extension add-on:
-    
-        ```bash
-        zypper rm -t products sle-hae
-        ```
+7.	**Removal procedures**. If you need to remove a node from the cluster or if you want to remove the High Availability Extension Software, see the **Removing Nodes From an Existing Cluster** and **Removing the High Availability Extension Software From a Machine** sections of the SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).  
 
 ## Configure the cluster resources for SQL Server
 
-To configure cluster resources, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html). 
+The following steps explain how to configure the cluster resource for SQL Server. There are two settings that you need to customize.
 
 - **SQL Server Resource Name**: A name for the clustered SQL Server resource. 
 - **Timeout Value**: The timeout value is the amount of time that the cluster waits while a resource is brought online. For SQL Server, this is the time that you expect SQL Server to take to bring the `master` database online. 
@@ -306,6 +228,8 @@ exit
 ```
 
 After the configuration is committed, SQL Server will start on the same node as the virtual IP resource. 
+
+For more information, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html). 
 
 ### Verify that SQL Server is started. 
 

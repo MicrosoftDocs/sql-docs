@@ -153,25 +153,6 @@ description: Learn about SQL
                                 </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="/media/hubs/sql/sql-server-8.svg" src="/media/hubs/sql/sql-server-8.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Documentation</h3>
-                                                <p>Download SQL Server documentation</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
                         </ul>
                     </li>
                     <li>

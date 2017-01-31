@@ -1,5 +1,5 @@
 ---
-$title: "JScript ADO Programming | Microsoft Docs"
+title: "JScript ADO Programming | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

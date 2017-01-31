@@ -1,5 +1,5 @@
 ---
-$title: "ConnectPromptEnum | Microsoft Docs"
+title: "ConnectPromptEnum | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

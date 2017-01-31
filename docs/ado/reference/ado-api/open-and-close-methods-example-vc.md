@@ -1,5 +1,5 @@
 ---
-$title: "Open and Close Methods Example (VC++) | Microsoft Docs"
+title: "Open and Close Methods Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

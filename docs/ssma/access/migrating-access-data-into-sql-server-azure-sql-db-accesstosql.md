@@ -1,5 +1,5 @@
 ---
-$title: "Migrating Access Data into SQL Server - Azure SQL DB (AccessToSQL) | Microsoft Docs"
+title: "Migrating Access Data into SQL Server - Azure SQL DB (AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

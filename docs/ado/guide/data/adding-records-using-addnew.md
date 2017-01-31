@@ -1,5 +1,5 @@
 ---
-$title: "Adding Records Using AddNew | Microsoft Docs"
+title: "Adding Records Using AddNew | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

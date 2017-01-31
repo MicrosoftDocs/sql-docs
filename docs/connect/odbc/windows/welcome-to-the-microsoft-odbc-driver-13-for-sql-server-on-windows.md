@@ -1,5 +1,5 @@
 ---
-$title: "Welcome to the Microsoft ODBC Driver 13 for SQL Server on Windows | Microsoft Docs"
+title: "Welcome to the Microsoft ODBC Driver 13 for SQL Server on Windows | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

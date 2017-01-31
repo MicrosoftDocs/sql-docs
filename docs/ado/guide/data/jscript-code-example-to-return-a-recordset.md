@@ -1,5 +1,5 @@
 ---
-$title: "JScript Code Example to Return a Recordset | Microsoft Docs"
+title: "JScript Code Example to Return a Recordset | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

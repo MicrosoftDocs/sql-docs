@@ -1,5 +1,5 @@
 ---
-$title: "Connecting to SQL Server (MySQLToSQL) | Microsoft Docs"
+title: "Connecting to SQL Server (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

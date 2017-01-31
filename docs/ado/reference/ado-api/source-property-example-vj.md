@@ -1,5 +1,5 @@
 ---
-$title: "Source Property Example (VJ++) | Microsoft Docs"
+title: "Source Property Example (VJ++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

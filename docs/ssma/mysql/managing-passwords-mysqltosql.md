@@ -1,5 +1,5 @@
 ---
-$title: "Managing Passwords (MySQLToSQL) | Microsoft Docs"
+title: "Managing Passwords (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

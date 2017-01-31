@@ -1,5 +1,5 @@
 ---
-$title: "Calling a Stored Procedure with a Command | Microsoft Docs"
+title: "Calling a Stored Procedure with a Command | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

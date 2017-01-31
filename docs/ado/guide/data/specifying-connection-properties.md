@@ -1,5 +1,5 @@
 ---
-$title: "Specifying Connection Properties | Microsoft Docs"
+title: "Specifying Connection Properties | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

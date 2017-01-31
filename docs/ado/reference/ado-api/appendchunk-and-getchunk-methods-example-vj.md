@@ -1,5 +1,5 @@
 ---
-$title: "AppendChunk and GetChunk Methods Example (VJ++) | Microsoft Docs"
+title: "AppendChunk and GetChunk Methods Example (VJ++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

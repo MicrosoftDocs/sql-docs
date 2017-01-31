@@ -1,5 +1,5 @@
 ---
-$title: "SQL Server Data Tools (SSDT) - Release Candidate | Microsoft Docs"
+title: "SQL Server Data Tools (SSDT) - Release Candidate | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/30/2017"

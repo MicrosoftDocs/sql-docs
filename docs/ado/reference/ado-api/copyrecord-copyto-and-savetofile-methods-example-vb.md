@@ -1,5 +1,5 @@
 ---
-$title: "CopyRecord, CopyTo, and SaveToFile Methods Example (VB) | Microsoft Docs"
+title: "CopyRecord, CopyTo, and SaveToFile Methods Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

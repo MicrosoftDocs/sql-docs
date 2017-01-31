@@ -1,5 +1,5 @@
 ---
-$title: "Catalog ActiveConnection Property Example (VC++) | Microsoft Docs"
+title: "Catalog ActiveConnection Property Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

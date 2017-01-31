@@ -1,5 +1,5 @@
 ---
-$title: "BOF, EOF Properties (ADO) | Microsoft Docs"
+title: "BOF, EOF Properties (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

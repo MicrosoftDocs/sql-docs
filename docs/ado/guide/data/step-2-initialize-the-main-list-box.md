@@ -1,5 +1,5 @@
 ---
-$title: "Step 2: Initialize the Main List Box | Microsoft Docs"
+title: "Step 2: Initialize the Main List Box | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

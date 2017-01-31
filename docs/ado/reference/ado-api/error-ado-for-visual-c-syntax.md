@@ -1,5 +1,5 @@
 ---
-$title: "Error (ADO for Visual C++ Syntax) | Microsoft Docs"
+title: "Error (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

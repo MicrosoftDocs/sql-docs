@@ -1,5 +1,5 @@
 ---
-$title: "ADOX Collections | Microsoft Docs"
+title: "ADOX Collections | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,5 +1,5 @@
 ---
-$title: "ActiveX Data Objects (ADO) | Microsoft Docs"
+title: "ActiveX Data Objects (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

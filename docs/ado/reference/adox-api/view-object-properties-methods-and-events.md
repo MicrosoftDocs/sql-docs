@@ -1,5 +1,5 @@
 ---
-$title: "View Object Properties, Methods, and Events | Microsoft Docs"
+title: "View Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

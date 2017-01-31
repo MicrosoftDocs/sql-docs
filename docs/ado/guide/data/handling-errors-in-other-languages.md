@@ -1,5 +1,5 @@
 ---
-$title: "Handling Errors In Other Languages | Microsoft Docs"
+title: "Handling Errors In Other Languages | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

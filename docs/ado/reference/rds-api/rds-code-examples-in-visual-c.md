@@ -1,5 +1,5 @@
 ---
-$title: "RDS Code Examples in Visual C++ | Microsoft Docs"
+title: "RDS Code Examples in Visual C++ | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

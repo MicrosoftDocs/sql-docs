@@ -1,5 +1,5 @@
 ---
-$title: "Status Property (ADO Field) | Microsoft Docs"
+title: "Status Property (ADO Field) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

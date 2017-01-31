@@ -1,5 +1,5 @@
 ---
-$title: "Reshape Name Property-Dynamic (ADO) | Microsoft Docs"
+title: "Reshape Name Property-Dynamic (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

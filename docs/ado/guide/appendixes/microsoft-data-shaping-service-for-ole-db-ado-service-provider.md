@@ -1,5 +1,5 @@
 ---
-$title: "Microsoft Data Shaping Service for OLE DB (ADO Service Provider) | Microsoft Docs"
+title: "Microsoft Data Shaping Service for OLE DB (ADO Service Provider) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

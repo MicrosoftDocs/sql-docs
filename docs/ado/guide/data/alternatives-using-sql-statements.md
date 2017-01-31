@@ -1,5 +1,5 @@
 ---
-$title: "Alternatives: Using SQL Statements | Microsoft Docs"
+title: "Alternatives: Using SQL Statements | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

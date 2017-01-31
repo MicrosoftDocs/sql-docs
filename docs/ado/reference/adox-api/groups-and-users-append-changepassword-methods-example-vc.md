@@ -1,5 +1,5 @@
 ---
-$title: "Groups and Users Append, ChangePassword Methods Example (VC++) | Microsoft Docs"
+title: "Groups and Users Append, ChangePassword Methods Example (VC++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

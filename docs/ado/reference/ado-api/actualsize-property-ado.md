@@ -1,5 +1,5 @@
 ---
-$title: "ActualSize Property (ADO) | Microsoft Docs"
+title: "ActualSize Property (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

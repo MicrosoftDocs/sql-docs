@@ -1,5 +1,5 @@
 ---
-$title: "AbsolutePosition and CursorLocation Properties Example (JScript) | Microsoft Docs"
+title: "AbsolutePosition and CursorLocation Properties Example (JScript) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

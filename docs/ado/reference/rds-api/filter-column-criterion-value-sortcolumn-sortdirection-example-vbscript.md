@@ -1,5 +1,5 @@
 ---
-$title: "Set RDS.DataControl Server and Bind to HTML table Example (VBScript) | Microsoft Docs"
+title: "Set RDS.DataControl Server and Bind to HTML table Example (VBScript) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

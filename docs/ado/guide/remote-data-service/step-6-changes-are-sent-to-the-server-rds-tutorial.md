@@ -1,5 +1,5 @@
 ---
-$title: "Step 6: Changes are Sent to the Server (RDS Tutorial) | Microsoft Docs"
+title: "Step 6: Changes are Sent to the Server (RDS Tutorial) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,5 +1,5 @@
 ---
-$title: "Registering Business Objects on the Client for Use with DCOM | Microsoft Docs"
+title: "Registering Business Objects on the Client for Use with DCOM | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

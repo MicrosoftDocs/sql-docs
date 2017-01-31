@@ -1,5 +1,5 @@
 ---
-$title: "BeginTrans, CommitTrans, and RollbackTrans Methods Example (VJ++) | Microsoft Docs"
+title: "BeginTrans, CommitTrans, and RollbackTrans Methods Example (VJ++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,5 +1,5 @@
 ---
-$title: "Overview | Microsoft Docs"
+title: "Overview | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/30/2017"

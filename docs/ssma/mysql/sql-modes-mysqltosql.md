@@ -1,5 +1,5 @@
 ---
-$title: "SQL Modes (MySQLToSQL) | Microsoft Docs"
+title: "SQL Modes (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

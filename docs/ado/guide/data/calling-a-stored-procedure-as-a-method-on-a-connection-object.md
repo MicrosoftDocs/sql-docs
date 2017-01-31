@@ -1,5 +1,5 @@
 ---
-$title: "Calling a Stored Procedure as a Method on a Connection object | Microsoft Docs"
+title: "Calling a Stored Procedure as a Method on a Connection object | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

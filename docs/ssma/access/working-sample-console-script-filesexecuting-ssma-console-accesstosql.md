@@ -1,5 +1,5 @@
 ---
-$title: "Working with the Sample Console Script FilesExecuting the SSMA Console (AccessToSQL) | Microsoft Docs"
+title: "Working with the Sample Console Script FilesExecuting the SSMA Console (AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

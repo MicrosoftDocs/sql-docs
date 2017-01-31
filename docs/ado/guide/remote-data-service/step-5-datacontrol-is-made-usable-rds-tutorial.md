@@ -1,5 +1,5 @@
 ---
-$title: "Step 5: DataControl is Made Usable (RDS Tutorial) | Microsoft Docs"
+title: "Step 5: DataControl is Made Usable (RDS Tutorial) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

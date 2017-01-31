@@ -1,5 +1,5 @@
 ---
-$title: "Solutions for Remote Data Access | Microsoft Docs"
+title: "Solutions for Remote Data Access | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

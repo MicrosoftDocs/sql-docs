@@ -1,5 +1,5 @@
 ---
-$title: "Absolute and Relative URLs | Microsoft Docs"
+title: "Absolute and Relative URLs | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

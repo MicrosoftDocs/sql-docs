@@ -1,5 +1,5 @@
 ---
-$title: "Issuing Commands to the Underlying Data Provider | Microsoft Docs"
+title: "Issuing Commands to the Underlying Data Provider | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

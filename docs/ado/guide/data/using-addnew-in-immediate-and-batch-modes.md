@@ -1,5 +1,5 @@
 ---
-$title: "Using AddNew in Immediate and Batch Modes | Microsoft Docs"
+title: "Using AddNew in Immediate and Batch Modes | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

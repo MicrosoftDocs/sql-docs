@@ -1,5 +1,5 @@
 ---
-$title: "Step 4: Populate the Details Text Box | Microsoft Docs"
+title: "Step 4: Populate the Details Text Box | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

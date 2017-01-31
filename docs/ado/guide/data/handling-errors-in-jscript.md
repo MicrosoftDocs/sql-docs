@@ -1,5 +1,5 @@
 ---
-$title: "Handling Errors in JScript | Microsoft Docs"
+title: "Handling Errors in JScript | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

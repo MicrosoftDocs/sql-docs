@@ -1,5 +1,5 @@
 ---
-$title: "CursorType, LockType, and EditMode Properties Example (VJ++) | Microsoft Docs"
+title: "CursorType, LockType, and EditMode Properties Example (VJ++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

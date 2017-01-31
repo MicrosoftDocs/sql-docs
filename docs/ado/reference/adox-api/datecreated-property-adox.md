@@ -1,5 +1,5 @@
 ---
-$title: "DateCreated Property (ADOX) | Microsoft Docs"
+title: "DateCreated Property (ADOX) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

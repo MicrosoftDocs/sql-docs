@@ -1,5 +1,5 @@
 ---
-$title: "System Requirements for the Address Book Application | Microsoft Docs"
+title: "System Requirements for the Address Book Application | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

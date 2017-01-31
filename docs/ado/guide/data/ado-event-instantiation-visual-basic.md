@@ -1,5 +1,5 @@
 ---
-$title: "ADO Event Instantiation: Visual Basic | Microsoft Docs"
+title: "ADO Event Instantiation: Visual Basic | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

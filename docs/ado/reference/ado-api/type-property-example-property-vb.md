@@ -1,5 +1,5 @@
 ---
-$title: "Type Property Example (Property) (VB) | Microsoft Docs"
+title: "Type Property Example (Property) (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,5 +1,5 @@
 ---
-$title: "Refresh from Database (OracleToSQL) | Microsoft Docs"
+title: "Refresh from Database (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

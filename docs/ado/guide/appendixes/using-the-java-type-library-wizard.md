@@ -1,5 +1,5 @@
 ---
-$title: "Using the Java Type Library Wizard | Microsoft Docs"
+title: "Using the Java Type Library Wizard | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

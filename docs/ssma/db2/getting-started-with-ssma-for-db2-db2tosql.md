@@ -1,5 +1,5 @@
 ---
-$title: "Getting Started with SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
+title: "Getting Started with SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

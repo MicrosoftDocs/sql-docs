@@ -1,5 +1,5 @@
 ---
-$title: "Removing SSMA  for Oracle Components (OracleToSQL) | Microsoft Docs"
+title: "Removing SSMA  for Oracle Components (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

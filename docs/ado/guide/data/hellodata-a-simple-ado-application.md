@@ -1,5 +1,5 @@
 ---
-$title: "HelloData: A Simple ADO Application | Microsoft Docs"
+title: "HelloData: A Simple ADO Application | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

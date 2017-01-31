@@ -1,5 +1,5 @@
 ---
-$title: "Provider Errors | Microsoft Docs"
+title: "Provider Errors | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

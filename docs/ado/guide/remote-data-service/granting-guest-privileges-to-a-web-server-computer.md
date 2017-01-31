@@ -1,5 +1,5 @@
 ---
-$title: "Granting Guest Privileges to a Web Server Computer | Microsoft Docs"
+title: "Granting Guest Privileges to a Web Server Computer | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,5 +1,5 @@
 ---
-$title: "What is a Cursor? | Microsoft Docs"
+title: "What is a Cursor? | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

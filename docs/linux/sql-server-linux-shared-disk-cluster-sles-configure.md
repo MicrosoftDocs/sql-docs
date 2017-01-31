@@ -211,9 +211,9 @@ Update the values from the script below for your environment. Run on one node to
 sudo crm configure
 primitive <sqlServerResourceName> ocf:mssql:fci op start timeout=<timeout_in_seconds>
 colocation <constraintName> inf: <virtualIPResourceName> <sqlServerResourceName>
-#show
-#commit
-#exit
+show
+commit
+exit
 ```
 
 For example, the following script creates a SQL Server clustered resource named mssqlha. 
@@ -271,5 +271,3 @@ migrate mssqlha SLES2
 ## Additional resources
 
 [SUSE Linux Enterprise High Availability Extension - Administration Guide](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts) 
-
-## Next steps

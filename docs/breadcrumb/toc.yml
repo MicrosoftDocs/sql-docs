@@ -4,7 +4,7 @@
   items:
   - name: SQL
     href: /sql/
-    homepage: /sql/
+    homepage: /sql
     items:
     - name: ActiveX Data Objects
       href: /sql/ado/

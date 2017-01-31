@@ -105,19 +105,24 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- Creates a job step that uses XMLA to create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database  
+    -- Creates a job step that uses XMLA to create a relational data source that
+    -- references the AdventureWorks2012 Microsoft SQL Server database.  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
         @job_name = N'Weekly Sales Data Backup',  
-        @step_name = N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database ',  
+        @step_name =
+            N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database',  
         @subsystem = N'ANALYSISCOMMAND',  
-        @command = N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+        @command =
+            N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
         <ObjectDefinition>  
-            <DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RelationalDataSource">  
+            <DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:type="RelationalDataSource">  
                 <ID>AdventureWorks2012</ID>  
                 <Name>Adventure Works 2012</Name>  
                 <ConnectionString>Data Source=localhost;Initial Catalog=AdventureWorks2012;Integrated Security=True</ConnectionString>  

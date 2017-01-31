@@ -1,6 +1,6 @@
 - name: Docs
-  href: https:/docs.microsoft.com/
-  homepage: https:/docs.microsoft.com/
+  href: /
+  homepage: /
   items:
   - name: SQL
     href: /sql/

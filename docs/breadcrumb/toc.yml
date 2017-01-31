@@ -1,4 +1,4 @@
-- name: Docs
+- name: SQL
   href: /sql/
   homepage: /sql/
   items:
@@ -26,7 +26,7 @@
         homepage: /sql/connect/php
       - name: Python
         href: /sql/connect/python/
-        homepage: /sql/connect/oython
+        homepage: /sql/connect/python
       - name: Ruby
         href: /sql/connect/ruby/
         homepage: /sql/connect/ruby
@@ -36,6 +36,33 @@
   - name: ODBC
     href: /sql/odbc/
     homepage: /sql/odbc
+    items:
+      - name: Administration
+        href: /sql/sample/admin
+        homepage: /sql/sample/reference
+      - name: Microsoft Drivers
+        href: /sql/sample/microsoft
+        homepage: /sql/sample/microsoft
+      - name: Reference
+        href: /sql/sample/admin
+        homepage: /sql/sample/reference
+        items:
+          - name: Appendix
+            href: /sql/sample/refernce/appendixes
+            homepage: /sql/sample/reference/appendixes
+          - name: Develop Applications
+            href: /sql/sample/reference/develop-app
+            homepage: /sql/sample/reference/develop-app
+          - name: Develop Drivers
+            href: /sql/sample/reference/develop-driver
+            homepage: /sql/sample/reference/develop-driver
+          - name: Installation
+            href: /sql/sample/reference/install
+            homepage: /sql/sample/reference/install
+          - name: Syntax
+            href: /sql/sample/reference/syntax
+            homepage: /sql/sample/reference/syntax
+  - name: SQL Server Data Tools
   - name: SQL Server Samples
     href: /sql/sample/
     homepage: /sql/sample
@@ -56,7 +83,7 @@
       - name: DB2 to SQL Server
         href: /sql/ssma/db2
         homepage: /sql/ssma/db2
-      - name: NySQL to SQL Server
+      - name: MySQL to SQL Server
         href: /sql/ssma/mysql
         homepage: /sql/ssma/access
       - name: Oracle to SQL Server

@@ -1,5 +1,6 @@
 ---
-title: "Microsoft OLE DB Persistence Provider (ADO Service Provider) | Microsoft Docs"
+$title: "Microsoft OLE DB Persistence Provider (ADO Service Provider) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

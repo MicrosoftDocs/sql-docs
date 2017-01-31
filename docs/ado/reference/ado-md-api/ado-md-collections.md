@@ -1,5 +1,6 @@
 ---
-title: "ADO MD Collections | Microsoft Docs"
+$title: "ADO MD Collections | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

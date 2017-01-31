@@ -1,5 +1,6 @@
 ---
-title: "Microsoft OLE DB Remoting Provider (ADO Service Provider) | Microsoft Docs"
+$title: "Microsoft OLE DB Remoting Provider (ADO Service Provider) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

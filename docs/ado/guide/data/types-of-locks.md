@@ -1,5 +1,6 @@
 ---
-title: "Types of Locks | Microsoft Docs"
+$title: "Types of Locks | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

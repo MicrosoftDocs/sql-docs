@@ -1,7 +1,7 @@
 ---
 title: "Data generation | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-27"
+ms.date: "01/30/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""

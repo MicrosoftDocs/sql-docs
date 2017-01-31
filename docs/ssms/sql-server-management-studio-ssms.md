@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.date: "2016-10-31"
+ms.date: "01/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

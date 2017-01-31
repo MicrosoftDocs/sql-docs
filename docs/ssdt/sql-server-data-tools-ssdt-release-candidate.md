@@ -1,7 +1,8 @@
 ---
-title: "SQL Server Data Tools (SSDT) - Release Candidate | Microsoft Docs"
+$title: "SQL Server Data Tools (SSDT) - Release Candidate | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "01/30/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

@@ -1,5 +1,6 @@
 ---
-title: "User Object Properties, Methods, and Events | Microsoft Docs"
+$title: "User Object Properties, Methods, and Events | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

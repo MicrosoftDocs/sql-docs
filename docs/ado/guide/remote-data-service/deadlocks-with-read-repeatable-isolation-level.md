@@ -1,5 +1,6 @@
 ---
-title: "Deadlocks with Read Repeatable Isolation Level | Microsoft Docs"
+$title: "Deadlocks with Read Repeatable Isolation Level | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,5 +1,6 @@
 ---
-title: "WillChangeRecordset and RecordsetChangeComplete Events (ADO) | Microsoft Docs"
+$title: "WillChangeRecordset and RecordsetChangeComplete Events (ADO) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

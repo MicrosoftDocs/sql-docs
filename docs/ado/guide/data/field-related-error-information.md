@@ -1,5 +1,6 @@
 ---
-title: "Field-Related Error Information | Microsoft Docs"
+$title: "Field-Related Error Information | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

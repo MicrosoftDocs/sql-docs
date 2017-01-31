@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio (SSMS) - Release Candidate | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "01/30/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""

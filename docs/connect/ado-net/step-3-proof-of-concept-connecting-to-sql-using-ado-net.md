@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Proof of concept connecting to SQL using ADO.NET | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-01"
+ms.date: "01/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

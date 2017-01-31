@@ -1,5 +1,6 @@
 ---
-title: "UnderlyingValue Property | Microsoft Docs"
+$title: "UnderlyingValue Property | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

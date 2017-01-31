@@ -1,5 +1,6 @@
 ---
-title: "ADO Events Model Example (VC++) | Microsoft Docs"
+$title: "ADO Events Model Example (VC++) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

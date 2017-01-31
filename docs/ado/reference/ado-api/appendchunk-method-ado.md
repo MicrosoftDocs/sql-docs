@@ -1,5 +1,6 @@
 ---
-title: "AppendChunk Method (ADO) | Microsoft Docs"
+$title: "AppendChunk Method (ADO) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,5 +1,6 @@
 ---
-title: "Installing SSMA for MySQL (MySqlToSql) | Microsoft Docs"
+$title: "Installing SSMA for MySQL (MySqlToSql) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

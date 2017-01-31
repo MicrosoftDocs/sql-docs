@@ -1,5 +1,6 @@
 ---
-title: "AbsolutePosition and CursorLocation Properties Example (VJ++) | Microsoft Docs"
+$title: "AbsolutePosition and CursorLocation Properties Example (VJ++) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

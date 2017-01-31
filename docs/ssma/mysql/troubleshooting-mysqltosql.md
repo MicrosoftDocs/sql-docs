@@ -1,5 +1,6 @@
 ---
-title: "Troubleshooting (MySQLToSQL) | Microsoft Docs"
+$title: "Troubleshooting (MySQLToSQL) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

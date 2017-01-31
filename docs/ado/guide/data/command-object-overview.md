@@ -1,5 +1,6 @@
 ---
-title: "Command Object Overview | Microsoft Docs"
+$title: "Command Object Overview | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

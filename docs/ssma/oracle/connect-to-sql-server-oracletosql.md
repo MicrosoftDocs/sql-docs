@@ -1,5 +1,6 @@
 ---
-title: "Connect to SQL Server  (OracleToSQL) | Microsoft Docs"
+$title: "Connect to SQL Server  (OracleToSQL) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

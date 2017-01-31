@@ -1,5 +1,6 @@
 ---
-title: "XML Persistence Format | Microsoft Docs"
+$title: "XML Persistence Format | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

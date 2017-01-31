@@ -1,5 +1,6 @@
 ---
-title: "ADO Code Examples in Visual Basic | Microsoft Docs"
+$title: "ADO Code Examples in Visual Basic | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

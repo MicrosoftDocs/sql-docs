@@ -1,5 +1,6 @@
 ---
-title: "Generating Reports (MySQLToSQL) | Microsoft Docs"
+$title: "Generating Reports (MySQLToSQL) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

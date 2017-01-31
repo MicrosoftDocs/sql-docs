@@ -1,5 +1,6 @@
 ---
-title: "RDS Usage and Security | Microsoft Docs"
+$title: "RDS Usage and Security | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

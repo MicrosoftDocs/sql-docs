@@ -1,5 +1,6 @@
 ---
-title: "Using the Microsoft SDK for Java | Microsoft Docs"
+$title: "Using the Microsoft SDK for Java | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

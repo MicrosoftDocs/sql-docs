@@ -1,5 +1,6 @@
 ---
-title: "Removing the SSMA for MySQL Components (MySQLToSql) | Microsoft Docs"
+$title: "Removing the SSMA for MySQL Components (MySQLToSql) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,5 +1,6 @@
 ---
-title: "ADO Java Class Wrappers | Microsoft Docs"
+$title: "ADO Java Class Wrappers | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

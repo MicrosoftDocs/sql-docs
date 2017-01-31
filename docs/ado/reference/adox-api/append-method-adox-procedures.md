@@ -1,5 +1,6 @@
 ---
-title: "Append Method (ADOX Procedures) | Microsoft Docs"
+$title: "Append Method (ADOX Procedures) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

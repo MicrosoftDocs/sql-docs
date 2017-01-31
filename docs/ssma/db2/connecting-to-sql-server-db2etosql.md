@@ -1,5 +1,6 @@
 ---
-title: "Connecting to SQL Server (DB2eToSQL) | Microsoft Docs"
+$title: "Connecting to SQL Server (DB2eToSQL) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

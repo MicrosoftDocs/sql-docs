@@ -1,5 +1,6 @@
 ---
-title: "Resync Command Property-Dynamic (ADO) | Microsoft Docs"
+$title: "Resync Command Property-Dynamic (ADO) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

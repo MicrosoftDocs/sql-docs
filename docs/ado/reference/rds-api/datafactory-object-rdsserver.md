@@ -1,5 +1,6 @@
 ---
-title: "DataFactory Object (RDSServer) | Microsoft Docs"
+$title: "DataFactory Object (RDSServer) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,5 +1,6 @@
 ---
-title: "ADO Event Instantiation: Visual C++ | Microsoft Docs"
+$title: "ADO Event Instantiation: Visual C++ | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

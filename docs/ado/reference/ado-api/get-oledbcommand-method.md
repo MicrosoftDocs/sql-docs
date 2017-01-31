@@ -1,5 +1,6 @@
 ---
-title: "get_OLEDBCommand Method | Microsoft Docs"
+$title: "get_OLEDBCommand Method | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

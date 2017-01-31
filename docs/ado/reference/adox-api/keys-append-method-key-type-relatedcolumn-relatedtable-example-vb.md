@@ -1,5 +1,6 @@
 ---
-title: "Create a New Foreign Key Relationship between Tables Example (VB) | Microsoft Docs"
+$title: "Create a New Foreign Key Relationship between Tables Example (VB) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

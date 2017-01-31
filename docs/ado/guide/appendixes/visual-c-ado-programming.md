@@ -1,5 +1,6 @@
 ---
-title: "Visual C++ ADO Programming | Microsoft Docs"
+$title: "Visual C++ ADO Programming | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

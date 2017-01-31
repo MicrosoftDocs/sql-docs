@@ -1,5 +1,6 @@
 ---
-title: "Records and Provider-Supplied Fields | Microsoft Docs"
+$title: "Records and Provider-Supplied Fields | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,5 +1,6 @@
 ---
-title: "Parameters Collection, Command Property Example (VC++) | Microsoft Docs"
+$title: "Parameters Collection, Command Property Example (VC++) | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

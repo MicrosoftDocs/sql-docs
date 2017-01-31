@@ -1,5 +1,6 @@
 ---
-title: "Cursor and Lock Characteristics | Microsoft Docs"
+$title: "Cursor and Lock Characteristics | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

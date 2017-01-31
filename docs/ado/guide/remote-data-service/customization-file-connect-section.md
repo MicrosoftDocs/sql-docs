@@ -1,5 +1,6 @@
 ---
-title: "Customization File Connect Section | Microsoft Docs"
+$title: "Customization File Connect Section | Microsoft Docs"
+ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

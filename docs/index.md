@@ -1040,8 +1040,7 @@ description: Learn about SQL
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
                                                         <img data-scaleimage="/media/hubs/sql/sql_architecture-1.svg" src="/media/hubs/sql/sql_architecture-1.svg" alt="" />
-                                                    </div>
-                                                </div>
+                                                    </div>                                                </div>
                                                 <div class="cardText">
                                                     <h3>Multitenant SaaS applications</h3>
                                                     <p>Design patterns for multitenant SaaS applications in Azure SQL Database</p>

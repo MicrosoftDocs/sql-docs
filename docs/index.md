@@ -7,7 +7,7 @@ description: Learn about SQL
 
 <div id="main" class="v2">
   <div class="container">
-	<h1>SQL Documentation</h1>
+    <h1>SQL Documentation</h1>
         <ul class="pivots">
             <li>
                 <a href="#products">Products</a>
@@ -153,25 +153,6 @@ description: Learn about SQL
                                 </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                        <img data-scaleimage="/media/hubs/sql/sql-server-8.svg" src="/media/hubs/sql/sql-server-8.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Documentation</h3>
-                                                <p>Download SQL Server documentation</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
                         </ul>
                     </li>
                     <li>
@@ -183,7 +164,7 @@ description: Learn about SQL
                                 </div>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-sql-server-iaas-overview?toc=/azure/virtual-machines/windows/toc.json">
+                                <a href="/azure/virtual-machines/virtual-machines-windows-sql-server-iaas-overview?toc=/azure/virtual-machines/windows/toc.json">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -202,7 +183,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-portal-sql-server-provision?toc=/azure/virtual-machines/windows/toc.json">
+                                <a href="/azure/virtual-machines/virtual-machines-windows-portal-sql-server-provision?toc=/azure/virtual-machines/windows/toc.json">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -221,7 +202,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-migrate-sql?toc=/azure/virtual-machines/windows/toc.json">
+                                <a href="/azure/virtual-machines/virtual-machines-windows-migrate-sql?toc=/azure/virtual-machines/windows/toc.json">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -240,7 +221,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-sql-high-availability-dr?toc=/azure/virtual-machines/windows/toc.json">
+                                <a href="/azure/virtual-machines/virtual-machines-windows-sql-high-availability-dr?toc=/azure/virtual-machines/windows/toc.json">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -278,7 +259,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-sql-server-iaas-faq?toc=/azure/virtual-machines/windows/toc.json">
+                                <a href="/azure/virtual-machines/virtual-machines-windows-sql-server-iaas-faq?toc=/azure/virtual-machines/windows/toc.json">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -318,15 +299,15 @@ description: Learn about SQL
                         </ul>
                     </li>
                     <li>
-                        <a href="#products-sql-server-linux">SQL Server on Linux</a>
-                        <ul id="products-sql-server-linux" class="cardsC">
+                        <a href="/en-us/sql/linux/">SQL Server on Linux</a>
+ <!--                       <ul id="products-sql-server-linux" class="cardsC">
                             <li class="fullSpan">
                                 <div class="container intro">
                                     <p>SQL Server vNext CTP1 now runs on Linux! Learn about the core relational database capabilities in this release of SQL Server, and how to install, manage, secure, and develop for this new release.</p>
                                 </div>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup">
+                                <a href="/sql/linux/sql-server-linux-setup">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -345,7 +326,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-management-overview">
+                                <a href="/sql/linux/sql-server-linux-management-overview">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -364,7 +345,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-develop-overview">
+                                <a href="/sql/linux/sql-server-linux-develop-overview">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -458,11 +439,11 @@ description: Learn about SQL
                                 </div>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <li>
-                        <a href="#products-azure-sql-db">Azure SQL Database</a>
-                        <ul id="products-azure-sql-db" class="cardsC">
+                        <a href="/en-us/azure/sql-database/">Azure SQL Database</a>
+ <!--                       <ul id="products-azure-sql-db" class="cardsC">
                             <li class="fullSpan">
                                 <div class="container intro">
                                     <p>A managed relational database service in the cloud based on the Microsoft SQL Server engine.</p>
@@ -488,7 +469,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-technical-overview">
+                                <a href="/azure/sql-database/sql-database-technical-overview">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -526,7 +507,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started">
+                                <a href="/azure/sql-database/sql-database-get-started">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -545,7 +526,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-business-continuity">
+                                <a href="/azure/sql-database/sql-database-business-continuity">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -564,7 +545,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-security">
+                                <a href="/azure/sql-database/sql-database-get-started-security">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -583,7 +564,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/powershell/resourcemanager/azurerm.sql/v2.3.0/azurerm.sql">
+                                <a href="/powershell/resourcemanager/azurerm.sql/v2.3.0/azurerm.sql">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -602,7 +583,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.management.sql.models">
+                                <a href="/dotnet/api/microsoft.azure.management.sql.models">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -621,7 +602,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/java/api/com.microsoft.azure.management.sql">
+                                <a href="/java/api/com.microsoft.azure.management.sql">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -640,7 +621,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/rest/api/sql/">
+                                <a href="/rest/api/sql/">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -696,11 +677,11 @@ description: Learn about SQL
                                 </div>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <li>
-                        <a href="#products-azure-sql-data-warehouse">Azure SQL Data Warehouse</a>
-                        <ul id="products-azure-sql-data-warehouse" class="cardsC">
+                        <a href="/en-us/azure/sql-data-warehouse/">Azure SQL Data Warehouse</a>
+<!--
                             <li class="fullSpan">
                                 <div class="container intro">
                                     <p>SQL Data Warehouse combines the SQL Server relational database with Azure cloud scale-out capabilities.</p>
@@ -726,7 +707,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is">
+                                <a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -764,7 +745,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/sql-data-WArehouse/sql-data-warehouse-get-started-provision">
+                                <a href="/azure/sql-data-WArehouse/sql-data-warehouse-get-started-provision">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -783,7 +764,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-reference-powershell-cmdlets">
+                                <a href="/azure/sql-data-warehouse/sql-data-warehouse-reference-powershell-cmdlets">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -802,7 +783,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements">
+                                <a href="/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -839,7 +820,7 @@ description: Learn about SQL
                                 </div>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
                 </ul>
             </li>
@@ -914,70 +895,6 @@ description: Learn about SQL
                             </li>
                             <li class="fullSpan">
                                 <div class="container">
-                                    <h1>Command Line Interface (CLI)</h1>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage"> 
-                                                    <img alt="" src="/media/common/i_CLIgeneric.svg">
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Azure CLI 2.0 preview</h3>
-                                                <p><a href="https://docs.microsoft.com/cli/azure/get-started/">Get started</a></p>
-                                                <p><a href="https://github.com/Azure/azure-cli">Download Azure CLI 2.0</a></p>
-                                                <p><a href="https://docs.microsoft.com/en-us/cli/azure/">Reference</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage"> 
-                                                    <img alt="" src="/media/logos/logo_powershell.svg">
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>PowerShell</h3>
-                                                <p><a href="https://docs.microsoft.com/azure/powershell-install-configure">Get started</a></p>
-                                                <p><a href="https://docs.microsoft.com/powershell/resourcemanager/azurerm.sql/v2.3.0/azurerm.sql">Azure SQL Database cmdlets</a></p>
-                                                <p><a href="https://msdn.microsoft.com/library/mt740629.aspx">SQL Server cmdlets</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage"> 
-                                                    <img alt="" src="/media/common/i_CLIgeneric.svg">
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Azure CLI</h3>
-                                                <p><a href="https://docs.microsoft.com/en-us/azure/xplat-cli-install?toc=/azure/virtual-machines/linux/toc.json">Get started</a></p>
-                                                <p><a href="http://aka.ms/linux-azure-cli">Download Azure CLI for Linux</a></p>
-                                                <p><a href="http://aka.ms/mac-azure-cli">Download Azure CLI for Mac</a></p>
-                                                <p><a href="http://aka.ms/webpi-azure-cli">Download Azure CLI for Windows</a></p>
-                                                <p><a href="https://azure.microsoft.com/documentation/articles/azure-cli-arm-commands/">Reference</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="fullSpan">
-                                <div class="container">
                                     <h1>Tools &amp; Extensions</h1>
                                 </div>
                             </li>
@@ -992,7 +909,7 @@ description: Learn about SQL
                                             </div>
                                             <div class="cardText">
                                                 <h3>SSMS</h3>
-                                                <p><a href="https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ssms">Get started</a></p>
+                                                <p><a href="/azure/sql-database/sql-database-connect-query-ssms">Get started</a></p>
                                                 <p><a href="https://msdn.microsoft.com/library/mt238290.aspx">Download SQL Server Management Studio</a></p>
                                             </div>
                                         </div>
@@ -1035,6 +952,161 @@ description: Learn about SQL
                                         </div>
                                     </div>
                                 </div>
+                            </li>
+                            <li class="fullSpan">
+                                <div class="container">
+                                    <h1>Command Line Interface (CLI)</h1>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage"> 
+                                                    <img alt="" src="/media/logos/logo_powershell.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>PowerShell</h3>
+                                                <p><a href="/azure/powershell-install-configure">Get started</a></p>
+                                                <p><a href="/powershell/resourcemanager/azurerm.sql/v2.3.0/azurerm.sql">Azure SQL Database cmdlets</a></p>
+                                                <p><a href="https://msdn.microsoft.com/library/mt740629.aspx">SQL Server cmdlets</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage"> 
+                                                    <img alt="" src="/media/common/i_CLIgeneric.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Azure CLI 2.0 preview</h3>
+                                                <p><a href="/cli/azure/get-started/">Get started</a></p>
+                                                <p><a href="https://github.com/Azure/azure-cli">Download Azure CLI 2.0</a></p>
+                                                <p><a href="/cli/azure/">Reference</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage"> 
+                                                    <img alt="" src="/media/common/i_CLIgeneric.svg">
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Azure CLI</h3>
+                                                <p><a href="/azure/xplat-cli-install?toc=/azure/virtual-machines/linux/toc.json">Get started</a></p>
+                                                <p><a href="http://aka.ms/linux-azure-cli">Download Azure CLI for Linux</a></p>
+                                                <p><a href="http://aka.ms/mac-azure-cli">Download Azure CLI for Mac</a></p>
+                                                <p><a href="http://aka.ms/webpi-azure-cli">Download Azure CLI for Windows</a></p>
+                                                <p><a href="https://azure.microsoft.com/documentation/articles/azure-cli-arm-commands/">Reference</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#architecture">Architecture</a>
+                <ul id="architecture">
+                    <li>
+                        <a href="#architecture1"></a>
+                        <ul id="architecture1" class="cardsC">
+                            <li>
+                                <div class="container intro">
+                                    <p>Architecture recommendations and patterns for SQL, beginning with Azure SQL Database.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/azure/sql-database/sql-database-design-patterns-multi-tenancy-saas-applications">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img data-scaleimage="/media/hubs/sql/sql_architecture-1.svg" src="/media/hubs/sql/sql_architecture-1.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Multitenant SaaS applications</h3>
+                                                    <p>Design patterns for multitenant SaaS applications in Azure SQL Database</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/azure/sql-database/sql-database-elastic-tools-multi-tenant-row-level-security">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img data-scaleimage="/media/hubs/sql/sql_architecture-2.svg" src="/media/hubs/sql/sql_architecture-2.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Row-level security</h3>
+                                                    <p>Implementing row-level security with sharded databases in Azure SQL Database</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/azure/sql-database/sql-database-designing-cloud-solutions-for-disaster-recovery">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img data-scaleimage="/media/hubs/sql/sql_architecture-3.svg" src="/media/hubs/sql/sql_architecture-3.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Application design for disaster recovery</h3>
+                                                    <p>Design an application for cloud disaster recovery using Active Geo-Replication in Azure SQL Database</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/azure/sql-database/sql-database-disaster-recovery-strategies-for-applications-with-elastic-pool">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img data-scaleimage="/media/hubs/sql/sql_architecture-4.svg" src="/media/hubs/sql/sql_architecture-4.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Disaster recovery strategies with elastic pools</h3>
+                                                    <p>Disaster recovery strategies for applications using elastic pools in Azure SQL Database</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </li>

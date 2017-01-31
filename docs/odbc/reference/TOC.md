@@ -2,7 +2,8 @@
 # [Develop Applications](./develop-app/TOC.md)
 # [Develop Drivers ](./develop-driver/TOC.md)
 # [Syntax](./syntax/TOC.md)
-# [Appendix](./appendixes/TOC.md)
+# [Appendixes](./appendixes/TOC.md)
+
 # [Introduction to ODBC](introduction-to-odbc.md)
 # [What Is ODBC?](what-is-odbc.md)
 # [Why Was ODBC Created?](why-was-odbc-created.md)

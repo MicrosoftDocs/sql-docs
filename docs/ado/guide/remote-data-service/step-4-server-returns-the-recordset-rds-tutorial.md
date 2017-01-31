@@ -1,6 +1,8 @@
 ---
 title: "Step 4: Server Returns the Recordset (RDS Tutorial) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

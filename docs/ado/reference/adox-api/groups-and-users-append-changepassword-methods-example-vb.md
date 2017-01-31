@@ -1,6 +1,8 @@
 ---
 title: "Groups and Users Append, ChangePassword Methods Example (VB) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,6 +1,8 @@
 ---
 title: "Save and Open Methods Example (VJ++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

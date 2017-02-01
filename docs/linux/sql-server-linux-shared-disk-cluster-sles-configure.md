@@ -168,6 +168,8 @@ At this point both instances of SQL Server are configured to run with the databa
 4. **Install the FCI resource agent for SQL Server**. Run the following commands on both nodes:
 
     ```bash
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```
 
@@ -195,7 +197,7 @@ At this point both instances of SQL Server are configured to run with the databa
     > [!NOTE]
     > **admin_addr** is the virtual IP cluster resource which is configured during initial one-node cluster setup.
 
-7.	**Removal procedures**. If you need to remove a node from the cluster or if you want to remove the High Availability Extension Software, see the **Removing Nodes From an Existing Cluster** and **Removing the High Availability Extension Software From a Machine** sections of the SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).  
+7.	**Removal procedures**. If you need to remove a node from the cluster, use the **ha-cluster-remove** bootstrap script. For more information, see [Overview of the Bootstrap Scripts](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap).  
 
 ## Configure the cluster resources for SQL Server
 

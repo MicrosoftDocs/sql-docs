@@ -1,3 +1,4 @@
+# [Solution Explorer](solution-explorer.md)
 # [Copy Items in a Solution](copy-items-in-a-solution.md)
 # [Files That Manage Solutions and Projects](files-that-manage-solutions-and-projects.md)
 # [Solutions (SQL Server Management Studio)](solutions-sql-server-management-studio.md)
@@ -18,6 +19,5 @@
 # [Rename Solutions and Project Items](rename-solutions-and-project-items.md)
 # [Close a Solution](close-a-solution.md)
 # [View or Change the Properties of a Connection in a Project](view-or-change-the-properties-of-a-connection-in-a-project.md)
-# [Solution Explorer](solution-explorer.md)
 # [Add Existing Items to a Project](add-existing-items-to-a-project.md)
 # [Create a New Solution](create-a-new-solution.md)

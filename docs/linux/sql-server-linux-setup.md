@@ -38,15 +38,20 @@ SQL Server vNext CTP 1.2 is supported on the following platforms:
 | **Ubuntu** | 16.04 and 16.10| [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)
 
-## Select the platform to install on
+## Prerequisites 
+
+- You need at least 3.25GB of memory to run SQL Server on Linux.
+
+    > [!NOTE] 
+    > SQL Server Engine has only been tested up to 256GB of memory at this time.
+
+- The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported. 
+
+## Install SQL Server on your platform
 - [Install on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
-- [Instal on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [Install on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
 - [Install on Ubuntu](sql-server-linux-setup-ubuntu.md)
 - [Run on Docker](sql-server-linux-setup-docker.md)
-
-> [!NOTE] 
-> You need at least 3.25GB of memory to run SQL Server on Linux.
-> SQL Server Engine has only been tested up to 256GB of memory at this time.
 
 ## Next steps
 

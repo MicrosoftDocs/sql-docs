@@ -13,6 +13,7 @@ ms.assetid: e74974b4-3d73-4116-ab4c-36fa22b204f3
 caps.latest.revision: 2
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # Wide World Importers OLTP database

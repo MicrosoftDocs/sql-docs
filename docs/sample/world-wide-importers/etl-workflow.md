@@ -13,6 +13,7 @@ ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
 caps.latest.revision: 5
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # WideWorldImportersDW ETL workflow

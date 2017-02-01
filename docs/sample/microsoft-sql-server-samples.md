@@ -13,6 +13,7 @@ ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
 caps.latest.revision: 3
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # Microsoft SQL Server Samples

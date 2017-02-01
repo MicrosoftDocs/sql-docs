@@ -13,6 +13,7 @@ ms.assetid: 27dec724-84b2-419d-941d-88948918406f
 caps.latest.revision: 3
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # Sample queries

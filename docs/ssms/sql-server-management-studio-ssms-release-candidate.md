@@ -13,6 +13,7 @@ ms.assetid: a4561ad6-5cfc-4c22-91a8-cf880fcbf233
 caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
+manager: "jhubbard"
 ---
 # SQL Server Management Studio (SSMS) - Release Candidate
 Welcome to the current release candidate (17.0 RC2) of SQL Server Management Studio!  This release candidate of SQL Server Management Studio (SSMS) includes support for [SQL Server vNext](https://msdn.microsoft.com/library/mt788653.aspx). 

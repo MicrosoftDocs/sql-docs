@@ -13,6 +13,7 @@ ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
 caps.latest.revision: 4
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # Installation and configuration

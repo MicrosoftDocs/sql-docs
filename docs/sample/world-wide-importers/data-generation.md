@@ -13,6 +13,7 @@ ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
 caps.latest.revision: 4
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # WideWorldImporters data generation

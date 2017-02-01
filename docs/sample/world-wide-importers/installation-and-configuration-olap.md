@@ -13,6 +13,7 @@ ms.assetid: d07ffb9a-ac4f-4295-9aeb-ecfb97600134
 caps.latest.revision: 3
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # WideWorldImportersDW Installation and configuration

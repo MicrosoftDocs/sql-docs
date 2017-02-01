@@ -1,5 +1,5 @@
 ---
-$title: "Setting Conversion and Migration Options (AccessToSQL) | Microsoft Docs"
+title: "Setting Conversion and Migration Options (AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

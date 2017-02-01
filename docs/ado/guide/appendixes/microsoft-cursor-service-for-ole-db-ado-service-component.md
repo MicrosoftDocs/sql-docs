@@ -1,6 +1,8 @@
 ---
-$title: "Microsoft Cursor Service for OLE DB (ADO Service Component) | Microsoft Docs"
+title: "Microsoft Cursor Service for OLE DB (ADO Service Component) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

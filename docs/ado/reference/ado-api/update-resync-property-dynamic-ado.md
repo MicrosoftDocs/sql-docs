@@ -1,6 +1,8 @@
 ---
-$title: "Update Resync Property-Dynamic (ADO) | Microsoft Docs"
+title: "Update Resync Property-Dynamic (ADO) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

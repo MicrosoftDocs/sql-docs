@@ -1,6 +1,8 @@
 ---
-$title: "XML Security Considerations | Microsoft Docs"
+title: "XML Security Considerations | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

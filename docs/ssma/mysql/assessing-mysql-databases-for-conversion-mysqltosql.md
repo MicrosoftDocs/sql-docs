@@ -1,5 +1,5 @@
 ---
-$title: "Assessing MySQL Databases for Conversion (MySQLToSQL) | Microsoft Docs"
+title: "Assessing MySQL Databases for Conversion (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

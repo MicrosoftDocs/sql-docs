@@ -1,6 +1,8 @@
 ---
-$title: "Welcome to the Microsoft ODBC Driver 13 for SQL Server on Windows | Microsoft Docs"
+title: "Welcome to the Microsoft ODBC Driver 13 for SQL Server on Windows | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,6 +1,8 @@
 ---
-$title: "Supports Method Example (VJ++) | Microsoft Docs"
+title: "Supports Method Example (VJ++) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

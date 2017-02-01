@@ -1,5 +1,5 @@
 ---
-$title: "Project Settings (Loading Objects) (AccessToSQL) | Microsoft Docs"
+title: "Project Settings (Loading Objects) (AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

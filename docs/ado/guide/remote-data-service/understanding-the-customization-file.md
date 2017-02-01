@@ -1,6 +1,8 @@
 ---
-$title: "Understanding the Customization File | Microsoft Docs"
+title: "Understanding the Customization File | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

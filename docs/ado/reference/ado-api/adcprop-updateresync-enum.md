@@ -1,6 +1,8 @@
 ---
-$title: "ADCPROP_UPDATERESYNC_ENUM | Microsoft Docs"
+title: "ADCPROP_UPDATERESYNC_ENUM | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

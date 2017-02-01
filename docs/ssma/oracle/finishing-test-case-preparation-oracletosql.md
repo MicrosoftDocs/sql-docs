@@ -1,5 +1,5 @@
 ---
-$title: "Finishing Test Case Preparation (OracleToSQL) | Microsoft Docs"
+title: "Finishing Test Case Preparation (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

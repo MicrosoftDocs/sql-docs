@@ -1,5 +1,5 @@
 ---
-$title: "Selecting and Configuring Objects to Test (OracleToSQL) | Microsoft Docs"
+title: "Selecting and Configuring Objects to Test (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

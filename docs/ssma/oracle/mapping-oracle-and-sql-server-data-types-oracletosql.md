@@ -1,5 +1,5 @@
 ---
-$title: "Mapping Oracle and SQL Server Data Types (OracleToSQL) | Microsoft Docs"
+title: "Mapping Oracle and SQL Server Data Types (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

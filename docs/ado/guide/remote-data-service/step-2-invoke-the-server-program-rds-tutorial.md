@@ -1,6 +1,8 @@
 ---
-$title: "Step 2: Invoke the Server Program (RDS Tutorial) | Microsoft Docs"
+title: "Step 2: Invoke the Server Program (RDS Tutorial) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

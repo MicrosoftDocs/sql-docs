@@ -1,5 +1,5 @@
 ---
-$title: "Global Settings (Logging) (OracleToSQL) | Microsoft Docs"
+title: "Global Settings (Logging) (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

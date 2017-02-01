@@ -1,6 +1,8 @@
 ---
-$title: "Configuring DataFactory for Safe or Unrestricted Modes | Microsoft Docs"
+title: "Configuring DataFactory for Safe or Unrestricted Modes | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -1,5 +1,5 @@
 ---
-$title: "New GUI Features in SSMA for MySQL (MySQLToSQL) | Microsoft Docs"
+title: "New GUI Features in SSMA for MySQL (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

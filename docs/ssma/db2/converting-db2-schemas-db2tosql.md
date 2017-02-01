@@ -1,5 +1,5 @@
 ---
-$title: "Converting DB2 Schemas (DB2ToSQL) | Microsoft Docs"
+title: "Converting DB2 Schemas (DB2ToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

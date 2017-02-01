@@ -1,6 +1,8 @@
 ---
-$title: "Marking Business Objects as Safe for Scripting | Microsoft Docs"
+title: "Marking Business Objects as Safe for Scripting | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.technology:
+  - "drivers"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

@@ -19,7 +19,7 @@ ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # SkipLine Method
 Skips one entire line when reading a text [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  

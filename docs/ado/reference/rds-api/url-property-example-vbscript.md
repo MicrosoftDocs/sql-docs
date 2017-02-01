@@ -17,7 +17,7 @@ ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # URL Property Example (VBScript)
 > [!IMPORTANT]

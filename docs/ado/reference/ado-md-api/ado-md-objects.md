@@ -16,7 +16,7 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO MD Objects
 |||  

@@ -16,7 +16,7 @@ ms.assetid: f93099ae-797d-4f0d-ac28-81405b2892e1
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Update and CancelUpdate Methods Example (VJ++)
 This example demonstrates the [Update](../../../ado/reference/ado-api/update-method.md) method in conjunction with the [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) method.  

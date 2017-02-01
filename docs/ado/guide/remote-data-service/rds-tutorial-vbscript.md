@@ -17,7 +17,7 @@ ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RDS Tutorial (VBScript)
 This is the RDS Tutorial, written in Microsoft Visual Basic Scripting Edition. For a description of the purpose of this tutorial, see the [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md).  

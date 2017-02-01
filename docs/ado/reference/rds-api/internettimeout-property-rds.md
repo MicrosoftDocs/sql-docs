@@ -16,7 +16,7 @@ ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # InternetTimeout Property (RDS)
 Indicates the number of milliseconds to wait before a request times out.  

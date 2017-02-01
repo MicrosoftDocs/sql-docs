@@ -16,7 +16,7 @@ ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Collections
 The relationships between these collections and the ADO objects are represented in the [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md).  

@@ -18,7 +18,7 @@ ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # SearchDirectionEnum
 Specifies the direction of a record search within a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

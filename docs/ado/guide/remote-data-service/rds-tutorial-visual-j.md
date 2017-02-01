@@ -15,7 +15,7 @@ ms.assetid: d0d735e0-669a-41e7-ada2-8dd80924e349
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RDS Tutorial (Visual J++)
 ADO/WFC does not completely follow the RDS object model in that it does not implement the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object. ADO/WFC implements only the client-side class, [RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md).  

@@ -17,7 +17,7 @@ ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Code Examples in Visual Basic
 Use the following code examples to learn how to use the ADO methods, properties, and events when writing in Visual Basic.  

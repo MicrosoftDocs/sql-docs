@@ -18,7 +18,7 @@ ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ParameterAttributesEnum
 Specifies the attributes of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object.  

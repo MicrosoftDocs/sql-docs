@@ -16,7 +16,7 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Accessing Rows in a Hierarchical Recordset
 The following example shows the steps necessary to access rows in a hierarchical [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):  

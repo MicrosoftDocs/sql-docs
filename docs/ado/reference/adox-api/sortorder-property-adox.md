@@ -22,7 +22,7 @@ ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # SortOrder Property (ADOX)
 Indicates the sort sequence for the column (index columns only).  

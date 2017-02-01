@@ -18,7 +18,7 @@ ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Record (ADO for Visual C++ Syntax)
 ## Methods  

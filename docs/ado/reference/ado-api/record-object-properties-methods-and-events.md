@@ -15,7 +15,7 @@ ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Record Object Properties, Methods, and Events
 ## Properties/Collections  

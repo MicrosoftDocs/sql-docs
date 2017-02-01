@@ -18,7 +18,7 @@ ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RecordsetEvents (Visual C++ Syntax Index with #import)
 ## Events  

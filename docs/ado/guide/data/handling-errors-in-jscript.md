@@ -18,7 +18,7 @@ ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Handling Errors in JScript
 Your Microsoft® JScript® code must check the **Count** property of the **Connection** object's **Errors** collection. If the value is greater than 0, iterate through the collection and print the values as you would in any of the other languages.  

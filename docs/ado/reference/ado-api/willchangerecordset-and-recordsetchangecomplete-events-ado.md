@@ -22,7 +22,7 @@ ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # WillChangeRecordset and RecordsetChangeComplete Events (ADO)
 The **WillChangeRecordset** event is called before a pending operation changes the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). The **RecordsetChangeComplete** event is called after the **Recordset** has changed.  

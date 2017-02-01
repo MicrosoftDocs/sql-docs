@@ -15,7 +15,7 @@ ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Registering Business Objects on the Client for Use with DCOM
 Custom business objects need to ensure that the client side can map their program name (ProgId) to an identifier (CLSID) that can be used over DCOM. For this reason, the ProgID of the DCOM object must be in the client-side registry and map to the class ID of the server-side business object. For the other supported protocols (HTTP, HTTPS, and in-process), this is not necessary.  

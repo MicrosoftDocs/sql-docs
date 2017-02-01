@@ -16,7 +16,7 @@ ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADOX Collections
 |||  

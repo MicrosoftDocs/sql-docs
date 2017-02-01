@@ -18,7 +18,7 @@ ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # AppendChunk and GetChunk Methods Example (VB)
 This example uses the [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) and [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) methods to fill an image field with data from another record.  

@@ -22,7 +22,7 @@ ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # StayInSync Property
 Indicates, in a hierarchical [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object, whether the reference to the underlying child records (that is, the *chapter*) changes when the parent row position changes.  

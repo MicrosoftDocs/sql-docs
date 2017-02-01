@@ -15,7 +15,7 @@ ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Errors
 ADO errors are reported to your program as run-time errors. You can use the error-trapping mechanism of your programming language to trap and handle them. For example, in Visual Basic, use the **On Error** statement. In Visual J++, use a **try-catch** block. In Visual C++, it depends on the method you are using to access the ADO libraries. With #import, use a **try-catch** block. Otherwise, C++ programmers need to explicitly retrieve the error object by calling **GetErrorInfo**. The following Visual Basic sub procedure demonstrates trapping an ADO error:  

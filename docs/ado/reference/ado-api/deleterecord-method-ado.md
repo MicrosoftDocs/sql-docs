@@ -19,7 +19,7 @@ ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # DeleteRecord Method (ADO)
 Deletes an entity represented by a [Record](../../../ado/reference/ado-api/record-object-ado.md).  

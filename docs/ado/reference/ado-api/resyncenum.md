@@ -18,7 +18,7 @@ ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ResyncEnum
 Specifies whether underlying values are overwritten by a call to [Resync](../../../ado/reference/ado-api/resync-method.md).  

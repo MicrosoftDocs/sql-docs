@@ -18,7 +18,7 @@ ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Hierarchy Object (ADO MD)
 Represents one way in which the members of a [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) can be aggregated or "rolled up." A dimension can be aggregated along one or more hierarchies.  

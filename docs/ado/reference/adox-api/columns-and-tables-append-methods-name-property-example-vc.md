@@ -18,7 +18,7 @@ ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Columns and Tables Append Methods, Name Property Example (VC++)
 The following code demonstrates how to create a new table.  

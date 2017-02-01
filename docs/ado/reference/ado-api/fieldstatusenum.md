@@ -18,7 +18,7 @@ ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # FieldStatusEnum
 Specifies the [status](../../../ado/reference/ado-api/status-property-ado-field.md) of a [Field Object](../../../ado/reference/ado-api/field-object.md).  

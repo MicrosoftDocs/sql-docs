@@ -18,7 +18,7 @@ ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Property Object (ADO)
 Represents a dynamic characteristic of an ADO object that is defined by the provider.  

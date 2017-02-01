@@ -18,7 +18,7 @@ ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Collections (ADO - WFC Syntax)
 **package com.ms.wfc.data**  

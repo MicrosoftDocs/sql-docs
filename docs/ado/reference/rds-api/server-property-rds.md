@@ -18,7 +18,7 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Server Property (RDS)
 Indicates the Internet Information Services (IIS) name and communication protocol.  

@@ -15,7 +15,7 @@ ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Connection Object Properties, Methods, and Events
 ## Properties/Collections  

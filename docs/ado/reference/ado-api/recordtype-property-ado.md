@@ -20,7 +20,7 @@ ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RecordType Property (ADO)
 Indicates the type of [Record](../../../ado/reference/ado-api/record-object-ado.md) object.  

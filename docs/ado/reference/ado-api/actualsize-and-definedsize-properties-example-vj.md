@@ -16,7 +16,7 @@ ms.assetid: 2a0936e6-6452-4fef-9295-50407a13d691
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ActualSize and DefinedSize Properties Example (VJ++)
 This example uses the [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) and [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) properties to display the defined size and actual size of a field.  

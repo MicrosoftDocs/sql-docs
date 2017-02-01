@@ -17,7 +17,7 @@ ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # OpenSchema Method Example (VC++)
 This example uses the [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) method to display the name and type of each table in the ***Pubs*** database.  

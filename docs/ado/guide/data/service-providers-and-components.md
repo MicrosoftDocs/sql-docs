@@ -17,7 +17,7 @@ ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Service Providers and Components
 Service providers are components that extend the functionality of data providers by implementing extended interfaces that are not natively supported by the data store.  

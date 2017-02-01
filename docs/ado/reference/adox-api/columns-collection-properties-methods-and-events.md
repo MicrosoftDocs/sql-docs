@@ -15,7 +15,7 @@ ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Columns Collection Properties, Methods, and Events
 ## Properties  

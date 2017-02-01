@@ -19,7 +19,7 @@ ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # CancelBatch Method (ADO)
 Cancels a pending batch update.  

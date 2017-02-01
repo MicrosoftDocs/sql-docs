@@ -18,7 +18,7 @@ ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # SeekEnum
 Specifies the type of [Seek](../../../ado/reference/ado-api/seek-method.md) to execute.  

@@ -17,7 +17,7 @@ ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Data Providers
 Data providers represent diverse sources of data such as SQL databases, indexed-sequential files, spreadsheets, document stores, and mail files. Providers expose data uniformly using a common abstraction called the rowset.  

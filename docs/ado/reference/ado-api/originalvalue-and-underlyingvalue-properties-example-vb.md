@@ -18,7 +18,7 @@ ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # OriginalValue and UnderlyingValue Properties Example (VB)
 This example demonstrates the [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) and [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) properties by displaying a message if a record's underlying data has changed during a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) batch update.  

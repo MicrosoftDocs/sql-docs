@@ -15,7 +15,7 @@ ms.assetid: 6da136c5-fa93-4fe6-9bf5-90f4d92441fb
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # HelloData Code
 ```  

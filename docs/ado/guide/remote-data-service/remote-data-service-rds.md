@@ -16,7 +16,7 @@ ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Remote Data Service (RDS)
 Remote Data Service (RDS) is a feature of ADO, with which you can move data from a server to a client application or Web page, manipulate the data on the client, and return updates to the server in a single round trip.  

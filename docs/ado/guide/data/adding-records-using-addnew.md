@@ -17,7 +17,7 @@ ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Adding Records Using AddNew
 This is the basic syntax of the **AddNew** method:  

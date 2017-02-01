@@ -15,7 +15,7 @@ ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Preparing and Executing Commands
 Commands are instructions issued to a provider to perform some operations against the underlying data source. An SQL statement, for example, is a command to the Microsoft SQL Data Provider. In ADO, commands are typically represented by **Command** objects, although simple commands can also be issued through **Connection** or **Recordset** objects.  

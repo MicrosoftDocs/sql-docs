@@ -16,7 +16,7 @@ ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Events
 |||  

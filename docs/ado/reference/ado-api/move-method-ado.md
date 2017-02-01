@@ -19,7 +19,7 @@ ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Move Method (ADO)
 Moves the position of the current record in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

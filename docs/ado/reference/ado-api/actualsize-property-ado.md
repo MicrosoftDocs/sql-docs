@@ -18,7 +18,7 @@ ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ActualSize Property (ADO)
 Indicates the actual length of a field’s value in bytes.  

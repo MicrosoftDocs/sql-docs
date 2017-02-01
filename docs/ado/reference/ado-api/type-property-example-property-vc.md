@@ -17,7 +17,7 @@ ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Type Property Example (Property) (VC++)
 This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property. It is a model of a utility for listing the names and types of a collection, like [Properties](../../../ado/reference/ado-api/properties-collection-ado.md), [Fields](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  

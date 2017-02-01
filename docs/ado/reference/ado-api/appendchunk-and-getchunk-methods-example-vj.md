@@ -16,7 +16,7 @@ ms.assetid: c21d0e82-81b3-4b06-a91e-77efad17c093
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # AppendChunk and GetChunk Methods Example (VJ++)
 This example uses the [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) and [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) methods to fill an image field with data from another record.  

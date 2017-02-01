@@ -15,7 +15,7 @@ ms.assetid: d1c82f1a-cf78-4bd6-9ad4-1eb526e2c474
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Code Examples in Visual J++
 Use the following code examples to learn how to use the ADO methods and properties when writing in Microsoft Visual J++.  

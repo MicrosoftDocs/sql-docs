@@ -19,7 +19,7 @@ ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # SetEOS Method
 Sets the position that is the end of the stream.  

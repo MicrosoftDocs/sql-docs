@@ -15,7 +15,7 @@ ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # GetDataProviderDSO Method
 Retrieves the underlying OLE DB Data Source object from the Shape provider.  

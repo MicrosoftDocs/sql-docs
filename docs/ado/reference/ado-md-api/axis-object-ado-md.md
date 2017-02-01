@@ -18,7 +18,7 @@ ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Axis Object (ADO MD)
 Represents a positional or filter axis of a cellset, containing selected members of one or more dimensions.  

@@ -16,7 +16,7 @@ ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Reshape Name Property-Dynamic (ADO)
 Specifies a name for the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

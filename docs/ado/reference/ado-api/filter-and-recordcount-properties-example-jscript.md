@@ -18,7 +18,7 @@ ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Filter and RecordCount Properties Example (JScript)
 This example opens a **Recordset** on the Companies table of the Northwind database and then uses the [Filter](../../../ado/reference/ado-api/filter-property.md) property to limit the records visible to those where the CompanyName field starts with the letter D. Cut and paste the following code to Notepad or another text editor, and save it as **FilterJS.asp**.  

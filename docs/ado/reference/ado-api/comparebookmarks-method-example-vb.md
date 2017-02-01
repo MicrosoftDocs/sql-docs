@@ -17,7 +17,7 @@ ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # CompareBookmarks Method Example (VB)
 This example demonstrates the [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) method. The relative value of bookmarks is seldom needed unless a particular bookmark is somehow special.  

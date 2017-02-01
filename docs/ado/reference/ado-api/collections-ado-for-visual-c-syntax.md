@@ -20,7 +20,7 @@ ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Collections (ADO for Visual C++ Syntax)
 ## Parameters  

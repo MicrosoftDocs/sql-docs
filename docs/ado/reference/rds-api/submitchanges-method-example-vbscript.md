@@ -17,7 +17,7 @@ ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # SubmitChanges Method Example (VBScript)
 > [!IMPORTANT]

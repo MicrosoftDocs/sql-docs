@@ -14,7 +14,7 @@ ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "MightyPen"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Introduction
 ActiveX Data Objects (ADO) is a high-level, easy-to-use interface to OLE DB. OLE DB is a low-level, high-performance interface to a variety of data stores. Both ADO and OLE DB can work with relational (tabular) and nonrelational (hierarchical or stream) data.  

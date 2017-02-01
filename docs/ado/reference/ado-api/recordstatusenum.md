@@ -18,7 +18,7 @@ ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RecordStatusEnum
 Specifies the [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) of a record with regard to batch updates and other bulk operations.  

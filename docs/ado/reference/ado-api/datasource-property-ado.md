@@ -18,7 +18,7 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # DataSource Property (ADO)
 Indicates an object that contains data to be represented as a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

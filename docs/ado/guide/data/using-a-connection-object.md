@@ -15,7 +15,7 @@ ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Using a Connection Object
 Before opening a **Connection** object, you must define certain information about the data source and type of connection. Most of this information is held by the *ConnectionString* parameter of the [Open method](../../../ado/reference/ado-api/open-method-ado-connection.md) on the **Connection** object, or by the [ConnectionString property](../../../ado/reference/ado-api/connectionstring-property-ado.md) on the **Connection** object. A connection string consists of a list of argument/value pairs separated by semi-colons, with the values enclosed within single quotes. For example:  

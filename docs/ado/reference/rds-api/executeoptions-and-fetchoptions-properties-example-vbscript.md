@@ -18,7 +18,7 @@ ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ExecuteOptions and FetchOptions Properties Example (VBScript)
 > [!IMPORTANT]

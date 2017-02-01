@@ -16,7 +16,7 @@ ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Customization File Logs Section
 The **logs** section contains a log file entry, which specifies the name of a file that records errors during the operation of the **DataFactory**.  

@@ -15,7 +15,7 @@ ms.assetid: 74b59bbe-0244-4516-9b1d-dc513bd03a3d
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # State Property Example (VJ++)
 This example uses the [State](../../../ado/reference/ado-api/state-property-ado.md) property to display a message while asynchronous connections are opening and asynchronous commands are executing.  

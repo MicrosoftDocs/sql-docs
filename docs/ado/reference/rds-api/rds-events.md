@@ -16,7 +16,7 @@ ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RDS Events
 > [!IMPORTANT]

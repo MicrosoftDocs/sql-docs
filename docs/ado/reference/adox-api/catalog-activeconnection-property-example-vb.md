@@ -17,7 +17,7 @@ ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Catalog ActiveConnection Property Example (VB)
 Setting the [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) property to a valid, open connection "opens" the catalog. From an open catalog, you can access the schema objects contained within that catalog.  

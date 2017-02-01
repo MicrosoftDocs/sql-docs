@@ -18,7 +18,7 @@ ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Parameter Object
 Represents a parameter or argument associated with a [Command](../../../ado/reference/ado-api/command-object-ado.md) object based on a parameterized query or stored procedure.  

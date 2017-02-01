@@ -16,7 +16,7 @@ ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RDS Methods
 > [!IMPORTANT]

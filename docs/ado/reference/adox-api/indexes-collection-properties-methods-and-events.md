@@ -15,7 +15,7 @@ ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Indexes Collection Properties, Methods, and Events
 ## Properties  

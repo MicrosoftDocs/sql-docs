@@ -16,7 +16,7 @@ ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # DataSpace Object (RDS)
 > [!IMPORTANT]

@@ -17,7 +17,7 @@ ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Enabling a DLL to Run on DCOM
 > [!IMPORTANT]

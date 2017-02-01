@@ -18,7 +18,7 @@ ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # SchemaObjectTypeEnum
 Specifies the type of object to be retrieved by the [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) method.  

@@ -19,7 +19,7 @@ ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # State Property (ADO MD)
 Indicates the current state of the cellset.  

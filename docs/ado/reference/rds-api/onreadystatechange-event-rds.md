@@ -16,7 +16,7 @@ ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # onReadyStateChange Event (RDS)
 The **onReadyStateChange** event is called whenever the value of the [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) property changes.  

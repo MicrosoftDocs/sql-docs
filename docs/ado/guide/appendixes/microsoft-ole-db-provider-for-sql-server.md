@@ -17,7 +17,7 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Microsoft OLE DB Provider for SQL Server
 The Microsoft OLE DB Provider for SQL Server, SQLOLEDB, allows ADO to access Microsoft SQL Server.  

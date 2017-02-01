@@ -22,7 +22,7 @@ ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # DefinedSize Property (ADOX)
 Indicates the stated maximum size of the column.  

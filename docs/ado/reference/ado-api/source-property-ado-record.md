@@ -23,7 +23,7 @@ ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Source Property (ADO Record)
 Indicates the data source or object represented by the [Record](../../../ado/reference/ado-api/record-object-ado.md).  

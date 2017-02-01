@@ -16,7 +16,7 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RDS Scenario
 > [!IMPORTANT]

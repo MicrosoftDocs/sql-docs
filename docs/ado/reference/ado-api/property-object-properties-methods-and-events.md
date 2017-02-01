@@ -15,7 +15,7 @@ ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Property Object Properties, Methods, and Events
 ## Properties  

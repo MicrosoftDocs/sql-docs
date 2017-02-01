@@ -19,7 +19,7 @@ ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Name Property (ADO)
 Indicates the name of an object.  

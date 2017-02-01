@@ -18,7 +18,7 @@ ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Referencing the ADO Libraries In a Visual C++ Application
 To use the latest version of ADO in a Visual C++ application, use the following `#import` directive:  

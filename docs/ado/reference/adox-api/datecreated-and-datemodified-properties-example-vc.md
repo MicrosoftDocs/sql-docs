@@ -18,7 +18,7 @@ ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # DateCreated and DateModified Properties Example (VC++)
 This example demonstrates the [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) and [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) properties by adding a new [Column](../../../ado/reference/adox-api/column-object-adox.md) to an existing [Table](../../../ado/reference/adox-api/table-object-adox.md) and by creating a new **Table**. The DateOutput procedure is required for this example to run.  

@@ -19,7 +19,7 @@ ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # AddNew Method (ADO)
 Creates a new record for an updatable [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

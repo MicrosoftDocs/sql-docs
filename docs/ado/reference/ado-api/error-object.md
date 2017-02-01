@@ -18,7 +18,7 @@ ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Error Object
 Contains details about data access errors that pertain to a single operation involving the provider.  

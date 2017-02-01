@@ -18,7 +18,7 @@ ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # XactAttributeEnum
 Specifies the transaction attributes of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

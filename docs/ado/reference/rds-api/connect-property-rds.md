@@ -16,7 +16,7 @@ ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Connect Property (RDS)
 Indicates the database name from which the query and update operations are run.  

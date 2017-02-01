@@ -15,7 +15,7 @@ ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RDS API Reference
 > [!IMPORTANT]

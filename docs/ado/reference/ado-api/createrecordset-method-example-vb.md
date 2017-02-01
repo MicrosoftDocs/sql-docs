@@ -17,7 +17,7 @@ ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # CreateRecordset Method Example (VB)
 You can create a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object and specify the column information. You can then insert data into the **Recordset** object; the underlying rowset buffers the inserts.  

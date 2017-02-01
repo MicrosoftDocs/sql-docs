@@ -18,7 +18,7 @@ ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ActiveCommand Property (ADO)
 Indicates the [Command](../../../ado/reference/ado-api/command-object-ado.md) object that created the associated [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

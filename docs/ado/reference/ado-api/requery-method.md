@@ -19,7 +19,7 @@ ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Requery Method
 Updates the data in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object by re-executing the query on which the object is based.  

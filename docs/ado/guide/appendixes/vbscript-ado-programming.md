@@ -18,7 +18,7 @@ ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # VBScript ADO Programming
 ## Creating an ADO Project  

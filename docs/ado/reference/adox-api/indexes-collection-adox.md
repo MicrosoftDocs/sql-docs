@@ -19,7 +19,7 @@ ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Indexes Collection (ADOX)
 Contains all [Index](../../../ado/reference/adox-api/index-object-adox.md) objects of a table.  

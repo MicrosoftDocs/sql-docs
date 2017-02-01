@@ -15,7 +15,7 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Namespaces
 The XML persistence format in ADO uses the following four namespaces.  

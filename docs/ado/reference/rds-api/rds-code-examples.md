@@ -15,7 +15,7 @@ ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RDS Code Examples
 > [!IMPORTANT]

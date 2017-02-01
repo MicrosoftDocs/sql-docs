@@ -17,7 +17,7 @@ ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Handler Property Example (VC++)
 > [!IMPORTANT]

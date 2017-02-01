@@ -20,7 +20,7 @@ ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # DateModified Property (ADOX)
 Indicates the date the object was last modified.  

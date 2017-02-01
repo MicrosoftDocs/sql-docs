@@ -18,7 +18,7 @@ ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Position Property (ADO)
 Indicates the current position within a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

@@ -18,7 +18,7 @@ ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # IsolationLevel Property
 Indicates the level of isolation for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

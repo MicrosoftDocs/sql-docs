@@ -19,7 +19,7 @@ ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # WillConnect Event (ADO)
 The **WillConnect** event is called before a connection starts.  

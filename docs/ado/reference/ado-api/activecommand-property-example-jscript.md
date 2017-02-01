@@ -17,7 +17,7 @@ ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ActiveCommand Property Example (JScript)
 This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property. Cut and paste the following code to Notepad or another text editor, and save it as **ActiveCommandJS.asp**.  

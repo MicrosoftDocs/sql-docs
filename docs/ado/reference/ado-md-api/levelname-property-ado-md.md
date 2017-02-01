@@ -19,7 +19,7 @@ ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # LevelName Property (ADO MD)
 Indicates the name of the level of a [member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  

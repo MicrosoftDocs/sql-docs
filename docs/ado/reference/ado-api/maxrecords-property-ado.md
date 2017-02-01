@@ -18,7 +18,7 @@ ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # MaxRecords Property (ADO)
 Indicates the maximum number of records to return to a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) from a query.  

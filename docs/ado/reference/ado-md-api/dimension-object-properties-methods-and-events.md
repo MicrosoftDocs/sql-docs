@@ -15,7 +15,7 @@ ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Dimension Object Properties, Methods, and Events
 ## Properties/Collections  

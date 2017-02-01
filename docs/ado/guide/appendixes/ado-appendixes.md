@@ -13,7 +13,7 @@ ms.assetid: 2e6417d6-442e-4539-9573-d1322328674a
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Appendixes
 The ADO Programmer's Guide contains the following appendixes.  

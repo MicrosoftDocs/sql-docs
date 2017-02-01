@@ -16,7 +16,7 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADOX Properties
 |||  

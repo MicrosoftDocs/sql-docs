@@ -16,7 +16,7 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Methods
 |||  

@@ -19,7 +19,7 @@ ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Append Method (ADOX Procedures)
 Adds a new [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) object to the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  

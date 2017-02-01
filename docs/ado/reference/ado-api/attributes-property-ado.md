@@ -20,7 +20,7 @@ ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Attributes Property (ADO)
 Indicates one or more characteristics of an object.  

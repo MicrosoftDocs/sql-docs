@@ -18,7 +18,7 @@ ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RecordOpenOptionsEnum
 Specifies options for opening a [Record](../../../ado/reference/ado-api/record-object-ado.md). These values may be combined by using OR.  

@@ -16,7 +16,7 @@ ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Running the Address Book SQL Script
 > [!IMPORTANT]

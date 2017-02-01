@@ -18,7 +18,7 @@ ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Connection Object (ADO)
 Represents an open connection to a data source.  

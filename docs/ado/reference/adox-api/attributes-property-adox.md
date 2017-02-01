@@ -22,7 +22,7 @@ ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Attributes Property (ADOX)
 Describes column characteristics.  

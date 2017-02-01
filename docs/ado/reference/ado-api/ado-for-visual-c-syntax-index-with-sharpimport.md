@@ -20,7 +20,7 @@ ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO for Visual C++ Syntax Index with #import
 This index is a cross-reference to the ADO Language Reference based on Microsoft Visual C++ and the **#import** directive.  

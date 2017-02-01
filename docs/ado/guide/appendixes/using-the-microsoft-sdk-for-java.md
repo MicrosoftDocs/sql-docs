@@ -16,7 +16,7 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Using the Microsoft SDK for Java
 The Microsoft SDK for Java is the developer kit for the Microsoft Internet Explorer environment. Tools, information, and samples are provided to help you develop Java programs and applets based on JDK 1.1 and the Microsoft Win32 virtual machine (Microsoft VM). The Microsoft SDK for Java is not tied to Microsoft Visual J++. To download this SDK, click here.  

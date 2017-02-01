@@ -15,7 +15,7 @@ ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Hierarchy Object Properties, Methods, and Events
 ## Properties/Collections  

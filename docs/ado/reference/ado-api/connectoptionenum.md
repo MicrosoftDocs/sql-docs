@@ -18,7 +18,7 @@ ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ConnectOptionEnum
 Specifies whether the [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) method of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object should return after the connection is established (synchronously) or before (asynchronously).  

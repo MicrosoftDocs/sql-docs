@@ -15,7 +15,7 @@ ms.assetid: 75b774a5-fa94-490a-b521-b2b8f7d48919
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO (Multidimensional) (ADO MD)
 This section contains the following topic.  

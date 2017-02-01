@@ -17,7 +17,7 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Microsoft OLE DB Provider for Oracle
 > [!IMPORTANT]

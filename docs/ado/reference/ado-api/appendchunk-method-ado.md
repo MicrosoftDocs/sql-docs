@@ -19,7 +19,7 @@ ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # AppendChunk Method (ADO)
 Appends data to a large text or binary data [Field](../../../ado/reference/ado-api/field-object.md), or to a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object.  

@@ -18,7 +18,7 @@ ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # PageCount Property (ADO)
 Indicates how many pages of data the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object contains.  

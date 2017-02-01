@@ -20,7 +20,7 @@ ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Errors Collection (ADO)
 Contains all the [Error](../../../ado/reference/ado-api/error-object.md) objects created in response to a single provider-related failure.  

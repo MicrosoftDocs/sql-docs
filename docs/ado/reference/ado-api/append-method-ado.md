@@ -18,7 +18,7 @@ ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 caps.latest.revision: 18
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Append Method (ADO)
 Appends an object to a collection. If the collection is [Fields](../../../ado/reference/ado-api/fields-collection-ado.md), a new [Field](../../../ado/reference/ado-api/field-object.md) object can be created before it is appended to the collection.  

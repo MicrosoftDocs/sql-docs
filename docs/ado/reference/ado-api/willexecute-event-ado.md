@@ -19,7 +19,7 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # WillExecute Event (ADO)
 The **WillExecute** event is called just before a pending command executes on a connection.  

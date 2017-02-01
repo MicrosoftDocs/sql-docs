@@ -15,7 +15,7 @@ ms.assetid: 094ae2f9-9382-4080-ba80-2ad625746ed4
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Source Property Example (VJ++)
 This example demonstrates the [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) property by opening three [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects based on different data sources.  

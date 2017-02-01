@@ -19,7 +19,7 @@ ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ExecuteComplete Event (ADO)
 The **ExecuteComplete** event is called after a command has finished executing.  

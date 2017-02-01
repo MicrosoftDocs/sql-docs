@@ -18,7 +18,7 @@ ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Member Object (ADO MD)
 Represents a member of a level in a cube, the children of a member of a level, or a member of a position along an axis of a cellset.  

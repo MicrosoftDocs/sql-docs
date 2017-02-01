@@ -16,7 +16,7 @@ ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Syntax Indexes
 The syntax for calling ADO methods and properties differs depending on your development environment. The rest of the ADO Language Reference uses the Microsoft Visual Basic programming language to illustrate ADO method and property syntax. However, refer to the following sections for more specific syntax examples based on your programming language and methodology:  

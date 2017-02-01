@@ -19,7 +19,7 @@ ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Flush Method (ADO)
 Forces the contents of the [Stream](../../../ado/reference/ado-api/stream-object-ado.md) remaining in the ADO buffer to the underlying object with which the **Stream** is associated.  

@@ -18,7 +18,7 @@ ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Key Object (ADOX)
 Represents a primary, foreign, or unique key field from a database table.  

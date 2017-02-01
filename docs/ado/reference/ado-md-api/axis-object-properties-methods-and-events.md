@@ -16,7 +16,7 @@ ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Axis Object Properties, Methods, and Events
 ## Properties/Collections  

@@ -15,7 +15,7 @@ ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Configuring DataFactory for Safe or Unrestricted Modes
 > [!IMPORTANT]

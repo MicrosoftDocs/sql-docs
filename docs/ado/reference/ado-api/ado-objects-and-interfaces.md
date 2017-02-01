@@ -16,7 +16,7 @@ ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Objects and Interfaces
 The relationships between these objects are represented in the [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md).  

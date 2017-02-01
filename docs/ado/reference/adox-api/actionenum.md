@@ -18,7 +18,7 @@ ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ActionEnum
 Specifies the type of action to be performed when [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) is called.  

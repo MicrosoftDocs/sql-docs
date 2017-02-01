@@ -18,7 +18,7 @@ ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # FilterGroupEnum
 Specifies the group of records to be filtered from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

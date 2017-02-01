@@ -17,7 +17,7 @@ ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # GetString Method Example (VB)
 This example demonstrates the [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) method.  

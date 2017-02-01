@@ -18,7 +18,7 @@ ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Columns and Tables Append Methods, Name Property Example (VB)
 The following code demonstrates how to create a new table.  

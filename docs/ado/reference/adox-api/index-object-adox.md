@@ -18,7 +18,7 @@ ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Index Object (ADOX)
 Represents an index from a database table.  

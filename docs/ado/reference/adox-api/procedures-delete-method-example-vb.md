@@ -17,7 +17,7 @@ ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Procedures Delete Method Example (VB)
 The following code demonstrates how to delete a procedure by using the [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) method of the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  

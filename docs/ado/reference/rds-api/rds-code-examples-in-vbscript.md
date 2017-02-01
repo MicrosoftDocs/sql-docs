@@ -18,7 +18,7 @@ ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RDS Code Examples in VBScript
 > [!IMPORTANT]

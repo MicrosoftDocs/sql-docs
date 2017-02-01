@@ -20,7 +20,7 @@ ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # UnderlyingValue Property
 Indicates the current value of a [Field](../../../ado/reference/ado-api/field-object.md) object in the database.  

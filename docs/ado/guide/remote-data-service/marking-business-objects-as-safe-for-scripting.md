@@ -15,7 +15,7 @@ ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Marking Business Objects as Safe for Scripting
 > [!IMPORTANT]

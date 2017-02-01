@@ -20,7 +20,7 @@ ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Source Property (ADO Error)
 Indicates the name of the object or application that originally generated an error.  

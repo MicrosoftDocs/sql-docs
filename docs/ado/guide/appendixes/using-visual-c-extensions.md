@@ -18,7 +18,7 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Using Visual C++ Extensions
 ## The IADORecordBinding Interface  

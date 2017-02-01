@@ -16,7 +16,7 @@ ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # System Requirements for the Address Book Application
 To set up the Address Book sample application, you need to meet the following software and database requirements:  

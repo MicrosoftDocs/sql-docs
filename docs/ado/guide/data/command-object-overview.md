@@ -15,7 +15,7 @@ ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Command Object Overview
 With a **Command** object, you can do the following:  

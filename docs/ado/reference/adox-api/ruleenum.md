@@ -18,7 +18,7 @@ ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RuleEnum
 Specifies the rule to follow when a [Key](../../../ado/reference/adox-api/key-object-adox.md) is deleted.  

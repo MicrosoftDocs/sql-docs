@@ -15,7 +15,7 @@ ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Groups Collection Properties, Methods, and Events
 ## Properties  

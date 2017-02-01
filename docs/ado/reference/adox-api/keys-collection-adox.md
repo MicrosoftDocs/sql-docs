@@ -19,7 +19,7 @@ ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Keys Collection (ADOX)
 Contains all [Key](../../../ado/reference/adox-api/key-object-adox.md) objects of a [table](../../../ado/reference/adox-api/table-object-adox.md).  

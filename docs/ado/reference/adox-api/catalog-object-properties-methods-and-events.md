@@ -15,7 +15,7 @@ ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Catalog Object Properties, Methods, and Events
 ## Properties/Collections  

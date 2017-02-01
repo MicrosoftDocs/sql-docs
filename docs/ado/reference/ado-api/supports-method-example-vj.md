@@ -15,7 +15,7 @@ ms.assetid: eb7a5d97-0f3c-4bd4-b66d-cd1c454c4a93
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Supports Method Example (VJ++)
 This example uses the [Supports](../../../ado/reference/ado-api/supports-method.md) method to display the options supported by a recordset opened with different cursor types. The DisplaySupport function is required for this example to run.  

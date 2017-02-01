@@ -18,7 +18,7 @@ ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Error (ADO for Visual C++ Syntax)
 ## Properties  

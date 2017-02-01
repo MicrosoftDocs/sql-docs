@@ -16,7 +16,7 @@ ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Synchronize Method (RDS)
 Synchronize the given Recordset with the database specified by the connection string for use in ADO 2.5 and later.  

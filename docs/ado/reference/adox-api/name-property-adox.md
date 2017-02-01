@@ -44,7 +44,7 @@ ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Name Property (ADOX)
 Indicates the name of the object.  

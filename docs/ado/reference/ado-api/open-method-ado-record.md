@@ -19,7 +19,7 @@ ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Open Method (ADO Record)
 Opens an existing [Record](../../../ado/reference/ado-api/record-object-ado.md) object, or creates a new item represented by the **Record**, such as a file or directory.  

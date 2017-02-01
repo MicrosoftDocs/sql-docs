@@ -17,7 +17,7 @@ ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Type Property Example (Property) (VB)
 This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property. It is a model of a utility for listing the names and types of a collection, like [Properties](../../../ado/reference/ado-api/properties-collection-ado.md), [Fields](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  

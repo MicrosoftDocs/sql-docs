@@ -19,7 +19,7 @@ ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # DimensionCount Property (ADO MD)
 Indicates the number of dimensions on an [axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  

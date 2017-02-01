@@ -15,7 +15,7 @@ ms.assetid: 0db15a15-d597-4c04-9ade-1ac0f0ebec0a
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Event Instantiation: VBScript
 Microsoft Visual Basic Scripting Edition does not support ADO events.

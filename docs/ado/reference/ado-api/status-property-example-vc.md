@@ -17,7 +17,7 @@ ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Status Property Example (VC++)
 This example uses the [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) property to display which records have been modified in a batch operation before a batch update has occurred.  

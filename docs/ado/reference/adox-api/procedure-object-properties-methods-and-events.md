@@ -15,7 +15,7 @@ ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Procedure Object Properties, Methods, and Events
 ## Properties  

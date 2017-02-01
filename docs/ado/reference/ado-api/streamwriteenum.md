@@ -18,7 +18,7 @@ ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # StreamWriteEnum
 Specifies whether a line separator is appended to the string written to a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

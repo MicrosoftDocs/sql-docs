@@ -16,7 +16,7 @@ ms.assetid: 9673f232-fa58-4439-995a-b4066db628aa
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Append and CreateParameter Methods Example (VJ++)
 This example uses the [Append](../../../ado/reference/ado-api/append-method-ado.md) and [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) methods to execute a stored procedure with an input parameter.  

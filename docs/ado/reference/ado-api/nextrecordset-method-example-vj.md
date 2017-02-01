@@ -15,7 +15,7 @@ ms.assetid: 7948eefb-f5cc-4e74-b2f4-39033b46243d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # NextRecordset Method Example (VJ++)
 This example uses the [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) method to view the data in a recordset that uses a compound command statement made up of three separate **SELECT** statements.  

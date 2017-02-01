@@ -17,7 +17,7 @@ ms.assetid: 3c92cb19-c13b-4bb3-b4cd-75dc8f42057c
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Execute, Requery, and Clear Methods Example (VJ++)
 This example demonstrates the **Execute** method when run from both a [Command](../../../ado/reference/ado-api/command-object-ado.md) object and a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object. It also uses the [Requery](../../../ado/reference/ado-api/requery-method.md) method to retrieve current data in a recordset, and the [Clear](../../../ado/reference/ado-api/clear-method-ado.md) method to clear the contents of the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection. The ExecuteCommand and PrintOutput procedures are required for this procedure to run.  

@@ -20,7 +20,7 @@ ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Members Collection (ADO MD)
 Contains the [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) objects from a level or a position along an axis.  

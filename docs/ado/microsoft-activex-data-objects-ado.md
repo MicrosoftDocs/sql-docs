@@ -14,7 +14,7 @@ ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Microsoft ActiveX Data Objects (ADO)
 ActiveX Data Objects (ADO) consists of the following components:  

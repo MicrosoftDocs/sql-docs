@@ -18,7 +18,7 @@ ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # MoveRecordOptionsEnum
 Specifies the behavior of the [Record](../../../ado/reference/ado-api/record-object-ado.md) object [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) method.  

@@ -17,7 +17,7 @@ ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # MarshalOptions Property Example (VB)
 This example uses the [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) property to specify what rows are sent back to the server — All Rows or only Modified Rows.  

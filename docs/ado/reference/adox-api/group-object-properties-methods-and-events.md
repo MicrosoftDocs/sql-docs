@@ -15,7 +15,7 @@ ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Group Object Properties, Methods, and Events
 ## Properties/Collections  

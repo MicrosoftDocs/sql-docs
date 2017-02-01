@@ -17,7 +17,7 @@ ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Cancel Method Example (VBScript)
 > [!IMPORTANT]

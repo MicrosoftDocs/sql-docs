@@ -18,7 +18,7 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Record Object (ADO)
 Represents a row from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) or the data provider, or an object returned by a semi-structured data provider, such as a file or directory.  

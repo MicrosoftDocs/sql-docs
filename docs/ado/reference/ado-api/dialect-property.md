@@ -18,7 +18,7 @@ ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Dialect Property
 Indicates the dialect of the [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) or [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) properties. The dialect defines the syntax and general rules that the provider uses to parse the string or stream.  

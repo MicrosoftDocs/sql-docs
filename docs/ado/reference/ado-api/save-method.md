@@ -19,7 +19,7 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Save Method
 Saves the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in a file or [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

@@ -20,7 +20,7 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # NextRecordset Method (ADO)
 Clears the current [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object and returns the next **Recordset** by advancing through a series of commands.  

@@ -18,7 +18,7 @@ ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Parameters Collection, Command Property Example (VC++)
 The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property with the [Command](../../../ado/reference/ado-api/command-object-ado.md) object to retrieve parameter information for the procedure.  

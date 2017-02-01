@@ -15,7 +15,7 @@ ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Granting Guest Privileges to a Web Server Computer
 The anonymous Web server account (IUSR_*ComputerName*) must be added to the Guests local group on the Web server computer to use RDS.  

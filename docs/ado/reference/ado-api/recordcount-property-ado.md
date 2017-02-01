@@ -20,7 +20,7 @@ ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # RecordCount Property (ADO)
 Indicates the number of records in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

@@ -19,7 +19,7 @@ ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # CursorType, LockType, and EditMode Properties Example (VC++)
 This example demonstrates setting the [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) and [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) properties before opening a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). It also shows the value of the [EditMode](../../../ado/reference/ado-api/editmode-property.md) property under various conditions. The EditModeOutput function is required for this procedure to run.  

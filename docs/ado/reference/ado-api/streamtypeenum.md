@@ -18,7 +18,7 @@ ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # StreamTypeEnum
 Specifies the type of data stored in a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

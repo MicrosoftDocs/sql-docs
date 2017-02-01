@@ -15,7 +15,7 @@ ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Parameter Object Properties, Methods, and Events
 ## Properties/Collections  

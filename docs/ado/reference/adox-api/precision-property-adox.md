@@ -22,7 +22,7 @@ ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Precision Property (ADOX)
 Indicates the maximum precision of data values in the [Column](../../../ado/reference/adox-api/column-object-adox.md).  

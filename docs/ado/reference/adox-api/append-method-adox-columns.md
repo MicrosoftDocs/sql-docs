@@ -19,7 +19,7 @@ ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Append Method (ADOX Columns)
 Adds a new [Column](../../../ado/reference/adox-api/column-object-adox.md) object to the [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) collection.  

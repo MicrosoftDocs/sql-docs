@@ -18,7 +18,7 @@ ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Using ADO with Microsoft Visual Basic
 Setting up an ADO project and writing ADO code is similar whether you use Visual Basic or Visual Basic for Applications. This topic addresses using ADO with both Visual Basic and Visual Basic for Applications and notes any differences.  

@@ -15,7 +15,7 @@ ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Understanding Recordset Structure
 Every **Recordset** has a **Fields** collection consisting of one or more **Field** objects. A **Field** object usually represents a table column. The following topics will explain how to navigate through the **Fields** collection and get information about each field. Then they will discuss what kind of information is available to you via the **Field** object and how to use it.  

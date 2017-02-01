@@ -14,7 +14,7 @@ ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
 caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Programmer&#39;s Reference
 This section contains the following topics.  

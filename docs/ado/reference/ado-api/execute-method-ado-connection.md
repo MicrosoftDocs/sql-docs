@@ -19,7 +19,7 @@ ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Execute Method (ADO Connection)
 Executes the specified query, SQL statement, stored procedure, or provider-specific text.  

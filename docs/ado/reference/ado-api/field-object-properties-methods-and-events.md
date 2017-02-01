@@ -15,7 +15,7 @@ ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Field Object Properties, Methods, and Events
 ## Properties/Collections  

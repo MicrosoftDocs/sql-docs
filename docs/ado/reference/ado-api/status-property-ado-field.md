@@ -20,7 +20,7 @@ ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Status Property (ADO Field)
 Indicates the status of a [Field](../../../ado/reference/ado-api/field-object.md) object.  

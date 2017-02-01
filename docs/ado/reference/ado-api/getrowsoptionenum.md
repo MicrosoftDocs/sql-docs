@@ -18,7 +18,7 @@ ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # GetRowsOptionEnum
 Specifies how many records to retrieve from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

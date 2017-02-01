@@ -16,7 +16,7 @@ ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # FilterCriterion Property (RDS)
 Indicates the evaluation operator to use in the filter value.  

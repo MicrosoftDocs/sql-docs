@@ -18,7 +18,7 @@ ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # PersistFormatEnum
 Specifies the format in which to save a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

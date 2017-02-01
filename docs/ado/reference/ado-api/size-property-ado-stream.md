@@ -18,7 +18,7 @@ ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Size Property (ADO Stream)
 Indicates the size of the stream in number of bytes.  

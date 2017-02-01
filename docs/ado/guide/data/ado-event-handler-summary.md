@@ -16,7 +16,7 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Event Handler Summary
 Two ADO objects can raise events: the [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object and the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object. The **ConnectionEvent** family pertains to operations on the **Connection** object, and the **RecordsetEvent** family pertains to operations on the **Recordset** object.  

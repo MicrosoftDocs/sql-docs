@@ -18,7 +18,7 @@ ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Command Object (ADO)
 Defines a specific command that you intend to execute against a data source.  

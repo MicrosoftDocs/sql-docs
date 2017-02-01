@@ -19,7 +19,7 @@ ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Execute Method (ADO Command)
 Executes the query, SQL statement, or stored procedure specified in the [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) or [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) property of the [Command object](../../../ado/reference/ado-api/command-object-ado.md).  

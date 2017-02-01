@@ -16,7 +16,7 @@ ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Formal Shape Grammar
 This is the formal grammar for creating any shape command:  

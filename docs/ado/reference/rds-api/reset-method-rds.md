@@ -16,7 +16,7 @@ ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Reset Method (RDS)
 Executes the sort or filter on a client-side **Recordset** based on the specified sort and filter properties.  

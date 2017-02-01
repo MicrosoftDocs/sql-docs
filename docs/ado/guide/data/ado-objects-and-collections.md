@@ -15,7 +15,7 @@ ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO Objects and Collections
 ADO consists of the following nine objects and four collections.  

@@ -16,7 +16,7 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Operation of Parameterized Commands
 If you are working with a large child **Recordset**, especially compared to the size of the parent **Recordset**, but need to access only a few child chapters, you might find it more efficient to use a parameterized command.  

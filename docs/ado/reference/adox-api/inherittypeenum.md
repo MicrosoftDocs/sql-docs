@@ -18,7 +18,7 @@ ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # InheritTypeEnum
 Specifies how objects will inherit permissions set with [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  

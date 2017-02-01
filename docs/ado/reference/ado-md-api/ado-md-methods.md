@@ -16,7 +16,7 @@ ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # ADO MD Methods
 |||  

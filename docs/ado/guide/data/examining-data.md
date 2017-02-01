@@ -18,7 +18,7 @@ ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Examining Data
 The [Getting Data](../../../ado/guide/data/getting-data.md) section explained how to retrieve data from a data source as one or more **Recordset** objects. This section will discuss **Recordset** in more detail, including how to navigate through the **Recordset** and view its data.  

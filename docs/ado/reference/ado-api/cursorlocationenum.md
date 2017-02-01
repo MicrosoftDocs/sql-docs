@@ -18,7 +18,7 @@ ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # CursorLocationEnum
 Specifies the location of the cursor service.  

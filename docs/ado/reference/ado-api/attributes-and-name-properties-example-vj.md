@@ -16,7 +16,7 @@ ms.assetid: 625f8bcb-a9bb-4534-8768-00a9bcbe7b7f
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Attributes and Name Properties Example (VJ++)
 This example displays the value of the [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) property for [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Field](../../../ado/reference/ado-api/field-object.md), and [Property](../../../ado/reference/ado-api/property-object-ado.md) objects. It uses the [Name](../../../ado/reference/ado-api/name-property-ado.md) property to display the name of each **Field** and **Property** object.  

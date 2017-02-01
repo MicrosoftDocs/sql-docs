@@ -18,7 +18,7 @@ ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Stream (ADO for Visual C++ Syntax)
 ## Methods  

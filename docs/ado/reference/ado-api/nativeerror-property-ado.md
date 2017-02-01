@@ -20,7 +20,7 @@ ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # NativeError Property (ADO)
 Indicates the provider-specific error code for a given [Error](../../../ado/reference/ado-api/error-object.md) object.  

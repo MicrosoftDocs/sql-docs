@@ -19,7 +19,7 @@ ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Value Property (ADO)
 Indicates the value assigned to a [Field](../../../ado/reference/ado-api/field-object.md), [Parameter](../../../ado/reference/ado-api/parameter-object.md), or [Property](../../../ado/reference/ado-api/property-object-ado.md) object.  

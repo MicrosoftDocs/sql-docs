@@ -17,7 +17,7 @@ ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Source Property Example (VB)
 This example demonstrates the [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) property by opening three [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects based on different data sources.  

@@ -18,7 +18,7 @@ ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # AbsolutePosition Property (ADO)
 Indicates the ordinal position of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's current record.  

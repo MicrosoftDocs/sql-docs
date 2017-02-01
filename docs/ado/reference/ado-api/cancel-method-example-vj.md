@@ -15,7 +15,7 @@ ms.assetid: 3e41ee6f-5138-4d32-98ac-05e30a2a6fd2
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Cancel Method Example (VJ++)
 This example uses the [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) method to cancel a command executing on a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object if the connection is busy.  

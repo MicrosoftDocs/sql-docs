@@ -18,7 +18,7 @@ ms.assetid: d2db8a95-3072-4007-a127-44376405a67e
 caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VJ++)
 This example uses the [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), and [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) methods to move the record pointer of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) based on the supplied command. The MoveAny procedure is required for this procedure to run.  

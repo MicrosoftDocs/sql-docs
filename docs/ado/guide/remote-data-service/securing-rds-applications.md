@@ -15,7 +15,7 @@ ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "annemill"
-manager: "sonalm"
+manager: "jhubbard"
 ---
 # Securing RDS Applications
 This topic provides security information for RDS.  

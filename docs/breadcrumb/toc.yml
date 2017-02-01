@@ -120,3 +120,6 @@
       - name: Visual DB Tools
         href: /sql/ssms/visual-db-tools
         homepage: /sql/ssms/visual-db-tools
+    - name: SQL Server Release Notes
+      href: /sql/release-notes/
+      homepage: /sql/release-notes

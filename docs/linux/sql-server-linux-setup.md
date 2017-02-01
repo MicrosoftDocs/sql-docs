@@ -6,7 +6,7 @@ description: SQL Server vNext CTP 1.2 now runs on Linux. This topic provides an 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 01/20/2017
+ms.date: 02/01/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -29,6 +29,7 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 SQL Server vNext CTP 1.2 is supported on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. It is also available as a Docker image which can run on Docker Engine on Linux or Docker for Windows/Mac. The topics in this section provide tutorials and general guidance for installing SQL Server vNext CTP 1.2 on Linux. 
 
 ## Supported platforms
+
 SQL Server vNext CTP 1.2 is supported on the following platforms:
 
 | Platform | Supported version(s) | Get
@@ -47,7 +48,8 @@ SQL Server vNext CTP 1.2 is supported on the following platforms:
 
 - The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported. 
 
-## Install SQL Server on your platform
+## Install SQL Server
+
 - [Install on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
 - [Install on Ubuntu](sql-server-linux-setup-ubuntu.md)

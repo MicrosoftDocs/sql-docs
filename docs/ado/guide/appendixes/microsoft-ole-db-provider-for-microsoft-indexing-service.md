@@ -16,8 +16,8 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Microsoft OLE DB Provider for Microsoft Indexing Service
 The Microsoft OLE DB Provider for Microsoft Indexing Service provides programmatic read-only access to file system and Web data indexed by Microsoft Indexing Service. ADO applications can issue SQL queries to retrieve content and file property information.  

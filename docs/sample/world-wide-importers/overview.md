@@ -13,6 +13,7 @@ ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
 caps.latest.revision: 3
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # Wide World Importers Overview

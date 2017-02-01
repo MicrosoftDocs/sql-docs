@@ -19,8 +19,8 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Groups Collection (ADOX)
 Contains all stored [Group](../../../ado/reference/adox-api/group-object-adox.md) objects of a catalog or user.  

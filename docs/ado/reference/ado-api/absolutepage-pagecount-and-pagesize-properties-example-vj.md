@@ -16,8 +16,8 @@ helpviewer_keywords:
 ms.assetid: 05f9f20e-0697-46bf-b004-76d7fc2e5d52
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (VJ++)
 This example uses the [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), and [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) properties to display names and hire dates from the ***Employees*** table, five records at a time.  

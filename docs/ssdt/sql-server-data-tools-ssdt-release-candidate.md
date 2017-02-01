@@ -13,6 +13,7 @@ ms.assetid: 13e47d2d-a441-4962-87ec-1c08973bb9e8
 caps.latest.revision: 2
 author: "stevestein"
 ms.author: "sstein"
+manager: "jhubbard"
 ---
 # SQL Server Data Tools (SSDT) - Release Candidate
 Welcome to the current release candidate (17.0 RC2) of SQL Server Data Tools (SSDT)!  This release candidate of SQL Server Data Tools (SSDT) includes support for [SQL Server vNext](https://msdn.microsoft.com/library/mt788653.aspx). 

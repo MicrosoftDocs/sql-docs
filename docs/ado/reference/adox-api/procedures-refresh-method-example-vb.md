@@ -16,8 +16,8 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Procedures Refresh Method Example (VB)
 The following code shows how to refresh the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection of a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md). This is required before [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) objects from the **Catalog** can be accessed.  

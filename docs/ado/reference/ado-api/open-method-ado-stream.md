@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Open Method (ADO Stream)
 Opens a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object to manipulate streams of binary or text data.  

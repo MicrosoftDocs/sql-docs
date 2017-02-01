@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # AllowNullsEnum
 Specifies whether records with null values are indexed.  

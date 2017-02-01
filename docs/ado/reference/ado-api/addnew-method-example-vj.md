@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 12856ffb-8645-4fad-b51f-2c2967677c01
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # AddNew Method Example (VJ++)
 This example uses the [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) method to create a new record with the specified name.  

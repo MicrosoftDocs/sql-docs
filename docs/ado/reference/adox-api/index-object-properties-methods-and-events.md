@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Index Object Properties, Methods, and Events
 ## Properties/Collections  

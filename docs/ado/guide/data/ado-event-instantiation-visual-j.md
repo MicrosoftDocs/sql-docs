@@ -12,8 +12,8 @@ ms.topic: "article"
 ms.assetid: e22eedae-07d5-4b1b-a447-4151d1a6c098
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ADO Event Instantiation: Visual J++
 This short Microsoft® Visual J++® example shows how you can associate your own function with a particular event.  

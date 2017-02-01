@@ -16,8 +16,8 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ADO Code Examples in Visual C++
 Use the following code examples to learn how to use the ADO methods, properties, and events when writing in Microsoft Visual C++.  

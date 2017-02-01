@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Query Method (RDS)
 Uses a valid SQL query string to return a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

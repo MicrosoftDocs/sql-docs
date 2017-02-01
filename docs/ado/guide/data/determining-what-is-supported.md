@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Determining What is Supported
 The **Supports** method is used to determine whether a specified **Recordset** object supports a particular type of functionality. It has the following syntax:  

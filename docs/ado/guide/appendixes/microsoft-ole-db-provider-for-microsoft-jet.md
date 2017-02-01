@@ -16,8 +16,8 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Microsoft OLE DB Provider for Microsoft Jet
 The OLE DB Provider for Microsoft Jet allows ADO to access Microsoft Jet databases.  

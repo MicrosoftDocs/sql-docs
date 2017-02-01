@@ -21,8 +21,8 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 caps.latest.revision: 17
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # CreateRecordset Method (RDS)
 Creates an empty, disconnected [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ChildCount Property (ADO MD)
 Indicates the number of members for which the current [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object is the parent in a hierarchy.  

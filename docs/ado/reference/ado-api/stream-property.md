@@ -21,8 +21,8 @@ helpviewer_keywords:
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 caps.latest.revision: 6
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Stream Property
 Gets or sets an OLE DB **Stream** object from/on an **ADOStreamConstruction** object.  

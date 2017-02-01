@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # FilterAxis Property (ADO MD)
 Indicates filter information about the current [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  

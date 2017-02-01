@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Key Object Properties, Methods, and Events
 ## Properties/Collections  

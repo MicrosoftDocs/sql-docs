@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 17438bac-468c-47ff-9028-325660e1b261
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Type Property Example (Property) (VJ++)
 This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property. It is a model of a utility for listing the names and types of a collection, like [Properties](../../../ado/reference/ado-api/properties-collection-ado.md), [Fields](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  

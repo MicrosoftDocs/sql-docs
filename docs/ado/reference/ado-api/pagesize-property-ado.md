@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # PageSize Property (ADO)
 Indicates how many records constitute one page in the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

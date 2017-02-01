@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Creating and Executing a Simple Command
 A simple command is one that is not parameterized and requires no persistence. There are three ways to create and execute a simple command.  

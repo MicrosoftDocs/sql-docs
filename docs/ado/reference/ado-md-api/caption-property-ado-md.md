@@ -19,8 +19,8 @@ helpviewer_keywords:
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Caption Property (ADO MD)
 Indicates the text caption to use when displaying a [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) or [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object.  

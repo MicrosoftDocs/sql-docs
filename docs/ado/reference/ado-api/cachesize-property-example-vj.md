@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: d6fe482a-6951-438b-be58-e08f64efd1e2
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # CacheSize Property Example (VJ++)
 This example uses the [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) property to show the difference in performance for an operation performed with and without a 30-record cache.  

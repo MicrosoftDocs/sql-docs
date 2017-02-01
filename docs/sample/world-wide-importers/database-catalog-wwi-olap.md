@@ -13,6 +13,7 @@ ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
 caps.latest.revision: 3
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # Database catalog

@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Internet Information Services Error Codes
 The following table lists Microsoft® Internet Information Services (IIS) error codes related to Remote Data Service usage. The positive decimal translation of the low two bytes, the negative decimal translation of the full error code, and the hexadecimal values are shown.  

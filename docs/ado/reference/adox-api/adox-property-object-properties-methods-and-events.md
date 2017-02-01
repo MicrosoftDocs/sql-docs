@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 caps.latest.revision: 4
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ADOX Property Object Properties, Methods, and Events
 ## Properties  

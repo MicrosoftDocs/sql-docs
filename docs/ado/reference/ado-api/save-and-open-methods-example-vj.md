@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: bc425816-ecf8-4739-b50e-4cd5c60a151c
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Save and Open Methods Example (VJ++)
 These three examples demonstrate how the [Save](../../../ado/reference/ado-api/save-method.md) and **Open** methods can be used together.  

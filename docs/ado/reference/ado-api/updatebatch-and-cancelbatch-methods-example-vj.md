@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 8e8728aa-267f-4468-9a04-8bb29457995c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # UpdateBatch and CancelBatch Methods Example (VJ++)
 This example demonstrates the [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) method in conjunction with the [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) method.  

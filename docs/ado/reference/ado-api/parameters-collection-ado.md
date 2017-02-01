@@ -19,8 +19,8 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 caps.latest.revision: 20
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Parameters Collection (ADO)
 Contains all the [Parameter](../../../ado/reference/ado-api/parameter-object.md) objects of a [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  

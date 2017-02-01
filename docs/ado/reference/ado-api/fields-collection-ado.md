@@ -19,8 +19,8 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Fields Collection (ADO)
 Contains all the [Field](../../../ado/reference/ado-api/field-object.md) objects of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) or [Record](../../../ado/reference/ado-api/record-object-ado.md) object.  

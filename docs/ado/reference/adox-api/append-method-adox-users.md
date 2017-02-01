@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Append Method (ADOX Users)
 Adds a new [User](../../../ado/reference/adox-api/user-object-adox.md) object to the [Users](../../../ado/reference/adox-api/users-collection-adox.md) collection.  

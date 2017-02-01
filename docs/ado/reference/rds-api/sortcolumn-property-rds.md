@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 caps.latest.revision: 18
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # SortColumn Property (RDS)
 Indicates by which column to sort the records.  

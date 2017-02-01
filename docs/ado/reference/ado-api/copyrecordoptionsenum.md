@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # CopyRecordOptionsEnum
 Specifies the behavior of the [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) method.  

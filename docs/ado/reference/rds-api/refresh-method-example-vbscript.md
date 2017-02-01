@@ -16,8 +16,8 @@ helpviewer_keywords:
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Refresh Method Example (VBScript)
 > [!IMPORTANT]

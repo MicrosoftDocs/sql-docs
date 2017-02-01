@@ -19,8 +19,8 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # CompareBookmarks Method (ADO)
 Compares two bookmarks and returns an indication of their relative values.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ADO Error Codes
 In addition to the provider errors returned in the [Error](../../../ado/reference/ado-api/error-object.md) objects of the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection, ADO itself can return errors to the exception-handling mechanism of your run-time environment. Use the error trapping mechanism your programming language, such as the **On Error** statement in Microsoft® Visual Basic or the **try-catch** block in Microsoft Visual C++® or Microsoft Visual J++® to capture ADO errors.  

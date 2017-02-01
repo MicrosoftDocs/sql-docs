@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: b29ddb8c-ceb3-4aad-a240-8030462fceba
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Move Method Example (VJ++)
 This example uses the [Move](../../../ado/reference/ado-api/move-method-ado.md) method to position the record pointer based on user input.  

@@ -19,8 +19,8 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 caps.latest.revision: 17
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Refresh Method (RDS)
 Requeries the data source specified in the [Connect](../../../ado/reference/rds-api/connect-property-rds.md) property and updates the query results.  

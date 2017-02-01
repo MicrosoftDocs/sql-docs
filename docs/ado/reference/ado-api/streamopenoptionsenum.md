@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # StreamOpenOptionsEnum
 Specifies options for opening a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object. The values can be combined with an OR operation.  

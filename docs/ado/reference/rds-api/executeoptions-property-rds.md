@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ExecuteOptions Property (RDS)
 Indicates whether asynchronous execution is enabled.  

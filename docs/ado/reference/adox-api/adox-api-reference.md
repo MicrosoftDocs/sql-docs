@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: ef700465-2e97-46e8-8213-2d662501e540
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ADOX API Reference
 This section of the ADOX documentation contains topics for each ADOX object, collection, method, and property, as well as example code when appropriate. For more information, search for a specific topic in the index or refer to the following topics:  

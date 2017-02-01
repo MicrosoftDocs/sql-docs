@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Seek Method
 Searches the index of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to quickly locate the row that matches the specified values, and changes the current row position to that row.  

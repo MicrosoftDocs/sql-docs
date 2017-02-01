@@ -14,8 +14,8 @@ dev_langs:
 ms.assetid: b37e5957-7f00-4d62-b0f1-929fec996f4e
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ADO Event Instantiation: JScript
 Microsoft® JScript® does not support ADO events.

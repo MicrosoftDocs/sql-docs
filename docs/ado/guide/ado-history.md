@@ -13,8 +13,8 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ADO History
 This topic lists the new features introduced by each release of ADO, ADO MD, and ADOX.  

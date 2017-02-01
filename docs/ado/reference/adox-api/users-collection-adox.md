@@ -19,8 +19,8 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Users Collection (ADOX)
 Contains all stored [User](../../../ado/reference/adox-api/user-object-adox.md) objects of a [catalog](../../../ado/reference/adox-api/catalog-object-adox.md) or [group](../../../ado/reference/adox-api/group-object-adox.md).  

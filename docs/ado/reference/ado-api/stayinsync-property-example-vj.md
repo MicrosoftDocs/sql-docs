@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 48e2f748-e8e0-4cbb-8133-b96aa06c6324
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # StayInSync Property Example (VJ++)
 This example demonstrates how the [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) property facilitates accessing rows in a hierarchical [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

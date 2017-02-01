@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Command Property (ADOX)
 Specifies an ADO [Command](../../../ado/reference/ado-api/command-object-ado.md) object that can be used to create or execute the procedure.  

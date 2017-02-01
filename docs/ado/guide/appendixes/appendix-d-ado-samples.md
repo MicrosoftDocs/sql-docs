@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Appendix D: ADO Samples
 The Windows SDK contains several sample applications that demonstrate the use of ADO and RDS code. These samples are intended to help you learn how to use ADO and RDS, but are not intended to be deployed on production servers.  

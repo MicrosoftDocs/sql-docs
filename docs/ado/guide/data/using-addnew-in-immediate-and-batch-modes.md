@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Using AddNew in Immediate and Batch Modes
 The behavior of the **AddNew** method depends on the updating mode of the **Recordset** object and whether you pass the *FieldList* and *Values* arguments.  

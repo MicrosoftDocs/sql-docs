@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: f28637c7-05ab-482d-b1ce-bbfc41228050
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ActiveCommand Property Example (VJ++)
 This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property.  

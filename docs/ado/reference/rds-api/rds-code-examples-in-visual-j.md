@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 693778e0-11ed-4e8d-922b-baab25b6bc17
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # RDS Code Examples in Visual J++
 Use the following code examples to learn how to use RDS properties when writing in Microsoft Visual J++.  

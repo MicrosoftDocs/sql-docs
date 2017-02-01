@@ -12,6 +12,8 @@ ms.topic: "article"
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 caps.latest.revision: 3
 ms.author: "v-jasonl"
+manager: "jhubbard"
+author: "MightyPen"
 ---
 # Using Always Encrypted with the Linux ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

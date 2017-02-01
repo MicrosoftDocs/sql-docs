@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 caps.latest.revision: 17
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # FilterColumn Property (RDS)
 Indicates the column on which to evaluate the filter criteria.  

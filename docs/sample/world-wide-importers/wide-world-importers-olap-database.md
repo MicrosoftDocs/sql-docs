@@ -13,6 +13,7 @@ ms.assetid: ee64562b-a6d7-420c-b9da-75b5223cf8ab
 caps.latest.revision: 2
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # Wide World Importers data warehousing and analytics database

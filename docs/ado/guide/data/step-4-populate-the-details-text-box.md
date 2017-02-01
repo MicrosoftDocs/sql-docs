@@ -12,8 +12,8 @@ ms.topic: "article"
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Step 4: Populate the Details Text Box
 To populate the Details text box, create a new subroutine named **recFields** and insert the following code:  

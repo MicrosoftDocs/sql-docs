@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: a75d5239-54a9-4eec-b144-a5848cdbf265
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Optimize Property Example (VJ++)
 This example demonstrates the [Field](../../../ado/reference/ado-api/field-object.md) object dynamic **Optimize** property. The ***zip*** field of the **Authors** table in the ***Pubs*** database is not indexed. Setting the [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) property to **True** on the ***zip*** field authorizes ADO to build an index that improves the performance of the [Find](../../../ado/reference/ado-api/find-method-ado.md) method.  

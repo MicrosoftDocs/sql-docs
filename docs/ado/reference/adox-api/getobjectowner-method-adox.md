@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # GetObjectOwner Method (ADOX)
 Returns the owner of an object in a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md).  

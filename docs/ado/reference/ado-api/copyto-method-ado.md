@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # CopyTo Method (ADO)
 Copies the specified number of characters or bytes (depending on [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)) in the [Stream](../../../ado/reference/ado-api/stream-object-ado.md) to another **Stream** object.  

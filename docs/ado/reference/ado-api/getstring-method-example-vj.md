@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: d8260e68-e255-4c0c-9f13-5cca6a9a9c35
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # GetString Method Example (VJ++)
 This example demonstrates the [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) method.  

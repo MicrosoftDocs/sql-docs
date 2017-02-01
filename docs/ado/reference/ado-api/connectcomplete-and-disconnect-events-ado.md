@@ -21,8 +21,8 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ConnectComplete and Disconnect Events (ADO)
 The **ConnectComplete** event is called after a connection starts. The **Disconnect** event is called after a connection ends.  

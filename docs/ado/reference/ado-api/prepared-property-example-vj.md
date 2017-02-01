@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: fc52ea7c-1b3b-4874-9db9-4d2e01d794c3
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Prepared Property Example (VJ++)
 This example demonstrates the [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) property by opening two [Command](../../../ado/reference/ado-api/command-object-ado.md) objects—one prepared and one not prepared.  

@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 70be5873-b95c-47a6-a793-d97c5b41e7e4
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Handline Errors in Visual J++
 Handle ADO errors in your Microsoft® Visual J++® applications using a **try catch** block. Once an error has been thrown, you can iterate through the collection, successively handling each error. The following Visual J++ example shows a console application that deliberately causes an error.  

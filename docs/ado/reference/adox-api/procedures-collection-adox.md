@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Procedures Collection (ADOX)
 Contains all [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) objects of a catalog.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 0ef0ed20-83ac-4047-9294-506fd82f7201
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Resync Method Example (VJ++)
 This example demonstrates using the [Resync](../../../ado/reference/ado-api/resync-method.md) method to refresh data in a static recordset.  

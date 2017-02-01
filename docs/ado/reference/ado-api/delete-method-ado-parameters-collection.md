@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Delete Method (ADO Parameters Collection)
 Deletes an object from the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  

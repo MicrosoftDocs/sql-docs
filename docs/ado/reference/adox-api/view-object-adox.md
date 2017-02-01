@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # View Object (ADOX)
 Represents a filtered set of records or a virtual table. When used in conjunction with the ADO [Command](../../../ado/reference/ado-api/command-object-ado.md) object, the **View** object can be used for adding, deleting, or modifying views.  

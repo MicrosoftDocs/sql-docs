@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 caps.latest.revision: 17
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Execute21 Method (RDS)
 Executes the request and creates an ADO recordset for use in ADO 2.1.  

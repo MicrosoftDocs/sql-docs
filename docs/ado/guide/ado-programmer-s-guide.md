@@ -13,8 +13,8 @@ helpviewer_keywords:
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ADO Programmer&#39;s Guide
 This documentation provides an overview of how to use ADO objects to work with data from various data sources. First, the introduction summarizes the new features and the requirement for installing, using, and redistributing the ADO component. The next sections discuss the use of the various types of ADO objects. Finally, the appendixes discuss various Microsoft-supplied data and service providers, error messages, and tips about how to use ADO in several programming languages, in addition to samples and a glossary.  

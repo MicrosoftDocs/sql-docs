@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # GetObjectOwner and SetObjectOwner Methods Example (VC++)
 This example demonstrates the [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) and [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) methods. This code assumes the existence of the group Accounting (see the [Groups and Users Append, ChangePassword Methods Example (VC++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) to see how to add this group to the system). The owner of the Categories table is set to Accounting.  

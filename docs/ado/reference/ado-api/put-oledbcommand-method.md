@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # put_OLEDBCommand Method
 This method performs no operation and always returns S_OK.  

@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # InfoMessage Event (ADO)
 The **InfoMessage** event is called whenever a warning occurs during a **ConnectionEvent** operation.  

@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Customization File SQL Section
 The **sql** section can contain a new SQL string that replaces the client command string. If there is no SQL string in the section, the section will be ignored.  

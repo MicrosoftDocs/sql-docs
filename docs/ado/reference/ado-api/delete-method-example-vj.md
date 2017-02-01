@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 838c4bcb-bd78-4c98-a3ac-b8bf6e750db2
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Delete Method Example (VJ++)
 This example uses the [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) method to remove a specified record from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

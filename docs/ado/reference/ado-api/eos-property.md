@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # EOS Property
 Indicates whether the current position is at the end of the [stream](../../../ado/reference/ado-api/stream-object-ado.md).  

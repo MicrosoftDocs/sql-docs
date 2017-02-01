@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: e1426a08-71b8-4af2-9f57-97ceb90ccef2
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Item Property Example (VJ++)
 This example demonstrates how the [Item](../../../ado/reference/ado-api/item-property-ado.md) property accesses members of a collection. The example opens the ***Authors*** table of the ***Pubs*** database with a parameterized command.  

@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # CopyRecord Method (ADO)
 Copies an entity represented by a [record](../../../ado/reference/ado-api/record-object-ado.md) to another location.  

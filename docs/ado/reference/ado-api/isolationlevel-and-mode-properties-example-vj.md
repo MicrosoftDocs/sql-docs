@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: 7662d89a-c5f9-44db-8c93-606db48cdd96
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # IsolationLevel and Mode Properties Example (VJ++)
 This example uses the [Mode](../../../ado/reference/ado-api/mode-property-ado.md) property to open an exclusive connection, and the [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) property to open a transaction that is conducted in isolation of other transactions.  

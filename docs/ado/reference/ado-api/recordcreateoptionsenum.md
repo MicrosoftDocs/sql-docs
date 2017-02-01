@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # RecordCreateOptionsEnum
 Specifies whether an existing **Record** should be opened or a new **Record** created for the [Record](../../../ado/reference/ado-api/record-object-ado.md) object [Open](../../../ado/reference/ado-api/open-method-ado-record.md) method. The values can be combined with an AND operator.  

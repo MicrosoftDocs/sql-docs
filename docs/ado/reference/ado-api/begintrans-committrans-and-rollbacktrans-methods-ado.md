@@ -24,8 +24,8 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)
 These transaction methods manage transaction processing within a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object as follows:  

@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # OriginalValue Property (ADO)
 Indicates the value of a [Field](../../../ado/reference/ado-api/field-object.md) that existed in the record before any changes were made.  

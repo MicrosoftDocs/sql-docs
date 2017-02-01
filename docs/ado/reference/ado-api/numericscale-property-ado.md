@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # NumericScale Property (ADO)
 Indicates the scale of numeric values in a [Parameter](../../../ado/reference/ado-api/parameter-object.md) or [Field](../../../ado/reference/ado-api/field-object.md) object.  

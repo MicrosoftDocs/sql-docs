@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 65e19302-4682-41c8-ac7f-de1a4e23eb2b
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Type Property Example (Field) (VJ++)
 This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property by displaying the name of the constant that corresponds to the value of the **Type** property of all the [Field](../../../ado/reference/ado-api/field-object.md) objects in the ***Employees*** table. The FieldType function is required for this procedure to run.  

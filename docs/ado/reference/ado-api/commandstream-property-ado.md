@@ -17,8 +17,8 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # CommandStream Property (ADO)
 Indicates the stream used as the input for a [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  

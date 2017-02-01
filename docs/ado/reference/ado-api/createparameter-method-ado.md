@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # CreateParameter Method (ADO)
 Creates a new [Parameter](../../../ado/reference/ado-api/parameter-object.md) object with the specified properties.  

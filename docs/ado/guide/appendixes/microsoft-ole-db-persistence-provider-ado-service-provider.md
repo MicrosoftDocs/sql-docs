@@ -16,8 +16,8 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Microsoft OLE DB Persistence Provider (ADO Service Provider)
 The Microsoft OLE DB Persistence Provider enables you to save a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object into a file, and later restore that **Recordset** object from the file. Schema information, data, and pending changes are preserved.  

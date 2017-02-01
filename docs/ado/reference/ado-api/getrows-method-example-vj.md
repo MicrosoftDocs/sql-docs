@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 44dde820-9596-439c-97a8-037d40d873f0
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # GetRows Method Example (VJ++)
 This example uses the [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) method to retrieve a specified number of rows from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and to fill an array with the resulting data. The **GetRows** method will return less than the desired number of rows in two cases: either if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) has been reached, or if **GetRows** tried to retrieve a record that was deleted by another user. The function returns **False** only if the second case occurs. The GetRowsOK function is required for this procedure to run.  

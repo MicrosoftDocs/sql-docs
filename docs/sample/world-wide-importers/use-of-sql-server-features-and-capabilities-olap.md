@@ -13,6 +13,7 @@ ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
 caps.latest.revision: 3
 author: "BarbKess"
 ms.author: "barbkess"
+manager: "jhubbard"
 robots: noindex,nofollow
 ---
 # WideWorldImportersDW use of SQL Server features and capabilities

@@ -18,8 +18,8 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Axes Collection (ADO MD)
 Contains the [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) objects that define a cellset.  

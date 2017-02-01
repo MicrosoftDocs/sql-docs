@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: ad709f69-113b-4972-9384-c1215641844d
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # ADO MD API Reference
 This section of the ADO MD documentation contains topics for each ADO MD object, collection, method, and property, as well as example code when appropriate.  

@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: ca9f10d2-b5d1-449b-807b-649ef4fbf0bb
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # NumericScale and Precision Properties Example (VJ++)
 This example uses the [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) and [Precision](../../../ado/reference/ado-api/precision-property-ado.md) properties to display the numeric scale and precision of fields in the ***Discounts*** table of the ***Pubs*** database.  

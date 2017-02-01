@@ -15,8 +15,8 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # Sample Recordset for Examining Data
 First, let's look at the **Recordset** object as returned using the following SQL query, executed against the Northwind sample data base in Microsoft SQL Server.  

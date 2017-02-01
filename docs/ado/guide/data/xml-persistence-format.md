@@ -14,8 +14,8 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 caps.latest.revision: 6
 author: "MightyPen"
-ms.author: "annemill"
-manager: "sonalm"
+ms.author: "genemi"
+manager: "jhubbard"
 ---
 # XML Persistence Format
 ADO uses UTF-8 encoding for the XML stream it persists.  

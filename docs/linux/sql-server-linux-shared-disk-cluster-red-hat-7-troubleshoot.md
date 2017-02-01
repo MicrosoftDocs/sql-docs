@@ -1,3 +1,3 @@
 ---
-redirect_url: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
+redirect_url: /sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate 
 ---

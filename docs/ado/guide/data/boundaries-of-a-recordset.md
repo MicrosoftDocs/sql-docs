@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Boundaries of a Recordset

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO - WFC Syntax Index

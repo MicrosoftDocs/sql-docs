@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # FetchComplete Event (ADO)

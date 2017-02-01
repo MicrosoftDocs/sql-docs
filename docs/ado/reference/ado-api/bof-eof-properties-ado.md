@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # BOF, EOF Properties (ADO)

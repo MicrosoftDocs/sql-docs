@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO MD Properties

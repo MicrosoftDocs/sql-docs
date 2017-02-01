@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 74b59bbe-0244-4516-9b1d-dc513bd03a3d
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # State Property Example (VJ++)

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 caps.latest.revision: 3
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # XSLT Transformations

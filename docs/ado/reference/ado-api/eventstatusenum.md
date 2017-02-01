@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # EventStatusEnum

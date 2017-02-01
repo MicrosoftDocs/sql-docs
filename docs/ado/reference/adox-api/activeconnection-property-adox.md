@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActiveConnection Property (ADOX)

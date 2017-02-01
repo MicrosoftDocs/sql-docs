@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # MarshalOptions Property Example (VC++)

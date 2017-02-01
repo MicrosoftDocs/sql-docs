@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Events Model Example (VC++)

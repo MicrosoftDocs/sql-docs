@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 16d5d896-9905-4f75-973b-e1e696cd169f
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Filter and RecordCount Properties Example (VJ++)

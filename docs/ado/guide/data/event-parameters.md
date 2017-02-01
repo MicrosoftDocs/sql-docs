@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Event Parameters

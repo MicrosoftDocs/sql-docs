@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # FilterGroupEnum

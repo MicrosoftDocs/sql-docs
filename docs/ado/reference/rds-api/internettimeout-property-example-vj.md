@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 757adb1b-d184-4887-bbe2-0f1bb6433f69
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # InternetTimeout Property Example (VJ++)

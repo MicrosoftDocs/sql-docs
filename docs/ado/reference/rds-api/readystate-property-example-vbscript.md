@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ReadyState Property Example (VBScript)

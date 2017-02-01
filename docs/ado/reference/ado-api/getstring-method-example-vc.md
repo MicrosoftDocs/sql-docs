@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # GetString Method Example (VC++)

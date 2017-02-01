@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Catalog ActiveConnection Property Example (VC++)

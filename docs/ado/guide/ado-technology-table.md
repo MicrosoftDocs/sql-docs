@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Technology Table

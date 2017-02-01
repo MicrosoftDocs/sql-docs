@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # GetPermissions and SetPermissions Methods Example (VB)

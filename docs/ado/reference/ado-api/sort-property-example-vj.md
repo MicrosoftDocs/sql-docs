@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 460d4bbc-6250-475e-843e-899cf3c11742
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Sort Property Example (VJ++)

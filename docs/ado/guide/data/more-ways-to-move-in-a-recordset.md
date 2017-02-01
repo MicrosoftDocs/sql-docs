@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # More Ways to Move in a Recordset

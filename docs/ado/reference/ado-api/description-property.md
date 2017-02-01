@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Description Property

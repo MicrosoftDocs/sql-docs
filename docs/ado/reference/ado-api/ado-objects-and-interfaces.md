@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Objects and Interfaces

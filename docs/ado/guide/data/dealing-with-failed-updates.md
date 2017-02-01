@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 caps.latest.revision: 3
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Dealing with Failed Updates

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using Visual C++ Extensions

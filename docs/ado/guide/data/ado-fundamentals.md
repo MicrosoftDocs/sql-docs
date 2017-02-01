@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Fundamentals

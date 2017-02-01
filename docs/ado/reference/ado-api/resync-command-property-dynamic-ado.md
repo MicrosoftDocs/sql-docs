@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Resync Command Property-Dynamic (ADO)

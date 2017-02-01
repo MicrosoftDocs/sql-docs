@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # PageCount Property (ADO)

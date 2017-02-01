@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Parameter Object

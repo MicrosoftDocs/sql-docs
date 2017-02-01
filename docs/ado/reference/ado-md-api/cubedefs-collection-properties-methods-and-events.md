@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CubeDefs Collection Properties, Methods, and Events

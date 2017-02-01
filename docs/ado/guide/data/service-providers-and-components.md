@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Service Providers and Components

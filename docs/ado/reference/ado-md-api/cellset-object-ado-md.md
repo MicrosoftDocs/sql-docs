@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Cellset Object (ADO MD)

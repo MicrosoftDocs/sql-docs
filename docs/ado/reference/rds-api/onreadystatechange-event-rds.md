@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # onReadyStateChange Event (RDS)

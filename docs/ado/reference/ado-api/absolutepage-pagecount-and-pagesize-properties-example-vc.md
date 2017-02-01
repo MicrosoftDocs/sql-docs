@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (VC++)

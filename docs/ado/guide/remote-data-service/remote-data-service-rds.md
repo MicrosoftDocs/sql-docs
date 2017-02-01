@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Remote Data Service (RDS)

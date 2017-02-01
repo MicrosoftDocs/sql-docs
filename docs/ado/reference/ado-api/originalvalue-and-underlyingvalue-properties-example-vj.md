@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: cfe62974-f768-437f-87c5-8106c4e23ad0
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # OriginalValue and UnderlyingValue Properties Example (VJ++)

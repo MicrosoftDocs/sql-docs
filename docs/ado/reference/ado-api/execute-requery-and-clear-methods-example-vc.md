@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Execute, Requery, and Clear Methods Example (VC++)

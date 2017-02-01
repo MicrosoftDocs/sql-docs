@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # PrimaryKey and Unique Properties Example (VC++)

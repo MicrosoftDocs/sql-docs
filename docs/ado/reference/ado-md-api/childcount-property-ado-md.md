@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ChildCount Property (ADO MD)

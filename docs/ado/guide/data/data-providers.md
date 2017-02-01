@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Data Providers

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 7662d89a-c5f9-44db-8c93-606db48cdd96
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # IsolationLevel and Mode Properties Example (VJ++)

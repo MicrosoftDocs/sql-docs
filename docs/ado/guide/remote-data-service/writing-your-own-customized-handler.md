@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Writing Your Own Customized Handler

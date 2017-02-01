@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # RecordOpenOptionsEnum

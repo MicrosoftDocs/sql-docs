@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DeleteRecord and MoveRecord Methods Example (VB)

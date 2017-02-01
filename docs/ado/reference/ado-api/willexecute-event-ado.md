@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # WillExecute Event (ADO)

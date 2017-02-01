@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Referencing the ADO Libraries In a Visual Basic 6 Application

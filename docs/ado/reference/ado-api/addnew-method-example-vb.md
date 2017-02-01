@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # AddNew Method Example (VB)

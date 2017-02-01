@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Filter and RecordCount Properties Example (VC++)

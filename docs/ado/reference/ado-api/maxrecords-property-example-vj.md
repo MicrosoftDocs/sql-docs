@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f5f12f3b-8f45-4bfa-b70e-971b758e1898
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # MaxRecords Property Example (VJ++)

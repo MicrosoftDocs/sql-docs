@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Table Object Properties, Methods, and Events

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SQL Property

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 3c92cb19-c13b-4bb3-b4cd-75dc8f42057c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Execute, Requery, and Clear Methods Example (VJ++)

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Address Book Data-Binding Object

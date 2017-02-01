@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: a75d5239-54a9-4eec-b144-a5848cdbf265
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Optimize Property Example (VJ++)

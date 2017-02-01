@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Find Method Example (VC++)

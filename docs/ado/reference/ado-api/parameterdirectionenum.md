@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ParameterDirectionEnum

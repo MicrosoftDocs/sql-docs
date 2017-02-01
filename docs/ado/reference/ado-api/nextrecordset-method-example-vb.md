@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # NextRecordset Method Example (VB)

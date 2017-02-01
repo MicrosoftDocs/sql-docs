@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Status Property (ADO Field)

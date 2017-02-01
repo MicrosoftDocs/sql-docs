@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Shape COMPUTE Clause

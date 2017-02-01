@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # MaxRecords Property Example (VB)

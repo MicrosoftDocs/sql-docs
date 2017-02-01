@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: d2db8a95-3072-4007-a127-44376405a67e
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VJ++)

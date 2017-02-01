@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # get_OLEDBCommand Method

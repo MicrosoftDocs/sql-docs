@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
 caps.latest.revision: 4
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # IDSOShapeExtensions Interface

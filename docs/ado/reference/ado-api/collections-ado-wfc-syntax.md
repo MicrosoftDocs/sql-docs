@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Collections (ADO - WFC Syntax)

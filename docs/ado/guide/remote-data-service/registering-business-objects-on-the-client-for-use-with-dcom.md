@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Registering Business Objects on the Client for Use with DCOM

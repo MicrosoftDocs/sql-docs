@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using a Connection Object

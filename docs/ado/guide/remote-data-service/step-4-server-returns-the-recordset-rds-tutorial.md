@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 4: Server Returns the Recordset (RDS Tutorial)

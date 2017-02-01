@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # EndOfRecordset Event (ADO)

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Delete Method (ADO Recordset)

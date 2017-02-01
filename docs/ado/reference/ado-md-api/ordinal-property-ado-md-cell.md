@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Ordinal Property (ADO MD Cell)

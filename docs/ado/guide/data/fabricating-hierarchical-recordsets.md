@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Fabricating Hierarchical Recordsets

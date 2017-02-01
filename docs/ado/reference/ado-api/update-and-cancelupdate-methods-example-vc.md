@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Update and CancelUpdate Methods Example (VC++)

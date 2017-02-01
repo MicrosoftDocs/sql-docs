@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CommandStream Property (ADO)

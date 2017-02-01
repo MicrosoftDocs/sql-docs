@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Error (ADO for Visual C++ Syntax)

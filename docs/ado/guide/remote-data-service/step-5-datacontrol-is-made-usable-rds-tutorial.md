@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 5: DataControl is Made Usable (RDS Tutorial)

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Levels Collection (ADO MD)

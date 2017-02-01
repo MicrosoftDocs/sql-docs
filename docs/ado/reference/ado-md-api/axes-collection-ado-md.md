@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Axes Collection (ADO MD)

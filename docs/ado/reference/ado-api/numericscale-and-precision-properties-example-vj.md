@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: ca9f10d2-b5d1-449b-807b-649ef4fbf0bb
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # NumericScale and Precision Properties Example (VJ++)

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Comments on HelloData

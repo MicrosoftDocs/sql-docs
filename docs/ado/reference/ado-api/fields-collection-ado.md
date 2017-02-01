@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Fields Collection (ADO)

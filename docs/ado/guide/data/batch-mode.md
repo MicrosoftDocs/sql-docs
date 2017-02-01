@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Batch Mode

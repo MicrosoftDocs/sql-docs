@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)

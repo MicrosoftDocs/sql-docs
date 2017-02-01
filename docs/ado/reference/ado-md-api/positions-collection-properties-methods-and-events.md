@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 56091fcb-71e1-463a-b8ae-c09108eece2f
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Positions Collection Properties, Methods, and Events

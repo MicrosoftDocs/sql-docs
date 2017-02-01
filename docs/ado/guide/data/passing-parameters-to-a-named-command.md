@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Passing Parameters to a Named Command

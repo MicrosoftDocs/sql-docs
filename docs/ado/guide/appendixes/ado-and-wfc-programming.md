@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 1fdfa42e-897e-4770-b320-ab3720adabcc
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO and WFC Programming

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using the Microsoft SDK for Java

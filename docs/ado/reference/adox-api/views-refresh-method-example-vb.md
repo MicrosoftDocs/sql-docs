@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Views Refresh Method Example (VB)

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Views Collection (ADOX)

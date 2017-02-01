@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Find Method Example (JScript)

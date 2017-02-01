@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # URL Property (RDS)

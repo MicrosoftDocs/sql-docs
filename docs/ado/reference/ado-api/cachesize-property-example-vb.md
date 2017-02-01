@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CacheSize Property Example (VB)

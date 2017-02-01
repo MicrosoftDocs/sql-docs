@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 70be5873-b95c-47a6-a793-d97c5b41e7e4
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Handline Errors in Visual J++

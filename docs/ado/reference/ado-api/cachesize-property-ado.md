@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CacheSize Property (ADO)

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Append Method (ADOX Tables)

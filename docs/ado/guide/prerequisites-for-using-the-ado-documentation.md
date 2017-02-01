@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Prerequisites for Using the ADO Documentation

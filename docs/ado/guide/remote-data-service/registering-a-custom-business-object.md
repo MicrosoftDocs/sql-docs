@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 caps.latest.revision: 19
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Registering a Custom Business Object

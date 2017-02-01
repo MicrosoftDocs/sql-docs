@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Procedures Delete Method Example (VB)

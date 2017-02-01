@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Count Property Example (VC++)

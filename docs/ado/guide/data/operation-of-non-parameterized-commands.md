@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Operation of Non-Parameterized Commands

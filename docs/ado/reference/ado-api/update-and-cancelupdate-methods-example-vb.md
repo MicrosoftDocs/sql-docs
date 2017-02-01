@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Update and CancelUpdate Methods Example (VB)

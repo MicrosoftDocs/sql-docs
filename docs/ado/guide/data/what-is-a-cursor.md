@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # What is a Cursor?

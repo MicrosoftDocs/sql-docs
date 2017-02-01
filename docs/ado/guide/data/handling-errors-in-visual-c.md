@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Handling Errors in Visual C++

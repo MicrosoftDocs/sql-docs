@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Event Instantiation: ADO and WFC

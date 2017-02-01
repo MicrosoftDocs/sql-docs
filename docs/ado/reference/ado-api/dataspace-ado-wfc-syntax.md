@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DataSpace (ADO - WFC Syntax)

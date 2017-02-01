@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Delete Method Example (VC++)

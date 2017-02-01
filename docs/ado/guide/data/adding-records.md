@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Adding Records

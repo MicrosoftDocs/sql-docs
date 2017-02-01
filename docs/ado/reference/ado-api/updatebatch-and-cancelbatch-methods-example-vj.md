@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 8e8728aa-267f-4468-9a04-8bb29457995c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # UpdateBatch and CancelBatch Methods Example (VJ++)

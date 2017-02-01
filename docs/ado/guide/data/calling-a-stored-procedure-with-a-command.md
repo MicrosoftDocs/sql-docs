@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Calling a Stored Procedure with a Command

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # InheritTypeEnum

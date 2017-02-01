@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: cd92d39e-0f7f-4fa6-a9f3-9cd5f00f184d
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Find Method Example (VJ++)

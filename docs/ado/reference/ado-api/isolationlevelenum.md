@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # IsolationLevelEnum

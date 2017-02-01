@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 caps.latest.revision: 6
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Property Object (ADO)

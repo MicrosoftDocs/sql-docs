@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 caps.latest.revision: 3
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # XML Security Considerations

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DeleteRule Property Example (VC++)

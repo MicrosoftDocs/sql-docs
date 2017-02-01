@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Status Property Example (Field) (VB)

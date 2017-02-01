@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # RDS Returns &quot;Stream Not Read&quot; Error

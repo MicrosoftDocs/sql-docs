@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Append Method (ADOX Columns)

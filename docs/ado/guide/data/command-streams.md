@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Command Streams

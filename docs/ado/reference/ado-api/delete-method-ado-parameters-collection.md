@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Delete Method (ADO Parameters Collection)

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Move Method (ADO)

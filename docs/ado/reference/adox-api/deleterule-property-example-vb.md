@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DeleteRule Property Example (VB)

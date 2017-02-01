@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # BOF, EOF, and Bookmark Properties Example (VC++)

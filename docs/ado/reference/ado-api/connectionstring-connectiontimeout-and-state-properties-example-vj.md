@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 4c1e61ed-6569-44a9-b0c8-75b820a64cb6
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ConnectionString, ConnectionTimeout, and State Properties Example (VJ++)

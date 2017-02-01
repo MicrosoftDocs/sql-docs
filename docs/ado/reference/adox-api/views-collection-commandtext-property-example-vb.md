@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Views Collection, CommandText Property Example (VB)

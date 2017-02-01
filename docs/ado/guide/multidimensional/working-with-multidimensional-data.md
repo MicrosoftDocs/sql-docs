@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Working with Multidimensional Data

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ef700465-2e97-46e8-8213-2d662501e540
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADOX API Reference

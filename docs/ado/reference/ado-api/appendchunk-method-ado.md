@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # AppendChunk Method (ADO)

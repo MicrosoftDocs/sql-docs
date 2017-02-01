@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DataMember Property

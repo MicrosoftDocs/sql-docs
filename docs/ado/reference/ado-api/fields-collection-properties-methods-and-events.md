@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Fields Collection Properties, Methods, and Events

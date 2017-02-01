@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADOX Fundamentals

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Supports Method

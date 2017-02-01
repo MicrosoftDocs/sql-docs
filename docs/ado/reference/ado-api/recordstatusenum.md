@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # RecordStatusEnum

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 05f9f20e-0697-46bf-b004-76d7fc2e5d52
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (VJ++)

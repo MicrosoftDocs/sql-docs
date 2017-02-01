@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # InternetTimeout Property Example (VC++)

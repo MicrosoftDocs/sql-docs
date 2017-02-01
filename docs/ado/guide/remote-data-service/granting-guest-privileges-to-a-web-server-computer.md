@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Granting Guest Privileges to a Web Server Computer

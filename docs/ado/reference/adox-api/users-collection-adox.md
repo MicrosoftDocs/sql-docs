@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Users Collection (ADOX)

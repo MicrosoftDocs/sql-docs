@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 8e9d52da-342d-46b5-8535-c57f07711db0
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActiveX Data Objects (ADO)

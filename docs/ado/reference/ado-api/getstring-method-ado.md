@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # GetString Method (ADO)

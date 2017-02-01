@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DrilledDown Property (ADO MD)

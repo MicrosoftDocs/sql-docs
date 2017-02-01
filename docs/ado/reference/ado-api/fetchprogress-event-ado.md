@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # FetchProgress Event (ADO)

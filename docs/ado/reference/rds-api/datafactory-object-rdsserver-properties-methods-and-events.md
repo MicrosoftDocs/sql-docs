@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DataFactory Object (RDSServer) Properties, Methods, and Events

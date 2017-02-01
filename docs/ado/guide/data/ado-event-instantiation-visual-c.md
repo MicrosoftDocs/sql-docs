@@ -14,7 +14,7 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Event Instantiation: Visual C++

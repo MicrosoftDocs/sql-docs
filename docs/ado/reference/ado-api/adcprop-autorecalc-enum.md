@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADCPROP_AUTORECALC_ENUM

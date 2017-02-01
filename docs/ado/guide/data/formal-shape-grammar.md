@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Formal Shape Grammar

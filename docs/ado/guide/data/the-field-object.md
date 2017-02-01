@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # The Field Object

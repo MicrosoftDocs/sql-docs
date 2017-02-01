@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Sort Property

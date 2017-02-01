@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Users Collection Properties, Methods, and Events

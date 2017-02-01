@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActualSize and DefinedSize Properties Example (JScript)

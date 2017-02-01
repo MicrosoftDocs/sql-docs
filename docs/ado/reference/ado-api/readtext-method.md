@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ReadText Method

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Open Method (ADO MD)

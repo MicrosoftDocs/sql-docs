@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Row Property (ADO)

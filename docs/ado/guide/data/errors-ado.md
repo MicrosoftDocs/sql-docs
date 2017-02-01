@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 8ae6611b-3069-4155-b014-c0c9da37be39
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Errors (ADO)

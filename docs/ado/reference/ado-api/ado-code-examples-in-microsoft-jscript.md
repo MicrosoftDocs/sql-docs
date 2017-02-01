@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Code Examples in Microsoft JScript

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CancelUpdate Method (ADO)

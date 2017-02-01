@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Calling a Stored Procedure as a Method on a Connection object

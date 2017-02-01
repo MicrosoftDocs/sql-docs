@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Command Object Overview

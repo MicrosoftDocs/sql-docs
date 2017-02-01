@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SkipLine Method

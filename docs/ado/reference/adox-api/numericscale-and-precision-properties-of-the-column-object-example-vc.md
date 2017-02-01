@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # NumericScale and Precision Properties of the Column Object Example (VC++)

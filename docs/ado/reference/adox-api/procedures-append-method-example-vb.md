@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Procedures Append Method Example (VB)

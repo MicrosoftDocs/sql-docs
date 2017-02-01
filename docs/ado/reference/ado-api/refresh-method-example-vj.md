@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c0fbf728-0ccb-468d-be1e-c09dad9ffddb
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Refresh Method Example (VJ++)

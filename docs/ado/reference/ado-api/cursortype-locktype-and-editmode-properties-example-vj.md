@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: c222016e-415d-485e-86c5-e29feac4297a
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CursorType, LockType, and EditMode Properties Example (VJ++)

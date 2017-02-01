@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
 caps.latest.revision: 4
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Disconnecting and Reconnecting the Recordset

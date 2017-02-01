@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Reshaping

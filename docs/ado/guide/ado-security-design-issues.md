@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 caps.latest.revision: 18
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Security Design Issues

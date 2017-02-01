@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SQL Property Example (VBScript)

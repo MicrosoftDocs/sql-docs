@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Address Book Navigation Buttons

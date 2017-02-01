@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # NativeError Property (ADO)

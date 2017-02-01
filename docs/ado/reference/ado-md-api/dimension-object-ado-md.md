@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Dimension Object (ADO MD)

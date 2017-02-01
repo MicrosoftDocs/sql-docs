@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Extensions for Data Definition Language and Security (ADOX)

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Immediate Mode

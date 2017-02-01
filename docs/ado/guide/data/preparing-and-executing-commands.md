@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Preparing and Executing Commands

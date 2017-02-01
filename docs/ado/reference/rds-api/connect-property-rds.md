@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Connect Property (RDS)

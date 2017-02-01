@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Java Class Wrappers

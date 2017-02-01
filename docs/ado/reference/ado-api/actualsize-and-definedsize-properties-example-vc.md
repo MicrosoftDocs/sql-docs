@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActualSize and DefinedSize Properties Example (VC++)

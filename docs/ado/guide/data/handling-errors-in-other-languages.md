@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Handling Errors In Other Languages

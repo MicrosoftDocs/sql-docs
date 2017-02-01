@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO MD Object Model

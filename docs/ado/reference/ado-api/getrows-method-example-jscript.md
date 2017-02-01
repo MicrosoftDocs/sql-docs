@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # GetRows Method Example (JScript)

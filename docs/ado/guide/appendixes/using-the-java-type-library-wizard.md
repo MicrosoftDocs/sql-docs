@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f9737a65-4b2f-47fa-b026-1494dca158eb
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using the Java Type Library Wizard

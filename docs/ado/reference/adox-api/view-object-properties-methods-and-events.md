@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # View Object Properties, Methods, and Events

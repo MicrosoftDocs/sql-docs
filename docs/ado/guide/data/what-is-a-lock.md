@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # What is a Lock?

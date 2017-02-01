@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DataControl Object (RDS) Properties, Methods, and Events

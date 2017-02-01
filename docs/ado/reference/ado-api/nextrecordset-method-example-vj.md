@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 7948eefb-f5cc-4e74-b2f4-39033b46243d
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # NextRecordset Method Example (VJ++)

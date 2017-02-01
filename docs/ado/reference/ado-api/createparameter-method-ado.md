@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CreateParameter Method (ADO)

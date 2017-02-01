@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Editing Existing Records

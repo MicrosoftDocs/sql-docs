@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using ADO with Microsoft Visual Basic

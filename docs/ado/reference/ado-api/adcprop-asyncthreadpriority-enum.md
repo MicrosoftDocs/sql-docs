@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADCPROP_ASYNCTHREADPRIORITY_ENUM

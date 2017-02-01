@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Understanding the Customization File

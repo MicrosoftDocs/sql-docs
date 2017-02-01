@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Connection Close Method, Table Type Property Example (VC++)

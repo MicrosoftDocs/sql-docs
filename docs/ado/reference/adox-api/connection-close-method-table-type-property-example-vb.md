@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Connection Close Method, Table Type Property Example (VB)

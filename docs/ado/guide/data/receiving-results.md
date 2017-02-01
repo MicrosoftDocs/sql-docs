@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Receiving Results

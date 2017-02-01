@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # WillChangeField and FieldChangeComplete Events (ADO)

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # StayInSync Property Example (VB)

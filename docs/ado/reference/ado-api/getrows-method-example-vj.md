@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 44dde820-9596-439c-97a8-037d40d873f0
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # GetRows Method Example (VJ++)

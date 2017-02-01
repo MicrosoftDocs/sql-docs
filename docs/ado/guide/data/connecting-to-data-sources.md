@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Connecting to Data Sources

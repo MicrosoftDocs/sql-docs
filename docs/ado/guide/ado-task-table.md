@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Task Table

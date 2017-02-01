@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActualSize and DefinedSize Properties Example (VB)

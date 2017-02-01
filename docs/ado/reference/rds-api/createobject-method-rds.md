@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CreateObject Method (RDS)

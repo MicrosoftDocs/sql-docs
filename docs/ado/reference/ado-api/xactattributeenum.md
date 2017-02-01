@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # XactAttributeEnum

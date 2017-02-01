@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # RowPosition Property (ADO)

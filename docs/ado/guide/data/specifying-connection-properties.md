@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Specifying Connection Properties

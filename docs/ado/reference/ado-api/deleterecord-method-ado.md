@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DeleteRecord Method (ADO)

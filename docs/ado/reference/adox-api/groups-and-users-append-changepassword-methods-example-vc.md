@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Groups and Users Append, ChangePassword Methods Example (VC++)

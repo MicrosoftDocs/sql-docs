@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Bookmark Property (ADO)

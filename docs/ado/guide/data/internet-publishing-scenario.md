@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Internet Publishing Scenario

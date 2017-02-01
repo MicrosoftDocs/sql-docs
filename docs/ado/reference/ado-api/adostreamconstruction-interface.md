@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADOStreamConstruction Interface

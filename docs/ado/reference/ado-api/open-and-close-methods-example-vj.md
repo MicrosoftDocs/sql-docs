@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 0b7dd9f8-4751-48fb-a75d-c6f75d80d928
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Open and Close Methods Example (VJ++)

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Open and Close Methods Example (VBScript)

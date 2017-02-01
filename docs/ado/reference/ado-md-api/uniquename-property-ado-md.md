@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # UniqueName Property (ADO MD)

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using a Recordset Object

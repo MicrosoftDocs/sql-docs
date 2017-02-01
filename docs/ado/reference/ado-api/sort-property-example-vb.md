@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Sort Property Example (VB)

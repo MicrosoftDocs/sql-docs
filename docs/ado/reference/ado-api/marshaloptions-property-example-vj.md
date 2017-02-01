@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9475c5f9-3a63-42cb-818c-4268e938a25c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # MarshalOptions Property Example (VJ++)

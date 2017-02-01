@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CopyRecord Method (ADO)

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Append Method (ADOX Procedures)

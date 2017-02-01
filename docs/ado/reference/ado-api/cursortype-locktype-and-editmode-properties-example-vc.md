@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CursorType, LockType, and EditMode Properties Example (VC++)

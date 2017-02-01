@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d0d735e0-669a-41e7-ada2-8dd80924e349
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # RDS Tutorial (Visual J++)

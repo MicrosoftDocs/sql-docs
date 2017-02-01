@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Execute, Requery, and Clear Methods Example (JScript)

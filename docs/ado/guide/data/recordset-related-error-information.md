@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Recordset-Related Error Information

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Flush Method (ADO)

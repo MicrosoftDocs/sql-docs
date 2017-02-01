@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 4: Populate the Details Text Box

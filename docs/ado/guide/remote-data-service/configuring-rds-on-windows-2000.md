@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Configuring RDS on Windows 2000

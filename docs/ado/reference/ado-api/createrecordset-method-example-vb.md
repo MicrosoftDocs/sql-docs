@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CreateRecordset Method Example (VB)

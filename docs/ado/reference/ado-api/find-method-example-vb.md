@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Find Method Example (VB)

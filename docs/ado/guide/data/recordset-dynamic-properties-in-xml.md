@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
 caps.latest.revision: 3
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Recordset Dynamic Properties in XML

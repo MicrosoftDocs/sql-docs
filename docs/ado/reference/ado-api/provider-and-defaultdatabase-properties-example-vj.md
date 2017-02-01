@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: fdc26576-37d0-4fa1-9afa-75d0e7133675
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Provider and DefaultDatabase Properties Example (VJ++)

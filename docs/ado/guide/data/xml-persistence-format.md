@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 caps.latest.revision: 6
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # XML Persistence Format

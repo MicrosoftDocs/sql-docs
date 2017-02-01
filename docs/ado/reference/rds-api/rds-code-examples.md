@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # RDS Code Examples

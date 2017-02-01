@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Member Object (ADO MD)

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Attributes and Name Properties Example (VC++)

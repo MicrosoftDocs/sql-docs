@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Synchronize Method (RDS)

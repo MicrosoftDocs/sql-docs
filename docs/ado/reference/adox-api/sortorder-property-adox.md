@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SortOrder Property (ADOX)

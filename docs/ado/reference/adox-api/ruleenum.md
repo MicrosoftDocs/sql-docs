@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # RuleEnum

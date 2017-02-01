@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # GetRows Method (ADO)

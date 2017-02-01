@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Positions Collection (ADO MD)

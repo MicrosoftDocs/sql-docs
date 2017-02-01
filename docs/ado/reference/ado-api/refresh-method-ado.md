@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Refresh Method (ADO)

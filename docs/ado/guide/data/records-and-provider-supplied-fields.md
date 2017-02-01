@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Records and Provider-Supplied Fields

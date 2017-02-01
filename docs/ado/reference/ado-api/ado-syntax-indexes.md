@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Syntax Indexes

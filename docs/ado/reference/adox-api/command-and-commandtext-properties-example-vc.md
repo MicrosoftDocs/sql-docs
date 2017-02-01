@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Command and CommandText Properties Example (VC++)

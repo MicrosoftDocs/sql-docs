@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 838c4bcb-bd78-4c98-a3ac-b8bf6e750db2
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Delete Method Example (VJ++)

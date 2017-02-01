@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Attributes Property Example (VB)

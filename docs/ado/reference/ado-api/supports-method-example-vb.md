@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Supports Method Example (VB)

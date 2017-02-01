@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SubmitChanges Method (RDS)

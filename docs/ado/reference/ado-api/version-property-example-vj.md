@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 40b2ab58-84b5-4ae6-9226-df9e8f7d97c6
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Version Property Example (VJ++)

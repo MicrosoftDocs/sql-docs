@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Appendix D: ADO Samples

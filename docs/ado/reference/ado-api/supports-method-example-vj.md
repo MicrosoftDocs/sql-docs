@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: eb7a5d97-0f3c-4bd4-b66d-cd1c454c4a93
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Supports Method Example (VJ++)

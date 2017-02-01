@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Stat Method

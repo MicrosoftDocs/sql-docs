@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Record (Visual C++ Syntax Index with #import)

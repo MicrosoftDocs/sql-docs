@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Version Property Example (VB)

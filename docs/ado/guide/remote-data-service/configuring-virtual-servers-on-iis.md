@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Configuring Virtual Servers on IIS

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 74afb37a-92b5-4cab-be49-18fb866e4d53
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # AbsolutePosition and CursorLocation Properties Example (VJ++)

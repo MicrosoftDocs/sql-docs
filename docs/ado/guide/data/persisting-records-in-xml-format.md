@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 caps.latest.revision: 17
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Persisting Records in XML Format

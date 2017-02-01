@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Catalog Object Properties, Methods, and Events (ADO MD)

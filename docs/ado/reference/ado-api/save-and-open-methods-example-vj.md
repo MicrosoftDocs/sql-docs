@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: bc425816-ecf8-4739-b50e-4cd5c60a151c
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Save and Open Methods Example (VJ++)

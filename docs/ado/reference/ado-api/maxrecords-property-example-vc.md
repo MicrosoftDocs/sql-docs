@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # MaxRecords Property Example (VC++)

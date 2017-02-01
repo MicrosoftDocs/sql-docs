@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActiveCommand Property (ADO)

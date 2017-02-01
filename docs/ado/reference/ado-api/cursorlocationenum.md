@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CursorLocationEnum

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Microsoft OLE DB Provider for Microsoft Indexing Service

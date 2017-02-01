@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # IndexNulls Property Example (VC++)

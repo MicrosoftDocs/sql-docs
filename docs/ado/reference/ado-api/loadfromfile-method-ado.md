@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # LoadFromFile Method (ADO)

@@ -14,7 +14,7 @@ dev_langs:
 ms.assetid: 0db15a15-d597-4c04-9ade-1ac0f0ebec0a
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Event Instantiation: VBScript

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Execute, Requery, and Clear Methods Example (VB)

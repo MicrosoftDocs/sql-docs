@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Accessing Rows in a Hierarchical Recordset

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 2a0936e6-6452-4fef-9295-50407a13d691
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActualSize and DefinedSize Properties Example (VJ++)

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Groups and Users Append, ChangePassword Methods Example (VB)

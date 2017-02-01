@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Visual Basic Example of Data Shaping

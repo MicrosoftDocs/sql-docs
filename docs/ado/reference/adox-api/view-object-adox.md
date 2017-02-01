@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # View Object (ADOX)

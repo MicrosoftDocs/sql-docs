@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Customization File UserList Section

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Children Property (ADO MD)

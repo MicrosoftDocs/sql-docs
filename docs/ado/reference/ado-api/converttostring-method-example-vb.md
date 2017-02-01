@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ConvertToString Method Example (VB)

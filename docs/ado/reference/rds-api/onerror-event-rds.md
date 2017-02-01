@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # onError Event (RDS)

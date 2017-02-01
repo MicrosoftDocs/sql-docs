@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # GetPermissions and SetPermissions Methods Example (VC++)

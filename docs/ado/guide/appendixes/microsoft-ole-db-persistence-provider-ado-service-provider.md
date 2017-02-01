@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Microsoft OLE DB Persistence Provider (ADO Service Provider)

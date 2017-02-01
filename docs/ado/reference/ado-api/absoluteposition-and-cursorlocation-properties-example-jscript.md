@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # AbsolutePosition and CursorLocation Properties Example (JScript)

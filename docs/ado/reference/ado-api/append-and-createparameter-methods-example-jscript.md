@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Append and CreateParameter Methods Example (JScript)

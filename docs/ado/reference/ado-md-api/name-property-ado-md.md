@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Name Property (ADO MD)

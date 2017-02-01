@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Dimensions Collection (ADO MD)

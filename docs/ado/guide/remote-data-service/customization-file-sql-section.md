@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Customization File SQL Section

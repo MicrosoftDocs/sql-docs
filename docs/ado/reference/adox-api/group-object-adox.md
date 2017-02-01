@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Group Object (ADOX)

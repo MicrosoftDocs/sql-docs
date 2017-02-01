@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 caps.latest.revision: 7
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Stream Object (ADO)

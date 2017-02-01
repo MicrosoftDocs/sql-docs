@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Precision Property (ADOX)

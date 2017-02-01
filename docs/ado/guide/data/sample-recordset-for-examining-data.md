@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Sample Recordset for Examining Data

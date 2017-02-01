@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 caps.latest.revision: 3
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Sending the Updates: UpdateBatch Method

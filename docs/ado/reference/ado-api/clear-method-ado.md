@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Clear Method (ADO)

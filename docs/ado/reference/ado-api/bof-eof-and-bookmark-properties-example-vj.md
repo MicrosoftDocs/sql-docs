@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: eecd75a8-3e4f-4a18-b1c1-4c053dd7833f
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # BOF, EOF, and Bookmark Properties Example (VJ++)

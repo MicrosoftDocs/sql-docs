@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d52e6926-5c22-43dc-9f32-7b32c1a071e2
 caps.latest.revision: 3
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Updating JOINed Results: Unique Table

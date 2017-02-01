@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Tables Collection (ADOX)

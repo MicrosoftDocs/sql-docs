@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ObjectStateEnum

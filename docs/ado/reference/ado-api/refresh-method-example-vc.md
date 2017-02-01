@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Refresh Method Example (VC++)

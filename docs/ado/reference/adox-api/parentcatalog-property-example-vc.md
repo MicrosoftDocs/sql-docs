@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ParentCatalog Property Example (VC++)

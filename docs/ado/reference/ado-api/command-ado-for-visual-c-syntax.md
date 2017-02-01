@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Command (ADO for Visual C++ Syntax)

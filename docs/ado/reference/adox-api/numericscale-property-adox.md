@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # NumericScale Property (ADOX)

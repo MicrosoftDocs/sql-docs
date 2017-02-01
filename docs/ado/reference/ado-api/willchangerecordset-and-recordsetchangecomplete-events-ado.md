@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # WillChangeRecordset and RecordsetChangeComplete Events (ADO)

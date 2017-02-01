@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DataFactory Object (RDSServer)

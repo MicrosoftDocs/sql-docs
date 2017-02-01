@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Views Collection Properties, Methods, and Events

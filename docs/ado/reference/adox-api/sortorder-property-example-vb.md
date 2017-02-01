@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SortOrder Property Example (VB)

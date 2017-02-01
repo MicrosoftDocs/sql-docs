@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Clustered Property Example (VC++)

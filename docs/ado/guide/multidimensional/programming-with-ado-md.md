@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Programming with ADO MD

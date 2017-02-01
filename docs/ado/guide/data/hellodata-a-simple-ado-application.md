@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # HelloData: A Simple ADO Application

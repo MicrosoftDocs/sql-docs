@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 3: Populate the Fields List Box

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Append and CreateParameter Methods Example (VC++)

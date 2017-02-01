@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # AppendChunk and GetChunk Methods Example (VC++)

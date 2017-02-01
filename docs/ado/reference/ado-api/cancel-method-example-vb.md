@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Cancel Method Example (VB)

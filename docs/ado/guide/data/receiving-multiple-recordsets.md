@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Receiving Multiple Recordsets

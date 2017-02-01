@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Creating a Connection String

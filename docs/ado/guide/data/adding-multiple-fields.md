@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Adding Multiple Fields

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # EditMode Property

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Setting DCOM Stream Marshaling Format

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Value Property Example (VC++)

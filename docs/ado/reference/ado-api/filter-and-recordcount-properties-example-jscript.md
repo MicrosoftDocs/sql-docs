@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Filter and RecordCount Properties Example (JScript)

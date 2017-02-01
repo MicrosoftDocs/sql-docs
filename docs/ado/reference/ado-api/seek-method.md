@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Seek Method

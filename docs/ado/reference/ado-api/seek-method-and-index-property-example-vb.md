@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Seek Method and Index Property Example (VB)

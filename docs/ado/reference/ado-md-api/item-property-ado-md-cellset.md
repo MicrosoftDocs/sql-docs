@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Item Property (ADO MD Cellset)

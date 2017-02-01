@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActiveConnection Property (ADO)

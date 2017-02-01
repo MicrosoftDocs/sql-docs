@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # LevelDepth Property (ADO MD)

@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Rowset Property (ADO)

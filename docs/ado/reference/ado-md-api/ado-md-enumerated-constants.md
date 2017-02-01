@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO MD Enumerated Constants

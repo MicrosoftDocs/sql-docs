@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Clone Method (ADO)

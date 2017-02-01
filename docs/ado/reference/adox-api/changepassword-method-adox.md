@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ChangePassword Method (ADOX)

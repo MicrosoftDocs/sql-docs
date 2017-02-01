@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 68cc1395-2433-4000-98dc-9e860170cd59
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Count Property Example (VJ++)

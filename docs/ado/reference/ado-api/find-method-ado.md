@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Find Method (ADO)

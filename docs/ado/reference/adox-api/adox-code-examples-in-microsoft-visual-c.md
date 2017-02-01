@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADOX Code Examples in Microsoft Visual C++

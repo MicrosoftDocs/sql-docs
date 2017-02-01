@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: b29ddb8c-ceb3-4aad-a240-8030462fceba
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Move Method Example (VJ++)

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CacheSize Property Example (VC++)

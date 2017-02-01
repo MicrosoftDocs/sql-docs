@@ -42,7 +42,7 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ParentCatalog Property (ADOX)

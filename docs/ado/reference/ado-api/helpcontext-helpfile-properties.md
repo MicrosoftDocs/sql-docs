@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # HelpContext, HelpFile Properties

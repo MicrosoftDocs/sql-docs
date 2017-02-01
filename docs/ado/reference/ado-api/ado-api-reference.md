@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO API Reference

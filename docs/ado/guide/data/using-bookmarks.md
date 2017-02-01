@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using Bookmarks

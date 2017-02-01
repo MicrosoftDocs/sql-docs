@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Reset Method (RDS)

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Status Property Example (Recordset) (VB)

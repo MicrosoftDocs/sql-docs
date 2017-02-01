@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Cancel Method (RDS)

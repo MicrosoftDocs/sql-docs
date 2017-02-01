@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # PrimaryKey and Unique Properties Example (VB)

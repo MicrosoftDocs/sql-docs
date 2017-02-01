@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # NumericScale and Precision Properties Example (VC++)

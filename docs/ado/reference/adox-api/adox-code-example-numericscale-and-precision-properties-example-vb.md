@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADOX Code Example: NumericScale and Precision Properties Example (VB)

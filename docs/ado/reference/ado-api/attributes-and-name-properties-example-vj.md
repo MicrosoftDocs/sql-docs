@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 625f8bcb-a9bb-4534-8768-00a9bcbe7b7f
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Attributes and Name Properties Example (VJ++)

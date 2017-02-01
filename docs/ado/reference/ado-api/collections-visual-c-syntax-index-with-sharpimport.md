@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Collections (Visual C++ Syntax Index with #import)

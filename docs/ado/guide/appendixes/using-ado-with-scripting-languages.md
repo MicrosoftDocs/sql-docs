@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using ADO with Scripting Languages

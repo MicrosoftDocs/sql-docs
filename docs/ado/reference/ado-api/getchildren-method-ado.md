@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # GetChildren Method (ADO)

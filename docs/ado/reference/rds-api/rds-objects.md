@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 caps.latest.revision: 18
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # RDS Objects

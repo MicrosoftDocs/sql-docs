@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO MD Fundamentals

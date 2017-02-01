@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Type Property (Column) (ADOX)

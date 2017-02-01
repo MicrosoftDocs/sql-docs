@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Types of Events

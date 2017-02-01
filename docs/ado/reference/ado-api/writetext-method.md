@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # WriteText Method

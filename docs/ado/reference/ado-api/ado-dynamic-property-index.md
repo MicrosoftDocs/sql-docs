@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Dynamic Property Index

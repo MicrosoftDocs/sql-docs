@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # RDS Tutorial (VBScript)

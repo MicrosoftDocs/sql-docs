@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Controlling Transactions (ADO)

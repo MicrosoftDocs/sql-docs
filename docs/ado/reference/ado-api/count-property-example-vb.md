@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Count Property Example (VB)

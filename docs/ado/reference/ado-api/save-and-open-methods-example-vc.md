@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Save and Open Methods Example (VC++)

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
 caps.latest.revision: 9
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO MD Code Examples in Visual Basic

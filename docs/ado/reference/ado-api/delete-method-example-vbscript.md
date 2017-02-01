@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Delete Method Example (VBScript)

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Jumping to a Record

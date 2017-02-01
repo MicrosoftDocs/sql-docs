@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Alternatives: Using SQL Statements

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Named Commands

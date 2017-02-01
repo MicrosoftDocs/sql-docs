@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Execute Method (ADO Command)

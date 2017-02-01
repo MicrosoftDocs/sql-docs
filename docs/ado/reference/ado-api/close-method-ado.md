@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Close Method (ADO)

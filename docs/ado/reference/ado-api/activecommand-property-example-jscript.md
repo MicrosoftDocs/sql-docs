@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActiveCommand Property Example (JScript)

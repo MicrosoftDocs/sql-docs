@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Working with Recordsets

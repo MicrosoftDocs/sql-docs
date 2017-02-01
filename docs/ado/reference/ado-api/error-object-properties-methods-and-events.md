@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Error Object Properties, Methods, and Events

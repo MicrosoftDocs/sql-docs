@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 0ef0ed20-83ac-4047-9294-506fd82f7201
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Resync Method Example (VJ++)

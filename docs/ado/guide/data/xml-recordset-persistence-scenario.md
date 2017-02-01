@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 caps.latest.revision: 4
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # XML Recordset Persistence Scenario

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Status Property Example (VC++)

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SetEOS Method

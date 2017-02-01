@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Internet Explorer Error Codes

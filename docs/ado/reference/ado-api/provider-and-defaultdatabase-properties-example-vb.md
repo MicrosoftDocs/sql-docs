@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Provider and DefaultDatabase Properties Example (VB)

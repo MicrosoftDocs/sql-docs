@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Open and Close Methods Example (VC++)

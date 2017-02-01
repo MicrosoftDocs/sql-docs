@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # JScript Code Example to Return a Recordset

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Indexes Append Method Example (VC++)

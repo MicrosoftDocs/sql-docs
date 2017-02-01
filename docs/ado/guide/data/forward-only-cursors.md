@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Forward-Only Cursors

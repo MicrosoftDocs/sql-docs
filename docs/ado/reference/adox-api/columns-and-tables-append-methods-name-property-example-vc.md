@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Columns and Tables Append Methods, Name Property Example (VC++)

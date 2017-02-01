@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
 caps.latest.revision: 17
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Deadlocks with Read Repeatable Isolation Level

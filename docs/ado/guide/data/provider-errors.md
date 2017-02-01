@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Provider Errors

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using ADO for Internet Publishing

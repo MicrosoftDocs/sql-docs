@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ReadyState Property (RDS)

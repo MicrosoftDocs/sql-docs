@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # WillConnect Event (ADO)

@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Provider and DefaultDatabase Properties Example (VC++)

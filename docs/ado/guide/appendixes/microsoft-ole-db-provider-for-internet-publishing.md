@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Microsoft OLE DB Provider for Internet Publishing

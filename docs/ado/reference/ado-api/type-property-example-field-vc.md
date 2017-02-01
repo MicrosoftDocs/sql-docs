@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Type Property Example (Field) (VC++)

@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VBScript)

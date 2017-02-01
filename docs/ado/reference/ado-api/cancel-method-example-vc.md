@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Cancel Method Example (VC++)

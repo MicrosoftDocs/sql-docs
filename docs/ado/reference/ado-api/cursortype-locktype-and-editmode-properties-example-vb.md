@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CursorType, LockType, and EditMode Properties Example (VB)

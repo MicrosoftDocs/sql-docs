@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ConnectionString, ConnectionTimeout, and State Properties Example (VC++)

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: f93099ae-797d-4f0d-ac28-81405b2892e1
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Update and CancelUpdate Methods Example (VJ++)

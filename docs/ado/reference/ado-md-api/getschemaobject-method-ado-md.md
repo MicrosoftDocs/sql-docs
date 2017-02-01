@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # GetSchemaObject Method (ADO MD)

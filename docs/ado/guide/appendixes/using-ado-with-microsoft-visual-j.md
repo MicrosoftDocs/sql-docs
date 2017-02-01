@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 15542c35-3bf7-4d5f-a3b2-3a5cff286987
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using ADO with Microsoft Visual J++

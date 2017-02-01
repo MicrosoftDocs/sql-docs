@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 caps.latest.revision: 16
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Address Book Command Buttons

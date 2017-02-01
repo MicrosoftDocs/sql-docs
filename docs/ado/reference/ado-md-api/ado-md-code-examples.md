@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO MD Code Examples

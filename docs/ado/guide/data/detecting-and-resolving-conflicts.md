@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 caps.latest.revision: 5
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Detecting and Resolving Conflicts

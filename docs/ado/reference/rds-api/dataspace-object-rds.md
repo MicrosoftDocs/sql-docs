@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DataSpace Object (RDS)

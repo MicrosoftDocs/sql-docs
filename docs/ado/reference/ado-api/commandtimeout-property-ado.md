@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CommandTimeout Property (ADO)

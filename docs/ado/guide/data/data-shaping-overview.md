@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Data Shaping Overview

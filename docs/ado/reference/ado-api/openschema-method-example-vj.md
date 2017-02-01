@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 4c1240f1-7464-47db-9761-2d547419aedd
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # OpenSchema Method Example (VJ++)

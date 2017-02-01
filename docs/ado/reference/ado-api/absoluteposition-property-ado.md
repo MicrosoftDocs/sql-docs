@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # AbsolutePosition Property (ADO)

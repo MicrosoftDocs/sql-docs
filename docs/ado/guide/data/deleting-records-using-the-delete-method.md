@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Deleting Records Using the Delete Method

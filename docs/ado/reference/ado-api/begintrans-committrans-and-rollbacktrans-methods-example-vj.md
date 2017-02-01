@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 27f502f8-d66a-4b44-9071-a05993d3fabb
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # BeginTrans, CommitTrans, and RollbackTrans Methods Example (VJ++)

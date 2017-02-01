@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # SaveOptionsEnum

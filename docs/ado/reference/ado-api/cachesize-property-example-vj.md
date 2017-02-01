@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d6fe482a-6951-438b-be58-e08f64efd1e2
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CacheSize Property Example (VJ++)

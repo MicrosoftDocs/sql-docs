@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Getting Data

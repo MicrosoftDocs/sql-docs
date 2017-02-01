@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # AddNew Method (ADO)

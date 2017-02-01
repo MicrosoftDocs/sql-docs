@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DateCreated and DateModified Properties Example (VB)

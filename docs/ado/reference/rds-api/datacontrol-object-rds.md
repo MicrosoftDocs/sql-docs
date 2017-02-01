@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 caps.latest.revision: 15
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # DataControl Object (RDS)

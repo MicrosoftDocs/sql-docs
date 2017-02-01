@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 caps.latest.revision: 4
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Handling Errors in JScript

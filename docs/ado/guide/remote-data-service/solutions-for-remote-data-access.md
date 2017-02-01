@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 caps.latest.revision: 14
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Solutions for Remote Data Access

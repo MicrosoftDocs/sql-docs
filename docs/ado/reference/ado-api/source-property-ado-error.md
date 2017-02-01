@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Source Property (ADO Error)

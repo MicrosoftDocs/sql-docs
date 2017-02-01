@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Parameterized Commands with Intervening COMPUTE Commands

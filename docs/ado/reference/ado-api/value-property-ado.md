@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 caps.latest.revision: 8
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Value Property (ADO)

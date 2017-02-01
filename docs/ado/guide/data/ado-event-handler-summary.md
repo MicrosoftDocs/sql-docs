@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Event Handler Summary

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 caps.latest.revision: 12
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # The Fields Collection

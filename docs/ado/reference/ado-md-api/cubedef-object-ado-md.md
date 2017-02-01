@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CubeDef Object (ADO MD)

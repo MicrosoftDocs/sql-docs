@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # The Microsoft Cursor Service for OLE DB

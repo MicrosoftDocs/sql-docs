@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Updating and Persisting Data

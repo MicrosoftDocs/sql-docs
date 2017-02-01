@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 69a4a219-8d52-401b-9e92-2ef415f68b05
 caps.latest.revision: 10
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VJ++)

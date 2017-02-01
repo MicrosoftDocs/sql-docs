@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # CursorLocation Property (ADO)

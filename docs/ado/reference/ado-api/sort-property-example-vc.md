@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Sort Property Example (VC++)

@@ -23,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Source Property (ADO Recordset)

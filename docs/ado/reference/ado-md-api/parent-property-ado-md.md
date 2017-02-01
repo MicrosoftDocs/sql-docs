@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 32c278c1-d8e1-4bb7-9ecd-2fbfdffee34b
 caps.latest.revision: 13
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Parent Property (ADO MD)

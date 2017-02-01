@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 caps.latest.revision: 11
 author: "MightyPen"
-ms.author: "annemill"
+ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Indexes Append Method Example (VB)

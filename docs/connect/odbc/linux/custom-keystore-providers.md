@@ -12,6 +12,7 @@ ms.topic: "article"
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 caps.latest.revision: 1
 ms.author: "v-jasonl"
+author: "MightyPen"
 ---
 # Custom Keystore Providers
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

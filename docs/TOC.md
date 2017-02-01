@@ -6,3 +6,4 @@
 #  [SQL Server Data Drivers](./connect/TOC.md)
 #  [SQL Server Samples](./sample/TOC.md)
 #  [SQL Server Migration Assistant (SSMA)](./ssma/TOC.md)
+#  [SQL Server Release Notes](./release-notes/toc.md)

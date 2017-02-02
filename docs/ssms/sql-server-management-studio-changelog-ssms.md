@@ -16,12 +16,13 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # SQL Server Management Studio - Changelog (SSMS)
-### SSMS 16.5.2 release
-Generally available | Build number: 13.0.16105.4
 
- 
+## SSMS 16.5.3 release
+Generally available | Build number: 13.0.16106.4
+
 The following issues were fixed this release:
 
+* Fixed an issue introduced in SSMS 16.5.2 which was causing the expansion of the 'Table' node when the table had more than one sparse column.
 
 * Users can deploy SSIS packages containing OData Connection Manager which connect to a Microsoft Dynamics AX/CRM Online resource to SSIS catalog. For more information, see [OData Connection Manager](https://msdn.microsoft.com/library/dn584133.aspx).
 
@@ -46,9 +47,7 @@ The following issues were fixed this release:
 * SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
 
 
-
-
-### SSMS 16.5.1 release
+## SSMS 16.5.1 release
 Generally available | Build number: 13.0.16100.1
 
 * Fixed an issue where Invoke-Sqlcmd erroneously inserts multiple rows when check constraint occurs. [Microsoft Connect Item: 811560](https://connect.microsoft.com/SQLServer/feedback/details/811560)
@@ -58,7 +57,7 @@ Generally available | Build number: 13.0.16100.1
 * Fixed an issue where clicking query plan XML does not open the proper SSMS UI.
 
 
-### SSMS 16.5 release
+## SSMS 16.5 release
 Generally available | Build number: 13.0.16000.28
 
 * Fixed an issue where a crash could occur when a database with table name containing “;:” was clicked on.
@@ -82,7 +81,7 @@ Generally available | Build number: 13.0.16000.28
 * Fixed the issue of SSMS crashes that occur when closing the application or when it is trying to show the error dialog.
 
 
-### SSMS 16.4.1 (September 2016) release
+## SSMS 16.4.1 (September 2016) release
 Generally available | Build number: 13.0.15900.1
 
 *  Fixed an issue where attempting to ALTER/Modify a Stored Procedure fails:  
@@ -144,7 +143,7 @@ Generally available | Build number: 13.0.15900.1
 
 
 
-### SSMS 16.3 (August 2016) release
+## SSMS 16.3 (August 2016) release
 Generally available | Version number: 13.0.15700.28
 
 * SSMS monthly releases are now branded numerically.
@@ -200,7 +199,7 @@ Generally available | Version number: 13.0.15700.28
 
 
 ---
-### SSMS July 2016 hotfix update release 
+## SSMS July 2016 hotfix update release 
 Generally available | Version number: 13.0.15600.2
 
 * **Bug fix in SSMS to enable missing right-click menu items**.  
@@ -210,7 +209,7 @@ Generally available | Version number: 13.0.15600.2
 [Microsoft Connect item #2924345](https://connect.microsoft.com/SQLServer/feedback/details/2924345/some-ssms-object-explorer-right-click-menu-options-missing-in-july-update)
 
 ---
-### SSMS July 2016 release 
+## SSMS July 2016 release 
 Generally available | Version number: 13.0.15500.91
 
 * *Edit, July 5th:* **Improved support for SQL Server 2016 (1200 compatibility level) tabular databases in the Analysis Services Process dialog and the Analysis Services deployment wizard.**
@@ -268,7 +267,7 @@ Generally available | Version number: 13.0.15500.91
 * **Bug fix in Analysis Services to correctly show the Data Feed provider for multi-dimensional Analysis Services models.**
 
 ----
-### SSMS June 2016 generally available release
+## SSMS June 2016 generally available release
 Generally available | Version number: 13.0.15000.23
 
 * **SSMS is generally available starting with the June 2016 release.**
@@ -294,7 +293,7 @@ Generally available | Version number: 13.0.15000.23
 * **Bug fixes in Always Encrypted experience. Fixed bug where Always Encrypted menu option was not enabled correctly for Stretch databases. Also fixed bug in the Always Encrypted wizard where it was not properly using the SafeNet (Luna SA) HSM provider.**
 
 ---
-### SSMS April 2016 Preview 
+## SSMS April 2016 Preview 
 Version number: 13.0.14000.36
   
 * **Improvement in the SSMS installer to add human-readable error messages.**  
@@ -316,7 +315,7 @@ Version number: 13.0.14000.36
 * **Bug fix in Always Encrypted New Column Master Key dialog to provide feedback on attempt to generate a key using an unsupported Cryptographic Algorithm (CNG) provider.**  
   
 ---  
-### SSMS March 2016 Preview Refresh
+## SSMS March 2016 Preview Refresh
 Version number: 13.0.13000.55
   
 * **SSMS now uses the Visual Studio 2015 Isolated Shell.**  
@@ -368,7 +367,7 @@ Version number: 13.0.13000.55
 <https://connect.microsoft.com/SQLServer/feedback/details/2534820/ssms-ctrl-u-doesnt-work/>  
   
 ---  
-### SSMS March 2016 Preview 
+## SSMS March 2016 Preview 
 Version number: 13.0.12500.29 
   
 * **Improvement in SSMS web installer to allow navigation using keyboard keys.**  
@@ -387,7 +386,7 @@ Version number: 13.0.12500.29
 * **Bug fixes in Backup wizard to allow custom multiple backup names for striped backups, and to display appropriate backup file name if a new name is entered after a storage credential is selected.**  
   
 ---  
-### SSMS February 2016 Preview 
+## SSMS February 2016 Preview 
 Version number: 13.0.12000.65
   
 * **Improvement in Activity monitor to display text options when high contrast settings are enabled in SSMS.**  
@@ -403,7 +402,7 @@ Version number: 13.0.12000.65
 * **Bug fix for 'type initializer' error that occurs if Always Encrypted dialog is launched using the SSMS January release or the SSMS release bundled with the SQL Server RC0 media.**  
   
 ---  
-### SSMS January 2016 Preview 
+## SSMS January 2016 Preview 
 Version number: 13.0.11000.78 
   
 * **Bug fix in SSMS to allow the deletion of Extended Events (XEvent) sessions.**  
@@ -424,7 +423,7 @@ Version number: 13.0.11000.78
  *Linked customer bug requests:*  
  <https://connect.microsoft.com/SQLServer/feedback/details/2103116/>  
 ---  
-### SSMS December 2015 Preview 
+## SSMS December 2015 Preview 
 Version number: 13.0.900.73
   
 * **Improvements to Showplan comparison to enable comparison of the current query execution plan with one saved in a file.**  
@@ -449,7 +448,7 @@ Version number: 13.0.900.73
 <https://connect.microsoft.com/SQLServer/feedback/details/2079557/unable-to-instal-sql-server-update-13-0-800-111-over-13-0-700-242-error-code-2711>  
   
 ---  
-### SSMS November 2015 Preview
+## SSMS November 2015 Preview
 Version number: 13.0.800.111
   
 * **Bitmap scaling support for High-DPI displays in SSMS.**  
@@ -472,7 +471,7 @@ Version number: 13.0.800.111
   <https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
 ***  
 
-### SSMS October 2015 Preview 
+## SSMS October 2015 Preview 
 Version number: 13.0.700.242  
 * **New modernized lightweight web installer that simplifies the SSMS download and install process.**  
   
@@ -496,7 +495,7 @@ Version number: 13.0.700.242
 <https://connect.microsoft.com/SQLServer/feedback/details/1737185/sql-server-2016-overall-resource-consumption-query-store-pane-issue>  
 ***  
 
-### SSMS September 2015 Preview 
+## SSMS September 2015 Preview 
 Version number: 13.0.600.65  
 * **New firewall rule dialog that streamlines the process of connecting to an Azure SQL database.**      
     
@@ -523,7 +522,7 @@ Version number: 13.0.600.65
   <https://connect.microsoft.com/SQLServer/feedback/details/1589096/live-query-statistics-node-shows-as-completed>  
   
 ***      
-### SSMS August 2015 Preview 
+## SSMS August 2015 Preview 
 Version number: 13.0.500.53
   
 * **Object explorer updates to reduce loading delay when there are a large number of databases.**  
@@ -533,7 +532,7 @@ Version number: 13.0.500.53
 * **Bug fixes and updates to SQL Server Configuration manager, and SSMS user reports user interface**    
 ***  
   
-### SSMS July 2015 Preview
+## SSMS July 2015 Preview
 Version number: 13.0.400.91
   
 * **Database diagrams for Azure SQL Database (V12).**  
@@ -545,7 +544,7 @@ Version number: 13.0.400.91
 * **Bug fixes (updated 'check for update' UI, UI fix in 'compatibility level' list and more).**  
 ***  
   
-### SSMS June 2015 Preview 
+## SSMS June 2015 Preview 
 Version number: 13.0.300.44
   
 * **New SSMS light-weight web installer.**  

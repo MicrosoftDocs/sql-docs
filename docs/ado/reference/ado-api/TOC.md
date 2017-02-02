@@ -18,7 +18,7 @@
 # [Save Method](save-method.md)
 # [Begin, Commit, Rollback - TransComplete](begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)
 # [EventStatusEnum](eventstatusenum.md)
-# [PersistFormatEnum](persistform atenum.md)
+# [PersistFormatEnum](persistformatenum.md)
 # [Supports Method Example (VJ++)](supports-method-example-vj.md)
 # [AddNew Method Example (JScript)](addnew-method-example-jscript.md)
 # [CancelUpdate Method (ADO)](cancelupdate-method-ado.md)

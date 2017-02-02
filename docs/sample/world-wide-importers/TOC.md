@@ -1,6 +1,5 @@
 # [Overview](overview.md)
 # [Wide World Importers Documentation](wide-world-importers-documentation.md)
-# [wasnull method sqlserverresultset](wasnull-method-sqlserverresultset.md)
 # [Data generation.md](data-generation.md)
 # [ETL workflow.md](etl-workflow.md)
 

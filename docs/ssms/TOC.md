@@ -2,6 +2,7 @@
 # [Download SSMS](download-sql-server-management-studio-ssms.md)
 # [SSMS Changelog](sql-server-management-studio-changelog-ssms.md)
 # [Release notes](sql-server-management-studio-release-notes.md)
+# [SQL Server Management Studio (SSMS) - Release Candidate](sql-server-management-studio-ssms-release-candidate.md)
 
 # [SQL Server Agent](./agent/TOC.md)
 # [F1-Help](./f1-help/TOC.md)
@@ -20,7 +21,6 @@
 # [Understand SQL Server Management Studio Windows Management](understand-sql-server-management-studio-windows-management.md)
 # [External Tools Dialog Box](external-tools-dialog-box.md)
 
-# [SQL Server Management Studio (SSMS) - Release Candidate](sql-server-management-studio-ssms-release-candidate.md)
 # [Arguments Dialog Box](arguments-dialog-box.md)
 # [Administer Servers with SQL Server Management Studio](administer-servers-with-sql-server-management-studio.md)
 # [License Terms](sql-server-management-studio-license-terms.md)

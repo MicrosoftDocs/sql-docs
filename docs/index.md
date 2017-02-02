@@ -910,7 +910,7 @@ description: Learn about SQL
                                             <div class="cardText">
                                                 <h3>SSMS</h3>
                                                 <p><a href="/azure/sql-database/sql-database-connect-query-ssms">Get started</a></p>
-                                                <p><a href="https://msdn.microsoft.com/library/mt238290.aspx">Download SQL Server Management Studio</a></p>
+                                                <p><a href="./ssms/download-sql-server-management-studio-ssms">Download SQL Server Management Studio</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -928,7 +928,7 @@ description: Learn about SQL
                                             <div class="cardText">
                                                 <h3>SSDT</h3>
                                                 <p><a href="https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx">Get started</a></p>
-                                                <p><a href="https://msdn.microsoft.com/library/mt204009.aspx">Download SQL Server Data Tools</a></p>
+                                                <p><a href="./ssdt/download-sql-server-data-tools-ssdt">Download SQL Server Data Tools</a></p>
                                             </div>
                                         </div>
                                     </div>

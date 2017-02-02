@@ -5,3 +5,4 @@
 # [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
 # [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
 # [Microsoft SQL Server](microsoft-sql-server.md)
+# [SQL Server Help Installation](sql-server-help-installation.md)

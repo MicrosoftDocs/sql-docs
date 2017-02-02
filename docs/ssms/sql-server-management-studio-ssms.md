@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.date: "01/30/2017"
+ms.date: "02/02/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,7 +21,7 @@ SSMS is part of a suite of developer tools Microsoft offers free of charge for y
  
  - [**Download SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx) 
  - [**Download SQL Server 2016 Developer edition**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
-  - [**Download Visual Studio 2015 Developer edition**](https://www.visualstudio.com/post-download-vs/?sku=community&clcid=0x409&downloadrename=true)
+ - [**Download Visual Studio 2015 Developer edition**](https://www.visualstudio.com/post-download-vs/?sku=community&clcid=0x409&downloadrename=true)
 
   
 ## SQL Server Management Studio components  

@@ -34,7 +34,7 @@ SQL Server Management Studio (SSMS) is an integrated environment for accessing, 
     
 | ![download](../ssdt/media/download.png) Download SQL Server Management Studio (SSMS)  |  |
 |:---|:---|
-|**[Download SQL Server Management Studio (16.5.2)](https://go.microsoft.com/fwlink/?LinkID=839337)**|Current release for production use.|
+|**[Download SQL Server Management Studio (16.5.3)](https://go.microsoft.com/fwlink/?LinkID=840946)**|Current release for production use.|
 |**[Download SQL Server Management Studio - Release Candidate](https://go.microsoft.com/fwlink/?LinkID=835608)**|Includes support for SQL Server vNext CTP1, and works side-by-side with 16.x, but not recommended for production use.| 
 
 
@@ -46,8 +46,8 @@ SQL Server Management Studio (SSMS) is an integrated environment for accessing, 
 ## SQL Server Management Studio   
 **Version Information**  
   
-The release number: 16.5.2  
-The build number for this release: 13.0.16105.4
+The release number: 16.5.3  
+The build number for this release: 13.0.16106.4
   
 **Supported SQL Server versions**  
   
@@ -65,15 +65,17 @@ This release of SSMS supports the following platforms when used with the latest 
 > Non-English localized releases of SSMS require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2. 
   
  This release of SSMS can be installed in the following languages:  
-[Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x40c)  
-[German](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?linkid=839337&clcid=0x40a)  
+[Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)  
+[German](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)  
 
  
 ## Changelog  
 
-16.5.2
- 
+16.5.3
+
 The following issues were fixed this release:
+
+* Fixed an issue introduced in SSMS 16.5.2 which was causing the expansion of the 'Table' node when the table had more than one sparse column.
 
 * Users can deploy SSIS packages containing OData Connection Manager which connect to a Microsoft Dynamics AX/CRM Online resource to SSIS catalog. For more information, see [OData Connection Manager](https://msdn.microsoft.com/library/dn584133.aspx).
 
@@ -96,6 +98,9 @@ The following issues were fixed this release:
 * SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
 
 * SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
+
+
+
 
 
 For the full list of features, see   

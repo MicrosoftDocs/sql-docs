@@ -1,11 +1,11 @@
 ---
 # required metadata
 title: Install SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
-description: Describes how to install SQL Server vNext CTP 1.2 on SUSE Linux Enterprise Server 7.3.
+description: Describes how to install SQL Server vNext CTP 1.2 on SUSE Linux Enterprise Server.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 02/01/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -31,6 +31,8 @@ This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
 > SQL Server Engine has only been tested up to 256GB of memory at this time.
 
+> [!NOTE]
+> The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
 ## Install SQL Server
 To install the mssql-server package on SLES, follow these steps:

@@ -37,7 +37,8 @@ Help Viewer 2.2 is available in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md
 7. Click **Add** next to the documentation you want to install, and then click **Update**.  
 ![HelpViewer2_ManageContent_AddContent](../release-notes/media/helpviewer2-managecontent-addcontent.png)     
   
-   >[!IMPORTANT] In SQL Server Management Studio and Visual Studio, the Help Viewer application may freeze (hang) during the process of adding the documentation. To resolve this issue, do the following. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).  
+   >[!IMPORTANT] 
+   >In SQL Server Management Studio and Visual Studio, the Help Viewer application may freeze (hang) during the process of adding the documentation. To resolve this issue, do the following. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).  
    >>Open the %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings file in Notepad and change the date in the following code to some date in the future. This file is available on your local machine only when you have installed Visual Studio. 
    >>>Cache LastRefreshed="12/31/2017 00:00:00"  
   
@@ -50,7 +51,8 @@ Help Viewer 2.2 is available in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md
 
    After the content is moved, the new location is displayed in the **Local store path**.
       
-   >[!IMPORTANT] If a message appears indicating that the move operation has failed, close the message box, close the Help Viewer and then re-open the Help Viewer. The new location for the content should now appear in the **Local store path**.   
+   >[!IMPORTANT]
+   > If a message appears indicating that the move operation has failed, close the message box, close the Help Viewer and then re-open the Help Viewer. The new location for the content should now appear in the **Local store path**.   
   
 **To display local Help or online Help in SQL Server Management Studio**  
 * To view local Help, click **Add and Remove Help Content** on the **Help** menu, and then click the **Help Viewer Home** tab to see the documentation.  
@@ -70,7 +72,8 @@ Help Viewer 2.2 is available in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md
 ## [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] and Help Viewer 1.1  
  Help Viewer 1.1 is available in [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] Management Studio and versions of Visual Studio prior to Visual Studio 2012.   
  
->[!NOTE] You can also view local Help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] using Help Viewer 2.2 only when you **Install content from disk**. Help Viewer 2.2 is available in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]  Management Studio starting with the April 2016 Preview (13.0.12500.29) and in Visual Studio 2015. 
+>[!NOTE]
+> You can also view local Help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] using Help Viewer 2.2 only when you **Install content from disk**. Help Viewer 2.2 is available in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]  Management Studio starting with the April 2016 Preview (13.0.12500.29) and in Visual Studio 2015. 
    
 **To install local Help to use with Help Viewer 1.1**  
 1. Navigate to the [download site](https://www.microsoft.com/en-us/download/details.aspx?id=42557) for the Help content and click **Download**.  
@@ -84,7 +87,8 @@ Select Install content from disk  |Browse to Help content file
 ---------|---------  
 ![HelpLibraryManager_MainPage_InstallFromDisk](../release-notes/media/helplibrarymanager-mainpage-installfromdisk.png)    | ![HelpLibraryManager_InstallContentFromDisk_dialog1](../release-notes/media/helplibrarymanager-installcontentfromdisk-dialog1.png)          
   
->[!IMPORTANT] To avoid installing local Help content that has only a partial table of contents, use the **Install content from disk** option in the **Help Library Manager**.  
+>[!IMPORTANT]
+> To avoid installing local Help content that has only a partial table of contents, use the **Install content from disk** option in the **Help Library Manager**.  
 >>If you've used the **Install content from online** option and the Help Viewer is displaying a partial table of contents, see this [blog post](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) for troubleshooting steps.  
 8. Click the HelpContentSetup.msha file, click **Open**, and then click **Next**.  
 9. Click **Add** next to the documentation you want to install, and then click **Update**.  

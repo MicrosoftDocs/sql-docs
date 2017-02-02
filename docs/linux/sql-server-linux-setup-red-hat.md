@@ -5,7 +5,7 @@ description: Describes how to install SQL Server vNext CTP 1.2 on Red Hat Enterp
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 02/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -71,7 +71,7 @@ To install the mssql-server package on RHEL, follow these steps:
    systemctl status mssql-server
    ```
    
-7. You may need to open a port on the firewall on RHEL.  If you are using **FirewallD** for your firewall, you can use the following commands.
+7. To allow remote connections, open the SQL Server port on the firewall on RHEL. The default SQL Server port is TCP 1433. If you are using **FirewallD** for your firewall, you can use the following commands:
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent

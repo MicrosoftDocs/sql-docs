@@ -6,7 +6,7 @@ description: Implement high availability by configuring SUSE Linux Enterprise Se
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 01/30/2017
+ms.date: 02/01/2017
 ms.topic: article
 ms.prod: sql-linux 
 ms.technology: database-engine
@@ -25,9 +25,9 @@ ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 
 # Configure SLES shared disk cluster for SQL Server
 
-This guide provides instructions to create a two-nodes shared disk cluster for SQL Server on SUSE Linux Enterprise Server (SLES). The clustering layer is based on SUSE [High Availability Extension](https://www.suse.com/products/highavailability) built on top of [Pacemaker](http://clusterlabs.org/). 
+This guide provides instructions to create a two-nodes shared disk cluster for SQL Server on SUSE Linux Enterprise Server (SLES). The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](http://clusterlabs.org/). 
 
-For more details on cluster configuration, resource agent options, and management, best practices and recommendations visit [SUSE reference documentation](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html).
+For more details on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 > [!NOTE]
 > At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. It is expected that @@servername and sys.servers to return the node name, while the cluster dmvs sys.dm_os_cluster_nodes and sys.dm_os_cluster_properties will no records. To use a connection string that points to a string server name and not use the IP, they will have to register in their DNS server the IP used to create the virtual IP resource (as explained below) with the chosen server name.
@@ -86,12 +86,12 @@ The first step is to configure the operating system on the cluster nodes. For th
     ```
 
     > [!NOTE]
-    > All cluster nodes must be able to access each other via SSH. Tools like hb_report or crm_report (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes, otherwise they can only collect data from the current node. In case you use a non-standard SSH port, use the -X option ([see man page](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)). For example, if your SSH port is 3479, invoke an hb_report with:
+    > All cluster nodes must be able to access each other via SSH. Tools like hb_report or crm_report (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes, otherwise they can only collect data from the current node. In case you use a non-standard SSH port, use the -X option ([see man page](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)). For example, if your SSH port is 3479, invoke an crm_report with:
     >
     >```bash
-    >hb_report -X "-p 3479" [...]
+    >crm_report -X "-p 3479" [...]
     >```
-    >For more information, see [the other requirements and recommendations in the SUSE documentation.](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)
+    >For more information, see [the Administration Guide].(https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)
 
 In the next section you will configure shared storage and move your database files to that storage.  
 
@@ -99,18 +99,17 @@ In the next section you will configure shared storage and move your database fil
 
 There are a variety of solutions for providing shared storage. This walk-through demonstrates configuring shared storage with NFS. We recommend to follow best practices and use Kerberos to secure NFS: 
 
-- [Sharing File Systems with NFS](https://www.suse.com/documentation/sled11/book_sle_admin/data/cha_nfs.html)
-- [Configuring a NFSv4 Server and Client on SUSE Linux Enterprise Server 10](https://www.suse.com/communities/blog/configuring-nfsv4-server-and-client-suse-linux-enterprise-server-10/)
+- [Sharing File Systems with NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
 
 If you do not follow this guidance, anyone who can access your network and spoof the IP address of a SQL node will be able to access your data files. As always, make sure you threat model your system before using it in production. 
 
 Another storage option is to use SMB file share:
 
-- [Samba section of SUSE documentation](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
+- [Samba section of SUSE documentation](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.samba)
 
 ### Configure an NFS server
 
-To configure an NFS server, refer to the following steps in the SUSE documentation: [Configuring NFS Server](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_nfs_configuring-nfs-server.html).
+To configure an NFS server, refer to the following steps in the SUSE documentation: [Configuring NFS Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
 
 ### Configure all cluster nodes to connect to the NFS shared storage
 
@@ -128,10 +127,10 @@ Before configuring the client NFS to mount the SQL Server database files path to
 
     Configure the NFS client on all cluster nodes:
 
-    - [Configuring Clients](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_nfs_configuring-nfs-clients.html)
+    - [Configuring Clients](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > It is recommended to follow SUSE’s best practices and recommendations regarding Highly Available NFS storage: [Highly Available NFS Storage with DRBD and Pacemaker](https://www.suse.com/documentation/sle_ha/book_sleha_techguides/data/art_ha_quick_nfs.html).
+    > It is recommended to follow SUSE’s best practices and recommendations regarding Highly Available NFS storage: [Highly Available NFS Storage with DRBD and Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
 
 2. Validate that SQL Server starts successfully with the new file path. Do this on each node. At this point only one node should run SQL Server at a time. They cannot both run at the same time because they will both try to access the data files simultaneously (to avoid accidentally starting SQL Server on both nodes, use a File System cluster resource to make sure the share is not mounted twice by the different nodes). The following commands start SQL Server, check the status, and then stop SQL Server.
 
@@ -157,22 +156,24 @@ At this point both instances of SQL Server are configured to run with the databa
 2. **All cluster nodes must be able to access each other via SSH**. Tools like hb_report or crm_report (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes, otherwise they can only collect data from the current node. In case you use a non-standard SSH port, use the -X option (see man page). For example, if your SSH port is 3479, invoke an hb_report with:
 
     ```bash
-    hb_report -X "-p 3479" [...]
+    crm_report -X "-p 3479" [...]
     ```
 
     For more information, see [System Requirements and Recommendations in the SUSE documentation](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html).
 
 3. **Install the High Availability extension**. To install the extension, follow the steps in the following SUSE topic:
     
-    [Installation as Add-on](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_add-on.html)
+    [Installation and Setup Quick Start](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html)
 
 4. **Install the FCI resource agent for SQL Server**. Run the following commands on both nodes:
 
     ```bash
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```
 
-5. **Automatically set up the first node**. The next step is to setup a running one-node cluster by configuring the first node, SLES1. Follow the instructions in the **Automatically Setting Up the First Node** section of the SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).
+5. **Automatically set up the first node**. The next step is to setup a running one-node cluster by configuring the first node, SLES1. Follow the instructions in the SUSE topic, [Setting Up the First Node](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node).
 
     When finished, check the cluster status with `crm status`:
     ```bash
@@ -181,7 +182,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
     It should show that one node, SLES1, is configured.
 
-6. **Add nodes to an existing cluster**. Next join the SLES2 node to the cluster. Follow the instructions in the **Adding Nodes to an Existing Cluster** in the same SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).
+6. **Add nodes to an existing cluster**. Next join the SLES2 node to the cluster. Follow the instructions in the SUSE topic, [Adding the Second Node](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.2nd-node).
     
     When finished, check the cluster status with **crm status**. If you have successfully added a second node, the output will be similar to the following:
         
@@ -196,7 +197,7 @@ At this point both instances of SQL Server are configured to run with the databa
     > [!NOTE]
     > **admin_addr** is the virtual IP cluster resource which is configured during initial one-node cluster setup.
 
-7.	**Removal procedures**. If you need to remove a node from the cluster or if you want to remove the High Availability Extension Software, see the **Removing Nodes From an Existing Cluster** and **Removing the High Availability Extension Software From a Machine** sections of the SUSE topic, [Automatic Cluster Setup (sleha-bootstrap)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_installation_setup_auto.html).  
+7.	**Removal procedures**. If you need to remove a node from the cluster, use the **ha-cluster-remove** bootstrap script. For more information, see [Overview of the Bootstrap Scripts](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap).  
 
 ## Configure the cluster resources for SQL Server
 
@@ -229,7 +230,7 @@ exit
 
 After the configuration is committed, SQL Server will start on the same node as the virtual IP resource. 
 
-For more information, see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html). 
+For more information, see [Configuring and Managing Cluster Resources (Command Line)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config). 
 
 ### Verify that SQL Server is started. 
 
@@ -255,7 +256,7 @@ Full list of resources:
 ## Managing cluster resources
 
 To manage your cluster resources, refer to the following SUSE topic:
-[Managing Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm.html)
+[Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
 ### Manual failover
 
@@ -270,4 +271,4 @@ migrate mssqlha SLES2
 
 ## Additional resources
 
-[SUSE Linux Enterprise High Availability Extension - Administration Guide](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts) 
+[SUSE Linux Enterprise High Availability Extension - Administration Guide](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 

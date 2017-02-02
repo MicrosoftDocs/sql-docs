@@ -1,11 +1,11 @@
 ---
 # required metadata
 title: Install SQL Server on Red Hat Enterprise Linux | Microsoft Docs
-description: Describes how to install SQL Server vNext CTP 1.2 on Red Hat Enterprise Linux 7.3.
+description: Describes how to install SQL Server vNext CTP 1.2 on Red Hat Enterprise Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 02/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -25,7 +25,7 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ---
 # Install SQL Server on Red Hat Enterprise Linux
 
-This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on Red Hat Enterprise Linux (RHEL) 7.3.
+This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on Red Hat Enterprise Linux (RHEL).
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -71,7 +71,7 @@ To install the mssql-server package on RHEL, follow these steps:
    systemctl status mssql-server
    ```
    
-7. You may need to open a port on the firewall on RHEL.  If you are using **FirewallD** for your firewall, you can use the following commands.
+7. To allow remote connections, open the SQL Server port on the firewall on RHEL. The default SQL Server port is TCP 1433. If you are using **FirewallD** for your firewall, you can use the following commands:
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent

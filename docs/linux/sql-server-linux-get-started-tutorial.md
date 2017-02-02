@@ -39,7 +39,7 @@ Next, set up SQL Server vNext on your Linux machine, or run the Docker image, us
 
 | Platform | Installation |
 |-----|-----|
-| Red Hat Enterprise 7.3 | [Installation guide](sql-server-linux-setup-red-hat.md) |
+| Red Hat Enterprise | [Installation guide](sql-server-linux-setup-red-hat.md) |
 | SUSE Linux Enterprise Server v12 SP2 | [Installation guide](sql-server-linux-setup-suse-linux-enterprise-server.md) |
 | Ubuntu 16.04 and 16.10 | [Installation guide](sql-server-linux-setup-ubuntu.md) |
 | Docker | [Installation guide](sql-server-linux-setup-docker.md) |

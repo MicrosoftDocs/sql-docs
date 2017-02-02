@@ -1,3 +1,6 @@
+# [Microsoft PHP Driver for SQL Server](microsoft-php-driver-for-sql-server.md)
+# [Overview of the PHP SQL Driver](overview-of-the-php-sql-driver.md)
+# [Download Microsoft PHP Driver for SQL Server](download-microsoft-php-driver-for-sql-server.md)
 
 # [Step 1: Configure development environment for PHP development](step-1-configure-development-environment-for-php-development.md)
 # [Step 2: Create a SQL database for PHP development](step-2-create-a-sql-database-for-php-development.md)
@@ -13,7 +16,7 @@
 # [PDOStatement::setFetchMode](pdostatement-setfetchmode.md)
 # [sqlsrv_server_info](sqlsrv-server-info.md)
 # [PDOStatement Class](pdostatement-class.md)
-# [Download Microsoft PHP Driver for SQL Server](download-microsoft-php-driver-for-sql-server.md)
+
 # [PDO::getAvailableDrivers](pdo-getavailabledrivers.md)
 # [Loading the PHP SQL Driver](loading-the-php-sql-driver.md)
 # [PDOStatement::errorInfo](pdostatement-errorinfo.md)
@@ -51,7 +54,7 @@
 # [Example Application (PDO_SQLSRV Driver)](example-application-pdo-sqlsrv-driver.md)
 # [PDO::commit](pdo-commit.md)
 # [sqlsrv_query](sqlsrv-query.md)
-# [Microsoft PHP Driver for SQL Server](microsoft-php-driver-for-sql-server.md)
+
 # [PDO::errorInfo](pdo-errorinfo.md)
 # [PDO Class](pdo-class.md)
 # [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
@@ -78,7 +81,7 @@
 # [sqlsrv_close](sqlsrv-close.md)
 # [sqlsrv_fetch_array](sqlsrv-fetch-array.md)
 # [Getting Started with the PHP SQL Driver](getting-started-with-the-php-sql-driver.md)
-# [Overview of the PHP SQL Driver](overview-of-the-php-sql-driver.md)
+
 # [Default SQL Server Data Types](default-sql-server-data-types.md)
 # [How to: Connect on a Specified Port](how-to-connect-on-a-specified-port.md)
 # [PDOStatement:bindParam](pdostatement-bindparam.md)

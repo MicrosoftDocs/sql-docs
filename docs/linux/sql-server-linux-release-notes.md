@@ -6,7 +6,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 01/20/2017
+ms.date: 02/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -33,7 +33,7 @@ The following release notes apply to SQL Server vNext running on Linux. This rel
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](sql-server-linux-setup-suse-linux-enterprise-server.md) |
 | Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
@@ -128,6 +128,8 @@ The following sections describe known issues with this release of SQL Server vNe
 - System databases can not be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
+
+- Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### In-Memory OLTP
 - In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
@@ -265,6 +267,8 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
+- Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
+
 #### In-Memory OLTP
 - In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
@@ -396,6 +400,8 @@ The following sections describe known issues with this release of SQL Server vNe
 - System databases can not be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
+
+- Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### In-Memory OLTP
 - In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  

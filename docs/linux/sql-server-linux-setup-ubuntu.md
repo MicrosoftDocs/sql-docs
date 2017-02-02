@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 12/16/2016
+ms.date: 02/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -65,6 +65,8 @@ To install the mssql-server Package on Ubuntu, follow these steps:
    ```bash
    systemctl status mssql-server
    ```
+
+8. To allow remote connections, you may need to open the SQL Server TCP port on your firewall. The default SQL Server port is 1433.
 
 ## Upgrade SQL Server
 

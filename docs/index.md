@@ -78,7 +78,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="/sample/world-wide-importers/overview">
+                                <a href="./sample/world-wide-importers/overview">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">

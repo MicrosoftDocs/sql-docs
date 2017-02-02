@@ -31,7 +31,7 @@ manager: "jhubbard"
 
 ## SSDT works best with Visual Studio 2015
 
-- #### [**Download Visual Studio Community 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
+#### [**Download Visual Studio Community 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
 
 
 

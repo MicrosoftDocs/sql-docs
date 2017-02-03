@@ -30,7 +30,7 @@ A SQL Server Always On Availability Group is a high-availability (HA) and disast
 
 For a comprehensive introduction, see [SQL Server Always On Availability Groups](http://msdn.microsoft.com/library/hh510230.aspx).
 
-Configure SQL Server Always On Availability Groups on Linux server. In order to accommodate SQL Server workloads with rigorous business continuity requirements to run on Linux, Always On Availability Groups run on [all Linux OS distributions SQL Server vNext will support](sql-server-linux-release-notes.md). Also, all capabilities that make Availability Groups a flexible, integrated and efficient HA DR solution are available on Linux as well. These include: 
+Configure SQL Server Always On Availability Groups on Linux server. In order to accommodate SQL Server workloads with rigorous business continuity requirements to run on Linux, Always On Availability Groups run on all supported [Linux OS distributions](sql-server-linux-release-notes.md). Also, all capabilities that make Availability Groups a flexible, integrated and efficient HA DR solution are available on Linux as well. These include: 
 
 - Multi-database failover
 - Fast failure detection and failover

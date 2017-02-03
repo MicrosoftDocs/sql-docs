@@ -278,7 +278,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="https://opbuildstorageprod.blob.core.windows.net/output-pdf-files/en-us/Azure.azure-documents/live/virtual-machines/windows/sql.pdf">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">

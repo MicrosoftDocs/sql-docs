@@ -60,7 +60,7 @@ Server = [protocol:]server[,port]
   
 You can optionally specify the protocol and port to connect to the server. For example, **Server = tcp:***servername***,12345**.  
   
-To connect to a named instance on a static port, use **Server =** *servername***,***port_number*. Connecting to dynamic port is not supported.  
+To connect to a named instance on a static port, use **Server =** *servername***,***port_number*. Connecting to a dynamic port is not supported.  
   
 Optionally, you can add the DSN information to a template file and execute the following command: **odbcinst -i -s -f** *template_file*  
   
@@ -90,9 +90,12 @@ SSL uses the OpenSSL library. The following table shows the minimum supported ve
   
 |Platform|Minimum OpenSSL Version|Default Certificate Trust Store Location|  
 |------------|---------------------------|--------------------------------------------|  
-|Red Hat Enterprise Linux 5|0.9.8e|/etc/pki/tls/cert.pem|  
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|  
-|SuSE Linux Enterprise 11 Service Pack 2|0.9.8j|/etc/ssl/certs|  
+|Red Hat Enterprise Linux 7|1.0.1e|/etc/pki/tls/cert.pem|
+|SuSE Linux Enterprise 12 |1.0.1i|/etc/ssl/certs|
+|Ubuntu 15.10 |1.0.2d|/etc/ssl/certs|
+|Ubuntu 16.04 |1.0.2g|/etc/ssl/certs|
+|Ubuntu 16.10 |1.0.2g|/etc/ssl/certs|
   
 You can use **SQLDriverConnect** to specify encryption in the connection string.  
   

@@ -73,11 +73,18 @@ Install the tools for your platform:
 >   sudo yum update mssql-tools
 >   ```
 
-Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
+Optional Step: Add /opt/mssql-tools/bin/ to your PATH environment variable in a bash shell
+
+To add this directory to the ~/.bash_profile so that sqlcmd/bcp is accessible from the bash shell for login sessions, run the following command:
 
    ```bash
-   sudo ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
-   sudo ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   ```
+To add this directory to ~/.bashrc so that sqlcmd/bcp is accessible from the bash shell for interactive/non-login sessions, run the following command:
+
+   ```bash
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+   source ~/.bashrc
    ```
 
 
@@ -109,12 +116,20 @@ Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 >   sudo apt-get install mssql-tools 
 >   ```
 
-Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
+Optional Step: Add /opt/mssql-tools/bin/ to your PATH environment variable in a bash shell
+
+To add this directory to the ~/.bash_profile so that sqlcmd/bcp is accessible from the bash shell for login sessions, run the following command:
 
    ```bash
-   sudo ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
-   sudo ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
+To add this directory to ~/.bashrc so that sqlcmd/bcp is accessible from the bash shell for interactive/non-login sessions, run the following command:
+
+   ```bash
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
 
 ## <a name="SLES">Install tools on SLES</a>
 
@@ -139,11 +154,18 @@ Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
 >   sudo zypper update mssql-tools
 >   ```
 
-Optional Step: Create symlinks to 'SQLCMD' and 'BCP' under /usr/bin/.
+Optional Step: Add /opt/mssql-tools/bin/ to your PATH environment variable in a bash shell
+
+To add this directory to the ~/.bash_profile so that sqlcmd/bcp is accessible from the bash shell for login sessions, run the following command:
 
    ```bash
-   sudo ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
-   sudo ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   ```
+To add this directory to ~/.bashrc so that sqlcmd/bcp is accessible from the bash shell for interactive/non-login sessions, run the following command:
+
+   ```bash
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+   source ~/.bashrc
    ```
 
 

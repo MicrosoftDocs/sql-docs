@@ -24,7 +24,7 @@ The ODBC driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
 ## Documentation  
 The documentation for the ODBC driver on macOS includes:  
 
-*   [Release Notes for the Microsoft ODBC Driver for SQL Server on MacOS](../../../connect/odbc/mac/release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-macos.md)  
+*   [Release Notes for the Microsoft ODBC Driver for SQL Server on MacOS](../../../connect/odbc/mac/release-notes.md)  
 *   [Known Issues in this Version of the Driver](../../../connect/odbc/mac/known-issues-in-this-version-of-the-driver.md)  
 *   [System Requirements](../../../connect/odbc/mac/system-requirements.md)  
 *   [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/installing-the-microsoft-odbc-driver-for-sql-server-on-macos.md)  

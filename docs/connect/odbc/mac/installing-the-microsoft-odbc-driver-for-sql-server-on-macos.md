@@ -84,4 +84,4 @@ For more information about resolving connection failures, see:
     The error number specified in the URL (11001) should be changed to match the error that you see.  
 
 ## See Also  
-[Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/macos/microsoft-odbc-driver-for-sql-server-on-mac.md)  
+[Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac.md)  

@@ -89,5 +89,4 @@ When UTF-8 multibyte characters or UTF-16 surrogates are split across SQLPutData
     > DAC connections must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Authentication.  
 
 ## See Also  
-[Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-macos.md)  
-  
+[Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac.md)  

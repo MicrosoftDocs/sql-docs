@@ -43,10 +43,5 @@ Configure SQL Server Always On Availability Groups on Linux server. In order to 
 
 An availability group is one or more databases in a logical group, with replicas on more than one instance of SQL Server. 
 
-|Distribution |Topic 
-|----- |-----
-| |
-| |
-
 ## Next steps
 

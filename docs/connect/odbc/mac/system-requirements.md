@@ -5,16 +5,14 @@ ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "prerequisites"
   - "system requirements"
   - "requirements"
-ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
-caps.latest.revision: 31
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
@@ -22,11 +20,11 @@ manager: "jhubbard"
 # System Requirements
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 This topic lists the requirements to use the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 and 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on macOS.  
-  
+
 ## System Requirements for Microsoft ODBC Driver 13 for SQL Server  
-  
+
 The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on macOS resolves the driver's dependencies automatically when installed using the homebrew package management system, as described on [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/macos/installing-the-microsoft-odbc-driver-for-sql-server-on-macos.md).
-    
+
 ## See Also  
-[Microsoft ODBC Driver for SQL Server on macOS](../Topic/Microsoft%20ODBC%20Driver%20for%20SQL%20Server%20on%20macOS.md)  
+[Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-macos.md)  
   

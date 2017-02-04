@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "data source names"
   - "connection string keywords"
   - "DSNs"
-ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 caps.latest.revision: 41
 author: "MightyPen"
 ms.author: "genemi"
@@ -25,7 +24,7 @@ manager: "jhubbard"
 This topic discusses how you can create a connection to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] database.  
   
 ## Connection Properties  
-For this release of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux, you can use the following connection keywords:  
+For this release of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on macOS, you can use the following connection keywords:  
   
 ||||||  
 |-|-|-|-|-|  
@@ -54,7 +53,7 @@ Server = [protocol:]server[,port]
 #   
 # Note:  
 # Port is not a valid keyword in the ~/.odbc.ini file  
-# for the Microsoft ODBC driver on Linux  
+# for the Microsoft ODBC driver on macOS  
 #  
 ```  
   
@@ -86,20 +85,10 @@ By default, encrypted connections always verify the server’s certificate. Howe
 Driver='ODBC Driver 13 for SQL Server';Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   
-SSL uses the OpenSSL library. The following table shows the minimum supported versions of OpenSSL and the default Certificate Trust Store locations for each platform:  
-  
-|Platform|Minimum OpenSSL Version|Default Certificate Trust Store Location|  
-|------------|---------------------------|--------------------------------------------|  
-|Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|  
-|Red Hat Enterprise Linux 7|1.0.1e|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1i|/etc/ssl/certs|
-|Ubuntu 15.10 |1.0.2d|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2g|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2g|/etc/ssl/certs|
-  
+
 You can use **SQLDriverConnect** to specify encryption in the connection string.  
   
 ## See Also  
-[Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux/microsoft-odbc-driver-for-sql-server-on-linux.md)  
-[Installing the Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux/installing-the-microsoft-odbc-driver-for-sql-server-on-linux.md)  
+[Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-linux.md)  
+[Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/installing-the-microsoft-odbc-driver-for-sql-server-on-macOS.md)  
   

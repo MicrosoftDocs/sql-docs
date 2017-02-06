@@ -20,7 +20,17 @@ manager: "jhubbard"
 
 Release Notes for Microsoft ODBC Driver for SQL Server on Linux.  
   
-## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux  
+## What's New in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux  
+With Microsoft ODBC Driver 13.1 for SQL Server.  
+  
+**New distributions supported**:
+Ubuntu 16.10 is now supported, along with Red Hat and SUSE. Each platform has a platform relevant package (RPM or DEB) to ease installation and configuration.  See [Installing the Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux/installing-the-microsoft-odbc-driver-for-sql-server-on-linux.md) for installation instructions.
+  
+**unixODBC Driver Manager 2.3.1 Support changes**: The ODBC driver no longer depends on custom packaging for the unixODBC driver manager (except on RedHat 6), and instead relies on the distribution package manager to resolve the UnixODBC dependency from the distribution's repositories.
+
+**BCP API Support**: The Linux ODBC driver now supports the use of the BCP API functions (bcp_init, etc.)
+
+## What's New in the Microsoft ODBC Driver 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux  
 With Microsoft ODBC Driver 13.0 for SQL Server, SQL Server 2014 and SQL Server 2016 are now also supported.  
   
 **New distributions supported**:

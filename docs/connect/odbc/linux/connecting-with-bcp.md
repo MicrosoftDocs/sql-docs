@@ -59,9 +59,9 @@ Uses a character data type.
 Specifies the database to connect to.  
   
 -D  
-Causes the value passed to the sqlcmd -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](../../../connect/odbc/linux/connecting-with-sqlcmd.md).  
+Causes the value passed to the bcp -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](../../../connect/odbc/linux/connecting-with-sqlcmd.md).  
   
--e *eror_file*  
+-e *error_file*  
 Specifies the full path of an error file used to store any rows that the bcp utility cannot transfer from the file to the database.  
   
 -E  
@@ -83,7 +83,7 @@ Specifies a login timeout. The –l option specifies the number of seconds befor
 Specifies the number of the last row to export from a table or import from a data file.  
   
 -m *max_errors*  
-Specifies the maximum number of syntax errors that can occur before the bcp operation is canceled.  
+Specifies the maximum number of syntax errors that can occur before the bcp operation is cancelled.  
   
 -n  
 Uses the native (database) data types of the data to perform the bulk-copy operation.  

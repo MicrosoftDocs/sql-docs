@@ -31,4 +31,4 @@ Additional issues will be posted on the [Microsoft ODBC driver team blog](http:/
     So, if you specify 1 for *ColumnSize* in **SQLBindParameter** for such a character, the driver compares *ColumnSize* with the *BufferLength* in **SQLBindParameter** before doing the conversion between the different code pages on the client and server. Because a *ColumnSize* of 1 is less than a *BufferLength* of (for example) 3, the driver generates an error. To avoid this error, use the value of *BufferLength* (and not converted length) in *ColumnSize*. *ColumnSize* cannot be greater than 8000 for varchar(n) type.  
 
 ## See Also  
-[Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-macos.md)  
+[Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac.md)  

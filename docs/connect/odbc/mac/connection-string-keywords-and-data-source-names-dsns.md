@@ -88,5 +88,5 @@ Driver='ODBC Driver 13 for SQL Server';Server=ServerNameHere;Encrypt=YES;TrustSe
 You can use **SQLDriverConnect** to specify encryption in the connection string.  
 
 ## See Also  
-[Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-macos.md)  
+[Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac.md)  
 [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/installing-the-microsoft-odbc-driver-for-sql-server-on-macos.md)  

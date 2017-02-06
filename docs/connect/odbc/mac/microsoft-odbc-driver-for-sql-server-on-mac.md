@@ -30,7 +30,7 @@ The documentation for the ODBC driver on macOS includes:
 *   [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/installing-the-microsoft-odbc-driver-for-sql-server-on-macos.md)  
 *   [Connection String Keywords and Data Source Names &#40;DSNs&#41;](../../../connect/odbc/mac/connection-string-keywords-and-data-source-names-dsns.md)  
 *   [Programming Guidelines](../../../connect/odbc/mac/programming-guidelines.md)  
-*   [Frequently Asked Questions &#40;FAQ&#41; for ODBC macOS](../../../connect/odbc/mac/frequently-asked-questions-faq-for-odbc-macos.md)  
+*   [Frequently Asked Questions &#40;FAQ&#41; for ODBC macOS](../../../connect/odbc/mac/frequently-asked-questions-for-odbc-macos.md)  
 
 ## Community  
 * [Microsoft ODBC Driver For SQL Server Team blog](http://blogs.msdn.com/sqlnativeclient/default.aspx)  

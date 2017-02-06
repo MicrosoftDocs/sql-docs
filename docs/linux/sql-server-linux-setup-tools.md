@@ -40,6 +40,8 @@ Install the tools for your platform:
 
 ## <a name="RHEL">Install tools on RHEL</a>
 
+Use the following steps to install the **mssql-tools** on Red Hat Enterprise Linux. 
+
 1. Enter superuser mode.
 
    ```bash
@@ -81,13 +83,13 @@ Install the tools for your platform:
 
 1. **Optional**: Add `/opt/mssql-tools/bin/` to your **PATH** environment variable in a bash shell.
 
-   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your **PATH** in the `~/.bash_profile` file with the following command:
+   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your **PATH** in the **~/.bash_profile** file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the **PATH** in the `~/.bashrc` file with the following command:
+   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the **PATH** in the **~/.bashrc** file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -95,6 +97,8 @@ Install the tools for your platform:
    ```
 
 ## <a name="ubuntu">Install tools on Ubuntu</a>
+
+Use the following steps to install the **mssql-tools** on Ubuntu. 
 
 1. Import the public repository GPG keys.
 
@@ -115,29 +119,31 @@ Install the tools for your platform:
    sudo apt-get install mssql-tools unixodbc-dev
    ```
 
-> [!Note] 
-> To update to the latest version of **mssql-tools** run the following commands:
->    ```bash
->   sudo apt-get update 
->   sudo apt-get install mssql-tools 
->   ```
+   > [!Note] 
+   > To update to the latest version of **mssql-tools** run the following commands:
+   >    ```bash
+   >   sudo apt-get update 
+   >   sudo apt-get install mssql-tools 
+   >   ```
 
-Optional Step: Add /opt/mssql-tools/bin/ to your PATH environment variable in a bash shell
+1. **Optional**: Add `/opt/mssql-tools/bin/` to your **PATH** environment variable in a bash shell.
 
-To add this directory to the ~/.bash_profile so that sqlcmd/bcp is accessible from the bash shell for login sessions, run the following command:
+   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your **PATH** in the **~/.bash_profile** file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
-To add this directory to ~/.bashrc so that sqlcmd/bcp is accessible from the bash shell for interactive/non-login sessions, run the following command:
+
+   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the **PATH** in the **~/.bashrc** file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
 
-
 ## <a name="SLES">Install tools on SLES</a>
+
+Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise Server. 
 
 1. Add the Microsoft SQL Server repository to Zypper.
 
@@ -152,35 +158,34 @@ To add this directory to ~/.bashrc so that sqlcmd/bcp is accessible from the bas
    sudo zypper install mssql-tools unixODBC-devel
    ```
 
-> [!Note] 
-> To update to the latest version of **mssql-tools** run the following commands:
->    ```bash
->   sudo zypper refresh
->   sudo zypper update mssql-tools
->   ```
+   > [!Note] 
+   > To update to the latest version of **mssql-tools** run the following commands:
+   >    ```bash
+   >   sudo zypper refresh
+   >   sudo zypper update mssql-tools
+   >   ```
 
-Optional Step: Add /opt/mssql-tools/bin/ to your PATH environment variable in a bash shell
+1. **Optional**: Add `/opt/mssql-tools/bin/` to your **PATH** environment variable in a bash shell.
 
-To add this directory to the ~/.bash_profile so that sqlcmd/bcp is accessible from the bash shell for login sessions, run the following command:
+   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your **PATH** in the **~/.bash_profile** file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
-To add this directory to ~/.bashrc so that sqlcmd/bcp is accessible from the bash shell for interactive/non-login sessions, run the following command:
+
+   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the **PATH** in the **~/.bashrc** file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
 
-
 ## <a name="macos">Install tools on macOS</a>
 
-Sqlcmd and bcp are not available on macOS. 
+**Sqlcmd** and **bcp** are not available on macOS. 
 
 Use sql-cli from macOS. For more information, see [sql-cli](https://www.npmjs.com/package/sql-cli).  
 
 ## Next steps
 
 After installation, connect to the SQL Server instance to create and manage databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query-sqlcmd.md).
-

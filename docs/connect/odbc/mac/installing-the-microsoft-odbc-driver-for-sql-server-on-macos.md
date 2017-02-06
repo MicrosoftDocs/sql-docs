@@ -16,10 +16,10 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
 ---
-# Installing the Microsoft ODBC Driver for SQL Server on Linux
+# Installing the Microsoft ODBC Driver for SQL Server on macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This topic explains how to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 and 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux.
+This topic explains how to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 and 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on macOS.
 
 ## Installing the Microsoft ODBC Driver 13.1 for SQL Server on macOS  
 

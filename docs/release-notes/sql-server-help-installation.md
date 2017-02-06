@@ -1,8 +1,9 @@
 ---
 title: "SQL Server Help Installation | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-09"
+ms.date: "11/09/2016"
 ms.prod: "sql-non-specified"
+ms.technology: "server-general"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""

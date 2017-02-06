@@ -6,7 +6,7 @@ description: This topic describes how to install the SQL Server Tools on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 1/20/2017
+ms.date: 2/06/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,16 +26,16 @@ ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ---
 # Install SQL Server tools on Linux
 
-The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The mssql-tools package contains:
+The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The **mssql-tools** package contains:
 
 - **sqlcmd**: Command-line query utility.
 - **bcp**: Bulk import-export utility.
 
 Install the tools for your platform:
 
-- [Red Hat Enterprise Linux (RHEL)](#RHEL)
+- [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
-- [SUSE Linux Enterprise Server (SLES)](#SLES)
+- [SUSE Linux Enterprise Server](#SLES)
 - [macOS](#macos)
 
 ## <a name="RHEL">Install tools on RHEL</a>
@@ -58,35 +58,41 @@ Install the tools for your platform:
    exit
    ```
 
-1. Run the following commands to install 'mssql-tools' with the unixODBC developer package.
+1. If you had a previous version of **mssql-tools** installed, remove any older unixODBC packages.
 
    ```bash
    sudo yum update
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #necessary if you had a previous version of mssql-tools installed
+   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
+   ```
+
+1. Run the following commands to install **mssql-tools** with the unixODBC developer package.
+
+   ```bash
+   sudo yum update
    sudo yum install mssql-tools unixODBC-devel
    ```
 
-> [!Note] 
-> To update to the latest version of 'mssql-tools' run the following commands:
->    ```bash
->   sudo yum check-update
->   sudo yum update mssql-tools
->   ```
+   > [!Note] 
+   > To update to the latest version of **mssql-tools** run the following commands:
+   >    ```bash
+   >   sudo yum check-update
+   >   sudo yum update mssql-tools
+   >   ```
 
-Optional Step: Add /opt/mssql-tools/bin/ to your PATH environment variable in a bash shell
+1. **Optional**: Add `/opt/mssql-tools/bin/` to your **PATH** environment variable in a bash shell.
 
-To add this directory to the ~/.bash_profile so that sqlcmd/bcp is accessible from the bash shell for login sessions, run the following command:
+   To make **sqlcmd/bcp** accessible from the bash shell for login sessions, modify your **PATH** in the `~/.bash_profile` file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
-To add this directory to ~/.bashrc so that sqlcmd/bcp is accessible from the bash shell for interactive/non-login sessions, run the following command:
+
+   To make **sqlcmd/bcp** accessible from the bash shell for interactive/non-login sessions, modify the **PATH** in the `~/.bashrc` file with the following command:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
 
 ## <a name="ubuntu">Install tools on Ubuntu</a>
 
@@ -110,7 +116,7 @@ To add this directory to ~/.bashrc so that sqlcmd/bcp is accessible from the bas
    ```
 
 > [!Note] 
-> To update to the latest version of 'mssql-tools' run the following commands:
+> To update to the latest version of **mssql-tools** run the following commands:
 >    ```bash
 >   sudo apt-get update 
 >   sudo apt-get install mssql-tools 
@@ -133,7 +139,6 @@ To add this directory to ~/.bashrc so that sqlcmd/bcp is accessible from the bas
 
 ## <a name="SLES">Install tools on SLES</a>
 
-
 1. Add the Microsoft SQL Server repository to Zypper.
 
    ```bash
@@ -141,14 +146,14 @@ To add this directory to ~/.bashrc so that sqlcmd/bcp is accessible from the bas
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. Install 'mssql-tools' with the unixODBC developer package.
+1. Install **mssql-tools** with the unixODBC developer package.
 
    ```bash
    sudo zypper install mssql-tools unixODBC-devel
    ```
 
 > [!Note] 
-> To update to the latest version of 'mssql-tools' run the following commands:
+> To update to the latest version of **mssql-tools** run the following commands:
 >    ```bash
 >   sudo zypper refresh
 >   sudo zypper update mssql-tools

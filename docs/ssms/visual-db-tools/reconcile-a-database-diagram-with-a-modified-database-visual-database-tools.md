@@ -1,5 +1,5 @@
 ---
-title: "Reconcile a Database Diagram with a Modified Database (Visual Database Tools) | Microsoft Docs"
+title: "Reconcile a Database Diagram with a Modified Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

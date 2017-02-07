@@ -1,5 +1,5 @@
 ---
-title: "Migrating Access Databases to SQL Server - Azure SQL DB (AccessToSQL) | Microsoft Docs"
+title: "Migrate Access Databases to SQL Server - Azure SQL DB | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

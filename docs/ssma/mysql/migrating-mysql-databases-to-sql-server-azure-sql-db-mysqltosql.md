@@ -1,5 +1,5 @@
 ---
-title: "Migrating MySQL Databases to SQL Server - Azure SQL DB (MySQLToSql) | Microsoft Docs"
+title: "Migrate MySQL Databases to SQL Server - Azure SQL DB | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,5 +1,5 @@
 ---
-title: "Getting Started with SQL Server Migration Assistant for Access (AccessToSQL) | Microsoft Docs"
+title: "Get Started with SQL Server Migration Assistant for Access | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,5 +1,5 @@
 ---
-title: "Copy an Image of a Database Diagram to the Clipboard (Visual Database Tools) | Microsoft Docs"
+title: "Copy an Image of a Database Diagram to the Clipboard | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

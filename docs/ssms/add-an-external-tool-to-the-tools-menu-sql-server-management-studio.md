@@ -1,5 +1,5 @@
 ---
-title: "Add an External Tool to the Tools Menu (SQL Server Management Studio) | Microsoft Docs"
+title: "Add an External Tool to the Tools Menu | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

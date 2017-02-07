@@ -1,5 +1,5 @@
 ---
-title: "Using the ExtendedAnsiSQL Connection String Attribute (Access Driver) | Microsoft Docs"
+title: "Using the ExtendedAnsiSQL Connection String Attribute | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

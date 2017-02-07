@@ -1,5 +1,5 @@
 ---
-title: "Specify a Target Server&#39;s Location (SQL Server Management Studio) | Microsoft Docs"
+title: "Specify a Target Server Location | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

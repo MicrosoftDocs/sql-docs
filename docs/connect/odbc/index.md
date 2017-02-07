@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/connect/odbc/getting-started-with-odbc-driver-for-sql-server
+redirect_url: /sql/connect/odbc/microsoft-odbc-driver-for-sql-server
 ---

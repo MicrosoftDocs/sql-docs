@@ -31,7 +31,7 @@ Driver='ODBC Driver 11 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 You can also add **Trusted_Connection=yes** in the DSN entry of the ODBC.ini.  
   
-You can also use the **-E** option in **sqlcmd**; see [Connecting with sqlcmd](../../../connect/odbc/linux/connecting-with-sqlcmd.md) for more information.  
+You can also use the **-E** option in **sqlcmd** and the **-T** option in **bcp**; see [Connecting with sqlcmd](../../../connect/odbc/linux/connecting-with-sqlcmd.md) for more information.  
   
 Ensure that the Linux principal server that is going to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] is already authenticated with the Kerberos KDC.  
   

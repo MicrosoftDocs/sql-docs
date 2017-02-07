@@ -18,13 +18,13 @@ manager: "jhubbard"
 # Using Transparent Network IP Resolution
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-TransparentNetwork IP Resolution is a revision of the existing MultiSubnet Failover feature, available in Microsoft ODBC Driver 13.0 for SQL Server on Linux, that affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. It interacts with MultiSubnetFailover to provide the following three connection sequences:
+TransparentNetworkIPResolution is a revision of the existing MultiSubnetFailover feature, available in Microsoft ODBC Driver 13 for SQL Server on Linux, that affects the connection sequence of the driver in the case where the first resolved IP of the hostname does not respond and there are multiple IPs associated with the hostname. It interacts with MultiSubnetFailover to provide the following three connection sequences:
 
 * 0: One IP is attempted, followed by all IPs in parallel
 * 1: All IPs are attempted in parallel
 * 2: All IPs are attempted one after another
 
-|Transparent Network IP Resolution|Multisubnet Failover|Behaviour|
+|Transparent Network IP Resolution|MultiSubnetFailover|Behaviour|
 |:-:|:-:|:-:|
 |(default)|(default)|0|
 |(default)|Enabled|1|
@@ -36,7 +36,7 @@ TransparentNetwork IP Resolution is a revision of the existing MultiSubnet Failo
 |Disabled|Enabled|1|
 |Disabled|Disabled|2|
 
-The Transparent Network IP Resolution connection string and DSN keyword controls this setting at the connection-string level. The default is enabled.
+The TransparentNetworkIPResolution connection string and DSN keyword controls this setting at the connection-string level. The default is enabled.
 
 Connection String Keyword|Values|Default
 -|-|-

@@ -26,7 +26,7 @@ This topic lists the requirements to use the [!INCLUDE[msCoName](../../../includ
   
 ## System Requirements for Microsoft ODBC Driver 13 for SQL Server  
   
-The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux resolves the driver's dependencies automatically when installed using the package management system of your distribution, as described on [Installing the Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux/installing-the-microsoft-odbc-driver-for-sql-server-on-linux.md).
+The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux resolves the driver's dependencies automatically when installed using the package management system of your distribution, as described on [Installing the Microsoft ODBC Driver for SQL Server on Linux](../../../connect/odbc/linux/installing-the-microsoft-odbc-driver-for-sql-server-on-linux.md).
   
 ## System Requirements for Microsoft ODBC Driver 11 for SQL Server  
   

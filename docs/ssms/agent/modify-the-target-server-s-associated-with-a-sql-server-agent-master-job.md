@@ -1,5 +1,5 @@
 ---
-title: "Modify the Target Server(s) Associated with a SQL Server Agent Master Job | Microsoft Docs"
+title: "Modify Target Server Associated with Agent Master Job | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

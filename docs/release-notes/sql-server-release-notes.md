@@ -1,8 +1,9 @@
 ---
 title: "SQL Server Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-15"
-ms.prod: "sql-server-2016"
+ms.date: "06/15/2016"
+ms.prod: "sql-non-specified"
+ms.technology: "server-general"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""

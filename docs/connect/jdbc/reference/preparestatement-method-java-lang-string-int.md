@@ -44,8 +44,7 @@ A PreparedStatement object.
 ## Remarks
 This prepareStatement method is specified by the prepareStatement method in the java.sql.Connection interface.
 
-## See Also
-
-[prepareStatement Method &#40;SQLServerConnection&#41;](./preparestatement-method-sqlserverconnection.md)
-[SQLServerConnection Members](./sqlserverconnection-members.md)
-[SQLServerConnection Class](./sqlserverconnection-class.md)
+## See Also  
+ [prepareStatement Method &#40;SQLServerConnection&#41;](./preparestatement-method-sqlserverconnection.md)
+ [SQLServerConnection Members](./sqlserverconnection-members.md)
+ [SQLServerConnection Class](./sqlserverconnection-class.md)

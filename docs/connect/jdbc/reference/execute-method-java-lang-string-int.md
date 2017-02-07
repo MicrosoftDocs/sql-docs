@@ -51,8 +51,9 @@ An array of **int**s that indicates the column indexes of the auto-generated key
 This execute method is specified by the execute method in the java.sql.Statement interface.
 
 ## See Also
- [execute Method &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 
- [SQLServerStatement members](./sqlserverstatement-members.md)
+[execute Method &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 
- [SQLServerStatement class](./sqlserverstatement-class.md)
+[SQLServerStatement members](./sqlserverstatement-members.md)
+
+[SQLServerStatement class](./sqlserverstatement-class.md)

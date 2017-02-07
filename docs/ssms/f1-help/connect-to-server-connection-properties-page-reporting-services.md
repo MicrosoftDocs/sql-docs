@@ -1,5 +1,5 @@
 ---
-title: "Connect to Server (Connection Properties Page) Reporting Services | Microsoft Docs"
+title: "Connect to SSRS Server (Connection Properties) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

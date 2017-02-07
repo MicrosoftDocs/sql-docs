@@ -20,9 +20,9 @@ manager: "jhubbard"
 # Installing the Microsoft ODBC Driver for SQL Server on Linux
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-This topic explains how to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.0 and 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux. 
+This topic explains how to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 and 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux. 
   
-## Installing the Microsoft ODBC Driver 13.0 for SQL Server on Linux  
+## Installing the Microsoft ODBC Driver 13 for SQL Server on Linux  
 
 ### RedHat6
 ```
@@ -32,7 +32,7 @@ exit
 sudo yum update
 yum remove unixODBC #to avoid conflicts
 sudo ACCEPT_EULA=Y yum install msodbcsql mssql-tools
-sudo yum install unixODBC-utf16-devel #this step is optional but recommended*
+sudo yum install unixODBC-devel #this step is optional but recommended*
 ```
 
 ### RedHat 7
@@ -43,7 +43,7 @@ exit
 sudo yum update
 yum remove unixODBC #to avoid conflicts
 sudo ACCEPT_EULA=Y yum install msodbcsql mssql-tools
-sudo yum install unixODBC-utf16-devel #this step is optional but recommended*
+sudo yum install unixODBC-devel #this step is optional but recommended*
 ```
 
 ### Ubuntu 15.10
@@ -54,7 +54,7 @@ curl https://packages.microsoft.com/config/ubuntu/15.10/prod.list > /etc/apt/sou
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql mssql-tools
-sudo apt-get install unixodbc-dev-utf16 #this step is optional but recommended*
+sudo apt-get install unixodbc-dev #this step is optional but recommended*
 ```
 
 ### Ubuntu 16.04
@@ -65,7 +65,7 @@ curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sou
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql mssql-tools
-sudo apt-get install unixodbc-dev-utf16 #this step is optional but recommended*
+sudo apt-get install unixodbc-dev #this step is optional but recommended*
 ```
 
 ### SUSE12
@@ -80,17 +80,17 @@ rpm --import microsoft.asc
 zypper remove unixODBC #to avoid conflicts
 zypper update
 ACCEPT_EULA=Y zypper install msodbcsql mssql-tools
-zypper install unixODBC-utf16-devel #this step is optional but recommended*
+zypper install unixODBC-devel #this step is optional but recommended*
 ```
 ### Offline installation
-If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.0 to be installed on a computer with no internet connection, you will need to resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.0 has the following direct dependencies:
-* Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc-utf16 (>= 2.3.1-1)
-* Red Hat: glibc, e2fsprogs, krb5-libs, openssl, unixODBC-utf16
-* Suse: glibc, libuuid1, krb5, openssl, unixODBC-utf16.
+If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 to be installed on a computer with no internet connection, you will need to resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 has the following direct dependencies:
+* Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
+* Red Hat: glibc, e2fsprogs, krb5-libs, openssl, unixODBC
+* SuSE: glibc, libuuid1, krb5, openssl, unixODBC
 
 Each of these packages in turn has their own dependencies which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [Suse](https://en.opensuse.org/Portal:Zypper)
 
-It is also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.0 package.
+It is also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 package.
 
 #### Redhat
   * Install the downloading utility: 
@@ -105,18 +105,18 @@ $ sudo yum install –downloadonly --downloaddir=<output_directory> msodbcsql
 
   * Use the RPM command to install the local package, which should be named like this:
 ```
-$ sudo rpm -i  msodbcsql-13.0.X.X-X.x86_64.rpm
+$ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm
 ```
 
 #### Ubuntu 
-  * use apt-get to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.0 and dependent packages:
+  * use apt-get to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 and dependent packages:
 ```
 $ sudo apt-get download msodbcsql
 ```
-  * The package will be saved under the current folder and named like this: ```msodbcsql_13.0.X.X-X_amd64.deb``` 	
+  * The package will be saved under the current folder and named like this: ```msodbcsql_13.1.X.X-X_amd64.deb``` 	
   * Use dpkg to install this file: 
 ```
-$ sudo dpkg -i msodbcsql_13.0.X.X-X_amd64.deb
+$ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb
 ```
 
 #### Suse
@@ -126,10 +126,10 @@ $ sudo zypper install –download-only msodbcsql
 ```
 * use the RPM command to install the local package, named like:	
 ```
-$ sudo rpm -i  msodbcsql-13.0.X.X-X.x86_64.rpm
+$ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm
 ```
 
-Once you have completed the package installation, you can verify that the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.0 can find all its dependencies by running ldd and inspecting its output for missing libraries:
+Once you have completed the package installation, you can verify that the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 can find all its dependencies by running ldd and inspecting its output for missing libraries:
 ```
 ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 ```

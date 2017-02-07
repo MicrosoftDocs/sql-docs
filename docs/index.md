@@ -884,10 +884,10 @@ description: Learn about SQL
                                                 <p><a href="connect/sql-server-drivers.md">Get started</a></p>
                                                 <p><a href="connect/jdbc/microsoft-jdbc-driver-for-sql-server.md">JDBC</a></p>
                                                 <p><a href="connect/odbc/microsoft-odbc-driver-for-sql-server.md">ODBC</a></p>
-                                                <p><a href="./connect/php/microsoft-php-driver-for-sql-server">PHP</a></p>
-                                                <p><a href="./connect/node-js/node-js-driver-for-sql-server">Node.js</a></p>
-                                                <p><a href="./connect/python/python-driver-for-sql-server">Python</a></p>
-                                                <p><a href="./connect/ruby/ruby-driver-for-sql-server">Ruby</a></p>
+                                                <p><a href="connect/php/microsoft-php-driver-for-sql-server.md">PHP</a></p>
+                                                <p><a href="connect/node-js/node-js-driver-for-sql-server.md">Node.js</a></p>
+                                                <p><a href="connect/python/python-driver-for-sql-server.md">Python</a></p>
+                                                <p><a href="connect/ruby/ruby-driver-for-sql-server.md">Ruby</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -910,7 +910,7 @@ description: Learn about SQL
                                             <div class="cardText">
                                                 <h3>SSMS</h3>
                                                 <p><a href="/azure/sql-database/sql-database-connect-query-ssms">Get started</a></p>
-                                                <p><a href="./ssms/download-sql-server-management-studio-ssms">Download SQL Server Management Studio</a></p>
+                                                <p><a href="ssms/download-sql-server-management-studio-ssms.md">Download SQL Server Management Studio</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -928,7 +928,7 @@ description: Learn about SQL
                                             <div class="cardText">
                                                 <h3>SSDT</h3>
                                                 <p><a href="https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx">Get started</a></p>
-                                                <p><a href="./ssdt/download-sql-server-data-tools-ssdt">Download SQL Server Data Tools</a></p>
+                                                <p><a href="ssdt/download-sql-server-data-tools-ssdt.md">Download SQL Server Data Tools</a></p>
                                             </div>
                                         </div>
                                     </div>

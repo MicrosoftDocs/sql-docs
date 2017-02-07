@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 |SQL Server Types|JDBC Types (java.sql.Types)|Java Language Types|  
 |----------------------|-----------------------------------|-------------------------|  
-|varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] (default), Blob, InputStream, String|  
+|varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(default), Blob, InputStream, String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (default), Clob, InputStream|  
 |ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob (Java SE 6.0)|  
 |xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (default), InputStream, Clob, byte[],Blob, SQLXML (Java SE 6.0)|  

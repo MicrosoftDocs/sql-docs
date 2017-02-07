@@ -45,16 +45,14 @@ $ ODBCSYSINI=/home/myappuser myapp
   
 In this case, you can add **Trace=Yes** to the [ODBC Driver 11 for SQL Server] section of /home/myappuser/odbcinst.ini.  
   
-## Determining Which ODBC.ini File the Driver is Using  
-The Linux ODBC Driver does not know which ODBC INI is in use, or the path to the ODBC INI file. So, the driver cannot trace the ODBC INI file.  
+## Determining Which odbc.ini File The Driver Is Using  
+The Linux ODBC Driver does not know which odbc.ini is in use, or the path to the odbc.ini file. However, information about which odbc.ini file is in use is available, from the unixODBC tools odbc_config and odbcinst, and from the unixODBC Driver Manager documentation.  
   
-Information about which ODBC.ini file is in use is available, however, from the unixODBC tools odbc_config and odbcinst, and from the unixODBC Driver Manager documentation.  
-  
-For example, the following command prints (among other information) the location of system and user ODBC INI files that may contain, respectively, system and user DSNs:  
+For example, the following command prints (among other information) the location of system and user odbc.ini files that may contain, respectively, system and user DSNs:  
   
 ```  
 $ odbcinst -j  
-unixODBC 2.3.0  
+unixODBC 2.3.1  
 DRIVERS............: /etc/odbcinst.ini  
 SYSTEM DATA SOURCES: /etc/odbc.ini  
 FILE DATA SOURCES..: /etc/ODBCDataSources  
@@ -66,13 +64,13 @@ SQLSETPOSIROW Size.: 8
   
 The [unixODBC documentation](http://www.unixodbc.org/doc/UserManual/) explains how the user vs. system DSN decision is made. Specifically:  
   
-User DSN. These are your personal Data Sources. You are able to add new ones, remove existing ones, and configure existing ones. User DSN information is stored in a secret location where only you can access them. Keeping your User DSN's separate from other User DSN's allows you a great deal of flexibility and control over creating and working with data sources which are only important to you.  
+User DSN. These are your personal Data Sources. You are able to add new ones, remove existing ones, and configure existing ones. User DSN information is stored in a secret location where only you can access them. Keeping your User DSNs separate from other User DSNs allows you a great deal of flexibility and control over creating and working with data sources which are only important to you.  
   
-System DSN. These are created by the System Administrator. They act very much like the User DSN's but with three important differences:  
+System DSN. These are created by the System Administrator. They act very much like the User DSNs but with three important differences:  
   
--   Only the System Administrator can add, remove, and configure System DSN's.  
+-   Only the System Administrator can add, remove, and configure System DSNs.  
   
--   System DSN's will be used only if the DSN does not exist as a User DSN. In other words, your User DSN has precedence over the System DSN.  
+-   System DSNs will be used only if the DSN does not exist as a User DSN. In other words, your User DSN has precedence over the System DSN.  
   
--   Everyone shares the same list of System DSN's.  
+-   Everyone shares the same list of System DSNs.  
   

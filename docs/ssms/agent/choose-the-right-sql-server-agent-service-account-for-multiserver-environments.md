@@ -1,5 +1,5 @@
 ---
-title: "Choose the Right SQL Server Agent Service Account for Multiserver Environments | Microsoft Docs"
+title: "Choose the Agent Service Account for Multiserver Environments | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

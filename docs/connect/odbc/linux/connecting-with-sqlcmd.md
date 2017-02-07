@@ -209,14 +209,14 @@ Create a sqlcmd scripting variable that can be used in a sqlcmd script.
   
 You can use the following alternative method:  
   
--   Put the parameters inside one file. Which you can then append to another file. This will help you use a parameter file to replace the values. Create a file called a.sql (the parameter file) with the following content:  
+-   Put the parameters inside one file, which you can then append to another file. This will help you use a parameter file to replace the values. Create a file called a.sql (the parameter file) with the following content:  
   
     ```  
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
     ```  
   
--   Create a file called b.sql,with the parameters for replacement:  
+-   Create a file called b.sql, with the parameters for replacement:  
   
     ```  
     select $(ColumnName) from $(TableName)  
@@ -230,7 +230,7 @@ You can use the following alternative method:
   
 -   Run sqlcmd and use c.sql as input file:  
   
-    slqcmd -S\<…> -P\<..> –U\<..> -I c.sql  
+    slqcmd -S<…> -P<..> –U<..> -I c.sql  
   
 -z *password*  
 Change password.  
@@ -267,7 +267,7 @@ The following entries are supported in a DSN on Linux:
   
 In a DSN, only the DRIVER entry is required, but to connect to a server, **sqlcmd** or **bcp** need the value in the SERVER entry.  
   
-If the same option is specified in both the DSN and the **sqlcmd** or **bcp** command line, the **sqlcmd** or **bcp** option override the value used in the DSN. For example, if the DSN has a DATABASE entry and the **sqlcmd** command line includes -d, the value passed to **-d** is used. If **Trusted_Connection=yes** is specified in the DSN, Kerberos authentication is used, and user name (**–U**) and password (**–P**) , if provided, is ignored.  
+If the same option is specified in both the DSN and the **sqlcmd** or **bcp** command line, the **sqlcmd** or **bcp** option overrides the value used in the DSN. For example, if the DSN has a DATABASE entry and the **sqlcmd** command line includes -d, the value passed to **-d** is used. If **Trusted_Connection=yes** is specified in the DSN, Kerberos authentication is used, and user name (**–U**) and password (**–P**) , if provided, is ignored.  
   
 Existing scripts that invoke **isql** can be modified to use **sqlcmd** by defining the following alias: **alias isql="sqlcmd –D"**.  
   

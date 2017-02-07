@@ -1,5 +1,7 @@
 ---
 title: "SQL Server 2008 R2 SP2 Release Notes | Microsoft Docs"
+ms.prod: "sql-non-specified"
+ms.technology: "server-general"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.reviewer: ""

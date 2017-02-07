@@ -1,5 +1,7 @@
 ---
 title: "SQL Server 2012 SP2 Release Notes | Microsoft Docs"
+ms.prod: "sql-server-2012"
+ms.technology: "server-general"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.reviewer: ""

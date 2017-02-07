@@ -364,7 +364,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="ssms/download-sql-server-management-studio-ssms">
+                                <a href="ssms/download-sql-server-management-studio-ssms.md">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -383,7 +383,7 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="./ssdt/download-sql-server-data-tools-ssdt">
+                                <a href="ssdt/download-sql-server-data-tools-ssdt.md">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -863,7 +863,7 @@ description: Learn about SQL
                                             </div>
                                             <div class="cardText">
                                                 <h3>ADO.NET</h3>
-                                                <p><a href="connect/ado-net/microsoft-ado-net-for-sql-server">Get started</a></p>
+                                                <p><a href="connect/ado-net/microsoft-ado-net-for-sql-server.md">Get started</a></p>
                                                 <p><a href="https://msdn.microsoft.com/library/system.data.sqlclient.aspx">API reference</a></p>
                                             </div>
                                         </div>
@@ -881,9 +881,9 @@ description: Learn about SQL
                                             </div>
                                             <div class="cardText">
                                                 <h3>Drivers</h3>
-                                                <p><a href="connect/sql-server-drivers">Get started</a></p>
-                                                <p><a href="connect/jdbc/microsoft-jdbc-driver-for-sql-server">JDBC</a></p>
-                                                <p><a href="./connect/odbc/microsoft-odbc-driver-for-sql-server">ODBC</a></p>
+                                                <p><a href="connect/sql-server-drivers.md">Get started</a></p>
+                                                <p><a href="connect/jdbc/microsoft-jdbc-driver-for-sql-server.md">JDBC</a></p>
+                                                <p><a href="connect/odbc/microsoft-odbc-driver-for-sql-server.md">ODBC</a></p>
                                                 <p><a href="./connect/php/microsoft-php-driver-for-sql-server">PHP</a></p>
                                                 <p><a href="./connect/node-js/node-js-driver-for-sql-server">Node.js</a></p>
                                                 <p><a href="./connect/python/python-driver-for-sql-server">Python</a></p>

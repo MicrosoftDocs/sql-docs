@@ -1,7 +1,7 @@
 ---
 title: "prepareStatement Method (java.lang.String) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,32 +22,30 @@ manager: "jhubbard"
 ---
 # prepareStatement Method (java.lang.String)
 
-  Creates a [SQLServerPreparedStatement](../Topic/SQLServerPreparedStatement%20Class.md) object for sending parameterized SQL statements to the database.  
-  
-## Syntax  
-  
-```  
-  
-public java.sql.PreparedStatement prepareStatement(java.lang.String sql)  
-```  
-  
-#### Parameters  
- *sql*  
-  
- A **String** containing an SQL statement.  
-  
-## Return Value  
- A PreparedStatement object.  
-  
+Creates a [SQLServerPreparedStatement](./sqlserverpreparedstatement-class.md) object for sending parameterized SQL statements to the database.
+
+## Syntax
+
+```
+public java.sql.PreparedStatement prepareStatement(java.lang.String sql)
+```
+
+#### Parameters
+*sql*
+
+A **String** containing an SQL statement.
+
+## Return Value
+A PreparedStatement object.
+
 ## Exceptions  
- [SQLServerException](../Topic/SQLServerException%20Class.md)  
-  
-## Remarks  
- This prepareStatement method is specified by the prepareStatement method in the java.sql.Connection interface.  
-  
-## See Also  
- [prepareStatement Method &#40;SQLServerConnection&#41;](../Topic/prepareStatement%20Method%20(SQLServerConnection).md)   
- [SQLServerConnection Members](../Topic/SQLServerConnection%20Members.md)   
- [SQLServerConnection Class](../Topic/SQLServerConnection%20Class.md)  
-  
-  
+[SQLServerException](./sqlserverexception-class.md)
+
+## Remarks
+This prepareStatement method is specified by the prepareStatement method in the java.sql.Connection interface.
+
+## See Also
+
+[prepareStatement Method &#40;SQLServerConnection&#41;](./preparestatement-method-sqlserverconnection.md)
+[SQLServerConnection Members](./sqlserverconnection-members.md)
+[SQLServerConnection Class](./sqlserverconnection-class.md)

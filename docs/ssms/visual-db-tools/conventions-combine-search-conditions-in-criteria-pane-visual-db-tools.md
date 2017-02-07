@@ -1,5 +1,5 @@
 ---
-title: "Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools) | Microsoft Docs"
+title: "Conventions for Combining Search Conditions in the Criteria Pane | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for the Microsoft ODBC Driver for SQL Server on Linux | Microsoft Docs"
+title: "Release Notes - Microsoft ODBC Driver for SQL Server on Linux | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

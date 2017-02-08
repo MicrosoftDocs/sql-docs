@@ -1,5 +1,5 @@
 ---
-title: "Summarize or Aggregate Values for All Rows in a Table (Visual Database Tools) | Microsoft Docs"
+title: "Summarize or Aggregate Values for All Rows in a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

@@ -1,5 +1,5 @@
 ---
-title: "How to: Retrieve Date and Time Type as Strings Using the SQLSRV Driver | Microsoft Docs"
+title: "Retrieve Date and Time Type as Strings Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

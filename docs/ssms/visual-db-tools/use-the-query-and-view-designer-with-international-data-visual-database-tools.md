@@ -1,5 +1,5 @@
 ---
-title: "Use the Query and View Designer with International Data (Visual Database Tools) | Microsoft Docs"
+title: "Use the Query and View Designer with International Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

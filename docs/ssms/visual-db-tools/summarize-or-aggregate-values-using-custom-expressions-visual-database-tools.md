@@ -1,5 +1,5 @@
 ---
-title: "Summarize or Aggregate Values Using Custom Expressions (Visual Database Tools) | Microsoft Docs"
+title: "Summarize or Aggregate Values Using Custom Expressions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

@@ -1,5 +1,5 @@
 ---
-title: "ODBC Driver on Linux Support for High Availability, Disaster Recovery | Microsoft Docs"
+title: "ODBC Driver on Linux - High Availability, Disaster Recovery | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

@@ -5,4 +5,4 @@
 # [Installing the Microsoft ODBC Driver for SQL Server on macOS](installing-the-microsoft-odbc-driver-for-sql-server-on-macos.md)
 # [Connection String Keywords and Data Source Names (DSNs)](connection-string-keywords-and-data-source-names-dsns.md)
 # [Programming Guidelines](programming-guidelines.md)
-# [Frequently Asked Questions (FAQ) for ODBC macOS](frequently-asked-questions-faq-for-odbc-macos.md)
+# [Frequently Asked Questions (FAQ) for ODBC macOS](frequently-asked-questions-for-odbc-macos.md)

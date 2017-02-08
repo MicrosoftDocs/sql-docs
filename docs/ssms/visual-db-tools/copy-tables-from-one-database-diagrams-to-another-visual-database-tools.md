@@ -1,5 +1,5 @@
 ---
-title: "Copy Tables from One Database Diagrams to Another (Visual Database Tools) | Microsoft Docs"
+title: "Copy Tables from One Database Diagrams to Another | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

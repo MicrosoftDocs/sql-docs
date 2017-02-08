@@ -21,7 +21,10 @@ manager: "jhubbard"
   Use the following links to download the Microsoft JDBC Driver for SQL Server.  
   
 ## Download Microsoft JDBC Drivers for SQL Server  
- [Download the Microsoft JDBC Driver 6.0, 4.2, 4.1, or 4.0 for SQL Server](http://go.microsoft.com/fwlink/?LinkId=245496)  
+ * [Microsoft JDBC Driver 6.0 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841535)
+ * [Microsoft JDBC Driver 4.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841534) 
+ * [Microsoft JDBC Driver 4.1 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
+ * [Microsoft JDBC Driver 4.0 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841532) 
   
 ## Unsupported Drivers  
  Unsupported driver versions are not available for download. We are continually improving our Java connectivity support. As such we highly recommend you work with the latest version of our JDBC driver.  

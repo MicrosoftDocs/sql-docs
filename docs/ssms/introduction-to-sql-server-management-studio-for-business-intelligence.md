@@ -1,5 +1,5 @@
 ---
-title: "Introduction to SQL Server Management Studio for Business Intelligence | Microsoft Docs"
+title: "Introduction to SQL Server Management Studio for BI | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: "sql-non-specified"

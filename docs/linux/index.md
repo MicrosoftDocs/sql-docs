@@ -8,7 +8,7 @@ SQL Server vNext CTP 1.2 runs on Linux! Learn about the core relational database
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="sql-server-linux-setup">
+        <a href="sql-server-linux-setup.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -26,7 +26,7 @@ SQL Server vNext CTP 1.2 runs on Linux! Learn about the core relational database
         </a>
     </li>
     <li>
-        <a href="sql-server-linux-management-overview">
+        <a href="sql-server-linux-management-overview.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -44,7 +44,7 @@ SQL Server vNext CTP 1.2 runs on Linux! Learn about the core relational database
         </a>
     </li>
     <li>
-        <a href="sql-server-linux-develop-overview">
+        <a href="sql-server-linux-develop-overview.md">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

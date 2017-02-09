@@ -24,9 +24,9 @@ ms.assetid: 150b0765-2c54-4bc4-b55a-7e57a5501a0f
 
 ---
 
-# Availability group for SQL Server on Linux
+# Configure Availability Group for SQL Server on Linux
 
-A SQL Server Always On Availability Group is a high-availability (HA) and disaster-recovery (DR) solution. It provides high availability for groups of databases on direct attached storage. It supports multiple secondaries for integrated HA and DR, automatic failure detection, fast transparent failover, and read load balancing. This broad set of capabilities allows you to achieve optimal availability SLAs for your workloads.
+A SQL Server Always On Availability Group is a high-availability (HA) and disaster-recovery (DR) solution. It provides HA for groups of databases on direct attached storage. It supports multiple secondaries for integrated HA and DR, automatic failure detection, fast transparent failover, and read load balancing. This broad set of capabilities allows you to achieve optimal availability SLAs for your workloads.
 
 For a comprehensive introduction, see [SQL Server Always On Availability Groups](http://msdn.microsoft.com/library/hh510230.aspx).
 
@@ -45,3 +45,4 @@ An availability group is one or more databases in a logical group, with replicas
 
 ## Next steps
 
+[Configure Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-configure-cluster.md)

@@ -29,5 +29,5 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 
 ## Next steps
 
-[Create SQL Server Availability Group](sql-server-linux-availability-group-configure-create.md)
+[Create SQL Server Availability Group](sql-server-linux-availability-group-configure.md)
 

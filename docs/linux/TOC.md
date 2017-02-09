@@ -38,7 +38,7 @@
 ### [Create](sql-server-linux-availability-group-configure.md)
 ### [Cluster]()
 #### [Red Hat Enterprise Linux](sql-server-linux-availability-group-cluster-rhel.md)
-#### [SUSE Linux Enterprise Server](sql-server-linux-availability-group-cluster-suse.md)
+#### [SUSE Linux Enterprise Server](sql-server-linux-availability-group-cluster-sles.md)
 #### [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 # [Security](sql-server-linux-security-overview.md)
 ## [Get started with security features](sql-server-linux-security-get-started.md)

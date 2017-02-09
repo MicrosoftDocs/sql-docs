@@ -67,7 +67,7 @@ To set the computer name, add it to `/etc/hostname`. The following script lets y
 sudo vi /etc/hosts
 ```
 
-The following example shows `/etc/hostname` on **node1** with additions for **node1** and **node2**. In this document **node1** refers to the primary SQL Server. **node2** refers to the secondary SQL Server.
+The following example shows `/etc/hostname` on **node1** with additions for **node1** and **node2**. In this document **node1** refers to the primary SQL Server. **node2** refers to the secondary SQL Server.;
 
 ```
 127.0.0.1   localhost localhost4 localhost4.localdomain4

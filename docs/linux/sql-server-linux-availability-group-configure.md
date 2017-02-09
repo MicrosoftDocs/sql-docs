@@ -43,20 +43,23 @@ sudo ip a
 
 Set the computer name on each node.
 
-Update `etc\hostname` file with the new name.
+Update `/etc/hostname` file with the new name.
+
+
+### Configure a computer name for each node
 
 Each node name must be:
 
 - 15 characters or less
 - Unique within the network
 
-To set the computer name, add it to `//etc//hosts`. The following script lets you edit `//etc/hosts//` with `vi`.
+To set the computer name, add it to `/etc/hostname`. The following script lets you edit `/etc/hostname` with `vi`.
 
 ```bash
 sudo vi /etc/hosts
 ```
 
-The following example shows `//etc//hosts` on **node1** with additions for **node1** and **node2**.
+The following example shows `/etc/hostname` on **node1** with additions for **node1** and **node2**.
 
 ```
 127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -69,9 +72,24 @@ The following example shows `//etc//hosts` on **node1** with additions for **nod
 >There should not be an entry for the machine's own hostname to 127.x.x.x. For example, in the above example, notice that node1 is mapped to 10.128.18.128 and not mapped to 127.0.0.1.
 
 
-## Configure a computer name for each node
-
 ## Install SQL Server
+
+Install SQL Server. The following links point to SQL Server installation instructions for various distributions. 
+
+- [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
+
+- [SUSE Linux Enterprise Server]())sql-server-linux-setup-suse-linux-enterprise-server.md)
+
+- [Ubuntu](sql-server-linux-setup-ubuntu.md)
+
+### Enable HADRON and restart sqlserver
+
+Enable HADRON on each SQL Server, then restart `mssql-server`.  Run the following script:
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set hadrenabled 1
+sudo systemctl restart mssql-server
+```
 
 ## Configure the Availability Group
 

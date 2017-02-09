@@ -34,7 +34,7 @@
 #### [Operate (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 ### [SUSE Linux Enterprise Server]()
 #### [Configure (HA add-on)](sql-server-linux-shared-disk-cluster-sles-configure.md)
-## [Availability Groups]()
+## [Availability Groups](sql-server-linux-availability-group-overview.md)
 ### [Create](sql-server-linux-availability-group-configure.md)
 ### [Cluster]()
 #### [Red Hat Enterprise Linux](sql-server-linux-availability-group-cluster-rhel.md)

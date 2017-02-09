@@ -93,9 +93,32 @@ sudo systemctl restart mssql-server
 
 ## Configure the Availability Group
 
+After you have configured the server name, the hosts file, installed SQL Server, and enabled HADRON you can configure an availability group.  
+
 ### Create a certificate
 
+Connect to the SQL Server on the primary node and run the following Transact-SQL to create the certificate:
+
+```Transact-SQL
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
+CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm'
+BACKUP CERTIFICATE dbm_certificate
+   TO FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
+       WITH PRIVATE KEY (
+           FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
+               ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
+       )
+DROP CERTIFICATE dbm_certificate
+```
+
+>[!NOTE]
+>Do not use Linux-style paths like `/var/opt/mssql/data/dbm_certificate.cer` for the certificates.
+
+
+
 ### Create a master key 
+
+
 
 ### Create the HADR endpoints on all replicas
 

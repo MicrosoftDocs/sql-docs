@@ -26,24 +26,48 @@ ms.assetid: 150b0765-2c54-4bc4-b55a-7e57a5501a0f
 
 # Configure Availability Group for SQL Server on Linux
 
-A SQL Server Always On Availability Group is a high-availability (HA) and disaster-recovery (DR) solution. It provides HA for groups of databases on direct attached storage. It supports multiple secondaries for integrated HA and DR, automatic failure detection, fast transparent failover, and read load balancing. This broad set of capabilities allows you to achieve optimal availability SLAs for your workloads.
+A server that participates in an availability group is called a cluster node. 
 
-For a comprehensive introduction, see [SQL Server Always On Availability Groups](http://msdn.microsoft.com/library/hh510230.aspx).
-
-Configure SQL Server Always On Availability Groups on Linux server. In order to accommodate SQL Server workloads with rigorous business continuity requirements to run on Linux, Always On Availability Groups run on all supported [Linux OS distributions](sql-server-linux-release-notes.md). Also, all capabilities that make Availability Groups a flexible, integrated and efficient HA DR solution are available on Linux as well. These include: 
-
-- Multi-database failover
-- Fast failure detection and failover
-- Multiple synchronous and asynchronous secondaries
-- Manual or automatic failover
-- Active secondaries available for read and backup workloads
-- Direct seeding
-- Read-only routing
-- Database level health monitoring and failover trigger
-
+## Prerequisites
 
 
 ## Configure the hosts file
+
+The hosts file on every cluster node contains the IP address and name of every cluster node. 
+
+The following command returns the IP address of the current node:
+
+```bash
+sudo ip a
+```
+
+Set the computer name on each node.
+
+Update `etc\hostname` file with the new name.
+
+Each node name must be:
+
+- 15 characters or less
+- Unique within the network
+
+To set the computer name, add it to `//etc//hosts`. The following script lets you edit `//etc/hosts//` with `vi`.
+
+```bash
+sudo vi /etc/hosts
+```
+
+The following example shows `//etc//hosts` on **node1** with additions for **node1** and **node2**.
+
+```
+127.0.0.1   localhost localhost4 localhost4.localdomain4
+::1       localhost localhost6 localhost6.localdomain6
+10.128.18.128 node1
+10.128.16.77 node2
+```
+
+>[!WARNING]
+>There should not be an entry for the machine's own hostname to 127.x.x.x. For example, in the above example, notice that node1 is mapped to 10.128.18.128 and not mapped to 127.0.0.1.
+
 
 ## Configure a computer name for each node
 

@@ -59,7 +59,6 @@
 # [Choose the Right Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)
 # [Modify the Target Servers for a Job](modify-the-target-servers-for-a-job.md)
 # [Proxy Editor - Add Principal](proxy-editor-add-principal.md)
-# [Add Steps to a SQL Server Agent Master Job](add-steps-to-a-sql-server-agent-master-job.md)
 # [Poll Servers](poll-servers.md)
 # [Automatically Delete a Job](automatically-delete-a-job.md)
 # [View Information About an Operator](view-information-about-an-operator.md)

@@ -78,7 +78,7 @@ Install SQL Server. The following links point to SQL Server installation instruc
 
 - [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
 
-- [SUSE Linux Enterprise Server]())sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
 
 - [Ubuntu](sql-server-linux-setup-ubuntu.md)
 

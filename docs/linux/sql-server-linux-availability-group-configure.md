@@ -123,20 +123,75 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@targetmachine:/var/opt/mssql/data/
 ```
 
-Alternatively, you copy from the target machine with the following command.
+Alternatively on the destination server, you can copy the certificate and key with the following command.
 
 ```bash
 cd /var/opt/mssql/data
 chown mssql:mssql dbm_certificate.*
 ```
 
-### Create a master key 
+### Create a master key
 
+Run the following command on each of the secondary nodes to create the certificate on the secondary nodes. 
 
+```Transact-SQL
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>' ]
+CREATE LOGIN dbm_login WITH PASSWORD = '<1Sample_Strong_Password!@#>'
+CREATE USER dbm_user FOR LOGIN dbm_login
+CREATE CERTIFICATE dbm_certificate   
+AUTHORIZATION dbm_user
+    FROM FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
+    WITH PRIVATE KEY (
+    FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
+    DECRYPTION BY PASSWORD = 'as3jsdjhaj304SDF'
+            )
+```
 
 ### Create the HADR endpoints on all replicas
 
+The HADR endpoint is also called the database mirroring endpoint. This endpoint identifies the name, IP address, and port for the availability group. Create the database mirroring endpoint on all nodes. Run the following Transact-SQL on all nodes: 
+
+```Transact-SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (<0.0.0.0>), LISTENER_PORT = <5022>)
+    FOR DATA_MIRRORING (
+	    ROLE = ALL,
+	    AUTHENTICATION = CERTIFICATE dbm_certificate,
+		ENCRYPTION = REQUIRED ALGORITHM AES
+		)
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login]
+```
+
+
+>[!IMPORTANT]
+>The TCP port on the firewall needs to be open for the listener port.
+
 ### Create the Availability group on the primary SQL Server instance
+
+Create the availability group. Run the following Transact-SQL on the primary node.
+
+```Transact-SQL
+CREATE AVAILABILITY GROUP [ag1]
+    WITH (DB_FAILOVER = ON, CLUSTER_TYPE = NONE)
+    FOR REPLICA ON
+        N'node1' WITH (
+            ENDPOINT_URL = N'tcp://node1:5022',
+		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+		    FAILOVER_MODE = AUTOMATIC,
+		    SEEDING_MODE = AUTOMATIC,
+		    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
+		    ),
+        N'node2' WITH ( 
+		    ENDPOINT_URL = N'tcp://node2:5022', 
+		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+		    FAILOVER_MODE = AUTOMATIC,
+		    SEEDING_MODE = AUTOMATIC,
+		    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
+		    )
+		
+ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
+```
 
 ### Join secondary SQL Server instances to the Availability Group
 

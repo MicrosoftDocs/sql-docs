@@ -43,6 +43,28 @@ Configure SQL Server Always On Availability Groups on Linux server. In order to 
 
 An availability group is one or more databases in a logical group, with replicas on more than one instance of SQL Server. 
 
+## Configure the hosts file
+
+## Configure a computer name for each node
+
+## Install SQL Server
+
+## Configure the Availability Group
+
+### Create a certificate
+
+### Create a master key 
+
+### Create the HADR endpoints on all replicas
+
+### Create the Availability group on the primary SQL Server instance
+
+### Join secondary SQL Server instances to the Availability Group
+
+### Create the database
+
+### Add additional databases to the availability group
+
 ## Next steps
 
 [Configure Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster.md)

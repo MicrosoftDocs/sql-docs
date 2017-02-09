@@ -26,6 +26,37 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 
 # Configure Linux Cluster for SQL Server Availability Group
 
+## Configure Pacemaker for SLES
+
+## Install mssql-server-ha package
+
+## Create a SQL Server login for Pacemaker
+
+## Save credentials
+
+## Open Pacemaker firewall ports
+
+## Install Pacemaker packages
+
+## Set password for default user
+
+## Enable ansd start pcsd service and Pacemaker
+
+## Create the Cluster
+
+## Disable STONITH
+
+## Create AG resource
+
+## Enable monitoring on master
+
+## Create virtual IP resource
+
+## Add colocation constraint
+
+## Add ordering constraint
+
+## Manual failover
 
 ## Next steps
 

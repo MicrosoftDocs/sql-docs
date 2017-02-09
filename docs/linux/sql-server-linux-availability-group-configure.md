@@ -38,6 +38,14 @@ This document describes how to create an availability group on SQL Server on Lin
 
 ## Prerequisites
 
+Before you create the availability group, you need to:
+
+- Configure the host file on each server
+- Set the server name for each server
+- Install SQL Server
+
+>[!NOTE]
+>On Linux, you create the availability group before you create the cluster. This document provides an example that creates the availability group. It does not create the cluster. Create the cluster after you follow the steps in this document. For distribution specific instructions to create the cluster, see the links under [Next steps](#next-steps).
 
 ## Configure the hosts file
 
@@ -54,7 +62,7 @@ Set the computer name on each server.
 Update `/etc/hostname` file with the new name.
 
 
-### Configure a computer name for each SQL Server
+### Configure a computer name for each server
 
 Each SQL Server name must be:
 

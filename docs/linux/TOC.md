@@ -34,6 +34,7 @@
 #### [Operate (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 ### [SUSE Linux Enterprise Server]()
 #### [Configure (HA add-on)](sql-server-linux-shared-disk-cluster-sles-configure.md)
+## [Availability Groups](sql-server-linux-availability-group-configure.md)
 # [Security](sql-server-linux-security-overview.md)
 ## [Get started with security features](sql-server-linux-security-get-started.md)
 # [Optimize Performance](sql-server-linux-performance-get-started.md)

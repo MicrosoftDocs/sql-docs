@@ -114,7 +114,21 @@ DROP CERTIFICATE dbm_certificate
 >[!NOTE]
 >Do not use Linux-style paths like `/var/opt/mssql/data/dbm_certificate.cer` for the certificates.
 
+At this point your primary server has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all other nodes. Use the mssql user or give permission to mssql user to access these files. 
 
+For example on the source machine, the following command copies the  files to the target machine.
+
+```bash
+cd /var/opt/mssql/data
+scp dbm_certificate.* root@targetmachine:/var/opt/mssql/data/
+```
+
+Alternatively, you copy from the target machine with the following command.
+
+```bash
+cd /var/opt/mssql/data
+chown mssql:mssql dbm_certificate.*
+```
 
 ### Create a master key 
 

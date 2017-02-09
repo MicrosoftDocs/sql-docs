@@ -41,7 +41,7 @@ Configure SQL Server Always On Availability Groups on Linux server. In order to 
 - Read-only routing
 - Database level health monitoring and failover trigger
 
-An availability group is one or more databases in a logical group, with replicas on more than one instance of SQL Server. 
+
 
 ## Configure the hosts file
 

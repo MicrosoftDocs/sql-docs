@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure Linux Cluster for SQL Server Availability Group | Microsoft Docs
+title: Configure Ubuntu Cluster for SQL Server Availability Group | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -10,7 +10,8 @@ ms.date: 02/09/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
-ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
+ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
+
 
 # optional metadata
 # keywords: ""
@@ -24,7 +25,7 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 
 ---
 
-# Configure Linux Cluster for SQL Server Availability Group
+# Configure Ubuntu Cluster for SQL Server Availability Group
 
 ## Configure Pacemaker for SLES
 

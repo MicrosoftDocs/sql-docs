@@ -26,29 +26,37 @@ ms.assetid: 150b0765-2c54-4bc4-b55a-7e57a5501a0f
 
 # Configure Availability Group for SQL Server on Linux
 
-A server that participates in an availability group is called a cluster node. 
+An availability Group is one or more databases that can have replicas on multiple SQL Servers for high-availability (HA), disaster-recovery (DR), and reporting. An availability group defines a set of two or more failover partners, known as availability replicas. Availability replicas are components of the availability group. For details see [Overview of Always On Availability Groups (SQL Server)](http://msdn.microsoft.com/library/ff877884.aspx).
+
+This document describes how to create an availability group on SQL Server on Linux. The document uses the following specific terms:
+
+- **Primary SQL Server**
+   This server is the server that holds the primary replica. The primary replica is the availability group replica that allows read and write access to the database. This is also the server where you will create the first certificate and the first database in the availability group.
+
+- **Secondary SQL Server**
+   This server includes all SQL Servers that will hold a secondary availability group replica. The secondary availability group replicas cannot be written to. They may or may not be readable.
 
 ## Prerequisites
 
 
 ## Configure the hosts file
 
-The hosts file on every cluster node contains the IP address and name of every cluster node. 
+The hosts file on every SQL Server contains the IP address and name of every SQL Server that will participate in the availability group. 
 
-The following command returns the IP address of the current node:
+The following command returns the IP address of the current server:
 
 ```bash
 sudo ip a
 ```
 
-Set the computer name on each node.
+Set the computer name on each server.
 
 Update `/etc/hostname` file with the new name.
 
 
-### Configure a computer name for each node
+### Configure a computer name for each SQL Server
 
-Each node name must be:
+Each SQL Server name must be:
 
 - 15 characters or less
 - Unique within the network
@@ -59,7 +67,7 @@ To set the computer name, add it to `/etc/hostname`. The following script lets y
 sudo vi /etc/hosts
 ```
 
-The following example shows `/etc/hostname` on **node1** with additions for **node1** and **node2**.
+The following example shows `/etc/hostname` on **node1** with additions for **node1** and **node2**. In this document **node1** refers to the primary SQL Server. **node2** refers to the secondary SQL Server.
 
 ```
 127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -97,7 +105,7 @@ After you have configured the server name, the hosts file, installed SQL Server,
 
 ### Create a certificate
 
-Connect to the SQL Server on the primary node and run the following Transact-SQL to create the certificate:
+Connect to the primary SQL Server and run the following Transact-SQL to create the certificate:
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
@@ -114,7 +122,7 @@ DROP CERTIFICATE dbm_certificate
 >[!NOTE]
 >Do not use Linux-style paths like `/var/opt/mssql/data/dbm_certificate.cer` for the certificates.
 
-At this point your primary server has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all other nodes. Use the mssql user or give permission to mssql user to access these files. 
+At this point your primary SQL server has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all other SQL Servers. Use the mssql user or give permission to mssql user to access these files. 
 
 For example on the source machine, the following command copies the  files to the target machine.
 
@@ -132,7 +140,7 @@ chown mssql:mssql dbm_certificate.*
 
 ### Create a master key
 
-Run the following command on each of the secondary nodes to create the certificate on the secondary nodes. 
+Run the following command on each of the secondary SQL Servers to create the certificate. 
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>' ]
@@ -149,7 +157,7 @@ AUTHORIZATION dbm_user
 
 ### Create the HADR endpoints on all replicas
 
-The HADR endpoint is also called the database mirroring endpoint. This endpoint identifies the name, IP address, and port for the availability group. Create the database mirroring endpoint on all nodes. Run the following Transact-SQL on all nodes: 
+The HADR endpoint is also called the database mirroring endpoint. This endpoint identifies the name, IP address, and port for the availability group. Create the database mirroring endpoint on all SQL Servers. Run the following Transact-SQL on all SQL Servers: 
 
 ```Transact-SQL
 CREATE ENDPOINT [Hadr_endpoint]
@@ -169,7 +177,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login]
 
 ### Create the Availability group on the primary SQL Server instance
 
-Create the availability group. Run the following Transact-SQL on the primary node.
+Create the availability group. Run the following Transact-SQL on the primary SQL Server.
 
 ```Transact-SQL
 CREATE AVAILABILITY GROUP [ag1]
@@ -193,11 +201,48 @@ CREATE AVAILABILITY GROUP [ag1]
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
 ```
 
-### Join secondary SQL Server instances to the Availability Group
+### Join secondary SQL Server to the Availability Group
+
+On each secondary SQL Server, run the following Transact-SQL to join the availability group.
+
+```Transact-SQL
+ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE)
+		 
+ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
+```
+
+>[!NOTE]
+>In some cases the first command, above will take approximately 30 seconds to complete. 
+
+## Test the Availability Group
+
+To test the availability group create a database, add it to an availability group and verify that the database is created on the secondary servers. 
 
 ### Create the database
+On the primary SQL Server, run the following Transact-SQL to create a database called `db1`.
 
-### Add additional databases to the availability group
+```Transact-SQL
+CREATE DATABASE [db1]
+ALTER DATABASE [db1] SET RECOVERY FULL
+BACKUP DATABASE [db1] TO DISK = N'NUL'
+```
+
+### Add the database to the availability group
+
+On the primary SQL Server, run the following Transact-SQL to add a database called `db1` to an availability group called `ag1`.
+
+```Transact-SQL
+ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1]
+```
+
+
+### Verify that the database is created on the secondary servers
+
+On each secondary SQL Server, run the following query to see if the `db1` database has been created.
+
+```Transact-SQL
+SELECT * FROM sys.databases WHERE name = 'db1'
+```
 
 ## Next steps
 

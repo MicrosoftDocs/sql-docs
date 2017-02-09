@@ -45,4 +45,4 @@ An availability group is one or more databases in a logical group, with replicas
 
 ## Next steps
 
-[Configure Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-configure-cluster.md)
+[Configure Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster.md)

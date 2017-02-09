@@ -4,7 +4,7 @@
 # [Get Started](sql-server-linux-get-started-tutorial.md)
 ## [Install SQL Server](sql-server-linux-setup.md)
 ### [Install on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
-### [Install on SUSE Enterprise Linux Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
+### [Install on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
 ### [Install on Ubuntu](sql-server-linux-setup-ubuntu.md)
 ### [Run the Docker image](sql-server-linux-setup-docker.md)
 ### [Provision a SQL Server VM in Azure](sql-server-linux-azure-virtual-machine.md)

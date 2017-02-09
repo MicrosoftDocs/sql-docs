@@ -183,9 +183,9 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login]
 >[!IMPORTANT]
 >The TCP port on the firewall needs to be open for the listener port.
 
-### Create the Availability group on the primary SQL Server instance
+### Create the availability group on the primary SQL Server instance
 
-Create the availability group. Run the following Transact-SQL on the primary SQL Server.
+Create the availability group. The following Transact-SQL creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Run the following Transact-SQL on the primary SQL Server to create the availability group.
 
 ```Transact-SQL
 CREATE AVAILABILITY GROUP [ag1]
@@ -209,7 +209,7 @@ CREATE AVAILABILITY GROUP [ag1]
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
 ```
 
-### Join secondary SQL Server to the Availability Group
+### Join secondary SQL Server to the availability group
 
 On each secondary SQL Server, run the following Transact-SQL to join the availability group.
 

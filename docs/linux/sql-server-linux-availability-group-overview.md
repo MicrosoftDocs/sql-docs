@@ -41,9 +41,13 @@ Configure SQL Server Always On Availability Groups on Linux server. In order to 
 - Read-only routing
 - Database level health monitoring and failover trigger
 
+## Overview of Steps to Configure SQL Server Availability Group on Linux
+
+To configure a SQL Server Availability Group on Linux, first configure the availability group and then configure the cluster. The steps to configure the availability group are the same across Linux distributions. The steps to configure the cluster depend on the distribution. For specific steps, see the following links. 
+
 ## Next steps
 
-[Configure Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure)
+[Configure Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure.md)
 
 [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-rhel.md)
 

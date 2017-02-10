@@ -201,7 +201,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
 ## TestInclude
 
-[!INCLUDE [SLES-Configure-Pacemaker](../../includes/ss-sles-pacemaker-configure.md)]
+[!INCLUDE [SLES-Configure-Pacemaker](../includes/ss-sles-pacemaker-configure.md)]
 
 ## Configure the cluster resources for SQL Server
 

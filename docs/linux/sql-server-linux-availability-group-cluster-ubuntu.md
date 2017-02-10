@@ -81,7 +81,27 @@ sudo systemctl enable pacemaker
 
 ## Create the Cluster
 
+Run the following command on all nodes. 
+
+```bash
+sudo pcs cluster destroy # On all nodes
+```
+
+Run the following command the primary SQL Server. 
+
+```bash
+sudo pcs cluster auth nodeName1 nodeName2  -u hacluster -p <password for hacluster>
+sudo pcs cluster setup --name <clusterName> <nodeName1> <nodeName2…> --force
+sudo pcs cluster start --all
+```
+
 ## Disable STONITH
+
+Run the following command to disable STONITH
+
+```bash
+sudo pcs property set stonith-enabled=false
+```
 
 ## Create AG resource
 

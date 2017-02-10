@@ -62,7 +62,18 @@ sudo systemctl enable pacemaker
 
 ## Create the Cluster
 
+To create the cluster, run `ha-cluster-init` on the first node. For instructions, see [Setting up the first node](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node).
+
+To add additional nodes, run `ha-cluster-join` on secondary nodes. See [Adding the second node](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+
 ## Disable STONITH
+
+On SLES, STONITH is disabled during `ha-cluster-init` on the first node, and `ha-cluster-join` on secondary nodes. You can also manually disable it by running the following commands. 
+
+```bash
+sudo crm configure property stonith-enabled=false
+sudo crm configure property start-failure-is-fatal=false
+a```
 
 ## Create AG resource
 

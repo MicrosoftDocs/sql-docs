@@ -47,7 +47,7 @@ Before you create the availability group, you need to:
 >[!NOTE]
 >On Linux, you create the availability group before you create the cluster. This document provides an example that creates the availability group. It does not create the cluster. Create the cluster after you follow the steps in this document. For distribution specific instructions to create the cluster, see the links under [Next steps](#next-steps).
 
-## Configure the hosts file
+### Configure the hosts file
 
 The hosts file on every SQL Server contains the IP address and name of every SQL Server that will participate in the availability group. 
 
@@ -88,7 +88,7 @@ The following example shows `/etc/hostname` on **node1** with additions for **no
 >There should not be an entry for the machine's own hostname to 127.x.x.x. For example, in the above example, notice that node1 is mapped to 10.128.18.128 and not mapped to 127.0.0.1.
 
 
-## Install SQL Server
+### Install SQL Server
 
 Install SQL Server. The following links point to SQL Server installation instructions for various distributions. 
 
@@ -98,7 +98,7 @@ Install SQL Server. The following links point to SQL Server installation instruc
 
 - [Ubuntu](sql-server-linux-setup-ubuntu.md)
 
-### Enable HADRON and restart sqlserver
+## Enable HADRON and restart sqlserver
 
 Enable HADRON on each SQL Server, then restart `mssql-server`.  Run the following script:
 
@@ -107,11 +107,7 @@ sudo /opt/mssql/bin/mssql-conf set hadrenabled 1
 sudo systemctl restart mssql-server
 ```
 
-## Configure the Availability Group
-
-After you have configured the server name, the hosts file, installed SQL Server, and enabled HADRON you can configure an availability group.  
-
-### Create a certificate
+## Create a certificate
 
 Connect to the primary SQL Server and run the following Transact-SQL to create the certificate:
 
@@ -146,7 +142,7 @@ cd /var/opt/mssql/data
 chown mssql:mssql dbm_certificate.*
 ```
 
-### Create a master key
+## Create a master key
 
 Run the following command on each of the secondary SQL Servers to create the certificate. 
 
@@ -163,7 +159,7 @@ AUTHORIZATION dbm_user
             )
 ```
 
-### Create the HADR endpoints on all replicas
+## Create the HADR endpoints on all replicas
 
 The HADR endpoint is also called the database mirroring endpoint. This endpoint identifies the name, IP address, and port for the availability group. Create the database mirroring endpoint on all SQL Servers. Run the following Transact-SQL on all SQL Servers: 
 
@@ -183,7 +179,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login]
 >[!IMPORTANT]
 >The TCP port on the firewall needs to be open for the listener port.
 
-### Create the availability group on the primary SQL Server instance
+## Create the availability group
 
 Create the availability group. The following Transact-SQL creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Run the following Transact-SQL on the primary SQL Server to create the availability group.
 
@@ -209,7 +205,7 @@ CREATE AVAILABILITY GROUP [ag1]
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
 ```
 
-### Join secondary SQL Server to the availability group
+### Join secondary SQL Servers
 
 On each secondary SQL Server, run the following Transact-SQL to join the availability group.
 

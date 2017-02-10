@@ -26,7 +26,9 @@ ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 
 # Configure SLES Cluster for SQL Server Availability Group
 
-## Configure Pacemaker for SLES
+## Install and configure Pacemaker on each cluster node
+ 
+[!INCLUDE [SLES-Configure-Pacemaker](../includes/ss-sles-pacemaker-configure.md)]
 
 ## Install mssql-server-ha package
 

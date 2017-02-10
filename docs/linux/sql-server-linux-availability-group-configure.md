@@ -252,6 +252,10 @@ On each secondary SQL Server, run the following query to see if the `db1` databa
 SELECT * FROM sys.databases WHERE name = 'db1'
 ```
 
+## Notes
+
+
+
 ## Next steps
 
 [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-rhel.md)

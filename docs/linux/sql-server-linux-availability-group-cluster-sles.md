@@ -28,7 +28,7 @@ ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 
 ## Install and configure Pacemaker on each cluster node
  
-[!INCLUDE [SLES-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure.md)]
+[!INCLUDE [SLES-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-sles.md)]
 
 ## Create a SQL Server login for Pacemaker
 

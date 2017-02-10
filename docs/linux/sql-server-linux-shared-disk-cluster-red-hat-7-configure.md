@@ -256,6 +256,7 @@ At this point both instances of SQL Server are configured to run with the databa
 
 ## Install and configure Pacemaker on each cluster node
 
+[!INCLUDE [RHEL-Configure-Pacemaker](../../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
 
 2. On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
 

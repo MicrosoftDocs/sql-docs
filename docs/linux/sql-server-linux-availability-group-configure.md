@@ -142,7 +142,7 @@ cd /var/opt/mssql/data
 chown mssql:mssql dbm_certificate.*
 ```
 
-## Create a master key
+## Create the certificate on secondary servers
 
 Run the following command on each of the secondary SQL Servers to create the certificate. 
 

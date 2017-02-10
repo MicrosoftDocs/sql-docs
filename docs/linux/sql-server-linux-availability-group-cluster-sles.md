@@ -34,11 +34,13 @@ ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 
 [!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
-## Save credentials
-
 ## Open Pacemaker firewall ports
 
+For instructions, see [SuSEFirewall2](https://www.suse.com/documentation/sles-12/book_security/data/sec_security_firewall_suse.html).
+
 ## Install Pacemaker packages
+
+For instructions, see [Installing SUSE Linux Enterprise Server and High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.installation)
 
 ## Set password for default user
 

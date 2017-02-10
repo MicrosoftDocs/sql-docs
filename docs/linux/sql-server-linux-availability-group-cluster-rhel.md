@@ -34,11 +34,25 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 
 [!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
-## Save credentials
-
 ## Open Pacemaker firewall ports
 
+On all nodes open the firewall ports. Open the port for the high-availability service, SQL Server, and the availability group endpoint. If firewalld is installed, run the following commands: 
+
+```bash
+sudo firewall-cmd --permanent --add-service=high-availability
+sudo firewall-cmd --permanent --add-port=1433/tcp
+sudo firewall-cmd --permanent --add-port=5022/tcp
+		
+sudo firewall-cmd --reload
+```
+
 ## Install Pacemaker packages
+
+On all nodes, run the following commands to install the pacemaker packages:
+
+```bash
+sudo yum install pacemaker pcs fence-agents-all resource-agents
+```
 
 ## Set password for default user
 

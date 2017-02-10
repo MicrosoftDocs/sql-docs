@@ -33,11 +33,33 @@ ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 
 [!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
-## Save credentials
-
 ## Open Pacemaker firewall ports
 
+```bash
+sudo ufw allow 2224/tcp
+sudo ufw allow 3121/tcp
+sudo ufw allow 21064/tcp
+sudo ufw allow 5405/udp
+		
+sudo ufw allow 1433/tcp # Replace with TDS endpoint
+sudo ufw allow 5022/tcp # Replace with DATA_MIRRORING endpoint
+		
+sudo ufw reload
+```
+
+Alternatively, you can just disable the firewall:
+		
+```bash
+sudo ufw disable
+```
+
 ## Install Pacemaker packages
+
+On all nodes, run the following commands:
+
+```bash
+sudo apt-get install pacemaker pcs fence-agents resource-agents
+```
 
 ## Set password for default user
 

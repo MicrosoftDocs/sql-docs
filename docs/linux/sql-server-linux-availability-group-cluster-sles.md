@@ -92,8 +92,6 @@ crm configure
 commit
 ```
 
-## Enable monitoring on master
-
 ## Create virtual IP resource
 
 ## Add colocation constraint

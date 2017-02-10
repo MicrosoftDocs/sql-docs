@@ -107,6 +107,13 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 \
 
 ## Enable monitoring on master
 
+To enable monitoring, run the following commands on one node.
+
+```bash
+sudo pcs resource op add ag_cluster monitor interval=11s timeout=60s role=Master
+sudo pcs resource op add ag_cluster monitor interval=12s timeout=60s role=Slave
+```
+
 ## Create virtual IP resource
 
 ## Add colocation constraint

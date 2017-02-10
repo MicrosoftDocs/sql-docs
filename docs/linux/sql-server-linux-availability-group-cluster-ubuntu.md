@@ -27,11 +27,11 @@ ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 
 # Configure Ubuntu Cluster for SQL Server Availability Group
 
-## Configure Pacemaker for SLES
-
 ## Install mssql-server-ha package
 
 ## Create a SQL Server login for Pacemaker
+
+[!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## Save credentials
 

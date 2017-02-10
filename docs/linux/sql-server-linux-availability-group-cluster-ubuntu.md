@@ -144,7 +144,32 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 
 ## Add ordering constraint
 
+The colocation constraint has an implicit ordering constraint. It moves the virtual IP resource before it moves the availability group resource. By default the sequence of events is:
+
+1. User issues `pcs resource move` to the availability group master from node1 to node2.
+1. The virtual IP resource stops on node 1.
+1. The virtual IP resource starts on node 2. 
+   >[!NOTE]
+   >At this point, the IP address temporarily points to node 2 while node 2 is still a pre-failover secondary. 
+1. The availability group master on node 1 is demoted to slave.
+1. The availability group slave on node 2 is promoted to master. 
+
+To prevent the IP address from temporarily pointing to the node with the pre-failover secondary, add an ordering constraint. 
+
+To add an ordering constraint, run the following command on one node:
+
+```bash
+sudo pcs constraint order promote ag_cluster-master then start virtualip
+```
+
+
 ## Manual failover
+
+To manually failover to cluster node2, run the following command.
+
+```bash
+sudo pcs resource move ag_cluster-master node2 --master
+```
 
 ## Next steps
 

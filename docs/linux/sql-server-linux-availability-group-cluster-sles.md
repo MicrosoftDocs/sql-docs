@@ -94,6 +94,17 @@ commit
 
 ## Create virtual IP resource
 
+If you did not create the virtual IP resource when you ran `ha-cluster-init` you can create this resource now. The following command creates a virtual IP resource.
+
+```bash
+crm configure
+# primitive admin_addr \
+   ocf:heartbeat:IPaddr2 \
+   params ip=10.9.9.180 \
+      cidr_netmask=24 \
+    op monitor interval="30s"
+```
+
 ## Add colocation constraint
 
 ## Add ordering constraint

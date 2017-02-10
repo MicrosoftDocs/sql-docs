@@ -128,6 +128,12 @@ sudo pcs resource op add ag_cluster monitor interval=12s timeout=60s role=Slave
 
 ## Create virtual IP resource
 
+To create the virtual IP address resource, run the following command on one node. Use an available IP address from the network.
+
+```bash
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
+```
+
 ## Add colocation constraint
 
 ## Add ordering constraint

@@ -73,9 +73,24 @@ On SLES, STONITH is disabled during `ha-cluster-init` on the first node, and `ha
 ```bash
 sudo crm configure property stonith-enabled=false
 sudo crm configure property start-failure-is-fatal=false
-a```
+```
 
-## Create AG resource
+## Create availability group resource
+
+The following command creates and configures the availabiltiy group resource.
+
+```bash
+crm configure
+#primitive ag_cluster \
+   ocf:mssql:ag \
+   params ag_name="ag1" \
+   op monitor interval="15" role="Master" \
+   op monitor interval="30" role="Slave"
+#ms ms-ag_cluster ag_cluster \
+   meta master-max="1" master-node-max="1" clone-max="2" \
+   clone-node-max="1"
+commit
+```
 
 ## Enable monitoring on master
 

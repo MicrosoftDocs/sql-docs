@@ -103,7 +103,19 @@ Run the following command to disable STONITH
 sudo pcs property set stonith-enabled=false
 ```
 
-## Create AG resource
+## Create availability group resource
+
+To create the availability group resource, set properties as follows:
+
+- **clone-max**: Number of AG replicas, including primary. For example, if you have one primary and one secondary, set this to 2.
+- **clone-node-max**: Number of secondaries. For example, if you have one primary and one secondary, set this to 1.
+
+The following script sets these properties.
+
+```bash
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 \
+--master meta master-max=1 master-node-max=1 clone-max=2 clone-node-max=1 
+```
 
 ## Enable monitoring on master
 

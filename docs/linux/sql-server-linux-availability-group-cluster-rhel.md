@@ -28,7 +28,7 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 
 ## Configure Pacemaker for RHEL
 
-[!INCLUDE [RHEL-Configure-Pacemaker](../../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
+[!INCLUDE [RHEL-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
 
 ## Install mssql-server-ha package
 

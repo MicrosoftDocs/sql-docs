@@ -155,7 +155,7 @@ AUTHORIZATION dbm_user
     FROM FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
     WITH PRIVATE KEY (
     FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
-    DECRYPTION BY PASSWORD = 'as3jsdjhaj304SDF'
+    DECRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
             )
 ```
 
@@ -256,6 +256,6 @@ SELECT * FROM sys.databases WHERE name = 'db1'
 
 [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-rhel.md)
 
-[Configure SUSE Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-sles.md)
+[Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-sles.md)
 
 [Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-ubuntu.md)

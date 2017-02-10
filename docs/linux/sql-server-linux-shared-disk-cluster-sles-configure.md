@@ -199,6 +199,10 @@ At this point both instances of SQL Server are configured to run with the databa
 
 7.	**Removal procedures**. If you need to remove a node from the cluster, use the **ha-cluster-remove** bootstrap script. For more information, see [Overview of the Bootstrap Scripts](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap).  
 
+## TestInclude
+
+[!INCLUDE [SLES-Configure-Pacemaker](../../includes/ss-sles-pacemaker-configure.md)]
+
 ## Configure the cluster resources for SQL Server
 
 The following steps explain how to configure the cluster resource for SQL Server. There are two settings that you need to customize.

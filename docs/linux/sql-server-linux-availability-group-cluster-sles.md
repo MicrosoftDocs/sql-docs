@@ -144,11 +144,14 @@ For more information, see [Show Cluster Resources](http://www.suse.com/documenta
 
 ## Manual failover
 
-To manually failover to cluster node2, run the following command.
+Manage failover of the availability group with `crm`. Do not initiate failover with Transact-SQL. To manually failover to cluster node2, run the following command.
 
 ```bash
 crm resource migrate ms-ag_cluster sles1
 ```
+
+>[!NOTE]
+>At this time manual failover to an asynchronous replica does not work properly. This will be fixed in a future release.
 
 ## Next steps
 

@@ -151,11 +151,16 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 
 ## Manual failover
 
+Manually failover the availability group with `pcs`. Do not initiate failover with Transact-SQL.
+
 To manually failover to cluster node2, run the following command.
 
 ```bash
 sudo pcs resource move ag_cluster-master node2 --master
 ```
+
+>[!NOTE]
+>At this time manual failover to an asynchronous replica does not work properly. This will be fixed in a future release.
 
 ## Next steps
 

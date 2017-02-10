@@ -144,7 +144,7 @@ chown mssql:mssql dbm_certificate.*
 
 ## Create the certificate on secondary servers
 
-Run the following command on each of the secondary SQL Servers to create the certificate. 
+Run the following command on both the primary and each of the secondary SQL Servers to create the certificate from the backup. The command also creates a user named dbm_user and authorizes the user to access the certificate.
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>' ]

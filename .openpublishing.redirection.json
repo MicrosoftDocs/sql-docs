@@ -4,7 +4,7 @@
   {
     "source_path" :  "docs/ssms/agent/add-steps-to-a-sql-server-agent-master-job.md",
     "redirect_url": "/docs/ssms/object",
-    "redirect_document_id": true
+    "redirect_document_id": false
   }
  ]
 }

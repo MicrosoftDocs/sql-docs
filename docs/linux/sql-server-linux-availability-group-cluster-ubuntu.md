@@ -37,6 +37,8 @@ ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 
 ## Open Pacemaker firewall ports
 
+The default TCP port for SQL Server is 1433. 
+
 ```bash
 sudo ufw allow 2224/tcp
 sudo ufw allow 3121/tcp

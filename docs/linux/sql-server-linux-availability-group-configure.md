@@ -250,8 +250,25 @@ SELECT * FROM sys.databases WHERE name = 'db1'
 
 ## Notes
 
+### Operations before the cluster is configured 
+If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. While the availability group is not in a cluster, note the following behaviors:
 
+- If the primary replica goes down and comes back up - for example if the SQL Server instance or node restarts - the availability group will go in `RESOLVING` state. Because there is no cluster controller to manage the availability group elect one of replicas as primary, you need to run `ALTER AVAILABILITY GROUP FAILOVER` on the replica that you choose as primary. You can run `ALTER AVAILABILITY GROUP FAILOVER` on any the former primary replica or any secondary replica. Note the following behavior:
+   - If you run this on the former primary replica then previous configuration returns.
+   - If you run this on a secondary replica then the rest of replicas - including the former PRIMARY - will automatically join the availability group.
+   
+   >[!NOTE]
+   >A database restart does not trigger the availability group to go into a `RESOLVING` state. Only an instance restart triggers availability group state evaluation.
 
+- Manual failover is a two step process.
+   1. Demote the current primary. On the primary SQL Server, run the following query:
+      ```Transact-SQL
+      ALTER AVAILABILITY GROUP [AgName] SET (ROLE = SECONDARY)
+      ```
+   1. Promote the current secondary to new primary. On the node that you want to promote run the following query:
+      ```Transact-SQL
+      ALTER AVAILABILITY GROUP [AgName] FAILOVER
+      ```
 ## Next steps
 
 [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-rhel.md)

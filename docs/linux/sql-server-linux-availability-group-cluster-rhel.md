@@ -32,11 +32,11 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 
 ## Create a SQL Server login for Pacemaker
 
-[!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
+[!INCLUDE [SQL-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## Open Pacemaker firewall ports
 
-On all nodes open the firewall ports. Open the port for the high-availability service, SQL Server, and the availability group endpoint. If firewalld is installed, run the following commands: 
+On all nodes open the firewall ports. Open the port for the high-availability service, SQL Server, and the availability group endpoint. The default TCP port for SQL Server is 1433. If `firewalld` is installed, run the following commands: 
 
 ```bash
 sudo firewall-cmd --permanent --add-service=high-availability

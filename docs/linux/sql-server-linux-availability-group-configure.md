@@ -269,6 +269,10 @@ If you followed the steps in this document, you have an availability group that 
       ```Transact-SQL
       ALTER AVAILABILITY GROUP [AgName] FAILOVER
       ```
+
+>[!IMPORTANT]
+>After you configure the cluster, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server is not aware of the presence of the cluster. All orchestration is done through the cluster resources. 
+
 ## Next steps
 
 [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-rhel.md)

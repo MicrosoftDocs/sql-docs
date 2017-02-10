@@ -136,6 +136,12 @@ sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 
 ## Add colocation constraint
 
+To add colocation constraint, run the following command on one node.
+
+```bash
+sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
 ## Add ordering constraint
 
 ## Manual failover

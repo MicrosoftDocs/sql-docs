@@ -94,18 +94,27 @@ commit
 
 ## Create virtual IP resource
 
-If you did not create the virtual IP resource when you ran `ha-cluster-init` you can create this resource now. The following command creates a virtual IP resource.
+If you did not create the virtual IP resource when you ran `ha-cluster-init` you can create this resource now. The following command creates a virtual IP resource. Run on one node.
 
 ```bash
 crm configure
 # primitive admin_addr \
    ocf:heartbeat:IPaddr2 \
-   params ip=10.9.9.180 \
-      cidr_netmask=24 \
-    op monitor interval="30s"
+   params ip=<10.9.9.180> \
+      cidr_netmask=<24> \
+   op monitor interval="30s"
 ```
 
 ## Add colocation constraint
+
+To set colocation constraint, run the following command on one node.
+
+```bash
+crm configure
+colocation vip_on_master inf: \
+    admin_addr ms-ag_cluster:Master
+commit
+```
 
 ## Add ordering constraint
 

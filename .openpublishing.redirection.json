@@ -1,0 +1,10 @@
+{
+ "redirections":
+ [
+  {
+   "source_path" : "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
+   "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate ",
+   "redirect_document_id": true
+  }
+ ]
+}

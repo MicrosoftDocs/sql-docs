@@ -1,97 +1,43 @@
 ---
-title:="Deploy an ASP.NET web app to App Service | Microsoft Docs" 
-description: "This tutorial shows how to deploy an ASP.NET web application to a web app in Azure App Service by using Visual Studio 2015. "
-services: "app-service"
-documentationCenter: ""
-authors: "CarlRabeler"
-manager: "jhubbard"
-editor: ""/>
-
-ms.service="app-service"
-ms.devlang="NA"
-ms.custom: "NA"
-ms.topic="article"
-ms.tgt_pltfrm="NA"
-ms.workload="NA"
-ms.date="10/20/2016"
-ms.author="carlrab;barbkess"/>
-
----
 <!------------------
-This topic is annotated with TEMPLATE guidelines for TUTORIAL TOPICS.
+
+This is an annotated example of a tutorial with high CSAT (https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-dotnet-get-started). 
+
+Tutorials show users how to solve a problem. They include prerequisites and steps. They are not "learn concepts" topics. 
 
 
-Metadata guidelines
-
-title
-	60 characters or less. Tells users clearly what they will do (deploy an ASP.NET web app to App Service). Not the same as H1. It's 60 characters or fewer including all characters between the quotes and the Microsoft Docs site identifier.
-
-description
-	115-145 characters. Duplicate of the first sentence in the introduction. This is the abstract of the article that displays under the title when searching in Bing or Google. 
-
-	Example: "This tutorial shows how to deploy an ASP.NET web application to a web app in Azure App Service by using Visual Studio 2015."
------------------->
-
-<!----------------
-
-TEMPLATE GUIDELINES for tutorial topics
-
-The tutorial topic shows users how to solve a problem using a product or service. It includes the prerequisites and steps users need to be successful.  
-
-It is a "solve a problem" topic, not a "learn concepts" topic.
-
-DO include this:
-	• What users will do
-	• What they will create or accomplish by the end of the tutorial
-	• Time estimate
-	• Optional but useful: Include a diagram or video. Diagrams help users see the big picture of what they are doing. A video of the steps can be used by customers as an alternative to following the steps in the topic.
-	• Prerequisites: Technical expertise and software requirements
-	• End-to-end steps. At the end, include next steps to deeper or related tutorials so users can learn more about the service
-
-DON'T include this:
-	• Conceptual info about the service. This info is in overview topics that you can link to in the prerequisites section if necessary
-
-------------------->
-
-<!------------------
-GUIDELINES for the H1 
+GUIDELINES for H1 
+	The H1 is the top heading in the article. It tells users what they will do. Use strong keywords: deploy, ASP.NET, web app, App Service, Visual Studio, as you see below. 
 	
-	The H1 should answer the question "What will I do in this topic?" Write the H1 heading in conversational language and use search keywords as much as possible. Since this is a "solve a problem" topic, make sure the title indicates that. Use a strong, specific verb like "Deploy."  
-		
-	Heading must use an industry standard term. If your feature is a proprietary name like "Elastic database pools", use a synonym. For example: "Learn about elastic database pools for multi-tenant databases." In this case multi-tenant database is the industry-standard term that will be an anchor for finding the topic.
-
 -------------------->
-
 # Deploy an ASP.NET web app to Azure App Service by using Visual Studio #
 
-<!------------------
-	GUIDELINES for introduction
-	
-	The introduction is 1-2 sentences.  It is optimized for search and sets proper expectations about what to expect in the article. It should contain the top keywords that you are using throughout the article.The introduction should be brief and to the point of what users will do and what they will accomplish. 
 
-	In this example:
-	 
-
-Sentence #1 Explains what the user will do. This is also the metadata description. 
-	This tutorial shows how to deploy an ASP.NET web application to a web app in Azure App Service by using Visual Studio 2015. 
-
-Sentence #2 Explains what users will learn and the benefit.  
-	When you’re finished, you’ll have a simple web application up and running in the cloud.
+<!-----------------
+GUIDELINES for Introduction
+	1-2 sentences: what users will do and what they will accomplish. Again, use strong keywords.
 
 -------------------->
-
-
 This tutorial shows how to deploy an ASP.NET web application to a [web app in Azure App Service](app-service-web-overview.md) by using Visual Studio 2015. When you’re finished, you’ll have a simple web application up and running in the cloud.
 
 
-**Time estimate**: This tutorial will take about 10-15 minutes to complete. Installing the Azure SDK for .NET will take additional time: several minutes to a half hour, depending on how many SDK dependencies you have on your computer.
+<!------------------
+GUIDELINES for time estimate and diagram 
+	Give a time estimate with any useful details. Diagrams are optional but help users see the big picture of what they will do. An optional video of the steps can be used by customers as an alternative to following the steps in the topic. The video doesn't have to be professional. 
 
+-------------------->
+**Time estimate**: This tutorial will take about 10-15 minutes to complete. Installing the Azure SDK for .NET will take additional time: several minutes to a half hour, depending on how many SDK dependencies you have on your computer.
 
 The diagram illustrates what you do in the tutorial.
 
 ![Visual Studio create and deploy diagram](./media/web-sites-dotnet-get-started/Create_App.png)
 
 
+<!------------------
+GUIDELINES for prerequisites 
+	Include getting started info like setting up an account. List technical expertise and software required. Can also add links to conceptual info.
+	
+-------------------->
 ## Prerequisites
 
 * The tutorial assumes you have worked with ASP.NET MVC and Visual Studio. If you need an introduction, see [Getting Started with ASP.NET MVC 5](http://www.asp.net/mvc/overview/getting-started/introduction/getting-started).
@@ -101,7 +47,17 @@ The diagram illustrates what you do in the tutorial.
 	If you want to get started with Azure App Service before you sign up for an Azure account, go to [Try App Service](http://go.microsoft.com/fwlink/?LinkId=523751). There you can create a short-lived starter app in App Service — no credit card required, and no commitments.
 
 
-<!--**Procedure**: *This is the first “step”. Make titles H2’s and short and clear – H2’s appear in the right pane on the web page and are important for navigation.*-->
+<!------------------
+GUIDELINES for procedures (steps)
+	Format headings as H2’s and make them short and clear – H2’s appear in the right pane on the web page and are important for navigation. Usually begin with a verb: configure, download, etc. to let users know they are doing something. Keep number of steps under 10.
+
+	Screenshots: Really help users understand where they are. Don’t include too many since they’re difficult to maintain. Highlight areas you are referring to in red.
+
+	Next steps: At the end of the procedures give users relevant next steps so they want to go on.
+
+	End of annotations! 
+
+-------------------->
 
 ## <a name="setupdevenv"></a>Set up the development environment
 
@@ -110,20 +66,7 @@ The tutorial is written for Visual Studio 2015 with the [Azure SDK for .NET](../
 * [Download the latest Azure SDK for Visual Studio 2015](http://go.microsoft.com/fwlink/?linkid=518003). The SDK installs Visual Studio 2015 if you don't already have it.
 
 
-<!--**Notes**: *Notes provide just-in-time info: A Note is “by the way” info, an Important is info users need to complete a task, Tip is for shortcuts. Don’t overdo*.-->
-
-	>[AZURE.NOTE] Depending on how many of the SDK dependencies you already have on your machine, installing the SDK could take a long time, from several minutes to a half hour or more.
-
 If you have Visual Studio 2013 and prefer to use that, you can [download the latest Azure SDK for Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=324322). Some screens may look different from the illustrations.
-
-
-<!--**Procedures**: *This is the second “step." They often include substeps. Again, use a short title that tells users what they’ll do*. *("Configure a new web project.")*-->
-
-<!--**UI**: *Note the format for documenting the UI: bold for UI elements and arrow keys for sequence. (Ex. Click **File > New > Project**.)*-->
-
-<!--**Screenshot**: *Screenshots really help users. But don’t include too many since they’re difficult to maintain. Highlight areas you are referring to in red.*-->
-
-<!--**No. of steps**: *Make sure the number of steps within a procedure is 10 or fewer. Seven steps is ideal. Break up long procedure logically.*-->
 
 ## Configure a new web project
 

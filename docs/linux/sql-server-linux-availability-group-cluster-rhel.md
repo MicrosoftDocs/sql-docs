@@ -26,6 +26,22 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 
 # Configure RHEL Cluster for SQL Server Availability Group
 
+This document explains how to create a two-node availability group cluster for SQL Server on Red Hat Enterprise Linux. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). 
+
+> [!NOTE] 
+> Access to Red Hat documentation requires a subscription. 
+
+For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+
+> [!NOTE] 
+> SQL Server integration with Pacemaker is not as tightly coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. It is expected that @@servername and sys.servers to return the node name, while the cluster dmvs sys.dm_os_cluster_nodes and sys.dm_os_cluster_properties will no records.
+To use a connection string that points to a string server name and not use the IP, they will have to register in their DNS server the IP used to create the virtual IP resource (as explained below) with the chosen server name.
+
+> [!NOTE] 
+> This is not a production setup. This guide creates an architecture that is for high-level functional testing.
+
+The following sections walk through the steps to set up a failover cluster solution. 
+
 ## Configure Pacemaker for RHEL
 
 [!INCLUDE [RHEL-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]

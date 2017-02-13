@@ -42,7 +42,7 @@ The simplest solutions leverage virtualization technologies to achieve a high de
     - Disaster recovery protection
     - RTO in minutes to hours
 
-Standard high-availability and disaster recovery techniques provide instance-level protection combined with a reliable shared storage infrastructure. For SQL Server vNext CTP 1.2 standard high-availability includes the following Always On technologies:
+Standard high-availability and disaster recovery techniques provide instance-level protection combined with a reliable shared storage infrastructure. For SQL Server vNext CTP 1.2 standard high-availability includes:
 
 - [**Failover Cluster**](sql-server-linux-shared-disk-cluster-configure.md)
     - Instance level protection
@@ -50,13 +50,6 @@ Standard high-availability and disaster recovery techniques provide instance-lev
     - Resilience against OS and SQL Server failures
     - RTO in seconds to minutes
 
-- [**Availability Groups**](sql-server-linux-availability-group-configure.md)
-    - Database availability group level protection
-    - Multiple replicas
-    - Synchronous and asynchronous commit capabilities
-    - Automatic failure detection and failover
-    - Resilience against OS and SQL Server failures
-    - RTO in seconds 
 
 ## Summary
 

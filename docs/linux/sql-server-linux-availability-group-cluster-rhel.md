@@ -62,6 +62,7 @@ sudo firewall-cmd --permanent --add-port=5022/tcp
 sudo firewall-cmd --reload
 ```
 
+<!--------------------------------
 ## Install Pacemaker packages
 
 On all nodes, run the following commands to install the pacemaker packages:
@@ -97,6 +98,7 @@ sudo pcs cluster auth <nodeName1> <nodeName2…> -u hacluster -p <password for h
 sudo pcs cluster setup --name <clusterName> <nodeName1> <nodeName2…> --force
 sudo pcs cluster start --all
 ```
+-------------------------------->
 
 ## Disable STONITH
 

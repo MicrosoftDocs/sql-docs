@@ -67,7 +67,7 @@ Alternatively, you can just disable the firewall:
 ```bash
 sudo ufw disable
 ```
-
+<!--------------------------------------------------
 ## Install Pacemaker packages
 
 On all nodes, run the following commands:
@@ -109,6 +109,7 @@ sudo pcs cluster auth nodeName1 nodeName2  -u hacluster -p <password for haclust
 sudo pcs cluster setup --name <clusterName> <nodeName1> <nodeName2…> --force
 sudo pcs cluster start --all
 ```
+----------------------------->
 
 ## Disable STONITH
 

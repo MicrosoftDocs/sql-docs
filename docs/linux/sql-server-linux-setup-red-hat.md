@@ -33,7 +33,8 @@ This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on 
 
 
 ## Install SQL Server
-To install the mssql-server package on RHEL, follow these steps:
+
+To install the **mssql-server** package on RHEL, follow these steps:
 
 1. Enter superuser mode.
 
@@ -80,7 +81,7 @@ To install the mssql-server package on RHEL, follow these steps:
 
 ## Upgrade SQL Server
 
-In order to upgrade the mssql-server package on RHEL, execute the following command:
+To upgrade the **mssql-server** package on RHEL, execute the following command:
 
    ```bash
    sudo yum update mssql-server
@@ -90,7 +91,7 @@ These commands will download the newest package and replace the binaries located
 
 ## Uninstall SQL Server
 
-In order to remove the mssql-server package on RHEL, follow these steps:
+To remove the **mssql-server** package on RHEL, follow these steps:
 
 1. Run the `remove` command. This will delete the package and remove the files under `/opt/mssql/`. However, this command will not affect user-generated and system database files, which are located under `/var/opt/mssql`.
    ```bash

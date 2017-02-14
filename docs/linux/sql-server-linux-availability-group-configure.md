@@ -53,7 +53,6 @@ This document describes the specifics of availability groups on SQL Server on Li
   
  availability group listener  
  A server name to which clients can connect in order to access a database in a primary or secondary replica of an Always On availability group. Availability group listeners direct incoming connections to the primary replica or to a read-only secondary replica.  
-  
 
 ## Prerequisites
 

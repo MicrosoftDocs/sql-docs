@@ -55,10 +55,10 @@ To install the **mssql-server** Package on Ubuntu, follow these steps:
    sudo apt-get install -y mssql-server
    ```
 
-6. After the package installation finishes, run the configuration script and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+6. After the package installation finishes, run **mssql-conf setup** and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
  
    ```bash
-   sudo /opt/mssql/bin/sqlservr-setup
+   sudo /opt/mssql/bin/mssql-conf setup
    ```
 
 7. Once the configuration is done, verify that the service is running:

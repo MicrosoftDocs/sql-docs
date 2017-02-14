@@ -50,6 +50,9 @@ The following sections walk through the steps to set up a failover cluster solut
 
 [!INCLUDE [SQL-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
+
+<!--------------------------------
+
 ## Open Pacemaker firewall ports
 
 On all nodes open the firewall ports. Open the port for the high-availability service, SQL Server, and the availability group endpoint. The default TCP port for SQL Server is 1433. If `firewalld` is installed, run the following commands: 
@@ -62,7 +65,6 @@ sudo firewall-cmd --permanent --add-port=5022/tcp
 sudo firewall-cmd --reload
 ```
 
-<!--------------------------------
 ## Install Pacemaker packages
 
 On all nodes, run the following commands to install the pacemaker packages:

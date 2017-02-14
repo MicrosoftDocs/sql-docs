@@ -24,17 +24,36 @@ ms.assetid: 150b0765-2c54-4bc4-b55a-7e57a5501a0f
 
 ---
 
-# Configure Availability Group for SQL Server on Linux
+# Configure Always On Availability Group for SQL Server on Linux
 
 An availability group supports a failover environment for a discrete set of user databases - known as availability databases - that fail over together. An availability group supports one set of read-write primary databases and one to eight sets of corresponding secondary databases. Optionally, secondary databases can be made available for read-only access and/or some backup operations. An availability group defines a set of two or more failover partners, known as availability replicas. Availability replicas are components of the availability group. For details see [Overview of Always On Availability Groups (SQL Server)](http://msdn.microsoft.com/library/ff877884.aspx).
 
 This document describes the specifics of availability groups on SQL Server on Linux. The document uses the following specific terms:
 
-- **Primary SQL Server**
-   This server is the server that holds the primary replica. The primary replica is the availability group replica that allows read and write access to the database. This is also the server where you will create the first certificate and the first database in the availability group.
-
-- **Secondary SQL Server**
-   This server includes all SQL Servers that will hold a secondary availability group replica. The secondary availability group replicas cannot be written to. They may or may not be readable.
+ availability group  
+ A container for a set of databases, *availability databases*, that fail over together.  
+  
+ availability database  
+ A database that belongs to an availability group. For each availability database, the availability group maintains a single read-write copy (the *primary database*) and one to eight read-only copies (*secondary databases*).  
+  
+ primary database  
+ The read-write copy of an availability database.  
+  
+ secondary database  
+ A read-only copy of an availability database.  
+  
+ availability replica  
+ An instantiation of an availability group that is hosted by a specific instance of SQL Server and maintains a local copy of each availability database that belongs to the availability group. Two types of availability replicas exist: a single *primary replica* and one to eight *secondary replicas*.  
+  
+ primary replica  
+ The availability replica that makes the primary databases available for read-write connections from clients and, also, sends transaction log records for each primary database to every secondary replica.  
+  
+ secondary replica  
+ An availability replica that maintains a secondary copy of each availability database, and serves as a potential failover targets for the availability group. Optionally, a secondary replica can support read-only access to secondary databases can support creating backups on secondary databases.  
+  
+ availability group listener  
+ A server name to which clients can connect in order to access a database in a primary or secondary replica of an Always On availability group. Availability group listeners direct incoming connections to the primary replica or to a read-only secondary replica.  
+  
 
 ## Prerequisites
 
@@ -210,8 +229,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
 ```
 
 >[!NOTE]
->`CLUSTER_TYPE` is a new option for `CREATE AVAILABILITY GROUP`. `CLUSTER_TYPE = NONE` is required for availability groups that are not on servers that belong to a Windows Server Failover Cluster.    
-
+>`CLUSTER_TYPE` is a new option for `CREATE AVAILABILITY GROUP`. An availability group requires`CLUSTER_TYPE = NONE` when it is on a SQL Server that is not a member of a Windows Server Failover Cluster.
 
 ### Join secondary SQL Servers to the availability group
 

@@ -26,9 +26,9 @@ ms.assetid: 150b0765-2c54-4bc4-b55a-7e57a5501a0f
 
 # Configure Availability Group for SQL Server on Linux
 
-An availability group is one or more databases that can have replicas on multiple SQL Servers for high-availability (HA), disaster-recovery (DR), and reporting. An availability group defines a set of two or more failover partners, known as availability replicas. Availability replicas are components of the availability group. For details see [Overview of Always On Availability Groups (SQL Server)](http://msdn.microsoft.com/library/ff877884.aspx).
+An availability group supports a failover environment for a discrete set of user databases - known as availability databases - that fail over together. An availability group supports one set of read-write primary databases and one to eight sets of corresponding secondary databases. Optionally, secondary databases can be made available for read-only access and/or some backup operations. An availability group defines a set of two or more failover partners, known as availability replicas. Availability replicas are components of the availability group. For details see [Overview of Always On Availability Groups (SQL Server)](http://msdn.microsoft.com/library/ff877884.aspx).
 
-This document describes how to create an availability group on SQL Server on Linux. The document uses the following specific terms:
+This document describes the specifics of availability groups on SQL Server on Linux. The document uses the following specific terms:
 
 - **Primary SQL Server**
    This server is the server that holds the primary replica. The primary replica is the availability group replica that allows read and write access to the database. This is also the server where you will create the first certificate and the first database in the availability group.
@@ -40,11 +40,11 @@ This document describes how to create an availability group on SQL Server on Lin
 
 Before you create the availability group, you need to:
 
-- Set your environment so that all nodes in the cluster can communicate
+- Set your environment so all servers that will host availability replicas can communicate
 - Install SQL Server
 
 >[!NOTE]
->On Linux, you create the availability group before you create the cluster. This document provides an example that creates the availability group. It does not create the cluster. Create the cluster after you follow the steps in this document. For distribution specific instructions to create the cluster, see the links under [Next steps](#next-steps).
+>On Linux, you must create an availability group before adding it as a cluster resource to be managed by the cluster. This document provides an example that creates the availability group. For distribution specific instructions to create the cluster and add the availability group as a cluster resource, see the links under [Next steps](#next-steps).
 
 1. **Update the computer name for each host**
 
@@ -124,7 +124,7 @@ BACKUP CERTIFICATE dbm_certificate
 >[!NOTE]
 >For this release, do not use Linux-style paths like `/var/opt/mssql/data/dbm_certificate.cer` for the certificates.
 
-At this point your primary SQL server has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all other servers. Use the mssql user or give permission to mssql user to access these files. 
+At this point your primary SQL server has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the mssql user or give permission to mssql user to access these files. 
 
 For example on the source server, the following command copies the  files to the target machine.
 
@@ -223,7 +223,7 @@ ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE)
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
 ```
 
-## Create the database
+## Add a database to the availability group
 
 Ensure the database you are adding to the Availability group is in full recovery mode and has a valid log backup. If this is a test database or a new database created, take a database backup. On the primary SQL Server, run the following Transact-SQL to create and back up a database called `db1`.
 
@@ -232,8 +232,6 @@ CREATE DATABASE [db1]
 ALTER DATABASE [db1] SET RECOVERY FULL
 BACKUP DATABASE [db1] TO DISK = N'NUL'
 ```
-
-### Add the database to the availability group
 
 On the primary SQL Server, run the following Transact-SQL to add a database called `db1` to an availability group called `ag1`.
 
@@ -251,17 +249,19 @@ GO
 SELECT DB_NAME(database_id) AS database, synchronization_state_desc FROM sys.dm_hadr_database_replica_states
 ```
 
-## Notes
+## Operations before the cluster is configured
 
-### Operations before the cluster is configured 
-If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. While the availability group is not in a cluster, note the following behaviors:
+>[!IMPORTANT]
+>If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. While this is a valid configuration in read-scale/load balancing scenarios, it is not valid for HADR. To achieve HADR, you need to add the availability group as a cluster resource. See [Next steps](#next-steps) for instructions.
 
-- If the primary replica goes down and comes back up - for example if the SQL Server instance or node restarts - the availability group will go in `RESOLVING` state. Because there is no cluster controller to manage the availability group elect one of replicas as primary, you need to run `ALTER AVAILABILITY GROUP FAILOVER` on the replica that you choose as primary. You can run `ALTER AVAILABILITY GROUP FAILOVER` on any the former primary replica or any secondary replica. Note the following behavior:
+While the availability group is not in a cluster, note the following behaviors:
+
+- If the primary replica goes down and comes back up - for example if the SQL Server instance or node restarts 
+- the availability group will go in `RESOLVING` state. Because there is no cluster controller to manage the availability group elect one of replicas as primary, you need to run `ALTER AVAILABILITY GROUP FAILOVER` on the replica that you choose as primary. You can run `ALTER AVAILABILITY GROUP FAILOVER` on any the former primary replica or any secondary replica. Note the following behavior:
    - If you run this on the former primary replica then previous configuration returns.
    - If you run this on a secondary replica then the rest of replicas - including the former PRIMARY - will automatically join the availability group.
    
-   >[!NOTE]
-   >A database restart does not trigger the availability group to go into a `RESOLVING` state. Only an instance restart triggers availability group state evaluation.
+   A database restart does not trigger the availability group to go into a `RESOLVING` state. Only an instance restart triggers availability group state evaluation.
 
 - Manual failover is a two step process.
    1. Demote the current primary. On the primary SQL Server, run the following query:

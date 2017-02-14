@@ -35,7 +35,7 @@ This topic provides a walkthrough of how to install SQL Server vNext CTP 1.2 on 
 > The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
 ## Install SQL Server
-To install the mssql-server package on SLES, follow these steps:
+To install the **mssql-server** package on SLES, follow these steps:
 
 1. Download the Microsoft SQL Server SLES repository configuration file:
 
@@ -67,7 +67,7 @@ To install the mssql-server package on SLES, follow these steps:
 
 ## Upgrade SQL Server
 
-In order to upgrade the mssql-server package on SLES, execute the following command:
+To upgrade the **mssql-server** package on SLES, execute the following command:
 
    ```bash
    sudo zypper update mssql-server
@@ -77,7 +77,7 @@ These commands will download the newest package and replace the binaries located
 
 ## Uninstall SQL Server
 
-In order to remove the mssql-server package on SLES, follow these steps:
+To remove the **mssql-server** package on SLES, follow these steps:
 
 1. Run the `remove` command. This will delete the package and remove the files under `/opt/mssql/`. However, this command will not affect user-generated and system database files, which are located under `/var/opt/mssql`.
    ```bash

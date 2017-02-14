@@ -29,7 +29,7 @@ This topic provides a walkthrough of how to install SQL Server vNext CTP 1.3 on 
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
-> SQL Server Engine has only been tested up to 256GB of memory at this time.
+> SQL Server Engine has been tested up to 1 TB of memory at this time.
 
 > [!NOTE]
 > The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.

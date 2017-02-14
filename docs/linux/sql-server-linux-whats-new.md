@@ -28,8 +28,8 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 
 This topic describes what's new for SQL Server vNext running on Linux.
 
-## CTP 1.3
-The CTP 1.3 release contains the following improvements and fixes:
+## CTP 1.2
+The CTP 1.2 release contains the following improvements and fixes:
 - Support for SUSE Linux Enterprise Server v12 SP2
 - Bug fixes for core engine and stability improvements.
 - Docker image: 

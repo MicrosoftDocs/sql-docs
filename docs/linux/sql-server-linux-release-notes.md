@@ -40,7 +40,7 @@ The following release notes apply to SQL Server vNext running on Linux. This rel
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
-> SQL Server Engine has only been tested up to 256GB of memory at this time.
+> SQL Server Engine has been tested up to 1 TB of memory at this time.
 
 ### Package details
 The SQL Server engine version for this release is 14.0.200.24. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).

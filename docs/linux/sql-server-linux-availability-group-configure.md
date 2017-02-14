@@ -122,6 +122,15 @@ sudo /opt/mssql/bin/mssql-conf set hadrenabled 1
 sudo systemctl restart mssql-server
 ```
 
+## Create db mirroring endpoint user
+
+Run the following command on all SQL Servers to create the database mirroring endpoint user.
+
+```Transact-SQL
+CREATE LOGIN dbm_login WITH PASSWORD = '<1Sample_Strong_Password!@#>'
+CREATE USER dbm_user FOR LOGIN dbm_login
+```
+
 ## Create a certificate
 
 SQL Server on Linux uses certificates to authenticate communication between the mirroring endpoints. 
@@ -131,11 +140,12 @@ Connect to the primary SQL Server and run the following Transact-SQL to create t
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm'
+    AUTHORIZATION dbm_user
 BACKUP CERTIFICATE dbm_certificate
    TO FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
-       WITH PRIVATE KEY (
+   WITH PRIVATE KEY (
            FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
-               ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
+           ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
        )
 ```
 
@@ -165,21 +175,12 @@ Run the following command on all secondary servers to create the certificate. Th
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>' ]
 CREATE CERTIFICATE dbm_certificate   
-AUTHORIZATION dbm_user
+    AUTHORIZATION dbm_user
     FROM FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
     WITH PRIVATE KEY (
     FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
     DECRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
             )
-```
-
-## Create db mirroring endpoint user
-
-Run the following command on all SQL Servers to create the database mirroring endpoint user.
-
-```Transact-SQL
-CREATE LOGIN dbm_login WITH PASSWORD = '<1Sample_Strong_Password!@#>'
-CREATE USER dbm_user FOR LOGIN dbm_login
 ```
 
 ## Create the database mirroring endpoints on all replicas

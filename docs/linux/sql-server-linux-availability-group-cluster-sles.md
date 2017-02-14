@@ -37,6 +37,8 @@ For more details on cluster configuration, resource agent options, management, b
  
 [!INCLUDE [SLES-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-sles.md)]
 
+For reference, see [Installing SUSE Linux Enterprise Server and High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.installation)
+
 ## Create a SQL Server login for Pacemaker
 
 [!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
@@ -45,9 +47,7 @@ For more details on cluster configuration, resource agent options, management, b
 
 For instructions, see [SuSEFirewall2](https://www.suse.com/documentation/sles-12/book_security/data/sec_security_firewall_suse.html).
 
-## Install Pacemaker packages
-
-For instructions, see [Installing SUSE Linux Enterprise Server and High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.installation)
+<!----------------------------
 
 ## Set password for default user
 
@@ -72,6 +72,8 @@ sudo systemctl enable pacemaker
 To create the cluster, run `ha-cluster-init` on the first node. For instructions, see [Setting up the first node](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node).
 
 To add additional nodes, run `ha-cluster-join` on secondary nodes. See [Adding the second node](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+
+--------------------------------------->
 
 ## Disable STONITH
 

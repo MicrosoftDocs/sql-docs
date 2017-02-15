@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Help Installation | Microsoft Docs"
+title: "SQL Help Viewer | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/09/2016"
+ms.date: "02/15/2017"
 ms.prod: "sql-non-specified"
 ms.technology: "server-general"
 ms.reviewer: ""

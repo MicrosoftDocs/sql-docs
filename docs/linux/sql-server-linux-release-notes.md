@@ -25,9 +25,9 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 
 ---
 # Release notes for SQL Server vNext on Linux
-The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into three sections: [CTP 1.3](#ctp13), [CTP 1.2](#ctp12), [CTP 1.1](#ctp11), and [CTP 1.0](#ctp10) release notes. See the information in the each section for supported platforms, tools, features, and known issues.
+The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into four sections: [CTP 1.3](#ctp13), [CTP 1.2](#ctp12), [CTP 1.1](#ctp11), and [CTP 1.0](#ctp10) release notes. See the information in the each section for supported platforms, tools, features, and known issues.
 
-## <a id="ctp13"> CTP 1.3 (February 2017)
+## <a id="ctp13"> CTP 1.3 (February 2017) </a>
 
 ### Supported platforms 
 
@@ -47,16 +47,17 @@ The SQL Server engine version for this release is 14.0.200.24. Package details a
 
 | Package | Version | Downloads |
 |-----|-----|-----|
-| RPM package | 14.0.200.24-2 | [mssql-server 14.0.200.24-2 Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.200.24-2.x86_64.rpm)</br>[mssql-server 14.0.200.24-2 High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.200.24-2.x86_64.rpm) | 
-| Debian package | 14.0.200.24-2 | [mssql-server 14.0.200.24-2 Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.200.24-2_amd64.deb) |
+| Red Hat RPM package | 14.0.200.24-2 | [mssql-server 14.0.200.24-2 Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.200.24-2.x86_64.rpm)</br>[mssql-server 14.0.200.24-2 High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.200.24-2.x86_64.rpm) | 
+| SLES RPM package | 14.0.200.24-2 | [mssql-server 14.0.200.24-2 Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.200.24-2.x86_64.rpm)</br>[mssql-server 14.0.200.24-2 High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.200.24-3.x86_64.rpm) | 
+| Ubuntu Debian package | 14.0.200.24-2 | [mssql-server 14.0.200.24-2 Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.200.24-2_amd64.deb) |
 
 ### Supported client tools
 
 | Tool | Minimum version |
 |-----|-----|
-| [SQL Server Management Studio (SSMS) for Windows - Release Candidate 1](https://go.microsoft.com/fwlink/?LinkID=835608) | 17.0 |
-| [SQL Server Data Tools for Visual Studio - Release Candidate 1](https://go.microsoft.com/fwlink/?LinkID=835150) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (0.2) |
+| [SQL Server Management Studio (SSMS) for Windows - Release Candidate 2](https://go.microsoft.com/fwlink/?linkid=840957) | 17.0 |
+| [SQL Server Data Tools for Visual Studio - Release Candidate 2](https://go.microsoft.com/fwlink/?linkid=837939) | 17.0 |
+| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (0.2.1) |
 
 > [!NOTE] 
 > The SQL Server Management Studio and SQL Server Data Tools versions specified above are Release Candidates, hence not recommended for use in production.
@@ -73,7 +74,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
-| **High Availability** | Always On Availability Groups |
+| **High Availability**
 | &nbsp; | Database mirroring  |
 | **Security** | Active Directory Authentication |
 | &nbsp; | Windows Authentication |
@@ -98,8 +99,6 @@ The following sections describe known issues with this release of SQL Server vNe
     - **Resolution**: Change the name in /etc/hostname to something 15 characters long or less.
 
 - Do not run the command `ALTER SERVICE MASTER KEY REGENERATE`. There is a known bug that will cause SQL Server to become unstable. If you need to regenerate the Service Master Key, you should back up your database files, uninstall and then re-install SQL Server, and then restore your database files again.
-
-- Resource name for SQL resource changed from ocf:sql:fci to ocf:mssql:fci. More details about configuring a shared disk failover cluster you can find [here](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-configure).
 
 - Manually setting the system time backwards in time will cause SQL Server to stop updating the internal system time within SQL Server.
 
@@ -131,7 +130,7 @@ The following sections describe known issues with this release of SQL Server vNe
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### In-Memory OLTP
-- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
+- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
 #### SqlPackage
 - Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 
@@ -157,6 +156,8 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 - The SQL Server Agent is not supported yet. Therefore, SQL Server Agent functionality in SSMS does not work on Linux at the moment.
 
 - The file browser is restricted to the  “C:\” scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\ paths with Linux paths. Then execute the script manually in SSMS.
+
+- Number of log files to retain cannot be modified.
 
 ### Next steps
 To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).

@@ -248,6 +248,3 @@ You can see a list of installed filters by calling **sp_help_fulltext_system_com
 |.wri | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0
 |.wtx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0
-
-## Next steps
-For more information on how to use SQL Server Agent to create, schedule, and run jobs, see [Run a SQL Server Agent job on Linux](sql-server-linux-run-sql-server-agent-job.md).

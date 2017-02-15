@@ -1,5 +1,5 @@
 ---
-title: "SQL Help Viewer | Microsoft Docs"
+title: "Help Viewer for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.prod: "sql-non-specified"

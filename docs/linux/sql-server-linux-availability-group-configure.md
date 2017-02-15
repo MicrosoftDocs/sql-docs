@@ -323,7 +323,7 @@ sqlVnext introduces a new feature to force a certain number of secondaries to be
 
 When `REQUIRED_COPIES_TO_COMMIT` is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of synchronous secondary replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.
 
-The following example SETS an availability group name [ag1] to `REQUIRED_COPIES_TO_COMMIT = 2`.
+The following example sets an availability group name [ag1] to `REQUIRED_COPIES_TO_COMMIT = 2`.
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP ag1

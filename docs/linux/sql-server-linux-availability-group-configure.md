@@ -185,7 +185,9 @@ CREATE CERTIFICATE dbm_certificate
 
 ## Create the database mirroring endpoints on all replicas
 
-Database mirroring endpoints use Transmission Control Protocol (TCP) to send and receive messages between the server instances participating database mirroring sessions or hosting availability replicas. The database mirroring endpoint listens on a unique TCP port number. Run the following Transact-SQL on all SQL Servers: 
+Database mirroring endpoints use Transmission Control Protocol (TCP) to send and receive messages between the server instances participating database mirroring sessions or hosting availability replicas. The database mirroring endpoint listens on a unique TCP port number. 
+
+Update the following Transact-SQL for your environment  on all SQL Servers: 
 
 ```Transact-SQL
 CREATE ENDPOINT [Hadr_endpoint]
@@ -201,6 +203,8 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login]
 
 >[!IMPORTANT]
 >The TCP port on the firewall needs to be open for the listener port.
+
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
 
 ## Create the availability group
 
@@ -267,32 +271,34 @@ GO
 SELECT DB_NAME(database_id) AS database, synchronization_state_desc FROM sys.dm_hadr_database_replica_states
 ```
 
-## Operations before the cluster is configured
+## Notes
 
->[!IMPORTANT]
->If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. While this is a valid configuration in read-scale/load balancing scenarios, it is not valid for HADR. To achieve HADR, you need to add the availability group as a cluster resource. See [Next steps](#next-steps) for instructions.
 
-While the availability group is not in a cluster, note the following behaviors:
+**The availability group is not a clustered resource at this point.** 
 
-- If the primary replica goes down and comes back up - for example if the SQL Server instance or node restarts 
-- the availability group will go in `RESOLVING` state. Because there is no cluster controller to manage the availability group elect one of replicas as primary, you need to run `ALTER AVAILABILITY GROUP FAILOVER` on the replica that you choose as primary. You can run `ALTER AVAILABILITY GROUP FAILOVER` on any the former primary replica or any secondary replica. Note the following behavior:
-   - If you run this on the former primary replica then previous configuration returns.
-   - If you run this on a secondary replica then the rest of replicas - including the former PRIMARY - will automatically join the availability group.
+   If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. While this is a valid configuration in read-scale/load balancing scenarios, it is not valid for HADR. To achieve HADR, you need to add the availability group as a cluster resource. See [Next steps](#next-steps) for instructions. 
    
-   A database restart does not trigger the availability group to go into a `RESOLVING` state. Only an instance restart triggers availability group state evaluation.
+   While the availability group is not in a cluster, note the following behaviors:
 
-- Manual failover is a two step process.
-   1. Demote the current primary. On the primary SQL Server, run the following query:
-      ```Transact-SQL
-      ALTER AVAILABILITY GROUP [AgName] SET (ROLE = SECONDARY)
-      ```
-   1. Promote the current secondary to new primary. On the node that you want to promote run the following query:
-      ```Transact-SQL
-      ALTER AVAILABILITY GROUP [AgName] FAILOVER
-      ```
+   - If the primary replica goes down and comes back up - for example if the SQL Server instance or node restarts the availability group will go in `RESOLVING` state. A database restart does not trigger the availability group to go into a `RESOLVING` state. Only an instance restart triggers availability group state evaluation. Because there is no cluster controller to manage the availability group elect one of replicas as primary, you need to manually fail over the availability group. To do this, run `ALTER AVAILABILITY GROUP FAILOVER` on the replica that you choose as primary. You can run `ALTER AVAILABILITY GROUP FAILOVER` on any the former primary replica or any secondary replica. Note the following behavior:
+      - If you run this on the former primary replica then previous configuration returns.
+      - If you run this on a secondary replica then the rest of replicas - including the former PRIMARY - will automatically join the availability group.
+      
+   - Manual failover is a two step process.
+      1. Demote the current primary. On the primary SQL Server, run the following query:
+         ```Transact-SQL
+         ALTER AVAILABILITY GROUP [AgName] SET (ROLE = SECONDARY)
+         ```
+      1. Promote the current secondary to new primary. On the node that you want to promote run the following query:
+         ```Transact-SQL
+         ALTER AVAILABILITY GROUP [AgName] FAILOVER
+         ```
 
 >[!IMPORTANT]
->After you configure the cluster, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server is not aware of the presence of the cluster. All orchestration is done through the cluster resources. 
+>After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs`. In SLES use `crm`. 
+
+>[!IMPORTANT]
+>If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
 
 ## Next steps
 

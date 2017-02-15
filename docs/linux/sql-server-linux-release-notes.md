@@ -25,7 +25,7 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 
 ---
 # Release notes for SQL Server vNext on Linux
-The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into three sections: [CTP 1.2](#ctp12), [CTP 1.1](#ctp11), and [CTP 1.0](#ctp10) release notes. See the information in the each section for supported platforms, tools, features, and known issues.
+The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into three sections: [CTP 1.2 (January 2017)](#ctp12), [CTP 1.1 (December 2016)](#ctp11), and [CTP 1.0 (November 2016)](#ctp10) release notes. See the information in the each section for supported platforms, tools, features, and known issues.
 
 ## <a id="ctp12"> CTP 1.2 (January 2017)
 
@@ -47,8 +47,8 @@ The SQL Server engine version for this release is 14.0.100.187. Package details 
 
 | Package | Version | Downloads |
 |-----|-----|-----|
-| RPM package | 14.0.100.187-1 | [mssql-server 14.0.100.187-1 Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.100.187-1.x86_64.rpm)</br>[mssql-server 14.0.100.187-1 High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.100.187-1.x86_64.rpm) | 
-| Debian package | 14.0.100.187-1 | [mssql-server 14.0.100.187-1 Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.100.187-1_amd64.deb) |
+| RPM package | 14.0.200.24 | [mssql-server 14.0.200.24 Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.100.187-1.x86_64.rpm)</br>[mssql-server 14.0.200.24 High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.100.187-1.x86_64.rpm) | 
+| Debian package | 14.0.200.24 | [mssql-server 14.0.200.24 Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.100.187-1_amd64.deb) |
 
 ### Supported client tools
 

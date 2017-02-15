@@ -57,6 +57,25 @@ For details about SQL Server Availability Groups, see [SQL Server Always On Avai
 
 To configure a SQL Server Availability Group on Linux, first configure the availability group and then add it as a resource to a Linux cluster. The steps to configure the availability group are the same across Linux distributions. The tools to manage the cluster resources may be different, depending on the distribution. For specific steps, see the following links. 
 
+## New in SQL Server vNext for Availability Groups
+
+###
+
+New option in vNext for CREATE/ALTER AVAILABILITY GROUP ddl: REQUIRED_COPIES_TO_COMMIT
+		New option in vNext:
+		CREATE AVAILABILITY GROUP myag2
+		WITH ( AUTOMATED_BACKUP_PREFERENCE = SECONDARY,
+		       REQUIRED_COPIES_TO_COMMIT = 2, 
+		       health_check_timeout = 600000)
+		○ Min number of replicas that are required to commit a transaction before committing on the primary. If option is not used, default is 0. 
+			§ I.e. user has 3 sync secondaries and sets REQUIRED_COPIES_TO_COMMIT=2
+				□ If one of the secondaries is not available, then transaction is committed on primary if the other 2 secondaries are committing successfully 
+If 2 of the secondaries are not available, then primary becomes unavailable for writes as it requires at least 2 to commit to comply with REQUIRED_COPIES_TO_COMMIT=2
+
+
+###
+
+
 ## Next steps
 
 [Configure Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure.md)

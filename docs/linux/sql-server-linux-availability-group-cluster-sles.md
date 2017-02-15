@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 02/09/2017
+ms.date: 02/14/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -70,8 +70,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    10.128.16.77 SLES2
    ```
 
-   >[!NOTE]
-   >All cluster nodes must be able to access each other via SSH. Tools like `hb_report` or `crm_report` (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes, otherwise they can only collect data from the current node. In case you use a non-standard SSH port, use the -X option (see `man` page). For example, if your SSH port is 3479, invoke a `crm_report` with:
+   All cluster nodes must be able to access each other via SSH. Tools like `hb_report` or `crm_report` (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes, otherwise they can only collect data from the current node. In case you use a non-standard SSH port, use the -X option (see `man` page). For example, if your SSH port is 3479, invoke a `crm_report` with:
 
    ```bash
    crm_report -X "-p 3479" [...]
@@ -244,6 +243,13 @@ For more information, see Show Cluster Resources.
 ```
 
 ## Manual failover
+
+>[!IMPORTANT]
+>After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In SLES use `crm`. 
+
+>[!IMPORTANT]
+>If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
+
 Manage failover of the availability group with `crm`. Do not initiate failover with Transact-SQL. To manually failover to cluster node2, run the following command. 
 
 ```bash

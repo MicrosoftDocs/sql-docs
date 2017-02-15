@@ -4,7 +4,7 @@
       {
         "files": [
           "**/*.md",
-          "**/**.yml"
+          "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -19,6 +19,7 @@
       {
         "files": [
           "**/*.png",
+          "**/*.gif",
           "**/*.jpg"
         ],
         "exclude": [
@@ -32,7 +33,13 @@
     "globalMetadata": {
       "layout": "Conceptual",
       "breadcrumb_path": "~/breadcrumb/toc.yml",
-	  "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana"]
+      "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana"],
+      "_op_documentIdPathDepotMapping": {
+        "linux/": {
+          "depot_name": "SQL.linux",
+          "folder_relative_path_in_docset": "."
+        }
+      }
     },
     "fileMetadata": {},
     "template": [],

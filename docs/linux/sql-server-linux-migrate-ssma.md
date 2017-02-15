@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use SSMA to migrate databases to SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Migrate SQL Server databases to Linux with SSMA | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
@@ -25,9 +25,9 @@ ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ---
 # Use SSMA to migrate databases to SQL Server on Linux
 
-This topic introduces [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) that helps you easily migrate databases to SQL Server vNext CTP 1.2 on Linux from Microsoft Access, DB2, MySQL, Oracle and Sybase. SSMA is a Windows application, so use SSMA when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
+This topic introduces [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) that helps you easily migrate databases to SQL Server vNext CTP 1.3 on Linux from Microsoft Access, DB2, MySQL, Oracle and Sybase. SSMA is a Windows application, so use SSMA when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
 
-SSMA supports a variety of source databases including Oracle, MySQL, Sybase, DB2 and Microsoft Access to SQL Server vNext CTP 1.2 on Linux and helps automate migration tasks such as:
+SSMA supports a variety of source databases including Oracle, MySQL, Sybase, DB2 and Microsoft Access to SQL Server vNext CTP 1.3 on Linux and helps automate migration tasks such as:
 - assess your source database
 - convert the source database schema to Microsoft SQL Server schema
 - migrate the schema

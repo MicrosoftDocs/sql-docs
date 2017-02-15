@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Manage SQL Server on Linux | Microsoft Docs
 description: This topic provides links to common management tasks and tools for SQL Server running on Linux.
 author: rothja 
 ms.author: jroth 
@@ -26,7 +26,7 @@ ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ---
 # Manage SQL Server on Linux
 
-There are several ways to manage SQL Server vNext CTP 1.2 on Linux. The following section provide a quick overview of different management tools and techniques with pointers to more resources.
+There are several ways to manage SQL Server vNext CTP 1.3 on Linux. The following section provide a quick overview of different management tools and techniques with pointers to more resources.
 
 ## mssql-conf 
 The **mssql-conf** tool configures SQL Server on Linux. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md).

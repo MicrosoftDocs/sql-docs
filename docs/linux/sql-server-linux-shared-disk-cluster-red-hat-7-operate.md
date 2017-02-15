@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Operate Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server - SQL Server vNext | Microsoft Docs
-description: 
+title: Operate Red Hat Enterprise Linux shared cluster for SQL Server | Microsoft Docs
+description: Implement high availability by configuring Red Hat Enterprise Linux shared disk cluster for SQL Server.
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
@@ -24,9 +24,9 @@ ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 
 ---
 
-# Operate Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server
+# Operate Red Hat Enterprise Linux shared disk cluster for SQL Server
 
-This document describes how to do the following tasks for SQL Server on a shared disk failover cluster with Red Hat Enterprise Linux 7.3.
+This document describes how to do the following tasks for SQL Server on a shared disk failover cluster with Red Hat Enterprise Linux.
 
 - Manually failover the cluster
 - Monitor a failover cluster SQL Server service
@@ -211,7 +211,74 @@ The following example sets the monitoring interval to 2 seconds for the mssql re
 ```bash
 sudo pcs    resource op monitor interval=2s mssqlha 
 ```
+## Troubleshoot Red Hat Enterprise Linux shared disk cluster for SQL Server
 
-## Next Steps
+In troubleshooting the cluster it may help to understand how the three daemons work together to manage cluster resources. 
 
-[Configure Red Hat Enterprise Linux 7.3 shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
+| Daemon | Description 
+| ----- | -----
+| Corosync | Provides quorum membership and messaging between cluster nodes.
+| Pacemaker | Resides on top of Corosync and provides state machines for resources. 
+| PCSD | Manages both Pacemaker and Corosync through the `pcs` tools
+
+PCSD must be running in order to use `pcs` tools. 
+
+### Current cluster status 
+
+`sudo pcs status` returns basic information about the cluster, quorum, nodes, resources, and daemon status for each node. 
+
+An example of a healthy pacemaker quorum output would be:
+
+```
+Cluster name: MyAppSQL 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Stack: corosync 
+Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
+3 nodes and 1 resource configured 
+
+Online: [ sqlvmnode1 sqlvmnode2 sqlvmnode3] 
+
+Full list of resources: 
+
+mssqlha (ocf::sql:fci): Started sqlvmnode1 
+
+PCSD Status: 
+sqlvmnode1: Online 
+sqlvmnode2: Online 
+sqlvmnode3: Online 
+
+Daemon Status: 
+corosync: active/disabled 
+pacemaker: active/enabled 
+```
+
+In the example, `partition with quorum` means that a majority quorum of nodes is online. If the cluster loses a majority quorum of nodes , `pcs status` will return `partition WITHOUT quorum` and all resources will be stopped. 
+
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` returns the name of all nodes currently participating in the cluster. If any nodes are not participating, `pcs status` returns `OFFLINE: [<nodename>]`.
+
+`PCSD Status` shows the cluster status for each node.
+
+### Reasons why a node may be offline
+
+Check the following items when a node is offline.
+
+- **Firewall**
+
+    The following ports need to be open on all nodes for Pacemaker to be able to communicate.
+    
+    - **TCP: 2224, 3121, 21064
+
+- **Pacemaker or Corosync services running**
+
+- **Node communication**
+
+- **Node name mappings**
+
+## Additional resources
+
+* [Cluster from Scratch](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf) guide from Pacemaker
+
+## Next steps
+
+[Configure Red Hat Enterprise Linux shared disk cluster for SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
+

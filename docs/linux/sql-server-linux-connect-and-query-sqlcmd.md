@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use the sqlcmd command-line utility on Linux - SQL Server vNext | Microsoft Docs
+title: Use the sqlcmd command-line utility on Linux | Microsoft Docs
 description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL queries.
 author: rothja 
 ms.author: jroth 
@@ -26,7 +26,7 @@ ms.assetid: 9e6c1ae1-59a4-4589-b839-18d6a52f2676
 ---
 # Connect and query SQL Server on Linux with sqlcmd
 
-This topic provides connection requirements and guidance for SQL Server vNext CTP 1.2 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. This topic approaches the subject in the context of Linux and then points to other resources. 
+This topic provides connection requirements and guidance for SQL Server vNext CTP 1.3 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. This topic approaches the subject in the context of Linux and then points to other resources. 
 
 This topic is a walk-through. In this walk-through, you will use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext on Linux. After successfully connecting, you will use Transact-SQL (T-SQL) queries to create and populate a small database.
 

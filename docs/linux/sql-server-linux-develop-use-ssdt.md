@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use SQL Server Data Tools (SSDT) with SQL Server on Linux - SQL Server vNext | Microsoft Docs
+title: Develop and Deploy SQL Server databases for Linux  | Microsoft Docs
 description: 
 author: erickangMSFT 
 ms.author: erickang 
@@ -42,7 +42,7 @@ SQL Server Data Tools turns Visual Studio into a powerful development and databa
 
 ## Upgrade SQL Server Data Tools to SSDT 17.0 RC release
 
-SQL Server vNext CTP 1.2 on Linux is supported by SSDT version 17.0 RC or later.
+SQL Server vNext CTP 1.3 on Linux is supported by SSDT version 17.0 RC or later.
 
 1. [Download and Install SSDT 17.0 RC1].
 

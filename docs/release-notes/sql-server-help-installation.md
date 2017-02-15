@@ -22,6 +22,9 @@ ms.author: "carlasab"
   
 This article walks you through how to install local Help, and how to display online and local Help. The article covers Microsoft Help viewer 1.1 and 2.2, and documentation for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] and for [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]. 
 
+>[!IMPORTANT]
+>The Help Viewer does not support proxy settings, and does not support the ISO format.  
+
 >**F1 and Help**
 >>When you press F1, the corresponding topic appears online. The topic can not be displayed in local Help.
 

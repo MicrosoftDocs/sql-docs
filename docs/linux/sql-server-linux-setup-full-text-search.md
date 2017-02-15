@@ -43,7 +43,7 @@ Use the following commands to install the **mssql-server-fts** on Red Hat Enterp
 
 ```bash
 sudo yum update
-sudo yum install mssql-server-fts
+sudo yum install -y mssql-server-fts
 ```
 
 If you already have **mssql-server-fts** installed, you can update to the latest version with the following commands:
@@ -59,14 +59,14 @@ Use the following commands to install the **mssql-server-fts** on Ubuntu.
 
 ```bash
 sudo apt-get update 
-sudo apt-get install mssql-server-fts
+sudo apt-get install -y mssql-server-fts
 ```
 
 If you already have **mssql-server-fts** installed, you can update to the latest version with the following commands:
 
 ```bash
 sudo apt-get update 
-sudo apt-get install mssql-server-fts 
+sudo apt-get install -y mssql-server-fts 
 ```
 
 ## <a name="SLES">Install on SLES</a>

@@ -27,7 +27,7 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 # Release notes for SQL Server vNext on Linux
 The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into three sections: [CTP 1.3](#ctp13), [CTP 1.2](#ctp12), [CTP 1.1](#ctp11), and [CTP 1.0](#ctp10) release notes. See the information in the each section for supported platforms, tools, features, and known issues.
 
-## <a id="ctp13"> CTP 1.3 (February 2017)
+## <a id="ctp13"> CTP 1.3 (February 2017) </a>
 
 ### Supported platforms 
 
@@ -131,7 +131,7 @@ The following sections describe known issues with this release of SQL Server vNe
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### In-Memory OLTP
-- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
+- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
 #### SqlPackage
 - Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 

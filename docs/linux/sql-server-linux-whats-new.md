@@ -28,6 +28,16 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 
 This topic describes what's new for SQL Server vNext running on Linux.
 
+## CTP 1.3
+The CTP 1.3 release contains the following improvements and fixes:
+- Enabled Full-text Search feature.
+- Enabled Availability Groups functionality for High Availability feature.
+- Additional functionality in mssql-conf:
+    - First time set-up using mssql
+- Fixed native Linux path support for In-memory OLTP filegroups.
+- Enabled native Linux paths for SQL XE.
+- Enabled dm_os_host_info DMV functionality.
+
 ## CTP 1.2
 The CTP 1.2 release contains the following improvements and fixes:
 - Support for SUSE Linux Enterprise Server v12 SP2

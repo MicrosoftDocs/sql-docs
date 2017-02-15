@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 02/09/2017
+ms.date: 02/14/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -179,6 +179,12 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 
 
 ## Manual failover
+
+>[!IMPORTANT]
+>After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs`. 
+
+>[!IMPORTANT]
+>If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
 
 Manually failover the availability group with `pcs`. Do not initiate failover with Transact-SQL.
 

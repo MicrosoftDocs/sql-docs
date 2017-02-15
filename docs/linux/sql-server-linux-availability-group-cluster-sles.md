@@ -31,7 +31,7 @@ This guide provides instructions to create a two-node cluster for SQL Server on 
 For more details on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 >[!NOTE]
->At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. It is expected Always On dmvs that query cluster information to return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
+>At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources as if SQL Server were a standalone instance. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. On Linux, Always On Availability Group Dynamic Management Views (DMVs) will return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
 
 
 ## Prerequisites
@@ -121,16 +121,22 @@ On Linux servers configure the availability group and then configure the cluster
    If you decide to continue anyway, the script will automatically generate keys for SSH access and for the Csync2 synchronization tool and start the services needed for both. 
 
 3. To configure the cluster communication layer (Corosync): 
+
    a. Enter a network address to bind to. By default, the script will propose the network address of eth0. Alternatively, enter a different network address, for example the address of bond0. 
+
    b. Enter a multicast address. The script proposes a random address that you can use as default. 
+
    c. Enter a multicast port. The script proposes 5405 as default. 
+
    d. To configure `SBD ()`, enter a persistent path to the partition of your block device that you want to use for SBD. The path must be consistent across all nodes in the cluster. 
    Finally, the script will start the Pacemaker service to bring the one-node cluster online and enable the Web management interface Hawk2. The URL to use for Hawk2 is displayed on the screen. 
 4. For any details of the setup process, check `/var/log/sleha-bootstrap.log`. You now have a running one-node cluster. Check the cluster status with crm status:
+
    ```bash
    crm status
    ```
 5. The bootstrap procedure creates a Linux user named hacluster with the password linux. Replace the default password with a secure one as soon as possible: 
+
    ```bash
    passwd hacluster
    ```
@@ -145,9 +151,11 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
 
 1. Log in as root to the physical or virtual machine supposed to join the cluster. 
 2. Start the bootstrap script by executing: 
+
    ```bash
    ha-cluster-join
    ```
+
    If NTP has not been configured to start at boot time, a message appears. 
 3. If you decide to continue anyway, you will be prompted for the IP address of an existing node. Enter the IP address. 
 4. If you have not already configured a passwordless SSH access between both machines, you will also be prompted for the root password of the existing node. 
@@ -197,6 +205,7 @@ commit
 ### Create virtual IP resource
 
 If you did not create the virtual IP resource when you ran `ha-cluster-init` you can create this resource now. The following command creates a virtual IP resource. Run on one node.
+
 ```bash
 crm configure
 # primitive admin_addr \
@@ -208,6 +217,7 @@ crm configure
 
 ### Add colocation constraint
 To set colocation constraint for the virtual IP to run on same node as the master, run the following command on one node:
+
 ```bash
 crm configure
 colocation vip_on_master inf: \
@@ -225,6 +235,7 @@ The colocation constraint has an implicit ordering constraint. It moves the virt
 
 To prevent the IP address from temporarily pointing to the node with the pre-failover secondary, add an ordering constraint. 
 To add an ordering constraint, run the following command on one node: 
+
 ```bash
 crm configure
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
@@ -234,6 +245,7 @@ For more information, see Show Cluster Resources.
 
 ## Manual failover
 Manage failover of the availability group with `crm`. Do not initiate failover with Transact-SQL. To manually failover to cluster node2, run the following command. 
+
 ```bash
 crm resource migrate ms-ag_cluster sles1
 ```
@@ -255,6 +267,7 @@ If you have a cluster running (with at least two nodes), you can remove single n
    ```branch
    ha-cluster-remove -c IP_ADDR_OR_HOSTNAME
    ```
+
    The script enables the `sshd`, stops the pacemaker service on the specified node, and propagates the files to synchronize with `Csync2` across the remaining nodes.
 
    If you specified a host name and the node to remove cannot be contacted (or the host name cannot be resolved), the script will inform you and ask whether to remove the node anyway. If you specified an IP address and the node cannot be contacted, you will be asked to enter the host name and to confirm whether to remove the node anyway. 
@@ -266,10 +279,13 @@ If you have a cluster running (with at least two nodes), you can remove single n
 To remove the High Availability Extension software from a machine that you no longer need as cluster node, proceed as follows:
 
 1. Stop the cluster service:
+
    ```bash
    rcopenais stop
    ```
+
 2. Remove the High Availability Extension add-on:
+
    ```
    zypper rm -t products sle-hae
    ```

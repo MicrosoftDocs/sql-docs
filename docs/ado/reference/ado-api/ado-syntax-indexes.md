@@ -30,5 +30,4 @@ The syntax for calling ADO methods and properties differs depending on your deve
 ## See Also  
  [Using ADO with Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Using ADO with Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
- [Using ADO with Microsoft Visual J++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-j.md)   
  [Using ADO with Scripting Languages](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

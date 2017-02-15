@@ -30,8 +30,6 @@ ADO is a COM automation interface component that can be used with many programmi
   
 -   [Using ADO with Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)  
   
--   [Using ADO with Microsoft Visual J++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-j.md)  
-  
 ## See Also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Appendix D: ADO Samples](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   

@@ -42,7 +42,6 @@
 # [ExecuteOptions and FetchOptions Properties Example (VBScript)](executeoptions-and-fetchoptions-properties-example-vbscript.md)
 # [Synchronize21 Method (RDS)](synchronize21-method-rds.md)
 # [URL Property Example (VBScript)](url-property-example-vbscript.md)
-# [RDS Code Examples in Visual J++](rds-code-examples-in-visual-j.md)
 # [CreateRecordset Method (RDS)](createrecordset-method-rds.md)
 # [ExecuteOptions Property (RDS)](executeoptions-property-rds.md)
 # [SubmitChanges Method Example (VBScript)](submitchanges-method-example-vbscript.md)

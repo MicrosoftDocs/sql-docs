@@ -36,6 +36,3 @@ Sub RDSTutorial1()
 ## See Also  
  [Step 2: Invoke the Server Program (RDS Tutorial)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)   
  [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
- [RDS Tutorial (Visual J++)](../../../ado/guide/remote-data-service/rds-tutorial-visual-j.md)
-
-

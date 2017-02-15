@@ -30,6 +30,4 @@ Use the following code examples to learn how to use the ADO objects, methods, pr
   
 -   [ADO Code Examples in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)  
   
--   [ADO Code Examples in Visual J++](../../../ado/reference/ado-api/ado-code-examples-in-visual-j.md)  
-  
 -   [ADO Code Examples in JScript](../../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)

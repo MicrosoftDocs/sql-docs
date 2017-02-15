@@ -115,5 +115,4 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
 ## See Also  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Using ADO with Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
- [Using ADO with Microsoft Visual J++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-j.md)   
  [Using ADO with Scripting Languages](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

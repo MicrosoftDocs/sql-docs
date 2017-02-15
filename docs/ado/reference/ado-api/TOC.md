@@ -77,7 +77,6 @@
 # [MoveFirst, MoveLast, MoveNext, MovePrevious Example (VJ++)](movefirst-movelast-movenext-and-moveprevious-methods-example-vj.md)
 # [LockTypeEnum](locktypeenum.md)
 # [Open Method (ADO Stream)](open-method-ado-stream.md)
-# [ADO Code Examples in Visual J++](ado-code-examples-in-visual-j.md)
 # [Unique Table, Unique Schema, Unique Catalog)](unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)
 # [ADO Objects and Interfaces](ado-objects-and-interfaces.md)
 # [CompareBookmarks Method (ADO)](comparebookmarks-method-ado.md)

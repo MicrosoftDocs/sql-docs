@@ -37,7 +37,6 @@ The Windows SDK contains several sample applications that demonstrate the use of
  [ADO Code Examples in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO Code Examples VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [ADO Code Examples in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [ADO Code Examples in Visual J++](../../../ado/reference/ado-api/ado-code-examples-in-visual-j.md)   
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [Configuring RDS](../../../ado/guide/remote-data-service/configuring-rds.md)   
  [Appendix C: Programming with ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   

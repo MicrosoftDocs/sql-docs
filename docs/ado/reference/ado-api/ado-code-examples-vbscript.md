@@ -45,5 +45,4 @@ Use the following code examples to learn about how to use the ADO methods when w
 ## See Also  
  [ADO Code Examples in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO Code Examples in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [ADO Code Examples in Visual J++](../../../ado/reference/ado-api/ado-code-examples-in-visual-j.md)   
  [Appendix D: ADO Samples](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

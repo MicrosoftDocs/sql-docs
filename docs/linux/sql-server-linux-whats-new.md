@@ -31,7 +31,7 @@ This topic describes what's new for SQL Server vNext running on Linux.
 ## CTP 1.3
 The CTP 1.3 release contains the following improvements and fixes:
 - Enabled Full-text Search feature.
-- Enabled Availability Groups functionality for High Availability feature.
+- Enabled Always On Availability Groups functionality for High Availability.
 - Additional functionality in mssql-conf:
     - First time set-up using mssql
 - Fixed native Linux path support for In-memory OLTP filegroups.

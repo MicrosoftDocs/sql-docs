@@ -66,6 +66,5 @@ collection.Refresh
 ## See Also  
  [Refresh Method Example (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh Method Example (VC++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
- [Refresh Method Example (VJ++)](../../../ado/reference/ado-api/refresh-method-example-vj.md)   
  [Count Property (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Refresh Method (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)

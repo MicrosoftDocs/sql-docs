@@ -38,4 +38,3 @@ Indicates which records of the [Recordset](../../../ado/reference/ado-api/record
 ## See Also  
  [MarshalOptions Property Example (VB)](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)   
  [MarshalOptions Property Example (VC++)](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)   
- [MarshalOptions Property Example (VJ++)](../../../ado/reference/ado-api/marshaloptions-property-example-vj.md)

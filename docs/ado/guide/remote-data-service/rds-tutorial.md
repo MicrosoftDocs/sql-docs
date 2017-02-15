@@ -66,11 +66,6 @@ This tutorial illustrates using the RDS programming model to query and update a 
   
 -   [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
--   [RDS Tutorial (Visual J++)](../../../ado/guide/remote-data-service/rds-tutorial-visual-j.md)  
-  
 ## See Also  
  [Step 1: Specify a Server Program (RDS Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
- [RDS Tutorial (Visual J++)](../../../ado/guide/remote-data-service/rds-tutorial-visual-j.md)
-
-

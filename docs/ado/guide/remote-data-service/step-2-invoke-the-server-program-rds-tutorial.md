@@ -64,6 +64,3 @@ Sub RDSTutorial2B()
 ## See Also  
  [Step 3: Server Obtains a Recordset (RDS Tutorial)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
- [RDS Tutorial (Visual J++)](../../../ado/guide/remote-data-service/rds-tutorial-visual-j.md)
-
-

@@ -70,7 +70,6 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ## See Also  
  [OpenSchema Method Example (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
  [OpenSchema Method Example (VC++)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
- [OpenSchema Method Example (VJ++)](../../../ado/reference/ado-api/openschema-method-example-vj.md)   
  [Open Method (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open Method (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

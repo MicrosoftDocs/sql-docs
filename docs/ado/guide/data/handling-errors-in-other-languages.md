@@ -4,7 +4,7 @@ ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/14/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -23,7 +23,5 @@ So far, this section has discussed errors from a Microsoft® Visual Basic® poin
 -   [Handling Errors in VBScript](../../../ado/guide/data/handling-errors-in-vbscript.md)  
   
 -   [Handling Errors in Visual C++](../../../ado/guide/data/handling-errors-in-visual-c.md)  
-  
--   [Handling Errors in Visual J++](../../../ado/guide/data/handline-errors-in-visual-j.md)  
   
 -   [Handling Errors in JScript](../../../ado/guide/data/handling-errors-in-jscript.md)

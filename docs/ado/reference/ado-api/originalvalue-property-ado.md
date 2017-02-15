@@ -42,5 +42,4 @@ Indicates the value of a [Field](../../../ado/reference/ado-api/field-object.md)
 ## See Also  
  [OriginalValue and UnderlyingValue Properties Example (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [OriginalValue and UnderlyingValue Properties Example (VC++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
- [OriginalValue and UnderlyingValue Properties Example (VJ++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vj.md)   
  [UnderlyingValue Property](../../../ado/reference/ado-api/underlyingvalue-property.md)

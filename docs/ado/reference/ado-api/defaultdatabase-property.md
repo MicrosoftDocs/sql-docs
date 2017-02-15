@@ -42,4 +42,3 @@ Indicates the default database for a [Connection](../../../ado/reference/ado-api
 ## See Also  
  [Provider and DefaultDatabase Properties Example (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provider and DefaultDatabase Properties Example (VC++)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)   
- [Provider and DefaultDatabase Properties Example (VJ++)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vj.md)

@@ -65,5 +65,4 @@ Indicates the information used to establish a connection to a data source.
 ## See Also  
  [ConnectionString, ConnectionTimeout, and State Properties Example (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString, ConnectionTimeout, and State Properties Example (VC++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [ConnectionString, ConnectionTimeout, and State Properties Example (VJ++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vj.md)   
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

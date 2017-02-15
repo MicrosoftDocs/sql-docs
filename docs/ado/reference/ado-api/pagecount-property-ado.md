@@ -37,7 +37,6 @@ Indicates how many pages of data the [Recordset](../../../ado/reference/ado-api/
 ## See Also  
  [AbsolutePage, PageCount, and PageSize Properties Example (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
  [AbsolutePage, PageCount, and PageSize Properties Example (VC++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
- [AbsolutePage, PageCount, and PageSize Properties Example (VJ++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vj.md)   
  [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageSize Property (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [RecordCount Property (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)

@@ -71,6 +71,5 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
 ## See Also  
  [Resync Method Example (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Resync Method Example (VC++)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
- [Resync Method Example (VJ++)](../../../ado/reference/ado-api/resync-method-example-vj.md)   
  [Clear Method (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [UnderlyingValue Property](../../../ado/reference/ado-api/underlyingvalue-property.md)

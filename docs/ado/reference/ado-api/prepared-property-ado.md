@@ -39,4 +39,3 @@ Indicates whether to save a compiled version of a [Command](../../../ado/referen
 ## See Also  
  [Prepared Property Example (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Prepared Property Example (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   
- [Prepared Property Example (VJ++)](../../../ado/reference/ado-api/prepared-property-example-vj.md)

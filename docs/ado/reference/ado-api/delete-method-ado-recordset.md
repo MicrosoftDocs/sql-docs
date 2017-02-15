@@ -58,7 +58,6 @@ recordset.Delete AffectRecords
  [Delete Method Example (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
  [Delete Method Example (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
  [Delete Method Example (VC++)](../../../ado/reference/ado-api/delete-method-example-vc.md)   
- [Delete Method Example (VJ++)](../../../ado/reference/ado-api/delete-method-example-vj.md)   
  [Delete Method (ADO Fields Collection)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Delete Method (ADO Parameters Collection)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [DeleteRecord Method (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

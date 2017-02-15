@@ -43,5 +43,4 @@ Indicates the scale of numeric values in a [Parameter](../../../ado/reference/ad
 ## See Also  
  [NumericScale and Precision Properties Example (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale and Precision Properties Example (VC++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
- [NumericScale and Precision Properties Example (VJ++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vj.md)   
  [Precision Property (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

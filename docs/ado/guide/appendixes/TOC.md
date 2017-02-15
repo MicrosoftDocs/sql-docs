@@ -35,6 +35,5 @@
 # [ADO and WFC Programming](ado-and-wfc-programming.md)
 # [ADO Java Class Wrappers](ado-java-class-wrappers.md)
 # [Microsoft OLE DB Simple Provider](microsoft-ole-db-simple-provider.md)
-# [Using ADO with Microsoft Visual J++](using-ado-with-microsoft-visual-j.md)
 # [Visual C++ ADO Programming](visual-c-ado-programming.md)
 # [Using ADO with Microsoft Visual C++](using-ado-with-microsoft-visual-c.md)

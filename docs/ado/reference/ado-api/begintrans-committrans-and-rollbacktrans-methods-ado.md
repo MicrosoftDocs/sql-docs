@@ -76,5 +76,4 @@ object.RollbackTrans
 ## See Also  
  [BeginTrans, CommitTrans, and RollbackTrans Methods Example (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [BeginTrans, CommitTrans, and RollbackTrans Methods Example (VC++)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
- [BeginTrans, CommitTrans, and RollbackTrans Methods Example (VJ++)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vj.md)   
  [Attributes Property (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

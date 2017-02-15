@@ -87,7 +87,6 @@ rs.Update
  [AddNew Method Example (VB)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
  [AddNew Method Example (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
  [AddNew Method Example (VC++)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   
- [AddNew Method Example (VJ++)](../../../ado/reference/ado-api/addnew-method-example-vj.md)   
  [CancelUpdate Method (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [EditMode Property](../../../ado/reference/ado-api/editmode-property.md)   
  [Requery Method](../../../ado/reference/ado-api/requery-method.md)   

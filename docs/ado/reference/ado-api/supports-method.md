@@ -50,5 +50,4 @@ boolean = recordset.Supports(CursorOptions )
 ## See Also  
  [Supports Method Example (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
  [Supports Method Example (VC++)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
- [Supports Method Example (VJ++)](../../../ado/reference/ado-api/supports-method-example-vj.md)   
  [CursorType Property (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

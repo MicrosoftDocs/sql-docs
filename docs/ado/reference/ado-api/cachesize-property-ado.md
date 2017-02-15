@@ -48,5 +48,4 @@ Indicates the number of records from a [Recordset](../../../ado/reference/ado-ap
 ## See Also  
  [CacheSize Property Example (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [CacheSize Property Example (VC++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [CacheSize Property Example (VJ++)](../../../ado/reference/ado-api/cachesize-property-example-vj.md)   
  [CacheSize Property Example (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)

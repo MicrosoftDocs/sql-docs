@@ -45,7 +45,6 @@ Indicates on which page the current record resides.
 ## See Also  
  [AbsolutePage, PageCount, and PageSize Properties Example (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
  [AbsolutePage, PageCount, and PageSize Properties Example (VC++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
- [AbsolutePage, PageCount, and PageSize Properties Example (VJ++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vj.md)   
  [AbsolutePosition Property (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [PageCount Property (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize Property (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)

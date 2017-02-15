@@ -26,9 +26,9 @@ Indicates a filter for data in a [Recordset](../../../ado/reference/ado-api/reco
 ## Settings and Return Values  
  Sets or returns a **Variant** value, which can contain one of the following:  
   
--   **Criteria string** — a string made up of one or more individual clauses concatenated with **AND** or **OR** operators.  
+-   **Criteria string** ??? a string made up of one or more individual clauses concatenated with **AND** or **OR** operators.  
   
--   **Array of bookmarks** — an array of unique bookmark values that point to records in the **Recordset** object.  
+-   **Array of bookmarks** ??? an array of unique bookmark values that point to records in the **Recordset** object.  
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) value.  
   
@@ -91,6 +91,5 @@ Indicates a filter for data in a [Recordset](../../../ado/reference/ado-api/reco
 ## See Also  
  [Filter and RecordCount Properties Example (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
  [Filter and RecordCount Properties Example (VC++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
- [Filter and RecordCount Properties Example (VJ++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vj.md)   
  [Clear Method (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

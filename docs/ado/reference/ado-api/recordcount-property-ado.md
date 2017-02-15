@@ -31,7 +31,7 @@ Indicates the number of records in a [Recordset](../../../ado/reference/ado-api/
 ## Remarks  
  Use the **RecordCount** property to find out how many records are in a **Recordset** object. The property returns -1 when ADO cannot determine the number of records or if the provider or cursor type does not support **RecordCount**. Reading the **RecordCount** property on a closed **Recordset** causes an error.  
   
- If the **Recordset** object supports approximate positioning or bookmarks — that is, **Supports (adApproxPosition)** or **Supports (adBookmark)**, respectively, return **True**— this value will be the exact number of records in the **Recordset**, regardless of whether it has been fully populated. If the **Recordset** object does not support approximate positioning, this property may be a significant drain on resources because all records will have to be retrieved and counted to return an accurate **RecordCount** value.  
+ If the **Recordset** object supports approximate positioning or bookmarks ??? that is, **Supports (adApproxPosition)** or **Supports (adBookmark)**, respectively, return **True**??? this value will be the exact number of records in the **Recordset**, regardless of whether it has been fully populated. If the **Recordset** object does not support approximate positioning, this property may be a significant drain on resources because all records will have to be retrieved and counted to return an accurate **RecordCount** value.  
   
 > [!NOTE]
 >  In ADO versions 2.8 and earlier, the SQLOLEDB provider fetches all records when a server-side cursor is used, despite the fact that it returns **True** for both **Supports (adApproxPosition)** and **Supports (adBookmark)**.  
@@ -44,6 +44,5 @@ Indicates the number of records in a [Recordset](../../../ado/reference/ado-api/
 ## See Also  
  [Filter and RecordCount Properties Example (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
  [Filter and RecordCount Properties Example (VC++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
- [Filter and RecordCount Properties Example (VJ++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vj.md)   
  [AbsolutePosition Property (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [PageCount Property (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

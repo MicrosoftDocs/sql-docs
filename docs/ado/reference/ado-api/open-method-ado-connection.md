@@ -67,7 +67,6 @@ connection.Open ConnectionString, UserID, Password, Options
  [Open and Close Methods Example (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open and Close Methods Example (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Open and Close Methods Example (VC++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
- [Open and Close Methods Example (VJ++)](../../../ado/reference/ado-api/open-and-close-methods-example-vj.md)   
  [Open Method (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open Method (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   

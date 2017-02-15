@@ -61,4 +61,3 @@ array = recordset.GetRows(Rows, Start, Fields )
 ## See Also  
  [GetRows Method Example (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
  [GetRows Method Example (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   
- [GetRows Method Example (VJ++)](../../../ado/reference/ado-api/getrows-method-example-vj.md)

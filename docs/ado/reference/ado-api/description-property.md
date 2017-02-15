@@ -39,7 +39,6 @@ Describes an [Error](../../../ado/reference/ado-api/error-object.md) object.
 ## See Also  
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VJ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vj.md)   
  [HelpContext, HelpFile Properties](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Number Property (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source Property (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)

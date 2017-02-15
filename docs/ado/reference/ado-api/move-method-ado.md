@@ -65,7 +65,6 @@ recordset.Move NumRecords, Start
  [Move Method Example (VB)](../../../ado/reference/ado-api/move-method-example-vb.md)   
  [Move Method Example (VBScript)](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
  [Move Method Example (VC++)](../../../ado/reference/ado-api/move-method-example-vc.md)   
- [Move Method Example (VJ++)](../../../ado/reference/ado-api/move-method-example-vj.md)   
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [MoveRecord Method (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

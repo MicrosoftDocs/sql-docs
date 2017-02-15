@@ -54,7 +54,6 @@ Indicates one or more characteristics of an object.
 ## See Also  
  [Attributes and Name Properties Example (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Attributes and Name Properties Example (VC++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [Attributes and Name Properties Example (VJ++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vj.md)   
  [AppendChunk Method (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [GetChunk Method (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

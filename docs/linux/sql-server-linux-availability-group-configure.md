@@ -127,7 +127,7 @@ sudo systemctl restart mssql-server
 The following Transact-SQL script creates a login named `dbm_login`, and a user named `dbm_user`. Update the script with a strong password. Run the following command on all SQL Servers to create the database mirroring endpoint user.
 
 ```Transact-SQL
-CREATE LOGIN dbm_login WITH PASSWORD = '<1Sample_Strong_Password!@#>'
+CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**'
 CREATE USER dbm_user FOR LOGIN dbm_login
 ```
 
@@ -138,13 +138,13 @@ SQL Server on Linux uses certificates to authenticate communication between the 
 The following Transact-SQL script creates a master key and certificate. It then backs the certificate up and secures the file with a private key. Update the script with strong passwords. Connect to the primary SQL Server and run the following Transact-SQL to create the certificate:
 
 ```Transact-SQL
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Master_Key_Password>'
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**'
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm'
 BACKUP CERTIFICATE dbm_certificate
    TO FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
    WITH PRIVATE KEY (
            FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
-           ENCRYPTION BY PASSWORD = '<Private_Key_Password>'
+           ENCRYPTION BY PASSWORD = '**<Private_Key_Password>**'
        )
 ```
 
@@ -172,13 +172,13 @@ chown mssql:mssql dbm_certificate.*
 The following Transact-SQL script creates a master key and certificate from the backup that you created on the primary SQL Server. The command also authorizes the user to access the certificate. Update the script with strong passwords. The decryption password is the same password that you used to create the .pvk file in a previous step. Run the following script on all secondary servers to create the certificate.
 
 ```Transact-SQL
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Master_Key_Password>' 
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**' 
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
     FROM FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
     WITH PRIVATE KEY (
     FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
-    DECRYPTION BY PASSWORD = '<Private_Key_Password>'
+    DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
             )
 ```
 
@@ -186,13 +186,13 @@ CREATE CERTIFICATE dbm_certificate
 
 Database mirroring endpoints use Transmission Control Protocol (TCP) to send and receive messages between the server instances participating database mirroring sessions or hosting availability replicas. The database mirroring endpoint listens on a unique TCP port number. 
 
-The following Transact-SQL creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint, and gives connect permission to the user that you created. Before you run the script, replace the values between `< ... >`. Update the IP address and listener port values for your environment. Use an available IP address from the same network as the SQL Servers. Use an available TCP port. 
+The following Transact-SQL creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint, and gives connect permission to the user that you created. Before you run the script, replace the values between `**< ... >**`. Update the IP address and listener port values for your environment. Use an available IP address from the same network as the SQL Servers. Use an available TCP port. 
 
 Update the following Transact-SQL for your environment  on all SQL Servers: 
 
 ```Transact-SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (<0.0.0.0>), LISTENER_PORT = <5022>)
+    AS TCP (LISTENER_IP = (**<0.0.0.0>**), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
 	    ROLE = ALL,
 	    AUTHENTICATION = CERTIFICATE dbm_certificate,
@@ -209,21 +209,21 @@ For complete information, see [The Database Mirroring Endpoint (SQL Server)](htt
 
 ## Create the availability group
 
-Create the availability group. The following Transact-SQL script creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Update the following script for your environment. Replace the  `<node1>` and `<node2>` values with the names of the SQL Servers that will host the replicas. Replace the `<5022>` with the port you set for the endpoint. Run the following Transact-SQL on the primary SQL Server to create the availability group.
+Create the availability group. The following Transact-SQL script creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Update the following script for your environment. Replace the  `**<node1>**` and `**<node2>**` values with the names of the SQL Servers that will host the replicas. Replace the `**<5022>**` with the port you set for the endpoint. Run the following Transact-SQL on the primary SQL Server to create the availability group.
 
 ```Transact-SQL
 CREATE AVAILABILITY GROUP [ag1]
     WITH (DB_FAILOVER = ON, CLUSTER_TYPE = NONE)
     FOR REPLICA ON
-        N'<node1>' WITH (
-            ENDPOINT_URL = N'tcp://<node1>:<5022>',
+        N'**<node1>**' WITH (
+            ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
 		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = AUTOMATIC,
 		    SEEDING_MODE = AUTOMATIC,
 		    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
 		    ),
-        N'<node2>' WITH ( 
-		    ENDPOINT_URL = N'tcp://<node2>:<5022>', 
+        N'**<node2>**' WITH ( 
+		    ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
 		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = AUTOMATIC,
 		    SEEDING_MODE = AUTOMATIC,
@@ -301,6 +301,7 @@ SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.d
 >[!IMPORTANT]
 >If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
 
+<a name="sync-commit"></a>
 ## Managing synchronous commit mode
 
 >[!WARNING]
@@ -320,7 +321,7 @@ In a cluster with Windows Server Failover Clustering (WSFC) the known commit mod
 
 But in a Pacemaker-managed availability group this does not happen, and in sqlVNext CTP 1.3 there is a possibility that a lagging asynchronous secondary might be promoted to a primary, causing data loss.
 
-sqlVnext introduces a new feature to force a certain number of secondaries to be available before any transactions can be committed on the primary. You can use this feature to work around the above bug. `REQUIRED_COPIES_TO_COMMIT` allows you to set a number of replicas that must commit to secondary replica database transaction logs before a transaction can proceed. You can use this option with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`.
+sqlVnext introduces a new feature to force a certain number of secondaries to be available before any transactions can be committed on the primary. You can use this feature to work around the above bug. `REQUIRED_COPIES_TO_COMMIT` allows you to set a number of replicas that must commit to secondary replica database transaction logs before a transaction can proceed. You can use this option with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. See [CREATE AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878399.aspx).
 
 When `REQUIRED_COPIES_TO_COMMIT` is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of synchronous secondary replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.
 

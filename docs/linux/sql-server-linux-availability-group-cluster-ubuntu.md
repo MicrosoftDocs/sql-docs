@@ -163,9 +163,11 @@ The colocation constraint has an implicit ordering constraint. It moves the virt
 
 1. User issues `pcs resource move` to the availability group primary from node1 to node2.
 1. The virtual IP resource stops on node 1.
-1. The virtual IP resource starts on node 2. 
+1. The virtual IP resource starts on node 2.
+
    >[!NOTE]
    >At this point, the IP address temporarily points to node 2 while node 2 is still a pre-failover secondary. 
+   
 1. The availability group primary on node 1 is demoted to secondary.
 1. The availability group secondary on node 2 is promoted to primary. 
 

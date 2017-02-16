@@ -140,7 +140,6 @@ Connect to the primary SQL Server and run the following Transact-SQL to create t
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm'
-    AUTHORIZATION dbm_user
 BACKUP CERTIFICATE dbm_certificate
    TO FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
    WITH PRIVATE KEY (

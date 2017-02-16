@@ -138,13 +138,13 @@ SQL Server on Linux uses certificates to authenticate communication between the 
 The following Transact-SQL script creates a master key and certificate. It then backs the certificate up and secures the file with a private key. Update the script with strong passwords. Connect to the primary SQL Server and run the following Transact-SQL to create the certificate:
 
 ```Transact-SQL
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**'
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Master_Key_Password>'
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm'
 BACKUP CERTIFICATE dbm_certificate
    TO FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
    WITH PRIVATE KEY (
            FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
-           ENCRYPTION BY PASSWORD = '*<Private_Key_Password>*'
+           ENCRYPTION BY PASSWORD = '<Private_Key_Password>'
        )
 ```
 

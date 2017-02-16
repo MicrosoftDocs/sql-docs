@@ -16,7 +16,7 @@ caps.latest.revision: 8
 author: "sabotta"
 ms.author: "carlasab"
 ---
-# SQL Server Help Installation
+# Help Viewer for SQL Server
   
   
   

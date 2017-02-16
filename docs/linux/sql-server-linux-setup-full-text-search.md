@@ -26,7 +26,7 @@ ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ---
 # Install SQL Server Full-Text Search on Linux
 
-The following steps install SQL Server Full-Text Search (**mssql-server-fts**) on Linux. [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx) enables you to run full-text queries against character-based data in SQL Server tables. For information about Full-Text Search known issues for this release, see the [Release Notes](sql-server-linux-release-notes.md).
+The following steps install [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-fts**) on Linux. Full-Text Search enables you to run full-text queries against character-based data in SQL Server tables. For known issues for this release, see the [Release Notes](sql-server-linux-release-notes.md).
 
 > [!NOTE]
 > Before installing SQL Server Full-Text Search, first [install SQL Server](sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the **mssql-server-fts** package.
@@ -248,3 +248,7 @@ You can see a list of installed filters by calling **sp_help_fulltext_system_com
 |.wri | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.wtx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
+
+## Next steps
+
+For information about Full-Text Search, see [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx). 

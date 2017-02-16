@@ -4,7 +4,7 @@ ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -39,5 +39,4 @@ public static void main( String args[])
 ```  
   
 ## See Also  
- [Using the Java Type Library Wizard](../../../ado/guide/appendixes/using-the-java-type-library-wizard.md)   
  [Using the Microsoft SDK for Java](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)

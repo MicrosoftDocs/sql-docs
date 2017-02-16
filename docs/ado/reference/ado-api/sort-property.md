@@ -53,7 +53,6 @@ Indicates one or more field names on which the [Recordset](../../../ado/referenc
 ## See Also  
  [Sort Property Example (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
  [Sort Property Example (VC++)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [Sort Property Example (VJ++)](../../../ado/reference/ado-api/sort-property-example-vj.md)   
  [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [SortColumn Property (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [SortDirection Property (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

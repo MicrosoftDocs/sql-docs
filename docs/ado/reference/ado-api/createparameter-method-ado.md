@@ -65,7 +65,6 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ## See Also  
  [Append and CreateParameter Methods Example (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Append and CreateParameter Methods Example (VC++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
- [Append and CreateParameter Methods Example (VJ++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vj.md)   
  [Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)   
  [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

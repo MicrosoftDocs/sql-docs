@@ -48,5 +48,4 @@ Indicates the number of objects in a collection.
 ## See Also  
  [Count Property Example (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Count Property Example (VC++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
- [Count Property Example (VJ++)](../../../ado/reference/ado-api/count-property-example-vj.md)   
  [Refresh Method (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

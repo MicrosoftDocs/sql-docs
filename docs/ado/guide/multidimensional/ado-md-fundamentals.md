@@ -4,7 +4,7 @@ ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,7 +18,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO MD Fundamentals
-Microsoft® ActiveX® Data Objects (Multidimensional) (ADO MD) provides easy access to multidimensional data from languages such as Microsoft Visual Basic®, Microsoft Visual C++®, and Microsoft Visual J++®. ADO MD extends Microsoft ActiveX® Data Objects (ADO) to include objects specific to multidimensional data, such as the [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) and [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objects. With ADO MD you can browse multidimensional schema, query a cube, and retrieve the results.  
+Microsoft® ActiveX® Data Objects (Multidimensional) (ADO MD) provides easy access to multidimensional data from languages such as Microsoft Visual Basic®, Microsoft Visual C++®. ADO MD extends Microsoft ActiveX® Data Objects (ADO) to include objects specific to multidimensional data, such as the [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) and [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objects. With ADO MD you can browse multidimensional schema, query a cube, and retrieve the results.  
   
  Like ADO, ADO MD uses an underlying OLE DB provider to gain access to data. To work with ADO MD, the provider must be a multidimensional data provider (MDP) as defined by the OLE DB for OLAP specification. An MDP presents data in multidimensional views instead of tabular views, which is how a tabular data provider (TDP) presents data. Refer to the documentation for your OLAP OLE DB provider for more information about the specific syntax and behavior supported by your provider.  
   

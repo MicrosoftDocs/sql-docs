@@ -91,4 +91,3 @@ collection (Index)
 ## See Also  
  [Item Property Example (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item Property Example (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   
- [Item Property Example (VJ++)](../../../ado/reference/ado-api/item-property-example-vj.md)

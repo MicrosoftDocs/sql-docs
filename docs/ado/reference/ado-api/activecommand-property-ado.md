@@ -40,5 +40,4 @@ Indicates the [Command](../../../ado/reference/ado-api/command-object-ado.md) ob
  [ActiveCommand Property Example (VB)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
  [ActiveCommand Property Example (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
  [ActiveCommand Property Example (VC++)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
- [ActiveCommand Property Example (VJ++)](../../../ado/reference/ado-api/activecommand-property-example-vj.md)   
  [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

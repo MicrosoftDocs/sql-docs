@@ -50,7 +50,6 @@ fld.Properties("Optimize") = False   'Delete an index
 ## See Also  
  [Optimize Property Example (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
  [Optimize Property Example (VC++)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
- [Optimize Property Example (VJ++)](../../../ado/reference/ado-api/optimize-property-example-vj.md)   
  [Filter Property](../../../ado/reference/ado-api/filter-property.md)   
  [Find Method (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Sort Property](../../../ado/reference/ado-api/sort-property.md)

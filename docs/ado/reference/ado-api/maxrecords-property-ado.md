@@ -37,4 +37,3 @@ Indicates the maximum number of records to return to a [Recordset](../../../ado/
 ## See Also  
  [MaxRecords Property Example (VB)](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
  [MaxRecords Property Example (VC++)](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)   
- [MaxRecords Property Example (VJ++)](../../../ado/reference/ado-api/maxrecords-property-example-vj.md)

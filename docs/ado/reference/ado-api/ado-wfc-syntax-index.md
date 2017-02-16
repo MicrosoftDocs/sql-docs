@@ -4,7 +4,7 @@ ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -20,7 +20,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO - WFC Syntax Index
-The ADO Language Reference uses the Microsoft Visual Basic programming language to illustrate ADO method and property syntax. This index is a cross-reference to the ADO Language Reference topics, based on Microsoft Visual J++ and ADO for Windows Foundation Classes (ADO/WFC). When differences in syntax arise, use the function signatures in this index, as opposed to the syntax listings in the language reference topic.  
+The ADO Language Reference uses the Microsoft Visual Basic programming language to illustrate ADO method and property syntax. This index is a cross-reference to the ADO Language Reference topics, based on ADO for Windows Foundation Classes (ADO/WFC). When differences in syntax arise, use the function signatures in this index, as opposed to the syntax listings in the language reference topic.  
   
  Method and property syntax are listed for the following elements:  
   
@@ -48,5 +48,4 @@ The ADO Language Reference uses the Microsoft Visual Basic programming language 
   
 ## See Also  
  [Handling ADO Events](../../../ado/guide/data/handling-ado-events.md)   
- [ADO and WFC Programming](../../../ado/guide/appendixes/ado-and-wfc-programming.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

@@ -39,4 +39,3 @@ Indicates the ADO version number.
 ## See Also  
  [Version Property Example (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Version Property Example (VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   
- [Version Property Example (VJ++)](../../../ado/reference/ado-api/version-property-example-vj.md)

@@ -106,7 +106,6 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  [Open and Close Methods Example (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open and Close Methods Example (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Open and Close Methods Example (VC++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
- [Open and Close Methods Example (VJ++)](../../../ado/reference/ado-api/open-and-close-methods-example-vj.md)   
  [Save and Open Methods Example (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Open Method (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open Method (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   

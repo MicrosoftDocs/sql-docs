@@ -4,7 +4,7 @@ ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,7 +18,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ADO Error Codes
-In addition to the provider errors returned in the [Error](../../../ado/reference/ado-api/error-object.md) objects of the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection, ADO itself can return errors to the exception-handling mechanism of your run-time environment. Use the error trapping mechanism your programming language, such as the **On Error** statement in Microsoft® Visual Basic or the **try-catch** block in Microsoft Visual C++® or Microsoft Visual J++® to capture ADO errors.  
+In addition to the provider errors returned in the [Error](../../../ado/reference/ado-api/error-object.md) objects of the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection, ADO itself can return errors to the exception-handling mechanism of your run-time environment. Use the error trapping mechanism your programming language, such as the **On Error** statement in Microsoft® Visual Basic, or the **try-catch** block in Microsoft Visual C++®, to capture ADO errors.  
   
  For the list of ADO error codes, see [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md).  
   

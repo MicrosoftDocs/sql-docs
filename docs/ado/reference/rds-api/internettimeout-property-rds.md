@@ -41,6 +41,5 @@ Indicates the number of milliseconds to wait before a request times out.
 ## See Also  
  [InternetTimeout Property Example (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [InternetTimeout Property Example (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
- [InternetTimeout Property Example (VJ++)](../../../ado/reference/rds-api/internettimeout-property-example-vj.md)
-
+ 
 

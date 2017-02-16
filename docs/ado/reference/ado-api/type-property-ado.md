@@ -41,6 +41,5 @@ Indicates the operational type or data type of a [Parameter](../../../ado/refere
 ## See Also  
  [Type Property Example (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Type Property Example (Property) (VC++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
- [Type Property Example (Property) (VJ++)](../../../ado/reference/ado-api/type-property-example-property-vj.md)   
  [RecordType Property (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type Property (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

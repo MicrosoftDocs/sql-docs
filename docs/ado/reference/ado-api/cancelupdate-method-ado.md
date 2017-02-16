@@ -51,7 +51,6 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
 ## See Also  
  [Update and CancelUpdate Methods Example (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update and CancelUpdate Methods Example (VC++)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
- [Update and CancelUpdate Methods Example (VJ++)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vj.md)   
  [AddNew Method (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Cancel Method (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Cancel Method (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   

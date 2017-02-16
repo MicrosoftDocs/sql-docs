@@ -4,7 +4,7 @@ ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,7 +18,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # RDS Tutorial
-This tutorial illustrates using the RDS programming model to query and update a data source. First, it describes the steps necessary to accomplish this task. Then the tutorial is repeated in Microsoft® Visual Basic Scripting Edition and Microsoft® Visual J++®, featuring ADO for Windows Foundation Classes (ADO/WFC).  
+This tutorial illustrates using the RDS programming model to query and update a data source. First, it describes the steps necessary to accomplish this task. Then the tutorial is repeated in Microsoft® Visual Basic Scripting Edition (featuring ADO for Windows Foundation Classes (ADO/WFC)).  
   
  This tutorial is coded in different languages for two reasons:  
   
@@ -66,11 +66,6 @@ This tutorial illustrates using the RDS programming model to query and update a 
   
 -   [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
--   [RDS Tutorial (Visual J++)](../../../ado/guide/remote-data-service/rds-tutorial-visual-j.md)  
-  
 ## See Also  
  [Step 1: Specify a Server Program (RDS Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
- [RDS Tutorial (Visual J++)](../../../ado/guide/remote-data-service/rds-tutorial-visual-j.md)
-
-

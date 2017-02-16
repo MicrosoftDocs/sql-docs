@@ -91,7 +91,6 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ## See Also  
  [Append and CreateParameter Methods Example (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Append and CreateParameter Methods Example (VC++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
- [Append and CreateParameter Methods Example (VJ++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vj.md)   
  [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Delete Method (ADO Fields Collection)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Delete Method (ADO Parameters Collection)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   

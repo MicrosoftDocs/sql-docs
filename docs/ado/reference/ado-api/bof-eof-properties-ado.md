@@ -69,4 +69,3 @@ manager: "jhubbard"
 ## See Also  
  [BOF, EOF, and Bookmark Properties Example (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF, EOF, and Bookmark Properties Example (VC++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
- [BOF, EOF, and Bookmark Properties Example (VJ++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vj.md)

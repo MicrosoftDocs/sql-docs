@@ -76,6 +76,3 @@ End Sub
  [Microsoft OLE DB Remoting Provider (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
  [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
- [RDS Tutorial (Visual J++)](../../../ado/guide/remote-data-service/rds-tutorial-visual-j.md)
-
-

@@ -40,4 +40,3 @@ Indicates the level of isolation for a [Connection](../../../ado/reference/ado-a
 ## See Also  
  [IsolationLevel and Mode Properties Example (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [IsolationLevel and Mode Properties Example (VC++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
- [IsolationLevel and Mode Properties Example (VJ++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vj.md)

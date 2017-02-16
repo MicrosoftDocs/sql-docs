@@ -50,5 +50,4 @@ recordset.Requery Options
  [Execute, Requery, and Clear Methods Example (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
  [Execute, Requery, and Clear Methods Example (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [Execute, Requery, and Clear Methods Example (VC++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
- [Execute, Requery, and Clear Methods Example (VJ++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vj.md)   
  [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)

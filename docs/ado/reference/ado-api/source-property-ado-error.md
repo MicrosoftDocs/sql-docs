@@ -41,7 +41,6 @@ Indicates the name of the object or application that originally generated an err
 ## See Also  
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VJ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vj.md)   
  [Description Property](../../../ado/reference/ado-api/description-property.md)   
  [HelpContext, HelpFile Properties](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Number Property (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   

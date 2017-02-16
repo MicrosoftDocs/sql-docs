@@ -86,4 +86,3 @@ rsNew.Filter = rsOriginal.Filter
  [Clone Method Example (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
  [Clone Method Example (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
  [Clone Method Example (VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   
- [Clone Method Example (VJ++)](../../../ado/reference/ado-api/clone-method-example-vj.md)

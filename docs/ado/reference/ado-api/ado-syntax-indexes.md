@@ -25,10 +25,7 @@ The syntax for calling ADO methods and properties differs depending on your deve
   
 -   The [ADO for Visual C++ Syntax Index with #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) covers ADO properties and methods when using the **#import** compiler directive with Microsoft Visual C++.  
   
--   The [ADO/WFC Syntax Index](../../../ado/reference/ado-api/ado-wfc-syntax-index.md) covers using the ADO Windows Foundation Classes with Visual J++.  
-  
 ## See Also  
  [Using ADO with Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Using ADO with Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
- [Using ADO with Microsoft Visual J++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-j.md)   
  [Using ADO with Scripting Languages](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

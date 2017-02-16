@@ -13,7 +13,6 @@
 # [Customization File Connect Section](customization-file-connect-section.md)
 # [Writing Your Own Customized Handler](writing-your-own-customized-handler.md)
 # [Solutions for Remote Data Access](solutions-for-remote-data-access.md)
-# [RDS Tutorial (Visual J++)](rds-tutorial-visual-j.md)
 # [RDS Returns "Stream Not Read" Error](rds-returns-stream-not-read-error.md)
 # [RDS Usage and Security](rds-usage-and-security.md)
 # [Step 6: Changes are Sent to the Server (RDS Tutorial)](step-6-changes-are-sent-to-the-server-rds-tutorial.md)

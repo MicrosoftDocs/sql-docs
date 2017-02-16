@@ -25,8 +25,6 @@ Each programming language creates instances of ADO events differently. All of th
   
 -   [Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
   
--   [Visual J++](../../../ado/guide/data/ado-event-instantiation-visual-j.md)  
-  
 -   [VBScript](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
   
 -   [JScript](../../../ado/guide/data/ado-event-instantiation-jscript.md)  

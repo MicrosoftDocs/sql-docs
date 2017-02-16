@@ -48,4 +48,3 @@ Indicates the name of an object.
 ## See Also  
  [Attributes and Name Properties Example (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Attributes and Name Properties Example (VC++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [Attributes and Name Properties Example (VJ++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vj.md)

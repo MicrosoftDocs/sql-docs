@@ -48,6 +48,5 @@ Indicates the ordinal position of a [Recordset](../../../ado/reference/ado-api/r
 ## See Also  
  [AbsolutePosition and CursorLocation Properties Example (VB)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
  [AbsolutePosition and CursorLocation Properties Example (VC++)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
- [AbsolutePosition and CursorLocation Properties Example (VJ++)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vj.md)   
  [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [RecordCount Property (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)

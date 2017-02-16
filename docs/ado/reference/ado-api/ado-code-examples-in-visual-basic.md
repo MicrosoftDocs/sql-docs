@@ -156,5 +156,4 @@ Use the following code examples to learn how to use the ADO methods, properties,
 ## See Also  
  [ADO Code Examples VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [ADO Code Examples in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [ADO Code Examples in Visual J++](../../../ado/reference/ado-api/ado-code-examples-in-visual-j.md)   
  [Appendix D: ADO Samples](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

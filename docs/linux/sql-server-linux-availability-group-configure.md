@@ -124,7 +124,7 @@ sudo systemctl restart mssql-server
 
 ## Create db mirroring endpoint user
 
-Run the following command on all SQL Servers to create the database mirroring endpoint user.
+The following Transact-SQL script creates a login named `dbm_login`, and a user named `dbm_user`. Update the script with a strong password. Run the following command on all SQL Servers to create the database mirroring endpoint user.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '<1Sample_Strong_Password!@#>'
@@ -135,16 +135,16 @@ CREATE USER dbm_user FOR LOGIN dbm_login
 
 SQL Server on Linux uses certificates to authenticate communication between the mirroring endpoints. 
 
-Connect to the primary SQL Server and run the following Transact-SQL to create the certificate:
+The following Transact-SQL script creates a master key and certificate. It then backs the certificate up and secures the file with a private key. Update the script with strong passwords. Connect to the primary SQL Server and run the following Transact-SQL to create the certificate:
 
 ```Transact-SQL
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Master_Key_Password>'
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm'
 BACKUP CERTIFICATE dbm_certificate
    TO FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
    WITH PRIVATE KEY (
            FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
-           ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
+           ENCRYPTION BY PASSWORD = '<Private_Key_Password>'
        )
 ```
 
@@ -169,22 +169,24 @@ chown mssql:mssql dbm_certificate.*
 
 ## Create the certificate on secondary servers
 
-Run the following command on all secondary servers to create the certificate. The command also authorizes the user to access the certificate.
+The following Transact-SQL script creates a master key and certificate from the backup that you created on the primary SQL Server. The command also authorizes the user to access the certificate. Update the script with strong passwords. The decryption password is the same password that you used to create the .pvk file in a previous step. Run the following script on all secondary servers to create the certificate.
 
 ```Transact-SQL
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>' 
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<Master_Key_Password>' 
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
     FROM FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
     WITH PRIVATE KEY (
     FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
-    DECRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>'
+    DECRYPTION BY PASSWORD = '<Private_Key_Password>'
             )
 ```
 
 ## Create the database mirroring endpoints on all replicas
 
 Database mirroring endpoints use Transmission Control Protocol (TCP) to send and receive messages between the server instances participating database mirroring sessions or hosting availability replicas. The database mirroring endpoint listens on a unique TCP port number. 
+
+The following Transact-SQL creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint, and gives connect permission to the user that you created. Before you run the script, replace the values between `< ... >`. Update the IP address and listener port values for your environment. Use an available IP address from the same network as the SQL Servers. Use an available TCP port. 
 
 Update the following Transact-SQL for your environment  on all SQL Servers: 
 
@@ -207,21 +209,21 @@ For complete information, see [The Database Mirroring Endpoint (SQL Server)](htt
 
 ## Create the availability group
 
-Create the availability group. The following Transact-SQL creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Run the following Transact-SQL on the primary SQL Server to create the availability group.
+Create the availability group. The following Transact-SQL script creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Update the following script for your environment. Replace the  `<node1>` and `<node2>` values with the names of the SQL Servers that will host the replicas. Replace the `<5022>` with the port you set for the endpoint. Run the following Transact-SQL on the primary SQL Server to create the availability group.
 
 ```Transact-SQL
 CREATE AVAILABILITY GROUP [ag1]
     WITH (DB_FAILOVER = ON, CLUSTER_TYPE = NONE)
     FOR REPLICA ON
         N'<node1>' WITH (
-            ENDPOINT_URL = N'tcp://<node1>:5022',
+            ENDPOINT_URL = N'tcp://<node1>:<5022>',
 		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = AUTOMATIC,
 		    SEEDING_MODE = AUTOMATIC,
 		    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
 		    ),
         N'<node2>' WITH ( 
-		    ENDPOINT_URL = N'tcp://<node2>:5022', 
+		    ENDPOINT_URL = N'tcp://<node2>:<5022>', 
 		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = AUTOMATIC,
 		    SEEDING_MODE = AUTOMATIC,
@@ -236,7 +238,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
 
 ### Join secondary SQL Servers to the availability group
 
-On each secondary SQL Server, run the following Transact-SQL to join the availability group.
+The following Transact-SQL script joins a server to an availablity group named `ag1`. Update the script for your environment. On each secondary SQL Server, run the following Transact-SQL to join the availability group.
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE)
@@ -286,11 +288,11 @@ SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.d
    - Manual failover is a two step process.
       1. Demote the current primary. On the primary SQL Server, run the following query:
          ```Transact-SQL
-         ALTER AVAILABILITY GROUP [<AgName>] SET (ROLE = SECONDARY)
+         ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY)
          ```
       1. Promote the current secondary to new primary. On the node that you want to promote run the following query:
          ```Transact-SQL
-         ALTER AVAILABILITY GROUP [AgName] FAILOVER
+         ALTER AVAILABILITY GROUP [ag1] FAILOVER
          ```
 
 >[!IMPORTANT]
@@ -325,7 +327,7 @@ When `REQUIRED_COPIES_TO_COMMIT` is set, transactions at the primary replica dat
 The following example sets an availability group name [ag1] to `REQUIRED_COPIES_TO_COMMIT = 2`.
 
 ```Transact-SQL
-ALTER AVAILABILITY GROUP ag1
+ALTER AVAILABILITY GROUP [ag1]
 WITH (REQUIRED_COPIES_TO_COMMIT = 2)
 ```
 

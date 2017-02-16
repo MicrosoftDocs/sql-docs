@@ -39,7 +39,6 @@ Indicates the number that uniquely identifies an [Error](../../../ado/reference/
 ## See Also  
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VJ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vj.md)   
  [Description Property](../../../ado/reference/ado-api/description-property.md)   
  [HelpContext, HelpFile Properties](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Source Property (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)

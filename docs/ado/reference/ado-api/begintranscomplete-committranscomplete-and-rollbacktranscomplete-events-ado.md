@@ -67,7 +67,6 @@ RollbackTransComplete pError, adStatus, pConnection
   
 ## See Also  
  [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [BeginTrans, CommitTrans, and RollbackTrans Methods Example (VJ++)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vj.md)   
  [BeginTrans, CommitTrans, and RollbackTrans Methods Example (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
  [BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)

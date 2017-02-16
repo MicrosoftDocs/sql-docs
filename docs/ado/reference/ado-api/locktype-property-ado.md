@@ -44,6 +44,5 @@ Indicates the type of locks placed on records during editing.
 ## See Also  
  [CursorType, LockType, and EditMode Properties Example (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [CursorType, LockType, and EditMode Properties Example (VC++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
- [CursorType, LockType, and EditMode Properties Example (VJ++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vj.md)   
  [CancelBatch Method (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch Method](../../../ado/reference/ado-api/updatebatch-method.md)

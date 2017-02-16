@@ -60,7 +60,6 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
 ## See Also  
  [UpdateBatch and CancelBatch Methods Example (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [UpdateBatch and CancelBatch Methods Example (VC++)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
- [UpdateBatch and CancelBatch Methods Example (VJ++)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vj.md)   
  [CancelBatch Method (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Clear Method (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   

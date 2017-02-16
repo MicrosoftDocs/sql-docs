@@ -28,7 +28,7 @@ Indicates the value assigned to a [Field](../../../ado/reference/ado-api/field-o
  Sets or returns a **Variant** value that indicates the value of the object. Default value depends on the [Type](../../../ado/reference/ado-api/type-property-ado.md) property.  
   
 ## Remarks  
- Use the **Value** property to set or return data from **Field** objects, to set or return parameter values with **Parameter** objects, or to set or return property settings with **Property** objects. Whether the **Value** property is read/write or read-only depends upon numerous factors — see the respective object topics for more information.  
+ Use the **Value** property to set or return data from **Field** objects, to set or return parameter values with **Parameter** objects, or to set or return property settings with **Property** objects. Whether the **Value** property is read/write or read-only depends upon numerous factors ??? see the respective object topics for more information.  
   
  ADO allows setting and returning long binary data with the **Value** property.  
   
@@ -46,4 +46,3 @@ Indicates the value assigned to a [Field](../../../ado/reference/ado-api/field-o
 ## See Also  
  [Value Property Example (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)   
  [Value Property Example (VC++)](../../../ado/reference/ado-api/value-property-example-vc.md)   
- [Value Property Example (VJ++)](../../../ado/reference/ado-api/value-property-example-vj.md)

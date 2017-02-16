@@ -4,7 +4,7 @@ ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -65,7 +65,7 @@ public AdoProperties getProperties()
 ## Parameter Accessor Methods  
  The [Value](../../../ado/reference/ado-api/value-property-ado.md) property of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object gets or sets the content of that object. The content is represented as a VARIANT, a type of object that can be assigned a value and any of several data types.  
   
- ADO/WFC implements the **Value** property with the **getValue** method, which returns a VARIANT object; and the **setValue** method, which takes a VARIANT as an argument. VARIANTs are highly efficient in certain languages, such as Microsoft Visual Basic. However, you can attain better performance in Microsoft Visual J++ by using native Java data types.  
+ ADO/WFC implements the **Value** property with the **getValue** method, which returns a VARIANT object; and the **setValue** method, which takes a VARIANT as an argument. VARIANTs are highly efficient in certain languages, such as Microsoft Visual Basic.  
   
  In addition to the **Value** property, ADO/WFC provides *accessor* methods that use Java data types to get and set the content of **Parameter** objects. Most of these methods have names of the form **get***DataType* or **set***DataType*.  
   

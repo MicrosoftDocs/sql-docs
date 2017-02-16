@@ -62,7 +62,6 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VB)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VC++)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   
- [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VJ++)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vj.md)   
  [Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [MoveRecord Method (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

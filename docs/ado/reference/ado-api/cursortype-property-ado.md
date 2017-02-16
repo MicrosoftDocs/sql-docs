@@ -56,5 +56,4 @@ Indicates the type of cursor used in a [Recordset](../../../ado/reference/ado-ap
 ## See Also  
  [CursorType, LockType, and EditMode Properties Example (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [CursorType, LockType, and EditMode Properties Example (VC++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
- [CursorType, LockType, and EditMode Properties Example (VJ++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vj.md)   
  [Supports Method](../../../ado/reference/ado-api/supports-method.md)

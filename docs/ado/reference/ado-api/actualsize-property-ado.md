@@ -21,7 +21,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # ActualSize Property (ADO)
-Indicates the actual length of a field’s value in bytes.  
+Indicates the actual length of a field???s value in bytes.  
   
 ## Settings and Return Values  
  Returns a **Long** value.  
@@ -37,5 +37,4 @@ Indicates the actual length of a field’s value in bytes.
 ## See Also  
  [ActualSize and DefinedSize Properties Example (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
  [ActualSize and DefinedSize Properties Example (VC++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
- [ActualSize and DefinedSize Properties Example (VJ++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vj.md)   
  [DefinedSize Property](../../../ado/reference/ado-api/definedsize-property.md)

@@ -58,7 +58,6 @@ object.Cancel
  [Cancel Method Example (VB)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
  [Cancel Method Example (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
  [Cancel Method Example (VC++)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   
- [Cancel Method Example (VJ++)](../../../ado/reference/ado-api/cancel-method-example-vj.md)   
  [Cancel Method (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [CancelBatch Method (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [CancelUpdate Method (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   

@@ -48,4 +48,3 @@ Indicates the status of a [Field](../../../ado/reference/ado-api/field-object.md
 ## See Also  
  [Status Property Example (Field) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [Status Property Example (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   
- [Status Property Example (VJ++)](../../../ado/reference/ado-api/status-property-example-vj.md)

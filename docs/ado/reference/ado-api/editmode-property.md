@@ -42,7 +42,6 @@ Indicates the editing status of the current record.
 ## See Also  
  [CursorType, LockType, and EditMode Properties Example (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [CursorType, LockType, and EditMode Properties Example (VC++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
- [CursorType, LockType, and EditMode Properties Example (VJ++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vj.md)   
  [AddNew Method (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Delete Method (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [CancelUpdate Method (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   

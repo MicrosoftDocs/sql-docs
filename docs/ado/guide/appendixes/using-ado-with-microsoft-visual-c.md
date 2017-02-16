@@ -37,6 +37,5 @@ For information about using ADO with Visual C++, see the following sections:
  [ADO for Visual C++ Syntax Index for COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
  [ADO for Visual C++ Syntax Index with #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Using ADO with Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Using ADO with Microsoft Visual J++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-j.md)   
  [Using ADO with Scripting Languages](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
  [Visual C++ Extensions for ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)

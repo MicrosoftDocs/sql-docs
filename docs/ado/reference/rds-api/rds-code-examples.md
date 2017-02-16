@@ -30,7 +30,3 @@ manager: "jhubbard"
 -   [RDS Code Examples in Microsoft Visual Basic Scripting Edition](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
   
 -   [RDS Code Examples in Microsoft Visual C++](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
-  
--   [RDS Code Examples in Microsoft Visual J++](../../../ado/reference/rds-api/rds-code-examples-in-visual-j.md)
-
-

@@ -58,6 +58,5 @@ variable = field.GetChunk(Size)
 ## See Also  
  [AppendChunk and GetChunk Methods Example (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk and GetChunk Methods Example (VC++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
- [AppendChunk and GetChunk Methods Example (VJ++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vj.md)   
  [AppendChunk Method (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Attributes Property (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

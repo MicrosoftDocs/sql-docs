@@ -43,4 +43,3 @@ Indicates for all applicable objects whether the state of the object is open or 
 ## See Also  
  [ConnectionString, ConnectionTimeout, and State Properties Example (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString, ConnectionTimeout, and State Properties Example (VC++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [ConnectionString, ConnectionTimeout, and State Properties Example (VJ++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vj.md)

@@ -57,7 +57,6 @@ Contains details about data access errors that pertain to a single operation inv
 ## See Also  
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VJ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vj.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

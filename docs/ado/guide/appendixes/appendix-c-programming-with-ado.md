@@ -18,7 +18,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Appendix C: Programming with ADO
-ADO is a COM automation interface component that can be used with many programming languages, including Microsoft Visual Basic, VBScript, JScript, Visual C++, and Visual J++. A version of ADO is installed with each of these tools and other applications, such as Microsoft Office and Microsoft SQL Server.  
+ADO is a COM automation interface component that can be used with many programming languages, including Microsoft Visual Basic, VBScript, JScript and Visual C++. A version of ADO is installed with each of these tools and other applications, such as Microsoft Office and Microsoft SQL Server.  
   
  The library for ADO is msado15.dll and the program ID (ProgID) prefix is "ADODB." For example, to explicitly refer to an ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), use `ADODB.Recordset`.  
   
@@ -29,8 +29,6 @@ ADO is a COM automation interface component that can be used with many programmi
 -   [Using ADO with Scripting Languages](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)  
   
 -   [Using ADO with Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)  
-  
--   [Using ADO with Microsoft Visual J++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-j.md)  
   
 ## See Also  
  [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)   

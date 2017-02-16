@@ -41,6 +41,5 @@ Indicates the name of the provider for a [Connection](../../../ado/reference/ado
 ## See Also  
  [Provider and DefaultDatabase Properties Example (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provider and DefaultDatabase Properties Example (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [Provider and DefaultDatabase Properties Example (VJ++)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vj.md)   
  [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -20,7 +20,8 @@ manager: "jhubbard"
 ---
 # Using the Microsoft SDK for Java
 
-> [!IMPORTANT] Microsoft discontinued support of Visual J++ in January 2004.
+> [!IMPORTANT]
+> Microsoft discontinued support of Visual J++ in January 2004.
 
 The Microsoft SDK for Java is the developer kit for the Microsoft Internet Explorer environment. Tools, information, and samples are provided to help you develop Java programs and applets based on JDK 1.1 and the Microsoft Win32 virtual machine (Microsoft VM). The Microsoft SDK for Java is not tied to Microsoft Visual J++. To download this SDK, click here.  
   
@@ -48,4 +49,3 @@ The Microsoft SDK for Java is the developer kit for the Microsoft Internet Explo
   
 ## See Also  
  [ADO Java Class Wrappers](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
- [Using the Java Type Library Wizard](../../../ado/guide/appendixes/using-the-java-type-library-wizard.md)

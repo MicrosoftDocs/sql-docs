@@ -48,7 +48,7 @@ SQL Server vNext CTP 1.3 is supported on the following platforms:
 
 - The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported. 
 
-## Install SQL Server
+## <a id="platforms"></a> Install SQL Server
 
 - [Install on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)

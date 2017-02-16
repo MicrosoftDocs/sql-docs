@@ -10,7 +10,6 @@
 
 # [OLE DB Provider for Jet](microsoft-ole-db-provider-for-microsoft-jet.md)
 # [OLE DB Provider for Active Directory Service](microsoft-ole-db-provider-for-microsoft-active-directory-service.md)
-# [Using the Java Type Library Wizard](using-the-java-type-library-wizard.md)
 # [OLE DB Provider for Microsoft Indexing Service](microsoft-ole-db-provider-for-microsoft-indexing-service.md)
 # [OLE DB Persistence Provider](microsoft-ole-db-persistence-provider-ado-service-provider.md)
 # [Microsoft OLE DB Remoting Provider](microsoft-ole-db-remoting-provider-ado-service-provider.md)
@@ -32,7 +31,6 @@
 # [Using the Microsoft SDK for Java](using-the-microsoft-sdk-for-java.md)
 
 # [DataControl Error Codes](datacontrol-error-codes.md)
-# [ADO and WFC Programming](ado-and-wfc-programming.md)
 # [ADO Java Class Wrappers](ado-java-class-wrappers.md)
 # [Microsoft OLE DB Simple Provider](microsoft-ole-db-simple-provider.md)
 # [Visual C++ ADO Programming](visual-c-ado-programming.md)

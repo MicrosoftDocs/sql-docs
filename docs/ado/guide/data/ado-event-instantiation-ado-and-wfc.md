@@ -4,7 +4,7 @@ ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -38,15 +38,6 @@ ADO for Windows Foundation Classes (ADO/WFC) builds on the ADO event model and p
   
      The first argument of the **ConnectionEventHandler** constructor is a reference to the class that contains the event handler named in the second argument.  
   
-     The Microsoft Visual J++ compiler also supports an equivalent syntax:  
-  
-    ```  
-    ConnectionEventHandler handler =   
-        new ConnectionEventHandler(this.onConnectComplete);  
-    ```  
-  
-     The single argument is a reference to the desired class (**this**) and method within the class (**onConnectComplete**).  
-  
 3.  Add your event handler to a list of handlers designated to process a particular type of event. Use the method with a name such as **addOn***EventName*(*handler*).  
   
 4.  ADO/WFC internally implements all the ADO event handlers. Therefore, an event caused by a **Connection** or **Recordset** operation is intercepted by an ADO/WFC event handler.  
@@ -69,7 +60,6 @@ ADO for Windows Foundation Classes (ADO/WFC) builds on the ADO event model and p
   
 ## See Also  
  [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO and WFC Programming](../../../ado/guide/appendixes/ado-and-wfc-programming.md)   
  [ADO - WFC Syntax Index](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Event Parameters](../../../ado/guide/data/event-parameters.md)   
  [How Event Handlers Work Together](../../../ado/guide/data/how-event-handlers-work-together.md)   

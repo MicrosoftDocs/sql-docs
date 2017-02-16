@@ -261,7 +261,7 @@ In order to use Semantic Search, you must first download and attach the [Semanti
 
 2. Run the .MSI file to extract the database and log files.
 
-3. Move the databas and log files to your Linux SQL Server machine.
+3. Move the database and log files to your Linux SQL Server machine.
 
     > [!TIP]
     > For guidance on how to move files from Windows to Linux, see [Transfer a file to Linux](sql-server-linux-migrate-restore-database.md#transfer-the-backup-file-to-linux).

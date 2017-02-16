@@ -170,10 +170,10 @@ chown mssql:mssql dbm_certificate.*
 
 ## Create the certificate on secondary servers
 
-Run the following command on all secondary servers to create the certificate. The command also creates a user named dbm_user and authorizes the user to access the certificate.
+Run the following command on all secondary servers to create the certificate. The command also authorizes the user to access the certificate.
 
 ```Transact-SQL
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>' ]
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<as3jsdjhaj304SDF>' 
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
     FROM FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
@@ -214,15 +214,15 @@ Create the availability group. The following Transact-SQL creates an availabilit
 CREATE AVAILABILITY GROUP [ag1]
     WITH (DB_FAILOVER = ON, CLUSTER_TYPE = NONE)
     FOR REPLICA ON
-        N'node1' WITH (
-            ENDPOINT_URL = N'tcp://node1:5022',
+        N'<node1>' WITH (
+            ENDPOINT_URL = N'tcp://<node1>:5022',
 		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = AUTOMATIC,
 		    SEEDING_MODE = AUTOMATIC,
 		    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
 		    ),
-        N'node2' WITH ( 
-		    ENDPOINT_URL = N'tcp://node2:5022', 
+        N'<node2>' WITH ( 
+		    ENDPOINT_URL = N'tcp://<node2>:5022', 
 		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = AUTOMATIC,
 		    SEEDING_MODE = AUTOMATIC,
@@ -268,7 +268,7 @@ On each secondary SQL Server, run the following query to see if the `db1` databa
 ```Transact-SQL
 SELECT * FROM sys.databases WHERE name = 'db1'
 GO
-SELECT DB_NAME(database_id) AS database, synchronization_state_desc FROM sys.dm_hadr_database_replica_states
+SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.dm_hadr_database_replica_states
 ```
 
 ## Notes
@@ -287,7 +287,7 @@ SELECT DB_NAME(database_id) AS database, synchronization_state_desc FROM sys.dm_
    - Manual failover is a two step process.
       1. Demote the current primary. On the primary SQL Server, run the following query:
          ```Transact-SQL
-         ALTER AVAILABILITY GROUP [AgName] SET (ROLE = SECONDARY)
+         ALTER AVAILABILITY GROUP [<AgName>] SET (ROLE = SECONDARY)
          ```
       1. Promote the current secondary to new primary. On the node that you want to promote run the following query:
          ```Transact-SQL

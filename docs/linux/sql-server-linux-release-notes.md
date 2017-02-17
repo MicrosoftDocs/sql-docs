@@ -129,7 +129,7 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
-- Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure.md#sync-commit).
+- Always On Availability Groups on Linux may be subject to data loss if replicas are in synchronous commit mode and connectivity between the primary and secondary replicas is lost. To avoid data loss in this situation, set the `REQUIRED_COPIES_TO_COMMIT` option on the availability group. For specific details, see [Managing synchronous commit mode](sql-server-linux-availability-group-configure.md#sync-commit).
 
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).

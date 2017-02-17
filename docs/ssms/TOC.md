@@ -1,5 +1,6 @@
 # [What is SSMS?](sql-server-management-studio-ssms.md)
 # [Download SSMS](download-sql-server-management-studio-ssms.md)
+# [Usage feedback collection](sql-server-management-studio-telemetry-ssms.md)
 # [SSMS Changelog](sql-server-management-studio-changelog-ssms.md)
 # [Release notes](sql-server-management-studio-release-notes.md)
 # [SQL Server Management Studio (SSMS) - Release Candidate](sql-server-management-studio-ssms-release-candidate.md)

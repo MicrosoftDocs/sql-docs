@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Help Installation | Microsoft Docs"
+title: "Help Viewer for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/14/2017"
+ms.date: "02/15/2017"
 ms.prod: "sql-non-specified"
 ms.technology: "server-general"
 ms.reviewer: ""
@@ -16,7 +16,7 @@ caps.latest.revision: 8
 author: "sabotta"
 ms.author: "carlasab"
 ---
-# SQL Server Help Installation
+# Help Viewer for SQL Server
   
   
   

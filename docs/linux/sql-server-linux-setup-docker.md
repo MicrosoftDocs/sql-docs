@@ -2,7 +2,7 @@
 # required metadata
 
 title: Run the SQL Server Docker image on Linux, Mac, or Windows | Microsoft Docs
-description: 
+description: Download and run the Docker image for SQL Server vNext.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard

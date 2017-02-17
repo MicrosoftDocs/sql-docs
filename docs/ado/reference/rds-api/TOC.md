@@ -60,7 +60,6 @@
 # [SubmitChanges Method (RDS)](submitchanges-method-rds.md)
 # [FilterCriterion Property (RDS)](filtercriterion-property-rds.md)
 # [RDS Code Examples in VBScript](rds-code-examples-in-vbscript.md)
-# [Handler Property Example (VJ++)](handler-property-example-vj.md)
 # [Query Method (RDS)](query-method-rds.md)
 # [SortDirection Property (RDS)](sortdirection-property-rds.md)
 # [DataSpace Object and CreateObject Method Example (VBScript)](dataspace-object-and-createobject-method-example-vbscript.md)

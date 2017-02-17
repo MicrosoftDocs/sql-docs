@@ -24,7 +24,7 @@
 #### [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)
 #### [Connecting to Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md)
 ### [Comparing Execution Functions](comparing-execution-functions.md)
-### [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](direct-statement-execution-and-prepared-statement-execution-in-the-pdo-sqlsrv-driver.md)
+### [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)
 ### [Retrieving Data](retrieving-data.md)
 #### [Retrieving Data as a Stream Using the SQLSRV Driver](retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
 ##### [Data Types with Stream Support Using the SQLSRV Driver](data-types-with-stream-support-using-the-sqlsrv-driver.md)

@@ -35,7 +35,6 @@ The CTP 1.3 release contains the following improvements and fixes:
 - Additional functionality in mssql-conf:
     - First time set-up using mssql
 - Fixed native Linux path support for In-memory OLTP filegroups.
-- Enabled native Linux paths for SQL XE.
 - Enabled dm_os_host_info DMV functionality.
 
 ## CTP 1.2

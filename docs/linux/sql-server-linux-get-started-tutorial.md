@@ -6,7 +6,7 @@ description: This topic provides a learning path for getting started with SQL Se
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 12/16/2016
+ms.date: 02/17/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

@@ -33,9 +33,9 @@ The CTP 1.3 release contains the following improvements and fixes:
 - Enabled Full-text Search feature.
 - Enabled Always On Availability Groups functionality for High Availability.
 - Additional functionality in mssql-conf:
-    - First time set-up using mssql
+    - First time set-up using mssql-conf. See [installation topic](sql-server-linux-setup.md).
+    - Enabling Availability Groups. See the [Availability Groups topic](sql-server-linux-availability-group-overview.md).
 - Fixed native Linux path support for In-memory OLTP filegroups.
-- Enabled native Linux paths for SQL XE.
 - Enabled dm_os_host_info DMV functionality.
 
 ## CTP 1.2

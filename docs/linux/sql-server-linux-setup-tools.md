@@ -38,7 +38,7 @@ Install the tools for your platform:
 - [SUSE Linux Enterprise Server](#SLES)
 - [macOS](#macos)
 
-## <a name="RHEL">Install tools on RHEL</a>
+## <a id="RHEL"><a/>Install tools on RHEL
 
 Use the following steps to install the **mssql-tools** on Red Hat Enterprise Linux. 
 
@@ -96,7 +96,7 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
    source ~/.bashrc
    ```
 
-## <a name="ubuntu">Install tools on Ubuntu</a>
+## <a id="ubuntu"></a>Install tools on Ubuntu
 
 Use the following steps to install the **mssql-tools** on Ubuntu. 
 
@@ -141,7 +141,7 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
    source ~/.bashrc
    ```
 
-## <a name="SLES">Install tools on SLES</a>
+## <a id="SLES"></a>Install tools on SLES
 
 Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise Server. 
 
@@ -180,7 +180,7 @@ Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise 
    source ~/.bashrc
    ```
 
-## <a name="macos">Install tools on macOS</a>
+## <a id="macos"></a> Install tools on macOS
 
 **Sqlcmd** and **bcp** are not available on macOS. 
 

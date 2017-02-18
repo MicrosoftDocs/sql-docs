@@ -92,15 +92,22 @@ Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms14250
 | Neutral | 0 |
 | Arabic | 1025 |
 | Bengali (India) | 1093 |
+| Bokmål | 1044 |
+| Brazilian | 1046 |
 | British English | 2057 |
 | Bulgarian | 1026 |
 | Catalan | 1027 |
+| Chinese (Hong Kong SAR, PRC) | 3076 |
+| Chinese (Macao SAR) | 5124 |
+| Chinese (Singapore) | 4100 |
 | Croatian | 1050 |
+| Czech | 1029 |
 | Danish | 1030 |
 | Dutch | 1043 |
 | English | 1033 |
 | French | 1036 |
 | German | 1031 |
+| Greek | 1032 |
 | Gujarati | 1095 |
 | Hebrew | 1037 |
 | Hindi | 1081 |
@@ -109,15 +116,14 @@ Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms14250
 | Italian | 1040 |
 | Japanese | 1041 |
 | Kannada | 1099 |
+| Korean | 1042 |
 | Latvian | 1062 |
 | Lithuanian | 1063 |
 | Malay - Malaysia | 1086 |
 | Malayalam | 1100 |
 | Marathi | 1102 |
-| Norwegian (Bokmål) | 1044 |
 | Polish | 1045 |
-| Portuguese (Brazil) | 1046 |
-| Portuguese (Portugal) | 2070 |
+| Portuguese | 2070 |
 | Punjabi | 1094 |
 | Romanian | 1048 |
 | Russian | 1049 |
@@ -135,6 +141,7 @@ Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms14250
 | Turkish | 1055 |
 | Ukrainian | 1058 |
 | Urdu | 1056 |
+| Vietnamese | 1066 |
 
 ## <a id="filters"></a> Filters
 

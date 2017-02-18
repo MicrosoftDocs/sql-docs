@@ -48,18 +48,6 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms throughout this guide.
 
-   On all servers that will host availability group replicas, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Connect to the SQL Server master database with the `sa` account and run the following:
-
-   ```Transact-SQL
-   USE [master]
-   GO
-   CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'
-   GRANT VIEW SERVER STATE TO <loginName>
-   ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
-   ```
-
-   If you choose more granular permissions for the Pacemaker login, grant ALTER, CONNECT and VIEW DEFINITION permissions to the login. See [GRANT Availability Group Permissions (Transact-SQL)](http://msdn.microsoft.com/library/hh968934.aspx). 
-
 1. Make sure nodes that are going to be part of the cluster can communicate to each other.
 
    The following example shows `/etc/hosts` with additions for two nodes named SLES1 and SLES2.
@@ -79,21 +67,15 @@ The first step is to configure the operating system on the cluster nodes. For th
    For additional information, see the [SLES Administration Guide - Miscellaneous section](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
 
 
+## Create a SQL Server login for Pacemaker
+
+[!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
+
 ## Configure an Always On Availability Group
 
 On Linux servers configure the availability group and then configure the cluster resources. To configure the availability group, see [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-overview.md)
 
 ## Install and configure Pacemaker on each cluster node
- 
-1. On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
-
-   ```bash
-   sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
-   sudo chown root:root /var/opt/mssql/secrets/passwd 
-   sudo chmod 600 /var/opt/mssql/secrets/passwd    
-   ```
 
 1. Install the High Availability extension
 

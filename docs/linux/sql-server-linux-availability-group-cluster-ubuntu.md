@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 02/14/2017
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -39,49 +39,49 @@ The following sections walk through the steps to set up a failover cluster solut
 
 ## Install and configure Pacemaker on each cluster node
 
-[!INCLUDE [RHEL-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
+1. On all nodes open the firewall ports. Open the port for the high-availability service, SQL Server, and the availability group endpoint. The default TCP port for SQL Server is 1433.  
+
+   ```bash
+   sudo ufw allow 2224/tcp
+   sudo ufw allow 3121/tcp
+   sudo ufw allow 21064/tcp
+   sudo ufw allow 5405/udp
+   		
+   sudo ufw allow 1433/tcp # Replace with TDS endpoint
+   sudo ufw allow 5022/tcp # Replace with DATA_MIRRORING endpoint
+		
+   sudo ufw reload
+   ```
+   
+   Alternatively, you can just disable the firewall:
+   		
+   ```bash
+   sudo ufw disable
+   ```
+
+1. Install Pacemaker packages. On all nodes, run the following commands:
+
+   ```bash
+   sudo apt-get install pacemaker pcs fence-agents resource-agents
+   ```
+
+2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+
+   ```bash
+   sudo passwd hacluster
+   ```
+
+3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on both nodes.
+
+   ```bash
+   sudo systemctl enable pcsd
+   sudo systemctl start pcsd
+   sudo systemctl enable pacemaker
+   ```
 
 ## Create a SQL Server login for Pacemaker
 
 [!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
-
-## Open Pacemaker firewall ports
-
-On all nodes open the firewall ports. Open the port for the high-availability service, SQL Server, and the availability group endpoint. The default TCP port for SQL Server is 1433.  
-
-```bash
-sudo ufw allow 2224/tcp
-sudo ufw allow 3121/tcp
-sudo ufw allow 21064/tcp
-sudo ufw allow 5405/udp
-		
-sudo ufw allow 1433/tcp # Replace with TDS endpoint
-sudo ufw allow 5022/tcp # Replace with DATA_MIRRORING endpoint
-		
-sudo ufw reload
-```
-
-Alternatively, you can just disable the firewall:
-		
-```bash
-sudo ufw disable
-```
-<!--------------------------------------------------
-## Install Pacemaker packages
-
-On all nodes, run the following commands:
-
-```bash
-sudo apt-get install pacemaker pcs fence-agents resource-agents
-```
-
-## Set password for default user
-
-Set the password for the default user that is created when installing pacemaker and corosync packages. Use the same password on all nodes. The following command sets the password.
-
-```bash
-sudo passwd hacluster
-```
 
 ## Enable and start pcsd service and Pacemaker
 
@@ -108,7 +108,6 @@ sudo pcs cluster auth nodeName1 nodeName2  -u hacluster -p <password for haclust
 sudo pcs cluster setup --name <clusterName> <nodeName1> <nodeName2…> --force
 sudo pcs cluster start --all
 ```
------------------------------>
 
 ## Disable STONITH
 
@@ -178,7 +177,6 @@ To add an ordering constraint, run the following command on one node:
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
 ```
-
 
 ## Manual failover
 

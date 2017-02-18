@@ -1,12 +1,3 @@
-2. On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
-
-   ```bash
-   sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
-   sudo chown root:root /var/opt/mssql/secrets/passwd 
-   sudo chmod 600 /var/opt/mssql/secrets/passwd    
-   ```
 
 3. On both cluster nodes, open the Pacemaker firewall ports. To open these ports with `firewalld`, run the following command:
 

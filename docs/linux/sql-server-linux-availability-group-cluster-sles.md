@@ -84,16 +84,6 @@ The first step is to configure the operating system on the cluster nodes. For th
 On Linux servers configure the availability group and then configure the cluster resources. To configure the availability group, see [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-overview.md)
 
 ## Install and configure Pacemaker on each cluster node
- 
-1. On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
-
-   ```bash
-   sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
-   sudo chown root:root /var/opt/mssql/secrets/passwd 
-   sudo chmod 600 /var/opt/mssql/secrets/passwd    
-   ```
 
 1. Install the High Availability extension
 

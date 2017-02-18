@@ -39,16 +39,6 @@ The following sections walk through the steps to set up a failover cluster solut
 
 ## Install and configure Pacemaker on each cluster node
 
-2. On both cluster nodes, create a file to store the SQL Server username and password for the Pacemaker login. The following command creates and populates this file:
-
-   ```bash
-   sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
-   sudo chown root:root /var/opt/mssql/secrets/passwd 
-   sudo chmod 600 /var/opt/mssql/secrets/passwd    
-   ```
-
 1. On all nodes open the firewall ports. Open the port for the high-availability service, SQL Server, and the availability group endpoint. The default TCP port for SQL Server is 1433.  
 
    ```bash

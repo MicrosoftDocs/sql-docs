@@ -59,21 +59,16 @@ To configure a SQL Server Availability Group on Linux, first configure the avail
 
 ## New in SQL Server vNext for Availability Groups
 
-###
+SQL Server vNext introduces two new features for availability groups.
 
-New option in vNext for CREATE/ALTER AVAILABILITY GROUP ddl: REQUIRED_COPIES_TO_COMMIT
-		New option in vNext:
-		CREATE AVAILABILITY GROUP myag2
-		WITH ( AUTOMATED_BACKUP_PREFERENCE = SECONDARY,
-		       REQUIRED_COPIES_TO_COMMIT = 2, 
-		       health_check_timeout = 600000)
-		○ Min number of replicas that are required to commit a transaction before committing on the primary. If option is not used, default is 0. 
-			§ I.e. user has 3 sync secondaries and sets REQUIRED_COPIES_TO_COMMIT=2
-				□ If one of the secondaries is not available, then transaction is committed on primary if the other 2 secondaries are committing successfully 
-If 2 of the secondaries are not available, then primary becomes unavailable for writes as it requires at least 2 to commit to comply with REQUIRED_COPIES_TO_COMMIT=2
+**REQUIRED_COPIES_TO_COMMI**
 
+Use with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of synchronous secondary replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.
 
-###
+**CLUSTER_TYPE**
+Use with `CREATE AVAILABILITY GROUP`. Denotes an availability group on a server that is not a member of a Windows Server Failover Cluster (WSFC).
+
+For more information about these options, see [CREATE AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878399.aspx) or [ALTER AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878601.aspx).
 
 
 ## Next steps

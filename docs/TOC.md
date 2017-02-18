@@ -7,3 +7,4 @@
 #  [SQL Server Samples](./sample/TOC.md)
 #  [SQL Server Migration Assistant (SSMA)](./ssma/TOC.md)
 #  [SQL Server Release Notes](./release-notes/toc.md)
+#  [Help Viewer for SQL Server](./release-notes/sql-server-help-installation.md)

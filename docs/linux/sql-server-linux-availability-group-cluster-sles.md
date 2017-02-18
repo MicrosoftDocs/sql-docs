@@ -48,7 +48,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms throughout this guide.
 
-[!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
+   [!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 1. Make sure nodes that are going to be part of the cluster can communicate to each other.
 

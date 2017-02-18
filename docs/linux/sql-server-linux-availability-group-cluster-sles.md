@@ -48,17 +48,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms throughout this guide.
 
-   On all servers that will host availability group replicas, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Connect to the SQL Server master database with the `sa` account and run the following:
-
-   ```Transact-SQL
-   USE [master]
-   GO
-   CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'
-   GRANT VIEW SERVER STATE TO <loginName>
-   ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
-   ```
-
-   If you choose more granular permissions for the Pacemaker login, grant ALTER, CONNECT and VIEW DEFINITION permissions to the login. See [GRANT Availability Group Permissions (Transact-SQL)](http://msdn.microsoft.com/library/hh968934.aspx). 
+[!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 1. Make sure nodes that are going to be part of the cluster can communicate to each other.
 

@@ -48,8 +48,6 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms throughout this guide.
 
-   [!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
-
 1. Make sure nodes that are going to be part of the cluster can communicate to each other.
 
    The following example shows `/etc/hosts` with additions for two nodes named SLES1 and SLES2.
@@ -68,6 +66,10 @@ The first step is to configure the operating system on the cluster nodes. For th
 
    For additional information, see the [SLES Administration Guide - Miscellaneous section](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
 
+
+## Create a SQL Server login for Pacemaker
+
+[!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## Configure an Always On Availability Group
 

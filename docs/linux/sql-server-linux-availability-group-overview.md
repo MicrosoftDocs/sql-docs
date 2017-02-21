@@ -61,7 +61,7 @@ To configure a SQL Server Availability Group on Linux, first configure the avail
 
 SQL Server vNext introduces two new features for availability groups.
 
-**REQUIRED_COPIES_TO_COMMI**
+**REQUIRED_COPIES_TO_COMMIT**
 
 Use with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of synchronous secondary replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.
 

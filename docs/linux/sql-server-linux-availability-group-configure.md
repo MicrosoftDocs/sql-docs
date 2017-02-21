@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 02/09/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -329,7 +329,7 @@ The following example sets an availability group name [ag1] to `REQUIRED_COPIES_
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1]
-WITH (REQUIRED_COPIES_TO_COMMIT = 2)
+SET (REQUIRED_COPIES_TO_COMMIT = 2)
 ```
 
 In the example above, if the availability group has three secondary replicas, it will wait until two of the secondary replicas acknowledge commits. If the availability group has two replicas and one becomes unresponsive, transactions will be blocked.

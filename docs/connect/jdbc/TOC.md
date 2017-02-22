@@ -1,5 +1,5 @@
 # [JDBC Code Samples](./code-samples/TOC.md)
-# [JDBC Reference](./reference/TOC.md)
+# [JDBC Reference](./reference/index.md?toc=%2fsql%2fconnect%2fjdbc%2freference%2ftoc.json)
 # [Microsoft JDBC Driver for SQL Server](microsoft-jdbc-driver-for-sql-server.md)
 # [Release Notes for the JDBC Driver](release-notes-for-the-jdbc-driver.md)
 # [Step 1: Configure development environment for Java development](step-1-configure-development-environment-for-java-development.md)

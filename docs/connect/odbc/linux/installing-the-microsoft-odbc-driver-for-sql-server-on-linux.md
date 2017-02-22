@@ -170,6 +170,7 @@ It is also common to manually download all the dependent packages and place them
 #### Redhat Linux Enterprise Server 7
   * Download the latest msodbcsql rpm from here: http://packages.microsoft.com/rhel/7/prod/
   * Install dependencies and the driver
+  
     ```
     yum install glibc e2fsprogs krb5-libs openssl unixODBC unixODBC-devel #install dependencies
     sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
@@ -178,6 +179,7 @@ It is also common to manually download all the dependent packages and place them
 #### Ubuntu 16.04
 * Download the latest msodbcsql deb from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 * Install dependencies and the driver 
+
     ```
     sudo apt-get install libc6 libstdc++6 libkrb5-3 libcurl3 openssl debconf unixodbc unixodbc-dev #install dependencies
     sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
@@ -186,6 +188,7 @@ It is also common to manually download all the dependent packages and place them
 #### SUSE Linux Enterprise Server
 * Download the latest msodbcsql rpm from here: http://packages.microsoft.com/sles/12/prod/
 * Install the dependencies and the driver
+
     ```
     zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install dependencies
     sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver

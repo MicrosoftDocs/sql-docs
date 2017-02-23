@@ -171,10 +171,10 @@ It is also common to manually download all the dependent packages and place them
   * Download the latest msodbcsql rpm from here: http://packages.microsoft.com/rhel/7/prod/
   * Install dependencies and the driver
   
-    ```
-    yum install glibc e2fsprogs krb5-libs openssl unixODBC unixODBC-devel #install dependencies
-    sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
-    ```
+```
+yum install glibc e2fsprogs krb5-libs openssl unixODBC unixODBC-devel #install dependencies
+sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
+```
 
 #### Ubuntu 16.04
 * Download the latest msodbcsql deb from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 

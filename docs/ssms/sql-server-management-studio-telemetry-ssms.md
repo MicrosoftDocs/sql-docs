@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Telemetry (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/17/2017"
+ms.date: "02/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,8 +27,10 @@ To see feature usage data that is collected by SSMS, do the following:
 3.	When the **Output** window is visible, choose **Telemetry** in the **Show output from:** menu.
 
 While you use SSMS to interact with your databases, the **Output** window shows the data that is collected.
- 
-Customers can configure Group Policy settings to opt in or out of usage data collection for SSMS by configuring a registry-based policy. For instructions, see: [How to configure SQL Server 2016 to send feedback to Microsoft](http://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft).
+
+## Enable or disable usage feedback collection in SSMS
+
+To opt in or out of usage data collection for SSMS, see: [How to configure SQL Server 2016 to send feedback to Microsoft](http://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft).
 
 ## See also
 

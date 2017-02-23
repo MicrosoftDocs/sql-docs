@@ -22,6 +22,70 @@ manager: "jhubbard"
 
 This topic explains how to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 and 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux. 
   
+## Installing the Microsoft ODBC Driver 13.1 for SQL Server on Linux  
+
+### RedHat Enterprise Server 6
+```
+sudo su
+curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
+exit
+sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
+sudo ACCEPT_EULA=Y yum install msodbcsql-13.1.4.0-1 mssql-tools-14.0.3.0-1 unixODBC-devel
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+### RedHat Enterprise Server 7
+```
+sudo su
+curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+exit
+sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
+sudo ACCEPT_EULA=Y yum install msodbcsql-13.1.4.0-1 mssql-tools-14.0.3.0-1 unixODBC-devel
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+### Ubuntu 15.10
+```
+sudo su 
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/config/ubuntu/15.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+exit
+sudo apt-get update
+sudo ACCEPT_EULA=Y apt-get install msodbcsql=13.1.4.0-1 mssql-tools-14.0.3.0-1 unixodbc-dev
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+### Ubuntu 16.04
+```
+sudo su 
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+exit
+sudo apt-get update
+sudo ACCEPT_EULA=Y apt-get install msodbcsql=13.1.4.0-1 mssql-tools-14.0.3.0-1 unixodbc-dev
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+### SUSE Linux Enterprise Server 12
+
+```
+sudo su 
+zypper ar https://packages.microsoft.com/config/sles/12/prod.repo 
+exit 
+sudo ACCEPT_EULA=Y zypper install msodbcsql-13.1.4.0-1 mssql-tools-14.0.3.0-1 unixODBC-devel
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+``` 
+  
 ## Installing the Microsoft ODBC Driver 13 for SQL Server on Linux  
 
 ### RedHat6
@@ -30,9 +94,12 @@ sudo su
 curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
 exit
 sudo yum update
-yum remove unixODBC #to avoid conflicts
-sudo ACCEPT_EULA=Y yum install msodbcsql mssql-tools
-sudo yum install unixODBC-devel #this step is optional but recommended*
+sudo yum remove unixODBC #to avoid conflicts
+sudo ACCEPT_EULA=Y yum install msodbcsql-13.0.1.0-1 mssql-tools-14.0.2.0-1
+sudo yum install unixODBC-utf16-devel #this step is optional but recommended*
+#Create symlinks for tools
+ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
+ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### RedHat 7
@@ -41,47 +108,55 @@ sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 exit
 sudo yum update
-yum remove unixODBC #to avoid conflicts
-sudo ACCEPT_EULA=Y yum install msodbcsql mssql-tools
-sudo yum install unixODBC-devel #this step is optional but recommended*
+sudo yum remove unixODBC #to avoid conflicts
+sudo ACCEPT_EULA=Y yum install msodbcsql-13.0.1.0-1 mssql-tools-14.0.2.0-1
+sudo yum install unixODBC-utf16-devel #this step is optional but recommended*
+#Create symlinks for tools
+ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
+ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### Ubuntu 15.10
 ```
-sudo su
+sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/15.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql mssql-tools
-sudo apt-get install unixodbc-dev #this step is optional but recommended*
+sudo ACCEPT_EULA=Y apt-get install msodbcsql=13.0.1.0-1 mssql-tools-14.0.2.0-1
+sudo apt-get install unixodbc-dev-utf16 #this step is optional but recommended*
+#Create symlinks for tools
+ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
+ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### Ubuntu 16.04
 ```
-sudo su
+sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 exit
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install msodbcsql mssql-tools
-sudo apt-get install unixodbc-dev #this step is optional but recommended*
+sudo ACCEPT_EULA=Y apt-get install msodbcsql=13.0.1.0-1 mssql-tools-14.0.2.0-1
+sudo apt-get install unixodbc-dev-utf16 #this step is optional but recommended*
+#Create symlinks for tools
+ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
+ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
 ### SUSE12
 
 ```
-sudo su
-zypper ar  https://packages.microsoft.com/yumrepos/mssql-suse12-release/ "mssql" #To add the repo
-wget "http://aka.ms/msodbcrhelpublickey/dpgswdist.v1.asc"
-rpm --import dpgswdist.v1.asc
-wget "https://apt-mo.trafficmanager.net/keys/microsoft.asc"
-rpm --import microsoft.asc
-zypper remove unixODBC #to avoid conflicts
-zypper update
-ACCEPT_EULA=Y zypper install msodbcsql mssql-tools
-zypper install unixODBC-devel #this step is optional but recommended*
+sudo su 
+zypper ar https://packages.microsoft.com/config/sles/12/prod.repo 
+zypper update 
+sudo ACCEPT_EULA=Y zypper install msodbcsql-13.0.1.0-1 mssql-tools-14.0.2.0-1
+zypper install unixODBC-utf16-devel
+#Create symlinks for tools
+ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd 
+ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
+
 ### Offline installation
 If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 to be installed on a computer with no internet connection, you will need to resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 has the following direct dependencies:
 * Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
@@ -92,41 +167,31 @@ Each of these packages in turn has their own dependencies which may or may not b
 
 It is also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 package.
 
-#### Redhat
-  * Install the downloading utility: 
+#### Redhat Linux Enterprise Server 7
+  * Download the latest msodbcsql rpm from here: http://packages.microsoft.com/rhel/7/prod/
+  * Install dependencies and the driver
+  
 ```
-$ sudo yum install yum-downloadonly
-```
-
-  * Use the download utility to get the RPM package. Set the output directory: 
-```
-$ sudo yum install –downloadonly --downloaddir=<output_directory> msodbcsql
+yum install glibc e2fsprogs krb5-libs openssl unixODBC unixODBC-devel #install dependencies
+sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
-  * Use the RPM command to install the local package, which should be named like this:
+#### Ubuntu 16.04
+* Download the latest msodbcsql deb from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+* Install dependencies and the driver 
+
 ```
-$ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm
+sudo apt-get install libc6 libstdc++6 libkrb5-3 libcurl3 openssl debconf unixodbc unixodbc-dev #install dependencies
+sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
-#### Ubuntu 
-  * use apt-get to install the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 and dependent packages:
-```
-$ sudo apt-get download msodbcsql
-```
-  * The package will be saved under the current folder and named like this: ```msodbcsql_13.1.X.X-X_amd64.deb``` 	
-  * Use dpkg to install this file: 
-```
-$ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb
-```
+#### SUSE Linux Enterprise Server
+* Download the latest msodbcsql rpm from here: http://packages.microsoft.com/sles/12/prod/
+* Install the dependencies and the driver
 
-#### Suse
-* Download the rpm package:
 ```
-$ sudo zypper install –download-only msodbcsql
-```
-* use the RPM command to install the local package, named like:	
-```
-$ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm
+zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install dependencies
+sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 Once you have completed the package installation, you can verify that the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 can find all its dependencies by running ldd and inspecting its output for missing libraries:

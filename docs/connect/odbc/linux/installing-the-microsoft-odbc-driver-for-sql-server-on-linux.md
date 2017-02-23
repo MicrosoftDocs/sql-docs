@@ -180,19 +180,19 @@ It is also common to manually download all the dependent packages and place them
 * Download the latest msodbcsql deb from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 * Install dependencies and the driver 
 
-    ```
-    sudo apt-get install libc6 libstdc++6 libkrb5-3 libcurl3 openssl debconf unixodbc unixodbc-dev #install dependencies
-    sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
-    ```
+```
+sudo apt-get install libc6 libstdc++6 libkrb5-3 libcurl3 openssl debconf unixodbc unixodbc-dev #install dependencies
+sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
+```
 
 #### SUSE Linux Enterprise Server
 * Download the latest msodbcsql rpm from here: http://packages.microsoft.com/sles/12/prod/
 * Install the dependencies and the driver
 
-    ```
-    zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install dependencies
-    sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
-    ```
+```
+zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install dependencies
+sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
+```
 
 Once you have completed the package installation, you can verify that the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 can find all its dependencies by running ldd and inspecting its output for missing libraries:
 ```

@@ -289,9 +289,9 @@ The following sections describe known issues with this release of SQL Server vNe
 - SqlPackage shows the location of files with a “C:\” prefix.
 
 #### Sqlcmd/BCP & ODBC 
-- SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql) depends on a custom unixODBC Driver Manager. This causes conflicts if you have a previously installed unixODBC Driver Manager. 
+- If you have an older version of SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql), you might have installed a custom unixODBC Driver Manager (unixODBC-utf16). This could casue a potential conflict as we no longer use a custom driver manager. 
 
-    - **Resolution**: On Ubuntu, the conflict will be resolved automatically. When prompted if you would like to unisntall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC`. We are working on fixing this limitation for RHEL and SUSE and should have an update for you soon.  
+    - **Resolution**: On Ubuntu and SLES, the conflict will be resolved automatically. When prompted if you would like to unisntall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC-utf16 unixODBC-utf16-devel` and retry the install.
     
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.

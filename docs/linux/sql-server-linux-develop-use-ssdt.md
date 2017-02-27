@@ -6,7 +6,7 @@ description:
 author: erickangMSFT 
 ms.author: erickang 
 manager: jroth
-ms.date: 11/16/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -21,12 +21,12 @@ ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 # ms.reviewer: ""
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
-# ms.custom: ""
+ms.custom: H1Hack27Feb2017
 
 ---
-# Use SQL Server Data Tools (SSDT) with SQL Server on Linux 
+# Use Visual Studio to create databases for SQL Server on Linux 
 
-SQL Server Data Tools turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test and publish your database from a source controlled project, just like you develop your application code.
+SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test and publish your database from a source controlled project, just like you develop your application code.
 
 ## Install Visual Studio and SQL Server Data Tools
 
@@ -34,7 +34,7 @@ SQL Server Data Tools turns Visual Studio into a powerful development and databa
 
 2. During the Visual Studio installation, select **Custom** for the **Choose the type of installation** option. Click **Next**
 
-3. Select **Microsoft SQL Server Data Tools**, **Git for Windows** and **GitHub Extension for Visual Studio** from the feature selection list.
+3. Select **Microsoft SQL Server Data Tools**, **Git for Windows**, and **GitHub Extension for Visual Studio** from the feature selection list.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
 

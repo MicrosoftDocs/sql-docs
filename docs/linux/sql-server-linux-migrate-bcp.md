@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Bulk copy data with bcp to SQL Server on Linux | Microsoft Docs
+title: Bulk copy data to SQL Server on Linux | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

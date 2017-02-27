@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Export and import databases with SqlPackage | Microsoft Docs
+title: Export and import databases on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -21,9 +21,10 @@ ms.assetid: 5befd8fa-a451-4cde-a6b9-121f20cc41ea
 # ms.reviewer: ""
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
-# ms.custom: ""
+ms.custom: H1Hack27Feb2017
+
 ---
-# Export and import databases with SqlPackage
+# Use SqlPackage to export and import SQL Server databases on Linux
 
 Use `SqlPackage` to create and deploy SQL Server databases and DACPAC packages. `SqlPackage` is a command-line utility for extraction and deployment of database snapshots and other data migration tasks. This tool makes use of the DACPAC format - a self-contained unit of SQL Server database deployment which allows the migration of data in a portable package.  
 

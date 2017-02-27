@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: SQL Server security on Linux | Microsoft Docs 
+title: Get started with SQL Server security on Linux | Microsoft Docs 
 description: This topic describes typical security actions.  
 author: BYHAM   
 ms.author: rickbyh   
 manager: jhubbard  
-ms.date: 12/16/2016  
+ms.date: 02/27/2017  
 ms.topic: article  
 ms.prod: sql-linux   
 ms.technology: database-engine  
@@ -21,10 +21,10 @@ ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 # ms.reviewer: ""
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
-# ms.custom: ""
+ms.custom: H1Hack27Feb2017
 
 ---
-# Get started with security features of SQL Server on Linux
+# Walkthrough for the security features of SQL Server on Linux
 
 If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the security tasks. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the in-depth documentation for that area.
 

@@ -6,7 +6,7 @@ description: This tutorial shows how to create a Linux SQL Server vNext virtual 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 11/17/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -21,9 +21,9 @@ ms.assetid: 222e23b2-51e7-429b-b8e5-61e0ebe7df9b
 # ms.reviewer: ""
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
-# ms.custom: ""
+ms.custom: H1Hack27Feb2017
 ---
-# Provision a Linux SQL Server VM in Azure
+# Create a Linux SQL Server vNext virtual machine with the Azure portal
 Azure provides Linux virtual machine images that have SQL Server vNext CTP 1.3 installed. This topic provides a short walkthrough on how to use the Azure portal to create a Linux SQL Server virtual machine. 
 
 ## Create a Linux VM with SQL Server installed

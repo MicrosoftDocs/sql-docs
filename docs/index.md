@@ -472,7 +472,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Azure CLI 2.0 preview</h3>
+                                                <h3>Azure CLI 2.0</h3>
                                                 <p><a href="/cli/azure/get-started/">Get started</a></p>
                                                 <p><a href="https://github.com/Azure/azure-cli">Download Azure CLI 2.0</a></p>
                                                 <p><a href="/cli/azure/">Reference</a></p>

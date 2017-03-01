@@ -31,7 +31,7 @@ This guide provides instructions to create a two-node cluster for SQL Server on 
 For more details on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 >[!NOTE]
->At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources as if SQL Server were a standalone instance. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. On Linux, Always On Availability Group Dynamic Management Views (DMVs) will return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
+>At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server service on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources as if SQL Server were a standalone instance. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. On Linux, Always On Availability Group Dynamic Management Views (DMVs) will return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
 
 
 ## Prerequisites
@@ -42,9 +42,9 @@ To complete the end-to-end scenario below you need two machines to deploy the tw
 
 The first step is to configure the operating system on the cluster nodes. For this walk through, use SLES 12 SP2 with a valid subscription for the HA add-on.
 
-### Install and configure SQL Server on each cluster node
+### Install and configure SQL Server service on each cluster node
 
-1. Install and setup SQL Server on both nodes. For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
+1. Install and setup SQL Server service on both nodes. For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
 1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms throughout this guide.
 
@@ -227,7 +227,7 @@ For more information, see Show Cluster Resources.
 ## Manual failover
 
 >[!IMPORTANT]
->After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In SLES use `crm`. 
+>After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In SLES use `crm`. 
 
 >[!IMPORTANT]
 >If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 

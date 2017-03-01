@@ -34,7 +34,7 @@ This document explains how to create a two-node availability group cluster for S
 For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
-> At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. It is expected Always On dmvs that query cluster information to return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
+> At this point, SQL Server service's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. It is expected Always On dmvs that query cluster information to return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
 
 > [!NOTE] 
 > This is not a production setup. This guide creates an architecture that is for high-level functional testing.
@@ -49,57 +49,6 @@ The following sections walk through the steps to set up a failover cluster solut
 
 [!INCLUDE [SQL-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
-
-<!--------------------------------
-
-## Open Pacemaker firewall ports
-
-On all nodes open the firewall ports. Open the port for the high-availability service, SQL Server, and the availability group endpoint. The default TCP port for SQL Server is 1433. If `firewalld` is installed, run the following commands: 
-
-```bash
-sudo firewall-cmd --permanent --add-service=high-availability
-sudo firewall-cmd --permanent --add-port=1433/tcp
-sudo firewall-cmd --permanent --add-port=5022/tcp
-		
-sudo firewall-cmd --reload
-```
-
-## Install Pacemaker packages
-
-On all nodes, run the following commands to install the pacemaker packages:
-
-```bash
-sudo yum install pacemaker pcs fence-agents-all resource-agents
-```
-
-## Set password for default user
-
-Set the password for the default user that is created when installing pacemaker and corosync packages. Use the same password on all nodes. The following command sets the password.
-
-```bash
-sudo passwd hacluster
-```
-
-## Enable and start pcsd service and Pacemaker
-
-The following command enables and starts pcsd service and pacemaker. This allows the nodes to rejoin the cluster after reboot. 
-
-```bash
-sudo systemctl enable pcsd
-sudo systemctl start pcsd
-sudo systemctl enable pacemaker
-```
-
-## Create the Cluster
-
-To create the cluster, run the following command:
-
-```bash
-sudo pcs cluster auth <nodeName1> <nodeName2…> -u hacluster -p <password for hacluster>
-sudo pcs cluster setup --name <clusterName> <nodeName1> <nodeName2…> --force
-sudo pcs cluster start --all
-```
--------------------------------->
 
 ## Disable STONITH
 
@@ -164,7 +113,7 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ## Manual failover
 
 >[!IMPORTANT]
->After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs`. 
+>After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs` and in SLES use 'crm' tools. 
 
 >[!IMPORTANT]
 >If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
@@ -176,10 +125,3 @@ To manually failover to cluster node2, run the following command.
 ```bash
 sudo pcs resource move ag_cluster-master node2 --master
 ```
-
->[!NOTE]
->At this time manual failover to an asynchronous replica does not work properly. This will be fixed in a future release.
-
-## Next steps
-
-[Create SQL Server Availability Group](sql-server-linux-availability-group-configure.md)

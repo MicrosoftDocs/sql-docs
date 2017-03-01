@@ -93,7 +93,7 @@ Before you create the availability group, you need to:
    sudo vi /etc/hosts
    ```
 
-   The following example shows `/etc/hosts` on **node1** with additions for **node1** and **node2**. In this document **node1** refers to the primary SQL Server. **node2** refers to the secondary SQL Server.;
+   The following example shows `/etc/hosts` on **node1** with additions for **node1** and **node2**. In this document **node1** refers to the primary SQL Server replica. **node2** refers to the secondary SQL Server.;
 
 
    ```
@@ -115,16 +115,20 @@ Install SQL Server. The following links point to SQL Server installation instruc
 
 ## Enable Always On availability groups and restart sqlserver
 
-Enable Always On availability groups on each SQL Server, then restart `mssql-server`.  Run the following script:
+Enable Always On availability groups on each node hosting SQL Server service, then restart `mssql-server`.  Run the following script:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadrenabled 1
 sudo systemctl restart mssql-server
 ```
 
-##	Enable AlwaysOn_health event session – you can optionaly enable Always On Availability Groups specific extended events to help with root-cause diagnosis when you troubleshoot an availability group.
-ALTER EVENT SESSION  AlwaysOn_health ON SERVER  STATE = START
+##	Enable AlwaysOn_health event session 
 
+You can optionaly enable Always On Availability Groups specific extended events to help with root-cause diagnosis when you troubleshoot an availability group.
+
+```Transact-SQL
+ALTER EVENT SESSION  AlwaysOn_health ON SERVER  STATE = START
+```
 
 ## Create db mirroring endpoint user
 
@@ -137,7 +141,7 @@ CREATE USER dbm_user FOR LOGIN dbm_login
 
 ## Create a certificate
 
-SQL Server on Linux uses certificates to authenticate communication between the mirroring endpoints. 
+SQL Server service on Linux uses certificates to authenticate communication between the mirroring endpoints. 
 
 The following Transact-SQL script creates a master key and certificate. It then backs the certificate up and secures the file with a private key. Update the script with strong passwords. Connect to the primary SQL Server and run the following Transact-SQL to create the certificate:
 
@@ -155,7 +159,7 @@ BACKUP CERTIFICATE dbm_certificate
 >[!NOTE]
 >For this release, do not use Linux-style paths like `/var/opt/mssql/data/dbm_certificate.cer` for the certificates.
 
-At this point your primary SQL server has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the mssql user or give permission to mssql user to access these files. 
+At this point your primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the mssql user or give permission to mssql user to access these files. 
 
 For example on the source server, the following command copies the  files to the target machine.
 
@@ -173,7 +177,7 @@ chown mssql:mssql dbm_certificate.*
 
 ## Create the certificate on secondary servers
 
-The following Transact-SQL script creates a master key and certificate from the backup that you created on the primary SQL Server. The command also authorizes the user to access the certificate. Update the script with strong passwords. The decryption password is the same password that you used to create the .pvk file in a previous step. Run the following script on all secondary servers to create the certificate.
+The following Transact-SQL script creates a master key and certificate from the backup that you created on the primary SQL Server replica. The command also authorizes the user to access the certificate. Update the script with strong passwords. The decryption password is the same password that you used to create the .pvk file in a previous step. Run the following script on all secondary servers to create the certificate.
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**' 
@@ -190,9 +194,9 @@ CREATE CERTIFICATE dbm_certificate
 
 Database mirroring endpoints use Transmission Control Protocol (TCP) to send and receive messages between the server instances participating database mirroring sessions or hosting availability replicas. The database mirroring endpoint listens on a unique TCP port number. 
 
-The following Transact-SQL creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint, and gives connect permission to the user that you created. Before you run the script, replace the values between `**< ... >**`. Update the IP address and listener port values for your environment. Use an available IP address from the same network as the SQL Servers. Use an available TCP port. 
+The following Transact-SQL creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint, and gives connect permission to the user that you created. Before you run the script, replace the values between `**< ... >**`. Update the IP address and listener port values for your environment. Use an available IP address from the same network as the servers hosting SQL Server instance. Use an available TCP port. 
 
-Update the following Transact-SQL for your environment  on all SQL Servers: 
+Update the following Transact-SQL for your environment  on all SQL Server instances: 
 
 ```Transact-SQL
 CREATE ENDPOINT [Hadr_endpoint]
@@ -213,7 +217,7 @@ For complete information, see [The Database Mirroring Endpoint (SQL Server)](htt
 
 ## Create the availability group
 
-Create the availability group. The following Transact-SQL script creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Update the following script for your environment. Replace the  `**<node1>**` and `**<node2>**` values with the names of the SQL Servers that will host the replicas. Replace the `**<5022>**` with the port you set for the endpoint. Run the following Transact-SQL on the primary SQL Server to create the availability group.
+Create the availability group. The following Transact-SQL script creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Update the following script for your environment. Replace the  `**<node1>**` and `**<node2>**` values with the names of the SQL Server instances that will host the replicas. Replace the `**<5022>**` with the port you set for the endpoint. Run the following Transact-SQL on the primary SQL Server replica to create the availability group.
 
 ```Transact-SQL
 CREATE AVAILABILITY GROUP [ag1]
@@ -238,11 +242,11 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
 ```
 
 >[!NOTE]
->`CLUSTER_TYPE` is a new option for `CREATE AVAILABILITY GROUP`. An availability group requires`CLUSTER_TYPE = NONE` when it is on a SQL Server that is not a member of a Windows Server Failover Cluster.
+>`CLUSTER_TYPE` is a new option for `CREATE AVAILABILITY GROUP`. An availability group requires`CLUSTER_TYPE = NONE` when it is on a SQL Server instance that is not a member of a Windows Server Failover Cluster.
 
 ### Join secondary SQL Servers to the availability group
 
-The following Transact-SQL script joins a server to an availablity group named `ag1`. Update the script for your environment. On each secondary SQL Server, run the following Transact-SQL to join the availability group.
+The following Transact-SQL script joins a server to an availablity group named `ag1`. Update the script for your environment. On each secondary SQL Server replica, run the following Transact-SQL to join the availability group.
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE)
@@ -260,7 +264,7 @@ ALTER DATABASE [db1] SET RECOVERY FULL
 BACKUP DATABASE [db1] TO DISK = N'NUL'
 ```
 
-On the primary SQL Server, run the following Transact-SQL to add a database called `db1` to an availability group called `ag1`.
+On the primary SQL Server replica, run the following Transact-SQL to add a database called `db1` to an availability group called `ag1`.
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1]
@@ -268,7 +272,7 @@ ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1]
 
 ### Verify that the database is created on the secondary servers
 
-On each secondary SQL Server, run the following query to see if the `db1` database has been created and is synchronized.
+On each secondary SQL Server replica, run the following query to see if the `db1` database has been created and is synchronized.
 
 ```Transact-SQL
 SELECT * FROM sys.databases WHERE name = 'db1'
@@ -290,7 +294,7 @@ SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.d
       - If you run this on a secondary replica then the rest of replicas - including the former PRIMARY - will automatically join the availability group.
       
    - Manual failover is a two step process.
-      1. Demote the current primary. On the primary SQL Server, run the following query:
+      1. Demote the current primary. On the primary SQL Server replica, run the following query:
          ```Transact-SQL
          ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY)
          ```
@@ -300,7 +304,7 @@ SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.d
          ```
 
 >[!IMPORTANT]
->After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs`. In SLES use `crm`. 
+>After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs`. In SLES use `crm`. 
 
 >[!IMPORTANT]
 >If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
@@ -313,9 +317,9 @@ SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.d
 
 In SQL Server availability groups, applications write to the databases in the primary replica. When any secondary replicas are in synchronous commit mode, writes on the primary replica databases wait until the writes are committed to the synchronous secondary replica database transaction logs before committing on the primary. 
 
-If a synchronous replica becomes unresponsive, the SQL Server that hosts the primary replica can automatically change that replica to asynchronous to prevent infinite wait times.
+If a synchronous replica becomes unresponsive, the SQL Server instance that hosts the primary replica can automatically change that replica to asynchronous to prevent infinite wait times.
 
-After a SQL Server has automatically changed a replica from synchronous to asynchronous commit mode, it is possible for the resource agent to promote the asynchronous replica to a primary replica. In this case the availability group resource agent will fail the promote action when it detects that the local replica is asynchronous.
+After a SQL Server service has automatically changed a replica from synchronous to asynchronous commit mode, it is possible for the resource agent to promote the asynchronous replica to a primary replica. In this case the availability group resource agent will fail the promote action when it detects that the local replica is asynchronous.
 
 For example, an availability group has a primary replica on SQL-A. The group has secondary replicas on SQL-B, SQL-C, and SQL-D in synchronous commit mode with automatic failover. If SQL-B quits responding to write request because of a network outage, SQL-A can change the replica commit mode on SQL-B to asynchronous. This allows transactions to continue on the other replicas. The replica on SQL-B is not aware that it is now asynchronous. It does not communicate any problems to Pacemaker via the resource monitor action.
 

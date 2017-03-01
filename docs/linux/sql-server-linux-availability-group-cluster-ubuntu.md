@@ -91,7 +91,8 @@ sudo systemctl enable pacemaker
 
    The following command removes any existing cluster configuration files and stops all cluster services. This permanently destroys the cluster. Run it as a first step in a pre-production environment. Run the following command on all nodes. 
    
-   [!WARNING] The command will destroy any existing cluster resources.
+   >[!WARNING]
+   >The command will destroy any existing cluster resources.
 
    ```bash
    sudo pcs cluster destroy # On all nodes

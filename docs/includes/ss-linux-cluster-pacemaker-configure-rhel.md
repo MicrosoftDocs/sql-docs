@@ -35,9 +35,7 @@
    sudo systemctl enable pacemaker
    ```
 
-4. Create the Cluster
-
-To create the cluster, run the following command:
+4. Create the Cluster. To create the cluster, run the following command:
 
 ```bash
 sudo pcs cluster auth <nodeName1> <nodeName2…> -u hacluster -p <password for hacluster>

@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 02/17/2017
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -102,7 +102,7 @@ sudo systemctl enable pacemaker
    The following command creates a two node cluster. Before you run the script, replace the values between `**< ... >**`. Run the following command the primary SQL Server. 
 
    ```bash
-   sudo pcs cluster auth **<nodeName1**> **<nodeName2>**  -u hacluster -p **<password for hacluster>**
+   sudo pcs cluster auth **<nodeName1>** **<nodeName2>**  -u hacluster -p **<password for hacluster>**
    sudo pcs cluster setup --name **<clusterName>** **<nodeName1>** **<nodeName2…>** --force
    sudo pcs cluster start --all
    ```
@@ -185,8 +185,8 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 
 Manually failover the availability group with `pcs`. Do not initiate failover with Transact-SQL.
 
-To manually failover to cluster node2, run the following command.
+To manually failover to cluster nodeName2, run the following command.
 
 ```bash
-sudo pcs resource move ag_cluster-master node2 --master
+sudo pcs resource move ag_cluster-master nodeName2 --master
 ```

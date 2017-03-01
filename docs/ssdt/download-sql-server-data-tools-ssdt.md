@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "03/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,7 @@ manager: "jhubbard"
 | ![download](../ssdt/media/download.png) Download SQL Server Data Tools for Visual Studio 2015  | Download Data-Tier Application Framework (DacFx) ||
 |:---|:---|:---|
 |**[Download SQL Server Data Tools (16.5)](https://msdn.microsoft.com/mt186501)**|[**Download DacFx and SqlPackage.exe (16.5)**](https://www.microsoft.com/download/details.aspx?id=54106) |Current GA release for production use.|
-|[**Download SQL Server Data Tools - Release Candidate**](../ssdt/sql-server-data-tools-ssdt-release-candidate.md)| [**Download DacFx and SqlPackage.exe - Release Candidate**](../ssdt/sql-server-data-tools-ssdt-release-candidate.md) |Includes support for SQL Server vNext CTP1, but not recommended for production use.|
+|[**Download SQL Server Data Tools - Release Candidate**](../ssdt/sql-server-data-tools-ssdt-release-candidate.md)| [**Download DacFx and SqlPackage.exe - Release Candidate**](../ssdt/sql-server-data-tools-ssdt-release-candidate.md) |Includes support for SQL Server vNext.|
 
 
 

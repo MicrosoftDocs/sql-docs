@@ -112,9 +112,9 @@ sudo systemctl enable pacemaker
 
 Run the following commands on all nodes. 
 
-   ```bash
-   sudo apt-get install mssql-server-ha
-   ```
+```bash
+sudo apt-get install mssql-server-ha
+```
 
 ## Disable STONITH
 

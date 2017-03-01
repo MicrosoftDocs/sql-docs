@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Use the sqlcmd command-line utility on Linux | Microsoft Docs
+title: Connect and query SQL Server on Linux | Microsoft Docs
 description: This tutorial shows how to run sqlcmd on Linux to run Transact-SQL queries.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 12/16/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -21,10 +21,10 @@ ms.assetid: 9e6c1ae1-59a4-4589-b839-18d6a52f2676
 # ms.reviewer: ""
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
-# ms.custom: ""
+ms.custom: H1Hack27Feb2017
 
 ---
-# Connect and query SQL Server on Linux with sqlcmd
+# Connect to SQL Server on Linux and run Transact-SQL queries
 
 This topic provides connection requirements and guidance for SQL Server vNext CTP 1.3 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. This topic approaches the subject in the context of Linux and then points to other resources. 
 

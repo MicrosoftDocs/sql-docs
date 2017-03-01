@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Overview of development for SQL Server on Linux | Microsoft Docs
+title: Develop applications for SQL Server on Linux | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -20,10 +20,10 @@ ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 # ms.reviewer: ""
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
-# ms.custom: ""
+ms.custom: H1Hack27Feb2017
 
 ---
-# Develop applications for SQL Server on Linux
+# How to get started developing applications for SQL Server on Linux
 
 You can create applications that connect to and use SQL Server vNext CTP 1.3 on Linux from a variety of programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
 

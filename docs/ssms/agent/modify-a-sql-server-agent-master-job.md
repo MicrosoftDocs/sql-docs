@@ -1,7 +1,7 @@
 ---
 title: "Modify a SQL Server Agent Master Job | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,7 +24,7 @@ The following topics describe how to modify a [!INCLUDE[msCoName](../../includes
   
 [Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
-[Add Steps to a SQL Server Agent Master Job](../../ssms/agent/add-steps-to-a-sql-server-agent-master-job.md)  
+[Add Steps to a SQL Server Agent Master Job](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   
 [Change Steps of a SQL Server Agent Master Job](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
   

@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Run the SQL Server Docker image on Linux, Mac, or Windows | Microsoft Docs
+title: Run SQL Server vNext on Docker | Microsoft Docs
 description: Download and run the Docker image for SQL Server vNext.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 12/16/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -21,10 +21,10 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 # ms.reviewer: ""
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
-# ms.custom: ""
+ms.custom: H1Hack27Feb2017
 
 ---
-# Run the SQL Server Docker image on Linux, Mac, or Windows
+# Run the SQL Server vNext Docker image on Linux, Mac, or Windows
 
 This topic explains how to pull and run the [mssql-server Docker image](https://hub.docker.com/r/microsoft/mssql-server-linux/). This image consists of SQL Server running on Linux and can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. We are currently tracking all issues with the Docker image in our [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker).
 

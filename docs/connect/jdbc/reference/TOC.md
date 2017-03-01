@@ -1,4 +1,3 @@
-# [JDBC Overview](../index.md)
 # [DateTimeOffset Class](datetimeoffset-class.md?toc=%2fsql%2fconnect%2fjdbc%2freference%2ftoc.json)
 ## [DateTimeOffset Members](datetimeoffset-members.md)
 ## [DateTimeOffset Methods](datetimeoffset-methods.md)

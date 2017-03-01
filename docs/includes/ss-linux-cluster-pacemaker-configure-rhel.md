@@ -37,10 +37,11 @@
 
 4. Create the Cluster. To create the cluster, run the following command:
 
-```bash
-sudo pcs cluster auth <nodeName1> <nodeName2…> -u hacluster -p <password for hacluster>
-sudo pcs cluster setup --name <clusterName> <nodeName1> <nodeName2…> --force
-sudo pcs cluster start --all
+   ```bash
+   sudo pcs cluster auth <nodeName1> <nodeName2…> -u hacluster -p <password for hacluster>
+   sudo pcs cluster setup --name <clusterName> <nodeName1> <nodeName2…> --force
+   sudo pcs cluster start --all
+   ```
 
 5. Install SQL Server resource agent for SQL Server. Run the following commands on both nodes. 
 

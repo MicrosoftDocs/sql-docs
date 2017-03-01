@@ -3,7 +3,7 @@ title: "ADO Appendixes | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.technology:
   - "drivers"
-ms.custom: ""
+ms.custom: "H1Hack27Feb2017"
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,13 +15,13 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
 ---
-# ADO Appendixes
-The ADO Programmer's Guide contains the following appendixes.  
-  
--   [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)  
-  
--   [Appendix B: ADO Errors](../../../ado/guide/appendixes/appendix-b-ado-errors.md)  
-  
--   [Appendix C: Programming with ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)  
-  
+# ADO Appendixes for Programmer Guide
+The ADO Programmer's Guide contains the following appendixes.
+
+-   [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
+
+-   [Appendix B: ADO Errors](../../../ado/guide/appendixes/appendix-b-ado-errors.md)
+
+-   [Appendix C: Programming with ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)
+
 -   [Appendix D: ADO Samples](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

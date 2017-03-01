@@ -123,21 +123,12 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 \
 --master meta master-max=1 master-node-max=1 clone-max=2 clone-node-max=1 
 ```
 
-## Enable monitoring on primary
-
-To enable monitoring, run the following commands on one node.
-
-```bash
-sudo pcs resource op add ag_cluster monitor interval=11s timeout=60s role=Master
-sudo pcs resource op add ag_cluster monitor interval=12s timeout=60s role=Slave
-```
-
 ## Create virtual IP resource
 
-To create the virtual IP address resource, run the following command on one node. Use an available IP address from the network.
+To create the virtual IP address resource, run the following command on one node. Use an available IP address from the network. 
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=10.128.16.240
 ```
 
 ## Add colocation constraint

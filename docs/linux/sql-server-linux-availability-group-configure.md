@@ -122,6 +122,10 @@ sudo /opt/mssql/bin/mssql-conf set hadrenabled 1
 sudo systemctl restart mssql-server
 ```
 
+##	Enable AlwaysOn_health event session – you can optionaly enable Always On Availability Groups specific extended events to help with root-cause diagnosis when you troubleshoot an availability group.
+ALTER EVENT SESSION  AlwaysOn_health ON SERVER  STATE = START
+
+
 ## Create db mirroring endpoint user
 
 The following Transact-SQL script creates a login named `dbm_login`, and a user named `dbm_user`. Update the script with a strong password. Run the following command on all SQL Servers to create the database mirroring endpoint user.

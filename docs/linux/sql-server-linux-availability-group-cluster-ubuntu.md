@@ -109,6 +109,12 @@ sudo pcs cluster setup --name <clusterName> <nodeName1> <nodeName2…> --force
 sudo pcs cluster start --all
 ```
 
+## Install SQL Server resource agent for SQL Server. Run the following commands on both nodes. 
+
+   ```bash
+   sudo apt-get install mssql-server-ha
+   ```
+
 ## Disable STONITH
 
 Run the following command to disable STONITH

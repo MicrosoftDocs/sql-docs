@@ -17,10 +17,10 @@ To remove the constraint run the following command. In the following command `ag
 sudo pcs resource clear ag_cluster-master 
 ```
 
-Alternatively, you can run the following command to remove the location constraint. In the following command `ag_cluster-master` is the name of the resource that was moved. `-INFINITY` is the ID of the constraint. `sudo pcs constraint --full` returns this ID. 
+Alternatively, you can run the following command to remove the location constraint. In the following command `ag_cluster-master-INFINITY` is the ID of the constraint that needs to be removed. `sudo pcs constraint --full` returns this ID.  
 
 ```bash
-sudo pcs constraint remove location-ag_cluster-master -INFINITY 
+sudo pcs constraint remove location-ag_cluster-master-INFINITY 
 ```
 
 >[!NOTE]

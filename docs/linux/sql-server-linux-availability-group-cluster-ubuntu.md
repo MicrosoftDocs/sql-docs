@@ -191,3 +191,6 @@ To manually failover to cluster nodeName2, run the following command.
 ```bash
 sudo pcs resource move ag_cluster-master nodeName2 --master
 ```
+
+[!INCLUDE [Move-Resource](../includes/ss-linux-cluster-pacemaker-configure-rhel-ubuntu-move-resource.md)]
+

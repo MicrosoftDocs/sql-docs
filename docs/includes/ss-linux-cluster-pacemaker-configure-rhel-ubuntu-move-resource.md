@@ -1,4 +1,4 @@
->[IMPORTANT]
+>[!IMPORTANT]
 >After you manually failover a resource, you need to remove a location constraint that is automatically added during the move.
 
 ### Remove the location constraint

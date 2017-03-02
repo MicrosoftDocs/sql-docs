@@ -241,6 +241,32 @@ crm resource migrate ms-ag_cluster sles1
 >[!NOTE]
 >At this time manual failover to an asynchronous replica does not work properly. This will be fixed in a future release.
 
+During a manual move, the `migrate` command adds a location constraint for the resource to be placed on the new target node. To see the new constraint, run the following command after manually moving the resource:
+
+```bash
+crm resource show
+```
+
+To remove the constraint run the following command. In the following command `ms-ag_cluster` is the name of the resource that was moved. Replace this name with the name of your resource:
+
+```bash
+crm resource clean ms-ag_cluster
+```
+
+Alternatively, you can run the following command to remove the location constraint. In the following command `cli-prefer-ms-ag_cluster` is the ID of the constraint. `crm resource showl` returns this ID. 
+
+```bash
+crm configure
+delete cli-prefer-ms-ag_cluster 
+commit
+```
+
+>[!NOTE]
+>Automatic failover does not add a location constraint, so no cleanup is necessary. 
+
+For more information, see [SLES Admininstration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
+
+
 For additional details see:
 - [Managing cluster resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm).   
 - [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)

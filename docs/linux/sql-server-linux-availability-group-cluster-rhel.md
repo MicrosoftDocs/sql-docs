@@ -36,9 +36,6 @@ For more details on cluster configuration, resource agents options, and manageme
 > [!NOTE] 
 > At this point, SQL Server service's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. It is expected Always On dmvs that query cluster information to return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
 
-> [!NOTE] 
-> This is not a production setup. This guide creates an architecture that is for high-level functional testing.
-
 The following sections walk through the steps to set up a failover cluster solution. 
 
 ## Configure Pacemaker for RHEL
@@ -58,6 +55,11 @@ Run the following command to disable STONITH
 sudo pcs property set stonith-enabled=false
 ```
 
+>[!IMPORTANT>
+>This is not supported by the clustering vendors in a production setup. For details, see [Red Hat High Availability Add-On with Pacemaker: Fencing](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html 
+http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html) 
+
+
 ## Create availability group resource
 
 To create the availability group resource, set properties as follows:
@@ -74,12 +76,14 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 \
 
 ## Create virtual IP resource
 
-To create the virtual IP address resource, run the following command on one node. Use an available IP address from the network. 
+To create the virtual IP address resource, run the following command on one node. Use an available static IP address from the network. Replace the IP address between `**<...>**'
 
 ```bash
-sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=10.128.16.240
+sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
 ```
 
+There is no virtual server name equivalent in Pacemaker. To use a connection string that points to a string server name and not use the IP address, register the IP resource address and desired virtual server name in DNS. For DR configurations, register the desired virtual server name and IP address with the DNS servers on both primary and DR site.
+ 
 ## Add colocation constraint
 
 To add colocation constraint, run the following command on one node.

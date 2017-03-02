@@ -293,7 +293,7 @@ SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.d
       - If you run this on the former primary replica then previous configuration returns.
       - If you run this on a secondary replica then the rest of replicas - including the former PRIMARY - will automatically join the availability group.
       
-   - Manual failover is a two step process.
+   - During failover a cluster manager ensures that the demotion action is completed before the promotion action starts so that there will not be two primary replicas in the configuration. On Windows, WSFC is the cluster manager. On a Linux cluster, Pacemaker can be the cluster manager. Without a cluster manager, you have to manually demote the primary replica and promote the secondary replicas in sequential order. If you initiate a failover without a cluster manager, there is no guarantee the demotion is successful - if the primary replica is unresponsive, for example - but promotion can succeed. To avoid having two primary replicas if the demotion fails, you can complete the manual fail over in two steps. First demote the primary replica, and then promote the secondary replica. 
       1. Demote the current primary. On the primary SQL Server replica, run the following query:
          ```Transact-SQL
          ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY)

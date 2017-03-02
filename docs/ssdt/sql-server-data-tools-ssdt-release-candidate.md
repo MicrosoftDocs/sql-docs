@@ -2,7 +2,7 @@
 title: "SQL Server Data Tools (SSDT) - Release Candidate | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "02/01/2017"
+ms.date: "03/01/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,8 +20,6 @@ Welcome to the current release candidate (17.0 RC2) of SQL Server Data Tools (SS
 
 
 ## Download
-
-SSDT release candidate 17.0 RC2 works side-by-side with our [generally available release &#40;16.x&#41;](../ssdt/download-sql-server-data-tools-ssdt.md), but is not recommended for production use. 
   
 ![download](../ssdt/media/download.png)[ Download SQL Server Data Tools 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939). 
 

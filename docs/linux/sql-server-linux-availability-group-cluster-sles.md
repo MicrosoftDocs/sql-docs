@@ -261,6 +261,9 @@ delete cli-prefer-ms-ag_cluster
 commit
 ```
 
+>[!NOTE]
+>Automatic failover does not add a location constraint, so no cleanup is necessary. 
+
 For more information, see [SLES Admininstration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
 
 

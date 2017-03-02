@@ -49,7 +49,7 @@ The following sections walk through the steps to set up a failover cluster solut
 
 ## Disable STONITH
 
-Run the following command to disable STONITH
+Run the following command to disable STONITH.
 
 ```bash
 sudo pcs property set stonith-enabled=false

@@ -115,7 +115,7 @@ sudo apt-get install mssql-server-ha
 
 ## Disable STONITH
 
-Run the following command to disable STONITH
+Run the following command to disable STONITH.
 
 ```bash
 sudo pcs property set stonith-enabled=false

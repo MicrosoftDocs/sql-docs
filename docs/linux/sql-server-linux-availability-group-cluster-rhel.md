@@ -55,7 +55,7 @@ Run the following command to disable STONITH
 sudo pcs property set stonith-enabled=false
 ```
 
->[!IMPORTANT>
+>[!IMPORTANT]
 >This is not supported by the clustering vendors in a production setup. For details, see [Red Hat High Availability Add-On with Pacemaker: Fencing](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html 
 http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html) 
 

@@ -130,6 +130,8 @@ You can optionaly enable Always On Availability Groups specific extended events 
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER  STATE = START
 ```
 
+For more information about this XE session, see [Always On Extended Events](http://msdn.microsoft.com/library/dn135324.aspx).
+
 ## Create db mirroring endpoint user
 
 The following Transact-SQL script creates a login named `dbm_login`, and a user named `dbm_user`. Update the script with a strong password. Run the following command on all SQL Servers to create the database mirroring endpoint user.
@@ -161,11 +163,11 @@ BACKUP CERTIFICATE dbm_certificate
 
 At this point your primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the mssql user or give permission to mssql user to access these files. 
 
-For example on the source server, the following command copies the  files to the target machine.
+For example on the source server, the following command copies the  files to the target machine. Replace the **<node2>** values with the names of the SQL Server instances that will host the replicas. 
 
 ```bash
 cd /var/opt/mssql/data
-scp dbm_certificate.* root@node2:/var/opt/mssql/data/
+scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
 On the target server, give permission to mssql user to access the certificate.

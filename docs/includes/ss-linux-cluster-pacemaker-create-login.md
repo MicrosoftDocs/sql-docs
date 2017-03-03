@@ -19,7 +19,7 @@
 1. **On all SQL Servers, save the credentials for the SQL Server login**.
 
    ```bash
-   echo 'pacemakerLogin' > ~/pacemaker-passwd
+   echo 'pacemakerLogin' >> ~/pacemaker-passwd
    echo 'ComplexP@$$w0rd!' >> ~/pacemaker-passwd
    sudo mv ~/pacemaker-passwd /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd

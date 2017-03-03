@@ -86,7 +86,7 @@ There is no virtual server name equivalent in Pacemaker. To use a connection str
 
 You can provide client connectivity to the databases in the availability group by creating an availability group listener instead of connecting to the virtual IP address. In Linux, you need to manually register the listener name with the virtual IP address in your DNS server. 
  
-The following example, ads a listener to the availability group 'ag1':
+The following example, adds a listener to the availability group 'ag1':
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP ag1   

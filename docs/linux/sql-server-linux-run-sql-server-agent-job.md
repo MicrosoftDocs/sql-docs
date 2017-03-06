@@ -28,7 +28,7 @@ ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 # Create and run SQL Server Agent jobs on Linux
 SQL Server jobs are used to regularly perform the same sequence of commands in your SQL Server database. This topic provides examples of how to create SQL Server Agent jobs on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
 
-> [!NOTE] For known issues and supported scenarios, see the [Release Notes](sql-server-linux-release-notes.md).
+For known issues with SQL Server Agent in this release, see the [Release Notes](sql-server-linux-release-notes.md).
 
 ## Prerequisites 
 To create and run jobs, you must first install the SQL Server Agent service. For installation instructions, see the [SQL Server Agent installation topic](sql-server-linux-setup-sql-agent.md).

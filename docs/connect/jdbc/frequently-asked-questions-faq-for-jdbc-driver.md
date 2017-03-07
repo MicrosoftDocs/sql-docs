@@ -25,14 +25,14 @@ manager: "jhubbard"
  See the [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.  
   
  What should I know when upgrading my driver?  
- The Microsoft JDBC Driver 6.0 and 4.2 for SQL Server support both JDBC 3.0 and JDBC 4.2 specifications and include two JAR class libraries in the installation package as follows:  
+ The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server support both JDBC 4.1 and JDBC 4.2 specifications and include two JAR class libraries in the installation package as follows:  
   
 ||||  
 |-|-|-|  
 |sqljdbc42.jar|JDBC 4.2, 4.1, and 4.0|JDK 8.0, 7.0, 6.0 and 5.0|  
 |sqljdbc41.jar|JDBC 4.1 and 4.0|JDK 7.0, 6.0 and 5.0|  
   
- The Microsoft JDBC Driver 4.1 for SQL Server supports both JDBC 3.0 and JDBC 4.0 specifications and includes one JAR class library in the installation package as follows:  
+ The Microsoft JDBC Driver 4.1 for SQL Server supports the JDBC 4.1 specification and includes one JAR class library in the installation package as follows:  
   
 ||||  
 |-|-|-|  

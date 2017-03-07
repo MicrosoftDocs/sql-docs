@@ -32,7 +32,7 @@ manager: "jhubbard"
 |sqljdbc42.jar|JDBC 4.2, 4.1, and 4.0|JDK 8.0, 7.0, 6.0 and 5.0|  
 |sqljdbc41.jar|JDBC 4.1 and 4.0|JDK 7.0, 6.0 and 5.0|  
   
- The Microsoft JDBC Driver 4.1 for SQL Server supports the JDBC 4.1 specification and includes one JAR class library in the installation package as follows:  
+ The Microsoft JDBC Driver 4.1 for SQL Server supports the JDBC 4.0 specification and includes one JAR class library in the installation package as follows:  
   
 ||||  
 |-|-|-|  

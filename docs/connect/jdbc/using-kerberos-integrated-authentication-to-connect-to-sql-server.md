@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Using Kerberos Integrated Authentication to Connect to SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Beginning in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using type 4 Kerberos integrated authentication. See [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) for more information on connection properties. For more information on Kerberos, see [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkId=101449) and [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758).  
+  Beginning in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using type 4 Kerberos integrated authentication. See [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) for more information on connection properties. For more information on Kerberos, see [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758).  
   
  When using integrated authentication with the Java **Krb5LoginModule**, you can configure the module using [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).  
   

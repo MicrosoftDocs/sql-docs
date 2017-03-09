@@ -51,6 +51,9 @@ SQL Server Always On Availability Groups were first introduced in SQL Server 201
 - **Disaster recovery configurations**
    With distributed availability groups or multi-subnet availability group setup. 
 
+> [!IMPORTANT]
+> Read-only routing does not work in the current preview build due to an issue with the listener. These capabilities will be enabled in the upcoming releases.
+
 For details about SQL Server Availability Groups, see [SQL Server Always On Availability Groups](http://msdn.microsoft.com/library/hh510230.aspx).
 
 ## Overview of Steps to Configure SQL Server Availability Group on Linux

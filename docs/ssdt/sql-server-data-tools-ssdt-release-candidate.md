@@ -22,7 +22,7 @@ Welcome to the current release candidate (17.0 RC3) of SQL Server Data Tools (SS
 
 ## Download
 
-SSDT release candidate 17.0 RC3 is not recommended for production use. For production use, it is recommended to continue to use the [generally available release &#40;16.x&#41;](../Topic/Download%20SQL%20Server%20Data%20Tools%20(SSDT).md)
+SSDT release candidate 17.0 RC3 is not recommended for production use. For production use, it is recommended to continue to use the [generally available release &#40;16.x&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)
   
 ![download](../ssdt/media/download.png)[ Download SQL Server Data Tools 17.0 RC3](https://go.microsoft.com/fwlink/?linkid=842523).  
 
@@ -81,4 +81,4 @@ SSDT release candidate 17.0 RC3 is not recommended for production use. For produ
 [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback)  
 [SSDT Documentation](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)  
-[Download SQL Server Management Studio (SSMS)](Download%20SQL%20Server%20Management%20Studio%20(SSMS).md)  
+[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

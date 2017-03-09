@@ -20,10 +20,10 @@ Welcome to the current release candidate (17.0 RC3) of SQL Server Management Stu
 
 ## Download
 
-SSMS release candidate 17.0 RC3 works side-by-side with our [generally available release &#40;16.x&#41;](../Topic/Download%20SQL%20Server%20Management%20Studio%20(SSMS).md), but is not recommended for production use. 
+SSMS release candidate 17.0 RC3 works side-by-side with our [generally available release &#40;16.x&#41;](../ssms/download-sql-server-management-studio-ssms.md), but is not recommended for production use. 
   
-![download](/Image/download.png)[ Download SQL Server Management Studio 17.0 RC3](https://go.microsoft.com/fwlink/?linkid=844503).  
-![download](/Image/download.png)[ Download SQL Server Management Studio 17.0 RC3 Upgrade Package](https://go.microsoft.com/fwlink/?linkid=844505).  
+![download](../ssdt/media/download.png)[ Download SQL Server Management Studio 17.0 RC3](https://go.microsoft.com/fwlink/?linkid=844503).  
+![download](../ssdt/media/download.png)[ Download SQL Server Management Studio 17.0 RC3 Upgrade Package](https://go.microsoft.com/fwlink/?linkid=844505).  
   
 ## Enhancements 
 
@@ -99,8 +99,8 @@ SSMS release candidate 17.0 RC3 works side-by-side with our [generally available
     
 ## Feedback  
   
-![needhelp_person_icon](/Image/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Log an issue or suggestion at Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback).  
+![need help](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Log an issue or suggestion at Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## See Also  
-[SQL Server Management Studio Tutorial](Use%20SQL%20Server%20Management%20Studio.md)  
+[SQL Server Management Studio Tutorial](../ssms/use-sql-server-management-studio.md)  
 [What's new in SQL Server vNext](https://msdn.microsoft.com/library/mt788653.aspx)

@@ -82,20 +82,8 @@ sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**
 
 There is no virtual server name equivalent in Pacemaker. To use a connection string that points to a string server name and not use the IP address, register the IP resource address and desired virtual server name in DNS. For DR configurations, register the desired virtual server name and IP address with the DNS servers on both primary and DR site.
 
-## Create a listener
-
-You can provide client connectivity to the databases in the availability group by creating an availability group listener instead of connecting to the virtual IP address. In Linux, you need to manually register the listener name with the virtual IP address in your DNS server. 
- 
-The following example, adds a listener to the availability group 'ag1':
-
-```Transact-SQL
-ALTER AVAILABILITY GROUP ag1   
-      ADD LISTENER 'myAGServer' ( WITH IP ( ('10.128.16.240','255.255.255.0') ), PORT=1433);   
-GO  
-```
-
-For more details, see [Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)
-
+>[!IMPORTANT]
+>Due to a known issue, listener like capabilities are not working properly in the curent preview. We are working on a fix to be available in the upcoming releases. 
 
 ## Add colocation constraint
 

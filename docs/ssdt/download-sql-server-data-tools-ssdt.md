@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,17 +29,19 @@ manager: "jhubbard"
 
 
 
-## SSDT works best with Visual Studio 2015
+## SSDT works best with Visual Studio
 
-#### [**Download Visual Studio Community 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
+Use SSDT in Visual Studio 2017
+
+[**Download Visual Studio Community 2017**](https://www.visualstudio.com/)
+[**Download Visual Studio Community 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
 
 
-
-If you don't have Visual Studio installed on your machine, installing SSDT will also install a minimal “Integrated Shell” version of Visual Studio 2015. This version of Visual Studio is free to install and use on as many machines as you wish. It gives you all the SQL Server project types, plus SQL Server Object Explorer and other SQL tools experiences.
+If you don't have Visual Studio installed on your machine, installing SSDT will also install a minimal “Integrated Shell” version of Visual Studio. This version of Visual Studio is free to install and use on as many machines as you wish. It gives you all the SQL Server project types, plus SQL Server Object Explorer and other SQL tools experiences.
 
 If you do have [Visual Studio 2015 Community Edition (or above)](https://www.visualstudio.com/products/visual-studio-community-vs.aspx) installed on your machine, installing SSDT will add the full set of SQL Server tools into your existing Visual Studio installation. Visual Studio includes many features you might want to use, such as Source Code Control integration and non-SQL language support. We recommend using Visual Studio 2015 Community or above to get the best experience when developing T-SQL.
 
-- [Compare Visual Studio 2015 features by Edition](https://www.visualstudio.com/products/compare-visual-studio-2015-products-vs)
+- [Compare Visual Studio 2017 features by Edition](https://www.visualstudio.com/products/compare-visual-studio-2015-products-vs)
 
 ## Supported SQL versions
   

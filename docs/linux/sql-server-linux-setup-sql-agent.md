@@ -29,7 +29,7 @@ ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 The following steps install SQL Server Agent (**mssql-server-agent**) on Linux. The [SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) runs scheduled SQL Server jobs. For information on the features supported for this release of the SQL Server Agent, see the [Release Notes](sql-server-linux-release-notes.md).
 
 > [!NOTE]
-> Before installing SQL Server Agent, first [install SQL Server](sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when you install the **mssql-server-agent** package.
+> Before installing SQL Server Agent, first [install SQL Server CTP 1.4+](sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when you install the **mssql-server-agent** package.
 
 Install the SQL Server Agent for your platform:
 
@@ -42,8 +42,8 @@ Install the SQL Server Agent for your platform:
 Use the following steps to install the **mssql-server-agent** on Red Hat Enterprise Linux. 
 
 ```bash
-sudo yum update
 sudo yum install mssql-server-agent
+sudo systemctl restart mssql-server
 ```
 
 If you already have **mssql-server-agent** installed, you can update to the latest version with the following commands:
@@ -51,6 +51,8 @@ If you already have **mssql-server-agent** installed, you can update to the late
 ```bash
 sudo yum check-update
 sudo yum update mssql-server-agent
+sudo systemctl restart mssql-server
+
 ```
 
 ## <a name="ubuntu">Install on Ubuntu</a>
@@ -60,23 +62,26 @@ Use the following steps to install the **mssql-server-agent** on Ubuntu.
 ```bash
 sudo apt-get update 
 sudo apt-get install mssql-server-agent
+sudo systemctl restart mssql-server
 ```
 
 If you already have **mssql-server-agent** installed, you can update to the latest version with the following commands:
 
 ```bash
 sudo apt-get update 
-sudo apt-get install mssql-server-agent 
+sudo apt-get install mssql-server-agent
+sudo systemctl restart mssql-server
 ```
 
 ## <a name="SLES">Install on SLES</a>
 
 Use the following steps to install the **mssql-server-agent** on SUSE Linux Enterprise Server. 
 
-Install **mssql-server-agent** with the unixODBC developer package.
+Install **mssql-server-agent** 
 
 ```bash
-sudo zypper install mssql-server-agent unixODBC-devel
+sudo zypper install mssql-server-agent
+sudo systemctl restart mssql-server
 ```
 
 If you already have **mssql-server-agent** installed, you can update to the latest version with the following commands:
@@ -84,6 +89,7 @@ If you already have **mssql-server-agent** installed, you can update to the late
 ```bash
 sudo zypper refresh
 sudo zypper update mssql-server-agent
+sudo systemctl restart mssql-server
 ```
 
 ## Next steps

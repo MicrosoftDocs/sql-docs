@@ -31,12 +31,16 @@ manager: "jhubbard"
 
 ## Download Visual Studio
 
-* [**Download Visual Studio Community 2017**](https://www.visualstudio.com/)
+
 * [**Download Visual Studio Community 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
 
 ### Use SSDT in Visual Studio 2017
-* [Microsoft Analysis Services Modeling Projects](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
-* [Microsoft Report Projects for Visual Studio](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
+
+* [**Download Visual Studio 2017**](https://www.visualstudio.com/)
+
+If you are using SSDT with Visual Studio 2017, install the AS and RS components:
+* [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
+* [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 If you don't have Visual Studio installed on your machine, installing SSDT will also install a minimal “Integrated Shell” version of Visual Studio 2015. This version of Visual Studio is free to install and use on as many machines as you wish. It gives you all the SQL Server project types, plus SQL Server Object Explorer and other SQL tools experiences.
 

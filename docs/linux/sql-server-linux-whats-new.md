@@ -32,6 +32,13 @@ This topic describes what's new for SQL Server vNext running on Linux.
 The CTP 1.4 release contains the following improvements and fixes:
 
 - Enabled the [SQL Server Agent](sql-server-linux-setup-sql-agent.md).
+    - Enabled T-SQL Jobs functionality.
+- Fixed timezone bugs: 
+    - Timezone support for Asia/Kolkata.
+    - Fixed GETDATE() function.
+- Network Async I/0 Improvements
+- Docker image now includes SQL Server command-line utilities. (sqlcmd/bcp).
+- Enabled Virtual Device Interface (VDI) support for backups.
 
 ## CTP 1.3
 The CTP 1.3 release contains the following improvements and fixes:

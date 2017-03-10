@@ -35,14 +35,13 @@ manager: "jhubbard"
 
 ### Use SSDT in Visual Studio 2017
 
-* [**Download Visual Studio 2017**](https://www.visualstudio.com/) ([compare Visual Studio 2017 features by edition](https://www.visualstudio.com/products/compare-visual-studio-2015-products-vs))
+* [**Download Visual Studio 2017**](https://www.visualstudio.com/) ([compare Visual Studio 2017 features by edition](https://www.visualstudio.com/vs/compare/))
 
 To use relational database projects, we recommend checking the **Data Storage and Processing** workload during installation. SSDT database project support is also included in a number of other workloads including *Azure*, *ASP.Net and Web Development*, and *.Net Core Cross Platform Development*.
 
 If you are using SSDT with Visual Studio 2017, install the AS and RS components:
 * [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
-
 
 
 ## Installing SSDT without Visual Studio pre-installed

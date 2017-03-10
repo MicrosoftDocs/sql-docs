@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,22 +31,25 @@ manager: "jhubbard"
 
 ## Download Visual Studio
 
-
 * [**Download Visual Studio Community 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
 
 ### Use SSDT in Visual Studio 2017
 
 * [**Download Visual Studio 2017**](https://www.visualstudio.com/)
 
+To use relational database projects, we recommend checking the **Data Storage and Processing** workload during installation. SSDT database project support is also included in a number of other workloads including *Azure, ASP.Net and Web Development, and .Net Core Cross Platform Development*.
+
 If you are using SSDT with Visual Studio 2017, install the AS and RS components:
 * [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
-If you don't have Visual Studio installed on your machine, installing SSDT will also install a minimal “Integrated Shell” version of Visual Studio 2015. This version of Visual Studio is free to install and use on as many machines as you wish. It gives you all the SQL Server project types, plus SQL Server Object Explorer and other SQL tools experiences.
+  [Compare Visual Studio 2017 features by Edition](https://www.visualstudio.com/products/compare-visual-studio-2015-products-vs)
+
+## Installing SSDT without Visual Studio pre-installed
+
+If you don't have Visual Studio installed on your machine, installing SSDT for Visual Studio 2015 will also install a minimal “Integrated Shell” version of Visual Studio 2015. This version of Visual Studio is free to install and use on as many machines as you wish. It gives you all the SQL Server project types, plus SQL Server Object Explorer and other SQL tools experiences.
 
 If you do have [Visual Studio 2015 Community Edition (or above)](https://www.visualstudio.com/products/visual-studio-community-vs.aspx) installed on your machine, installing SSDT will add the full set of SQL Server tools into your existing Visual Studio installation. Visual Studio includes many features you might want to use, such as Source Code Control integration and non-SQL language support. We recommend using Visual Studio 2015 Community or above to get the best experience when developing T-SQL.
-
-- [Compare Visual Studio 2017 features by Edition](https://www.visualstudio.com/products/compare-visual-studio-2015-products-vs)
 
 ## Supported SQL versions
   

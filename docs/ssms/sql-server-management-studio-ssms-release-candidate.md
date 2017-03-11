@@ -53,7 +53,7 @@ SSMS release candidate 17.0 RC3 works side-by-side with our [generally available
 	- Show max instead of sum across the threads in properties window for elapsed time
 	- Expose new mem grant operator properties
 	- Enabled the "Edit Query" button in Live Query Statistics
-	- Support for interleaved execution
+d	- Support for interleaved execution
 - Removed Configuration Manager from Registered Servers explorer
 - Enable reading audit logs from Azure blob storage
 
@@ -92,9 +92,9 @@ SSMS release candidate 17.0 RC3 works side-by-side with our [generally available
 	- Workaround: re-run SSMS 17.0 RC3 Setup and choose to "Repair"
 	
 - SQL on Linux support:
-	- Support for native path on "SQL on Linux" will be in an upcoming upate of SSMS
+	- Support for native path on "SQL on Linux" will be in an upcoming update of SSMS
 	- Currently some scenarios in SSMS may not work as expected. For example:
-		- The path displayed in the "Backup Database" form will look like C:\var\opt\... (instead of the native Linux path)
+		- The path displayed in the "Backup Database" form will look like C:\var\opt\... (instead of the native Linux path).
 		- Clicking on the "Content" button on the Backup Database wizard will cause an error.
     
 ## Feedback  

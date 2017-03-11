@@ -114,7 +114,21 @@ The following steps provide an example of how to create a SQL Server Agent job o
 
 You can also create and manage jobs remotely using SQL Server Management Studio (SSMS) on Windows.
 
-TBD: Screenshot/potential steps/general description. Follow same example above in the UI.
+Step 1: Create a new database - Sample DB
+
+//insert screenshot
+
+Step 2: Verify that SQL Agent was isntalled and configured correctly. Look for the plus sign in the box
+
+Step 3: Create a new Job
+
+Step 4: Give your Job a name and create your Job Step
+
+Step 5: Specify what subsystem you would like to use and what the Job Step should do
+
+Step 6: Create a new Job Schedule
+
+Step 7: Start your Job
 
 ## Next Steps
 

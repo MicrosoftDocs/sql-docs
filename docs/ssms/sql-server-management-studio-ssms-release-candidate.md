@@ -27,22 +27,22 @@ SSMS release candidate 17.0 RC3 works side-by-side with our [generally available
   
 ## Enhancements 
 
-- New Upgrade Pacakge
-	- Upgrades previous 17.X installations to current version  
-	- Provides smaller download size  
-	- see known issues below for issues specific to upgrading RC 2 to RC 3
+- New Upgrade Package
+	- Upgrades previous 17.x installations to the current version
+	- Provides a smaller download size
+	- See **known issues** below for issues specific to upgrading RC2 to RC3
 - Icon Updates
 	- Final set of icon updates for SSMS 17.0
-	- New SSMS and Profiler program icons to differentiate between 16.X and 17.X versions
+	- New SSMS and Profiler program icons to differentiate between 16.x and 17.x versions
 - Presentation Mode
 	- 3 new tasks available via Quick Launch (Ctr-Q)
 	- PresentOn - Turn on presentation mode
 	- PresentEdit - Edit the presentation font sizes for presentation mode.  "Text Editor font" for the Query Editor.  "Environment font" for other components.
 	- RestoreDefaultFonts - Revert back to default settings.
-	- *Note: there is currently no PresentOff command at this time.  Use RestoreDefaultFonts to turn off Presentation Mode*
+	- **Note:** there is currently no *PresentOff* command at this time.  Use *RestoreDefaultFonts* to turn off Presentation Mode
 - SQL PowerShell Module 
-	- Miscellaneous improvement around the "presentation" (formatting) of some SMO objects (e.g. databases now show the size and the available space and tables show row count and space usage)
-	- Colorization when the PowerShell command prompt is invoked from the "Start PowerShell" menu in OE
+	- Miscellaneous improvements around the presentation (formatting) of some SMO objects (e.g. databases now show the size and the available space, and tables show row count and space usage)
+	- Colorization when the PowerShell command prompt is invoked from the "Start PowerShell" menu in Object Explorer
 	- Added -ClusterType and -RequiredCopiesToCommit parameter to AG cmdlets (New-SqlAvailabilityGroup, Join-SqlAvailabilityGroup, and Set-SqlAvailabilityGroup cmdlets)
 	- Added parameters -ActiveDirectoryAuthority and -AzureKeyVaultResourceId to Add-SqlAzureAuthenticationContext cmdlet
 - SQL Server on Linux
@@ -76,7 +76,7 @@ SSMS release candidate 17.0 RC3 works side-by-side with our [generally available
 	- Fixed issue in AE wizard where the Azure Key Vault sign-in page was not showing Azure subscriptions for which the user has reader permission
 - Improved contrast of hyperlinks on SSMS Setup page
 - Fixed an issue where Polybase nodes were not displayed when connected to SQL Server Express (2016 SP1)
-- Fixed an issue where SSMS is unable to change the Compatibility Level of an Azure DB to v140
+- Fixed an issue where SSMS is unable to change the Compatibility Level of an Azure SQL database to v140
 - Improved performance of Object Explorer when expanding the list of Azure databases [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - Fixed an issue where "View SQL Server Log" context menu item appeared incorrectly for non-relational server types (AS\RS\IS) 
 - Fixed an issue where checking syntax of an Analysis Services partition query using SQL auth could result in login failed message
@@ -89,7 +89,7 @@ SSMS release candidate 17.0 RC3 works side-by-side with our [generally available
 - Upgrade from RC2 to RC3 
 	- Unable to access AS, RS, and IS menu options
 	- Profiler and Database Tuning Engine Advisor missing from "Tools" menu
-	- *Workaround: re-run SSMS 17.0 RC 3 Setup and choose to "Repair"*
+	- Workaround: re-run SSMS 17.0 RC3 Setup and choose to "Repair"
 	
 - SQL on Linux support:
 	- Support for native path on "SQL on Linux" will be in an upcoming upate of SSMS

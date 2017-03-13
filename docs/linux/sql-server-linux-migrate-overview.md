@@ -25,6 +25,7 @@ ms.custom: H1Hack27Feb2017
 
 ---
 # Migrate databases and structured data to SQL Server on Linux 
+
 You can migrate your databases and data to SQL Server vNext CTP 1.4 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
 
 ## Migrate from SQL Server on Windows

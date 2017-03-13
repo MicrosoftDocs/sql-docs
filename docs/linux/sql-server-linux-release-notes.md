@@ -43,7 +43,10 @@ The following release notes apply to SQL Server vNext running on Linux. This rel
 > SQL Server Engine has been tested up to 1 TB of memory at this time.
 
 ### Package details
-The SQL Server engine version for this release is 14.0.304.138-1. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).
+The SQL Server engine version for this release is 14.0.304.138-1. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the installation guides below
+-	[Install SQL Sever package](sql-server-linux-setup.md)
+-	[Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
+-	[Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
 
 | Package | Version | Downloads |
 |-----|-----|-----|
@@ -136,6 +139,16 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - The Korean word breaker takes several seconds to load and generates an error on first use. After this initial error, it should work normally.
 
+#### SQL Agent
+- The following components and subsystems of SQL Agent jobs are not currently supported on Linux:
+	-	Subsystems: CmdExec, PowerShell, Replication Distributor, Snapshot, Merge, Queue Reader, SSIS, SSAS, SSRS
+	-   Alerts
+    -   DB Mail
+    -   Log Shipping
+    -   Log Reader Agent 
+    -   Change Data Capture
+
+
 #### In-Memory OLTP
 - In-Memory OLTP databases can only be created in the /var/opt/mssql directory. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
@@ -146,10 +159,6 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - SqlPackage shows the location of files with a “C:\” prefix.
 
-#### Sqlcmd/BCP & ODBC 
-- SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql) depends on a custom unixODBC Driver Manager. This causes conflicts if you have a previously installed unixODBC Driver Manager. 
-
-    - **Resolution**: On Ubuntu, the conflict will be resolved automatically. When prompted if you would like to unisntall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC`. We are working on fixing this limitation for RHEL and SUSE and should have an update for you soon.  
     
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
@@ -159,8 +168,6 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 - Management Data Warehouse (MDW) and the data collector in SSMS is not supported. 
 
 - SSMS UI components that have Windows Authentication or Windows event log options do not work with Linux. You can still use these features with other options, such as SQL logins. 
-
-- The SQL Server Agent is not supported yet. Therefore, SQL Server Agent functionality in SSMS does not work on Linux at the moment.
 
 - The file browser is restricted to the  “C:\” scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\ paths with Linux paths. Then execute the script manually in SSMS.
 

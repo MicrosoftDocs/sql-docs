@@ -131,6 +131,11 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure.md#sync-commit).
 
+#### Always On Availability Group
+- Always On Availability Group clustered resources that were created with CTP 1.3 may fail after SQL Server instance upgrade. 
+
+   - **Resolution**: Set the cluster resource parameter `notify=true`.
+
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
 

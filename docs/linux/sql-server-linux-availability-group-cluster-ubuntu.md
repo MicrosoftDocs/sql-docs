@@ -136,7 +136,7 @@ The following script sets these properties.
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 \
---master meta master-max=1 master-node-max=1 clone-max=2 clone-node-max=1 
+--master meta master-max=1 master-node-max=1 clone-max=2 clone-node-max=1 notify=true
 ```
 
 ## Create virtual IP resource
@@ -197,3 +197,4 @@ sudo pcs resource move ag_cluster-master nodeName2 --master
 
 [!INCLUDE [Move-Resource](../includes/ss-linux-cluster-pacemaker-configure-rhel-ubuntu-move-resource.md)]
 
+[!INCLUDE [Manage-Sync-Commit](../includes/ss-linux-cluster-availability-group-manage-sync-commit.md)]

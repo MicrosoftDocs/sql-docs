@@ -151,9 +151,9 @@ The following Transact-SQL script creates a master key and certificate. It then 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**'
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm'
 BACKUP CERTIFICATE dbm_certificate
-   TO FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
+   TO FILE = '/var/opt/mssql/data/dbm_certificate.cer'
    WITH PRIVATE KEY (
-           FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
+           FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
            ENCRYPTION BY PASSWORD = '**<Private_Key_Password>**'
        )
 ```
@@ -185,9 +185,9 @@ The following Transact-SQL script creates a master key and certificate from the 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**' 
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
-    FROM FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
+    FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
     WITH PRIVATE KEY (
-    FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
+    FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
     DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
             )
 ```

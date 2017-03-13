@@ -179,7 +179,7 @@ crm configure
    op monitor interval="11" role="Slave"
 #ms ms-ag_cluster ag_cluster \
    meta master-max="1" master-node-max="1" clone-max="2" \
-   clone-node-max="1" notify=true
+   clone-node-max="1" notify="true"
 commit
 ```
 

@@ -329,7 +329,7 @@ In this situation, if SQL-A goes down, Pacemaker will promote one of the replica
 
 In a cluster with Windows Server Failover Clustering (WSFC) the known commit mode for each replica – as determined by the primary replica - is stored in global storage managed by WSFC. Each replica can query the shared state to determine if it is still synchronous. In the preceding scenario, if the WSFC tries to promote SQL-B, SQL-B will notice that SQL-A had marked it asynchronous, and fail the promote action.
 
-But in a Pacemaker-managed availability group this does not happen, and in sqlVNext CTP 1.3 there is a possibility that a lagging asynchronous secondary might be promoted to a primary, causing data loss.
+But in a Pacemaker-managed availability group this does not happen, and in sqlVNext CTP 1.4 there is a possibility that a lagging asynchronous secondary might be promoted to a primary, causing data loss.
 
 sqlVnext introduces a new feature to force a certain number of secondaries to be available before any transactions can be committed on the primary. You can use this feature to work around the above bug. `REQUIRED_COPIES_TO_COMMIT` allows you to set a number of replicas that must commit to secondary replica database transaction logs before a transaction can proceed. You can use this option with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. See [CREATE AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878399.aspx).
 

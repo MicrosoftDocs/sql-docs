@@ -27,7 +27,7 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 # Release notes for SQL Server vNext on Linux
 The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, CTP 1.4. See the information in the each section for supported platforms, tools, features, and known issues.
 
-## <a id="ctp13"> CTP 1.4 (March 2017) </a>
+## <a id="ctp14"> CTP 1.4 (March 2017) </a>
 
 ### Supported platforms 
 
@@ -159,8 +159,6 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 - Management Data Warehouse (MDW) and the data collector in SSMS is not supported. 
 
 - SSMS UI components that have Windows Authentication or Windows event log options do not work with Linux. You can still use these features with other options, such as SQL logins. 
-
-- The SQL Server Agent is not supported yet. Therefore, SQL Server Agent functionality in SSMS does not work on Linux at the moment.
 
 - The file browser is restricted to the  “C:\” scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\ paths with Linux paths. Then execute the script manually in SSMS.
 

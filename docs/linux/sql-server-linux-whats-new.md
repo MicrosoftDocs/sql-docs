@@ -36,8 +36,8 @@ The CTP 1.4 release contains the following improvements and fixes:
 - Fixed timezone bugs: 
     - Timezone support for Asia/Kolkata.
     - Fixed GETDATE() function.
-- Network Async I/0 Improvements
-- Docker image now includes SQL Server command-line utilities. (sqlcmd/bcp).
+- Network Async I/0 Improvements.
+- Docker image now includes SQL Server command-line utilities (sqlcmd/bcp).
 - Enabled Virtual Device Interface (VDI) support for backups.
 
 ## CTP 1.3

@@ -70,7 +70,7 @@ This chapter contains descriptions of each of the client functions. The descript
 - Return values
 - Remarks
 
-### ClientVirtualDeviceSet::Create
+## ClientVirtualDeviceSet::Create
 
 **Purpose** This function creates the virtual device set.
 
@@ -95,7 +95,7 @@ This chapter contains descriptions of each of the client functions. The descript
 
 **Remarks** The Create method should be called only once per BACKUP or RESTORE operation. After invoking the Close method, the client can reuse the interface to create another virtual device set.
 
-### ClientVirtualDeviceSet::GetConfiguration
+## ClientVirtualDeviceSet::GetConfiguration
 
 **Purpose**	This function is used to wait for the server to configure the virtual device set.
 **Syntax**
@@ -120,7 +120,7 @@ This chapter contains descriptions of each of the client functions. The descript
 **Remarks** This function blocks in an Alertable state. After successful invocation, the devices in the virtual device set may be opened.
 
 
-### ClientVirtualDeviceSet::OpenDevice
+## ClientVirtualDeviceSet::OpenDevice
 **Purpose** This function opens one of the devices in the virtual device set.
 **Syntax**
    ```
@@ -149,7 +149,7 @@ If more than one device is configured, for example *n* devices, the virtual devi
 The `GetConfiguration` function can be used to wait until the devices can be opened.
 If this function does not succeed, then a null value is returned through the ppVirtualDevice.
  
-### ClientVirtualDevice::GetCommand
+## ClientVirtualDevice::GetCommand
 
 **Purpose** This function is used to obtain the next command queued to a device. When requested, this function waits for the next command.
 
@@ -177,7 +177,7 @@ If this function does not succeed, then a null value is returned through the ppV
 **Remarks**	When VD_E_CLOSE is returned, SQL Server has closed the device. This is part of the normal shutdown. After all devices have been closed, the client invokes ClientVirtualDeviceSet::Close to close the virtual device set.
 When this routine must block to wait for a command, the thread is left in an Alertable condition.
 
-### ClientVirtualDevice::CompleteCommand
+## ClientVirtualDevice::CompleteCommand
 
 **Purpose**	This function is used to notify SQL Server that a command has finished. Completion information appropriate for the command should be returned. For more information, see “Commands” later in this document.
 
@@ -195,7 +195,7 @@ When this routine must block to wait for a command, the thread is left in an Ale
 | Parameters | Argument | Explanation
 | ----- | ----- | ------ |
 | |**pCmd** |This is the address of a command previously returned from ClientVirtualDevice::GetCommand.
-	completionCode	This is a status code that indicates the completion status. This parameter must be returned for all commands. The code returned should be appropriate to the command being performed. ERROR_SUCCESS is used in all cases to denote a successfully executed command. For the complete list of possible codes, see the file, vdierror.h. A list of typical status codes for each command appears in “Commands” later in this document.
+| |**completionCode** |This is a status code that indicates the completion status. This parameter must be returned for all commands. The code returned should be appropriate to the command being performed. ERROR_SUCCESS is used in all cases to denote a successfully executed command. For the complete list of possible codes, see the file, vdierror.h. A list of typical status codes for each command appears in “Commands” later in this document.
 | |**bytesTransferred** |This is the number of successfully transferred bytes. This is returned only for data transfer commands Read and Write.
 | |**position** |This is a response to the GetPosition   command only.
 		
@@ -208,7 +208,7 @@ When this routine must block to wait for a command, the thread is left in an Ale
 
 **Remarks** None
 
-### ClientVirtualDeviceSet::SignalAbort
+## ClientVirtualDeviceSet::SignalAbort
 
 **Purpose**	This function is used to signal that an abnormal termination should occur.
 
@@ -228,7 +228,7 @@ When this routine must block to wait for a command, the thread is left in an Ale
 
 **Remarks** At any time, the client may choose to abort the BACKUP or RESTORE operation. This routine signals that all operations should cease. The state of the overall virtual device set enters an Abnormally Terminated state. No further commands are returned on any devices. All uncompleted commands are automatically completed, returning ERROR_OPERATION_ABORTED as a completion code. The client should call ClientVirtualDeviceSet::Close after it has safely terminated any outstanding use of buffers provided to the client. For more information, see “Abnormal Termination” earlier in this document.
 
-### ClientVirtualDeviceSet::Close
+## ClientVirtualDeviceSet::Close
 
 **Purpose**	This function closes the virtual device set created by ClientVirtualDeviceSet::Create. It results in the release of all resources associated with the virtual device set.
 
@@ -253,7 +253,7 @@ The client is permitted to issue a Create call on the virtual device set interfa
 If Close is called when one or more virtual devices are still open, VD_E_OPEN is returned. In this case, SignalAbort is internally triggered, to ensure a proper shutdown if possible. VDI resources are released. The client should wait for a VD_E_CLOSE indication on each device before invoking ClientVirtualDeviceSet::Close. If the client knows that the virtual device set is already in an Abnormally Terminated state, then it should not expect a VD_E_CLOSE indication from GetCommand, and may invoke ClientVirtualDeviceSet::Close as soon as activity on the shared buffers is terminated.
 For more information, see “Abnormal Termination” earlier in this document.
 
-### ClientVirtualDeviceSet::OpenInSecondary
+## ClientVirtualDeviceSet::OpenInSecondary
 
 **Purpose**	This function opens the virtual device set in a secondary client. The primary client must have already used Create and GetConfiguration to set up the virtual device set.
 
@@ -276,7 +276,7 @@ For more information, see “Abnormal Termination” earlier in this document.
 
 **Remarks** When using a multiple process model, the primary client is responsible for detecting normal and abnormal termination of secondary clients.
 
-### ClientVirtualDeviceSet::GetBufferHandle
+## ClientVirtualDeviceSet::GetBufferHandle
 
 **Purpose**	Some applications may require more than one process to operate on the buffers returned by ClientVirtualDevice::GetCommand. In such cases, the process that receives the command can use GetBufferHandle to obtain a process independent handle that identifies the buffer. This handle can then be communicated to any other process that also has the same Virtual Device Set open. That process would then use ClientVirtualDeviceSet::MapBufferHandle to obtain the address of the buffer. The address will likely be a different address than in its partner because each process may be mapping buffers at different addresses.
 
@@ -300,7 +300,7 @@ For more information, see “Abnormal Termination” earlier in this document.
 | |**VD_E_INVALID** |The pBuffer is not a valid address.
 Remarks	The process that invokes the GetBufferHandle function is responsible for invoking ClientVirtualDevice::CompleteCommand when the data transfer is complete.
 
-### ClientVirtualDeviceSet::MapBufferHandle
+## ClientVirtualDeviceSet::MapBufferHandle
 
 **Purpose**	This function is used to obtain a valid buffer address from a buffer handle obtained from some other process. 
 

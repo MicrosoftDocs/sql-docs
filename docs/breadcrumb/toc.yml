@@ -1,6 +1,6 @@
 - name: Docs
-  href: /
-  homepage: /
+  href: /sql/
+  homepage: /sql/
   items:
   - name: SQL
     href: /sql/

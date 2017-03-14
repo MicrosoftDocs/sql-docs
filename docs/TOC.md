@@ -7,5 +7,5 @@
 ##  [ActiveX Data Objects](./ado/TOC.md)
 ##  [SQL Server Data Drivers](./connect/TOC.md)
 #  [Samples](./sample/TOC.md)
-#  [Release Notes](./release-notes/toc.md)
+#  [Release Notes](./release-notes/TOC.md)
 ##  [Help Viewer for SQL Server](./release-notes/sql-server-help-installation.md)

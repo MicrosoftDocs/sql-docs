@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/01/2017"
+ms.date: "03/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,7 +35,7 @@ SQL Server Management Studio (SSMS) is an integrated environment for accessing, 
 | ![download](../ssdt/media/download.png) Download SQL Server Management Studio (SSMS)  |  |
 |:---|:---|
 |**[Download SQL Server Management Studio (16.5.3)](https://go.microsoft.com/fwlink/?LinkID=840946)**|Current release for production use.|
-|**[Download SQL Server Management Studio - Release Candidate](../ssms/sql-server-management-studio-ssms-release-candidate.md)**|Includes support for SQL Server vNext CTP1, and works side-by-side with 16.x, but not recommended for production use.| 
+|**[Download SQL Server Management Studio - Release Candidate (17.0 RC3)](../ssms/sql-server-management-studio-ssms-release-candidate.md)**|Includes support for SQL Server vNext CTP1.3, and works side-by-side with 16.x, but not recommended for production use.| 
 
 
 > [!NOTE]

@@ -4,122 +4,182 @@
   items:
   - name: SQL
     href: /sql/
-    homepage: /sql
+    homepage: /sql/microsoft-sql-documentation-table-of-contents
     items:
     - name: ActiveX Data Objects
       href: /sql/ado/
-      homepage: /sql/ado
-    - name: SQL Data Drivers
-      href: /sql/connect/
-      homepage: /sql/connect
+      homepage: /sql/ado/
       items:
-      - name: Ado-Net
+      - name: ADO Guides
+        href: /sql/ado/guide/
+        homepage: /sql/ado/guide/
+        items:
+        - name: ADO Appendix
+          href: /sql/ado/guide/appendixes/
+          homepage: /sql/ado/guide/appendixes/
+        - name: ADO Data
+          href: /sql/ado/guide/data/
+          homepage: /sql/ado/guide/data/
+        - name: ADO Extensions
+          href: /sql/ado/guide/extensions/
+          homepage: /sql/ado/guide/extensions/
+        - name: ADO Multidimensional
+          href: /sql/ado/guide/multidimensional/
+          homepage: /sql/ado/guide/multidimensional/
+        - name: ADO Remote Data Service
+          href: /sql/ado/guide/remote-data-service/
+          homepage: /sql/ado/guide/remote-data-service/
+      - name: ADO Reference
+        href: /sql/ado/reference/
+        homepage: /sql/ado/reference/
+        items:
+        - name: ADO API
+          href: /sql/ado/reference/ado-api/
+          homepage: /sql/ado/reference/ado-api/
+        - name: ADO Multidimensional API
+          href: /sql/ado/reference/ado-md-api/
+          homepage: /sql/ado/reference/ado-md-api/
+        - name: ADOX API
+          href: /sql/ado/reference/adox-api/
+          homepage: /sql/ado/reference/adox-api/
+        - name: ADO Remote Database Services
+          href: /sql/ado/reference/rds-api/
+          homepage: /sql/ado/reference/rds-api/
+    - name: SQL Connection Drivers
+      href: /sql/connect/
+      homepage: /sql/connect/
+      items:
+      - name: ADO.NET
         href: /sql/connect/ado-net/
-        homepage: /sql/connect/ado-net
+        homepage: /sql/connect/ado-net/
       - name: JDBC
         href: /sql/connect/jdbc/
-        homepage: /sql/connect/jdbc
-      - name: Node-JS
+        homepage: /sql/connect/jdbc/
+        items:
+        - name: JDBC Code Samples
+          href: /sql/connect/jdbc/code-samples/
+          homepage: /sql/connect/jdbc/code-samples/
+        - name: JDBC Reference
+          href: /sql/connect/jdbc/reference/
+          homepage: /sql/connect/jdbc/reference/
+      - name: Node.JS
         href: /sql/connect/node-js/
-        homepage: /sql/connect/node-js
+        homepage: /sql/connect/node-js/
       - name: ODBC
         href: /sql/connect/odbc/
-        homepage: /sql/connect/odbc
+        homepage: /sql/connect/odbc/
+        items:
+        - name: ODBC Linux
+          href: /sql/connect/linux/
+          homepage: /sql/connect/linux/
+        - name: ODBC Mac
+          href: /sql/connect/mac/
+          homepage: /sql/connect/mac/
+        - name: ODBC Windows
+          href: /sql/connect/windows/
+          homepage: /sql/connect/windows/
+        - name: ODBC Reference and Details
+          href: /sql/odbc/
+          homepage: /sql/odbc/
+          items:
+          - name: ODBC Administration
+            href: /sql/odbc/admin/
+            homepage: /sql/odbc/admin/
+          - name: ODBC Microsoft
+            href: /sql/odbc/microsoft/
+            homepage: /sql/odbc/microsoft/
+          - name: Reference
+            href: /sql/odbc/reference/
+            homepage: /sql/odbc/reference/
+            items:
+            - name: Appendix
+              href: /sql/odbc/reference/appendixes/
+              homepage: /sql/odbc/reference/appendixes/
+            - name: Application Development
+              href: /sql/odbc/reference/develop-app/
+              homepage: /sql/odbc/reference/develop-app/
+            - name: Driver Development
+              href: /sql/odbc/reference/develop-driver/
+              homepage: /sql/odbc/reference/develop-driver/
+            - name: Install
+              href: /sql/odbc/reference/install/
+              homepage: /sql/odbc/reference/install/
+            - name: Syntax
+              href: /sql/odbc/reference/syntax/
+              homepage: /sql/odbc/reference/syntax/
       - name: PHP
         href: /sql/connect/php/
-        homepage: /sql/connect/php
+        homepage: /sql/connect/php/
       - name: Python
         href: /sql/connect/python/
-        homepage: /sql/connect/python
+        homepage: /sql/connect/python/
+        items:
+        - name: pymssql
+          href: /sql/connect/python/pymssql/
+          homepage: /sql/connect/python/pymssql/
+        - name: pyodbc
+          href: /sql/connect/python/pyodbc/
+          homepage: /sql/connect/python/pyodbc/
       - name: Ruby
         href: /sql/connect/ruby/
-        homepage: /sql/connect/ruby
+        homepage: /sql/connect/ruby/
     - name: SQL Server on Linux
       href: /sql/linux/
-      homepage: /sql/linux
-    - name: ODBC
-      href: /sql/odbc/
-      homepage: /sql/odbc
-      items:
-      - name: Administration
-        href: /sql/sample/admin
-        homepage: /sql/sample/reference
-      - name: Microsoft Drivers
-        href: /sql/sample/microsoft
-        homepage: /sql/sample/microsoft
-      - name: Reference
-        href: /sql/sample/admin
-        homepage: /sql/sample/reference
-        items:
-        - name: Appendix
-          href: /sql/sample/refernce/appendixes
-          homepage: /sql/sample/reference/appendixes
-        - name: Develop Applications
-          href: /sql/sample/reference/develop-app
-          homepage: /sql/sample/reference/develop-app
-        - name: Develop Drivers
-          href: /sql/sample/reference/develop-driver
-          homepage: /sql/sample/reference/develop-driver
-        - name: Installation
-          href: /sql/sample/reference/install
-          homepage: /sql/sample/reference/install
-        - name: Syntax
-          href: /sql/sample/reference/syntax
-          homepage: /sql/sample/reference/syntax
+      homepage: /sql/linux/
     - name: SQL Server Samples
       href: /sql/sample/
-      homepage: /sql/sample
+      homepage: /sql/sample/
       items:
       - name: World Wide Importers
-        href: /sql/sample/world-wide-importers
-        homepage: /sql/sample/world-wide-importers
+        href: /sql/sample/world-wide-importers/
+        homepage: /sql/sample/world-wide-importers/
     - name: SQL Server Data Tools
       href: /sql/ssdt/
-      homepage: /sql/ssdt
+      homepage: /sql/ssdt/
     - name: SQL Server Migration Assistant
       href: /sql/ssma/
-      homepage: /sql/ssma
+      homepage: /sql/ssma/
       items:
       - name: Access to SQL Server
-        href: /sql/ssma/access
-        homepage: /sql/ssma/access
+        href: /sql/ssma/access/
+        homepage: /sql/ssma/access/
       - name: DB2 to SQL Server
-        href: /sql/ssma/db2
-        homepage: /sql/ssma/db2
+        href: /sql/ssma/db2/
+        homepage: /sql/ssma/db2/
       - name: MySQL to SQL Server
-        href: /sql/ssma/mysql
-        homepage: /sql/ssma/access
+        href: /sql/ssma/mysql/
+        homepage: /sql/ssma/access/
       - name: Oracle to SQL Server
-        href: /sql/ssma/oracle
-        homepage: /sql/ssma/oracle
+        href: /sql/ssma/oracle/
+        homepage: /sql/ssma/oracle/
       - name: Sybase to SQL Server
-        href: /sql/ssma/sybase
-        homepage: /sql/ssma/sybase
+        href: /sql/ssma/sybase/
+        homepage: /sql/ssma/sybase/
     - name: SQL Server Management Studio
       href: /sql/ssms/
-      homepage: /sql/ssms
+      homepage: /sql/ssms/
       items:
       - name: SQL Server Agent
-        href: /sql/ssms/agent
-        homepage: /sql/ssms/agent
+        href: /sql/ssms/agent/
+        homepage: /sql/ssms/agent/
       - name: F1-Help
-        href: /sql/ssms/f1-help
-        homepage: /sql/ssms/f1-help
+        href: /sql/ssms/f1-help/
+        homepage: /sql/ssms/f1-help/
       - name: Menu Help
-        href: /sql/ssms/menu-help
-        homepage: /sql/ssms/menu-Help
+        href: /sql/ssms/menu-help/
+        homepage: /sql/ssms/menu-Help/
       - name: Object Explorer
-        href: /sql/ssms/object
-        homepage: /sql/ssms/object
+        href: /sql/ssms/object/
+        homepage: /sql/ssms/object/
       - name: Solution Explorer
-        href: /sql/ssms/solution
-        homepage: /sql/ssms/solution
+        href: /sql/ssms/solution/
+        homepage: /sql/ssms/solution/
       - name: Templates
-        href: /sql/ssms/template
-        homepage: /sql/ssms/template
+        href: /sql/ssms/template/
+        homepage: /sql/ssms/template/
       - name: Visual DB Tools
-        href: /sql/ssms/visual-db-tools
-        homepage: /sql/ssms/visual-db-tools
+        href: /sql/ssms/visual-db-tools/
+        homepage: /sql/ssms/visual-db-tools/
     - name: SQL Server Release Notes
       href: /sql/release-notes/
-      homepage: /sql/release-notes
+      homepage: /sql/release-notes/

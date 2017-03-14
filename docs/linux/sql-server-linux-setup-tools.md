@@ -6,7 +6,7 @@ description: This topic describes how to install the SQL Server Tools on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 2/06/2017
+ms.date: 3/15/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -37,6 +37,7 @@ Install the tools for your platform:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 - [macOS](#macos)
+- [Docker](#docker)
 
 ## <a id="RHEL"><a/>Install tools on RHEL
 
@@ -185,6 +186,10 @@ Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise 
 **Sqlcmd** and **bcp** are not available on macOS. 
 
 Use sql-cli from macOS. For more information, see [sql-cli](https://www.npmjs.com/package/sql-cli).  
+
+## <a id="docker"></a> Docker
+
+Starting with SQL Server vNext CTP 1.4, the SQL Server command-line tools are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
 
 ## Next steps
 

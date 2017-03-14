@@ -36,8 +36,8 @@ Install the tools for your platform:
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
-- [Docker](#docker)
 - [macOS](#macos)
+- [Docker](#docker)
 
 ## <a id="RHEL"><a/>Install tools on RHEL
 
@@ -180,15 +180,16 @@ Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise 
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-## <a id="docker"></a> Tools on Docker images
-
-Starting with SQL Server vNext CTP 1.4, the SQL Server command-line tools are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally. 
 
 ## <a id="macos"></a> Install tools on macOS
 
 **Sqlcmd** and **bcp** are not available on macOS. 
 
 Use sql-cli from macOS. For more information, see [sql-cli](https://www.npmjs.com/package/sql-cli).  
+
+## <a id="docker"></a> Docker
+
+Starting with SQL Server vNext CTP 1.4, the SQL Server command-line tools are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
 
 ## Next steps
 

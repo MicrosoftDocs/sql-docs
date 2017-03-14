@@ -258,8 +258,9 @@ For more information, see “Abnormal Termination” earlier in this document.
 **Purpose**	This function opens the virtual device set in a secondary client. The primary client must have already used Create and GetConfiguration to set up the virtual device set.
 
 **Syntax** 
-
-   ```int ClientVirtualDeviceSet::OpenInSecondary (
+   
+   ```
+   int ClientVirtualDeviceSet::OpenInSecondary (
    char *	setName			// name of the set
    );
    ```
@@ -282,7 +283,8 @@ For more information, see “Abnormal Termination” earlier in this document.
 
 **Syntax** 
 
-   ```int ClientVirtualDeviceSet::GetBufferHandle (
+   ```
+   int ClientVirtualDeviceSet::GetBufferHandle (
    uint8_t*		pBuffer,		// in: buffer address
    unsigned int*		pBufferHandle	// out: buffer handle
    );

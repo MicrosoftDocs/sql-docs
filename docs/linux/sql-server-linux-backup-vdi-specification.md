@@ -6,7 +6,7 @@ description: SQL Server Backup Virtual Device Interface Specification.
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 03/14/2016
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -33,7 +33,7 @@ This document covers the interfaces provided by the SQL Server on Linux virtual 
 - Windows types like HRESULT and DWORD are changed to integer equivalents.
 - The COM interfaces are removed and replaced with a pair of C++ Classes.
 - SQL Server on Linux does not support named instances so references to instance name have been removed. 
-
+- The shared library is implemented in libsqlvdi.so installed at /opt/mssql/lib/libsqlvdi.so
 This document is an addendum to vbackup.chm that details the Windows VDI Specification. Download the [Windows VDI Specification](http://www.microsoft.com/download/details.aspx?id=17282).
 
 ## User Permissions Setup

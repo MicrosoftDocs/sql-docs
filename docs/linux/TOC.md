@@ -32,6 +32,7 @@
 ## [Load data with (SSIS)](sql-server-linux-migrate-ssis.md)
 # [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ## [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
+### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)
 ## [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-configure.md)
 ### [Red Hat Enterprise Linux]()
 #### [Configure (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)

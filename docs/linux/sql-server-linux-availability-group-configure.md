@@ -156,9 +156,9 @@ The following Transact-SQL script creates a master key and certificate. It then 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
-   TO FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
+   TO FILE = '/var/opt/mssql/data/dbm_certificate.cer'
    WITH PRIVATE KEY (
-           FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
+           FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
            ENCRYPTION BY PASSWORD = '**<Private_Key_Password>**'
        );
 ```
@@ -190,9 +190,9 @@ The following Transact-SQL script creates a master key and certificate from the 
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
-    FROM FILE = 'C:\var\opt\mssql\data\dbm_certificate.cer'
+    FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
     WITH PRIVATE KEY (
-    FILE = 'C:\var\opt\mssql\data\dbm_certificate.pvk',
+    FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
     DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
             );
 ```
@@ -289,7 +289,6 @@ SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.d
 
 ## Notes
 
-
 **The availability group is not a clustered resource at this point.** 
 
    If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. While this is a valid configuration in read-scale/load balancing scenarios, it is not valid for HADR. To achieve HADR, you need to add the availability group as a cluster resource. See [Next steps](#next-steps) for instructions. 
@@ -315,39 +314,6 @@ SELECT DB_NAME(database_id) AS 'database', synchronization_state_desc FROM sys.d
 
 >[!IMPORTANT]
 >If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
-
-<a name="sync-commit"></a>
-## Managing synchronous commit mode
-
->[!WARNING]
->In some cases, a SQL Server availability group in synchronous commit mode on Linux may be vulnerable to data loss. See the following details.
-
-In SQL Server availability groups, applications write to the databases in the primary replica. When any secondary replicas are in synchronous commit mode, writes on the primary replica databases wait until the writes are committed to the synchronous secondary replica database transaction logs before committing on the primary. 
-
-If a synchronous replica becomes unresponsive, the SQL Server instance that hosts the primary replica can automatically change that replica to asynchronous to prevent infinite wait times.
-
-After a SQL Server service has automatically changed a replica from synchronous to asynchronous commit mode, it is possible for the resource agent to promote the asynchronous replica to a primary replica. In this case the availability group resource agent will fail the promote action when it detects that the local replica is asynchronous.
-
-For example, an availability group has a primary replica on SQL-A. The group has secondary replicas on SQL-B, SQL-C, and SQL-D in synchronous commit mode with automatic failover. If SQL-B quits responding to write request because of a network outage, SQL-A can change the replica commit mode on SQL-B to asynchronous. This allows transactions to continue on the other replicas. The replica on SQL-B is not aware that it is now asynchronous. It does not communicate any problems to Pacemaker via the resource monitor action.
-
-In this situation, if SQL-A goes down, Pacemaker will promote one of the replicas to primary. If it attempts to promote SQL-B it will succeed. In this case data loss is possible.
-
-In a cluster with Windows Server Failover Clustering (WSFC) the known commit mode for each replica – as determined by the primary replica - is stored in global storage managed by WSFC. Each replica can query the shared state to determine if it is still synchronous. In the preceding scenario, if the WSFC tries to promote SQL-B, SQL-B will notice that SQL-A had marked it asynchronous, and fail the promote action.
-
-But in a Pacemaker-managed availability group this does not happen, and in sqlVNext CTP 1.4 there is a possibility that a lagging asynchronous secondary might be promoted to a primary, causing data loss.
-
-sqlVnext introduces a new feature to force a certain number of secondaries to be available before any transactions can be committed on the primary. You can use this feature to work around the above bug. `REQUIRED_COPIES_TO_COMMIT` allows you to set a number of replicas that must commit to secondary replica database transaction logs before a transaction can proceed. You can use this option with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. See [CREATE AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878399.aspx).
-
-When `REQUIRED_COPIES_TO_COMMIT` is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of synchronous secondary replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.
-
-The following example sets an availability group name [ag1] to `REQUIRED_COPIES_TO_COMMIT = 2`.
-
-```Transact-SQL
-ALTER AVAILABILITY GROUP [ag1]
-SET (REQUIRED_COPIES_TO_COMMIT = 2);
-```
-
-In the example above, if the availability group has three secondary replicas, it will wait until two of the secondary replicas acknowledge commits. If the availability group has two replicas and one becomes unresponsive, transactions will be blocked.
 
 ## Next steps
 

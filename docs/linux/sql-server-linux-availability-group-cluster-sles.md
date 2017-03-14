@@ -179,7 +179,7 @@ crm configure
    op monitor interval="11" role="Slave"
 #ms ms-ag_cluster ag_cluster \
    meta master-max="1" master-node-max="1" clone-max="2" \
-   clone-node-max="1"
+   clone-node-max="1" notify="true"
 commit
 ```
 
@@ -272,6 +272,10 @@ For additional details see:
 - [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 
 
+<a name="sync-commit"></a>
+[!INCLUDE [Manage-Sync-Commit](../includes/ss-linux-cluster-availability-group-manage-sync-commit.md)]
+
+
 ## Removing Nodes From An Existing Cluster
 If you have a cluster running (with at least two nodes), you can remove single nodes from the cluster with the `sleha-remove` bootstrap script. You need to know the IP address or host name of the node you want to remove from the cluster. Follow the steps below:
 
@@ -307,3 +311,5 @@ To remove the High Availability Extension software from a machine that you no lo
 ## Next steps
 
 [Create SQL Server Availability Group](sql-server-linux-availability-group-configure.md)
+
+

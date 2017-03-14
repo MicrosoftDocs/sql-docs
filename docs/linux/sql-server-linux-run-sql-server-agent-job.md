@@ -116,38 +116,36 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 
 1. **Create a new database - Sample DB**
 
-//insert screenshot
+2. **Verify that SQL Agent was installed and configured correctly. Look for the plus sign in the box.**
 
-2. **Verify that SQL Agent was isntalled and configured correctly. Look for the plus sign in the box**
-
-  ![alt text](/docs/linux/media/sql-server-linux-develop-use-sql-agent/ssms-agent-1.png)
+    ![Verify SQL Server Agent was installed](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-1.png)
 
 
-3. **Create a new Job**
+3. **Create a new job.**
 
-  ![alt text](/docs/linux/media/sql-server-linux-develop-use-sql-agent/ssms-agent-2.png)
-
-
-4. **Give your Job a name and create your Job Step**
-
-  ![alt text](/docs/linux/media/sql-server-linux-develop-use-sql-agent/ssms-agent-3.png)
+    ![Create a new job](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-2.png)
 
 
-5.  **Specify what subsystem you would like to use and what the Job Step should do**
+4. **Give your Job a name and create your Job Step.**
 
-  ![alt text](/docs/linux/media/sql-server-linux-develop-use-sql-agent/ssms-agent-4.png)
+    ![Create a job step](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-3.png)
 
-  ![alt text](/docs/linux/media/sql-server-linux-develop-use-sql-agent/ssms-agent-5.png)
 
-6. **Create a new Job Schedule**
+5. **Specify what subsystem you would like to use and what the Job Step should do.**
 
-  ![alt text](/docs/linux/media/sql-server-linux-develop-use-sql-agent/ssms-agent-6.png)
+    ![Job subsystem](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-4.png)
+
+    ![Job step action](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-5.png)
+
+6. **Create a new Job Schedule.**
+
+    ![Job schedule](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-6.png)
   
-  ![alt text](/docs/linux/media/sql-server-linux-develop-use-sql-agent/ssms-agent-8.png)
+    ![Job schedule](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-8.png)
 
-7. **Start your Job**
+7. **Start your Job.**
 
-  ![alt text](/docs/linux/media/sql-server-linux-develop-use-sql-agent/ssms-agent-9.png)
+    ![Start the SQL Server Agent job](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png)
 
 ## Next Steps
 

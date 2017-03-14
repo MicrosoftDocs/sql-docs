@@ -114,7 +114,7 @@ The following steps provide an example of how to create a SQL Server Agent job o
 
 You can also create and manage jobs remotely using SQL Server Management Studio (SSMS) on Windows.
 
-1. Start SSMS on Windows and connect to your Linux SQL Server instance. For more information, see [Manage SQL Server on Linux with SSMS](sql-server-linux-develop-use-ssms.md).
+1. **Start SSMS on Windows and connect to your Linux SQL Server instance.** For more information, see [Manage SQL Server on Linux with SSMS](sql-server-linux-develop-use-ssms.md).
 
 1. **Create a new database named SampleDB**.
 

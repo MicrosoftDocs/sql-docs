@@ -197,4 +197,5 @@ sudo pcs resource move ag_cluster-master nodeName2 --master
 
 [!INCLUDE [Move-Resource](../includes/ss-linux-cluster-pacemaker-configure-rhel-ubuntu-move-resource.md)]
 
+<a name="sync-commit"></a>
 [!INCLUDE [Manage-Sync-Commit](../includes/ss-linux-cluster-availability-group-manage-sync-commit.md)]

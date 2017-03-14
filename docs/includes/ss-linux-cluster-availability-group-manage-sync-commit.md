@@ -1,5 +1,4 @@
 ## Managing synchronous commit mode
-<a name="sync-commit"></a>
 
 >[!WARNING]
 >In some cases, a SQL Server availability group in synchronous commit mode on Linux may be vulnerable to data loss. See the following details.

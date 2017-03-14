@@ -1,9 +1,9 @@
 # [SQL Server on Linux](./linux/TOC.md)
-# [Developer Tools]
+# Developer Tools
 ## [SQL Server Management Studio (SSMS)](./ssms/TOC.md)
 ## [SQL Server Data Tools (SSDT)](./ssdt/TOC.md)
 ## [SQL Server Migration Assistant (SSMA)](./ssma/TOC.md)
-# [Drivers]
+# Drivers
 ## [ActiveX Data Objects](./ado/TOC.md)
 ## [SQL Server Data Drivers](./connect/TOC.md)
 # [Samples](./sample/TOC.md)

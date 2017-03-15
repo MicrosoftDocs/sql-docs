@@ -26,7 +26,7 @@ ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ---
 # SQL Server on Linux VDI client SDK Specification
 
-This document covers the interfaces provided by the SQL Server on Linux virtual device interface (VDI) client SDK. In general, VDI on Linux behaves similarly to VDI on Windows with the following changes:
+This document covers the interfaces provided by the SQL Server on Linux virtual device interface (VDI) client SDK. Independent software vendors (ISVs) can use the Virtual Backup Device Application Programming Interface (API) to integrate SQL Server into their products. In general, VDI on Linux behaves similarly to VDI on Windows with the following changes:
 
 - Windows Shared Memory becomes POSIX shared memory.
 - Windows Semaphores become POSIX semaphores.
@@ -34,7 +34,10 @@ This document covers the interfaces provided by the SQL Server on Linux virtual 
 - The COM interfaces are removed and replaced with a pair of C++ Classes.
 - SQL Server on Linux does not support named instances so references to instance name have been removed. 
 - The shared library is implemented in libsqlvdi.so installed at /opt/mssql/lib/libsqlvdi.so
-This document is an addendum to vbackup.chm that details the Windows VDI Specification. Download the [Windows VDI Specification](http://www.microsoft.com/download/details.aspx?id=17282).
+
+This document is an addendum to **vbackup.chm** that details the Windows VDI Specification. Download the [Windows VDI Specification](http://www.microsoft.com/download/details.aspx?id=17282).
+
+Also review the sample VDI backup solution on the [SQL Server Samples GitHub repository](http://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 
 ## User Permissions Setup
 

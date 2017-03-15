@@ -163,9 +163,6 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
->[!NOTE]
->For this release, do not use Linux-style paths like `/var/opt/mssql/data/dbm_certificate.cer` for the certificates.
-
 At this point your primary SQL Server replica has a certificate at `/var/opt/mssql/data/dbm_certificate.cer` and a private key at `var/opt/mssql/data/dbm_certificate.pvk`. Copy these two files to the same location on all servers that will host availability replicas. Use the mssql user or give permission to mssql user to access these files. 
 
 For example on the source server, the following command copies the  files to the target machine. Replace the **<node2>** values with the names of the SQL Server instances that will host the replicas. 

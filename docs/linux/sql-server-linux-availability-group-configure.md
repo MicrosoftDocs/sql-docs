@@ -198,13 +198,17 @@ CREATE CERTIFICATE dbm_certificate
 
 Database mirroring endpoints use Transmission Control Protocol (TCP) to send and receive messages between the server instances participating database mirroring sessions or hosting availability replicas. The database mirroring endpoint listens on a unique TCP port number. 
 
-The following Transact-SQL creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint, and gives connect permission to the user that you created. Before you run the script, replace the values between `**< ... >**`. Update the IP address and listener port values for your environment. Use an available IP address from the same network as the servers hosting SQL Server instance. Use an available TCP port. 
+The following Transact-SQL creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint, and gives connect permission to the user that you created. Before you run the script, replace the values between `**< ... >**`.
+
+
+>[!NOTE]
+>For this release, do not use a different IP address for the listener IP. We are working on a fix for this issue, but the only acceptable value for now is '0.0.0.0'.
 
 Update the following Transact-SQL for your environment  on all SQL Server instances: 
 
 ```Transact-SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (**<0.0.0.0>**), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
 	    ROLE = ALL,
 	    AUTHENTICATION = CERTIFICATE dbm_certificate,

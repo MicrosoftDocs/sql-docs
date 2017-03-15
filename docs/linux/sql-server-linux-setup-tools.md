@@ -205,9 +205,10 @@ If your Linux machine does not have access to the online repositories used in th
 | Ubuntu 16.04 Debian tools package | 14.0.4.0-1 | [mssql-tools Debian package](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.4.0-1_amd64.deb) |
 | Ubuntu 16.10 Debian tools package | 14.0.304.138-1 | [mssql-tools Debian package](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.4.0-1_amd64.deb) |
 
-These packages depend on **msodbcsql** which must be installed first. This package requires either **unixODBC-devel** (RPM) or **unixodbc-dev** (Debian) to have been previously installed. The location of the **msodbcsql** packages are listed in the following table.
+These packages depend on **msodbcsql** which must be installed first. The **msodbcsql** pacakage also has a dependency on either **unixODBC-devel** (RPM) or **unixodbc-dev** (Debian). The location of the **msodbcsql** packages are listed in the following table.
 
 | msodbcsql package | Version | Download |
+|-----|-----|-----|
 | Red Hat RPM msodbcsql package | 13.1.4.0-1 | [msodbcsql RPM package](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.4.0-1.x86_64.rpm) | 
 | SLES RPM msodbcsql package | 13.1.4.0-1 | [msodbcsql RPM package](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.4.0-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian msodbcsql package | 13.1.4.0-1 | [msodbcsql Debian package](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.4.0-1_amd64.deb) |

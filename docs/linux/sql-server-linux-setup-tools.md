@@ -200,10 +200,10 @@ If your Linux machine does not have access to the online repositories used in th
 
 | Tools package | Version | Download |
 |-----|-----|-----|
-| Red Hat RPM tools package | 14.0.304.138-1 | [mssql-tools RPM package](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.4.0-1.x86_64.rpm) | 
+| Red Hat RPM tools package | 14.0.4.0-1 | [mssql-tools RPM package](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.4.0-1.x86_64.rpm) | 
 | SLES RPM tools package | 14.0.4.0-1 | [mssql-tools RPM package](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.4.0-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian tools package | 14.0.4.0-1 | [mssql-tools Debian package](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.4.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian tools package | 14.0.304.138-1 | [mssql-tools Debian package](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.4.0-1_amd64.deb) |
+| Ubuntu 16.10 Debian tools package | 14.0.4.0-1 | [mssql-tools Debian package](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.4.0-1_amd64.deb) |
 
 These packages depend on **msodbcsql** which must be installed first. The **msodbcsql** pacakage also has a dependency on either **unixODBC-devel** (RPM) or **unixodbc-dev** (Debian). The location of the **msodbcsql** packages are listed in the following table.
 

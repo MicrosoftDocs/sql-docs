@@ -111,11 +111,15 @@ On Linux servers configure the availability group and then configure the cluster
 
    d. To configure `SBD ()`, enter a persistent path to the partition of your block device that you want to use for SBD. The path must be consistent across all nodes in the cluster. 
    Finally, the script will start the Pacemaker service to bring the one-node cluster online and enable the Web management interface Hawk2. The URL to use for Hawk2 is displayed on the screen. 
+
 4. For any details of the setup process, check `/var/log/sleha-bootstrap.log`. You now have a running one-node cluster. Check the cluster status with crm status:
 
    ```bash
    crm status
    ```
+
+   You can also see cluster configuration with `crm configure show xml`  or `crm configure show`.
+
 5. The bootstrap procedure creates a Linux user named hacluster with the password linux. Replace the default password with a secure one as soon as possible: 
 
    ```bash
@@ -170,30 +174,38 @@ Refer to [SLES Administration Guid](https://www.suse.com/documentation/sle-ha-12
 
 The following command creates and configures the availability group resource for 2 replicas of availability group [ag1]. Run the command on one of the nodes in the cluster:
 
-```bash
-crm configure
-#primitive ag_cluster \
-   ocf:mssql:ag \
-   params ag_name="ag1" \
-   op monitor interval="10" role="Master" \
-   op monitor interval="11" role="Slave"
-#ms ms-ag_cluster ag_cluster \
-   meta master-max="1" master-node-max="1" clone-max="2" \
-   clone-node-max="1"
-commit
-```
+1. Run `crm configure` to open the crm prompt:
+
+   ```bash
+   crm configure 
+   ```
+
+1. In the crm prompt, run the command below to configure the resource properties.
+
+   ```bash
+   primitive ag_cluster \
+      ocf:mssql:ag \
+      params ag_name="ag1" \
+      op monitor interval="10" role="Master" \
+      op monitor interval="11" role="Slave" 
+   ms ms-ag_cluster ag_cluster \
+      meta master-max="1" master-node-max="1" clone-max="2" \
+      clone-node-max="1" notify="true"
+   commit
+   ```
 
 ### Create virtual IP resource
 
-If you did not create the virtual IP resource when you ran `ha-cluster-init` you can create this resource now. The following command creates a virtual IP resource. Run on one node.
+If you did not create the virtual IP resource when you ran `ha-cluster-init` you can create this resource now. The following command creates a virtual IP resource. Replace `<**0.0.0.0**>` with an available address from your network and `<**24**>` with the number of bits in the CIDR subnet mask. Run on one node.
 
 ```bash
-crm configure
-# primitive admin_addr \
+crm configure \
+primitive admin_addr \
    ocf:heartbeat:IPaddr2 \
-   params ip=<10.9.9.180> \
-      cidr_netmask=<24> \
+   params ip=<**0.0.0.0**> \
+      cidr_netmask=<**24**> \
    op monitor interval="12s"
+
 ```
 
 ### Add colocation constraint
@@ -218,10 +230,8 @@ To prevent the IP address from temporarily pointing to the node with the pre-fai
 To add an ordering constraint, run the following command on one node: 
 
 ```bash
-crm configure
+crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
-commit
-For more information, see Show Cluster Resources.
 ```
 
 ## Manual failover
@@ -272,6 +282,10 @@ For additional details see:
 - [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 
 
+<a name="sync-commit"></a>
+[!INCLUDE [Manage-Sync-Commit](../includes/ss-linux-cluster-availability-group-manage-sync-commit.md)]
+
+
 ## Removing Nodes From An Existing Cluster
 If you have a cluster running (with at least two nodes), you can remove single nodes from the cluster with the `sleha-remove` bootstrap script. You need to know the IP address or host name of the node you want to remove from the cluster. Follow the steps below:
 
@@ -307,3 +321,5 @@ To remove the High Availability Extension software from a machine that you no lo
 ## Next steps
 
 [Create SQL Server Availability Group](sql-server-linux-availability-group-configure.md)
+
+

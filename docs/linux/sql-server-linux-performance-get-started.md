@@ -99,7 +99,7 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
    GO  
-   ALTER DATABASE AdventureWorks ADD FILE (NAME='AdventureWorks_mod', FILENAME='c:\var\opt\mssql\data\AdventureWorks_mod') TO FILEGROUP AdventureWorks_mod
+   ALTER DATABASE AdventureWorks ADD FILE (NAME='AdventureWorks_mod', FILENAME='/var/opt/mssql/data/AdventureWorks_mod') TO FILEGROUP AdventureWorks_mod
    GO
    ```
 

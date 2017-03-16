@@ -6,7 +6,7 @@ description: Download and run the Docker image for SQL Server vNext.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 02/27/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -88,6 +88,11 @@ Upgrading the Docker image will require just pulling the latest version from the
 ```
 
 You can now create new containers that will have the latest version of SQL Server in Linux on Docker.
+
+## SQL Server command-line tools
+Starting with SQL Server vNext CTP 1.4, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally. 
+
+Alternatively, you can connect to the SQL Server instance on your Docker machine from any external Windows or Linux tool that supports SQL connections, such as SQL Server Management Studio (SSMS) on Windows.
 
 ## Next steps
 

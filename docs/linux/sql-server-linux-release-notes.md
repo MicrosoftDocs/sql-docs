@@ -133,9 +133,15 @@ The following sections describe known issues with this release of SQL Server vNe
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### Always On Availability Group
-- Always On Availability Group clustered resources that were created with CTP 1.3 may fail after SQL Server instance upgrade. 
+- Always On Availability Group clustered resources on Linux that were created with CTP 1.3 will fail after you upgrade HA package (mssql-server-ha). 
 
-   - **Resolution**: Set the cluster resource parameter `notify=true`.
+   - **Resolution**: Before you upgrade the HA package, set the cluster resource parameter `notify=true`. 
+   
+      - The following example sets the cluster resource parameter on a resource named **ag1** on RHEL or Ubuntu: 
+
+      ```bash
+      sudo pcs resource update ag1-master notify=true
+      ```
 
 - Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See details as appropriate for your Linux distribution. 
 

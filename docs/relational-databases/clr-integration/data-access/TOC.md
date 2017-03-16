@@ -1,0 +1,5 @@
+# [Context Connections vs. Regular Connections](context-connections-vs-regular-connections.md)
+# [Data Access from CLR Database Objects](data-access-from-clr-database-objects.md)
+# [Context Connection](context-connection.md)
+# [Impersonation and Credentials for Connections](impersonation-and-credentials-for-connections.md)
+# [Context Connections and Regular Connections - Restrictions](context-connections-and-regular-connections-restrictions.md)

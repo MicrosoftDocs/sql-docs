@@ -1,0 +1,5 @@
+# [ProtocolCapabilities Element (XMLA)](protocolcapabilities-element-xmla.md)
+# [EndSession Element (XMLA)](endsession-element-xmla.md)
+# [Session Element (XMLA)](session-element-xmla.md)
+# [BeginSession Element (XMLA)](beginsession-element-xmla.md)
+# [XML Elements - Headers](xml-elements-headers.md)

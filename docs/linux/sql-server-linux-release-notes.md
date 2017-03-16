@@ -143,6 +143,14 @@ The following sections describe known issues with this release of SQL Server vNe
       sudo pcs resource update ag1-master notify=true
       ```
 
+      - For SLES, update availability group resource configuration to add `notify=true`.  
+
+      ```bash
+      crm configure edit ms-ag_cluster 
+      ```
+
+      Add `notify=true` and save the resource configuration.
+
 - Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See details as appropriate for your Linux distribution. 
 
    - [RHEL](sql-server-linux-availability-group-cluster-rhel.md#sync-commit)

@@ -68,22 +68,6 @@ The following sections walk through the steps to set up a failover cluster solut
    sudo passwd hacluster
    ```
 
-## Disable STONITH
-
-Run the following command to disable STONITH.
-
-```bash
-sudo pcs property set stonith-enabled=false
-```
-
->[!IMPORTANT]
->This is not supported by the clustering vendors in a production setup. For details, see [Pacemaker Clustersf from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and
-[Red Hat High Availability Add-On with Pacemaker: Fencing](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html).
-
-## Create a SQL Server login for Pacemaker
-
-[!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
-
 ## Enable and start pcsd service and Pacemaker
 
 The following command enables and starts pcsd service and pacemaker. This allows the nodes to rejoin the cluster after reboot. 
@@ -93,6 +77,8 @@ sudo systemctl enable pcsd
 sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
+>[!NOTE]
+>Enable pacemaker command will complete with the error 'pacemaker Default-Start contains no runlevels, aborting.' This is harmless, cluster configuration can continue. We are following up with cluster vendors for fixing this issue.
 
 ## Create the Cluster
 
@@ -124,6 +110,22 @@ Run the following commands on all nodes.
 ```bash
 sudo apt-get install mssql-server-ha
 ```
+
+## Disable STONITH
+
+Run the following command to disable STONITH.
+
+```bash
+sudo pcs property set stonith-enabled=false
+```
+
+>[!IMPORTANT]
+>This is not supported by the clustering vendors in a production setup. For details, see [Pacemaker Clustersf from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and
+[Red Hat High Availability Add-On with Pacemaker: Fencing](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html).
+
+## Create a SQL Server login for Pacemaker
+
+[!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## Create availability group resource
 

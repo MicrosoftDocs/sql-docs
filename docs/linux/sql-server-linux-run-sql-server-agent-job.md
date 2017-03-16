@@ -45,7 +45,7 @@ The following steps provide an example of how to create a SQL Server Agent job o
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
-     -- called 'Daily AdventureWorks Backup'  
+     -- called 'Daily SampleDB Backup'  
      CREATE DATABASE SampleDB
      USE msdb ;  
      GO  

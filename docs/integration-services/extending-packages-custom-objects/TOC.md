@@ -1,0 +1,5 @@
+# [Support multi-targeting in your custom components](support-multi-targeting-in-your-custom-components.md)
+# [Developing Custom Objects for Integration Services](developing-custom-objects-for-integration-services.md)
+# [Building, Deploying, and Debugging Custom Objects](building-deploying-and-debugging-custom-objects.md)
+# [Persisting Custom Objects](persisting-custom-objects.md)
+# [Extending Packages with Custom Objects](extending-packages-with-custom-objects.md)

@@ -1,0 +1,8 @@
+# [Coding and Debugging the Script Component](coding-and-debugging-the-script-component.md)
+# [Raising Events in the Script Component](raising-events-in-the-script-component.md)
+# [Connecting to Data Sources in the Script Component](connecting-to-data-sources-in-the-script-component.md)
+# [Using Variables in the Script Component](using-variables-in-the-script-component.md)
+# [Configuring the Script Component in the Script Component Editor](configuring-the-script-component-in-the-script-component-editor.md)
+# [Understanding the Script Component Object Model](understanding-the-script-component-object-model.md)
+# [Logging in the Script Component](logging-in-the-script-component.md)
+# [Extending the Data Flow with the Script Component](extending-the-data-flow-with-the-script-component.md)

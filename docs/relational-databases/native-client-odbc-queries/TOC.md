@@ -1,0 +1,7 @@
+# [Executing Queries (ODBC)](executing-queries-odbc.md)
+# [Using Statement Parameters - Binding Parameters](using-statement-parameters-binding-parameters.md)
+# [Allocating a Statement Handle](allocating-a-statement-handle.md)
+# [Freeing a Statement Handle](freeing-a-statement-handle.md)
+# [Using Statement Parameters](using-statement-parameters.md)
+# [Constructing SQL Statements for Cursors](constructing-sql-statements-for-cursors.md)
+# [Constructing an SQL Statement (ODBC)](constructing-an-sql-statement-odbc.md)

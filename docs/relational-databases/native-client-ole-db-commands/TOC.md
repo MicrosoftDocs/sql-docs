@@ -1,0 +1,6 @@
+# [Commands](commands.md)
+# [Command Syntax](command-syntax.md)
+# [Using IMultipleResults to Process Multiple Result Sets](using-imultipleresults-to-process-multiple-result-sets.md)
+# [Commands Generating Multiple-Rowset Results](commands-generating-multiple-rowset-results.md)
+# [Preparing Commands](preparing-commands.md)
+# [Command Parameters](command-parameters.md)

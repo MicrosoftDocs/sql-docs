@@ -1,0 +1,7 @@
+# [Persisted Data Source Objects](persisted-data-source-objects.md)
+# [Data Source Objects (OLE DB)](data-source-objects-ole-db.md)
+# [Initialization and Authorization Properties](initialization-and-authorization-properties.md)
+# [Data Source Information Properties](data-source-information-properties.md)
+# [Data Source Properties (OLE DB)](data-source-properties-ole-db.md)
+# [Sessions](sessions.md)
+# [Session Properties - SQL Server Native Client OLE DB provider](session-properties-sql-server-native-client-ole-db-provider.md)

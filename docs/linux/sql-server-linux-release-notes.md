@@ -143,12 +143,6 @@ The following sections describe known issues with this release of SQL Server vNe
       sudo pcs resource update ag1-master notify=true
       ```
 
-      - The following example sets the cluster resource parameter on a resource named **ag1** on SLES: 
-
-      ```bash
-      <>
-      ```
-
 - Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See details as appropriate for your Linux distribution. 
 
    - [RHEL](sql-server-linux-availability-group-cluster-rhel.md#sync-commit)

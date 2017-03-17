@@ -254,16 +254,16 @@ crm resource migrate ms-ag_cluster sles1
 During a manual move, the `migrate` command adds a location constraint for the resource to be placed on the new target node. To see the new constraint, run the following command after manually moving the resource:
 
 ```bash
-crm resource show
+crm config show
 ```
 
 To remove the constraint run the following command. In the following command `ms-ag_cluster` is the name of the resource that was moved. Replace this name with the name of your resource:
 
 ```bash
-crm resource clean ms-ag_cluster
+crm resource clear ms-ag_cluster
 ```
 
-Alternatively, you can run the following command to remove the location constraint. In the following command `cli-prefer-ms-ag_cluster` is the ID of the constraint. `crm resource showl` returns this ID. 
+Alternatively, you can run the following command to remove the location constraint. In the following command `cli-prefer-ms-ag_cluster` is the ID of the constraint. `crm config show` returns this ID. 
 
 ```bash
 crm configure

@@ -1,7 +1,0 @@
-# [Overview](collation-and-unicode-support.md)  
-# [Set or Change the Server Collation](set-or-change-the-server-collation.md)  
-# [Set or Change the Database Collation](set-or-change-the-database-collation.md)  
-# [Set or Change the Column Collation](set-or-change-the-column-collation.md)  
-# [View Collation Information](view-collation-information.md)  
-# [Write International Transact-SQL Statements](write-international-transact-sql-statements.md)  
-# [Set a Session Language](set-a-session-language.md)  

@@ -1,8 +1,0 @@
-# [Data processing (Go to)](../../reporting-services/extensions/data-processing/index.md?toc=%2fsql%2freporting-services%2fextensions%2fdata-processing%2ftoc.json)
-# [Delivery extension (Go to)](../../reporting-services/extensions/delivery-extension/index.md?toc=%2fsql%2freporting-services%2fextensions%2fdelivery-extension%2ftoc.json)
-# [Rendering extension (Go to)](../../reporting-services/extensions/rendering-extension/index.md?toc=%2fsql%2freporting-services%2fextensions%2frendering-extension%2ftoc.json)
-# [Security extension (Go to)](../../reporting-services/extensions/security-extension/index.md?toc=%2fsql%2freporting-services%2fextensions%2fsecurity-extension%2ftoc.json)
-# [Secure development (Go to)](../../reporting-services/extensions/secure-development/index.md?toc=%2fsql%2freporting-services%2fextensions%2fsecure-development%2ftoc.json)
-# [Reporting Services Extension Library](reporting-services-extension-library.md)
-# [Reporting Services Extensions](reporting-services-extensions.md)
-# [Security Considerations for Extensions](security-considerations-for-extensions.md)

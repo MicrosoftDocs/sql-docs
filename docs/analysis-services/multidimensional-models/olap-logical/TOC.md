@@ -1,7 +1,0 @@
-# [Multidimensional models olap logical dimension objects (Go to)](../analysis-services/multidimensional-models-olap-logical-dimension-objects/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models-olap-logical-dimension-objects%2ftoc.json)
-# [Multidimensional models olap logical cube objects (Go to)](../analysis-services/multidimensional-models-olap-logical-cube-objects/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models-olap-logical-cube-objects%2ftoc.json)
-# [Database Objects (Analysis Services - Multidimensional Data)](database-objects-analysis-services-multidimensional-data.md)
-# [Logical Architecture Overview (Analysis Services - Multidimensional Data)](logical-architecture-overview-analysis-services-multidimensional-data.md)
-# [Security Roles  (Analysis Services - Multidimensional Data)](security-roles-analysis-services-multidimensional-data.md)
-# [Server Objects (Analysis Services - Multidimensional Data)](server-objects-analysis-services-multidimensional-data.md)
-# [Understanding Microsoft OLAP Logical Architecture](understanding-microsoft-olap-logical-architecture.md)

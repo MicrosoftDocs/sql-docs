@@ -6,7 +6,7 @@ description: This tutorial shows how to run SQL Server Agent job on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/15/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -118,7 +118,7 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 
 1. **Create a new database named SampleDB**.
 
-    ![Create a SampleDB database](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png)
+   <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 
 2. **Verify that SQL Agent was installed and configured correctly.** Look for the plus sign next to SQL Server Agent in the Object Explorer. If SQL Server Agent is not installed, see [Install SQL Server Agent on Linux](sql-server-linux-setup-sql-agent.md).
 
@@ -149,7 +149,7 @@ You can also create and manage jobs remotely using SQL Server Management Studio 
 
 7. **Start your job.**
 
-    ![Start the SQL Server Agent job](./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png)
+   <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job" style="width: 550px;"/>
 
 ## Next Steps
 

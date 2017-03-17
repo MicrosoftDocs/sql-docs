@@ -1,5 +1,0 @@
-USE master;
-GO
-ALTER DATABASE AdventureWorks2012
-REMOVE FILE test1dat4;
-GO

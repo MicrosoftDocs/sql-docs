@@ -1,1 +1,0 @@
- Parallel Data Warehouse 

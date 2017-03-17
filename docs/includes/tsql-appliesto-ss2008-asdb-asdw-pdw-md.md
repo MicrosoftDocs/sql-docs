@@ -1,2 +1,0 @@
-<Token>**THIS TOPIC APPLIES TO:**![yes](/Image/Applies%20to/yes.png)SQL Server (starting with 2008)![yes](/Image/Applies%20to/yes.png)Azure SQL Database![yes](/Image/Applies%20to/yes.png)Azure SQL Data Warehouse ![yes](/Image/Applies%20to/yes.png)Parallel Data Warehouse
- </Token>

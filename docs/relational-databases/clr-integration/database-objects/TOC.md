@@ -1,0 +1,8 @@
+# [Clr integration database objects types net framework (Go to)](../relational-databases/clr-integration-database-objects-types-net-framework/index.md?toc=%2fsql%2frelational-databases%2fclr-integration-database-objects-types-net-framework%2ftoc.json)
+# [Clr integration database objects user defined functions (Go to)](../relational-databases/clr-integration-database-objects-user-defined-functions/index.md?toc=%2fsql%2frelational-databases%2fclr-integration-database-objects-user-defined-functions%2ftoc.json)
+# [Clr integration database objects user defined types (Go to)](../relational-databases/clr-integration-database-objects-user-defined-types/index.md?toc=%2fsql%2frelational-databases%2fclr-integration-database-objects-user-defined-types%2ftoc.json)
+# [Building Database Objects with Common Language Runtime (CLR) Integration](building-database-objects-with-common-language-runtime-clr-integration.md)
+# [CLR Integration Custom Attributes for CLR Routines](clr-integration-custom-attributes-for-clr-routines.md)
+# [CLR Integration Programming Model Restrictions](clr-integration-programming-model-restrictions.md)
+# [Getting Started with CLR Integration](getting-started-with-clr-integration.md)
+# [Supported .NET Framework Libraries](supported-net-framework-libraries.md)

@@ -1,0 +1,5 @@
+# [Methods (Go to)](../../reporting-services/report-server-web-service/methods/index.md?toc=%2fsql%2freporting-services%2freport-server-web-service%2fmethods%2ftoc.json)
+# [Net framework (Go to)](../../reporting-services/report-server-web-service/net-framework/index.md?toc=%2fsql%2freporting-services%2freport-server-web-service%2fnet-framework%2ftoc.json)
+# [Accessing the SOAP API](accessing-the-soap-api.md)
+# [Report Server Web Service](report-server-web-service.md)
+# [The Role of SOAP in Reporting Services](the-role-of-soap-in-reporting-services.md)

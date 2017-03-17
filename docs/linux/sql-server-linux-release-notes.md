@@ -43,7 +43,7 @@ The following release notes apply to SQL Server vNext running on Linux. This rel
 > SQL Server Engine has been tested up to 1 TB of memory at this time.
 
 ### Package details
-The SQL Server engine version for this release is 14.0.405.200-1. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the installation guides below
+The SQL Server engine version for this release is 14.0.405.198. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the installation guides below
 -	[Install SQL Sever package](sql-server-linux-setup.md)
 -	[Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 -	[Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)

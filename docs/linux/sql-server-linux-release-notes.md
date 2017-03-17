@@ -78,8 +78,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
-| **High Availability**
-| &nbsp; | Database mirroring  |
+| **High Availability** | Database mirroring  |
 | **Security** | Active Directory Authentication |
 | &nbsp; | Windows Authentication |
 | &nbsp; | Extensible Key Management |
@@ -124,8 +123,6 @@ The following sections describe known issues with this release of SQL Server vNe
 - **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now. 
 
 #### Databases
-- Changing the locations of TempDB data and log files is not supported.
-
 - System databases can not be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
@@ -171,7 +168,6 @@ The following sections describe known issues with this release of SQL Server vNe
     -   Log Shipping
     -   Log Reader Agent 
     -   Change Data Capture
-
 
 #### In-Memory OLTP
 - In-Memory OLTP databases can only be created in the /var/opt/mssql directory. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
@@ -252,8 +248,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
-| **High Availability**
-| &nbsp; | Database mirroring  |
+| **High Availability** | Database mirroring  |
 | **Security** | Active Directory Authentication |
 | &nbsp; | Windows Authentication |
 | &nbsp; | Extensible Key Management |

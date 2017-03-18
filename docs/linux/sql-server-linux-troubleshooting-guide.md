@@ -6,7 +6,7 @@ description: Provides troubleshooting tips for using SQL Server vNext on Linux.
 author: annashres 
 ms.author: anshrest 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

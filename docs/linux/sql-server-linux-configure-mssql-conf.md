@@ -6,7 +6,7 @@ description: This topic describes how to use the mssql-conf tool to  configure S
 author: luisbosquez 
 ms.author: lbosq 
 manager: jhubbard
-ms.date: 02/27/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

@@ -6,7 +6,7 @@ description: Implement high availability by configuring SUSE Linux Enterprise Se
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 02/01/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-linux 
 ms.technology: database-engine

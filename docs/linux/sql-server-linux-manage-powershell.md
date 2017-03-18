@@ -6,7 +6,7 @@ description: This topic provides an overview of using PowerShell on Windows with
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 01/10/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

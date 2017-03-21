@@ -1,7 +1,7 @@
 ---
 title: "Thread and Task Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-26"
+ms.date: "10/26/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -125,4 +125,5 @@ The following table lists SQL Server components and indicates whether they can u
 |SQL Server Agent	|Sqlagent.exe	|No |  
 |SQL Server Management Studio	|Ssms.exe	|No |  
 |SQL Server Setup	|Setup.exe	|No |  
+
 

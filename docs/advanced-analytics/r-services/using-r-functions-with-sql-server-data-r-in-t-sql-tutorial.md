@@ -1,7 +1,7 @@
 ---
 title: "Using R Functions with SQL Server Data (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-10"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -107,4 +107,5 @@ Next, you'll build a predictive model using R in SQL Server.
 
     
     
+
 

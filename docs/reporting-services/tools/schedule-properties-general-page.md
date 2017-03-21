@@ -1,7 +1,7 @@
 ---
 title: "Schedule Properties (General Page) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-11"
+ms.date: "06/11/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -69,3 +69,4 @@ manager: "erikre"
  [Schedules](../../reporting-services/subscriptions/schedules.md)  
   
   
+

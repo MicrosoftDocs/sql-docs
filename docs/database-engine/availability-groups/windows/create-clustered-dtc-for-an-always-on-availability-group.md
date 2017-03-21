@@ -1,7 +1,7 @@
 ---
 title: "Create Clustered DTC for an Always On Availability Group | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-30"
+ms.date: "08/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

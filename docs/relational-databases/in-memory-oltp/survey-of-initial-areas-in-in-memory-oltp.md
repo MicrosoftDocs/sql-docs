@@ -1,7 +1,7 @@
 ---
 title: "Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-02"
+ms.date: "12/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -612,3 +612,4 @@ GeneMi , 2016-05-07  00:07am
   
   
   
+

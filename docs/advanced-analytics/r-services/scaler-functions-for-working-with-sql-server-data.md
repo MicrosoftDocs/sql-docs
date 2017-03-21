@@ -1,7 +1,7 @@
 ---
 title: "ScaleR Functions for Working with SQL Server Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-27"
+ms.date: "01/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,3 +65,4 @@ For more information about these ScaleR functions, which can be used to transfer
 
 ## See Also
 [Comparison of Base R and ScaleR Functions](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
+

@@ -1,7 +1,7 @@
 ---
 title: "DROP LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-11-16"
+ms.date: "11/16/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -80,4 +80,5 @@ DROP LOGIN login7;
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
+
 

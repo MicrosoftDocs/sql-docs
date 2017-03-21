@@ -1,7 +1,7 @@
 ---
 title: "sys.column_store_segments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-30"
+ms.date: "12/30/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -80,3 +80,4 @@ GO
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   
   
+

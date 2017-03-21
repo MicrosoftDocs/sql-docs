@@ -2,7 +2,7 @@
 title: "Discontinued Database Engine Functionality in SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-02-02"
+ms.date: "02/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

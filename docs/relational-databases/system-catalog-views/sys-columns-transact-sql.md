@@ -2,7 +2,7 @@
 title: "sys.columns (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-09-08"
+ms.date: "09/08/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "DENY XML Schema Collection Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-11-25"
+ms.date: "11/25/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

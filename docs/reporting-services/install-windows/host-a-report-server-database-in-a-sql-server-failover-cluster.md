@@ -1,7 +1,7 @@
 ---
 title: "Host a Report Server Database in a SQL Server Failover Cluster | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-30"
+ms.date: "03/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

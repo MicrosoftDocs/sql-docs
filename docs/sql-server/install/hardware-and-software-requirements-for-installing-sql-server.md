@@ -2,7 +2,7 @@
 title: "Hardware and Software Requirements for Installing SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-01-18"
+ms.date: "01/18/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

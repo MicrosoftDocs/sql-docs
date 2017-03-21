@@ -2,7 +2,7 @@
 title: "Always Encrypted (Database Engine) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-01-13"
+ms.date: "01/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

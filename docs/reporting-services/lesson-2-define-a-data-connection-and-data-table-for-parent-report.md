@@ -1,7 +1,7 @@
 ---
 title: "Lesson 2: Define a Data Connection and Data Table for Parent Report | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-18"
+ms.date: "05/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -74,3 +74,4 @@ After you create a new website project using the ASP.NET website template for Vi
 ## Next Task  
 You have successfully created a data connection and a data table for the parent report. Next, you will design the parent report using the Report Wizard. See [Lesson 3: Design the Parent Report using the Report Wizard](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md).  
   
+

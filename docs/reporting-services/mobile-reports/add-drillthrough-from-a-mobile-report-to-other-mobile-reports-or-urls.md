@@ -1,7 +1,7 @@
 ---
 title: "Add drillthrough from a mobile report to other mobile reports or URLs | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -81,3 +81,4 @@ Hidden items are displayed in a lighter color..
 * [Add parameters to a Reporting Services mobile report](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
 * [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
+

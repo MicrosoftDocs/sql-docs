@@ -1,7 +1,7 @@
 ---
 title: "Stored Procedures (Integration Services Catalog) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -163,4 +163,5 @@ Enable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssISn
 
 [catalog.disable_worker_agent &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)   
 Disable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.
+
 

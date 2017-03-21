@@ -1,7 +1,7 @@
 ---
 title: "Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-10"
+ms.date: "10/10/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -104,3 +104,4 @@ manager: "jhubbard"
 ## See Also
 
 [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)  
+

@@ -1,6 +1,6 @@
 ---
 title: "DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs"
-ms.date: "2016-07-11"
+ms.date: "07/11/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

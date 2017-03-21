@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Map Report (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-31"
+ms.date: "08/31/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -549,3 +549,4 @@ For more information, see [Maps &#40;Report Builder and SSRS&#41;](../reporting-
 [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
 [Vary Polygon, Line, and Point Display by Rules and Analytical Data &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
+

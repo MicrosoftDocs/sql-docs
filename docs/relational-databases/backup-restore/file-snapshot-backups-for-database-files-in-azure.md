@@ -3,7 +3,7 @@ title: "File-Snapshot Backups for Database Files in Azure | Microsoft Docs"
 ms.custom: 
   - "IAAS"
   - "SQL2016_New_Updated"
-ms.date: "2016-05-23"
+ms.date: "05/23/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

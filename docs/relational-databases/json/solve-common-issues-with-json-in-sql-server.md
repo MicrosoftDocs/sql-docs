@@ -2,7 +2,7 @@
 title: "Solve common issues with JSON in SQL Server | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-07-07"
+ms.date: "07/07/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

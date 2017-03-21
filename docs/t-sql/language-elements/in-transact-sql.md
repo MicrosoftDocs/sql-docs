@@ -1,7 +1,7 @@
 ---
 title: "IN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-29"
+ms.date: "08/29/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -215,5 +215,6 @@ WHERE FirstName IN ('Mike', 'Michael');
  [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
   
   
+
 
 

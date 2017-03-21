@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-23"
+ms.date: "09/23/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -268,3 +268,4 @@ GO
 -   [ALTER DATABASE &#40;Azure SQL Database&#41;](https://msdn.microsoft.com/library/mt574871.aspx)  
   
   
+

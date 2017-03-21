@@ -1,7 +1,7 @@
 ---
 title: "Working with shared datasets (web portal) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-21"
+ms.date: "03/21/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -118,3 +118,4 @@ You can then **Edit** or **Delete** plans that are listed. The **New From Existi
   
   
   
+

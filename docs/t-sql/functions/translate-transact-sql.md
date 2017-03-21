@@ -1,7 +1,7 @@
 ---
 title: "TRANSLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -88,3 +88,4 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)   
+

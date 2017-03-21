@@ -1,7 +1,7 @@
 ---
 title: "GETUTCDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-12-02"
+ms.date: "12/02/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -194,4 +194,5 @@ GETUTCDATE()             01:25:01.6930000
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
+
 

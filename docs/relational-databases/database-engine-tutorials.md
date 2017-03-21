@@ -1,7 +1,7 @@
 ---
 title: "Database Engine Tutorials | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-02"
+ms.date: "08/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -54,3 +54,4 @@ This tutorial helps you understand how to store SQL Server data files in the Win
   
   
   
+

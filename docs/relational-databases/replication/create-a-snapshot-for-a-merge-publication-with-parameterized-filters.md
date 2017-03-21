@@ -1,7 +1,7 @@
 ---
 title: "Create a Snapshot for a Merge Publication with Parameterized Filters | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-03"
+ms.date: "05/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

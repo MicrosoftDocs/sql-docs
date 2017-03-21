@@ -1,7 +1,7 @@
 ---
 title: "WSFC Quorum Modes and Voting Configuration (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-03"
+ms.date: "10/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

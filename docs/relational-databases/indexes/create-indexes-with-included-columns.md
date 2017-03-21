@@ -1,7 +1,7 @@
 ---
 title: "Create Indexes with Included Columns | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-09"
+ms.date: "03/09/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

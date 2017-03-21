@@ -1,7 +1,7 @@
 ---
 title: "Lesson 2: View and Explore the Data (Data Science End-to-End Walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-17"
+ms.date: "03/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -75,3 +75,4 @@ First, take a minute to ascertain that your data was loaded correctly.
   
   
   
+

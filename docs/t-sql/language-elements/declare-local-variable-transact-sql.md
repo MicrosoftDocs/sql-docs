@@ -1,7 +1,7 @@
 ---
 title: "DECLARE @local_variable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-20"
+ms.date: "10/20/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -320,6 +320,7 @@ WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;
  [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)  
   
   
+
 
 
 

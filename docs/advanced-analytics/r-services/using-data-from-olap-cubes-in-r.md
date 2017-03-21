@@ -1,7 +1,7 @@
 ---
 title: "Using Data from OLAP Cubes in R | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -85,4 +85,5 @@ You can also download an existing cube as a backup, and restore it to an instanc
 [How to Create MDX Queries using R](../../advanced-analytics/r-services/how-to-create-mdx-queries-using-olapr.md)
 
 [MDX Query Designer for Analysis Services](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)
+
 

@@ -1,7 +1,7 @@
 ---
 title: "Create a Data-Driven Subscription (SSRS Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-26"
+ms.date: "05/26/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -78,3 +78,4 @@ Your computer must have the following installed to use this tutorial:
 [Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
+

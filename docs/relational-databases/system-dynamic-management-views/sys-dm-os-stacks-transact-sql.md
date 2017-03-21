@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_stacks (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-13"
+ms.date: "03/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

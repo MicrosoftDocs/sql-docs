@@ -1,7 +1,7 @@
 ---
 title: "EKM provider enabled Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-02"
+ms.date: "03/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,3 +44,4 @@ sp_configure 'EKM provider enabled', 0
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)  
   
   
+

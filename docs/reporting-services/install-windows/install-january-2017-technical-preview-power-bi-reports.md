@@ -1,7 +1,7 @@
 ---
 title: "Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-23"
+ms.date: "01/23/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -138,4 +138,5 @@ You will need to open up the TCP port that you have configured for your Web Serv
  [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+
 

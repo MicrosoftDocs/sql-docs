@@ -1,7 +1,7 @@
 ---
 title: "System Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-02"
+ms.date: "11/02/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

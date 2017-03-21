@@ -1,7 +1,7 @@
 ---
 title: "Import JSON documents into SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-16"
+ms.date: "03/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -162,3 +162,4 @@ Now you can return this table to the user, or load the data into another table.
   
 ## See Also
 [Convert JSON Data to Rows and Columns with OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)
+

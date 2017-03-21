@@ -1,7 +1,7 @@
 ---
 title: "Use a Format File to Map Table Columns to Data-File Fields (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-19"
+ms.date: "09/19/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

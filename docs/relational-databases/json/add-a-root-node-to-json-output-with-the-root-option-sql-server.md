@@ -2,7 +2,7 @@
 title: "Add a Root Node to JSON Output with the ROOT Option (SQL Server) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-06-02"
+ms.date: "06/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

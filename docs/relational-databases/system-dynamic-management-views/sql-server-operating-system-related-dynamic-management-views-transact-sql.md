@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Operating System Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,3 +58,4 @@ manager: "jhubbard"
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
+

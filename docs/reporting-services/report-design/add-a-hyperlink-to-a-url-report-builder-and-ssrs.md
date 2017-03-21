@@ -1,7 +1,7 @@
 ---
 title: "Add a Hyperlink to a URL (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-07"
+ms.date: "09/07/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

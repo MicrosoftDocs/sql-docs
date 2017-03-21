@@ -1,7 +1,7 @@
 ---
 title: "Configure File System Permissions for Database Engine Access | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-06"
+ms.date: "06/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Load Data into Memory using rxImport (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-03"
+ms.date: "10/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,3 +87,4 @@ By specifying additional operations in the *transforms* parameter, you can do el
   
   
   
+

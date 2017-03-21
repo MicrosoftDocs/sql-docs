@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Introducing Expressions | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-16"
+ms.date: "09/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -667,3 +667,4 @@ Now your report readers can view your report in the [!INCLUDE[ssRSnoversion_md](
   
   
   
+

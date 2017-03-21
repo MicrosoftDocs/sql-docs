@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_linux_proc_meminfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-10"
+ms.date: "02/10/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -105,3 +105,4 @@ FROM sys.dm_linux_proc_meminfo;
 ## See Also  
 
 [Linux Process Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md)   
+

@@ -3,7 +3,7 @@ title: "Performance Center for SQL Server Database Engine and Azure SQL Database
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-04-08"
+ms.date: "04/08/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

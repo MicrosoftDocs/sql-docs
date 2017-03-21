@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_memory_clerks (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-13"
+ms.date: "03/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -71,4 +71,5 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   
   
+
 

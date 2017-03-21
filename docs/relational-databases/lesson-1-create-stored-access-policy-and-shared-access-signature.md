@@ -2,7 +2,7 @@
 title: "Lesson 1: Create a stored access policy and a shared access signature  on an Azure container | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-06-02"
+ms.date: "06/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -147,3 +147,4 @@ To create a policy on container and generate a Shared Access Signature (SAS) key
   
   
   
+

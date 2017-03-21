@@ -1,7 +1,7 @@
 ---
 title: "Tabular Modeling (Adventure Works Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-06"
+ms.date: "05/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -101,3 +101,4 @@ To begin the tutorial, continue to the first lesson: [Lesson 1: Create a New Tab
   
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: "Upgrade and Migrate Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-18"
+ms.date: "08/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Complete the Wizard (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-16"
+ms.date: "03/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,3 +38,4 @@ Review the summary and verify the following information:
  
 ## See also
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+

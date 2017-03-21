@@ -1,7 +1,7 @@
 ---
 title: "CREATE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-18"
+ms.date: "07/18/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -102,4 +102,5 @@ GO
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
+
 

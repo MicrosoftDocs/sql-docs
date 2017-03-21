@@ -1,6 +1,6 @@
 ---
 title: "Configure a Report Server for Remote Administration | Microsoft Docs"
-ms.date: "2015-09-14"
+ms.date: "09/14/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

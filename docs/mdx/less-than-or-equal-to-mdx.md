@@ -1,7 +1,7 @@
 ---
 title: "&lt;= (Less Than or Equal To) (MDX) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-02"
+ms.date: "03/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

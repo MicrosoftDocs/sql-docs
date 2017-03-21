@@ -2,7 +2,7 @@
 title: "CREATE USER (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-10-10"
+ms.date: "10/10/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -507,4 +507,5 @@ You might also want to [GRANT Object Permissions](../../t-sql/statements/grant-o
  [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
   
+
 

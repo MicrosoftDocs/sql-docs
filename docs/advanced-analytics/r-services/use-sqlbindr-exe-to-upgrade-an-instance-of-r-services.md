@@ -1,7 +1,7 @@
 ---
 title: "Use sqlBindR.exe to Upgrade an Instance of R Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-14"
+ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -124,3 +124,4 @@ The tool returns the following error messages:
 ## See Also
 
 [R Server Release Notes](https://msdn.microsoft.com/microsoft-r/notes/r-server-notes)
+

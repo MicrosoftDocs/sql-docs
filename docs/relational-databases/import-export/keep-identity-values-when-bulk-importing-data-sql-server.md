@@ -1,7 +1,7 @@
 ---
 title: "Keep Identity Values When Bulk Importing Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-21"
+ms.date: "09/21/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

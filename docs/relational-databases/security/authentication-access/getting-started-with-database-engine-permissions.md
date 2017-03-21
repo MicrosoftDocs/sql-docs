@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Database Engine Permissions | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-03"
+ms.date: "01/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

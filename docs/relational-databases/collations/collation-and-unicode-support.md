@@ -1,7 +1,7 @@
 ---
 title: "Collation and Unicode Support | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -232,3 +232,4 @@ These collations are supported in Database Engine indexes, memory-optimized tabl
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
+

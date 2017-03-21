@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Format Text (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-15"
+ms.date: "06/15/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -362,3 +362,4 @@ There are many ways to format text in Report Builder. [Tutorial: Creating a Free
 -   [Formatting Report Items &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 -   [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+

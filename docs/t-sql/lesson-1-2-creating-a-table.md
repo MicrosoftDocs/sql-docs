@@ -1,7 +1,7 @@
 ---
 title: "Creating a Table (Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-18"
+ms.date: "04/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -78,3 +78,4 @@ For a list of data types and links for a description of each, see [Data Types &#
   
   
   
+

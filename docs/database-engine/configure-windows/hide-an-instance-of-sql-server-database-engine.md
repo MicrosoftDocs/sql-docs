@@ -1,7 +1,7 @@
 ---
 title: "Hide an Instance of SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-08-19"
+ms.date: "08/19/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

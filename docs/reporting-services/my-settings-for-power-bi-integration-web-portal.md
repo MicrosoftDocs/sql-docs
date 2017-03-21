@@ -1,6 +1,6 @@
 ---
 title: "My Settings for Power BI Integration (web portal) | Microsoft Docs"
-ms.date: "2016-05-18"
+ms.date: "05/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,3 +41,4 @@ Once you sign in, a new security token will be created.  Your dashboard tiles wi
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+

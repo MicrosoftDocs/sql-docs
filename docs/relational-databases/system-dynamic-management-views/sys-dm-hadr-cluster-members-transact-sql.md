@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-23"
+ms.date: "01/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

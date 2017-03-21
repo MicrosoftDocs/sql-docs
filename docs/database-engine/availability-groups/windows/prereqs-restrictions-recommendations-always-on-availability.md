@@ -1,7 +1,7 @@
 ---
 title: "Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-30"
+ms.date: "06/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -398,3 +398,4 @@ manager: "jhubbard"
     
   
 --------------------------------------------------  
+

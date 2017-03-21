@@ -2,7 +2,7 @@
 title: "FROM (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-03-16"
+ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -873,4 +873,5 @@ ON dp.ProductKey = fis.ProductKey;
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
+
 

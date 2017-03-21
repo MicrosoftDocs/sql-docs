@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services Developer Documentation | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-14"
+ms.date: "09/14/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

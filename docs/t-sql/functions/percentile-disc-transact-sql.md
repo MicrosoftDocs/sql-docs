@@ -1,7 +1,7 @@
 ---
 title: "PERCENTILE_DISC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-10-20"
+ms.date: "10/20/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -130,4 +130,5 @@ FROM dbo.DimEmployee;
  [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
   
   
+
 

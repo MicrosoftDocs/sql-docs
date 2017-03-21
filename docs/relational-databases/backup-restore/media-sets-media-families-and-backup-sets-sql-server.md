@@ -1,7 +1,7 @@
 ---
 title: "Media Sets, Media Families, and Backup Sets (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-18"
+ms.date: "07/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

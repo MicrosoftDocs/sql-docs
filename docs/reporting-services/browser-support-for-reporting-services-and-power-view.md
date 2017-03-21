@@ -2,7 +2,7 @@
 title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-09-14"
+ms.date: "09/14/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -147,3 +147,4 @@ The following is the current list of browsers supported for the [!INCLUDE[ssRSWe
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+

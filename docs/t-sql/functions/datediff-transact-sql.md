@@ -1,7 +1,7 @@
 ---
 title: "DATEDIFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-12-02"
+ms.date: "12/02/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -321,4 +321,5 @@ FROM dbo.DimEmployee
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
+
 

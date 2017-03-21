@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-30"
+ms.date: "03/30/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -77,5 +77,6 @@ manager: "jhubbard"
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
+
 
 

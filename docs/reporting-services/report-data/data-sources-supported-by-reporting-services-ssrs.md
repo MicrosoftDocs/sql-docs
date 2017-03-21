@@ -1,7 +1,7 @@
 ---
 title: "Data Sources Supported by Reporting Services (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-17"
+ms.date: "03/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-28"
+ms.date: "07/28/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -110,3 +110,4 @@ WHERE modification_counter > 1000;
  [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  
  [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
+

@@ -1,7 +1,7 @@
 ---
 title: "Lesson 9: Build and Run the Application | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-18"
+ms.date: "05/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,3 +38,4 @@ After you create a data filter for the data table, your next step is to build an
   
   
   
+

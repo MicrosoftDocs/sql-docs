@@ -3,7 +3,7 @@ title: "Firewall Rules Stored Procedures (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-07-28"
+ms.date: "07/28/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -39,4 +39,5 @@ manager: "jhubbard"
   
 For [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], use Window firewall rules. For more information, see [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   
   
+
 

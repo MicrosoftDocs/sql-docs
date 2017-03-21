@@ -1,7 +1,7 @@
 ---
 title: "sys.database_credentials (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-27"
+ms.date: "02/27/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

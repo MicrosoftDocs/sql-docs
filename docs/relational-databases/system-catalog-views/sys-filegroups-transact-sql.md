@@ -1,7 +1,7 @@
 ---
 title: "sys.filegroups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-24"
+ms.date: "05/24/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

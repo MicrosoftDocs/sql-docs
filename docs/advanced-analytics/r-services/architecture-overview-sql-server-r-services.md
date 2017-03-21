@@ -1,7 +1,7 @@
 ---
 title: "Architecture Overview (SQL Server R Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-31"
+ms.date: "05/31/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,3 +44,4 @@ To help you optimize existing R code and take advantage of these improvements, t
 
 ## See Also
 [R Services Tutorials](../../advanced-analytics/r-services/sql-server-r-services-tutorials.md)
+

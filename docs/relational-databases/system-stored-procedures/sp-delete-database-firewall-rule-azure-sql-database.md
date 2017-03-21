@@ -3,7 +3,7 @@ title: "sp_delete_database_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-07-28"
+ms.date: "07/28/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -65,4 +65,5 @@ EXECUTE sp_delete_database_firewall_rule N'Example DB Setting 1';
  [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   
+
 

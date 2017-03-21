@@ -1,7 +1,7 @@
 ---
 title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-09-09"
+ms.date: "09/09/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

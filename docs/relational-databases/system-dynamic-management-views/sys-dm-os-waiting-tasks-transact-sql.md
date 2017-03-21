@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-13"
+ms.date: "03/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -146,4 +146,5 @@ WHERE blocking_session_id IS NOT NULL;
   [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
+
 

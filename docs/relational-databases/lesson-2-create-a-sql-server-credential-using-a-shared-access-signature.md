@@ -2,7 +2,7 @@
 title: "Lesson 2: Create a SQL Server credential using a shared access signature | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-02-25"
+ms.date: "02/25/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -67,3 +67,4 @@ To create a SQL Server credential, follow these steps:
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
+

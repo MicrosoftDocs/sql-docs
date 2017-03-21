@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted using SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-30"
+ms.date: "11/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -469,6 +469,7 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 - [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
 - [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "sp_addlinkedserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-12"
+ms.date: "09/12/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

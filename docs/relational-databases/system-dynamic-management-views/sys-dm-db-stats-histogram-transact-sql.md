@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-14"
+ms.date: "03/14/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""

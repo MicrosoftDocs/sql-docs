@@ -1,7 +1,7 @@
 ---
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-11-16"
+ms.date: "11/16/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -396,4 +396,5 @@ ALTER LOGIN Mary5 WITH NAME = John2;
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   
+
 

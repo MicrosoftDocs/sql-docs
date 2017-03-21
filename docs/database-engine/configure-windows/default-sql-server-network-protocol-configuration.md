@@ -1,7 +1,7 @@
 ---
 title: "Default SQL Server Network Protocol Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-27"
+ms.date: "07/27/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -69,4 +69,5 @@ The [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service
 [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)  
+
 

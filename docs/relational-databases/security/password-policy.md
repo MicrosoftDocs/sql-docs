@@ -2,7 +2,7 @@
 title: "Password Policy | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-09-25"
+ms.date: "09/25/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

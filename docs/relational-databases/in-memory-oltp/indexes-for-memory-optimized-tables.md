@@ -3,7 +3,7 @@ title: "Indexes for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-10-24"
+ms.date: "10/24/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -247,3 +247,4 @@ GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child artic
   
   
   
+

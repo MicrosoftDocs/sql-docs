@@ -1,7 +1,7 @@
 ---
 title: "Deploy Packages with SSIS | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-16"
+ms.date: "11/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -80,3 +80,4 @@ In this lesson, you will build a deployment utility and verify that the deployme
 [Lesson 3: Install SSIS Packages](../integration-services/lesson-3-install-ssis-packages.md)    
 In this lesson, you will copy the deployment bundle to the target computer, install the packages, and then run the packages.    
     
+

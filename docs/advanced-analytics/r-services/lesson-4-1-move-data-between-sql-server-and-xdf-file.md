@@ -1,7 +1,7 @@
 ---
 title: "Move Data between SQL Server and XDF File (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-03"
+ms.date: "10/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -125,3 +125,4 @@ In the next and final lesson, you'll create a simple simulation using a custom R
   
   
   
+

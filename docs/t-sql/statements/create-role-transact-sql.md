@@ -1,7 +1,7 @@
 ---
 title: "CREATE ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-23"
+ms.date: "03/23/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -125,4 +125,5 @@ GO
  [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
   
+
 

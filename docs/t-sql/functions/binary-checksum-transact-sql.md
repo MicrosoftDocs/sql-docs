@@ -1,7 +1,7 @@
 ---
 title: "BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-17"
+ms.date: "10/17/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

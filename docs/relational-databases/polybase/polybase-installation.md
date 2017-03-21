@@ -2,7 +2,7 @@
 title: "PolyBase installation | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-08-31"
+ms.date: "08/31/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

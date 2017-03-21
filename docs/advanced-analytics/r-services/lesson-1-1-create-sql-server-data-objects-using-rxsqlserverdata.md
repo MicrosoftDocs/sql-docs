@@ -1,7 +1,7 @@
 ---
 title: "Create SQL Server Data Objects using RxSqlServerData | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-28"
+ms.date: "09/28/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -194,3 +194,4 @@ You can also specify transformations on the data, such as indicating that column
 ## Previous Step  
 [Lesson 1: Work with SQL Server Data using R &#40;Data Science Deep Dive&#41;](../../advanced-analytics/r-services/lesson-1-work-with-sql-server-data-using-r-data-science-deep-dive.md)  
   
+

@@ -1,7 +1,7 @@
 ---
 title: "Determining Effective Database Engine Permissions | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-03"
+ms.date: "01/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -155,3 +155,4 @@ For the details of the syntax, see [HAS_PERMS_BY_NAME](../../../t-sql/functions/
 
 [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [Tutorial: Getting Started with Database Engine](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+

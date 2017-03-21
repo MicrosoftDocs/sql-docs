@@ -1,7 +1,7 @@
 ---
 title: "Lesson 1: Prepare the Data (Data Science End-to-End Walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-18"
+ms.date: "03/18/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -315,3 +315,4 @@ The T-SQL queries used in this walkthrough have been tested and can be run _as i
   
   
   
+

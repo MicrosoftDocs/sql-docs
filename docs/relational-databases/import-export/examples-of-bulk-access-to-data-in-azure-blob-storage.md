@@ -1,7 +1,7 @@
 ---
 title: "Examples of Bulk Access to Data in Azure Blob Storage | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-04"
+ms.date: "01/04/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -106,3 +106,4 @@ WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',
 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)   
 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)   
 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)   
+

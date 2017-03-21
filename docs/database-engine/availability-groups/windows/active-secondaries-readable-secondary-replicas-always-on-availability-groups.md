@@ -1,7 +1,7 @@
 ---
 title: "Active Secondaries: Readable Secondary Replicas (Always On Availability Groups) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-06"
+ms.date: "06/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

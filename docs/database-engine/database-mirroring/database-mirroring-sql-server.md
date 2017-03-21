@@ -1,7 +1,7 @@
 ---
 title: "Database Mirroring (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-16"
+ms.date: "05/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

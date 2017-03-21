@@ -2,7 +2,7 @@
 title: "Data for Reporting Services mobile reports | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-02-08"
+ms.date: "02/08/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,3 +42,4 @@ The mobile report runtime provides aggregated values for the gauge, based on use
 - [Retain date formatting for Analysis Services data in mobile reports](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 
   
   
+

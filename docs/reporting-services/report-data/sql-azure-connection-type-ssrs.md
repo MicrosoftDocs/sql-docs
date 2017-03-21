@@ -1,7 +1,7 @@
 ---
 title: "SQL Azure Connection Type (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-24"
+ms.date: "02/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

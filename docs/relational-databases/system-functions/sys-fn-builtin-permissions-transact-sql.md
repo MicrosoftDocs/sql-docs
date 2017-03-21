@@ -1,7 +1,7 @@
 ---
 title: "sys.fn_builtin_permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -369,4 +369,5 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   
+
 

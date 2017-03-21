@@ -1,7 +1,7 @@
 ---
 title: "R Interoperability in SQL Server R Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-31"
+ms.date: "05/31/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -64,3 +64,4 @@ Among the most important additions to Microsoft R are the **RevoScaleR** and **R
 [New Components in SQL Server to Support R Services](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r-services.md)
 
 [Security Overview](../../advanced-analytics/r-services/security-overview-sql-server-r-services.md)
+

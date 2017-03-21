@@ -1,7 +1,7 @@
 ---
 title: "CONCAT_WS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-21"
+ms.date: "12/21/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -128,3 +128,4 @@ FROM sys.databases;
 
 [String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)      
+

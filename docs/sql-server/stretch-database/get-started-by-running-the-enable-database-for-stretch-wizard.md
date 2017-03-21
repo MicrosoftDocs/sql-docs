@@ -2,7 +2,7 @@
 title: "Get started by running the Enable Database for Stretch Wizard | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-08-05"
+ms.date: "08/05/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: "sql-server-stretch-database"

@@ -1,7 +1,7 @@
 ---
 title: "Server-Level Roles | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-29"
+ms.date: "12/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

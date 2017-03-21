@@ -1,7 +1,7 @@
 ---
 title: "Create a Database Snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-10"
+ms.date: "08/10/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -175,3 +175,4 @@ GO
  [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
+

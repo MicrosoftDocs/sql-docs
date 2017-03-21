@@ -1,7 +1,7 @@
 ---
 title: "DAY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-06"
+ms.date: "01/06/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -91,4 +91,5 @@ SELECT TOP 1 YEAR(0), MONTH(0), DAY(0) FROM dbo.DimCustomer;
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
+
 

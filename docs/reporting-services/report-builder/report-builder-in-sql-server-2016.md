@@ -1,7 +1,7 @@
 ---
 title: "Report Builder in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-08-06"
+ms.date: "08/06/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -95,3 +95,4 @@ manager: "erikre"
  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)  
   
   
+

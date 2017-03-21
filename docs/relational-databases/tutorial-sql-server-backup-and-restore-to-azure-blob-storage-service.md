@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-16"
+ms.date: "02/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -55,3 +55,4 @@ Following are some recommended reading to understand the concepts, best practice
   
 ## See also  
 [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
+

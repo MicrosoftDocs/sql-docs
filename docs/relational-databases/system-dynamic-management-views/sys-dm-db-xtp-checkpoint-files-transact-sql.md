@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs"
-ms.date: "2017-03-20"
+ms.date: "03/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

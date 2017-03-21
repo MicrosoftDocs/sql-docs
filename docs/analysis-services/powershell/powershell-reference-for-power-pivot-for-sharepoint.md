@@ -2,7 +2,7 @@
 title: "PowerShell Reference for Power Pivot for SharePoint | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-11-16"
+ms.date: "11/16/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

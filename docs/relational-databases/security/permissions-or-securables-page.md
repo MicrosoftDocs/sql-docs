@@ -1,7 +1,7 @@
 ---
 title: "Permissions or Securables Page | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-07"
+ms.date: "01/07/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-16"
+ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,3 +87,4 @@ GO
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
+

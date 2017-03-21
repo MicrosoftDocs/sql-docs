@@ -1,7 +1,7 @@
 ---
 title: "RENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-13"
+ms.date: "04/13/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"

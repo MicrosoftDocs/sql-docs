@@ -1,7 +1,7 @@
 ---
 title: "Install Microsoft R Server from the Command Line | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-19"
+ms.date: "01/19/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "KILL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-08-15"
+ms.date: "08/15/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -172,3 +172,4 @@ KILL 'SID535';
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   
+

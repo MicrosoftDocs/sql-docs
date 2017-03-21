@@ -2,7 +2,7 @@
 title: "Web Application Requirements (Master Data Services) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-02-13"
+ms.date: "02/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

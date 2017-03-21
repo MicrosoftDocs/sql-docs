@@ -2,7 +2,7 @@
 title: "Temporal Table Considerations and Limitations | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-01-24"
+ms.date: "01/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "column_definition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-27"
+ms.date: "12/27/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -252,3 +252,4 @@ manager: "jhubbard"
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
+

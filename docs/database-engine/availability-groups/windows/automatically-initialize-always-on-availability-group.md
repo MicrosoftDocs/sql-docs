@@ -1,7 +1,7 @@
 ---
 title: "Automatically initialize Always On availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-14"
+ms.date: "11/14/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -262,3 +262,4 @@ Before adding a database to an availability group with automatic seeding, evalua
 -](https://msdn.microsoft.com/library/ff878399.aspx)
 
 [AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](http://technet.microsoft.com/library/dn135328.aspx)
+

@@ -2,7 +2,7 @@
 title: "Prerequisites for Data Science Walkthroughs (SQL Server R Services) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-11-22"
+ms.date: "11/22/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -57,3 +57,4 @@ In this walkthrough, you will connect to an instance of [!INCLUDE[ssNoVersion](.
   
   
   
+

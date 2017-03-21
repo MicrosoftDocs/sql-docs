@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services Language Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-02"
+ms.date: "03/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -32,6 +32,7 @@ manager: "erikre"
  [Data Mining Stored Procedures &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   
+
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Extended Events for Stretch Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-14"
+ms.date: "06/14/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -81,3 +81,4 @@ stretch_unprovision_table_start|Reports the start of stretch table un-provisioni
   
 ## See Also  
 [Manage and troubleshoot Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+

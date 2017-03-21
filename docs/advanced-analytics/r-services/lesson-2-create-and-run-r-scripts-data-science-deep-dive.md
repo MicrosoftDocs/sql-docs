@@ -2,7 +2,7 @@
 title: "Lesson 2: Create and Run R Scripts (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-10-26"
+ms.date: "10/26/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -157,3 +157,4 @@ These modifications affect only the data source object in R; no new data has bee
   
   
   
+

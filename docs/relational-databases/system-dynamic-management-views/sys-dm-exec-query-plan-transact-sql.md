@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_query_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-02"
+ms.date: "08/02/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -161,3 +161,4 @@ GO
  [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   
+

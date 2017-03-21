@@ -1,7 +1,7 @@
 ---
 title: "CHARINDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-08"
+ms.date: "01/08/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -231,4 +231,5 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
+
 

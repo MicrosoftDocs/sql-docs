@@ -1,7 +1,7 @@
 ---
 title: "Establish a Database Mirroring Session Using Windows Authentication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-17"
+ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -220,3 +220,4 @@ manager: "jhubbard"
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
+

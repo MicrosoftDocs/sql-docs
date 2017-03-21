@@ -1,7 +1,7 @@
 ---
 title: "Lesson 4: Analyze Data in Local Compute Context (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-03"
+ms.date: "10/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -61,3 +61,4 @@ In this section, you'll learn how to switch back to a local compute context, and
   
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: "Using R Code Profiling Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-29"
+ms.date: "11/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -70,5 +70,6 @@ The chapter is also available online: [https://cran.r-project.org/doc/manuals/r-
 ### Location of R help files
 
 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual
+
 
 

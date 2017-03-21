@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_hosts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-13"
+ms.date: "03/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -80,4 +80,5 @@ GROUP BY h.type;
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
+
 

@@ -1,7 +1,7 @@
 ---
 title: "Add visualizations to Reporting Services mobile reports | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-26"
+ms.date: "09/26/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -194,3 +194,4 @@ to audit the major changes contributing to the total value.
 * [Data grids in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Gauges in Reporting Services mobile reports](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
+

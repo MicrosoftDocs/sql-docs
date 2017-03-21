@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-16"
+ms.date: "11/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -93,3 +93,4 @@ For additional usage suggestions, see  [sys.dm_db_stats_properties](../../relati
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Object Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+

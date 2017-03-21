@@ -1,7 +1,7 @@
 ---
 title: "Language Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-19"
+ms.date: "10/19/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

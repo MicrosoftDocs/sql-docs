@@ -2,7 +2,7 @@
 title: "Deprecated Database Engine Features in SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-11-03"
+ms.date: "11/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -167,3 +167,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
+

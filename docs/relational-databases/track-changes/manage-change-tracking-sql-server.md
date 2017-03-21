@@ -1,7 +1,7 @@
 ---
 title: "Manage Change Tracking (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-08"
+ms.date: "08/08/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

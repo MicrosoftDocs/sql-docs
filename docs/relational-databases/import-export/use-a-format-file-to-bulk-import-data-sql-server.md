@@ -1,7 +1,7 @@
 ---
 title: "Use a Format File to Bulk Import Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-20"
+ms.date: "09/20/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Alternative Ways to Get a Data Connection (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-15"
+ms.date: "06/15/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -75,3 +75,4 @@ To use a shared data source, you browse to a report server and select one. Usual
 [Report Datasets &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
   
+

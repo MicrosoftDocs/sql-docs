@@ -1,6 +1,6 @@
 ---
 title: "Breaking changes in SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
-ms.date: "2017-03-15"
+ms.date: "03/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,4 +39,5 @@ manager: "erikre"
 [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)
   
 [Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)
+
 

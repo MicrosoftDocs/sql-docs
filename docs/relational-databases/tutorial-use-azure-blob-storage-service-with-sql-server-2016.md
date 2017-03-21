@@ -2,7 +2,7 @@
 title: "Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-01-07"
+ms.date: "01/07/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -76,3 +76,4 @@ What information are you looking for, and did you find it? We’re listening to 
   
   
   
+

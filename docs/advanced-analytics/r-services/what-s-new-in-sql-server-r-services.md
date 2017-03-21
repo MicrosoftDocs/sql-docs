@@ -2,7 +2,7 @@
 title: "What&#39;s New in SQL Server R Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-01-20"
+ms.date: "01/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

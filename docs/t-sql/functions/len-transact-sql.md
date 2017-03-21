@@ -1,7 +1,7 @@
 ---
 title: "LEN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-09-03"
+ms.date: "09/03/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -104,4 +104,5 @@ WHERE EnglishCountryRegionName = 'Australia';
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
   
   
+
 

@@ -1,7 +1,7 @@
 ---
 title: "Execution Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-12"
+ms.date: "12/12/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,3 +58,4 @@ manager: "jhubbard"
  [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
+

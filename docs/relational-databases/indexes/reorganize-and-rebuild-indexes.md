@@ -1,7 +1,7 @@
 ---
 title: "Reorganize and Rebuild Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-29"
+ms.date: "04/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

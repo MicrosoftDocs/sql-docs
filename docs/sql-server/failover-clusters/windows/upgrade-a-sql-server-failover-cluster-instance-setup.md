@@ -1,7 +1,7 @@
 ---
 title: "Upgrade a SQL Server Failover Cluster Instance (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-22"
+ms.date: "01/22/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

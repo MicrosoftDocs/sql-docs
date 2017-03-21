@@ -1,7 +1,7 @@
 ---
 title: "ASCII (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-07"
+ms.date: "12/07/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -70,4 +70,5 @@ A           B           a           b           1           2
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
+
 

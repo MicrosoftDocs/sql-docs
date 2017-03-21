@@ -1,7 +1,7 @@
 ---
 title: "Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-02"
+ms.date: "12/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

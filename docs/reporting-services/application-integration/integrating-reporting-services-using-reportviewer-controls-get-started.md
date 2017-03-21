@@ -1,7 +1,7 @@
 ---
 title: "Getting started with the ReportViewer 2016 control | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-24"
+ms.date: "02/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -220,3 +220,4 @@ Let the team know about issues you encounter with the control on the [Reporting 
 
 [Data collection in the 2016 ReportingViewer control](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
 More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+

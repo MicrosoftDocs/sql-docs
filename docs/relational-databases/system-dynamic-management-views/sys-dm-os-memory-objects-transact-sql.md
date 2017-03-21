@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_memory_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-13"
+ms.date: "03/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -83,4 +83,5 @@ GO
  [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
+
 

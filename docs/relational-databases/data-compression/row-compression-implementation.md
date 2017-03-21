@@ -1,7 +1,7 @@
 ---
 title: "Row Compression Implementation | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-30"
+ms.date: "06/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

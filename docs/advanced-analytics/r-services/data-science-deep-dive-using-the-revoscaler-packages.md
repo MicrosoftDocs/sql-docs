@@ -1,7 +1,7 @@
 ---
 title: "Data Science Deep Dive: Using the RevoScaleR Packages | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-27"
+ms.date: "09/27/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -121,3 +121,4 @@ A key benefit of using the ScaleR functions in that they support the use of eith
   
   
   
+

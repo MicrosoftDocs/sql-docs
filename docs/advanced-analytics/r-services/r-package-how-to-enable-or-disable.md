@@ -1,7 +1,7 @@
 ---
 title: "How to Enable or Disable R Package Management | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-21"
+ms.date: "12/21/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

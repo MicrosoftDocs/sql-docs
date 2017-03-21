@@ -2,7 +2,7 @@
 title: "DECOMPRESS (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-11-30"
+ms.date: "11/30/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

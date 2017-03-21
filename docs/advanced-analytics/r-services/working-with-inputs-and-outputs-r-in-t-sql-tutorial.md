@@ -1,7 +1,7 @@
 ---
 title: "Working with Inputs and Outputs (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-10"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -132,3 +132,4 @@ EXECUTE sp_execute_external_script
 You'll examine some of the problems that you might encounter when passing data between R and SQL Server, such as implicit conversions and differences in tabular data between R and SQL. 
 
 [R and SQL Data Types and Data Objects](../../advanced-analytics/r-services/r-and-sql-data-types-and-data-objects-r-in-t-sql-tutorial.md)
+

@@ -1,7 +1,7 @@
 ---
 title: "Create a Report Server Database  (SSRS Configuration Manager) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-26"
+ms.date: "05/26/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -73,3 +73,4 @@ manager: "erikre"
  [Reporting Services Configuration Manager (SSRS Native Mode)](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
   
   
+

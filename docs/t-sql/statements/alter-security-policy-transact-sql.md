@@ -2,7 +2,7 @@
 title: "ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-04-19"
+ms.date: "04/19/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Cardinality Estimation (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-04"
+ms.date: "10/04/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -256,3 +256,4 @@ SELECT s.ticket, s.customer, r.store
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   
+

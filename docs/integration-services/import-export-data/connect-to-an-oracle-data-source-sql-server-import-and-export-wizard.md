@@ -1,7 +1,7 @@
 ---
 title: "Connect to an Oracle Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-16"
+ms.date: "03/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -88,3 +88,4 @@ For info about how to connect to Oracle with a data provider that's not listed h
 ## See also
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+

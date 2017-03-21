@@ -1,7 +1,7 @@
 ---
 title: "sys.server_audits (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-05"
+ms.date: "04/05/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

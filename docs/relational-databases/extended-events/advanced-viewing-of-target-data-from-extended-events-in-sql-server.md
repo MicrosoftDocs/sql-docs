@@ -1,7 +1,7 @@
 ---
 title: "Advanced Viewing of Target Data from Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-04"
+ms.date: "10/04/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -311,4 +311,5 @@ The **query_post_execution_showplan** event enables you to see the actual query 
 
 
 ![Query Plan, with properties list for one node](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
+
 

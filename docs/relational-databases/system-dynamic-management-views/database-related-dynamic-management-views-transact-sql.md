@@ -1,7 +1,7 @@
 ---
 title: "Database Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-28"
+ms.date: "12/28/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -43,3 +43,4 @@ DMV's unique to SQL Database or SQL Data Warehouse.
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
    
   
+

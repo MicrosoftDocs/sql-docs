@@ -1,6 +1,6 @@
 ---
 title: "View the Size of the Sparse File of a Database Snapshot (Transact-SQL) | Microsoft Docs"
-ms.date: "2016-07-28"
+ms.date: "07/28/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

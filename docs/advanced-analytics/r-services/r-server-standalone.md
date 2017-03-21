@@ -2,7 +2,7 @@
 title: "R Server (Standalone) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-03-07"
+ms.date: "03/07/2017"
 ms.prod: "r-server"
 ms.reviewer: ""
 ms.suite: ""

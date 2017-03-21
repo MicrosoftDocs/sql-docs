@@ -1,7 +1,7 @@
 ---
 title: "Install Reporting Services and Internet Information Services Side-by-Side (SSRS Native Mode) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-15"
+ms.date: "03/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

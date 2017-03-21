@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Features and Tasks (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-12-18"
+ms.date: "12/18/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

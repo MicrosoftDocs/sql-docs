@@ -1,7 +1,7 @@
 ---
 title: "Using the MicrosoftML Package with SQL Server R Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-27"
+ms.date: "01/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -70,4 +70,5 @@ The **MicrosoftML** package is fully integrated with the data processing pipelin
 [Introduction to MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction)
 
 [RevoScaleR Function Reference](https://msdn.microsoft.com/microsoft-r/scaler/scaler)
+
 

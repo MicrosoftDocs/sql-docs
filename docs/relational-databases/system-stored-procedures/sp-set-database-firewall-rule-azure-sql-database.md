@@ -3,7 +3,7 @@ title: "sp_set_database_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-07-27"
+ms.date: "07/27/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

@@ -3,7 +3,7 @@ title: "Azure SQL Database Catalog Views | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2015-08-20"
+ms.date: "08/20/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

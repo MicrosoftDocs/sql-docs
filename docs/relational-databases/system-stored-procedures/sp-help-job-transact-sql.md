@@ -1,7 +1,7 @@
 ---
 title: "sp_help_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-02"
+ms.date: "08/02/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

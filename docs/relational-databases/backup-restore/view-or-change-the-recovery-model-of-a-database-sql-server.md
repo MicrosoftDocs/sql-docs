@@ -1,7 +1,7 @@
 ---
 title: "View or Change the Recovery Model of a Database (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-05"
+ms.date: "08/05/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

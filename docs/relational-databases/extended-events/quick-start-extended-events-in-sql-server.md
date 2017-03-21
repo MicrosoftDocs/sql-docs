@@ -1,7 +1,7 @@
 ---
 title: "Quick Start: Extended events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-10"
+ms.date: "09/10/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -656,4 +656,5 @@ Here are links to documentation related to these SELECTs, and to permissions:
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
+
 

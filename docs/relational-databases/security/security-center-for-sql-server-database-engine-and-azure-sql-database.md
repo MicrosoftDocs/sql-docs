@@ -3,7 +3,7 @@ title: "Security Center for SQL Server Database Engine and Azure SQL Database | 
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2017-01-31"
+ms.date: "01/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: "sql-database"

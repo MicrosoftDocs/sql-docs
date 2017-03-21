@@ -1,7 +1,7 @@
 ---
 title: "Manage the Size of the Transaction Log File | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-14"
+ms.date: "07/14/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

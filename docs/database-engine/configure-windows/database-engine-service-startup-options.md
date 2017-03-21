@@ -1,7 +1,7 @@
 ---
 title: "Database Engine Service Startup Options | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-21"
+ms.date: "07/21/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

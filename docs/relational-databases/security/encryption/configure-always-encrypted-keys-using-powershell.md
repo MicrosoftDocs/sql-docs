@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted Keys using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-29"
+ms.date: "09/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -284,3 +284,4 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 - [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Always Encrypted Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+

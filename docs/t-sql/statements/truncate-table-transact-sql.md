@@ -1,7 +1,7 @@
 ---
 title: "TRUNCATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-02-03"
+ms.date: "02/03/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

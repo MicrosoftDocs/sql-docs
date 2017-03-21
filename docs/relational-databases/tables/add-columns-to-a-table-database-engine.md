@@ -1,7 +1,7 @@
 ---
 title: "Add Columns to a Table (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-27"
+ms.date: "10/27/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

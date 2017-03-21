@@ -2,7 +2,7 @@
 title: "ALTER USER (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-11-04"
+ms.date: "11/04/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -269,4 +269,5 @@ ALTER USER [Contoso\Mary] WITH DEFAULT_SCHEMA = Sales;
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
   
   
+
 

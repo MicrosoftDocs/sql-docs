@@ -1,7 +1,7 @@
 ---
 title: "RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-25"
+ms.date: "10/25/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -187,5 +187,6 @@ GROUP BY LastName, SalesTerritoryRegion;
  [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
+
 
 

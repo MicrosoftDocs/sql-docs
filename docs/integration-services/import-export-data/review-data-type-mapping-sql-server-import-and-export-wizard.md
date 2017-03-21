@@ -1,7 +1,7 @@
 ---
 title: "Review Data Type Mapping (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-16"
+ms.date: "03/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -94,3 +94,4 @@ This example shows the default values for the two global error handling options.
  
  ## See also
 [Data Type Mapping in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
+

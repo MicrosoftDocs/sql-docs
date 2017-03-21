@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Connecting to the SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-07"
+ms.date: "02/07/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -150,3 +150,4 @@ Both of these problems are related to the SQL Server Browser service, which prov
     1. On the client computer, using SQL Server Configuration Manager, in the left-pane expand **SQL Native Client** *version* **Configuration**, and then select **Client Protocols**.
     2. On the right-pane, Make sure TCP/IP is enabled. If TCP/IP is disabled, right-click **TCP/IP** and then click **Enable**.
     3. Make sure that the protocol order for TCP/IP is a smaller number that the named pipes (or VIA on older versions) protocols. Generally you should leave Shared Memory as order 1 and TCP/IP as order 2. Shared memory is only used when the client and SQL Server are running on the same computer. All enabled protocols are tried in order until one succeeds, except that shared memory is skipped when the connection is not to the same computer. 
+

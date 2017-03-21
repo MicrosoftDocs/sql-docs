@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-09"
+ms.date: "08/09/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -79,5 +79,6 @@ GO
  [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   
   
+
 
 

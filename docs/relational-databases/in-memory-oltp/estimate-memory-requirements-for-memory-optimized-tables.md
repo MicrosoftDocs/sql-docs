@@ -1,7 +1,7 @@
 ---
 title: "Estimate Memory Requirements for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-02"
+ms.date: "12/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -192,3 +192,4 @@ The above calculations estimate your memory needs for the table as it currently 
 ## See Also
 
 [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+

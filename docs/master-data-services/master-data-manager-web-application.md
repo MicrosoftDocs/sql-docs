@@ -2,7 +2,7 @@
 title: "Master Data Manager Web Application | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-12-20"
+ms.date: "12/20/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

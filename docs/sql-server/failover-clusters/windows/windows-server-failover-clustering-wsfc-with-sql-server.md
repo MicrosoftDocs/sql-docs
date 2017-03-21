@@ -1,7 +1,7 @@
 ---
 title: "Windows Server Failover Clustering (WSFC) with SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-18"
+ms.date: "01/18/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

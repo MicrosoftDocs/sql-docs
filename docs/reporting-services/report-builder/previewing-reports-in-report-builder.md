@@ -1,7 +1,7 @@
 ---
 title: "Previewing Reports in Report Builder | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-09"
+ms.date: "01/09/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

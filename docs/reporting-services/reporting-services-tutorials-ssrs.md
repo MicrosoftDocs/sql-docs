@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Tutorials (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-27"
+ms.date: "09/27/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -45,3 +45,4 @@ These tutorials introduce you a variety of visualizations you can create in Repo
   
   
   
+

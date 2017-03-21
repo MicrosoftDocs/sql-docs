@@ -1,7 +1,7 @@
 ---
 title: "Predefined Roles | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-10-22"
+ms.date: "10/22/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -2,7 +2,7 @@
 title: "Master Data Services Overview (MDS) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-02-14"
+ms.date: "02/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -2,7 +2,7 @@
 title: "Pin Reporting Services items to Power BI Dashboards | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-09-16"
+ms.date: "09/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -146,3 +146,4 @@ From the [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dashboard the pinned
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+

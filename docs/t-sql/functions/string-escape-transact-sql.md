@@ -1,7 +1,7 @@
 ---
 title: "STRING_ESCAPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-02-25"
+ms.date: "02/25/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

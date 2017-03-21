@@ -1,7 +1,7 @@
 ---
 title: "RAISERROR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-21"
+ms.date: "02/21/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -345,3 +345,4 @@ GO
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   
+

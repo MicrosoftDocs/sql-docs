@@ -1,7 +1,7 @@
 ---
 title: "CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-26"
+ms.date: "01/26/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -264,4 +264,5 @@ GO
  [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
   
   
+
 

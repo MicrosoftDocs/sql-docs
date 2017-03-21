@@ -1,7 +1,7 @@
 ---
 title: "sys.database_query_store_options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-28"
+ms.date: "11/28/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

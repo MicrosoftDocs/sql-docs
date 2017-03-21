@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_broker_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-08"
+ms.date: "01/08/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -76,3 +76,4 @@ manager: "jhubbard"
  [Service Broker Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
+

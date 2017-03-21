@@ -1,7 +1,7 @@
 ---
 title: "Walkthrough: Set Up Integration Services Scale Out | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-18"
+ms.date: "01/18/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -142,4 +142,5 @@ GO
 ```
 ## Next Steps
 The set up of the Scale Out feature is finished. You can now run packages in Scale Out. For more information, see [Execute Packages in Integration Services (SSIS) Scale Out](../integration-services/run-packages-in-integration-services-ssis-scale-out.md).
+
 

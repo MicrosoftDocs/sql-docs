@@ -1,7 +1,7 @@
 ---
 title: "Configuring the Integration Services Service (SSIS Service) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-28"
+ms.date: "02/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

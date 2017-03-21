@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Samples: Model Deployment Packages (MDS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-13"
+ms.date: "02/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

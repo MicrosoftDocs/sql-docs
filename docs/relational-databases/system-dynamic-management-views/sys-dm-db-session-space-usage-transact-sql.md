@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_session_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-11-16"
+ms.date: "11/16/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -103,5 +103,6 @@ manager: "jhubbard"
  [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   
+
 
 

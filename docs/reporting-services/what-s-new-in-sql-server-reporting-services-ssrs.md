@@ -1,6 +1,6 @@
 ---
 title: "What&#39;s new in Reporting Services (SSRS) | Microsoft Docs"
-ms.date: "2017-03-16"
+ms.date: "03/16/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""

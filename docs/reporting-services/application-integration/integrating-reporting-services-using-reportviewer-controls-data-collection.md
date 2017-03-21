@@ -1,7 +1,7 @@
 ---
 title: "Data collection in ReportViewer Control 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-06"
+ms.date: "09/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,5 +42,6 @@ protected void Page_Load(object sender, EventArgs e)
 
 [Using the WebForms ReportViewer Control](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
 [Integrating Reporting Services Using the ReportViewer Controls](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
+
 
 

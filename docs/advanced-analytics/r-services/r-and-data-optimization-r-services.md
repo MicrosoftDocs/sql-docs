@@ -1,7 +1,7 @@
 ---
 title: "R and Data Optimization (R Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-10"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

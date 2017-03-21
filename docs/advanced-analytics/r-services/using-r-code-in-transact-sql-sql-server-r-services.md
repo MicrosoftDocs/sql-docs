@@ -2,7 +2,7 @@
 title: "Using R Code in Transact-SQL (SQL Server R Services) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-03-10"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -90,3 +90,4 @@ Step 3: [Using R Functions with SQL Server Data](../../advanced-analytics/r-serv
 Step 4:  [Create a Predictive Model](../../advanced-analytics/r-services/create-a-predictive-model-r-in-t-sql-tutorial.md)
 
 Step 5:  [Predict and Plot from Model](../../advanced-analytics/r-services/predict-and-plot-from-model-r-in-t-sql-tutorial.md)
+

@@ -1,7 +1,7 @@
 ---
 title: "Sample Reporting Services rs.exe Script to Copy Content between Report Servers | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-07-27"
+ms.date: "07/27/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

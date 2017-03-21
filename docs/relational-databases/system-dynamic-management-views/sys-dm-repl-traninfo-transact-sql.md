@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_repl_traninfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-10"
+ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -78,3 +78,4 @@ manager: "jhubbard"
  [Change Data Capture Related Dynamic Management Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
+

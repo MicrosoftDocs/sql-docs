@@ -1,7 +1,7 @@
 ---
 title: "Compute Capacity Limits by Edition of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-02"
+ms.date: "06/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -96,3 +96,4 @@ manager: "jhubbard"
  [Quick-Start Installation of SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   
+

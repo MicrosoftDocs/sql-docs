@@ -1,7 +1,7 @@
 ---
 title: "Demonstration: Performance Improvement of In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-19"
+ms.date: "08/19/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Download the Sample Data (In-Database Advanced Analytics Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-19"
+ms.date: "04/19/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -73,3 +73,4 @@ In this step, you'll download the sample dataset and the [!INCLUDE[tsql](../../i
   
   
   
+

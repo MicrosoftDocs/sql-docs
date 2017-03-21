@@ -1,7 +1,7 @@
 ---
 title: "Predict and Plot from Model (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-10"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -181,6 +181,7 @@ For guidance on using the new RevoScaleR packages, see these resources for [Micr
     
     
     
+
 
 
 

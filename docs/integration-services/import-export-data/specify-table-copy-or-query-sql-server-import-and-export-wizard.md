@@ -1,7 +1,7 @@
 ---
 title: "Specify Table Copy or Query (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-17"
+ms.date: "02/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -78,4 +78,5 @@ You can still use the **Write a query** option, even if you don't typically writ
 
 ## See also
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+
 

@@ -1,6 +1,6 @@
 ---
 title: "Use the Maintenance Plan Wizard | Microsoft Docs"
-ms.date: "2016-08-19"
+ms.date: "08/19/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -520,3 +520,4 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      Copies the results of the wizard’s progress report into an email message.  
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: "Apply Transaction Log Backups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-13"
+ms.date: "08/13/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

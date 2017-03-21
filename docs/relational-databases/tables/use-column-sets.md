@@ -1,7 +1,7 @@
 ---
 title: "Use Column Sets | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-07-30"
+ms.date: "07/30/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

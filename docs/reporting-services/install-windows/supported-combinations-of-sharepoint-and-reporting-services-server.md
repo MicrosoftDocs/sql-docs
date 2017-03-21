@@ -2,7 +2,7 @@
 title: "Supported Combinations of SharePoint and Reporting Services Server and Add-in (SQL Server 2016) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-10-07"
+ms.date: "10/07/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -72,3 +72,4 @@ manager: "erikre"
  [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
   
+

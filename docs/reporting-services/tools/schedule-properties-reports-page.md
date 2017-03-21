@@ -1,7 +1,7 @@
 ---
 title: "Schedule Properties (Reports Page) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-30"
+ms.date: "06/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -50,3 +50,4 @@ manager: "erikre"
  [Configure General Properties for a Report (Report Manager)](http://msdn.microsoft.com/en-us/10b941b2-28e6-4408-9ee4-acebc63c8496)  
   
   
+

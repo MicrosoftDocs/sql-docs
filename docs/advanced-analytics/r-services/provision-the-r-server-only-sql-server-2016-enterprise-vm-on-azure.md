@@ -1,7 +1,7 @@
 ---
 title: "Provision the R Server Only SQL Server 2016 Enterprise VM on Azure | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-22"
+ms.date: "12/22/2016"
 ms.prod: "r-server"
 ms.reviewer: ""
 ms.suite: ""
@@ -161,3 +161,4 @@ To learn about R in general, see these resources:
 
 ## See Also
 [SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)
+

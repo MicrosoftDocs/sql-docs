@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_cluster_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-09"
+ms.date: "08/09/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -70,5 +70,6 @@ FROM sys.dm_os_cluster_nodes;
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
+
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Lesson 2: Modifying the Report Data Source Properties | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-23"
+ms.date: "05/23/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -123,3 +123,4 @@ You will also modify the dataset and report to use a parameter to filter the rep
   
   
   
+

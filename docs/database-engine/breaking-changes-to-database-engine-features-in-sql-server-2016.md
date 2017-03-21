@@ -2,7 +2,7 @@
 title: "Breaking Changes to Database Engine Features in SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-11-15"
+ms.date: "11/15/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

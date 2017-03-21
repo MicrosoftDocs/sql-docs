@@ -1,6 +1,6 @@
 ---
 title: "Working with KPIs in Reporting Services | Microsoft Docs"
-ms.date: "2017-02-24"
+ms.date: "02/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -108,3 +108,4 @@ To refresh the KPI, you will need to configure a caching for the shared dataset.
   
   
   
+

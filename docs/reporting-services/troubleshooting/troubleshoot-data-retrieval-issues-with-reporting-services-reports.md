@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Data Retrieval issues with Reporting Services Reports | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-02-27"
+ms.date: "02/27/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -66,3 +66,4 @@ To populate the dataset field collection, do the following:
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+

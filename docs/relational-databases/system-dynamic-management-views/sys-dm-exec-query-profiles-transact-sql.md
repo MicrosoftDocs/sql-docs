@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-16"
+ms.date: "11/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -128,3 +128,4 @@ ORDER BY node_id;
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
+

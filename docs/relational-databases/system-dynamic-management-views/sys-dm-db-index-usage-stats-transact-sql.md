@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_index_usage_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-20"
+ms.date: "03/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -85,4 +85,5 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   
   
+
 

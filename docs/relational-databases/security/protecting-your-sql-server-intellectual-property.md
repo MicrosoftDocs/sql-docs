@@ -1,7 +1,7 @@
 ---
 title: "Protecting Your SQL Server Intellectual Property | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-31"
+ms.date: "01/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,3 +39,4 @@ You can also host a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]
 
 [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Securing SQL Server](../../relational-databases/security/securing-sql-server.md)  
+

@@ -2,7 +2,7 @@
 title: "View and Summarize Data using R (Data Science End-to-End Walkthrough) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-03-17"
+ms.date: "03/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -213,3 +213,4 @@ You can now apply R functions to the data source, to explore, summarize, and cha
   
   
   
+

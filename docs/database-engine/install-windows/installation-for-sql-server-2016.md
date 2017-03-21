@@ -1,7 +1,7 @@
 ---
 title: "Installation for SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-13"
+ms.date: "04/13/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,3 +87,4 @@ See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.a
  [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
   
+

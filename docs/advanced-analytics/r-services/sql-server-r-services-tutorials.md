@@ -2,7 +2,7 @@
 title: "SQL Server R Services Tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-03-17"
+ms.date: "03/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -135,3 +135,4 @@ Note that standard R libraries are insufficient to use these tutorials; both you
 [Getting Started with SQL Server R Services](../../advanced-analytics/r-services/getting-started-with-sql-server-r-services.md)  
 [SQL Server R Services Features and Tasks](../../advanced-analytics/r-services/sql-server-r-services-features-and-tasks.md)  
   
+

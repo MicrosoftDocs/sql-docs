@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-16"
+ms.date: "11/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -106,3 +106,4 @@ GO
   [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+

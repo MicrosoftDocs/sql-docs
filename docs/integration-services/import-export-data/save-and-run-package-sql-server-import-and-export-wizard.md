@@ -1,7 +1,7 @@
 ---
 title: "Save and Run Package (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-16"
+ms.date: "02/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -98,3 +98,4 @@ If you started the wizard from an Integration Services project in Visual Studio 
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
   
+

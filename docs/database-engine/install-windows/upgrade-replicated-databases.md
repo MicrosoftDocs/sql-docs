@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Replicated Databases | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-02-16"
+ms.date: "02/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

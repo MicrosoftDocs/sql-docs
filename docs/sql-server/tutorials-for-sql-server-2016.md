@@ -1,7 +1,7 @@
 ---
 title: "Tutorials for SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-26"
+ms.date: "07/26/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -53,3 +53,4 @@ If you are using a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] server, th
 |[SQL Server R Services Tutorials](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data using the R language, and run R scripts from [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
   
+

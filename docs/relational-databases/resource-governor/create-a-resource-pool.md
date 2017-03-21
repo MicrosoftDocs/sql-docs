@@ -1,7 +1,7 @@
 ---
 title: "Create a Resource Pool | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-17"
+ms.date: "03/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

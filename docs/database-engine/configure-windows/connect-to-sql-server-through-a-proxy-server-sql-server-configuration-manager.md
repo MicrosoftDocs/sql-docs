@@ -1,7 +1,7 @@
 ---
 title: "Connect to SQL Server Through a Proxy Server (SQL Server Configuration Manager) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-15"
+ms.date: "12/15/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,4 +38,5 @@ manager: "jhubbard"
   
 >  [!NOTE]
 >  This topic applies to on-premises [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. For connection issues related to [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], see [Troubleshoot connection issues to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-troubleshoot-common-connection-issues).  
+
 

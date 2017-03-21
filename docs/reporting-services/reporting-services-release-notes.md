@@ -1,7 +1,7 @@
 ---
 title: "Technical Preview of Power BI reports in SSRS - Release notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-17"
+ms.date: "01/17/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""

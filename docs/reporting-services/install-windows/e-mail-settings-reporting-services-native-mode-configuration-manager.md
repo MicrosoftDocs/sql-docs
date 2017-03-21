@@ -1,7 +1,7 @@
 ---
 title: "E-Mail Settings - Reporting Services Native mode (Configuration Manager) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-01"
+ms.date: "06/01/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

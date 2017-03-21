@@ -1,7 +1,7 @@
 ---
 title: "Apply a Filter to a Mining Model | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-19"
+ms.date: "03/19/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

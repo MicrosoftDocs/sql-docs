@@ -1,7 +1,7 @@
 ---
 title: "sp_add_jobschedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-28"
+ms.date: "07/28/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

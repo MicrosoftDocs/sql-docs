@@ -2,7 +2,7 @@
 title: "Editions and Components of SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-12-01"
+ms.date: "12/01/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

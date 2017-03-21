@@ -1,7 +1,7 @@
 ---
 title: "Transactions (Master Data Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-10"
+ms.date: "01/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

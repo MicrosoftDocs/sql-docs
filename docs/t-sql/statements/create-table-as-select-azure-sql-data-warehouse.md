@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-07"
+ms.date: "10/07/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
@@ -804,4 +804,5 @@ You can see therefore that type consistency and maintaining nullability properti
  [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  
   
   
+
 

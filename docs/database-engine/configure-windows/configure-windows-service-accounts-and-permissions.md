@@ -1,7 +1,7 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-13"
+ms.date: "03/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

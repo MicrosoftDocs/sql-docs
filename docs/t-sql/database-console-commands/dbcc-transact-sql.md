@@ -1,7 +1,7 @@
 ---
 title: "DBCC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-11-16"
+ms.date: "11/16/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

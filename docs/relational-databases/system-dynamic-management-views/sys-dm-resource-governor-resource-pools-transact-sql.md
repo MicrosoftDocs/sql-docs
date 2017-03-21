@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-17"
+ms.date: "01/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -90,5 +90,6 @@ manager: "jhubbard"
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
+
 
 

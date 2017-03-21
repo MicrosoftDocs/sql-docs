@@ -1,7 +1,7 @@
 ---
 title: "Power BI reports in Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-17"
+ms.date: "01/17/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -102,3 +102,4 @@ The following features within Power BI Desktop (SSRS) are not supported for use 
 [Getting started with Power BI desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-getting-started/)  
 [Configure Kerberos to use Power BI reports](../reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md)  
 [Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services](../reporting-services/install-windows/install-january-2017-technical-preview-power-bi-reports.md)
+

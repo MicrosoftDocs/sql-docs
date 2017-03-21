@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Adding a KPI to Your Report (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-15"
+ms.date: "06/15/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -346,3 +346,4 @@ You have successfully completed the Adding a KPI to Your Report tutorial. For mo
 * [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)
 * [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+

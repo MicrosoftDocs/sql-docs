@@ -1,7 +1,7 @@
 ---
 title: "Columnstore indexes - design guidance | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-27"
+ms.date: "01/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -202,3 +202,4 @@ To convert an existing rowstore heap or btree index to a clustered columnstore i
 
 
   
+

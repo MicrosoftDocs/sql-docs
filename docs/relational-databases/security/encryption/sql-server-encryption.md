@@ -2,7 +2,7 @@
 title: "SQL Server Encryption | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-05-03"
+ms.date: "05/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

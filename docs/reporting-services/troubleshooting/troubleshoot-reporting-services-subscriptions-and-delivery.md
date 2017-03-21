@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Reporting Services Subscriptions and Delivery | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-31"
+ms.date: "05/31/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -79,3 +79,4 @@ For more information, see the TechNet Wiki [Troubleshoot issues and errors with 
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+

@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Creating a Free Form Report (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-02"
+ms.date: "09/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -512,3 +512,4 @@ For more information about query designers, see [Query Designers &#40;Report Bui
 ## See Also  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
   
+

@@ -1,7 +1,7 @@
 ---
 title: "Data Science Scenarios and Solution Templates | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-18"
+ms.date: "04/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -80,3 +80,4 @@ To download the files included in each template, you can use GitHub commands, or
   
   
   
+

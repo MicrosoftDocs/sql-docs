@@ -1,7 +1,7 @@
 ---
 title: "sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-10-13"
+ms.date: "10/13/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

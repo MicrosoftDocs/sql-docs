@@ -1,7 +1,7 @@
 ---
 title: "Create an Updatable Subscription to a Transactional Publication (Management Studio) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-21"
+ms.date: "07/21/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -99,3 +99,4 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
 
 [Create an Updatable Subscription to a Transactional Publication Using Transact-SQL](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) 
+

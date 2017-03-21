@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services with Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-17"
+ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

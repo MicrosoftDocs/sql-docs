@@ -1,7 +1,7 @@
 ---
 title: "Use Always On Policies to View the Health of an Availability Group (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-17"
+ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -137,4 +137,5 @@ manager: "jhubbard"
  [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
   
+
 

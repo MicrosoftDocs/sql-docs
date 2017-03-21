@@ -2,7 +2,7 @@
 title: "Changing the Schema of a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-03-28"
+ms.date: "03/28/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

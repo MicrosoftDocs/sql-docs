@@ -1,7 +1,7 @@
 ---
 title: "Cluster DTC for SQL Server 2016 Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-30"
+ms.date: "08/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

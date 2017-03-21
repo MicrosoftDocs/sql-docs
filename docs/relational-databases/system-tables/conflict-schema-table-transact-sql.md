@@ -1,7 +1,7 @@
 ---
 title: "conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-15"
+ms.date: "01/15/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

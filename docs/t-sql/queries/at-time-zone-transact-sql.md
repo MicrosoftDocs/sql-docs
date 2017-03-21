@@ -1,6 +1,6 @@
 ---
 title: "AT TIME ZONE (Transact-SQL) | Microsoft Docs"
-ms.date: "2016-11-16"
+ms.date: "11/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

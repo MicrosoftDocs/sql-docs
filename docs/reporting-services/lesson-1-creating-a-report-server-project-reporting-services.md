@@ -1,7 +1,7 @@
 ---
 title: "Lesson 1: Creating a Report Server Project (Reporting Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-30"
+ms.date: "11/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -76,3 +76,4 @@ You have successfully created a report project called "Tutorial" and added a rep
 ## See Also  
 [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
+

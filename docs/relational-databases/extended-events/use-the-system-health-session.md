@@ -1,7 +1,7 @@
 ---
 title: "Use the system_health Session | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-25"
+ms.date: "06/25/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Index Design Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-06"
+ms.date: "10/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

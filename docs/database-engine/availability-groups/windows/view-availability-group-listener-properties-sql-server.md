@@ -1,7 +1,7 @@
 ---
 title: "View Availability Group Listener Properties (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-11"
+ms.date: "07/11/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

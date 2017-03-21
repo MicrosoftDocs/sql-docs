@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-31"
+ms.date: "01/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -180,5 +180,6 @@ WHERE c.session_id = @@SPID;
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
+
 
 

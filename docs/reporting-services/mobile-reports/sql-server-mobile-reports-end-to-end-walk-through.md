@@ -2,7 +2,7 @@
 title: "SQL Server mobile reports: End-to-end walk-through | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-11-08"
+ms.date: "11/08/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -306,3 +306,4 @@ The KPIs and mobile reports are displayed in the same folders they're in on the 
 -  View [Reporting Services  mobile reports and KPIs in the Power BI app for Windows 10 devices](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
+

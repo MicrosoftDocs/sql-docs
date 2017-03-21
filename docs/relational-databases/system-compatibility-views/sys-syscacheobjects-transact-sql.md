@@ -1,7 +1,7 @@
 ---
 title: "sys.syscacheobjects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-10"
+ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,3 +65,4 @@ manager: "jhubbard"
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   
+

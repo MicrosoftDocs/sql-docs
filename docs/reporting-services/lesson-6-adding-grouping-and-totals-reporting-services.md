@@ -1,7 +1,7 @@
 ---
 title: "Lesson 6: Adding Grouping and Totals (Reporting Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-23"
+ms.date: "05/23/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -160,3 +160,4 @@ Click the name of the report **Sales Orders** to view the rendered report in the
   
   
   
+

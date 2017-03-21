@@ -1,7 +1,7 @@
 ---
 title: "Data Mining Extensions (DMX) Syntax Conventions | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-02"
+ms.date: "03/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,3 +41,4 @@ manager: "erikre"
  [Data Mining Extensions &#40;DMX&#41; Reference](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
+

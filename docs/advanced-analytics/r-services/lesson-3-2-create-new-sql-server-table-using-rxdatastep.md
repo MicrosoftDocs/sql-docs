@@ -1,7 +1,7 @@
 ---
 title: "Create New SQL Server Table using rxDataStep (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-03"
+ms.date: "10/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -122,3 +122,4 @@ After doing some lightweight transformations on the data using the XDF file, you
   
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: "Import and Export Packages (SSIS Service) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-26"
+ms.date: "08/26/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

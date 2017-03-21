@@ -1,7 +1,7 @@
 ---
 title: "Data Science End-to-End Walkthrough | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-17"
+ms.date: "03/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -63,3 +63,4 @@ Note that the estimated times do not include setup.
   
   
   
+

@@ -3,7 +3,7 @@ title: "DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-09-14"
+ms.date: "09/14/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

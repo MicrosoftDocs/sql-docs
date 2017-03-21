@@ -175,7 +175,7 @@ If an exception occurs in one of the SQL Server processes, SQL Server creates a 
 
     If **captureminiandfull** is set to **false**, then only a mini dump is collected. The default is **false**.
 
-2. Specify the type of dump file with the **coredumptype** setting. Specify the type of dump to collect.
+2. Specify the type of dump file with the **coredumptype** setting.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set coredumptype <dump type>

@@ -93,7 +93,8 @@ Select Install content from disk  |Browse to Help content file
   
 >[!IMPORTANT]
 > To avoid installing local Help content that has only a partial table of contents, use the **Install content from disk** option in the **Help Library Manager**.  
->>If you've used the **Install content from online** option and the Help Viewer is displaying a partial table of contents, see this [blog post](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) for troubleshooting steps.  
+>>If you've used the **Install content from online** option and the Help Viewer is displaying a partial table of contents, see this [blog post](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) for troubleshooting steps. 
+
 8. Click the HelpContentSetup.msha file, click **Open**, and then click **Next**.  
 9. Click **Add** next to the documentation you want to install, and then click **Update**.  
   

@@ -6,7 +6,7 @@ description: This tutorial shows how to use the mssql extension for VS Code. Thi
 author: erickangMSFT 
 ms.author: erickang 
 manager: jhubbard
-ms.date: 02/27/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

@@ -6,7 +6,7 @@ description: Lists the connectivity drivers that client apps can use from variou
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 11/16/2016
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

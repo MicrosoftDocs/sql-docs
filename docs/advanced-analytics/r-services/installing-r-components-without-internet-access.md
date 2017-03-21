@@ -1,7 +1,7 @@
 ---
 title: "Installing R Components without Internet Access | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-10"
+ms.date: "02/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

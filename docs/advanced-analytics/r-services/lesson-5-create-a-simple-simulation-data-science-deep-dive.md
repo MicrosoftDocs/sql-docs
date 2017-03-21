@@ -1,7 +1,7 @@
 ---
 title: "Lesson 5: Create a Simple Simulation (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-03"
+ms.date: "10/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -130,3 +130,4 @@ In this tutorial, you have become proficient with these tasks:
   
   
   
+

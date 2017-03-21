@@ -1,7 +1,7 @@
 ---
 title: "COUNT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-08"
+ms.date: "01/08/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -289,4 +289,5 @@ WHERE SalesOrderNumber IN (N'SO53115',N'SO55981');
  [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
+
 

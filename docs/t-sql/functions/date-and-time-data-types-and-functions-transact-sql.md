@@ -1,7 +1,7 @@
 ---
 title: "Date and Time Data Types and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-12-02"
+ms.date: "12/02/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

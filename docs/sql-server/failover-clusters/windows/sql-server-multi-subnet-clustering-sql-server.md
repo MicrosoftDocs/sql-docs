@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Multi-Subnet Clustering (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-01"
+ms.date: "09/01/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

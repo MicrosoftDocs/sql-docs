@@ -2,7 +2,7 @@
 title: "Lesson 1: Work with SQL Server Data using R (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-09-30"
+ms.date: "09/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -123,3 +123,4 @@ This section lists some common issues that you might run across in the course of
   
   
   
+

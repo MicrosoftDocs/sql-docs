@@ -1,7 +1,7 @@
 ---
 title: "Exporting to a PDF File (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-21"
+ms.date: "10/21/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

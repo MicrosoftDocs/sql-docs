@@ -1,7 +1,7 @@
 ---
 title: "Start SQL Server with Minimal Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-20"
+ms.date: "01/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "CASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-20"
+ms.date: "10/20/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -355,5 +355,6 @@ WHERE SalariedFlag = 0;
  [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
+
 
 

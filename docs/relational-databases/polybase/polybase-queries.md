@@ -2,7 +2,7 @@
 title: "PolyBase Queries | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-03-09"
+ms.date: "03/09/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

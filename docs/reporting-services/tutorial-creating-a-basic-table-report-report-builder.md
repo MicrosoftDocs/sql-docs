@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Creating a Basic Table Report (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-23"
+ms.date: "06/23/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -359,3 +359,4 @@ This concludes the walkthrough for how to create a basic table report. For more 
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)  
 [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+

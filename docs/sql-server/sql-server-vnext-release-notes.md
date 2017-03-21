@@ -1,7 +1,7 @@
 ---
 title: "SQL Server vNext Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-12"
+ms.date: "03/12/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -219,3 +219,4 @@ SQL Server Management Studio is a seperate downlaod.  For the latest information
 
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+

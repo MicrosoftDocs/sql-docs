@@ -2,7 +2,7 @@
 title: "View or Change the Properties of a Database | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-08-25"
+ms.date: "08/25/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

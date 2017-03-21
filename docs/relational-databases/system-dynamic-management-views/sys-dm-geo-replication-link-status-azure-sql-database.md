@@ -3,7 +3,7 @@ title: "sys.dm_geo_replication_link_status (Azure SQL Database) | Microsoft Docs
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-10-13"
+ms.date: "10/13/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

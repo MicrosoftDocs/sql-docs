@@ -1,7 +1,7 @@
 ---
 title: "PATINDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-07"
+ms.date: "01/07/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -196,4 +196,5 @@ ORDER BY ProductKey;
  [Percent character &#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
+
 

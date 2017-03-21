@@ -2,7 +2,7 @@
 title: "System Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-02-21"
+ms.date: "02/21/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

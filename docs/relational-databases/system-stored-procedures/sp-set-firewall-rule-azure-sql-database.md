@@ -3,7 +3,7 @@ title: "sp_set_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-07-28"
+ms.date: "07/28/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -88,4 +88,5 @@ exec sp_set_firewall_rule N'Example setting 1','0.0.0.2','0.0.0.3';
  [sys.firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
   
   
+
 

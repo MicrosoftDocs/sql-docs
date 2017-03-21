@@ -1,7 +1,7 @@
 ---
 title: "Resource Governor Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-16"
+ms.date: "03/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

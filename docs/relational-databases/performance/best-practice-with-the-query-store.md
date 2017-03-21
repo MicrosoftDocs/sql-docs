@@ -2,7 +2,7 @@
 title: "Best Practice with the Query Store | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-11-24"
+ms.date: "11/24/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

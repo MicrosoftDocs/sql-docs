@@ -3,7 +3,7 @@ title: "What&#39;s New in SQL Server 2016 (Database Engine) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
   - "SQL2016_rc1"
-ms.date: "2017-01-13"
+ms.date: "01/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -451,6 +451,7 @@ SQL Server 2016 Upgrade Advisor Preview is a standalone tool that enables users 
 [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
  
 [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+
 
 
 

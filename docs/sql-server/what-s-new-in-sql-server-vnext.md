@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server vNext | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-16"
+ms.date: "03/16/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""

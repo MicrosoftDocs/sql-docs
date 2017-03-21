@@ -1,6 +1,6 @@
 ---
 title: "Enable a report server for Power BI Mobile access | Microsoft Docs"
-ms.date: "2015-12-17"
+ms.date: "12/17/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -57,3 +57,4 @@ For more information on how to configure the Windows Firewall, see [Configure a 
   
   
   
+

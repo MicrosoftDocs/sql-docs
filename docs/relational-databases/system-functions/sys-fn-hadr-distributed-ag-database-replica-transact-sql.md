@@ -1,7 +1,7 @@
 ---
 title: "sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-14"
+ms.date: "06/14/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

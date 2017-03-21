@@ -1,7 +1,7 @@
 ---
 title: "Create Table SQL Statement (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-16"
+ms.date: "02/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -55,4 +55,5 @@ For more info about the syntax, see [CREATE TABLE &#40;Transact-SQL&#41;](../../
  
  ## See also
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+
 

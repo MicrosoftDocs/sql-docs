@@ -2,7 +2,7 @@
 title: "external scripts enabled Server Configuration Option | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-03-15"
+ms.date: "03/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

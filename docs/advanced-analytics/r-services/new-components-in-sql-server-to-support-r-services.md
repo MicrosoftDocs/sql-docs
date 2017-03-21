@@ -1,7 +1,7 @@
 ---
 title: "New Components in SQL Server to Support R Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-03"
+ms.date: "06/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -115,3 +115,4 @@ When connecting from a remote data science client that supports Microsoft R, you
 
 ## See Also
 [Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r-services.md)
+

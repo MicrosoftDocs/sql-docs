@@ -1,7 +1,7 @@
 ---
 title: "DMVs for SQL Server R Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-29"
+ms.date: "11/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -139,4 +139,5 @@ To determine if a process is running in a job, use the `IsProcessInJob` function
 
 ## See Also
 [Managing and Monitoring](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)
+
 

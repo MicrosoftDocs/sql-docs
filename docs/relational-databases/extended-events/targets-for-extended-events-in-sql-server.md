@@ -1,7 +1,7 @@
 ---
 title: "Targets for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-08"
+ms.date: "08/08/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -786,4 +786,5 @@ If encountered, error **25726** means the event stream filled up with data faste
 - [Microsoft.SqlServer.Management.XEvent Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Microsoft.SqlServer.XEvent.Linq Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
+
 

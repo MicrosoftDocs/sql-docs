@@ -1,7 +1,7 @@
 ---
 title: "sys.database_permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-15"
+ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -170,4 +170,5 @@ JOIN sys.schemas AS s
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   
+
 

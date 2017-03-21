@@ -1,7 +1,7 @@
 ---
 title: "Create Database (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-17"
+ms.date: "02/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,3 +87,4 @@ For more info about the file size options that you see on this page, see [CREATE
 
 ## What's next?  
  After you provide a name for the new database that the wizard will create and click **OK**, the **Create Database** dialog box returns you to the **Choose a Destination** page. For more info, see [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
+

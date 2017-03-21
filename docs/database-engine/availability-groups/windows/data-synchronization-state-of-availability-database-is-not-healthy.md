@@ -1,7 +1,7 @@
 ---
 title: "Data synchronization state of availability database is not healthy | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-17"
+ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -46,4 +46,5 @@ manager: "erikre"
  [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+
 

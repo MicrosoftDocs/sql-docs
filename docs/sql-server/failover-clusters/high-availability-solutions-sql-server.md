@@ -1,7 +1,7 @@
 ---
 title: "High Availability Solutions (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-19"
+ms.date: "05/19/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -62,3 +62,4 @@ Database mirroring is a solution to increase database availability by supporting
  [Deprecated Database Engine Features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)    
     
   
+

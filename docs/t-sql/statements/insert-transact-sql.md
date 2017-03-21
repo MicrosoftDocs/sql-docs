@@ -1,7 +1,7 @@
 ---
 title: "INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-01"
+ms.date: "09/01/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -1114,4 +1114,5 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN)
  [Use the inserted and deleted Tables](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
   
+
 

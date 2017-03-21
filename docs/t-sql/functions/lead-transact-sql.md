@@ -1,7 +1,7 @@
 ---
 title: "LEAD (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-10-20"
+ms.date: "10/20/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -176,4 +176,5 @@ ORDER BY CalendarYear, CalendarQuarter;
  [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   
+
 

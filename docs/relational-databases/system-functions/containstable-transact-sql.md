@@ -1,7 +1,7 @@
 ---
 title: "CONTAINSTABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-07-24"
+ms.date: "07/24/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

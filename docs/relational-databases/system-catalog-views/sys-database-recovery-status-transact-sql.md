@@ -1,7 +1,7 @@
 ---
 title: "sys.database_recovery_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-12"
+ms.date: "08/12/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Specify Prefix Length in Data Files by Using bcp (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-28"
+ms.date: "07/28/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

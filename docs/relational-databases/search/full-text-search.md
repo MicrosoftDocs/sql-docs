@@ -1,7 +1,7 @@
 ---
 title: "Full-Text Search | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-29"
+ms.date: "07/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -250,3 +250,4 @@ Only one full-text index is allowed per table. For a full-text index to be creat
  Word breakers (and stemmers) and filters run in the filter daemon host process (fdhost.exe).  
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+

@@ -1,7 +1,7 @@
 ---
 title: "Define and Use Compute Contexts (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-30"
+ms.date: "09/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -133,3 +133,4 @@ Now that you have created a remote compute context, you'll learn how to change c
   
   
   
+

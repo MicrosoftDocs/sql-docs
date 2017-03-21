@@ -1,7 +1,7 @@
 ---
 title: "sp_sequence_get_range (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-08-08"
+ms.date: "08/08/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

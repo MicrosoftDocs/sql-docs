@@ -1,7 +1,7 @@
 ---
 title: "Slash Star Comment (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-10"
+ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -107,3 +107,4 @@ GO
  [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
+

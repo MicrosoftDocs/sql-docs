@@ -2,7 +2,7 @@
 title: "Diagnostic Connection for Database Administrators | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-10-16"
+ms.date: "10/16/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -142,3 +142,4 @@ manager: "jhubbard"
  [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
+

@@ -2,7 +2,7 @@
 title: "PPTX Device Information Settings | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-09-11"
+ms.date: "09/11/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

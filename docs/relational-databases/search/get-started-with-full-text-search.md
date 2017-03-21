@@ -1,6 +1,6 @@
 ---
 title: "Get Started with Full-Text Search | Microsoft Docs"
-ms.date: "2016-08-22"
+ms.date: "08/22/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

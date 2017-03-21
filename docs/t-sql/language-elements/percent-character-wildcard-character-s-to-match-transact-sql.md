@@ -1,7 +1,7 @@
 ---
 title: "Percent character (Wildcard - Character(s) to Match) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-06"
+ms.date: "12/06/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

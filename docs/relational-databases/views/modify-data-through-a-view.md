@@ -1,7 +1,7 @@
 ---
 title: "Modify Data Through a View | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-05"
+ms.date: "10/05/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

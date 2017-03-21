@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_external_script_execution_stats | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-16"
+ms.date: "09/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -90,3 +90,4 @@ WHERE language = 'R';
 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
+

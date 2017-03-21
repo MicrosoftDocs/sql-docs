@@ -1,7 +1,7 @@
 ---
 title: "Overview and Usage Scenarios | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-22"
+ms.date: "11/22/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

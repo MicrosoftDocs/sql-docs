@@ -1,7 +1,7 @@
 ---
 title: "Security Best Practices with Contained Databases | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-14"
+ms.date: "03/14/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "MDX Syntax Conventions (MDX) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-02"
+ms.date: "03/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -37,3 +37,4 @@ manager: "erikre"
  [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
+

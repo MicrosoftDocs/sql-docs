@@ -1,7 +1,7 @@
 ---
 title: "Configure firewall rules before running the TSQL Debugger | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-20"
+ms.date: "10/20/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

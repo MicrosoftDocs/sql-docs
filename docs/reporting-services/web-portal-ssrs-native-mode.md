@@ -2,7 +2,7 @@
 title: "Web portal (SSRS Native Mode) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-02-24"
+ms.date: "02/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -144,3 +144,4 @@ You can enter a search team, and you will see everything you can access. The res
 More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
+

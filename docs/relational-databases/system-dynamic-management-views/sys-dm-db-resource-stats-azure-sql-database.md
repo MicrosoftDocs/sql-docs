@@ -3,7 +3,7 @@ title: "sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-03-16"
+ms.date: "03/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

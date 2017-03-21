@@ -1,7 +1,7 @@
 ---
 title: "Use Unicode Native Format to Import or Export Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-30"
+ms.date: "09/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

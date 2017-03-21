@@ -2,7 +2,7 @@
 title: "Configure a Firewall for Report Server Access | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-09-14"
+ms.date: "09/14/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

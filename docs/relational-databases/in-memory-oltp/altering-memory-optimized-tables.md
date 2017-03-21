@@ -2,7 +2,7 @@
 title: "Altering Memory-Optimized Tables | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-10-04"
+ms.date: "10/04/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -170,3 +170,4 @@ The single-threaded operations require that the entire contents of the altered t
 
 [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
+

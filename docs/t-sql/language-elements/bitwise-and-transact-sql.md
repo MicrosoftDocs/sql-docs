@@ -1,7 +1,7 @@
 ---
 title: "&amp; (Bitwise AND) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-10"
+ms.date: "01/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -107,4 +107,5 @@ GO
  [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
+
 

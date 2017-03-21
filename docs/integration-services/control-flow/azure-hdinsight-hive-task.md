@@ -2,7 +2,7 @@
 title: "Azure HDInsight Hive Task | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-02-28"
+ms.date: "02/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

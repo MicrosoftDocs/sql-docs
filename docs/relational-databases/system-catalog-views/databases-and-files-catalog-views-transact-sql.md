@@ -2,7 +2,7 @@
 title: "Databases and Files Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-01-18"
+ms.date: "01/18/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "DROP STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-22"
+ms.date: "03/22/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -112,4 +112,5 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
   
   
+
 

@@ -1,7 +1,7 @@
 ---
 title: "Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-09"
+ms.date: "08/09/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Create a Basic Table Report (SSRS Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-15"
+ms.date: "06/15/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -59,3 +59,4 @@ You must also have read-only permissions to retrieve data from the [!INCLUDE[ssS
   
   
   
+

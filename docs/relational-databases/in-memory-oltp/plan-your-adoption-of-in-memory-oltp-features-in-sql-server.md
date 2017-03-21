@@ -1,7 +1,7 @@
 ---
 title: "Plan your adoption of In-Memory OLTP Features in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-05"
+ms.date: "10/05/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -410,4 +410,5 @@ You can make your Transact-SQL scripts more robust against a possible transactio
 ## Related links
 
 - [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+
 

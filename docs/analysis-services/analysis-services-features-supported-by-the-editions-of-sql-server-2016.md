@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services Features Supported by the Editions of SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-02"
+ms.date: "09/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -157,4 +157,5 @@ This topic provides details of features supported by the different editions of [
  ## See Also  
  [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Installation for SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+
 

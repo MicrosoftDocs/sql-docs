@@ -1,7 +1,7 @@
 ---
 title: "Configure Flat File Destination (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-16"
+ms.date: "03/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -79,3 +79,4 @@ After you preview the data, you may want to change the options that you selected
 
 ## What's next?  
  After you specify formatting options for the destination flat file, the next page is **Save and Execute Package**. On this page, you specify whether you want to run the operation immediately. Depending on your configuration, you may also be able to save your settings as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to customize it and to reuse it later. For more info, see [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
+

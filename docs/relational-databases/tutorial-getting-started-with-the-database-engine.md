@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Getting Started with the Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-02"
+ms.date: "06/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -49,3 +49,4 @@ Your system must have the following installed to use this tutorial:
   
   
   
+

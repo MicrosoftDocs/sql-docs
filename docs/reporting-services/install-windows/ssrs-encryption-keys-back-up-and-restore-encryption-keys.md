@@ -1,7 +1,7 @@
 ---
 title: "Back Up and Restore Reporting Services Encryption Keys | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-31"
+ms.date: "05/31/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

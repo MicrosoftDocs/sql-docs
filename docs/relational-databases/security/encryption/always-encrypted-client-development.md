@@ -2,7 +2,7 @@
 title: "Always Encrypted (client development) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-07-29"
+ms.date: "07/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,3 +33,4 @@ For details about developing applications that use Always Encrypted protected da
 ## See Also
 
 [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+

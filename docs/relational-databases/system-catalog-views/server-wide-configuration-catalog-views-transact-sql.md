@@ -1,7 +1,7 @@
 ---
 title: "Server-wide Configuration Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-12-01"
+ms.date: "12/01/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "User-Defined Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-05"
+ms.date: "08/05/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -132,5 +132,6 @@ Why use them?
 |Describes how to view the definition of a user-defined function.|[View User-defined Functions](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
+
 
 

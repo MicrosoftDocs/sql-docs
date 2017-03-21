@@ -1,7 +1,7 @@
 ---
 title: "Lesson 5: Deploy and Use the Model (Data Science End-to-End Walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-22"
+ms.date: "11/22/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -225,3 +225,4 @@ We also recommend that you check out some of these additional samples and resour
   
   
   
+

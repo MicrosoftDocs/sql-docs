@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Documentation Offline Access | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-22"
+ms.date: "08/22/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -45,5 +45,6 @@ Install either of these before proceeding to the steps below.
 
 
    ![Offline ready to use](../sql-server/media/offline-ready-to-use.png)
+
 
 

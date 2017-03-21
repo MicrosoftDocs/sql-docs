@@ -1,7 +1,7 @@
 ---
 title: "sys.database_role_members (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-31"
+ms.date: "01/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -61,4 +61,5 @@ ORDER BY DP1.name;
 [ALTER ROLE (Transact-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      
 [sys.server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
   
+
 

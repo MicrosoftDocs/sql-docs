@@ -1,6 +1,6 @@
 ---
 title: "Database Checkpoints (SQL Server) | Microsoft Docs"
-ms.date: "2016-09-23"
+ms.date: "09/23/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

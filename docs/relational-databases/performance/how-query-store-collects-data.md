@@ -2,7 +2,7 @@
 title: "How Query Store Collects Data | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-09-13"
+ms.date: "09/13/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

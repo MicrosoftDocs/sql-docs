@@ -1,7 +1,7 @@
 ---
 title: "sp_dropalias (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-09-18"
+ms.date: "09/18/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

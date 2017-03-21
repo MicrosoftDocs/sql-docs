@@ -1,7 +1,7 @@
 ---
 title: "COUNT_BIG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-07"
+ms.date: "01/07/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

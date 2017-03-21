@@ -1,7 +1,7 @@
 ---
 title: "Lesson 5: Formatting a Report (Reporting Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-23"
+ms.date: "05/23/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -90,3 +90,4 @@ You have successfully formatted column headers and date and currency values. Nex
   
   
   
+

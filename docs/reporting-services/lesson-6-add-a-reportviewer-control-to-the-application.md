@@ -1,7 +1,7 @@
 ---
 title: "Lesson 6: Add a ReportViewer Control to the Application | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-18"
+ms.date: "05/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,3 +41,4 @@ After you design the child report by using the Report Wizard, your next step is 
 ## Next Task  
 You have successfully added a ReportViewer control to the website application. Next, you will add a drillthrough action on the parent report. See [Lesson 7: Add Drillthrough Action on Parent Report](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md).  
   
+

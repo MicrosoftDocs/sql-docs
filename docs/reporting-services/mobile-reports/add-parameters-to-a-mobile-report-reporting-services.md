@@ -1,7 +1,7 @@
 ---
 title: "Add parameters to a mobile report | Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-01"
+ms.date: "11/01/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -61,3 +61,4 @@ After you add parameters to a mobile report, you create a URL to [open the repor
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
+

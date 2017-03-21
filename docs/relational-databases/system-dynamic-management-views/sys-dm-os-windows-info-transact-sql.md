@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_windows_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

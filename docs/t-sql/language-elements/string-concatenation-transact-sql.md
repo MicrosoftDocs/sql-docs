@@ -1,7 +1,7 @@
 ---
 title: "+ (String Concatenation) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-06"
+ms.date: "12/06/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -202,5 +202,6 @@ Welcker, B.        Vice President of Sales
  [+= &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
   
+
 
 

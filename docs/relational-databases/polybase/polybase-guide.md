@@ -1,6 +1,6 @@
 ---
 title: "PolyBase Guide | Microsoft Docs"
-ms.date: "2016-12-08"
+ms.date: "12/08/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

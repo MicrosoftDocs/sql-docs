@@ -1,7 +1,7 @@
 ---
 title: "Database Properties (Query Store Page) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-11-09"
+ms.date: "11/09/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

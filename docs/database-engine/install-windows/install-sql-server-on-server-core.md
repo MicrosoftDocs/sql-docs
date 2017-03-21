@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server 2016 on Server Core | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-10"
+ms.date: "11/10/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -330,3 +330,4 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](http://go.microsoft.com/fwlink/?LinkId=221421)  
   
   
+

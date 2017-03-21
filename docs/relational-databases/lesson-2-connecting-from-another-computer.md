@@ -1,7 +1,7 @@
 ---
 title: "Lesson 2: Connecting from Another Computer | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-08"
+ms.date: "03/08/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -139,3 +139,4 @@ This concludes this brief tutorial on basic connectivity.
 ## Return to Tutorials Portal  
 [Tutorial: Getting Started with the Database Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
+

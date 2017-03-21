@@ -1,7 +1,7 @@
 ---
 title: "Business Rule Examples (Master Data Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-05"
+ms.date: "01/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -157,3 +157,4 @@ What information are you looking for, and did you find it? We’re listening to 
   
   
   
+

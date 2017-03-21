@@ -1,7 +1,7 @@
 ---
 title: "How Online Index Operations Work | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-17"
+ms.date: "02/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

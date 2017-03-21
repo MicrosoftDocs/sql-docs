@@ -1,7 +1,7 @@
 ---
 title: "FIRST_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-10"
+ms.date: "11/10/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

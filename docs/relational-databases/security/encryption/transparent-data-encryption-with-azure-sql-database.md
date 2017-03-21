@@ -4,7 +4,7 @@ ms.custom:
   - "SQL2016_New_Updated"
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-09-02"
+ms.date: "09/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: "sql-database"

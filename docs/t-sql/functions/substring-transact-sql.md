@@ -1,7 +1,7 @@
 ---
 title: "SUBSTRING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-21"
+ms.date: "10/21/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -222,4 +222,5 @@ SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
+
 

@@ -2,7 +2,7 @@
 title: "Create mobile reports with SQL Server Mobile Report Publisher | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-11-08"
+ms.date: "11/08/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -59,3 +59,4 @@ These articles will help you get started.
 
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: "SELECTs and JOINs From System Views for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-02"
+ms.date: "08/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -914,4 +914,5 @@ Here is the contents of the first XML cell, from the preceding returned rowset.
   </action>
 </event>
 ```
+
 

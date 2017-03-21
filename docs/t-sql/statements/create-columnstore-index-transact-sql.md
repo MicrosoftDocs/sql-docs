@@ -2,7 +2,7 @@
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -811,4 +811,5 @@ DROP INDEX cci_xdimProduct ON xdimProduct;
 ```  
   
   
+
 

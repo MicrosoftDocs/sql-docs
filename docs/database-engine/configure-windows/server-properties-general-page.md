@@ -1,7 +1,7 @@
 ---
 title: "Server Properties (General Page) - SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-25"
+ms.date: "08/25/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

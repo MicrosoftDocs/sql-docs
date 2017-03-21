@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_session_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-01"
+ms.date: "02/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -54,3 +54,4 @@ manager: "jhubbard"
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  
   
   
+

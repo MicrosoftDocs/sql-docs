@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_xtp_merge_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-01"
+ms.date: "02/01/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.suite: ""
@@ -47,4 +47,5 @@ Requires VIEW DATABASE STATE permission on the current database.
 ## See also
 
 [Memory-Optimized Table Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
+
 

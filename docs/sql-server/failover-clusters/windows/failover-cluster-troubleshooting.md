@@ -2,7 +2,7 @@
 title: "Failover Cluster Troubleshooting | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-10-21"
+ms.date: "10/21/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

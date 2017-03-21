@@ -1,7 +1,7 @@
 ---
 title: "Scalability | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-08-27"
+ms.date: "08/27/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Spatial Data Types Overview | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-01"
+ms.date: "11/01/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

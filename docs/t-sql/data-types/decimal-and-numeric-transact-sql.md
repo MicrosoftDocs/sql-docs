@@ -1,7 +1,7 @@
 ---
 title: "decimal and numeric (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-14"
+ms.date: "12/14/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

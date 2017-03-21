@@ -1,7 +1,7 @@
 ---
 title: "Statistics for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-23"
+ms.date: "10/23/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

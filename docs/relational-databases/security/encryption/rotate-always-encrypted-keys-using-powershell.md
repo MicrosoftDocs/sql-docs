@@ -1,7 +1,7 @@
 ---
 title: "Rotate Always Encrypted Keys using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-18"
+ms.date: "11/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -369,3 +369,4 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)    
 - [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
+

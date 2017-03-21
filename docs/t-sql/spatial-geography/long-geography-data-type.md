@@ -1,7 +1,7 @@
 ---
 title: "Long (geography Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-02"
+ms.date: "06/02/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

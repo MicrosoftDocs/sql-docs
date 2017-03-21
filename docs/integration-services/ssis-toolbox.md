@@ -1,7 +1,7 @@
 ---
 title: "SSIS Toolbox | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-16"
+ms.date: "11/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -59,3 +59,4 @@ Get more information about a component in the toolbox by clicking the component 
 ## Refresh the SSIS Toolbox  
   
 1.  Right-click in the SSIS Toolbox, and then click **Refresh Toolbox**.  
+

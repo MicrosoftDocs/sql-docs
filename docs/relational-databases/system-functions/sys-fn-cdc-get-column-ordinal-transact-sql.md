@@ -1,7 +1,7 @@
 ---
 title: "sys.fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-25"
+ms.date: "01/25/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

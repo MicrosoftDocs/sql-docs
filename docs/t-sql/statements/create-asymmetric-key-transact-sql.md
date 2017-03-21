@@ -1,7 +1,7 @@
 ---
 title: "CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-08"
+ms.date: "01/08/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

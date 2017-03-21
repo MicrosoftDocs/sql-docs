@@ -1,7 +1,7 @@
 ---
 title: "Data Collection | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-18"
+ms.date: "07/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -117,3 +117,4 @@ manager: "jhubbard"
 |Exploit the server-side trace capabilities of SQL Server Profiler to export a trace definition that you can use to create a collection set that uses the Generic SQL Trace collector type| [Use SQL Server Profiler to Create a SQL Trace Collection Set (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
   
   
+

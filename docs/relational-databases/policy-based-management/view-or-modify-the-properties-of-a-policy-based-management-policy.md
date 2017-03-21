@@ -1,7 +1,7 @@
 ---
 title: "View or Modify the Properties of a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-06"
+ms.date: "10/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

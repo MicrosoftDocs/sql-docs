@@ -1,7 +1,7 @@
 ---
 title: "NEXT VALUE FOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-19"
+ms.date: "07/19/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Accessing Memory-Optimized Tables Using Interpreted Transact-SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-31"
+ms.date: "05/31/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -71,3 +71,4 @@ An isolation level table hint is not required for memory-optimized tables access
 [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
 
 [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+

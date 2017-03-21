@@ -1,7 +1,7 @@
 ---
 title: "Integration Services (SSIS) Scale Out | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,4 +30,5 @@ manager: "jhubbard"
 
 ## Run packages in Scale Out
 Scale Out supports running multiple packages in the SSISDB catalog in parallel. For more details, see [Run packages in Scale Out](../integration-services/run-packages-in-integration-services-ssis-scale-out.md).
+
 

@@ -1,7 +1,7 @@
 ---
 title: "Step 5: Train and Save a Model using T-SQL (In-Database Advanced Analytics Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-19"
+ms.date: "04/19/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -117,3 +117,4 @@ In the next step you'll use the trained model to create predictions.
   
   
   
+

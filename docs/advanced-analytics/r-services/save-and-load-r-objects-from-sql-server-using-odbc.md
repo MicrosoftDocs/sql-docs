@@ -1,7 +1,7 @@
 ---
 title: "Save and Load R Objects from SQL Server using ODBC | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -117,3 +117,4 @@ This procedure demonstrates how you can use the new functions to load a model fr
 ## See Also
 
 [R Services Features and Tasks](../../advanced-analytics/r-services/sql-server-r-services-features-and-tasks.md)
+

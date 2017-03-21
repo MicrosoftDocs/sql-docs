@@ -1,7 +1,7 @@
 ---
 title: "sys.tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-11"
+ms.date: "10/11/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Implementing MERGE Functionality in a Natively Compiled Stored Procedure | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-17"
+ms.date: "11/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

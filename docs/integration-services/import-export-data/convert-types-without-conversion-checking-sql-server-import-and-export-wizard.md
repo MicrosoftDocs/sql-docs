@@ -1,7 +1,7 @@
 ---
 title: "Convert Types without Conversion Checking (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-11"
+ms.date: "01/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

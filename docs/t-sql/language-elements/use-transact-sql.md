@@ -1,7 +1,7 @@
 ---
 title: "USE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-28"
+ms.date: "11/28/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -79,4 +79,5 @@ USE AccountingDB;
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
   
   
+
 

@@ -1,7 +1,7 @@
 ---
 title: "ntext, text, and image (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-30"
+ms.date: "07/30/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,3 +65,4 @@ manager: "jhubbard"
   
   
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+

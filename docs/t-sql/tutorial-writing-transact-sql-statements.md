@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Writing Transact-SQL Statements | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-03"
+ms.date: "08/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -55,3 +55,4 @@ Your system must have the following installed:
   
   
   
+

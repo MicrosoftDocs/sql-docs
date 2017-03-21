@@ -2,7 +2,7 @@
 title: "DROP SYNONYM (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-10-10"
+ms.date: "10/10/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

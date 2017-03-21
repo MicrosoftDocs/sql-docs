@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-28"
+ms.date: "12/28/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,5 +65,6 @@ FROM sys.dm_db_log_space_usage;
  [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
   
+
 
 

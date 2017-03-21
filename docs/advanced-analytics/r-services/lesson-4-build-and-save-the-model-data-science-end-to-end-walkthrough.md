@@ -1,7 +1,7 @@
 ---
 title: "Lesson 4: Build and Save the Model (Data Science End-to-End Walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-22"
+ms.date: "11/22/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -221,3 +221,4 @@ In the next lesson, you'll learn how to perform scoring against the saved model 
   
   
   
+

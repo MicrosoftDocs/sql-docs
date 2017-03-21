@@ -3,7 +3,7 @@ title: "sp_execute_remote (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2017-02-01"
+ms.date: "02/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

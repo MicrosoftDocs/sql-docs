@@ -2,7 +2,7 @@
 title: "Tree Map and Sunburst Charts in Reporting Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-08-31"
+ms.date: "08/31/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -178,3 +178,4 @@ manager: "erikre"
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+

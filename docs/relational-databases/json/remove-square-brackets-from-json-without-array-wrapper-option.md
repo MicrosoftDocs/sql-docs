@@ -2,7 +2,7 @@
 title: "Remove Square Brackets from JSON Output with the WITHOUT_ARRAY_WRAPPER Option (SQL Server) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-06-02"
+ms.date: "06/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

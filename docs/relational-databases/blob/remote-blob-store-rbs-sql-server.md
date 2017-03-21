@@ -1,7 +1,7 @@
 ---
 title: "Remote Blob Store (RBS) (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-03"
+ms.date: "11/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

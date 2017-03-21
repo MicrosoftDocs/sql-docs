@@ -2,7 +2,7 @@
 title: "sys.time_zone_info (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-11-15"
+ms.date: "11/15/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

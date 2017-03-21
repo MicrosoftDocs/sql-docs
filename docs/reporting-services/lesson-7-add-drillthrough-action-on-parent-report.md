@@ -1,7 +1,7 @@
 ---
 title: "Lesson 7: Add Drillthrough Action on Parent Report | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-18"
+ms.date: "05/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -46,3 +46,4 @@ You have successfully added a drillthrough action on the parent report. Next, yo
   
   
   
+

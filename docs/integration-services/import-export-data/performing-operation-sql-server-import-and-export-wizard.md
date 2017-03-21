@@ -1,7 +1,7 @@
 ---
 title: "Performing Operation (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-11"
+ms.date: "01/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -54,4 +54,5 @@ After you review the choices that you made in the wizard and click **Finish** on
 
 ## See also
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+
 

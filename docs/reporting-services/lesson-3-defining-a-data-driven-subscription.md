@@ -1,7 +1,7 @@
 ---
 title: "Lesson 3: Defining a Data-Driven Subscription | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-26"
+ms.date: "05/26/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -108,3 +108,4 @@ This step concludes the tutorial "Define a Data-Driven Subscription".
   
   
   
+

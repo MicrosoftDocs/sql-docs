@@ -1,7 +1,7 @@
 ---
 title: "Lesson 4: Define a Data Connection and Data Table for Child Report | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-18"
+ms.date: "05/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -72,3 +72,4 @@ After you design the parent report, you next step is to create a data connection
 ## Next Task  
 You have successfully created a data connection and data table for the child report. Next, you will design the child report using the Report Wizard. See [Lesson 5: Design the Child Report using the Report Wizard](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
   
+

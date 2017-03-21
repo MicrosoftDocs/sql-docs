@@ -1,7 +1,7 @@
 ---
 title: "sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-24"
+ms.date: "06/24/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

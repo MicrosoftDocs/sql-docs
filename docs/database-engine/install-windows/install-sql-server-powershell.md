@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-02-24"
+ms.date: "02/24/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

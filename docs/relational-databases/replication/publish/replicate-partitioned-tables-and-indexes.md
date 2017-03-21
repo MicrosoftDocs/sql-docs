@@ -1,7 +1,7 @@
 ---
 title: "Replicate Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-09-10"
+ms.date: "09/10/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

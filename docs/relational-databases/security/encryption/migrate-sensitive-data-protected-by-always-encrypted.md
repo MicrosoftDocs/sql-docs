@@ -2,7 +2,7 @@
 title: "Migrate Sensitive Data Protected by Always Encrypted | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-11-04"
+ms.date: "11/04/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

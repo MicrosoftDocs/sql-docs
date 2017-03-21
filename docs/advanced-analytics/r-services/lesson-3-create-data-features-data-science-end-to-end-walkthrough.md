@@ -1,7 +1,7 @@
 ---
 title: "Lesson 3: Create Data Features (Data Science End-to-End Walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-22"
+ms.date: "11/22/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -218,3 +218,4 @@ Proceed to the next lesson to learn how to build a predictive model using this d
   
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: "CREATE PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-21"
+ms.date: "02/21/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -1077,5 +1077,6 @@ DROP PROCEDURE Get10TopResellers;
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
   
+
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Integrating Reporting Services Using the ReportViewer Controls | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-06"
+ms.date: "09/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

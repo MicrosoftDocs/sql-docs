@@ -1,7 +1,7 @@
 ---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-29"
+ms.date: "11/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -842,5 +842,6 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
  [Create a CmdExec Job Step](../Topic/Create%20a%20CmdExec%20Job%20Step.md)  
   
   
+
 
 

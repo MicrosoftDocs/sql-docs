@@ -1,7 +1,7 @@
 ---
 title: "sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-07"
+ms.date: "03/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -127,4 +127,5 @@ FROM sys.memory_optimized_tables_internal_attributes moa
    JOIN sys.objects o on moa.object_id=o.object_id
 WHERE moa.type IN (0, 2, 3, 4)
 ```
+
 

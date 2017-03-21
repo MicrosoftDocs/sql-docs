@@ -1,7 +1,7 @@
 ---
 title: "Query and Modify the SQL Server Data (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-30"
+ms.date: "09/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -130,3 +130,4 @@ Now the three variables you specified (_gender_, _state_, and _cardholder_) are 
   
   
   
+

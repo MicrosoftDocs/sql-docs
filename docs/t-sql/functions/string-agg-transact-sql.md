@@ -1,7 +1,7 @@
 ---
 title: "STRING_AGG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-24"
+ms.date: "02/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -189,3 +189,4 @@ GROUP BY town;
 ## See Also  
 
 [String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+

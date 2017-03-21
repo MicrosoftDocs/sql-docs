@@ -3,7 +3,7 @@ title: "Transactions with Memory-Optimized Tables | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-08-18"
+ms.date: "08/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -359,3 +359,4 @@ GeneMi , 2016-03-28 11:40am
   
   
   
+

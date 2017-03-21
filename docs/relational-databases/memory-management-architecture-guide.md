@@ -1,7 +1,7 @@
 ---
 title: "Memory Management Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-21"
+ms.date: "10/21/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -175,3 +175,4 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is non-uniform 
 ## See Also
 [Reading Pages](../relational-databases/reading-pages.md)   
  [Writing Pages](../relational-databases/writing-pages.md)
+

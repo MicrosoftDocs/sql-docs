@@ -1,7 +1,7 @@
 ---
 title: "Linux Process Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-10"
+ms.date: "02/10/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,3 +35,4 @@ Process information is exposed in catalog views that are optimized for performan
 ## See Also
 
 [sys.dm_os_host_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)   
+

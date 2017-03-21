@@ -1,7 +1,7 @@
 ---
 title: "Configure SQL Server on a Server Core Installation | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-31"
+ms.date: "08/31/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

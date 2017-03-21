@@ -1,7 +1,7 @@
 ---
 title: "View or Configure the backup compression default Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-02"
+ms.date: "03/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -120,3 +120,4 @@ GO
  [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   
+

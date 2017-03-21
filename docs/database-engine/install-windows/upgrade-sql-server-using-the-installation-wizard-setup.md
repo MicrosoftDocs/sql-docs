@@ -1,7 +1,7 @@
 ---
 title: "Upgrade to SQL Server 2016 Using the Installation Wizard (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-09-14"
+ms.date: "09/14/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

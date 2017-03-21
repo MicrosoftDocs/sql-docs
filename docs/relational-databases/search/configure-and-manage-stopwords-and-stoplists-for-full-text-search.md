@@ -1,7 +1,7 @@
 ---
 title: "Configure and Manage Stopwords and Stoplists for Full-Text Search | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-02"
+ms.date: "02/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Upgrading Log Shipping to SQL Server 2016 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-02-01"
+ms.date: "02/01/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

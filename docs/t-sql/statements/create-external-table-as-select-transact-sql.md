@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-06"
+ms.date: "07/06/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"

@@ -2,7 +2,7 @@
 title: "DROP PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-10-28"
+ms.date: "10/28/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -113,4 +113,5 @@ GO
  [Delete a Stored Procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
   
   
+
 

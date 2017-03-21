@@ -1,7 +1,7 @@
 ---
 title: "Use the Copy Database Wizard | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-26"
+ms.date: "07/26/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

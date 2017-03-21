@@ -1,7 +1,7 @@
 ---
 title: "Pages and Extents Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-21"
+ms.date: "10/21/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

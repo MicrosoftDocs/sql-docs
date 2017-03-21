@@ -2,7 +2,7 @@
 title: "Always Encrypted Cryptography | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-02-29"
+ms.date: "02/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

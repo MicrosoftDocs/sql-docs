@@ -1,7 +1,7 @@
 ---
 title: "sp_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-17"
+ms.date: "10/17/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -121,4 +121,5 @@ EXEC sp_columns @table_name = N'DimEmployee',
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
+
 

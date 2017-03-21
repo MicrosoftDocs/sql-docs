@@ -1,7 +1,7 @@
 ---
 title: "Expression Examples (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-16"
+ms.date: "09/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

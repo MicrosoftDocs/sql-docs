@@ -1,7 +1,7 @@
 ---
 title: "Server Properties (General Page) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-08"
+ms.date: "06/08/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -59,3 +59,4 @@ manager: "erikre"
  [Secure My Reports](../../reporting-services/security/secure-my-reports.md)  
   
   
+

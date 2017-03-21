@@ -1,7 +1,7 @@
 ---
 title: "Faster temp table and table variable by using memory optimization | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-17"
+ms.date: "01/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -459,3 +459,4 @@ GeneMi , 2016-05-02  Monday  18:40pm
   
   
   
+

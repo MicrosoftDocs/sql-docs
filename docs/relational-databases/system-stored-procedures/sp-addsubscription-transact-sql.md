@@ -1,6 +1,6 @@
 ---
 title: "sp_addsubscription (Transact-SQL) | Microsoft Docs"
-ms.date: "2015-10-28"
+ms.date: "10/28/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

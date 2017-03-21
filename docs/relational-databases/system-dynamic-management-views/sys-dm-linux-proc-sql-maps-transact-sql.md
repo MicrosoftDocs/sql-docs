@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_linux_proc_sql_maps (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-09"
+ms.date: "02/09/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -59,3 +59,4 @@ SELECT * FROM sys.dm_linux_proc_sql_maps WHERE pathname LIKE '%/usr/%';
 ## See Also  
 
 [Linux Process Dynamic Management Views (Transact-SQL)](../../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md)   
+

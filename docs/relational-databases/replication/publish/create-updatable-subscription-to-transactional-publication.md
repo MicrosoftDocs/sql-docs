@@ -1,7 +1,7 @@
 ---
 title: "Create an Updatable Subscription to a Transactional Publication Using Transact-SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-21"
+ms.date: "07/21/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -274,3 +274,4 @@ GO
 [Use sqlcmd with Scripting Variables](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)
 
 [Create an Updatable Subscription to a Transactional Publication (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
+

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-11"
+ms.date: "02/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

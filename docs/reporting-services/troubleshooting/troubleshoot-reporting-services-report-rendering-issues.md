@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Reporting Services Report Rendering Issues | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-02-27"
+ms.date: "02/27/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -73,3 +73,4 @@ When the data source is configured for a Microsoft SharePoint List connection ty
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+

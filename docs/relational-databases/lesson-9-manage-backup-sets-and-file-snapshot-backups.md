@@ -2,7 +2,7 @@
 title: "Lesson 9: Manage backup sets and file-snapshot backups | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-06-02"
+ms.date: "06/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -64,3 +64,4 @@ To delete a file-snapshot backup set, follow these steps:
   
   
   
+

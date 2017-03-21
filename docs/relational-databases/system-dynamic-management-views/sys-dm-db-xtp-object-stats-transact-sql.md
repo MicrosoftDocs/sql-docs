@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-29"
+ms.date: "08/29/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

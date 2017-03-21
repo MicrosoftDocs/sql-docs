@@ -1,6 +1,6 @@
 ---
 title: "Discontinued functionality to SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
-ms.date: "2016-09-12"
+ms.date: "09/12/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

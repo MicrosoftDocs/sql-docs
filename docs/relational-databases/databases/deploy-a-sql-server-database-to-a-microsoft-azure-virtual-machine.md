@@ -1,6 +1,6 @@
 ---
 title: "Deploy a SQL Server Database to a Microsoft Azure Virtual Machine | Microsoft Docs"
-ms.date: "2016-07-29"
+ms.date: "07/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

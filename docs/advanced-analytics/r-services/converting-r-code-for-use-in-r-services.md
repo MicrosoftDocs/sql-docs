@@ -2,7 +2,7 @@
 title: "Converting R Code for Use in R Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-05-31"
+ms.date: "05/31/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -94,4 +94,5 @@ When you are working in [!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)]
   
   
   
+
 

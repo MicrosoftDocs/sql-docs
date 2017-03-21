@@ -1,7 +1,7 @@
 ---
 title: "Database Properties (General Page) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-10-27"
+ms.date: "10/27/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

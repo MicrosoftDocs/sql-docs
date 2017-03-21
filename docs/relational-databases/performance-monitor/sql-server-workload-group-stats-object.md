@@ -2,7 +2,7 @@
 title: "SQL Server, Workload Group Stats Object | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-12-04"
+ms.date: "12/04/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

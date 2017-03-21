@@ -1,7 +1,7 @@
 ---
 title: "Deploy a Data-tier Application | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-31"
+ms.date: "01/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

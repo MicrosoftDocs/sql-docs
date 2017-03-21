@@ -1,7 +1,7 @@
 ---
 title: "UPDATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-01"
+ms.date: "07/01/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -280,4 +280,5 @@ UPDATE STATISTICS Customer;
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
   
   
+
 

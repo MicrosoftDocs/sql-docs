@@ -1,7 +1,7 @@
 ---
 title: "Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-17"
+ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -202,3 +202,4 @@ GO
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   
+

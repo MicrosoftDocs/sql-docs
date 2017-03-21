@@ -1,7 +1,7 @@
 ---
 title: "Files-Only Installation (Reporting Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-30"
+ms.date: "03/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,3 +65,4 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
  [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)  
   
   
+

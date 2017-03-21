@@ -1,7 +1,7 @@
 ---
 title: "Create a Predictive Model (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-10"
+ms.date: "03/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -152,4 +152,5 @@ Remember these rules for working with SQL parameters and R variables in sp_execu
 Now that you have a model, in the final step, you'll learn how to generate predictions from it and plot the results.
 
 [Predict and Plot from Model](../../advanced-analytics/r-services/predict-and-plot-from-model-r-in-t-sql-tutorial.md)
+
 

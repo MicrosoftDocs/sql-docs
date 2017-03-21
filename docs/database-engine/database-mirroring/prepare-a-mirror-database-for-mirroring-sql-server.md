@@ -1,7 +1,7 @@
 ---
 title: "Prepare a Mirror Database for Mirroring (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-17"
+ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -268,3 +268,4 @@ manager: "jhubbard"
  [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   
+

@@ -3,7 +3,7 @@ title: "Hash Indexes for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-08-29"
+ms.date: "08/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -457,3 +457,4 @@ GeneMi  ,  2016-05-05  Thursday  15:01pm
   
   
   
+

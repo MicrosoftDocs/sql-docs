@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-11-03"
+ms.date: "11/03/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

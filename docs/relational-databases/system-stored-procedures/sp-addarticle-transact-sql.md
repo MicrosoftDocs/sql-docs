@@ -2,7 +2,7 @@
 title: "sp_addarticle (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-10-28"
+ms.date: "10/28/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

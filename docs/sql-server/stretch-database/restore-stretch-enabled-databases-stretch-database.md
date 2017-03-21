@@ -1,7 +1,7 @@
 ---
 title: "Restore Stretch-enabled databases (Stretch Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-06"
+ms.date: "07/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: "sql-server-stretch-database"

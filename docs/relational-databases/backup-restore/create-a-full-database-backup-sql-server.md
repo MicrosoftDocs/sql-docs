@@ -1,7 +1,7 @@
 ---
 title: "Create a Full Database Backup (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-25"
+ms.date: "07/25/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

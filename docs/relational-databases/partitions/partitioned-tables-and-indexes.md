@@ -1,7 +1,7 @@
 ---
 title: "Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-01-20"
+ms.date: "01/20/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

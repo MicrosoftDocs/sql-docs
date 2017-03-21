@@ -1,7 +1,7 @@
 ---
 title: "Learn SQL Server Master Data Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-14"
+ms.date: "02/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -53,3 +53,4 @@ manager: "jhubbard"
   
   
   
+

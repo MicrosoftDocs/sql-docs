@@ -1,7 +1,7 @@
 ---
 title: "Score New Data (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-03"
+ms.date: "10/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -161,3 +161,4 @@ After the new table has been created, you will compute and display a histogram o
   
   
   
+

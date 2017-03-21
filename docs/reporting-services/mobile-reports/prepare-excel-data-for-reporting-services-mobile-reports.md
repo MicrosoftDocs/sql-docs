@@ -2,7 +2,7 @@
 title: "Prepare Excel data for Reporting Services mobile reports | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-02-08"
+ms.date: "02/08/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -96,3 +96,4 @@ Custom objects in Excel worksheets, including PivotTables, visualizations, and i
   
   
   
+

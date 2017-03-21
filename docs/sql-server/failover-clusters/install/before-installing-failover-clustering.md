@@ -1,7 +1,7 @@
 ---
 title: "Before Installing Failover Clustering | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-24"
+ms.date: "08/24/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -253,3 +253,4 @@ manager: "jhubbard"
  [Failover Cluster Instance Administration and Maintenance](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  
   
   
+

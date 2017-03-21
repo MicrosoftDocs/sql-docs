@@ -2,7 +2,7 @@
 title: "Power BI Report Server Integration (Configuration Manager) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-09-16"
+ms.date: "09/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -154,3 +154,4 @@ The second time a user pins an item, the steps 1-4 are skipped and instead the A
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+

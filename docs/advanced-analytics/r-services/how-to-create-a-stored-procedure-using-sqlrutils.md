@@ -1,7 +1,7 @@
 ---
 title: "How to Create a Stored Procedure Using sqlrutils | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -157,4 +157,5 @@ Although you do not need to open the ODBC connection explicitly as part of your 
 ## See Also
 
 [Generating a Stored Procedure using sqlrutils](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+
 

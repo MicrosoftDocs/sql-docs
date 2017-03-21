@@ -1,7 +1,7 @@
 ---
 title: "Configure the remote query timeout Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-08"
+ms.date: "03/08/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

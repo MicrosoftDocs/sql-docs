@@ -1,7 +1,7 @@
 ---
 title: "Create Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-22"
+ms.date: "09/22/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Manage the Integration Services Service | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-26"
+ms.date: "08/26/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,3 +58,4 @@ manager: "jhubbard"
  [Execution of Projects and Packages](https://msdn.microsoft.com/library/ms141708(v=sql.130).aspx)  
   
   
+

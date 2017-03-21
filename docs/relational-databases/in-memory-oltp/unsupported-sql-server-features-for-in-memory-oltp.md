@@ -1,7 +1,7 @@
 ---
 title: "Unsupported SQL Server Features for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-17"
+ms.date: "10/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

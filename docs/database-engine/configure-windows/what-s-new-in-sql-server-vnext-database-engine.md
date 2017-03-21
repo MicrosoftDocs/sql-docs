@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server vNext (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-13"
+ms.date: "03/13/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -130,3 +130,4 @@ as begin
         FOR JSON PATH
 end;
 ```
+

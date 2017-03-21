@@ -1,7 +1,7 @@
 ---
 title: "Hierarchies (Master Data Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-01"
+ms.date: "04/01/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

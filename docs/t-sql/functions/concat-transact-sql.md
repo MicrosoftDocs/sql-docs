@@ -1,7 +1,7 @@
 ---
 title: "CONCAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-21"
+ms.date: "12/21/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -122,4 +122,5 @@ Happy Birthday 11/25
 ```  
   
   
+
 

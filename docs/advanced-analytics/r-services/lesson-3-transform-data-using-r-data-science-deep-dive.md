@@ -2,7 +2,7 @@
 title: "Lesson 3: Transform Data Using R (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-10-03"
+ms.date: "10/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -114,3 +114,4 @@ Notice that the factor variables have been written to the table *ccScoreOutput2*
   
   
   
+

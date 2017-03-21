@@ -1,7 +1,7 @@
 ---
 title: "SQL Server, Columnstore Object | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-12"
+ms.date: "04/12/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

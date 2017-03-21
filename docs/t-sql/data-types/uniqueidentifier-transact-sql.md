@@ -1,7 +1,7 @@
 ---
 title: "uniqueidentifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-26"
+ms.date: "11/26/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

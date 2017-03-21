@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_sql_text (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-10"
+ms.date: "08/10/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -167,3 +167,4 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
  [Using APPLY](https://msdn.microsoft.com/library/ms177634.aspx#Anchor_3)   
   
   
+

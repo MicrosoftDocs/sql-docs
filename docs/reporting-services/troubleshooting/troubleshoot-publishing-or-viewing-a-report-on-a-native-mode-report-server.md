@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-02-28"
+ms.date: "02/28/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -59,3 +59,4 @@ Verify that you have permission to access the folders that contain the cached fi
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+

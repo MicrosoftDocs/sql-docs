@@ -2,7 +2,7 @@
 title: "CURRENT_TRANSACTION_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-12-18"
+ms.date: "12/18/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

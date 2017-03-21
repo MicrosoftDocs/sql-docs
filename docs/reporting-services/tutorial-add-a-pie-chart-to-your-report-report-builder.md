@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Add a Pie Chart to Your Report (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-15"
+ms.date: "06/15/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -220,3 +220,4 @@ You have successfully completed the Adding a Pie Chart to Your Report tutorial. 
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)  
 [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+

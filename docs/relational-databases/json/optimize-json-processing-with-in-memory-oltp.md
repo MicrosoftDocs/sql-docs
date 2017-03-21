@@ -1,7 +1,7 @@
 ---
 title: "Optimize JSON processing with in-memory OLTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-03"
+ms.date: "02/03/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -168,3 +168,4 @@ To learn about various scenarios for integrating JSON into your application, che
 -   See the demos in this [Channel 9 video](https://channel9.msdn.com/Events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds).
 -   Find a scenario that matches your use case in [JSON Blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/).
 -   Find examples in our [GitHub repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/json/).
+

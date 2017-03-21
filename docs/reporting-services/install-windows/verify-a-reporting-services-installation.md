@@ -1,7 +1,7 @@
 ---
 title: "Verify a Reporting Services Installation | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-03"
+ms.date: "06/03/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

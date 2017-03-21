@@ -1,7 +1,7 @@
 ---
 title: "IS_MEMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-08-05"
+ms.date: "08/05/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

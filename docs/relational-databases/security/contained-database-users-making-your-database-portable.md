@@ -1,7 +1,7 @@
 ---
 title: "Contained Database Users - Making Your Database Portable | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-17"
+ms.date: "08/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "sp_send_dbmail (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-10"
+ms.date: "08/10/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

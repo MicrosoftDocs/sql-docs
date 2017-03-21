@@ -1,7 +1,7 @@
 ---
 title: "Azure SQL DW Upload Task | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-16"
+ms.date: "12/16/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,3 +51,4 @@ You will see a different **Mappings** page depending on whether you are uploadin
 On the **Columns** page, configure the data type properties for each source column.
 
 The **T-SQL** page shows the T-SQL used to load data from Azure Blob Storage to Azure SQL DW. The T-SQL is automatically generated from configurations on the other pages, and will be executed as part of the task execution. You may choose to manually edit the generated T-SQL to meet your particular needs by clicking the **Edit** button. You can revert to the automatically generated one later on by clicking the **Reset** button.
+

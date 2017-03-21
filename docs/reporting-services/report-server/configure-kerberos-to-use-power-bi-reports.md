@@ -1,7 +1,7 @@
 ---
 title: "Configure Kerberos to use Power BI reports | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-02-07"
+ms.date: "02/07/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -225,4 +225,5 @@ While this configuration should work in most cases, with Kerberos, there can be 
 ## See also
 [Power BI reports in Reporting Services](../../reporting-services/power-bi-reports-in-reporting-services.md)  
 [Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services](../../reporting-services/install-windows/install-january-2017-technical-preview-power-bi-reports.md)
+
 

@@ -1,7 +1,7 @@
 ---
 title: "Data Type Conversion (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-02-05"
+ms.date: "02/05/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

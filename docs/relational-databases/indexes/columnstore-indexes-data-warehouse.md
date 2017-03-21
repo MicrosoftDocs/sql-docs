@@ -1,7 +1,7 @@
 ---
 title: "Columnstore indexes - data warehouse | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-27"
+ms.date: "01/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

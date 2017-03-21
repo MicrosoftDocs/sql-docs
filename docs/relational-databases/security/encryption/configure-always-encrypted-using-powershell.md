@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-29"
+ms.date: "09/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -151,4 +151,5 @@ The following PowerShell cmdlets are available for Always Encrypted:
 - [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Using Always Encrypted with .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+
 

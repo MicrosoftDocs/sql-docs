@@ -1,7 +1,7 @@
 ---
 title: "Managing Services and Network Settings by Using WMI Provider | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-02"
+ms.date: "08/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

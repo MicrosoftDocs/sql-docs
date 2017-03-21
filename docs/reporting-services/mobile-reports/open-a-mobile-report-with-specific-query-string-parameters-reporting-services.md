@@ -1,7 +1,7 @@
 ---
 title: "Open a mobile report with specific query string parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-25"
+ms.date: "10/25/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,3 +51,4 @@ If you have a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] m
 ### See also
 
 [Add parameters to a mobile report](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
+

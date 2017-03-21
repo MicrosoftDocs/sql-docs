@@ -1,7 +1,7 @@
 ---
 title: "Overview of Key Management for Always Encrypted | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-20"
+ms.date: "07/20/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -105,6 +105,7 @@ To ensure Always Encrypted is effective in preventing these types of attacks, yo
 - [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Always Encrypted Wizard tutorial (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Always Encrypted Wizard tutorial (Windows Certificate Store)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+
 
 
 

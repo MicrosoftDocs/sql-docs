@@ -3,7 +3,7 @@ title: "Geo-Replication Dynamic Management Views and Functions (Azure SQL Databa
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2015-11-24"
+ms.date: "11/24/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

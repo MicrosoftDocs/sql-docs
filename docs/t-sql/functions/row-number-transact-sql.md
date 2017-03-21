@@ -1,7 +1,7 @@
 ---
 title: "ROW_NUMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-31"
+ms.date: "01/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -291,4 +291,5 @@ GROUP BY LastName, FirstName, SalesTerritoryKey;
  [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)  
   
   
+
 

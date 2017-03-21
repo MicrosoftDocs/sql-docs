@@ -2,7 +2,7 @@
 title: "Modify the User Account Pool for SQL Server R Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2017-03-03"
+ms.date: "03/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

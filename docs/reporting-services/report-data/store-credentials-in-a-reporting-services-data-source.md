@@ -2,7 +2,7 @@
 title: "Store Credentials in a Reporting Services Data Source | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2015-09-23"
+ms.date: "09/23/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "Database Health Detection Failover Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-01"
+ms.date: "03/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -185,5 +185,6 @@ Related References
 * [Enhance AlwaysOn Failover Policy to Test SQL Server Database Data and Log Drives](https://blogs.msdn.microsoft.com/alwaysonpro/2016/01/14/enhance-alwayson-failover-policy-to-test-sql-server-database-data-and-log-drives/)
 
 * [Extended Events](../../../relational-databases/extended-events/extended-events.md)
+
 
 

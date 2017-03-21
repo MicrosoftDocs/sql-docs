@@ -1,7 +1,7 @@
 ---
 title: "Create Models (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-30"
+ms.date: "09/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -125,3 +125,4 @@ state=AL             -1.043e+00  1.383e+00  -0.754   0.4511*
   
   
   
+

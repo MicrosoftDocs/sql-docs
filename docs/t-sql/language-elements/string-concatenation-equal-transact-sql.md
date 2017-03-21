@@ -1,7 +1,7 @@
 ---
 title: "+= (String Concatenation) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-12-07"
+ms.date: "12/07/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

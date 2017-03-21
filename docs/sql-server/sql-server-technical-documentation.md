@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 Technical Documentation | Microsoft Docs"
-ms.date: "2017-02-27"
+ms.date: "02/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -75,3 +75,4 @@ For the latest information on what is new, see [What's New in SQL Server vNext](
 + [Introducing SQL Server 2016](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx?WT.srch=1&WT.mc_id=SEM_%5B_uniqid%5D&utm_source=Bing&utm_medium=CPC&utm_term=SQL%20Server%202016&utm_campaign=Data_Management)  
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+

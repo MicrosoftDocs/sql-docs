@@ -1,7 +1,7 @@
 ---
 title: "ALTER QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-11-18"
+ms.date: "11/18/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

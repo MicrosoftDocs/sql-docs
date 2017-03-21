@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-01-02"
+ms.date: "01/02/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

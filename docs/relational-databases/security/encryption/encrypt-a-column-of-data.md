@@ -1,7 +1,7 @@
 ---
 title: "Encrypt a Column of Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-03-18"
+ms.date: "03/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

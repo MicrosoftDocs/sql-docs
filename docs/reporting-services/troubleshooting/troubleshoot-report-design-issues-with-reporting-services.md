@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Report Design Issues with Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-02-27"
+ms.date: "02/27/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -61,3 +61,4 @@ To group multiple data regions or report items together, place them in the same 
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+

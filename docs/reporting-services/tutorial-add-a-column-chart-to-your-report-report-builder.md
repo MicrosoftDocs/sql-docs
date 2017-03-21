@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Add a Column Chart to Your Report (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-09-02"
+ms.date: "09/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -306,3 +306,4 @@ You have successfully completed the Adding a Column Chart to Your Report tutoria
 -    [Report Builder tutorials](../reporting-services/report-builder-tutorials.md) 
 -    [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+

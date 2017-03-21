@@ -1,7 +1,7 @@
 ---
 title: "Disable or Pause Report and Subscription Processing | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-09-29"
+ms.date: "09/29/2015"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

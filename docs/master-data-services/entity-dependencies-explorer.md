@@ -1,7 +1,7 @@
 ---
 title: "Entity Dependencies Explorer | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-04-06"
+ms.date: "04/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,3 +42,4 @@ The view is fully editable, just like in the Hierarchy Explorer page. Parent-chi
   
   
   
+

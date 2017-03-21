@@ -1,7 +1,7 @@
 ---
 title: "sysmail_update_account_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-17"
+ms.date: "11/17/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

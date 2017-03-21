@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in Integration Services in SQL Server vNext | Microsoft Docs"
 ms.custom: ""
-ms.date: "2017-03-16"
+ms.date: "03/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,3 +38,4 @@ For more information, see [Integration Services Scale Out](../integration-servic
 ### Support for Microsoft Dynamics Online Resources
 
 The OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online.
+

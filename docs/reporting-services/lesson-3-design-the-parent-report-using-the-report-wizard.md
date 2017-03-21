@@ -1,7 +1,7 @@
 ---
 title: "Lesson 3: Design the Parent Report using the Report Wizard | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-05-18"
+ms.date: "05/18/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -53,3 +53,4 @@ You have successfully designed the parent report using the Report Wizard. Next, 
   
   
   
+

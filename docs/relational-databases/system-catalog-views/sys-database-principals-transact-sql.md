@@ -1,7 +1,7 @@
 ---
 title: "sys.database_principals (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-10-27"
+ms.date: "10/27/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -125,4 +125,5 @@ JOIN sys.schemas AS s
  [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
   
   
+
 

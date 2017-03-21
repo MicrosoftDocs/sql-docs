@@ -2,7 +2,7 @@
 title: "CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-07-18"
+ms.date: "07/18/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

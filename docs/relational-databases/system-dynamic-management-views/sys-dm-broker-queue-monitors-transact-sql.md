@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-10"
+ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -78,3 +78,4 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
  [Service Broker Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
+

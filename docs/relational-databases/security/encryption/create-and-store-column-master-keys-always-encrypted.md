@@ -1,7 +1,7 @@
 ---
 title: "Create and Store Column Master Keys (Always Encrypted) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-07-01"
+ms.date: "07/01/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -239,3 +239,4 @@ Consult the documentation for your HSM and CSP, for how to configure the CSP on 
 - [Develop Applications using Always Encrypted with .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Always Encrypted Blog](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
+

@@ -1,7 +1,7 @@
 ---
 title: "Lesson 3: Working with Templates, Solutions, and Script Projects | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-02"
+ms.date: "08/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,3 +33,4 @@ This lesson contains the following topics:
   
   
   
+

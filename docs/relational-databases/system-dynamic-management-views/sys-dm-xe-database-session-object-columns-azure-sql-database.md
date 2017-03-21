@@ -3,7 +3,7 @@ title: "sys.dm_xe_database_session_object_columns (Azure SQL Database) | Microso
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "2016-06-10"
+ms.date: "06/10/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

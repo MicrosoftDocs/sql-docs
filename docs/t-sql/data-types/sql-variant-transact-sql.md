@@ -1,7 +1,7 @@
 ---
 title: "sql_variant (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2015-10-02"
+ms.date: "10/02/2015"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Audit (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-11-21"
+ms.date: "11/21/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -212,3 +212,4 @@ manager: "jhubbard"
  [SQL Server Audit Records](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
+

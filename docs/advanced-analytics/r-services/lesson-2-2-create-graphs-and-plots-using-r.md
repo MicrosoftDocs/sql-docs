@@ -2,7 +2,7 @@
 title: "Create Graphs and Plots Using R (Data Science End-to-End Walkthrough) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "2016-11-23"
+ms.date: "11/23/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -105,3 +105,4 @@ This is a pattern that you might find useful when developing your own applicatio
   
   
   
+

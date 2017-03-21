@@ -1,0 +1,5 @@
+# [CSDL Annotations for Business Intelligence (CSDLBI)](csdl-annotations-for-business-intelligence-csdlbi.md)
+# [IMDEmbeddedData Interface](imdembeddeddata-interface.md)
+# [CSDLBI Attributes for Report Design](csdlbi-attributes-for-report-design.md)
+# [CSDLBI Concepts](csdlbi-concepts.md)
+# [Tabular Model Programming for Compatibility Levels 1050 through 1103](tabular-model-programming-for-compatibility-levels-1050-through-1103.md)

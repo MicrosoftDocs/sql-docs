@@ -1,0 +1,5 @@
+# [Guidelines and Limitations of SQLXML 4.0](guidelines-and-limitations-of-sqlxml-4-0.md)
+# [SQLXML 4.0 .NET Framework Support - Using Bulk Load](sqlxml-4-0-net-framework-support-using-bulk-load.md)
+# [XPath Data Types (SQLXML 4.0)](xpath-data-types-sqlxml-4-0.md)
+# [Using XPath Queries in SQLXML 4.0](using-xpath-queries-in-sqlxml-4-0.md)
+# [Introduction to Using XPath Queries (SQLXML 4.0)](introduction-to-using-xpath-queries-sqlxml-4-0.md)

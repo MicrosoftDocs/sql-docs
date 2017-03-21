@@ -1,0 +1,8 @@
+# [XML for Analysis Compliance (XMLA)](xml-for-analysis-compliance-xmla.md)
+# [XML Elements - Methods](xml-elements-methods.md)
+# [XML for Analysis  (XMLA) Reference](xml-for-analysis-xmla-reference.md)
+# [XML Elements - Objects](xml-elements-objects.md)
+# [XML Elements - Objects - ExecuteResponse](xml-elements-objects-executeresponse.md)
+# [XML Elements - Objects - DiscoverResponse](xml-elements-objects-discoverresponse.md)
+# [XML Elements - Methods - Execute](xml-elements-methods-execute.md)
+# [XML Elements - Methods - Discover](xml-elements-methods-discover.md)

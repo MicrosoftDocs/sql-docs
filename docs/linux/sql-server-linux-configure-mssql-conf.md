@@ -165,15 +165,17 @@ To set up this new location, use the following commands:
 
 ## <a id="coredump"></a> Specify core dump settings
 
-If an exception occurs in one of the SQL Server processes, SQL Server creates a memory dump. There are two options for controlling the type of memory dumps that SQL Server collects: **captureminiandfull** and **coredumptype**. 
+If an exception occurs in one of the SQL Server processes, SQL Server creates a memory dump. 
 
-1. You can decide whether to capture both mini and full dumps with the **captureminiandfull** setting.
+There are two options for controlling the type of memory dumps that SQL Server collects: **coredumptype** and **captureminiandfull**. These relate to the two phases of core dump capture. 
+
+The first phase capture is controlled by the **coredumptype** setting, which determines the type of dump file generated during an exception. The second phase is enabled when the **captureminiandfull** setting. If **captureminiandfull** is set to true, the dump file specified by **coredumptype** is generated and a second mini dump is also generated. Setting **captureminiandfull** to false disables the second capture attempt.
+
+1. Decide whether to capture both mini and full dumps with the **captureminiandfull** setting.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set captureminiandfull <true or false>
     ```
-
-    If **captureminiandfull** is set to **false**, then only a mini dump is collected. The default is **false**.
 
 2. Specify the type of dump file with the **coredumptype** setting.
 
@@ -185,10 +187,10 @@ If an exception occurs in one of the SQL Server processes, SQL Server creates a 
 
     | Type | Description |
     |-----|-----|
-    | **mini** | Mini is the smallest dump file type. It uses the Linux system information to determine threads and modules in the process. The dump contains only the Host Environment (PAL) thread stacks and modules. It does not contain indirect memory references or globals. |
-    | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of LibOS and the PAL, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB (LibOS boundary) – PAL/HE memory</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from Pal thread stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Windows modules</br> - Windows stacks and indirect memory</br> - Windows PE pages as marked in the VAD as PE pages</br> - Module Information</br> - VMM and VAD tree |
-    | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of LibOS and the PAL, excluding certain regions from the dump.
-    | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. |
+    | **mini** | Mini is the smallest dump file type. It uses the Linux system information to determine threads and modules in the process. The dump contains only the Host Environment thread stacks and modules. It does not contain indirect memory references or globals. |
+    | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from threads and stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Module Information</br> - VMM and VAD tree |
+    | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
+    | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. This is not controlled by **captureminiandfull** setting. |
 
 ## <a id="traceflags"></a> Enable/Disable traceflags
 

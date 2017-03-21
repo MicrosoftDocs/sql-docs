@@ -6,7 +6,7 @@ description: This topic describes how to use the mssql-conf tool to  configure S
 author: luisbosquez 
 ms.author: lbosq 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -32,10 +32,15 @@ ms.custom: H1Hack27Feb2017
 - [Default log directory](#datadir): Changes the directory where the new SQL Server database log (.ldf) files are created.
 - [Default dump directory](#dumpdir): Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default.
 - [Default backup directory](#backupdir): Change the directory where SQL Server will send the backup files by default. 
+- [Mini and full dump prefernces](#coredump): Specify whether to generate both mini dumps and full dumps.
+- [Core dump type](#coredump): Choose the type of dump memory dump file to collect.
 - [Set traceflags](#traceflags): Set the traceflags that the service is going to use.
 - [Set collation](#collation): Set a new collation for SQL Server on Linux.
 
 The following sections show examples of how to use mssql-conf for each of these scenarios.
+
+> [!TIP]
+> These examples run mssql-conf by specify the full path: `/opt/mssql/bin/mssql-conf`. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: `./mssql-conf`.
 
 ## <a id="tcpport"></a> Change the TCP port
 
@@ -129,7 +134,7 @@ To set up this new location, use the following commands:
 
 ## <a id="backupdir"></a> Change the default backup directory location
 
-This option will let you change the default location where the backup files are generaqted. By default, these files are generated in /var/opt/mssql/data.
+This option will let you change the default location where the backup files are generated. By default, these files are generated in /var/opt/mssql/data.
 
 To set up this new location, use the following commands:
 
@@ -157,6 +162,31 @@ To set up this new location, use the following commands:
    ```bash
    sudo systemctl restart mssql-server
    ```
+
+## <a id="coredump"></a> Specify core dump settings
+
+There are two options for controlling the type of memory dumps that SQL Server collects: **captureminiandfull** and **coredumptype**. 
+
+1. You can decide whether to capture both mini and full dumps with the following command. The default is false (only collect a mini dump). 
+
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf set captureminiandfull <true or false>
+    ```
+
+2. Specify the type of dump file with the **coredumptype** setting the type of dump file collected.
+
+    ```bash
+    sudo /opt/mssql/bin/mssql-conf set coredumptype <dump type>
+    ```
+    
+    The following table lists the possible **coredumptype** values.
+
+    | Dump type | Description |
+    |-----|-----|
+    | **mini** | Smallest dump type. Mini is the unaltered, BreakPad, dump.   It uses the Linux system information to determine threads and modules in the process.    The dump contains only the Host Environment (PAL) thread stacks and modules. Note:  This does NOT contain indirect memory references or globals. |
+    | **miniplus** | MiniPlus uses an addition based design were additional memory, beyond a mini-dump, is included.</br></br> The design understands internals of LibOS and the Pal, adding the following memory regions to the dump.</br> - Various globals</br> - All memory above 64TB (LibOS boundary) – PAL/HE memory</br> - All named regions found in /proc/$pid/maps</br> - Indirect memory from Pal thread stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Windows modules</br> - Windows stacks and indirect memory</br> - Windows PE pages as marked in the VAD as PE pages</br> - Module Information</br> - VMM and VAD tree |
+    | **filtered** | Filtered uses a subtraction based design where all memory in the process is included unless specifically excluded.</br></br> The design understands internals of LibOS and the Pal.  Using the LibOS, VMM’s VAD tree certain regions are excluded from the dump. |
+    | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. |
 
 ## <a id="traceflags"></a> Enable/Disable traceflags
 

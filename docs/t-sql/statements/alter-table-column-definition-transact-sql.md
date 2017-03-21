@@ -140,7 +140,7 @@ manager: "jhubbard"
   
  The COLLATE clause can be used to specify the collations only of columns of the **char**, **varchar**, **nchar**, and **nvarchar** data types.  
   
- For more information about the COLLATE clause, see [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md).  
+ For more information about the COLLATE clause, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
  NULL | NOT NULL  
  Determines whether null values are allowed in the column. NULL is not strictly a constraint but can be specified just like NOT NULL.  

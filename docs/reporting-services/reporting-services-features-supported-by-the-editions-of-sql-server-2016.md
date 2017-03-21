@@ -21,7 +21,7 @@ This topic provides details of features supported by the different editions of [
   
  SQL Server Evaluation edition is available for a 180-day trial period.  
   
- For the latest release notes, see [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md). For the latest information on what is new, see [What's new in Reporting Services (SSRS)](What's%20New%20in%20Reporting%20Services%20\(SSRS\).md).
+ For the latest release notes, see [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md). For the latest information on what is new, see [What's new in Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
     
  **Try SQL Server 2016!**    
     
@@ -99,6 +99,7 @@ To navigate the table for a SQL Server technology, click on its link:
 > 3.  Whether you are using  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] on-premises, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] in the cloud, or both as your report delivery solution you only need one mobile app to access dashboards and mobile reports on mobile devices. The [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] apps are available for download from the Windows, iOS, or Android app stores.  
 
 ## See Also  
- [Features Supported by the Editions of SQL Server 2016](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
+ [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
  [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Installation for SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+

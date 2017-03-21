@@ -62,6 +62,6 @@ manager: "jhubbard"
 |**sql**|**nvarchar(3900)**|Module definition or the first 3900 characters of the batch submitted.|  
   
 ## See Also  
- [Compatibility Views &#40;Transact-SQL&#41;](../Topic/Compatibility%20Views%20\(Transact-SQL\).md)  
+ [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -251,7 +251,7 @@ OR ALTER
   
  The trigger actions specified in the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements go into effect when the operation is tried.  
   
- Triggers can include any number and kind of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, with exceptions. For more information, see Remarks. A trigger is designed to check or change data based on a data modification or definition statement; it should not return data to the user. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a trigger frequently include [control-of-flow language](../Topic/Control-of-Flow%20Language%20\(Transact-SQL\).md).  
+ Triggers can include any number and kind of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, with exceptions. For more information, see Remarks. A trigger is designed to check or change data based on a data modification or definition statement; it should not return data to the user. The [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a trigger frequently include [control-of-flow language](~/t-sql/language-elements/control-of-flow.md).  
   
  DML triggers use the deleted and inserted logical (conceptual) tables. They are structurally similar to the table on which the trigger is defined, that is, the table on which the user action is tried. The deleted and inserted tables hold the old values or new values of the rows that may be changed by the user action. For example, to retrieve all values in the `deleted` table, use:  
   

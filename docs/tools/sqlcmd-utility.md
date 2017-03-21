@@ -461,7 +461,7 @@ Prints raw error messages to the screen.
   
 -   **!!** *command*  
   
- If the **-X** option is specified, it prevents environment variables from being passed on to **sqlcmd**. It also prevents the startup script specified by using the SQLCMDINI scripting variable from being executed. For more information about **sqlcmd** scripting variables, see [Use sqlcmd with Scripting Variables](../Topic/Use%20sqlcmd%20with%20Scripting%20Variables.md).  
+ If the **-X** option is specified, it prevents environment variables from being passed on to **sqlcmd**. It also prevents the startup script specified by using the SQLCMDINI scripting variable from being executed. For more information about **sqlcmd** scripting variables, see [Use sqlcmd with Scripting Variables](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
  **-?**  
  Displays the version of **sqlcmd** and a syntax summary of **sqlcmd** options.  
@@ -471,7 +471,7 @@ Prints raw error messages to the screen.
   
  When multiple results are returned, **sqlcmd** prints a blank line between each result set in a batch. In addition, the `<x> rows affected` message does not appear when it does not apply to the statement executed.  
   
- To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any one or more of the options described earlier in this topic. For more information, see [Use the sqlcmd Utility](../Topic/Use%20the%20sqlcmd%20Utility.md)  
+ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any one or more of the options described earlier in this topic. For more information, see [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
 > [!NOTE]  
 >  The options **-L**, **-Q**, **-Z** or **-i** cause **sqlcmd** to exit after execution.  
@@ -834,11 +834,13 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
 ## See Also  
  [Start the sqlcmd Utility](../Topic/Start%20the%20sqlcmd%20Utility.md)   
  [Run Transact-SQL Script Files Using sqlcmd](../Topic/Run%20Transact-SQL%20Script%20Files%20Using%20sqlcmd.md)   
- [Use the sqlcmd Utility](../Topic/Use%20the%20sqlcmd%20Utility.md)   
- [Use sqlcmd with Scripting Variables](../Topic/Use%20sqlcmd%20with%20Scripting%20Variables.md)   
+ [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)   
+ [Use sqlcmd with Scripting Variables](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Connect to the Database Engine With sqlcmd](../Topic/Connect%20to%20the%20Database%20Engine%20With%20sqlcmd.md)   
  [Edit SQLCMD Scripts with Query Editor](../Topic/Edit%20SQLCMD%20Scripts%20with%20Query%20Editor.md)   
  [Manage Job Steps](../Topic/Manage%20Job%20Steps.md)   
  [Create a CmdExec Job Step](../Topic/Create%20a%20CmdExec%20Job%20Step.md)  
   
   
+
+

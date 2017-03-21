@@ -53,7 +53,7 @@ manager: "jhubbard"
 ## See Also  
  [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md)   
  [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/configuring-the-integration-services-service-ssis-service.md)   
- [SQL Server Import and Export Wizard](../Topic/SQL%20Server%20Import%20and%20Export%20Wizard.md)   
+ [SQL Server Import and Export Wizard](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)   
  [dtexec Utility](../../integration-services/packages/dtexec-utility.md)   
  [Execution of Projects and Packages](https://msdn.microsoft.com/library/ms141708(v=sql.130).aspx)  
   

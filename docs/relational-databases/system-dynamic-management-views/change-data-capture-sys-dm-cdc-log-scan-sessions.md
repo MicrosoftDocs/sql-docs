@@ -58,7 +58,7 @@ manager: "jhubbard"
  The values in this dynamic management view are reset whenever the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started.  
   
 ## Permissions  
- Requires VIEW DATABASE STATE permission to query the **sys.dm_cdc_log_scan_sessions** dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md).  
+ Requires VIEW DATABASE STATE permission to query the **sys.dm_cdc_log_scan_sessions** dynamic management view. For more information about permissions on dynamic management views, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## Examples  
  The following example returns information for the most current session.  

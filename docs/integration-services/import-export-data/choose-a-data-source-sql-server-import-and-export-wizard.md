@@ -39,7 +39,7 @@ Specify the data source by selecting a data provider that can connect to the sou
 -   **There may be more than one provider available for your data source.** Typically you can select any provider that works with your source. For example, to connect to Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use the .NET Framework Data Provider for SQL Server or the SQL Server ODBC driver. (Other providers are also still in the list but are no longer supported.) 
 
 ## My data source isn't in the list
--   **You may have to download the data provider** from Microsoft or from a third party. The list of available data providers in the **Data source** list includes only the providers installed on your computer. For info about the data sources that you can use, see [What data sources and destinations can I use?](Import%20and%20Export%20Data%20with%20the%20SQL%20Server%20Import%20and%20Export%20Wizard.md\#wizardSources)
+-   **You may have to download the data provider** from Microsoft or from a third party. The list of available data providers in the **Data source** list includes only the providers installed on your computer. For info about the data sources that you can use, see [What data sources and destinations can I use?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 -   **Do you have an ODBC driver for your data source?** ODBC drivers aren't listed in the drop-down list of data sources. If you have an ODBC driver for your data source, select the .Net Framework Data Provider for ODBC. Then enter the driver-specific info. The .Net Framework Data Provider for ODBC acts as a wrapper around the ODBC driver. For more info, see [Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
@@ -66,3 +66,4 @@ For info about how to connect to a data source that's not listed here, see [The 
  
 ## See also
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+

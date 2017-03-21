@@ -85,7 +85,7 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  `(7 row(s) affected)`  
   
 ## See Also  
- [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md)   
+ [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
   
   

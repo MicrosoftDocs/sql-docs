@@ -100,7 +100,7 @@ END
  When you use a natively compiled, scalar user-defined function inside a natively compiled stored procedure, the permissions for executing the user-defined function are checked when the outer procedure is created. If the user impersonated by the outer procedure does not have EXEC permissions for the user-defined function, the creation of the stored procedure fails. If permission changes result in the user no longer having the EXEC permissions, the execution of the outer procedure fails.  
   
 ## See Also  
- [Built-in Functions &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md)   
+ [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [Save an Execution Plan in XML Format](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   

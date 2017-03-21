@@ -24,7 +24,7 @@ manager: "jhubbard"
   This topic introduces several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] high-availability solutions that improve the availability of servers or databases. A high-availability solution masks the effects of a hardware or software failure and maintains the availability of applications so that the perceived downtime for users is minimized.    
     
    
->  **Note!** Want to know which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions support a given high availability solution? See the "High Availability (Always On)" section of [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).    
+>  **Note!** Want to know which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions support a given high availability solution? See the "High Availability (Always On)" section of [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
      
     
 ##  <a name="TermsAndDefinitions"></a> Overview of SQL Server High-Availability Solutions    
@@ -54,7 +54,7 @@ Database mirroring is a solution to increase database availability by supporting
     
 -   For data protection through [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], we recommend that you use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].    
     
-       >  We recommend using log shipping if you are running an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that does not support [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. For information about which editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], see the "High Availability (Always On)" section of [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).    
+       >  We recommend using log shipping if you are running an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that does not support [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. For information about which editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], see the "High Availability (Always On)" section of [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
     
 ## See Also    
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)     

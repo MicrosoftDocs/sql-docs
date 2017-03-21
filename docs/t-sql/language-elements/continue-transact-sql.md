@@ -27,6 +27,6 @@ manager: "jhubbard"
 # CONTINUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restarts a WHILE loop. Any statements after the CONTINUE keyword are ignored. CONTINUE is frequently, but not always, opened by an IF test. For more information, see [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md) and [Control-of-Flow Language &#40;Transact-SQL&#41;](../Topic/Control-of-Flow%20Language%20\(Transact-SQL\).md).  
+  Restarts a WHILE loop. Any statements after the CONTINUE keyword are ignored. CONTINUE is frequently, but not always, opened by an IF test. For more information, see [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md) and [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
   

@@ -45,7 +45,7 @@ manager: "jhubbard"
   
  In this release, the UCP must satisfy the following requirements:  
   
--   The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be a supported edition. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be a supported edition. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   We recommend that the UCP is hosted by a case-sensitive instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 -   FILESTREAM data are not supported for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility monitoring.  
   
- For more information, see [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) and [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ For more information, see [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) and [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ### Remove Previous Utility Control Points Before Installing a New One  
  If you are installing a utility control point (UCP) on an instance of SQL Server that was ever configured as a UCP, you must remove all managed instances of SQL Server and remove the UCP before doing so. You do this by running the **sp_sysutility_ucp_remove** stored procedure.  
@@ -159,7 +159,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |---------------------|-----------------------|  
 |You must have administrator privileges on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the utility control point will be created.|Log on with an account that has administrator privileges on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version must be 10.50 or higher.|Specify a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to host the UCP.|  
-|The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be a supported edition. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).|Specify a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to host the UCP.|  
+|The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be a supported edition. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|Specify a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to host the UCP.|  
 |The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must not be an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enrolled with any other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP.|Specify a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to host the UCP, or unenroll the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the UCP where it is currently a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot already be host to a utility control point.|Specify a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to host the UCP.|  
 |The specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have TCP/IP enabled.|Enable TCP/IP for the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

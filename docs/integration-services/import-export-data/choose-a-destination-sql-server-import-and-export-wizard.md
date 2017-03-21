@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Choose a Destination (SQL Server Import and Export Wizard)
  After you provide info about the source of your data and about how to connect to it, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Choose a Destination**. On this page, you provide info about the destination for your data and about how to connect to it.
   
-For info about the data destinations that you can use, see [What data sources and destinations can I use?](Import%20and%20Export%20Data%20with%20the%20SQL%20Server%20Import%20and%20Export%20Wizard.md\#wizardSources). 
+For info about the data destinations that you can use, see [What data sources and destinations can I use?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources). 
 
 ## Screen shot of the Destination page
 The following screen shot shows the first part of the **Choose a Destination** page of the wizard. The rest of the page has a variable number of options which depend on the destination that you choose here.
@@ -39,7 +39,7 @@ The following screen shot shows the first part of the **Choose a Destination** p
 -   **There may be more than one provider available for your destination.** Typically you can select any provider that works with your destination. For example, to connect to Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use the .NET Framework Data Provider for SQL Server or the SQL Server ODBC driver. (Other providers are also still in the list but are no longer supported.) 
 
 ## My destination isn't in the list
--   **You may have to download the data provider** from Microsoft or from a third party. The list of available data providers in the **Destination** list includes only the providers installed on your computer. For info about the destinations that you can use, see [What data sources and destinations can I use?](Import%20and%20Export%20Data%20with%20the%20SQL%20Server%20Import%20and%20Export%20Wizard.md\#wizardSources)
+-   **You may have to download the data provider** from Microsoft or from a third party. The list of available data providers in the **Destination** list includes only the providers installed on your computer. For info about the destinations that you can use, see [What data sources and destinations can I use?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 -   **Do you have an ODBC driver for your destination?** ODBC drivers aren't listed in the drop-down list of destinations. If you have an ODBC driver for your destination, select the .Net Framework Data Provider for ODBC. Then enter the driver-specific info. The .Net Framework Data Provider for ODBC acts as a wrapper around the ODBC driver. For more info, see [Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
@@ -66,3 +66,4 @@ For info about how to connect to a destination that's not listed here, see [The 
 
 ## See also
 [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+

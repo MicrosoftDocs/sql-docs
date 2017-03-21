@@ -27,6 +27,6 @@ manager: "jhubbard"
   
 ## See Also  
  [SQLTablePrivileges Function](http://go.microsoft.com/fwlink/?LinkId=59373\)   
- [ODBC API Implementation Details](../Topic/ODBC%20API%20Implementation%20Details.md)  
+ [ODBC API Implementation Details](~/relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

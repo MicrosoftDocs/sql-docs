@@ -110,7 +110,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  To find and remove a deployment or retraction job that is already in the queue, do the following:  
   
-1.  For all other errors, check the ULS logs. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;Power Pivot for SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
+1.  For all other errors, check the ULS logs. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;Power Pivot for SharePoint&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 2.  Start the SharePoint Management Shell as an administrator and then run the following command to view jobs in the queue:  
   

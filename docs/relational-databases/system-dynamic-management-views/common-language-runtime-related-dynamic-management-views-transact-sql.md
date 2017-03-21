@@ -31,6 +31,6 @@ manager: "jhubbard"
 |[sys.dm_clr_properties](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|[sys.dm_clr_tasks](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|  
   
 ## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)  
+ [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

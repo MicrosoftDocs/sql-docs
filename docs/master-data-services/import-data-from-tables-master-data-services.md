@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 3.  Import data into the staging tables by using the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Import and Export wizard.  
   
-     For more information, see [SQL Server Import and Export Wizard](../Topic/SQL%20Server%20Import%20and%20Export%20Wizard.md).  
+     For more information, see [SQL Server Import and Export Wizard](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
 4.  Load the data from the staging tables to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tables, by doing one of the following  
   

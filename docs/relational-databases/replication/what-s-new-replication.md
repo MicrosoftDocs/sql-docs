@@ -23,6 +23,6 @@ manager: "jhubbard"
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] does not support replication to or from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## See Also  
- [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
+ [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   

@@ -93,13 +93,13 @@ For more details, see these topics in the [Columnstore Indexes Guide](../../rela
 
 - [Columnstore Indexes Data Loading](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
-- [Columnstore Indexes Query Performance](../Topic/Columnstore%20Indexes%20Query%20Performance.md)
+- [Columnstore Indexes Query Performance](~/relational-databases/indexes/columnstore-indexes-query-performance.md)
 
 - [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
-- [Columnstore Indexes for Data Warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)
+- [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 
-- [Columnstore Indexes Defragmentation](../Topic/Columnstore%20Indexes%20Defragmentation.md)
+- [Columnstore Indexes Defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)
 
 
 ####  <a name="scopedconfiguration"></a> Database Scoped Configurations
@@ -451,4 +451,7 @@ SQL Server 2016 Upgrade Advisor Preview is a standalone tool that enables users 
 [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
  
 [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+
+
+
 

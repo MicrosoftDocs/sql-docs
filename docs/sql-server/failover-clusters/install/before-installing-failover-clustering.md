@@ -195,7 +195,7 @@ manager: "jhubbard"
   
 ### [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Edition and Operating System Considerations  
   
--   For information about the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that support a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster, see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   For information about the editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that support a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   To create a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster, you must first create the [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] multi-site failover cluster on multiple subnets.  
   

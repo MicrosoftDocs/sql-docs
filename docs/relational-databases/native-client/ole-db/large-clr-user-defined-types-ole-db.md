@@ -36,10 +36,10 @@ manager: "jhubbard"
  UDT values are represented as byte arrays. Conversions to and from hex strings are supported. Literal values are represented as hex strings with a prefix of "0x". A hex string is the textual representation of binary data in base 16. A example is a conversion from server type **varbinary(10)** to DBTYPE_STR, which results in hexadecimal representation of 20 characters where every pair of characters represents a single byte.  
   
 ## Parameter Properties  
- The DBPROPSET_SQLSERVERPARAMETER property set supports UDTs through OLE DB. For more information, see [Using User-Defined Types](../Topic/Using%20User-Defined%20Types.md).  
+ The DBPROPSET_SQLSERVERPARAMETER property set supports UDTs through OLE DB. For more information, see [Using User-Defined Types](~/relational-databases/native-client/features/using-user-defined-types.md).  
   
 ## Column Properties  
- The DBPROPSET_SQLSERVERCOLUMN property set supports the creation of tables through OLE DB. For more information, see [Using User-Defined Types](../Topic/Using%20User-Defined%20Types.md).  
+ The DBPROPSET_SQLSERVERCOLUMN property set supports the creation of tables through OLE DB. For more information, see [Using User-Defined Types](~/relational-databases/native-client/features/using-user-defined-types.md).  
   
 ## Data Type Mapping in ITableDefinition::CreateTable  
  The following information is used in **DBCOLUMNDESC** structures used by ITableDefinition::CreateTable when UDT columns are required:  

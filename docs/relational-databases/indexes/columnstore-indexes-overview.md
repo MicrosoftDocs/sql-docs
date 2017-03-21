@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  Jump to scenarios:  
   
--   [Columnstore Indexes for Data Warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)  
+-   [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 -   [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
@@ -102,7 +102,7 @@ manager: "jhubbard"
 ## When should I use a columnstore index?  
  Recommended use cases:  
   
--   Use a clustered columnstore index to store fact tables and large dimension tables for data warehousing workloads. This improves query performance and data compression by up to 10x. See [Columnstore Indexes for Data Warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md).  
+-   Use a clustered columnstore index to store fact tables and large dimension tables for data warehousing workloads. This improves query performance and data compression by up to 10x. See [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md).  
   
 -   Use a nonclustered columnstore index to perform analysis in real-time on an OLTP workload. See [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
@@ -158,22 +158,26 @@ manager: "jhubbard"
 |Convert a columnstore table to a rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Usually this is not necessary, but there can be times when you need to perform this conversion. Examples show how to convert a columnstore to a heap or clustered index.|  
 |Create a columnstore index on a rowstore table.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|A rowstore table can have one columnstore index.  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the columnstore index can have a filtered condition. Examples show the basic syntax.|  
 |Create performant indexes for operational analytics.|[Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Describes how to create complementary columnstore and btree indexes so that OLTP queries use btree indexes and analytics queries use columnstore indexes.|  
-|Create performant columnstore indexes for data warehousing.|[Columnstore Indexes for Data Warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)|Describes how to use btree indexes on columnstore tables to create performant data warehousing queries.|  
-|Use a btree index to enforce a primary key constraint on a columnstore index.|[Columnstore Indexes for Data Warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)|Shows how to combine btree and columnstore indexes to enforce primary key constraints on the columnstore index.|  
+|Create performant columnstore indexes for data warehousing.|[Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Describes how to use btree indexes on columnstore tables to create performant data warehousing queries.|  
+|Use a btree index to enforce a primary key constraint on a columnstore index.|[Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Shows how to combine btree and columnstore indexes to enforce primary key constraints on the columnstore index.|  
 |Drop a columnstore index|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Dropping a columnstore index uses the standard DROP INDEX syntax that btree indexes use. Dropping a clustered columnstore index will convert the columnstore table to a heap.|  
 |Delete a row from a columnstore index|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Use [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) to delete a row.<br /><br /> **columnstore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marks the row as logically deleted but does not reclaim the physical storage for the row until the index is rebuilt.<br /><br /> **deltastore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logically and physically deletes the row.|  
 |Update a row in the columnstore index|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Use [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) to update a row.<br /><br /> **columnstore** row:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marks the row as logically deleted, and then inserts the updated row into the deltastore.<br /><br /> **deltastore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates the row in the deltastore.|  
-|Load data into a columnstore index|[Columnstore Indexes Data Loading](../Topic/Columnstore%20Indexes%20Data%20Loading.md)||  
-|Force all rows in the deltastore to go into the columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Columnstore Indexes Defragmentation](../Topic/Columnstore%20Indexes%20Defragmentation.md)|ALTER INDEX with the REBUILD option forces all rows to go into the columnstore.|  
+|Load data into a columnstore index|[Columnstore Indexes Data Loading](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
+|Force all rows in the deltastore to go into the columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Columnstore Indexes Defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX with the REBUILD option forces all rows to go into the columnstore.|  
 |Defragment a columnstore index|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX … REORGANIZE  defragments columnstore indexes online.|  
 |Merge tables with columnstore indexes.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   
 ## See Also  
- [Columnstore Indexes Data Loading](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [Columnstore Indexes Versioned Feature Summary](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
- [Columnstore Indexes Query Performance](../Topic/Columnstore%20Indexes%20Query%20Performance.md)   
+ [Columnstore Indexes Data Loading](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
+ [Columnstore Indexes Versioned Feature Summary](~/relational-databases/indexes/columnstore-indexes-what-s-new.md)   
+ [Columnstore Indexes Query Performance](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Columnstore Indexes for Data Warehousing](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
- [Columnstore Indexes Defragmentation](../Topic/Columnstore%20Indexes%20Defragmentation.md)  
+ [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
+ [Columnstore Indexes Defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+
+
+
+

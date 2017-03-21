@@ -1,1 +1,2 @@
-<Token>**THIS TOPIC APPLIES TO:** ![yes](/Image/Applies%20to/yes.png)SQL Server (starting with 2014 SP2)![yes](/Image/Applies%20to/yes.png)Azure SQL Database![no](/Image/Applies%20to/no.png)Azure SQL Data Warehouse ![no](/Image/Applies%20to/no.png)Parallel Data Warehouse </Token>
+<Token>**THIS TOPIC APPLIES TO:** ![yes](media/yes.png)SQL Server (starting with 2014 SP2)![yes](media/yes.png)Azure SQL Database![no](media/no.png)Azure SQL Data Warehouse ![no](media/no.png)Parallel Data Warehouse </Token>
+

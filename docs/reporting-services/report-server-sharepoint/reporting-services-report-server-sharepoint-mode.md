@@ -25,7 +25,7 @@ manager: "erikre"
   
 -   [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
- For information on what’s new in this release, see the ‘SharePoint’ section in [What's New in Reporting Services &#40;SSRS&#41;](../Topic/What's%20New%20in%20Reporting%20Services%20\(SSRS\).md).  
+ For information on what’s new in this release, see the ‘SharePoint’ section in [What's New in Reporting Services &#40;SSRS&#41;](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
   
  In this topic:  
   

@@ -46,6 +46,6 @@ manager: "jhubbard"
 |[ERROR_NUMBER](../../t-sql/functions/error-number-transact-sql.md)|[XACT_STATE](../../t-sql/functions/xact-state-transact-sql.md)|  
   
 ## See Also  
- [Built-in Functions &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md)  
+ [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

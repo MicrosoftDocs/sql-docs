@@ -32,7 +32,7 @@ manager: "erikre"
 |**bold**|DMX keywords and text that must be typed exactly as shown.|  
 |*italic*|User-supplied arguments of DMX syntax.|  
 |&#124; (vertical bar)|Used to separate syntax items within brackets or braces. You can choose only one of the items.|  
-|[ ] (brackets)|Contain optional syntax items. Do not type the brackets.|  
+|`[ ]` (brackets)|Contain optional syntax items. Do not type the brackets.|  
 |{ } (braces)|Contain required syntax items. Do not type the braces.|  
 |, ...|Indicates that the item before the comma can be repeated any number of times. The items are separated by commas.|  
 |\<label> ::=|The name for a block of syntax. This convention is used to group and label sections of lengthy syntax or a unit of syntax that can be used in more than one location within a statement. Each location in which the block of syntax can be used is indicated with the label enclosed in chevrons, such as \<label>.|  

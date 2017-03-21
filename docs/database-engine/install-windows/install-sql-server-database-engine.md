@@ -56,7 +56,7 @@ manager: "jhubbard"
 >  By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see the [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## See Also  
- [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+ [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   

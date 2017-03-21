@@ -25,7 +25,7 @@ manager: "jhubbard"
  To learn more about the Copy Column transformation, see [Copy Column Transformation](../../../integration-services/data-flow/transformations/copy-column-transformation.md).  
   
 > [!NOTE]  
->  When you are simply copying all of your source data to a destination, it may not be necessary to use the Copy Column transformation. In some scenarios, you can connect a source directly to a destination, when no data transformation is required. In these circumstances it is often preferable to use the SQL Server Import and Export Wizard to create your package for you. Later you can enhance and reconfigure the package as needed. For more information, see [SQL Server Import and Export Wizard](../Topic/SQL%20Server%20Import%20and%20Export%20Wizard.md).  
+>  When you are simply copying all of your source data to a destination, it may not be necessary to use the Copy Column transformation. In some scenarios, you can connect a source directly to a destination, when no data transformation is required. In these circumstances it is often preferable to use the SQL Server Import and Export Wizard to create your package for you. Later you can enhance and reconfigure the package as needed. For more information, see [SQL Server Import and Export Wizard](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
 ## Options  
  **Available Input Columns**  

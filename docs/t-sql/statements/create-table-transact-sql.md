@@ -627,7 +627,7 @@ Specifies to create an index on the table. This can be a clustered index, or a n
   
  For more information about the Windows and SQL collation names, see [Windows Collation Name](../../t-sql/statements/windows-collation-name-transact-sql.md) and [SQL Collation Name](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
- For more information about the COLLATE clause, see [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md).  
+ For more information about the COLLATE clause, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
  CONSTRAINT  
  Is an optional keyword that indicates the start of the definition of a PRIMARY KEY, NOT NULL, UNIQUE, FOREIGN KEY, or CHECK constraint.  

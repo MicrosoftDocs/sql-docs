@@ -253,7 +253,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
   
      Selecting this option also activates Low Priority Used, which uses the `WAIT_AT_LOW_PRIORITY` option. Online index rebuild operations will wait for low priority locks for `MAX_DURATION` minutes, allowing other operations to proceed while the online index build operation is waiting.  
   
-    > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+    > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      **MAXDOP** check box  
      Overrides the max degree of parallelism configuration option of sp_configure for DBCC CHECKDB. For more information, see For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  

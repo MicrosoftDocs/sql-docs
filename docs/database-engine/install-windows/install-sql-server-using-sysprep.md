@@ -120,7 +120,7 @@ manager: "jhubbard"
     |-|-|  
     |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication<br /><br /> Full-Text Features<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in Native mode<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Redistributable Features<br /><br /> Shared Features|  
   
-     A description for each component group appears in the right pane when you highlight the feature name. You can select any combination of check boxes. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+     A description for each component group appears in the right pane when you highlight the feature name. You can select any combination of check boxes. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.  
   
@@ -173,7 +173,7 @@ manager: "jhubbard"
 8.  On the **Feature Review** page, you will see the selected features and components included in the install during the prepare step. If you wish to add more features to your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instance not included in the prepared instance, you must first complete this step to complete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instance, then add the features from the **Add Features** on the **Installation Center**.  
   
     > [!NOTE]  
-    >  You can add features that are available for the product version that you are installing. For more information, see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
+    >  You can add features that are available for the product version that you are installing. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
 9. On the Instance Configuration page, specify the Instance name for the prepared Instance. This is the name of the instance once you have completed the configuration of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Click **Next** to continue.  
   

@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Connect to an ODBC Data Source (SQL Server Import and Export Wizard)
 This topic shows you how to connect to an **ODBC** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
 
-You may have to download the ODBC driver you need from Microsoft or from a third party. For info about the data sources that you can use, see [What data sources and destinations can I use?](Import%20and%20Export%20Data%20with%20the%20SQL%20Server%20Import%20and%20Export%20Wizard.md\#wizardSources)
+You may have to download the ODBC driver you need from Microsoft or from a third party. For info about the data sources that you can use, see [What data sources and destinations can I use?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 You may also have to look up the required connection info that you have to provide. This third-party site - [The Connection Strings Reference](https://www.connectionstrings.com/) - contains sample connection strings and more info about data providers and the connection info they require.
 
@@ -153,3 +153,4 @@ To build and test the connection string for your ODBC driver on your own compute
 ## See also
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+

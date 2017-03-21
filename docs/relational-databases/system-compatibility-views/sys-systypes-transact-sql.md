@@ -57,7 +57,7 @@ manager: "jhubbard"
 |**collation**|**sysname**|If character based, **collation** is the collation of the current database; otherwise, it is NULL.|  
   
 ## See Also  
- [Compatibility Views &#40;Transact-SQL&#41;](../Topic/Compatibility%20Views%20\(Transact-SQL\).md)   
+ [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

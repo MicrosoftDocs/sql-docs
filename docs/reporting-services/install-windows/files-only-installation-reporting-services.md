@@ -61,7 +61,7 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
  [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
- [Install Reporting Services Native Mode Report Server](../Topic/Install%20Reporting%20Services%20Native%20Mode%20Report%20Server.md)   
+ [Install Reporting Services Native Mode Report Server](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)  
   
   

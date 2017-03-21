@@ -171,7 +171,7 @@ CREATE DATABASE database_snapshot_name
   
  A collation name cannot be specified with the FOR ATTACH or FOR ATTACH_REBUILD_LOG clauses. For information about how to change the collation of an attached database, visit this [Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335).  
   
- For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md).  
+ For more information about the Windows and SQL collation names, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
 > [!NOTE]  
 >  Contained databases are collated differently than non-contained databases. Please see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) for more information.  

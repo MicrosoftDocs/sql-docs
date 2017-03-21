@@ -17,7 +17,7 @@ manager: "jhubbard"
 # Upgrade to a Different Edition of SQL Server (Setup)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports edition upgrade among various editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For information about supported edition upgrade paths, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Before you initiate the edition upgrade of an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following topics:  
   
--   [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
+-   [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
 -   [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  
   

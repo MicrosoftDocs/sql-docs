@@ -62,6 +62,6 @@ manager: "jhubbard"
 |Added the total_regular_buffers,regular_buffer_size, total_large_buffers, large_buffer_size and total_buffer_size columns.|  
   
 ## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../Topic/Dynamic%20Management%20Views%20and%20Functions%20\(Transact-SQL\).md)  
+ [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

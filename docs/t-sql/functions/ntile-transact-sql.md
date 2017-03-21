@@ -271,7 +271,8 @@ ORDER BY st.SalesTerritoryCountry, Quartile;
  [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
  [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
  [Ranking Functions &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
- [Built-in Functions &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md)  
+ [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
+
 

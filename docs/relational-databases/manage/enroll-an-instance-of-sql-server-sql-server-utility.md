@@ -42,7 +42,7 @@ manager: "jhubbard"
   
  In this release, the UCP must satisfy the following requirements:  
   
--   The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be a supported edition. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+-   The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be a supported edition. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   We recommend that the UCP is hosted by a case-sensitive instance of SQL Server.  
   
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 -   FILESTREAM data are not supported for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility monitoring.  
   
- For more information, see [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) and [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).  
+ For more information, see [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) and [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility concepts, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
@@ -117,7 +117,7 @@ manager: "jhubbard"
 |Condition|Corrective Action|  
 |---------------|-----------------------|  
 |You must have administrator privileges on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and on the UCP.|Log on with an account that has administrator privileges on the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and on the UCP.|  
-|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition must support instance enrollment.|For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md).|  
+|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition must support instance enrollment.|For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
 |The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP should have TCP/IP enabled.|Enable TCP/IP on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP.|  
 |The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot already be enrolled with any other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP.|If the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you specify is already managed as part of an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, you cannot enroll it with a different UCP.|  
 |The instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot already be a UCP.|If the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you specify is already a UCP that is different than the UCP you are connected to, you cannot enroll it in this UCP.|  

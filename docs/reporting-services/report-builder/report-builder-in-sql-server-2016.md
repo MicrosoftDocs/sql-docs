@@ -70,7 +70,7 @@ manager: "erikre"
 >  Published reports are managed on a report server or a report server in SharePoint integrated mode by a report server administrator. Report server administrators can define security, set properties, and schedule operations such as report history and e-mail report delivery. They can create shared schedules and shared data sources and make them available for general use. Administrators also manage all of the report server folders. The ability to perform management tasks depends on user permissions.  
   
 ##  <a name="InThisSection"></a> In This Section  
- [What's New in Reporting Services and Report Builder for SQL Server 2016](What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)  
+ [What's New in Reporting Services and Report Builder for SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Describes the new features in this version of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
   
  [Tutorial: Creating a Quick Chart Report Offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  

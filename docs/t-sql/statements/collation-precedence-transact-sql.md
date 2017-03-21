@@ -236,7 +236,7 @@ a
 |PATINDEX|UPPER|  
   
 ## See Also  
- [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md)   
+ [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  

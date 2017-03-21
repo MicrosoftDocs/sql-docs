@@ -59,7 +59,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  If *string_expression* is not of type **varchar(max)** or **nvarchar(max),REPLACE** truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to a large-value data type.  
   
 ## Remarks  
- REPLACE performs comparisons based on the collation of the input. To perform a comparison in a specified collation, you can use [COLLATE](../Topic/COLLATE%20\(Transact-SQL\).md) to apply an explicit collation to the input.  
+ REPLACE performs comparisons based on the collation of the input. To perform a comparison in a specified collation, you can use [COLLATE](~/t-sql/statements/collations.md) to apply an explicit collation to the input.  
   
  0x0000 (**char(0)**) is an undefined character in Windows collations and cannot be included in REPLACE.  
   
@@ -113,4 +113,5 @@ SELECT REPLACE('abcdefghicde','cde','xxx');
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
+
 

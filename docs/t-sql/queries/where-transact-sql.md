@@ -192,11 +192,12 @@ WHERE EmployeeKey Between 100 AND 200;
   
 ## See Also  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Predicates &#40;Transact-SQL&#41;](../Topic/Predicates%20\(Transact-SQL\).md)   
+ [Predicates &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
  [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  
   
   
+
 

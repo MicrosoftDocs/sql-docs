@@ -156,7 +156,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
 ```  
   
 > [!NOTE]  
->  LIKE comparisons are affected by collation. For more information, see [COLLATE &#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md).  
+>  LIKE comparisons are affected by collation. For more information, see [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
   
 ## Using the % Wildcard Character  
  If the LIKE '5%' symbol is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] searches for the number 5 followed by any string of zero or more characters.  
@@ -385,9 +385,11 @@ ORDER by LastName;
   
 ## See Also  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Built-in Functions &#40;Transact-SQL&#41;](../Topic/Built-in%20Functions%20\(Transact-SQL\).md)   
+ [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
+
+
 

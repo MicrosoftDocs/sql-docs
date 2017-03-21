@@ -309,7 +309,7 @@ To change a rowstore table to a columnstore table, drop all existing indexes on 
 For more information, see these articles:
 - [Columnstore indexes versioned feature summary](https://msdn.microsoft.com/library/dn934994/)
 - [Indexing tables in SQL Data Warehouse](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)
-- [Columnstore Indexes Guide](../Topic/Columnstore%20Indexes%20Guide.md) 
+- [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md) 
  
 <a name="LimitationsRestrictions"></a>  
 ## Limitations and Restrictions  

@@ -223,7 +223,7 @@ manager: "erikre"
   
     4.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  
   
-     For all other errors, check the ULS logs. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;Power Pivot for SharePoint&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md).  
+     For all other errors, check the ULS logs. For more information, see [Configure and View SharePoint Log Files  and Diagnostic Logging &#40;Power Pivot for SharePoint&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="bkmk_workbooks"></a> Workbooks  
  Upgrading a server does not necessarily upgrade the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that run on it, but older workbooks created in the previous version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel will continue to work as before, using the features available in that release. Workbooks remain functional because an upgraded server has the version of the Analysis Services OLE DB provider that was part of the previous installation.  

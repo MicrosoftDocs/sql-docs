@@ -31,7 +31,7 @@ manager: "erikre"
 |----------------|--------------|  
 |**bold**|Text that must be typed exactly as shown.|  
 |&#124; (vertical bar)|Separates syntax items. You can choose only one of the items.|  
-|[ ] (brackets)|Optional syntax items. Do not type the brackets.|  
+|`[ ]` (brackets)|Optional syntax items. Do not type the brackets.|  
 |**{ }** (braces)|Delimits parameters of syntax items.|  
 |[**,**...*n*]|Indicates the preceding item can be repeated *n* number of times. The occurrences are separated by commas.|  
   

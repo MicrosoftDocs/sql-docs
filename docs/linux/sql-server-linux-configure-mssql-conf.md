@@ -165,13 +165,15 @@ To set up this new location, use the following commands:
 
 ## <a id="coredump"></a> Specify core dump settings
 
-There are two options for controlling the type of memory dumps that SQL Server collects: **captureminiandfull** and **coredumptype**. 
+If an exception occurs in one of the SQL Server processes, SQL Server creates a memory dump. There are two options for controlling the type of memory dumps that SQL Server collects: **captureminiandfull** and **coredumptype**. 
 
-1. You can decide whether to capture both mini and full dumps with the following command. The default is false (only collect a mini dump). 
+1. You can decide whether to capture both mini and full dumps with the following command.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set captureminiandfull <true or false>
     ```
+
+    If **captureminiandfull** is set to **false**, then only a mini dump is collected. The default is **false**.
 
 2. Specify the type of dump file with the **coredumptype** setting the type of dump file collected.
 
@@ -183,9 +185,9 @@ There are two options for controlling the type of memory dumps that SQL Server c
 
     | Dump type | Description |
     |-----|-----|
-    | **mini** | Smallest dump type. Mini is the unaltered, BreakPad, dump.   It uses the Linux system information to determine threads and modules in the process.    The dump contains only the Host Environment (PAL) thread stacks and modules. Note:  This does NOT contain indirect memory references or globals. |
-    | **miniplus** | MiniPlus uses an addition based design were additional memory, beyond a mini-dump, is included.</br></br> The design understands internals of LibOS and the Pal, adding the following memory regions to the dump.</br> - Various globals</br> - All memory above 64TB (LibOS boundary) – PAL/HE memory</br> - All named regions found in /proc/$pid/maps</br> - Indirect memory from Pal thread stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Windows modules</br> - Windows stacks and indirect memory</br> - Windows PE pages as marked in the VAD as PE pages</br> - Module Information</br> - VMM and VAD tree |
-    | **filtered** | Filtered uses a subtraction based design where all memory in the process is included unless specifically excluded.</br></br> The design understands internals of LibOS and the Pal.  Using the LibOS, VMM’s VAD tree certain regions are excluded from the dump. |
+    | **mini** | Mini is the smallest dump file type. It uses the Linux system information to determine threads and modules in the process. The dump contains only the Host Environment (PAL) thread stacks and modules. It does not contain indirect memory references or globals. |
+    | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of LibOS and the PAL, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB (LibOS boundary) – PAL/HE memory</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from Pal thread stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Windows modules</br> - Windows stacks and indirect memory</br> - Windows PE pages as marked in the VAD as PE pages</br> - Module Information</br> - VMM and VAD tree |
+    | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of LibOS and the PAL, excluding certain regions from the dump.
     | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. |
 
 ## <a id="traceflags"></a> Enable/Disable traceflags

@@ -6,7 +6,7 @@ description: This topic describes how to use the mssql-conf tool to  configure S
 author: luisbosquez 
 ms.author: lbosq 
 manager: jhubbard
-ms.date: 02/27/2017
+ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -88,26 +88,13 @@ This option will let you change the location where the new database and log file
    sudo systemctl restart mssql-server
    ```
 
-5. Troubleshooting: Move the tempdb data directories to this new location. The service will not start if it can't restore the tempdb database files. Move them to the new folder using the following commands:
-
-   ```bash
-   sudo mv /var/opt/mssql/data/tempdb.mdf /tmp/data
-   sudo mv /var/opt/mssql/data/templog.ldf /tmp/data
-   ```
-
-6. Restart the SQL Server service again:
-
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
-
-7. Now all the database files for the new databases created will be stored in this new location. If you would like to change the location of the log (.ldf) files of the new databases, you can use the following "set" command:
+5. Now all the database files for the new databases created will be stored in this new location. If you would like to change the location of the log (.ldf) files of the new databases, you can use the following "set" command:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set defaultlogdir /tmp/log
    ```
 
-8. This command also assumes that a /tmp/log directory exists, and that it is under the user and group "mssql".
+6. This command also assumes that a /tmp/log directory exists, and that it is under the user and group "mssql".
 
 ## <a id="dumpdir"></a> Change the default dump directory location
 

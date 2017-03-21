@@ -1,0 +1,8 @@
+# [Using Strong-Named Custom Assemblies](using-strong-named-custom-assemblies.md)
+# [Deploying a Custom Assembly](deploying-a-custom-assembly.md)
+# [Referencing Assemblies in an RDL File](referencing-assemblies-in-an-rdl-file.md)
+# [Accessing Custom Assemblies Through Expressions](accessing-custom-assemblies-through-expressions.md)
+# [Using Custom Assemblies with Reports](using-custom-assemblies-with-reports.md)
+# [Asserting Permissions in Custom Assemblies](asserting-permissions-in-custom-assemblies.md)
+# [How to: Debug Custom Assemblies](how-to-debug-custom-assemblies.md)
+# [Initializing Custom Assembly Objects](initializing-custom-assembly-objects.md)

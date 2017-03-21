@@ -1,0 +1,5 @@
+# [DBSCHEMA_CATALOGS Rowset](dbschema-catalogs-rowset.md)
+# [OLE DB Schema Rowsets](ole-db-schema-rowsets.md)
+# [DBSCHEMA_COLUMNS Rowset](dbschema-columns-rowset.md)
+# [DBSCHEMA_PROVIDER_TYPES Rowset](dbschema-provider-types-rowset.md)
+# [DBSCHEMA_TABLES Rowset](dbschema-tables-rowset.md)

@@ -175,7 +175,7 @@ If an exception occurs in one of the SQL Server processes, SQL Server creates a 
 
     If **captureminiandfull** is set to **false**, then only a mini dump is collected. The default is **false**.
 
-2. Specify the type of dump file with the **coredumptype** setting the type of dump file collected.
+2. Specify the type of dump file with the **coredumptype** setting. Specify the type of dump to collect.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set coredumptype <dump type>
@@ -183,7 +183,7 @@ If an exception occurs in one of the SQL Server processes, SQL Server creates a 
     
     The following table lists the possible **coredumptype** values.
 
-    | Dump type | Description |
+    | Type | Description |
     |-----|-----|
     | **mini** | Mini is the smallest dump file type. It uses the Linux system information to determine threads and modules in the process. The dump contains only the Host Environment (PAL) thread stacks and modules. It does not contain indirect memory references or globals. |
     | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of LibOS and the PAL, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB (LibOS boundary) – PAL/HE memory</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from Pal thread stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Windows modules</br> - Windows stacks and indirect memory</br> - Windows PE pages as marked in the VAD as PE pages</br> - Module Information</br> - VMM and VAD tree |

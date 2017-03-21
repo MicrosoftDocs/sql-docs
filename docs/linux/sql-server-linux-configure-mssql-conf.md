@@ -167,7 +167,7 @@ To set up this new location, use the following commands:
 
 If an exception occurs in one of the SQL Server processes, SQL Server creates a memory dump. There are two options for controlling the type of memory dumps that SQL Server collects: **captureminiandfull** and **coredumptype**. 
 
-1. You can decide whether to capture both mini and full dumps with the following command.
+1. You can decide whether to capture both mini and full dumps with the **captureminiandfull** setting.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set captureminiandfull <true or false>

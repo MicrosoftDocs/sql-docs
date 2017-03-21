@@ -1,7 +1,7 @@
 ---
 title: "SQL documentation - table of contents | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "03/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,21 @@ manager: "jhubbard"
 
 The *Table of Contents* on the side of this webpage is the high level tree of links you can use to drill deeper into all the documentation articles about Microsoft SQL Server and several related Microsoft technologies.
 
-## See Also
+## Hub Menu
 
-- [Microsoft SQL Documentation - Landing Page](./index.md)
+The [SQL Hub page](./index.md) provides links to numerous major areas of the ever expanding SQL product line available from Microsoft.
+
+- [Microsoft SQL documentation - Hub menu page](./index.md)
+
+The SQL Hub page links to documentation about diverse areas. The following lists only some of those areas:
+
+- R Services
+- Azure SQL Database in the cloud
+- SQL Server on Linux
+- SQL Server on Azure VMs
+- SQL Data Warehouse
+- Several tools
+- Connection drivers for client program development, for several languages and platforms
+- Architectural recommendations in areas such as multitenant SaaS and elastic pools
+- *...and more...*
 

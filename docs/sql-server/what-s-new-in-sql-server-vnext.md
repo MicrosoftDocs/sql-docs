@@ -80,11 +80,13 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 - [Reddit - general discussion about R](https://www.reddit.com/r/SQLServer/)
 
 ## See also    
- + [![Release Notes](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)](SQL%20Server%20vNext%20Release%20Notes.md)[ SQL Server VNext Release Notes](../sql-server/sql-server-vnext-release-notes.md). 
+ + [![Release Notes](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)] [SQL Server VNext Release Notes](../sql-server/sql-server-vnext-release-notes.md). 
 + [Features supported by Edition](https://msdn.microsoft.com/library/cc645993.aspx)
- + [[Installation hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)](Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md)
+ + [Installation hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
  + [Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
  
  + [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
  
  ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
+
+

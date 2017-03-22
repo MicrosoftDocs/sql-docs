@@ -51,7 +51,7 @@ The [ring_buffer section](#h2_target_ring_buffer) includes an example of using [
 ## Parameters, actions, and fields
 
 
-In Transact-SQL, the [CREATE EVENT SESSION](CREATE EVENT SESSION %28Transact-SQL%29.md) statement is central to extended events. To write the statement you often need a list and description of the following:
+In Transact-SQL, the [CREATE EVENT SESSION](~/t-sql/statements/create-event-session-transact-sql.md) statement is central to extended events. To write the statement you often need a list and description of the following:
 
 - The fields associated with your chosen event.
 - The parameters associated with your chosen target.
@@ -786,5 +786,6 @@ If encountered, error **25726** means the event stream filled up with data faste
 - [Microsoft.SqlServer.Management.XEvent Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Microsoft.SqlServer.XEvent.Linq Namespace](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
+
 
 

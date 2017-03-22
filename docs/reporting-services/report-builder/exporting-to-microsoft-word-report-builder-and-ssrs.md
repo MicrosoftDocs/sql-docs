@@ -147,7 +147,7 @@ manager: "erikre"
 ##  <a name="AvailabilityWord"></a> The Word 2003 Renderer  
   
 > [!IMPORTANT]  
->  The [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) rendering extension is deprecated. For more information, see [Deprecated Features in SQL Server Reporting Services in SQL Server 2016](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md).  
+>  The [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) rendering extension is deprecated. For more information, see [Deprecated Features in SQL Server Reporting Services in SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  The Word renderer is compatible with [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack for Word, Excel, and PowerPoint installed. For more information, see [Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint](http://go.microsoft.com/fwlink/?LinkID=205622).  
   

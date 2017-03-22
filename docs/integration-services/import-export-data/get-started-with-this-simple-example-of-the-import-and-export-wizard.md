@@ -29,7 +29,7 @@ Here (in SQL Server Management Studio) is the SQL Server destination database to
 ![SQL Server destination database](../../integration-services/import-export-data/media/sql-server-destination-database.jpg)
 
 ## Prerequisite - Is the wizard installed on your computer?
-If you want to run the wizard, but you don't have [!INCLUDE[msCoName] (../Token/msCoName_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+If you want to run the wizard, but you don't have [!INCLUDE[msCoName] (~/includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## Step 1 - Start the wizard
 You start the wizard from the Microsoft SQL Server 2016 group on the Windows Start menu.
@@ -153,4 +153,5 @@ Learn more about how the wizard works.
 -   **Learn about the steps in the wizard.** If you're looking for info about the steps in the wizard, select the page you want from the list here - [Steps in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). There's also a separate page of documentation for each page of the wizard.
 
 -   **Learn how to connect to data sources and destinations.** If you're looking for info about how to connect to your data, select the page you want from the list here - [Connect to data sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). There's a separate page of documentation for each of several commonly used data sources.
+
 

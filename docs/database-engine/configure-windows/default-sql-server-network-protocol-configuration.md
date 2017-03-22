@@ -51,7 +51,7 @@ All editions	| Upgrade	| Enabled	| Settings from the previous installation are p
 See the following topics for samples of connection strings:
 * [Creating a Valid Connection String Using Shared Memory Protocol](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
 * [Creating a Valid Connection String Using TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)
-* [Creating a Valid Connection String Using Named Pipes](Creating%20a%20Valid%20Connection%20String%20Using%20Named%20Pipes.xml)
+
 
 
 ## [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser Settings
@@ -69,5 +69,6 @@ The [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service
 [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)  
+
 
 

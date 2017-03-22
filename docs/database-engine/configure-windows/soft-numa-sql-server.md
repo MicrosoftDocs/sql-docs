@@ -72,7 +72,7 @@ manager: "jhubbard"
             [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]
-> The **Soft-NUMA** registry keys are not copied when you upgrade an instance of [!INCLUDE[ssNoVersion] (../Token/ssNoVersion_md.md)].  
+> The **Soft-NUMA** registry keys are not copied when you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### Set the CPU affinity mask  
  Run the following statement on instance A to configure it to use CPUs 0, 1, 2, and 3 by setting the CPU affinity mask:  
@@ -142,3 +142,4 @@ SET PROCESS AFFINITY CPU=4 TO 7;
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

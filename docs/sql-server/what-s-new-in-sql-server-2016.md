@@ -66,9 +66,10 @@ Links to individual topics:
   
     
 ## See Also    
- + [![Release Notes](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)](../Topic/SQL%20Server%202016%20Release%20Notes.md)  [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md). 
+ +   [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md). 
 + [SQL Server 2016 datasheet](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [Features supported by Editions of SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
  + [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
  + [Install SQL Server 2016 from the Installtion Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
  [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
+

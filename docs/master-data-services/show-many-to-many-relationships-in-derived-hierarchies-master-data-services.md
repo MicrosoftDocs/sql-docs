@@ -75,7 +75,7 @@ As shown in the following image, the level name that models this relationship is
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
-For instructions on deploying the Customer sample model, and other sample models included with [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Deploying Sample Models and Data](Master%20Data%20Services.md#deploySample).   
+For instructions on deploying the Customer sample model, and other sample models included with [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Deploying Sample Models and Data](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md).   
   
 ## One-Many Relationship  
  A member of a DH may be the parent of many child members, but it generally cannot have more than one parent (for exceptions, see [Member Security](#bkmk_member_security)). For example, suppose there are two entities: Employee and Department, where each employee belongs to a single department. This relationship is modeled by adding to the Employee entity a domain-based attribute (DBA) that references the Department entity:  

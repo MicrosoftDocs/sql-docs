@@ -43,7 +43,7 @@ WHERE CommissionPct > 0.015
 
 For more examples of SELECT queries, see [SELECT Examples &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md) or search online.  
 
-If your data source is Excel, see [Provide a source query for Excel](Provide%20a%20Source%20Query%20%28SQL%20Server%20Import%20and%20Export%20Wizard%29.md\#excelQueries) later in this topic to learn how to specify Excel worksheets and ranges in a query.
+If your data source is Excel, see [Provide a source query for Excel](#excelQueries) later in this topic to learn how to specify Excel worksheets and ranges in a query.
   
  **Parse**  
  Check the syntax of the SQL statement that you entered in the **SQL statement** text box.  
@@ -84,4 +84,5 @@ Whether you specify a worksheet or a range as the source table, the driver reads
 -   For most destinations the next page is **Select Source Tables and Views**. On this page, you review the query that you provided and optionally choose columns to copy and preview sample data. For more info, see [Select Source Tables and Views](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).  
   
 -   If your destination is a flat file, the next page is **Configure Flat File Destination**. On this page, you specify formatting options for the destination flat file. (After you configure the flat file, the next page is then **Select Source Tables and Views**.) For more info, see [Configure Flat File Destination](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
+
 

@@ -28,9 +28,9 @@ manager: "jhubbard"
   
  A page is considered "suspect" when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] encounters one of the following errors when it tries to read a data page:  
   
--   An [823 error](../Topic/MSSQLSERVER_823.md) that was caused by a cyclic redundancy check (CRC) issued by the operating system, such as a disk error (certain hardware errors)  
+-   An 823 error that was caused by a cyclic redundancy check (CRC) issued by the operating system, such as a disk error (certain hardware errors)  
   
--   An [824 error](../Topic/MSSQLSERVER_824.md), such as a torn page (any logical error)  
+-   An 824 error, such as a torn page (any logical error)  
   
  The page ID of every suspect page is recorded in the **suspect_pages** table. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] records any suspect pages encountered during regular processing, such as the following:  
   
@@ -165,7 +165,10 @@ GO
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [Restore Pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
- [MSSQLSERVER_823](../Topic/MSSQLSERVER_823.md)   
- [MSSQLSERVER_824](../Topic/MSSQLSERVER_824.md)  
+    
+   
   
   
+
+
+

@@ -32,7 +32,7 @@ This article describes the types of indexes that are available for a memory-opti
 *Hash* indexes are discussed in more detail in a [closely related article](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md).  
   
   
-*Columnstore* indexes are discussed in [another article](Columnstore%20Indexes%20Guide.xml).  
+*Columnstore* indexes are discussed in [another article](~/relational-databases/indexes/columnstore-indexes-overview.md).  
   
   
 ## A. Syntax for memory-optimized indexes  
@@ -247,4 +247,5 @@ GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child artic
   
   
   
+
 

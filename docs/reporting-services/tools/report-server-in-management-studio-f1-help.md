@@ -57,6 +57,6 @@ manager: "erikre"
   
 ## See Also  
  [Feature Reference (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)  
- [Use SQL Server Management Studio](Use%20SQL%20Server%20Management%20Studio.xml) 
+ [Use SQL Server Management Studio](~/ssms/use-sql-server-management-studio.md) 
 
   

@@ -24,7 +24,7 @@ To make it easier to manage SQL Server R Services, the product team has provided
 - A list of extended events for R Services
 - A list of R packages installed on the current instance
 
-This topic explains how to install and use the reports. For more information about custom reports in Management Studio, see [Custom reports in Management Studio](Custom%20Reports%20in%20Management%20Studio.xml).
+This topic explains how to install and use the reports. For more information about custom reports in Management Studio, see [Custom reports in Management Studio](~/ssms/object/custom-reports-in-management-studio.md).
 
 ## How to install the reports
 
@@ -119,3 +119,4 @@ The product samples repository in GitHub currently includes the following report
 [Monitoring R Services](../../advanced-analytics/r-services/monitoring-r-services.md)
 
 [Extended events for R Services](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
+

@@ -82,7 +82,7 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
 
 -   Ensure the data and log file directories on the source server can be reached from the destination server.
 
--   Under the **detach and attach** method, a SQL Server Agent Proxy for the SSIS subsystem must exist on the destination server with a credential that can access the file system of both the source and destination servers. For more information on proxies, see [Create a SQL Server Agent Proxy](Create%20a%20SQL%20Server%20Agent%20Proxy.xml).
+-   Under the **detach and attach** method, a SQL Server Agent Proxy for the SSIS subsystem must exist on the destination server with a credential that can access the file system of both the source and destination servers. For more information on proxies, see [Create a SQL Server Agent Proxy](~/ssms/agent/create-a-sql-server-agent-proxy.md).
 
 > **IMPORTANT!!** Under the **detach and attach** method, the copy or move process will fail if an Integration Services Proxy account is not used.  Under certain situations the source database will not become re-attached to the source server and all NTFS security permissions will be stripped from the data and log files.  If this happens, navigate to your files, re-apply the relevant permissions, and then re-attach the database to your instance of SQL Server.
   
@@ -400,3 +400,4 @@ In this example the `Sales` database will be copied and created as `SalesCopy` o
  [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)  
   
   
+

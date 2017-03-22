@@ -42,7 +42,8 @@ In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the deployable un
 [Step 3: Adding Packages and Other Files](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
 ## See Also  
-[Integration Services &#40;SSIS&#41; Projects](../Topic/Integration%20Services%20(SSIS)%20Projects.md)  
+[Integration Services &#40;SSIS&#41; Projects](~/integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   
   
+

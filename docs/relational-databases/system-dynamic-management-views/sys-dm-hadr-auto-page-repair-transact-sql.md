@@ -39,7 +39,7 @@ manager: "jhubbard"
 |**database_id**|**int**|ID of the database to which this row corresponds.|  
 |**file_id**|**int**|ID of the file in which the page is located.|  
 |**page_id**|**bigint**|ID of the page in the file.|  
-|**error_type**|**int**|Type of the error. The values can be:<br /><br /> **-**1 = All hardware [823 errors](../Topic/MSSQLSERVER_823.md)<br /><br /> 1 = [824 errors](../Topic/MSSQLSERVER_824.md) other than a bad checksum or a torn page (such as a bad page ID)<br /><br /> 2 = Bad checksum<br /><br /> 3 = Torn page|  
+|**error_type**|**int**|Type of the error. The values can be:<br /><br /> **-**1 = All hardware 823 errors<br /><br /> 1 = 824 errors other than a bad checksum or a torn page (such as a bad page ID)<br /><br /> 2 = Bad checksum<br /><br /> 3 = Torn page|  
 |**page_status**|**int**|The status of the page-repair attempt:<br /><br /> 2 = Queued for request from partner.<br /><br /> 3 = Request sent to partner.<br /><br /> 4 = Queued for automatic page repair (response received from partner).<br /><br /> 5 = Automatic page repair succeeded and the page should be usable.<br /><br /> 6 = Irreparable. This indicates that an error occurred during page-repair attempt, for example, because the page is also corrupted on the partner, the partner is disconnected, or a network problem occurred. This state is not terminal; if corruption is encountered again on the page, the page will be requested again from the partner.|  
 |**modification_time**|**datetime**|Time of last change to the page status.|  
   
@@ -54,3 +54,4 @@ manager: "jhubbard"
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   
+

@@ -60,4 +60,5 @@ The worker agent id of a Scale Out Worker. The *workeragent_id* is **uniqueIdent
 - The execution is not in Scale Out.
 
 ## See Also
-[Execute packages in Scale Out](../Topic/Execute 20Packages 20in 20Integration 20Services 20\(SSIS\) 20Scale 20Out.md).
+[Execute packages in Scale Out](~/integration-services/packages/run-integration-services-ssis-packages.md).
+

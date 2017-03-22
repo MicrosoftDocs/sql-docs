@@ -46,7 +46,7 @@ manager: "jhubbard"
 ## Hierarchies and Collections  
  [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)  
   
- [Move Members within a Hierarchy &#40;Master Data Services&#41;](../Topic/Move%20Members%20within%20a%20Hierarchy%20\(Master%20Data%20Services\).md)  
+   
   
  [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   

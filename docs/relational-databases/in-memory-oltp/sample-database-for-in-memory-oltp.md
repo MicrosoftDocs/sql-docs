@@ -765,6 +765,7 @@ ORDER BY state, file_type
  In this case, there are two checkpoint file pairs in the ‘under construction’ state, which means multiple file pairs were moved to the ‘under construction’ state, likely due to the high level of concurrency in the workload. Multiple concurrent threads required a new file pair at the same time, and thus moved a pair from ‘precreated’ to ‘under construction’.  
   
 ## See Also  
- [In-Memory OLTP &#40;In-Memory Optimization&#41;](../Topic/In-Memory%20OLTP%20\(In-Memory%20Optimization\).md)  
+ [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

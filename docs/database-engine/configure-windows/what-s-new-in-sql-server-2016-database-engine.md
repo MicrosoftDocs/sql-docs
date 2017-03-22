@@ -89,7 +89,7 @@ This release offers improvements for columnstore indexes including updateable no
 
 For more details, see these topics in the [Columnstore Indexes Guide](../../relational-databases/indexes/columnstore-indexes-overview.md) section of Books Online:
 
-- [Columnstore Indexes Versioned Feature Summary](Columnstore%20Indexes%20Versioned%20Feature%20Summary.md) – includes what’s new.
+- [Columnstore Indexes Versioned Feature Summary](~/relational-databases/indexes/columnstore-indexes-what-s-new.md) – includes what’s new.
 
 - [Columnstore Indexes Data Loading](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)
 
@@ -175,7 +175,7 @@ There are several Transact-SQL elements that were not supported for memory-optim
 For overall information, see:
 
 - [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
-- [Unsupported SQL Server Features for In-Memory OLTP](Unsupported%20SQL%20Server%20Features%20for%20In-Memory OLTP.md)
+- [Unsupported SQL Server Features for In-Memory OLTP](~/relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
 
 ##### Transact-SQL Improvements for natively compiled modules
@@ -219,7 +219,7 @@ For overall information, see:
 
 ##### Performance and scaling improvements
 
-- There is no longer any limitation on data size. See [Estimate Memory Requirements for Memory-Optimized Tables](Estimate%20Memory%20Requirements%20for%20Memory-Optimized Tables.md).
+- There is no longer any limitation on data size. See [Estimate Memory Requirements for Memory-Optimized Tables](~/relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).
 
 - There are now multiple concurrent threads responsible to [persist to disk the changes to memory-optimized tables](../../relational-databases/in-memory-oltp/scalability.md).
 
@@ -451,6 +451,9 @@ SQL Server 2016 Upgrade Advisor Preview is a standalone tool that enables users 
 [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
  
 [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+
+
+
 
 
 

@@ -73,7 +73,7 @@ manager: "erikre"
   
  The connection string can also contain new Always On connection properties that configure the report query requests to use secondary replica for read-only reporting. Use of secondary replica for reporting requests will reduce the load on a read-write primary replica. The following illustration is an example of a three replica AG configuration where the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data source connection strings have been configured with ApplicationIntent=ReadOnly. In this example the report query requests are sent to a secondary replica and not the primary replica.  
   
- ![](../Image/rs_Always On_Basic.gif)  
+ 
   
  The following is an example connection string, where the [AvailabilityGroupListenerName] is the **Listener DNS Name** that was configured when replicas were created:  
   
@@ -198,3 +198,4 @@ manager: "erikre"
  [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
+

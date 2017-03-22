@@ -48,7 +48,8 @@ Before you test the package you should verify that the control and data flows in
 [Lesson 5: Add SSIS Package Configurations for the Package Deployment Model](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
 ## See Also  
-[Execution of Projects and Packages](../Topic/Execution%20of%20Projects%20and%20Packages.md)  
+[Execution of Projects and Packages](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   
+

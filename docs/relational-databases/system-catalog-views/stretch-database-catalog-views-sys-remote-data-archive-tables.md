@@ -35,7 +35,7 @@ manager: "jhubbard"
 |**object_id**|**int**|The object ID of the Stretch-enabled local table.|  
 |**remote_database_id**|**int**|The auto-generated local identifier of the remote database.|  
 |**remote_table_name**|**sysname**|The name of the table in the remote database that corresponds to the Stretch-enabled local table.|  
-|**filter_predicate**|**nvarchar(max)**|The filter predicate, if any, that identifies rows in the table to be migrated. If the value is null, the entire table is eligible to be migrated.<br /><br /> For more info, see [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) and [Select rows to migrate by using a filter predicate](Select%20rows%20to%20migrate%20by%20using%20a%20filter%20predicate%20\(Stretch%20Database\).md).|  
+|**filter_predicate**|**nvarchar(max)**|The filter predicate, if any, that identifies rows in the table to be migrated. If the value is null, the entire table is eligible to be migrated.<br /><br /> For more info, see [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) and [Select rows to migrate by using a filter predicate](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).|  
 |**migration_direction**|**tinyint**|The direction in which data is currently being migrated. The available values are the following.<br/>1 (outbound)<br/>2 (inbound)|  
 |**migration_direction_desc**|**nvarchar(60)**|The description of the direction in which data is currently being migrated. The available values are the following.<br/>outbound (1)<br/>inbound (2)|  
 |**is_migration_paused**|**bit**|Indicates whether migration is currently paused.|  
@@ -45,3 +45,4 @@ manager: "jhubbard"
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   
+

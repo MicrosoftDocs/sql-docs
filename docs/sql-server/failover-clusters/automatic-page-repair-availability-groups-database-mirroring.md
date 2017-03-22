@@ -44,8 +44,8 @@ manager: "jhubbard"
   
 |Error number|Description|Instances that cause automatic page-repair attempt|  
 |------------------|-----------------|---------------------------------------------------------|  
-|[823](../Topic/MSSQLSERVER_823.md)|Action is taken only if the operating system performed a cyclic redundancy check (CRC) that failed on the data.|ERROR_CRC. The operating-system value for this error is 23.|  
-|[824](../Topic/MSSQLSERVER_824.md)|Logical errors.|Logical data errors, such as torn write or bad page checksum.|  
+|823|Action is taken only if the operating system performed a cyclic redundancy check (CRC) that failed on the data.|ERROR_CRC. The operating-system value for this error is 23.|  
+|824|Logical errors.|Logical data errors, such as torn write or bad page checksum.|  
 |829|A page has been marked as restore pending.|All.|  
   
  To view recent 823 CRC errors and 824 errors, see the [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) table in the [msdb](../../relational-databases/databases/msdb-database.md) database.  
@@ -119,3 +119,5 @@ manager: "jhubbard"
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   
+
+

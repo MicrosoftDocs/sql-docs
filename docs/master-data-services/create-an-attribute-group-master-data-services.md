@@ -73,6 +73,6 @@ manager: "jhubbard"
  [Change an Attribute Group Name &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [Delete an Attribute Group &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
  [Leaf Permissions &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)   
- [Consolidated Permissions &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
+   
   
   

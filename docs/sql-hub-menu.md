@@ -27,7 +27,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-1.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -46,7 +46,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-2.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -65,7 +65,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-3.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -84,12 +84,12 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-4.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>New samples</h3>
-                                                <p>World Wide Importers database</p>
+                                                <p>Wide World Importers database</p>
                                             </div>
                                         </div>
                                     </div>
@@ -103,7 +103,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-6.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-6.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -122,7 +122,7 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-7.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-7.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -283,7 +283,7 @@ description: Learn about SQL
                         <a href="/en-us/sql/linux/">SQL Server on Linux</a>
                     </li>
                     <li>
-                        <a href="/en-us/sql/advanced-analytics/r-services/">R on SQL Server</a>
+                        <a href="/en-us/sql/advanced-analytics/r-services/">SQL Server R Services</a>
                     </li>
                     <li>
                         <a href="/en-us/azure/sql-database/">Azure SQL Database</a>
@@ -294,7 +294,7 @@ description: Learn about SQL
                     <li>
                         <a href="/en-us/sql/microsoft-sql-documentation-table-of-contents">SQL Table of Contents</a>
                     </li>
-                    </ul>
+                </ul>
             </li>
             <li>
                 <a href="#sdkstools">SDKs/Tools</a>

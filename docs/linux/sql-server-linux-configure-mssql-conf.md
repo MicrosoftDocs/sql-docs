@@ -344,6 +344,6 @@ The following is a list of supported collations:
 -  Turkish_BIN
 -  Ukrainian_BIN
 
-# Next steps
+## Next steps
 
 For other management tools and scenarios, see [Manage SQL Server on Linux](sql-server-linux-management-overview.md).

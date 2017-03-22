@@ -1,4 +1,4 @@
-# [Overview](b8d18d3d-9db0-43e7-8286-7b46cc3a37ed.md) 
+# [Overview](create-deploy-and-manage-mobile-and-paginated-reports.md)
 ## [What's new in Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [Reporting Services Concepts (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services Features and Tasks](reporting-services-features-and-tasks-ssrs.md)   
@@ -92,8 +92,8 @@
 # [Reporting Services Tutorials](reporting-services-tutorials-ssrs.md)  
 
 ## [Create a Basic Table Report (SSRS Tutorial)](create-a-basic-table-report-ssrs-tutorial.md)  
-### [Lesson 1: Creating a Report Server Project](675671ca-e6c9-48a2-82e9-386778f3a49f.md)  
-### [Lesson 2: Specifying Connection Information](54405a3a-d7fa-4d95-8963-9aa224e5901e.md)  
+### [Lesson 1: Creating a Report Server Project](lesson-1-creating-a-report-server-project-reporting-services.md)
+### [Lesson 2: Specifying Connection Information](lesson-2-specifying-connection-information-reporting-services.md)
 ### [Lesson 3: Defining a Dataset for the Table Report](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
 ### [Lesson 4: Adding a Table to the Report](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
 ### [Lesson 5: Formatting a Report](lesson-5-formatting-a-report-reporting-services.md)  

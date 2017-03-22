@@ -32,7 +32,7 @@ ms.custom: H1Hack27Feb2017
 - [Default log directory](#datadir): Changes the directory where the new SQL Server database log (.ldf) files are created.
 - [Default dump directory](#dumpdir): Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default.
 - [Default backup directory](#backupdir): Change the directory where SQL Server will send the backup files by default. 
-- [Mini and full dump prefernces](#coredump): Specify whether to generate both mini dumps and full dumps.
+- [Mini and full dump preferences](#coredump): Specify whether to generate both mini dumps and full dumps.
 - [Core dump type](#coredump): Choose the type of dump memory dump file to collect.
 - [Set traceflags](#traceflags): Set the traceflags that the service is going to use.
 - [Set collation](#collation): Set a new collation for SQL Server on Linux.
@@ -177,17 +177,21 @@ The first phase capture is controlled by the **coredumptype** setting, which det
     sudo /opt/mssql/bin/mssql-conf set captureminiandfull <true or false>
     ```
 
+    Default: **true**
+
 2. Specify the type of dump file with the **coredumptype** setting.
 
     ```bash
-    sudo /opt/mssql/bin/mssql-conf set coredumptype <dump type>
+    sudo /opt/mssql/bin/mssql-conf set coredumptype <dump_type>
     ```
     
+    Default: **miniplus**
+
     The following table lists the possible **coredumptype** values.
 
     | Type | Description |
     |-----|-----|
-    | **mini** | Mini is the smallest dump file type. It uses the Linux system information to determine threads and modules in the process. The dump contains only the Host Environment thread stacks and modules. It does not contain indirect memory references or globals. |
+    | **mini** | Mini is the smallest dump file type. It uses the Linux system information to determine threads and modules in the process. The dump contains only the host environment thread stacks and modules. It does not contain indirect memory references or globals. |
     | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from threads and stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Module Information</br> - VMM and VAD tree |
     | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
     | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. This is not controlled by **captureminiandfull** setting. |

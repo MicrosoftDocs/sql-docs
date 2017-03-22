@@ -317,7 +317,7 @@
         - name: Install on Windows
           href: /sql/reporting-services/install-windows/
           homepage: /sql/reporting-services/install-windows/
-        - name: Mbile reports
+        - name: Mobile reports
           href: /sql/reporting-services/mobile-reports/
           homepage: /sql/reporting-services/mobile-reports
         - name: Report Builder

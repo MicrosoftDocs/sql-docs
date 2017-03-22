@@ -176,7 +176,7 @@ DELETE Sales.ShoppingCartItem
   
     -   A computed column that contains a user-defined function that performs user or system data access in its definition.  
   
-     When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detects such a column in the OUTPUT clause, error 4186 is raised. For more information, see [MSSQLSERVER_4186](../Topic/MSSQLSERVER_4186.md).  
+     When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detects such a column in the OUTPUT clause, error 4186 is raised.   
   
 ## Inserting Data Returned From an OUTPUT Clause Into a Table  
  When you are capturing the results of an OUTPUT clause in a nested INSERT, UPDATE, DELETE, or MERGE statement and inserting those results into a target table, keep the following information in mind:  

@@ -6,7 +6,7 @@ description: This topic highlights what's new for the current release of SQL Ser
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/15/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -33,12 +33,14 @@ The CTP 1.4 release contains the following improvements and fixes:
 
 - Enabled the [SQL Server Agent](sql-server-linux-setup-sql-agent.md).
     - Enabled T-SQL Jobs functionality.
-- Fixed timezone bugs: 
+- Fixed timezone bugs:
     - Timezone support for Asia/Kolkata.
     - Fixed GETDATE() function.
-- Network Async I/0 Improvements.
-- Docker image now includes SQL Server command-line utilities (sqlcmd/bcp).
+- Network Async I/0 Improvements:
+    - Significant improvements to In-Memory OLTP workload performance.
+- Docker image now includes SQL Server command-line utilities. (sqlcmd/bcp).
 - Enabled Virtual Device Interface (VDI) support for backups.
+- Location of TempDB can now be modified after installation using `ALTER DATABASE`.
 
 ## CTP 1.3
 The CTP 1.3 release contains the following improvements and fixes:

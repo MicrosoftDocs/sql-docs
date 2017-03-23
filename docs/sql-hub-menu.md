@@ -70,7 +70,7 @@ description: Learn about SQL
                                             </div>
                                             <div class="cardText">
                                                 <h3>Relational databases</h3>
-                                                <p>Capabilities and reference for working with relational databases in SQL.</p>
+                                                <p>Capabilities and reference for working with relational databases in SQL</p>
                                             </div>
                                         </div>
                                     </div>
@@ -107,7 +107,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>SQL Server Management Studio Tutorials</h3>
+                                                <h3>SQL Server Management Studio tutorials</h3>
                                                 <p>Learn how to use SQL Server Management Studio</p>
                                             </div>
                                         </div>
@@ -126,7 +126,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Transact-SQL Tutorials</h3>
+                                                <h3>Transact-SQL tutorials</h3>
                                                 <p>Learn how to write Transact-SQL statements</p>
                                             </div>
                                         </div>
@@ -270,7 +270,7 @@ description: Learn about SQL
                                             </div>
                                             <div class="cardText">
                                                 <h3>Documentation</h3>
-                                                <p>Download SQL Server on Azure VMs Documentation</p>
+                                                <p>Download SQL Server on Azure VMs documentation</p>
                                             </div>
                                         </div>
                                     </div>

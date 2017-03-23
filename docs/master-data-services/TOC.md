@@ -9,7 +9,7 @@
 ## [Discontinued Master Data Services Features](discontinued-master-data-services-features.md)  
 
 # [Install and configure](master-data-services-installation-and-configuration.md)
-## [Install-windows](install-windows/toc.md) 
+## [Install-windows](install-windows/index.md) 
 ## [Master Data Services Server Configuration Page](server-configuration-mds-configuration-manager.md)  
 ## [Database Configuration Page](database-configuration-page-master-data-services-configuration-manager.md)  
 
@@ -23,7 +23,7 @@
 ## [Create Website Dialog Box](create-website-dialog-box-master-data-services-configuration-manager.md)  
 ## [Web Configuration Reference](web-configuration-reference-master-data-services.md)  
 
-## [Add-in for Microsoft Excel](microsoft-excel-add-in/toc.md)
+## [Add-in for Microsoft Excel](microsoft-excel-add-in/index.md)
 
 ## [Models](models-master-data-services.md)  
 ### [Create a Model](create-a-model-master-data-services.md)  

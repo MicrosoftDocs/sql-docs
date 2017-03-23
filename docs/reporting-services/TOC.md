@@ -9,7 +9,7 @@
 ### [Breaking changes in SQL Server Reporting Services in SQL Server 2016](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)  
 ### [Behavior changes to SQL Server Reporting Services  in SQL Server 2016](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 
-# [Install](install-windows/toc.md)
+# [Install](install-windows/index.md)
 
 # [Planning](planning-for-reporting-services.md)  
 ## [Choosing Microsoft Business Intelligence (BI) tools for analysis and reporting](choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
@@ -17,18 +17,18 @@
 ## [Plan for report design and report deployment | Reporting Services](plan-for-report-design-and-report-deployment-reporting-services.md)  
 ## [Reporting Services Features Supported by the Editions of SQL Server 2016](reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
   
-# [Mobile reports](mobile-reports/toc.md)
+# [Mobile reports](mobile-reports/index.md)
 # [Power BI reports](power-bi-reports-in-reporting-services.md)  
 # [Pin to Power BI](pin-reporting-services-items-to-power-bi-dashboards.md)  
-# [Report Builder](report-builder/toc.md)
-# [Report Design](report-design/toc.md)
-# [Report Server](report-server/toc.md)
-# [Report Server Sharepoint](report-server-sharepoint/toc.md)
-# [Reports](reports/toc.md)
-# [Security and protection](security/toc.md)
-# [Subscriptions and delivery](subscriptions/toc.md)
-# [Tools](tools/toc.md)
-# [Troubleshooting](troubleshooting/toc.md)
+# [Report Builder](report-builder/index.md)
+# [Report Design](report-design/index.md)
+# [Report Server](report-server/index.md)
+# [Report Server Sharepoint](report-server-sharepoint/index.md)
+# [Reports](reports/index.md)
+# [Security and protection](security/index.md)
+# [Subscriptions and delivery](subscriptions/index.md)
+# [Tools](tools/index.md)
+# [Troubleshooting](troubleshooting/index.md)
 
 # [Web portal (SSRS Native Mode)](web-portal-ssrs-native-mode.md)  
 ## [Branding the web portal](branding-the-web-portal.md)  
@@ -63,7 +63,7 @@
 ## [Search a Report Using URL Access](search-a-report-using-url-access.md)  
 ## [Render a Report History Snapshot Using URL Access](render-a-report-history-snapshot-using-url-access.md)  
 
-# [WMI provider](wmi-provider-library-reference/toc.md)
+# [WMI provider](wmi-provider-library-reference/index.md)
 
 
 # Developer

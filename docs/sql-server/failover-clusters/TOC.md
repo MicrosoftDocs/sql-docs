@@ -6,7 +6,6 @@
 ## [Remove a SQL Server Failover Cluster Instance (Setup)](install/remove-a-sql-server-failover-cluster-instance-setup.md)  
 ## [Rename a SQL Server Failover Cluster Instance](install/rename-a-sql-server-failover-cluster-instance.md)  
 
-
 # [High Availability Solutions](high-availability-solutions-sql-server.md)  
 ## [Automatic Page Repair (Availability Groups: Database Mirroring)](automatic-page-repair-availability-groups-database-mirroring.md)  
 ## [Management of Logins and Jobs After Role Switching](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
@@ -20,6 +19,7 @@
 ### [Force a WSFC Cluster to Start Without a Quorum](windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
 ## [SQL Server Multi-Subnet Clustering](windows/sql-server-multi-subnet-clustering-sql-server.md)  
 ## [Failover Cluster Troubleshooting](windows/failover-cluster-troubleshooting.md)  
+
 # [Always On Failover Cluster Instances](windows/always-on-failover-cluster-instances-sql-server.md)  
 ## [Failover Policy for Failover Cluster Instances](windows/failover-policy-for-failover-cluster-instances.md)  
 ### [Configure HealthCheckTimeout Property Settings](windows/configure-healthchecktimeout-property-settings.md)  

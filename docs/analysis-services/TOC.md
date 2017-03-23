@@ -16,7 +16,7 @@
 ### [Currency Conversions](currency-conversions-analysis-services.md)  
 ### [Tips and best practices](globalization-tips-and-best-practices-analysis-services.md)  
 
-# [Data mining](data-mining/toc.md)
+# [Data mining](data-mining/index.md)
 
 # Developer Tools
 ## [Schema rowsets +](schema-rowsets/index.md)
@@ -27,13 +27,13 @@
 ## [Tabular models scripting language objects +](tabular-models-scripting-language-objects/index.md)
 ## [XMLA +](xmla/index.md)
 
-# [Instances](instances/toc.md)
-# [Multidimensional models](multidimensional-models/toc.md)
-# [Power Pivot Sharepoint](power-pivot-sharepoint/toc.md)
-# [PowerShell](powershell/toc.md)
-# [Server properties](server-properties/toc.md)
-# [Tabular models](tabular-models/toc.md)
-# [Trace-events](trace-events/toc.md)
+# [Instances](instances/index.md)
+# [Multidimensional models](multidimensional-models/index.md)
+# [Power Pivot Sharepoint](power-pivot-sharepoint/index.md)
+# [PowerShell](powershell/index.md)
+# [Server properties](server-properties/index.md)
+# [Tabular models](tabular-models/index.md)
+# [Trace-events](trace-events/index.md)
 
 # [Troubleshooting Analysis Services](troubleshooting-analysis-services.md)  
 ## [Troubleshoot Process Data](troubleshoot-process-data-ssas-tabular.md)  

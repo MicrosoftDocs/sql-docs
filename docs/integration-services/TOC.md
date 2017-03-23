@@ -6,11 +6,11 @@
 ## [Integration Services (SSIS) Development and Management Tools](integration-services-ssis-development-and-management-tools.md)
 ## [Integration Services (SSIS) Projects and Solutions](integration-services-ssis-projects-and-solutions.md)
 
-# [Install](install-windows/toc.md)
-# [Change data capture](change-data-capture/toc.md)
-# [Connection Manager](connection-manager/toc.md)
-# [Control flow](control-flow/toc.md)
-# [Data flow](data-flow/toc.md)
+# [Install](install-windows/index.md)
+# [Change data capture](change-data-capture/index.md)
+# [Connection Manager](connection-manager/index.md)
+# [Control flow](control-flow/index.md)
+# [Data flow](data-flow/index.md)
 
 # Develop Packages for Integration
 ## [Build packages programmatically +](building-packages-programmatically/index.md)
@@ -19,8 +19,8 @@
 ## [Run and manage packages programmatically +](run-manage-packages-programmatically/index.md)
 
 # [Event Handlers](integration-services-ssis-event-handlers.md)
-# [Expressions](expressions/toc.md)
-# [Import and export](import-export-data/toc.md)
+# [Expressions](expressions/index.md)
+# [Import and export](import-export-data/index.md)
 
 # [User Interface](integration-services-user-interface.md)
 ## [SSIS Designer](ssis-designer.md)
@@ -45,20 +45,20 @@
 ## [Package Upgrade Wizard F1 Help](ssis-package-upgrade-wizard-f1-help.md)
 ## [Package and Project Parameters](integration-services-ssis-package-and-project-parameters.md)
 
-# [Performance](performance/toc.md)
+# [Performance](performance/index.md)
 # [Queries](integration-services-ssis-queries.md)
 
-# [Security](security/toc.md)
+# [Security](security/index.md)
 
-# [Service](service/toc.md)
+# [Service](service/index.md)
 
-# [System stored procedures](system-stored-procedures/toc.md)
+# [System stored procedures](system-stored-procedures/index.md)
 
-# [System views](system-views/toc.md)
+# [System views](system-views/index.md)
 
 # [Transactions](integration-services-transactions.md)
 
-# [Troubleshooting](troubleshooting/toc.md)
+# [Troubleshooting](troubleshooting/index.md)
 
 # [Variables](integration-services-ssis-variables.md)
 ## [Variables Window](variables-window.md)

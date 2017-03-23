@@ -1,4 +1,4 @@
-# [SQL Server Management Studio](sql-server-management-studio/toc.md)
+# [SQL Server Management Studio](sql-server-management-studio/index.md)
 
 # [Command Prompt Utilities](command-prompt-utility-reference-database-engine.md)  
 ## [bcp Utility](bcp-utility.md)  
@@ -14,8 +14,8 @@
 ## [sqlservr Application](sqlservr-application.md)  
 ## [tablediff Utility](tablediff-utility.md)  
 
-# [Configuration Manager](configuration-manager/toc.md)
-# [Distributed Replay](distributed-replay/toc.md)
-# [dta](dta/toc.md)
-# [SQL Server Profiler](sql-server-profiler/toc.md)
-# [ssbdiagnose](ssbdiagnose/toc.md)
+# [Configuration Manager](configuration-manager/index.md)
+# [Distributed Replay](distributed-replay/index.md)
+# [dta](dta/index.md)
+# [SQL Server Profiler](sql-server-profiler/index.md)
+# [ssbdiagnose](ssbdiagnose/index.md)

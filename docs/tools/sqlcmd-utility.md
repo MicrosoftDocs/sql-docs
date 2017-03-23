@@ -1,4 +1,4 @@
----
+﻿---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/29/2016"
@@ -295,7 +295,7 @@ Prints raw error messages to the screen.
  Writes input scripts to the standard output device (**stdout**).  
   
  **-I**  
- Sets the SET QUOTED_IDENTIFIER connection option to ON. By default, it is set to OFF. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../Topic/SET%20QUOTED_IDENTIFIER%20\(Transact-SQL\).md).  
+ Sets the SET QUOTED_IDENTIFIER connection option to ON. By default, it is set to OFF. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **-q"** *cmdline query* **"**  
  Executes a query when **sqlcmd** starts, but does not exit **sqlcmd** when the query has finished running. Multiple-semicolon-delimited queries can be executed. Use quotation marks around the query, as shown in the following example.  
@@ -832,16 +832,22 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
 -   Set time-out values for batch or query execution higher than you expect it will take to execute the batch or query.  
   
 ## See Also  
- [Start the sqlcmd Utility](../Topic/Start%20the%20sqlcmd%20Utility.md)   
- [Run Transact-SQL Script Files Using sqlcmd](../Topic/Run%20Transact-SQL%20Script%20Files%20Using%20sqlcmd.md)   
+ [Start the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-start-the-utility.md)   
+ [Run Transact-SQL Script Files Using sqlcmd](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
  [Use the sqlcmd Utility](~/relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [Use sqlcmd with Scripting Variables](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [Connect to the Database Engine With sqlcmd](../Topic/Connect%20to%20the%20Database%20Engine%20With%20sqlcmd.md)   
- [Edit SQLCMD Scripts with Query Editor](../Topic/Edit%20SQLCMD%20Scripts%20with%20Query%20Editor.md)   
- [Manage Job Steps](../Topic/Manage%20Job%20Steps.md)   
- [Create a CmdExec Job Step](../Topic/Create%20a%20CmdExec%20Job%20Step.md)  
+ [Connect to the Database Engine With sqlcmd](~/relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)   
+ [Edit SQLCMD Scripts with Query Editor](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
+ [Manage Job Steps](~/ssms/agent/manage-job-steps.md)   
+ [Create a CmdExec Job Step](~/ssms/agent/create-a-cmdexec-job-step.md)  
   
   
+
+
+
+
+
+
 
 
 

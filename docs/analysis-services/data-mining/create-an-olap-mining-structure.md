@@ -123,7 +123,7 @@ manager: "jhubbard"
   
 -   For the second filter, you would choose the Customer dimension, select the Gender attribute, and select “Female” from the list of attribute values.  
   
- After the mining structure has been created, you can modify both the definition of the cube data and the filter criteria. For more information, see [Filters for Mining Models](../Topic/Filters%20for%20Mining Models%20&#40;Analysis%20Services%20-%20Data%20Mining&#40;.md).  
+ After the mining structure has been created, you can modify both the definition of the cube data and the filter criteria. For more information, see [Filters for Mining Models](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  Both the **Mining Structure** tab and the **Mining Model** tab provide an option to add a filter to an existing mining structure, by clicking **Define a Cube Slice**. The **Slice Cube** dialog box helps you build a valid MDX filter expression by choosing value from dropdown lists.  
   

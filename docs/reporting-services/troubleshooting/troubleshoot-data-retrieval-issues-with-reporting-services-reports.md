@@ -41,7 +41,7 @@ For data sources with prompted credentials or credentials specified in the conne
 Verify that the password does not include special characters. If changing the password is impractical, work with your database administrator to store the appropriate credentials locally and on the server as part of a system ODBC data source name (DSN). For more information, see "OdbcConnection.ConnectionString" in the .NET Framework SDK documentation on MSDN.   
   
 > [!NOTE]  
->It is recommended that you do not add login information such as passwords to the connection string. Report Designer provides a **Credentials** page on the [Data Source Properties](Data%20Source%20Properties%20Dialog%20Box,%20General%20(Report%20Builder).xml) or the [Shared Data Source Properties dialog boxes](Shared%20Data%20Source%20Properties%20Dialog%20Box,%20Credentials.xml) that you can use to enter credentials. These credentials are stored securely on the report authoring computer.  
+>It is recommended that you do not add login information such as passwords to the connection string. Report Designer provides a **Credentials** page on the [Data Source Properties](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) or the [Shared Data Source Properties dialog boxes](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) that you can use to enter credentials. These credentials are stored securely on the report authoring computer.  
   
 ## Why do I see no data when I run my query in the query designer?  
 When you create a dataset, the dataset field collection appears in the Report Data pane. Sometimes the dataset field collection does not appear as expected.   
@@ -66,4 +66,6 @@ To populate the dataset field collection, do the following:
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+
+
 

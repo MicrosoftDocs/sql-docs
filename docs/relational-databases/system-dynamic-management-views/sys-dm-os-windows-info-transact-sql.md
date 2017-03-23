@@ -29,7 +29,7 @@ manager: "jhubbard"
 
   Returns one row that displays Windows operating system version information.  
   
-  Only applies to SQL Server running on Windows. To see similar informaton for SQL Server running on a non-Windows host, such as Linux, use [sys.dm_os_host_info &#40;Transact-SQL&#41;](../Topic/sys.dm_os_host_info 20\(Transact-SQL\).md). 
+  Only applies to SQL Server running on Windows. To see similar informaton for SQL Server running on a non-Windows host, such as Linux, use [sys.dm_os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -66,3 +66,4 @@ FROM sys.dm_os_windows_info;
  [sys.dm_os_host_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)  
   
   
+

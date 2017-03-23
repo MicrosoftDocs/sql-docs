@@ -96,7 +96,7 @@ GROUP BY {
 ### *column-expression*  
 Specifies a column or a non-aggregate calculation on a column. This column can belong to a table, derived table, or view. The column must appear in the FROM clause of the SELECT statement, but is not required to appear in the SELECT list. 
 
-For valid expressions, see [expression](../Topic/Expressions%20\(Transact-SQL\).    
+For valid expressions, see [expression](~/t-sql/language-elements/expressions-transact-sql.md).    
 
 The column must appear in the FROM clause of the SELECT statement, but is not required to appear in the SELECT list. However, each table or view column in any nonaggregate expression in the \<select> list must be included in the GROUP BY list:  
   
@@ -461,9 +461,13 @@ ORDER BY OrderDateKey;
 ```  
   
 ## See Also  
- [GROUPING_ID &#40;Transact-SQL&#41;](../Topic/GROUPING_ID%20\(Transact-SQL\).md)   
- [GROUPING &#40;Transact-SQL&#41;](../Topic/GROUPING%20\(Transact-SQL\).md)   
- [SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20\(Transact-SQL\).md)   
- [SELECT Clause &#40;Transact-SQL&#41;](../Topic/SELECT%20Clause%20\(Transact-SQL\).md)  
+ [GROUPING_ID &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
+ [GROUPING &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-transact-sql.md)   
+ [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
+ [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
+
+
+
+

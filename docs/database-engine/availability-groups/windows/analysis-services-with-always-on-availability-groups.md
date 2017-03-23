@@ -1,4 +1,4 @@
----
+﻿---
 title: "Analysis Services with Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
@@ -138,9 +138,7 @@ manager: "erikre"
   
      The availability group listener redirects a client connection to a primary replica for read-write requests or to a secondary replica if you specify read-intent in the connection string. Because replica roles will change during a failover (where the primary becomes the secondary and a secondary becomes a primary), you should always specify the listener so that the client connection is redirected accordingly.  
   
-     To determine the name of the availability group listener, you can either ask a database administrator or connect to an instance in the availability group and view its Always On availability configuration. In the screenshot below, the availability group listener is **AdventureWorks2**.  
-  
-     ![](../Image/SSAS_Always OnInfoInSSMS.png)  
+     To determine the name of the availability group listener, you can either ask a database administrator or connect to an instance in the availability group and view its Always On availability configuration.   
   
 4.  Still in Connection Manager, click **All** in the left navigation pane to view the property grid of data provider.  
   

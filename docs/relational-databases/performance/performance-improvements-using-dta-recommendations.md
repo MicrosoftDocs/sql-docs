@@ -55,11 +55,13 @@ See Also
 
 [Columnstore index recommendations in Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
 
-[Columnstore Indexes Guide](Columnstore%20Indexes%20Guide.md)
+[Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md)
 
-[Columnstore Indexes for Data Warehousing](Columnstore%20Indexes%20for%20Data%20Warehousing.md)
+[Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 
 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)
 
 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)
+
+
 

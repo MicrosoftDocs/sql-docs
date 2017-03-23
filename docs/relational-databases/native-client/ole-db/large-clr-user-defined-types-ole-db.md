@@ -170,6 +170,7 @@ manager: "jhubbard"
  When **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) is set to "80", large UDT types appear to clients in the same way that they appear for down-level clients.  
   
 ## See Also  
- [Large CLR User-Defined Types](../Topic/Large%20CLR%20User-Defined%20Types.md)  
+ [Large CLR User-Defined Types](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   
+

@@ -87,7 +87,7 @@ manager: "jhubbard"
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Returns the current date.|  
 |CURDATE( ) (ODBC 3.0)|Returns the current date.|  
-|CURRENT_TIME[( time-precision )] (ODBC 3.0)|Returns the current local time. The time-precision argument determines the seconds precision of the returned value|  
+|CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|Returns the current local time. The time-precision argument determines the seconds precision of the returned value|  
 |CURTIME() (ODBC 3.0)|Returns the current local time.|  
 |DAYNAME( date_exp ) (ODBC 2.0)|Returns a character string that contains the data source–specific name of the day (for example, Sunday through Saturday or Sun. through Sat. for a data source that uses English, or Sonntag through Samstag for a data source that uses German) for the day part of date_exp.|  
 |DAYOFMONTH( date_exp ) (ODBC 1.0)|Returns the day of the month based on the month field in date_exp as an integer value in the range of 1–31.|  
@@ -249,5 +249,6 @@ SELECT {fn WEEK( @date_exp )};
  [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
+
 
 

@@ -41,7 +41,7 @@ manager: "jhubbard"
  You can also specify the script language by setting the **ScriptLanguage** property on the **Script** page of the **Script Transformation Editor**.  
   
 > [!NOTE]  
->  To set the default script language for Script components and Script Tasks, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](../Topic/General%20Page.md).  
+>  To set the default script language for Script components and Script Tasks, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [General Page](~/integration-services/control-flow/script-task-editor-general-page.md).  
   
 ### Adding Connection Managers  
  Ordinarily a source component uses an existing connection manager to connect to the data source from which it loads data into the data flow. On the **Connection Managers** page of the **Script Transformation Editor**, click **Add** to add the appropriate connection manager.  

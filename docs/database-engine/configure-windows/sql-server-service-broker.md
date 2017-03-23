@@ -35,7 +35,7 @@ manager: "jhubbard"
 ## Where is the documentation for Service Broker?  
  The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
   
--   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](../Topic/Data%20Definition%20Language%20\(DDL\)%20Statements%20\(Transact-SQL\).md) for CREATE, ALTER, and DROP statements  
+-   [Data Definition Language &#40;DDL&#41; Statements &#40;Transact-SQL&#41;](~/mdx/mdx-data-definition-statements-mdx.md) for CREATE, ALTER, and DROP statements  
   
 -   [Service Broker Statements](../../t-sql/statements/service-broker-statements.md)  
   
@@ -63,3 +63,4 @@ manager: "jhubbard"
  For more information, see [Service Broker with Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md).  
   
   
+

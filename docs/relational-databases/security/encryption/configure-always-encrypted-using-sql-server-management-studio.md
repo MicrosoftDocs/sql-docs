@@ -427,7 +427,7 @@ You need *ALTER ANY COLUMN MASTER KEY* and *ALTER ANY COLUMN ENCRYPTION KEY* on 
 
 ## Migrating Databases with Encrypted Columns using SQL Server Import and Export Wizard
 
-Compared to using BACPAC files, the [SQL Server Import and Export Wizard](Import%20and%20Export%20Data%20Sources%20Supported%20for%20SQL%20Server.md) gives you more control over how the data stored in encrypted columns are handled during the data migration.
+Compared to using BACPAC files, the [SQL Server Import and Export Wizard](~/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) gives you more control over how the data stored in encrypted columns are handled during the data migration.
 
 - If your data source is a database using Always Encrypted, you can configure your data source connection so that the data stored in encrypted columns is decrypted during the export operation, or remains encrypted.
 - If your data target is a database using Always Encrypted, you can configure your data target connection so that the data targeting encrypted columns is encrypted.
@@ -469,6 +469,7 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 - [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
 - [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
+
 
 
 

@@ -259,8 +259,10 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 ```  
   
 ## See Also  
- [Understanding Synchronous and Asynchronous Transformations](../Topic/Understanding%20Synchronous%20and%20Asynchronous%20Transformations.md)   
- [Creating an Asynchronous Transformation with the Script Component](../Topic/Creating%20an%20Asynchronous%20Transformation%20with%20the%20Script%20Component.md)   
- [Developing a Custom Transformation Component with Synchronous Outputs](../Topic/Developing%20a%20Custom%20Transformation%20Component%20with%20Synchronous%20Outputs.md)  
+ [Understanding Synchronous and Asynchronous Transformations](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md   
+ [Creating an Asynchronous Transformation with the Script Component](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md   
+ [Developing a Custom Transformation Component with Synchronous Outputs](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md  
   
   
+
+

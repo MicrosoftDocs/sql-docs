@@ -80,7 +80,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 For additional options and more info, see [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
 
 ##  <a name="tshoot"></a> Troubleshoot word-breaking time-out errors  
- A word-breaking time-out error might occur in a variety of situations. For information about these situations and how to respond in each situation, see [MSSQLSERVER_30053](../Topic/MSSQLSERVER_30053.md).  
+ A word-breaking time-out error might occur in a variety of situations.   
   
 ##  <a name="impact"></a> Understand the impact of updated word breakers  
  Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typically includes new word breakers that have better linguistic rules and are more accurate than earlier word breakers. Potentially, the new word breakers might behave slightly differently from the word breakers in full-text indexes that were imported from previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].

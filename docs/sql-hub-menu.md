@@ -21,13 +21,13 @@ description: Learn about SQL
                                 </div>
                             </li>
                             <li>
-                                <a href="https://msdn.microsoft.com/en-us/library/mt788653.aspx">
+                                <a href="/sql/sql-server/sql-server-vnext-release-notes">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-1.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -40,13 +40,13 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://msdn.microsoft.com/en-us/library/ms143219.aspx">
+                                <a href="/sql/sql-server/install/planning-a-sql-server-installation">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-2.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -59,18 +59,18 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.microsoft.com/en-us/sql-server/sql-server-2016-features">
+                                <a href="/sql/relational-databases/database-features">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-3.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>New capabilities</h3>
-                                                <p>Video focusing on improvements to performance, security, and analytics</p>
+                                                <h3>Relational databases</h3>
+                                                <p>Capabilities and reference for working with relational databases in SQL</p>
                                             </div>
                                         </div>
                                     </div>
@@ -84,12 +84,12 @@ description: Learn about SQL
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-4.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
                                                 <h3>New samples</h3>
-                                                <p>World Wide Importers database</p>
+                                                <p>Wide World Importers database</p>
                                             </div>
                                         </div>
                                     </div>
@@ -97,18 +97,18 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://msdn.microsoft.com/en-us/library/bb510411.aspx">
+                                <a href="/sql/tools/sql-server-management-studio/tutorial-sql-server-management-studio">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-5.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-6.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Database Engine</h3>
-                                                <p>New capabilities in the Database Engine</p>
+                                                <h3>SQL Server Management Studio tutorials</h3>
+                                                <p>Learn how to use SQL Server Management Studio</p>
                                             </div>
                                         </div>
                                     </div>
@@ -116,37 +116,18 @@ description: Learn about SQL
                                 </a>
                             </li>
                             <li>
-                                <a href="https://msdn.microsoft.com/en-us/library/mt674876.aspx">
+                                <a href="/sql/t-sql/tutorial-writing-transact-sql-statements">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-6.svg" alt="" />
+                                                    <img src="/media/hubs/sql/sql-server-7.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>R Services</h3>
-                                                <p>Analyze data directly within a SQL Server database</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://msdn.microsoft.com/en-us/library/ms159106.aspx">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                        <img src="/media/hubs/sql/sql-server-7.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>Mobile and paginated reports</h3>
-                                                <p>Use SQL Server Reporting Services to create, deploy, and manage mobile and paginated reports</p>
+                                                <h3>Transact-SQL tutorials</h3>
+                                                <p>Learn how to write Transact-SQL statements</p>
                                             </div>
                                         </div>
                                     </div>
@@ -289,7 +270,7 @@ description: Learn about SQL
                                             </div>
                                             <div class="cardText">
                                                 <h3>Documentation</h3>
-                                                <p>Download SQL Server on Azure VMs Documentation</p>
+                                                <p>Download SQL Server on Azure VMs documentation</p>
                                             </div>
                                         </div>
                                     </div>
@@ -302,10 +283,16 @@ description: Learn about SQL
                         <a href="/en-us/sql/linux/">SQL Server on Linux</a>
                     </li>
                     <li>
+                        <a href="/en-us/sql/advanced-analytics/r-services/">SQL Server R Services</a>
+                    </li>
+                    <li>
                         <a href="/en-us/azure/sql-database/">Azure SQL Database</a>
                     </li>
                     <li>
                         <a href="/en-us/azure/sql-data-warehouse/">Azure SQL Data Warehouse</a>
+                    </li>
+                    <li>
+                        <a href="/en-us/sql/microsoft-sql-documentation-table-of-contents">SQL Table of Contents</a>
                     </li>
                 </ul>
             </li>

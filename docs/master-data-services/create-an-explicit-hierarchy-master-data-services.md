@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 -   [Create a Consolidated Member &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)  
   
--   [Move Members within a Hierarchy &#40;Master Data Services&#41;](../Topic/Move%20Members%20within%20a%20Hierarchy%20\(Master%20Data%20Services\).md)  
+  
   
 ## See Also  
  [Explicit Hierarchies &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
@@ -76,3 +76,4 @@ manager: "jhubbard"
  [Change an Explicit Hierarchy Name &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   
+

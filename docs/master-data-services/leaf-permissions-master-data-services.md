@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Assign Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Consolidated Permissions &#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)   
+    
  [Model Object Permissions &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Members &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  

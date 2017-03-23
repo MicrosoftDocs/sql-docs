@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 |Issue|Summary|  
 |-----------|-------------|  
-|Error Message 1418|This [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message indicates that the server network address cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command. For more information, see the [MSSQLSERVER_1418](../Topic/MSSQLSERVER_1418.md) topic.|  
+|Error Message 1418|This [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message indicates that the server network address cannot be reached or does not exist, and it suggests that you verify the network address name and reissue the command. |  
 |[Accounts](#Accounts)|Discusses requirements for correctly configuring the accounts under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.|  
 |[Endpoints](#Endpoints)|Discusses requirements for correctly configuring the database mirroring endpoint of each server instance.|  
 |[SystemAddress](#SystemAddress)|Summarizes the alternatives for specifying the system name of a server instance in a database mirroring configuration.|  
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
      To identify the port currently associated with database mirroring endpoint of a server instance, use the [sys.database_mirroring_endpoints](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) and [sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) catalog views.  
   
-3.  For database mirroring setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports. For information about verifying port availability, see [MSSQLSERVER_1418](../Topic/MSSQLSERVER_1418.md).  
+3.  For database mirroring setup issues that are difficult to explain, we recommend that you inspect each server instance to determine whether it is listening on the correct ports.   
   
 4.  Make sure that the endpoints are started (STATE=STARTED). On each server instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
@@ -166,3 +166,5 @@ manager: "jhubbard"
  [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   
   
+
+

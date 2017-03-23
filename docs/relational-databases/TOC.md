@@ -86,13 +86,18 @@
 # [xml](xml/index.md)
 
 # [Tutorials](database-engine-tutorials.md)  
-## [Tutorial: Getting Started with the Database Engine](tutorial-getting-started-with-the-database-engine.md)  
+
+## [Getting Started with the Database Engine](tutorial-getting-started-with-the-database-engine.md)  
 ### [Lesson 1: Connecting to the Database Engine](lesson-1-connecting-to-the-database-engine.md)  
 ### [Lesson 2: Connecting from Another Computer](lesson-2-connecting-from-another-computer.md)  
-## [Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
-## [Tutorial: Signing Stored Procedures with a Certificate](tutorial-signing-stored-procedures-with-a-certificate.md)  
-## [Tutorial: Ownership Chains and Context Switching](tutorial-ownership-chains-and-context-switching.md)  
-## [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+
+## [SQL Server Backup and Restore to Azure Blob Storage Service](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+
+## [Signing Stored Procedures with a Certificate](tutorial-signing-stored-procedures-with-a-certificate.md)  
+
+## [Ownership Chains and Context Switching](tutorial-ownership-chains-and-context-switching.md)  
+
+## [Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 ### [Lesson 1: Create a stored access policy and a shared access signature  on an Azure container](lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
 ### [Lesson 2: Create a SQL Server credential using a shared access signature](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
 ### [Lesson 3: Database backup to URL](lesson-3-database-backup-to-url.md)  

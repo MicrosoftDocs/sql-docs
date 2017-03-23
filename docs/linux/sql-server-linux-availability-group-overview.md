@@ -34,8 +34,8 @@ SQL Server Always On Availability Groups were first introduced in SQL Server 201
    An availability group supports a failover environment for a set of user databases, known as availability databases.
 - **Fast failure detection and failover**
    As a resource in a highly available cluster, an availability group benefits from built-in cluster intelligence for immediate failover detection and failover action.
-- **Transparent failover using availability group listener**
-   Enables client to use single connection string to primary or secondary databases that does not change in case of failover. 
+- **Transparent failover using virtual IP resource**
+   Enables client to use single connection string to primary in case of failover. Requires integration with a cluster manager.
 - **Multiple synchronous and asynchronous secondaries**
    An availability group supports up to eight secondary replicas. With synchronous replicas the primary replica waits to commit transaction the primary replica waits for transactions to be written to disk on the transaction log. The primary replica does not wait for writes on asynchronous synchronous replicas.  
 - **Manual or automatic failover**
@@ -46,13 +46,13 @@ SQL Server Always On Availability Groups were first introduced in SQL Server 201
    SQL Server automatically creates the secondary replicas for every database in the availability group.
 - **Read-only routing**
    SQL Server routes incoming connections to an availability group listener to a secondary replica that is configured to allow read-only workloads. 
+> [!IMPORTANT]
+> Read-only routing does not work in the current preview build due to an issue with the listener. These capabilities will be enabled in the upcoming releases.
 - **Database level health monitoring and failover trigger**
    Enhanced database level monitoring and diagnostics. 
 - **Disaster recovery configurations**
    With distributed availability groups or multi-subnet availability group setup. 
 
-> [!IMPORTANT]
-> Read-only routing does not work in the current preview build due to an issue with the listener. These capabilities will be enabled in the upcoming releases.
 
 For details about SQL Server Availability Groups, see [SQL Server Always On Availability Groups](http://msdn.microsoft.com/library/hh510230.aspx).
 

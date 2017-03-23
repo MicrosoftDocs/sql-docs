@@ -1,4 +1,4 @@
----
+﻿---
 title: "Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/02/2016"
@@ -428,7 +428,6 @@ The rest of this section lists some of the major planning and trade-off consider
   
 You must plan to ensure there will be sufficient active memory for your planned memory-optimized table and its indexes. See:  
   
-- [Managing Memory for In-Memory OLTP](Managing%20Memory%20for%20In-Memory%20OLTP.xml)  
 - [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

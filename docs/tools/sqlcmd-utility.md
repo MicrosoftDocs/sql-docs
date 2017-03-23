@@ -1,4 +1,4 @@
----
+﻿---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/29/2016"
@@ -295,7 +295,7 @@ Prints raw error messages to the screen.
  Writes input scripts to the standard output device (**stdout**).  
   
  **-I**  
- Sets the SET QUOTED_IDENTIFIER connection option to ON. By default, it is set to OFF. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../Topic/SET%20QUOTED_IDENTIFIER%20\(Transact-SQL\).md).  
+ Sets the SET QUOTED_IDENTIFIER connection option to ON. By default, it is set to OFF. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **-q"** *cmdline query* **"**  
  Executes a query when **sqlcmd** starts, but does not exit **sqlcmd** when the query has finished running. Multiple-semicolon-delimited queries can be executed. Use quotation marks around the query, as shown in the following example.  

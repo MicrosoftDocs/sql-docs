@@ -45,7 +45,8 @@ C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
   
 ### SharePoint mode report server
 
-> [!NOTE] SharePoint integrated mode is not available with the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services.
+> [!NOTE]
+> SharePoint integrated mode is not available with the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services.
   
 ```  
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  

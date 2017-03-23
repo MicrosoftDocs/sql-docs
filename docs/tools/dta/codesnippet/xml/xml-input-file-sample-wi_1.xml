@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-16" ?>
+<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">
+  <DTAInput>
+    <Server>
+      <Name>MyServerName</Name>
+<!-- To tune multiple databases, list them and their associated tables in the following section. -->
+      <Database>
+        <Name>MyDatabaseName</Name>
+        <Schema>
+          <Name>MyDatabaseSchemaName</Name>
+<!-- You can list as many tables as necessary in the following section. -->
+          <Table>
+            <Name>MyTableName1</Name>
+          </Table>
+          <Table>
+            <Name>MyTableName2</Name>
+          </Table>
+        </Schema>
+      </Database>
+    </Server>
+    <Workload>
+<!-- The Weight attributes shown with the following EventString elements are optional. -->
+      <EventString Weight="100.01">
+        SELECT * FROM MyTableName1 WHERE
+        MyColumnName1 &gt; 200
+        ORDER BY ColumnName1
+      </EventString>
+      <EventString Weight="10.02">
+        SELECT * FROM MyTableName2 WHERE
+        MyColumnName2 BETWEEN 2 AND 25000
+        ORDER BY ColumnName2
+      </EventString>
+    </Workload>
+    <TuningOptions>
+      <TuningTimeInMin>120</TuningTimeInMin>
+      <StorageBoundInMB>1500</StorageBoundInMB>
+      <FeatureSet>IDX</FeatureSet>
+      <Partitioning>NONE</Partitioning>
+      <KeepExisting>NONE</KeepExisting>
+      <OnlineIndexOperation>OFF</OnlineIndexOperation>
+<!-- The following tuning option specifies the first database to which the Database Engine Tuning Advisor connects when tuning the workload. This element is optional. -->
+      <DatabaseToConnect>MyDatabaseName</DatabaseToConnect>
+    </TuningOptions>
+  </DTAInput>
+</DTAXML>

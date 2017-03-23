@@ -1,0 +1,5 @@
+# [Xml +](../../analysis-services/schema-rowsets/xml/index.md?toc=%2fsql%2fanalysis-services%2fschema-rowsets%2fxml%2ftoc.json)
+# [Ole db +](../../analysis-services/schema-rowsets/ole-db/index.md?toc=%2fsql%2fanalysis-services%2fschema-rowsets%2fole-db%2ftoc.json)
+# [Ole db olap +](../../analysis-services/schema-rowsets/ole-db-olap/index.md?toc=%2fsql%2fanalysis-services%2fschema-rowsets%2fole-db-olap%2ftoc.json)
+# [Data mining +](../../analysis-services/schema-rowsets/data-mining/index.md?toc=%2fsql%2fanalysis-services%2fschema-rowsets%2fdata-mining%2ftoc.json)
+# [Analysis Services Schema Rowsets](analysis-services-schema-rowsets.md)

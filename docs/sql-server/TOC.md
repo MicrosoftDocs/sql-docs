@@ -25,13 +25,13 @@
 # [Analysis Services](../analysis-services/index.md)
 # [Database Engine](../database-engine/index.md)
 # [Data Quality Services](../data-quality-services/index.md)
-# [Failover clusters](failover-clusters/toc.md)
-# [Install](install/toc.md)
+# [Failover clusters](failover-clusters/index.md)
+# [Install](install/index.md)
 # [Integration Services](../integration-services/index.md)
 # [Master Data Services](../master-data-services/index.md)
 # [Reporting Services](../reporting-services/index.md)
 # [SQL Server Migration Assistant](../ssma/index.md)
-# [Stretch Database](stretch-database/toc.md)
+# [Stretch Database](stretch-database/index.md)
 # [Tutorials for SQL Server 2016](tutorials-for-sql-server-2016.md)
 
 # About the documentation

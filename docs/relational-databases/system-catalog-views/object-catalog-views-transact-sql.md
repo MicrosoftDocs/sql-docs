@@ -41,8 +41,7 @@ manager: "jhubbard"
 |[sys.function_order_columns](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md)|[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)|  
 |[sys.hash_indexes](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.synonyms](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)|  
 |[sys.identity_columns](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)|[sys.table_types](../../relational-databases/system-catalog-views/sys-table-types-transact-sql.md)|  
-|[sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|[sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)|  
-|[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[enter link description here](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)
+|[sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|[sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)|
 [sys.trigger_event_types](../../relational-databases/system-catalog-views/sys-trigger-event-types-transact-sql.md)|[sys.key_constraints](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)|
 |[sys.trigger_events](../../relational-databases/system-catalog-views/sys-trigger-events-transact-sql.md)|[sys.masked_columns](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)|
 |[sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|

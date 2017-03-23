@@ -29,11 +29,11 @@ manager: "jhubbard"
 ## Supported Operating Systems  
  You can run applications with the ODBC driver on Windows on the following Windows operating systems:  
 
--   Windows Server 2008 R2 *(ODBC Driver 11 Only)*
+-   Windows Server 2008 R2 
 -   Windows Server 2012
 -   Windows Server 2012 R2    
 -   Vista SP2  *(ODBC Driver 11 Only)*  
--   Windows 7 *(ODBC Driver 11 Only)*  
+-   Windows 7  
 -   Windows 8
 -   Windows 8.1
 -   Windows 10

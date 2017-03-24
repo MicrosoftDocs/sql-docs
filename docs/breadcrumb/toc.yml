@@ -168,7 +168,7 @@
         href: /sql/database-engine/
         homepage: /sql/database-engine
         items:
-        - name: Windows availability groups
+        - name: Availability groups
           href: /sql/database-engine/availability-groups/windows/
           homepage: /sql/database-engine/availability-groups/windows
         - name: Configure on Windows

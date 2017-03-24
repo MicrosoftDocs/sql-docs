@@ -123,7 +123,7 @@
 #### [Lesson 3-3 - Perform Chunking Analysis using rxDataStep](lesson-3-3-perform-chunking-analysis-using-rxdatastep.md)  
 
 ### [Lesson 4: Analyze Data in Local Compute Context](lesson-4-analyze-data-in-local-compute-context-data-science-deep-dive.md)  
-#### [Lesson 4-1 - Move Data between SQL Server and XDF File](move-data-between-sql-server-and-xdf-file-data-science-deep-dive.md)  
+#### [Lesson 4-1 - Move Data between SQL Server and XDF File](lesson-4-1-move-data-between-sql-server-and-xdf-file.md)  
 
 ### [Lesson 5: Create a Simple Simulation](lesson-5-create-a-simple-simulation-data-science-deep-dive.md)  
 

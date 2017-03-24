@@ -28,6 +28,7 @@ This example illustrates a method to transfer data from one database into a memo
 1. Create Test Objects.  Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
     ```tsql
+
     USE master;
     GO
     
@@ -51,9 +52,8 @@ This example illustrates a method to transfer data from one database into a memo
     	(2, N'Susan');
     GO
     ---------------------------------------------------------------
-
-
     -- Create a database with a MEMORY_OPTIMIZED_DATA filegroup
+
     CREATE DATABASE DestinationDatabase
      ON  PRIMARY 
     ( NAME = N'DestinationDatabase_Data', FILENAME = N'D:\DATA\DestinationDatabase_Data.mdf',	SIZE = 8MB), 
@@ -75,6 +75,7 @@ This example illustrates a method to transfer data from one database into a memo
     	)
     WITH ( MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA );
     GO
+
     ```
 
 2.  Attempt cross-database query. Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].

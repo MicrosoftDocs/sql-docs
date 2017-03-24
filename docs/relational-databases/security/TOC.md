@@ -1,4 +1,7 @@
 # [Overview](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [Auditing](auditing/index.md)
+# [Authentication-access](authentication-access/index.md)
+# [Encryption](encryption/index.md)
 # [Securing SQL Server](securing-sql-server.md)  
 # [Protecting Your SQL Server Intellectual Property](protecting-your-sql-server-intellectual-property.md)  
 # [Securables](securables.md)  

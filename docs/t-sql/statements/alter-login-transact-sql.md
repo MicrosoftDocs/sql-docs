@@ -132,9 +132,7 @@ ALTER LOGIN login_name
  Continuously active connections to SQL Database require reauthorization (performed by the Database Engine) at least every 10 hours. The Database Engine attempts reauthorization using the originally submitted password and no user input is required. For performance reasons, when a password is reset in SQL Database, the connection will not be re-authenticated, even if the connection is reset due to connection pooling. This is different from the behavior of on-premises SQL Server. If the password has been changed since the connection was initially authorized, the connection must be terminated and a new connection made using the new password. A user with the KILL DATABASE CONNECTION permission can explicitly terminate a connection to SQL Database by using the KILL command. For more information, see [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
  PASSWORD **=***hashed_password*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies to the HASHED keyword only. Specifies the hashed value of the password for the login that is being created.  
   
@@ -142,9 +140,8 @@ ALTER LOGIN login_name
 >  When a login (or a contained database user) connects and is authenticated, the connection caches identity information about the login. For a Windows Authentication login, this includes information about membership in Windows groups. The identity of the login remains authenticated as long as the connection is maintained. To force changes in the identity, such as a password reset or change in Windows group membership, the login must logoff from the authentication authority (Windows or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), and log in again. A member of the **sysadmin** fixed server role or any login with the **ALTER ANY CONNECTION** permission can use the **KILL** command to end a connection and force a login to reconnect. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can reuse connection information when opening multiple connections to Object Explorer and Query Editor windows. Close all connections to force reconnection.  
   
  HASHED  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+   
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies that the password entered after the PASSWORD argument is already hashed. If this option is not selected, the password is hashed before being stored in the database. This option should only be used for login synchronization between two servers. Do not use the HASHED option to routinely change passwords.  
   
@@ -152,23 +149,18 @@ ALTER LOGIN login_name
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. The current password of the login to which a new password will be assigned. Passwords are case-sensitive.  
   
  MUST_CHANGE  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. If this option is included, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will prompt for an updated password the first time the altered login is used.  
   
  DEFAULT_DATABASE **=***database*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies a default database to be assigned to the login.  
   
  DEFAULT_LANGUAGE **=***language*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ 
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies a default language to be assigned to the login.  
   
@@ -176,53 +168,39 @@ ALTER LOGIN login_name
  The new name of the login that is being renamed. If this is a Windows login, the SID of the Windows principal corresponding to the new name must match the SID associated with the login in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The new name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login cannot contain a backslash character (\\).  
   
  CHECK_EXPIRATION = { ON | **OFF** }  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies whether password expiration policy should be enforced on this login. The default value is OFF.  
   
  CHECK_POLICY **=** { **ON** | OFF }  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies that the Windows password policies of the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running should be enforced on this login. The default value is ON.  
   
  CREDENTIAL = *credential_name*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  The name of a credential to be mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The credential must already exist in the server. For more information see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). A credential cannot be mapped to the sa login.  
   
  NO CREDENTIAL  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Removes any existing mapping of the login to a server credential. For more information see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  UNLOCK  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies that a login that is locked out should be unlocked.  
   
  ADD CREDENTIAL  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Adds an Extensible Key Management (EKM) provider credential to the login. For more information, see [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  DROP CREDENTIAL  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Removes an Extensible Key Management (EKM) provider credential to the login. For more information see [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+s Removes an Extensible Key Management (EKM) provider credential to the login. For more information see [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## Remarks  
  When CHECK_POLICY is set to ON, the HASHED argument cannot be used.  
@@ -277,39 +255,38 @@ ALTER LOGIN login_name
 ### A. Enabling a disabled login  
  The following example enables the login `Mary5`.  
   
-```  
+```tsql  
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
 ### B. Changing the password of a login  
  The following example changes the password of login `Mary5` to a strong password.  
   
-```  
+```tsql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
 ### C. Changing the name of a login  
  The following example changes the name of login `Mary5` to `John2`.  
   
-```  
+```tsql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
 ### D. Mapping a login to a credential  
  The following example maps the login `John2` to the credential `Custodian04`.  
   
-```  
+```tsql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
 ### E. Mapping a login to an Extensible Key Management credential  
  The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ 
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```tsql  
 ALTER LOGIN Mary5  
 ADD CREDENTIAL EKMProvider1;  
 GO  
@@ -318,18 +295,16 @@ GO
 ### F. Unlocking a login  
  To unlock a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, execute the following statement, replacing **** with the desired account password.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
-```  
+```tsql  
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;  
+
 GO  
 ```  
   
  To unlock a login without changing the password, turn the check policy off and then on again.  
   
-```  
+```tsql  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;  
 GO  
@@ -338,54 +313,15 @@ GO
 ### G. Changing the password of a login using HASHED  
  The following example changes the password of the `TestUser` login to an already hashed value.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```tsql  
 ALTER LOGIN TestUser WITH   
 PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;  
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### H. Enabling a disabled login  
- The following example enables the login `Mary5`.  
-  
-```  
-ALTER LOGIN Mary5 ENABLE;  
-```  
-  
-### I. Changing the password of a login  
- The following example changes the password of login `Mary5` to a strong password.  
-  
-```  
-ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
-```  
-  
-### J. Unlocking a login  
- The following example unlocks the login `Mary5`.  
-  
-```  
-ALTER LOGIN Mary8 WITH PASSWORD = 'jlkfdjl;ied51' MUST_CHANGE UNLOCK;  
-  
-```  
-  
- To unlock a login without changing the password, turn the check policy off and then on again.  
-  
-```  
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;  
-ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;  
-GO  
-```  
-  
-### K. Changing the name of a login  
- The following example changes the name of login `Mary5` to `John2`.  
-  
-```  
-ALTER LOGIN Mary5 WITH NAME = John2;  
-```  
+ 
   
 ## See Also  
  [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   

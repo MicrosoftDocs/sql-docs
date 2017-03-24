@@ -26,8 +26,8 @@ This page gives you access to all SQL documentation:
 	- [SQL Server R Services](advanced-analytics/r-services/index.md)
 	- [Azure SQL Database](/azure/sql-database)
 	- [Azure SQL Data Warehouse](/azure/sql-data-warehouse)
-	- [Tools and SDKs](sql-hub-menu.md#sdktools)
-	- [Architectural recommendations](sql-hub-menu.md#architecture)
+	- [Tools and SDKs](sql-hub-menu.md#pivot=sdkstools&panel=sdkstools-all)
+	- [Architectural recommendations](sql-hub-menu.md#pivot=architecture)
 
 
 **See also**: Additional Azure database technologies such as [DocumentDB and Data Factory](/azure/#pivot=services&panel=databases).  

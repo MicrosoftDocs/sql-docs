@@ -17,309 +17,309 @@
   {
    "source_path" : "docs/ado/guide/data/ado-event-instantiation-visual-j.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/guide/data/handline-errors-in-visual-j.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/guide/remote-data-service/rds-tutorial-visual-j.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/ado-code-examples-in-visual-j.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/rds-api/rds-code-examples-in-visual-j.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
 
 
   {
    "source_path" : "docs/ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/activecommand-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/actualsize-and-definedsize-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/addnew-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/append-and-createparameter-methods-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/attributes-and-name-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/cachesize-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/cancel-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/clone-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/comparebookmarks-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/count-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/delete-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/execute-requery-and-clear-methods-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/filter-and-recordcount-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/find-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/getrows-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/getstring-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/handler-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/internettimeout-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/isolationlevel-and-mode-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/item-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/marshaloptions-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/maxrecords-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/move-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/nextrecordset-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/numericscale-and-precision-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/open-and-close-methods-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/openschema-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/optimize-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/prepared-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/refresh-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/resync-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/save-and-open-methods-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/sort-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/source-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/state-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/status-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/stayinsync-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/supports-method-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/type-property-example-field-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/type-property-example-property-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/update-and-cancelupdate-methods-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/value-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   },
   {
    "source_path" : "docs/ado/reference/ado-api/version-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
+   "redirect_document_id": false
   }
 
  ]

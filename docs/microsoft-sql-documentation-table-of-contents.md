@@ -21,12 +21,12 @@ This page gives you access to all SQL documentation:
 - The larger set of SQL technologies including SQL Azure are here: 
 	- [SQL hub page](sql-hub-menu.md): The complete table of contents for all SQLs
 	- [SQL Server](sql-hub-menu.md#products-sql-server)
-	- [SQL Server on Azure VMs](sql-hub-menu.md#products-sql-server-azure)
+	- [SQL Server on Azure VMs](sql-hub-menu.md#pivot=products&panel=products-sql-server-azure)
 	- [SQL Server on Linux](linux/index.md)
 	- [SQL Server R Services](advanced-analytics/r-services/index.md)
 	- [Azure SQL Database](/azure/sql-database)
 	- [Azure SQL Data Warehouse](/azure/sql-data-warehouse)
-	- [Tools and SDKs](sql-hub-menu.md#sdkstools)
+	- [Tools and SDKs](sql-hub-menu.md#sdktools)
 	- [Architectural recommendations](sql-hub-menu.md#architecture)
 
 

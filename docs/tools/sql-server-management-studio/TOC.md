@@ -17,6 +17,7 @@
 ## [Registered Servers F1 Help](registered-servers-f1-help.md)  
 # [Ssms Utility](ssms-utility.md)  
 # [SQL Server Management Studio Keyboard Shortcuts](sql-server-management-studio-keyboard-shortcuts.md)  
+
 # [Tutorials: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
 ## [Lesson 1: Basic Navigation in SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 ### [Lesson 1-1 - Start SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  

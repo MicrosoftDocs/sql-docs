@@ -19,13 +19,6 @@
       - name: Failover clusters
         href: /sql/sql-server/failover-clusters/
         homepage: /sql/sql-server/failover-clusters
-      - name: Install
-        href: /sql/sql-server/failover-clusters/install/
-        homepage: /sql/sql-server/failover-clusters/install
-        items:
-        - name: Windows
-          href: /sql/sql-server/failover-clusters/install/windows
-          homepage: /sql/sql-server/failover-clusters/install/windows
       - name: Stretch Database
         href: /sql/sql-server/stretch-database/
         homepage: /sql/sql-server/stretch-database

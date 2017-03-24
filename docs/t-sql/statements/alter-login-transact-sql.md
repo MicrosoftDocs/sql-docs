@@ -1,7 +1,7 @@
 ---
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2015"
+ms.date: "03/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -124,7 +124,7 @@ ALTER LOGIN login_name
  Specifies the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that is being changed. Domain logins must be enclosed in brackets in the format [domain\user].  
   
  ENABLE | DISABLE  
- Enables or disables this login. Disabling a login does not affect the behavior of logins that are already connected. Disabled logins retain their permissions and can still be impersonated.  
+ Enables or disables this login. Disabling a login does not affect the behavior of logins that are already connected. (Use the `KILL` statement to terminate an existing connections.) Disabled logins retain their permissions and can still be impersonated.  
   
  PASSWORD **='***password***'**  
  Applies only to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. Specifies the password for the login that is being changed. Passwords are case-sensitive.  

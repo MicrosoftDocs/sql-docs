@@ -1,11 +1,25 @@
+# [Using relational databases](./relational-databases/toc.md)
+
 # [SQL Server on Linux](./linux/TOC.md)
-# Developer Tools
-## [SQL Server Management Studio (SSMS)](./ssms/TOC.md)
-## [SQL Server Data Tools (SSDT)](./ssdt/TOC.md)
-## [SQL Server Migration Assistant (SSMA)](./ssma/TOC.md)
-# Drivers
-## [ActiveX Data Objects](./ado/TOC.md)
-## [SQL Server Data Drivers](./connect/TOC.md)
+
+# [R on SQL Server](./advanced-analytics/r-services/toc.md)
+
+# [SQL Server](./sql-server/toc.md)
+
+# Languages
+## [dmx](./dmx/toc.md)
+## [mdx](./mdx/toc.md)
+## [Transact-SQL](./t-sql/toc.md)
+## [XQuery](./xquery/toc.md)
+
 # [Samples](./sample/TOC.md)
-# [Release Notes](./release-notes/TOC.md)
-## [Help Viewer for SQL Server](./release-notes/sql-server-help-installation.md)
+
+# [Tools](./tools/toc.md)
+
+# Developer
+## [SQL Server Data Tools (SSDT)](./ssdt/TOC.md)
+## [ActiveX Data Objects (ADO)](./ado/TOC.md)
+## [SQL Server Connection and Data Drivers](./connect/TOC.md)
+## [SQL Server Management Studio (SSMS)](./ssms/toc.md)
+
+# [Whitepapers](./whitepapers/toc.md)

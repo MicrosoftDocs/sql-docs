@@ -1,0 +1,5 @@
+# [Scripting language ASSL XMLA +](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models-scripting-language-assl-xmla%2ftoc.json)
+# [ASSL Objects and Object Characteristics](assl-objects-and-object-characteristics.md)
+# [ASSL XML Conventions](assl-xml-conventions.md)
+# [Developing with Analysis Services Scripting Language (ASSL)](developing-with-analysis-services-scripting-language-assl.md)
+# [XMLA Concepts](xmla-concepts.md)

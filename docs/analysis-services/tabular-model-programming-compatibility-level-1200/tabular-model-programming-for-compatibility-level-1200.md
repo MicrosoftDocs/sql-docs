@@ -1,7 +1,7 @@
 ---
 title: "Tabular Model Programming for Compatibility Level 1200 | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "03/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,8 +26,8 @@ Upgrading an existing Tabular solution is recommended but not required. Existing
  New Tabular models will require different code and script, summarized below.  
   
 ## Object Model Definitions as Tabular Metadata Constructs  
- The Tabular Object Model for 1200 models is exposed in JSON through the [Tabular Model Scripting Language](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) and through the AMO data definition language through a new namespace, [Microsoft.AnalysisServices.Tabular](Microsoft.AnalysisServices.Tabular.xml).  
-  
+ The Tabular Object Model for 1200 models is exposed in JSON through the [Tabular Model Scripting Language](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) and through the AMO data definition language through a new namespace, [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)
+
 ## Script for Tabular Models and Databases  
  TMSL is a JSON scripting language for Tabular models, with support for create, read, update, an delete operations. You can refresh data via TMSL and invoke database operations for attach, detatch, backup, restore, and synchronize.  
   

@@ -64,9 +64,9 @@ manager: "jhubbard"
   
     -   Templog.ldf  
   
-    -   ReportServer[$InstanceName] (This is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default database.)  
+    -   ReportServer[$InstanceName] This is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default database.  
   
-    -   ReportServer[$InstanceName]TempDB (This is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default temporary database.)  
+    -   ReportServer[$InstanceName]TempDB This is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default temporary database.  
   
 2.  **Delete the local security groups.** Before you uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], delete the local security groups for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.  
   

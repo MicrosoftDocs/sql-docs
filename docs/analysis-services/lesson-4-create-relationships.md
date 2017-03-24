@@ -23,7 +23,7 @@ In this lesson you will verify the relationships that were created automatically
 Estimated time to complete this lesson: **10 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 3: Mark as Date Table](../analysis-services/lesson-3-mark-as-date-table.md). 
   
 ## Review existing relationships and add new relationships  
 When you imported data by using the Table Import Wizard, you got seven tables from the AdventureWorksDW database. Generally, when you import data from a relational source, existing relationships are automatically imported together with the data. However, before you proceed with authoring your model you should verify those relationships between tables were created properly. For this tutorial, you will also add three new relationships.  
@@ -89,7 +89,8 @@ In some cases, you may need to create additional relationships between tables in
     
      ![as-tabular-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
-
+## What's next?
+Go to the next lesson: [Lesson 5: Create Calculated Columns](../analysis-services/lesson-5-create-calculated-columns.md).
   
   
   

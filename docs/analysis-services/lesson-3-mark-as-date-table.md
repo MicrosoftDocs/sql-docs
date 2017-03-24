@@ -29,7 +29,7 @@ Before we mark the date table and date column, we need to do a little housekeepi
 Estimated time to complete this lesson: **3 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 2: Add data](../analysis-services/lesson-2-add-data.md). 
 
 ### To rename the FullDateAlternateKey column
 
@@ -49,6 +49,6 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     ![as-tabular-lesson3-date-table](../analysis-services/media/as-tabular-lesson3-date-table.png)
   
 
-  
-  
+## What's next?
+Go to the next lesson: [Lesson 4: Create Relationships](../analysis-services/lesson-4-create-relationships.md).
   

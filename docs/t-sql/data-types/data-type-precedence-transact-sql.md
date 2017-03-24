@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 1.  user-defined data types (highest)  
   
-2.  **sql_varian** **t**  
+2.  **sql_variant**  
   
 3.  **xml**  
   

@@ -1,7 +1,7 @@
 ---
 title: "DBCC PROCCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,7 +58,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
   
 -   Extended procedures  
   
- The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Performance Monitor uses DBCC PROCCACHE to obtain information about the procedure cache.  
+  
   
 ## Result Sets  
  The following table describes the columns of the result set.  

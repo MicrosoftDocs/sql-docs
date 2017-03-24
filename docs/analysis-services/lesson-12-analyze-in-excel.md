@@ -25,7 +25,7 @@ In order to complete this lesson, Excel must be installed on the same computer a
 Estimated time to complete this lesson: **20 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 11: Create Roles](../analysis-services/lesson-11-create-roles.md).  
   
 ## Browse using the Default and Internet Sales perspectives  
 In these first tasks, you will browse your model by using both the default perspective, which includes all model objects, and also by using the Internet Sales perspective you earlier. The Internet Sales perspective excludes the Customer table object.  
@@ -69,6 +69,8 @@ Roles are an integral part of any tabular model. Without at least one role to wh
       
 3.  Close Excel without saving the workbook.  
   
+## What's next?
+Go to the next lesson: [Lesson 13: Deploy](../analysis-services/lesson-13-deploy.md).
 
   
   

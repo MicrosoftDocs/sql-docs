@@ -164,7 +164,8 @@ It's important to frequently save your model project.
   
 -   Click **File** > **Save All**.  
   
+## What's next?
+Go to the next lesson: [Lesson 3: Mark as Date Table](../analysis-services/lesson-3-mark-as-date-table.md).
 
-  
   
   

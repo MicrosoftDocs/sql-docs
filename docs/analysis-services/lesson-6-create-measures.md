@@ -29,7 +29,7 @@ In this lesson, you will create measures by both entering a DAX formula in the f
 Estimated time to complete this lesson: **30 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 5: Create Calculated Columns](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## Create measures  
   
@@ -122,6 +122,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 Measures created for the FactInternetSales table can be used to analyze critical financial data such as sales, costs, and profit margin for items defined by the user selected filter.  
   
-  
-  
+## What's next?
+Go to the next lesson: [Lesson 7: Create Key Performance Indicators](../analysis-services/lesson-7-create-key-performance-indicators.md).  
+
   

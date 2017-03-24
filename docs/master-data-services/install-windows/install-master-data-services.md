@@ -15,7 +15,7 @@ author: "sabotta"
 ms.author: "carlasab"
 manager: "jhubbard"
 ---
-# Install Master Data Services
+# Installation Tasks for Master Data Services
   This article provides an overview of the installation tasks, with links to instructions. For a walkthrough of installing and configuring Master Data Services, see [Master Data Services Installation and Configuration](../../master-data-services/master-data-services-installation-and-configuration.md) 
   
 -   [Pre-Installation Tasks](#preinstall): Verify system requirements before you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  

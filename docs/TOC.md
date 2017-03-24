@@ -22,3 +22,4 @@
 ## [SQL Server Connection and Data Drivers](./connect/TOC.md)
 ## [SQL Server Management Studio (SSMS)](./ssms/toc.md)
 
+# [Whitepapers](./whitepapers/toc.md)

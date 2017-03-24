@@ -1,7 +1,7 @@
 ---
 title: "SQL documentation - table of contents | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: "03/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,25 +13,22 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
 ---
-# Microsoft SQL Documentation: Table of Contents
+# Microsoft SQL documentation: table of contents
 
-The *Table of Contents* on the side of this webpage is the high level tree of links you can use to drill deeper into all the documentation articles about Microsoft SQL Server and several related Microsoft technologies.
+This page gives you access to all SQL documentation:
 
-## Hub Menu
+- The table of contents on the left is for SQL Server and several related technologies 
+- The larger set of SQL technologies including SQL Azure are here: 
+	- [SQL hub page](sql-hub-menu.md): The complete table of contents for all SQLs
+	- [SQL Server](sql-hub-menu.md#products-sql-server)
+	- [SQL Server on Azure VMs](sql-hub-menu.md#products-sql-server-azure)
+	- [SQL Server on Linux](linux/index.md)
+	- [SQL Server R Services](advanced-analytics/r-services/index.md)
+	- [Azure SQL Database](/azure/sql-database)
+	- [Azure SQL Data Warehouse](/azure/sql-data-warehouse)
+	- [Tools and SDKs](sql-hub-menu.md#sdkstools-all)
+	- [Architectural recommendations](sql-hub-menu.md#architecture)
 
-The [SQL Hub page](./index.md) provides links to numerous major areas of the ever expanding SQL product line available from Microsoft.
 
-- [Microsoft SQL documentation - Hub menu page](./index.md)
-
-The SQL Hub page links to documentation about diverse areas. The following lists only some of those areas:
-
-- R Services
-- Azure SQL Database in the cloud
-- SQL Server on Linux
-- SQL Server on Azure VMs
-- SQL Data Warehouse
-- Several tools
-- Connection drivers for client program development, for several languages and platforms
-- Architectural recommendations in areas such as multitenant SaaS and elastic pools
-- *...and more...*
+**See also**: Additional Azure database technologies such as [DocumentDB and Data Factory](/azure/#pivot=services&panel=databases).  
 

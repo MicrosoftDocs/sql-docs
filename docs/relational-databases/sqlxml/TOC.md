@@ -1,5 +1,5 @@
 # [Formatting +](../../relational-databases/sqlxml/formatting/index.md?toc=%2fsql%2frelational-databases%2fsqlxml%2fformatting%2ftoc.json)
-# [Annotated xsd schemas +](../../relational-databases/sqlxml/annotated-xsd-schemas/index.md?toc=%2fsql%2frelational-databases%2fsqlxml%2fannotated-xsd-schemas%2ftoc.json)
+# [Annotated XSD schemas +](../../relational-databases/sqlxml/annotated-xsd-schemas/index.md?toc=%2fsql%2frelational-databases%2fsqlxml%2fannotated-xsd-schemas%2ftoc.json)
 # [Requirements for Running SQLXML Examples](requirements-for-running-sqlxml-examples.md)
 # [SQLXML 4.0 Programming Concepts](sqlxml-4-0-programming-concepts.md)
 # [SQLXML Is Not Installed in SQL Server](sqlxml-is-not-installed-in-sql-server.md)

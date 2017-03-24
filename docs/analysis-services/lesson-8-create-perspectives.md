@@ -27,7 +27,7 @@ The purpose of this lesson is to describe how to create perspectives and become 
 Estimated time to complete this lesson: **5 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 7: Create Key Performance Indicators](../analysis-services/lesson-7-create-key-performance-indicators.md).  
   
 ## Create perspectives  
   
@@ -44,7 +44,9 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     ![as-tabular-lesson8-perspectives](../analysis-services/media/as-tabular-lesson8-perspectives.png)
   
     In a later lesson, you will use the Analyze in Excel feature to test this perspective. The Excel PivotTable Fields List will include each table except the DimCustomer table.  
- 
+
+## What's next?
+Go to the next lesson: [Lesson 9: Create Hierarchies](../analysis-services/lesson-9-create-hierarchies.md).
   
   
   

@@ -25,7 +25,7 @@ You will create five new calculated columns in three different tables. The steps
 Estimated time to complete this lesson: **15 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 4: Create Relationships](../analysis-services/lesson-4-create-relationships.md). 
   
 ## Create calculated columns  
   
@@ -125,7 +125,8 @@ The ProductCategoryName calculated column is used to create a hierarchy in the D
       
     The Margin calculated column is used to analyze profit margins for each sale.  
   
-
+## What's next?
+Go to the next lesson: [Lesson 6: Create Measures](../analysis-services/lesson-6-create-measures.md).
   
   
   

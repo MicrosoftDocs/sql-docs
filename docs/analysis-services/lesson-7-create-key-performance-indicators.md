@@ -23,7 +23,7 @@ In this lesson, you will create Key Performance Indicators (KPIs). KPIs are used
 Estimated time to complete this lesson: **15 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 6: Create Measures](../analysis-services/lesson-6-create-measures.md).   
   
 ## Create Key Performance Indicators  
   
@@ -76,7 +76,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 6.  In **Select Icon Style**, select the diamond (red), triangle (yellow), circle (green) icon type, and then click **OK**.  
   
-
-  
+## What's next?
+Go to the next lesson: [Lesson 8: Create Perspectives](../analysis-services/lesson-8-create-perspectives.md).
   
   

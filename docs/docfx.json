@@ -11,7 +11,8 @@
           "**/includes/**",
           "README.md",
           "LICENSE",
-          "LICENSE-CODE"
+          "LICENSE-CODE",
+           "**/mref/**"
         ]
       }
     ],
@@ -24,7 +25,7 @@
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**"
+          "**/includes/*.md"
         ]
       }
     ],
@@ -43,6 +44,7 @@
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "docs"
+    "dest": "docs",
+    "xref":["mref/sql130.zip"]
   }
 }

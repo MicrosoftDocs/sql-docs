@@ -281,7 +281,7 @@ function Get-TabularColumnTypeFromSQL()
 ## See Also  
  [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
  [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md)   
- [Analysis Services Management Objects &#40;AMO&#41;](../Topic/Analysis%20Services%20Management%20Objects%20\(AMO\).md)   
+ [Analysis Services Management Objects &#40;AMO&#41;](https://msdn.microsoft.com/en-us/library/mt436122.aspx)   
  [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

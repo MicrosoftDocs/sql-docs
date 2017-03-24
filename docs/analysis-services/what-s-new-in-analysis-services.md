@@ -149,9 +149,9 @@ You can now save incomplete DAX measures directly in a tabular 1200 model projec
     
 ## Developer    
  ### Microsoft.AnalysisServices.Tabular namespace for Tabular 1200 programmability in AMO
- Analysis Services Management Objects (AMO) is updated to include a new tabular namespace for managing a Tabular Mode instance of SQL Server 2016 Analysis Services, as well as provide the data definition language for creating or modifying tabular 1200 models programmatically. Visit [Microsoft.AnalysisServices.Tabular](Microsoft.AnalysisServices.Tabular.xml) to read up on the API.    
+ Analysis Services Management Objects (AMO) is updated to include a new tabular namespace for managing a Tabular Mode instance of SQL Server 2016 Analysis Services, as well as provide the data definition language for creating or modifying tabular 1200 models programmatically. Visit [Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/en-us/library/microsoft.analysisservices.tabular.aspx) to read up on the API.    
  ### Analysis Services Management Objects (AMO) updates
- [Analysis Services Management Objects &#40;AMO&#41;](../Topic/Analysis%20Services%20Management%20Objects%20\(AMO\).md) has been re-factored to include a second assembly, Microsoft.AnalysisServices.Core.dll. The new assembly separates out common classes like Server, Database, and Role that have broad application in Analysis Services, irrespective of server mode.    
+ [Analysis Services Management Objects &#40;AMO&#41;](https://msdn.microsoft.com/en-us/library/mt436122.aspx) has been re-factored to include a second assembly, Microsoft.AnalysisServices.Core.dll. The new assembly separates out common classes like Server, Database, and Role that have broad application in Analysis Services, irrespective of server mode.    
     
  Previously, these classes were part of the original Microsoft.AnalysisServices assembly. Moving them to a new assembly paves the way for future extensions to AMO, with clear division between generic and context-specific APIs.    
     

@@ -93,7 +93,7 @@ manager: "jhubbard"
   
 -   [Restore Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Restore.SqlRestore Method (Server)](SqlRestore%20Method.xml) (SMO)  
+-   [Restore.SqlRestore Method (Server) (SMO)](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
   
 ## See Also  
  [Backup and Restore: Interoperability and Coexistence &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   

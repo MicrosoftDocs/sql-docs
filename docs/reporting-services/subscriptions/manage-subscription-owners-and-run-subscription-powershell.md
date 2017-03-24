@@ -58,7 +58,7 @@ manager: "erikre"
   
  **Native mode:**  
   
--   List Subscriptions: [ReportOperation Enumeration](ReportOperation%20Enumeration.xml) on the report AND the user is the subscription owner) OR ReadAnySubscription.  
+-   List Subscriptions: [ReportOperation Enumeration](https://msdn.microsoft.com/en-us/library/microsoft.reportingservices.interfaces.reportoperation.aspx) on the report AND the user is the subscription owner) OR ReadAnySubscription.  
   
 -   Change Subscriptions: The user must be a member of the BUILTIN\Administrators group  
   
@@ -381,9 +381,13 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 ```  
   
 ## See Also  
- <xref:ReportService2010.ReportingService2010.ListSubscriptions%2A>   
- <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>   
- <xref:ReportService2010.ReportingService2010.ListChildren%2A>   
- <xref:ReportService2010.ReportingService2010.FireEvent%2A>  
+ 
+[ReportingService2010.ListSubscriptions Method](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+
+[ReportingService2010.ChangeSubscriptionOwner Method](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+
+[ReportingService2010.ListChildren](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+
+[ReportingService2010.FireEvent](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
   
   

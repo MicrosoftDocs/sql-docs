@@ -944,6 +944,9 @@
       - name: XML
         href: /sql/t-sql/xml/
         homepage: /sql/t-sql/xml
+    - name: Whitepapers
+      href: /sql/whitepapers/
+      homepage: /sql/whitepapers
     - name: XQuery
       href: /sql/xquery/
       homepage: /sql/xquery

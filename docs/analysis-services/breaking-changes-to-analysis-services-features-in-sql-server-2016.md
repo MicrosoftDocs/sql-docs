@@ -29,7 +29,7 @@ manager: "erikre"
  Analysis Services Management Objects (AMO), ADOMD.NET, and Tabular Object Model (TOM) client libraries in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] now target the .NET 4.0 runtime. This can be a breaking change for applications that target .NET 3.5. Applications using newer versions of these assemblies must now target .NET 4.0 or later.  
   
 ## AMO version upgrade  
- [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] is a version upgrade for [Analysis Services Management Objects &#40;AMO&#41;](https://msdn.microsoft.com/en-us/library/mt436122.aspx) and is  a breaking change under certain circumstances.  Existing code and scripts that call into AMO will continue to run as before if you upgrade from a previous version. However, if you need to *recompile* your application and you are targeting a [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] instance, you must add the following namespace to make your code or script operational:  
+ [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] is a version upgrade for [Analysis Services Management Objects &#40;AMO&#41;](https://msdn.microsoft.com/library/mt436122.aspx) and is  a breaking change under certain circumstances.  Existing code and scripts that call into AMO will continue to run as before if you upgrade from a previous version. However, if you need to *recompile* your application and you are targeting a [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] instance, you must add the following namespace to make your code or script operational:  
   
 ```  
   
@@ -38,7 +38,7 @@ using Microsoft.AnalysisServices.Core;
   
 ```  
   
- The [Microsoft.AnalysisServices.Core](https://msdn.microsoft.com/en-us/library/microsoft.analysisservices.core.aspx) namespace is now required whenever you reference the Microsoft.AnalysisServices assembly in your code. Objects that were previously only in the **Microsoft.AnalysisServices** namespace are moved to the Core namespace in this release if the object is used the same way in both tabular and multidimensional scenarios.  For example, server-related APIs are relocated to the Core namespace.  
+ The [Microsoft.AnalysisServices.Core](https://msdn.microsoft.com/library/microsoft.analysisservices.core.aspx) namespace is now required whenever you reference the Microsoft.AnalysisServices assembly in your code. Objects that were previously only in the **Microsoft.AnalysisServices** namespace are moved to the Core namespace in this release if the object is used the same way in both tabular and multidimensional scenarios.  For example, server-related APIs are relocated to the Core namespace.  
   
  Although there are now multiple namespaces, both exist in the same assembly (Microsoft.AnalysisServices.dll).  
   

@@ -25,10 +25,12 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sys.dm_db_stats_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx_md)]
 
 Returns the statistics histogram for the specified database object (table or indexed view) in the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Similar to `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
- 
+
+> [!NOTE] This DMF is available starting with [!INCLUDE[ssSQL15](../Token/ssSQL15_md.md)] SP1 CU2
+
 ## Syntax  
   
 ```  
@@ -57,7 +59,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  ## Remarks  
  
- The resultset for `sys.dm_db_stats_histogram` returns information similar to `DBCC SHOW_STATISTICS WITH HISTROGRAM` and also includes `object_id`, `stats_id`, and `step_number`.
+ The resultset for `sys.dm_db_stats_histogram` returns information similar to `DBCC SHOW_STATISTICS WITH HISTOGRAM` and also includes `object_id`, `stats_id`, and `step_number`.
 
 ### Histogram
   

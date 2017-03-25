@@ -30,7 +30,7 @@ manager: "jhubbard"
 Returns the statistics histogram for the specified database object (table or indexed view) in the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Similar to `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
-> This DMF is available starting with [!INCLUDE[ssSQL15](../../includes/ssSQL15_md.md)] SP1 CU2
+> This DMF is available starting with [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
 
 ## Syntax  
   

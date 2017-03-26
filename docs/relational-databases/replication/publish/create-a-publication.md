@@ -166,7 +166,7 @@ manager: "jhubbard"
   
 4.  For a transactional publication, check the value of the <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> property. If this property is **true**, a Log Read Agent job already exists for this database. If this property is **false**, do the following:  
   
-    -   Set the <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> or <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> fields of <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows account under which the Log Reader Agent runs.  
+    -   Set the <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> fields of <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows account under which the Log Reader Agent runs.  
   
         > [!NOTE]  
         >  Setting <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> is not required when the publication is created by a member of the **sysadmin** fixed server role. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  

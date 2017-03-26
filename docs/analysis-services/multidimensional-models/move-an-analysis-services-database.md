@@ -1,4 +1,4 @@
----
+﻿---
 title: "Move an Analysis Services Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -140,7 +140,7 @@ manager: "erikre"
 2.  Execute the XMLA command.  
   
 ## See Also  
- <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
+ <xref:Microsoft.AnalysisServices.Core.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Attach and Detach Analysis Services Databases](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Database Storage Location](../../analysis-services/multidimensional-models/database-storage-location.md)   

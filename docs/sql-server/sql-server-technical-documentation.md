@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 Technical Documentation | Microsoft Docs"
-ms.date: "02/27/2017"
+ms.date: "03/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -45,7 +45,7 @@ For the latest information on what is new, see [What's New in SQL Server vNext](
     
  - [**Download SQL Server 2016  from the Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)    
     
-- **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+- **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
     
 -  **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
     

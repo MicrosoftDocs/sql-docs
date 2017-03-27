@@ -5,10 +5,10 @@
     "need_generate_intellisense": false,
     "branch_target_mapping": {
         "live": [
-            "Publish"           
+            "Publish", "PDF"           
         ],
         "master": [
-            "Publish"            
+            "Publish", "PDF"           
         ]
     },
     "Targets": {

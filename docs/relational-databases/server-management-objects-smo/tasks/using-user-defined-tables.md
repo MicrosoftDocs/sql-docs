@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  User-defined table types cannot be altered after they are created. The <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> does not support the Alter method. User-defined table types can have check constraints, but some check operations will throw an exception because the type is not alterable.  
   
- The <xref:Microsoft.SqlServer.Management.Smo.Datatype> class is used to specify the data type that is associated with columns and parameters. Use this type to specify the user-defined table type as a parameter for user-defined functions and stored procedures.  
+ The <xref:Microsoft.SqlServer.Management.Smo.DataType> class is used to specify the data type that is associated with columns and parameters. Use this type to specify the user-defined table type as a parameter for user-defined functions and stored procedures.  
   
 ## Examples  
 To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -252,6 +252,6 @@ $udf.Create()
   
 ## See Also  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
- [Database Files and Filegroups](../../../relational-databases/databases/database-files-and-filegroups.md)  
+ [Database Files and Filegroups](../../../relational-databases/databases/database-files-and-filegroups.md)   
   
   

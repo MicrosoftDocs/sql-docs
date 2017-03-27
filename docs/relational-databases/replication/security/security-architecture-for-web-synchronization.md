@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 |Type of account|Where the account is specified|  
 |---------------------|------------------------------------|  
-|Windows user|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: the **@job_login** and **@job_password** parameters of [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO (Replication Management Objects): the <xref:Microsoft.SqlServer.Replication.IprocessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IprocessSecurityContext.Password%2A> properties for <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
+|Windows user|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: the **@job_login** and **@job_password** parameters of [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO (Replication Management Objects): the <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> properties for <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
 |Windows service account for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager|  
 |Stand-alone application|The Merge Agent runs under the context of the Windows user that is running the application.|  
   
@@ -131,7 +131,7 @@ manager: "jhubbard"
   
 |Type of account|Where the account is specified|  
 |---------------------|------------------------------------|  
-|Any Windows user that has the required permissions.|Internet Information Services (IIS) Manager.|  
+|Any Windows user that has the required permissions.|Internet Information Services (IIS) Manager. |  
   
 ## See Also  
  [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   

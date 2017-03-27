@@ -1,7 +1,7 @@
 ---
-title: "Install Master Data Services | Microsoft Docs"
+title: "Installation Tasks for Master Data Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,8 +15,8 @@ author: "sabotta"
 ms.author: "carlasab"
 manager: "jhubbard"
 ---
-# Install Master Data Services
-  The following workflow provides an overview of how to install and configure [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installation is a three-part process:  
+# Installation Tasks for Master Data Services
+  This article provides an overview of the installation tasks, with links to instructions. For a walkthrough of installing and configuring Master Data Services, see [Master Data Services Installation and Configuration](../../master-data-services/master-data-services-installation-and-configuration.md) 
   
 -   [Pre-Installation Tasks](#preinstall): Verify system requirements before you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   

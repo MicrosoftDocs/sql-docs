@@ -93,7 +93,7 @@ manager: "jhubbard"
   
      Get-ClusterResource “*\<NetworkResourceName>*” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
-     The following PowerShell example sets the HostRecordTTL to 300 seconds for a Network Name resource named "`SQL Network Name (SQL35)`".  
+     The following PowerShell example sets the HostRecordTTL to 300 seconds for a Network Name resource named `SQL Network Name (SQL35)`.  
   
     ```  
     Import-Module FailoverClusters  

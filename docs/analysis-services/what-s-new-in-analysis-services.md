@@ -2,7 +2,7 @@
 title: "What&#39;s New in Analysis Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "11/16/2016"
+ms.date: "03/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,11 +20,11 @@ manager: "erikre"
 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] includes many new enhancements providing improved performance, easier solution authoring, automated database management,   enhanced relationships with bi-directional cross filtering, parallel partition processing, and much more. At the heart of most enhancements for this release is the new 1200 compatibility level for tabular model databases.     
 
 ## Azure Analysis Services
-Announced at the 2016 SQL PASS Conference, Analysis Services is now available in the cloud as an Azure service. **Azure Analysis Services** supports tabular models at the 1200 compatibility level. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. To learn more and give it a try for free, see [Azure Analysis Services](https://azure.microsoft.com/en-us/services/analysis-services/). 
+Announced at the 2016 SQL PASS Conference, Analysis Services is now available in the cloud as an Azure service. **Azure Analysis Services** supports tabular models at the 1200 compatibility level. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. To learn more and give it a try for free, see [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
 
 ## What's new in SQL Server 2016 Service Pack 1 (SP1) Analysis Services
 
-[Download SQL Server 2016 SP1](https://www.microsoft.com/en-us/download/details.aspx?id=54276) 
+[Download SQL Server 2016 SP1](http://www.microsoft.com/download/details.aspx?id=54276) 
 
 SQL Server 2016 Service SP1 Analysis Services provides improved performance and scalability through Non-Uniform Memory Access (NUMA) awareness and optimized memory allocation based on **Intel Threading Building Blocks** (Intel TBB). This new functionality helps lower Total Cost of Ownership (TCO) by supporting more users on fewer, more powerful enterprise servers. 
 
@@ -43,20 +43,20 @@ While most enhancements in this release are specific to tabular models, a number
 
 #### Get the latest tools
 In addition to installing a [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] instance, in order to take full advantage of all the enhancements in this release, be sure to install the latest versions of SSDT and SSMS.    
-- [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)    
-- [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)   
+- [Download SQL Server Data Tools (SSDT)](http://msdn.microsoft.com/library/mt204009.aspx)    
+- [Download SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
 If you have a custom AMO-dependent application, you might need to install an updated version of AMO. For instructions, see [Install Analysis Services data providers &#40;AMO, ADOMD.NET, MSOLAP&#41;](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md).    
 
  #### TechNet Virtual Labs: SQL Server 2016 Analysis Services
-Learn better by doing? Follow along step-by-step with the [What's New in SQL Server 2016 Analysis Services Virtual Lab](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true).
+Learn better by doing? Follow along step-by-step with the [What's New in SQL Server 2016 Analysis Services Virtual Lab](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true).
 In this lab, you'll create and monitor Extended Events (xEvents), upgrade a tabular project to compatibility level 1200, work with Visual Studio configurations, implement new calculation capabilities, implement new table relationship capabilities, configure display folders, manage model translations, work with the new Tabular Model Scripting Language (TMSL), work with PowerShell, and try out new DirectQuery mode capabilities.
 
 ## Modeling    
 ### Improved modeling performance for tabular 1200 models    
 For tabular 1200 models,  metadata operations in SSDT are much faster than tabular 1100 or 1103 models. By comparison, on the same hardware, creating a relationship on a model set to the SQL Server 2014 compatibility level (1103) with 23 tables takes 3 seconds, whereas the same relationship on a model created set to compatibility level 1200 takes just under a second.    
 ### Project templates added for tabular 1200 models in SSDT    
-With this release, you no longer need two versions of SSDT for building relational and BI projects. [SQL Server Data Tools for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx) adds project templates for Analysis Services solutions, including **Analysis Services Tabular Projects** used for building models at the 1200 compatibility level. Other Analysis Services project templates for multidimensional and data mining solutions are also included, but  at the same functional level (1100 or 1103) as in previous releases.    
+With this release, you no longer need two versions of SSDT for building relational and BI projects. [SQL Server Data Tools for Visual Studio 2015](http://msdn.microsoft.com/library/mt204009.aspx) adds project templates for Analysis Services solutions, including **Analysis Services Tabular Projects** used for building models at the 1200 compatibility level. Other Analysis Services project templates for multidimensional and data mining solutions are also included, but  at the same functional level (1100 or 1103) as in previous releases.    
 ### Display folders
 Display folders are now available for tabular 1200 models. Defined in SQL Server Data Tools and rendered in client applications like Excel or Power BI Desktop, display folders help you organize large numbers of measures into individual folders, adding a visual hierarchy for easier navigation in field lists.
 ### Bi-directional cross filtering
@@ -76,7 +76,7 @@ A *calculated table* is a model-only construction based on a DAX expression or q
 
 ## Instance management    
  ### Administer Tabular 1200 models in SSMS    
- In this release, an Analysis Services instance in Tabular server mode can run tabular models at any compatibility level (1100, 1103, 1200). The latest [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) is updated to display properties and provide database model administration for tabular models at the 1200 compatibility level.    
+ In this release, an Analysis Services instance in Tabular server mode can run tabular models at any compatibility level (1100, 1103, 1200). The latest [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) is updated to display properties and provide database model administration for tabular models at the 1200 compatibility level.    
  ### Parallel processing for multiple table partitions in tabular models    
  This release includes new parallel processing functionality for tables with two or more partitions, increasing processing performance. There are no configuration settings for this feature. For more information about configuring partitions and processing tables, see [Tabular Model Partitions &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### Add computer accounts as Administrators in SSMS    
@@ -92,14 +92,14 @@ A *calculated table* is a model-only construction based on a DAX expression or q
  ### PowerShell for Tabular models    
  This release includes PowerShell enhancements for tabular models at compatibility level 1200. You can use all of the applicable cmdlets, plus cmdlets specific to Tabular mode: [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) and [Invoke-ProcessTable cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### SSMS scripting database operations    
- In the [latest SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx), script is now enabled for database commands, including Create, Alter, Delete, Backup, Restore, Attach, Detach. Output is Tabular Model Scripting Language (TMSL) in JSON. See [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) for more information.    
+ In the [latest SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx), script is now enabled for database commands, including Create, Alter, Delete, Backup, Restore, Attach, Detach. Output is Tabular Model Scripting Language (TMSL) in JSON. See [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) for more information.    
  ### Analysis Services Execute DDL Task    
  [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) now also accepts Tabular Model Scripting Language (TMSL) commands.     
  ### SSAS PowerShell cmdlet    
  SSAS PowerShell cmdlet **Invoke-ASCmd** now accepts Tabular Model Scripting Language (TMSL) commands. Other SSAS PowerShell cmdlets may be updated in a future release to use the new tabular metadata (exceptions will be called out in the release notes).    
 See [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) for details.    
  ### Tabular Model Scripting Language (TMSL) supported in SSMS    
-  Using the [latest version of SSMS](https://msdn.microsoft.com/library/mt238290.aspx), you can now create scripts to automate most administrative tasks for tabular 1200 models. Currently, the following tasks can be scripted: Process at any level, plus CREATE, ALTER, DELETE at the database level.    
+  Using the [latest version of SSMS](http://msdn.microsoft.com/library/mt238290.aspx), you can now create scripts to automate most administrative tasks for tabular 1200 models. Currently, the following tasks can be scripted: Process at any level, plus CREATE, ALTER, DELETE at the database level.    
     
  Functionally, TMSL is equivalent to the XMLA ASSL extension that provides multidimensional object definitions, except that TMSL uses native descriptors like **model**, **table**, and **relationship** to describe tabular metadata. See [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) for details about the schema.    
     
@@ -135,9 +135,9 @@ refresh|Processes the object. ASSL equivalent is PROCESS.
 Updates to the formula bar help you write formulas with more ease by differentiating functions, fields and measures using syntax coloring, it provides intelligent function and field suggestions and tells you if parts of your DAX expression are wrong using error *squiggles*. It also allows you to use multiple lines (Alt + Enter) and indentation (Tab). The formula bar now also allows you to write comments as part of your measures, just type “//” and everything after these characters on the same line will be considered a comment.
 
 ### DAX variables    
-This release now includes support for variables in DAX. Variables can now store the result of an expression as a named variable, which can then be passed as an argument to other measure expressions. Once resultant values have been calculated for a variable expression, those values do not change, even if the variable is referenced in another expression. For more information, see [VAR Function](https://msdn.microsoft.com/library/mt243785.aspx).    
+This release now includes support for variables in DAX. Variables can now store the result of an expression as a named variable, which can then be passed as an argument to other measure expressions. Once resultant values have been calculated for a variable expression, those values do not change, even if the variable is referenced in another expression. For more information, see [VAR Function](http://msdn.microsoft.com/library/mt243785.aspx).    
 ### New DAX functions
-With this release, DAX introduces over fifty new functions to support faster calculations and enhanced visualizations in Power BI. To learn more, see [New DAX Functions](https://msdn.microsoft.com/library/mt704075.aspx).
+With this release, DAX introduces over fifty new functions to support faster calculations and enhanced visualizations in Power BI. To learn more, see [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx).
 ### Save incomplete measures
 You can now save incomplete DAX measures directly in a tabular 1200 model project and pick it up again when you are ready to continue.
 ### Additional DAX enhancements
@@ -149,9 +149,9 @@ You can now save incomplete DAX measures directly in a tabular 1200 model projec
     
 ## Developer    
  ### Microsoft.AnalysisServices.Tabular namespace for Tabular 1200 programmability in AMO
- Analysis Services Management Objects (AMO) is updated to include a new tabular namespace for managing a Tabular Mode instance of SQL Server 2016 Analysis Services, as well as provide the data definition language for creating or modifying tabular 1200 models programmatically. Visit [Microsoft.AnalysisServices.Tabular](Microsoft.AnalysisServices.Tabular.xml) to read up on the API.    
+ Analysis Services Management Objects (AMO) is updated to include a new tabular namespace for managing a Tabular Mode instance of SQL Server 2016 Analysis Services, as well as provide the data definition language for creating or modifying tabular 1200 models programmatically. Visit [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) to read up on the API.    
  ### Analysis Services Management Objects (AMO) updates
- [Analysis Services Management Objects &#40;AMO&#41;](../Topic/Analysis%20Services%20Management%20Objects%20\(AMO\).md) has been re-factored to include a second assembly, Microsoft.AnalysisServices.Core.dll. The new assembly separates out common classes like Server, Database, and Role that have broad application in Analysis Services, irrespective of server mode.    
+ [Analysis Services Management Objects &#40;AMO&#41;](http://msdn.microsoft.com/library/mt436122.aspx) has been re-factored to include a second assembly, Microsoft.AnalysisServices.Core.dll. The new assembly separates out common classes like Server, Database, and Role that have broad application in Analysis Services, irrespective of server mode.    
     
  Previously, these classes were part of the original Microsoft.AnalysisServices assembly. Moving them to a new assembly paves the way for future extensions to AMO, with clear division between generic and context-specific APIs.    
     
@@ -198,7 +198,7 @@ This release sees significant enhancements in DirectQuery for tabular 1200 model
 To learn more, see [DirectQuery Mode &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 
 ## See Also
-[Analysis Services team blog](https://blogs.msdn.microsoft.com/analysisservices/)    
+[Analysis Services team blog](http://blogs.msdn.microsoft.com/analysisservices/)    
 [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)    
      
 

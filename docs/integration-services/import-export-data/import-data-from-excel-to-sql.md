@@ -14,16 +14,14 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Import data from Excel to SQL Server or Azure SQL Database
-Import data directly from Excel to SQL by using Integration Services (SSIS) or the SQL Server Import and Export Wizard. Or, save your Excel files as text files to use the BULK INSERT statement, BCP, or Azure Data Factory.
+Import data directly from Excel files to SQL by using Integration Services (SSIS) or the SQL Server Import and Export Wizard. Or, save your Excel files as text files, and then  use the BULK INSERT statement, BCP, or Azure Data Factory.
 
 > [!NOTE]
 > A complete description of each tool or service, such as SSIS or Azure Data Factory, is beyond the scope of this article. To learn more about the solution that interests you, follow the links provided for tutorials and more info.
 
-## Import data directly from Excel
+## SQL Server Integration Services (SSIS)
 
-### SQL Server Integration Services (SSIS)
-
-Create an SSIS package that uses the Excel Source and the SQL Server Destination in the data flow. Or, if you don't want to build the package manually, use the SQL Server Import and Export Wizard to build and run the package.
+Create an SSIS package that uses the Excel Source and the SQL Server Destination in the data flow to import directly from Excel files. Or, if you don't want to build an SSIS package manually, use the SQL Server Import and Export Wizard to build and run the package.
 
 ![](media/excel-to-sql-data-flow.png)
 
@@ -32,18 +30,18 @@ For more info about using these SSIS components, see the following topics.
 -   [SQL Server Destination](../data-flow/sql-server-destination.md)
 -   [How to Create an ETL Package](../ssis-how-to-create-an-etl-package.md) (tutorial).
 
-### SQL Server Import and Export Wizard
+## SQL Server Import and Export Wizard
 
-Import data by stepping throught the pages of the wizard. Optionally, save the SSIS package that the wizard creates to customize it and reuse it later.
+Import data directly from Excel files by stepping throught the pages of a wizard. Optionally, save the SSIS package that the wizard creates to customize it and reuse it later.
 
 ![](media/excel-connection.png)
 
 For an example of using the wizard to import from Excel to SQL Server, see [Get started with this simple example of the Import and Export Wizard](get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
-### Linked servers and distributed queries (SQL Server only)
+## Linked servers and distributed queries (SQL Server only)
 
 > [!NOTE]
-> The ACE provider (formerly the Jet provider) that connects to Excel is intended for interactive client-side use. If you use the ACE provider on the server, especially in automated processes or processes running in parallel, you may see unexpected results.
+> The ACE provider (formerly the Jet provider) that connects to Excel files is intended for interactive client-side use. If you use the ACE provider on the server, especially in automated processes or processes running in parallel, you may see unexpected results.
 
 The following example imports the data from the `Data` worksheet on the existing Excel linked server `EXCELLINK` into a new SQL Server table named `Data_ls`.
 
@@ -54,7 +52,7 @@ SELECT * INTO Data_ls FROM EXCELLINK...[Data$];
 GO
 ```
 
-If you don't  want to configure a persistent connection to the Excel workbook as a linked server, you can import data on a one-time basis by using the `OPENDATASOURCE` or the `OPENROWSET` function. The following code sample imports the data from the Excel `Customers` worksheet into a new SQL Server table.
+If you don't want to configure a persistent connection to the Excel file as a linked server, you can import data on a one-time basis by using the `OPENDATASOURCE` or the `OPENROWSET` function. This usage is called a distributed query. The following code sample imports the data from the Excel `Customers` worksheet into a new SQL Server table.
 
 ```sql
 USE ImportFromExcel;

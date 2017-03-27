@@ -63,8 +63,8 @@ sudo pcs property set stonith-enabled=false
 
 To create the availability group resource, set properties as follows:
 
-- **clone-max**: Number of AG replicas, including primary. For example, if you have one primary and one secondary, set this to 2.
-- **clone-node-max**: Number of secondaries. For example, if you have one primary and one secondary, set this to 1.
+- **clone-max**: Number of AG replicas, including primary. For example, if you have one primary and one secondary, set this to 2. Default is number of nodes in the cluster.
+- **clone-node-max**: Number of replicas that can be started on a node. Set this to 1 (or use the default which is 1).
 
 The following script sets these properties.
 

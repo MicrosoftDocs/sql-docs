@@ -60,7 +60,8 @@ Help Viewer 2.2 is available in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md
   
 **To display local Help or online Help in SQL Server Management Studio**  
 * To view local Help, click **Add and Remove Help Content** on the **Help** menu, and then click the **Help Viewer Home** tab to see the documentation.  
-    >[!NOTE]The text, **Help Viewer Home**, changes based on which topic you've clicked in the table of contents.   
+    >[!NOTE]
+	>The text, **Help Viewer Home**, changes based on which topic you've clicked in the table of contents.   
 * To view online Help, click **View Help** on the **Help** menu. Documentation displays in a browser.  
 ![HelpViewer2_SSMS_ChooseOnlineORLocalHelp](../release-notes/media/helpviewer2-ssms-chooseonlineorlocalhelp.png)  
   
@@ -82,7 +83,8 @@ Help Viewer 2.2 is available in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md
 **To install local Help to use with Help Viewer 1.1**  
 1. Navigate to the [download site](https://www.microsoft.com/en-us/download/details.aspx?id=42557) for the Help content and click **Download**.  
 2. Click **Save** in the message box to save the SQLServer2014Documentation_*.exe file to your computer.  
-   >[!NOTE]For firewall and proxy restricted environments, save the download to a USB drive or other portable media that can be carried into the environment.   
+   >[!NOTE]
+   >For firewall and proxy restricted environments, save the download to a USB drive or other portable media that can be carried into the environment.   
 3. Double-click the .exe to unpack the Help content file and save the file to a local or shared folder.  
 4. Open the **Help Library Manager** by launching SQL Server Management Studio or Visual Studio and clicking **Manage Help Settings** on the **Help** menu.  
 7. Click **Install content from disk**, and browse to the folder where you unpacked the Help content file.  

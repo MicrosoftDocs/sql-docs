@@ -70,13 +70,13 @@ To *append* the imported data to an *existing* table instead of creating a new t
 To query the Excel data without importing it, just use the `SELECT ... FROM ...` syntax.
 
 For more info about linked servers, see the following topics.
--   [Create Linked Servers](../../relational-databases/create-linked-servers-sql-server-database-engine.md)
--   [OPENQUERY](../../t-sql/openquery-transact-sql.md)
+-   [Create Linked Servers](../../linked-servers/relational-databases/create-linked-servers-sql-server-database-engine.md)
+-   [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
 
 For more info about distributed queries, see the following topics.
 -   [Distributed Queries](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx). (Distributed queries are still supported in SQL Server 2016, but the documentation for this feature has not been updated.)
--   [OPENDATASOURCE](../../t-sql/openquery-transact-sql.md)
--   [OPENROWSET](../../t-sql/openrowset-transact-sql.md)
+-   [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
+-   [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 
 For more info and examples about both linked servers and distributed queries, see the following topics.
 -   [How to import data from Excel to SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)

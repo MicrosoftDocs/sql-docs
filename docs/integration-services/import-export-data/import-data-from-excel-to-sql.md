@@ -80,17 +80,15 @@ For more info and examples about both linked servers and distributed queries, se
 -   [How to import data from Excel to SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 -   [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries).
 
-## Save Excel data as text, then import text files
-
-### First, save Excel data as text
-In Excel, select **File | Save As** and select **Text (Tab delimited) (\*.txt)** or **CSV (Comma delimited) (\*.csv)** as the file type.
+## Save Excel data as text
+To use the 'BULK INSERT' statement, the BCP tool, or Azure Data Factory, first export your Excel data to a text file. In Excel, select **File | Save As** and then select **Text (Tab delimited) (\*.txt)** or **CSV (Comma delimited) (\*.csv)** as the file type.
 
 > [!TIP]
 > For best results with data importing tools, save sheets that contain only the column headers and the rows of data. If the saved data contains page titles, blank lines, notes, and so forth, you may see unexpected results.
 
-### BULK INSERT command
+## BULK INSERT command
 
-`BULK INSERT` is a SQL Server command that you can run from SQL Server Management Studio. The following examples load the content from the `Data.csv` CSV file into an existing table in SQL Server.
+`BULK INSERT` is a SQL Server command that you can run from SQL Server Management Studio. The following example loads the data from the `Data.csv` CSV file into an existing table in SQL Server.
 
 ```sql
 USE ImportFromExcel;
@@ -107,9 +105,9 @@ For more info, see the following topics.
 -   [Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 -   [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
-### BCP tool
+## BCP tool
 
-BCP is a SQL Server that you run from the command prompt. The following example loads the content from the `Data.csv` CSV file into the existing `Data_bcp` table in SQL Server.
+BCP is a SQL Server that you run from the command prompt. The following example loads the data from the `Data.csv` CSV file into the existing `Data_bcp` table in SQL Server.
 
 ```sql
 bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
@@ -120,7 +118,7 @@ For more info, see the following topics.
 -   [bcp Utility](../../tools/bcp-utility.md)
 -   [Prepare Data for Bulk Export or Import](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
-### Azure Data Factory
+## Azure Data Factory
 In Azure Data Factory, create a pipeline with a Copy activity that copies from the text file in a file storage location to SQL Server or to Azure SQL Database. Or, use the Data Factory Copy Wizard to copy the data.
 
 For more info about using these Data Factory sources and sinks, see the following topics.

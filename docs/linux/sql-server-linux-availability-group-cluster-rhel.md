@@ -42,17 +42,18 @@ The following sections walk through the steps to set up a failover cluster solut
 
 [!INCLUDE [RHEL-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
 
-## Disable STONITH
+## Configure fencing (STONITH)
+Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. Fencing configuration is needed to allow a surviving cluster node to forcibly remove a non-responsive node from the cluster. For details, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and
+[Red Hat High Availability Add-On with Pacemaker: Fencing](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html).
 
-Run the following command to disable STONITH.
+To continue the configuration and validate the cluster setup , disable STONITH (it can be configured at a later time):
 
 ```bash
 sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->This is not supported by the clustering vendors in a production setup. For details, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and
-[Red Hat High Availability Add-On with Pacemaker: Fencing](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html).
+>This is not supported by the clustering vendors in a production setup. 
 
 ## Create a SQL Server login for Pacemaker
 

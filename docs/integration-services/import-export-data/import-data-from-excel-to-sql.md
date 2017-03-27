@@ -70,7 +70,7 @@ To *append* the imported data to an *existing* table instead of creating a new t
 To query the Excel data without importing it, just use the `SELECT ... FROM ...` syntax.
 
 For more info about linked servers, see the following topics.
--   [Create Linked Servers](../../linked-servers/relational-databases/create-linked-servers-sql-server-database-engine.md)
+-   [Create Linked Servers](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
 -   [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
 
 For more info about distributed queries, see the following topics.

@@ -1,7 +1,7 @@
 ---
 title: "Lesson 12: Create Roles | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

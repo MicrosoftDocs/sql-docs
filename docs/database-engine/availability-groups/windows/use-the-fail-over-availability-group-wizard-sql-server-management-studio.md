@@ -35,12 +35,7 @@ manager: "jhubbard"
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   A failover command returns as soon as the target secondary replica has accepted the command. However, database recovery occurs asynchronously after the availability group has finished failing over.  
-  
--   Cross-database consistency across databases within the availability group might not be maintained on failover.  
-  
-    > [!NOTE]  
-    >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
-  
+    
 ###  <a name="Prerequisites"></a> Prerequisites for Using the Failover Availability Group Wizard  
   
 -   You must be connected to the server instance that hosts an availability replica that is currently available.  

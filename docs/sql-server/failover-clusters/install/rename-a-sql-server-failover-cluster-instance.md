@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "failover clustering [SQL Server], virtual servers"
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 caps.latest.revision: 16
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

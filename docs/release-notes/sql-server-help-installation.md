@@ -87,21 +87,21 @@ Help Viewer 2.2 is available in [!INCLUDE[ssCurrent_md](../includes/sscurrent-md
    >For firewall and proxy restricted environments, save the download to a USB drive or other portable media that can be carried into the environment.   
 3. Double-click the .exe to unpack the Help content file and save the file to a local or shared folder.  
 4. Open the **Help Library Manager** by launching SQL Server Management Studio or Visual Studio and clicking **Manage Help Settings** on the **Help** menu.  
-5. Click **Install content from disk**, and browse to the folder where you unpacked the Help content file.  
+7. Click **Install content from disk**, and browse to the folder where you unpacked the Help content file.  
   
-    Select Install content from disk  |Browse to Help content file   
-    ---------|---------  
-    ![HelpLibraryManager_MainPage_InstallFromDisk](../release-notes/media/helplibrarymanager-mainpage-installfromdisk.png)    | ![HelpLibraryManager_InstallContentFromDisk_dialog1](../release-notes/media/helplibrarymanager-installcontentfromdisk-dialog1.png)          
+Select Install content from disk  |Browse to Help content file   
+---------|---------  
+![HelpLibraryManager_MainPage_InstallFromDisk](../release-notes/media/helplibrarymanager-mainpage-installfromdisk.png)    | ![HelpLibraryManager_InstallContentFromDisk_dialog1](../release-notes/media/helplibrarymanager-installcontentfromdisk-dialog1.png)          
   
-    >[!IMPORTANT]
-    > To avoid installing local Help content that has only a partial table of contents, use the **Install content from disk** option in the **Help Library Manager**.  
-  >>If you've used the **Install content from online** option and the Help Viewer is displaying a partial table of contents, see this [blog post](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) for troubleshooting steps. 
+>[!IMPORTANT]
+> To avoid installing local Help content that has only a partial table of contents, use the **Install content from disk** option in the **Help Library Manager**.  
+>>If you've used the **Install content from online** option and the Help Viewer is displaying a partial table of contents, see this [blog post](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) for troubleshooting steps. 
 
-6. Click the HelpContentSetup.msha file, click **Open**, and then click **Next**.  
-7. Click **Add** next to the documentation you want to install, and then click **Update**.  
+8. Click the HelpContentSetup.msha file, click **Open**, and then click **Next**.  
+9. Click **Add** next to the documentation you want to install, and then click **Update**.  
   
    ![HelpLibraryManager_InstallContentFromDisk_dialog2](../release-notes/media/helplibrarymanager-installcontentfromdisk-dialog2.png)  
-8. Click **Finish**, click **Exit**, and then open the Help Viewer to see the content by clicking **View Help** on the **Help** menu. You should see the content you've installed listed in the table of contents, in the left pane.  
+10. Click **Finish**, click **Exit**, and then open the Help Viewer to see the content by clicking **View Help** on the **Help** menu. You should see the content you've installed listed in the table of contents, in the left pane.  
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   

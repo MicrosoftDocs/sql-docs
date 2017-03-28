@@ -45,14 +45,14 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
  *database_name*  
  Is the name of the database to be modified.  
   
- COMPATIBILITY_LEVEL { 130 | 120 | 110 | 100 | 90 | 80 }  
+ COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
  Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with which the database is to be made compatible. The following compatibility level values can be configured:  
   
 |Product|Database Engine Version|Compatibility Level Designation|Supported Compatibility Level Values|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
-|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|12|120|130, 120, 110, 100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|10.5|100|100, 90, 80|  
@@ -63,7 +63,7 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 > [!NOTE]  
 >  **Azure SQL Database** V12 was released in December 2014. One aspect of that release was that newly created databases had their compatibility level set to 120. In 2015 SQL Database began support for level 130, although the default remained 120.  
 > 
-> Starting in **mid-June 2016**, in Azure SQL Database, the default compatibility level will be 130 instead of 120 for **newly created** databases. Existing databases created before mid-June 2016 will not be affected, and will maintain their current compatibility level (100, 110, or 120). 
+> Starting in **mid-June 2016**, in Azure SQL Database, the default compatibility level are 130 instead of 120 for **newly created** databases. Existing databases created before mid-June 2016 are not affected, and maintain their current compatibility level (100, 110, or 120). 
 > 
 > If you want level 130 for your database generally, but you have reason to prefer the level 110 **cardinality estimation** algorithm, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), and in particular its keyword LEGACY_CARDINALITY_ESTIMATION =ON.  
 >  

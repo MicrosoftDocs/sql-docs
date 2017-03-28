@@ -503,7 +503,7 @@ column_name <data_type>
   
  You can mark one or both period columns with **HIDDEN** flag to implicitly hide these columns such that **SELECT \* FROM***`<table>`* does not return a value for those columns. By default, period columns are not hidden. In order to be used, hidden columns must be explicitly included in all queries that directly reference the temporal table. To change the **HIDDEN** attribute for an existing period column, **PERIOD** must be dropped and recreated with a different hidden flag.  
   
- INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )  
+ `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
  ||  
 |-|  
 |**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|

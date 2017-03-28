@@ -5,6 +5,7 @@ ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
+ms.assetid: ""
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -32,7 +33,7 @@ For more info about using these SSIS components, see the following topics.
 
 ## SQL Server Import and Export Wizard
 
-Import data directly from Excel files by stepping throught the pages of a wizard. Optionally, save the SSIS package that the wizard creates to customize it and reuse it later.
+Import data directly from Excel files by stepping through the pages of a wizard. Optionally, save the SSIS package that the wizard creates to customize it and reuse it later.
 
 ![](media/excel-connection.png)
 

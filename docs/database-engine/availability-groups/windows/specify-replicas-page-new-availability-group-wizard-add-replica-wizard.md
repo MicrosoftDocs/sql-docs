@@ -15,6 +15,7 @@ f1_keywords:
   - "sql13.swb.newagwizard.specifyreplicas.f1"
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 35
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

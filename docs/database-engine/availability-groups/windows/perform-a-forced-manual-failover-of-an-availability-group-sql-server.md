@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 83
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

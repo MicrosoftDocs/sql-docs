@@ -16,6 +16,7 @@ f1_keywords:
   - "sql13.swb.failoverwizard.summary.f1"
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 caps.latest.revision: 12
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

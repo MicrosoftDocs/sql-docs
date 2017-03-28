@@ -26,11 +26,11 @@ Process information is exposed in catalog views that are optimized for performan
 
 ## In this Section  
 
-* [sys.dm_linux_proc_all_stat (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-all-stat-transact-sql.md)     
-* [sys.dm_linux_proc_cpuinfo (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-cpuinfo-transact-sql.md)     
-* [sys.dm_linux_proc_meminfo (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-meminfo-transact-sql.md)     
-* [sys.dm_linux_proc_sql_maps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-maps-transact-sql.md)     
-* [sys.dm_linux_proc_sql_threads (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-threads-transact-sql.md)     
+|||  
+|-|-| 
+|[sys.dm_linux_proc_all_stat (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-all-stat-transact-sql.md)|[sys.dm_linux_proc_cpuinfo (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-cpuinfo-transact-sql.md)|   
+|[sys.dm_linux_proc_meminfo (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-meminfo-transact-sql.md)|[sys.dm_linux_proc_sql_maps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-maps-transact-sql.md)|   
+|[sys.dm_linux_proc_sql_threads (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-threads-transact-sql.md)||
 
 ## See Also
 

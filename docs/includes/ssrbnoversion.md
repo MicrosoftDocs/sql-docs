@@ -1,1 +1,1 @@
-\<Token xmlns:xlink="http://www.w3.org/1999/xlink">Report Builder</Token>
+ Report Builder 

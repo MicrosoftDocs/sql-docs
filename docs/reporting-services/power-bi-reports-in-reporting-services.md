@@ -16,9 +16,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Power BI reports in Reporting Services
- ||  
-|-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
+> **[!INCLUDE[applies](../includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services
 
 Power BI reports can be uploaded and viewed within the Reporting Services web portal within the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services.
 

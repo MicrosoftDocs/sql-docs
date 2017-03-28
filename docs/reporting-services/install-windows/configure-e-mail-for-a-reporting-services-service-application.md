@@ -18,9 +18,7 @@ manager: "erikre"
 # Configure E-mail for a Reporting Services Service Application
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data alerting sends alerts in e-mail messages. To send e-mail you may need to configure your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application and you may need to modify the e-mail delivery extension for the service application. The e-mail settings are also required if you plan to use the e-mail delivery extension for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription feature.  
   
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2013 and SharePoint 2016.|  
+> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2013 and SharePoint 2016.
   
 ### To configure e-mail for the shared service  
   

@@ -1,5 +1,16 @@
-# [Soap headers +](../../../reporting-services/report-server-web-service-net-framework-soap-headers/index.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-# [Exception handling +](../../../reporting-services/report-server-web-service-net-framework-exception-handling/index.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
+
+# Exception handling +
+## [Handling Exceptions in Reporting Services](../../handling-exceptions-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
+## [Introducing Exception Handling in Reporting Services](../../introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
+
+
+# Soap headers +
+## [report-server-web-service-net-framework-soap-headers/Batching Methods](../../batching-methods.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+## [report-server-web-service-net-framework-soap-headers/Identifying Execution State](../../identifying-execution-state.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+## [report-server-web-service-net-framework-soap-headers/Setting the Item Namespace for the GetProperties Method](../../setting-the-item-namespace-for-the-getproperties-method.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+## [report-server-web-service-net-framework-soap-headers/Using Reporting Services SOAP Headers](../../using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+
+
 # [Building Applications Using the Web Service and the .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)
 # [Calling Web Service Methods](calling-web-service-methods.md)
 # [Creating the Web Service Proxy](creating-the-web-service-proxy.md)

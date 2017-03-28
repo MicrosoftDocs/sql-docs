@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "fn_get_current_xevent_settings"
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 caps.latest.revision: 11
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

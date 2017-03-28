@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "sys.dm_hadr_availability_group_states dynamic management view"
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 caps.latest.revision: 43
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

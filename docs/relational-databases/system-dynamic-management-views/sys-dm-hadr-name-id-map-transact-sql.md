@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "sys.dm_hadr_name_id_map dynamic management view"
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
 caps.latest.revision: 8
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

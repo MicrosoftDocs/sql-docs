@@ -12,6 +12,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: eabcc635-7adf-4e45-b6f1-158d6e024908
 caps.latest.revision: 7
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

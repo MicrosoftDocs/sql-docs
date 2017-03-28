@@ -1,14 +1,14 @@
 
 # Exception handling +
-## [Handling Exceptions in Reporting Services](../../handling-exceptions-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
-## [Introducing Exception Handling in Reporting Services](../../introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
+## [Handling Exceptions in Reporting Services](../../report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
+## [Introducing Exception Handling in Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-exception-handling%2ftoc.json)
 
 
 # Soap headers +
-## [report-server-web-service-net-framework-soap-headers/Batching Methods](../../batching-methods.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [report-server-web-service-net-framework-soap-headers/Identifying Execution State](../../identifying-execution-state.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [report-server-web-service-net-framework-soap-headers/Setting the Item Namespace for the GetProperties Method](../../setting-the-item-namespace-for-the-getproperties-method.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
-## [report-server-web-service-net-framework-soap-headers/Using Reporting Services SOAP Headers](../../using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+## [Batching Methods](../../report-server-web-service-net-framework-soap-headers/batching-methods.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+## [Identifying Execution State](../../report-server-web-service-net-framework-soap-headers/identifying-execution-state.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+## [Setting the Item Namespace for the GetProperties Method](../../report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
+## [Using Reporting Services SOAP Headers](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md?toc=%2fsql%2freporting-services%2freport-server-web-service-net-framework-soap-headers%2ftoc.json)
 
 
 # [Building Applications Using the Web Service and the .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)

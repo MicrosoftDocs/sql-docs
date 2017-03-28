@@ -13,6 +13,7 @@ f1_keywords:
   - "sql13.swb.dbmmonitor.status.f1"
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 caps.latest.revision: 36
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

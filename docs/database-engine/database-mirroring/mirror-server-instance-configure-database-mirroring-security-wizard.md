@@ -13,6 +13,7 @@ f1_keywords:
   - "sql13.swb.configdbmsecurwiz.mirrorsrvr.f1"
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 caps.latest.revision: 42
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

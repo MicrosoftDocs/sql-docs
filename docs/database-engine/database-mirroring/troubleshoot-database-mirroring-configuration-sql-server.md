@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], database mirroring"
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 caps.latest.revision: 69
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

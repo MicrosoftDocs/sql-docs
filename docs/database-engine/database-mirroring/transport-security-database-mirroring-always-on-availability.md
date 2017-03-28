@@ -20,6 +20,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 caps.latest.revision: 59
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

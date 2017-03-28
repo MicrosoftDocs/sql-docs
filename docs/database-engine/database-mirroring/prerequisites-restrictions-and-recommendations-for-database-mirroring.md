@@ -19,6 +19,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], about database mirroring"
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: 55
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

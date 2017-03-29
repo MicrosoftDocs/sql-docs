@@ -1,5 +1,5 @@
 ---
-title: "Use an Office Data Connection (.odc) with Reports (Reporting Services in SharePoint Integrated Mode) | Microsoft Docs"
+title: "Use an Office Data Connection (.odc) with Reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

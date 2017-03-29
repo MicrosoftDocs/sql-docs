@@ -1,5 +1,5 @@
 ---
-title: "Add, Change, or Delete Default Values for a Report Parameter (Report Builder and SSRS) | Microsoft Docs"
+title: "Add, Change, or Delete Default Values for a Report Parameter | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

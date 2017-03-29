@@ -1,5 +1,7 @@
-# [Types +](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/index.md?toc=%2fsql%2fintegration-services%2fextending-packages-scripting-data-flow-script-component-types%2ftoc.json)
-# [Examples +](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/index.md?toc=%2fsql%2fintegration-services%2fextending-packages-scripting-data-flow-script-component-examples%2ftoc.json)
+# Subcategories of Articles
+## [Types](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/index.md?toc=%2fsql%2fintegration-services%2fextending-packages-scripting-data-flow-script-component-types%2ftoc.json)
+## [Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/index.md?toc=%2fsql%2fintegration-services%2fextending-packages-scripting-data-flow-script-component-examples%2ftoc.json)
+
 # [Coding and Debugging the Script Component](coding-and-debugging-the-script-component.md)
 # [Configuring the Script Component in the Script Component Editor](configuring-the-script-component-in-the-script-component-editor.md)
 # [Connecting to Data Sources in the Script Component](connecting-to-data-sources-in-the-script-component.md)

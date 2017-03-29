@@ -42,7 +42,7 @@ This tutorial provides lessons on how to create an Analysis Services tabular mod
   
 -   How to secure model objects and data by creating roles with user members.  
   
--   How to deploy a tabular model to an Analysis Services server on-premises or in Azure instance.  
+-   How to deploy a tabular model to an Analysis Services server on-premises or in Azure.  
   
 ## Scenario  
 This tutorial is based on Adventure Works Cycles, a fictitious company. Adventure Works is a large, multinational manufacturing company that produces and distributes metal and composite bicycles to commercial markets in North America, Europe, and Asia. With headquarters in Bothell, Washington, the company employs 500 workers. Additionally, Adventure Works employs several regional sales teams throughout its market base.  

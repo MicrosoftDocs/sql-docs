@@ -329,7 +329,7 @@
           - name: Sharepoint
             href: /sql/reporting-services/report-server-sharepoint/
             homepage: /sql/reporting-services/report-server-sharepoint/
-        - name: Reports
+        - name: Working with reports
           href: /sql/reporting-services/reports/
           homepage: /sql/reporting-services/reports
         - name: Security

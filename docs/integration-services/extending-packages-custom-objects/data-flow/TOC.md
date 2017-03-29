@@ -1,4 +1,6 @@
-# [Data flow types +](../../../integration-services/extending-packages-custom-objects-data-flow-types/index.md?toc=%2fsql%2fintegration-services%2fextending-packages-custom-objects-data-flow-types%2ftoc.json)
+# Subcategories of Articles
+## [Data flow types](../../../integration-services/extending-packages-custom-objects-data-flow-types/index.md?toc=%2fsql%2fintegration-services%2fextending-packages-custom-objects-data-flow-types%2ftoc.json)
+
 # [Creating a Custom Data Flow Component](creating-a-custom-data-flow-component.md)
 # [Design-time Methods of a Data Flow Component](design-time-methods-of-a-data-flow-component.md)
 # [Developing a Custom Data Flow Component](developing-a-custom-data-flow-component.md)

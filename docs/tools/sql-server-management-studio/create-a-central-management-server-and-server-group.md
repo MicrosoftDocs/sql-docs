@@ -1,5 +1,5 @@
 ---
-title: "Create a Central Management Server and Server Group (SQL Server Management Studio) | Microsoft Docs"
+title: "Create a Central Management Server and Server Group | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

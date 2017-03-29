@@ -1,5 +1,5 @@
 ---
-title: "Configure the Transaction Set Job for an Oracle Publisher (Replication Transact-SQL Programming) | Microsoft Docs"
+title: "Configure the Transaction Set Job for an Oracle Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

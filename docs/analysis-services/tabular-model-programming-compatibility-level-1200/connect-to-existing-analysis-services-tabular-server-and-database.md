@@ -1,5 +1,5 @@
 ---
-title: "Connect to an existing Analysis Services Tabular server and database (Analysis Services AMO-TOM) | Microsoft Docs"
+title: "Connect to existing Analysis Services Tabular server and database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

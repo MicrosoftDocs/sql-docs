@@ -1,5 +1,5 @@
 ---
-title: "Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server | Microsoft Docs"
+title: "Develop using Always Encrypted with .NET Framework Data Provider | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: "sql-server-2016"

@@ -1,7 +1,7 @@
 ---
 title: "Install Reporting and Internet Information Services Side-by-Side | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,9 +18,10 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Install Reporting and Internet Information Services Side-by-Side
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+
   You can install and run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) and Internet Information Services (IIS) on the same computer. The version of IIS that you are using determines the interoperability issues you must address.  
-  
-> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode 
   
 |IIS version|Issues|Description|  
 |-----------------|------------|-----------------|  
@@ -73,9 +74,9 @@ manager: "erikre"
   
 -   For installations that you configure manually, adopt the default naming conventions in the URLs that configure. If you install [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] as a named instance, include the instance name when creating a virtual directory.  
   
-## See Also  
- [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Install Reporting Services Native Mode Report Server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
-  
-  
+## See Also
+
+[Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+[Install Reporting Services Native Mode Report Server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
+More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

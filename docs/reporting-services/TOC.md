@@ -7,30 +7,17 @@
 ### [Deprecated features](deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 ### [Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
 ### [Breaking changes in SQL Server Reporting Services in SQL Server 2016](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)  
-### [Behavior changes to SQL Server Reporting Services  in SQL Server 2016](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+### [Behavior changes to SQL Server Reporting Services in SQL Server 2016](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 
-# [Install](install-windows/index.md)
-
-# [Planning](planning-for-reporting-services.md)  
+# Planning
 ## [Choosing Microsoft Business Intelligence (BI) tools for analysis and reporting](choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
 ## [Browser Support for Reporting Services and Power View](browser-support-for-reporting-services-and-power-view.md)  
 ## [Plan for report design and report deployment | Reporting Services](plan-for-report-design-and-report-deployment-reporting-services.md)  
 ## [Reporting Services Features Supported by the Editions of SQL Server 2016](reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
-  
-# [Mobile reports](mobile-reports/index.md)
-# [Power BI reports](power-bi-reports-in-reporting-services.md)  
-# [Pin to Power BI](pin-reporting-services-items-to-power-bi-dashboards.md)  
-# [Report Builder](report-builder/index.md)
-# [Report Design](report-design/index.md)
-# [Report Server](report-server/index.md)
-# [Report Server Sharepoint](report-server-sharepoint/index.md)
-# [Reports](reports/index.md)
-# [Security and protection](security/index.md)
-# [Subscriptions and delivery](subscriptions/index.md)
-# [Tools](tools/index.md)
-# [Troubleshooting](troubleshooting/index.md)
 
-# [Web portal (SSRS Native Mode)](web-portal-ssrs-native-mode.md)  
+# [Install](install-windows/index.md)
+  
+# [Web portal](web-portal-ssrs-native-mode.md)  
 ## [Branding the web portal](branding-the-web-portal.md)  
 ## [Working with shared datasets (web portal)](work-with-shared-datasets-web-portal.md)  
 ## [Working with paginated reports (web portal)](working-with-paginated-reports-web-portal.md)  
@@ -39,7 +26,22 @@
 ## [Working with KPIs in Reporting Services](working-with-kpis-in-reporting-services.md)  
 ## [My Settings for Power BI Integration (web portal)](my-settings-for-power-bi-integration-web-portal.md)
 
-# [Data Alerts](reporting-services-data-alerts.md)  
+# [Report Server](report-server/index.md)
+# [Report Server (SharePoint)](report-server-sharepoint/index.md)
+
+
+# [Pin to Power BI](pin-reporting-services-items-to-power-bi-dashboards.md)  
+# [Power BI reports](power-bi-reports-in-reporting-services.md)  
+# [Report Builder](report-builder/index.md)
+# [Report Design](report-design/index.md)
+# [Working with reports](reports/index.md)
+# [Mobile reports](mobile-reports/index.md)
+
+# [Security and protection](security/index.md)
+# [Subscriptions and delivery](subscriptions/index.md)
+# [Tools](tools/toc.md)
+
+# [Data Alerts (SharePoint)](reporting-services-data-alerts.md)  
 ## [Data Alert Designer](data-alert-designer.md)  
 ## [Data Alert Manager for SharePoint Users](data-alert-manager-for-sharepoint-users.md)  
 ## [Data Alert Manager for Alerting Administrators](data-alert-manager-for-alerting-administrators.md)  
@@ -64,6 +66,7 @@
 ## [Render a Report History Snapshot Using URL Access](render-a-report-history-snapshot-using-url-access.md)  
 
 # [WMI provider](wmi-provider-library-reference/index.md)
+# [Troubleshooting](troubleshooting/toc.md)
 
 
 # Developer
@@ -89,7 +92,7 @@
 ### [RGDI Device Information Settings](rgdi-device-information-settings.md)  
 ## [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)  
 
-# [Reporting Services Tutorials](reporting-services-tutorials-ssrs.md)  
+# [Tutorials](reporting-services-tutorials-ssrs.md)  
 
 ## [Create a Basic Table Report (SSRS Tutorial)](create-a-basic-table-report-ssrs-tutorial.md)  
 ### [Lesson 1: Creating a Report Server Project](lesson-1-creating-a-report-server-project-reporting-services.md)

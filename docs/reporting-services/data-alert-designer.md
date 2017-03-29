@@ -1,7 +1,7 @@
 ---
 title: "Data Alert Designer | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,8 +24,14 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Data Alert Designer
-  You create and edit data alert definitions in Data Alert Designer. An alert definition is a collection of metadata, including the report data that you are interested in, the rules that report data must satisfy to create data alert instances and send data alert messages, the recipients of the alert message, and so forth.  
-  
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+You create and edit data alert definitions in Data Alert Designer. An alert definition is a collection of metadata, including the report data that you are interested in, the rules that report data must satisfy to create data alert instances and send data alert messages, the recipients of the alert message, and so forth.  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
  To create an alert definition you do a number of related tasks:  
   
 -   Select the report and the report data feed that includes data that you want to use.  
@@ -202,10 +208,9 @@ manager: "erikre"
 -   [Edit a Data Alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Create a Data Alert in Data Alert Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
-  
-  
-## See Also  
- [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)   
- [Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
-  
-  
+
+## See Also
+
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)   
+[Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
+More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

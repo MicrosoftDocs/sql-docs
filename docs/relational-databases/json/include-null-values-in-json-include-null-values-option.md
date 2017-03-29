@@ -1,5 +1,5 @@
 ---
-title: "Include Null Values in JSON Output with the INCLUDE_NULL_VALUES Option (SQL Server) | Microsoft Docs"
+title: "Include Null Values in JSON - INCLUDE_NULL_VALUES Option | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "06/02/2016"

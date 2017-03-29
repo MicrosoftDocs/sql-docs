@@ -1,5 +1,5 @@
 ---
-title: "Working with Analysis Services Projects and Databases During the Development Phase | Microsoft Docs"
+title: "Work with Analysis Services Projects and Databases in Development | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

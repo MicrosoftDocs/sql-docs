@@ -1,5 +1,5 @@
 ---
-title: "View Data Conflicts for Transactional Publications (SQL Server Management Studio) | Microsoft Docs"
+title: "View Data Conflicts for Transactional Publications (SSMS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-server-2016"

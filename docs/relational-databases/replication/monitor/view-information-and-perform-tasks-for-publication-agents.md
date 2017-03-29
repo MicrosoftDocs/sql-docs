@@ -1,5 +1,5 @@
 ---
-title: "View Information and Perform Tasks for the Agents Associated With a Publication (Replication Monitor) | Microsoft Docs"
+title: "View Information and Perform Tasks for Publication Agents | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Considerations for Running Utility and non-Utility Collection Sets on the Same Instance of SQL Server | Microsoft Docs"
+title: "Run Utility and non-Utility Collection Sets on Same SQL Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

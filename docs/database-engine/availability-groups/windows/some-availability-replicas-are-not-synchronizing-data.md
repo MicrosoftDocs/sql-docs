@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 caps.latest.revision: 12
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

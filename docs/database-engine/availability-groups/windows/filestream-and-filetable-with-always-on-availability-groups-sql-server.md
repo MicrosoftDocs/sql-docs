@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: 15
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

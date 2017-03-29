@@ -13,6 +13,7 @@ f1_keywords:
   - "sql13.swb.availabilityreplicaproperties.general.f1"
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: 14
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

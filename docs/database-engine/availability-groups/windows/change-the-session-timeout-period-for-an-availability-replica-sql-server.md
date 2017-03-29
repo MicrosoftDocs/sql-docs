@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "session timeout [SQL Server]"
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 caps.latest.revision: 26
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

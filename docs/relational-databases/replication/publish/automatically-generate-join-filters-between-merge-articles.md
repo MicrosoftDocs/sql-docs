@@ -1,5 +1,5 @@
 ---
-title: "Automatically Generate a Set of Join Filters Between Merge Articles (SQL Server Management Studio) | Microsoft Docs"
+title: "Automatically Generate Join Filters Between Merge Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

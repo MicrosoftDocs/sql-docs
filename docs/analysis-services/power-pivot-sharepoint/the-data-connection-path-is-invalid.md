@@ -1,5 +1,5 @@
 ---
-title: "The data connection path in the workbook points to a file on the local drive or is an invalid URI. The following connections failed to refresh: Power Pivot Data | Microsoft Docs"
+title: "The data connection path is invalid | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

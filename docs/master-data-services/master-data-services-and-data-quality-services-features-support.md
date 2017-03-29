@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016 | Microsoft Docs"
+title: "Master Data Services and Data Quality Services Features Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-non-specified"

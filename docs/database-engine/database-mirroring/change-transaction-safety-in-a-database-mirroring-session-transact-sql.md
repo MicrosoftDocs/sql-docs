@@ -13,6 +13,7 @@ helpviewer_keywords:
   - "transaction safety [SQL Server database mirroring]"
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 caps.latest.revision: 38
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "Configuring Database Mirroring Security Wizard"
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 caps.latest.revision: 29
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

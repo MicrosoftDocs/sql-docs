@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "mirror database [SQL Server]"
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 caps.latest.revision: 43
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "log shipping [SQL Server], configuring"
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

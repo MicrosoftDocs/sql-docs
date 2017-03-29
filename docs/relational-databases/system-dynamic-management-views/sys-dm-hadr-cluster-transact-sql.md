@@ -22,6 +22,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 caps.latest.revision: 20
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

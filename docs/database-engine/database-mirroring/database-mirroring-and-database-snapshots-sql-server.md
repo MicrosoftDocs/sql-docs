@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "database snapshots [SQL Server], database mirroring"
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 caps.latest.revision: 41
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

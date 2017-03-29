@@ -14,6 +14,7 @@ f1_keywords:
   - "sql13.swb.adddatabasewizard.specifyagname.f1"
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 caps.latest.revision: 13
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

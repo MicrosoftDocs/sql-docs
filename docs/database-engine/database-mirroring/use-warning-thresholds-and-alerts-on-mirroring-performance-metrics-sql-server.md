@@ -18,6 +18,7 @@ helpviewer_keywords:
   - "warnings [database mirroring]"
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: 40
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

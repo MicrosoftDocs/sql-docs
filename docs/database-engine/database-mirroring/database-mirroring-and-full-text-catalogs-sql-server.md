@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "catalogs [SQL Server], database mirroring"
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 caps.latest.revision: 50
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "sys.fn_hadr_is_primary_replica"
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 caps.latest.revision: 7
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

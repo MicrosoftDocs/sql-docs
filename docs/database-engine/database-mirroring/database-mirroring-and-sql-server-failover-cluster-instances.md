@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "high-availability mode [SQL Server]"
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 caps.latest.revision: 42
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

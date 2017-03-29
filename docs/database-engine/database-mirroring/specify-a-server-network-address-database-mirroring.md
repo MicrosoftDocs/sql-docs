@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "server network addresses [SQL Server]"
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 caps.latest.revision: 60
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

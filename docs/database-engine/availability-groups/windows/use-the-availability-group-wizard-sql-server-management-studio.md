@@ -18,6 +18,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], creating"
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 46
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

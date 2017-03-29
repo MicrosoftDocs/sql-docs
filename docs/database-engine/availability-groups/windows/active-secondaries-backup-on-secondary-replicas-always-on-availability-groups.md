@@ -19,6 +19,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 caps.latest.revision: 34
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

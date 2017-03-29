@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "smart_admin.sp_get_backup_diagnostics"
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 caps.latest.revision: 12
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "rolling upgrades [SQL Server]"
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 44
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

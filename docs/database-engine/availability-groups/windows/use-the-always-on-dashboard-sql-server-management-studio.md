@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], dashboard"
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

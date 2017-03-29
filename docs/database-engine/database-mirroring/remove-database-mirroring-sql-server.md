@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "removing database mirroring [SQL Server]"
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 caps.latest.revision: 42
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

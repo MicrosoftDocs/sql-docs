@@ -17,6 +17,7 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 caps.latest.revision: 33
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

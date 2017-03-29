@@ -22,6 +22,7 @@ helpviewer_keywords:
   - "configuration options [SQL Server], libraries"
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 caps.latest.revision: 50
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -2,7 +2,7 @@
 title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "09/14/2016"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,7 +27,8 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Browser Support for Reporting Services and Power View
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
 
 Learn about what browser versions are supported for managing and viewing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the ReportViewer Controls and Power View.
   
@@ -140,11 +141,12 @@ The following is the current list of browsers supported for the [!INCLUDE[ssRSWe
   
  For more information on the SharePoint 2016 browser support, see [Plan browser support in SharePoint 2013](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).  
   
-## See Also  
+## See Also
+
 [Finding and Viewing Reports in the web portal &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/en-us/8556807e-f2e2-4a7b-bb1b-ac5ea1872e51)  
 [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)  
 [Web portal (SSRS Native Mode)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
 

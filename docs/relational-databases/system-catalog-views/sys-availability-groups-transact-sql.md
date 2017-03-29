@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "sys.availability_groups catalog view"
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 caps.latest.revision: 42
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

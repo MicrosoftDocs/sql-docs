@@ -1,5 +1,5 @@
 ---
-title: "Configure E-mail for a Reporting Services Service Application (SharePoint 2013 and SharePoint 2016) | Microsoft Docs"
+title: "Configure E-mail for a Reporting Services Service Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2016"
 ms.prod: "sql-server-2016"

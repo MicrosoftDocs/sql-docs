@@ -1,5 +1,5 @@
 ---
-title: "Use Marked Transactions to Recover Related Databases Consistently (Full Recovery Model) | Microsoft Docs"
+title: "Use Marked Transactions to Recover Related Databases Consistently | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Supported Combinations of SharePoint and Reporting Services Server and Add-in (SQL Server 2016) | Microsoft Docs"
+title: "Supported Combinations of SharePoint and Reporting Services Server | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "10/07/2016"

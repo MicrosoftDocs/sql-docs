@@ -1,5 +1,5 @@
 ---
-title: "Using SQL Server Profiler to Monitor Data Mining (Analysis Services - Data Mining) | Microsoft Docs"
+title: "Using SQL Server Profiler to Monitor Data Mining  | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-server-2016"

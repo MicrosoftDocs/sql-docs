@@ -16,6 +16,8 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Install January 2017 Technical Preview Power BI reports
+[!INCLUDE[ssrs-appliesto-xxx-preview](../includes/ssrs-appliesto-xxx-preview.md)]
+
 Learn how to install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services. This will install Reporting Services outside of the SQL Server setup experience.
 
  **Download** ![download](../../analysis-services/media/download.png "download")
@@ -23,10 +25,6 @@ Learn how to install the January 2017 Technical Preview of Power BI reports in S
 To download the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services, along with Power BI Desktop (SQL Server Reporting Services), go to the [Microsoft download center](https://go.microsoft.com/fwlink/?linkid=839351). 
   
  ![note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") For the current release notes, see [Technical Preview of Power BI reports in SSRS - Release notes](../../reporting-services/reporting-services-release-notes.md). 
- 
- ||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/A9O5BHZ4-9A?showinfo=0" frameborder="0" allowfullscreen></iframe>
 

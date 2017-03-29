@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_fts_active_catalogs dynamic management view"
-ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
+ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee 
 caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -56,8 +56,8 @@ manager: "jhubbard"
  The is_importing column was new in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## Permissions  
-On [!INCLUDE[ssNoVersion_md](/Token/ssNoVersion_md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](/Token/ssSDS_md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](/Token/ssSDS_md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
   
 ## Physical Joins  
  ![Significant joins of this dynamic management view](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "Significant joins of this dynamic management view")  

@@ -19,7 +19,7 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_fts_memory_pools dynamic management view"
 ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
-caps.latest.revision: 29
+caps.latest.revision: 29 
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
@@ -38,9 +38,9 @@ manager: "jhubbard"
 |**buffer_count**|**int**|Current number of shared memory buffers in the memory pool.|  
   
 ## Permissions  
-On [!INCLUDE[ssNoVersion_md](/Token/ssNoVersion_md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](/Token/ssSDS_md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](/Token/ssSDS_md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
-  
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
+
 ## Physical Joins  
  ![Significant joins of this dynamic management view](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-pools-1.gif "Significant joins of this dynamic management view")  
   

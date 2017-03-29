@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_fts_memory_buffers dynamic management view"
-ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
+ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8 
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
@@ -44,9 +44,9 @@ manager: "jhubbard"
 |**percent_used**|**int**|Percentage of allocated memory used.|  
   
 ## Permissions  
-On [!INCLUDE[ssNoVersion_md](/Token/ssNoVersion_md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](/Token/ssSDS_md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](/Token/ssSDS_md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
-  
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
+ 
 ## Physical Joins  
  ![Significant joins of this dynamic management view](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-buffers-1.gif "Significant joins of this dynamic management view")  
   

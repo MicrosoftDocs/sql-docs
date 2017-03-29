@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "log shipping [SQL Server], database mirroring"
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 caps.latest.revision: 36
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

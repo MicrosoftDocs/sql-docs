@@ -16,7 +16,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Install January 2017 Technical Preview Power BI reports
-[!INCLUDE[ssrs-appliesto-xxx-preview](../includes/ssrs-appliesto-xxx-preview.md)]
+[!INCLUDE[ssrs-appliesto-xxx-preview](../../includes/ssrs-appliesto-xxx-preview.md)]
 
 Learn how to install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services. This will install Reporting Services outside of the SQL Server setup experience.
 

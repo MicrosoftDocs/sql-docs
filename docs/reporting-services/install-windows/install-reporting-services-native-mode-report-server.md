@@ -22,7 +22,7 @@ manager: "erikre"
 ---
 # Install Reporting Services native mode report server
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)]
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)]
 
 Learn how to install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in native mode. This will provide access to a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] where you can manage reports and other items.
 

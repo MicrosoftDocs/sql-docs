@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server) | Microsoft Docs"
+title: "Prereqs, Restrictions, Recommendations - Always On Availability | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/30/2016"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Hide a Page Header or Footer on the First or Last Page (Report Builder and SSRS) | Microsoft Docs"
+title: "Hide Page Header or Footer on First or Last Page-Report Builder-SSRS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-server-2016"

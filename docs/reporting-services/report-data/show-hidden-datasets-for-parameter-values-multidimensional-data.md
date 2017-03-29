@@ -1,5 +1,5 @@
 ---
-title: "Show Hidden Datasets for Parameter Values for Multidimensional Data (Report Builder and SSRS) | Microsoft Docs"
+title: "Show Hidden Datasets for Parameter Values - Multidimensional Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

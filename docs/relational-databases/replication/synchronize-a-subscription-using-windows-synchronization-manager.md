@@ -1,5 +1,5 @@
 ---
-title: "Synchronize a Subscription Using Windows Synchronization Manager (Windows Synchronization Manager) | Microsoft Docs"
+title: "Synchronize a Subscription Using Windows Synchronization Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

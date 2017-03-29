@@ -19,13 +19,13 @@
 # [Data mining](data-mining/index.md)
 
 # Developer Tools
-## [Schema rowsets +](schema-rowsets/index.md)
-## [Scripting +](scripting/index.md)
-## [Tabular model programming compatibility level 1200 +](tabular-model-programming-compatibility-level-1200/index.md)
-## [Tabular model programming compatibility level 1050 to 1103 +](tabular-model-programming-compatibility-levels-1050-1103/index.md)
-## [Tabular models scripting language commands +](tabular-models-scripting-language-commands/index.md)
-## [Tabular models scripting language objects +](tabular-models-scripting-language-objects/index.md)
-## [XMLA +](xmla/index.md)
+## [Schema rowsets](schema-rowsets/index.md)
+## [Scripting](scripting/index.md)
+## [Tabular model programming compatibility level 1200](tabular-model-programming-compatibility-level-1200/index.md)
+## [Tabular model programming compatibility level 1050 to 1103](tabular-model-programming-compatibility-levels-1050-1103/index.md)
+## [Tabular models scripting language commands](tabular-models-scripting-language-commands/index.md)
+## [Tabular models scripting language objects](tabular-models-scripting-language-objects/index.md)
+## [XMLA](xmla/index.md)
 
 # [Instances](instances/index.md)
 # [Multidimensional models](multidimensional-models/index.md)

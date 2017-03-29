@@ -1,5 +1,5 @@
 ---
-title: "Lesson 1: Create a stored access policy and a shared access signature  on an Azure container | Microsoft Docs"
+title: "Lesson 1: Create stored access policy and shared access signature | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "06/02/2016"

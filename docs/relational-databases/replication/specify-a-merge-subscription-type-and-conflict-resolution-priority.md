@@ -1,5 +1,5 @@
 ---
-title: "Specify a Merge Subscription Type and Conflict Resolution Priority (SQL Server Management Studio) | Microsoft Docs"
+title: "Specify a Merge Subscription Type and Conflict Resolution Priority | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

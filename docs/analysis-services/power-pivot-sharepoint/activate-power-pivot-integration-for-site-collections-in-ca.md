@@ -1,5 +1,5 @@
 ---
-title: "Activate Power Pivot Feature Integration for Site Collections in Central Administration | Microsoft Docs"
+title: "Activate Power Pivot Integration for Site Collections in CA | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

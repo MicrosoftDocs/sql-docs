@@ -1,5 +1,5 @@
 ---
-title: "GenerateDatabaseCreationScript Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "ConfigurationSetting Method - GenerateDatabaseCreationScript | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

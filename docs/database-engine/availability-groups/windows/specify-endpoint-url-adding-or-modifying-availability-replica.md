@@ -1,5 +1,5 @@
 ---
-title: "Specify the Endpoint URL When Adding or Modifying an Availability Replica (SQL Server) | Microsoft Docs"
+title: "Specify Endpoint URL - Adding or Modifying Availability Replica | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

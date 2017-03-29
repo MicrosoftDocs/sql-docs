@@ -1,5 +1,5 @@
 ---
-title: "Introducing Microsoft Technologies for Data Storage, Movement and Transformation | Microsoft Docs"
+title: "Introducing Microsoft Technologies to Move, Store, Transform Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: "sql-non-specified"

@@ -1,5 +1,5 @@
 ---
-title: "Local Mode vs. Connected Mode Reports in the Report Viewer (Reporting Services in SharePoint Mode) | Microsoft Docs"
+title: "Local Mode vs. Connected Mode Reports in the Report Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-server-2016"

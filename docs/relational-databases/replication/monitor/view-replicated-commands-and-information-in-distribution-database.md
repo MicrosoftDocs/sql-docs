@@ -1,5 +1,5 @@
 ---
-title: "View Replicated Commands and Other Information in the Distribution Database (Replication Transact-SQL Programming) | Microsoft Docs"
+title: "View Replicated Commands and Information in Distribution Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2016"

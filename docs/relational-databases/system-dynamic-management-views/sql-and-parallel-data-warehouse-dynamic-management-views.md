@@ -1,5 +1,5 @@
 ---
-title: "SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views (Transact-SQL) | Microsoft Docs"
+title: "SQL and Parallel Data Warehouse Dynamic Management Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"

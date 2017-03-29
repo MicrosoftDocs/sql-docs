@@ -1,5 +1,5 @@
 ---
-title: "Use the Add Database to Availability Group Wizard (SQL Server Management Studio) | Microsoft Docs"
+title: "Availability Group - Add Database to Group Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

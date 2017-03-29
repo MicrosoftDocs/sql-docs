@@ -1,5 +1,5 @@
 ---
-title: "Upload Documents to a SharePoint Library (Reporting Services in SharePoint Mode) | Microsoft Docs"
+title: "Upload Docs to SharePoint Library-Reporting Services-SharePoint Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

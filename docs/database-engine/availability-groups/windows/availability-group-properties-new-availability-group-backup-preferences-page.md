@@ -1,5 +1,5 @@
 ---
-title: "Availability Group Properties: New Availability Group (Backup Preferences Page) | Microsoft Docs"
+title: "Properties: New Availability Group (Backup Preferences Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

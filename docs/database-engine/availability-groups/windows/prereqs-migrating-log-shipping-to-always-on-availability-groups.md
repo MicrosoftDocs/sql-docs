@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for Migrating from Log Shipping to Always On Availability Groups (SQL Server) | Microsoft Docs"
+title: "Prereqs Migrating Log Shipping to Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "RSWindowsExtendedProtectionLevel Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "RSWindowsExtendedProtectionLevel Property | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: "sql-server-2016"

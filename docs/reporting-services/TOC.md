@@ -67,11 +67,11 @@
 
 
 # Developer
-## [Application integration +](application-integration/index.md)
-## [Report server web service +](report-server-web-service/index.md)
-## [Extensions +](extensions/index.md)
-## [Custom report items +](custom-report-items/index.md)
-## [Custom assemblies +](custom-assemblies/index.md)
+## [Application integration](application-integration/index.md)
+## [Report server web service](report-server-web-service/index.md)
+## [Extensions](extensions/index.md)
+## [Custom report items](custom-report-items/index.md)
+## [Custom assemblies](custom-assemblies/index.md)
 
 
 # [Technical Reference](technical-reference-ssrs.md)  

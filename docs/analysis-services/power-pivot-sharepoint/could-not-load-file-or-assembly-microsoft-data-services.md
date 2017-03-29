@@ -1,5 +1,5 @@
 ---
-title: "Could not load file or assembly 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' or one of its dependencies. The system cannot find the file specified. | Microsoft Docs"
+title: "Could not load file or assembly Microsoft-Data-Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

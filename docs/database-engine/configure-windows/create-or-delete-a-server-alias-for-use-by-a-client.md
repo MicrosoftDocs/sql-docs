@@ -1,5 +1,5 @@
 ---
-title: "Create or Delete a Server Alias for Use by a Client (SQL Server Configuration Manager) | Microsoft Docs"
+title: "Create or Delete a Server Alias for Use by a Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

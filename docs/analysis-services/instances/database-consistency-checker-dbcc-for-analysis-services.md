@@ -1,5 +1,5 @@
 ---
-title: "Database Consistency Checker (DBCC) for Analysis Services tabular and multidimensional databases | Microsoft Docs"
+title: "Database Consistency Checker (DBCC) for Analysis Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "03/07/2017"

@@ -19,7 +19,7 @@
 ## [ALTER DATABASE compatibility level](alter-database-transact-sql-compatibility-level.md)  
 ## [ALTER DATABASE database mirroring](alter-database-transact-sql-database-mirroring.md)  
 ## [ALTER DATABASE ENCRYPTION KEY](alter-database-encryption-key-transact-sql.md)
-## [ALTER DATABASE File and Filegroup Options](alter-database-transact-sql-file-and-filegroup-options.md)  
+## [ALTER DATABASE file and filegroup options](alter-database-transact-sql-file-and-filegroup-options.md)  
 ## [ALTER DATABASE SCOPED CREDENTIAL](alter-database-scoped-credential-transact-sql.md)  
 ## [ALTER DATABASE SCOPED CONFIGURATION](alter-database-scoped-configuration-transact-sql.md)  
 ## [ALTER DATABASE SET HADR](alter-database-transact-sql-set-hadr.md)  
@@ -80,8 +80,8 @@
 ## [BACKUP MASTER KEY](backup-master-key-transact-sql.md)  
 ## [BACKUP SERVICE MASTER KEY](backup-service-master-key-transact-sql.md)  
 
-## [RESTORE Statements](restore-statements-transact-sql.md)  
-## [RESTORE Statements for Backups](restore-statements-for-restoring-recovering-and-managing-backups-transact-sql.md)  
+## [RESTORE](restore-statements-transact-sql.md)  
+## [RESTORE statements](restore-statements-for-restoring-recovering-and-managing-backups-transact-sql.md)  
 ## [RESTORE DATABASE (Parallel Data Warehouse)](restore-database-parallel-data-warehouse.md) 
 
 ## [RESTORE arguments](restore-statements-arguments-transact-sql.md)  

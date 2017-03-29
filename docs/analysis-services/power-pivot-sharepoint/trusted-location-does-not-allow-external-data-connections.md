@@ -1,5 +1,5 @@
 ---
-title: "The trusted location where the workbook is stored does not allow external data connections. The following connections failed to refresh: Power Pivot Data | Microsoft Docs"
+title: "Trusted location does not allow external data connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

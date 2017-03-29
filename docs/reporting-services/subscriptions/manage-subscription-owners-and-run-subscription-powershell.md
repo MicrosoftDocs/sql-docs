@@ -1,5 +1,5 @@
 ---
-title: "Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription | Microsoft Docs"
+title: "Manage Subscription Owners and Run Subscription - PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/24/2017"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Connect to Existing Secondary Replicas Page (Add Replica Wizard: Add Databases Wizard) | Microsoft Docs"
+title: "Connect to Existing Secondary Replicas Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

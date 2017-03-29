@@ -1,5 +1,5 @@
 ---
-title: "Example: Setting Up Database Mirroring Using Windows Authentication (Transact-SQL) | Microsoft Docs"
+title: "Example: Set Up Database Mirroring with Windows Authentication (T-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

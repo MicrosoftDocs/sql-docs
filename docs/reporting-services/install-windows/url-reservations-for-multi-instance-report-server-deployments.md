@@ -1,5 +1,5 @@
 ---
-title: "URL Reservations for Multi-Instance Report Server Deployments  (SSRS Configuration Manager) | Microsoft Docs"
+title: "URL Reservations for Multi-Instance Report Server Deployments | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2016"
 ms.prod: "sql-server-2016"

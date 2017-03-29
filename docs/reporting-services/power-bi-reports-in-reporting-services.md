@@ -1,7 +1,7 @@
 ---
 title: "Power BI reports in Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/17/2017"
+ms.date: "03/29/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Power BI reports in Reporting Services
-> **[!INCLUDE[applies](../includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services
+[!INCLUDE[ssrs-appliesto-xxx-preview](../includes/ssrs-appliesto-xxx-preview.md)]
 
 Power BI reports can be uploaded and viewed within the Reporting Services web portal within the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services.
 

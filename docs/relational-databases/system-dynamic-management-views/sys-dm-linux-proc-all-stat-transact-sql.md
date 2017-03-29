@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_linux_proc_all_stat (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/10/2017"
+ms.date: "03/29/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,6 +29,8 @@ manager: "jhubbard"
 
 This DMV is based off of the linux `/proc/[pid]/stat` file for every process in /proc/. It provides information about the processes running on your system. There will be one row for every process visible under the `/proc/` directory.  
 
+> [!NOTE]  
+> Implementation of this DMV has been delayed. Expect it, or something similar in a future CTP.
 
 |Column name |Data type |Description |  
 |-----------------|---------------|-----------------|  

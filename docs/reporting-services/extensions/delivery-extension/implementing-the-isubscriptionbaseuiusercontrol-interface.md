@@ -1,5 +1,5 @@
 ---
-title: "Implementing the ISubscriptionBaseUIUserControl Interface for a Delivery Extension | Microsoft Docs"
+title: "Implementing the ISubscriptionBaseUIUserControl Interface | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

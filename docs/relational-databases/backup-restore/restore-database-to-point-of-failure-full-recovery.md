@@ -1,5 +1,5 @@
 ---
-title: "Restore a Database to the Point of Failure Under the Full Recovery Model (Transact-SQL) | Microsoft Docs"
+title: "Restore Database to Point of Failure - Full Recovery | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

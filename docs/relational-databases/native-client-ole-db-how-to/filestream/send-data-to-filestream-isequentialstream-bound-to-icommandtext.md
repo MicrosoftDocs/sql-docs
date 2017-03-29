@@ -1,5 +1,5 @@
 ---
-title: "Send Data to a FILESTREAM Column Using ISequentialStream Bound to ICommandText Parameter (OLE DB) | Microsoft Docs"
+title: "Send Data to FILESTREAM - ISequentialStream Bound to ICommandText | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

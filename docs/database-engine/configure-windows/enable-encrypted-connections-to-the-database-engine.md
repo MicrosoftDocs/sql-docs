@@ -1,5 +1,5 @@
 ---
-title: "Enable Encrypted Connections to the Database Engine (SQL Server Configuration Manager) | Microsoft Docs"
+title: "Enable Encrypted Connections to the Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/10/2016"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Connect a Power Pivot Service Application to a SharePoint Web Application in Central Administration | Microsoft Docs"
+title: "Connect Power Pivot Service App to SharePoint Web App in CA | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

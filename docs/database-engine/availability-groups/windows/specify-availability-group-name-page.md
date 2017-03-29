@@ -1,5 +1,5 @@
 ---
-title: "Specify Availability Group Name Page (New Availability Group Wizard/Add Database Wizard) | Microsoft Docs"
+title: "Specify Availability Group Name Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

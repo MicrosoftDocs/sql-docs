@@ -1,5 +1,5 @@
 ---
-title: "Start the Configuring Database Mirroring Security Wizard (SQL Server Management Studio) | Microsoft Docs"
+title: "Start the Configuring Database Mirroring Security Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

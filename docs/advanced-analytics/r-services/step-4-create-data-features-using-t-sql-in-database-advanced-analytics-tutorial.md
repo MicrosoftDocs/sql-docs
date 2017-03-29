@@ -1,5 +1,5 @@
 ---
-title: "Step 4: Create Data Features using T-SQL (In-Database Advanced Analytics Tutorial) | Microsoft Docs"
+title: "Step 4: Create Data Features using T-SQL  | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2016"
 ms.prod: "sql-server-2016"

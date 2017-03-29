@@ -1,5 +1,5 @@
 ---
-title: "Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects (SharePoint Mode) | Microsoft Docs"
+title: "Performance Counters MSRS 2011 SharePoint Mode Performance Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

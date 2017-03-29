@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Data Alerts | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,13 +17,15 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Reporting Services Data Alerts
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts are a data driven alerting solution that helps you be informed about report data that is interesting or important to you, and at a relevant time. By using data alerts you no longer have to seek out information, it comes to you.  
   
  Data alert messages are sent by email. Depending on the importance of the information, you can choose to send messages more or less frequently and only when results change. You can specify multiple email recipients and this way keep others informed to enhance efficiency and collaboration.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint mode|  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
 ##  <a name="AlertingWF"></a> Data Alerts Architecture and Workflow  
  The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts:  
@@ -310,9 +312,9 @@ manager: "erikre"
   
 -   [Grant Permissions to Users and Alerting Administrators](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## See Also  
- [Data Alert Designer](../reporting-services/data-alert-designer.md)   
- [Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
-  
-  
+## See Also
+
+[Data Alert Designer](../reporting-services/data-alert-designer.md)   
+[Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
+More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

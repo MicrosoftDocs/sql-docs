@@ -1,5 +1,5 @@
 ---
-title: "Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial | Microsoft Docs"
+title: "Install Sample Data and Projects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

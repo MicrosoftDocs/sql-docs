@@ -1,5 +1,5 @@
 ---
-title: "Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections (Transact-SQL) | Microsoft Docs"
+title: "Database Mirroring - Use Certificates for Inbound Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

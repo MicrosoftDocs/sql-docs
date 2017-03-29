@@ -1,5 +1,5 @@
 ---
-title: "Specify That Deletes Should Not Be Tracked For Merge Articles (Replication Transact-SQL Programming) | Microsoft Docs"
+title: "Specify That Deletes Should Not Be Tracked For Merge Articles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

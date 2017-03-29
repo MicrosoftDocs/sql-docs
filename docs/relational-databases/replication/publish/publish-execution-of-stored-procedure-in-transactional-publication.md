@@ -1,5 +1,5 @@
 ---
-title: "Publish the Execution of a Stored Procedure in a Transactional Publication (SQL Server Management Studio) | Microsoft Docs"
+title: "Publish Execution of Stored Procedure in Transactional Publication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

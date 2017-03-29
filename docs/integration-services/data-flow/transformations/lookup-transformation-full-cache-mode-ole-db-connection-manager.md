@@ -1,5 +1,5 @@
 ---
-title: "Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager | Microsoft Docs"
+title: "Lookup Transformation Full Cache Mode - OLE DB Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

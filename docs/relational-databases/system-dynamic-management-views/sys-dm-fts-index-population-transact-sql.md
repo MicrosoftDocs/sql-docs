@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "03/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # sys.dm_fts_index_population (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns information about the full-text index and semantic key phrase populations currently in progress in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
@@ -55,7 +55,8 @@ manager: "jhubbard"
  When statistical semantic indexing is enabled in addition to full-text indexing, the semantic extraction and population of key phrases, and the extraction of document similarity data, occur simultaneously with full-text indexing. The population of the document similarity index occurs later in a second phase. For more information, see [Manage and Monitor Semantic Search](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+On [!INCLUDE[ssNoVersion_md](/Token/ssNoVersion_md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](/Token/ssSDS_md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](/Token/ssSDS_md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
   
 ## Physical Joins  
  ![Significant joins of this dynamic management view](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "Significant joins of this dynamic management view")  

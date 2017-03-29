@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_fts_fdhosts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,14 +26,11 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # sys.dm_fts_fdhosts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns information on the current activity of the filter daemon host or hosts on the server instance.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
+ 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**fdhost_id**|**int**|ID of the filter daemon host.|  
@@ -44,7 +41,8 @@ manager: "jhubbard"
 |**batch_count**|**int**|Number of batches that are being processed in the filter daemon host.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+On [!INCLUDE[ssNoVersion_md](/Token/ssNoVersion_md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](/Token/ssSDS_md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](/Token/ssSDS_md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
   
 ## Examples  
  The following example returns the name of the filter daemon host and the maximum number of threads in it. It also monitors how many batches are currently being processed in the filter daemon. This information can be used to diagnose performance.  

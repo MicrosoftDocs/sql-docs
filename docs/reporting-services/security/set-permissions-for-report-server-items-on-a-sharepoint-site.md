@@ -1,5 +1,5 @@
 ---
-title: "Set Permissions for Report Server Items on a SharePoint Site (Reporting Services in SharePoint Integrated Mode) | Microsoft Docs"
+title: "Set Permissions for Report Server Items on a SharePoint Site | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

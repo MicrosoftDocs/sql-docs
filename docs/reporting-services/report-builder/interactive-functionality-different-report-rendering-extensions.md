@@ -1,5 +1,5 @@
 ---
-title: "Interactive Functionality for Different Report Rendering Extensions (Report Builder and SSRS) | Microsoft Docs"
+title: "Interactive Functionality - Different Report Rendering Extensions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

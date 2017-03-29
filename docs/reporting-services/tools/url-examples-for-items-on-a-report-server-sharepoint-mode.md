@@ -1,5 +1,5 @@
 ---
-title: "URL Examples for Published Report Items on a Report Server in SharePoint Mode (SSRS) | Microsoft Docs"
+title: "URL Examples for Items on a Report Server - SharePoint Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Install, distribute, and reference the Tabular Object Model (Microsoft.AnalysisServices.Tabular) | Microsoft Docs"
+title: "Install, distribute, and reference the Tabular Object Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-server-2016"

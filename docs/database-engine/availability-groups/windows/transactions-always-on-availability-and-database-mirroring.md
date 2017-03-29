@@ -1,5 +1,5 @@
 ---
-title: "Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring (SQL Server) | Microsoft Docs"
+title: "Transactions - Always On Availability and Database Mirroring | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/29/2016"
 ms.prod: "sql-server-2016"

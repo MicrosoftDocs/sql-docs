@@ -1,5 +1,5 @@
 ---
-title: "Using WQL and Scripting Languages with the WMI Provider for Configuration Management | Microsoft Docs"
+title: "Using WQL and Scripting Languages with the WMI Provider | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

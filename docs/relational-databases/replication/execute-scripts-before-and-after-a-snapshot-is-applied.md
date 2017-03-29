@@ -1,5 +1,5 @@
 ---
-title: "Execute Scripts Before and After a Snapshot Is Applied (SQL Server Management Studio) | Microsoft Docs"
+title: "Execute Scripts Before and After a Snapshot Is Applied | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Initialize a Transactional Subscription from a Backup (Replication Transact-SQL Programming) | Microsoft Docs"
+title: "Initialize a Transactional Subscription from a Backup | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-server-2016"

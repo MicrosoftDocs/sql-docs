@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_linux_proc_meminfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/10/2017"
+ms.date: "03/29/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,6 +30,8 @@ manager: "jhubbard"
 Returns information about memory page allocation when [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is running on Linux.  
 This dmv is based off of the linux `/proc/meminfo` file. It provides information about your system's memory. If a field is missing from the file, it will be set to NULL in the DMV.				
 
+> [!NOTE]  
+> Implementation of this DMV has been delayed. Expect it, or something similar in a future CTP.
 
 |Column name |Data type |Description |  
 |---------------- |-------------- |---------------- |  

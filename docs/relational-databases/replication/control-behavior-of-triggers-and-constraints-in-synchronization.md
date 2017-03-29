@@ -1,5 +1,5 @@
 ---
-title: "Control the Behavior of Triggers and Constraints During Synchronization (Replication Transact-SQL Programming) | Microsoft Docs"
+title: "Control Behavior of Triggers and Constraints in Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-server-2016"

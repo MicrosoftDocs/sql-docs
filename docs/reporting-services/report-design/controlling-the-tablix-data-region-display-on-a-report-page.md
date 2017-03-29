@@ -1,5 +1,5 @@
 ---
-title: "Controlling the Tablix Data Region Display on a Report Page (Report Builder and SSRS) | Microsoft Docs"
+title: "Controlling the Tablix Data Region Display on a Report Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

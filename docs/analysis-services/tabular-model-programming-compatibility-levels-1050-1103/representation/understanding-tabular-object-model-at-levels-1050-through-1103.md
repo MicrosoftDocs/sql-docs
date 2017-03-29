@@ -1,5 +1,5 @@
 ---
-title: "Understanding the Tabular Object Model at Compatibility Levels 1050 through 1103 | Microsoft Docs"
+title: "Understanding Tabular Object Model at Levels 1050 through 1103 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

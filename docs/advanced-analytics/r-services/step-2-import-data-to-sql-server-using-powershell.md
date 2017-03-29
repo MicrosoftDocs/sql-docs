@@ -1,5 +1,5 @@
 ---
-title: "Step 2: Import Data to SQL Server using PowerShell (In-Database Advanced Analytics Tutorial) | Microsoft Docs"
+title: "Step 2: Import Data to SQL Server using PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: "sql-server-2016"

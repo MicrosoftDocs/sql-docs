@@ -1,5 +1,5 @@
 ---
-title: "Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse) | Microsoft Docs"
+title: "GRANT-DENY-REVOKE Perms-Azure SQL Data and Parallel Data Warehouses | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"

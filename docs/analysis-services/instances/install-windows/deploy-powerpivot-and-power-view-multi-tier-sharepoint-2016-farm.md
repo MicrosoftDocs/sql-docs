@@ -1,5 +1,5 @@
 ---
-title: "Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm | Microsoft Docs"
+title: "Deploy PowerPivot and Power View - Multi-Tier SharePoint 2016 Farm | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

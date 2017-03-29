@@ -1,5 +1,5 @@
 ---
-title: "Set Parameters on a Published Report (Reporting Services in SharePoint Integrated Mode) | Microsoft Docs"
+title: "Set Parameters on a Published Report - SharePoint Integrated Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

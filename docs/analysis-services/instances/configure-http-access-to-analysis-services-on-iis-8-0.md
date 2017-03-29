@@ -1,5 +1,5 @@
 ---
-title: "Configure HTTP Access to Analysis Services on Internet Information Services (IIS) 8.0 | Microsoft Docs"
+title: "Configure HTTP Access to Analysis Services on IIS 8.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

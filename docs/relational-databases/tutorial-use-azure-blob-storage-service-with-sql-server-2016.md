@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases | Microsoft Docs"
+title: "Tutorial: Use Azure Blob storage service with SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "01/07/2016"

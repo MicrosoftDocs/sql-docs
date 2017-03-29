@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_linux_proc_cpuinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/10/2017"
+ms.date: "03/29/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,6 +30,8 @@ manager: "jhubbard"
 Returns information about CPU allocation when [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is running on Linux.  
 This DMV is based off of the linux `/proc/cpuinfo` file. It provides information about the processors in your system. There will be one row for every logical processor on the machine. If a field is misisng from the file, it will be set to NULL in the DMV.				
 
+> [!NOTE]  
+> Implementation of this DMV has been delayed. Expect it, or something similar in a future CTP.
 
 |Column name |Data type |Description |  
 |-----------------|---------------|-----------------|  

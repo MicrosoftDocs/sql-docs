@@ -1,9 +1,11 @@
 # [Overview](report-data-ssrs.md)  
+# [Data Sources Supported by Reporting Services](data-sources-supported-by-reporting-services-ssrs.md)  
 # [Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 # [Add and Verify a Data Connection](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
 # [Create, Modify, and Delete Shared Data Sources](create-modify-and-delete-shared-data-sources-ssrs.md)  
 # [Create and Modify Embedded Data Sources](create-and-modify-embedded-data-sources.md)  
 # [Convert Data Sources](convert-data-sources-report-builder-and-ssrs.md)  
+
 # [Add Data from External Data Sources](add-data-from-external-data-sources-ssrs.md)  
 ## [SQL Server Connection Type](sql-server-connection-type-ssrs.md)  
 ## [Analysis Services Connection Type for MDX](analysis-services-connection-type-for-mdx-ssrs.md)  
@@ -26,7 +28,7 @@
 ### [Retrieve Data from a Data Mining Model (DMX)](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
 ## [Data Processing Extensions and .NET Framework Data Providers](data-processing-extensions-and-net-framework-data-providers-ssrs.md)  
 ### [Register a Standard .NET Framework Data Provider](register-a-standard-net-framework-data-provider-ssrs.md)  
-# [Data Sources Supported by Reporting Services](data-sources-supported-by-reporting-services-ssrs.md)  
+
 # [Manage Report Data Sources](manage-report-data-sources.md)  
 # [Specify Credential and Connection Information for Report Data Sources](specify-credential-and-connection-information-for-report-data-sources.md)  
 # [Store Credentials in a Reporting Services Data Source](store-credentials-in-a-reporting-services-data-source.md)  
@@ -37,6 +39,7 @@
 # [Configure Data Source Properties for a Report](configure-data-source-properties-for-a-report-report-manager.md)  
 # [Use an Office Data Connection (.odc) with Reports](use-an-office-data-connection-odc-with-reports.md)  
 # [Report Data Pane](report-data-pane.md)  
+
 # [Report Datasets](report-datasets-ssrs.md)  
 ## [Query Design Tools](query-design-tools-ssrs.md)  
 ### [Build a Query in the Relational Query Designer](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  

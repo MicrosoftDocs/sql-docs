@@ -1,5 +1,5 @@
 ---
-title: "View and Modify Replication Agent Command Prompt Parameters (SQL Server Management Studio) | Microsoft Docs"
+title: "View and Modify Replication Agent Command Prompt Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Use SQL Server Profiler to Create a SQL Trace Collection Set (SQL Server Management Studio) | Microsoft Docs"
+title: "Use SQL Server Profiler to Create a SQL Trace Collection Set | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

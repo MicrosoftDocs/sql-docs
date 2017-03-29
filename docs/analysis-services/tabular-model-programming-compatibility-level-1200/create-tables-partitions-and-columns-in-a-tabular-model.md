@@ -1,5 +1,5 @@
 ---
-title: "Create Tables, Partitions, and Columns in a Tabular model (Analysis Services AMO-TOM) | Microsoft Docs"
+title: "Create Tables, Partitions, and Columns in a Tabular model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

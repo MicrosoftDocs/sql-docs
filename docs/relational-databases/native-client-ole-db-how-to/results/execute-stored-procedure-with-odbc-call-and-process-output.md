@@ -1,5 +1,5 @@
 ---
-title: "Execute a Stored Procedure (Using ODBC CALL Syntax) and Process Return Codes and Output Parameters (OLE DB) | Microsoft Docs"
+title: "Execute Stored Procedure with ODBC CALL and Process Output | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

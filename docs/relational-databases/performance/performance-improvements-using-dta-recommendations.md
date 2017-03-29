@@ -1,5 +1,5 @@
 ---
-title: "Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations | Microsoft Docs"
+title: "Performance Improvements using DTA recommendations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

@@ -58,7 +58,7 @@ manager: "jhubbard"
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|No||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|No||  
   
-## Supported Scenario Matrix  
+## Supported scenarios  
  The following table shows the supported scenario matrix for installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on a Server Core.  
   
 |||  
@@ -68,10 +68,10 @@ manager: "jhubbard"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] language on OS language/locale (combination)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on JPN (Japanese) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on GER (German) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on CHS (Chinese-China) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on ARA (Arabic (SA)) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on THA (Thai) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on TRK (Turkish) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on pt-PT (Portuguese Portugal) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on ENG (English) Windows|  
 |Windows edition|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
-## Upgrading  
+## Upgrade 
  On Server Core installations, upgrading from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] is supported.  
   
-## Installation  
+## Install  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] does not support setup by using the installation wizard on the Server Core operating system. When installing on Server Core, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports full quiet mode by using the /Q parameter, or Quiet Simple mode by using the /QS parameter. For more information, see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
 > [!IMPORTANT]  
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
  To install specific features, use the /FEATURES parameter and specify the parent feature or feature values. For more information about feature parameters and their use, see the following sections.  
   
-### Feature Parameters  
+### Feature parameters  
   
 |Feature parameter|Description|  
 |-----------------------|-----------------|  
@@ -110,7 +110,7 @@ manager: "jhubbard"
 |/FEATURES=SQLENGINE,ADVANCEDANALYTICS /IACCEPTROPENLICENSETERMS |Installs the  [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)].|  
 
   
-### Installation Options  
+### Installation options  
  The Setup supports the following installation options while installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on a Server Core operating system:  
   
 1.  **Installation from Command Line**  
@@ -257,7 +257,7 @@ manager: "jhubbard"
   
          If the DefaultSetup.ini file does not exist, you can create it and copy it to the \x86 and \x64 folders at the root level of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source media.  
   
-## Configuring Remote Access of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Running on Server Core  
+## Configure remote access of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Server Core  
  Perform the actions described below to configure remote access of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance that is running on a Server Core installation of [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 or [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
   
 ### Enable remote connections on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
@@ -271,7 +271,7 @@ To enable remote connections, use SQLCMD.exe locally and execute the following s
    GO
    ```  
   
-### Enable and start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service  
+### Enable and start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  By default, the Browser service is disabled.  If it is disabled on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Server Core, run the following command from the command prompt to enable it:  
   
  `sc config SQLBROWSER start= auto`  
@@ -317,14 +317,15 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
   
  To remove a named instance, specify the name of the instance instead of `MSSQLSERVER` in the preceding example.  
   
-> [!WARNING]  
->  If you accidentally close the command prompt, you can start a new command prompt by following these steps:  
->   
-> 1.  Press Ctrl+Shift+Esc to display Task Manager.  
-> 2.  On the **Applications** tab, click **New Task**.  
-> 3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+## Start a new command prompt
+
+If you accidentally close the command prompt, you can start a new command prompt by following these steps:  
+ 
+1.  Press Ctrl+Shift+Esc to display Task Manager.  
+2.  On the **Applications** tab, click **New Task**.  
+3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-## See Also  
+## See also  
  [Install SQL Server 2016 Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   

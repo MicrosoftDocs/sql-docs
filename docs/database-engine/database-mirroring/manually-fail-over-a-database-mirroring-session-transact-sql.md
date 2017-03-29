@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], failover"
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 caps.latest.revision: 32
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

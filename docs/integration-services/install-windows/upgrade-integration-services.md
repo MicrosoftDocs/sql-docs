@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "upgrading Integration Services"
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 caps.latest.revision: 53
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
 ---

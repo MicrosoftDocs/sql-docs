@@ -13,6 +13,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], sessions"
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: 58
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

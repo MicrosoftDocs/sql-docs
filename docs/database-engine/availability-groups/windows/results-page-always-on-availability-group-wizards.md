@@ -16,6 +16,7 @@ f1_keywords:
   - "sql13.swb.adddatabasewizard.results.f1"
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 caps.latest.revision: 9
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

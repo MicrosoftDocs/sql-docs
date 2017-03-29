@@ -14,6 +14,7 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 caps.latest.revision: 13
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

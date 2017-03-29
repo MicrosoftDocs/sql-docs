@@ -53,6 +53,30 @@ SELECT * INTO Data_ls FROM EXCELLINK...[Data$];
 GO
 ```
 
+You can create a linked server from SQL Server Management Studio, or by running the system stored procedure `sp_addlinkedserver`, as shown in the following example.
+
+```sql
+DECLARE @RC int
+
+DECLARE @server     nvarchar(128)
+DECLARE @srvproduct nvarchar(128)
+DECLARE @provider   nvarchar(128)
+DECLARE @datasrc    nvarchar(4000)
+DECLARE @location   nvarchar(4000)
+DECLARE @provstr    nvarchar(4000)
+DECLARE @catalog    nvarchar(128)
+
+-- Set parameter values
+SET @server =     'EXCELLINK'
+SET @srvproduct = 'Excel'
+SET @provider =   'Microsoft.ACE.OLEDB.12.0'
+SET @datasrc =    'D:\Desktop\Data.xlsx'
+SET @provstr =    'Excel 12.0'
+
+EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
+@datasrc, @location, @provstr, @catalog
+```
+
 If you don't want to configure a persistent connection to the Excel file as a linked server, you can import data on a one-time basis by using the `OPENDATASOURCE` or the `OPENROWSET` function. This usage is called a distributed query. The following code sample imports the data from the Excel `Customers` worksheet into a new SQL Server table.
 
 ```sql

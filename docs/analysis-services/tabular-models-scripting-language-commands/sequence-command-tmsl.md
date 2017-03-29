@@ -1,7 +1,7 @@
 ---
 title: "Sequence command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -61,9 +61,9 @@ manager: "erikre"
   
 ```  
 {   
-  "sequence": [   
+  "sequence":    
     {   
-      "maxParallelism": "3",   
+      "maxParallelism": 3,   
       "operations": [   
         {   
           "mergepartitions": {   
@@ -90,8 +90,7 @@ manager: "erikre"
           }   
         }   
       ]   
-    }   
-  ]   
+    }      
 }   
 ```  
   

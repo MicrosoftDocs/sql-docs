@@ -20,6 +20,7 @@ helpviewer_keywords:
   - "sys.fn_hadr_distributed_ag_database_replica"
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 caps.latest.revision: 9
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

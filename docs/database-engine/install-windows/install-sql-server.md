@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "installation [SQL Server]"
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 59
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

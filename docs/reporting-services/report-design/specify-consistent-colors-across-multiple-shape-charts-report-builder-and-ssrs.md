@@ -1,5 +1,5 @@
 ---
-title: "Specify Consistent Colors across Multiple Shape Charts (Report Builder and SSRS) | Microsoft Docs"
+title: "Specify Consistent Colors in Multiple Shape Charts-Report Builder-SSRS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-server-2016"

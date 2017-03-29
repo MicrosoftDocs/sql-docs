@@ -1,5 +1,5 @@
 ---
-title: "Performance Considerations with Memory-Optimized System-Versioned Temporal Tables | Microsoft Docs"
+title: "Memory-Optimized System-Versioned Temporal Tables Performance | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "03/28/2016"

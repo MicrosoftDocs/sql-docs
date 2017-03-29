@@ -1,5 +1,5 @@
 ---
-title: "Vary Polygon, Line, and Point Display by Rules and Analytical Data (Report Builder and SSRS) | Microsoft Docs"
+title: "Vary Polygon, Line, and Point Display by Rules and Analytical Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

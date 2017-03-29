@@ -1,5 +1,5 @@
 ---
-title: "Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions | Microsoft Docs"
+title: "Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

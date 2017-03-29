@@ -1,5 +1,5 @@
 ---
-title: "Change the Name of a Registered Server or Registered Server Group (SQL Server Management Studio) | Microsoft Docs"
+title: "Change the Name of Registered Server or Registered Server Group | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: "sql-server-2016"

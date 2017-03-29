@@ -1,5 +1,5 @@
 ---
-title: "Configure the Flexible Failover Policy to Control Conditions for Automatic Failover (Always On Availability Groups) | Microsoft Docs"
+title: "Configure Flexible Automatic Failover Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

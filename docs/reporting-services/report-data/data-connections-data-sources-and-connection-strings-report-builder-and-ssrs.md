@@ -1,5 +1,5 @@
 ---
-title: "Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS) | Microsoft Docs"
+title: "Data Connections, Data Sources, Connection Strings-Report Builder-SSRS | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/24/2017"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Add Dataset Filters, Data Region Filters, and Group Filters (Report Builder and SSRS) | Microsoft Docs"
+title: "Add Dataset Filters, Data Region Filters, and Group Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

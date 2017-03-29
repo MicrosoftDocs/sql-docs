@@ -1,5 +1,5 @@
 ---
-title: "Expression Scope for Totals, Aggregates, and Built-in Collections (Report Builder and SSRS) | Microsoft Docs"
+title: "Expression Scope for Totals, Aggregates, and Built-in Collections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

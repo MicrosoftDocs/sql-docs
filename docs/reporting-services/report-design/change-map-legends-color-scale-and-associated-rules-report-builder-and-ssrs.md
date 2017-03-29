@@ -1,5 +1,5 @@
 ---
-title: "Change Map Legends, Color Scale, and Associated Rules (Report Builder and SSRS) | Microsoft Docs"
+title: "Change Map Legends-Color Scale-Associated Rules in Report Builder-SSRS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

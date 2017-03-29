@@ -1,5 +1,5 @@
 ---
-title: "Define Parameters in the MDX Query Designer for Analysis Services (Report Builder and SSRS) | Microsoft Docs"
+title: "Define Parameters in the MDX Query Designer for Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

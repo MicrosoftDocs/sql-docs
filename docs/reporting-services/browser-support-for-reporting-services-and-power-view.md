@@ -31,8 +31,9 @@ manager: "erikre"
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
 
 Learn about what browser versions are supported for managing and viewing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the ReportViewer Controls and Power View.
-  
- **Applies to:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
 ##  <a name="bkmk_webportal"></a> Browser requirements for the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]
 

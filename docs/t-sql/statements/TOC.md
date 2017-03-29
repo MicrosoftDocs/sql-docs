@@ -320,7 +320,8 @@
 ## [REVOKE System Object Permissions](revoke-system-object-permissions-transact-sql.md)  
 ## [REVOKE Type Permissions](revoke-type-permissions-transact-sql.md)  
 ## [REVOKE XML Schema Collection Permissions](revoke-xml-schema-collection-permissions-transact-sql.md)  
-# [SETUSER](setuser-transact-sql.md)  
+## [SETUSER](setuser-transact-sql.md)
+  
 # [Service Broker](service-broker-statements.md)  
 ## [BEGIN CONVERSATION TIMER](begin-conversation-timer-transact-sql.md)  
 ## [BEGIN DIALOG CONVERSATION](begin-dialog-conversation-transact-sql.md)  

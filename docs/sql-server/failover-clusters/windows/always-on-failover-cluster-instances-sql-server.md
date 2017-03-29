@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "AlwaysOn [SQL Server], see failover clustering [SQL Server]"
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 caps.latest.revision: 80
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Create a Local Package Repository Using miniCRAN | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/27/2016"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,7 +33,7 @@ There are two options for installing packages from a local share or repository:
 1. Install the miniCRAN package on a computer that has Internet access.
 
    ~~~~
-   # Install miniCRAN ---------------------------------------------------
+   # Install miniCRAN and igraph
 
    if(!require("miniCRAN")) install.packages("miniCRAN")
    if(!require("igraph")) install.packages("igraph")
@@ -46,39 +46,69 @@ There are two options for installing packages from a local share or repository:
    local_repo <- "~/miniCRAN"
    ~~~~
 
-2. Download or install the packages you need to this  computer. This will create the folder structure that you need to copy the packages to the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] later.
+2. Download or install the packages you need to this computer usng the following R script. This will create the folder structure that you need to copy the packages to the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] later.
 
    ~~~~
-   # List the packages you need 
-   # Do not specify dependencies
+   # List the packages to get. Do not specify dependencies.
    pkgs_needed <- c("ggplot2", "ggdendro")
-   ~~~~
-
-3. Copy the miniCRAN repository to the R_SERVICES library on the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance.
-
-## Step 2. Install the packages on the SQL Server computer 
-
-4. On the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computer, run the R command  `install.packages()`. You can use one of the R tools that are installed with [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], such as Rgui.exe, or you can run the command as part of a [!INCLUDE[tsql_md](../../includes/tsql-md.md)] stored procedure.
-5. At the prompt to specify a repository, select the folder containing the files you just copied; that is, the local miniCRAN repository.
-
-   ~~~~
-   pkgs_needed <- c("ggplot2", "ggdendro")
-   local_repo  <- "~/miniCRAN"
+   # Plot the dependency graph ----------------------------------------------- 
+   plot(makeDepGraph(pkgs_needed)) 
    
-   .libPaths()[1]
-   "C:/Program Files/Microsoft SQL Server/130/R_SERVER/library"
+   # Create the local repo --------------------------------------------------- 
+   pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror) 
+   makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.2") 
 
-   lib <- .libPaths()[1]
-
-   install.packages(pkgs_needed, 
-                 repos = file.path("file://", normalizePath(local_repo, winslash = "/")),
-                 lib = lib,
-                 type = "win.binary",
-                 dependencies = TRUE
-                 )
+   # List local packages ----------------------------------------------------- 
+   pdb <- as.data.frame( 
+     pkgAvail(local_repo, type = "win.binary", Rversion = "3.2"),  
+     stringsAsFactors = FALSE) 
+   head(pdb) 
+   pdb$Package 
+   pdb[, c("Package", "Version", "License")] 
    ~~~~
 
-6. Verify that the packages were installed by running this R code.
+
+## Step 2. Copy the miniCRAN repository to the SQL Server computer 
+
+Copy the miniCRAN repository to the R_SERVICES library on the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance.
+
++ For SQL Server 2016, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library1`.
++ For SQL Server vNext, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library1`.
+
+If you have installed R Services using a named instance, be sure to include the instance name in the path, to ensure that the libraries are installed to the correct instance. For example, if your named instance is RTEST02, the default path for the named instance would be:
+`C:\Program Files\Microsoft SQL Server\MSSQL13.RTEST02\R_SERVICES\library`.
+
+If you have installed SQL Server to a different drive, or made any other changes in the installation path, be sure to make those changes as well.
+
+## Step 3. Install the packages on SQL Server using the miniCRAN repository
+
+On the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computer, open an R command line or RGUI as administrator. 
+  
+> [!TIP]
+> You might have multiple R libraries on the computer; therefore, to ensure that packages are installed to the correct instance, use the copy of RGUI o RTerm that is installed with the specific instance where you want to install the packages.
+  
+When prompted to specify a repository, select the folder containing the files you just copied; that is, the local miniCRAN repository.
+
+   ~~~~
+   # Run this R code as administrator on the SQL Server computer 
+   pkgs_needed <- c("ggplot2", "ggdendro") 
+   local_repo  <- "~/miniCRAN" 
+
+   # OPTIONAL: If you are not running R from the instance library as recommended, you must specify the path
+   #   .libPaths()[1] 
+   # "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library " 
+   # lib <- .libPaths()[1]
+   
+   install.packages(pkgs_needed,  
+                    repos = file.path("file://", normalizePath(local_repo, winslash = "/")), 
+                    lib = lib, 
+                    type = "win.binary", 
+                    dependencies = TRUE 
+                    ) 
+   installed.packages() 
+   ~~~~
+
+Verify that the packages were installed.
    ~~~~
    installed.packages()
    ~~~~

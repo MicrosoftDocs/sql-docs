@@ -351,7 +351,7 @@ COMMIT ;
     WITH SCHEMABINDING   
     AS   
     RETURN  SELECT 1 AS is_eligible  
-        WHERE @column1 < CONVERT(datetime, '1/1/2015', 101) AND (@column2 \< -100 OR @column2 > 100 OR @column2 IS NULL) AND @column3 IN (N'Completed', N'Returned', N'Cancelled')  
+        WHERE @column1 < CONVERT(datetime, '1/1/2015', 101) AND (@column2 < -100 OR @column2 > 100 OR @column2 IS NULL) AND @column3 IN (N'Completed', N'Returned', N'Cancelled')  
     GO  
   
     ```  
@@ -391,7 +391,7 @@ COMMIT ;
     WITH SCHEMABINDING   
     AS   
     RETURN  SELECT 1 AS is_eligible  
-            WHERE @column1 >= 0 AND @column1 <= 100 AND (@column2 \< 200 OR @column2 > 300 OR @column1 = 50)  
+            WHERE @column1 >= 0 AND @column1 <= 100 AND (@column2 < 200 OR @column2 > 300 OR @column1 = 50)  
     GO  
   
     ```  
@@ -479,7 +479,7 @@ COMMIT ;
     WITH SCHEMABINDING   
     AS   
     RETURN  SELECT 1 AS is_eligible  
-            WHERE (@column1 >= 1 AND @column1 \<= 200 OR @column1 = 300) AND @column2 > 1000  
+            WHERE (@column1 >= 1 AND @column1 <= 200 OR @column1 = 300) AND @column2 > 1000  
     GO  
   
     ```  
@@ -525,7 +525,7 @@ WITH SCHEMABINDING
 AS   
 RETURN  SELECT 1 AS is_eligible  
         WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)  
-            AND (@column2 \< -100 OR @column2 > 100)  
+            AND (@column2 < -100 OR @column2 > 100)  
 GO  
   
 ```  
@@ -539,7 +539,7 @@ WITH SCHEMABINDING
 AS   
 RETURN  SELECT 1 AS is_eligible  
         WHERE @column1 < CONVERT(datetime, '2/1/2016', 101)  
-            AND (@column2 \< -50 OR @column2 > 50)  
+            AND (@column2 < -50 OR @column2 > 50)  
 GO  
   
 ```  
@@ -554,7 +554,7 @@ WITH SCHEMABINDING
 AS   
 RETURN  SELECT 1 AS is_eligible  
         WHERE @column1 < CONVERT(datetime, '1/1/2015', 101)  
-            AND (@column2 \< -100 OR @column2 > 100)  
+            AND (@column2 < -100 OR @column2 > 100)  
 GO  
   
 ```  
@@ -582,7 +582,7 @@ WITH SCHEMABINDING
 AS   
 RETURN  SELECT 1 AS is_eligible  
         WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)  
-            AND (@column2 \< -100 OR @column2 > 100)  
+            AND (@column2 < -100 OR @column2 > 100)  
             AND (@column2 <> 0)  
 GO  
   

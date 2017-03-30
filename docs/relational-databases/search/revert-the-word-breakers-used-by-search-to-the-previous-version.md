@@ -150,7 +150,7 @@ manager: "jhubbard"
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
   
-5.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+5.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 6.  Use the following steps to add new keys for the COM ClassIDs for the previous word breaker and stemmer interfaces for the selected language:  
   
@@ -162,7 +162,7 @@ manager: "jhubbard"
   
     4.  If the selected language uses a stemmer, then update the (Default) data of that key value to the file name of the previous stemmer from the table.  
   
-7.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* represents the abbreviation for the language that is used in the registry; for example, "fra" for French and "esn" for Spanish.  
+7.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* represents the abbreviation for the language that is used in the registry; for example, "fra" for French and "esn" for Spanish.  
   
 8.  Update the **WBreakerClass** key value to the value from the table for the current word breaker.  
   
@@ -179,7 +179,7 @@ manager: "jhubbard"
     > [!WARNING]  
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
   
-3.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+3.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 4.  If the following keys do not exist, then use the following steps to add new keys for the COM ClassIDs for the current word breaker and stemmer interfaces for the selected language:  
   
@@ -191,7 +191,7 @@ manager: "jhubbard"
   
     4.  If the selected language uses a stemmer, then update the (Default) data of that key value to the file name of the current stemmer from the table.  
   
-5.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* represents the abbreviation for the language that is used in the registry; for example, "fra" for French and "esn" for Spanish.  
+5.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* represents the abbreviation for the language that is used in the registry; for example, "fra" for French and "esn" for Spanish.  
   
 6.  Update the **WBreakerClass** key value to the value from the table for the previous word breaker.  
   
@@ -271,7 +271,7 @@ manager: "jhubbard"
   
 1.  Do not remove the files for the current version of the components from the Binn folder.  
   
-2.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 3.  Use the following steps to add new keys for the COM ClassIDs for the previous word breaker and stemmer interfaces for the selected language:  
   
@@ -283,7 +283,7 @@ manager: "jhubbard"
   
     4.  If the selected language uses a stemmer, then update the (Default) data of that key value to the file name of the previous stemmer from the table.  
   
-4.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* represents the abbreviation for the language that is used in the registry; for example, "fra" for French and "esn" for Spanish.  
+4.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* represents the abbreviation for the language that is used in the registry; for example, "fra" for French and "esn" for Spanish.  
   
 5.  Update the **WBreakerClass** key value to the value from the table for the current word breaker.  
   
@@ -295,7 +295,7 @@ manager: "jhubbard"
   
 1.  Do not remove the files for the previous version of the components from the Binn folder.  
   
-2.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 3.  If the following keys do not exist, then use the following steps to add new keys for the COM ClassIDs for the current word breaker and stemmer interfaces for the selected language:  
   
@@ -307,7 +307,7 @@ manager: "jhubbard"
   
     4.  If the selected language uses a stemmer, then update the (Default) data of that key value to the file name of the current stemmer from the table.  
   
-4.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<language_key>* represents the abbreviation for the language that is used in the registry; for example, "fra" for French and "esn" for Spanish.  
+4.  In the registry, navigate to the following node: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* represents the abbreviation for the language that is used in the registry; for example, "fra" for French and "esn" for Spanish.  
   
 5.  Update the **WBreakerClass** key value to the value from the table for the previous word breaker.  
   

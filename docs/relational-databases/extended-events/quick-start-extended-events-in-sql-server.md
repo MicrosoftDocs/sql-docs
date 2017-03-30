@@ -54,10 +54,10 @@ Blogs and other informal conversations sometimes refer to extended events by the
 The following preliminaries would be required for you to actually perform the upcoming demonstration.
 
 1. [Download SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
-   - Each month you should install the latest monthly update of SSMS.
+  - Each month you should install the latest monthly update of SSMS.
 2. Log in to Microsoft SQL Server 2014 or higher, or in to an Azure SQL Database database where `SELECT @@version` returns a value whose first node is 12 or higher.
 3. Ensure that your account has the [server permission](../../t-sql/statements/grant-server-permissions-transact-sql.md) of **ALTER ANY EVENT SESSION**.
-   - If interested, more details about security and permissons related to extended events are available at the end of this article in the [Appendix](#appendix1).
+  - If interested, more details about security and permissons related to extended events are available at the end of this article in the [Appendix](#appendix1).
 
 
 

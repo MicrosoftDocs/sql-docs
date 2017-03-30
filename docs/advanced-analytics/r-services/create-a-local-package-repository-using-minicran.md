@@ -51,14 +51,14 @@ There are two options for installing packages from a local share or repository:
    ~~~~
    # List the packages to get. Do not specify dependencies.
    pkgs_needed <- c("ggplot2", "ggdendro")
-   # Plot the dependency graph ----------------------------------------------- 
+   # Plot the dependency graph 
    plot(makeDepGraph(pkgs_needed)) 
    
-   # Create the local repo --------------------------------------------------- 
+   # Create the local repo 
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror) 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.2") 
 
-   # List local packages ----------------------------------------------------- 
+   # List local packages 
    pdb <- as.data.frame( 
      pkgAvail(local_repo, type = "win.binary", Rversion = "3.2"),  
      stringsAsFactors = FALSE) 

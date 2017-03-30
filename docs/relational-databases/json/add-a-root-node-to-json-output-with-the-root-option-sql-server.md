@@ -57,7 +57,7 @@ manager: "jhubbard"
 ```json  
 {   
   "root": [  
-   <\< json array elements >>  
+   << json array elements >>  
   ]  
 }  
 ```  

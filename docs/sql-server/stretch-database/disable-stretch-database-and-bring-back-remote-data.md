@@ -65,9 +65,9 @@ manager: "jhubbard"
     This command can't be canceled.  
   
     ```tsql  
-    USE \<Stretch-enabled database name>;
+    USE <Stretch-enabled database name>;
     GO
-    ALTER TABLE \<Stretch-enabled table name>  
+    ALTER TABLE <Stretch-enabled table name>  
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ; 
     GO 
     ```  
@@ -78,9 +78,9 @@ manager: "jhubbard"
 -   To disable Stretch for a table and abandon the remote data, run the following command.  
   
     ```tsql  
-    USE \<Stretch-enabled database name>;
+    USE <Stretch-enabled database name>;
     GO
-    ALTER TABLE \<Stretch-enabled table name>  
+    ALTER TABLE <Stretch-enabled table name>  
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ; 
     GO
     ```  
@@ -104,7 +104,7 @@ manager: "jhubbard"
  Run the following command.  
   
 ```tsql  
-ALTER DATABASE \<Stretch-enabled database name>  
+ALTER DATABASE <Stretch-enabled database name>  
     SET REMOTE_DATA_ARCHIVE = OFF ;  
 GO 
 ```  

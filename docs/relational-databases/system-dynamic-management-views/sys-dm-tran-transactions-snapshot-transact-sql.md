@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_tran_transactions_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "03/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,14 +18,14 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_tran_transactions_snapshot dynamic management view"
-ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
+ms.assetid: 03f64883-07ad-4092-8be0-31973348c647 
 caps.latest.revision: 37
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sys.dm_tran_transactions_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns a virtual table for the **sequence_number** of transactions that are active when each snapshot transaction starts. The information that is returned by this view can you help you do the following:  
   

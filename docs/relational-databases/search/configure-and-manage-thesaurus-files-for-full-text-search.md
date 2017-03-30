@@ -100,7 +100,7 @@ A typical empty thesaurus file contains the following XML text:
 ### Change the location of a thesaurus file 
  You can change the location and names of a thesaurus file by changing its registry key. For each language, the location of the thesaurus file is specified in the following value in the registry:  
   
-    HKLM/SOFTWARE/Microsoft/Microsoft SQL Server/<instance name>/MSSearch/Language/<language-abbreviation>/TsaurusFile  
+    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
   
  The global thesaurus file corresponds to the Neutral language with LCID 0. This value can be changed by administrators only.  
 
@@ -110,11 +110,11 @@ A typical empty thesaurus file contains the following XML text:
 2.  These steps are then repeated for the global thesaurus. However, if a term is already part of a match in the language specific thesaurus file, the term is ineligible for matching in the global thesaurus.  
   
 ##  <a name="structure"></a> Structure of a thesaurus file  
- Each thesaurus file defines an XML container whose ID is `Microsoft Search Thesaurus`, and a comment, `<!--` … `-->`, that contains a sample thesaurus. The thesaurus is defined in a <thesaurus> element that contains samples of the child elements that define the diacritics setting, expansion sets, and replacement sets, as follows:  
+ Each thesaurus file defines an XML container whose ID is `Microsoft Search Thesaurus`, and a comment, `<!--` … `-->`, that contains a sample thesaurus. The thesaurus is defined in a `<thesaurus>` element that contains samples of the child elements that define the diacritics setting, expansion sets, and replacement sets, as follows:  
   
 ### XML Structure of the Diacritical Setting  
   
-The diacritics setting of a thesaurus is specified in a single <diacritics_sensitive> element. This element contains an integer value that controls accent sensitivity, as follows:  
+The diacritics setting of a thesaurus is specified in a single `<diacritics_sensitive>` element. This element contains an integer value that controls accent sensitivity, as follows:  
   
 |Diacritics Setting|Value|XML|  
 |------------------------|-----------|---------|  
@@ -126,7 +126,7 @@ The diacritics setting of a thesaurus is specified in a single <diacritics_sensi
   
 ### XML Structure of an Expansion Set  
   
- Each expansion set is enclosed within an <expansion> element. Within this element, you specify one or more substitutions in a <sub> element. In the expansion set, you can specify a group of substitutions that are synonyms of each other.  
+ Each expansion set is enclosed within an `<expansion>` element. Within this element, you specify one or more substitutions in a `<sub>` element. In the expansion set, you can specify a group of substitutions that are synonyms of each other.  
   
  For example, you can edit the expansion section to treat the substitutions "writer", "author", and "journalist" as synonyms. full-text search queries that contain matches in one substitution are expanded to include all other substitutions specified in the expansion set. Therefore, in the preceding example, when you issue a FORMS OF THESAURUS or a FREETEXT query for the word "author", full-text search also returns search results containing the words "writer" and "journalist".  
   
@@ -142,7 +142,7 @@ This is what the expansion set section would look like for the above example:
   
 ### XML Structure of a Replacement Set  
   
-Each replacement set is enclosed within a <replacement> element. Within this element you can specify one or more patterns in a <pat> element and zero or more substitutions in <sub> elements, one per synonym. You can specify a pattern to be replaced by a substitution set. Patterns and substitutions can contain a word, or a sequence of words. If there is no substitution specified for a pattern, it has the effect of removing the pattern from the user query.  
+Each replacement set is enclosed within a `<replacement>` element. Within this element you can specify one or more patterns in a `<pat>` element and zero or more substitutions in `<sub>` elements, one per synonym. You can specify a pattern to be replaced by a substitution set. Patterns and substitutions can contain a word, or a sequence of words. If there is no substitution specified for a pattern, it has the effect of removing the pattern from the user query.  
   
 For example, suppose you want queries for "Win8", the pattern, to be replaced by "Windows Server 2012" or "Windows 8.0", the substitutions. If you run a full-text query for "Win8", full-text search only returns search results containing "Windows Server 2012" or "Windows 8.0". It does not return results containing "Win8". This is because the pattern "Win8" has been "replaced" by the patterns "Windows Server 2012" and "Windows 8.0".  
   
@@ -176,7 +176,7 @@ and
 ```  
 
 ##  <a name="editing"></a> Edit a thesaurus file  
- The thesaurus for a given language can be configured by editing its thesaurus file (an XML file). During setup, empty thesaurus files that contain only the <xml> container and a commented-out sample <thesaurus> element are installed. In order for full-text search queries that look for synonyms to work properly, you must create an actual <thesaurus> element that defines a set of synonyms. You can define two forms of synonyms, expansion sets and replacement sets.  
+ The thesaurus for a given language can be configured by editing its thesaurus file (an XML file). During setup, empty thesaurus files that contain only the `<xml>` container and a commented-out sample `<thesaurus>` element are installed. In order for full-text search queries that look for synonyms to work properly, you must create an actual `<thesaurus>` element that defines a set of synonyms. You can define two forms of synonyms, expansion sets and replacement sets.  
   
  ### Restrictions for editing thesaurus files  
   
@@ -190,13 +190,13 @@ and
   
 -   Phrases in the thesaurus file must be no longer than 512 characters.  
   
--   A thesaurus must not contain any duplicate entries among the <sub> entries of expansion sets and the <pat> elements of replacement sets.  
+-   A thesaurus must not contain any duplicate entries among the `<sub>` entries of expansion sets and the `<pat>` elements of replacement sets.  
   
  ### Recommendations for editing thesaurus files  
   
  We recommend that entries in the thesaurus file contain no special characters. This is because word breakers have subtle behaviors with respect to special characters. If a thesaurus entry contains any special characters, word breakers used in combination with that entry can have subtle behavioral implications for a full-text query.  
   
- We recommend that <sub> entries contain no stopwords since stopwords are omitted from the full-text index. Queries are expanded to include the <sub> entries from a thesaurus file, and if a <sub> entry contains stopwords, query size increases unnecessarily.  
+ We recommend that `<sub>` entries contain no stopwords since stopwords are omitted from the full-text index. Queries are expanded to include the `<sub>` entries from a thesaurus file, and if a `<sub>` entry contains stopwords, query size increases unnecessarily.  
   
 ### Edit a thesaurus file  
   

@@ -20,8 +20,8 @@ manager: "jhubbard"
   
 ##  <a name="wizardMapping"></a> How does the wizard map data types between source and destination?
 The wizard uses mapping files that are installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to map data types from one database system or version to another. For example, it can map from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types to Oracle data types. By default, the mapping files in XML format are installed in the following folders.
--   **C:\Program Files\Microsoft SQL Server\130\DTS\MappingFiles** (for 64-bit)
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTS\MappingFiles** (for 32-bit).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\** (for 64-bit)
+-   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\** (for 32-bit).  
   
  If you edit an existing mapping file, or add a new mapping file to the folder, you have to close and reopen the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to load the new or changed mapping file.  
  
@@ -36,7 +36,7 @@ Here's a portion of the XML mapping file that maps from SQL Server data types (o
   
 ```xml  
   
-\<dtm:DataTypeMappings  
+<dtm:DataTypeMappings  
     xmlns:dtm="http://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
@@ -46,33 +46,33 @@ Here's a portion of the XML mapping file that maps from SQL Server data types (o
     MinDestinationVersion="08.*"   
     MaxDestinationVersion="*">  
   
-    \<!-- smallint -->  
-    \<dtm:DataTypeMapping >  
-        \<dtm:SourceDataType>  
-            \<dtm:DataTypeName>smallint\</dtm:DataTypeName>  
-        \</dtm:SourceDataType>  
-        \<dtm:DestinationDataType>  
-            \<dtm:SimpleType>  
-                \<dtm:DataTypeName>INTEGER\</dtm:DataTypeName>  
-            \</dtm:SimpleType>  
-        \</dtm:DestinationDataType>  
-    \</dtm:DataTypeMapping>    
+    <!-- smallint -->  
+    <dtm:DataTypeMapping >  
+        <dtm:SourceDataType>  
+            <dtm:DataTypeName>smallint</dtm:DataTypeName>  
+        </dtm:SourceDataType>  
+        <dtm:DestinationDataType>  
+            <dtm:SimpleType>  
+                <dtm:DataTypeName>INTEGER</dtm:DataTypeName>  
+            </dtm:SimpleType>  
+        </dtm:DestinationDataType>  
+    </dtm:DataTypeMapping>    
   
-    \<!-- int -->  
-    \<dtm:DataTypeMapping >  
-        \<dtm:SourceDataType>  
-            \<dtm:DataTypeName>int\</dtm:DataTypeName>  
-        \</dtm:SourceDataType>  
-        \<dtm:DestinationDataType>  
-            \<dtm:SimpleType>  
-                \<dtm:DataTypeName>INTEGER\</dtm:DataTypeName>  
-            \</dtm:SimpleType>  
-        \</dtm:DestinationDataType>  
-    \</dtm:DataTypeMapping>    
+    <!-- int -->  
+    <dtm:DataTypeMapping >  
+        <dtm:SourceDataType>  
+            <dtm:DataTypeName>int</dtm:DataTypeName>  
+        </dtm:SourceDataType>  
+        <dtm:DestinationDataType>  
+            <dtm:SimpleType>  
+                <dtm:DataTypeName>INTEGER</dtm:DataTypeName>  
+            </dtm:SimpleType>  
+        </dtm:DestinationDataType>  
+    </dtm:DataTypeMapping>    
   
         ...  
   
-\</dtm:DataTypeMappings>  
+</dtm:DataTypeMappings>  
   
 ```  
 

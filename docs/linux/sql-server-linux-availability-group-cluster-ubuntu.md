@@ -62,7 +62,7 @@ The following sections walk through the steps to set up a failover cluster solut
    sudo apt-get install pacemaker pcs fence-agents resource-agents
    ```
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster
@@ -84,24 +84,38 @@ sudo systemctl enable pacemaker
 
 1. Remove any existing cluster configuration. 
 
-   The following command removes any existing cluster configuration files and stops all cluster services. This permanently destroys the cluster. Run it as a first step in a pre-production environment. Run the following command on all nodes. 
+   Running 'sudo apt-get install pcs' installs pacemaker, corosync, and pcs at the same time and starts running all 3 of the services.  Starting corosync generates a template '/etc/cluster/corosync.conf' file.  To have next steps succeed this file should not exist – so the workaround is to stop pacemaker / corosync and delete '/etc/cluster/corosync.conf', and then next steps will complete successfully. 'pcs cluster destroy' does the same thing, and you can use it as a one time initial cluster setup step.
+   
+   The following command removes any existing cluster configuration files and stops all cluster services. This permanently destroys the cluster. Run it as a first step in a pre-production environment. Run the following command on all nodes. Note that 'pcs cluster destroy' disabled the pacemaker service and needs to be reenabled.
    
    >[!WARNING]
    >The command will destroy any existing cluster resources.
 
    ```bash
    sudo pcs cluster destroy # On all nodes
+   sudo systemctl enable pacemaker
    ```
 
 1. Create the cluster. 
 
-   The following command creates a two node cluster. Before you run the script, replace the values between `**< ... >**`. Run the following command the primary SQL Server. 
+   >[!WARNING]
+   >Due to a known issue that the clustering vendor is investigating, starting the cluster ('pcs cluster start') will fail with below error. This is because the log file configured in /etc/corosync/corosync.conf is wrong. To workaround this issue, change the log file to: /var/log/corosync/corosync.log. Alternatively you could create the /var/log/cluster/corosync.log file.
+ 
+ ```bash
+ Job for corosync.service failed because the control process exited with error code. 
+ See "systemctl status corosync.service" and "journalctl -xe" for details.
+  ```
+  
+The following command creates a two node cluster. Before you run the script, replace the values between `**< ... >**`. Run the following command on the primary SQL Server. 
 
    ```bash
    sudo pcs cluster auth **<nodeName1>** **<nodeName2>**  -u hacluster -p **<password for hacluster>**
-   sudo pcs cluster setup --name **<clusterName>** **<nodeName1>** **<nodeName2…>** --force
+   sudo pcs cluster setup --name **<clusterName>** **<nodeName1>** **<nodeName2…>** 
    sudo pcs cluster start --all
    ```
+   
+   >[!NOTE]
+   >If you previously configured a cluster on the same nodes, you need to use '--force' option when running 'pcs cluster setup'. Note this is equivalent to running 'pcs cluster destroy' and pacemaker service needs to be reenabled using 'sudo systemctl enable pacemaker'.
 
 ## Install SQL Server resource agent for integration with Pacemaker
 
@@ -111,9 +125,10 @@ Run the following commands on all nodes.
 sudo apt-get install mssql-server-ha
 ```
 
-## Disable STONITH
+## Configure fencing (STONITH)
+Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. Fencing configuration is needed to allow a surviving cluster node to forcibly remove a non-responsive node from the cluster. For details, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
 
-Run the following command to disable STONITH.
+To continue the configuration and validate the cluster setup , disable STONITH (it can be configured at a later time):
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -131,8 +146,8 @@ sudo pcs property set stonith-enabled=false
 
 To create the availability group resource, set properties as follows:
 
-- **clone-max**: Number of AG replicas, including primary. For example, if you have one primary and one secondary, set this to 2.
-- **clone-node-max**: Number of secondaries. For example, if you have one primary and one secondary, set this to 1.
+- **clone-max**: Number of AG replicas, including primary. For example, if you have one primary and one secondary, set this to 2. Default is number of nodes in the cluster.
+- **clone-node-max**: Number of replicas that can be started on a node. Set this to 1 (or use the default which is 1).
 
 The following script sets these properties.
 
@@ -187,7 +202,7 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 >After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs`. 
 
 >[!IMPORTANT]
->If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
+>If the availability group is a cluster resource, there is a known issue in current release where forced failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
 
 Manually failover the availability group with `pcs`. Do not initiate failover with Transact-SQL.
 

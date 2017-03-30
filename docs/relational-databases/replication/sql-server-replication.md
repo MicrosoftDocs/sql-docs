@@ -27,7 +27,7 @@ manager: "jhubbard"
   
  **Browse by area**  
  - [What’s New](../../relational-databases/replication/what-s-new-replication.md)  
--  [Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)  
+ - [Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)  
  - [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)  
  - [Technical Reference](../../relational-databases/replication/technical-reference-replication.md)  
   

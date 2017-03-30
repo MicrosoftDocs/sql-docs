@@ -53,7 +53,6 @@ Blogs and other informal conversations sometimes refer to extended events by the
 
 The following preliminaries would be required for you to actually perform the upcoming demonstration.
 
-
 1. [Download SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
     - Each month you should install the latest monthly update of SSMS.
 2. Log in to Microsoft SQL Server 2014 or higher, or in to an Azure SQL Database database where `SELECT @@version` returns a value whose first node is 12 or higher.
@@ -110,8 +109,8 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
 7. Click the **Filter (Predicate)** tab. Next, click **Click here to add a clause**, for the intention of capturing all SQL SELECT statements that have a HAVING clause.
 
 8. In the **Field** drop-down list, and choose **sqlserver.sql_text**.
-  - For **Operator** choose a LIKE operator.
-  - For **Value** type in **%SELECT%HAVING%**.
+   - For **Operator** choose a LIKE operator.
+   - For **Value** type in **%SELECT%HAVING%**.
 
     > [!NOTE]
     > In this two part name, *sqlserver* is the package name, and *sql_text* is the field name. The event we chose earlier, *sql_statement_completed* must be in the same package as the field we choose.
@@ -292,7 +291,8 @@ trace_event_id         3
 In SSMS, run the following T-SQL SELECT to return results where each row provides the data about one event occurrence. The CAST AS XML makes viewing the results easy.
 
 
-> [AZURE.NOTE] The event system always appends a long number to the *.xel* event_file file name you specified. Before you can run the following SELECT from the file, you must copy the full name given by the system, and paste it into the SELECT.
+> [!NOTE]
+> The event system always appends a long number to the *.xel* event_file file name you specified. Before you can run the following SELECT from the file, you must copy the full name given by the system, and paste it into the SELECT.
 
 
 ```tsql

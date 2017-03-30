@@ -85,7 +85,7 @@ If you have installed SQL Server to a different drive, or made any other changes
 On the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computer, open an R command line or RGUI as administrator. 
   
 > [!TIP]
-> You might have multiple R libraries on the computer; therefore, to ensure that packages are installed to the correct instance, use the copy of RGUI o RTerm that is installed with the specific instance where you want to install the packages.
+> You might have multiple R libraries on the computer; therefore, to ensure that packages are installed to the correct instance, use the copy of RGUI or RTerm that is installed with the specific instance where you want to install the packages.
   
 When prompted to specify a repository, select the folder containing the files you just copied; that is, the local miniCRAN repository.
 

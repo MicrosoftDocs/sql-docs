@@ -170,12 +170,12 @@ ALTER INDEX { index_name | ALL }
   
 |Specifying ALL with this operation|Fails if the table has one or more|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index : **Applies to:**[!INCLUDE[ssSQL11](../Token/ssSQL11_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|REBUILD WITH ONLINE = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index : **Applies to:** SQL Server (starting with SQL Server 2012), SQL Database.|  
 |REBUILD PARTITION = *partition_number*|Nonpartitioned index, XML index, spatial index, or disabled index|  
 |REORGANIZE|Indexes with ALLOW_PAGE_LOCKS set to OFF|  
 |REORGANIZE PARTITION = *partition_number*|Nonpartitioned index, XML index, spatial index, or disabled index|  
-|IGNORE_DUP_KEY = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index : **Applies to:**[!INCLUDE[ssSQL11](../Token/ssSQL11_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
-|ONLINE = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index : **Applies to:**[!INCLUDE[ssSQL11](../Token/ssSQL11_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|IGNORE_DUP_KEY = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index : **Applies to:** SQL Server (starting with SQL Server 2012), SQL Database.|  
+|ONLINE = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index : **Applies to:** SQL Server (starting with SQL Server 2012), SQL Database.|  
   
 > [!WARNING]
 >  For more detailed information about index operations that can be performed online, see [Guidelines for Online Index Operations](../Topic/Guidelines%20for%20Online%20Index%20Operations.md).
@@ -205,7 +205,7 @@ ALTER INDEX { index_name | ALL }
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../Token/ssSQL11_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**:  SQL Server (starting with SQL Server 2012), SQL Database.|  
   
  For columnstore indexes, the rebuild operation:  
   
@@ -213,14 +213,14 @@ ALTER INDEX { index_name | ALL }
   
 2.  Acquires an exclusive lock on the table or partition while the rebuild occurs.  The data is “offline” and unavailable during the rebuild, even when using NOLOCK, RCSI, or SI.  
   
-3.  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] deletes the original columnstore index.  
+3.  Re-compresses all data into the columnstore. Two copies of the columnstore index exist while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes the original columnstore index.  
   
  For more information about rebuilding columnstore indexes, see [Columnstore indexes - defragmentation](../Topic/Columnstore%20indexes%20-%20defragmentation.md)  
   
  PARTITION  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
  Specifies that only one partition of an index will be rebuilt or reorganized. PARTITION cannot be specified if *index_name* is not a partitioned index.  
   
@@ -232,19 +232,19 @@ ALTER INDEX { index_name | ALL }
  *partition_number*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
  Is the partition number of a partitioned index that is to be rebuilt or reorganized. *partition_number* is a constant expression that can reference variables. These include user-defined type variables or functions and user-defined functions, but cannot reference a [!INCLUDE[tsql](../Token/tsql_md.md)] statement. *partition_number* must exist or the statement fails.  
   
  WITH **(**<single_partition_rebuild_index_option>**)**  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
  SORT_IN_TEMPDB, MAXDOP, and DATA_COMPRESSION are the options that can be specified when you rebuild a single partition (PARTITION = *n*). XML indexes cannot be specified in a single partition rebuild operation.  
   
  DISABLE  
- Marks the index as disabled and unavailable for use by the [!INCLUDE[ssDE](../Token/ssDE_md.md)]. Any index can be disabled. The index definition of a disabled index remains in the system catalog with no underlying index data. Disabling a clustered index prevents user access to the underlying table data. To enable an index, use ALTER INDEX REBUILD or CREATE INDEX WITH DROP_EXISTING. For more information, see [Disable Indexes and Constraints](../Topic/Disable%20Indexes%20and%20Constraints.md) and [Enable Indexes and Constraints](../Topic/Enable%20Indexes%20and%20Constraints.md).  
+ Marks the index as disabled and unavailable for use by the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Any index can be disabled. The index definition of a disabled index remains in the system catalog with no underlying index data. Disabling a clustered index prevents user access to the underlying table data. To enable an index, use ALTER INDEX REBUILD or CREATE INDEX WITH DROP_EXISTING. For more information, see [Disable Indexes and Constraints](../Topic/Disable%20Indexes%20and%20Constraints.md) and [Enable Indexes and Constraints](../Topic/Enable%20Indexes%20and%20Constraints.md).  
   
  REORGANIZE  a rowstore index  
  For rowstore indexes, REORGANIZE specifies to reorganize the index leaf level.  The REORGANIZE operation is:  
@@ -306,7 +306,7 @@ ALTER INDEX { index_name | ALL }
  PAD_INDEX = { ON | OFF }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
  Specifies index padding. The default is OFF.  
   
@@ -321,7 +321,7 @@ ALTER INDEX { index_name | ALL }
  FILLFACTOR = *fillfactor*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
  Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../Token/ssDE_md.md)] should make the leaf level of each index page during index creation or alteration. *fillfactor* must be an integer value from 1 to 100. The default is 0. Fill factor values 0 and 100 are the same in all respects.  
   
@@ -335,7 +335,7 @@ ALTER INDEX { index_name | ALL }
  SORT_IN_TEMPDB = { ON | **OFF** }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
  Specifies whether to store the sort results in **tempdb**. The default is OFF.  
   
@@ -379,7 +379,7 @@ ALTER INDEX { index_name | ALL }
 >  Disabling automatic recomputation of distribution statistics may prevent the query optimizer from picking optimal execution plans for queries that involve the table.  
   
  STATISTICS_INCREMENTAL = { ON | **OFF** }  
- When **ON**, the statistics created are per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] re-computes the statistics. The default is **OFF**.  
+ When **ON**, the statistics created are per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-computes the statistics. The default is **OFF**.  
   
  If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
   
@@ -407,7 +407,7 @@ ALTER INDEX { index_name | ALL }
  For an XML index or spatial index, only ONLINE = OFF is supported, and if ONLINE is set to ON an error is raised.  
   
 > [!NOTE]
->  Online index operations are not available in every edition of [!INCLUDE[msCoName](../Token/msCoName_md.md)] [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)], see [Editions and Supported Features for SQL Server 2016](Editions%20and%20Supported%20Features%20for%20SQL%20Server%202016.md).  
+>  Online index operations are not available in every edition of [!INCLUDE[msCoName](../Token/msCoName_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](Editions%20and%20Supported%20Features%20for%20SQL%20Server%202016.md).  
   
  ON  
  Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source table. This allows queries or updates to the underlying table and indexes to continue. At the start of the operation, a Shared (S) lock is very briefly held on the source object. At the end of the operation, an S lock is very briefly held on the source if a nonclustered index is being created, or an SCH-M (Schema Modification) lock is acquired when a clustered index is created or dropped online, or when a clustered or nonclustered index is being rebuilt. ONLINE cannot be set to ON when an index is being created on a local temporary table.  
@@ -430,7 +430,7 @@ ALTER INDEX { index_name | ALL }
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
  Specifies whether row locks are allowed. The default is ON.  
   
@@ -443,7 +443,7 @@ ALTER INDEX { index_name | ALL }
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
  Specifies whether page locks are allowed. The default is ON.  
   
@@ -459,7 +459,7 @@ ALTER INDEX { index_name | ALL }
  MAXDOP **=***max_degree_of_parallelism*  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
  Overrides the **max degree of parallelism** configuration option for the duration of the index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../Topic/Configure%20the%20max%20degree%20of%20parallelism%20Server%20Configuration%20Option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
@@ -480,7 +480,7 @@ ALTER INDEX { index_name | ALL }
  For more information, see [Configure Parallel Index Operations](../Topic/Configure%20Parallel%20Index%20Operations.md).  
   
 > [!NOTE]
->  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../Token/msCoName_md.md)] [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)], see [Editions and Supported Features for SQL Server 2016](Editions%20and%20Supported%20Features%20for%20SQL%20Server%202016.md).  
+>  Parallel index operations are not available in every edition of [!INCLUDE[msCoName](../Token/msCoName_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](Editions%20and%20Supported%20Features%20for%20SQL%20Server%202016.md).  
   
  COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
  This feature will be available after SQL Server 2016 CTP 3.3  
@@ -523,7 +523,7 @@ The default is 0 minutes.
  ON PARTITIONS **(** { <partition_number_expression> | <range\> } [**,***...n*] **)**  
  ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
  Specifies the partitions to which the DATA_COMPRESSION setting applies. If the index is not partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION option applies to all partitions of a partitioned index.  
   
@@ -607,9 +607,9 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Starting with [!INCLUDE[ssSQL11](../Token/ssSQL11_md.md)], statistics are not created by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use CREATE STATISTICS or UPDATE STATISTICS with the FULLSCAN clause.  
   
- In earlier versions of [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)], you could sometimes rebuild a nonclustered index to correct inconsistencies caused by hardware failures. In [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] and later, you may still be able to repair such inconsistencies between the index and the clustered index by rebuilding a nonclustered index offline. However, you cannot repair nonclustered index inconsistencies by rebuilding the index online, because the online rebuild mechanism will use the existing nonclustered index as the basis for the rebuild and thus persist the inconsistency. Rebuilding the index offline can sometimes force a scan of the clustered index (or heap) and so remove the inconsistency. To assure a rebuild from the clustered index, drop and recreate the non-clustered index. As with earlier versions, we recommend recovering from inconsistencies by restoring the affected data from a backup; however, you may be able to repair the index inconsistencies by rebuilding the nonclustered index offline. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md).  
+ In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you could sometimes rebuild a nonclustered index to correct inconsistencies caused by hardware failures. In [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] and later, you may still be able to repair such inconsistencies between the index and the clustered index by rebuilding a nonclustered index offline. However, you cannot repair nonclustered index inconsistencies by rebuilding the index online, because the online rebuild mechanism will use the existing nonclustered index as the basis for the rebuild and thus persist the inconsistency. Rebuilding the index offline can sometimes force a scan of the clustered index (or heap) and so remove the inconsistency. To assure a rebuild from the clustered index, drop and recreate the non-clustered index. As with earlier versions, we recommend recovering from inconsistencies by restoring the affected data from a backup; however, you may be able to repair the index inconsistencies by rebuilding the nonclustered index offline. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKDB%20\(Transact-SQL\).md).  
   
- To rebuild a clustered columnstore index, [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]:  
+ To rebuild a clustered columnstore index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 1.  Acquires an exclusive lock on the table or partition while the rebuild occurs. The data is “offline” and unavailable during the rebuild.  
   
@@ -617,7 +617,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
 3.  Reads all data from the original columnstore index, including the deltastore. It combines the data into new rowgroups, and compresses the rowgroups into the columnstore.  
   
-4.  Requires space on the physical media to store two copies of the columnstore index while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] deletes the original clustered columnstore index.  
+4.  Requires space on the physical media to store two copies of the columnstore index while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes the original clustered columnstore index.  
   
 ## Reorganizing Indexes  
  Reorganizing an index uses minimal system resources. It defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical, left to right, order of the leaf nodes. Reorganizing also compacts the index pages. Compaction is based on the existing fill factor value. To view the fill factor setting, use [sys.indexes](../Topic/sys.indexes%20\(Transact-SQL\).md).  
@@ -856,7 +856,7 @@ FROM dbo.FactInternetSales;
 SELECT * FROM sys.column_store_row_groups;  
 ```  
   
- The results show there is one OPEN rowgroup, which means [!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)] will wait for more rows to be added before it closes the rowgroup and moves the data to the columnstore. This next statement rebuilds the clustered columnstore index, which forces all rows into the columnstore.  
+ The results show there is one OPEN rowgroup, which means [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will wait for more rows to be added before it closes the rowgroup and moves the data to the columnstore. This next statement rebuilds the clustered columnstore index, which forces all rows into the columnstore.  
   
 ```  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REBUILD;  
@@ -924,7 +924,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
 ```  
 ALTER INDEX ALL ON Production.Product  
@@ -961,7 +961,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
   
 ||  
 |-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../Token/ssKatmai_md.md)] through [!INCLUDE[ssCurrent](../Token/ssCurrent_md.md)] and [!INCLUDE[ssSDSfull](../Token/ssSDSfull_md.md)].|  
+|**Applies to**: SQL Server (starting with SQL Server 2008), SQL Database.|  
   
 ```  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  

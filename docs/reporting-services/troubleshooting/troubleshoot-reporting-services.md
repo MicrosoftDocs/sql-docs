@@ -19,7 +19,7 @@ manager: "erikre"
 # Troubleshoot Reporting Services
   The topics in this section help identify and troubleshoot issues with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- ![![Small File Folder Icon](../../analysis-services/media/filefolder-small.png "Small File Folder Icon")](/Image/filefolder_small.png)   **Troubleshoot issues with Reporting Services**  
+ ![Small File Folder Icon](../../reporting-services/troubleshooting/media/filefolder_small.png)   **Troubleshoot issues with Reporting Services**  
 + [Troubleshoot Reporting Services Report Issues](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [Troubleshoot Reporting Services Subscriptions and Delivery](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
@@ -35,7 +35,7 @@ manager: "erikre"
   
 +  [Troubleshoot Server and Database Connection Problems with Reporting Serivces](https://msdn.microsoft.com/library/mt650905.aspx)  
   
-![![Small File Folder Icon](../../analysis-services/media/filefolder-small.png "Small File Folder Icon")](/Image/filefolder_small.png)   **Error and Events Reference**  
+ ![Small File Folder Icon](../../reporting-services/troubleshooting/media/filefolder_small.png)   **Error and Events Reference**  
  + [Errors and Events Reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
 +  [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  

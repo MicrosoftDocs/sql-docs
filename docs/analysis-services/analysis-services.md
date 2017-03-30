@@ -1,6 +1,6 @@
 ---
 title: "Analysis Services | Microsoft Docs"
-ms.date: "03/17/2017"
+ms.date: "03/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Analysis Services
+# What is Analysis Services?
   Analysis Services is an analytical data engine used in decision support and business analytics, providing the analytical data for business reports and client applications such as Power BI, Excel, Reporting Services reports, and other data visualization tools.  
   
  A typical workflow includes authoring a multidimensional or tabular data model, deploying the model as a database to an on-premises SQL Server Analysis Services or Azure Analysis Services server instance, setting up recurring data processing, and assigning permissions to allow data access by end-users. When it's ready to go, your semantic data model can be accessed by any client application supporting Analysis Services as a data source.  
@@ -52,8 +52,8 @@ Documentation for Analysis Services is organized into sections that correspond t
 *  [Tabular Models](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [Multidimensional Models](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
 *  [Data Mining](../analysis-services/data-mining/data-mining-ssas.md)  
-*  [Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
-*  [Analysis Services Instance Management](../analysis-services/instances/analysis-services-instance-management.md)    
-*  [Analysis Services Tutorials](../analysis-services/analysis-services-tutorials-ssas.md)   
-*  [Analysis Services Developer Documentation](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
+*  [Power Pivot for SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+*  [Instance Management](../analysis-services/instances/analysis-services-instance-management.md)    
+*  [Tutorials](../analysis-services/analysis-services-tutorials-ssas.md)   
+*  [Developer Documentation](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [Technical Reference (SSAS)](../analysis-services/powershell/technical-reference-ssas.md)

@@ -40,9 +40,9 @@ manager: "jhubbard"
  Run the following command.  
   
 ```tsql  
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
-ALTER TABLE \<Stretch-enabled table name>  
+ALTER TABLE <Stretch-enabled table name>  
     SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = PAUSED ) ) ;  
 GO 
 ```  
@@ -59,9 +59,9 @@ GO
  Run the following command.  
   
 ```tsql  
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
-ALTER TABLE \<Stretch-enabled table name>   
+ALTER TABLE <Stretch-enabled table name>   
     SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = OUTBOUND ) ) ;  
  GO
 ```  

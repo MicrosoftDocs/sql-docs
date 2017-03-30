@@ -81,7 +81,7 @@ manager: "jhubbard"
  Here's an example that migrates the entire table and begins data migration immediately.  
   
 ```tsql  
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
     SET ( REMOTE_DATA_ARCHIVE = ON ( MIGRATION_STATE = OUTBOUND ) ) ;  
@@ -91,7 +91,7 @@ GO
  Here's an example that migrates only the rows identified by the `dbo.fn_stretchpredicate` inline table-valued function and postpones data migration. For more info about the filter function, see [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ```tsql  
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
     SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -108,7 +108,7 @@ ALTER TABLE <table name>
  Here's an example that migrates the entire table and begins data migration immediately.  
   
 ```tsql  
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name>
     ( ... )  
@@ -119,7 +119,7 @@ GO
  Here's an example that migrates only the rows identified by the `dbo.fn_stretchpredicate` inline table-valued function and postpones data migration. For more info about the filter function, see [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).  
   
 ```tsql  
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name> 
     ( ... )  

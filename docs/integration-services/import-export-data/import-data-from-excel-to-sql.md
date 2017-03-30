@@ -1,5 +1,5 @@
 ---
-title: "Import data from Excel to SQL Server or SQL Database | Microsoft Docs"
+title: "Import data from Excel to SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
@@ -38,6 +38,72 @@ Import data directly from Excel files by stepping through the pages of a wizard.
 ![](media/excel-connection.png)
 
 For an example of using the wizard to import from Excel to SQL Server, see [Get started with this simple example of the Import and Export Wizard](get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+
+## Linked servers and distributed queries (SQL Server only)
+
+> [!NOTE]
+> The ACE provider (formerly the Jet provider) that connects to Excel files is intended for interactive client-side use. If you use the ACE provider on the server, especially in automated processes or processes running in parallel, you may see unexpected results.
+
+The following example imports the data from the `Data` worksheet on the existing Excel linked server `EXCELLINK` into a new SQL Server table named `Data_ls`.
+
+```sql
+USE ImportFromExcel;
+GO
+SELECT * INTO Data_ls FROM EXCELLINK...[Data$];
+GO
+```
+
+You can create a linked server from SQL Server Management Studio, or by running the system stored procedure `sp_addlinkedserver`, as shown in the following example.
+
+```sql
+DECLARE @RC int
+
+DECLARE @server     nvarchar(128)
+DECLARE @srvproduct nvarchar(128)
+DECLARE @provider   nvarchar(128)
+DECLARE @datasrc    nvarchar(4000)
+DECLARE @location   nvarchar(4000)
+DECLARE @provstr    nvarchar(4000)
+DECLARE @catalog    nvarchar(128)
+
+-- Set parameter values
+SET @server =     'EXCELLINK'
+SET @srvproduct = 'Excel'
+SET @provider =   'Microsoft.ACE.OLEDB.12.0'
+SET @datasrc =    'D:\Desktop\Data.xlsx'
+SET @provstr =    'Excel 12.0'
+
+EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
+@datasrc, @location, @provstr, @catalog
+```
+
+If you don't want to configure a persistent connection to the Excel file as a linked server, you can import data on a one-time basis by using the `OPENDATASOURCE` or the `OPENROWSET` function. This usage is called a distributed query. The following code sample imports the data from the Excel `Customers` worksheet into a new SQL Server table.
+
+```sql
+USE ImportFromExcel;
+GO
+SELECT * INTO Data_dq
+FROM OPENDATASOURCE('Microsoft.ACE.OLEDB.12.0',
+    'Data Source=D:\Desktop\Data.xlsx;Extended Properties=Excel 12.0')...[Data$];
+GO
+```
+
+To *append* the imported data to an *existing* table instead of creating a new table, use the `INSERT INTO ... SELECT ... FROM ...` syntax instead of the `SELECT ... INTO ... FROM ...` syntax used in the preceding examples.
+
+To query the Excel data without importing it, just use the `SELECT ... FROM ...` syntax.
+
+For more info about linked servers, see the following topics.
+-   [Create Linked Servers](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
+-   [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
+
+For more info about distributed queries, see the following topics.
+-   [Distributed Queries](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx). (Distributed queries are still supported in SQL Server 2016, but the documentation for this feature has not been updated.)
+-   [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
+-   [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
+
+For more info and examples about both linked servers and distributed queries, see the following topics.
+-   [How to import data from Excel to SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
+-   [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries).
 
 ## Save Excel data as text
 To use the 'BULK INSERT' statement, the BCP tool, or Azure Data Factory, first export your Excel data to a text file. In Excel, select **File | Save As** and then select **Text (Tab delimited) (\*.txt)** or **CSV (Comma delimited) (\*.csv)** as the file type.

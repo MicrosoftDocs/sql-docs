@@ -52,7 +52,7 @@
 ### [Working with R Data Types](working-with-r-data-types.md)  
 ## [Predictive Modeling](data-exploration-and-predictive-modeling-with-r.md)  
 ### [Converting R Code for Use in Machine Learning Services](converting-r-code-for-use-in-r-services.md)  
-### [Creating multiple models using-rxExecBy](creating-multiple-models-using-rxexecby.md)  
+### [Creating multiple models using rxExecBy](creating-multiple-models-using-rxexecby.md)  
 ## [Native Scoring](native-scoring-in-sql-server-2017.md)  
 ### [Real-time scoring in SQL Server 2016 with Machine Learning Server](real-time-scoring-in-sql-server-2016-with-machine-learning-server.md)  
 ### [sp_rxPredict](sp_rxpredict.md)  

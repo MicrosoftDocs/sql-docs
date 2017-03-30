@@ -2,7 +2,7 @@
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/29/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -82,7 +82,7 @@ CREATE TABLE
     [ database_name . [ schema_name ] . | schema_name . ] table_name   
     [ AS FileTable ]  
     ( {   <column_definition>   
-        | <computed_column_definition> }   
+        | <computed_column_definition>    
         | <column_set_definition>   
         | [ <table_constraint> ]   
         | [ <table_index> ] }  
@@ -93,7 +93,7 @@ CREATE TABLE
     [ ON { partition_scheme_name ( partition_column_name )   
            | filegroup   
            | "default" } ]   
-    [ { TEXTIMAGE_ON { filegroup | "default" } ]   
+    [ TEXTIMAGE_ON { filegroup | "default" } ]   
     [ FILESTREAM_ON { partition_scheme_name   
            | filegroup   
            | "default" } ]  

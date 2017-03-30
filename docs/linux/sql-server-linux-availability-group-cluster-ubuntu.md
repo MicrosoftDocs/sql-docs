@@ -62,7 +62,7 @@ The following sections walk through the steps to set up a failover cluster solut
    sudo apt-get install pacemaker pcs fence-agents resource-agents
    ```
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster
@@ -106,7 +106,7 @@ sudo systemctl enable pacemaker
  See "systemctl status corosync.service" and "journalctl -xe" for details.
   ```
   
-    The following command creates a two node cluster. Before you run the script, replace the values between `**< ... >**`. Run the following command the primary SQL Server. 
+The following command creates a two node cluster. Before you run the script, replace the values between `**< ... >**`. Run the following command on the primary SQL Server. 
 
    ```bash
    sudo pcs cluster auth **<nodeName1>** **<nodeName2>**  -u hacluster -p **<password for hacluster>**

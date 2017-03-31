@@ -45,8 +45,8 @@ Data Manipulation Language (DML) affect the information stored in the database. 
 - MERGE
 - TRUNCATE TABLE
 
-## Security statements
-Security statements determine which users and logins can access database objects. For more information about authentication and access, see the [Security center](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
+## Permissions statements
+Permissions statements determine which users and logins can access data and perform operations. For more information about authentication and access, see the [Security center](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
 ## Service Broker statements
 Service Broker is a feature that provides native support for messaging and queuing applications. For more information, see [Service Broker](../../relational-databases/service-broker/event-notifications.md).

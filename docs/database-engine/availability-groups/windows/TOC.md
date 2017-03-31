@@ -33,7 +33,7 @@
 ## [Tune compression for availability group](tune-compression-for-availability-group.md)  
 # [Creation and Configuration of Availability Groups](creation-and-configuration-of-availability-groups-sql-server.md)  
 ## [Use the Availability Group Wizard](use-the-availability-group-wizard-sql-server-management-studio.md)  
-### [Specify Availability Group Name Page (New Availability Group Wizard/Add Database Wizard)](specify-availability-group-name-page.md)  
+### [Specify Availability Group Options Page (New Availability Group Wizard/Add Database Wizard)](specify-availability-group-name-page.md)  
 ### [Select Databases Page (New Availability Group Wizard and Add Database Wizard)](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)  
 ### [Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)  
 ### [Enter Passwords Page (Add Replica Wizard)](enter-passwords-page-add-replica-wizard.md)  

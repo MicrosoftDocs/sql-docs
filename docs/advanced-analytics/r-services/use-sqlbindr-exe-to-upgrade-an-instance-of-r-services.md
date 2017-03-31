@@ -1,7 +1,7 @@
 ---
 title: "Use sqlBindR.exe to Upgrade an Instance of R Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,13 +18,13 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Use sqlBindR.exe to Upgrade an Instance of R Services
-If you install the latest version of Microsoft R Server for Windows, you can use the included **SqlBindR.exe** tool to upgrade the R components associated with an instance of R Services. This process is called **binding**, because it changes the licensing model for a SQL Server 2016 instance to use the new Microsoft Modern Software Lifecycle Support license. 
+If you install the latest version of Microsoft R Server for Windows, you can use the included **SqlBindR.exe** tool to upgrade the R components associated with an instance of R Services. This process is called **binding**, because it changes the support model for R Server and SQL Server R Services to use the new Modern Lifecycle Policy. The support model for the SQL Server database will not change because of this.
 
-In general, this licensing system ensures that your data scientists will always be using the latest version of R. For more information about the terms and advantages of the Microsoft Software License, see [Run Microsoft R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows).
+In general, this licensing system ensures that your data scientists will always be using the latest version of R. For more information about the terms of the Modern Lifecycle Policy, see [Support Timeline for Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support).
 
 When you bind an instance, several things happen:
-+ The support policy for the instance is changed from the SQL Server 2016 support policy to the new Microsoft Modern Software License agreement.
-+ The R components associated with that instance will be automatically upgraded with each release, in lock-step with the R Server version that is current under the new Modern Software License terms. 
++ The support policy for R Server and SQL Server R Services is changed from the SQL Server 2016 support policy to the new Modern Lifecycle Policy.
++ The R components associated with that instance will be automatically upgraded with each release, in lock-step with the R Server version that is current under the new Modern Lifecycle Policy. 
 + New packages are added, which are included by default with R Server, such as RODBC, [MicrosoftML](../../advanced-analytics/r-services/using-the-microsoftml-package-with-sql-server-r-services.md), [olapR](../../advanced-analytics/r-services/how-to-create-mdx-queries-using-olapr.md), and [sqlrutils](../../advanced-analytics/r-services/how-to-create-a-stored-procedure-using-sqlrutils.md).
 + The instance can no longer be manually updated, except to add new packages. 
 
@@ -68,7 +68,7 @@ If you later decide that you want to stop upgrading the instance at each release
 
 ## <a name="bkmk_Unbind"></a>How to revert an instance of R Services
 
-To restore an instance of SQL Server R Services to use the original R libraries and licensing terms, you must run the SqlBindR tool to remove the licensing, and then repair or reinstall the instance.
+To restore an instance of SQL Server R Services to use the original R libraries and licensing terms, you must run the SqlBindR tool to remove the binding, and then repair or reinstall the instance.
 
 1. Open a command prompt and navigate to the folder that contains **sqlbindr.exe**, as described in the previous section. 
 
@@ -87,7 +87,7 @@ The upgrade is supported only for instances of SQL Server 2016 that meet the fol
 + SQL Server 2016 SP1 or  later
 + Cumulative Update 3.0 (OD) has been applied
 
-Currently upgrade is supported only by using the command-line tool. An interactive interface will be provided in a later release.
+Currently upgrade is supported only by using the command-line tool. 
 
 ## sqlbindr.exe command syntax
 

@@ -23,23 +23,30 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Query with Full-Text Search
+
 This topic describes when and how to use the full-text predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** to write full-text queries.  
 
 ## Pick the best full-text predicate or function
+
 CONTAINS/CONTAINSTABLE and FREETEXT/FREETEXTTABLE, are useful for different kind of matches.  
   
--   Use CONTAINS (or CONTAINSTABLE) for precise or fuzzy (less precise) matches to single words and phrases, or to specify the proximity of words within a certain distance of one another, or to return weighted matches. You have to specify at least one search condition that specifies the text that you are searching for and the conditions that determine matches. You can also use logical operation to combine search conditions. For more information, see [Using Boolean operators—AND, OR, AND NOT (in CONTAINS and CONTAINSTABLE)](#Using_Boolean_Operators), later in this topic.  
+-   Use CONTAINS (or CONTAINSTABLE) for the following queries:
+    -   For precise or fuzzy (less precise) matches to single words and phrases.
+    -   To specify the proximity of words within a certain distance of one another.
+    -   To return weighted matches.
+    
+    You have to specify at least one search condition that specifies the text that you are searching for and the conditions that determine matches. You can also use logical operation to combine search conditions. For more information, see [Using Boolean operators—AND, OR, AND NOT (in CONTAINS and CONTAINSTABLE)](#Using_Boolean_Operators), later in this topic.  
   
--   Use FREETEXT (or FREETEXTTABLE) for matching the meaning, but not the exact wording, of specified words, phrases or sentences (the *freetext string*). Matches are generated if any term or form of any term is found in the full-text index of a specified column.  
+-   Use FREETEXT (or FREETEXTTABLE) to match the meaning, but not the exact wording, of specified words, phrases or sentences (the *freetext string*). Matches are generated if any term or form of any term is found in the full-text index of a specified column.  
   
-##  <a name="OV_ft_predicates"></a> Query with the full-text predicates CONTAINS and FREETEXT  
-Use CONTAINS and FREETEXT in the WHERE or HAVING clause of a SELECT statement. You can combine them with any of the other [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates, such as LIKE and BETWEEN. 
+##  <a name="OV_ft_predicates"></a> CONTAINS and FREETEXT  
+Use the full-text **predicates** CONTAINS and FREETEXT in the WHERE or HAVING clause of a SELECT statement. You can combine them with any of the other [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates, such as LIKE and BETWEEN. 
 
 The CONTAINS and FREETEXT predicates return a TRUE or FALSE value that indicates whether a given row matches the full-text query. Matching rows are returned in the result set.  
   
 When you use CONTAINS or FREETEXT, you can specify either a single column, a list of columns, or all columns in the table to be searched. Optionally, you can specify the language whose resources will be used by the full-text query for word breaking and stemming, thesaurus lookups, and noise-word removal.  
 
-For information about the syntax and arguments of these predicates, see [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [FREETEXT](../../t-sql/queries/freetext-transact-sql.md).
+For more info about the syntax and arguments of these predicates, see [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [FREETEXT](../../t-sql/queries/freetext-transact-sql.md).
 
 ### Example - Use CONTAINS to search for a simple_term  
  The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`.  
@@ -71,8 +78,8 @@ GO
 ### Query a linked server
 You can use a four-part name in the CONTAINS or FREETEXT predicate to query full-text indexed columns of the target tables on a linked server. To prepare a remote server to receive full-text queries, create a full-text index on the target tables and columns on the remote server and then add the remote server as a linked server.  
 
-##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a> Query with the full-text functions CONTAINSTABLE and FREETEXTTABLE
-Use the CONTAINSTABLE and FREETEXTTABLE functions like a regular table name in the FROM clause of a SELECT statement. These functions return a table of zero, one, or more rows that match the full-text query. The returned table contains only rows from the base table that match the selection criteria specified in the full-text search condition of the function.  
+##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a> CONTAINSTABLE and FREETEXTTABLE
+Usethe full-text **functions** CONTAINSTABLE and FREETEXTTABLE functions like a regular table name in the FROM clause of a SELECT statement. These functions return a table of zero, one, or more rows that match the full-text query. The returned table contains only rows from the base table that match the selection criteria specified in the full-text search condition of the function.  
 
 CONTAINSTABLE is useful for the same kinds of matches as CONTAINS, and FREETEXTTABLE is useful for the same kinds of matches as FREETEXT.
   
@@ -142,8 +149,10 @@ ORDER BY KEY_TBL.RANK DESC
 GO  
 ```  
 
-##  <a name="supported"></a> Search for specific types of words and phrases
-### Types of words and phrases that you can search for  
+##  <a name="supported"></a> What you can search for
+
+### Types of words and phrases that you can search for
+
  This section summarizes the support provided for each form of query by the full-text predicates and rowset-valued functions.  
   
 |Query-term form|Description|Supported by|  
@@ -226,8 +235,9 @@ GO
   
  A weighted term can be used in conjunction with any simple term, prefix term, generation term, or proximity term.  
 
-##  <a name="Using_Boolean_Operators"></a> Use Boolean operators (AND, OR, and NOT) in CONTAINS and CONTAINSTABLE  
- The CONTAINS predicate and CONTAINSTABLE function use the same search conditions. Both support combining several search terms by using Boolean operators - AND, OR, and NOT - to perform logical operations. You can use AND, for example, to find rows that contain both "latte" and "New York-style bagel". You can use AND NOT, for example, to find the rows that contain "bagel" but do not contain "cream cheese".  
+##  <a name="Using_Boolean_Operators"></a> Use Boolean operators (AND, OR, and NOT)
+ 
+The CONTAINS predicate and CONTAINSTABLE function use the same search conditions. Both support combining several search terms by using Boolean operators - AND, OR, and NOT - to perform logical operations. You can use AND, for example, to find rows that contain both "latte" and "New York-style bagel". You can use AND NOT, for example, to find the rows that contain "bagel" but do not contain "cream cheese".  
   
 In contrast, FREETEXT and FREETEXTTABLE treat the Boolean terms as words to be searched.  
   
@@ -247,19 +257,21 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> Specify more options for full-text queries  
+##  <a name="Additional_Considerations"></a> Specify additional options
+
  When you write full-text queries, also consider the following things:  
   
--   The **LANGUAGE** option. Many query terms depend heavily on word-breaker behavior. To ensure that you are using the correct word breaker (and stemmer) and thesaurus file, we recommend that you specify the LANGUAGE option. For more information, see [Choose a Language When Creating a Full-Text Index](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
+-   **Language**, with the **LANGUAGE** option. Many query terms depend heavily on word-breaker behavior. To ensure that you are using the correct word breaker (and stemmer) and thesaurus file, we recommend that you specify the LANGUAGE option. For more information, see [Choose a Language When Creating a Full-Text Index](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   
 -   **Stopwords**. When defining a full-text query, the Full-Text Engine discards stopwords (also called noise words) from the search criteria. Stopwords are words such as "a," "and," "is," or "the," that can occur frequently but that typically do not help when searching for particular text. Stopwords are listed in a stoplist. Each full-text index is associated with a specific stoplist, which determines what stopwords are omitted from the query or the index at indexing time. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   The **thesaurus**. FREETEXT and FREETEXTTABLE queries use the thesaurus by default. CONTAINS and CONTAINSTABLE support an optional THESAURUS argument.  
+-   **Thesaurus**. FREETEXT and FREETEXTTABLE queries use the thesaurus by default. CONTAINS and CONTAINSTABLE support an optional THESAURUS argument.  
   
 -   **Case sensitivity**. Full-text search queries are case-insensitive. However, in Japanese, there are multiple phonetic orthographies in which the concept of orthographic normalization is akin to case insensitivity (for example, kana = insensitivity). This type of orthographic normalization is not supported.  
 
-##  <a name="tokens"></a> Viewing the tokenization result of a word breaker, thesaurus, and stoplist combination  
- After applying a given word breaker, thesaurus, and stoplist combination in a query, you can view the tokenization result by using the **sys.dm_fts_parser** dynamic management view. For more information, see [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
+##  <a name="tokens"></a> Get the tokenization results
+
+After you apply a given word breaker, thesaurus, and stoplist combination in a query, you can view the tokenization results by using the **sys.dm_fts_parser** dynamic management view. For more information, see [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   
 ## See Also  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   

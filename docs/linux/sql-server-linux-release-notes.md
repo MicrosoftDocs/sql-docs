@@ -30,7 +30,7 @@ The following release notes apply to SQL Server vNext running on Linux. This rel
 The following table lists the releases of SQL Server vNext covered in this topic.
 
 | Release | Version | Release date |
-|-----|-----|
+|-----|-----|-----|
 | [CTP 1.4](#ctp14) | 14.0.405.198 | 3-2017 |
 | [CTP 1.3](#ctp13) | 14.0.304.138-1 | 2-2017 |
 | [CTP 1.2](#ctp12) | 14.0.200.24 | 1-2017 |

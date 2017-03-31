@@ -252,7 +252,7 @@
 # [MERGE](merge-transact-sql.md) 
 # [RENAME](rename-transact-sql.md)  
 
-# Security 
+# Permissions 
 ## [ADD SIGNATURE](add-signature-transact-sql.md)  
 ## [CLOSE MASTER KEY](close-master-key-transact-sql.md)  
 ## [CLOSE SYMMETRIC KEY](close-symmetric-key-transact-sql.md)  
@@ -334,7 +334,7 @@
 ## [RECEIVE](receive-transact-sql.md)  
 ## [SEND](send-transact-sql.md)  
 
-# Set 
+# SET 
 ## [Overview](set-statements-transact-sql.md)
 ## [ANSI_DEFAULTS](set-ansi-defaults-transact-sql.md)  
 ## [ANSI_NULL_DFLT_OFF](set-ansi-null-dflt-off-transact-sql.md)  

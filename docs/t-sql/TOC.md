@@ -9,7 +9,7 @@
 # Spatial
 ## [Geography](spatial-geography/index.md)
 ## [Geometry](spatial-geometry/index.md)
-# [Statements](statements/index.md)
+# [Statements](statements/toc.md)
 # [xml](xml/index.md)
 
 

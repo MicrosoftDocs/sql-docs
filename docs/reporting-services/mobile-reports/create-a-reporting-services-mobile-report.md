@@ -1,7 +1,7 @@
 ---
 title: "Create a Reporting Services mobile report | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,15 +16,15 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Create a Reporting Services mobile report
-With [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], you can quickly create [!INCLUDE[PRODUCT_NAME](../../includes/sscurrent.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] mobile reports that scale well to any screen size, on a design surface with adjustable grid rows and columns, and flexible mobile report elements.  
+With SQL Server Mobile Report Publisher, you can quickly create SQL Server 2016 Reporting Services mobile reports that scale well to any screen size, on a design surface with adjustable grid rows and columns, and flexible mobile report elements.  
   
-The first time you create a mobile report, you can install [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)] on your local machine from the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] web portal. Or you can install it from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=733527). After the first time, you can start it either from the web portal or locally.   
+The first time you create a mobile report, you can install SQL Server Mobile Report Publisher, on your local machine from the Reporting Services web portal. Or you can install it from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=733527). After the first time, you can start it either from the web portal or locally.   
     
-1. In the top bar of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] web portal, select **New** > **Mobile Report**.  
+1. In the top bar of the Reporting Services web portal, select **New** > **Mobile Report**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. On the **Layout** tab in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)], select a navigator, gauge, chart, map, or datagrid and drag it to the design grid.  
+2. On the **Layout** tab in Mobile Report Publisher, select a navigator, gauge, chart, map, or datagrid and drag it to the design grid.  
   
 3. Grab the lower-right corner of the element and drag it to the size you want.  
   
@@ -62,7 +62,7 @@ The first time you create a mobile report, you can install [!INCLUDE[SS_MobileRe
   
 11. Time to save your report. Select the Save icon in the upper left, and either **Save Locally** or **Save to Server**.  
   
-   To save it to a server, you need access to a [!INCLUDE[PRODUCT_NAME](../../includes/sscurrent.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] report server.  
+   To save it to a server, you need access to a SQL Server 2016 Reporting Services report server.  
      
    ### See also  
      

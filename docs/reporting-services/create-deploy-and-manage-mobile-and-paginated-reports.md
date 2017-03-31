@@ -1,7 +1,8 @@
 ---
 title: "Reporting Services (SSRS) | Microsoft Docs"
+description: "Learn about tools and services for mobile and paginated Reporting Services reports and Power BI reports on premises."
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,11 +23,12 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
-# Create, deploy, and manage mobile and paginated reports
+# What is SQL Server Reporting Services (SSRS)? 
   Create, deploy, and manage mobile and paginated Reporting Services reports and Power BI reports on premises with the range of ready-to-use tools and services that SQL Server Reporting Services (SSRS) and Power BI provide. 
   
  ![SQL Server Reporting Services all together](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services all together")  
-## What is SQL Server Reporting Services (SSRS)?
+
+## Create, deploy, and manage mobile and paginated reports
 
 SQL Server Reporting Services is a solution that customers deploy on their own premises for creating, publishing, and managing reports, then delivering them to the right users in different ways, whether that’s viewing them in web browser, on their mobile device, or as an email in their in-box.
 
@@ -95,16 +97,6 @@ More about [Reporting Services Report Server in SharePoint integrated mode](../r
  
  More [Reporting Services Developer Documentation](../reporting-services/reporting-services-developer-documentation.md). 
   
-## Browse content by area  
-* [Backward Compatibility](../reporting-services/reporting-services-backward-compatibility.md) 
-* [Reporting Services Report Server](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
-* [Web portal (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)
-* [Reporting Services Reports &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)  
-* [Report Data &#40;SSRS&#41;](../reporting-services/report-data/report-data-ssrs.md)  
-* [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-* [SQL Server Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
-* [KPIs in Reporting Services](../reporting-services/working-with-kpis-in-reporting-services.md)
-* [Reporting Services Tools](../reporting-services/tools/reporting-services-tools.md)  
   
 ## See Also  
 * [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)

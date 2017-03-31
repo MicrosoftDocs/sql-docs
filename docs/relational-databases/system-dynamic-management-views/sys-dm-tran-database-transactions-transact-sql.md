@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_tran_database_transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_tran_database_transactions dynamic management view"
-ms.assetid: 82a44295-4cbc-4a5b-891a-8ebaf307b8f5
+ms.assetid: 82a44295-4cbc-4a5b-891a-8ebaf307b8f5 
 caps.latest.revision: 33
 author: "BYHAM"
 ms.author: "rickbyh"
@@ -56,7 +56,10 @@ manager: "jhubbard"
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.  
+ 
+
   
 ## See Also  
  [sys.dm_tran_active_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   

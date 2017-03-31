@@ -18,7 +18,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Tabular Models (SSAS)
+# Tabular Modeling (SSAS)
   Tabular models are Analysis Services databases that run in-memory or in DirectQuery mode, accessing data directly from backend relational data sources.  
   
  In-memory is the default. Using state-of-the-art compression algorithms and multi-threaded query processor, the in-memory analytics engine delivers fast access to tabular model objects and data by reporting client applications such as Microsoft Excel and Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  

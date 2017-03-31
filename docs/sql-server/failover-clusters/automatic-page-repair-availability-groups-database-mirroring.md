@@ -50,8 +50,7 @@ manager: "jhubbard"
 |829|A page has been marked as restore pending.|All.|  
   
  To view recent 823 CRC errors and 824 errors, see the [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) table in the [msdb](../../relational-databases/databases/msdb-database.md) database.  
-  
- [&#91;Top&#93;](#Top)  
+
   
 ##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
  Automatic page repair cannot repair the following control page types:  
@@ -62,8 +61,7 @@ manager: "jhubbard"
   
 -   Allocation pages: Global Allocation Map (GAM) pages, Shared Global Allocation Map (SGAM) pages, and Page Free Space (PFS) pages.  
   
- [&#91;Top&#93;](#Top)  
-  
+ 
 ##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
  On the principal/primary database, automatic page repair is tried only when the database is in the SYNCHRONIZED state and the principal/primary is still sending log records for the database to the mirror/secondary. The basic sequence of actions in an automatic page-repair attempt are as follows:  
   
@@ -77,8 +75,7 @@ manager: "jhubbard"
   
 5.  If the page I/O error caused any [deferred transactions](../../relational-databases/backup-restore/deferred-transactions-sql-server.md), after you repair the page, the principal/primary tries to resolve those transactions.  
   
- [&#91;Top&#93;](#Top)  
-  
+ 
 ##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
  I/O errors on data pages that occur on the mirror/secondary database are handled in generally the same way by database mirroring and by [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
@@ -90,13 +87,11 @@ manager: "jhubbard"
   
      If a mirror/secondary does not receive a page that it requested from the principal/primary, the automatic page-repair attempt fails. With database mirroring, the mirroring session remains suspended. With [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], the secondary database remains suspended. If the mirroring session or secondary database is resumed manually, the corrupted pages will be hit again during the synchronization phase.  
   
- [&#91;Top&#93;](#Top)  
-  
+ 
 ##  <a name="DevBP"></a> Developer Best Practice  
  An automatic page repair is an asynchronous process that runs in the background. Therefore, a database operation that requests an unreadable page fails and returns the error code for whatever condition caused the failure. When developing an application for a mirrored database or an availability database, you should intercept exceptions for failed operations. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error code is 823, 824, or 829, you should retry the operation later.  
   
- [&#91;Top&#93;](#Top)  
-  
+
 ##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
  The following dynamic management views return rows for the latest automatic page-repair attempts on a given availability database or mirrored database, with a maximum of 100 rows per database.  
   
@@ -112,8 +107,7 @@ manager: "jhubbard"
   
      Returns a row for every automatic page-repair attempt on any mirrored database on the server instance.  
   
- [&#91;Top&#93;](#Top)  
-  
+ 
 ## See Also  
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -132,7 +132,7 @@ manager: "jhubbard"
   
 -   [Read-Only Workload Impact](#ReadOnlyWorkloadImpact)  
   
--   [Indexing](#Indexing)  
+-   [Indexing](#bkmk_Indexing)  
   
 -   [Statistics for Read-Only Access Databases](#Read-OnlyStats)  
   

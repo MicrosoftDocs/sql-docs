@@ -27,6 +27,16 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 # Release notes for SQL Server vNext on Linux
 The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, CTP 1.4. See the information in the each section for supported platforms, tools, features, and known issues.
 
+The following table lists the releases of SQL Server vNext covered in this topic.
+
+| Release | Version | Release date |
+|-----|-----|-----|
+| [CTP 1.4](#ctp14) | 14.0.405.198 | 3-2017 |
+| [CTP 1.3](#ctp13) | 14.0.304.138-1 | 2-2017 |
+| [CTP 1.2](#ctp12) | 14.0.200.24 | 1-2017 |
+| [CTP 1.1](#ctp11) | 14.0.100.187 | 12-2016 |
+| [CTP 1.0](#ctp10) | 14.0.1.246 | 11-2016 |
+
 ## <a id="ctp14"> CTP 1.4 (March 2017) </a>
 
 ### Supported platforms 
@@ -48,7 +58,7 @@ The SQL Server engine version for this release is 14.0.405.198. Package details 
 -	[Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 -	[Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
 
-| Package | Version | Downloads |
+| Package | Package version | Downloads |
 |-----|-----|-----|
 | Red Hat RPM package | 14.0.405.200-1 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.405.200-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.405.200-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.405.200-1.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.405.200-1.x86_64.rpm) | 
 | SLES RPM package | 14.0.405.200-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.405.200-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.405.200-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.405.200-1.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.405.200-1.x86_64.rpm) | 
@@ -218,7 +228,7 @@ To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](s
 ### Package details
 The SQL Server engine version for this release is 14.0.304.138-1. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).
 
-| Package | Version | Downloads |
+| Package | Package version | Downloads |
 |-----|-----|-----|
 | Red Hat RPM package | 14.0.304.138-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.304.138-1.x86_64.rpm)</br>[mssql-server-ha High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.304.138-1.x86_64.rpm)</br>[mssql-server-fts Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.304.138-1.x86_64.rpm) | 
 | SLES RPM package | 14.0.304.138-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.304.138-1.x86_64.rpm)</br>[mssql-server-ha High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.304.138-1.x86_64.rpm)</br>[mssql-server-fts Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.304.138-1.x86_64.rpm) | 
@@ -368,7 +378,7 @@ To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](s
 ### Package details
 The SQL Server engine version for this release is 14.0.200.24. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).
 
-| Package | Version | Downloads |
+| Package | Package version | Downloads |
 |-----|-----|-----|
 | RPM package | 14.0.200.24-2 | [mssql-server 14.0.200.24-2 Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.200.24-2.x86_64.rpm)</br>[mssql-server 14.0.200.24-2 High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.200.24-2.x86_64.rpm) | 
 | Debian package | 14.0.200.24-2 | [mssql-server 14.0.200.24-2 Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.200.24-2_amd64.deb) |
@@ -506,7 +516,7 @@ To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](s
 ### Package details
 The SQL Server engine version for this release is 14.0.100.187. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).
 
-| Package | Version | Downloads |
+| Package | Package version | Downloads |
 |-----|-----|-----|
 | RPM package | 14.0.100.187-1 | [mssql-server 14.0.100.187-1 Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.100.187-1.x86_64.rpm)</br>[mssql-server 14.0.100.187-1 High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.100.187-1.x86_64.rpm) | 
 | Debian package | 14.0.100.187-1 | [mssql-server 14.0.100.187-1 Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.100.187-1_amd64.deb) |
@@ -644,7 +654,7 @@ To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](s
 ### Package details
 The SQL Server engine version for this release is 14.0.1.246. Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the [installation guides](sql-server-linux-setup.md).
 
-| Package | Version | Downloads |
+| Package | Package version | Downloads |
 |-----|-----|-----|
 | RPM package | 14.0.1.246-6 | [mssql-server 14.0.1.246-6 Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.1.246-6.x86_64.rpm)</br>[mssql-server 14.0.1.246-6 High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.1.246-6.x86_64.rpm) | 
 | Debian package | 14.0.1.246-6 | [mssql-server 14.0.1.246-6 Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.1.246-6_amd64.deb) |

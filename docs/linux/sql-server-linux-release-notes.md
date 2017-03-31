@@ -27,7 +27,6 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 # Release notes for SQL Server vNext on Linux
 The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, CTP 1.4. See the information in the each section for supported platforms, tools, features, and known issues.
 
-<<<<<<< HEAD
 The following table lists the releases of SQL Server vNext covered in this topic.
 
 | Release | Version | Release date |
@@ -38,8 +37,6 @@ The following table lists the releases of SQL Server vNext covered in this topic
 | [CTP 1.1](#ctp11) | 14.0.100.187 | 12-2016 |
 | [CTP 1.0](#ctp10) | 14.0.1.246 | 11-2016 |
 
-=======
->>>>>>> e39fe17624c37c63623824d371875cfcdb76165c
 ## <a id="ctp14"> CTP 1.4 (March 2017) </a>
 The SQL Server engine version for this release is 14.0.405.198.
 

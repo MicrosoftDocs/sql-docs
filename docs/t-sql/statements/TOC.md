@@ -334,7 +334,7 @@
 ## [RECEIVE](receive-transact-sql.md)  
 ## [SEND](send-transact-sql.md)  
 
-# Set 
+# SET 
 ## [Overview](set-statements-transact-sql.md)
 ## [ANSI_DEFAULTS](set-ansi-defaults-transact-sql.md)  
 ## [ANSI_NULL_DFLT_OFF](set-ansi-null-dflt-off-transact-sql.md)  

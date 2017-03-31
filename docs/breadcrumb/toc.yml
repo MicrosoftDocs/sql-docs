@@ -9,7 +9,7 @@
     - name: SQL Server on Linux
       href: /sql/linux/
       homepage: /sql/linux
-    - name: R on SQL Server
+    - name: Advanced analytics on SQL Server
       href: /sql/advanced-analytics/
       homepage: /sql/advanced-analytics
     - name: SQL Server

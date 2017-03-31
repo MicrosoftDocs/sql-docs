@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_linux_proc_sql_maps (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/09/2017"
+ms.date: "03/29/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,6 +29,8 @@ manager: "jhubbard"
 
 This dmv is based off of the linux `/proc/self/maps` file. It provides information about the mapped memory regions of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 
+> [!NOTE]  
+> Implementation of this DMV has been delayed. Expect it, or something similar in a future CTP.
 
 |Column name |Data type |Description |  
 |------------- |------------- |---------------- |  

@@ -1,5 +1,5 @@
 ---
-title: "Set Up Login Accounts for Database Mirroring or Always On Availability Groups (SQL Server) | Microsoft Docs"
+title: "Set Up Login Accounts - Database Mirroring Always On Availability | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "logins [SQL Server], database mirroring"
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 caps.latest.revision: 19
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

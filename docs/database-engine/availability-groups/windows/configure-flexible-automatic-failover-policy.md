@@ -1,5 +1,5 @@
 ---
-title: "Configure the Flexible Failover Policy to Control Conditions for Automatic Failover (Always On Availability Groups) | Microsoft Docs"
+title: "Configure Flexible Automatic Failover Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 caps.latest.revision: 24
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

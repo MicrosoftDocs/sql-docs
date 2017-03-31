@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 caps.latest.revision: 41
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -59,9 +60,13 @@ manager: "jhubbard"
  **Data Transfers:** Inbound data transfers to Microsoft Azure are free. Outbound transfers are charged for the bandwidth use and calculated based on a graduated region-specific scale. For more details, see the [Data Transfers](http://go.microsoft.com/fwlink/?LinkId=277061) section of the Pricing Details article.  
   
 ## See Also  
- [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md)  
- [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
+
+[SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+
+[Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
+
+[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+
+[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   

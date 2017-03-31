@@ -1,7 +1,7 @@
 ---
 title: "Lesson 14: Deploy | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -48,7 +48,9 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 1.  In **Solution Explorer**, right-click the **AW Internet Sales** project > **Build**.  
 
-2.  Right-click the **AW Internet Sales** project > **Deploy**. 
+2.  Right-click the **AW Internet Sales** project > **Deploy**.
+
+    When deploying to Azure Analysis Services, you'll likely be prompted to enter your account. Enter your organizational account and passsword, for example nancy@adventureworks.com. This account must be in Admins on the server instance.
   
     The Deploy dialog box appears and displays the deployment status of the metadata as well as each table included in the model.  
     

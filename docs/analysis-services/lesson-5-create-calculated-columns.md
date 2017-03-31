@@ -1,7 +1,7 @@
 ---
 title: "Lesson 6: Create Calculated Columns | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -89,7 +89,7 @@ The DayOfWeek calculated column provides a sortable name for the day of week.
   
 3.  Rename the column to **ProductSubcategoryName**.  
   
-The ProductSubcategoryName calculated column is used to create a hierarchy in the DimProduct table which includes data from the EnglishProductSubcategoryName column in the DimProductSubcategory table. Hierarchies cannot span more than one table. You will create hierarchies later in Lesson 6.  
+The ProductSubcategoryName calculated column is used to create a hierarchy in the DimProduct table which includes data from the EnglishProductSubcategoryName column in the DimProductSubcategory table. Hierarchies cannot span more than one table. You will create hierarchies later in Lesson 9.  
   
 #### Create a ProductCategoryName calculated column in the DimProduct table  
   

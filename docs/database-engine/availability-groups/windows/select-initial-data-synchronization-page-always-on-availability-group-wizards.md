@@ -1,5 +1,5 @@
 ---
-title: "Select Initial Data Synchronization Page (Always On Availability Group Wizards) | Microsoft Docs"
+title: "Select Initial Data Sync Page-Always On Availability Group Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -15,6 +15,7 @@ f1_keywords:
   - "sql13.swb.addreplicawizard.selectinitialdatasync.f1"
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 39
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

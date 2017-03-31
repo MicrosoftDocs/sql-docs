@@ -1,7 +1,7 @@
 ---
 title: "Print a Report (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,11 +17,11 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Print a Report (Report Builder and SSRS)
-  After you save a report to a report server, you can view and print the report from a browser, Report Manager, or any application that you use to view an exported report. Before saving a report, you can print it when you preview it.  
+  After you save a report to a report server, you can view and print the report from a browser, the Reporting Services web portal, or any application that you use to view an exported report. Before saving a report, you can print it when you preview it.  
   
  When you print a report, you can specify the size of the paper to use. The size of the paper determines the number of pages in a report and which report data fits on each page. Paper size affects only reports that are rendered with hard page-break renders: PDF, Image, and Print. Setting the paper size has no effect on other renderers. For more information, see [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
- From the report viewer toolbar in Report Manager or in preview in Report Builder, you can export a report to a hard page-break renderer or click the Print button to print a copy of the report. You might need to set the paper size or other page setup properties. Use the **Report Properties** dialog box to change page setup properties, including paper size.  
+ From the report viewer toolbar in the Reporting Services web portal or in preview in Report Builder, you can export a report to a hard page-break renderer or click the Print button to print a copy of the report. You might need to set the paper size or other page setup properties. Use the **Report Properties** dialog box to change page setup properties, including paper size.  
   
  You can specify print page margins in two different locations: in design mode and in run mode.  
   
@@ -56,9 +56,7 @@ manager: "erikre"
   
 ### To print a report from a Web browser application  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
-  
-2.  In Report Manager, navigate to the report that you want to print. Open the report.  
+1.  In the Reporting Services web portal, navigate to the report that you want to print. Open the report.  
   
 3.  On the toolbar at the top of the report, click **Print**.  
   
@@ -69,7 +67,7 @@ manager: "erikre"
   
 ### To print a report from other applications  
   
-1.  In Report Manager, navigate to the report that you want to print. Open the report.  
+1.  In the Reporting Services web portal, navigate to the report that you want to print. Open the report.  
   
 2.  On the toolbar at the top of the report, select a rendering format, and then click **Export**. The report opens in a viewer application that corresponds to the rendering format.  
   

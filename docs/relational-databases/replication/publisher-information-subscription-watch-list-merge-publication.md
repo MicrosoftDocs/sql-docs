@@ -1,5 +1,5 @@
 ---
-title: "Publisher Information, Subscription Watch List (Merge Publication, SQL Server 2005 and Later) | Microsoft Docs"
+title: "Publisher Information, Subscription Watch List (Merge Publication) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

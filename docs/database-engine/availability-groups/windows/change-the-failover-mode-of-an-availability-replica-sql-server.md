@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 caps.latest.revision: 27
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -67,38 +68,25 @@ manager: "jhubbard"
   
 1.  Connect to the server instance that hosts the primary replica.  
   
-2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:  
+2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:
+
+   ```Transact-SQL
+   ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+      WITH ( {  
+           AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }
+              | FAILOVER_MODE = { AUTOMATIC | MANUAL }
+            }  )
+   ```
+
+   In the preceeding script:
+
+      - *group_name* is the name of the availability group.  
   
-     ALTER AVAILABILITY GROUP *group_name* MODIFY REPLICA ON '*server_name*'  
+      - *server_name* is either the computer name or the failover cluster network name. For named instances add `\instance_name'. Use the name that hosts the replica that you want to modify.
   
-     WITH ( {  
+   For more information about these parameters, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
-     AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
-  
-     | FAILOVER_MODE = { AUTOMATIC | MANUAL }  
-  
-     }  )  
-  
-     where  
-  
-    -   *group_name* is the name of the availability group.  
-  
-    -   { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
-  
-         Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts the availability replica to be altered. The components of this address are as follows:  
-  
-         *system_name*  
-         Is the NetBIOS name of the computer system on which a stand-alone server instance resides.  
-  
-         *FCI_network_name*  
-         Is the network name that is used to access a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster in which a target server instance is a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover partner (an FCI).  
-  
-         *instance_name*  
-         Is the name of the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts the target availability replica. For a default server instance, *instance_name* is optional.  
-  
-     For more information about these parameters, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
-  
-     The following example, entered on the primary replica of the *MyAG* availability group, changes the failover mode to automatic failover on the availability replica that is located on the default server instance on a computer named *COMPUTER01*.  
+   The following example, entered on the primary replica of the *MyAG* availability group, changes the failover mode to automatic failover on the availability replica that is located on the default server instance on a computer named *COMPUTER01*.  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG MODIFY REPLICA ON 'COMPUTER01' WITH  

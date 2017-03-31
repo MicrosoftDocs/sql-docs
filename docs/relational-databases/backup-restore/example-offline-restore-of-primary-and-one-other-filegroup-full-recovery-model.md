@@ -1,5 +1,5 @@
 ---
-title: "Example: Offline Restore of Primary and One Other Filegroup (Full Recovery Model) | Microsoft Docs"
+title: "Example Offline Restore: Primary and 1 Filegroup (Full Recovery Model) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

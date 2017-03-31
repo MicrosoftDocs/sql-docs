@@ -105,7 +105,7 @@ The following steps provide an example of how to create a SQL Server Agent job o
 6. **Start the job**. 
 
     ```tsql
-	EXEC dbo.sp_start_job N’ Daily SampleDB Backup’ ;
+	EXEC dbo.sp_start_job N' Daily SampleDB Backup' ;
 	GO
     ```
 ## Create a job with SSMS

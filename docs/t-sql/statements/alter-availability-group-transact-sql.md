@@ -23,6 +23,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Transact-SQL statements"
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 caps.latest.revision: 152
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

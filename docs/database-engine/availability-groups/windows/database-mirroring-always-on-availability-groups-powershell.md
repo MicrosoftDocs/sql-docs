@@ -1,5 +1,5 @@
 ---
-title: "Create a Database Mirroring Endpoint for Always On Availability Groups (SQL Server PowerShell) | Microsoft Docs"
+title: "Database Mirroring - Always On Availability Groups- PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 caps.latest.revision: 9
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

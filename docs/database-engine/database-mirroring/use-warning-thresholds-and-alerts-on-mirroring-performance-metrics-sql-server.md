@@ -1,5 +1,5 @@
 ---
-title: "Use Warning Thresholds and Alerts on Mirroring Performance Metrics (SQL Server) | Microsoft Docs"
+title: "Use Warning Thresholds and Alerts on Mirroring Performance Metrics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"
@@ -18,6 +18,7 @@ helpviewer_keywords:
   - "warnings [database mirroring]"
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: 40
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

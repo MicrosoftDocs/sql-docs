@@ -1,5 +1,5 @@
 ---
-title: "Distributor Information, Subscription Watch List (Snapshot Publication, SQL Server 2005 and Later) | Microsoft Docs"
+title: "Distributor Info, Subscription Watch List-Snapshot Pub, SQL 2005-Later | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: "sql-server-2016"

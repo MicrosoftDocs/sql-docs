@@ -13,10 +13,10 @@
 # [Data flow](data-flow/index.md)
 
 # Develop Packages for Integration
-## [Build packages programmatically +](building-packages-programmatically/index.md)
-## [Extend packages custom objects +](extending-packages-custom-objects/index.md)
-## [Extend packages scripting +](extending-packages-scripting/index.md)
-## [Run and manage packages programmatically +](run-manage-packages-programmatically/index.md)
+## [Build packages programmatically](building-packages-programmatically/index.md)
+## [Extend packages custom objects](extending-packages-custom-objects/index.md)
+## [Extend packages scripting](extending-packages-scripting/index.md)
+## [Run and manage packages programmatically](run-manage-packages-programmatically/index.md)
 
 # [Event Handlers](integration-services-ssis-event-handlers.md)
 # [Expressions](expressions/index.md)

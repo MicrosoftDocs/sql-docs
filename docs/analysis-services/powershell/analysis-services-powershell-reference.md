@@ -28,7 +28,7 @@ manager: "erikre"
 |------------|-----------------|----------------------------|  
 |[Add-RoleMember cmdlet](../../analysis-services/powershell/add-rolemember-cmdlet.md)|Add a member to a database role.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
 |[Backup-ASDatabase cmdlet](../../analysis-services/powershell/backup-asdatabase-cmdlet.md)|Backup an Analysis Services database.|<xref:Microsoft.AnalysisServices.Database.Backup%2A>|  
-|[Invoke-ASCmd cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)|Execute a query or script in XMLA or TSML (JSON) format.|<xref:Microsoft.AnalysisServices.Server.Execute%2A>|  
+|[Invoke-ASCmd cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)|Execute a query or script in XMLA or TSML (JSON) format.|<xref:Microsoft.AnalysisServices.Core.Server.Execute%2A>|  
 |[Invoke-ProcessASDatabase](../../analysis-services/powershell/invoke-processasdatabase.md)|Process a database.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessCube cmdlet](../../analysis-services/powershell/invoke-processcube-cmdlet.md)|Process a cube.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessDimension cmdlet](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)|Process a dimension.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
@@ -38,7 +38,7 @@ manager: "erikre"
 |[New-RestoreFolder cmdlet](../../analysis-services/powershell/new-restorefolder-cmdlet.md)|Create a folder to contain a database backup.|<xref:Microsoft.AnalysisServices.RestoreFolder>|  
 |[New-RestoreLocation cmdlet](../../analysis-services/powershell/new-restorelocation-cmdlet.md)|Specify one or more remote servers on which to restore the database.|<xref:Microsoft.AnalysisServices.RestoreLocation>|  
 |[Remove-RoleMember cmdlet](../../analysis-services/powershell/remove-rolemember-cmdlet.md)|Remove a member from a database role.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Remove%2A>|  
-|[Restore-ASDatabase cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)|Restore a database on a server instance.|<xref:Microsoft.AnalysisServices.Server.Restore%2A>|  
+|[Restore-ASDatabase cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)|Restore a database on a server instance.|<xref:Microsoft.AnalysisServices.Core.Server.Restore%2A>|  
   
 ## See Also  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   

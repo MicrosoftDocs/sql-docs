@@ -1,5 +1,5 @@
 ---
-title: "Transport Security for Database Mirroring and Always On Availability Groups (SQL Server) | Microsoft Docs"
+title: "Transport Security - Database Mirroring - Always On Availability | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -20,6 +20,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 caps.latest.revision: 59
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Use Always On Policies to View the Health of an Availability Group (SQL Server) | Microsoft Docs"
+title: "Use Always On Policies to View the Health of an Availability Group | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -13,6 +13,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 caps.latest.revision: 17
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -13,6 +13,7 @@ f1_keywords:
   - "sql13.swb.configdbmsecurwiz.witnsrvr.f1"
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 caps.latest.revision: 41
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

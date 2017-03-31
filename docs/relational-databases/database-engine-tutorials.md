@@ -42,7 +42,7 @@ This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/s
 [Tutorial: Administering Servers by Using Policy-Based Management](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 This tutorial teaches how to create policies that enforce site administration standards.  
   
-[Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+[Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 This tutorial illustrates how to do a SQL Server backup and restore to the Windows Azure Blob Storage Service.  
   
 [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](https://msdn.microsoft.com/library/dn466438.aspx)  

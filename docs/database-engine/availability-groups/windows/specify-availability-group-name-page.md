@@ -14,6 +14,7 @@ f1_keywords:
   - "sql13.swb.adddatabasewizard.specifyagname.f1"
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 caps.latest.revision: 13
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -54,5 +55,4 @@ Select Databases Page (New Availability Group Wizard and Add Database Wizard)
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
-  
   

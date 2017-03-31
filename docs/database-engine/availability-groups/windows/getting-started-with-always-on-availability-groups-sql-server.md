@@ -15,29 +15,14 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 caps.latest.revision: 53
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Getting Started with Always On Availability Groups (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-    This topic introduces the steps for configuring instances of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and for creating, managing, and monitoring an availability group.  
-  
--   **Before You Begin:**  
-  
-     [Recommended Reading](#RecommendedReading)  
-  
--   **Getting started with:**  
-  
-     [Configuring an instance of SQL Server to support Always On Availability Groups](#ConfigSI)  
-  
-     [Creating and configuring a new availability group](#ConfigAG)  
-  
-     [Managing availability groups, replicas, and databases](#ManageAGsEtc)  
-  
-     [Monitoring availability groups](#MonitorAGsEtc)  
-  
--   [Related Content](#RelatedContent)  
+This topic introduces the steps for configuring instances of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and for creating, managing, and monitoring an availability group.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   

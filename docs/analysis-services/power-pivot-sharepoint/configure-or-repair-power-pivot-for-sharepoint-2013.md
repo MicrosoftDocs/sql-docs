@@ -1,5 +1,5 @@
 ---
-title: "Configure or Repair Power Pivot for SharePoint 2013 (Power Pivot Configuration Tool) | Microsoft Docs"
+title: "Configure or Repair Power Pivot for SharePoint 2013 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

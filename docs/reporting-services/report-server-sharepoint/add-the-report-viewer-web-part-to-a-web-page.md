@@ -1,5 +1,5 @@
 ---
-title: "Add the Report Viewer Web Part to a Web Page (Reporting Services in SharePoint Integrated Mode) | Microsoft Docs"
+title: "Add the Report Viewer Web Part to a Web Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

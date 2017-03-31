@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "sp_backup_config_basic"
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 caps.latest.revision: 15
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

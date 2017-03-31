@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], dropping"
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 caps.latest.revision: 48
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

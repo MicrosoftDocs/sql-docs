@@ -1,7 +1,7 @@
 ---
 title: "Create a Data Alert in Data Alert Designer | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,10 +17,16 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Create a Data Alert in Data Alert Designer
-  You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) and [Edit a Data Alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
-  
-### To create a data alert definition  
-  
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+You create data alert definitions in Data Alert Designer. After you save the alert definitions, you can reopen, edit, and then resave them in Data Alert Designer. For information about editing alert definitions, see [Manage My Data Alerts in Data Alert Manager](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) and [Edit a Data Alert in Alert Designer](../reporting-services/edit-a-data-alert-in-alert-designer.md).
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
+## Create a data alert definition
+ 
 1.  Locate the SharePoint library that contains the report that you want to create a data alert definition for.  
   
 2.  Click the report.  
@@ -113,10 +119,10 @@ manager: "erikre"
 21. Optionally, in the **Description** text box, type a description of the alert message.  
   
 22. Click **Save**.  
-  
-## See Also  
- [Data Alert Designer](../reporting-services/data-alert-designer.md)   
- [Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## See Also
+
+[Data Alert Designer](../reporting-services/data-alert-designer.md)   
+[Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
+More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -82,7 +82,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## Specifying the Target Set  
  Use three parameters to specify the set of target objects:  
   
--   **-TargetServerName** specifies the instance of SQL Server containing the target objects. You can specify the information in a string that uses the format defined for the ConnectionString property of the <xref:System.Data.SqlClient.SQLConnection> class. You can use the <xref:System.Data.SqlClient.SqlConnectionStringBuilder> class to build a correctly formatted connection string. You can also create a <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> object and pass it to **-TargetServer**. If you supply a string that has only the name of the server, **Invoke-PolicyEvaluation** uses Windows Authentication to connect to the server.  
+-   **-TargetServerName** specifies the instance of SQL Server containing the target objects. You can specify the information in a string that uses the format defined for the ConnectionString property of the <xref:System.Data.SqlClient.SqlConnection> class. You can use the <xref:System.Data.SqlClient.SqlConnectionStringBuilder> class to build a correctly formatted connection string. You can also create a <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> object and pass it to **-TargetServer**. If you supply a string that has only the name of the server, **Invoke-PolicyEvaluation** uses Windows Authentication to connect to the server.  
   
 -   **-TargetObjects** takes an object or array of objects that represent the SQL Server objects in the target set. For example, you could create an array of <xref:Microsoft.SqlServer.Management.Smo.Database> class objects to pass in to **-TargetObjects**.  
   
@@ -135,6 +135,6 @@ Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -Out
 ```  
   
 ## See Also  
- [Use the Database Engine cmdlets](../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
+ [Use the Database Engine cmdlets](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
   
   

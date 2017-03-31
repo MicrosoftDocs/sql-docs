@@ -13,6 +13,7 @@ f1_keywords:
   - "sql13.swb.availabilitygrouplistener.addipaddress.f1"
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 caps.latest.revision: 10
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

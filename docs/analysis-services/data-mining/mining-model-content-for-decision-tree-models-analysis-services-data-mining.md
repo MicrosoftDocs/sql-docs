@@ -1,5 +1,5 @@
 ---
-title: "Mining Model Content for Decision Tree Models (Analysis Services - Data Mining) | Microsoft Docs"
+title: "Mining Model Content for Decision Tree Models  | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

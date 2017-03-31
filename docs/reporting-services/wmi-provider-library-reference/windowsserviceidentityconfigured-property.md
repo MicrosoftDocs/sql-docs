@@ -1,5 +1,5 @@
 ---
-title: "WindowsServiceIdentityConfigured Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "WindowsServiceIdentityConfigured Property | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

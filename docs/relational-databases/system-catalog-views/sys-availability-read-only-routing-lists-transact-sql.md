@@ -25,6 +25,7 @@ helpviewer_keywords:
   - "sys.availability_read_only_routing_lists dynamic management view"
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
 caps.latest.revision: 9
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

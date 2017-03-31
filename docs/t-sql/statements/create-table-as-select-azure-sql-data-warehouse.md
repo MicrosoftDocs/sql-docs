@@ -83,7 +83,7 @@ For details, see the [Arguments section](https://msdn.microsoft.com/library/mt20
 `column_name` [ ,...`n` ]   
  Column names do not allow the [column options](https://msdn.microsoft.com/library/mt203953/#ColumnOptions) mentioned in CREATE TABLE.  Instead, you can provide an optional list of one or more column names for the new table. The columns in the new table will use the names you specify. When you specify column names, the number of columns in the column list must match the number of columns in the select results. If you don't specify any column names, the new target table will use the column names in the select statement results. 
   
- You cannot specify any other column options such as data types, collation, or nullability. Each of these attributes is derived from the results of the `SELECT` statement. However, you can use the SELECT statement to change the attributes. For an example, see [Use CTAS to change column attributes](#ChangeColumnAttributes).   
+ You cannot specify any other column options such as data types, collation, or nullability. Each of these attributes is derived from the results of the `SELECT` statement. However, you can use the SELECT statement to change the attributes. For an example, see [Use CTAS to change column attributes](#ctas-change-column-attributes-bk).   
 
 <a name="table-distribution-options-bk"></a>
 

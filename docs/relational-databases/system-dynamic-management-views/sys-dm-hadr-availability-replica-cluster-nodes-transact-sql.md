@@ -22,6 +22,7 @@ helpviewer_keywords:
   - "sys.dm_hadr_availability_replica_cluster_nodes dynamic management view"
 ms.assetid: dbd7e416-badd-4332-a45c-438aa0145a99
 caps.latest.revision: 13
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

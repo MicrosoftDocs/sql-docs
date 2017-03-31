@@ -1,7 +1,7 @@
 ---
 title: "Best Practices for Calling Natively Compiled Stored Procedures | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,13 +44,10 @@ manager: "jhubbard"
   
 -   Use ordinal (nameless) parameters when calling natively compiled stored procedures. For the most efficient execution, do not use named parameters.  
   
- Use of (inefficient) named parameters with natively compiled stored procedures can be detected through the XEvent **hekaton_slow_parameter_passing**, with **reason=named_parameters**.  
-  
- Similarly, you can detect use of mismatched types through the same XEvent **hekaton_slow_parameter_passing**, with **reason=parameter_conversion**.  
-  
- Because you will need to implement retry logic when using memory-optimized tables (in many scenarios), and because you will need to work around certain feature limitations, you may want to create a wrapper interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure. For an example, see [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
+ Inefficiencies in parameters with natively compiled stored procedures can be detected through the XEvent **natively_compiled_proc_slow_parameter_passing**:
+ - Mismatched types: **reason=parameter_conversion**
+ - Named parameters: **reason=named_parameters**
+ - DEFAULT values: **reason=default** 
   
 ## See Also  
  [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
-  

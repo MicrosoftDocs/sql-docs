@@ -13,6 +13,7 @@ f1_keywords:
   - "sql13.swb.availabilitygroupproperties.general.f1"
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: 15
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

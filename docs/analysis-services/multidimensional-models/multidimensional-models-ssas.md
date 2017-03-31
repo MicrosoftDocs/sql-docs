@@ -17,7 +17,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Multidimensional Models (SSAS)
+# Multidimensional Modeling (SSAS)
   An Analysis Services multidimensional solution uses cube structures for analyzing business data across multiple dimensions. Multidimensional mode is the default server mode of Analysis Services. It includes a query and calculation engine for OLAP data, with MOLAP, ROLAP, and HOLAP storage modes to balance performance with scalable data requirements. The Analysis Services OLAP engine is an industry leading OLAP server that works well with a broad range of BI tools. Most Analysis Services deployments are installed as classic OLAP servers.  
   
 ## Benefits of Using Multidimensional Solutions  

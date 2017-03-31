@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], troubleshooting"
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 caps.latest.revision: 11
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

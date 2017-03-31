@@ -1,5 +1,5 @@
 ---
-title: "An error occurred during an attempt to establish a connection to the external data source. The following connections failed to refresh: Power Pivot Data | Microsoft Docs"
+title: "An error occurred during an attempt to establish a connection | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

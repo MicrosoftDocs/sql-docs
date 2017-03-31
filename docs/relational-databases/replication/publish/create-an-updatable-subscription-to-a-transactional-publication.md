@@ -1,5 +1,5 @@
 ---
-title: "Create an Updatable Subscription to a Transactional Publication (Management Studio) | Microsoft Docs"
+title: "Create an Updatable Subscription to a Transactional Publication | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/21/2016"
 ms.prod: "sql-server-2016"

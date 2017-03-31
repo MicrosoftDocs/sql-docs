@@ -1,5 +1,5 @@
 ---
-title: "Add Articles to and Drop Articles from a Publication (SQL Server Management Studio) | Microsoft Docs"
+title: "Add Articles to and Drop Articles from a Publication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

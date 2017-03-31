@@ -1,5 +1,5 @@
 ---
-title: "Configure and View SharePoint Log Files and Diagnostic Logging (Power Pivot for SharePoint) | Microsoft Docs"
+title: "Configure and View SharePoint and Diagnostic Logging | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

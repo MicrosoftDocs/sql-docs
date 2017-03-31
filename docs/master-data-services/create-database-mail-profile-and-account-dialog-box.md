@@ -1,5 +1,5 @@
 ---
-title: "Create Database Mail Profile and Account Dialog Box (Master Data Services Configuration Manager) | Microsoft Docs"
+title: "Create Database Mail Profile and Account Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: "sql-server-2016"

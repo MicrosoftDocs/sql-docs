@@ -1,5 +1,5 @@
 ---
-title: "Create and Configure a Power Pivot Service Application in Central Administration | Microsoft Docs"
+title: "Create and Configure Power Pivot Service Application in CA | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

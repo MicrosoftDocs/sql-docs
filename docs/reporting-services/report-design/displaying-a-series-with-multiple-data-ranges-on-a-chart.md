@@ -1,5 +1,5 @@
 ---
-title: "Displaying a Series with Multiple Data Ranges on a Chart (Report Builder and SSRS) | Microsoft Docs"
+title: "Displaying a Series with Multiple Data Ranges on a Chart | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

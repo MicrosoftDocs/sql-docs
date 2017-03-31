@@ -1,5 +1,5 @@
 ---
-title: "Enable Initialization with a Backup for Transactional Publications (SQL Server Management Studio) | Microsoft Docs"
+title: "Enable Initialization with Backup for Transactional Publications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

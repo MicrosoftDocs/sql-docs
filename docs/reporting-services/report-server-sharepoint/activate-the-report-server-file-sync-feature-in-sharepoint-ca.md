@@ -1,5 +1,5 @@
 ---
-title: "Activate the Report Server File Sync Feature in SharePoint Central Administration | Microsoft Docs"
+title: "Activate the Report Server File Sync Feature in SharePoint CA | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

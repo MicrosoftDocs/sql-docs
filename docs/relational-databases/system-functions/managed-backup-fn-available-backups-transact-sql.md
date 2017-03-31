@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "smart_admin.fn_available_backups"
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 caps.latest.revision: 15
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

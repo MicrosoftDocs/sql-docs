@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "sp_backup_on_demand"
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 caps.latest.revision: 13
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -37,7 +37,7 @@ manager: "jhubbard"
   
 -   If the primary replica is currently unavailable, which secondary replica would allow the minimum data loss if it becomes the primary replica?  
   
--   When the value of the [sys.databases](#46c288c1-3410-4d68-a027-3bbf33239289)   **log_reuse_wait_desc** column is "AVAILABILITY_REPLICA", which secondary replica in an availability group is holding up log truncation on a given primary database?  
+-   When the value of the [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)   **log_reuse_wait_desc** column is "AVAILABILITY_REPLICA", which secondary replica in an availability group is holding up log truncation on a given primary database?  
    
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -121,7 +121,7 @@ For additional options and more info, see [sys.fulltext_index_columns &#40;Trans
   
 |Probable cause|User action|  
 |--------------------|-----------------|  
-|The word breaker for the query language is configured incorrectly.|If you are using a third-party word breaker it might be incorrectly registered with the operating system. In this case, re-register the word breaker. For more information, see [Revert the Word Breakers Used by Search to the Previous Version](Revert%20the%20Word%20Breakers%20Used%20by%20Search%20to%20the%20Previous%20Version.md).|  
+|The word breaker for the query language is configured incorrectly.|If you are using a third-party word breaker it might be incorrectly registered with the operating system. In this case, re-register the word breaker. For more information, see [Revert the Word Breakers Used by Search to the Previous Version](revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
 |The word breaker malfunctions for a specific query string.|If the word breaker is supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support.|  
 |The word breaker returns too much data for a specific query string.|If the word breaker is supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support.|  
 |The filter daemon process configuration is incorrect.|Ensure that you are using the current password and that a domain policy is not preventing the filter daemon account from logging on.|  

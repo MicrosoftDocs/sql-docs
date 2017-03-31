@@ -77,7 +77,7 @@ The following table lists the properties that are related to full-text catalogs.
 ##  <a name="rebuildone"></a> Rebuild a full-text catalog  
 
 Run the Transact-SQL statement [ALTER FULLTEXT CATALOG ... REBUILD](
-../../t-sql/statements/alter-fulltext-catalog-transact-sql), or do the following things in SQL Server Management Studio (SSMS).
+../../t-sql/statements/alter-fulltext-catalog-transact-sql.md), or do the following things in SQL Server Management Studio (SSMS).
 
 1.  In SSMS, in Object Explorer, expand the server, expand **Databases**, and then expand the database that contains the full-text catalog that you want to rebuild.  
   
@@ -106,7 +106,7 @@ Run the Transact-SQL statement [ALTER FULLTEXT CATALOG ... REBUILD](
 ##  <a name="removing"></a> Remove a full-text catalog from a database  
 
 Run the Transact-SQL statement [DROP FULLTEXT CATALOG](
-../../t-sql/statements/drop-fulltext-catalog-transact-sql), or do the following things in SQL Server Management Studio (SSMS).
+../../t-sql/statements/drop-fulltext-catalog-transact-sql.md), or do the following things in SQL Server Management Studio (SSMS).
 
 1.  In SSMS, in Object Explorer, expand the server, expand **Databases**, and expand the database that contains the full-text catalog you want to remove.  
   

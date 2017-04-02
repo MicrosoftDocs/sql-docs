@@ -1,5 +1,5 @@
 ---
-title: "Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
+title: "Always On Availability Groups Dynamic Management Views - Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"
@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "dynamic management views [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 caps.latest.revision: 20
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Lesson 4: Mark as Date Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,12 +24,12 @@ Whenever you use DAX time-intelligence functions in calculations, as you'll do w
   
 In this lesson, you'll mark the DimDate table as the *Date table* and the Date column (in the Date table) as the *Date column* (unique identifier).  
 
-Before we mark the date table and date column, we need to do a little housekeeping to make our model easier to understand. You'll notice in the DimDate table a column named **FullDateAlternateKey**. We'll be using this column a lot in measure formulas and in reports. But, FullDateAlternateKey is not really a good identifier. We'll rename it to **Date**, making it easier to identify and include in formulas. Whenever possible, it's a good idea to rename objects like tables and columns to make them easier to identify in client reporting applications like Power BI and Excel. 
+Before we mark the date table and date column, we need to do a little housekeeping to make our model easier to understand. You'll notice in the DimDate table a column named **FullDateAlternateKey**. It contains one row for every day in each calendar year included in the table. We'll be using this column a lot in measure formulas and in reports. But, FullDateAlternateKey is not really a good identifier for this column. We'll rename it to **Date**, making it easier to identify and include in formulas. Whenever possible, it's a good idea to rename objects like tables and columns to make them easier to identify in client reporting applications like Power BI and Excel. 
   
 Estimated time to complete this lesson: **3 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 2: Add data](../analysis-services/lesson-2-add-data.md). 
 
 ### To rename the FullDateAlternateKey column
 
@@ -49,6 +49,6 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     ![as-tabular-lesson3-date-table](../analysis-services/media/as-tabular-lesson3-date-table.png)
   
 
-  
-  
+## What's next?
+Go to the next lesson: [Lesson 4: Create Relationships](../analysis-services/lesson-4-create-relationships.md).
   

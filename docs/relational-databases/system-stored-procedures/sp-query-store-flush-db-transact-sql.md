@@ -1,7 +1,7 @@
 ---
 title: "sp_query_store_flush_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/29/2016"
+ms.date: "03/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -10,15 +10,15 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
-  - "sp_query_store_force_plan_TSQL"
-  - "sys.sp_query_store_force_plan_TSQL"
-  - "sp_query_store_force_plan"
-  - "sys.sp_query_store_force_plan"
+  - "sp_query_store_flush_db_TSQL"
+  - "sys.sp_query_store_flush_db_TSQL"
+  - "sp_query_store_flush_db"
+  - "sys.sp_query_store_flush_db"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "sys.sp_query_store_force_plan"
-  - "sp_query_store_force_plan"
+  - "sys.sp_query_store_flush_db"
+  - "sp_query_store_flush_db"
 ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
 caps.latest.revision: 7
 author: "BYHAM"

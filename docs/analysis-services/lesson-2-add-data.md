@@ -1,7 +1,7 @@
 ---
 title: "Lesson 2: Add Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,14 +15,12 @@ ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "erikre"
 ---
 # Lesson 2: Add Data
 In this lesson, you'll use the Table Import Wizard in SSDT to connect to the AdventureWorksDW SQL sample database, select data, preview and filter the data, and then import the data into your model workspace.  
   
-By using the Table Import Wizard, you can import data from a variety of relational sources: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata, and more. The steps for importing data from each of these relational sources are very similar to what is described below. Data can also be selected using a stored procedure.  
-  
-To learn more about importing data and the different types of data sources you can import from, see [Data Sources](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
+By using the Table Import Wizard, you can import data from a variety of relational sources: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata, and more. The steps for importing data from each of these relational sources are very similar to what is described below. Data can also be selected using a stored procedure. To learn more about importing data and the different types of data sources you can import from, see [Data Sources](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
   
 Estimated time to complete this lesson: **20 minutes**  
   
@@ -38,6 +36,8 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     This launches the Table Import Wizard, which guides you through setting up a connection to a data source. If you don't see Tabular Model Explorer, double click **Model.bim** in **Solution Explorer** to open the model in the designer. 
     
     ![as-tabular-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
+
+    Note: If you're creating your model at the 1400 compatibility level, you'll see the new Get Data experience instead of the Table Import Wizard. The dialogs will appear a little different from the steps below, but you'll still be able to follow along. 
   
 2.  In the Table Import Wizard, under **Relational Databases**, click **Microsoft SQL Server** > **Next**.  
   
@@ -135,12 +135,10 @@ The DimCustomer table that you're importing from the sample database contains a 
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  
-      |**ShipDateKey**|  
-  
-Now that you've previewed and filtered out unnecessary data, you can import the data. .  
+      |**ShipDateKey**|   
   
 ## <a name="Import"></a>Import the selected tables and column data  
-You can now import the selected data. The wizard imports the table data along with any relationships between tables. New tables and columns are created in the model and data that you filtered out will not be imported.  
+Now that you've previewed and filtered out unnecessary data, you can import the rest of the data you do want. The wizard imports the table data along with any relationships between tables. New tables and columns are created in the model and data that you filtered out will not be imported.  
   
 #### To import the selected tables and column data  
   
@@ -164,7 +162,8 @@ It's important to frequently save your model project.
   
 -   Click **File** > **Save All**.  
   
+## What's next?
+Go to the next lesson: [Lesson 3: Mark as Date Table](../analysis-services/lesson-3-mark-as-date-table.md).
 
-  
   
   

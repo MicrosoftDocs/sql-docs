@@ -1,5 +1,5 @@
 ---
-title: "Establish a Database Mirroring Session Using Windows Authentication (SQL Server Management Studio) | Microsoft Docs"
+title: "Establish Database Mirroring Session - Windows Authentication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"
@@ -13,6 +13,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], sessions"
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: 58
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

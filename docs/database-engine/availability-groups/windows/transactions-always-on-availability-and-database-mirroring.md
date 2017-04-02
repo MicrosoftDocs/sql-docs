@@ -1,5 +1,5 @@
 ---
-title: "Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring (SQL Server) | Microsoft Docs"
+title: "Transactions - Always On Availability and Database Mirroring | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/29/2016"
 ms.prod: "sql-server-2016"
@@ -17,6 +17,7 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], cross-database transactions"
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 caps.latest.revision: 33
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

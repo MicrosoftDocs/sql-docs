@@ -26,27 +26,35 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Configure and Manage Word Breakers and Stemmers for Search
-  Word breakers and stemmers perform linguistic analysis on all full-text indexed data. Linguistic analysis involves finding word boundaries (word-breaking) and conjugating verbs (stemming). Word breakers and stemmers are language specific, and the rules for linguistic analysis differ for different languages.
--   For a given language, a *word breaker* identifies individual words by determining where word boundaries exist based on the lexical rules of the language. Each word (also known as a *token*) is inserted into the full-text index using a compressed representation to reduce its size.
--   The *stemmer* generates inflectional forms of a particular word based on the rules of that language (for example, "running", "ran", and "runner" are various forms of the word "run").  
-  
- Using language-specific word breakers enables the resulting terms to be more accurate for that language.
+
+Word breakers and stemmers perform linguistic analysis on all full-text indexed data. Linguistic analysis does the following two things:
+
+-   **Find word boundaries (word-breaking)**. The *word breaker* identifies individual words by determining where word boundaries exist based on the lexical rules of the language. Each word (also known as a *token*) is inserted into the full-text index using a compressed representation to reduce its size.
+
+-   **Conjugate verbs (stemming)**. The *stemmer* generates inflectional forms of a particular word based on the rules of that language (for example, "running", "ran", and "runner" are various forms of the word "run").
+
+## Word breakers and stemmers are language specific
+
+Word breakers and stemmers are language specific, and the rules for linguistic analysis differ for different languages. Language-specific word breakers make the resulting terms more accurate for that language.
+
+To use the word breakers and stemmers provided for all the languages supported by SQL Server, you typically don't have to take any action.
+
 -   Where there is a word breaker for the language family, but not for the specific sub-language, the major language is used. For example, the French word breaker is used to handle text that is French Canadian.
 -   If no word breaker is available for a particular language, the neutral word breaker is used. With the neutral word breaker, words are broken at neutral characters such as spaces and punctuation marks.
 
-To use the word breakers and stemmers provided for all the languages supported by SQL Server, you typically don't have to take any action.
-  
-##  <a name="register"></a> View info about registered word breakers
-For Full-Text Search to use the word breakers for a language, they must be registered. For registered word breakers, associated linguistic resources - stemmers, noise words (stopwords), and thesaurus files - also become available to full-text indexing and querying operations.
+## Get the list of supported languages
 
-### See the list of registered word breakers
 To see the list of languages supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The presence of a language in this list indicates that word breakers are registered for the language. 
   
 ```tsql
 SELECT * FROM sys.fulltext_languages
 ```
 
-To see a list of the word breaker components, use the following statement.
+##  <a name="register"></a> Get the list of registered word breakers
+
+For Full-Text Search to use the word breakers for a language, they must be registered. For registered word breakers, associated linguistic resources - stemmers, noise words (stopwords), and thesaurus files - also become available to full-text indexing and querying operations.
+
+To see the list of registered word breaker components, use the following statement.
 
 ```tsql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
@@ -80,8 +88,45 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 For additional options and more info, see [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
 
 ##  <a name="tshoot"></a> Troubleshoot word-breaking time-out errors  
- A word-breaking time-out error might occur in a variety of situations.   
+ A word-breaking time-out error may occur in a variety of situations. or information about these situations and how to respond in each situation, see [MSSQLSERVER_30053](https://msdn.microsoft.com/en-us/library/cc879279.aspx).
+
+### Info about the MSSQLSERVER_30053 error
   
+|Property|Value|
+|-|-|
+|Product Name|SQL Server|  
+|Event ID|30053|  
+|Event Source|MSSQLSERVER|  
+|Component|SQLEngine|  
+|Symbolic Name|FTXT_QUERY_E_WORDBREAKINGTIMEOUT|  
+|Message Text|Word breaking timed out for the full-text query string. This can happen if the wordbreaker took a long time to process the full-text query string, or if a large number of queries are running on the server. Try running the query again under a lighter load.|  
+  
+#### Explanation  
+ A word-breaking timeout error can occur in the following situations:  
+  
+-   The word breaker for the query language is configured incorrectly; for example, its registry settings are incorrect.  
+  
+-   The word breaker malfunctions for a specific query string.  
+  
+-   The word breaker returns too much data for a specific query string. Excess data is treated as a potential buffer overrun attack, and shuts down the filter daemon process (fdhost.exe), which hosts the word-breaking services.  
+  
+-   The filter daemon process configuration is incorrect.  
+  
+     The most common configuration problems are password expiration or a domain policy that prevents the filter daemon account from logging on.  
+  
+-   A very heavy query workload is running on the server instance; for example, the word-breaker took a long time to process the full-text query string, or a large number of queries are running on the server. Note that this is the least likely cause.  
+  
+#### User Action  
+ Select the user action that is appropriate to the probable cause of the timeout, as follows:  
+  
+|Probable cause|User action|  
+|--------------------|-----------------|  
+|The word breaker for the query language is configured incorrectly.|If you are using a third-party word breaker it might be incorrectly registered with the operating system. In this case, re-register the word breaker. For more information, see [Revert the Word Breakers Used by Search to the Previous Version](revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
+|The word breaker malfunctions for a specific query string.|If the word breaker is supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support.|  
+|The word breaker returns too much data for a specific query string.|If the word breaker is supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support.|  
+|The filter daemon process configuration is incorrect.|Ensure that you are using the current password and that a domain policy is not preventing the filter daemon account from logging on.|  
+|A very heavy query workload is running on the server instance.|Try running the query again under a lighter load.|  
+
 ##  <a name="impact"></a> Understand the impact of updated word breakers  
  Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typically includes new word breakers that have better linguistic rules and are more accurate than earlier word breakers. Potentially, the new word breakers might behave slightly differently from the word breakers in full-text indexes that were imported from previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  

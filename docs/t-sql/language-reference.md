@@ -1,7 +1,7 @@
 ---
 title: "Language Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/19/2016"
+ms.date: "03/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -47,17 +47,13 @@ At the top of each [!INCLUDE[tsql](../includes/tsql-md.md)] topic in this SQL Sh
  ![SQL Server from 2008 only](../t-sql/media/sql-server-from-2008-only.png)
     
 ## Exceptions  
- For most of the [!INCLUDE[tsql](../includes/tsql-md.md)] topics, the applies to banner statement is all that is required to identify version and platform applicability. However, some statements and system objects have changed over time to support new features in the product. These additions do not apply to the older versions. For example, the statement [ORDER BY Clause](../t-sql/queries/select-order-by-clause-transact-sql.md) applies to all SQL Server versions and to SQL Database, but a new OFFSET…FETCH argument was added in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] that applies only to that version and higher versions and to SQL Database. Such exceptions to the top-level applies to statement are identified in the **Arguments** section of the topic in the definition of the new syntax. For example, in the ORDER BY topic, the following statement is added to the definitions of OFFSET and FETCH. This statement indicates that these keywords cannot be used in versions of SQL Server earlier than [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
+ For most of the [!INCLUDE[tsql](../includes/tsql-md.md)] topics, the applies to banner statement is all that is required to identify version and platform applicability. However, some statements and system objects have changed over time to support new features in the product. These additions do not apply to the older versions. For example, the statement [ORDER BY Clause](../t-sql/queries/select-order-by-clause-transact-sql.md) applies to all SQL Server versions and to SQL Database, but a new `OFFSET…FETCH` argument was added in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] that applies only to that version and higher versions and to SQL Database. Such exceptions to the top-level applies to statement are identified in the **Arguments** section of the topic in the definition of the new syntax. For example, in the `ORDER BY` topic, the following statement is added to the definitions of `OFFSET` and `FETCH`. This statement indicates that these keywords cannot be used in versions of SQL Server earlier than [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)].  
   
- Exceptions to the top-level applies to statement can also occur when the topic is applicable to both the SQL Server and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] but only some of the syntax is supported by [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. For example, the [DROP INDEX](../t-sql/statements/drop-index-transact-sql.md) statement applies to both platforms, however, [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] does not support all of the options and clauses that SQL Server provides. These exceptions are identified in the Arguments section. For example, in the definition of MAXDOP, the following statement is added to specify the versions and platforms that can specify this option.  
+ Exceptions to the top-level applies to statement can also occur when the topic is applicable to both the SQL Server and [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] but only some of the syntax is supported by [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. For example, the [DROP INDEX](../t-sql/statements/drop-index-transact-sql.md) statement applies to both platforms, however, [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] does not support all of the options and clauses that SQL Server provides. These exceptions are identified in the Arguments section. For example, in the definition of `MAXDOP`, the following statement is added to specify the versions and platforms that can specify this option.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Exceptions to the top-level applies to statement can also occur in system objects such as catalog views. For these objects, new columns can be added or new values returned by existing columns. When a new column is added, the version/platform applicability is included in the definition of the column. When new values are returned by an existing column, the applicability of the new values are identified in the description of the values. For example, the values returned in the **type** column of the [sys.indexes](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view have changed from release to release. In the definition of that column, the applicability of the values are defined for each value that does not conform to the top-level "applies to" statement.  
   

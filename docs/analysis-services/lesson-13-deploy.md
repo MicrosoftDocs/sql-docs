@@ -1,7 +1,7 @@
 ---
 title: "Lesson 14: Deploy | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,7 +23,7 @@ In this lesson, you will configure deployment properties; specifying an on-premi
 Estimated time to complete this lesson: **5 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 12: Analyze in Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
   
 ## Deploy the model  
   
@@ -48,7 +48,9 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 1.  In **Solution Explorer**, right-click the **AW Internet Sales** project > **Build**.  
 
-2.  Right-click the **AW Internet Sales** project > **Deploy**. 
+2.  Right-click the **AW Internet Sales** project > **Deploy**.
+
+    When deploying to Azure Analysis Services, you'll likely be prompted to enter your account. Enter your organizational account and passsword, for example nancy@adventureworks.com. This account must be in Admins on the server instance.
   
     The Deploy dialog box appears and displays the deployment status of the metadata as well as each table included in the model.  
     
@@ -68,4 +70,7 @@ Congratulations! You're finished authoring and deploying your first Analysis Ser
 [Tabular Model Databases &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   
-  
+  ## What's next?
+*  [Supplemental Lesson - Implement Dynamic Security by Using Row Filters](../analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md).
+
+*  [Supplemental Lesson - Configure Reporting Properties for Power View Reports](../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md).

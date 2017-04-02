@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases | Microsoft Docs"
+title: "Tutorial: Use Azure Blob storage service with SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "01/07/2016"
@@ -14,6 +14,7 @@ applies_to:
   - "SQL Server 2016"
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 caps.latest.revision: 23
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

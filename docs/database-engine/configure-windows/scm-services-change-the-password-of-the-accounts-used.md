@@ -1,5 +1,5 @@
 ---
-title: "Change the Password of the Accounts Used by SQL Server (SQL Server Configuration Manager) | Microsoft Docs"
+title: "SCM Services - Change the Password of the Accounts Used | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "01/06/2016"

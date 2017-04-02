@@ -44,7 +44,8 @@ This article does the following:
 Blogs and other informal conversations sometimes refer to extended events by the abbreviation *xevents*.
 
 
-> [AZURE.NOTE] For information about extended event differences between Microsoft SQL Server and Azure SQL Database, see [Extended events in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
+> [!NOTE]
+> For information about extended event differences between Microsoft SQL Server and Azure SQL Database, see [Extended events in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
 
 
 ## Preparations before demo
@@ -52,12 +53,11 @@ Blogs and other informal conversations sometimes refer to extended events by the
 
 The following preliminaries would be required for you to actually perform the upcoming demonstration.
 
-
 1. [Download SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
-    - Each month you should install the latest monthly update of SSMS.
+  - Each month you should install the latest monthly update of SSMS.
 2. Log in to Microsoft SQL Server 2014 or higher, or in to an Azure SQL Database database where `SELECT @@version` returns a value whose first node is 12 or higher.
 3. Ensure that your account has the [server permission](../../t-sql/statements/grant-server-permissions-transact-sql.md) of **ALTER ANY EVENT SESSION**.
-    - If interested, more details about security and permissons related to extended events are available at the end of this article in the [Appendix](#appendix1).
+  - If interested, more details about security and permissons related to extended events are available at the end of this article in the [Appendix](#appendix1).
 
 
 
@@ -86,13 +86,9 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
 
 1. Connect with SSMS.
 
-2. In the Object Explorer, click **Management** > **Extended Events** > **New Session**.
-    -  The **New Session** dialog is preferable to the **New Session Wizard**, although the two are similar to each other.
+2. In the Object Explorer, click **Management** > **Extended Events** > **New Session**. The **New Session** dialog is preferable to the **New Session Wizard**, although the two are similar to each other.
 
-    ![SSMS Object Explorer, Management, Extended Events, New Session.](/Image/SQL%20Server/xevents%2dsession%2dnewsessions%2d05%2dgeneral%2dssms%2drightclick%2dnot%2dwizard%2epng)
-
-3. In the upper-left, click the **General** page. Then type *YourSession*, or any name you like, into the **Session name** text box.
-    - Do *not* press the **OK** button yet, that comes only at the end of the demo.
+3. In the upper-left, click the **General** page. Then type *YourSession*, or any name you like, into the **Session name** text box. Do *not* press the **OK** button yet, that comes only at the end of the demo.
 
     ![New Session > General > Session name](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
@@ -113,10 +109,11 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
 7. Click the **Filter (Predicate)** tab. Next, click **Click here to add a clause**, for the intention of capturing all SQL SELECT statements that have a HAVING clause.
 
 8. In the **Field** drop-down list, and choose **sqlserver.sql_text**.
-  - For **Operator** choose a LIKE operator.
-  - For **Value** type in **%SELECT%HAVING%**.
+   - For **Operator** choose a LIKE operator.
+   - For **Value** type in **%SELECT%HAVING%**.
 
-    > [AZURE.NOTE] In this two part name, *sqlserver* is the package name, and *sql_text* is the field name. The event we chose earlier, *sql_statement_completed* must be in the same package as the field we choose.
+    > [!NOTE]
+    > In this two part name, *sqlserver* is the package name, and *sql_text* is the field name. The event we chose earlier, *sql_statement_completed* must be in the same package as the field we choose.
 
 9. In the upper-left, click the **Data Storage** page.
 
@@ -141,7 +138,7 @@ The text and supporting screenshots can become slightly inexact when the SSMS UI
     ![Node for your new *event session* named YourSession, in the Object Explorer, under Management > Extended Events > Sessions](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
 
-#### Edit you event session
+#### Edit your event session
 
 
 In the SSMS **Object Explorer**, you can edit your event session by right-clicking its node, and then clicking **Properties**. The same multi-page dialog is displayed.
@@ -188,7 +185,8 @@ GO
 ```
 
 
-> [AZURE.NOTE] For Azure SQL Database, in the preceding CREATE EVENT SESSION statement, the ON SERVER clause would be instead be ON DATABASE.
+> [!NOTE]
+> For Azure SQL Database, in the preceding CREATE EVENT SESSION statement, the ON SERVER clause would be instead be ON DATABASE.
 > 
 > For more information about extended event differences between Microsoft SQL Server and Azure SQL Database, see [Extended events in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
 
@@ -293,7 +291,8 @@ trace_event_id         3
 In SSMS, run the following T-SQL SELECT to return results where each row provides the data about one event occurrence. The CAST AS XML makes viewing the results easy.
 
 
-> [AZURE.NOTE] The event system always appends a long number to the *.xel* event_file file name you specified. Before you can run the following SELECT from the file, you must copy the full name given by the system, and paste it into the SELECT.
+> [!NOTE]
+> The event system always appends a long number to the *.xel* event_file file name you specified. Before you can run the following SELECT from the file, you must copy the full name given by the system, and paste it into the SELECT.
 
 
 ```tsql

@@ -19,7 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create and Manage Full-Text Catalogs
-  A full-text catalog is a virtual object that does not belong to any filegroup. It is a logical concept that refers to a group of full-text indexes, or a logical container for  a group of full-text indexes. You have to create a full-text catalog before you can create a full-text index. 
+A full-text catalog is a logical container for a group of full-text indexes. You have to create a full-text catalog before you can create a full-text index.
+
+A full-text catalog is a virtual object that does not belong to any filegroup.
   
 ##  <a name="creating"></a> Create a Full-Text Catalog  
 
@@ -47,10 +49,19 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="props"></a> View the properties of a full-text catalog  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] functions such as **FULLTEXTCATALOGPROPERTY** can be used to obtain the value of various properties related to full-text indexing. This information is useful for administering and troubleshooting full-text search. For more info, see [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
+##  <a name="props"></a> Get the properties of a full-text catalog  
+Use the [!INCLUDE[tsql](../../includes/tsql-md.md)] function **FULLTEXTCATALOGPROPERTY** to get the value of various properties related to full-text catalogs. For more info, see [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
+
+For example, run the following query to get the count of indexes in the full-text catalog `Catalog1`.
+
+```sql 
+USE <database>;  
+GO  
+SELECT fulltextcatalogproperty('Catalog1', 'ItemCount');  
+GO  
+```  
   
-The following table lists the properties that are related to full-text catalogs.  
+The following table lists the properties that are related to full-text catalogs. This information may be useful for administering and troubleshooting full-text search. 
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -64,7 +75,11 @@ The following table lists the properties that are related to full-text catalogs.
 |**UniqueKeyCount**|Number of unique keys in the full-text catalog.| 
 
 ##  <a name="rebuildone"></a> Rebuild a full-text catalog  
-1.  In Object Explorer, expand the server, expand **Databases**, and then expand the database that contains the full-text catalog that you want to rebuild.  
+
+Run the Transact-SQL statement [ALTER FULLTEXT CATALOG ... REBUILD](
+../../t-sql/statements/alter-fulltext-catalog-transact-sql.md), or do the following things in SQL Server Management Studio (SSMS).
+
+1.  In SSMS, in Object Explorer, expand the server, expand **Databases**, and then expand the database that contains the full-text catalog that you want to rebuild.  
   
 2.  Expand **Storage**, and then expand **Full Text Catalogs**.  
   
@@ -75,7 +90,8 @@ The following table lists the properties that are related to full-text catalogs.
 5.  In the **Rebuild Full-Text Catalog** dialog box, click **Close**.  
    
 ##  <a name="rebuildall"></a> Rebuild all full-text catalogs for a database  
-1.  In Object Explorer, expand the server, expand **Databases**, and then expand the database that contains the full-text catalogs that you want to rebuild.  
+
+1.  In SSMS, in Object Explorer, expand the server, expand **Databases**, and then expand the database that contains the full-text catalogs that you want to rebuild.  
   
 2.  Expand **Storage**, and then right-click **Full Text Catalogs**.  
   
@@ -88,7 +104,11 @@ The following table lists the properties that are related to full-text catalogs.
   
   
 ##  <a name="removing"></a> Remove a full-text catalog from a database  
-1.  In Object Explorer, expand the server, expand **Databases**, and expand the database that contains the full-text catalog you want to remove.  
+
+Run the Transact-SQL statement [DROP FULLTEXT CATALOG](
+../../t-sql/statements/drop-fulltext-catalog-transact-sql.md), or do the following things in SQL Server Management Studio (SSMS).
+
+1.  In SSMS, in Object Explorer, expand the server, expand **Databases**, and expand the database that contains the full-text catalog you want to remove.  
   
 2.  Expand **Storage**, and expand **Full Text Catalogs**.  
   

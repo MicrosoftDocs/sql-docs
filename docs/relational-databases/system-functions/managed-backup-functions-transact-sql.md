@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "functions, smart admin"
 ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
 caps.latest.revision: 6
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

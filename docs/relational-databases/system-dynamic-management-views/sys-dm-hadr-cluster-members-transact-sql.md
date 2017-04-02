@@ -22,6 +22,7 @@ helpviewer_keywords:
   - "sys.dm_hadr_cluster_members catalog view"
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
 caps.latest.revision: 23
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

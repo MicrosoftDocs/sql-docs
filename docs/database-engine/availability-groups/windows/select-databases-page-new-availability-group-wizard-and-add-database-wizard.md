@@ -14,6 +14,7 @@ f1_keywords:
   - "sql13.swb.newagwizard.selectdatabases.f1"
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 caps.latest.revision: 16
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -25,6 +26,21 @@ manager: "jhubbard"
   
  **Name**  
  Displays the name of a local user database.  
+
+ **Cluster type**
+ Choose the type of the cluster. Pick one of the following cluster types: 
+
+   * **WSFC**
+   
+      Use when the availability group is hosted on instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that belong to a Windows Server failover cluster for high availability and disaster recovery. Applies to all supported versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+
+   * **EXTERNAL**
+      
+      Use when the availability group is hosted on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is managed by an external cluster technology for high availability and disaster recovery, for example Pacemaker on Linux. Applies to [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] and later.
+
+   * **NONE**
+      
+      Use when the availability group is hosted on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is not managed by a cluster technology for read scale and load balancing. Applies to [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] and later. 
   
  **Size**  
  Displays the database size, if the size is available to the wizard.  

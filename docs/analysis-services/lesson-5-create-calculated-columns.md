@@ -1,7 +1,7 @@
 ---
 title: "Lesson 6: Create Calculated Columns | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,7 @@ You will create five new calculated columns in three different tables. The steps
 Estimated time to complete this lesson: **15 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 4: Create Relationships](../analysis-services/lesson-4-create-relationships.md). 
   
 ## Create calculated columns  
   
@@ -89,7 +89,7 @@ The DayOfWeek calculated column provides a sortable name for the day of week.
   
 3.  Rename the column to **ProductSubcategoryName**.  
   
-The ProductSubcategoryName calculated column is used to create a hierarchy in the DimProduct table which includes data from the EnglishProductSubcategoryName column in the DimProductSubcategory table. Hierarchies cannot span more than one table. You will create hierarchies later in Lesson 6.  
+The ProductSubcategoryName calculated column is used to create a hierarchy in the DimProduct table which includes data from the EnglishProductSubcategoryName column in the DimProductSubcategory table. Hierarchies cannot span more than one table. You will create hierarchies later in Lesson 9.  
   
 #### Create a ProductCategoryName calculated column in the DimProduct table  
   
@@ -125,7 +125,8 @@ The ProductCategoryName calculated column is used to create a hierarchy in the D
       
     The Margin calculated column is used to analyze profit margins for each sale.  
   
-
+## What's next?
+Go to the next lesson: [Lesson 6: Create Measures](../analysis-services/lesson-6-create-measures.md).
   
   
   

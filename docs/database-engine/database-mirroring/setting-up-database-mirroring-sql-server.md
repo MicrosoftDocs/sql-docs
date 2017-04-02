@@ -13,6 +13,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], deployment"
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 caps.latest.revision: 62
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

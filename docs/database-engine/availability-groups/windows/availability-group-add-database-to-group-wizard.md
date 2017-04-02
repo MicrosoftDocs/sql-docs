@@ -1,5 +1,5 @@
 ---
-title: "Use the Add Database to Availability Group Wizard (SQL Server Management Studio) | Microsoft Docs"
+title: "Availability Group - Add Database to Group Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: 27
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -40,7 +40,7 @@ Or, click **Browse**.
  **Excel version**  
 Select the version of Excel that's used by the source workbook.
 
-If you have a problem when you specify a version, try specifying a different version, even an earlier version. For example, you may not be able to install the Office 2016 data providers because you have a Microsoft Office 365 subscription, and the data providers for Excel and Access 2016 can only be installed with a desktop version of Microsoft Office. In this case, you can specify Excel 2013 instead of Excel 2016. 
+If you have a problem when you specify a version, try specifying a different version, even an earlier version. For example, you may not be able to install the Office 2016 data providers because you have a Microsoft Office 365 subscription. You can only install the data providers for Excel 2016 and Access 2016 with a desktop version of Microsoft Office. In this case, you can specify Excel 2013 instead of Excel 2016. The two versions of the provider are functionally equivalent. This limitation of the Office 2016 runtime is mentioned in [this blog post](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
 
 > [!IMPORTANT]
 > You may have to download and install additional files to connect to the version of Excel that you select. See [Get the files you need to connect to Excel](#officeDownloads) on this page for more info.
@@ -58,8 +58,8 @@ If you don't see Excel in the list of data sources, are you running the 64-bit w
 ## <a name="officeDownloads"></a>Get the files you need to connect to Excel  
 You may have to download the connectivity components for Microsoft Office data sources, including Excel and Access, if they're not already installed.
 
-Later versions of the components can open files created by earlier versions of the programs. In some cases, earlier versions of the components can also open files created by later versions of the programs. For example, if you can't install the Office 2016 components, use the Office 2013 components instead.
-  
+Later versions of the components can open files created by earlier versions of the programs. In some cases, earlier versions of the components can also open files created by later versions of the programs. For example, if you can't install the Office 2016 components, use the Office 2013 components instead. The two versions of the provider are functionally equivalent. This limitation of the Office 2016 runtime is mentioned in [this blog post](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
+
 If the computer has a 32-bit version of Office - this is typical, even on 64-bit computers - then you have to install the 32-bit version of the components. You also have to ensure that you run the 32-bit wizard, or run the SQL Server Integration Services package that the wizard creates in 32-bit mode. 
  
 |Microsoft Office version|Download|  

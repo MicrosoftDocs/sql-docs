@@ -1,5 +1,5 @@
 ---
-title: "Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections (Transact-SQL) | Microsoft Docs"
+title: "Database Mirroring - Use Certificates for Outbound Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"
@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 caps.latest.revision: 39
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

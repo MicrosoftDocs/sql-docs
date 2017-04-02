@@ -1,7 +1,7 @@
 ---
 title: "Lesson 10: Create Hierarchies | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,7 @@ To create hierarchies, you'll use the model designer in *Diagram View*. Creating
 Estimated time to complete this lesson: **20 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 8: Create Perspectives](../analysis-services/lesson-8-create-perspectives.md).  
   
 ## Create hierarchies  
   
@@ -52,26 +52,26 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 3.  Add the following columns in-order:
 
-    *     CalendarYear
-    *     CalendarSemester
-    *     CalendarQuarter
-    *     MonthCalendar
-    *     DayNumberOfMonth
+    *  CalendarYear
+    *  CalendarSemester
+    *  CalendarQuarter
+    *  MonthCalendar
+    *  DayNumberOfMonth
     
 4.  In the **DimDate** table, create a **Fiscal** hierarchy. Include the following columns:  
   
-    *     FiscalYear
-    *     FiscalSemester
-    *     FiscalQuarter
-    *     MonthCalendar
-    *     DayNumberOfMonth
+    *  FiscalYear
+    *  FiscalSemester
+    *  FiscalQuarter
+    *  MonthCalendar
+    *  DayNumberOfMonth
   
 5.  Finally, in the **DimDate** table, create a **ProductionCalendar** hierarchy. Include the following columns:  
+    *  CalendarYear
+    *  WeekNumberOfYear
+    *  DayOfWeek
   
-    *     CalendarYear
-    *     WeekNumberOfYear
-    *     DayOfWeek
-  
-  
+ ## What's next?
+Go to the next lesson: [Lesson 10: Create Partitions](../analysis-services/lesson-10-create-partitions.md). 
   
   

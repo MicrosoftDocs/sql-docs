@@ -1,5 +1,5 @@
 ---
-title: "Add a BI Semantic Model Connection Content Type to a Library (Power Pivot for SharePoint) | Microsoft Docs"
+title: "Add BI Semantic Model Connection Content Type to Library | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

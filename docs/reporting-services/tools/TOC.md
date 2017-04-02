@@ -1,5 +1,4 @@
-# [overview](reporting-services-tools.md)  
-# [Tutorial: How to Locate and Start Reporting Services Tools](tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)  
+# [Overview](reporting-services-tools.md)  
 # [Reporting Services in SQL Server Data Tools](reporting-services-in-sql-server-data-tools-ssdt.md)  
 ## [Design Reports with Report Designer](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
 ### [Add a New or Existing Report to a Report Project](add-a-new-or-existing-report-to-a-report-project-ssrs.md)  
@@ -47,3 +46,4 @@
 ## [rskeymgmt Utility](rskeymgmt-utility-ssrs.md)  
 ## [rsconfig Utility](rsconfig-utility-ssrs.md)  
 ## [RS.exe Utility (SSRS)](rs-exe-utility-ssrs.md)  
+# [Tutorial: How to Locate and Start Reporting Services Tools](tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)  

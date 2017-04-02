@@ -16,9 +16,8 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Reporting Services Release notes
- ||  
-|-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
+
+[!INCLUDE[ssrs-appliesto-xxx-preview](../includes/ssrs-appliesto-xxx-preview.md)]
 
 This topic describes limitations and issues with the Technical Preview of Power BI reports in SQL Server Reporting Services.
 

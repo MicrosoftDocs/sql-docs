@@ -15,6 +15,7 @@ f1_keywords:
   - "sql13.swb.newagwizard.specifyreplicas.f1"
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 caps.latest.revision: 35
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -23,10 +24,10 @@ manager: "jhubbard"
   
 |Tab|Brief Description|  
 |---------|-----------------------|  
-|[Replicas](#ReplicasTab)|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that will host or currently hosts a secondary replica. Note that the server instance to which you are currently connected must host the primary replica.<br /><br /> Finish specifying all the replicas on the **Replicas** tab before starting the other tabs.|  
+|[Replicas](#ReplicasTab)|Use this tab to specify each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that will host or currently hosts a secondary replica. Note that the server instance to which you are currently connected must host the primary replica.<br /><br /> Finish specifying all the replicas on the **Replicas** tab before starting the other tabs.<br/><br/> Note **Automatic failover** is disabled if the cluster type is **NONE**. SQL Server only supports manual failover when an availability group is not in a cluster. <br/><br/> When cluster type is external, failover mode is external. <br/><br/> When you are adding a replica, all new replicas must be hosted on the same operating system type as the existing replicas. <br/><br/>When adding a replica, if the primary replica is on cluster type WSFC, the secondary replicas must be in the same cluster.|
 |[Endpoints](#EndpointsTab)|Use this tab to verify any existing database mirroring endpoints and also, if this endpoint is lacking on a server instance whose service accounts use Windows Authentication, to create the endpoint automatically.|  
 |[Backup Preferences](#BackupPreferencesTab)|Use this tab to specify your backup preference for the availability group as a whole and your backup priorities for the individual availability replicas.|  
-|[Listener](#Listener)|Use this tab, if available, to create an availability group listener. By default, a listener is not created.<br /><br /> This tab is available only if you are running the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].|  
+|[Listener](#Listener)|Use this tab, if available, to create an availability group listener. By default, a listener is not created.<br /><br /> This tab is available only if you are running the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].<br/><br/>DHCP is disabled when the cluster type is either EXTERNAL or NONE. |  
   
 ##  <a name="ReplicasTab"></a> Replicas Tab  
  **Server Instance**  
@@ -175,7 +176,7 @@ manager: "jhubbard"
  Click to remove the subnet that is currently selected in the grid.  
   
  **DHCP**  
- Select if you want the listener to listen on a single subnet and to use a dynamic IPv4 address that is assigned by a server running the Dynamic Host Configuration Protocol (DHCP). DHCP is limited to a single subnet that is common to every server instance that host an availability replica for the availability group.  
+ Select if you want the listener to listen on a single subnet and to use a dynamic IPv4 address that is assigned by a server running the Dynamic Host Configuration Protocol (DHCP). DHCP is limited to a single subnet that is common to every server instance that host an availability replica for the availability group. DHCP is not available for cluster type external or none.  
   
 > [!IMPORTANT]  
 >  We do not recommend DHCP in production environment. If there is a down time and the DHCP IP lease expires, extra time is required to register the new DHCP network IP address that is associated with the listener DNS name and impact the client connectivity. However, DHCP is good for setting up your development and testing environment to verify basic functions of availability groups and for integration with your applications.  

@@ -13,6 +13,7 @@ dev_langs:
   - "TSQL"
 ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
 caps.latest.revision: 5
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

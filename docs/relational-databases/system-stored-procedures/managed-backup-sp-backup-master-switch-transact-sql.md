@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "smart_admin.sp_ backup_master_switch"
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 caps.latest.revision: 12
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

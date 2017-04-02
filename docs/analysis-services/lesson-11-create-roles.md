@@ -1,7 +1,7 @@
 ---
 title: "Lesson 12: Create Roles | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,7 +36,7 @@ Because Windows user and group accounts in your organization are unique, you can
 Estimated time to complete this lesson: **15 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 10: Create Partitions](../analysis-services/lesson-10-create-partitions.md).  
   
 ## Create roles  
   
@@ -84,6 +84,8 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
 4.  Optional: Click on the **Members** tab, and then click **Add**. In the **Select Users or Groups** dialog box, enter the Windows users or groups from your organization you want to include in the role. 
   
   
+## What's next?
+Go to the next lesson: [Lesson 12: Analyze in Excel](../analysis-services/lesson-12-analyze-in-excel.md).
 
   
   

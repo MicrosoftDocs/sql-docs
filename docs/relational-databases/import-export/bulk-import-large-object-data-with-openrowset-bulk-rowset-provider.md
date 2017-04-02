@@ -1,5 +1,5 @@
 ---
-title: "Bulk Import Large-Object Data by using the OPENROWSET Bulk Rowset Provider (SQL Server) | Microsoft Docs"
+title: "Bulk Import Large-Object Data with OPENROWSET Bulk Rowset Provider | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Enable Coordinated Backups for Transactional Replication (Replication Transact-SQL Programming) | Microsoft Docs"
+title: "Enable Coordinated Backups for Transactional Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

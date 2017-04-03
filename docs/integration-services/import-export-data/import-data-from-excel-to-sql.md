@@ -34,7 +34,9 @@ If you're familiar with SSIS and don't want to run the SQL Server Import and Exp
 
 ![](media/excel-to-sql-data-flow.png)
 
-For more info about these SSIS components, see [Excel Source](../data-flow/excel-source.md) and [SQL Server Destination](../data-flow/sql-server-destination.md).
+For more info about these SSIS components, see the following topics.
+-   [Excel Source](../data-flow/excel-source.md)
+-   [SQL Server Destination](../data-flow/sql-server-destination.md)
 
 To start learning how to build SSIS packages, see the tutorial [How to Create an ETL Package](../ssis-how-to-create-an-etl-package.md).
 
@@ -44,7 +46,7 @@ To start learning how to build SSIS packages, see the tutorial [How to Create an
 
 Import data directly from Excel files by using the `OPENROWSET` or `OPENDATASOURCE` function. This usage is called a *distributed query*.
 
-Before you can run a distributed query, you have to enable the `ad hoc distributed queries' server configuration option, as shown in the following example.For more info, see [ad hoc distributed queries Server Configuration Option](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).
+Before you can run a distributed query, you have to enable the `ad hoc distributed queries` server configuration option, as shown in the following example. For more info, see [ad hoc distributed queries Server Configuration Option](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).
 
 ```sql
 sp_configure 'show advanced options', 1;
@@ -55,7 +57,7 @@ RECONFIGURE;
 GO
 ```
 
-The following code sample imports the data from the Excel `Customers` worksheet into a new SQL Server table.
+The following code sample imports the data from the Excel `Customers` worksheet into a new SQL Server table with `OPENROWSET`.
 
 ```sql
 USE ImportFromExcel;
@@ -171,11 +173,14 @@ Import data saved as text files by stepping through the pages of a wizard. For m
 -   [Tutorial: Create a pipeline with Copy Activity using Data Factory Copy Wizard](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## Azure Data Factory
-If you're familiar with Azure Data Factory and don't want to run the Azure Data Factory Copy Wizard, create pipeline with a Copy activity that copies from the text file in a file storage location to SQL Server or to Azure SQL Database.
+If you're familiar with Azure Data Factory and don't want to run the Azure Data Factory Copy Wizard, create A pipeline with a Copy activity that copies from the text file in a file storage location to SQL Server or to Azure SQL Database.
 
 For more info about using these Data Factory sources and sinks, see the following topics.
 -   [File system](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
 -   [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
 -   [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
-To start learning how to copy data with Azure data factory, see [Move data by using Copy Activity](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities) and the tutorial [Tutorial: Create a pipeline with Copy Activity using Azure portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database).
+To start learning how to copy data with Azure data factory, see the following topics.
+-   [Move data by using Copy Activity](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
+-   s[Tutorial: Create a pipeline with Copy Activity using Azure portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- 

@@ -179,13 +179,13 @@ CREATE DATABASE database_snapshot_name
     **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
      Specifies the level of non-transactional FILESTREAM access to the database.  
-  
-    |Value |Description |  
-    |----------- |----------------- |  
-    |OFF |Non-transactional access is disabled. |  
-    |READONLY |FILESTREAM data in this database can be read by non-transactional processes. |  
-    |FULL |Full non-transactional access to FILESTREAM FileTables is enabled. |   
-    
+
+|Value |Description |  
+|----------- |----------------- |  
+|OFF |Non-transactional access is disabled. |  
+|READONLY |FILESTREAM data in this database can be read by non-transactional processes. |  
+|FULL |Full non-transactional access to FILESTREAM FileTables is enabled. |   
+
     
      DIRECTORY_NAME = <directory_name>  
      **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

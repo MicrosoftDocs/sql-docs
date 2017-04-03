@@ -19,7 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Configure SQL Server on a Server Core Installation
-  This topic covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation. Refer the following sections:  
+  This topic covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Configure and Manage Server Core on Windows Server  
  The section provides references to the topics that help configure and manage a Server Core installation.  

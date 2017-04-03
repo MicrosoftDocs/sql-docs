@@ -30,6 +30,8 @@ This topic describes how to write full-text queries with the full-text predicate
 
 `CONTAINS/CONTAINSTABLE` and `FREETEXT/FREETEXTTABLE` are useful for different kinds of matching. The following table helps you to choose the best predicate or function for your query.
 
+For examples, see [Simple examples of each predicate and function](#examples_simple) and [Examples of specific types of searches](#examples_specific). Also see [What you can search for](#supported).
+
 | |CONTAINS/CONTAINSTABLE|FREETEXT/FREETEXTTABLE|
 |---|---|---|
 |**Type of query**|Match single words and phrases with precise or fuzzy (less precise) matching.|Match the meaning, but not the exact wording, of specified words, phrases or sentences (the *freetext string*).<br/><br/>Matches are generated if any term or form of any term is found in the full-text index of a specified column.|
@@ -39,6 +41,8 @@ This topic describes how to write full-text queries with the full-text predicate
 
 The predicates `CONTAINS/FREETEXT` and the rowset-valued functions `CONTAINSTABLE/FREETEXTTABLE` have different syntax and options. The following table helps you to choose the best predicate or function for your query.
 
+For examples, see [Simple examples of each predicate and function](#examples_simple) and [Examples of specific types of searches](#examples_specific). Also see [What you can search for](#supported).
+
 | |Predicates<br/>CONTAINS/FREETEXT|Functions<br/>CONTAINSTABLE/FREETEXTTABLE|
 |---|---|---|
 |**Usage**|Use the full-text **predicates** CONTAINS and FREETEXT in the WHERE or HAVING clause of a SELECT statement.|Use the full-text **functions** CONTAINSTABLE and FREETEXTTABLE functions like a regular table name in the FROM clause of a SELECT statement.|
@@ -47,7 +51,7 @@ The predicates `CONTAINS/FREETEXT` and the rowset-valued functions `CONTAINSTABL
 |**Additional options**|You can use a four-part name in the CONTAINS or FREETEXT predicate to query full-text indexed columns of the target tables on a linked server. To prepare a remote server to receive full-text queries, create a full-text index on the target tables and columns on the remote server and then add the remote server as a linked server.|N/a|
 |**More info**|For more info about the syntax and arguments of these predicates, see [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [FREETEXT](../../t-sql/queries/freetext-transact-sql.md).|For more info about the syntax and arguments of these functions, see [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).|
 
-## Simple examples of each predicate and function
+## <a name="examples_simple"></a> Simple examples of each predicate and function
 
 ### Example - CONTAINS  
  The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`.  
@@ -145,7 +149,7 @@ The following table describes the types of words and phrases that you can search
 |A word or phrase close to another word or phrase<br/>(*proximity term*)|For example, you want to find the rows in which the word "ice" is near the word "hockey" or in which the phrase "ice skating" is near the phrase "ice hockey".<br /><br /> A *proximity term* indicates words or phrases that are near to each other., You can also specify the maximum number of non-search terms that separate the first and last search terms. In addition, you can search for words or phrases in any order, or in the order in which you specify them.<br /><br /> For more information, see [Search for Words Close to Another Word with NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
 |Words or phrases using weighted values<br/>(*weighted term*)|For example, in a query searching for multiple terms, you can assign each search word a weight value indicating its importance relative to the other words in the search condition. The results for this type of query return the most relevant rows first, according to the relative weight you have assigned to search words. The result sets contain documents or rows containing any of the specified terms (or content between them); however, some results will be considered more relevant than others because of the variation in the weighted values associated with different searched terms.<br /><br /> A *weighting value* indicates the degree of importance for each word and phrase within a set of words and phrases. A weight value of 0.0 is the lowest, and a weight value of 1.0 is the highest.<br /><br /> For more information, see [Searching for Words or Phrases Using Weighted Values (Weighted Term)](#Weighted_Term), later in this topic.|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
 
-## Examples of specific types of searches
+## <a name="examples_specific"></a> Examples of specific types of searches
 
 ###  <a name="Simple_Term"></a> Search for a specific word or phrase (Simple Term)  
  You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) to search a table for a specific phrase. For example, if you want to search the **ProductReview** table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to find all comments about a product with the phrase "learning curve", you could use the CONTAINS predicate as follows:  

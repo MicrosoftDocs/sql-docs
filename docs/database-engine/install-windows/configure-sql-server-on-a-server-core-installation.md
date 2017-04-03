@@ -94,7 +94,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  Being enabled for AlwaysOn Availability Groups is a prerequisite for a server instance to use availability groups as a high availability and disaster recovery solution. For more information about managing the Always On Availability Groups, see [Enable and Disable Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager Remotely  
- These steps are meant to be performed on a PC running the client edition of Windows, or another server that has the Server Graphical Shell installed (i.e. a full installation of [!INCLUDE[winserver2016-standard](../../includes/winserver2016standard-md.md)] with the Server Graphical Shell feature enabled).  
+ These steps are meant to be performed on a PC running the client edition of Windows, or Windows Server that has the Server Graphical Shell installed.  
   
 1.  Open **Computer Management**. To open **Computer Management**, click **Start**, type `compmgmt.msc`, and then click **OK**.    
   

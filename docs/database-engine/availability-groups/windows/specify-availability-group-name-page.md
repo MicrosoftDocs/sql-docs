@@ -23,12 +23,12 @@ manager: "jhubbard"
   
 ##  <a name="PageOptions"></a> Specify Availability Group Options  
  **Availability group name**  
- Specify the name of the availability group. For a new availability group, specify a valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifier that is unique across all availability groups in the WSFC cluster. The maximum length for an availability group name is 128 characters.  
+ Specify the name of the availability group. For a new availability group, specify a valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifier that is unique across all availability groups in the Windows Server failover cluster (WSFC). The maximum length for an availability group name is 128 characters.  
 
  **Cluster type** 
  Next, specify the cluster type. The possible cluster types depend on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version and operating system. Choose one from the following list:
 
-   * **WSFC**
+   * **Windows Server Failover Clustering**
    
       Use when the availability group is hosted on instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that belong to a Windows Server failover cluster for high availability and disaster recovery. Applies to all supported versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
 

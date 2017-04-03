@@ -24,20 +24,20 @@ manager: "jhubbard"
 ---
 # Query with Full-Text Search
 
-This topic describes when and how to use the full-text predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** to write full-text queries.  
+This topic describes how to write full-text queries with the full-text predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** .  
 
 ## Pick the best full-text predicate or function
 
-CONTAINS/CONTAINSTABLE and FREETEXT/FREETEXTTABLE are useful for different kinds of matching. The following table helps you to choose the best predicate or function for your query.
+`CONTAINS/CONTAINSTABLE` and `FREETEXT/FREETEXTTABLE` are useful for different kinds of matching. The following table helps you to choose the best predicate or function for your query.
 
 | |CONTAINS/CONTAINSTABLE|FREETEXT/FREETEXTTABLE|
 |---|---|---|
-|**Type of query**|To match single words and phrases with precise or fuzzy (less precise) matching.|To match the meaning, but not the exact wording, of specified words, phrases or sentences (the *freetext string*).<br/><br/>Matches are generated if any term or form of any term is found in the full-text index of a specified column.|
-|**More query options**|<ul><li>You can specify the proximity of words within a certain distance of one another.</li><li>You can return weighted matches.</li><li>You can use logical operation to combine search conditions. For more info, see [Using Boolean operators (AND, OR, AND NOT)](#Using_Boolean_Operators) later in this topic.</li></ul>|N/a|
+|**Type of query**|Match single words and phrases with precise or fuzzy (less precise) matching.|Match the meaning, but not the exact wording, of specified words, phrases or sentences (the *freetext string*).<br/><br/>Matches are generated if any term or form of any term is found in the full-text index of a specified column.|
+|**More query options**|You can specify the proximity of words within a certain distance of one another.<br/><br/>You can return weighted matches.<br/><br/>You can use logical operation to combine search conditions. For more info, see [Using Boolean operators (AND, OR, and NOT)](#Using_Boolean_Operators) later in this topic.|N/a|
 
 ## Compare predicates and functions
 
-CONTAINS/FREETEXT and CONTAINSTABLE/FREETEXTTABLE have different syntax and options. The following table helps you to choose the best predicate or function for your query.
+The predicates `CONTAINS/FREETEXT` and the rowset-valued functions `CONTAINSTABLE/FREETEXTTABLE` have different syntax and options. The following table helps you to choose the best predicate or function for your query.
 
 | |Predicates<br/>CONTAINS/FREETEXT|Functions<br/>CONTAINSTABLE/FREETEXTTABLE|
 |---|---|---|
@@ -134,7 +134,7 @@ GO
 
 ##  <a name="supported"></a> What you can search for
 
-This section describes the types of words and phrases that you can search for.
+The following table describes the types of words and phrases that you can search for.
   
 |Query-term form|Description|Supported by|  
 |----------------------|-----------------|------------------|  
@@ -145,7 +145,7 @@ This section describes the types of words and phrases that you can search for.
 |A word or phrase close to another word or phrase<br/>(*proximity term*)|For example, you want to find the rows in which the word "ice" is near the word "hockey" or in which the phrase "ice skating" is near the phrase "ice hockey".<br /><br /> A *proximity term* indicates words or phrases that are near to each other., You can also specify the maximum number of non-search terms that separate the first and last search terms. In addition, you can search for words or phrases in any order, or in the order in which you specify them.<br /><br /> For more information, see [Search for Words Close to Another Word with NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
 |Words or phrases using weighted values<br/>(*weighted term*)|For example, in a query searching for multiple terms, you can assign each search word a weight value indicating its importance relative to the other words in the search condition. The results for this type of query return the most relevant rows first, according to the relative weight you have assigned to search words. The result sets contain documents or rows containing any of the specified terms (or content between them); however, some results will be considered more relevant than others because of the variation in the weighted values associated with different searched terms.<br /><br /> A *weighting value* indicates the degree of importance for each word and phrase within a set of words and phrases. A weight value of 0.0 is the lowest, and a weight value of 1.0 is the highest.<br /><br /> For more information, see [Searching for Words or Phrases Using Weighted Values (Weighted Term)](#Weighted_Term), later in this topic.|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
 
-## Examples of various types of searches
+## Examples of specific types of searches
 
 ###  <a name="Simple_Term"></a> Search for a specific word or phrase (Simple Term)  
  You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) to search a table for a specific phrase. For example, if you want to search the **ProductReview** table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to find all comments about a product with the phrase "learning curve", you could use the CONTAINS predicate as follows:  
@@ -245,14 +245,14 @@ GO
  When you write full-text queries, you can also specify the following options.
   
 -   **Language**, with the **LANGUAGE** option. Many query terms depend heavily on word-breaker behavior. To ensure that you are using the correct word breaker (and stemmer) and thesaurus file, we recommend that you specify the LANGUAGE option. For more information, see [Choose a Language When Creating a Full-Text Index](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
-  
--   **Stopwords**. When defining a full-text query, the Full-Text Engine discards stopwords (also called noise words) from the search criteria. Stopwords are words such as "a," "and," "is," or "the," that can occur frequently but that typically do not help when searching for particular text. Stopwords are listed in a stoplist. Each full-text index is associated with a specific stoplist, which determines what stopwords are omitted from the query or the index at indexing time. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
-  
--   **Thesaurus**. FREETEXT and FREETEXTTABLE queries use the thesaurus by default. CONTAINS and CONTAINSTABLE support an optional THESAURUS argument.  
-  
+
 -   **Case sensitivity**. Full-text search queries are case-insensitive. However, in Japanese, there are multiple phonetic orthographies in which the concept of orthographic normalization is akin to case insensitivity (for example, kana = insensitivity). This type of orthographic normalization is not supported.  
 
-##  <a name="tokens"></a> Get the tokenization results
+-   **Stopwords**. When defining a full-text query, the Full-Text Engine discards stopwords (also called noise words) from the search criteria. Stopwords are words such as "a," "and," "is," or "the," that can occur frequently but that typically do not help when searching for particular text. Stopwords are listed in a stoplist. Each full-text index is associated with a specific stoplist, which determines what stopwords are omitted from the query or the index at indexing time. For more info, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+  
+-   **Thesaurus**. FREETEXT and FREETEXTTABLE queries use the thesaurus by default. CONTAINS and CONTAINSTABLE support an optional THESAURUS argument. For more info, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md)
+  
+##  <a name="tokens"></a> Check the tokenization results
 
 After you apply a given word breaker, thesaurus, and stoplist combination in a query, you can view the tokenization results by using the **sys.dm_fts_parser** dynamic management view. For more information, see [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   

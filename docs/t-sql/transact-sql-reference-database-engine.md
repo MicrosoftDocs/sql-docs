@@ -29,13 +29,13 @@ manager: "jhubbard"
   
 -   General office productivity applications.  
   
--   Applications that use a graphical user interface (GUI) to let users select the tables and columns from which they want to see data. This includes Microsoft development tools such as [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) and [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt).  
+-   Applications that use a graphical user interface (GUI) to let users select the tables and columns from which they want to see data. This includes Microsoft development tools such as [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) and [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 -   Applications that use general language sentences to determine what data a user wants to see.  
   
 -   Line of business applications that store their data in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases. These applications can include both applications written by vendors and applications written in-house.  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] scripts that are run by using utilities such as [sqlcmd](../tools/sqlcmd-utility).  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] scripts that are run by using utilities such as [sqlcmd](../tools/sqlcmd-utility.md).  
   
 -   Applications created by using development systems such as [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vcprvc](../includes/vcprvc-md.md)], [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], or [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual J++ that use database APIs such as ADO, OLE DB, and ODBC.  
   
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
  To find [!INCLUDE[tsql](../includes/tsql-md.md)] topics, use search at the top right of this page, or use the table of contents on the left side of the page. You can also type a [!INCLUDE[tsql](../includes/tsql-md.md)] key word in the Management Studio Query Editor window, and press F1. 
   
-System tables, views, functions, and procedures, are in the [Database Features](../relational-databases/database-features) section.  
+System tables, views, functions, and procedures, are in the [Database Features](../relational-databases/database-features.md) section.  
   
  For a short tutorial about how to write [!INCLUDE[tsql](../includes/tsql-md.md)], see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).  
   

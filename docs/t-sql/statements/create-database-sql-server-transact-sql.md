@@ -49,7 +49,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```Create a database  
+```
+-- Create a database  
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -106,7 +107,8 @@ FILEGROUP filegroup name
   
 ```  
   
-```Attach a database  
+```
+-- Attach a database  
 CREATE DATABASE database_name   
     ON <filespec> [ ,...n ]   
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }  
@@ -122,7 +124,8 @@ CREATE DATABASE database_name
   
 ```  
   
-```Create a database snapshot  
+```
+-- Create a database snapshot  
 CREATE DATABASE database_snapshot_name   
     ON   
     (  

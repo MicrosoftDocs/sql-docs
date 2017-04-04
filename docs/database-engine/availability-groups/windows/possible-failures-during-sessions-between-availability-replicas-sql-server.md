@@ -10,6 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords:
+  - "troubleshooting [SQL Server], HADR"
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], troubleshooting"
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe

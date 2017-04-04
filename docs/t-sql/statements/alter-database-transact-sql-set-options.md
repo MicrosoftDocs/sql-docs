@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/10/2016"
+ms.date: "04/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,7 +29,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# ALTER DATABASE (Transact-SQL) SET Options 
+# ALTER DATABASE SET Options (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   This topic contains the ALTER DATABASE syntax that is related to setting database options in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For other ALTER DATABASE syntax, see the following topics.  
@@ -52,7 +52,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER DATABASE { database_name  | CURRENT }  
 SET   
 {  
@@ -258,7 +257,7 @@ SET
   
  CURRENT performs the action in the current database. CURRENT is not supported for all options in all contexts. If CURRENT fails, provide the database name.  
   
- **<auto_option> ::=**  
+ **\<auto_option> ::=**  
   
  Controls automatic options.  
   
@@ -358,7 +357,7 @@ SET
   
  For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
   
- **<change_tracking_option> ::=**  
+ **\<change_tracking_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -384,7 +383,7 @@ SET
  OFF  
  Disables change tracking for the database. You must disable change tracking on all tables before you can disable change tracking off the database.  
   
- **<containment_option> ::=**  
+ **\<containment_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -400,7 +399,7 @@ SET
 > [!NOTE]  
 >  Containment cannot be configured in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Containment is not explicitly designated, but [!INCLUDE[ssSDS](../../includes/sssds-md.md)] can use contained features such as contained database users.  
   
- **<cursor_option> ::=**  
+ **\<cursor_option> ::=**  
   
  Controls cursor options.  
   
@@ -430,13 +429,13 @@ SET
   
  The status of this option can be determined by examining the is_local_cursor_default column in the sys.databases catalog view or the IsLocalCursorsDefault property of the DATABASEPROPERTYEX function.  
   
- **<database_mirroring>**  
+ **\<database_mirroring>**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  For the argument descriptions, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
- **<date_correlation_optimization_option> ::=**  
+ **\<date_correlation_optimization_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -453,7 +452,7 @@ SET
   
  The current setting of this option can be determined by examining the is_date_correlation_on column in the sys.databases catalog view.  
   
- **<db_encryption_option> ::=**  
+ **\<db_encryption_option> ::=**  
   
  Controls the database encryption state.  
   
@@ -464,7 +463,7 @@ SET
   
  You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.  
   
- **<db_state_option> ::=**  
+ **\<db_state_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -486,7 +485,7 @@ SET
   
  A database marked as RESTORING cannot be set to OFFLINE, ONLINE, or EMERGENCY. A database may be in the RESTORING state during an active restore operation or when a restore operation of a database or log file fails because of a corrupted backup file.  
   
- **<db_update_option> ::=**  
+ **\<db_update_option> ::=**  
   
  Controls whether updates are allowed on the database.  
   
@@ -504,7 +503,7 @@ SET
 > [!NOTE]  
 >  On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.  
   
- **<db_user_access_option> ::=**  
+ **\<db_user_access_option> ::=**  
   
  Controls user access to the database.  
   
@@ -523,15 +522,15 @@ SET
   
  If there are active jobs, either allow the jobs to complete or manually terminate them by using [KILL STATS JOB](../../t-sql/language-elements/kill-stats-job-transact-sql.md).  
   
- RESTRICTED_USER  
+RESTRICTED_USER  
  RESTRICTED_USER allows for only members of the db_owner fixed database role and dbcreator and sysadmin fixed server roles to connect to the database, but does not limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused.  
   
- MULTI_USER  
+MULTI_USER  
  All users that have the appropriate permissions to connect to the database are allowed.  
   
  The status of this option can be determined by examining the user_access column in the sys.databases catalog view or the UserAccess property of the DATABASEPROPERTYEX function.  
   
- **<delayed_durability_option> ::=**  
+ **\<delayed_durability_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -546,7 +545,7 @@ SET
  FORCED  
  All transactions following SET FORCED are delayed durable. Any durability options set in an atomic block or commit statement are ignored.  
   
- **<external_access_option> ::=**  
+ **\<external_access_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -611,7 +610,7 @@ SET
   
  Specifies an integer from 1753 to 9999 that represents the cutoff year for interpreting two-digit years as four-digit years. This option is allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
   
- **<FILESTREAM_option> ::=**  
+ **\<FILESTREAM_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -630,13 +629,13 @@ SET
  DIRECTORY_NAME = *<directory_name>*  
  A windows-compatible directory name. This name should be unique among all the database-level directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of collation settings. This option must be set before creating a FileTable in this database.  
   
- **<HADR_options> ::=**  
+ **\<HADR_options> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  See [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
- **<mixed_page_allocation_option> ::=**  
+ **\<mixed_page_allocation_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -650,7 +649,7 @@ SET
   
  This setting is ON for all system databases. **tempdb** is the only system database that supports OFF.  
   
- **<parameterization_option> ::=**  
+ **\<parameterization_option> ::=**  
   
  Controls the parameterization option.  
   
@@ -663,7 +662,7 @@ SET
   
  The current setting of this option can be determined by examining the is_parameterization_forced column in the sys.databases catalog view.  
   
- **<query_store_options> ::=**  
+ **\<query_store_options> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
@@ -717,7 +716,7 @@ SET
  MAX_PLANS_PER_QUERY  
  An integer representing the maximum number of plans maintained for each query. Default is 200.  
   
- **<recovery_option> ::=**  
+ **\<recovery_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -784,7 +783,7 @@ SET
   
  The current setting of this option can be determined by examining the page_verify_option column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the IsTornPageDetectionEnabled property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
- **<remote_data_archive_option> ::=**  
+ **\<remote_data_archive_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -796,10 +795,10 @@ SET
   
  **Permissions**. Enabling Stretch Database for a database or a table requires db_owner permissions. Enabling Stretch Database for a database also requires CONTROL DATABASE permissions.  
   
- SERVER = <server_name>  
+ SERVER = \<server_name>  
  Specifies the address of the Azure server. Include the `.database.windows.net` portion of the name. For example, `MyStretchDatabaseServer.database.windows.net`.  
   
- CREDENTIAL = <db_scoped_credential_name>  
+ CREDENTIAL = \<db_scoped_credential_name>  
  Specifies the database scoped credential that the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to connect to the Azure server. Make sure the credential exists before you run this command. For more info, see [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
  FEDERATED_SERVICE_ACCOUNT =  ON | OFF  
@@ -822,7 +821,7 @@ SET
   
  Disabling Stretch does not remove the remote database. If you want to delete the remote database, you have to drop it by using the Azure management portal.  
   
- **<service_broker_option> ::=**  
+ **\<service_broker_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -854,7 +853,7 @@ SET
   
  The current setting of this property is reported in the is_broker_priority_honored column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
   
- **<snapshot_option> ::=**  
+ **\<snapshot_option> ::=**  
   
  Determines the transaction isolation level.  
   
@@ -910,7 +909,7 @@ SET
   
  The current setting of this option can be determined by examining the **is_memory_optimized_elevate_to_snapshot_on** column in the [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
   
- **<sql_option> ::=**  
+ **\<sql_option> ::=**  
   
  Controls the ANSI compliance options at the database level.  
   
@@ -959,8 +958,7 @@ SET
 > [!IMPORTANT]  
 >  In a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ANSI_PADDING will always be ON and any applications that explicitly set the option to OFF will produce an error. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. We recommend that you always set ANSI_PADDING to ON. ANSI_PADDING must be ON when you create or manipulate indexes on computed columns or indexed views.  
   
- **char(**  
- ***n* )** and **binary(*n*)** columns that allow for nulls are padded to the length of the column when ANSI_PADDING is set to ON, but trailing blanks and zeros are trimmed when ANSI_PADDING is OFF. **char(*n*)** and **binary(*n*)** columns that do not allow nulls are always padded to the length of the column.  
+ **char(*n*)** and **binary(*n*)** columns that allow for nulls are padded to the length of the column when ANSI_PADDING is set to ON, but trailing blanks and zeros are trimmed when ANSI_PADDING is OFF. **char(*n*)** and **binary(*n*)** columns that do not allow nulls are always padded to the length of the column.  
   
  Connection-level settings that are set by using the SET statement override the default database-level setting for ANSI_PADDING. By default, ODBC and OLE DB clients issue a connection-level SET statement setting ANSI_PADDING to ON for the session when connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
@@ -1049,7 +1047,7 @@ SET
   
  The status of this option can be determined by examining the is_recursive_triggers_on column in the sys.databases catalog view or the IsRecursiveTriggersEnabled property of the DATABASEPROPERTYEX function.  
   
- **<target_recovery_time_option> ::=**  
+ **\<target_recovery_time_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -1093,25 +1091,25 @@ SET
   
 |Options category|Can be specified with other options|Can use the WITH \<termination> clause|  
 |----------------------|-----------------------------------------|---------------------------------------------|  
-|<db_state_option>|Yes|Yes|  
-|<db_user_access_option>|Yes|Yes|  
-|<db_update_option>|Yes|Yes|  
-|<delayed_durability_option>|Yes|Yes|  
-|<external_access_option>|Yes|No|  
-|<cursor_option>|Yes|No|  
-|<auto_option>|Yes|No|  
-|<sql_option>|Yes|No|  
-|<recovery_option>|Yes|No|  
-|<target_recovery_time_option>|No|Yes|  
-|<database_mirroring_option>|No|No|  
+|\<db_state_option>|Yes|Yes|  
+|\<db_user_access_option>|Yes|Yes|  
+|\<db_update_option>|Yes|Yes|  
+|\<delayed_durability_option>|Yes|Yes|  
+|\<external_access_option>|Yes|No|  
+|\<cursor_option>|Yes|No|  
+|\<auto_option>|Yes|No|  
+|\<sql_option>|Yes|No|  
+|\<recovery_option>|Yes|No|  
+|\<target_recovery_time_option>|No|Yes|  
+|\<database_mirroring_option>|No|No|  
 |ALLOW_SNAPSHOT_ISOLATION|No|No|  
 |READ_COMMITTED_SNAPSHOT|No|Yes|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Yes|Yes|  
-|<service_broker_option>|Yes|No|  
+|\<service_broker_option>|Yes|No|  
 |DATE_CORRELATION_OPTIMIZATION|Yes|Yes|  
-|<parameterization_option>|Yes|Yes|  
-|<change_tracking_option>|Yes|Yes|  
-|<db_encryption>|Yes|No|  
+|\<parameterization_option>|Yes|Yes|  
+|\<change_tracking_option>|Yes|Yes|  
+|\<db_encryption>|Yes|No|  
   
  The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is cleared by setting one of the following options:  
   
@@ -1197,11 +1195,9 @@ GO
   
  The result set shows that the snapshot isolation framework is enabled.  
   
- `name                 snapshot_isolation_state  description`  
-  
- `-------------------- ------------------------  ----------`  
-  
- `AdventureWorks2012   1                         ON`  
+ |name |snapshot_isolation_state |description|  
+ |-------------------- |------------------------  |----------|  
+ |AdventureWorks2012   |1                        | ON |  
   
 ### D. Enabling, modifying, and disabling change tracking  
  The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.  

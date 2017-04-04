@@ -173,7 +173,7 @@ CREATE DATABASE database_snapshot_name
 >  Contained databases are collated differently than non-contained databases. Please see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) for more information.  
   
  WITH \<option>  
- -   **<filestream_options>**  
+ -   **\<filestream_options>**  
   
      NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }  
     **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -187,7 +187,7 @@ CREATE DATABASE database_snapshot_name
 |FULL |Full non-transactional access to FILESTREAM FileTables is enabled. |   
 
     
-     DIRECTORY_NAME = <directory_name>  
+  DIRECTORY_NAME = <directory_name>  
      **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
   

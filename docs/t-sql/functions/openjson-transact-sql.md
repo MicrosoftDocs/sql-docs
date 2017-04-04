@@ -54,10 +54,12 @@ OPENJSON( jsonExpression [ , path ] )
 
   **OPENJSON** table-value function parses *jsonExpression* provided as a first argument and returns one or many rows containing data from JSON objects in this expression. *jsonExpression* might contain nested sub-objects. If user wants to parse sub-object placed on some path within
   *jsonExpression*, he can specify second **path** parameter that will define where is placed JSON sub-object that should be parsed.
+
   ![Syntax for OPENJSON TVF](../../relational-databases/json/media/openjson-syntax.png "OPENJSON syntax")  
 
   By default, **OPENJSON** table-value function returns three columns with key name, value, and type of each {key:value} pair that is found in the *jsonExpression*.
   As an alternative, user can explicitly specify the schema of the result set that will return **OPENJSON** function using *with_clause*:
+
   ![Syntax for WITH clause in OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH syntax")
 
   *with_clause* contains the list of the columns that will be returned by **OPENJSON** with their types. By default, **OPENJSON** matches keys in
@@ -169,38 +171,33 @@ This behavior is similar to the behavior of the JSON_VALUE function.
  For example, the following query returns and formats the elements of an array.  
   
 ```tsql  
-DECLARE @json NVARCHAR(MAX)  
-SET @json = N'{"Orders":   
-   {"OrdersArray":  
-     [  
-       {  
-         "Order": {  
-           "Number":"SO43659",  
-           "Date":"2011-05-31T00:00:00"  
-         },  
-         "AccountNumber":"AW29825",  
-         "Item": {  
-           "Price":2024.9940,  
-           "Quantity":1  
-         }  
-       },  
-       {  
-         "Order": {  
-           "Number":"SO43661",  
-           "Date":"2011-06-01T00:00:00"  
-         },  
-         "AccountNumber":"AW73565",  
-         "Item": {  
-           "Price":2024.9940,  
-           "Quantity":3  
-         }  
-       }  
-     ]  
-   }  
- }'  
+DECLARE @json NVARCHAR(MAX) = N'[  
+  {  
+    "Order": {  
+      "Number":"SO43659",  
+      "Date":"2011-05-31T00:00:00"  
+    },  
+    "AccountNumber":"AW29825",  
+    "Item": {  
+      "Price":2024.9940,  
+      "Quantity":1  
+    }  
+  },  
+  {  
+    "Order": {  
+      "Number":"SO43661",  
+      "Date":"2011-06-01T00:00:00"  
+    },  
+    "AccountNumber":"AW73565",  
+    "Item": {  
+      "Price":2024.9940,  
+      "Quantity":3  
+    }  
+  }
+]'  
    
-SELECT * FROM  
- OPENJSON ( @json, '$.Orders.OrdersArray' )  
+SELECT *
+FROM OPENJSON ( @json )  
 WITH (   
               Number   varchar(200)   '$.Order.Number',  
               Date     datetime       '$.Order.Date',  
@@ -221,7 +218,7 @@ WITH (
 ## Return Value  
  Columns that will be returned as a result of OPENJSON function depend on WITH option.  
   
--   When you call OPENJSON with the default schema - that is, when you don't specify an explicit schema in the WITH clause - the function returns a table with the following columns.  
+1. When you call OPENJSON with the default schema - that is, when you don't specify an explicit schema in the WITH clause - the function returns a table with the following columns.  
   1.  **Key**. An nvarchar(4000) value that contains the name of the specified property or the index of the element in the specified array. The key column has a BIN2 collation.  
   2.  **Value**. An nvarchar(max) value that contains the value of the property. The value column inherits its collation from *jsonExpression*.
   3.  **Type**. An int value that contains the type of the value. The **Type** column is returned only when you use OPENJSON with the default schema. The type column has one of the following values.  
@@ -237,7 +234,7 @@ WITH (
   
      Only first level properties are returned. The statement fails if the JSON text is not properly formatted.  
 
--   When you call OPENJSON and you specify an explicit schema in the WITH clause, the function returns a table with the schema that you defined in the WITH clause.  
+2. When you call OPENJSON and you specify an explicit schema in the WITH clause, the function returns a table with the schema that you defined in the WITH clause.  
 
 ## Remarks  
 
@@ -252,9 +249,7 @@ If you don't specify mode, OPENJSON parses the root object using lax path mode (
  In this example, list of identifiers are provided as JSON array of numbers. Following query converts JSON array to table of identifiers and filters all products with specified ids.  
   
 ```tsql  
-DECLARE @pSearchOptions NVARCHAR(MAX)
-
-SET @pSearchOptions=N'[1,2,3,4]'
+DECLARE @pSearchOptions NVARCHAR(4000) =N'[1,2,3,4]'
 
 SELECT *
 FROM products
@@ -333,8 +328,7 @@ CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')
  The following example loads an entire JSON object into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
   
 ```tsql  
-DECLARE @json NVARCHAR(max)
-SET @json = N'{  
+DECLARE @json NVARCHAR(max)  = N'{  
   "id" : 2,  
   "firstName": "John",  
   "lastName": "Smith",  

@@ -188,8 +188,10 @@ CREATE DATABASE database_snapshot_name
     |FULL |Full non-transactional access to FILESTREAM FileTables is enabled. |   
 
     
-    DIRECTORY_NAME = \<directory_name>  
+ -  DIRECTORY_NAME = <directory_name>   
+ 
     **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
+    
     A windows-compatible directory name. This name should be unique among all the Database_Directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation settings. This option should be set before creating a FileTable in this database.  
   
 **Containment Options**  

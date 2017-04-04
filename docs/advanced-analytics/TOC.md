@@ -53,10 +53,10 @@
 ## [Predictive Modeling](./r-services/data-exploration-and-predictive-modeling-with-r.md)  
 ### [Converting R Code for Use in Machine Learning Services](./r-services/converting-r-code-for-use-in-r-services.md)  
 ### [Creating multiple models using rxExecBy](./r/creating-multiple-models-using-rxexecby.md)  
-## [Native Scoring](native-scoring-in-sql-server-2017.md)  
-### [Real-time scoring in SQL Server 2016 with Machine Learning Server](real-time-scoring-in-sql-server-2016-with-machine-learning-server.md)  
-<!-- ### [sp_rxPredict](sp_rxpredict.md)  
-### [PREDICT (T-SQL)](predict-t-sql.md)  -->
+<!-- ## [Native Scoring](native-scoring-in-sql-server-2017.md)-->
+### [Real-time scoring](real-time-scoring.md)
+<!-- ### [sp_rxPredict](sp_rxpredict.md)
+### [PREDICT (T-SQL)](predict-t-sql.md)-->
 ## [Operationalization](./r-services/creating-workflows-that-use-r-in-sql-server.md)  
 ### [SQL Server Machine Learning Services Performance Tuning](./r-services/sql-server-r-services-performance-tuning.md)  
 ## [Performance](./r-services/performance-case-study-r-services.md)  

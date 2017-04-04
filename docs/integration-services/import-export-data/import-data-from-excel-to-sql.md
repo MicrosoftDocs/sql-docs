@@ -173,7 +173,7 @@ Import data saved as text files by stepping through the pages of a wizard. For m
 -   [Tutorial: Create a pipeline with Copy Activity using Data Factory Copy Wizard](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## Azure Data Factory
-If you're familiar with Azure Data Factory and don't want to run the Azure Data Factory Copy Wizard, create A pipeline with a Copy activity that copies from the text file in a file storage location to SQL Server or to Azure SQL Database.
+If you're familiar with Azure Data Factory and don't want to run the Azure Data Factory Copy Wizard, create a pipeline with a Copy activity that copies from the text file in a file storage location to SQL Server or to Azure SQL Database.
 
 For more info about using these Data Factory sources and sinks, see the following topics.
 -   [File system](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)

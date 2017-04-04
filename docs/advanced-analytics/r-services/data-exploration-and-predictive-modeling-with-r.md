@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 ##  <a name="bkmk_SQLInR"></a> In This Section  
 
-[Comparison of ScaleR Functions and CRAN R Functions](http://msdn.microsoft.com/library/8f8c91d7-50c3-4ca1-9427-a83d9d2ecd22)
+[Comparison of ScaleR Functions and CRAN R Functions](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions2)
 
 [ScaleR Functions for Working with SQL Server](../../advanced-analytics/r-services/scaler-functions-for-working-with-sql-server-data.md)
    

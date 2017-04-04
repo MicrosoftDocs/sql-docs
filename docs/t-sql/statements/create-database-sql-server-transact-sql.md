@@ -1,7 +1,7 @@
 ---
 title: "CREATE DATABASE (SQL Server Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/03/2017"
+ms.date: "04/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -173,27 +173,28 @@ CREATE DATABASE database_snapshot_name
 >  Contained databases are collated differently than non-contained databases. Please see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) for more information.  
   
  WITH \<option>  
- -   **\<filestream_options>**  
+ 
+ -   **\\<filestream_options>**  
   
      NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }  
     **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
      Specifies the level of non-transactional FILESTREAM access to the database.  
 
-|Value |Description |  
-|----------- |----------------- |  
-|OFF |Non-transactional access is disabled. |  
-|READONLY |FILESTREAM data in this database can be read by non-transactional processes. |  
-|FULL |Full non-transactional access to FILESTREAM FileTables is enabled. |   
+    |Value |Description |  
+    |----------- |----------------- |  
+    |OFF |Non-transactional access is disabled. |  
+    |READONLY |FILESTREAM data in this database can be read by non-transactional processes. |  
+    |FULL |Full non-transactional access to FILESTREAM FileTables is enabled. |   
 
     
   DIRECTORY_NAME = <directory_name>  
      **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
+  A windows-compatible directory name. This name should be unique among all the Database_Directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation settings. This option should be set before creating a FileTable in this database.  
   
-     A windows-compatible directory name. This name should be unique among all the Database_Directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation settings. This option should be set before creating a FileTable in this database.  
-  
- The following options are allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
+**Containment Options**  
+The following options are allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
   
 -   **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**  
     **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

@@ -24,31 +24,36 @@ manager: "jhubbard"
 ---
 # Query with Full-Text Search
 
-This topic describes when and how to use the full-text predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** to write full-text queries.  
+This topic describes how to write full-text queries with the full-text predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** .  
 
 ## Pick the best full-text predicate or function
 
-CONTAINS/CONTAINSTABLE and FREETEXT/FREETEXTTABLE, are useful for different kind of matches.  
-  
--   Use CONTAINS (or CONTAINSTABLE) for the following queries:
-    -   For precise or fuzzy (less precise) matches to single words and phrases.
-    -   To specify the proximity of words within a certain distance of one another.
-    -   To return weighted matches.
-    
-    You have to specify at least one search condition that specifies the text that you are searching for and the conditions that determine matches. You can also use logical operation to combine search conditions. For more information, see [Using Boolean operators—AND, OR, AND NOT (in CONTAINS and CONTAINSTABLE)](#Using_Boolean_Operators), later in this topic.  
-  
--   Use FREETEXT (or FREETEXTTABLE) to match the meaning, but not the exact wording, of specified words, phrases or sentences (the *freetext string*). Matches are generated if any term or form of any term is found in the full-text index of a specified column.  
-  
-##  <a name="OV_ft_predicates"></a> CONTAINS and FREETEXT  
-Use the full-text **predicates** CONTAINS and FREETEXT in the WHERE or HAVING clause of a SELECT statement. You can combine them with any of the other [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates, such as LIKE and BETWEEN. 
+`CONTAINS/CONTAINSTABLE` and `FREETEXT/FREETEXTTABLE` are useful for different kinds of matching. The following table helps you to choose the best predicate or function for your query.
 
-The CONTAINS and FREETEXT predicates return a TRUE or FALSE value that indicates whether a given row matches the full-text query. Matching rows are returned in the result set.  
-  
-When you use CONTAINS or FREETEXT, you can specify either a single column, a list of columns, or all columns in the table to be searched. Optionally, you can specify the language whose resources will be used by the full-text query for word breaking and stemming, thesaurus lookups, and noise-word removal.  
+For examples, see [Simple examples of each predicate and function](#examples_simple) and [Examples of specific types of searches](#examples_specific). Also see [What you can search for](#supported).
 
-For more info about the syntax and arguments of these predicates, see [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [FREETEXT](../../t-sql/queries/freetext-transact-sql.md).
+| |CONTAINS/CONTAINSTABLE|FREETEXT/FREETEXTTABLE|
+|---|---|---|
+|**Type of query**|Match single words and phrases with precise or fuzzy (less precise) matching.|Match the meaning, but not the exact wording, of specified words, phrases or sentences (the *freetext string*).<br/><br/>Matches are generated if any term or form of any term is found in the full-text index of a specified column.|
+|**More query options**|You can specify the proximity of words within a certain distance of one another.<br/><br/>You can return weighted matches.<br/><br/>You can use logical operation to combine search conditions. For more info, see [Using Boolean operators (AND, OR, and NOT)](#Using_Boolean_Operators) later in this topic.|N/a|
 
-### Example - Use CONTAINS to search for a simple_term  
+## Compare predicates and functions
+
+The predicates `CONTAINS/FREETEXT` and the rowset-valued functions `CONTAINSTABLE/FREETEXTTABLE` have different syntax and options. The following table helps you to choose the best predicate or function for your query.
+
+For examples, see [Simple examples of each predicate and function](#examples_simple) and [Examples of specific types of searches](#examples_specific). Also see [What you can search for](#supported).
+
+| |Predicates<br/>CONTAINS/FREETEXT|Functions<br/>CONTAINSTABLE/FREETEXTTABLE|
+|---|---|---|
+|**Usage**|Use the full-text **predicates** CONTAINS and FREETEXT in the WHERE or HAVING clause of a SELECT statement.|Use the full-text **functions** CONTAINSTABLE and FREETEXTTABLE functions like a regular table name in the FROM clause of a SELECT statement.|
+|**More query options**|You can combine them with any of the other [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates, such as LIKE and BETWEEN.<br/><br/>You can specify either a single column, a list of columns, or all columns in the table to be searched.<br/><br/>Optionally, you can specify the language whose resources will be used by the full-text query for word breaking and stemming, thesaurus lookups, and noise-word removal.|You have to specify the base table to search when you use either of these functions. As with the predicates, you can specify a single column, a list of columns, or all columns in the table to be searched, and optionally, the language whose resources will be used by given full-text query.<br/><br/>Typically you have to join the results of CONTAINSTABLE or FREETEXTTABLE with the base table. To do this, you have to know the unique key column name. This column, which occurs in every full-text enabled table, is used to enforce unique rows for the table (the *unique**key column*). For more info about the key column, see [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md).|
+|**Results**|The CONTAINS and FREETEXT predicates return a TRUE or FALSE value that indicates whether a given row matches the full-text query. Matching rows are returned in the result set.|These functions return a table of zero, one, or more rows that match the full-text query. The returned table contains only rows from the base table that match the selection criteria specified in the full-text search condition of the function.<br/><br/>Queries that use one of these functions also return a relevance ranking value (RANK) and full-text key (KEY) for each row returned, as follows<br/><ul><li>**KEY** column. The KEY column returns unique values of the returned rows. The KEY column can be used to specify selection criteria.</li><li>**RANK** column. The RANK column returns a *rank value* for each row that indicates how well the row matched the selection criteria. The higher the rank value of the text or document in a row, the more relevant the row is for the given full-text query. Note that different rows can be ranked identically. You can limit the number of matches to be returned by specifying the optional *top_n_by_rank* parameter. For more information, see [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md).</li></ul>|
+|**Additional options**|You can use a four-part name in the CONTAINS or FREETEXT predicate to query full-text indexed columns of the target tables on a linked server. To prepare a remote server to receive full-text queries, create a full-text index on the target tables and columns on the remote server and then add the remote server as a linked server.|N/a|
+|**More info**|For more info about the syntax and arguments of these predicates, see [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [FREETEXT](../../t-sql/queries/freetext-transact-sql.md).|For more info about the syntax and arguments of these functions, see [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).|
+
+## <a name="examples_simple"></a> Simple examples of each predicate and function
+
+### Example - CONTAINS  
  The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`.  
   
 ```tsql
@@ -62,7 +67,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### Example - Use FREETEXT to search for words that contain specified character values  
+### Example - FREETEXT 
  The following example searches for all documents that contain words related to vital, safety, components.  
   
 ```tsql
@@ -74,26 +79,8 @@ FROM Production.Document
 WHERE FREETEXT (Document, 'vital safety components')  
 GO  
 ```
- 
-### Query a linked server
-You can use a four-part name in the CONTAINS or FREETEXT predicate to query full-text indexed columns of the target tables on a linked server. To prepare a remote server to receive full-text queries, create a full-text index on the target tables and columns on the remote server and then add the remote server as a linked server.  
 
-##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a> CONTAINSTABLE and FREETEXTTABLE
-Usethe full-text **functions** CONTAINSTABLE and FREETEXTTABLE functions like a regular table name in the FROM clause of a SELECT statement. These functions return a table of zero, one, or more rows that match the full-text query. The returned table contains only rows from the base table that match the selection criteria specified in the full-text search condition of the function.  
-
-CONTAINSTABLE is useful for the same kinds of matches as CONTAINS, and FREETEXTTABLE is useful for the same kinds of matches as FREETEXT.
-  
-You have to specify the base table to search when you use either of these functions. As with the predicates, you can specify a single column, a list of columns, or all columns in the table to be searched, and optionally, the language whose resources will be used by given full-text query.
-
-Typically you have to join the results of CONTAINSTABLE or FREETEXTTABLE with the base table. To do this, you have to know the unique key column name. This column, which occurs in every full-text enabled table, is used to enforce unique rows for the table (the *unique**key column*). For more information, see [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
-
-Queries that use one of these functions return a relevance ranking value (RANK) and full-text key (KEY) for each row returned, as follows:  
--   **KEY** column. The KEY column returns unique values of the returned rows. The KEY column can be used to specify selection criteria.  
--   **RANK** column. The RANK column returns a *rank value* for each row that indicates how well the row matched the selection criteria. The higher the rank value of the text or document in a row, the more relevant the row is for the given full-text query. Note that different rows can be ranked identically. You can limit the number of matches to be returned by specifying the optional *top_n_by_rank* parameter. For more information, see [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md).  
-  
-For more info about the syntax and arguments of these functions, see [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
-  
-### Example - Use CONTAINSTABLE  
+### Example - CONTAINSTABLE  
  The following example returns the description ID and description of all products for which the **Description** column contain the word "aluminum" near either the word "light" or the word "lightweight." Only rows with a rank value of 2 or higher are returned.  
   
 ```tsql
@@ -115,7 +102,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-### Example- Use FREETEXTTABLE  
+### Example- FREETEXTTABLE  
  The following example extends a FREETEXTTABLE query to return the highest ranked rows first and to add the ranking of each row to the select list. To specify the query, you must know that **ProductDescriptionID** is the unique key column for the **ProductDescription** table.  
   
 ```tsql 
@@ -132,7 +119,7 @@ ORDER BY KEY_TBL.RANK DESC
 GO  
 ```  
   
- Here is an extension of the same query that only returns rows with a rank value of 10 or greater:  
+Here is an extension of the same query that only returns rows with a rank value of 10 or greater:  
   
 ```tsql  
 USE AdventureWorks2012  
@@ -151,9 +138,7 @@ GO
 
 ##  <a name="supported"></a> What you can search for
 
-### Types of words and phrases that you can search for
-
- This section summarizes the support provided for each form of query by the full-text predicates and rowset-valued functions.  
+The following table describes the types of words and phrases that you can search for.
   
 |Query-term form|Description|Supported by|  
 |----------------------|-----------------|------------------|  
@@ -163,7 +148,9 @@ GO
 |Synonymous forms of a specific word<br/>(*generation term - thesaurus*)|For example, if an entry, "{car, automobile, truck, van}", is added to a thesaurus, you can search for the thesaurus form of the word "car". All rows in the table queried that include the words "automobile", "truck", "van", or "car", appear in the result set because each of these words belong to the synonym expansion set containing the word "car".<br /><br />A *thesaurus* defines user-specified synonyms for terms.<br /><br />  For information about the structure of thesaurus files, see [Configure and Manage Thesaurus Files for Full-Text Search](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) use the thesaurus by default.<br /><br /> [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) support an optional THESAURUS argument.|  
 |A word or phrase close to another word or phrase<br/>(*proximity term*)|For example, you want to find the rows in which the word "ice" is near the word "hockey" or in which the phrase "ice skating" is near the phrase "ice hockey".<br /><br /> A *proximity term* indicates words or phrases that are near to each other., You can also specify the maximum number of non-search terms that separate the first and last search terms. In addition, you can search for words or phrases in any order, or in the order in which you specify them.<br /><br /> For more information, see [Search for Words Close to Another Word with NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).|[CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
 |Words or phrases using weighted values<br/>(*weighted term*)|For example, in a query searching for multiple terms, you can assign each search word a weight value indicating its importance relative to the other words in the search condition. The results for this type of query return the most relevant rows first, according to the relative weight you have assigned to search words. The result sets contain documents or rows containing any of the specified terms (or content between them); however, some results will be considered more relevant than others because of the variation in the weighted values associated with different searched terms.<br /><br /> A *weighting value* indicates the degree of importance for each word and phrase within a set of words and phrases. A weight value of 0.0 is the lowest, and a weight value of 1.0 is the highest.<br /><br /> For more information, see [Searching for Words or Phrases Using Weighted Values (Weighted Term)](#Weighted_Term), later in this topic.|[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)|  
-  
+
+## <a name="examples_specific"></a> Examples of specific types of searches
+
 ###  <a name="Simple_Term"></a> Search for a specific word or phrase (Simple Term)  
  You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) to search a table for a specific phrase. For example, if you want to search the **ProductReview** table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to find all comments about a product with the phrase "learning curve", you could use the CONTAINS predicate as follows:  
   
@@ -197,9 +184,9 @@ GO
  When the prefix term is a phrase, each token making up the phrase is considered a separate prefix term. All rows that have words beginning with the prefix terms will be returned. For example, the prefix term "light bread*" will find rows with text of "light breaded," "lightly breaded," or "light bread," but it will not return "lightly toasted bread".  
   
 ###  <a name="Inflectional_Generation_Term"></a> Search for inflectional forms of a specific word (Generation Term)  
- You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) to search for all the different tenses and conjugations of a verb or both the singular and plural forms of a noun (an inflectional search) or for synonymous forms of a specific word (a thesaurus search).  
+You can use [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), or [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) to search for all the different tenses and conjugations of a verb or both the singular and plural forms of a noun (an inflectional search) or for synonymous forms of a specific word (a thesaurus search).  
   
- The following example searches for any form of "foot" ("foot", "feet", and so on) in the `Comments` column of the `ProductReview` table in the `AdventureWorks` database.  
+The following example searches for any form of "foot" ("foot", "feet", and so on) in the `Comments` column of the `ProductReview` table in the `AdventureWorks` database.  
   
 ```tsql  
 USE AdventureWorks2012  
@@ -214,9 +201,9 @@ GO
 Full-text search uses *stemmers*, which allow you to search for the different tenses and conjugations of a verb, or both the singular and plural forms of a noun. For more information about stemmers, see [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
    
 ###  <a name="Weighted_Term"></a> Search for words or phrases using weighted values (Weighted Term)  
- You can use [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) to search for words or phrases and specify a weighting value. Weight, measured as a number from 0.0 through 1.0, indicates the importance of each word and phrase within a set of words and phrases. A weight of 0.0 is the lowest, and a weight of 1.0 is the highest.  
+You can use [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) to search for words or phrases and specify a weighting value. Weight, measured as a number from 0.0 through 1.0, indicates the importance of each word and phrase within a set of words and phrases. A weight of 0.0 is the lowest, and a weight of 1.0 is the highest.  
   
- The following example shows a query that searches for all customer addresses, using weights, in which any text beginning with the string "Bay" has either "Street" or "View". The results give a higher rank to those rows that contain more of the words specified.  
+The following example shows a query that searches for all customer addresses, using weights, in which any text beginning with the string "Bay" has either "Street" or "View". The results give a higher rank to those rows that contain more of the words specified.  
   
 ```tsql  
 USE AdventureWorks2012  
@@ -257,19 +244,19 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> Specify additional options
+##  <a name="Additional_Considerations"></a> More query options
 
- When you write full-text queries, also consider the following things:  
+ When you write full-text queries, you can also specify the following options.
   
 -   **Language**, with the **LANGUAGE** option. Many query terms depend heavily on word-breaker behavior. To ensure that you are using the correct word breaker (and stemmer) and thesaurus file, we recommend that you specify the LANGUAGE option. For more information, see [Choose a Language When Creating a Full-Text Index](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
-  
--   **Stopwords**. When defining a full-text query, the Full-Text Engine discards stopwords (also called noise words) from the search criteria. Stopwords are words such as "a," "and," "is," or "the," that can occur frequently but that typically do not help when searching for particular text. Stopwords are listed in a stoplist. Each full-text index is associated with a specific stoplist, which determines what stopwords are omitted from the query or the index at indexing time. For more information, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
-  
--   **Thesaurus**. FREETEXT and FREETEXTTABLE queries use the thesaurus by default. CONTAINS and CONTAINSTABLE support an optional THESAURUS argument.  
-  
+
 -   **Case sensitivity**. Full-text search queries are case-insensitive. However, in Japanese, there are multiple phonetic orthographies in which the concept of orthographic normalization is akin to case insensitivity (for example, kana = insensitivity). This type of orthographic normalization is not supported.  
 
-##  <a name="tokens"></a> Get the tokenization results
+-   **Stopwords**. When defining a full-text query, the Full-Text Engine discards stopwords (also called noise words) from the search criteria. Stopwords are words such as "a," "and," "is," or "the," that can occur frequently but that typically do not help when searching for particular text. Stopwords are listed in a stoplist. Each full-text index is associated with a specific stoplist, which determines what stopwords are omitted from the query or the index at indexing time. For more info, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+  
+-   **Thesaurus**. FREETEXT and FREETEXTTABLE queries use the thesaurus by default. CONTAINS and CONTAINSTABLE support an optional THESAURUS argument. For more info, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md)
+  
+##  <a name="tokens"></a> Check the tokenization results
 
 After you apply a given word breaker, thesaurus, and stoplist combination in a query, you can view the tokenization results by using the **sys.dm_fts_parser** dynamic management view. For more information, see [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   

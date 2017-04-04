@@ -9,7 +9,7 @@ ms.technology:
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "troubleshooting [SQL Server, "HADR"]"
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], troubleshooting"

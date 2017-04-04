@@ -1,7 +1,7 @@
 ---
 title: "CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -75,7 +75,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  Is the table, view, or other securable object in the database on which to apply the audit action or audit action group. For more information, see [Securables](../../relational-databases/security/securables.md).  
   
  *principal*  
- Is the name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principal on which to apply the audit action or audit action group. For more information, see [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
+ Is the name of database principal on which to apply the audit action or audit action group. For more information, see [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
  WITH ( STATE = { ON | OFF } )  
  Enables or disables the audit from collecting records for this audit specification.  
@@ -84,9 +84,9 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  Database audit specifications are non-securable objects that reside in a given database. When a database audit specification is created, it is in a disabled state.  
   
 ## Permissions  
- Users with the ALTER ANY DATABASE AUDITpermission can create database audit specifications and bind them to any audit.  
+ Users with the `ALTER ANY DATABASE AUDIT` permission can create database audit specifications and bind them to any audit.  
   
- After a database audit specification is created, it can be viewed by principals with the CONTROL SERVER,ALTER ANY DATABASE AUDITpermissions, or the sysadmin account.  
+ After a database audit specification is created, it can be viewed by principals with the `CONTROL SERVER`, `ALTER ANY DATABASE AUDIT` permissions, or the `sysadmin` account.  
   
 ## Examples  
  The following example creates a server audit called `Payrole_Security_Audit` and then a database audit specification called `Payrole_Security_Audit` that audits `SELECT` and `INSERT` statements by the `dbo` user, for the `HumanResources.EmployeePayHistory` table in the `AdventureWorks2012` database.  

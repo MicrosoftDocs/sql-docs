@@ -74,7 +74,9 @@ Microsoft R Server     |[SRS_9.0.0.16000_1033.cab](https://go.microsoft.com/fwli
 **SQL Server vNext CTP 1.1** |           
 Microsoft R Open     |[SRO_3.3.2.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=834568)     
 Microsoft R Server     |[SRS_9.0.1.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=834567)  
-  
+**SQL Server vNext CTP 1.4** |           
+Microsoft R Open     |[SRO_3.3.2.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842483)     
+Microsoft R Server     |[SRS_9.0.2.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842482)    
  
 ## <a name="modslocales"></a>Modifications Required for Different Language Locales
 

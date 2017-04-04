@@ -35,7 +35,7 @@ manager: "jhubbard"
 ```  
 -- Uses AdventureWorks  
   
-WHILE ((SELECT AVG(ListPrice) FROM dbo.DimProduct) \< $300)  
+WHILE ((SELECT AVG(ListPrice) FROM dbo.DimProduct) < $300)  
 BEGIN  
     UPDATE DimProduct  
         SET ListPrice = ListPrice * 2;  

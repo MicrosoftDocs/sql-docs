@@ -260,7 +260,7 @@ CREATE DATABASE database_snapshot_name
   
      To set this option, requires membership in the sysadmin fixed server role.  
   
- FOR ATTACH [ WITH \< attach_database_option > ]  
+ FOR ATTACH [ WITH < attach_database_option > ]  
  Specifies that the database is created by [attaching](../../relational-databases/databases/database-detach-and-attach-sql-server.md) an existing set of operating system files. There must be a \<filespec> entry that specifies the primary file. The only other \<filespec> entries required are those for any files that have a different path from when the database was first created or last attached. A \<filespec> entry must be specified for these files.  
   
  FOR ATTACH requires the following:  

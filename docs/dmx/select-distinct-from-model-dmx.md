@@ -139,7 +139,7 @@ FROM [TM Decision Tree]
   
  For example, if you browse the model by using the Decision Tree viewer and click a node that contains customers grouped by income, the following node properties are displayed in the Tooltip:  
   
- Age >=69 AND Yearly Income \< 39221.41  
+ Age >=69 AND Yearly Income < 39221.41  
   
 > [!NOTE]  
 >  The minimum value of the minimum bucket and the maximum value of the maximum bucket are just the highest and lowest observed values. Any values that fall outside this observed range are assumed to belong to the minimum and maximum buckets.  

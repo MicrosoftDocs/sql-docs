@@ -58,7 +58,7 @@ manager: "jhubbard"
   
 -   The table replicates the schema of current temporal table plus one BIGINT column. This additional column guarantees the uniqueness of the rows moved to internal history buffer.  
   
--   The additional column has the following name format: **Change_ID[_\< suffix>]**, where *_\<suffix>* is optionally added in the case where the table already has a *Change_ID* column.  
+-   The additional column has the following name format: **Change_ID[_< suffix>]**, where *_\<suffix>* is optionally added in the case where the table already has a *Change_ID* column.  
   
 -   The maximum row size for a system-versioned memory-optimized table is reduced by 8 bytes because of the additional BIGINT column in staging table. The new maximum is now 8052 bytes.  
   

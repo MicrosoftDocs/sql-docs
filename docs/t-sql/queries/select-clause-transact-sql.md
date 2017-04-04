@@ -73,7 +73,7 @@ SELECT [ ALL | DISTINCT ]
   
  For backward compatibility, using the TOP *expression* without parentheses in SELECT statements is supported, but we do not recommend it. For more information, see [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
- \< select_list >  
+ < select_list >  
  The columns to be selected for the result set. The select list is a series of expressions separated by commas. The maximum number of expressions that can be specified in the select list is 4096.  
   
  \*  

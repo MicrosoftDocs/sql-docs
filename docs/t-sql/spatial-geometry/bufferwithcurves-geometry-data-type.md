@@ -59,7 +59,7 @@ SQL Server return type: **geometry**
 |distance Value|Type Dimensions|Spatial Type Returned|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|Zero or One|Empty **GeometryCollection** instance|  
-|distance \< 0|Two or More|A **CurvePolygon** or **GeometryCollection** instance with a negative buffer. **Note:** A negative buffer may create an empty **GeometryCollection**|  
+|distance < 0|Two or More|A **CurvePolygon** or **GeometryCollection** instance with a negative buffer. **Note:** A negative buffer may create an empty **GeometryCollection**|  
 |distance = 0|All dimensions|Copy of the invoking **geometry** instance|  
 |distance > 0|All dimensions|**CurvePolygon** or **GeometryCollection** instance|  
   

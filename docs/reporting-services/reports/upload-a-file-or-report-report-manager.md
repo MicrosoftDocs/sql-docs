@@ -41,7 +41,7 @@ manager: "erikre"
   
 4.  Click **Browse** to select a file to upload. You can upload a report definition file, an image, a document, or any file that you want to make available on the report server.  
   
-5.  Type a name for the new item. An item name can include spaces, but cannot include the reserved characters: ; ? : @ & = + , $ / * \< > |.  
+5.  Type a name for the new item. An item name can include spaces, but cannot include the reserved characters: ; ? : @ & = + , $ / * < > |.  
   
 6.  If you want to replace an existing item with the new item, select **Overwrite item if it exists**.  
   

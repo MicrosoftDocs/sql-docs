@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  Use OPENJSON to import JSON data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to convert JSON data to relational format for an app or service that can't consume JSON directly.  
   
-      ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -50,7 +50,8 @@ OPENJSON( jsonExpression [ , path ] )
 ]  
   
 ```  
->[!Note] column_type must be NVARCHAR(MAX) if **AS JSON** option is used.
+>[!Note]
+> column_type must be NVARCHAR(MAX) if **AS JSON** option is used.
 
   **OPENJSON** table-value function parses *jsonExpression* provided as a first argument and returns one or many rows containing data from JSON objects in this expression. *jsonExpression* might contain nested sub-objects. If user wants to parse sub-object placed on some path within
   *jsonExpression*, he can specify second **path** parameter that will define where is placed JSON sub-object that should be parsed.

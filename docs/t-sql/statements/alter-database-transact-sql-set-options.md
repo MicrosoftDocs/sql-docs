@@ -29,7 +29,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# ALTER DATABASE (Transact-SQL) SET Options 
+# ALTER DATABASE SET Options (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   This topic contains the ALTER DATABASE syntax that is related to setting database options in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For other ALTER DATABASE syntax, see the following topics.  

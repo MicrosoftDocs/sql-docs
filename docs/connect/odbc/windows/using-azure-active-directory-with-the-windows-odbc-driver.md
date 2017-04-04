@@ -83,7 +83,7 @@ The following samples show the code required to connect to SQL Server using Azur
     rc = SQLSetEnvAttr(hEnv, SQL_ATTR_ODBC_VERSION, (SQLPOINTER)SQL_OV_ODBC3_80, SQL_IS_INTEGER);
     rc = SQLAllocHandle(SQL_HANDLE_DBC, hEnv, &hDbc);
   	
-    SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=SqlPassword";
+    SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword";
     SQLDriverConnect(hDbc, nullptr, connString, SQL_NTS, nullptr, 0, nullptr, SQL_DRIVER_NOPROMPT);	
     return 0;
 ~~~

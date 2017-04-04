@@ -77,7 +77,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 1.  Click **New**.  
   
-2.  Rename the role to **Administrator Administrator**.  
+2.  Rename the role to **Administrator**.  
   
 3.  Give this role **Administrator** permission.  
   

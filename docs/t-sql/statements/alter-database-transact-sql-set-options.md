@@ -503,7 +503,7 @@ SET
 > [!NOTE]  
 >  On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] federated databases, SET { READ_ONLY | READ_WRITE } is disabled.  
   
- **<db_user_access_option> ::=**  
+ **\<db_user_access_option> ::=**  
   
  Controls user access to the database.  
   
@@ -522,10 +522,10 @@ SET
   
  If there are active jobs, either allow the jobs to complete or manually terminate them by using [KILL STATS JOB](../../t-sql/language-elements/kill-stats-job-transact-sql.md).  
   
- RESTRICTED_USER  
+RESTRICTED_USER  
  RESTRICTED_USER allows for only members of the db_owner fixed database role and dbcreator and sysadmin fixed server roles to connect to the database, but does not limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused.  
   
- MULTI_USER  
+MULTI_USER  
  All users that have the appropriate permissions to connect to the database are allowed.  
   
  The status of this option can be determined by examining the user_access column in the sys.databases catalog view or the UserAccess property of the DATABASEPROPERTYEX function.  

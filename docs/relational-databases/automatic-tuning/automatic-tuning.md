@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "binary collations [SQL Server]"
 ms.assetid: 
 caps.latest.revision: 
-author: "jovanpop"
+author: "BYHAM"
 ms.author: "jovanpop"
 manager: "jhubbard"
 ---

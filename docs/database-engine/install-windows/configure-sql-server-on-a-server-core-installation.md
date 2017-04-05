@@ -19,26 +19,8 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Configure SQL Server on a Server Core Installation
-  This topic covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation of [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Refer the following sections:  
-  
--   [Configure and Manage Server Core on Windows Server](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#BKMK_ConfigureWindows)  
-  
--   [Install SQL Server Updates](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#BKMK_InstallSQLUpdates)  
-  
--   [Start/Stop SQL Server Service](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#BKMK_StartStopServices)  
-  
--   [Enable AlwaysOn Availability Groups](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#BKMK_EnableAlwaysON)  
-  
--   [Configuring Remote Access of SQL Server Running on Server Core](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#BKMK_ConfigureRemoteAccess)  
-  
--   [SQL Server Profiler](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#BKMK_Profiler)  
-  
--   [SQL Server Auditing](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#BKMK_Auditing)  
-  
--   [Command Prompt Utilities](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#BKMK_CMD)  
-  
--   [Use troubleshooting tools](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#BKMK_troubleshoot)  
-  
+  This topic covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
+
 ##  <a name="BKMK_ConfigureWindows"></a> Configure and Manage Server Core on Windows Server  
  The section provides references to the topics that help configure and manage a Server Core installation.  
   
@@ -46,22 +28,20 @@ manager: "jhubbard"
   
  For more information about configuring and managing a Server Core installation remotely, see the following topics:  
   
--   [Windows Server 2008 R2: Best Practices for Server Core Deployments](http://go.microsoft.com/fwlink/?LinkID=245957) (http://go.microsoft.com/fwlink/?LinkID=245957)  
+-   [Install Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
--   [Configuring a Server Core installation: Overview](http://go.microsoft.com/fwlink/?LinkId=245958) (http://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)  
   
--   [Configuring a Server Core installation of Windows Server 2008 R2 with Sconfig.cmd](http://go.microsoft.com/fwlink/?LinkId=245959) (http://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [Installing a server role on a server running a Server Core installation of Windows Server 2008 R2: Overview](http://go.microsoft.com/fwlink/?LinkId=245960)
   
--   [Installing a server role on a server running a Server Core installation of Windows Server 2008 R2: Overview](http://go.microsoft.com/fwlink/?LinkId=245960) (http://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [Installing Windows Features on a server running a Server Core installation of Windows Server 2008 R2: Overview](http://go.microsoft.com/fwlink/?LinkId=245961)
   
--   [Installing Windows Features on a server running a Server Core installation of Windows Server 2008 R2: Overview](http://go.microsoft.com/fwlink/?LinkId=245961) (http://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [Managing a Server Core installation: Overview](http://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [Managing a Server Core installation: Overview](http://go.microsoft.com/fwlink/?LinkId=245962) (http://go.microsoft.com/fwlink/?LinkId=245962)  
-  
--   [Administering a Server Core installation](http://go.microsoft.com/fwlink/?LinkId=245963) (http://go.microsoft.com/fwlink/?LinkId=245963)  
+-   [Administering a Server Core installation](http://go.microsoft.com/fwlink/?LinkId=245963)
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> Install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Updates  
- This section provides information about installing updates for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on a Windows Server Core machine. We recommend that customers evaluate and install latest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates in a timely manner to make sure that systems are up-to-date with the most recent security updates. For more information about installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on a Windows Server Core machine, see [Install SQL Server 2016 on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+ This section provides information about installing updates for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on a Windows Server Core machine. We recommend that customers evaluate and install latest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates in a timely manner to make sure that systems are up-to-date with the most recent security updates. For more information about installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on a Windows Server Core machine, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
  The following are the two scenarios for installing product updates:  
   
@@ -114,33 +94,21 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  Being enabled for AlwaysOn Availability Groups is a prerequisite for a server instance to use availability groups as a high availability and disaster recovery solution. For more information about managing the Always On Availability Groups, see [Enable and Disable Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
 ### Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager Remotely  
- These steps are meant to be performed on a PC running the client edition of [!INCLUDE[win7](../../includes/win7-md.md)] or later, or another server that has the Server Graphical Shell installed (i.e. a full installation of [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] or a [!INCLUDE[win8srv](../../includes/win8srv-md.md)] installation with the Server Graphical Shell feature enabled).  
+ These steps are meant to be performed on a PC running the client edition of Windows, or Windows Server that has the Server Graphical Shell installed.  
   
-1.  Open Computer Management. To open Computer Management do one of the following:  
+1.  Open **Computer Management**. To open **Computer Management**, click **Start**, type `compmgmt.msc`, and then click **OK**.    
   
-    1.  On [!INCLUDE[win7](../../includes/win7-md.md)], Windows Server 2008, or [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]:  
+2.  In the console tree, right-click **Computer Management**, and then click **Connect to another computer...**.  
   
-        1.  Click Start, click All Programs, click Administrative Tools, and then click Computer Management.  
+3.  In the **Select Computer** dialog box, type the name of the Server Core machine that you want to manage, or click **Browse** to find it, and then click **OK**.  
   
-        2.  Click Start, click Run, type COMPMGMT.MSC, and then click OK.  
+4.  In the console tree, under **Computer Management** of the Server Core machine, click **Services and Applications**.  
   
-    2.  On [!INCLUDE[win8srv](../../includes/win8srv-md.md)] with Server Graphical Shell enabled:  
+5.  Double click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**.  
   
-        1.  Move your mouse to the bottom-left corner of the screen and right-click when you see the Start overlay.  
+6.  In **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Services**, right-click **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>), where \<instance name> is the name of a local server instance for which you want to enable Always On Availability Groups, and click Properties.  
   
-        2.  Select Computer Management  from the context menu.  
-  
-2.  In the console tree, right-click Computer Management, and then click Connect to another computer.  
-  
-3.  In the Select Computer dialog box, type the name of the Server Core machine that you want to manage, or click Browse to find it, and then click OK.  
-  
-4.  In the console tree, under Computer Management of the Server Core machine, click Services and Applications.  
-  
-5.  Double click [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
-  
-6.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, click [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Services, right-click [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<instance name>), where \<instance name> is the name of a local server instance for which you want to enable AlwaysOn Availability Groups, and click Properties.  
-  
-7.  Select the AlwaysOn High Availability tab.  
+7.  Select the **AlwaysOn High Availability** tab.  
   
 8.  Verify that Windows failover cluster name field contains the name of the local failover cluster node. If this field is blank, this server instance currently does not support AlwaysOn Availability Groups. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that does not support AlwaysOn Availability Groups.  
   
@@ -178,7 +146,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ```  
   
 ##  <a name="BKMK_ConfigureRemoteAccess"></a> Configuring Remote Access of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Running on Server Core  
- Perform the actions described below to configure remote access of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance that is running on [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1.  
+ Perform the actions described below to configure remote access of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance that is running on Windows Server Core.  
   
 ### Enable remote connections on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  To enable remote connections, use SQLCMD.exe locally and execute the following statements against the Server Core instance:  
@@ -206,7 +174,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ### Enable TCP/IP on the Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The TCP/IP protocol can be enabled through Windows PowerShell for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Server Core. Follow these steps:  
   
-1.  On the computer that is running Windows Server 2008 R2 Server Core SP1, launch Task Manager.  
+1.  On the computer that is running Windows Server Core, launch **Task Manager**.  
   
 2.  On the **Applications** tab, click **New Task**.  
   

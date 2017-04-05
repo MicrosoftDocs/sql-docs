@@ -1,7 +1,7 @@
 ---
 title: "Binding and Data Transfer of Table-Valued Parameters and Column Values | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/04/2017"
+ms.date: "04/04/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,7 +26,9 @@ manager: "jhubbard"
   
  Entire table-valued parameter columns can be assigned default values by using the attribute SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Individual table-valued parameter column values, however, cannot be assigned default values by using SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* with SQLBindParameter. Table-valued parameters as a whole cannot be set to a default value by using SQL_DEFAULT_PARAM in *StrLen_or_IndPtr* with SQLBindParameter. If these rules are not followed, SQLExecute or SQLExecDirect will return SQL_ERROR. A diagnostic record will be generated with SQLSTATE=07S01 and the message "Invalid use of default parameter for parameter \<p>", where \<p> is the ordinal of the TVP in the query statement.  
   
- After binding the table-valued parameter, the application must then bind each table-valued parameter column. To do this, the application first calls SQLSetStmtAttr to set SQL_SOPT_SS_PARAM_FOCUS to the ordinal of a table-valued parameter. Then the application binds the columns of the table-valued parameter by calls to the following routines: SQLBindParameter, SQLSetDescRec, and SQLSetDescField. Setting SQL_SOPT_SS_PARAM_FOCUS to 0 restores the usual effect of SQLBindParameter, SQLSetDescRec, and SQLSetDescField in operating on regular top-level parameters.  
+ After binding the table-valued parameter, the application must then bind each table-valued parameter column. To do this, the application first calls SQLSetStmtAttr to set SQL_SOPT_SS_PARAM_FOCUS to the ordinal of a table-valued parameter. Then the application binds the columns of the table-valued parameter by calls to the following routines: SQLBindParameter, SQLSetDescRec, and SQLSetDescField. Setting SQL_SOPT_SS_PARAM_FOCUS to 0 restores the usual effect of SQLBindParameter, SQLSetDescRec, and SQLSetDescField in operating on regular top-level parameters.
+ 
+ Note: for the Linux and Mac ODBC drivers with unixODBC 2.3.1 to 2.3.4, when setting the TVP name through SQLSetDescField with the SQL_CA_SS_TYPE_NAME descriptor field, unixODBC does not automatically convert between ANSI and Unicode strings depending on the exact function called (SQLSetDescFieldA / SQLSetDescFieldW). It is necessary to either always use SQLBindParameter or SQLSetDescFieldW with a Unicode (UTF-16) string to set the TVP name.
   
  No actual data is sent or received for the table-valued parameter itself, but data is sent and received for each of its constituent columns. Because the table-valued parameter is a pseudo column, the parameters for SQLBindParameter are used to refer to different attributes than other data types, as follows:  
   

@@ -67,7 +67,7 @@
 ### [Service Broker with Always On Availability Groups](service-broker-with-always-on-availability-groups-sql-server.md)  
 
 # [How-to guides](administration-of-an-availability-group-sql-server.md)  
-### [Configuration of a Server Instance for Always On Availability Groups](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
+## [Configuration of a Server Instance for Always On Availability Groups](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
 ### [Enable and Disable Always On Availability Groups](enable-and-disable-always-on-availability-groups-sql-server.md)  
 ### [Create a Database Mirroring Endpoint for Always On Availability Groups (SQL Server PowerShell)](database-mirroring-always-on-availability-groups-powershell.md)  
 ### [Create Clustered DTC for an Always On Availability Group](create-clustered-dtc-for-an-always-on-availability-group.md)  

@@ -26,10 +26,10 @@ manager: "jhubbard"
 # OPENJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  **OPENJSON** is a table-value function that parses JSON text and returns objects and properties in JSON as rows and columns. **OPENJSON** provides a rowset view over a JSON document, with the ability to explicitly specify the columns in the rowset and the property paths to use  to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** function in FROM clause of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements like any other table, view, or table-value function.  
+  **OPENJSON** is a table-value function that parses JSON text and returns objects and properties from the input JSON parameter as rows and columns. **OPENJSON** provides a rowset view over a JSON document, with the ability to explicitly specify the columns in the rowset and the property paths to use  to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** function in FROM clause of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements like any other table, view, or table-value function.  
   
 > [!NOTE]  
->  The **OPENJSON** function is available only under compatibility level 130. If your database compatibility level is lower than 130, SQL Server will not be able to find and execute OPENJSON function. Other JSON functions are available at all compatibility levels. You can check compatibility level in sys.databases view or in database properties. You can change a compatibility level of database using the following command:  
+>  The **OPENJSON** function is available only under compatibility level 130 (or higher). If your database compatibility level is lower than 130, SQL Server will not be able to find and execute OPENJSON function. Other JSON functions are available at all compatibility levels. You can check compatibility level in sys.databases view or in database properties. You can change a compatibility level of database using the following command:  
 > ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130  
 >   
 >  Note that compatibility level 120 might be default even in new Azure SQL Databases.  
@@ -56,11 +56,13 @@ OPENJSON( jsonExpression [ , path ] )
   **OPENJSON** table-value function parses *jsonExpression* provided as a first argument and returns one or many rows containing data from JSON objects in this expression. *jsonExpression* might contain nested sub-objects. If user wants to parse sub-object placed on some path within
   *jsonExpression*, he can specify second **path** parameter that will define where is placed JSON sub-object that should be parsed.
 
+  openjson
   ![Syntax for OPENJSON TVF](../../relational-databases/json/media/openjson-syntax.png "OPENJSON syntax")  
 
   By default, **OPENJSON** table-value function returns three columns with key name, value, and type of each {key:value} pair that is found in the *jsonExpression*.
   As an alternative, user can explicitly specify the schema of the result set that will return **OPENJSON** function using *with_clause*:
-
+  
+  with_clause
   ![Syntax for WITH clause in OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH syntax")
 
   *with_clause* contains the list of the columns that will be returned by **OPENJSON** with their types. By default, **OPENJSON** matches keys in
@@ -243,7 +245,21 @@ WITH (
 If you don't specify mode, OPENJSON parses the root object using lax path mode (that is, as if you had specified the **lax** option in the path expression).  
   
  Some of the examples on this page explicitly specify the path mode, lax or strict. This is optional. If you don't explicitly specify a path mode, lax mode is the default. For more info about path mode and path expressions, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).    
-  
+
+ Column names in **with_clause** are matched with the keys in JSON text. If you specify column name [Address.Country] it will be matched with the key "Address.Country". If you need to reference nested key "Country" within the object "Address", you would need to specify the path "$.Address.Country" in column path.
+
+ *json_path* may contain keys with alphanumeric characters. Escape key name in *json_path* with double quotes if you have some special characters in the keys. As an example, '$."my key $1".regularKey."key with . dot" would match value 1 in the following JSON text:
+
+```  
+{
+  "my key $1": {
+    "regularKey":{
+      "key with . dot": 1
+    }
+  }
+}
+```  
+
 ## Examples  
   
 ### Example 1 - Convert a JSON array value to a temporary table  

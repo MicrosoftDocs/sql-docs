@@ -938,7 +938,7 @@
       - name: Spatial geometry
         href: /sql/t-sql/spatial-geometry/
         homepage: /sql/t-sql/spatial-geometry
-      - name: statements
+      - name: Statements
         href: /sql/t-sql/statements/
         homepage: /sql/t-sql/statements
       - name: XML

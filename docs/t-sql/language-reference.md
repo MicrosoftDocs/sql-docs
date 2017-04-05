@@ -46,7 +46,7 @@ To find the system tables, views, functions, and procedures, see these links whi
 - [System catalog Views](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [System compatibility views](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
 - [System dynamic management views](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [System functions](../relational-databases/system-functions-for-transact-sql.md)
+- [System functions](../relational-databases/system-functions/system-functions-for-transact-sql.md)
 - [System information schema views](../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [System stored procedures](../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
 - [System tables](../relational-databases/system-tables/system-tables-transact-sql.md)
@@ -61,7 +61,7 @@ For example, this topic applies to all versions, and has the following label.
 
 Another example, the following label indicates a topic that applies only to Azure SQL Data Warehouse.
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxxx-md.md)]
   
 In some cases, the topic is used by a product or service, but all of the arguments are not supported. In this case, additional **Applies to** sections are inserted into the appropriate argument descriptions in the body of the topic.  
  

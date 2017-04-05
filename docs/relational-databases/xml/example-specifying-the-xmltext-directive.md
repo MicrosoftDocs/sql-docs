@@ -1,7 +1,7 @@
 ---
 title: "Example: Specifying the XMLTEXT Directive | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "04/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,7 +39,7 @@ INSERT INTO Person VALUES
 SELECT 1 as Tag, NULL as parent,  
        PersonID as [Parent!1!PersonID],  
        PersonName as [Parent!1!PersonName],  
-       Overflow as [Parent!1!!XMLTEST] -- No AttributeName; XMLTEXT directive  
+       Overflow as [Parent!1!!XMLTEXT] -- No AttributeName; XMLTEXT directive  
 FROM Person  
 FOR XML EXPLICIT;  
 ```  

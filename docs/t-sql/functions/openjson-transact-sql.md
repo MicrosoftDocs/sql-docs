@@ -44,9 +44,7 @@ manager: "jhubbard"
   
 OPENJSON( jsonExpression [ , path ] )  
 [  
-   WITH (   
-    ( colName type [ column_path ] [ AS JSON ] ) [ , ...n ]   
-      )  
+   WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )  
 ]  
   
 ```  

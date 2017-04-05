@@ -4,55 +4,71 @@
 
 # Quickstart
 ## [Getting Started](getting-started-with-always-on-availability-groups-sql-server.md)  
+## [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups](prereqs-restrictions-recommendations-always-on-availability.md)  
 ## [Creation and Configuration](creation-and-configuration-of-availability-groups-sql-server.md)  
 ### [Wizard](use-the-availability-group-wizard-sql-server-management-studio.md)  
 ### [Dialog](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
 ### [Transact-SQL](create-an-availability-group-transact-sql.md)  
 ### [PowerShell](create-an-availability-group-sql-server-powershell.md)  
-### [Azure virtual machines](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
+### [Azure virtual machines>](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
 
-# Samples
+## Manage
+### SSMS
+### [PowerShell Cmdlets](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+### [Transact-SQL](transact-sql-statements-for-always-on-availability-groups.md)  
+
+## Connect
+### To primary replica
+### To secondary replica
+
+## [Listener](create-or-configure-an-availability-group-listener-sql-server.md)  
+### SSMS
+### PowerShell
+### Azure virtual machines
+
+## Samples
+### SSMS
+### PowerShell
 
 # Tutorials
 
 # Concepts
+## [Failover Clustering and Always On Availability Groups](failover-clustering-and-always-on-availability-groups-sql-server.md)  
+## [Client connectivity](always-on-client-connectivity-sql-server.md)  
+## [Basic Availability Groups](basic-availability-groups-always-on-availability-groups.md)  
+## [Distributed Availability Groups](distributed-availability-groups-always-on-availability-groups.md)  
+## [Availability Modes](availability-modes-always-on-availability-groups.md)  
+## [Failover and Failover Modes](failover-and-failover-modes-always-on-availability-groups.md)  
+## [Flexible Failover Policy for Automatic Failover of an Availability Group](flexible-automatic-failover-policy-availability-group.md)  
+## [Possible Failures During Sessions Between Availability Replicas (SQL Server)](possible-failures-during-sessions-between-availability-replicas-sql-server.md)  
+## [Database Health Detection Failover Option](sql-server-always-on-database-health-detection-failover-option.md)  
+## [Active Secondaries: Backup on Secondary Replicas](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+## [Active Secondaries: Readable Secondary Replicas](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+## [About Client Connection Access to Availability Replicas](about-client-connection-access-to-availability-replicas-sql-server.md)  
+## [Availability Group Listeners, Client Connectivity, and Application Failover](listeners-client-connectivity-application-failover.md)  
 
 # How-to guides
+## [Configuration of a Server Instance for Always On Availability Groups](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
+### [Enable and Disable Always On Availability Groups](enable-and-disable-always-on-availability-groups-sql-server.md)  
+### [Create a Database Mirroring Endpoint for Always On Availability Groups (SQL Server PowerShell)](database-mirroring-always-on-availability-groups-powershell.md)  
+## Configure Availability Group
+### [Change the Availability Mode of an Availability Replica](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
+### [Change the Failover Mode of an Availability Replica](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+### [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover](configure-flexible-automatic-failover-policy.md)  
+### [Configure Backup on Availability Replicas](configure-backup-on-availability-replicas-sql-server.md)  
+### [Configure Read-Only Access on an Availability Replica](configure-read-only-access-on-an-availability-replica-sql-server.md)  
+### [Configure Read-Only Routing for an Availability Group](configure-read-only-routing-for-an-availability-group-sql-server.md)  
+### [Remove Availability Group Listener](remove-an-availability-group-listener-sql-server.md)  
+## [Troubleshoot Always On Availability Groups Configuration](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+
 
 # References
 
 # Resources
-
-
-# [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups](prereqs-restrictions-recommendations-always-on-availability.md)  
-# [Failover Clustering and Always On Availability Groups](failover-clustering-and-always-on-availability-groups-sql-server.md)  
-## [Availability Modes](availability-modes-always-on-availability-groups.md)  
-### [Change the Availability Mode of an Availability Replica](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
-## [Failover and Failover Modes](failover-and-failover-modes-always-on-availability-groups.md)  
-### [Change the Failover Mode of an Availability Replica](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
-### [Flexible Failover Policy for Automatic Failover of an Availability Group](flexible-automatic-failover-policy-availability-group.md)  
-### [Configure the Flexible Failover Policy to Control Conditions for Automatic Failover](configure-flexible-automatic-failover-policy.md)  
-### [Possible Failures During Sessions Between Availability Replicas (SQL Server)](possible-failures-during-sessions-between-availability-replicas-sql-server.md)  
-### [Database Health Detection Failover Option](sql-server-always-on-database-health-detection-failover-option.md)  
-## [Active Secondaries: Backup on Secondary Replicas](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
-### [Configure Backup on Availability Replicas](configure-backup-on-availability-replicas-sql-server.md)  
-## [Active Secondaries: Readable Secondary Replicas](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
-### [About Client Connection Access to Availability Replicas](about-client-connection-access-to-availability-replicas-sql-server.md)  
-### [Configure Read-Only Access on an Availability Replica](configure-read-only-access-on-an-availability-replica-sql-server.md)  
-## [Availability Group Listeners, Client Connectivity, and Application Failover](listeners-client-connectivity-application-failover.md)  
-### [Always On Failover Cluster Instances](always-on-client-connectivity-sql-server.md)  
-### [Create or Configure an Availability Group Listener](create-or-configure-an-availability-group-listener-sql-server.md)  
+## SSMS Help
 ### [Add IP Address Dialog Box](add-ip-address-dialog-box-sql-server-management-studio.md)  
-### [Configure Read-Only Routing for an Availability Group](configure-read-only-routing-for-an-availability-group-sql-server.md)  
-### [Remove Availability Group Listener](remove-an-availability-group-listener-sql-server.md)  
-## [Basic Availability Groups](basic-availability-groups-always-on-availability-groups.md)  
-## [Distributed Availability Groups](distributed-availability-groups-always-on-availability-groups.md)  
-## [Overview of Transact-SQL Statements for Always On Availability Groups](transact-sql-statements-for-always-on-availability-groups.md)  
-## [Overview of PowerShell Cmdlets for Always On Availability Groups](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
-# [Configuration of a Server Instance for Always On Availability Groups](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
-## [Enable and Disable Always On Availability Groups](enable-and-disable-always-on-availability-groups-sql-server.md)  
-## [Create a Database Mirroring Endpoint for Always On Availability Groups (SQL Server PowerShell)](database-mirroring-always-on-availability-groups-powershell.md)  
-## [Troubleshoot Always On Availability Groups Configuration](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+
+
 ## [Tune compression for availability group](tune-compression-for-availability-group.md)  
 ### [Specify Availability Group Name Page (New Availability Group Wizard/Add Database Wizard)](specify-availability-group-name-page.md)  
 ### [Select Databases Page (New Availability Group Wizard and Add Database Wizard)](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)  

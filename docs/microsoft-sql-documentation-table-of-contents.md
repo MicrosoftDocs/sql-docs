@@ -28,7 +28,7 @@ This page gives you access to all SQL documentation:
 	- [Azure SQL Data Warehouse](/azure/sql-data-warehouse)
 	- [Tools and SDKs](sql-hub-menu.md#sdkstools-all)
 	- [Architectural recommendations](sql-hub-menu.md#architecture)
+	- [Documentation for previous versions of SQL Server](https://msdn.microsoft.com/en-US/library/ms130214(SQL.120).aspx)
 
 
 **See also**: Additional Azure database technologies such as [DocumentDB and Data Factory](/azure/#pivot=services&panel=databases).  
-

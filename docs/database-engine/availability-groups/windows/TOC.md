@@ -49,7 +49,7 @@
 ## [Management of Logins and Jobs for the Databases of an Availability Group](logins-and-jobs-for-availability-group-databases.md)  
 ## [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md)  
 ## [Always On Policies for Operational Issues with Always On Availability Groups](always-on-policies-for-operational-issues-always-on-availability.md)  
-##Interoperability with other features
+## Interoperability with other features
 ### [Contained Databases with Always On Availability Groups](contained-databases-with-always-on-availability-groups-sql-server.md)  
 ### [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring (SQL Server)](transactions-always-on-availability-and-database-mirroring.md)  
 #### [Cluster DTC for SQL Server 2016 Availability Groups](cluster-dtc-for-sql-server-2016-availability-groups.md)  

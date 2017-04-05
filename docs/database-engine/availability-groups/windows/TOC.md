@@ -1,5 +1,5 @@
-# [Overview](always-on-availability-groups-sql-server.md)  
-## [Overview of Always On Availability Groups](overview-of-always-on-availability-groups-sql-server.md)  
+# [Overview](overview-of-always-on-availability-groups-sql-server.md)  
+## [Technology and capabilities](always-on-availability-groups-sql-server.md)  
 ## [Availability groups - interoperability](always-on-availability-groups-interoperability-sql-server.md)  
 
 # Quickstart

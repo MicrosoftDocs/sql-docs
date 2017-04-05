@@ -59,12 +59,20 @@
 ### [Configure Read-Only Access on an Availability Replica](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [Configure Read-Only Routing for an Availability Group](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [Remove Availability Group Listener](remove-an-availability-group-listener-sql-server.md)  
-## [Troubleshoot Always On Availability Groups Configuration](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+### [Join a Secondary Database to an Availability Group](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+### [Start Data Movement on an Always On Secondary Database](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
+### [Manually Prepare a Secondary Database for an Availability Group](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
 ### [Specify the Endpoint URL When Adding or Modifying an Availability Replica](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
 ### [Join a Secondary Replica to an Availability Group](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
-### [Start Data Movement on an Always On Secondary Database](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
-#### [Manually Prepare a Secondary Database for an Availability Group](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
-#### [Join a Secondary Database to an Availability Group](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+### [Tune compression for availability group](tune-compression-for-availability-group.md)  
+## [Troubleshoot Always On Availability Groups Configuration](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+## Failover
+### [Planned Manual Failover](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
+### [Forced Manual Failover](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+### [Fail Over - Wizard](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
+## Add Database
+### [Dialog](availability-group-add-a-database.md)  
+### [Wizard](availability-group-add-database-to-group-wizard.md)  
 
 
 # References
@@ -74,7 +82,6 @@
 ### [Add IP Address Dialog Box](add-ip-address-dialog-box-sql-server-management-studio.md)  
 
 
-## [Tune compression for availability group](tune-compression-for-availability-group.md)  
 ### [Specify Availability Group Name Page (New Availability Group Wizard/Add Database Wizard)](specify-availability-group-name-page.md)  
 ### [Select Databases Page (New Availability Group Wizard and Add Database Wizard)](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)  
 ### [Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)  
@@ -87,11 +94,6 @@
 ## [Management of Logins and Jobs for the Databases of an Availability Group](logins-and-jobs-for-availability-group-databases.md)  
 ## [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md)  
 # [Administration of an Availability Group](administration-of-an-availability-group-sql-server.md)  
-## [Perform a Planned Manual Failover of an Availability Group](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
-## [Perform a Forced Manual Failover of an Availability Group](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
-## [Use the Fail Over Availability Group Wizard](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
-## [Availability Group - Add a Database](availability-group-add-a-database.md)  
-## [Availability Group - Add Database to Group Wizard](availability-group-add-database-to-group-wizard.md)  
 ## [Availability Group - Connect Existing Secondary Replicas Page](connect-to-existing-secondary-replicas-page.md)  
 ## [Suspend an Availability Database](suspend-an-availability-database-sql-server.md)  
 ## [Resume an Availability Database](resume-an-availability-database-sql-server.md)  

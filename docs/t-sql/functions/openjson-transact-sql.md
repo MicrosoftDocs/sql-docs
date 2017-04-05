@@ -41,12 +41,10 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
-OPENJSON( jsonExpression [ , path ] )  
-[  
-   WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )  
-]  
-  
+
+OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
+
+<with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
 ```  
 >[!Note]
 > column_type must be NVARCHAR(MAX) if **AS JSON** option is used.

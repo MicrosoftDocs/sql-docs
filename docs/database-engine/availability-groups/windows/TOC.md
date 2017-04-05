@@ -49,11 +49,28 @@
 ## [Management of Logins and Jobs for the Databases of an Availability Group](logins-and-jobs-for-availability-group-databases.md)  
 ## [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md)  
 ## [Always On Policies for Operational Issues with Always On Availability Groups](always-on-policies-for-operational-issues-always-on-availability.md)  
+##Interoperability with other features
+### [Contained Databases with Always On Availability Groups](contained-databases-with-always-on-availability-groups-sql-server.md)  
+### [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring (SQL Server)](transactions-always-on-availability-and-database-mirroring.md)  
+#### [Cluster DTC for SQL Server 2016 Availability Groups](cluster-dtc-for-sql-server-2016-availability-groups.md)  
+### [Database Snapshots with Always On Availability Groups](database-snapshots-with-always-on-availability-groups-sql-server.md)  
+### [Encrypted Databases with Always On Availability Groups](encrypted-databases-with-always-on-availability-groups-sql-server.md)  
+### [FILESTREAM and FileTable with Always On Availability Groups](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)  
+### [Prerequisites for Migrating from Log Shipping to Always On Availability Groups (SQL Server)](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+### [Remote Blob Store (RBS) and Always On Availability Groups](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)  
+### [Configure Replication for Always On Availability Groups](configure-replication-for-always-on-availability-groups-sql-server.md)  
+### [Maintaining an Always On Publication Database](maintaining-an-always-on-publication-database-sql-server.md)  
+### [Replication Subscribers and Always On Availability Groups](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
+### [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups](replicate-track-change-data-capture-always-on-availability.md)  
+### [Always On Failover Cluster Instances](analysis-services-with-always-on-availability-groups.md)  
+### [Reporting Services with Always On Availability Groups](reporting-services-with-always-on-availability-groups-sql-server.md)  
+### [Service Broker with Always On Availability Groups](service-broker-with-always-on-availability-groups-sql-server.md)  
 
 # [How-to guides](administration-of-an-availability-group-sql-server.md)  
-## [Configuration of a Server Instance for Always On Availability Groups](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
+### [Configuration of a Server Instance for Always On Availability Groups](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
 ### [Enable and Disable Always On Availability Groups](enable-and-disable-always-on-availability-groups-sql-server.md)  
 ### [Create a Database Mirroring Endpoint for Always On Availability Groups (SQL Server PowerShell)](database-mirroring-always-on-availability-groups-powershell.md)  
+### [Create Clustered DTC for an Always On Availability Group](create-clustered-dtc-for-an-always-on-availability-group.md)  
 ## Configure Availability Group 
 ### [Change the Availability Mode of an Availability Replica](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [Change the Failover Mode of an Availability Replica](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
@@ -97,6 +114,8 @@
 ### [View Availability Group Properties](view-availability-group-properties-sql-server.md)  
 #### [Availability Group Properties: New Availability Group (General Page)](availability-group-properties-new-availability-group-general-page.md)  
 #### [Availability Group Properties: New Availability Group (Backup Preferences Page)](availability-group-properties-new-availability-group-backup-preferences-page.md)  
+### [View Availability Replica Properties](view-availability-replica-properties-sql-server.md)  
+### [View Availability Group Listener Properties](view-availability-group-listener-properties-sql-server.md)  
 
 
 # References
@@ -117,6 +136,7 @@
 ## [Use the Always On Dashboard (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
 ### [Options (SQL Server Always On, Dashboard Page)](options-sql-server-always-on-dashboard-page.md)  
 ### [Policy Evaluation Result (Always On)](policy-evaluation-result-always-on.md)  
+### [Availability Replica Properties (General Page)](availability-replica-properties-general-page.md)  
 ## Policies
 ### [WSFC cluster service is offline](wsfc-cluster-service-is-offline.md)  
 ### [Availability group is offline](availability-group-is-offline.md)  
@@ -132,30 +152,3 @@
 ### [Availability database is suspended](availability-database-is-suspended.md)  
 ### [Secondary database is not joined](secondary-database-is-not-joined.md)  
 ### [Data synchronization state of some availability database is not healthy](data-synchronization-state-of-some-availability-database-is-not-healthy.md)  
-
-
-
-
-
-
-
-
-## [View Availability Replica Properties](view-availability-replica-properties-sql-server.md)  
-### [Availability Replica Properties (General Page)](availability-replica-properties-general-page.md)  
-## [View Availability Group Listener Properties](view-availability-group-listener-properties-sql-server.md)  
-## [Contained Databases with Always On Availability Groups](contained-databases-with-always-on-availability-groups-sql-server.md)  
-## [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring (SQL Server)](transactions-always-on-availability-and-database-mirroring.md)  
-## [Database Snapshots with Always On Availability Groups](database-snapshots-with-always-on-availability-groups-sql-server.md)  
-## [Encrypted Databases with Always On Availability Groups](encrypted-databases-with-always-on-availability-groups-sql-server.md)  
-## [FILESTREAM and FileTable with Always On Availability Groups](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)  
-## [Prerequisites for Migrating from Log Shipping to Always On Availability Groups (SQL Server)](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
-## [Remote Blob Store (RBS) and Always On Availability Groups](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)  
-## [Configure Replication for Always On Availability Groups](configure-replication-for-always-on-availability-groups-sql-server.md)  
-## [Maintaining an Always On Publication Database](maintaining-an-always-on-publication-database-sql-server.md)  
-## [Replication Subscribers and Always On Availability Groups](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
-## [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups](replicate-track-change-data-capture-always-on-availability.md)  
-## [Always On Failover Cluster Instances](analysis-services-with-always-on-availability-groups.md)  
-## [Reporting Services with Always On Availability Groups](reporting-services-with-always-on-availability-groups-sql-server.md)  
-## [Service Broker with Always On Availability Groups](service-broker-with-always-on-availability-groups-sql-server.md)  
-# [Cluster DTC for SQL Server 2016 Availability Groups](cluster-dtc-for-sql-server-2016-availability-groups.md)  
-## [Create Clustered DTC for an Always On Availability Group](create-clustered-dtc-for-an-always-on-availability-group.md)  

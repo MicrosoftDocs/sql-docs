@@ -69,7 +69,6 @@ For a list of features that were added to the Developer edition for [!INCLUDE[ss
 |Always On failover cluster instances|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No|No|  
 |Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|No|
 |Basic availability groups <sup>2</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
-|Connection director|Yes|No|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
 |Online indexing|Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|

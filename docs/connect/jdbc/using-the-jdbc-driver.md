@@ -21,9 +21,9 @@ manager: "jhubbard"
   This section provides quick start instructions for making a simple connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database by using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Before you connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] must first be installed on either your local computer or a server, and the JDBC driver must be installed on your local computer.  
   
 ## Choosing the Right JAR file  
- The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server provide **sqljdbc.jar, sqljdbc4.jar, sqljdbc41**, and **sqljdbc42.jar** class library files to be used depending on your preferred Java Runtime Environment (JRE) settings.  
+ The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server provide **sqljdbc41.jar**, and **sqljdbc42.jar** class library files to be used depending on your preferred Java Runtime Environment (JRE) settings.  
   
- The Microsoft JDBC Driver 4.1 for SQL Server provides **sqljdbc.jar**, **sqljdbc4.jar**, and **sqljdbc41.jar** class library files to be used depending on your preferred Java Runtime Environment (JRE) settings.  
+ The Microsoft JDBC Driver 4.1 for SQL Server provides the **sqljdbc41.jar** class library file to be used depending on your preferred Java Runtime Environment (JRE) settings.  
   
  The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 provides **sqljdbc.jar** and **sqljdbc4.jar** class library files to be used depending on your preferred Java Runtime Environment (JRE) settings.  
   

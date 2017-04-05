@@ -60,6 +60,11 @@
 ### [Configure Read-Only Routing for an Availability Group](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [Remove Availability Group Listener](remove-an-availability-group-listener-sql-server.md)  
 ## [Troubleshoot Always On Availability Groups Configuration](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+### [Specify the Endpoint URL When Adding or Modifying an Availability Replica](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+### [Join a Secondary Replica to an Availability Group](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+### [Start Data Movement on an Always On Secondary Database](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
+#### [Manually Prepare a Secondary Database for an Availability Group](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+#### [Join a Secondary Database to an Availability Group](join-a-secondary-database-to-an-availability-group-sql-server.md)  
 
 
 # References
@@ -79,11 +84,6 @@
 ### [Summary Page (Always On Availability Group Wizards)](summary-page-always-on-availability-group-wizards.md)  
 ### [Progress Page (Always On Availability Group Wizards)](progress-page-always-on-availability-group-wizards.md)  
 ### [Results Page (Always On Availability Group Wizards)](results-page-always-on-availability-group-wizards.md)  
-## [Specify the Endpoint URL When Adding or Modifying an Availability Replica](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
-## [Join a Secondary Replica to an Availability Group](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
-## [Start Data Movement on an Always On Secondary Database](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
-### [Manually Prepare a Secondary Database for an Availability Group](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
-### [Join a Secondary Database to an Availability Group](join-a-secondary-database-to-an-availability-group-sql-server.md)  
 ## [Management of Logins and Jobs for the Databases of an Availability Group](logins-and-jobs-for-availability-group-databases.md)  
 ## [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md)  
 # [Administration of an Availability Group](administration-of-an-availability-group-sql-server.md)  

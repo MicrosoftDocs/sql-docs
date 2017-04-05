@@ -26,9 +26,10 @@
 ### PowerShell
 ### Azure virtual machines
 
-## Samples
-### SSMS
-### PowerShell
+# Samples
+## SSMS
+## Transact-SQL
+## PowerShell
 
 # Tutorials
 

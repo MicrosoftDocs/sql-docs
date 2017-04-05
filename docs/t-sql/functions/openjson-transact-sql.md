@@ -57,12 +57,14 @@ OPENJSON( jsonExpression [ , path ] )
   *jsonExpression*, he can specify second **path** parameter that will define where is placed JSON sub-object that should be parsed.
 
   openjson
+
   ![Syntax for OPENJSON TVF](../../relational-databases/json/media/openjson-syntax.png "OPENJSON syntax")  
 
   By default, **OPENJSON** table-value function returns three columns with key name, value, and type of each {key:value} pair that is found in the *jsonExpression*.
   As an alternative, user can explicitly specify the schema of the result set that will return **OPENJSON** function using *with_clause*:
   
   with_clause
+  
   ![Syntax for WITH clause in OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH syntax")
 
   *with_clause* contains the list of the columns that will be returned by **OPENJSON** with their types. By default, **OPENJSON** matches keys in

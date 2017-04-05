@@ -1,5 +1,4 @@
 # [Overview](language-reference.md)  
-## [Transact-SQL Reference](transact-sql-reference-database-engine.md)  
 
 # [Data types](data-types/index.md)
 # [Database Console Commands](database-console-commands/index.md)

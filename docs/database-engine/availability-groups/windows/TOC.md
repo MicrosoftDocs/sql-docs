@@ -2,7 +2,7 @@
 ## [Overview of Always On Availability Groups](overview-of-always-on-availability-groups-sql-server.md)  
 ## [Availability groups - interoperability](always-on-availability-groups-interoperability-sql-server.md)  
 
-# [Quickstart]
+# Quickstart
 ## [Getting Started](getting-started-with-always-on-availability-groups-sql-server.md)  
 ## [Creation and Configuration](creation-and-configuration-of-availability-groups-sql-server.md)  
 ### [Wizard](use-the-availability-group-wizard-sql-server-management-studio.md)  
@@ -11,17 +11,17 @@
 ### [PowerShell](create-an-availability-group-sql-server-powershell.md)  
 ### [Azure virtual machines](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
 
-# [Samples]
+# Samples
 
-# [Tutorials]
+# Tutorials
 
-# [Concepts]
+# Concepts
 
-# [How-to guides]
+# How-to guides
 
-# [References]
+# References
 
-# [Resources]
+# Resources
 
 
 # [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups](prereqs-restrictions-recommendations-always-on-availability.md)  

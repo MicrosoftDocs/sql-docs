@@ -920,6 +920,16 @@
       - name: Data types
         href: /sql/t-sql/data-types/
         homepage: /sql/t-sql/data-types
+        items:
+        - name: Spatial geography
+          href: /sql/t-sql/spatial-geography/
+          homepage: /sql/t-sql/spatial-geography
+        - name: Spatial geometry
+          href: /sql/t-sql/spatial-geometry/
+          homepage: /sql/t-sql/spatial-geometry
+        - name: XML
+          href: /sql/t-sql/xml/
+          homepage: /sql/t-sql/xml
       - name: Database Console Commands
         href: /sql/t-sql/database-console-commands/
         homepage: /sql/t-sql/database-console-commands
@@ -932,18 +942,9 @@
       - name: Queries
         href: /sql/t-sql/queries/
         homepage: /sql/t-sql/queries
-      - name: Spatial geography
-        href: /sql/t-sql/spatial-geography/
-        homepage: /sql/t-sql/spatial-geography
-      - name: Spatial geometry
-        href: /sql/t-sql/spatial-geometry/
-        homepage: /sql/t-sql/spatial-geometry
       - name: Statements
         href: /sql/t-sql/statements/
         homepage: /sql/t-sql/statements
-      - name: XML
-        href: /sql/t-sql/xml/
-        homepage: /sql/t-sql/xml
     - name: Whitepapers
       href: /sql/whitepapers/
       homepage: /sql/whitepapers

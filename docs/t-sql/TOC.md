@@ -5,11 +5,8 @@
 # [Functions](functions/index.md)
 # [Language elements](language-elements/index.md)
 # [Queries](queries/index.md)
-# Spatial
-## [Geography](spatial-geography/index.md)
-## [Geometry](spatial-geometry/index.md)
 # [Statements](statements/index.md)
-# [xml](xml/index.md)
+
 
 
 # [Tutorial: Writing Transact-SQL Statements](tutorial-writing-transact-sql-statements.md)  

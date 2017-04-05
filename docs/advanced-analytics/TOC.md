@@ -74,8 +74,8 @@
 <!-- ### [PREDICT (T-SQL)](predict-t-sql.md)-->
 
 ## [Operationalization](./r-services/creating-workflows-that-use-r-in-sql-server.md)  
-### [Operationalizing Your R Code]
-(./r-services/operationalizing-your-r-code.md)  
+
+### [Operationalizing Your R Code](./r-services/operationalizing-your-r-code.md)  
 
 ## [Performance Tuning](./r-services/sql-server-r-services-performance-tuning.md)  
 ### [SQL Server Configuration (Machine Learning Services)](./r-services/sql-server-configuration-r-services.md)    

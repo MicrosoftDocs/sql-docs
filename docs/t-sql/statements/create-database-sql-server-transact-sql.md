@@ -49,8 +49,9 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```
--- Create a database  
+```  
+  
+      Create a database  
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -93,8 +94,7 @@ CREATE DATABASE database_name
   
 <filegroup> ::=   
 {  
-FILEGROUP filegroup name 
-    [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]  
+FILEGROUP filegroup name [ [ CONTAINS FILESTREAM ] [ DEFAULT ] | CONTAINS MEMORY_OPTIMIZED_DATA ]  
     <filespec> [ ,...n ]  
 }  
   
@@ -107,8 +107,9 @@ FILEGROUP filegroup name
   
 ```  
   
-```
--- Attach a database  
+```  
+  
+      Attach a database  
 CREATE DATABASE database_name   
     ON <filespec> [ ,...n ]   
     FOR { { ATTACH [ WITH <attach_database_option> [ , ...n ] ] }  
@@ -124,8 +125,9 @@ CREATE DATABASE database_name
   
 ```  
   
-```
--- Create a database snapshot  
+```  
+  
+      Create a database snapshot  
 CREATE DATABASE database_snapshot_name   
     ON   
     (  
@@ -145,7 +147,9 @@ CREATE DATABASE database_snapshot_name
  If data file name is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses *database_name* as both the *logical_file_name* and as the *os_file_name*. The default path is obtained from the registry. The default path can be changed by using the **Server Properties (Database Settings Page)** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Changing the default path requires restarting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  CONTAINMENT = { NONE | PARTIAL }  
- **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ ||  
+|-|  
+|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
  Specifies the containment status of the database. NONE = non-contained database. PARTIAL = partially contained database.  
   
@@ -173,47 +177,59 @@ CREATE DATABASE database_snapshot_name
 >  Contained databases are collated differently than non-contained databases. Please see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) for more information.  
   
  WITH \<option>  
- 
- -   **\<filestream_options>**  
+ -   **<filestream_options>**  
   
      NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }  
-    **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     ||  
+    |-|  
+    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
      Specifies the level of non-transactional FILESTREAM access to the database.  
-
-    |Value |Description |  
-    |----------- |----------------- |  
-    |OFF |Non-transactional access is disabled. |  
-    |READONLY |FILESTREAM data in this database can be read by non-transactional processes. |  
-    |FULL |Full non-transactional access to FILESTREAM FileTables is enabled. |   
-
-    
- -  DIRECTORY_NAME = <directory_name>   
- 
-    **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
-    
-    A windows-compatible directory name. This name should be unique among all the Database_Directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation settings. This option should be set before creating a FileTable in this database.  
   
-**Containment Options**  
-The following options are allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
+    |Value|Description|  
+    |-----------|-----------------|  
+    |OFF|Non-transactional access is disabled.|  
+    |READONLY|FILESTREAM data in this database can be read by non-transactional processes.|  
+    |FULL|Full non-transactional access to FILESTREAM FileTables is enabled.|  
+  
+     DIRECTORY_NAME = <directory_name>  
+     ||  
+    |-|  
+    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+  
+     A windows-compatible directory name. This name should be unique among all the Database_Directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation settings. This option should be set before creating a FileTable in this database.  
+  
+ The following options are allowable only when CONTAINMENT has been set to PARTIAL. If CONTAINMENT is set to NONE, errors will occur.  
   
 -   **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**  
-    **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+    ||  
+    |-|  
+    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
      See [Configure the default full-text language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) for a full description of this option.  
   
 -   **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**  
-    **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+    ||  
+    |-|  
+    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
      See [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) for a full description of this option.  
   
 -   **NESTED_TRIGGERS = { OFF | ON}**  
-    **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+    ||  
+    |-|  
+    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
      See [Configure the nested triggers Server Configuration Option](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) for a full description of this option.  
   
 -   **TRANSFORM_NOISE_WORDS = { OFF | ON}**  
-    **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+    ||  
+    |-|  
+    |**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
      See [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)for a full description of this option.  
   
@@ -244,7 +260,7 @@ The following options are allowable only when CONTAINMENT has been set to PARTIA
   
      To set this option, requires membership in the sysadmin fixed server role.  
   
- FOR ATTACH [ WITH \< attach_database_option > ]  
+ FOR ATTACH [ WITH < attach_database_option > ]  
  Specifies that the database is created by [attaching](../../relational-databases/databases/database-detach-and-attach-sql-server.md) an existing set of operating system files. There must be a \<filespec> entry that specifies the primary file. The only other \<filespec> entries required are those for any files that have a different path from when the database was first created or last attached. A \<filespec> entry must be specified for these files.  
   
  FOR ATTACH requires the following:  
@@ -402,7 +418,9 @@ The following options are allowable only when CONTAINMENT has been set to PARTIA
  Specifies that the filegroup stores FILESTREAM binary large objects (BLOBs) in the file system.  
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
- **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ ||  
+|-|  
+|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
  Specifies that the filegroup stores memory_optimized data in the file system. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Only one MEMORY_OPTIMIZED_DATA filegroup is allowed per database. For code samples that create a filegroup to store memory-optimized data, see [Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
@@ -836,4 +854,3 @@ GO
  [Move Database Files](../../relational-databases/databases/move-database-files.md)   
  [Databases](../../relational-databases/databases/databases.md)   
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-  

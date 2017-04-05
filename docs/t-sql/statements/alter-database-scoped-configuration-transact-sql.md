@@ -55,7 +55,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 | CLEAR PROCEDURE_CACHE  
 [;]    
   
-\< set_options > ::=    
+< set_options > ::=    
 {  
     MAXDOP = { <value> | PRIMARY}    
     | LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY}    

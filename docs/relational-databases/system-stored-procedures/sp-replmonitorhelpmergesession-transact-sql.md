@@ -50,7 +50,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 |Value|Description|  
 |-----------|-----------------|  
-|\< **0**|Returns information on past agent runs, up to a maximum of 100 runs.|  
+|< **0**|Returns information on past agent runs, up to a maximum of 100 runs.|  
 |**0** (default)|Returns information on all past agent runs.|  
 |> **0**|Returns information on agent runs that occurred in the last *hours* number of hours.|  
   

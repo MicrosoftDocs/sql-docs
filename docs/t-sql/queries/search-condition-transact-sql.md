@@ -59,7 +59,7 @@ manager: "jhubbard"
 [ ,...n ]   
   
 <predicate> ::=   
-    { expression { = | \< > | ! = | > | > = | ! > | < | < = | ! < } expression   
+    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression   
     | string_expression [ NOT ] LIKE string_expression   
   [ ESCAPE 'escape_character' ]   
     | expression [ NOT ] BETWEEN expression AND expression   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   ( { column | * } , '<contains_search_condition>' )   
     | FREETEXT ( { column | * } , 'freetext_string' )   
     | expression [ NOT ] IN ( subquery | expression [ ,...n ] )   
-    | expression { = | \< > | ! = | > | > = | ! > | < | < = | ! < }   
+    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
   { ALL | SOME | ANY} ( subquery )   
     | EXISTS ( subquery )     }   
 ```  
@@ -76,13 +76,13 @@ manager: "jhubbard"
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-\< search_condition > ::=   
+< search_condition > ::=   
     { [ NOT ] <predicate> | ( <search_condition> ) }   
     [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]   
 [ ,...n ]   
   
 <predicate> ::=   
-    { expression { = | \< > | ! = | > | > = | < | < = } expression   
+    { expression { = | < > | ! = | > | > = | < | < = } expression   
     | string_expression [ NOT ] LIKE string_expression   
     | expression [ NOT ] BETWEEN expression AND expression   
     | expression IS [ NOT ] NULL   
@@ -103,7 +103,7 @@ manager: "jhubbard"
  OR  
  Combines two conditions and evaluates to TRUE when either condition is TRUE. For more information, see [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md).  
   
- \< predicate >  
+ < predicate >  
  Is an expression that returns TRUE, FALSE, or UNKNOWN.  
   
  *expression*  

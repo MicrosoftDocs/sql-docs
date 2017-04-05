@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ALTER DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
@@ -126,7 +126,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
     {  
           = OFF   
         | = ON [ ( <query_store_option_list> [,... n] ) ]  
-        | ( \< query_store_option_list> [,... n] )  
+        | ( < query_store_option_list> [,... n] )  
         | CLEAR [ ALL ]  
     }  
 }   

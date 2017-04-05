@@ -69,12 +69,12 @@ manager: "jhubbard"
 <query_specification> ::=   
 SELECT [ ALL | DISTINCT ]   
     [TOP ( expression ) [PERCENT] [ WITH TIES ] ]   
-    \< select_list >   
+    < select_list >   
     [ INTO new_table ]   
     [ FROM { <table_source> } [ ,...n ] ]   
     [ WHERE <search_condition> ]   
     [ <GROUP BY> ]   
-    [ HAVING \< search_condition > ]   
+    [ HAVING < search_condition > ]   
 ```  
   
 ```  

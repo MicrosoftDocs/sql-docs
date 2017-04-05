@@ -38,7 +38,7 @@ manager: "jhubbard"
 ```  
   
 GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name  
-        TO \< server_principal >  [ ,...n ]  
+        TO < server_principal >  [ ,...n ]  
     [ WITH GRANT OPTION ]  
     [ AS SQL_Server_login ]   
   

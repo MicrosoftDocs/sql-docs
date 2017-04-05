@@ -44,7 +44,7 @@ manager: "erikre"
   
      Or, if you are creating a system-level role definition, right-click **System Roles**, and point to **New System Role**.  
   
-4.  Type a unique name for the role. A name must contain at least one character. It can also include spaces and certain symbols, but not the characters ; ? : @ & = + , $ / * \< > | " or /.  
+4.  Type a unique name for the role. A name must contain at least one character. It can also include spaces and certain symbols, but not the characters ; ? : @ & = + , $ / * < > | " or /.  
   
 5.  Optionally type a description. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] this description is visible only on this page. Users who view this item through Report Manager can see this description in that tool.  
   

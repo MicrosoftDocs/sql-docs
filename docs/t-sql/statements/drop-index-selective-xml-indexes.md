@@ -49,7 +49,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  Is the name of the existing index to drop.  
   
- *\< object>*  
+ *< object>*  
  Is the table that contains the indexed XML column. Use one of the following formats:  
   
 -   `database_name.schema_name.table_name`  

@@ -56,7 +56,7 @@ manager: "jhubbard"
 {  
     table_or_view_name [ [ AS ] table_alias ]   
         [ <tablesample_clause> ]   
-        [ WITH ( \< table_hint > [ [ , ]...n ] ) ]   
+        [ WITH ( < table_hint > [ [ , ]...n ] ) ]   
     | rowset_function [ [ AS ] table_alias ]   
         [ ( bulk_column_alias [ ,...n ] ) ]   
     | user_defined_function [ [ AS ] table_alias ]  
@@ -345,7 +345,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  Is the alias name of the output table. *pivot_table_alias* must be specified.  
   
- UNPIVOT \< unpivot_clause >  
+ UNPIVOT < unpivot_clause >  
  Specifies that the input table is narrowed from multiple columns in *column_list* into a single column called *pivot_column*. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  AS OF <date_time>  

@@ -59,9 +59,10 @@ For example, this topic applies to all versions, and has the following label.
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-Another example, the following label indicates a topic that applies only to Azure SQL Data Warehouse.
+Another example, the following label indicates a topic that applies only to Azure SQL Data Warehouse and Parallel Data Warehouse.
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+
   
 In some cases, the topic is used by a product or service, but all of the arguments are not supported. In this case, additional **Applies to** sections are inserted into the appropriate argument descriptions in the body of the topic.  
  

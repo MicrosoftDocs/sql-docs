@@ -1,7 +1,8 @@
 ---
 title: "sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Microsoft Docs"
+description:"Returns the current status of resource semaphores used to throttle concurrent query optimization"
 ms.custom: ""
-ms.date: "04/05/2017"
+ms.date: "04/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,14 +19,12 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords:
   - "sys.dm_exec_query_optimizer_memory_gateways dynamic management view"
-ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "josack"
+ms.author: "josack"
 manager: "jhubbard"
 ---
 # sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Returns the current status of resource semaphores used to throttle concurrent query optimization.
 
@@ -66,7 +65,7 @@ FROM Sys.dm_exec_query_optimizer_memory_gateways;
 ```  
 
 ## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[How to use the DBCC MEMORYSTATUS command to monitor memory usage on SQL Server 2005](https://support.microsoft.com/en-us/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-[Large query compilation waits on RESOURCE_SEMAPHORE_QUERY_COMPILE in SQL Server 2014](https://support.microsoft.com/en-us/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+ [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
+ [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+[How to use the DBCC MEMORYSTATUS command to monitor memory usage on SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
+[Large query compilation waits on RESOURCE_SEMAPHORE_QUERY_COMPILE in SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

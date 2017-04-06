@@ -69,17 +69,17 @@ A Full-Text Search thesaurus is an XML text file.
   
      An empty global thesaurus file, tsGlobal.xml.  
 
-##  <a name="how_queries_use_tf"></a> How full-text queries use the thesaurus  
-A thesaurus query uses both a language-specific thesaurus and the global thesaurus.
-1.  First, the query looks up the language-specific file and loads it for processing (unless it is already loaded). The query is expanded to include the language-specific synonyms specified by the expansion set and replacement set rules in the thesaurus file. 
-2.  These steps are then repeated for the global thesaurus. However, if a term is already part of a match in the language specific thesaurus file, the term is ineligible for matching in the global thesaurus.  
-
 ### Change the location of a thesaurus file 
- You can change the location and names of a thesaurus file by changing its registry key. For each language, the location of the thesaurus file is specified in the following value in the registry:  
+You can change the location and names of a thesaurus file by changing its registry key. For each language, the location of the thesaurus file is specified in the following value in the registry:  
   
     HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
   
  The global thesaurus file corresponds to the Neutral language with LCID 0. This value can be changed by administrators only.  
+
+##  <a name="how_queries_use_tf"></a> How full-text queries use the thesaurus  
+A thesaurus query uses both a language-specific thesaurus and the global thesaurus.
+1.  First, the query looks up the language-specific file and loads it for processing (unless it is already loaded). The query is expanded to include the language-specific synonyms specified by the expansion set and replacement set rules in the thesaurus file. 
+2.  These steps are then repeated for the global thesaurus. However, if a term is already part of a match in the language specific thesaurus file, the term is ineligible for matching in the global thesaurus.  
 
 ##  <a name="structure"></a> Structure of a thesaurus file  
  Each thesaurus file defines an XML container whose ID is `Microsoft Search Thesaurus`, and a comment, `<!--` … `-->`, that contains a sample thesaurus. The thesaurus is defined in a `<thesaurus>` element that contains samples of the child elements that define the diacritics setting, expansion sets, and replacement sets.
@@ -163,7 +163,7 @@ and
 </replacement>  
 ```
 
-### XML Structure of the diacritics setting  
+### XML structure of the diacritics setting  
   
 The diacritics setting of a thesaurus is specified in a single `<diacritics_sensitive>` element. This element contains an integer value that controls accent sensitivity, as follows:  
   

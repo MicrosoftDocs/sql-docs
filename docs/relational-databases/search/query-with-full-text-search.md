@@ -114,7 +114,7 @@ ORDER BY KEY_TBL.RANK DESC
 GO  
 ```  
 
-## Pick the best full-text predicate or function
+## Pick the best predicate or function
 
 `CONTAINS`/`CONTAINSTABLE` and `FREETEXT`/`FREETEXTTABLE` are useful for different kinds of matching. The following table helps you to choose the best predicate or function for your query.
 
@@ -257,7 +257,7 @@ GO
 
 -   **Stopwords**. When defining a full-text query, the Full-Text Engine discards stopwords (also called noise words) from the search criteria. Stopwords are words such as "a," "and," "is," or "the," that can occur frequently but that typically do not help when searching for particular text. Stopwords are listed in a stoplist. Each full-text index is associated with a specific stoplist, which determines what stopwords are omitted from the query or the index at indexing time. For more info, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   **Thesaurus**. FREETEXT and FREETEXTTABLE queries use the thesaurus by default. CONTAINS and CONTAINSTABLE support an optional THESAURUS argument. For more info, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md)
+-   **Thesaurus**. FREETEXT and FREETEXTTABLE queries use the thesaurus by default. CONTAINS and CONTAINSTABLE support an optional THESAURUS argument. For more info, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md).
   
 ##  <a name="tokens"></a> Check the tokenization results
 

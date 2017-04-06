@@ -12,26 +12,7 @@
 ### [PowerShell](create-an-availability-group-sql-server-powershell.md)  
 ### [Azure virtual machines>](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
 
-## Manage
-### SSMS
-### [PowerShell Cmdlets](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
-### [Transact-SQL](transact-sql-statements-for-always-on-availability-groups.md)  
-
-## Connect
-### To primary replica
-### To secondary replica
-
 ## [Listener](create-or-configure-an-availability-group-listener-sql-server.md)  
-### SSMS
-### PowerShell
-### Azure virtual machines
-
-# Samples
-## SSMS
-## Transact-SQL
-## PowerShell
-
-# Tutorials
 
 # Concepts
 ## [Failover clustering and availability groups](failover-clustering-and-always-on-availability-groups-sql-server.md)  
@@ -117,6 +98,8 @@
 
 
 # References
+## [PowerShell Cmdlets](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+## [Transact-SQL](transact-sql-statements-for-always-on-availability-groups.md)  
 
 # Resources
 ## Dialogs and Wizards

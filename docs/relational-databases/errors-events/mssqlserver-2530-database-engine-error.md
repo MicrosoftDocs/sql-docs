@@ -44,8 +44,8 @@ The DBCC statement cannot proceed because the specified index is disabled. After
 2.  Rerun the DBCC statement.  
   
 ## See Also  
-[Enable Indexes and Constraints](../Topic/Enable%20Indexes%20and%20Constraints.md)  
-[ALTER INDEX &#40;Transact-SQL&#41;](../Topic/ALTER%20INDEX%20(Transact-SQL).md)  
-[CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20(Transact-SQL).md)  
-[DBCC DBREINDEX &#40;Transact-SQL&#41;](../Topic/DBCC%20DBREINDEX%20(Transact-SQL).md)  
+[Enable Indexes and Constraints](~/relational-databases/indexes/enable-indexes-and-constraints.md)  
+[ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
+[CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
+[DBCC DBREINDEX &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)  
   

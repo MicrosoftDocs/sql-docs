@@ -37,6 +37,6 @@ The type specified in @type requires a NULL value for the specified parameter, h
 Specify NULL for the parameter, or change the type to one that allows a non-NULL value for the parameter.  
   
 ## See Also  
-[sp_create_plan_guide &#40;Transact-SQL&#41;](../Topic/sp_create_plan_guide%20(Transact-SQL).md)  
-[Plan Guides](../Topic/Plan%20Guides.md)  
+[sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
+[Plan Guides](~/relational-databases/performance/plan-guides.md)  
   

@@ -36,8 +36,8 @@ The transaction encountered a dependency failure, and is now doomed.
 This error can also be caused by too many dependent transactions. Any write transaction can have a limited number of dependent transactions. For example, this error can occur if too many read transactions try to take a dependency on the update transaction.  
   
 ## User Action  
-Don't do any work on the transaction. Call ROLLBACK TRAN to roll back the transaction. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../Topic/In-Memory%20OLTP%20(In-Memory%20Optimization).md).  
+Don't do any work on the transaction. Call ROLLBACK TRAN to roll back the transaction. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 ## See Also  
-[Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](../Topic/Enable%20and%20Disable%20AlwaysOn%20Availability%20Groups%20(SQL%20Server).md)  
+[Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
   

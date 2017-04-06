@@ -48,16 +48,16 @@ Select the user action that is appropriate to the probable cause of the timeout,
   
 |Probable cause|User action|  
 |------------------|---------------|  
-|The word breaker for the query language is configured incorrectly.|If you are using a third-party word breaker it might be incorrectly registered with the operating system. In this case, re-register the word breaker. For more information, see [Revert the Word Breakers Used by Search to the Previous Version](../Topic/Revert%20the%20Word%20Breakers%20Used%20by%20Search%20to%20the%20Previous%20Version.md).|  
+|The word breaker for the query language is configured incorrectly.|If you are using a third-party word breaker it might be incorrectly registered with the operating system. In this case, re-register the word breaker. For more information, see [Revert the Word Breakers Used by Search to the Previous Version](~/relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
 |The word breaker malfunctions for a specific query string.|If the word breaker is supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support.|  
 |The word breaker returns too much data for a specific query string.|If the word breaker is supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contact Microsoft Customer Service and Support.|  
 |The filter daemon process configuration is incorrect.|Ensure that you are using the current password and that a domain policy is not preventing the filter daemon account from logging on.|  
 |A very heavy query workload is running on the server instance.|Try running the query again under a lighter load.|  
   
 ## See Also  
-[Set the Service Account for the Full-text Filter Daemon Launcher](../Topic/Set%20the%20Service%20Account%20for%20the%20Full-text%20Filter%20Daemon%20Launcher.md)  
-[Full-Text Search](../Topic/Full-Text%20Search.md)  
-[sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../Topic/sp_help_fulltext_system_components%20(Transact-SQL).md)  
-[Configure and Manage Word Breakers and Stemmers for Search](../Topic/Configure%20and%20Manage%20Word%20Breakers%20and%20Stemmers%20for%20Search.md)  
-[Configure and Manage Filters for Search](../Topic/Configure%20and%20Manage%20Filters%20for%20Search.md)  
+[Set the Service Account for the Full-text Filter Daemon Launcher](~/relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
+[Full-Text Search](~/relational-databases/search/full-text-search.md)  
+[sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
+[Configure and Manage Word Breakers and Stemmers for Search](~/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
+[Configure and Manage Filters for Search](~/relational-databases/search/configure-and-manage-filters-for-search.md)  
   

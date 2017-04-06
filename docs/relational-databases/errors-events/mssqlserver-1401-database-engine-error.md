@@ -37,5 +37,5 @@ Startup of the mirroring control thread failed.
 In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log, look for the associated error that preceded this message. Correct the cause of this error, and then restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service (MSSQLSERVER).  
   
 ## See Also  
-[Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../Topic/Start,%20Stop,%20Pause,%20Resume,%20Restart%20the%20Database%20Engine,%20SQL%20Server%20Agent,%20or%20SQL%20Server%20Browser%20Service.md)  
+[Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](~/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   

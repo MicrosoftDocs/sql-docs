@@ -32,13 +32,13 @@ robots: noindex,nofollow
 |Message Text|Accessing memory optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. It is not supported for explicit or implicit transactions. Provide a supported isolation level for the memory optimized table using a table hint, such as WITH (SNAPSHOT).|  
   
 ## Explanation  
-Accessing memory-optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. For more information, see [Transactions with In-Memory Tables and Procedures](../Topic/Transactions%20with%20In-Memory%20Tables%20and%20Procedures.md).  
+Accessing memory-optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. For more information, see [Transactions with In-Memory Tables and Procedures](~/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
   
 When accessing a memory-optimized table from an explicit transaction that was started with BEGIN TRANSACTION, or from an implicit transaction, if IMPLICIT_TRANSACTIONS is set to ON, the READ COMMITTED isolation level is not supported.  
   
 ## User Action  
-When accessing a memory-optimized table from an explicit or implicit READ COMMITTED transaction, use SNAPSHOT to access the table. This can be achieved by using the table hint WITH (SNAPSHOT) (for more information, see [Transactions with In-Memory Tables and Procedures](../Topic/Transactions%20with%20In-Memory%20Tables%20and%20Procedures.md)) or by setting the database option MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT to ON (for more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20(Transact-SQL).md)).  
+When accessing a memory-optimized table from an explicit or implicit READ COMMITTED transaction, use SNAPSHOT to access the table. This can be achieved by using the table hint WITH (SNAPSHOT) (for more information, see [Transactions with In-Memory Tables and Procedures](~/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)) or by setting the database option MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT to ON (for more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)).  
   
 ## See Also  
-[In-Memory OLTP &#40;In-Memory Optimization&#41;](../Topic/In-Memory%20OLTP%20(In-Memory%20Optimization).md)  
+[In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

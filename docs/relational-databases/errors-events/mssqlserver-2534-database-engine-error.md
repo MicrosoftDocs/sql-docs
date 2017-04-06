@@ -57,7 +57,7 @@ If running DBCC CHECKDB with one of the REPAIR clauses does not correct the prob
 REPAIR will rebuild the index if an index exists.  
   
 > [!CAUTION]  
-> Running REPAIR for the matching [MSSQLSERVER_2533](../Topic/MSSQLSERVER_2533.md) error deallocates the page before the rebuild.  
+> Running REPAIR for the matching [MSSQLSERVER_2533](~/relational-databases/errors-events/mssqlserver-2533-database-engine-error.md) error deallocates the page before the rebuild.  
   
 > [!CAUTION]  
 > This repair may cause data loss.  

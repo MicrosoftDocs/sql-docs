@@ -39,6 +39,6 @@ The amount of mirror commit overhead is a performance metric that can help you e
 Check the loads on the principal and mirror server instances and their network connection for the cause.  
   
 ## See Also  
-[Database Mirroring &#40;SQL Server&#41;](../Topic/Database%20Mirroring%20(SQL%20Server).md)  
-[Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](../Topic/Use%20Warning%20Thresholds%20and%20Alerts%20on%20Mirroring%20Performance%20Metrics%20(SQL%20Server).md)  
+[Database Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/database-mirroring-sql-server.md)  
+[Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](~/database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

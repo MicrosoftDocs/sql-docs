@@ -46,9 +46,9 @@ To resolve this error, you can take either of the following actions:
     > You can drop the mirror database when mirroring is still enabled only after a failed SET PARTNER OFF statement.  
   
 ## See Also  
-[Database Mirroring &#40;SQL Server&#41;](../Topic/Database%20Mirroring%20(SQL%20Server).md)  
-[ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20(Transact-SQL).md)  
-[Setting Up Database Mirroring &#40;SQL Server&#41;](../Topic/Setting%20Up%20Database%20Mirroring%20(SQL%20Server).md)  
-[Removing Database Mirroring &#40;SQL Server&#41;](../Topic/Removing%20Database%20Mirroring%20(SQL%20Server).md)  
-[Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../Topic/Prepare%20a%20Mirror%20Database%20for%20Mirroring%20(SQL%20Server).md)  
+[Database Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/database-mirroring-sql-server.md)  
+[ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
+[Setting Up Database Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)  
+[Removing Database Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
+[Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

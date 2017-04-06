@@ -91,11 +91,11 @@ To identify the listening ports and the processes that have those ports opened, 
     **netstat -ano**  
   
 ## See Also  
-[ALTER ENDPOINT &#40;Transact-SQL&#41;](../Topic/ALTER%20ENDPOINT%20(Transact-SQL).md)  
-[The Database Mirroring Endpoint &#40;SQL Server&#41;](../Topic/The%20Database%20Mirroring%20Endpoint%20(SQL%20Server).md)  
-[Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../Topic/Prepare%20a%20Mirror%20Database%20for%20Mirroring%20(SQL%20Server).md)  
-[SERVERPROPERTY &#40;Transact-SQL&#41;](../Topic/SERVERPROPERTY%20(Transact-SQL).md)  
-[Specify a Server Network Address &#40;Database Mirroring&#41;](../Topic/Specify%20a%20Server%20Network%20Address%20(Database%20Mirroring).md)  
-[sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_endpoints%20(Transact-SQL).md)  
-[Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../Topic/Troubleshoot%20Database%20Mirroring%20Configuration%20(SQL%20Server).md)  
+[ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)  
+[The Database Mirroring Endpoint &#40;SQL Server&#41;](~/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+[Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
+[SERVERPROPERTY &#40;Transact-SQL&#41;](~/t-sql/functions/serverproperty-transact-sql.md)  
+[Specify a Server Network Address &#40;Database Mirroring&#41;](~/database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
+[sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
+[Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   

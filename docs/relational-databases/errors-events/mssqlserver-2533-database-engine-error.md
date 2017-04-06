@@ -60,5 +60,5 @@ REPAIR will deallocate the page. If the page was from an in-row data allocation 
 > This repair may cause data loss.  
   
 ## See Also  
-[MSSQLSERVER_2534](../Topic/MSSQLSERVER_2534.md)  
+[MSSQLSERVER_2534](~/relational-databases/errors-events/mssqlserver-2534-database-engine-error.md)  
   

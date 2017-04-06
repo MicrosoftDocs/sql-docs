@@ -37,6 +37,6 @@ If a WSFC cluster is destroyed, it removes all registry keys related to [!INCLUD
 After re-creating a WSFC cluster, disable and then re-enable AlwaysOn on every cluster node on which an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is enabled for AlwaysOn. You can use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager for this task.  
   
 ## See Also  
-[Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](../Topic/Enable%20and%20Disable%20AlwaysOn%20Availability%20Groups%20(SQL%20Server).md)  
-[Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../Topic/Windows%20Server%20Failover%20Clustering%20(WSFC)%20with%20SQL%20Server.md)  
+[Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
+[Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](~/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   

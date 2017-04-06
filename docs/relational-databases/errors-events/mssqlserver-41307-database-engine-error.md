@@ -31,8 +31,8 @@ manager: "jhubbard"
 |Message Text|The row size limit of *number* bytes for memory optimized tables has been exceeded. Please simplify the table definition.|  
   
 ## Explanation  
-The row size limit for memory optimized tables is 8,060 bytes. For more information, see [Table and Row Size in Memory-Optimized Tables](../Topic/Table%20and%20Row%20Size%20in%20Memory-Optimized%20Tables.md). For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../Topic/In-Memory%20OLTP%20(In-Memory%20Optimization).md).  
+The row size limit for memory optimized tables is 8,060 bytes. For more information, see [Table and Row Size in Memory-Optimized Tables](~/relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md). For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 ## See Also  
-[In-Memory OLTP &#40;In-Memory Optimization&#41;](../Topic/In-Memory%20OLTP%20(In-Memory%20Optimization).md)  
+[In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -71,10 +71,10 @@ Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../../inc
 If the problem continues, you will need to investigate further and possibly reduce workload.  
   
 ## See Also  
-[DBCC FREESYSTEMCACHE &#40;Transact-SQL&#41;](../Topic/DBCC%20FREESYSTEMCACHE%20(Transact-SQL).md)  
-[DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](../Topic/DBCC%20FREESESSIONCACHE%20(Transact-SQL).md)  
-[DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../Topic/DBCC%20FREEPROCCACHE%20(Transact-SQL).md)  
-[Server Configuration Options &#40;SQL Server&#41;](../Topic/Server%20Configuration%20Options%20(SQL%20Server).md)  
-[SQL Server, Buffer Manager Object](../Topic/SQL%20Server,%20Buffer%20Manager%20Object.md)  
-[SQL Server, Memory Manager Object](../Topic/SQL%20Server,%20Memory%20Manager%20Object.md)  
+[DBCC FREESYSTEMCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)  
+[DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  
+[DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
+[Server Configuration Options &#40;SQL Server&#41;](~/database-engine/configure-windows/server-configuration-options-sql-server.md)  
+[SQL Server, Buffer Manager Object](~/relational-databases/performance-monitor/sql-server-buffer-manager-object.md)  
+[SQL Server, Memory Manager Object](~/relational-databases/performance-monitor/sql-server-memory-manager-object.md)  
   

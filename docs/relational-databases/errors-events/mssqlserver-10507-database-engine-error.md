@@ -37,7 +37,7 @@ A statement in the specified module or batch could not be matched to the specifi
 Modify the specified parameter values to match a statement in the module or batch.  
   
 ## See Also  
-[Plan Guides](../Topic/Plan%20Guides.md)  
-[sp_create_plan_guide &#40;Transact-SQL&#41;](../Topic/sp_create_plan_guide%20(Transact-SQL).md)  
-[sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../Topic/sp_create_plan_guide_from_handle%20(Transact-SQL).md)  
+[Plan Guides](~/relational-databases/performance/plan-guides.md)  
+[sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
+[sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   

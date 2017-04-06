@@ -41,9 +41,9 @@ This error can be caused by a transient condition that existed on the system dur
 For information about the cause of this occurrence of error 3414, examine the Windows Event Log for a previous error that indicates the specific failure. The appropriate user action depends on whether the information in the Windows Event Log indicates that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error was caused by a transient condition or a permanent failure. For information about the user actions for troubleshooting error 3414, see [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## See Also  
-[ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20(Transact-SQL).md)  
-[DBCC CHECKDB &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKDB%20(Transact-SQL).md)  
-[Complete Database Restores &#40;Simple Recovery Model&#41;](../Topic/Complete%20Database%20Restores%20(Simple%20Recovery%20Model).md)  
-[MSSQLSERVER_824](../Topic/MSSQLSERVER_824.md)  
-[sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20(Transact-SQL).md)  
+[ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
+[DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+[Complete Database Restores &#40;Simple Recovery Model&#41;](~/complete-database-restores-simple-recovery-model.md)  
+[MSSQLSERVER_824](~/relational-databases/errors-events/mssqlserver-824-database-engine-error.md)  
+[sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

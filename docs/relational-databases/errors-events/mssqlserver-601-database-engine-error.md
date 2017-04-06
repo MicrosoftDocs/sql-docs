@@ -42,7 +42,7 @@ This error cancels the query. Either resubmit the query or remove the NOLOCK loc
   
 ## See Also  
 [MSSQLSERVER_605](../../relational-databases/errors-events/mssqlserver-605-database-engine-error.md)  
-[Table Hints &#40;Transact-SQL&#41;](../Topic/Table%20Hints%20(Transact-SQL).md)  
-[SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20(Transact-SQL).md)  
-[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../Topic/SET%20TRANSACTION%20ISOLATION%20LEVEL%20(Transact-SQL).md)  
+[Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md)  
+[SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  
+[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](~/t-sql/statements/set-transaction-isolation-level-transact-sql.md)  
   

@@ -37,6 +37,6 @@ The database log is out of space. The **log_reuse_wait_desc** column in **sys.da
 Use **sys.databases** to determine why the log is full and then correct the condition. For more information, see "Troubleshooting a Full Transaction Log (Error 9002)" in SQL Server Books Online.  
   
 ## See Also  
-[Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../Topic/Troubleshoot%20a%20Full%20Transaction%20Log%20(SQL%20Server%20Error%209002).md)  
-[sys.databases &#40;Transact-SQL&#41;](../Topic/sys.databases%20(Transact-SQL).md)  
+[Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](~/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+[sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

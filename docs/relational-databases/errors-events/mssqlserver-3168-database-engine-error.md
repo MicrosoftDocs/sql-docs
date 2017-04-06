@@ -49,5 +49,5 @@ Some scenarios in which this problem may occur include the following:
 The restore process in this situation is fairly involved, and used only as a last resort. For more information, see"[You cannot restore system database backups to a different build of SQL Server](http://support.microsoft.com/kb/264474)".  
   
 ## See Also  
-[Back Up and Restore of System Databases &#40;SQL Server&#41;](../Topic/Back%20Up%20and%20Restore%20of%20System%20Databases%20(SQL%20Server).md)  
+[Back Up and Restore of System Databases &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   

@@ -45,8 +45,8 @@ Finally, you might find it useful to switch to a new hardware system. This switc
 ### Restore from Backup  
 If the problem is not hardware-related and a known clean backup is available, restore the database from the backup.  
   
-Consider changing the databases to use the PAGE_VERIFY CHECKSUM option. For information about PAGE_VERIFY, see [ALTER DATABASE &#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20(Transact-SQL).md).  
+Consider changing the databases to use the PAGE_VERIFY CHECKSUM option. For information about PAGE_VERIFY, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 ## See Also  
-[Manage the suspect_pages Table &#40;SQL Server&#41;](../Topic/Manage%20the%20suspect_pages%20Table%20(SQL%20Server).md)  
+[Manage the suspect_pages Table &#40;SQL Server&#41;](~/relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

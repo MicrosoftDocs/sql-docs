@@ -34,6 +34,6 @@ manager: "jhubbard"
 A structural inconsistency occurred on the database page that is referenced in the error message.  
   
 ## See Also  
-[DBCC CHECKDB &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKDB%20(Transact-SQL).md)  
-[Database Files and Filegroups](../Topic/Database%20Files%20and%20Filegroups.md)  
+[DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+[Database Files and Filegroups](~/relational-databases/databases/database-files-and-filegroups.md)  
   

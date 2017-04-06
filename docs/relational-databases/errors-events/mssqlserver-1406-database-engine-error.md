@@ -37,6 +37,6 @@ The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] cannot force s
 Remove database mirroring. You can then recover the mirror database to gain access to it.  
   
 ## See Also  
-[Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](../Topic/Force%20Service%20in%20a%20Database%20Mirroring%20Session%20(Transact-SQL).md)  
-[Removing Database Mirroring &#40;SQL Server&#41;](../Topic/Removing%20Database%20Mirroring%20(SQL%20Server).md)  
+[Force Service in a Database Mirroring Session &#40;Transact-SQL&#41;](~/database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)  
+[Removing Database Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
   

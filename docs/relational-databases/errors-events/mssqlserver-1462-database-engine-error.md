@@ -40,5 +40,5 @@ The most likely cause is that an add-file operation completed on the principal d
 Look in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log for the cause of this error. Try to resolve the cause and resume mirroring on the database.  
   
 ## See Also  
-[Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](../Topic/Troubleshoot%20Database%20Mirroring%20Configuration%20(SQL%20Server).md)  
+[Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   

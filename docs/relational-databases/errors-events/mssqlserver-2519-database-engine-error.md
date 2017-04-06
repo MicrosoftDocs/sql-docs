@@ -37,5 +37,5 @@ This informational message indicates that the query processor could not provide 
 None  
   
 ## See Also  
-[MSSQLSERVER_2518](../Topic/MSSQLSERVER_2518.md)  
+[MSSQLSERVER_2518](~/relational-databases/errors-events/mssqlserver-2518-database-engine-error.md)  
   

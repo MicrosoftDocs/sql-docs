@@ -35,7 +35,7 @@ This error generally signifies page or allocation corruption in the specified da
   
 **Data Corruption Errors**  
   
-A severity level of 21 indicates potential data corruption. Possible causes are a damaged page chain, a corrupt IAM, or an invalid entry in the [sys.objects](../Topic/sys.objects%20(Transact-SQL).md) catalog view for that object. These errors are often caused by hardware or disk device driver failure.  
+A severity level of 21 indicates potential data corruption. Possible causes are a damaged page chain, a corrupt IAM, or an invalid entry in the [sys.objects](~/relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view for that object. These errors are often caused by hardware or disk device driver failure.  
   
 **Transient Errors**  
   
@@ -88,5 +88,5 @@ If the problem is not hardware related, perform one of the following tasks:
     > If you are not sure what effect DBCC CHECKDB with a REPAIR clause has on your data, contact your primary support provider before running this statement.  
   
 ## See Also  
-[DBCC CHECKTABLE &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKTABLE%20(Transact-SQL).md)  
+[DBCC CHECKTABLE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-dbcc-checktable-transact-sql.md)  
   

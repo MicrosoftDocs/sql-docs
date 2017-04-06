@@ -39,5 +39,5 @@ manager: "jhubbard"
 Reduce the level of CASE statements to 10 or less.  
   
 ## See Also  
-[CASE &#40;Transact-SQL&#41;](../Topic/CASE%20(Transact-SQL).md)  
+[CASE &#40;Transact-SQL&#41;](~/t-sql/language-elements/case-transact-sql.md)  
   

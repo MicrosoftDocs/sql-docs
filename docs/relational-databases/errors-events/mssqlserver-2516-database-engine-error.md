@@ -37,5 +37,5 @@ This informational message is returned when error MSSQLEngine_2515 is repaired.
 Perform a full database backup.  
   
 ## See Also  
-[Create a Full Database Backup &#40;SQL Server&#41;](../Topic/Create%20a%20Full%20Database%20Backup%20(SQL%20Server).md)  
+[Create a Full Database Backup &#40;SQL Server&#41;](~/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

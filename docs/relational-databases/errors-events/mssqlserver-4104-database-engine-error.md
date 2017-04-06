@@ -120,6 +120,6 @@ Error 4104 indicates that the specified multi-part identifier could not be mappe
 -   Use unique, clearly defined names for identifiers. Doing so makes your code easier to read and maintain, and it also minimizes the risk of ambiguous references to multiple entities.  
   
 ## See Also  
-[MSSQLSERVER_107](../Topic/MSSQLSERVER_107.md)  
-[Database Identifiers](../Topic/Database%20Identifiers.md)  
+[MSSQLSERVER_107](~/relational-databases/errors-events/mssqlserver-107-database-engine-error.md)  
+[Database Identifiers](~/relational-databases/databases/database-identifiers.md)  
   

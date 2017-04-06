@@ -82,5 +82,5 @@ WHERE Status = 2;
 GO</pre>  
   
 ## See Also  
-[sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../Topic/sys.dm_sql_referenced_entities%20(Transact-SQL).md)  
+[sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)  
   

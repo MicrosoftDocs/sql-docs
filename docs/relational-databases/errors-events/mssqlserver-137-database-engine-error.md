@@ -65,7 +65,7 @@ SET @mycol = 'Name';
 EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
   
 ## See Also  
-[EXECUTE &#40;Transact-SQL&#41;](../Topic/EXECUTE%20(Transact-SQL).md)  
-[SET Statements &#40;Transact-SQL&#41;](../Topic/SET%20Statements%20(Transact-SQL).md)  
-[DECLARE @local_variable &#40;Transact-SQL&#41;](../Topic/DECLARE%20@local_variable%20(Transact-SQL).md)  
+[EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md)  
+[SET Statements &#40;Transact-SQL&#41;](~/t-sql/statements/set-statements-transact-sql.md)  
+[DECLARE @local_variable &#40;Transact-SQL&#41;](~/t-sql/language-elements/declare-local-variable-transact-sql.md)  
   

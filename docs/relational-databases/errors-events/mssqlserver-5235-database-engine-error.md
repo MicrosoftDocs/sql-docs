@@ -39,7 +39,7 @@ The following table lists and defines the error states.
 |---------------|--------------|  
 |State 0|The statement was terminated because of a fatal metadata corruption. This message will be accompanied by one or more instances of error 8930.|  
 |State 1|The statement was terminated because of an internal check failure. This message will be accompanied by one or more instances of error 8967.|  
-|State 2|Basic system table checks of the core storage engine system tables failed. This message will be accompanied by one or more instances of error [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md), 7985, [7986](../Topic/MSSQLSERVER_7986.md), [7987](../Topic/MSSQLSERVER_7987.md), or [7988](../Topic/MSSQLSERVER_7988.md).|  
+|State 2|Basic system table checks of the core storage engine system tables failed. This message will be accompanied by one or more instances of error [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md), 7985, [7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md), [7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md), or [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md).|  
 |State 3|DBCC emergency-mode repair failed because the database could not be started after rebuilding the transaction log. This message will be accompanied by error 7909.|  
 |State 4|A failed assertion or access violation occurred during the execution of the command.|  
 |State 5|An unknown failure occurred that unexpectedly terminated the DBCC command.|  
@@ -57,5 +57,5 @@ The following table provides the user action that is appropriate for the specifi
 |State 5|Run the command again. If the problem persists, contact CSS.|  
   
 ## See Also  
-[DBCC &#40;Transact-SQL&#41;](../Topic/DBCC%20(Transact-SQL).md)  
+[DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  
   

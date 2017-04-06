@@ -37,7 +37,7 @@ This message occurs because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 To resolve this error, terminate any running full-text filter daemon processes, and if necessary reconfigure the full-text daemon host account by using the SQL Server Configuration Manager.  
   
 ## See Also  
-[SQL Server Configuration Manager](../Topic/SQL%20Server%20Configuration%20Manager.md)  
-[Set the Service Account for the Full-text Filter Daemon Launcher](../Topic/Set%20the%20Service%20Account%20for%20the%20Full-text%20Filter%20Daemon%20Launcher.md)  
-[Full-Text Search](../Topic/Full-Text%20Search.md)  
+[SQL Server Configuration Manager](~/relational-databases/sql-server-configuration-manager.md)  
+[Set the Service Account for the Full-text Filter Daemon Launcher](~/relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
+[Full-Text Search](~/relational-databases/search/full-text-search.md)  
   

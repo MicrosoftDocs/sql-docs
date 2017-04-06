@@ -57,5 +57,5 @@ If running DBCC CHECKDB with one of the REPAIR clauses does not correct the prob
 Running REPAIR will cause the specified index and all its dependent indexes to be rebuilt.  
   
 ## See Also  
-[DBCC CHECKDB &#40;Transact-SQL&#41;](../Topic/DBCC%20CHECKDB%20(Transact-SQL).md)  
+[DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   

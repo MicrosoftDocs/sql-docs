@@ -116,8 +116,8 @@ Verify the following information and correct the statement as appropriate.
 -   The WHEN NOT MATCHED BY SOURCE clause in the MERGE statement refers to a value that can be accessed. Modify the MERGE statement so that at least one row is returned by the source table in the WHEN NOT MATCHED BY SOURCE clause. For example, you might need to add or revise the search condition specified for the clause. Alternatively, you can modify the clause to specify a value that does not reference the source table. For example, `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
 ## See Also  
-[MERGE &#40;Transact-SQL&#41;](../Topic/MERGE%20(Transact-SQL).md)  
-[FROM &#40;Transact-SQL&#41;](../Topic/FROM%20(Transact-SQL).md)  
-[SELECT &#40;Transact-SQL&#41;](../Topic/SELECT%20(Transact-SQL).md)  
-[UPDATE &#40;Transact-SQL&#41;](../Topic/UPDATE%20(Transact-SQL).md)  
+[MERGE &#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md)  
+[FROM &#40;Transact-SQL&#41;](~/t-sql/queries/from-transact-sql.md)  
+[SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  
+[UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)  
   

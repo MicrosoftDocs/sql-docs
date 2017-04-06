@@ -45,9 +45,9 @@ Perform the following tasks as appropriate:
 -   Increase the maximum number of user connections allowed on the server.  
   
 ## See Also  
-[sp_configure &#40;Transact-SQL&#41;](../Topic/sp_configure%20(Transact-SQL).md)  
-[Server Configuration Options &#40;SQL Server&#41;](../Topic/Server%20Configuration%20Options%20(SQL%20Server).md)  
-[sys.dm_exec_sessions &#40;Transact-SQL&#41;](../Topic/sys.dm_exec_sessions%20(Transact-SQL).md)  
-[Configure the user connections Server Configuration Option](../Topic/Configure%20the%20user%20connections%20Server%20Configuration%20Option.md)  
-[KILL &#40;Transact-SQL&#41;](../Topic/KILL%20(Transact-SQL).md)  
+[sp_configure &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+[Server Configuration Options &#40;SQL Server&#41;](~/database-engine/configure-windows/server-configuration-options-sql-server.md)  
+[sys.dm_exec_sessions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+[Configure the user connections Server Configuration Option](~/configure-the-user-connections-server-configuration-option.md)  
+[KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md)  
   

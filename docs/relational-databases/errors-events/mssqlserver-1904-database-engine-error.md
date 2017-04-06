@@ -36,9 +36,9 @@ The key column list for the specified index or statistics exceeds the maximum nu
 ## User Action  
 Modify the key column list to include no more than the specified maximum number of columns.  
   
-For nonclustered indexes, consider using the INCLUDE clause in the CREATE INDEX statement to add columns to the index as nonkey columns. This method avoids exceeding the current index size limitation of a maximum of 16 key columns. For more information, see [Create Indexes with Included Columns](../Topic/Create%20Indexes%20with%20Included%20Columns.md).  
+For nonclustered indexes, consider using the INCLUDE clause in the CREATE INDEX statement to add columns to the index as nonkey columns. This method avoids exceeding the current index size limitation of a maximum of 16 key columns. For more information, see [Create Indexes with Included Columns](~/relational-databases/indexes/create-indexes-with-included-columns.md).  
   
 ## See Also  
-[CREATE INDEX &#40;Transact-SQL&#41;](../Topic/CREATE%20INDEX%20(Transact-SQL).md)  
-[CREATE STATISTICS &#40;Transact-SQL&#41;](../Topic/CREATE%20STATISTICS%20(Transact-SQL).md)  
+[CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  
+[CREATE STATISTICS &#40;Transact-SQL&#41;](~/t-sql/statements/create-statistics-transact-sql.md)  
   

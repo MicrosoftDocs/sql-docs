@@ -37,7 +37,7 @@ The batch or module corresponding to the specified **@plan_handle** contains mor
 Create a plan guide for each statement in the batch or module by specifying a **statement_start_offset** value for each statement.  
   
 ## See Also  
-[sp_create_plan_guide &#40;Transact-SQL&#41;](../Topic/sp_create_plan_guide%20(Transact-SQL).md)  
-[Plan Guides](../Topic/Plan%20Guides.md)  
-[sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../Topic/sp_create_plan_guide_from_handle%20(Transact-SQL).md)  
+[sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
+[Plan Guides](~/relational-databases/performance/plan-guides.md)  
+[sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   

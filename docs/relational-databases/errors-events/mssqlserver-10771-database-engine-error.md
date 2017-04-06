@@ -31,7 +31,7 @@ manager: "jhubbard"
 |Message Text|The *construct* '*feature*' is not yet implemented with memory optimized tables.|  
   
 ## User Action  
-For a list of unsupported features and suggested resolutions, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](../Topic/Transact-SQL%20Constructs%20Not%20Supported%20by%20In-Memory%20OLTP.md).  
+For a list of unsupported features and suggested resolutions, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](~/relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../Topic/In-Memory%20OLTP%20(In-Memory%20Optimization).md).  
+For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   

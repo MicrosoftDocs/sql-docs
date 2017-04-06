@@ -37,5 +37,5 @@ This informational message indicates that the query processor could not provide 
 Enable CLR and rerun the DBCC statement.  
   
 ## See Also  
-[Enabling CLR Integration](../Topic/Enabling%20CLR%20Integration.md)  
+[Enabling CLR Integration](~/relational-databases/clr-integration/clr-integration-enabling.md)  
   

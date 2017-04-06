@@ -40,6 +40,6 @@ If the error code in the message is 0x2746 (decimal value 10054), this means tha
   
 To determine a possible solution for other error message values, use the operating system command **net helpmsg** and specify the decimal value of the error code.  
   
-For more information about how to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Server Network Configuration](../Topic/Server%20Network%20Configuration.md) and [Client Network Configuration](../Topic/Client%20Network%20Configuration.md).  
+For more information about how to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Server Network Configuration](~/database-engine/configure-windows/server-network-configuration.md) and [Client Network Configuration](~/database-engine/configure-windows/client-network-configuration.md).  
   
 ## Internal-Only  

@@ -1,5 +1,5 @@
 ---
-title: "MSSQLSERVER_2570_deleted | Microsoft Docs"
+title: "MSSQLSERVER_2570 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: "sql-server-2016"

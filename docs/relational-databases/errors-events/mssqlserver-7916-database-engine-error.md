@@ -1,5 +1,5 @@
 ---
-title: "MSSQLSERVER_7916_deleted | Microsoft Docs"
+title: "MSSQLSERVER_7916 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: "sql-server-2016"
@@ -27,7 +27,7 @@ manager: "jhubbard"
 |Event ID|7916|  
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
-|Symbolic Name|DBCC2_REPAIR_RECORD_DELETED|  
+|Symbolic Name|DBCC2_REPAIR_RECORD|  
 |Message Text|Repair: Deleted record for object ID O_ID, index ID I_ID, partition ID PN_ID, alloc unit ID A_ID (type TYPE), on page P_ID, slot S_ID. Indexes will be rebuilt.|  
   
 ## Explanation  

@@ -16,17 +16,16 @@ manager: "jhubbard"
 
 # Set up Python Machine Learning Services (In-Database)
 
-  You install the components required for using Python by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
+  You install the components required for using Python by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard and following the interactive pompts as decribed inn this topic.
 
-  You can also use command-line options for SQL Server setup and specify the Python options, as described here.
-
-  Here is the overall process:
+**Overview of the setup process**
   
-  + In setup, be sure to install the database engine. An instance of SQL Server is required to run Python scripts in-database.
+  + Be sure to install the database engine. An instance of SQL Server is required to run Python scripts in-database. 
   + Choose the **Machine Learning Services** feature, and select **Python** as the language.
   + After installation is complete, reconfigure the instance to allow execution of scripts that use an external executable. 
   + You might need to make some additional configuration of the secured account used to run Python. Each configuration change requires a restart of the Trusted Launchpad service.
 
+To perform an unattended installation, use the command-line options for SQL Server setup and the arguments specific to Python, as described here: [Unattended Installs of SQL Server with Python Machine LEarnign Services](./unattended-installs-of-sql-server-python-services.md).
  
 ## Prerequisites
 
@@ -51,9 +50,6 @@ manager: "jhubbard"
 
 1.  Run the setup wizard for SQL Server vNext.  
   
-    > [!NOTE]
-    > Need to perform an unattended installation? See this section for command-line arguments.  
-  
 2.  On the **Installation** tab, click **New SQL Server stand-alone installation or add features to an existing installation**.  
    
 3.  On the **Feature Selection** page, select both of these options:  
@@ -72,15 +68,16 @@ manager: "jhubbard"
         > [!NOTE]
         > Do not select the option in **Shared Features** for **Microsoft R Server (Standalone)**. Use this option in a separate installation if you need to add the Machine Learning components to a different computer that is used for R development, such as your data scientist's laptop.
         
-        [image:ml-svcs-features-python-highlight.png]
+        ![Setup options for Python](../python/media/ml-svcs-features-python-highlight.png "Setup options for Python")
 
 4.  On the page, **Consent to Install Python**, click **Accept**.  
   
      This license agreement is required to download the Python executable, Python packages from Anaconda.  
-     [imae: ml-svcs-license-python.PNG]
+     
+     ![Agreement to Python license](../python/media/ml-svcs-license-python.PNG "License agreement for Python")
   
     > [!NOTE]  
-    >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md)  
+    >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing Components without Internet Access](../../advanced-analytics/r-services/install-ml-components-without-internet-access.md)  
   
      Click **Accept**, wait until the **Next** button becomes active, and then click **Next**.  
   
@@ -90,6 +87,12 @@ manager: "jhubbard"
      + Machine Learning Services (In-Database)
      + Python 
   
+    These selections represent the minimum configuration required to use Python with SQL Server. 
+    
+    ![Ready to installl Python](../python/media/ready-to-install-python.png "Required components for Python install")
+
+    Optionally, make a note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
+
 6.  When installation is complete, restart the computer.   
   
   
@@ -118,9 +121,9 @@ manager: "jhubbard"
 
     You can restart the service using the **Services** panel in Control Panel, or by using SQL Server Configuration Manager.  
   
-## Step 3. Verify that script execution works locally
+## Step 3. Verify that the external script execution feature is running
 
-Take a moment to verify that all components used for Python script execution are running.
+Take a moment to verify that all components used to launch Python script are running.
 
 1. In SQL Server Management Studio, open a new Query window, and run the following command:  
   
@@ -129,9 +132,11 @@ Take a moment to verify that all components used for Python script execution are
     ```  
     The **run_value** should now be set to 1.
     
-2. Open the **Services** panel or SQL Server Configuration Manager and verify that the Launchpad service for your instance is running. If the Launchpad is not running, restart the service.
+2. Open the **Services** panel or [SQL Server Configuration Manager](https://docs.microsoft.com/en-us/relational-databases/sql-server-configuration-manager) and verify that the Launchpad service for your instance is running. If the Launchpad is not running, restart the service.
   
   If you have installed multiple instances of SQL Server, using either R or Python, each instance has its own Launchpad service.
+
+  However, if you install R and Python on a single instance, only one Launchpad is installed, but a separate Launcher.dll is added for each language. For more information, see [Components to Support Python Integration](new-components-in-sql-server-to-support-python-integration.md) 
    
 3. If Launchpad is running, you should be able to run simple Python scripts like the following in  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
@@ -149,9 +154,8 @@ Take a moment to verify that all components used for Python script execution are
   
 ### Troubleshooting
 
-If this command is successful, you can run Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.  
+If this command was successful, you can run Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.  
 
-To get started with some simple examples, and learn the basics of how R works with SQL Server, see [Using R Code in Transact-SQL](../../advanced-analytics/r-services/using-r-code-in-transact-sql-sql-server-r-services.md).
 
 If you get an error, see this article for a list of some common problems:  
 

@@ -20,14 +20,14 @@ manager: "jhubbard"
 This topic describes how to use the command-line arguments in SQL Server vNext setup to install the SQL Server database engine with Machine Learning Services and Python, using quiet mode. 
 
 > [!NOTE]
-> This unattended installation does not use the interactive features of the setup wizard, so you must supply licensing agreements for Python components as command-line arguments. 
+> Don't forget to include the command-line arguments for the licensing agreements, one for Python and one for SQL Server. 
 
 ## Prerequisites
 
 Before beginning the installation process, note these requirements:
 
-+ To use Python for machine learning in-database, you must install the SQL Server vNext database engine. 
-+ If you are performing an offline install, you must download the required Python components in advance, and copy them to a local folder. For download locations, see [Installing Machine Learning Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md).   
++ The Python service cannot be installed independently of the SQL Server vNext database engine. You must include the **SQL** feature. 
++ If you are performing an offline install, you must download the required Python components in advance, and copy them to a local folder. For download locations, see [Installing Machine Learning Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).   
 + There is a new parameter, */IACCEPTPYTHONLICENSETERMS*, that indicates you have accepted the license terms for using the Python components provided by Continuum Analytics. If you do not include this parameter in your command line, setup will fail. 
 + To complete setup without having to respond to prompts, make sure that you have identified all required arguments, including those for Python and SQL Server licensing, and for any other features that you might want to install. 
 +  Mixed Mode authentication was required only in prereleases versions of SQL Server 2016. However, it might still be useful in scenarios where data scientists are developing and testing solutions remotely using SQL logins.

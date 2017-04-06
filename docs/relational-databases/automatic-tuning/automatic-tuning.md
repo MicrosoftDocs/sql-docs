@@ -96,6 +96,6 @@ FORCE\_LAST\_GOOD\_PLAN option might be in OFF state even if the user specified 
 | 12 | QUERY\_STORE\_READ\_ONLY | Query Store is in read-only mode. |
 | 13 | NOT\_SUPPORTED | Available only in Enterprise edition of SQL Server. |
 
-## See also
-
-TBD: Link to query store????
+## See Also  
+ [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+ [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)

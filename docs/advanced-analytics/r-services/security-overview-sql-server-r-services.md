@@ -24,24 +24,30 @@ This topic describes the overall security architecture that is used to connect t
 
 ## Security Overview
 
-A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] login or Windows user account is required to run all R jobs that utilize [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. The login or user account identifies the *security principal*, who must have permission to access the database where R is run, as well as permissions to read data from secured objects such as tables, or to write new data or add new objects if required by the R job.
+A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] login or Windows user account is required to run R scripts that use SQL Server data or that run with SQL Server as the compute context. This requirement applies to both [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] and SQL Server vNext Machine Learning Services. 
 
-Therefore, it is a strict requirement that each person who runs R code against [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] must be mapped to a login in the database, regardless of whether that code is sent from a remote data science client using the RevoScaleR functions or started using a T-SQL stored procedure. 
+The login or user account identifies the *security principal*, who might need multiple levels of access, depending on the R script requirements:
++ Permission to access the database where R is enabled
++ Permissions to read data from secured objects such as tables
++ The ability to write new data to a table, such as a model, or scoring results
++ The ability to create new objects, such as tables, stored procedures that use R script, or custom functions that use R job
++ The right to install new packages on the SQL Server computer, or use R packages provided to a group of users. 
 
-For example, assume that you created some R code that runs on your laptop, and you want to run that code on [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. You must ensure that the following conditions are met:
+Therefore, each person who runs R code using [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] as the execution context must be mapped to a login in the database. Under SQL Server security, it is generally easiest to create roles to manage sets of permissions, and assign users to those roles, rather than individually set user permissions. 
+
+As an example, assume that you created some R code that runs on your laptop, and you want to run that code on [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. You can do this only if these conditions are met:
 
 + The database allows remote connections.
 + A SQL login with the name and the password that you used in the R code has been added to the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] at the instance level. Or, if you are using Windows integrated authentication, the Windows user specified in the connection string must be added as a user on the instance.
-+ The SQL login or Windows user must be granted the permission to execute external scripts. Generally, this permission can only be added by a database administrator.
++ The SQL login or Windows user must have the permission to execute external scripts. Generally, this permission can only be added by a database administrator.
 + The SQL login or Window user must be added as a user, with appropriate permissions, in each database where the R job performs any of these operations:
     + Retrieving data
     + Writing or updating data 
     + Creating new objects, such as tables or stored procedures
 
-After the login or Windows user account has been provisioned and given the necessary permissions, you can run R code on [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] by using an R data source object or by calling stored procedures. Whenever R is started from [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], the database engine security gets the security context of the user who started the R job, and manages the mappings of the user or login to securable objects. 
+After the login or Windows user account has been provisioned and given the necessary permissions, you can run R code on [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] by using an R data source object or by calling a stored procedure. Whenever R is started from [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], the database engine security gets the security context of the user who started the R job or ran the stored procedure, and manages the mappings of the user or login to securable objects. 
 
-Therefore, all R jobs that are initiated from a remote client must specify the login or user information as part of the connection string.
-
+Hence, all R jobs that are initiated from a remote client must specify the login or user information as part of the connection string.
 
 ## Interaction of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Security and LaunchPad Security
 
@@ -59,7 +65,8 @@ For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-laun
 For Launchpad to manage the worker accounts and execute R jobs, the group that contains the worker accounts, SQLRUserGroup, must have "Allow Log on locally" permissions; otherwise R Services might not work. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced, which prevent the worker accounts from connecting to SQL Server to perform R jobs.  
 
 ## Security of Worker Accounts
-This mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the lifetime of the SQL query that runs the R script. 
+
+The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the lifetime of the SQL query that runs the R script. 
 
 Parallel queries from the same login are mapped to the same user worker account.
 

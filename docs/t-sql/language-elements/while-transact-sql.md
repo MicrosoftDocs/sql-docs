@@ -75,7 +75,7 @@ WHILE Boolean_expression
 ```  
 USE AdventureWorks2012;  
 GO  
-WHILE (SELECT AVG(ListPrice) FROM Production.Product) \< $300  
+WHILE (SELECT AVG(ListPrice) FROM Production.Product) < $300  
 BEGIN  
    UPDATE Production.Product  
       SET ListPrice = ListPrice * 2  
@@ -115,7 +115,7 @@ GO
 ```  
 -- Uses AdventureWorks  
   
-WHILE ( SELECT AVG(ListPrice) FROM dbo.DimProduct) \< $300  
+WHILE ( SELECT AVG(ListPrice) FROM dbo.DimProduct) < $300  
 BEGIN  
     UPDATE dbo.DimProduct  
         SET ListPrice = ListPrice * 2;  

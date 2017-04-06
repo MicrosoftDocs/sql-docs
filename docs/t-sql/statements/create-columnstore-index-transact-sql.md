@@ -70,7 +70,7 @@ manager: "jhubbard"
 -- Create a clustered columnstore index on disk-based table.  
 CREATE CLUSTERED COLUMNSTORE INDEX index_name  
     ON [database_name. [schema_name ] . | schema_name . ] table_name  
-    [ WITH ( \< with_option> [ ,...n ] ) ]  
+    [ WITH ( < with_option> [ ,...n ] ) ]  
     [ ON <on_option> ]  
 [ ; ]  
   
@@ -78,7 +78,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name   
     ON [database_name. [schema_name ] . | schema_name . ] table_name   
         ( column  [ ,...n ] )  
-    [ WITH ( \< with_option> [ ,...n ] ) ]  
+    [ WITH ( < with_option> [ ,...n ] ) ]  
     [ ON <on_option> ]  
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]  
 [ ; ]  

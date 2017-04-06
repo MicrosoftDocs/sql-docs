@@ -270,7 +270,7 @@ SELECT * FROM deleted;
   
  For triggers on memory-optimized tables, the only *sql_statement* allowed at the top level is an ATOMIC block. The T-SQL allowed inside the ATOMIC block is limited by the T-SQL allowed inside native procs.  
   
- \< method_specifier >  
+ < method_specifier >  
  ||  
 |-|  
 |**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

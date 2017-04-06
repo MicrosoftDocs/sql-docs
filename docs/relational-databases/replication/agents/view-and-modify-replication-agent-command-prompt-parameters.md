@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 3.  Right-click a subscription, and then click **View Details**.  
   
-4.  In the **Subscription \< SubscriptionName>** window, click **Action**, and then click **\<AgentName> Job Properties**.  
+4.  In the **Subscription < SubscriptionName>** window, click **Action**, and then click **\<AgentName> Job Properties**.  
   
 5.  On the **Steps** page of the **Job Properties - \<Job>** dialog box, select the step **Run agent**, and then click **Edit**.  
   

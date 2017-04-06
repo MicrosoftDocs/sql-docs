@@ -116,7 +116,7 @@ GO
 
 ## Pick the best full-text predicate or function
 
-`CONTAINS/CONTAINSTABLE` and `FREETEXT/FREETEXTTABLE` are useful for different kinds of matching. The following table helps you to choose the best predicate or function for your query.
+`CONTAINS`/`CONTAINSTABLE` and `FREETEXT`/`FREETEXTTABLE` are useful for different kinds of matching. The following table helps you to choose the best predicate or function for your query.
 
 For examples, see [Simple examples of each predicate and function](#examples_simple) and [Examples of specific types of searches](#examples_specific). Also see [What you can search for](#supported).
 
@@ -127,7 +127,7 @@ For examples, see [Simple examples of each predicate and function](#examples_sim
 
 ## Compare predicates and functions
 
-The predicates `CONTAINS/FREETEXT` and the rowset-valued functions `CONTAINSTABLE/FREETEXTTABLE` have different syntax and options. The following table helps you to choose the best predicate or function for your query.
+The predicates `CONTAINS`/`FREETEXT` and the rowset-valued functions `CONTAINSTABLE`/`FREETEXTTABLE` have different syntax and options. The following table helps you to choose the best predicate or function for your query.
 
 For examples, see [Simple examples of each predicate and function](#examples_simple) and [Examples of specific types of searches](#examples_specific). Also see [What you can search for](#supported).
 

@@ -255,7 +255,7 @@
 
 # [MSSQLSERVER_17053 database engine error](mssqlserver-17053-database-engine-error.md)
 # [MSSQLSERVER_17065 database engine error](mssqlserver-17065-database-engine-error.md)
-# [MSSQLSERVER_17066 database engine error] (mssqlserver-17066-database-engine-error.md)
+# [MSSQLSERVER_17066 database engine error](mssqlserver-17066-database-engine-error.md)
 # [MSSQLSERVER_17067 database engine error](mssqlserver-17067-database-engine-error.md)
 # [MSSQLSERVER_17083 database engine error](mssqlserver-17083-database-engine-error.md)
 # [MSSQLSERVER_17084 database engine error](mssqlserver-17084-database-engine-error.md)

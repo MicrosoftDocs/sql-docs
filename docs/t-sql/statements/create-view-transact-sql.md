@@ -255,13 +255,13 @@ FROM Tn;
          Constraint `C1` defined on table `T1` must be of the following form:  
   
         ```  
-        C1 ::= \< simple_interval > [ OR \< simple_interval > OR ...]  
-        \< simple_interval > :: =   
-        \< col > { \< | > | \<= | >= | = \< value >}   
-        | \< col > BETWEEN \< value1 > AND \< value2 >  
-        | \< col > IN ( value_list )  
-        | \< col > { > | >= } \< value1 > AND  
-        \< col > { < | <= } \< value2 >  
+        C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
+        < simple_interval > :: =   
+        < col > { < | > | \<= | >= | = < value >}   
+        | < col > BETWEEN < value1 > AND < value2 >  
+        | < col > IN ( value_list )  
+        | < col > { > | >= } < value1 > AND  
+        < col > { < | <= } < value2 >  
         ```  
   
     -   The constraints should be in such a way that any specified value of `<col>` can satisfy, at most, one of the constraints `C1, ..., Cn` so that the constraints should form a set of disjointed or nonoverlapping intervals. The column `<col>` on which the disjointed constraints are defined is called the partitioning column. Note that the partitioning column may have different names in the underlying tables. The constraints should be in an enabled and trusted state for them to meet the previously mentioned conditions of the partitioning column. If the constraints are disabled, re-enable constraint checking by using the CHECK CONSTRAINT *constraint_name* option of ALTER TABLE, and using the WITH CHECK option to validate them.  
@@ -269,7 +269,7 @@ FROM Tn;
          The following examples show valid sets of constraints:  
   
         ```  
-        { [col \< 10], [col between 11 and 20] , [col > 20] }  
+        { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
   

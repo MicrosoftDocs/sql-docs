@@ -320,6 +320,43 @@
    "source_path" : "docs/ado/reference/ado-api/version-property-example-vj.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
    "redirect_document_id": false
+  },
+
+
+  {
+   "source_path" : "docs/sql/t-sql/statements/alter-statements-transact-sql.md",
+   "redirect_url": "/sql/t-sql/statements/statements",
+   "redirect_document_id": true
+  },
+  {
+   "source_path" : "docs/sql/t-sql/statements/backup-and-restore-statements-transact-sql.md",
+   "redirect_url": "/sql/t-sql/statements/statements",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/sql/t-sql/statements/create-statements-transact-sql.md",
+   "redirect_url": "/sql/t-sql/statements/statements",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/sql/t-sql/statements/drop-statements-transact-sql.md",
+   "redirect_url": "/sql/t-sql/statements/statements",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/sql/t-sql/statements/security-statements.md",
+   "redirect_url": "/sql/t-sql/statements/statements",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/sql/t-sql/statements/service-broker-statements.md",
+   "redirect_url": "/sql/t-sql/statements/statements",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/sql/t-sql/transact-sql-reference-database-engine.md",
+   "redirect_url": "/sql/t-sql/language-reference",
+   "redirect_document_id": false
   }
 
  ]

@@ -939,9 +939,9 @@ To take another example, suppose that the table has four partitions on column A 
 
 |Table partitions based on column A	|Seeks for column B in each table partition |
 |----|----|
-|Table Partition 1: A \< 10	 |B=50, B=100, B=150 |
-|Table Partition 2: A >= 10 AND A \< 20	 |B=50, B=100, B=150 |
-|Table Partition 3: A >= 20 AND A \< 30	 |B=50, B=100, B=150 |
+|Table Partition 1: A < 10	 |B=50, B=100, B=150 |
+|Table Partition 2: A >= 10 AND A < 20	 |B=50, B=100, B=150 |
+|Table Partition 3: A >= 20 AND A < 30	 |B=50, B=100, B=150 |
 |Table Partition 4: A >= 30	 |B=50, B=100, B=150 |
 
 ### Best Practices

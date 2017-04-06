@@ -118,7 +118,7 @@ manager: "erikre"
 ### File Names  
  File names in a URL for report items must include a file name extension. The file name extension determines the file type. When you publish report items from a report authoring tool, the file name extension is included automatically. If you upload a report item to a SharePoint library, you must include a file name extension.  
   
- If you do not specify a file name extension for items that you upload to a SharePoint site, the **rsInvalidDataSourceReference** error will occur. File names may not include characters that are not recognized as valid file name characters by SharePoint applications. Do not include the following characters: # % & * : \< > ? / { | }.  
+ If you do not specify a file name extension for items that you upload to a SharePoint site, the **rsInvalidDataSourceReference** error will occur. File names may not include characters that are not recognized as valid file name characters by SharePoint applications. Do not include the following characters: # % & * : < > ? / { | }.  
   
 ## Differences Between Uploading and Publishing  
  When you use Report Designer or Report Builder to publish reports and related files to a library, the files are validated before they are added. If you upload reports and related files by using the **Upload** action on a SharePoint library, no validation check occurs. You will not know whether the file is valid until you access the report by managing, editing, or running it.  

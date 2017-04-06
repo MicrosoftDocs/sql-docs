@@ -6,7 +6,7 @@ description: This topic highlights what's new for the current release of SQL Ser
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/23/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -27,6 +27,11 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 # What's new for SQL Server vNext on Linux
 
 This topic describes what's new for SQL Server vNext running on Linux.
+
+## CTP 2.0
+The CTP 2.0 release contains the following improvements and fixes:
+
+- TBD
 
 ## CTP 1.4
 The CTP 1.4 release contains the following improvements and fixes:

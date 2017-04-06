@@ -1,6 +1,6 @@
 ---
 title: "sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL) | Microsoft Docs"
-description:"Returns the current status of resource semaphores used to throttle concurrent query optimization"
+description: "Returns the current status of resource semaphores used to throttle concurrent query optimization"
 ms.custom: ""
 ms.date: "04/06/2017"
 ms.prod: "sql-non-specified"

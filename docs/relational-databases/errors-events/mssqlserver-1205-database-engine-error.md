@@ -17,7 +17,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# MSSQLSERVER_1205_deleted
+# MSSQLSERVER_1205
   
 ## Details  
   

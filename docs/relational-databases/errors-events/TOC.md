@@ -1,4 +1,4 @@
-# [Overview(errors-and-events-reference-database-engine.md)  
+# [Overview](errors-and-events-reference-database-engine.md)  
 # [Database Engine Events and Errors](database-engine-events-and-errors.md)  
 # [Understanding Database Engine Errors](understanding-database-engine-errors.md)  
 # [Database Engine Error Severities](database-engine-error-severities.md)  
@@ -29,9 +29,9 @@
 
 # [MSSQLSERVER_701 database engine error](mssqlserver-701-database-engine-error.md)
 
-# [MSSQLSERVER_802 database Engine error](mssqlserver-802-database-engine-error.md)
+# [MSSQLSERVER_802 database engine error](mssqlserver-802-database-engine-error.md)
 # [MSSQLSERVER_847 database engine error](mssqlserver-847-database-engine-error.md)
-# [MSSQLSERVER_823 database Engine error](mssqlserver-823-database-engine-error.md)
+# [MSSQLSERVER_823 database engine error](mssqlserver-823-database-engine-error.md)
 # [MSSQLSERVER_824 database engine error](mssqlserver-824-database-engine-error.md)
 # [MSSQLSERVER_825 database engine error](mssqlserver-825-database-engine-error.md)
 # [MSSQLSERVER_833 database engine error](mssqlserver-833-database-engine-error.md)

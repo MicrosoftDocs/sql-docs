@@ -17,7 +17,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# MSSQLSERVER_824_deleted
+# MSSQLSERVER_824
   
 ## Details  
   

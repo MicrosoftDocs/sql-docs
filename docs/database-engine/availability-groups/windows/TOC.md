@@ -11,7 +11,6 @@
 ### [Transact-SQL](create-an-availability-group-transact-sql.md)  
 ### [PowerShell](create-an-availability-group-sql-server-powershell.md)  
 ### [Azure virtual machines>](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
-
 ## [Listener](create-or-configure-an-availability-group-listener-sql-server.md)  
 
 # Concepts
@@ -53,7 +52,7 @@
 ### [Enable and disable](enable-and-disable-always-on-availability-groups-sql-server.md)  
 ### [Create database mirroring endpoint (PowerShell)](database-mirroring-always-on-availability-groups-powershell.md)  
 ### [Create clustered DTC](create-clustered-dtc-for-an-always-on-availability-group.md)  
-## Configure Availability Group 
+## Configure availability group 
 ### [Change replica availability](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [Change replica failover mode](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
 ### [Configure flexible failover policy](configure-flexible-automatic-failover-policy.md)  
@@ -66,8 +65,8 @@
 ### [Manually prepare secondary database](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
 ### [Specify the endpoint URL when adding or modifying a replica](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
 ### [Join secondary replica](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
-### [Tune compression for availability group](tune-compression-for-availability-group.md)  
-## [Troubleshoot availability groups](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+### [Tune compression](tune-compression-for-availability-group.md)  
+### [Troubleshoot configuration](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
 ## Operation
 ### [Planned manual failover](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
 ### [Forced manual failover](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  

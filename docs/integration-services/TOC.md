@@ -62,7 +62,6 @@
 
 # [Variables](integration-services-ssis-variables.md)
 ## [Variables Window](variables-window.md)
-## [Variable Grid Options](variable-grid-options.md)
 ## [System Variables](system-variables.md)
 
 # [Scale Out](integration-services-ssis-scale-out.md)

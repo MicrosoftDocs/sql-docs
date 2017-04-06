@@ -357,6 +357,11 @@
    "source_path" : "docs/t-sql/transact-sql-reference-database-engine.md",
    "redirect_url": "/sql/t-sql/language-reference",
    "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/variable-grid-options.md",
+   "redirect_url": "/sql/integration-services/variables-window",
+   "redirect_document_id": false
   }
 
  ]

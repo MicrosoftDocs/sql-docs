@@ -1,5 +1,5 @@
 ---
-title: "Change the Service Startup Account for SQL Server (SQL Server Configuration Manager) | Microsoft Docs"
+title: "SCM Services - Change the Service Startup Account | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "01/06/2016"

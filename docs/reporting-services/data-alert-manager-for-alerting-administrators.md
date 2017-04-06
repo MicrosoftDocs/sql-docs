@@ -1,7 +1,7 @@
 ---
 title: "Data Alert Manager for Alerting Administrators | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,10 +20,16 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Data Alert Manager for Alerting Administrators
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides Data Alert Manager for SharePoint alerting administrators to manage data alerts. Alerting administrators can view information about all alerts saved to the site and delete alerts. The following picture shows the features available to SharePoint alerting managers in Data Alert Manager.  
-  
- ![Alert Manager for SharePoin tsite administrators](../reporting-services/media/rs-alertmanagersite.gif "Alert Manager for SharePoin tsite administrators")  
-  
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides Data Alert Manager for SharePoint alerting administrators to manage data alerts. Alerting administrators can view information about all alerts saved to the site and delete alerts. The following picture shows the features available to SharePoint alerting managers in Data Alert Manager.
+
+![Alert Manager for SharePoin tsite administrators](../reporting-services/media/rs-alertmanagersite.gif "Alert Manager for SharePoint site administrators")
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
  When the site is enabled for data alerts, two SharePoint pages, MyDataAlerts.aspx and SiteDataAlerts.aspx are created and added to the SharePoint site. SiteDataAlerts.aspx is Data Alert Manager for alerting administrators. Alerting administrators can open Data Alert Manager from the Site Settings SharePoint page. Alerting administrators must have SharePoint Manage Alerts permission to open Data Alert Manager.  
   
  You can also open Data Alert Manager directly by using a URL. The following shows the syntax of the URL:  
@@ -66,9 +72,8 @@ manager: "erikre"
  This section lists a procedure that shows you how to manage your alerts.  
   
 -   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
-  
-  
-## See Also  
- [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## See Also
+
+[Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
+More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

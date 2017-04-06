@@ -1,5 +1,5 @@
 ---
-title: "Configuration of a Server Instance for Always On Availability Groups (SQL Server) | Microsoft Docs"
+title: "Configure SQL Server Instance for Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
+title: "Always On Availability Groups Dynamic Management Views - Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: "sql-non-specified"

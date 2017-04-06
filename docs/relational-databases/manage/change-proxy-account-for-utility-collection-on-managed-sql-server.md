@@ -1,5 +1,5 @@
 ---
-title: "Change the Proxy Account for the Utility Collection Set on a Managed Instance of SQL Server (SQL Server Utility) | Microsoft Docs"
+title: "Change Proxy Account for Utility Collection on Managed SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

@@ -1,5 +1,5 @@
 ---
-title: "Find Text, Numbers, or Dates in a Report (Reporting Services in SharePoint Integrated Mode) | Microsoft Docs"
+title: "Find Text, Numbers, or Dates in a Report | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

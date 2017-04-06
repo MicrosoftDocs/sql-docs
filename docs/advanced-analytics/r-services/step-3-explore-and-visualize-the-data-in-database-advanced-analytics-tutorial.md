@@ -1,5 +1,5 @@
 ---
-title: "Step 3: Explore and Visualize the Data (In-Database Advanced Analytics Tutorial) | Microsoft Docs"
+title: "Step 3: Explore and Visualize the Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2016"
 ms.prod: "sql-server-2016"

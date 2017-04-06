@@ -1,5 +1,5 @@
 ---
-title: "Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service | Microsoft Docs"
+title: "Start, Stop, Pause, Resume, Restart SQL Server Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "02/26/2016"

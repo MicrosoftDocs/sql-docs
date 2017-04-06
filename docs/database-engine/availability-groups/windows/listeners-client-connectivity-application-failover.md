@@ -1,5 +1,5 @@
 ---
-title: "Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server) | Microsoft Docs"
+title: "Listeners, Client Connectivity, Application Failover | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"

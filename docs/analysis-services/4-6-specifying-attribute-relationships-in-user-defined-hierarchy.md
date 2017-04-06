@@ -1,5 +1,5 @@
 ---
-title: "Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy | Microsoft Docs"
+title: "4-6-Specifying Attribute Relationships in User-Defined Hierarchy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

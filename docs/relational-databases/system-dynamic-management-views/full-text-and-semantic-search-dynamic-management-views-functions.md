@@ -1,5 +1,5 @@
 ---
-title: "Full-Text Search and Semantic Search Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
+title: "Full-Text and Semantic Search Dynamic Management Views - Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-non-specified"

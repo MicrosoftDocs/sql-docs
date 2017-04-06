@@ -1,5 +1,5 @@
 ---
-title: "Configuration and Administration of a Report Server (Reporting Services SharePoint Mode) | Microsoft Docs"
+title: "Configuration and Administration of a Report Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-server-2016"

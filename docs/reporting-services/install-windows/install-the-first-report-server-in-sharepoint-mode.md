@@ -2,7 +2,7 @@
 title: "Install The First Report Server in SharePoint Mode | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/03/2016"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,9 +17,13 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Install The First Report Server in SharePoint Mode
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
   The procedures in this topic guide you through a single server installation of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode. The steps include running the SQL Server installation wizard as well as configuration tasks that use SharePoint Central Administration. The topic can also be used for individual procedures for updating an existing installation, for example to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
   
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 & SharePoint 2016 &#124; **Note:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode does **not** support SharePoint Server multi-tenancy.  
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
  For information on adding more [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers to an existing farm, see the following:  
   
@@ -418,10 +422,10 @@ Also, the application pool security account used by the [!INCLUDE[ssRSnoversion]
   
      Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder (Report Builder)](http://technet.microsoft.com/library/ms159221.aspx).  
   
-## See Also  
- [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
-  
-  
+## See Also
+
+[PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
+[Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+[Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
+More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "View Conflict Information for Merge Publications (Replication Transact-SQL Programming) | Microsoft Docs"
+title: "View Conflict Information for Merge Publications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

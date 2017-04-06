@@ -1,5 +1,5 @@
 ---
-title: "View Integration Services Packages in SQL Server Management Studio (SSIS Service) | Microsoft Docs"
+title: "View Integration Services Packages-SQL Server Management Studio-SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-server-2016"

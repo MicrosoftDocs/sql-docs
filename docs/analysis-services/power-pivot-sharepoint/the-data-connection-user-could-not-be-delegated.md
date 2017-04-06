@@ -1,5 +1,5 @@
 ---
-title: "The data connection uses Windows Authentication and user credentials could not be delegated. The following connections failed to refresh: Power Pivot Data | Microsoft Docs"
+title: "The data connection user could not be delegated | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

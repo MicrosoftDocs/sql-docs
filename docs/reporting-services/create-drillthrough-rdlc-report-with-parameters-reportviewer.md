@@ -1,5 +1,5 @@
 ---
-title: "Create a Drillthrough (RDLC) Report with Parameters using ReportViewer (SSRS Tutorial) | Microsoft Docs"
+title: "Create Drillthrough (RDLC) Report with Parameters - ReportViewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2016"
 ms.prod: "sql-server-2016"

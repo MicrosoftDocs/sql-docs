@@ -28,6 +28,14 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 **Try it out:**    
    -   [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[Download the SQL Server vNext Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
+## What's New in SQL Server vNext CTP 2.0 (April 2017)
+### SQL Server Database Engine
+- There are no new Database Engine features in this CTP.
+- This CTP contains bug fixes for the Database Engine.
+- For a detailed list of vNext CTP enhancements in previous CTP releases, see [What's New in SQL Server vNext (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md).
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
+
 ## What's New in SQL Server vNext CTP 1.4 (March 2017)
 ### SQL Server Database Engine
 - There are no new Database Engine features in this CTP.

@@ -1,7 +1,7 @@
 ---
 title: "CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,7 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE FULLTEXT INDEX ON table_name  
    [ ( { column_name   
              [ TYPE COLUMN type_column_name ]  
@@ -102,9 +101,7 @@ CREATE FULLTEXT INDEX ON table_name
  For documents stored in XML- or BLOB-type columns, the language encoding within the document will be used at indexing time. For example, in XML columns, the **xml:lang** attribute in XML documents will identify the language. At query time, the value previously specified in *language_term* becomes the default language used for full-text queries unless *language_term* is specified as part of a full-text query.  
   
  STATISTICAL_SEMANTICS  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Creates the additional key phrase and document similarity indexes that are part of statistical semantic indexing. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -144,9 +141,7 @@ CREATE FULLTEXT INDEX ON table_name
  Specifies the name of the stoplist to be associated with the full-text index.  
   
  SEARCH PROPERTY LIST [ = ] *property_list_name*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Associates a search property list with the index.  
   
@@ -189,8 +184,6 @@ CREATE FULLTEXT INDEX ON table_name
  The following example creates a unique index on the `JobCandidateID` column of the `HumanResources.JobCandidate` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The example then creates a default full-text catalog, `ft`. Finally, the example creates a full-text index on the `Resume` column, using the `ft` catalog and the system stoplist.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
 CREATE FULLTEXT CATALOG ft AS DEFAULT;  
 CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume)   
@@ -203,8 +196,6 @@ GO
  The following example creates a full-text catalog, `production_catalog`, in the `AdventureWorks` sample database. The example then creates a full-text index that uses this new catalog. The full-text index is on the on the `ReviewerName`, `EmailAddress`, and `Comments` columns of the `Production.ProductReview`. For each column, the example specifies the LCID of English, `1033`, which is the language of the data in the columns. This full-text index uses an existing unique key index, `PK_ProductReview_ProductReviewID`. As recommended, this index key is on an integer column, `ProductReviewID`.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 CREATE FULLTEXT CATALOG production_catalog;  
 GO  
 CREATE FULLTEXT INDEX ON Production.ProductReview  
@@ -229,8 +220,6 @@ GO
  The example specifies that change tracking is off with no population. Later, during off-peak hours, the example uses an ALTER FULLTEXT INDEX statement to start a full population on the new index and enable automatic change tracking.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 CREATE FULLTEXT INDEX ON Production.Document  
   (   
   Title  
@@ -244,7 +233,6 @@ CREATE FULLTEXT INDEX ON Production.Document
   KEY INDEX PK_Document_DocumentID  
           WITH STOPLIST = SYSTEM, SEARCH PROPERTY LIST = DocumentPropertyList, CHANGE_TRACKING OFF, NO POPULATION;  
    GO  
-  
 ```  
   
  Later, at an off-peak time, the index is populated:  
@@ -252,7 +240,6 @@ CREATE FULLTEXT INDEX ON Production.Document
 ```  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO;  
 GO  
-  
 ```  
   
 ## See Also  

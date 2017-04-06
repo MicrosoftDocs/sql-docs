@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/10/2017"
+ms.date: "04/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,8 +39,7 @@ SQL Server Management Studio (SSMS) is an integrated environment for accessing, 
 
 
 > [!NOTE]
-> * SSMS releases are now branded numerically, not by months.
-> * This generally available release of SSMS is free and does not require a SQL Server license to install and use.  
+> SSMS releases are now branded numerically, not by months. SSMS is free! It does not require a license to install and use.  
 
 
 ## SQL Server Management Studio   

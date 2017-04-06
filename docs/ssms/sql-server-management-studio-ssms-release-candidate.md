@@ -59,6 +59,7 @@ d	- Support for interleaved execution
 
 ## Bug fixes
 
+- Fixed an issue where "Connect to Server" dialog does not persist the settings specified in the "Additional Connection Parameters" tab. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/813973)
 - Fixed an issue where default values were not scripted for user defined table types. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3119027)
 - Another round of perf improvements around context menu on indexes. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3120783)
 - Fixed issue which was causing excessive flickering when hovering mouse over missing index in execution plan. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3118510)

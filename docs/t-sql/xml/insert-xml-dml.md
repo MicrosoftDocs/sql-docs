@@ -214,7 +214,7 @@ GO
 ```  
   
 ### F. Inserting data using a CDATA section  
- When you insert text that includes characters that are not valid in XML, such as \< or >, you can use CDATA sections to insert the data as shown in the following query. The query specifies a CDATA section, but it is added as a text node with any invalid characters converted to entities. For example, '<' is saved as &lt;.  
+ When you insert text that includes characters that are not valid in XML, such as < or >, you can use CDATA sections to insert the data as shown in the following query. The query specifies a CDATA section, but it is added as a text node with any invalid characters converted to entities. For example, '<' is saved as &lt;.  
   
 ```  
 USE AdventureWorks;  

@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 |**avg_fragmentation_in_percent** value|Corrective statement|  
 |-----------------------------------------------|--------------------------|  
-|> 5% and \< = 30%|ALTER INDEX REORGANIZE|  
+|> 5% and < = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
   
  \* Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online.  

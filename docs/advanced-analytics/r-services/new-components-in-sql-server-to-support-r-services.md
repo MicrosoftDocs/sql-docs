@@ -1,7 +1,7 @@
 ---
 title: "New Components in SQL Server to Support R Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/03/2016"
+ms.date: "04/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,27 +15,33 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# New Components in SQL Server to Support R Services
+# Components in SQL Server to Support R
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] includes new components, provided by the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] database engine, that support extensibility for the R language. Security for these components is managed by [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and will be discussed in detail later.
+ In SQL Server 2016 and vNext, the database engine includes optional components that support extensibility for external script languages, including R and Python. Support for the R language was added in SQL Server 2016; support for Python was added in SQL Server vNext Machine Learning Services
 
-## New SQL Server Components and Providers
+This topic describes the new components that work specifically with the R language. 
+For a discussion of how these components work with open source R, see [R Interoperability](../../advanced-analytics/r-services/r-interoperability-in-sql-server-r-services.md)
+
+## New Components and Providers
 
 In addition to the shell that loads R and executes R code as described in the architecture overview, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] includes these additional components.
 
 ### **Launchpad** 
-  The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a new service provided by [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] for supporting execution of external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. 
+  The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service provided by [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] for supporting execution of external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. 
   
-  The Launchpad service will start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management. In [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)], R is currently the only external language supported by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)].
+  The Launchpad service will start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management. The naming for the language-specific launchers is straightforward:  
+  + R -  RLauncher.dll
+  + Python - PythonLauncher.dll 
   
   The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. Each satellite process for a specific language runtime will inherit the user account of the Launchpad. For more information about the configuration and security context of the Launchpad, see [Security Overview](../../advanced-analytics/r-services/security-overview-sql-server-r-services.md).
 
 ### **BxlServer and SQL Satellite**
+
   BxlServer is an executable provided by Microsoft that manages communication between [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and the R runtime and also implements ScaleR functions. It creates the Windows job objects that are used to contain R sessions, provisions secure working folders for each R job, and uses SQL Satellite to manage data transfer between R and [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
 
-  In effect, BxlServer is a companion to R that works with [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] to support integration of R with SQL Server. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes such as R. 
+  In effect, BxlServer is a companion to R that works with [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] to support integration of R with SQL Server. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes such as R. BxlServer.dll is also installed when you install Microsoft R Client or Microsoft R Server.  
 
- The SQL Satellite is a new extensibility API in SQL Server 2016 that is provided by the database engine to support external code or external runtimes implemented using C or C++. Currently R is the only supported runtime. BxlServer uses SQL Satellite for communicating with [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+ The SQL Satellite is a new extensibility API in SQL Server 2016 that is provided by the database engine to support external code or external runtimes implemented using C or C++. BxlServer uses SQL Satellite for communicating with [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
  
   The SQL Satellite uses a custom data format that is optimized for fast data transfer between [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and external script languages. It performs type conversions and defines the schemas of the input and output datasets during communications between [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and R.
 
@@ -45,7 +51,7 @@ In addition to the shell that loads R and executes R code as described in the ar
   - Getting input arguments
   - Writing output arguments
   - Error handling
-  - Writing STDOUT and STDERR back to client
+  - Writing standard output and errors back to the client
 
   The SQL Satellite can be monitored by using Extended Events. For more information, see [Extended Events for SQL Server R Services](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md).
 
@@ -57,7 +63,7 @@ In addition to the shell that loads R and executes R code as described in the ar
 
 + **Named Pipes**
 
-  Internal data transport between the BxlServer and [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] through SQL Satellite uses a proprietary, compressed data format to enhance performance. Data from R memory to BxlServer is exchanged over named pipes in BXL format. 
+  Internal data transport between the BxlServer and [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] via SQL Satellite uses a proprietary, compressed data format to enhance performance. Data from R memory to BxlServer is exchanged over named pipes in BXL format. 
   
 + **ODBC**
   Communications between external data science clients and the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance use ODBC. The account that sends the R jobs to [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] must have both permissions to connect to the instance and to run external scripts. Additionally, the account must have permission to access any data used by the job, to write data (for example, if saving results to a table), or to create database objects (for example, if saving R functions as part of a new stored procedure).
@@ -85,13 +91,13 @@ The component architecture just described has been provided to guarantee that op
 
 R code that is run from "inside" [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is executed by calling a stored procedure. Thus, any application that can make a stored procedure call can initiate execution of R code.  Thereafter [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] manages the execution of R code as summarized in the following diagram.
 
-![rsql_indb780-01](../../advanced-analytics/r-services/media/rsql-indb780-01.png)
+![rsql_indb780-01](../../advanced-analytics/r-services/media/script_in-db-r.png)
 
 1. A request for the R runtime is indicated by the parameter _@language='R'_ passed to the stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] sends this request to the Launchpad service.
 2. The Launchpad service starts the appropriate launcher; in this case, RLauncher.
 3. RLauncher starts the external R process.
 4. BxlServer coordinates with the R runtime to manage exchanges of data with [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and storage of working results.
-5. Throughout, SQL Satellite manages communications about related tasks and processes with [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+5. SQL Satellite manages communications about related tasks and processes with [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer uses SQL Satellite to communicate status and results to [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] gets results and closes related tasks and processes. 
 
@@ -101,13 +107,13 @@ R code that is run from "inside" [!INCLUDE[ssNoVersion_md](../../includes/ssnove
 When connecting from a remote data science client that supports Microsoft R, you can run R functions in the context of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] by using the ScaleR functions. This is a different workflow from the previous one, and is summarized in the following diagram.
 
 
-![rsql_fromR2db-01](../../advanced-analytics/r-services/media/rsql-fromr2db-01.png)
+![rsql_fromR2db-01](../../advanced-analytics/r-services/media/remote-sqlcc-from-r.png)
 
-1. For ScaleR functions, the R runtime calls a linking function which in turn calls BxlServer. 
+1. For RevoScaleR functions, the R runtime calls a linking function which in turn calls BxlServer. 
 2. BxlServer is provided with Microsoft R and runs in a separate process from the R runtime.
 3. BxlServer determines the connection target and initiates a connection using ODBC, passing credentials supplied as part of the connection string in the R data source object.
 4. BxlServer opens a connection to the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance.
-5. For an R call, the LaunchPad service is invoked, which is turn starts the appropriate launcher, RLauncher. Thereafter, processing of R code is similar to the process for running R code from T-SQL.
+5. For an R call, the Launchpad service is invoked, which is turn starts the appropriate launcher, RLauncher. Thereafter, processing of R code is similar to the process for running R code from T-SQL.
 6. RLauncher makes a call to the instance of the R runtime that is installed on the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computer. 
 7. Results are returned to BxlServer.
 8. SQL Satellite manages communication with [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and cleanup of related job objects.

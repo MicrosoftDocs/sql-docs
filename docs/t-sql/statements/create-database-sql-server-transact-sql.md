@@ -1,7 +1,7 @@
 ---
 title: "CREATE DATABASE (SQL Server Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/13/2016"
+ms.date: "04/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -260,7 +260,7 @@ CREATE DATABASE database_snapshot_name
   
      To set this option, requires membership in the sysadmin fixed server role.  
   
- FOR ATTACH [ WITH \< attach_database_option > ]  
+ FOR ATTACH [ WITH < attach_database_option > ]  
  Specifies that the database is created by [attaching](../../relational-databases/databases/database-detach-and-attach-sql-server.md) an existing set of operating system files. There must be a \<filespec> entry that specifies the primary file. The only other \<filespec> entries required are those for any files that have a different path from when the database was first created or last attached. A \<filespec> entry must be specified for these files.  
   
  FOR ATTACH requires the following:  
@@ -854,6 +854,3 @@ GO
  [Move Database Files](../../relational-databases/databases/move-database-files.md)   
  [Databases](../../relational-databases/databases/databases.md)   
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
-  
-  
-

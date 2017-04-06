@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/29/2016"
@@ -275,7 +275,7 @@ Prints raw error messages to the screen.
  Path examples:  
 
 ```  
--o C:\< filename>  
+-o C:< filename>  
 -o \\<Server>\<Share$>\<filename>  
 -o "C:\Some Folder\<file name>"  
  ``` 
@@ -718,7 +718,7 @@ Prints raw error messages to the screen.
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!**\< *command*>  
+ [**:**] **!!**< *command*>  
  Executes operating system commands. To execute an operating system command, start a line with two exclamation marks (**!!**) followed by the operating system command. For example:  
   
  `:!! Dir`  

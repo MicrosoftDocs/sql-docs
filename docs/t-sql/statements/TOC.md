@@ -22,10 +22,10 @@
 ## [DATABASE database mirroring](alter-database-transact-sql-database-mirroring.md)  
 ## [DATABASE ENCRYPTION KEY](alter-database-encryption-key-transact-sql.md)
 ## [DATABASE file and filegroup options](alter-database-transact-sql-file-and-filegroup-options.md)  
+## [DATABASE HADR](alter-database-transact-sql-set-hadr.md)
 ## [DATABASE SCOPED CREDENTIAL](alter-database-scoped-credential-transact-sql.md)  
-## [DATABASE SCOPED CONFIGURATION](alter-database-scoped-configuration-transact-sql.md)  
-## [DATABASE HADR](alter-database-transact-sql-set-hadr.md)  
-## [DATABASE Options](alter-database-transact-sql-set-options.md)  
+## [DATABASE SCOPED CONFIGURATION](alter-database-scoped-configuration-transact-sql.md)   
+## [DATABASE SET Options](alter-database-transact-sql-set-options.md)  
 
 ## [ENDPOINT](alter-endpoint-transact-sql.md)  
 ## [EVENT SESSION](alter-event-session-transact-sql.md)  

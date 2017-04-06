@@ -65,7 +65,7 @@ ORDER BY SensorData.Speed DESC
 ### Pushdown for selecting a subset of rows  
  Use predicate pushdown to improve performance for a query that selects a subset of rows from an external table.  
   
- Here SQL Server 2016 initiates a map-reduce job to retrieve the rows that match the predicate customer.account_balance < 200000 on Hadoop. Since the query can complete successfully without scanning all of the rows in the table, only the rows that meet the predicate criteria are copied to SQL Server. This saves significant time and requires less temporary storage space when the number of customer balances \< 200000 is small in comparison with the number of customers with account balances >= 200000.  
+ Here SQL Server 2016 initiates a map-reduce job to retrieve the rows that match the predicate customer.account_balance < 200000 on Hadoop. Since the query can complete successfully without scanning all of the rows in the table, only the rows that meet the predicate criteria are copied to SQL Server. This saves significant time and requires less temporary storage space when the number of customer balances < 200000 is small in comparison with the number of customers with account balances >= 200000.  
   Copy imageCopy Code   
 SELECT * FROM customer WHERE customer.account_balance < 200000.  
   

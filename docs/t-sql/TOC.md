@@ -1,16 +1,12 @@
 # [Overview](language-reference.md)  
-## [Transact-SQL Reference](transact-sql-reference-database-engine.md)  
 
 # [Data types](data-types/index.md)
 # [Database Console Commands](database-console-commands/index.md)
 # [Functions](functions/index.md)
 # [Language elements](language-elements/index.md)
 # [Queries](queries/index.md)
-# Spatial
-## [Geography](spatial-geography/index.md)
-## [Geometry](spatial-geometry/index.md)
-# [Statements](statements/toc.md)
-# [xml](xml/index.md)
+# [Statements](statements/index.md)
+
 
 
 # [Tutorial: Writing Transact-SQL Statements](tutorial-writing-transact-sql-statements.md)  

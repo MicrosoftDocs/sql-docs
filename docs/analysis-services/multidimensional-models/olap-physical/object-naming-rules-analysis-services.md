@@ -71,9 +71,9 @@ manager: "erikre"
 |------------|------------------------|  
 |**Server**|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) for details.|  
 |**DataSource**|: / \ * &#124; ? " () [] {} <>|  
-|**Level** or **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
+|**Level** or **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
 |**Dimension** or **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
-|All other objects|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|All other objects|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} < >|  
   
  **Exceptions: When Reserved Characters are Allowed**  
   

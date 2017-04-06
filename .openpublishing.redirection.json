@@ -344,12 +344,12 @@
    "redirect_document_id": false
   },
   {
-   "source_path" : "docs/sql/t-sql/statements/security-statements-transact-sql.md",
+   "source_path" : "docs/sql/t-sql/statements/security-statements.md",
    "redirect_url": "/sql/t-sql/statements/statements",
    "redirect_document_id": false
   },
   {
-   "source_path" : "docs/sql/t-sql/statements/service-broker-statements-transact-sql.md",
+   "source_path" : "docs/sql/t-sql/statements/service-broker-statements.md",
    "redirect_url": "/sql/t-sql/statements/statements",
    "redirect_document_id": false
   },

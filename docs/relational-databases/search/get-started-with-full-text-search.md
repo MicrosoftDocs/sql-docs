@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Get Started with Full-Text Search
 SQL Server databases are full-text enabled by default. Before you can run full-text queries, however, you must create a full text catalog and create a full-text index on the tables or indexed views you want to search.
 
-## Two steps to set up full-text search
+## Set up full-text search in two steps
 There are two basic steps to set up full-text search:  
 1.  Create a full-text catalog.  
 2.  Create a full-text index on tables or indexed view you want to search. 
@@ -73,7 +73,7 @@ To set up full-text search by using a wizard, see [Use the Full-Text Indexing Wi
 
     For more info, see [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md).
 
-##  <a name="options"></a> Choose more options for a full-text index 
+##  <a name="options"></a> Choose options for a full-text index 
   
 ### Choose a language  
  For information about choosing the column language, see [Choose a Language When Creating a Full-Text Index](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  

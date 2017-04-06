@@ -43,7 +43,7 @@ To resolve this error, try one of the following actions:
 -   Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager tool to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to accept remote connections.  
   
 ## See Also  
-[Configure a Windows Firewall for Database Engine Access](~/relational-databases/backup-restore.md)  
+[Configure a Windows Firewall for Database Engine Access](~/relational-databases/backup-restore/configure-a-windows-firewall-for-database-engine-access.md)  
 [Configure Client Protocols](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Network Protocols and Network Libraries](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Client Network Configuration](~/database-engine/configure-windows/client-network-configuration.md)  

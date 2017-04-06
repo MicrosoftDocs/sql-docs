@@ -28,7 +28,7 @@ manager: "jhubbard"
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|BUF_LONG_IO|  
-|Message Text|SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d).  The OS file handle is 0x%p.  The offset of the latest long I/O is: %#016I64x.|  
+|Message Text|SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database `[%ls] (%d)`.  The OS file handle is 0x%p.  The offset of the latest long I/O is: %#016I64x.|  
   
 ## Explanation  
 This message indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has issued a read or write request from disk, and that the request has taken longer than 15 seconds to return. This error is reported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and indicates a problem with the IO subsystem.  

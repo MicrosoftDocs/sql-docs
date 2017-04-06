@@ -39,8 +39,8 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client cannot conn
 Make sure that you have configured the firewall on the server instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to accept connections.  
   
 ## See Also  
-[Configure the Windows Firewall to Allow SQL Server Access](~/database-engine/configure-windows.md)  
-[Configure a Windows Firewall for Database Engine Access](~/relational-databases/backup-restore.md)  
+[Configure the Windows Firewall to Allow SQL Server Access](~/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+[Configure a Windows Firewall for Database Engine Access](~/relational-databases/backup-restore/configure-a-windows-firewall-for-database-engine-access.md)  
 [Configure Client Protocols](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Network Protocols and Network Libraries](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Client Network Configuration](~/database-engine/configure-windows/client-network-configuration.md)  

@@ -1,5 +1,6 @@
 # [Overview](tables.md)  
 # [Create Tables (Database Engine)](create-tables-database-engine.md)  
+# [Global Temporary Tables (Azure SQL Database)](global-temporary-tables-azure.md)
 # [Delete Tables (Database Engine)](delete-tables-database-engine.md)  
 # [Duplicate Tables](duplicate-tables.md)  
 # [Rename Tables (Database Engine)](rename-tables-database-engine.md)  

@@ -16,22 +16,22 @@ manager: "jhubbard"
 
 # Set up Python Machine Learning Services (In-Database)
 
-  You install the components required for using Python by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard and following the interactive pompts as decribed inn this topic.
+  You install the components required for using Python by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard and following the interactive prompts as described in this topic.
 
 **Overview of the setup process**
   
   + Be sure to install the database engine. An instance of SQL Server is required to run Python scripts in-database. 
   + Choose the **Machine Learning Services** feature, and select **Python** as the language.
   + After installation is complete, reconfigure the instance to allow execution of scripts that use an external executable. 
-  + You might need to make some additional configuration of the secured account used to run Python. Each configuration change requires a restart of the Trusted Launchpad service.
+  + You might need to make some additional configuration of the worker account pool that is used to run Python. 
+  + Each configuration change requires a restart of the Trusted Launchpad service.
 
-To perform an unattended installation, use the command-line options for SQL Server setup and the arguments specific to Python, as described here: [Unattended Installs of SQL Server with Python Machine LEarnign Services](./unattended-installs-of-sql-server-python-services.md).
+To perform an unattended installation, use the command-line options for SQL Server setup and the arguments specific to Python, as described here: [Unattended Installs of SQL Server with Python Machine Learning Services](./unattended-installs-of-sql-server-python-services.md).
  
 ## Prerequisites
 
 +  SQL Server vNext is required. Python integration is not supported on previous versions of SQL Server.
 +  Additional prerequisites, such as .NET Core, are installed as part of the Python component setup.
-+  We recommend that you do not install Machine Learning Services using both the R and Python options. To manage resources, it is probably easier to have separate instances used for R and Python.
 +  The **Shared Features** section contains a separate installation option, **Machine Learning Server (Standalone)**. We recommend that you **do not** install this on the same computer as a SQL Server instance that uses R Services or Python Services. 
   Instead, install the Machine Learning Server (Standalone) on a separate computer that you will use for developing and testing your R solutions. 
 
@@ -77,7 +77,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
      ![Agreement to Python license](../python/media/ml-svcs-license-python.PNG "License agreement for Python")
   
     > [!NOTE]  
-    >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing Components without Internet Access](../../advanced-analytics/r-services/install-ml-components-without-internet-access.md)  
+    >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md)  
   
      Click **Accept**, wait until the **Next** button becomes active, and then click **Next**.  
   
@@ -89,7 +89,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
   
     These selections represent the minimum configuration required to use Python with SQL Server. 
     
-    ![Ready to installl Python](../python/media/ready-to-install-python.png "Required components for Python install")
+    ![Ready to install Python](../python/media/ready-to-install-python.png "Required components for Python install")
 
     Optionally, make a note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
@@ -99,7 +99,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
 ##  <a name="bkmk_enableFeature"></a> Step 2: Enable Python script execution
   
   
-1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If it is not already installed, you can rerun the SQL Server setup wizard to open a download link and install it.  
+1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If it is not already installed, you can re-run the SQL Server setup wizard to open a download link and install it.  
   
 2. Connect to the instance where you installed Machine Learning Services, and run the following command:
 
@@ -107,7 +107,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
    sp_configure    
    ```  
 
-    The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default, to reduce the surface area, and must be explicitly enabled by an administrator.
+    The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default, to reduce the surface area. The feature must be explicitly enabled by an administrator before you can run R or Python scripts.
      
 3.  To enable the external scripting feature that supports Python, run the following statement.  
   
@@ -119,7 +119,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
 
 10. Restart the SQL Server service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Restarting the SQL Server service will also automatically restart the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. 
 
-    You can restart the service using the **Services** panel in Control Panel, or by using SQL Server Configuration Manager.  
+    You can restart the service using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](https://docs.microsoft.com/en-us/relational-databases/sql-server-configuration-manager.  
   
 ## Step 3. Verify that the external script execution feature is running
 
@@ -136,7 +136,7 @@ Take a moment to verify that all components used to launch Python script are run
   
   If you have installed multiple instances of SQL Server, using either R or Python, each instance has its own Launchpad service.
 
-  However, if you install R and Python on a single instance, only one Launchpad is installed, but a separate Launcher.dll is added for each language. For more information, see [Components to Support Python Integration](new-components-in-sql-server-to-support-python-integration.md) 
+  However, if you install R and Python on a single instance, only one Launchpad is installed, but a separate language-specific launcher DLL is added for each language. For more information, see [Components to Support Python Integration](new-components-in-sql-server-to-support-python-integration.md) 
    
 3. If Launchpad is running, you should be able to run simple Python scripts like the following in  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
@@ -144,7 +144,6 @@ Take a moment to verify that all components used to launch Python script are run
     exec sp_execute_external_script  @language =N'Python',  
     @script=N'OutputDataSet<-InputDataSet',    
     @input_data_1 = N'SELECT 1 as col'  
-    go  
     ```  
   
     **Results**  
@@ -152,18 +151,17 @@ Take a moment to verify that all components used to launch Python script are run
     *col*  
     *1*   
   
-### Troubleshooting
+## Troubleshooting and Additional Steps
 
 If this command was successful, you can run Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.  
 
+If not, review the following list and see if changes to the configuration of the service or database might be needed.
 
-If you get an error, see this article for a list of some common problems:  
-
+It is important to note that not all of the listed changes are required, and none might be required. It depends on your security schema, where you installed SQL Server, and how you expect users to connect to the datbase and run external scripts. 
 
   
-##  <a name="bkmk_configureAccounts"></a> Step 4: Enable Implied Authentication for Launchpad Accounts  
-   
-  
+###  <a name="bkmk_configureAccounts"></a> Enable implied authentication for Launchpad account group  
+     
 During setup, a number of new Windows user accounts are created for the purpose of running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When a user sends a Python or R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will activate an available worker account, map it to the identity of the calling user, and run the script on behalf of the user. 
 
 This is called called *implied authentication*, and is a service of the database engine that supports secure execution of external scripts in SQL Server 2016 and SQL Server vNext. 
@@ -187,11 +185,11 @@ If you need to run R scripts from a remote data science client and are using Win
 > If you use a SQL login for running scripts in a SQL Server compute context, this extra step is not required.
   
   
-## Step 5: Give Non-Admin Users Script Permissions 
+### Give users permission to run external scripts 
   
 If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yourself and are running R scripts in your own instance, you are typically executing scripts as an administrator and thus have implicit permission over various operations and all data in the database, as well as the ability to install new R packages as needed.  
   
-However, in an enterprise scenario, most users, including those accessing the database using SQL logins, do not have such elevated permissions. Therefore, for each user that will be running external scripts, you must grant the user permissions to run scripts in each database where R or Python will be used.   
+However, in an enterprise scenario, most users, including those accessing the database using SQL logins, do not have such elevated permissions. Therefore, for each user that will be running external scripts, you must grant users of machine learning services the permission to run scripts in each database where R or Python will be used.   
   
   
 ```  
@@ -199,19 +197,15 @@ USE <database_name>
 GO  
 GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]  
 ```  
-Note that permissions are agnostic to the supported script language. Currently there are not separate permission levels for R vs. Python script. For this reason, and to enable easier resource management, we recommend that you install R and Python on separate instances.
- 
+Note that permissions are agnostic to the supported script language. Currently there are not separate permission levels for R vs. Python script. If you need to maintain separate permissions for these languages, you can install R and Python on separate instances.
+
   
-##  <a name="bkmk_Additional"></a> Additional Configuration Options 
-  
-This section describes additional changes that you can make in the configuration of the instance, or of your data science client, to support Python script execution.
-  
-### Modify the number of worker accounts
+### Add more worker accounts
   
 If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).  
   
   
-### Give your users read, write, or DDL permissions as needed in additional databases  
+### Give your users read, write, or DDL permissions to databases  
   
 While running scripts, the user account or SQL login might need to read data from other databases, create new tables to store results, and write data into tables. 
      
@@ -236,13 +230,18 @@ If you create a machine learning solution on a data science client computer and 
   
 + For Windows authentication: You must configure an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [Using the ODBC Data Source Administrator](http://windows.microsoft.com/windows/using-odbc-data-source-administrator).  
   
-### Optimize the Server for Python Use  
+### Optimize the server for script execution  
 
-The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services supported by the database engine, which might include ETL processes, reporting, auditing, and applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. Therefore, under the default settings you  might find that resources for running Python are sometimes restricted or throttled, particularly in memory-intensive operations.  
+The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services supported by the database engine, which might include ETL processes, reporting, auditing, and applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. 
 
-To ensure that Python jobs are prioritized and resourced appropriately, we recommend that you use Resource Governor to configure an external resource pool specific for Python. 
+As a result, if you use the default settings created by SQ Server setup, you might find that resources for running external scripts are restricted or throttled, particularly in memory-intensive operations.  
 
-You might also wish to change the amount of memory allocated to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine, or increase the number of accounts running under the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.  
+If machine learning is a priority, you need to change default database settings to ensure that external script jobs are prioritized and resourced appropriately. These changes might include:
+
++ Reduce the amount of memory allocated to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine
++ Increase the number of accounts running under the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. This does not increase the number of resources, but does increase the number of scripts that can run concurrently.  
+
+If you have Enterprise Edition, we recommend that you use Resource Governor to configure an external resource pool specific for Python. See these articles for more information:
   
 -   Configure a resource pool for managing external resources  
   
@@ -259,8 +258,6 @@ You might also wish to change the amount of memory allocated to the [!INCLUDE[ss
 If you are using Standard Edition and do not have Resource Governor, you can use DMVs and Extended Events, as well as Windows event monitoring, to help you manage server resources. For more information, see [Monitoring and Managing R Services](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md).
 
 
- 
- + [Custom Reports for SQL Server R Services](../../advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md)
   
 ## See Also  
  

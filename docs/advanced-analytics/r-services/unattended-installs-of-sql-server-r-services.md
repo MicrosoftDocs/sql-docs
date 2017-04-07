@@ -29,7 +29,7 @@ The setup process is different in SQL Server 2016 and SQL Server vNext.
 ## Prerequisites
 
 + You must install the database engine on each instance where you will use R.  
-+ If you are performing an offline install, you must download the required R components in advance, and copy them to a local folder. For download locations, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md).   
++ If you are performing an offline install, you must download the required R components in advance, and copy them to a local folder. For download locations, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).   
 + There is a new parameter, */IACCEPTROPENLICENSETERMS*, that indicates you have accepted the license terms for using the open source R components. If you do not include this parameter in your command line, setup will fail. 
 + To complete setup without having to respond to prompts, make sure that you have identified all required arguments, including those for R and SQL Server licensing, and for any other features that you might want to install. 
 

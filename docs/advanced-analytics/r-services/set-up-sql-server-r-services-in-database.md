@@ -72,7 +72,7 @@ OR:
      This license agreement is required to download Microsoft R Open, which include a distribution of the open source R base packages and tools, together with enhanced R packages and connectivity providers from Revolution Analytics.  
   
     > [!NOTE]  
-    >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md)  
+    >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing R Components without Internet Access](../../advanced-analytics/ml-services/installing-r-components-without-internet-access.md)  
   
      Click **Accept**, wait until the **Next** button becomes active, and then click **Next**.  
   

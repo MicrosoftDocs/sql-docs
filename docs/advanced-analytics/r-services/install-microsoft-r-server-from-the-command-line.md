@@ -47,7 +47,7 @@ Note that all of the following arguments are required:
 
 ### Offline installation
 
-If you install Microsoft R Server (Standalone) on a computer that has no Internet access, you must download the required R components in advance, and copy them to a local folder. For download locations, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md).   
+If you install Microsoft R Server (Standalone) on a computer that has no Internet access, you must download the required R components in advance, and copy them to a local folder. For download locations, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).   
 
 
 ## Advanced Installation Tips

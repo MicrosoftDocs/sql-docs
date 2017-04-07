@@ -37,7 +37,7 @@ manager: "jhubbard"
 
 As hotfixes or improvements to SQL Server 2016 are released, R components will be upgraded or refreshed as well, if your instance already includes the R Services feature. 
 
-If you install or upgrade servers that are not connected to the Internet, you must download an updated version of the R components manually before beginning the refresh. For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md).
+If you install or upgrade servers that are not connected to the Internet, you must download an updated version of the R components manually before beginning the refresh. For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
 
 If you are using SQL Server vNext, upgrades to R components are automatically installed.
 
@@ -49,7 +49,7 @@ Slipstream setup refers to the ability to apply a patch or update to a failed in
 
 + In SQL Server 2016, you can start a slipstream upgrade in SQL Server Management Studio by clicking **Tools**, and selecting **Check for Updates**.
 
-+ If the server does not have Internet access, be sure to download the SQL Server installer. You must also separately download matching versions of the R component installers **before** beginning the update process. For download locations, see [Installing R Components without Internet Acccess](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md).  
++ If the server does not have Internet access, be sure to download the SQL Server installer. You must also separately download matching versions of the R component installers **before** beginning the update process. For download locations, see [Installing R Components without Internet Acccess](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).  
 
     When all setup files have been copied to a local directory, start the setup utility by typing SETUP.EXE from the command line.
       
@@ -163,7 +163,7 @@ If you are installing R Services on a computer that does not have Internet acces
 
 The language identifier used for the R components must be the same as the SQL Server setup language being installed, or the **Next** button is disabled and you cannot complete setup.
 
-For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md). 
+For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md). 
   
 ## Unable to launch runtime for R script
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] creates a Windows users group that is used by the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] to run R jobs. This user group must have the ability to log into the instance that is running R Services in order to execute R on the behalf of remote users who are using Windows integrated authentication.

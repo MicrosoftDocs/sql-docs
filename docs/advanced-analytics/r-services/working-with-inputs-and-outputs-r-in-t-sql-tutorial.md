@@ -94,7 +94,7 @@ Did you get this error?
 
 That's because R is case-sensitive! In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*. 
 
-Try correcting only the *SQL_In* variable and re-run the stored procedure. Now you get a different eror:
+Try correcting only the *SQL_In* variable and re-run the stored procedure. Now you get a different error:
 
   *EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.*
 

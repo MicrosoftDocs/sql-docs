@@ -18,11 +18,11 @@ manager: "jhubbard"
 
 This topic describes the goals of the extensibility framework that supports execution of Python and R script in SQL Server. 
 
-It also provides an overview of how the architecture is designed ot meet these goals, how R and Python are supported and executed by SQL Server, and the benefits of integration. 
+It also provides an overview of how the architecture is designed to meet these goals, how R and Python are supported and executed by SQL Server, and the benefits of integration. 
 
 Overall, the extensibility framework is the same, or similar, for R and Python, but there are details that might be different. For further information about the implementation for a specific language, see these topics:
 
-+ [Architecture Overview for SQL Server R Services](../../advanced-analytics/r-services/architecture-overview-sql-server-r-services.md)
++ [Architecture Overview for SQL Server R Services](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
 + [Architecture overview for Python in SQL Server](../../advanced-analytics/python/architecture-overview-sql-server-python.md)
 
 
@@ -30,7 +30,7 @@ Overall, the extensibility framework is the same, or similar, for R and Python, 
 
 In SQL Server 2016, numerous changes were introduced to the database engine to support execution of R scripts using SQL Server. In SQL Server vNext, this underlying infrastructure was improved to add support for the Python language. 
 
-The goal of the extensibility framework was to create a better interface between SQL Server and data science languages like R and Python, both to reduce the friction that occurs when data science solutions are moved into production, and to protect data that might be exposed during the data science development process.
+The goal of the extensibility framework was to create a better interface between SQL Server and data science languages such as R and Python, both to reduce the friction that occurs when data science solutions are moved into production, and to protect data that might be exposed during the data science development process.
 
 By executing a trusted scripting language within a secure framework managed by SQL Server, the database developer can maintain security while allowing data scientists to use enterprises data.
 

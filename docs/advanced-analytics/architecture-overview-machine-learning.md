@@ -14,6 +14,8 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 
+# Architecture and Overview
+
 # Architecture and Overview of Machine Learning Services
 
 This topic describes the goals of the extensibility framework that supports execution of Python and R script in SQL Server. 

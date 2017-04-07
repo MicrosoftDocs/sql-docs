@@ -1,4 +1,35 @@
- **sys.index_resumable_operations** is a system view that monitors and checks the current execution status for resumable Index rebuild.  
+---
+title: "sys.index_resumable_operations (Transact-SQL) | Microsoft Docs"
+ms.custom: 
+  - "MSDN content"
+  - "MSDN - SQL DB"
+ms.date: "04/07/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: ""
+ms.service: "sql-database"
+ms.suite: ""
+ms.technology: 
+  - "database-engine"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+f1_keywords: 
+  - "sys.index_resumable_operations_TSQL"
+  - "sys.indexes_TSQL"
+dev_langs: 
+  - "TSQL"
+helpviewer_keywords: 
+  - "sys.indexes"
+  - "sys.index_resumable_operations"
+ms.assetid: 
+caps.latest.revision: 1
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: "jhubbard"
+
+---
+# index_resumable_operations (Transact-SQL)
+
+**sys.index_resumable_operations** is a system view that monitors and checks the current execution status for resumable Index rebuild.  
   **Applies to**: SQL Server N2017 (feature is in public preview)
   
 |Column name|Data type|Description|  
@@ -40,4 +71,3 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
  [sys.partition_schemes &#40;Transact-SQL&#41;](sys-partition-schemes-transact-sql.md)   
  [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.md)   
   
- 

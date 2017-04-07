@@ -17,7 +17,6 @@
 |**percent_complete**|**real**|Index operation progress completion in % ( not nullable).|
 |**page_count**|**bigint**|Total number of index pages allocated by the index build operation for the new and mapping indexes ( not nullable ). 
 
-
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
    

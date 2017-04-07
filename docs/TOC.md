@@ -2,7 +2,7 @@
 
 # [SQL Server on Linux](./linux/TOC.md)
 
-# [Advanced analytics on SQL Server](./advanced-analytics/r-services/TOC.md)
+# [Advanced analytics on SQL Server](./advanced-analytics/TOC.md)
 
 # [SQL Server](./sql-server/toc.md)
 

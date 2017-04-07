@@ -22,7 +22,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
 ---
-# Global temporial objects (Azure SQL Database)
+# Global temporary objects (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 

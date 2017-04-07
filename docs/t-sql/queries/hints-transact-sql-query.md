@@ -248,6 +248,8 @@ manager: "jhubbard"
  If such a plan is not possible, the query optimizer returns an error instead of deferring error detection to query execution. Rows may contain variable-length columns; the [!INCLUDE[ssDE](../../includes/ssde-md.md)] allows for rows to be defined that have a maximum potential size beyond the ability of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to process them. Generally, despite the maximum potential size, an application stores rows that have actual sizes within the limits that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can process. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encounters a row that is too long, an execution error is returned.  
  
  USE HINT ( **'***hint_name***'** )  
+ **Applies to**: Applies to SQL Server (starting with 2016 SP1) and Azure SQL Database.
+ 
  Provides one or more additional hints to the query processor as specified by a hint name **inside single quotation marks**. 
   **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 

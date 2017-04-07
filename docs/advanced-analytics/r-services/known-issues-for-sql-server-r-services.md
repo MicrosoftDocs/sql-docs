@@ -52,7 +52,7 @@ As a workaround, you can install the service release by using the command line a
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-To get the latest CAB files, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md).
+To get the latest CAB files, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
 
 ### SQLRUserGroup for Launchpad must have an account in the SQL Server instance
 
@@ -86,7 +86,7 @@ For example, this error might occur if you install the database engine using the
 
 To avoid this problem, make sure that all components have the same version number. If you upgrade one component, be sure to apply the same upgrade to all other installed components.
 
-To view a list of the R version numbers required for each release of SQL Server 2016, see [Installing R components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md).
+To view a list of the R version numbers required for each release of SQL Server 2016, see [Installing R components without Internet Access](../../advanced-analytics/ml-services/installing-r-components-without-internet-access.md).
 
 
 ### Service account for LaunchPad requires permission Replace Process Level Token

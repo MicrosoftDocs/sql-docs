@@ -40,11 +40,10 @@ OR:
 + You cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster. The reason is that the security mechanism used for isolating R processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance with R Services, or install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a standalone computer that uses Always On and is part of an availability group. . 
 
 > [!IMPORTANT]    
-> After setup is complete, some additional steps are required to enable the R Services feature. Depending on your use of R, you might also need to give users permissions to specific databases, change or configure accounts, or set up a remote data science client. .   
+> After setup is complete, some additional steps are required to enable the R Services feature. Depending on your use of R, you might also need to give users permissions to specific databases, change or configure accounts, or set up a remote data science client.  
 
   
 ##  <a name="bkmk_installRServicesInDatabase"></a> Step 1: Install R Services (In-Database) on SQL Server 2016 or later  
-
 
 1.  Run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup.  
   
@@ -60,7 +59,8 @@ OR:
   
     -   **R Services (In-Database)**  
   
-         This option configures the database services used by R jobs and installs the extensions that support external scripts and processes.  
+         This option configures the database services used by R jobs and installs the extensions that support external scripts and processes. 
+          
         > [!NOTE]
         > Be sure to choose the **[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]** option  if you need to operationalize your solutions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
         > 
@@ -72,7 +72,7 @@ OR:
      This license agreement is required to download Microsoft R Open, which include a distribution of the open source R base packages and tools, together with enhanced R packages and connectivity providers from Revolution Analytics.  
   
     > [!NOTE]  
-    >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-r-components-without-internet-access.md)  
+    >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing R Components without Internet Access](../../advanced-analytics/ml-services/installing-r-components-without-internet-access.md)  
   
      Click **Accept**, wait until the **Next** button becomes active, and then click **Next**.  
   
@@ -145,8 +145,17 @@ After the SQL Server service is available, take a moment to verify that all comp
     Packages that you want to use from SQL Server must be installed in the default library that is used by the instance. If you have a separate installation of R on the compouter, or if you installed packages to user libraries, you won't be able to use those packages from T-SQL. For more information,  see [Install Additional R Packages on SQL Server](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md).
 
 5. Proceed to the next sections if you need to access SQL Server data, perform ODBC calls from your R code, or execute R commands from a remote data science client.  
-  
-##  <a name="bkmk_configureAccounts"></a> Step 4: Enable Implied Authentication for Launchpad Accounts  
+
+## Troubleshooting and Additional Steps
+
+If this command was successful, you can run R commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.  
+
+If not, review the following list and see if changes to the configuration of the service or database might be needed.
+
+It is important to note that not all of the listed changes are required, and none might be required. It depends on your security schema, where you installed SQL Server, and how you expect users to connect to the datbase and run external scripts. 
+
+    
+###  <a name="bkmk_configureAccounts"></a> Enable implied authentication for Launchpad account group  
    
   
 During setup, a number of new Windows user accounts are created for the purpose of running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When a user sends an R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will activate an available worker account, map it to the identity of the calling user, and run the R script on behalf of the user. This is a new service of the database engine that supports secure execution of external scripts, called *implied authentication*. 
@@ -167,7 +176,7 @@ However, if you need to run R scripts from a remote data science client and are 
 > If you use a SQL login for running R scripts in a SQL Server compute context, this extra step is not required.
   
   
-## Step 5: Give Non-Admin Users R Script Permissions 
+### Give users permission to run external scripts 
   
 If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yourself and are running R scripts in your own instance, you are typically executing scripts as an administrator and thus have implicit permission over various operations and all data in the database, as well as the ability to install new R packages as needed.  
   
@@ -183,16 +192,16 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > [!TIP]
 > Need help with setup? Not sure you have run all the steps? Use these custom reports to check the installation status of R Services. For more information, see [Monitor R Services using Custom Reports](../../advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md).    
   
-##  <a name="bkmk_Additional"></a> Additional Configuration Options 
-  
-This section describes additional changes that you can make in the configuration of the instance, or of your data science client, to support R script execution.
-  
-### Modify the number of worker accounts used by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
+### Ensure that the SQL Server supports remote connections
+
+If you cannot connect from a remote computer, check whether the firewall allows access to SQL Server. In a default installation, remote connections might be disabled, or the specific port used by SQL Server might be blocked by the firewall. For more information, see [Configure Windows Firewall for Database Engine Access](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access
+
+### Add more worker accounts
   
 If you think you will use R heavily, or if you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).  
   
   
-### Give your users read, write, or DDL permissions as needed in additional databases  
+### Give your users read, write, or DDL permissions to database  
   
 While running R scripts, the user account or SQL login might need to read data from other databases, create new tables to store results, and write data into tables. 
      
@@ -217,7 +226,7 @@ If you create an R solution on a data science client computer and need to run co
   
 + For Windows authentication: You must configure an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [Using the ODBC Data Source Administrator](http://windows.microsoft.com/windows/using-odbc-data-source-administrator).  
   
-### Optimize the Server for R  
+### Optimize the server for R  
 
 The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services supported by the database engine, which might include ETL processes, reporting, auditing, and applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. Therefore, under the default settings you  might find that resources for R operations are sometimes restricted or throttled, particularly in memory-intensive operations.  
   
@@ -237,21 +246,10 @@ The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 If you are using Standard Edition and do not have Resource Governor, you can use DMVs and Extended Events, as well as Windows event monitoring, to help you manage server resources used by R. For more information, see [Monitoring and Managing R Services](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md).
   
-### Get the R Source Code (Optional)  
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] includes a distribution of the open source R base packages.  
-  
-Optionally, click one of these links to immediately begin downloading the modified GPL/LGPL source code. The source code is made available in compliance with the GNU General Public License, but is not required to install or use [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].  
-  
--   Compatible with RC2: Download archive [rre-gpl-src.8.0.2.tar.gz](http://go.microsoft.com/fwlink/?LinkId=786770) 
-  
--   Compatible with RC3: Download archive [rre-gpl-src.8.0.3.tar.gz](http://go.microsoft.com/fwlink/?LinkId=786771) 
+### More tips and known issues  
 
--   Compatible with RTM: Download archive [rre-gpl-src.8.0.3.tar.gz](http://go.microsoft.com/fwlink/?LinkID=786771)
-  
-## Troubleshooting  
-
- Run into trouble? Have a pre-release version of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]? See this list of common issues.  
+ Run into trouble? Trying to upgrade from a pre-release version of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]? See this list of common issues.  
   
  + [Upgrade and Installation FAQ &#40;SQL Server R Services&#41;](../../advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md)  
  

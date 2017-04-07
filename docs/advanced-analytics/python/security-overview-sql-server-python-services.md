@@ -52,14 +52,14 @@ After mapping to a worker account, [!INCLUDE[rsql_launchpad_md](../../includes/r
 
 When all [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] operations are completed, the user worker account is marked as free and returned to the pool.
 
-For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], see [New Components in SQL Server to Support R Integration](../../advanced-analytics/python/new-components-in-sql-server-to-support-python.md).
+For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], see [New Components in SQL Server to Support Python Integration](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md).
 
 > [!NOTE]
 > For Launchpad to manage the worker accounts and execute Python jobs, the group that contains the worker accounts, SQLRUserGroup, must have "Allow Log on locally" permissions; otherwise the Python run-time might not be started. 
 > 
 > By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced, which prevent the worker accounts from connecting to SQL Server to Python jobs.
 > 
-> Note that the name of the group of worker accounts is the same regardless of whether you are using R or Python. However, a separate group is created for each instance.  
+> Note that the name of the group of worker accounts is the same regardless of whether you are using R or Python. However, a separate group is created for each instance where you enable any external language.  
 
 ## Security of Worker Accounts
 

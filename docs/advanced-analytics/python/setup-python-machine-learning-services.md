@@ -35,7 +35,8 @@ To perform an unattended installation, use the command-line options for SQL Serv
 +  The **Shared Features** section contains a separate installation option, **Machine Learning Server (Standalone)**. We recommend that you **do not** install this on the same computer as a SQL Server instance that uses R Services or Python Services. 
   Instead, install the Machine Learning Server (Standalone) on a separate computer that you will use for developing and testing your R solutions. 
 
-+ You cannot install Machine Learning with Python Services on a failover cluster. The reason is that the security mechanism used for isolating Python processes is not compatible with a Windows Server failover cluster environment. 
++ You cannot install Machine Learning with Python Services on a failover cluster. The reason is that the security mechanism used for isolating Python processes is not compatible with a Windows Server failover cluster environment.
+   
   As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance that uses Python Services, or you can install Machine Learning with Python Services on a standalone computer that uses Always On and is part of an availability group. . 
 
 + Side-by-side installation with other versions of Python is possible, because the SQL Server instance uses its own copy of the Anaconda distribution. However, running code using Python on the SQL Server computer outside of SQL Server can lead to various problems: 
@@ -43,8 +44,8 @@ To perform an unattended installation, use the command-line options for SQL Serv
     + Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
   
 > [!IMPORTANT] 
-> After setup is complete, be sure to complete the additional post-configuration steps as described here. You must enable SQL Server to use the Python  executable and ensure that SQL Server can run Python jobs on your behalf.
-+ 
+> After setup is complete, be sure to complete the additional post-configuration steps described in this topic. These include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run Python jobs on your behalf.
+ 
 ##  <a name="bkmk_installPythonInDatabase"></a> Step 1: Install Machine Learning Services (In-Database) on SQL Server
 
 
@@ -221,6 +222,9 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
   
 For more information about the permissions included in each role, see [Database-Level Roles](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
+### Ensure that the SQL Server supports remote connections
+
+If you cannot connect from a remote computer, check whether the firewall allows access to SQL Server. In a default installation, remote connections might be disabled, or the specific port used by SQL Server might be blocked by the firewall. For more information, see [Configure Windows Firewall for Database Engine Access](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access
   
 ### Create an ODBC data source for the instance on your data science client  
   

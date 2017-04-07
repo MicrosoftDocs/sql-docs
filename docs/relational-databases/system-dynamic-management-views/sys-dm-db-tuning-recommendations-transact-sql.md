@@ -71,8 +71,7 @@ JSON document in [status] column contains the reasome that describes why is the 
 |--------|-------------|
 | SchemaChanged | Recommendation expired because the schema of a referenced table is changed. |
 | StatisticsChanged| Recommendation expired due to the statistic change on a referenced table. |
-| ForcingFailed | Recommended plan cannot be forced on a query. Find the **last\_force\_failure\_reason** in the [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) view to find the reason of the failure. | 
-| OptionRecompile| Recommendation expired because user executed the regressed query with OPTION(RECOMPILE). Plan is recompiled by [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. |
+| ForcingFailed | Recommended plan cannot be forced on a query. Find the **last\_force\_failure\_reason** in the [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) view to find the reason of the failure. |
 | AutomaticTuningOptionDisabled | FORCE\_LAST\_GOOD\_PLAN option is disabled by the user during verification process. Enable FORCE\_LAST\_GOOD\_PLAN option using [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement or force the plan manually using the script in **details** column. |
 | UnsupportedStatementType| Plan cannot be forced on the query. Examples of unsupported queries are cursors and INSERT BULK statement. |
 | LastGoodPlanForced | Recommendation is successfully applied. |
@@ -107,6 +106,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
 ## See Also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)
+
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
  

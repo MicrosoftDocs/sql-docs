@@ -20,7 +20,7 @@ manager: "erikre"
   
  **Note:** This topic describes installing the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] solution files and [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 Configuration tool. After the installation, see the following topic for information on the configuration tool and additional features, [Configure Power Pivot and Deploy Solutions &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
- For information on how to download **spPowerPivot16.msi**, see [Microsoft® SQL Server® 2016 Power Pivot® for Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854).  
+ For information on how to download **spPowerPivot16.msi**, see [Microsoft® SQL Server® 2016 Power Pivot® for Microsoft SharePoint®](https://www.microsoft.com/download/details.aspx?id=52675).  
   
  **In this topic:**  
   
@@ -36,9 +36,8 @@ manager: "erikre"
   
 -   [Uninstall or repair the add-in](#bkmk_remove_addin)  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
+
+**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 
   
 ##  <a name="bkmk_background"></a> Background  
   

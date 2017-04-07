@@ -1,5 +1,5 @@
 ---
-title: "Global Temporary Tables for Azure SQL Database | Microsoft Docs"
+title: "Database scoped global temporary tables - Azure SQL Database | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
@@ -22,7 +22,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
 ---
-# Global temporary objects (Azure SQL Database)
+# Database scoped blobal temporary tables (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 

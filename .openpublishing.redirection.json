@@ -324,38 +324,43 @@
 
 
   {
-   "source_path" : "docs/sql/t-sql/statements/alter-statements-transact-sql.md",
-   "redirect_url": "/sql/t-sql/statements/statements",
-   "redirect_document_id": true
-  },
-  {
-   "source_path" : "docs/sql/t-sql/statements/backup-and-restore-statements-transact-sql.md",
+   "source_path" : "docs/t-sql/statements/alter-statements-transact-sql.md",
    "redirect_url": "/sql/t-sql/statements/statements",
    "redirect_document_id": false
   },
   {
-   "source_path" : "docs/sql/t-sql/statements/create-statements-transact-sql.md",
+   "source_path" : "docs/t-sql/statements/backup-and-restore-statements-transact-sql.md",
    "redirect_url": "/sql/t-sql/statements/statements",
    "redirect_document_id": false
   },
   {
-   "source_path" : "docs/sql/t-sql/statements/drop-statements-transact-sql.md",
+   "source_path" : "docs/t-sql/statements/create-statements-transact-sql.md",
    "redirect_url": "/sql/t-sql/statements/statements",
    "redirect_document_id": false
   },
   {
-   "source_path" : "docs/sql/t-sql/statements/security-statements.md",
+   "source_path" : "docs/t-sql/statements/drop-statements-transact-sql.md",
    "redirect_url": "/sql/t-sql/statements/statements",
    "redirect_document_id": false
   },
   {
-   "source_path" : "docs/sql/t-sql/statements/service-broker-statements.md",
+   "source_path" : "docs/t-sql/statements/security-statements.md",
    "redirect_url": "/sql/t-sql/statements/statements",
    "redirect_document_id": false
   },
   {
-   "source_path" : "docs/sql/t-sql/transact-sql-reference-database-engine.md",
+   "source_path" : "docs/t-sql/statements/service-broker-statements.md",
+   "redirect_url": "/sql/t-sql/statements/statements",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/t-sql/transact-sql-reference-database-engine.md",
    "redirect_url": "/sql/t-sql/language-reference",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/variable-grid-options.md",
+   "redirect_url": "/sql/integration-services/variables-window",
    "redirect_document_id": false
   }
 

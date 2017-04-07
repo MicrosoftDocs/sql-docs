@@ -26,7 +26,7 @@ ms.author: "jovanpop-msft"
 manager: "jhubbard"
 ---
 # sys.database\_automatic\_tuning_options (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
   Returns the Automatic Tuning options for this database.  
   

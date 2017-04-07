@@ -26,7 +26,7 @@ ms.author: "jovanpop-msft"
 manager: "jhubbard"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)] 
 
   Returns detailed information about tuning recomendations.  
   
@@ -39,12 +39,7 @@ manager: "jhubbard"
 | reason | nvarchar(4000) | Reason why this recommendation was provided. |
 | valid\_since | datetime2 | The first time this recommendation was generated |
 | last\_refresh | datetime2 | The last time this recommendation was generated |
-| state | nvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:
-
-currentValue (e.g. Active, Verifying, Reverted)
-
-reason – code that describes why the recommendation is in the current state.
- |
+| state | nvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:<br /> currentValue (Active, Verifying, Success, Reverted, and Expired)<br />  reason – code that describes why the recommendation is in the current state (SchemaChanged, StatisticsChanged, ForcingFailed, OptionRecompile, AutomaticTuningOptionDisabled, UnsupportedStatementType, PlanUnforcedByUser, LastGoodPlanForced, AutomaticTuningOptionNotEnabled, VerificationAborted, VerificationforcedQueryRecompile, PlanForcedByUser, PlanUnforcedByUser)|
 | is\_executable\_action | bit | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
 | is\_revertable\_action | bit | 1 = The recommendation can be automatically monitored and reverted by Database engine.0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will also be &quot;revertable&quot;. |
 | execute\_action\_start\_time | datetime2 | Date the recommendation is applied. |
@@ -99,6 +94,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
 ## See Also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)
+ 
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
  

@@ -1,4 +1,4 @@
-# [SQL Server Management Studio (SSMS)](./ssms/index.md)
+# [SQL Server Management Studio (SSMS)](../ssms/index.md)
 
 # [Command Prompt Utilities](command-prompt-utility-reference-database-engine.md)  
 ## [bcp Utility](bcp-utility.md)  

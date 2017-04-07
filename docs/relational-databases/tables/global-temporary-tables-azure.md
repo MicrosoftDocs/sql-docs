@@ -22,7 +22,8 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
 ---
-# tempdb Database
+# Global temporial objects (Azure SQL Database)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Global temporary tables for SQL Server (initiated with ## table name) are stored in tempdb and shared among all users’ sessions across the whole SQL Server instance. For information on SQL table types, see [Tables](tables.md)

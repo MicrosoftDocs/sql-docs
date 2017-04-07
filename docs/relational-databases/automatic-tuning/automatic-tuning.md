@@ -28,6 +28,9 @@ Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], noti
 ## Forcing last good plan
 
 [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] may use different SQL plans to execute the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries. Query plans depend on the statistics, indexes, and other factors, so the optimal plan that should be used to execute some [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query might be changed over time. In some cases, new plan might not be better than the previous one, and this might cause a performance regression.
+
+ ![SQL plan choice regression](media/plan-choice-regression.png "SQL plan choice regression") 
+
 In order to prevent unexpected performance issues, users must periodically monitor system and look for the queries that regressed. If any plan regressed, user should find some previous good plan and force it instead of the current one. The best practice would be to force last known good plan because older plans might be invalid due to statistic or index changes.
 When user forces last known good plan, he should monitor performance of the query that is executed using the forced plan and verify that forced plan works as expected. Depending on the results of monitoring and analysis, plan should be forced or user should find some other way to optimize the query.
 Manually forced plans should not be forced forever, because the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] should be able to apply optimal plans. The user or DBA should eventually unforce the plan and let the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] find the optimal plan.
@@ -66,14 +69,18 @@ FROM sys.dm_db_tuning_recommendations
 
 ## Automatic plan choice correction
 
-In addition to detection, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can automatically switch to the last known good plan whenever the regression is detected. The user can enable automatic tuning per database and specify that last good plan should be forced whenever some plan change regression is detected. Automatic tuning is enabled using the following command:
+In addition to detection, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can automatically switch to the last known good plan whenever the regression is detected.
+
+![SQL plan choice correction](media/force-last-good-plan.png "SQL plan choice correction") 
+
+When the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applies a recommendation, it automatically monitors the performance of the forced plan. The forced plan will be retained until a recompile (e.g. on next statistics or schema change) if it is better than the regressed plan. If the forced plan is not better than the regressed plan, the new plan will be unforced and the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will compile a new plan.
+
+The user can enable automatic tuning per database and specify that last good plan should be forced whenever some plan change regression is detected. Automatic tuning is enabled using the following command:
 
 ```   
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
-
-When the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applies a recommendation, it automatically monitors the performance of the forced plan and if the forced plan is better than regressed plan it will remain forced until a recompile (e.g. on next statistics or schema change). If the forced plan is not better than the regressed plan, the new plan will be unforced and the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will compile a new plan.
 
 The status of advisor is shown in the following view:
 

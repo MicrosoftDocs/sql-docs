@@ -39,11 +39,11 @@ manager: "jhubbard"
 | reason | nvarchar(4000) | Reason why this recommendation was provided. |
 | valid\_since | datetime2 | The first time this recommendation was generated |
 | last\_refresh | datetime2 | The last time this recommendation was generated |
-| state | JSONnvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:</br/>
-currentValue (e.g. Active, Verifying, Reverted)</br/>
+| state | JSONnvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:<br />
+currentValue (e.g. Active, Verifying, Reverted)<br />
 reason – code that describes why the recommendation is in the current state.
  |
-| is\_executable\_action | bit | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.</br/>0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
+| is\_executable\_action | bit | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
 | is\_revertable\_action | bit | 1 = The recommendation can be automatically monitored and reverted by Database engine.0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will also be &quot;revertable&quot;. |
 | execute\_action\_start\_time | datetime2 | Date the recommendation is applied. |
 | execute\_action\_duration | time | Duration of the execute action. |
@@ -54,22 +54,22 @@ reason – code that describes why the recommendation is in the current state.
 | revert\_action\_initiated\_by | nvarchar(4000) | User or System |
 | revert\_action\_initiated\_time | datetime2 | Date the recommendation is reverted. |
 | score | int | Estimated value/impact for this recommendation on the 0-100 scale (the larger the better) |
-| details (a property bag that each advisor can customize) | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:</br/>
-- planForceDetails</br/>
- - queryId</br/>
- - regressedPlanId</br/>
- - regressedPlanExecutionCount</br/>
- - regressedPlanAbortedCount</br/>
- - regressedPlanCpuTimeAverage</br/>
- - regressedPlanCpuTimeStddev</br/>
- - forcedPlanId</br/>
- - forcedPlanExecutionCount</br/>
- - forcedPlanAbortedCount</br/>
- - forcedPlanCpuTimeAverage</br/>
- - forcedPlanCpuTimeStddev</br/>
-- implementationDetails</br/>
- - method</br/>
- - script|
+| details (a property bag that each advisor can customize) | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:<br />
+- planForceDetails<br />
+ - queryId - query\_id of the regressed query.<br />
+ - regressedPlanId - plan_id of the regressed plan.<br />
+ - regressedPlanExecutionCount - Number of execution of the query with regressed plan until the regression is detected.<br />
+ - regressedPlanAbortedCount<br />
+ - regressedPlanCpuTimeAverage - Average CPU time consumed by the regressed query until the regression is detected.<br />
+ - regressedPlanCpuTimeStddev - Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />
+ - forcedPlanId - plan_id of the plan that should be forced.<br />
+ - forcedPlanExecutionCount - Number of execution of the query with the plan that should be forced until the regression is detected.<br />
+ - forcedPlanAbortedCount<br />
+ - forcedPlanCpuTimeAverage - Average CPU time consumed by the query executed with the plan that should be (calculated until the regression is detected).<br />
+ - forcedPlanCpuTimeStddev Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />
+- implementationDetails<br />
+ - method - The method that should be used to correct the regression.<br />
+ - script - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that shoudl be executed to force the recommended plan. |
   
 ## Remarks  
  Information returned by **sys.dm\_db\_tuning\_recommendations** is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling.  

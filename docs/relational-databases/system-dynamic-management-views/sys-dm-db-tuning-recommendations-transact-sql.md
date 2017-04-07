@@ -31,6 +31,45 @@ manager: "jhubbard"
   Returns detailed information about tuning recomendations.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn’t belong to the connected tenant is filtered out.
+
+| **Column name** | **Data type** | **Description** |
+| --- | --- | --- |
+| name | nvarchar(4000) | Unique name of recommendation. |
+| type | nvarchar(4000) | FORCE\_LAST\_GOOD\_PLAN |
+| reason | nvarchar(4000) | Reason why this recommendation was provided. |
+| valid\_since | datetime2 | The first time this recommendation was generated |
+| last\_refresh | datetime2 | The last time this recommendation was generated |
+| state | JSONnvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:</br/>
+currentValue (e.g. Active, Verifying, Reverted)</br/>
+reason – code that describes why the recommendation is in the current state.
+ |
+| is\_executable\_action | bit | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.</br/>0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
+| is\_revertable\_action | bit | 1 = The recommendation can be automatically monitored and reverted by Database engine.0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will also be &quot;revertable&quot;. |
+| execute\_action\_start\_time | datetime2 | Date the recommendation is applied. |
+| execute\_action\_duration | time | Duration of the execute action. |
+| execute\_action\_initiated\_by | nvarchar(4000) | User or System |
+| execute\_action\_initiated\_time | datetime2 | Date the recommendation is applied. |
+| revert\_action\_start\_time | datetime2 | Date the recommendation is reverted. |
+| revert\_action\_duration | time | Duration of the revert action. |
+| revert\_action\_initiated\_by | nvarchar(4000) | User or System |
+| revert\_action\_initiated\_time | datetime2 | Date the recommendation is reverted. |
+| score | int | Estimated value/impact for this recommendation on the 0-100 scale (the larger the better) |
+| details (a property bag that each advisor can customize) | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:</br/>
+- planForceDetails</br/>
+ - queryId</br/>
+ - regressedPlanId</br/>
+ - regressedPlanExecutionCount</br/>
+ - regressedPlanAbortedCount</br/>
+ - regressedPlanCpuTimeAverage</br/>
+ - regressedPlanCpuTimeStddev</br/>
+ - forcedPlanId</br/>
+ - forcedPlanExecutionCount</br/>
+ - forcedPlanAbortedCount</br/>
+ - forcedPlanCpuTimeAverage</br/>
+ - forcedPlanCpuTimeStddev</br/>
+- implementationDetails</br/>
+ - method</br/>
+ - script|
   
 ## Remarks  
  Information returned by **sys.dm\_db\_tuning\_recommendations** is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling.  
@@ -61,4 +100,3 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
- 

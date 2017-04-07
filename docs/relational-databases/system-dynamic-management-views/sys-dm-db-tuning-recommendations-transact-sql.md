@@ -28,7 +28,7 @@ manager: "jhubbard"
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)] 
 
-  Returns detailed information about tuning recomendations.  
+  Returns detailed information about tuning recommendations.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn’t belong to the connected tenant is filtered out.
 
@@ -51,11 +51,19 @@ manager: "jhubbard"
 | revert\_action\_initiated\_by | nvarchar(4000) | User or System |
 | revert\_action\_initiated\_time | datetime2 | Date the recommendation is reverted. |
 | score | int | Estimated value/impact for this recommendation on the 0-100 scale (the larger the better) |
-| details | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:<br />
- planForceDetails<br />    **queryId** - query\_id of the regressed query.<br />    **regressedPlanId** - plan_id of the regressed plan.<br />    **regressedPlanExecutionCount** - Number of execution of the query with regressed plan until the regression is detected.<br />    **regressedPlanAbortedCount**<br />    **regressedPlanCpuTimeAverage** - Average CPU time consumed by the regressed query until the regression is detected.<br />    **regressedPlanCpuTimeStddev** - Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />    **forcedPlanId** - plan_id of the plan that should be forced.<br />    **forcedPlanExecutionCount** - Number of execution of the query with the plan that should be forced until the regression is detected.<br />    **forcedPlanAbortedCount**<br />    **forcedPlanCpuTimeAverage** - Average CPU time consumed by the query executed with the plan that should be (calculated until the regression is detected).<br />    **forcedPlanCpuTimeStddev** Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />**implementationDetails**<br />    **method** - The method that should be used to correct the regression.<br />    **script** - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
+| details | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:<br />**planForceDetails**<br />    **queryId** - query\_id of the regressed query.<br />    **regressedPlanId** - plan_id of the regressed plan.<br />    **regressedPlanExecutionCount** - Number of execution of the query with regressed plan until the regression is detected.<br />    **regressedPlanAbortedCount**<br />    **regressedPlanCpuTimeAverage** - Average CPU time consumed by the regressed query until the regression is detected.<br />    **regressedPlanCpuTimeStddev** - Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />    **forcedPlanId** - plan_id of the plan that should be forced.<br />    **forcedPlanExecutionCount** - Number of execution of the query with the plan that should be forced until the regression is detected.<br />    **forcedPlanAbortedCount**<br />    **forcedPlanCpuTimeAverage** - Average CPU time consumed by the query executed with the plan that should be (calculated until the regression is detected).<br />    **forcedPlanCpuTimeStddev** Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />**implementationDetails**<br />    **method** - The method that should be used to correct the regression.<br />    **script** - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
   
 ## Remarks  
  Information returned by **sys.dm\_db\_tuning\_recommendations** is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling.  
+ Status fields that are shown in the [status] columns might have the following values:
+ | Status | Description |
+ |--------|-------------|
+ | Active | Recommendation is active and not yet aplied. User can take recommendation script and execute it manually or enable automatic tuning using ALTER DATABASE current SET AUTOMATIC\_TUNING (FORCE\_LAST\_GOOD\_PLAN = ON) statement. |
+ | Verifying | Recommendation is applied by [!INCLUDE[ssde_md](../../includes/ssde_md.md)] and internal verification process compares performance of the forced plan with the regressed plan. |
+ | Success | Recommendation is successfully applied. |
+ | Reverted | Recommendation is reverted because there are no significant performance gains. |
+ | Expired | Recommendation has expired and cannot be applied anymore. |
+
   
 ## Using tuning recommendations information  
  To convert the recommendation returned by **sys.dm\_db\_tuning\_recommendations** into an information that can be used to see the impact of recommendation and to get the T-SQL script that will fix the issue, you can use the following query:  
@@ -80,7 +88,6 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
 ## See Also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)
-
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
  

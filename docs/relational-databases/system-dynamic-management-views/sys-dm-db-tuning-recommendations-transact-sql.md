@@ -44,17 +44,18 @@ manager: "jhubbard"
 | is\_revertable\_action | bit | 1 = The recommendation can be automatically monitored and reverted by Database engine.0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will also be &quot;revertable&quot;. |
 | execute\_action\_start\_time | datetime2 | Date the recommendation is applied. |
 | execute\_action\_duration | time | Duration of the execute action. |
-| execute\_action\_initiated\_by | nvarchar(4000) | User or System |
+| execute\_action\_initiated\_by | nvarchar(4000) | User = User manually forced plan in the recommendation. <br /> System = System automatically applied recommendation. |
 | execute\_action\_initiated\_time | datetime2 | Date the recommendation is applied. |
 | revert\_action\_start\_time | datetime2 | Date the recommendation is reverted. |
 | revert\_action\_duration | time | Duration of the revert action. |
-| revert\_action\_initiated\_by | nvarchar(4000) | User or System |
+| revert\_action\_initiated\_by | nvarchar(4000) | User = User manually unforced recommended plan. <br /> System = System automatically reverted recommendation. |
 | revert\_action\_initiated\_time | datetime2 | Date the recommendation is reverted. |
 | score | int | Estimated value/impact for this recommendation on the 0-100 scale (the larger the better) |
-| details | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:<br />**planForceDetails**<br />    **queryId** - query\_id of the regressed query.<br />    **regressedPlanId** - plan_id of the regressed plan.<br />    **regressedPlanExecutionCount** - Number of execution of the query with regressed plan until the regression is detected.<br />    **regressedPlanAbortedCount**<br />    **regressedPlanCpuTimeAverage** - Average CPU time consumed by the regressed query until the regression is detected.<br />    **regressedPlanCpuTimeStddev** - Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />    **forcedPlanId** - plan_id of the plan that should be forced.<br />    **forcedPlanExecutionCount** - Number of execution of the query with the plan that should be forced until the regression is detected.<br />    **forcedPlanAbortedCount**<br />    **forcedPlanCpuTimeAverage** - Average CPU time consumed by the query executed with the plan that should be (calculated until the regression is detected).<br />    **forcedPlanCpuTimeStddev** Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />**implementationDetails**<br />    **method** - The method that should be used to correct the regression.<br />    **script** - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
+| details | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:<br />**planForceDetails**<br />    **queryId** - query\_id of the regressed query.<br />    **regressedPlanId** - plan_id of the regressed plan.<br />    **regressedPlanExecutionCount** - Number of execution of the query with regressed plan until the regression is detected.<br />    **regressedPlanAbortedCount**<br />    **regressedPlanCpuTimeAverage** - Average CPU time consumed by the regressed query until the regression is detected.<br />    **regressedPlanCpuTimeStddev** - Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />    **forcedPlanId** - plan_id of the plan that should be forced.<br />    **forcedPlanExecutionCount** - Number of execution of the query with the plan that should be forced until the regression is detected.<br />    **forcedPlanAbortedCount**<br />    **forcedPlanCpuTimeAverage** - Average CPU time consumed by the query executed with the plan that should be (calculated until the regression is detected).<br />    **forcedPlanCpuTimeStddev** Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />**implementationDetails**<br />    **method** - The method that should be used to correct the regression. Value is always **TSql**.<br />    **script** - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
   
 ## Remarks  
- Information returned by **sys.dm\_db\_tuning\_recommendations** is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling.  
+ Information returned by **sys.dm\_db\_tuning\_recommendations** is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 
+
  Status fields that are shown in the [status] columns might have the following values:
  | Status | Description |
  |--------|-------------|
@@ -81,6 +82,8 @@ JSON document in [status] column contains the reasome that describes why is the 
 | PlanForcedByUser| User manually forced the plan using [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure. |
 | PlanUnforcedByUser | User manually unforced the plan using [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) procedure. |
 
+ Statistic in the details column do not show runtime plan statistics (for example, current CPU time). These information are taken at the time of regression detection and describe why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified performance regression. Use **regressedPlanId** and **forcedPlanId** to query Query Store catalog views to find exact runtime plan statistics.
+
 ## Using tuning recommendations information  
  To convert the recommendation returned by **sys.dm\_db\_tuning\_recommendations** into an information that can be used to see the impact of recommendation and to get the T-SQL script that will fix the issue, you can use the following query:  
  
@@ -96,7 +99,7 @@ FROM sys.dm_db_tuning_recommendations
 WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
 ```
   
- For more information about JSON funcitons that can be used to query values in the recommendaiton view, see [JSON](../../relational-databases/json/index.md).
+ For more information about JSON funcitons that can be used to query values in the recommendaiton view, see [JSON Support](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   

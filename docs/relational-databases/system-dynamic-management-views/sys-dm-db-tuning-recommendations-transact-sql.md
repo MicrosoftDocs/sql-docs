@@ -39,7 +39,7 @@ manager: "jhubbard"
 | reason | nvarchar(4000) | Reason why this recommendation was provided. |
 | valid\_since | datetime2 | The first time this recommendation was generated |
 | last\_refresh | datetime2 | The last time this recommendation was generated |
-| state | nvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:<br />   **currentValue** (Active, Verifying, Success, Reverted, and Expired)<br />   **reason** – code that describes why the recommendation is in the current state (SchemaChanged, StatisticsChanged, ForcingFailed, OptionRecompile, AutomaticTuningOptionDisabled, UnsupportedStatementType, PlanUnforcedByUser, LastGoodPlanForced, AutomaticTuningOptionNotEnabled, VerificationAborted, VerificationforcedQueryRecompile, PlanForcedByUser, PlanUnforcedByUser)|
+| state | nvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:<br />   **currentValue** (Active, Verifying, Success, Reverted, and Expired)<br />   **reason** – code that describes why the recommendation is in the current state.|
 | is\_executable\_action | bit | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
 | is\_revertable\_action | bit | 1 = The recommendation can be automatically monitored and reverted by Database engine.0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will also be &quot;revertable&quot;. |
 | execute\_action\_start\_time | datetime2 | Date the recommendation is applied. |
@@ -64,7 +64,23 @@ manager: "jhubbard"
  | Reverted | Recommendation is reverted because there are no significant performance gains. |
  | Expired | Recommendation has expired and cannot be applied anymore. |
 
-  
+JSON document in [status] column contains the reasome that describes why is the recommendaiton in the current state. Values in the reason field might be: 
+
+| Reason | Description |
+|--------|-------------|
+| SchemaChanged | Recommendation expired because the schema of a referenced table is changed. |
+| StatisticsChanged| Recommendation expired due to the statistic change on a referenced table. |
+| ForcingFailed | Recommended plan cannot be forced on a query. Find the **last\_force\_failure\_reason** in the [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) view to find the reason of the failure. | 
+| OptionRecompile| Recommendation expired because user executed the regressed query with OPTION(RECOMPILE). Plan is recompiled by [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. |
+| AutomaticTuningOptionDisabled | FORCE\_LAST\_GOOD\_PLAN option is disabled by the user during verification process. Enable FORCE\_LAST\_GOOD\_PLAN option using [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement or force the plan manually using the script in **details** column. |
+| UnsupportedStatementType| Plan cannot be forced on the query. Examples of unsupported queries are cursors and INSERT BULK statement. |
+| LastGoodPlanForced | Recommendation is successfully applied. |
+| AutomaticTuningOptionNotEnabled| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified potential performance regression, but the FORCE\_LAST\_GOOD\_PLAN option is not enabled – see [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Apply recommendation manually or enable FORCE\_LAST\_GOOD\_PLAN option. |
+| VerificationAborted| Verification process is aborted due to the restart or Query Store cleanup. |
+| VerificationForcedQueryRecompile| Query is recompiled because there is no significant performance improvement. |
+| PlanForcedByUser| User manually forced the plan using [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure. |
+| PlanUnforcedByUser | User manually unforced the plan using [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) procedure. |
+
 ## Using tuning recommendations information  
  To convert the recommendation returned by **sys.dm\_db\_tuning\_recommendations** into an information that can be used to see the impact of recommendation and to get the T-SQL script that will fix the issue, you can use the following query:  
  
@@ -80,7 +96,7 @@ FROM sys.dm_db_tuning_recommendations
 WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
 ```
   
- For more information about memory-optimized indexes, see [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
+ For more information about JSON funcitons that can be used to query values in the recommendaiton view, see [JSON](../../relational-databases/json/index.md).
   
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   

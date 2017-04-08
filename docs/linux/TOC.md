@@ -23,6 +23,7 @@
 ## [Use SSMS to manage](sql-server-linux-manage-ssms.md)
 ## [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
 ## [Create and run jobs](sql-server-linux-run-sql-server-agent-job.md)
+## [Use log shipping](sql-server-linux-use-log-shipping.md)
 # [Migrate](sql-server-linux-migrate-overview.md)
 ## [Restore from Windows](sql-server-linux-migrate-restore-database.md)
 ## [Export and import a BACPAC with SqlPackage](sql-server-linux-migrate-sqlpackage.md)

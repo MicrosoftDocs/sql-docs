@@ -2,7 +2,7 @@
 title: "Known Issues for SQL Server R Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/10/2017"
+ms.date: "04/09/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,27 +16,50 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Known Issues for SQL Server R Services
-  This topic describes limitations and issues with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] and its related components in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+# Known Issues for Machine Learning Services  
+
+This topic describes limitations and known issues with the following machine learning components that are provided as an option in SQL Server 2016 and SQL Server vNext.  
+
++ SQL Server 2016
+
+  - R Services (In-Database)
+  - Microsoft R Server (Standalone)
+
++ SQL Server vNext
+
+  - Machine Learning Services for R (In-Database)
+  - Machine Learning Services for Python (In-Database)
+  - Machine Learning Services for R (Standalone)
+
+## Setup and configuration issues 
+
+Additional guidance related to initial setup and configuration are listed here: [ Upgrade and Installation FAQ](../../advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md).  
   
-> [!NOTE]
-> Additional issues related to initial setup and configuration are listed here: [ Upgrade and Installation FAQ](../../advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md).  
-  
-## R Services (In-Database)  
- This section lists issues specific to the feature of the database engine that supports R integration.  
+The articles contains details on how to upgrade from previous versions, including earlier versions of the Revolution Analytics tools and libraries, side-by-side installation, and solutions for some common problems related to installing and uninstalling the R features. 
+
+### License agreement for machine learning components required for unattended installs  
+
+ If you use the command line to install an instance of SQL Server 2016 or SQL Server vNext, and add the feature that supports use of external languages such as R or Python, you must add a separate licensing agreement parameter to the command line arguments for each language that you install.  
+
++ For R: */IACCEPTROPENLICENSEAGREEMENT* 
++ For R: */IACCEPTPYTHONLICENSEAGREEMENT* 
+
+Failure to use the correct argument will cause [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to fail. 
 
 ### Install latest service release to ensure compatibility with Microsoft R Client
 
-If you install the latest version of Microsoft R Client and use it to run R on SQL Server using a remote compute context, you might get the following error:
+If you install the latest version of Microsoft R Client and use it to run R on SQL Server using a remote compute context, you might get an error like the following:
 
-*You are running version 9.0.0 of Microsoft R client on your computer, which is incompatible with the Microsoft R server version 8.0.3. Download and install a compatible version.*
+*You are running version 9.x.x of Microsoft R client on your computer, which is incompatible with the Microsoft R Server version 8.x.x. Download and install a compatible version.*
 
-Typically, the version of R that is installed with SQL Server R Services is updated when service releases are published. To ensure that you always have the most up-to-date versions of R components, install all service packs. For compatibility with Microsoft R Client 9.0.0, you must install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262). 
+In SQL Server 2016, it was required that the R libraries on the client exactly match the R libraries on the server. Although that restriction has been removed for releases later than R Server 9.0.1, if you are using the RTM version of SQL Server 2016, you need to verify that your R clietn and server use the same versions.
+
+Typically, the version of R that is installed with SQL Server R Services is updated when SQL Server service releases are published. To ensure that you always have the most up-to-date versions of R components, you should install all service packs. For compatibility with Microsoft R Client 9.0.0, you must install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262). 
+
+Another option is to upgrade the version of the R libraries installed on the server, by changing to the Modern Lifecycle policy as described in [this section](#bkmk_sqlbindr). When you do so, the version of R installed with SQL Server is updated on the same schedule that updates are published for Microsoft R Server, ensuring that both server and client can always have the latest releases of Microsoft R. 
   
-### New license agreement for R components required for unattended installs  
- If you use the command line to install an instance of SQL Server that has [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] installed, you must edit the command line to use the new license agreement parameter, */IACCEPTROPENLICENSEAGREEMENT*. Failure to use the correct argument can cause [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to fail.  
   
-### Warning of incompatible version when connecting to older version of SQL Server  R Services from a client using [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
+### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when connecting to older version of SQL Server R Services from a client using [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
 
 If you installed Microsoft R Server on a client computer using the setup wizard for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] or the new standalone installer for [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-install-windows), and run R code in a compute context that uses an earlier version of SQL Server R Services, you might see an error like the following:
 
@@ -52,7 +75,7 @@ As a workaround, you can install the service release by using the command line a
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-To get the latest CAB files, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
+To get the latest CAB files, see [Installing R Components without Internet Access](installing-ml-components-without-internet-access.md).
 
 ### SQLRUserGroup for Launchpad must have an account in the SQL Server instance
 
@@ -86,7 +109,7 @@ For example, this error might occur if you install the database engine using the
 
 To avoid this problem, make sure that all components have the same version number. If you upgrade one component, be sure to apply the same upgrade to all other installed components.
 
-To view a list of the R version numbers required for each release of SQL Server 2016, see [Installing R components without Internet Access](../../advanced-analytics/ml-services/installing-r-components-without-internet-access.md).
+To view a list of the R version numbers required for each release of SQL Server 2016, see [Installing R components without Internet Access](../r-services/installing-ml-components-without-internet-access.md).
 
 
 ### Service account for LaunchPad requires permission Replace Process Level Token
@@ -105,6 +128,60 @@ When you run R jobs from a remote data science workstation using Windows integra
 To fix the issue, we recommend that you upgrade to a later service release.
 
 If you cannot upgrade, you can use a SQL login to run remote R jobs that might require embedded ODBC calls. 
+
+### Multiple R libraries and executables are installed if you install both Standalone and In-Database features 
+
+!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup includes the option to install Microsoft R Server (Standalone). The Microsoft R Server (Standalone) option can be used in Enterprise Edition  to install a standalone Windows server that supports R but that does not require interactivity with SQL Server.
+
+However, this standalone option is **not** required in order to use R with [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+
+Moreover, we recommend that you **do not** install both the In-database and Standalone features on the SQL Server computer.
+If you need to set up client tools capable of connecting to R In-Database, we recommend [Microsoft R Client](http://go.microsoft.com/fwlink/?LinkId=799768). 
+
+If you install both features (In-Database and Standalone) on the SQL Server computer, be aware that separate copies of the R libraries and R tools will be created for each instance of SQL Server that uses R, and another copy of the R libraries and tools for the Standalone install.  Therefore, if you installed R for both the default instance and a named instance of SQL Server, and the R Server (Standalone), you might have three instances of R on the same computer:  
+
+-   **SQL Server 2016**
+
+    + R Services, default instance: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES`
+    + R Services, named instance:  `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`
+    + R Server Standalone: `C:\Program Files\Microsoft SQL Server\130\R_SERVER`   
+  
+-   **SQL Server vNext:**
+    + Machine Learning Services, default instance: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES`
+    + Machine Learning Services, named instance:  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`
+    + Machine Learning Server Standalone: `C:\Program Files\Microsoft SQL Server\140\R_SERVER`   
+
+> [!NOTE] 
+> If you install R Server (Standalone), by default the R libraries and tools are installed by default in `C:\Program Files\Microsoft SQL Server\140\R_SERVER`. However, if you install R Server using the separate Windows installer, the libraries are installed in `C:\Program Files\Microsoft\R Server\R_SERVER`. For more information, see [Install R Server 9.0.1 for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows).
+
+Having multiple copies of the R tools and libraries can lead to confusion when you are trying to install new R packages or test your code. If you are developing solution that are meant to be run in SQL Server, we recommend the following:
+
++ Use the R libraries and tools associated with the database instance only from the context of [!INCLUDE[tsql](../../includes/tsql-md.md)], to avoid resource contention. 
++ Work from a remote client and install your R development environment and the Microsoft R libraries on that computer. Connect to SQL Server to run your code using a SQL Server compute context. 
+
+### Performance limits when R libraries are called from standalone R tools
+
+It is possible to call the R tools and libraries that are installed for SQL Server R Services from an external R application such as RGui. This might be handy when you are installing new packages, or running ad hoc tests on very short code samples.
+
+However, be aware that outside of SQL Server, performance will be limited. For example, even if you have purchased the Enterprise Edition of SQL Server, R will run in single-threaded mode when you run your R code using external tools. Performance will be superior if you run your R code by initiating a SQL Server connection and using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), which will call the R libraries for you.
+
++ Avoid calling the R libraries used by SQL Server from external R tools. 
++ If you need to run extensive R code on the SQL Server computer without using SQL server, install a separate instance of R such as Microsoft R  Client, and then ensure that your R development tools point to the new library. 
+
+For more information, see [Create a Standalone R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md).  
+
+  
+### Resource governance default values  
+In Enterprise Edition, you can use resource pools to manage external script processes. In some early release builds, the maximum memory that could be allocated to the R processes was 20%. Therefore, if the server had 32GB of RAM, the R executables (RTerm.exe and BxlServer.exe) could use a maximum 6.4GB in a single request. 
+
+If you encounter resource limitations, check the current default, and if 20% is not enough, see the documentation for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on how to change this value.  
+
+
+## R Code Execution and Package or Function Issues
+
+This section contains known issues that are specific to running R on SQL Server, as well as some issues related to the R libraries and tools published by Microsoft, including RevoScalerR.
+
+For additional known issues that might affect R solutions, see the Microsoft R Server site:  [Known Issues with Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-known-issues)
 
 ### Limitations on processor affinity for R jobs 
  
@@ -127,11 +204,8 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 This issue will be fixed in a later release. 
 
 As a workaround, you can rewrite the SQL query to use CAST or CONVERT and present the data to R using the correct data type. In general, it is better for performance to work with data using SQL rather than changing data in the R code.
-  
-### Resource governance default values  
-In Enterprise Edition, you can use resource pools to manage external script processes. In some  builds, the maximum memory that could be allocated to the R processes was 20%. Therefore, if the server had 32GB of RAM, the R executables (RTerm.exe and BxlServer.exe) could use a maximum 6.4GB in a single request. 
 
-If you encounter resource limitations, check the current default, and if 20% is not enough, see the documentation for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on how to change this value.  
+
 
 ### Avoid clearing workspaces when executing R code in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compute context  
  If you use the R command to clear your workspace of objects while running R code in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compute context, or if you clear the workspace as part of an R script called by using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), you might get this error: *workspace object 'revoScriptConnection' not found*
@@ -151,47 +225,13 @@ As a workaround, avoid indiscriminate clearing of variables and other objects wh
 -   Data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query that references masked columns.  
   
      If you need to use masked data in an R script, a possible workaround is to make a copy of the data in a temporary table and use that data instead.  
-   
-  
-## Microsoft R Server (Standalone)  
- This section lists issues specific to the standalone version of Microsoft R Server. 
-  
-### Multiple R libraries and executables are installed if you install both Standalone and In-Database  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup includes the option to install Microsoft R Server (Standalone). The Microsoft R Server (Standalone) option can be used in Enterprise Edition  to install a standalone Windows server that supports R but that does not require interactivity with SQL Server.    
 
-> [!TIP]
-> This standalone option is **not** required in order to use R with [!INCLUDE[tsql](../../includes/tsql-md.md)].
-> 
-> If you need to set up a data science client computer capable of connecting to either [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] or to the Microsoft R Server (Standalone), we recommend [Microsoft R Client](http://go.microsoft.com/fwlink/?LinkId=799768).  
+### Arguments *varsToKeep* and *varsToDrop* not supported for SQL Server data sources   
 
-If you do install both R Services (In-Database) and Microsoft R Server (Standalone) on the same computer, be aware that a separate R instance will be created for each instance of SQL Server that has R enabled, as well as a separate instance of R for Microsoft R Server (Standalone).  For example, if you installed the default instance and a named instance, and the R Server (Standalone), you might have three instances of R on the same computer:  
-  
--   **Standalone:** C:\Program Files\Microsoft SQL Server\130\R_SERVER  
-  
--   **Default instance:** C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES  
-  
--   **Named instance:** C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES  
-  
-> [!NOTE] 
-> Use the R libraries and tools that are associated with a database instance only from the context of [!INCLUDE[tsql](../../includes/tsql-md.md)]. If you need to run R using other R tools, be sure to reference the R libraries used by R Server (Standalone), which are installed by default in C:\Program Files\Microsoft SQL Server\130\R_SERVER.  
+When you use the rxDataStep function to write results to a table, using the *varsToKeep* and *varsToDrop* is a handy way of specifying the columns to include or exclude as part of the operation. Currently, these arguments are not supported for SQL Server data sources. 
 
-### Performance limits when R Services libraries are called from standalone R tools
+This limitation will be removed in a later release.
 
-The R libraries used by SQL Server R Services are installed by default to C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES. 
-It is *possible* to call the R tools and libraries that are installed for SQL Server R Services from an external R application such as RGui. 
-
-However, if you do so, performance will be limited. For example, even if you have purchased the Enterprise Edition of SQL Server, R will run in single-threaded mode if you run your R code using external tools. Performance will be superior if you run your R code by initiating a SQL Server connection and using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), which will call the R Services libraries for you.
-
-+ Avoid calling the R libraries used by SQL Server from external R tools. 
-+ If you need to run R on the SQL Server computer by using external tools, you should install a separate instance of R, and then ensure that your R tools point to the new library. 
-+ If you are using Enterprise Edition, we recommend that you install Microsoft R Server (Standalone) on the SQL Server computer. Then, from the external tool that you use to run R code, reference the libraries for R Server, which are installed by default in C:\Program Files\Microsoft SQL Server\<version number>\R_SERVER. 
-
-For more information, see [Create a Standalone R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md).  
-  
-  
-## General R Issues  
-
- This section lists issues specific to the R connectivity and performance tools.  
   
 ### Limited support for SQL data types in sp_execute_external_script  
 
@@ -251,25 +291,6 @@ g <- function(y){
   
 ```  
 
-  
-## Revolution R Enterprise and Microsoft R Open 
- 
- This section lists issues specific to R connectivity, development, and performance tools provided by Revolution Analytics. These tools were provided in earlier pre-release versions of  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
-
-In general, we recommend that you uninstall these previous versions and install the latest version of SQL Server R Services, Microsoft R Server, or Microsoft R Client.
-  
-### Running side by side versions of Revolution R Enterprise  
-
- Installing Revolution R Enterprise  with side by side with any version of [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] is not supported.  
-  
- If you have a license to use a different version of Revolution R Enterprise, you must put it on a separate computer from both the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and any workstation that you want to use to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
-  
-### Limited support for RevoScaleR rxExec  
-
- As of RC0, the `rxExec` function provided by [!INCLUDE[rsql_rre-short](../../includes/rsql-rre-short-md.md)] can be used only in single-threaded mode.  
-  
- Parallelism for `rxExec` across multiple processes will be added in an upcoming release.  
-  
 ### Data import and manipulation using RevoScaleR  
 
  When reading **varchar** columns from a database, white space will be trimmed. To prevent this, enclose strings in non-white-space characters.  
@@ -277,6 +298,14 @@ In general, we recommend that you uninstall these previous versions and install 
  When using functions such as `rxDataStep` to create database tables with **varchar** columns, the column width is estimated based on a sample of the data. If the width can vary, it may be necessary to pad all strings to a common length.  
   
  Using a transform to change a variable's data type is not supported when repeated calls to `rxImport` or `rxTextToXdf` are used to import and append rows, combining multiple input files into a single .xdf file.  
+
+  
+### Limited support for rxExec  
+
+In SQL Server 2016, the `rxExec` function provided by the RevoScaleR package can be used only in single-threaded mode.  
+  
+ Parallelism for `rxExec` across multiple processes will be added in an upcoming release.  
+
   
 ### Increase maximum parameter size to support rxGetVarInfo  
 
@@ -294,12 +323,25 @@ R --max-ppsize=500000
 RevoIDE.exe /RCommandLine --max-ppsize=500000  
 ```  
   
-### Issues with rxDTree function  
+### Issues with the rxDTree function  
 
  The `rxDTree` function does not currently support in-formula transformations. In particular, using the `F()` syntax for creating factors on the fly is not supported. However, numeric data will be automatically binned.  
   
  Ordered factors are treated the same as factors in all RevoScaleR analysis functions except `rxDTree`.  
+
+
+## Revolution R Enterprise and Microsoft R Open 
+ 
+This section lists issues specific to R connectivity, development, and performance tools provided by Revolution Analytics. These tools were provided in earlier pre-release versions of  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+
+In general, we recommend that you uninstall these previous versions and install the latest version of SQL Server or Microsoft R Server. 
   
+### Running side by side versions of Revolution R Enterprise  
+
+ Installing Revolution R Enterprise  with side by side with any version of [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] is not supported.  
+  
+ If you have a license to use a different version of Revolution R Enterprise, you must put it on a separate computer from both the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and any workstation that you want to use to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+
 ### Using the R Productivity Environment  
 
 Some prerelease versions of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] included an R development environment for Windows that was created by Revolution Analytics. 

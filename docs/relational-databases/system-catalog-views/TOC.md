@@ -168,7 +168,6 @@
 ## [sys.periods](sys-periods-transact-sql.md)  
 ## [sys.plan_guides](sys-plan-guides-transact-sql.md)  
 ## [sys.procedures](sys-procedures-transact-sql.md)  
-## [sys.resumable_index_operations](sys-resumable-index-operations.md)
 ## [sys.sequences](sys-sequences-transact-sql.md)  
 ## [sys.server_assembly_modules](sys-server-assembly-modules-transact-sql.md)  
 ## [sys.server_events](sys-server-events-transact-sql.md)  
@@ -326,7 +325,6 @@
 # Stretch Database
 ## [sys.remote_data_archive_databases](stretch-database-catalog-views-sys-remote-data-archive-databases.md)  
 ## [sys.remote_data_archive_tables](stretch-database-catalog-views-sys-remote-data-archive-tables.md)
-
 
 # [XML Schemas (XML Type System)](xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
 ## [sys.column_xml_schema_collection_usages](sys-column-xml-schema-collection-usages-transact-sql.md)  

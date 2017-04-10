@@ -60,13 +60,13 @@ manager: "jhubbard"
   
 > **NOTE:** To connect directly to an instance of the legacy Integration Services Service, you have to use the version of SQL Server Management Studio (SSMS) aligned with the version of SQL Server on which the Integration Services Service is running. For example, to connect to the legacy Integration Services Service running on an instance of SQL Server 2016, you have to use the version of SSMS released for SQL Server 2016. [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
 >
->   In the SSMS **Connect to Server** dialog box, you cannot enter the name of a server on which an earlier version of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is running. However, to manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/configuring-the-integration-services-service-ssis-service.md).  
+>   In the SSMS **Connect to Server** dialog box, you cannot enter the name of a server on which an earlier version of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is running. However, to manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server.   
   
  You can only install a single instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on a computer. The service is not specific to a particular instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. You connect to the service by using the name of the computer on which it is running.  
   
  You can manage the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service by using one of the following Microsoft Management Console (MMC) snap-ins: SQL Server Configuration Manager or Services. Before you can manage packages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must make sure that the service is started.  
   
- By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is configured to manage packages in the msdb database of the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that is installed at the same time as [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. If an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is not installed at the same time, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is configured to manage packages in the msdb database of the local, default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. To manage packages that are stored in a named or remote instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or in multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], you have to modify the configuration file for the service. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/configuring-the-integration-services-service-ssis-service.md).  
+ By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is configured to manage packages in the msdb database of the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] that is installed at the same time as [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. If an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is not installed at the same time, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is configured to manage packages in the msdb database of the local, default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. To manage packages that are stored in a named or remote instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or in multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], you have to modify the configuration file for the service.
   
  By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is configured to stop running packages when the service is stopped. However, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service does not wait for packages to stop and some packages may continue running after the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is stopped.  
   
@@ -76,21 +76,13 @@ manager: "jhubbard"
   
  The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service writes to the Windows event log. You can view service events in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can also view service events by using the Windows Event Viewer.  
   
-### To set properties of Integration Services service using the Services snap-in  
-  
--   [Set the Properties of the Integration Services Service](../../integration-services/service/set-the-properties-of-the-integration-services-service.md)  
-  
-### To view service events for Integration Services service  
-  
--   [View Events for the Integration Services Service](../../integration-services/service/view-events-for-the-integration-services-service.md)  
-
 ## Set the properties of the service
   
  The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service manages and monitors packages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. When you first install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is started and the startup type of the service is set to automatic.  
   
  After the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service has been installed, you can set the properties of the service by using either SQL Server Configuration Manager or the Services MMC snap-in.  
   
- To configure other important features of the service, including the locations where it stores and manages packages, you must modify the configuration file of the service. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/configuring-the-integration-services-service-ssis-service.md).  
+ To configure other important features of the service, including the locations where it stores and manages packages, you must modify the configuration file of the service.
   
 ### To set properties of the Integration Services service by using SQL Server Configuration Manager  
   
@@ -254,7 +246,7 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
  The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service loads the configuration file when the service is started. Any changes to the Registry entry require that the service be restarted.  
 
 ## Connect to the local service
-  Before you connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, the administrator must grant you access to the service. For more information, see [Grant Permissions to Integration Services Service](../../integration-services/service/grant-permissions-to-integration-services-service.md).  
+  Before you connect to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, the administrator must grant you access to the service. 
   
 ### To connect to the Integration Services Service  
   
@@ -275,7 +267,7 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
 > [!IMPORTANT]
 > To connect directly to an instance of the legacy Integration Services Service, you have to use the version of SQL Server Management Studio (SSMS) aligned with the version of SQL Server on which the Integration Services Service is running. For example, to connect to the legacy Integration Services Service running on an instance of SQL Server 2016, you have to use the version of SSMS released for SQL Server 2016. [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
 >
->  To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/configuring-the-integration-services-service-ssis-service.md).  
+>  To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server.
   
 ### Connecting to Integration Services on a Remote Server  
   
@@ -355,7 +347,7 @@ For more info, see [Getting Cross Domain Kerberos and Delegation working with SS
  The Windows firewall system helps prevent unauthorized access to computer resources over a network connection. To access [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] through this firewall, you have to configure the firewall to enable access.  
   
 > [!IMPORTANT]  
->  To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/configuring-the-integration-services-service-ssis-service.md).  
+>  To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server.
   
  The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service uses the DCOM protocol. For more information about how the DCOM protocol works through firewalls, see the article, "[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)," in the MSDN Library.  
   

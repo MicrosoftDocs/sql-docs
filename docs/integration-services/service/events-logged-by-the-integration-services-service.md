@@ -38,7 +38,7 @@ manager: "jhubbard"
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Service stopped.%nServer version %1|The service stopped.|  
   
 ## Settings file messages  
- Settings for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service are stored in an XML file that you can modify. For more information, see [Configuring the Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/configuring-the-integration-services-service-ssis-service.md).  
+ Settings for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service are stored in an XML file that you can modify. For more information, see [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 |Event ID|Symbolic Name|Text|Notes|  
 |--------------|-------------------|----------|-----------|  

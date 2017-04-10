@@ -293,7 +293,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
  For more information about single-user mode, see [Set a Database to Single-user Mode](../../relational-databases/databases/set-a-database-to-single-user-mode.md). For information about encryption and encryption algorithms in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the topics in the section, [SQL Server Encryption](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
- A database master key is used for the encryption. The key is created when you create the catalog. For more information, see [Create the SSIS Catalog](../../integration-services/service/create-the-ssis-catalog.md).  
+ A database master key is used for the encryption. The key is created when you create the catalog.  
   
  The following table lists the property names shown in the **Catalog Properties** dialog box and the corresponding properties in the database view.  
   
@@ -493,8 +493,6 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
  You can also view catalog properties in the catalog.catalog_property view, and set the properties by using the catalog.configure_catalog stored procedure. For more information, see [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) and [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
- For information on how to create the SSISDB catalog, see [Create the SSIS Catalog](../../integration-services/service/create-the-ssis-catalog.md).  
-  
  **What do you want to do?**  
   
 -   [Open the Catalog Properties Dialog Box](#open_dialog)  
@@ -527,7 +525,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 -   You restored the database from an older version of SQL Server.  
   
--   You did not remove the database from an Always On Availability Group before upgrading the SQL Server instance. This prevents the automatic upgrade of the database. For more info, see [Upgrading SSISDB in an availability group](../../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Upgrade).  
+-   You did not remove the database from an Always On Availability Group before upgrading the SQL Server instance. This prevents the automatic upgrade of the database. For more info, see [Upgrading SSISDB in an availability group](#Upgrade).  
   
  The wizard can only upgrade the database on a local  server instance.  
   
@@ -564,13 +562,13 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
  > [!IMPORTANT]
  > When a failover occurs, packages that were running do not restart or resume. 
  
- **In this topic:**  
+ **In this section:**  
   
-1.  [Prerequisites](../../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#prereq)  
+1.  [Prerequisites](#prereq)  
   
-2.  [Configure SSIS support for Always On](../../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Firsttime)  
+2.  [Configure SSIS support for Always On](#Firsttime)  
   
-3.  [Upgrading SSISDB in an availability group](../../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Upgrade)  
+3.  [Upgrading SSISDB in an availability group](#Upgrade)  
   
 ###  <a name="prereq"></a> Prerequisites  
  You must perform the following pre-requisite steps before enabling Always On support for the SSISDB database.  
@@ -583,11 +581,11 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 ###  <a name="Firsttime"></a> Configure SSIS support for Always On  
   
--   [Step 1: Create Integration Services Catalog](../../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Step1)  
+-   [Step 1: Create Integration Services Catalog](#Step1)  
   
--   [Step 2: Add SSISDB to an Always On Availability Group](../../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Step2)  
+-   [Step 2: Add SSISDB to an Always On Availability Group](#Step2)  
   
--   [Step 3: Enable SSIS support for Always On](../../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Step3)  
+-   [Step 3: Enable SSIS support for Always On](#Step3)  
   
 > [!IMPORTANT]  
 >  -   You must perform these steps on the **primary node** of the availability group.  

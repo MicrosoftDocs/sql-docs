@@ -32,11 +32,12 @@ manager: "jhubbard"
 -   Nonunique nonclustered indexes can be created online when the table contains LOB data types but none of these columns are used in the index definition as either key or nonkey (included) columns.  
   
 -   Indexes on local temp tables cannot be created, rebuilt, or dropped online. This restriction does not apply to indexes on global temp tables.
+- Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). This feature is in public preview for SQL Server 2017.
 
 > [!NOTE]  
 >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- The following table shows the index operations that can be performed online, the indexes that are excluded from these online operations. Additional restrictions are also included.  
+ The following table shows the index operations that can be performed online, the indexes that are excluded from these online operations, and resumable index restrictions. Additional restrictions are also included.  
   
 | Online index operation | Excluded indexes | Other restrictions |  
 |----------------------------|----------------------|------------------------|  
@@ -82,7 +83,7 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
   
 ## Transaction Log Considerations  
  Large-scale index operations, performed offline or online, can generate large data loads that can cause the transaction log to quickly fill. To make sure that the index operation can be rolled back, the transaction log cannot be truncated until the index operation has been completed; however, the log can be backed up during the index operation. Therefore, the transaction log must have sufficient space to store both the index operation transactions and any concurrent user transactions for the duration of the index operation. For more information, see [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
- 
+
 ## Related Content  
  [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)  
   

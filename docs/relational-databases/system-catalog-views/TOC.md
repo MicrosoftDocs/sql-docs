@@ -168,6 +168,7 @@
 ## [sys.periods](sys-periods-transact-sql.md)  
 ## [sys.plan_guides](sys-plan-guides-transact-sql.md)  
 ## [sys.procedures](sys-procedures-transact-sql.md)  
+## [sys.resumable_index_operations](sys-resumable-index-operations.md)
 ## [sys.sequences](sys-sequences-transact-sql.md)  
 ## [sys.server_assembly_modules](sys-server-assembly-modules-transact-sql.md)  
 ## [sys.server_events](sys-server-events-transact-sql.md)  
@@ -342,3 +343,4 @@
 ## [sys.xml_schema_types](sys-xml-schema-types-transact-sql.md)  
 ## [sys.xml_schema_wildcard_namespaces](sys-xml-schema-wildcard-namespaces-transact-sql.md)  
 ## [sys.xml_schema_wildcards](sys-xml-schema-wildcards-transact-sql.md)  
+

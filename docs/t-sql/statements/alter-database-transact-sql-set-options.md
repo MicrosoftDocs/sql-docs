@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 -   [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
   
- Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are **SET** options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
 >  Many database set options can be configured for the current session by using [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
@@ -261,7 +261,7 @@ SET
  CURRENT  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- CURRENT performs the action in the current database. CURRENT is not supported for all options in all contexts. If CURRENT fails, provide the database name.  
+ `CURRENT` performs the action in the current database. `CURRENT` is not supported for all options in all contexts. If `CURRENT` fails, provide the database name.  
   
  **\<auto_option> ::=**  
   
@@ -271,7 +271,7 @@ SET
  ON  
  The database is shut down cleanly and its resources are freed after the last user exits.  
   
- The database automatically reopens when a user tries to use the database again. For example, by issuing a USE *database_name* statement. If the database is shut down cleanly while AUTO_CLOSE is set to ON, the database is not reopened until a user tries to use the database the next time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is restarted.  
+ The database automatically reopens when a user tries to use the database again. For example, by issuing a `USE database_name` statement. If the database is shut down cleanly while AUTO_CLOSE is set to ON, the database is not reopened until a user tries to use the database the next time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is restarted.  
   
  OFF  
  The database remains open after the last user exits.  

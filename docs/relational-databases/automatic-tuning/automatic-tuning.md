@@ -57,7 +57,7 @@ Use the following query to obtain a script which will fix the issue:
 
 ```   
 SELECT description, score,
-      JSON_VALUE(details, '$.implementationDetails.TSql') correction_script,
+      JSON_VALUE(details, '$.implementationDetails.script') correction_script,
       planForceDetails.*
 FROM sys.dm_db_tuning_recommendations
   CROSS APPLY OPENJSON (Details, '$.planForceDetails')
@@ -94,7 +94,7 @@ FROM sys.database_automatic_tuning_options;
 | --- | --- | --- | --- | --- | --- | --- |
 | FORCE\_LAST\_GOOD\_PLAN | 1 | ON | 0 | ON | 0 | NULL |
 
-FORCE\_LAST\_GOOD\_PLAN option might be in OFF state even if the user specified ON. The option might be disabled if Query Store is disabled or in read-only mode. Columns `[actual_state` and `actual_state_desc` give information about the current state of automatic tuning option, and columns `reason_code` and `reason_desc` give information why is actual state diferent that desired state. Values in `reason_code` and `reason_desc` columns are shown in the following table:
+`FORCE\_LAST\_GOOD\_PLAN` option might be in `OFF` state even if the user specified `ON`. The option might be disabled if Query Store is disabled or in read-only mode. Columns `actual_state` and `actual_state_desc` give information about the current state of automatic tuning option, and columns `reason_code` and `reason_desc` give information why is actual state diferent that desired state. Values in `reason_code` and `reason_desc` columns are shown in the following table:
 
 | reason\_code | reason\_desc | Description |
 | --- | --- | --- |
@@ -104,6 +104,7 @@ FORCE\_LAST\_GOOD\_PLAN option might be in OFF state even if the user specified 
 | 13 | NOT\_SUPPORTED | Available only in Enterprise edition of SQL Server. |
 
 ## See Also  
- [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)[sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
+ [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
  [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)

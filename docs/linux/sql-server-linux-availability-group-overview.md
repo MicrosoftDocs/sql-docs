@@ -91,7 +91,7 @@ The following terms describe the main parts of a SQL Server Always On availabili
 
 ## Overview of Steps to Configure SQL Server Availability Group on Linux
 
-To configure a SQL Server Availability Group on Linux, first configure the availability group and then add it as a resource to a Linux cluster. The steps to configure the availability group are the same across Linux distributions. The tools to manage the cluster resources may be different, depending on the distribution. For specific steps, see [Next steps](#NextSteps). 
+To configure a SQL Server Availability Group on Linux, first configure the availability group and then add it as a resource to a Linux cluster. The steps to configure the availability group are the same across Linux distributions. The tools to manage the cluster resources may be different, depending on the distribution. For specific steps, see [Next steps](#next-steps). 
 
 ## New in SQL Server vNext for Availability Groups
 
@@ -107,7 +107,7 @@ For more information about these options, see [CREATE AVAILABILITY GROUP](http:/
 Use with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of synchronous secondary replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.
 
 
-## <a=NextSteps></a>Next steps
+## Next steps
 
 [Configure Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure.md)
 

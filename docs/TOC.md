@@ -23,4 +23,3 @@
 ## [SQL Server Management Studio (SSMS)](./ssms/toc.md)
 
 # [Whitepapers](./whitepapers/toc.md)
-

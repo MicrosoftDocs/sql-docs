@@ -47,8 +47,6 @@ manager: "jhubbard"
   
 ## Related Tasks  
   
--   [Create the SSIS Catalog](../../integration-services/service/create-the-ssis-catalog.md)  
-  
 -   [View the List of Packages on the Integration Services Server](../../integration-services/service/view-the-list-of-packages-on-the-integration-services-server.md)  
   
 -   [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md)  

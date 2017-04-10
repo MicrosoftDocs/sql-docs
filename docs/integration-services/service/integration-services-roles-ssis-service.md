@@ -90,7 +90,3 @@ manager: "jhubbard"
 -   [Assign a Reader and Writer Role to a Package](../../integration-services/service/assign-a-reader-and-writer-role-to-a-package.md)  
   
 -   [Create a User-Defined Role](../../integration-services/service/create-a-user-defined-role.md)  
-  
--   [Connect to Integration Services](../../integration-services/service/connect-to-integration-services.md)  
-  
-  

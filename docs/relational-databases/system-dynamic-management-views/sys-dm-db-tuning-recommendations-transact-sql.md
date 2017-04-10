@@ -26,7 +26,7 @@ ms.author: "jovanpop-msft"
 manager: "jhubbard"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)] 
 
   Returns detailed information about tuning recommendations.  
   

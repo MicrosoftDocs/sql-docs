@@ -19,7 +19,7 @@ ms.author: "jovanpop"
 manager: "jhubbard"
 ---
 # Automatic tuning
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
   Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems.
 
@@ -98,10 +98,10 @@ FROM sys.database_automatic_tuning_options;
 
 | reason\_code | reason\_desc | Description |
 | --- | --- | --- |
-| 2 | DISABLED | Option is disabled by system. |
-| 11 | QUERY\_STORE\_OFF | Query Store is turned off. |
-| 12 | QUERY\_STORE\_READ\_ONLY | Query Store is in read-only mode. |
-| 13 | NOT\_SUPPORTED | Available only in Enterprise edition of SQL Server. |
+| 2 | `DISABLED` | Option is disabled by system. |
+| 11 | `QUERY_STORE_OFF` | Query Store is turned off. |
+| 12 | `QUERY_STORE_READ_ONLY` | Query Store is in read-only mode. |
+| 13 | `NOT_SUPPORTED` | Available only in Enterprise edition of SQL Server. |
 
 ## See Also  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

@@ -1,7 +1,7 @@
 ---
 title: "CREATE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/18/2016"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -75,22 +75,13 @@ For [!INCLUDE[ssSDS](../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../
  Requires CONTROL permission on the database.  
   
 ## Examples  
- The following example creates a database master key for the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The key is encrypted using the password `23987hxJ#KL95234nl0zBe`.  
+ The following example creates a database master key for the current database. The key is encrypted using the password `23987hxJ#KL95234nl0zBe`.  
   
 ```  
--- Uses AdventureWorks  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
 GO  
 ```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example creates a master key. The key is encrypted using the password `23987hxJ#KL95234nl0zBe`.  
-  
-```  
-USE master;  
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';  
-GO  
-```  
+
   
 ## See Also  
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   

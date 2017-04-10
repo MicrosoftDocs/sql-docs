@@ -24,8 +24,8 @@ It also provides an overview of how the architecture is designed to meet these g
 
 Overall, the extensibility framework is the same, or similar, for R and Python, but there are details that might be different. For further information about the implementation for a specific language, see these topics:
 
-+ [Architecture Overview for SQL Server R Services](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
-+ [Architecture overview for Python in SQL Server](../../advanced-analytics/python/architecture-overview-sql-server-python.md)
++ [Architecture Overview for SQL Server R Services](/r-services/architecture-overview-sql-server-r.md)
++ [Architecture Overview for Python in SQL Server](/python/architecture-overview-sql-server-python.md)
 
 
 ## Design Goals

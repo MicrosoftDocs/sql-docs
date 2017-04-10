@@ -68,7 +68,7 @@ Each user group is associated with the [!INCLUDE[rsql_launchpad](../../includes/
 
 For each worker account, while the session is active, a temporary folder is created to store the script objects, intermediate results, and other information used by R and SQL Server during R script execution. These working files, located under the ExtensibilityData folder, are access-restricted to administrators, and are cleaned up by SQL Server after the script completes. 
 
-For more information, see [Security Overview](../../advanced-analytics/r-services/security-overview-sql-server-r-services.md).
+For more information, see [Security Overview](../../advanced-analytics/r-services/security-overview-sql-server-r.md).
 
 ### <a name="bkmk_EnforcePolicy"></a>Enforcing password policy
 

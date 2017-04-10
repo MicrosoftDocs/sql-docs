@@ -16,7 +16,7 @@ manager: "jhubbard"
 
 # Architecture Overview - Machine Learning Services with Python 
 
-This topic provides an overview of how Python is integrated with SQL Server, including the security model, the components in the database engine tat support external script execution, and new components that enable interoperability of Python with SQL Server. For details see the linked topics.
+This topic provides an overview of how Python is integrated with SQL Server, including the security model, the components in the database engine that support external script execution, and new components that enable interoperability of Python with SQL Server. For details see the linked topics.
 
 > [!IMPORTANT]
 > Support for Python is available beginning with SQL Server vNext.
@@ -25,7 +25,7 @@ This topic provides an overview of how Python is integrated with SQL Server, inc
 
 SQL Server Machine Learning Services (In-Database) installs the Anaconda distribution of Python, and the Python 3.5 runtime and interpreter. This ensure near-complete compatibility with standard Python solutions. Python runs in a separate process from SQL Server, to ensure that database operations are not compromised.
 
-For more information about the interaction of SQL Server with Python, see [Python Interoperability](../../advanced-analytics/python/python-interoperability.md)
+For more information about the interaction of SQL Server with Python, see [Python Interoperability](/python-interoperability.md)
 
 ## New Components that Support Python Integration
 
@@ -45,7 +45,7 @@ For details, see [Security for Python](../../advanced-analytics/python/security-
 
 In SQL Server Enterprise Edition, you can use Resource governor to manage and monitor resource use of external script operations, including R script and Python script. 
 
-For more information, see [Resource Governance for  Python](../../advanced-analytics/python/resource-governance-for-python).
+For more information, see [Resource Governance for  Python](/resource-governance-for-python.md).
 
 ## See Also
 

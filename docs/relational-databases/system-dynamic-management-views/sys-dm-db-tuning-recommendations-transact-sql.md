@@ -35,11 +35,11 @@ manager: "jhubbard"
 | **Column name** | **Data type** | **Description** |
 | --- | --- | --- |
 | name | nvarchar(4000) | Unique name of recommendation. |
-| type | nvarchar(4000) | `FORCE\_LAST\_GOOD\_PLAN` |
+| type | nvarchar(4000) | `FORCE_LAST_GOOD_PLAN` |
 | reason | nvarchar(4000) | Reason why this recommendation was provided. |
 | valid\_since | datetime2 | The first time this recommendation was generated |
 | last\_refresh | datetime2 | The last time this recommendation was generated |
-| state | nvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:<br />   `currentValue` (`Active`, `Verifying`, `Success`, `Reverted`, and `Expired`)<br />   `reason` – code that describes why the recommendation is in the current state.|
+| state | nvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:<br />-   `currentValue` (`Active`, `Verifying`, `Success`, `Reverted`, and `Expired`)<br />-   `reason` – code that describes why the recommendation is in the current state.|
 | is\_executable\_action | bit | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
 | is\_revertable\_action | bit | 1 = The recommendation can be automatically monitored and reverted by Database engine.0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will also be &quot;revertable&quot;. |
 | execute\_action\_start\_time | datetime2 | Date the recommendation is applied. |
@@ -48,18 +48,18 @@ manager: "jhubbard"
 | execute\_action\_initiated\_time | datetime2 | Date the recommendation is applied. |
 | revert\_action\_start\_time | datetime2 | Date the recommendation is reverted. |
 | revert\_action\_duration | time | Duration of the revert action. |
-| revert\_action\_initiated\_by | nvarchar(4000) | `User = User manually unforced recommended plan. <br /> `System` = System automatically reverted recommendation. |
+| revert\_action\_initiated\_by | nvarchar(4000) | `User` = User manually unforced recommended plan. <br /> `System` = System automatically reverted recommendation. |
 | revert\_action\_initiated\_time | datetime2 | Date the recommendation is reverted. |
 | score | int | Estimated value/impact for this recommendation on the 0-100 scale (the larger the better) |
-| details | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:<br />`planForceDetails`<br />-   `queryId` - `query\_id` of the regressed query.<br />-    `regressedPlanId` - plan_id of the regressed plan.<br />-    `regressedPlanExecutionCount` - Number of execution of the query with regressed plan until the regression is detected.<br />-    `regressedPlanAbortedCount`<br />-    `regressedPlanCpuTimeAverage` - Average CPU time consumed by the regressed query until the regression is detected.<br />    `regressedPlanCpuTimeStddev` - Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />-    `forcedPlanId` - plan_id of the plan that should be forced.<br />-    `forcedPlanExecutionCount` - Number of execution of the query with the plan that should be forced until the regression is detected.<br />-    `forcedPlanAbortedCount`<br />-    `forcedPlanCpuTimeAverage` - Average CPU time consumed by the query executed with the plan that should be (calculated until the regression is detected).<br />-    `forcedPlanCpuTimeStddev` Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />`implementationDetails`<br />-    `method` - The method that should be used to correct the regression. Value is always `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
+| details | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:<br />`planForceDetails`<br />-   `queryId` - query\_id of the regressed query.<br />-    `regressedPlanId` - plan_id of the regressed plan.<br />-    `regressedPlanExecutionCount` - Number of execution of the query with regressed plan until the regression is detected.<br />-    `regressedPlanAbortedCount`<br />-    `regressedPlanCpuTimeAverage` - Average CPU time consumed by the regressed query until the regression is detected.<br />    `regressedPlanCpuTimeStddev` - Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />-    `forcedPlanId` - plan_id of the plan that should be forced.<br />-    `forcedPlanExecutionCount` - Number of execution of the query with the plan that should be forced until the regression is detected.<br />-    `forcedPlanAbortedCount`<br />-    `forcedPlanCpuTimeAverage` - Average CPU time consumed by the query executed with the plan that should be (calculated until the regression is detected).<br />-    `forcedPlanCpuTimeStddev` Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br /><br />`implementationDetails`<br />-    `method` - The method that should be used to correct the regression. Value is always `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
   
 ## Remarks  
- Information returned by `sys.dm\_db\_tuning\_recommendations` is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 
+ Information returned by `sys.dm_db_tuning_recommendations` is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 
 
  Status fields that are shown in the [status] columns might have the following values:
  | Status | Description |
  |--------|-------------|
- | `Active` | Recommendation is active and not yet aplied. User can take recommendation script and execute it manually or enable automatic tuning using `ALTER DATABASE current SET AUTOMATIC\_TUNING (FORCE\_LAST\_GOOD\_PLAN = ON)` statement. |
+ | `Active` | Recommendation is active and not yet aplied. User can take recommendation script and execute it manually or enable automatic tuning using `ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON)` statement. |
  | `Verifying` | Recommendation is applied by [!INCLUDE[ssde_md](../../includes/ssde_md.md)] and internal verification process compares performance of the forced plan with the regressed plan. |
  | `Success` | Recommendation is successfully applied. |
  | `Reverted` | Recommendation is reverted because there are no significant performance gains. |
@@ -71,11 +71,11 @@ JSON document in `[status]` column contains the reasome that describes why is th
 |--------|-------------|
 | `SchemaChanged` | Recommendation expired because the schema of a referenced table is changed. |
 | `StatisticsChanged`| Recommendation expired due to the statistic change on a referenced table. |
-| `ForcingFailed` | Recommended plan cannot be forced on a query. Find the `last\_force\_failure\_reason` in the [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) view to find the reason of the failure. |
-| `AutomaticTuningOptionDisabled` | `FORCE\_LAST\_GOOD\_PLAN` option is disabled by the user during verification process. Enable `FORCE\_LAST\_GOOD\_PLAN` option using [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement or force the plan manually using the script in `[details]` column. |
+| `ForcingFailed` | Recommended plan cannot be forced on a query. Find the `last_force_failure_reason` in the [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) view to find the reason of the failure. |
+| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` option is disabled by the user during verification process. Enable `FORCE_LAST_GOOD_PLAN` option using [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) statement or force the plan manually using the script in `[details]` column. |
 | `UnsupportedStatementType` | Plan cannot be forced on the query. Examples of unsupported queries are cursors and `INSERT BULK` statement. |
 | `LastGoodPlanForced` | Recommendation is successfully applied. |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified potential performance regression, but the `FORCE\_LAST\_GOOD\_PLAN` option is not enabled – see [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Apply recommendation manually or enable `FORCE\_LAST\_GOOD\_PLAN` option. |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified potential performance regression, but the `FORCE_LAST_GOOD_PLAN` option is not enabled – see [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Apply recommendation manually or enable `FORCE_LAST_GOOD_PLAN` option. |
 | `VerificationAborted`| Verification process is aborted due to the restart or Query Store cleanup. |
 | `VerificationForcedQueryRecompile`| Query is recompiled because there is no significant performance improvement. |
 | `PlanForcedByUser`| User manually forced the plan using [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) procedure. |
@@ -84,7 +84,7 @@ JSON document in `[status]` column contains the reasome that describes why is th
  Statistic in the details column do not show runtime plan statistics (for example, current CPU time). These information are taken at the time of regression detection and describe why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identified performance regression. Use `regressedPlanId` and `forcedPlanId` to query [Query Store catalog views](../../relational-databases/performance/how-query-store-collects-data.md) to find exact runtime plan statistics.
 
 ## Using tuning recommendations information  
- To convert the recommendation returned by `sys.dm\_db\_tuning\_recommendations` into an information that can be used to see the impact of recommendation and to get the T-SQL script that will fix the issue, you can use the following query:  
+ To convert the recommendation returned by `sys.dm_db_tuning_recommendations` into an information that can be used to see the impact of recommendation and to get the T-SQL script that will fix the issue, you can use the following query:  
  
 ```
 SELECT name, reason, score,
@@ -102,7 +102,7 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
   
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the `Server admin*` or an `Azure Active Directory admin` account.  
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the `Server admin` or an `Azure Active Directory admin` account.  
   
 ## See Also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   

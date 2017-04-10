@@ -32,7 +32,7 @@ manager: "jhubbard"
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**option**|**nvarchar(64)**|`FORCE\_LAST\_GOOD\_PLAN`|  
+|**option**|**nvarchar(64)**|`FORCE_LAST_GOOD_PLAN`|  
 |**desired_state**|**smallint**|Indicates the desired operation mode for Automatic Tuning option, explicitly set by user.|  
 |**desired_state_desc**|**nvarchar(64)**|Textual description of the desired operation mode of Automatic Tuning option:<br />`OFF` (0)<br />`ON` (1)|  
 |**actual_state**|**smallint**|Indicates the operation mode of Automatic Tuning option.|  
@@ -44,7 +44,7 @@ manager: "jhubbard"
  Requires the `VIEW DATABASE STATE` permission.  
   
 ## Remarks
- The values in `reason\_code` and `reason\_desc` columns might be:
+ The values in `reason_code` and `reason_desc` columns might be:
 
 |reason\_code|reason\_desc|Description|
 |-----------------|---------------|-----------------| 

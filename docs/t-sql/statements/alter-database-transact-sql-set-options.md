@@ -366,7 +366,7 @@ SET
  **\<automatic\_tuning\_option> ::=**  
  **Applies to**: [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  .  
 
- Enables or disables **Force last good plan** [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.  
+ Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.  
   
  FORCE\_LAST\_GOOD\_PLAN = { ON | **OFF** }  
  ON  

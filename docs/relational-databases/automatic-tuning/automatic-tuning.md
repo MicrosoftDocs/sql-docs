@@ -43,14 +43,14 @@ In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the [!INCLUDE[ssde_md
 
 | type | description | datetime | score | details | … |
 | --- | --- | --- | --- | --- | --- |
-| FORCE\_LAST\_GOOD\_PLAN | CPU time changed from 4ms to 14ms | 3/17/2017 | 83% | {queryId,forcedPlanId,regressedPlanId,T-SQL} |   |
-| FORCE\_LAST\_GOOD\_PLAN | CPU time changed from 37ms to 84ms | 3/16/2017 | 26% | {queryId,forcedPlanId,regressedPlanId,T-SQL} |   |
+| FORCE\_LAST\_GOOD\_PLAN | CPU time changed from 4ms to 14ms | 3/17/2017 | 83% | `{queryId,forcedPlanId,regressedPlanId,T-SQL}` |   |
+| FORCE\_LAST\_GOOD\_PLAN | CPU time changed from 37ms to 84ms | 3/16/2017 | 26% | `{queryId,forcedPlanId,regressedPlanId,T-SQL}` |   |
 
 The most important information shown in this view are:
  - Type of the recommended action - `FORCE_LAST_GOOD_PLAN`.
- - Description that contains informations why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] thinks that this is potential performance regression.
+ - Description that contains information why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] thinks that this is a potential performance regression.
  - Datetime when the potential regression is detected.
- - Score of this. 
+ - Score of this recommendation. 
  - Details about the issues such as id of the detected plan, id of the regressed plan, id of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that might be applied to fix the issue, etc.
 
 Use the following query to obtain a script which will fix the issue:
@@ -94,7 +94,7 @@ FROM sys.database_automatic_tuning_options;
 | --- | --- | --- | --- | --- | --- | --- |
 | FORCE\_LAST\_GOOD\_PLAN | 1 | ON | 0 | ON | 0 | NULL |
 
-`FORCE\_LAST\_GOOD\_PLAN` option might be in `OFF` state even if the user specified `ON`. The option might be disabled if Query Store is disabled or in read-only mode. Columns `actual_state` and `actual_state_desc` give information about the current state of automatic tuning option, and columns `reason_code` and `reason_desc` give information why is actual state diferent that desired state. Values in `reason_code` and `reason_desc` columns are shown in the following table:
+`FORCE_LAST_GOOD_PLAN` option might be in `OFF` state even if the user specified `ON`. The option might be disabled if Query Store is disabled or in read-only mode. Columns `actual_state` and `actual_state_desc` give information about the current state of automatic tuning option, and columns `reason_code` and `reason_desc` give information why is actual state diferent that desired state. Values in `reason_code` and `reason_desc` columns are shown in the following table:
 
 | reason\_code | reason\_desc | Description |
 | --- | --- | --- |

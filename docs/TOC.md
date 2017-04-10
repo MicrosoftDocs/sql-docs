@@ -20,6 +20,6 @@
 ## [SQL Server Data Tools (SSDT)](./ssdt/TOC.md)		
 ## [ActiveX Data Objects (ADO)](./ado/TOC.md)		
 ## [SQL Server Connection and Data Drivers](./connect/TOC.md)		
-## [SQL Server Management Studio (SSMS)](./ssms/toc.md)		
+## [SQL Server Management Studio (SSMS)](./ssms/TOC.md)		
 		
 # [Whitepapers](./whitepapers/toc.md)

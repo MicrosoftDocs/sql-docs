@@ -1,7 +1,7 @@
 ---
 title: "Overview and Usage Scenarios | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/22/2016"
+ms.date: "04/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,6 +20,8 @@ manager: "jhubbard"
 
 In-Memory OLTP is the premier technology available in SQL Server and Azure SQL Database for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios. This topic includes an overview of the technology and outlines usage scenarios for In-Memory OLTP. Use this information to determine whether In-Memory OLTP is right for your application. The topic concludes with an example that shows In-Memory OLTP objects, reference to a perf demo, and references to resources you can use for next steps.
 
+This article covers the In-Memory OLTP technology in both SQL Server and Azure SQL Database. The following blog post contains a deep dive into the performance and resource utilization benefits in Azure SQL Database: 
+- [In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 
 ## In-Memory OLTP Overview
 
@@ -221,7 +223,8 @@ The following script illustrates In-Memory OLTP objects you can create in your d
 - [17-minute video explaining In-Memory OLTP and showing the demo](https://www.youtube.com/watch?v=l5l5eophmK4) (demo is at 8:25)
 - [Script to enable In-Memory OLTP and set recommended options](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
 - [Main In-Memory OLTP documentation](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Performance and resource utilization benefits of In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [Optimize Performance using In-Memory Technologies in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
 - [System-Versioned Temporal Tables with Memory-Optimized Tables](https://msdn.microsoft.com/library/mt590207.aspx)
--  [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx). 
+- [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx). 

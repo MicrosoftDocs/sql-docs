@@ -18,7 +18,7 @@ manager: "jhubbard"
 # R Interoperability in SQL Server R Services
 
 This topic focuses on the mechanism for running for R within [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], and describes the differences between Microsoft R and open source R.
-For information about additional components, see [New Components in SQL Server](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r-services.md).
+For information about additional components, see [New Components in SQL Server](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md).
 
 ### Open Source R Components
 
@@ -59,9 +59,9 @@ Among the most important additions to Microsoft R are the **RevoScaleR** and **R
 + **RevoPemaR.** PEMA stands for Parallel External Memory Algorithm. The **RevoPemaR** package provides APIs that you can use to develop your own parallel algorithms. For more information, see [RevoPemaR Getting Started Guide](https://msdn.microsoft.com/microsoft-r/pemar-getting-started).
 
 ## See Also
-[Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r-services.md)
+[Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
 
-[New Components in SQL Server to Support R Services](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r-services.md)
+[New Components in SQL Server to Support R Services](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md)
 
-[Security Overview](../../advanced-analytics/r-services/security-overview-sql-server-r-services.md)
+[Security Overview](../../advanced-analytics/r-services/security-overview-sql-server-r.md)
 

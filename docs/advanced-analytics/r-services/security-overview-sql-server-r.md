@@ -59,7 +59,7 @@ After mapping to a worker account, [!INCLUDE[rsql_launchpad_md](../../includes/r
 
 When all [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] operations are completed, the user worker account is marked as free and returned to the pool.
 
-For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], see [New Components in SQL Server to Support R Integration](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r-services.md).
+For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], see [New Components in SQL Server to Support R Integration](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md).
 
 > [!NOTE]
 For Launchpad to manage the worker accounts and execute R jobs, the group that contains the worker accounts, SQLRUserGroup, must have "Allow Log on locally" permissions; otherwise R Services might not work. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced, which prevent the worker accounts from connecting to SQL Server to perform R jobs.  
@@ -84,4 +84,4 @@ No worker account can see or manipulate files used by other worker accounts.
 If you are an administrator on the computer, you can view the directories created for each process. Each directory is identified by its session GUID.
 
 ## See Also
-[Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r-services.md)
+[Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)

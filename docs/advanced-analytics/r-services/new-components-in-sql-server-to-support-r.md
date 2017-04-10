@@ -20,7 +20,7 @@ manager: "jhubbard"
  In SQL Server 2016 and vNext, the database engine includes optional components that support extensibility for external script languages, including R and Python. Support for the R language was added in SQL Server 2016; support for Python was added in SQL Server vNext Machine Learning Services
 
 This topic describes the new components that work specifically with the R language. 
-For a discussion of how these components work with open source R, see [R Interoperability](../../advanced-analytics/r-services/r-interoperability-in-sql-server-r-services.md)
+For a discussion of how these components work with open source R, see [R Interoperability](../../advanced-analytics/r-services/r-interoperability-in-sql-server.md)
 
 ## New Components and Providers
 
@@ -33,7 +33,7 @@ In addition to the shell that loads R and executes R code as described in the ar
   + R -  RLauncher.dll
   + Python - PythonLauncher.dll 
   
-  The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. Each satellite process for a specific language runtime will inherit the user account of the Launchpad. For more information about the configuration and security context of the Launchpad, see [Security Overview](../../advanced-analytics/r-services/security-overview-sql-server-r-services.md).
+  The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. Each satellite process for a specific language runtime will inherit the user account of the Launchpad. For more information about the configuration and security context of the Launchpad, see [Security Overview](../../advanced-analytics/r-services/security-overview-sql-server-r.md).
 
 ### **BxlServer and SQL Satellite**
 
@@ -120,5 +120,5 @@ When connecting from a remote data science client that supports Microsoft R, you
 9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] passes results back to the client.
 
 ## See Also
-[Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r-services.md)
+[Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
 

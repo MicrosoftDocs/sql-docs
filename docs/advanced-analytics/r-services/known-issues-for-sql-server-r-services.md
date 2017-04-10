@@ -131,7 +131,7 @@ If you cannot upgrade, you can use a SQL login to run remote R jobs that might r
 
 ### Multiple R libraries and executables are installed if you install both Standalone and In-Database features 
 
-!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup includes the option to install Microsoft R Server (Standalone). The Microsoft R Server (Standalone) option can be used in Enterprise Edition  to install a standalone Windows server that supports R but that does not require interactivity with SQL Server.
+SQL Server setup includes the option to install Microsoft R Server (Standalone). The Microsoft R Server (Standalone) option can be used in Enterprise Edition  to install a standalone Windows server that supports R but that does not require interactivity with SQL Server.
 
 However, this standalone option is **not** required in order to use R with [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 

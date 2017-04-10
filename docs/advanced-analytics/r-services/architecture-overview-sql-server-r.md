@@ -37,7 +37,7 @@ The extensibility framework introduced in SQL Server 2016 is continued in SQL Se
 
 The role of these additional components is to improve data exchange speed and compression, while providing a secure, high-performance platform for running external scripts.
 
-For detailed description of the components that support R, such as the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] and RLauncher, see [New Components](../../advanced-analytics/python/new-components-in-sql-server-to-support-r.md).
+For detailed description of the components that support R, such as the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] and RLauncher, see [New Components](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md).
 
 ## Security
 
@@ -47,7 +47,7 @@ SQL Server intercepts all job requests, secures the task and its data using Wind
 
 Data is kept within the compliance boundary by enforcing SQL Server security at the table, database, and instance level. The database administrator can control who has the ability to run R jobs, and who has the ability to install or share R packages. The administrator can also monitor the use of R scripts by either rremote or  local users, and monitor and manage the resources consumed.
 
-For details, see [Security for R](../../advanced-analytics/python/security-overview-sql-server-r.md)
+For details, see [Security for R](../../advanced-analytics/r-services/security-overview-sql-server-r.md)
 
 
 

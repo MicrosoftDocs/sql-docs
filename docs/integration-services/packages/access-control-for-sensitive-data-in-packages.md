@@ -80,8 +80,7 @@ manager: "jhubbard"
 -   [Set or Change the Protection Level of Packages](../../integration-services/packages/set-or-change-the-protection-level-of-packages.md)  
   
 ## See Also  
- [Import and Export Packages &#40;SSIS Service&#41;](../../integration-services/service/import-and-export-packages-ssis-service.md)   
  [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)   
  [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
-  
+ [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md)    
   

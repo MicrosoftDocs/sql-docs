@@ -1,7 +1,7 @@
 ---
 title: "R Package Management for SQL Server R Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "04/07/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,8 +36,15 @@ This new functionality supports several scenarios:
 - Each data scientist can install private packages that are not visible to others, giving them an isolated sandbox to work with their own R packages.
 -  Because packages can be scoped to a database and each user gets an isolated packages sandbox in each database, it is easier to install use different versions of the same R package. 
 
-> [!NOTE]
-> Currently this feature is being released for use with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] only.	
+### Supported versions
+
+**SQL Server 2016** 
+
+To get the new package maagement features, you must upgrade the instance of R that is associated with the instance of SQL Server. Doing so installs the latest version of Microsoft R and also switches the instance to use the  Modern Lifecycle Policy. For more information, see [Use SqlBindR.exe to Upgrade an Instance of R Services](https://docs.microsoft.com/sql/advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services).
+
+**SQl Server vNext**
+
+The package management feature is included with this release.	
 
 ## Database roles and database scoping
 

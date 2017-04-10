@@ -13,22 +13,11 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
 ---
-# Microsoft SQL documentation: table of contents
+# Microsoft SQL documentation
 
 This page gives you access to all SQL documentation:
 
-- The table of contents on the left is for SQL Server and several related technologies 
-- The larger set of SQL technologies including SQL Azure are here: 
-	- [SQL hub page](sql-hub-menu.md): The complete table of contents for all SQLs
-	- [SQL Server](sql-hub-menu.md#products-sql-server)
-	- [SQL Server on Azure VMs](sql-hub-menu.md#products-sql-server-azure)
-	- [SQL Server on Linux](linux/index.md)
-	- [SQL Server R Services](advanced-analytics/r-services/index.md)
-	- [Azure SQL Database](/azure/sql-database)
-	- [Azure SQL Data Warehouse](/azure/sql-data-warehouse)
-	- [Tools and SDKs](sql-hub-menu.md#sdkstools-all)
-	- [Architectural recommendations](sql-hub-menu.md#architecture)
-	- [Documentation for previous versions of SQL Server](https://msdn.microsoft.com/en-US/library/ms130214(SQL.120).aspx)
-
+- The table of contents on the left is for SQL Server and several related technologies.
+- The table of contents for the larger set of SQL technologies including Azure SQL are on our [SQL hub page](sql-hub-menu.md).
 
 **See also**: Additional Azure database technologies such as [DocumentDB and Data Factory](/azure/#pivot=services&panel=databases).  

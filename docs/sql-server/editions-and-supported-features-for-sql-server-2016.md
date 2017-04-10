@@ -136,7 +136,7 @@ For a list of features that were added to the Developer edition for [!INCLUDE[ss
 |Snapshot replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
 |SQL Server change tracking|Yes|Yes|Yes|Yes|Yes| 
 |Transactional replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
-|Transactional replication to Azure|Yes|Yes|Yes|No|No|   
+|Transactional replication to Azure|Yes|Yes|No|No|No|   
 |Transactional replication updateable subscription|Yes|No|No|No|No|  
   
 ##  <a name="SSMS"></a> Management Tools  
@@ -238,7 +238,7 @@ For info about the Integration Services (SSIS) features supported by the edition
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Create cubes without a database|Yes|Yes|No|No|No |   
 |Auto-generate staging and data warehouse schema|Yes|Yes|No|No|No| 
-|Change data capture|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|No|No| 
+|Change data capture|Yes|Yes <sup>1</sup>|No|No|No| 
 |Star join query optimizations|Yes|No|No|No|No| 
 |Scalable read-only Analysis Services configuration|Yes|No|No|No|No| 
 |Parallel query processing on partitioned tables and indexes|Yes|No|No|No|No|   

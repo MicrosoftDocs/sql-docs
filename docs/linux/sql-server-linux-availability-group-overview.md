@@ -109,7 +109,9 @@ Use with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRE
 
 ## Next steps
 
-[Configure Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure.md)
+[Configure availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
+
+[Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
 
 [Add Availability Group Cluster Resource on RHEL](sql-server-linux-availability-group-cluster-rhel.md)
 

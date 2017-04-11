@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Read-scale availability groups
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-In addition to bringing together the best in class HA capabilities for SQL Server, an availability group is a comprehensive solution offering integrated scaling solutions as well. In a typical database application, there are multiple clients running various types of workloads and sometimes that can lead to bottlenecks due to resource constraints. In this case, customers will want to free up resources and achieve higher throughput for the OLTP workload or to deliver higher performance and scale on read-only workloads. This can be achieved by leveraging the fastest replication technology for SQL Server and create a group of replicated databases to offload reporting and analytics workloads to the read-only replicas. 
+In addition to bringing together the best in class HA capabilities for SQL Server, an availability group is a comprehensive solution offering integrated scaling solutions as well. In a typical database application, there are multiple clients running various types of workloads and sometimes that can lead to bottlenecks due to resource constraints. You can free up resources and achieve higher throughput for the OLTP workload or deliver higher performance and scale on read-only workloads. This can be achieved by leveraging the fastest replication technology for SQL Server - create a group of replicated databases to offload reporting and analytics workloads to the read-only replicas. 
 
 With Availability Groups, one or more secondary replicas can be configured to support read-only access to secondary databases.
 
@@ -35,7 +35,7 @@ If the business requirement is to conserve resources for mission-critical worklo
 
 ## Next Steps 
 
-[Configure read-scale availability group on Linux](..\..\..\linux\sql-server-linux-availability-group-configure-rs.md)
+[Configure read-scale availability group on Linux](../../../linux/sql-server-linux-availability-group-configure-rs.md)
 
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

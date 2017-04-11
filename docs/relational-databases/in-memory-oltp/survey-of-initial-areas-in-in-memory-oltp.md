@@ -77,7 +77,8 @@ The present article focuses on OLTP, and not on Analytics. For information on ho
 - [Columnstore Indexes Guide](../../relational-databases/indexes/columnstore-indexes-overview.md)  
   
   
-> [AZURE.NOTE] A two minute video about the In-Memory features is available at [Azure SQL Database - In-Memory Technologies](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). The video is dated December 2015.  
+> [!NOTE]
+> A two minute video about the In-Memory features is available at [Azure SQL Database - In-Memory Technologies](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). The video is dated December 2015.  
 
 
 ### Columnstore

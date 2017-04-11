@@ -1,7 +1,7 @@
 ---
 title: "Expression Examples (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/16/2016"
+ms.date: "04/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -37,7 +37,7 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
 > [!IMPORTANT]  
 >  When RDL Sandboxing is enabled, only certain types and members can be used in expression text at report publish time. For more information, see [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
   
- This topic provides examples of expressions that can be used for common tasks in a report.  
+This topic provides examples of expressions that can be used for common tasks in a report.  
   
 -   [Visual Basic Functions](#VisualBasicFunctions) Examples for date, string, conversion and conditional [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions.  
   
@@ -51,7 +51,7 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
   
 -   [Custom Code](#CustomCode) Examples of embedded custom code.  
   
- For expression examples for specific uses, see the following topics:  
+For expression examples for specific uses, see the following topics:  
   
 -   [Group Expression Examples &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
@@ -61,24 +61,20 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
   
 -   [Report and Group Variables Collections References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- For more information about simple and complex expressions, where you can use expressions, and the types of references that you can include in an expression, see topics under [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). For more information about the context in which expressions are evaluated for calculating aggregates, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+For more information about simple and complex expressions, where you can use expressions, and the types of references that you can include in an expression, see topics under [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). For more information about the context in which expressions are evaluated for calculating aggregates, see [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- To learn how to write expressions that use many of the functions and operators also used by expression examples in this topic, but in the context of writing a report, see [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
-  
- If you are using Report Model Query Designer to design a dataset query that uses a report model as a data source, you will use formulas instead of expressions. These formulas help specify the report data by using custom calculations that are integrated into the query that specifies which data to return from the report model data source. For more information, see [Formulas in Report Model Queries &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md).  
-  
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+To learn how to write expressions that use many of the functions and operators also used by expression examples in this topic, but in the context of writing a report, see [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
+
   
 ## Functions  
  Many expressions in a report contain functions. You can format data, apply logic, and access report metadata using these functions. You can write expressions that use functions from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] run-time library, and from the <xref:System.Convert> and <xref:System.Math> namespaces. You can add references to functions from other assemblies or custom code. You can also use classes from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], including <xref:System.Text.RegularExpressions>.  
   
-###  <a name="VisualBasicFunctions"></a> Visual Basic Functions  
+##  <a name="VisualBasicFunctions"></a> Visual Basic Functions  
  You can use [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions to manipulate the data that is displayed in text boxes or that is used for parameters, properties, or other areas of the report. This section provides examples demonstrating some of these functions. For more information, see [Visual Basic Runtime Library Members](http://go.microsoft.com/fwlink/?LinkId=198941) on MSDN.  
   
  The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides many custom format options, for example, for specific date formats. For more information, see [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) on MSDN.  
   
-#### Math Functions  
+### Math Functions  
   
 -   The **Round** function is useful to round numbers to the nearest integer. The following expression rounds a 1.3 to 1:  
   
@@ -92,12 +88,31 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
     = Round(1.3*5)/5  
     ```  
   
-####  <a name="DateFunctions"></a> Date Functions  
+###  <a name="DateFunctions"></a> Date Functions  
   
 -   The **Today** function provides the current date. This expression can be used in a text box to display the date on the report, or in a parameter to filter data based on the current date.  
   
     ```  
     =Today()  
+    ```  
+  
+-   Use the **DateInterval** function to pull out a specific part of a date. Here are some valid **DateInterval** parameters:
+
+    -   DateInterval.Second
+    -   DateInterval.Minute
+    -   DateInterval.Hour
+    -   DateInterval.Weekday
+    -   DateInterval.Day
+    -   DateInterval.DayOfYear
+    -   DateInterval.WeekOfYear
+    -   DateInterval.Month
+    -   DateInterval.Quarter
+    -   DateInterval.Year
+
+    For example, this expression will show the number of the week in the current year for today's date:
+  
+    ```  
+    =DatePart(DateInterval.WeekOfYear, today()) 
     ```  
   
 -   The **DateAdd** function is useful for supplying a range of dates based on a single parameter. The following expression provides a date that is six months after the date from a parameter named *StartDate*.  
@@ -178,7 +193,7 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
 |One Year Ago|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Two Years Ago|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-####  <a name="StringFunctions"></a> String Functions  
+###  <a name="StringFunctions"></a> String Functions  
   
 -   Combine more than one field by using concatenation operators and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] constants. The following expression returns two fields, each on a separate line in the same text box:  
   
@@ -228,7 +243,7 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
     > [!NOTE]  
     >  Verify that the value for Fields!Phone.Value has no extra spaces and is of type <xref:System.String>.  
   
-#### Lookup  
+### Lookup  
   
 -   By specifying a key field, you can use the **Lookup** function to retrieve a value from a dataset for a one-to-one relationship, for example, a key-value pair. The following expression displays the product name from a dataset (“Product”), given the product identifier to match on:  
   
@@ -236,7 +251,7 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
     ```  
   
-#### LookupSet  
+### LookupSet  
   
 -   By specifying a key field, you can use the **LookupSet** function to retrieve a set of values from a dataset for a one-to-many relationship. For example, a person can have multiple telephone numbers. In the following example, assume the dataset PhoneList contains a person identifier and a telephone number in each row. **LookupSet** returns an array of values. The following expression combines the return values into a single string and displays the list of telephone numbers for the person specified by ContactID:  
   
@@ -244,7 +259,7 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-####  <a name="ConversionFunctions"></a> Conversion Functions  
+###  <a name="ConversionFunctions"></a> Conversion Functions  
  You can use [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] functions to convert a field from the one data type to a different data type. Conversion functions can be used to convert the default data type for a field to the data type needed for calculations or to combine text.  
   
 -   The following expression converts the constant 500 to type Decimal in order to compare it to a [!INCLUDE[tsql](../../includes/tsql-md.md)] money data type in the Value field for a filter expression.  
@@ -259,7 +274,7 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-####  <a name="DecisionFunctions"></a> Decision Functions  
+###  <a name="DecisionFunctions"></a> Decision Functions  
   
 -   The **Iif** function returns one of two values depending on whether the expression is true or not. The following expression uses the **Iif** function to return a Boolean value of **True** if the value of `LineTotal` exceeds 100. Otherwise it returns **False**:  
   
@@ -278,7 +293,7 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
 -   A different way to get the same functionality uses the **Switch** function. The **Switch** function is useful when you have three or more conditions to test. The **Switch** function returns the value associated with the first expression in a series that evaluates to true:  
   
     ```  
-    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
+    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red")  
     ```  
   
      Values greater than or equal to 10 display with a green background, between 1 and 9 display with a blue background, equal to 1 display with a yellow background, and 0 or less display with a red background.  
@@ -314,10 +329,10 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
   
     ```  
   
-###  <a name="ReportFunctions"></a> Report Functions  
+##  <a name="ReportFunctions"></a> Report Functions  
  In an expression, you can add a reference to additional report functions that manipulate data in a report. This section provides examples for two of these functions. For more information about report functions and examples, see [Aggregate Functions Reference &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-#####  <a name="Sum"></a> Sum  
+###  <a name="Sum"></a> Sum  
   
 -   The **Sum** function can total the values in a group or data region. This function can be useful in the header or footer of a group. The following expression displays the sum of data in the Order group or data region:  
   
@@ -331,7 +346,7 @@ Expressions are used frequently in [!INCLUDE[ssRSnoversion](../../includes/ssrsn
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-#####  <a name="RowNumber"></a> RowNumber  
+###  <a name="RowNumber"></a> RowNumber  
   
 -   The **RowNumber** function, when used in a text box within a data region, displays the row number for each instance of the text box in which the expression appears. This function can be useful to number rows in a table. It can also be useful for more complex tasks, such as providing page breaks based on number of rows. For more information, see [Page Breaks](#PageBreaks) in this topic.  
   

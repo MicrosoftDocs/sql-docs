@@ -1,7 +1,7 @@
 ---
 title: "CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -43,14 +43,12 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE MESSAGE TYPE message_type_name  
     [ AUTHORIZATION owner_name ]  
     [ VALIDATION = {  NONE  
                     | EMPTY   
                     | WELL_FORMED_XML  
-                    | VALID_XML WITH SCHEMA COLLECTION   
-                                                    schema_collection_name  
+                    | VALID_XML WITH SCHEMA COLLECTION schema_collection_name  
                    } ]  
 [ ; ]  
 ```  

@@ -16,7 +16,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CLR strict security   
-[!INCLUDEtsql-appliesto-ssvNxt-xxxx-xxxx-xxx]   
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
 
 Controls the interpretation of the `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` permission in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 
@@ -25,7 +25,7 @@ Controls the interpretation of the `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` permissio
 |0 |Disabled - Provided for backwards compatibility. `Disabled` value is not recommended. | 
 |1 |Enabled - The [!INCLUDE[ssde-md](../../includes/ssde-md.md)] causes the engine to ignore the permission_set information on the assemblies, and always interprets them as `UNSAFE`.  `Enabled` is the default value for [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]. | 
 
-When enabled, the `PERMISSION_SET` option in the ༖༗ and ༖༗ statements is ignored at run-time, but the `PERMISSION_SET` options are preserved in metadata. Ignoring the option, minimizes breaking existing code statements.
+When enabled, the `PERMISSION_SET` option in the `CREATE ASSEMBLY` and `ALTER ASSEMBLY` statements is ignored at run-time, but the `PERMISSION_SET` options are preserved in metadata. Ignoring the option, minimizes breaking existing code statements.
 
 `CLR strict security` is an `advanced option`.  
 

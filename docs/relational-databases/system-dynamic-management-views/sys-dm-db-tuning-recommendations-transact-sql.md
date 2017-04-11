@@ -39,33 +39,33 @@ manager: "jhubbard"
 | reason | nvarchar(4000) | Reason why this recommendation was provided. |
 | valid\_since | datetime2 | The first time this recommendation was generated |
 | last\_refresh | datetime2 | The last time this recommendation was generated |
-| state | nvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:<br />-   `currentValue` (`Active`, `Verifying`, `Success`, `Reverted`, and `Expired`)<br />-   `reason` – code that describes why the recommendation is in the current state.|
+| state | nvarchar(4000) | JSON document that describes the state of the recommendation. Following fields are available:<br />-   `currentValue` - current state of the recommendation.<br />-   `reason` – constant that describes why the recommendation is in the current state.|
 | is\_executable\_action | bit | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
-| is\_revertable\_action | bit | 1 = The recommendation can be automatically monitored and reverted by Database engine.0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will also be &quot;revertable&quot;. |
+| is\_revertable\_action | bit | 1 = The recommendation can be automatically monitored and reverted by Database engine.<br />0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will be &quot;revertable&quot;. |
 | execute\_action\_start\_time | datetime2 | Date the recommendation is applied. |
 | execute\_action\_duration | time | Duration of the execute action. |
 | execute\_action\_initiated\_by | nvarchar(4000) | `User` = User manually forced plan in the recommendation. <br /> `System` = System automatically applied recommendation. |
-| execute\_action\_initiated\_time | datetime2 | Date the recommendation is applied. |
-| revert\_action\_start\_time | datetime2 | Date the recommendation is reverted. |
+| execute\_action\_initiated\_time | datetime2 | Date the recommendation was applied. |
+| revert\_action\_start\_time | datetime2 | Date the recommendation was reverted. |
 | revert\_action\_duration | time | Duration of the revert action. |
 | revert\_action\_initiated\_by | nvarchar(4000) | `User` = User manually unforced recommended plan. <br /> `System` = System automatically reverted recommendation. |
-| revert\_action\_initiated\_time | datetime2 | Date the recommendation is reverted. |
+| revert\_action\_initiated\_time | datetime2 | Date the recommendation was reverted. |
 | score | int | Estimated value/impact for this recommendation on the 0-100 scale (the larger the better) |
-| details | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:<br />`planForceDetails`<br />-   `queryId` - query\_id of the regressed query.<br />-    `regressedPlanId` - plan_id of the regressed plan.<br />-    `regressedPlanExecutionCount` - Number of execution of the query with regressed plan until the regression is detected.<br />-    `regressedPlanAbortedCount`<br />-    `regressedPlanCpuTimeAverage` - Average CPU time consumed by the regressed query until the regression is detected.<br />    `regressedPlanCpuTimeStddev` - Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br />-    `forcedPlanId` - plan_id of the plan that should be forced.<br />-    `forcedPlanExecutionCount` - Number of execution of the query with the plan that should be forced until the regression is detected.<br />-    `forcedPlanAbortedCount`<br />-    `forcedPlanCpuTimeAverage` - Average CPU time consumed by the query executed with the plan that should be (calculated until the regression is detected).<br />-    `forcedPlanCpuTimeStddev` Standard deviation of CPU time consumed by the regressed query until the regression is detected.<br /><br />`implementationDetails`<br />-    `method` - The method that should be used to correct the regression. Value is always `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
+| details | nvarchar(max) | JSON document that contains more details about the recommendation. Following fields are available:<br />`planForceDetails`<br />-   `queryId` - query\_id of the regressed query.<br />-    `regressedPlanId` - plan_id of the regressed plan.<br />-    `regressedPlanExecutionCount` - Number of execution of the query with regressed plan before the regression is detected.<br />-    `regressedPlanAbortedCount` - Number of detected errors during the execution of the regressed plan.<br />-    `regressedPlanCpuTimeAverage` - Average CPU time consumed by the regressed query until the regression is detected.<br />    `regressedPlanCpuTimeStddev` - Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br />-    `forcedPlanId` - plan_id of the plan that should be forced.<br />-    `forcedPlanExecutionCount` - Number of execution of the query with the plan that should be forced until the regression is detected.<br />-    `forcedPlanAbortedCount` - Number of detected errors during the execution of the plan that should be forced.<br />-    `forcedPlanCpuTimeAverage` - Average CPU time consumed by the query executed with the plan that should be forced (calculated before the regression is detected).<br />-    `forcedPlanCpuTimeStddev` Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br /><br />`implementationDetails`<br />-    `method` - The method that should be used to correct the regression. Value is always `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
   
 ## Remarks  
  Information returned by `sys.dm_db_tuning_recommendations` is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 
 
- Status fields that are shown in the [status] columns might have the following values:
+ `currentValue` field in the `[state]` column might have the following values:
  | Status | Description |
  |--------|-------------|
- | `Active` | Recommendation is active and not yet aplied. User can take recommendation script and execute it manually or enable automatic tuning using `ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON)` statement. |
+ | `Active` | Recommendation is active and not yet aplied. User can take recommendation script and execute it manually. |
  | `Verifying` | Recommendation is applied by [!INCLUDE[ssde_md](../../includes/ssde_md.md)] and internal verification process compares performance of the forced plan with the regressed plan. |
  | `Success` | Recommendation is successfully applied. |
  | `Reverted` | Recommendation is reverted because there are no significant performance gains. |
  | `Expired` | Recommendation has expired and cannot be applied anymore. |
 
-JSON document in `[status]` column contains the reasome that describes why is the recommendation in the current state. Values in the reason field might be: 
+JSON document in `[state]` column contains the reason that describes why is the recommendation in the current state. Values in the reason field might be: 
 
 | Reason | Description |
 |--------|-------------|
@@ -98,7 +98,7 @@ FROM sys.dm_db_tuning_recommendations
 WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
 ```
   
- For more information about JSON funcitons that can be used to query values in the recommendaiton view, see [JSON Support](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
+ For more information about JSON functions that can be used to query values in the recommendation view, see [JSON Support](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
   
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
@@ -106,6 +106,6 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
 ## See Also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
- [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)
+ [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
  

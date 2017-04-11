@@ -73,14 +73,14 @@ SELECT description, score,
 FROM sys.dm_db_tuning_recommendations
   CROSS APPLY OPENJSON (Details, '$.planForceDetails')
     WITH (  [query_id] int '$.queryId',
-            [regressed_plan_id] int '$.regressedPlanId',
-            [forced_plan_id] int '$.forcedPlanId'
+            [new plan_id] int '$.regressedPlanId',
+            [recommended plan_id] int '$.forcedPlanId'
           ) as planForceDetails;
 ```
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| description | score | script | query\_id | regressed\_plan\_id | forced\_plan\_id
+| description | score | script | query\_id | new plan\_id | regressed plan\_id |
 | --- | --- | --- | --- | --- | --- | --- |
 | CPU time changed from 3ms to 46ms | 36 | EXEC sp\_query\_store\_force\_plan 12, 17; | 12 | 28 | 17 |
 
@@ -106,7 +106,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 The status of advisor is shown in the following view:
 
 ```    
-SELECT name, desired_state_desc_, actual\_state\_desc, reason\_desc
+SELECT name, desired_state_desc_, actual_state_desc, reason_desc
 FROM sys.database_automatic_tuning_options;
 ```
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     

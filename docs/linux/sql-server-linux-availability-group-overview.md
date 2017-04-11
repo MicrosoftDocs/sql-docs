@@ -46,10 +46,6 @@ SQL Server availability groups were first introduced in SQL Server 2012 and have
    SQL Server automatically creates the secondary replicas for every database in the availability group.
 - **Read-only routing**
    SQL Server routes incoming connections to an availability group listener to a secondary replica that is configured to allow read-only workloads. 
-
-   > [!IMPORTANT]
-   > Read-only routing does not work in the current preview build due to an issue with the listener. These capabilities will be enabled in the upcoming releases.
-
 - **Database level health monitoring and failover trigger**
    Enhanced database level monitoring and diagnostics. 
 - **Disaster recovery configurations**
@@ -91,26 +87,28 @@ The following terms describe the main parts of a SQL Server availability group s
  A server name to which clients can connect in order to access a database in a primary or secondary replica of an availability group. Availability group listeners direct incoming connections to the primary replica or to a read-only secondary replica.  
 
 
-## Overview of steps to configure SQL Server availability group on Linux
-
-To configure a SQL Server availability group on Linux, first configure the availability group and then add it as a resource to a Linux cluster. The steps to configure the availability group are the same across Linux distributions. The tools to manage the cluster resources may be different, depending on the distribution. For specific steps, see [Next steps](#next-steps). 
-
 ## New in SQL Server vNext for availability groups
 
 SQL Server vNext introduces new features for availability groups.
 
-**Read-scale availability groups**
-Create an availability group without a cluster to support read-scale workloads. See [Read-scale availability groups](../database-engine/availability-groups/windows/read-scale-availability-groups.md).
-
 **CLUSTER_TYPE**
-Use with `CREATE AVAILABILITY GROUP`. Denotes an availability group on a server that is not a member of a Windows Server Failover Cluster (WSFC).
+Use with `CREATE AVAILABILITY GROUP`. Identifies the type of server cluster manager that manages an availability group. Can be one of the following types:
+
+   - **WSFC**
+      Winows server failover cluster. For example, a normal Windows failover cluster.
+   - **EXTERNAL** 
+      A cluster manager that is not Windows server failover cluster - for example, on Linux with Pacemaker.
+   - **NONE**
+      No cluster manager. Used for a read-scale availability group.
 
 For more information about these options, see [CREATE AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878399.aspx) or [ALTER AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878601.aspx).
 
-**REQUIRED_COPIES_TO_COMMIT**
+**Guarantee commits on required number of synchronous secondary replicas**
 
-Use with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of synchronous secondary replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.
+Use `REQUIRED_COPIES_TO_COMMIT` with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of **synchronous secondary** replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.
 
+**Read-scale availability groups**
+Create an availability group without a cluster to support read-scale workloads. See [Read-scale availability groups](../database-engine/availability-groups/windows/read-scale-availability-groups.md).
 
 ## Next steps
 

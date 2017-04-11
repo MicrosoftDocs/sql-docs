@@ -58,8 +58,8 @@ be executed to fix the problem.
 
 | type | description | datetime | score | details | … |
 | --- | --- | --- | --- | --- | --- |
-| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 4ms to 14ms | 3/17/2017 | 83 | {`queryId`,`forcedPlanId`,`regressedPlanId`,`T-SQL`} |   |
-| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 37ms to 84ms | 3/16/2017 | 26 | {`queryId`,`forcedPlanId`,`regressedPlanId`,`T-SQL`} |   |
+| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 4ms to 14ms | 3/17/2017 | 83 | `queryId` `forcedPlanId` `regressedPlanId` `T-SQL` |   |
+| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 37ms to 84ms | 3/16/2017 | 26 | `queryId` `forcedPlanId` `regressedPlanId` `T-SQL` |   |
 
 The most important information shown in this view are:
  - Type of the recommended action - `FORCE_LAST_GOOD_PLAN`.
@@ -67,7 +67,7 @@ The most important information shown in this view are:
  - Datetime when the potential regression is detected.
  - Score of this recommendation. 
  - Details about the issues such as id of the detected plan, id of the regressed plan, id of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- script that might be applied to fix the issue, etc.
+ script that might be applied to fix the issue, etc. Details are stored in JSON format.
 
 Use the following query to obtain a script that will fix the issue:
 
@@ -121,7 +121,7 @@ FROM sys.database_automatic_tuning_options;
 | FORCE\_LAST\_GOOD\_PLAN | ON | OFF | QUERY_STORE_OFF |
 
 `FORCE_LAST_GOOD_PLAN` option might be in `OFF` state even if the user specified `ON`. The option might be disabled if Query Store is disabled or in read-only mode. Column `actual_state_desc`
-give information about the current state of automatic tuning option, and column `reason_desc` give information why is actual state diferent that desired state. Values in `reason_desc` column
+gives information about the current state of automatic tuning option, and column `reason_desc` gives information why is actual state diferent that desired state. Values in `reason_desc` column
  are shown in the following table:
 
 | reason\_code | reason\_desc | Description |
@@ -133,6 +133,6 @@ give information about the current state of automatic tuning option, and column 
 
 ## See Also  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
+ [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
+ [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)      
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)

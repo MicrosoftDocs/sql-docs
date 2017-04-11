@@ -63,17 +63,18 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 >[!NOTE]
 >`CLUSTER_TYPE` is a new option for `CREATE AVAILABILITY GROUP`. An availability group requires`CLUSTER_TYPE = EXTERNAL` when it is on a SQL Server instance that is not a member of a cluster that is not a Windows server failover cluster.
 
+[!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
+
+>[!IMPORTANT]
+>After you create the availability group, you must configure integration with a cluster technology like WSFC (on Windows) and Pacemaker (Linux) for HA. In the case of a read-only scale-out architecture using availability groups, starting with SQL Server 2017, setting up a cluster is not required.
+
+## Notes
+
 ### Database level monitoring and failover trigger
 
 For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compared to WSFC. When the availability group is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the availability group health to report a fault. This signals the cluster manager to trigger a failover. In Linux, the SQL Server instance cannot communicate with the cluster. Monitoring for database health is done "outside-in". If you opted in for database level failover monitoring and failover (by setting the DDL option `DB_FAILOVER=ON`), the cluster will check if the database state is `ONLINE` every time when it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different than `ONLINE`, it triggers a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action as well as the database state being updated in sys.databases.
 
-
-[!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
-
-
-## Notes
-
-**The availability group is not a clustered resource at this point.** 
+### The availability group is not a clustered resource at this point 
 
    If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. While this is a valid configuration in read-scale/load balancing scenarios, it is not valid for HADR. To achieve HADR, you need to add the availability group as a cluster resource. See [Next steps](#next-steps) for instructions. 
    

@@ -65,6 +65,8 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
+This is not an HA configuration, if you need HA, follow the instructions at [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md). Specifically, create the availability group with `CLUSTER_TYPE=WSFC` (in Windows) or `CLUSTER_TYPE=EXTERNAL` (in Linux) and integrate with a cluster manager - either WSFC on Windows or Pacemaker on Linux.
+
 ## Next steps
 
 

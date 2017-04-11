@@ -51,22 +51,7 @@ manager: "jhubbard"
 | **revert\_action\_initiated\_by** | **nvarchar(4000)** | `User` = User manually unforced recommended plan. <br /> `System` = System automatically reverted recommendation. |
 | **revert\_action\_initiated\_time** | **datetime2** | Date the recommendation was reverted. |
 | **score** | **int** | Estimated value/impact for this recommendation on the 0-100 scale (the larger the better) |
-| **details** | **nvarchar(max)** | JSON document that contains more details about the recommendation. Following fields are available:<br /><br />
-`planForceDetails`<br />
--    `queryId` - query\_id of the regressed query.<br />
--    `regressedPlanId` - plan_id of the regressed plan.<br />
--    `regressedPlanExecutionCount` - Number of execution of the query with regressed plan before the regression is detected.<br />
--    `regressedPlanAbortedCount` - Number of detected errors during the execution of the regressed plan.<br />
--    `regressedPlanCpuTimeAverage` - Average CPU time consumed by the regressed query until the regression is detected.<br />
--    `regressedPlanCpuTimeStddev` - Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br />
--    `forcedPlanId` - plan_id of the plan that should be forced.<br />
--    `forcedPlanExecutionCount` - Number of execution of the query with the plan that should be forced until the regression is detected.<br />
--    `forcedPlanAbortedCount` - Number of detected errors during the execution of the plan that should be forced.<br />
--    `forcedPlanCpuTimeAverage` - Average CPU time consumed by the query executed with the plan that should be forced (calculated before the regression is detected).<br />
--    `forcedPlanCpuTimeStddev` Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br /><br />
-`implementationDetails`<br />
--    `method` - The method that should be used to correct the regression. Value is always `TSql`.<br />
--    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
+| **details** | **nvarchar(max)** | JSON document that contains more details about the recommendation. Following fields are available:<br /><br />`planForceDetails`<br />-    `queryId` - query\_id of the regressed query.<br />-    `regressedPlanId` - plan_id of the regressed plan.<br />-   regressedPlanExecutionCount` - Number of execution of the query with regressed plan before the regression is detected.<br />-    `regressedPlanAbortedCount` - Number of detected errors during the execution of the regressed plan.<br />-    `regressedPlanCpuTimeAverage` - Average CPU time consumed bythe regressed query until the regression is detected.<br />-    `regressedPlanCpuTimeStddev` - Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br />-    `forcedPlanId` - plan_id of the plan that should be forced.<br />-   forcedPlanExecutionCount`- Number of execution of the query with the plan that should be forced until the regression is detected.<br />-    `forcedPlanAbortedCount` - Number of detected errors during the execution of the plan that should be forced.<br />-    `forcedPlanCpuTimeAverage` - Average CPU time consumed by the query executed with the plan that should be forced (calculated before the regression is detected).<br />-    `forcedPlanCpuTimeStddev` Standard deviation of CPU time consumed by the regressed query before the regression is detected.<br /><br />`implementationDetails`<br />-  `method` - The method that should be used to correct the regression. Value is always `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script that should be executed to force the recommended plan. |
   
 ## Remarks  
  Information returned by `sys.dm_db_tuning_recommendations` is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 

@@ -16,7 +16,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Read-scale availability groups
-[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 In addition to bringing together the best in class HA capabilities for SQL Server, an availability group is a comprehensive solution offering integrated scaling solutions as well. In a typical database application, there are multiple clients running various types of workloads and sometimes that can lead to bottlenecks due to resource constraints. You can free up resources and achieve higher throughput for the OLTP workload or deliver higher performance and scale on read-only workloads. This can be achieved by leveraging the fastest replication technology for SQL Server - create a group of replicated databases to offload reporting and analytics workloads to the read-only replicas. 
 
@@ -32,6 +32,15 @@ If the business requirement is to conserve resources for mission-critical worklo
 
 >[!IMPORTANT]
 >This is not a high-availability setup. There is no infrastructure to monitor and coordinate failure detection and automatic failover. For users who need HADR capabilities, use a cluster manager (WSFC on Windows or Pacemaker on Linux). 
+
+## Use distributed availability groups for geographic read-scale
+
+Geographically separated solutions can implement read-scale solutions with distributed availability groups. This allows offloading read workloads from the primary replica to readable secondary replicas to sites that are closer to the source of the read workloads. This not only reduces the utilization of resources on the primary, but also helps with read throughput by reducing network latency and leveraging dedicated resources.
+
+A single distributed availability group can have up to 17 readable secondary replicas. For increased scaling capacity, daisy chain multiple availability groups and increase the number of readable replicas even further. You can also deploy two distributed availability groups from the same availability group for low latency reads in geographically dispersed environments.
+
+
+
 
 ## Next Steps 
 

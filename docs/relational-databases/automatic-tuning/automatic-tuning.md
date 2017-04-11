@@ -67,7 +67,7 @@ The most important information shown in this view are:
  - Datetime when the potential regression is detected.
  - Score of this recommendation. 
  - Details about the issues such as id of the detected plan, id of the regressed plan, id of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- script that might be applied to fix the issue, etc. Details are stored in JSON format.
+ script that might be applied to fix the issue, etc. Details are stored in [JSON format](../../relational-databases/json/index.md).
 
 Use the following query to obtain a script that will fix the issue:
 
@@ -124,7 +124,7 @@ FROM sys.database_automatic_tuning_options;
 gives information about the current state of automatic tuning option, and column `reason_desc` gives information why is actual state diferent that desired state. Values in `reason_desc` column
  are shown in the following table:
 
-| reason\_code | reason\_desc | Description |
+| reason\_code | reason\_desc | description |
 | --- | --- | --- |
 | 2 | `DISABLED` | Option is disabled by system. |
 | 11 | `QUERY_STORE_OFF` | Query Store is turned off. |
@@ -136,3 +136,4 @@ gives information about the current state of automatic tuning option, and column
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
  [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)      
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [JSON functions](../../relational-databases/json/index.md)

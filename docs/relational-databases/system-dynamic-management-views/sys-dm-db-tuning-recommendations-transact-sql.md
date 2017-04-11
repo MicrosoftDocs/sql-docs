@@ -56,7 +56,7 @@ manager: "jhubbard"
 ## Remarks  
  Information returned by `sys.dm_db_tuning_recommendations` is updated when database engine identifies potential query performance regression, and is not persisted. Recommendations are kept only until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. Database administrators should periodically make backup copies of the tuning recommendation if they want to keep it after server recycling. 
 
- `currentValue` field in the `[state]` column might have the following values:
+ `currentValue` field in the `state` column might have the following values:
  | Status | Description |
  |--------|-------------|
  | `Active` | Recommendation is active and not yet aplied. User can take recommendation script and execute it manually. |
@@ -65,7 +65,7 @@ manager: "jhubbard"
  | `Reverted` | Recommendation is reverted because there are no significant performance gains. |
  | `Expired` | Recommendation has expired and cannot be applied anymore. |
 
-JSON document in `[state]` column contains the reason that describes why is the recommendation in the current state. Values in the reason field might be: 
+JSON document in `state` column contains the reason that describes why is the recommendation in the current state. Values in the reason field might be: 
 
 | Reason | Description |
 |--------|-------------|
@@ -107,5 +107,6 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 ## See Also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+ [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [JSON Support](../../relational-databases/json/index.md)
  

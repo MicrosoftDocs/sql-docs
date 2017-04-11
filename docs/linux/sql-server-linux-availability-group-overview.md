@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Always On Availability Group for SQL Server on Linux | Microsoft Docs
+title: Always On availability group for SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -24,11 +24,11 @@ ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 
 ---
 
-# Always On Availability Group for SQL Server on Linux
+# Availability groups for SQL Server on Linux
 
-A SQL Server Always On Availability Group is a high-availability (HA) and disaster-recovery (DR) solution. It provides HA for groups of databases on direct attached storage. It supports multiple secondaries for integrated HA and DR, automatic failure detection, fast transparent failover, and read load balancing. This broad set of capabilities allows you to achieve optimal availability SLAs for your workloads.
+A SQL Server Always On availability group is a high-availability (HA), disaster-recovery (DR), and scale-out solution. It provides HA for groups of databases on direct attached storage. It supports multiple secondaries for integrated HA and DR, automatic failure detection, fast transparent failover, and read load balancing. This broad set of capabilities allows you to achieve optimal availability SLAs for your workloads.
 
-SQL Server Always On Availability Groups were first introduced in SQL Server 2012 and have been improved with each release. This feature is now available on Linux. To accommodate SQL Server workloads with rigorous business continuity requirements, Always On Availability Groups run on all supported [Linux OS distributions](sql-server-linux-release-notes.md). Also, all capabilities that make Availability Groups a flexible, integrated and efficient HA DR solution are available on Linux as well. These include: 
+SQL Server availability groups were first introduced in SQL Server 2012 and have been improved with each release. This feature is now available on Linux. To accommodate SQL Server workloads with rigorous business continuity requirements, availability groups run on all supported [Linux OS distributions](sql-server-linux-release-notes.md). Also, all capabilities that make availability groups a flexible, integrated and efficient HA DR solution are available on Linux as well. These include: 
 
 - **Multi-database failover**
    An availability group supports a failover environment for a set of user databases, known as availability databases.
@@ -54,15 +54,17 @@ SQL Server Always On Availability Groups were first introduced in SQL Server 201
    Enhanced database level monitoring and diagnostics. 
 - **Disaster recovery configurations**
    With distributed availability groups or multi-subnet availability group setup. 
+- **Read-scale capabilities**
+   In SQL Server vNext you can create an availability group with or without HA for to support scale-out read-only operations. 
 
 
-For details about SQL Server Availability Groups, see [SQL Server Always On Availability Groups](http://msdn.microsoft.com/library/hh510230.aspx).
+For details about SQL Server availability groups, see [SQL Server Always On availability groups](http://msdn.microsoft.com/library/hh510230.aspx).
 
-## Availability Group terminology
+## Availability group terminology
 
-An availability group supports a failover environment for a discrete set of user databases - known as availability databases - that fail over together. An availability group supports one set of read-write primary databases and one to eight sets of corresponding secondary databases. Optionally, secondary databases can be made available for read-only access and/or some backup operations. An availability group defines a set of two or more failover partners, known as availability replicas. Availability replicas are components of the availability group. For details see [Overview of Always On Availability Groups (SQL Server)](http://msdn.microsoft.com/library/ff877884.aspx).
+An availability group supports a failover environment for a discrete set of user databases - known as availability databases - that fail over together. An availability group supports one set of read-write primary databases and one to eight sets of corresponding secondary databases. Optionally, secondary databases can be made available for read-only access and/or some backup operations. An availability group defines a set of two or more failover partners, known as availability replicas. Availability replicas are components of the availability group. For details see [Overview of Always On availability groups (SQL Server)](http://msdn.microsoft.com/library/ff877884.aspx).
 
-The following terms describe the main parts of a SQL Server Always On availability group solution:
+The following terms describe the main parts of a SQL Server availability group solution:
 
  availability group  
  A container for a set of databases, *availability databases*, that fail over together.  
@@ -86,14 +88,14 @@ The following terms describe the main parts of a SQL Server Always On availabili
  An availability replica that maintains a secondary copy of each availability database, and serves as a potential failover targets for the availability group. Optionally, a secondary replica can support read-only access to secondary databases can support creating backups on secondary databases.  
   
  availability group listener  
- A server name to which clients can connect in order to access a database in a primary or secondary replica of an Always On availability group. Availability group listeners direct incoming connections to the primary replica or to a read-only secondary replica.  
+ A server name to which clients can connect in order to access a database in a primary or secondary replica of an availability group. Availability group listeners direct incoming connections to the primary replica or to a read-only secondary replica.  
 
 
-## Overview of Steps to Configure SQL Server Availability Group on Linux
+## Overview of steps to configure SQL Server availability group on Linux
 
-To configure a SQL Server Availability Group on Linux, first configure the availability group and then add it as a resource to a Linux cluster. The steps to configure the availability group are the same across Linux distributions. The tools to manage the cluster resources may be different, depending on the distribution. For specific steps, see [Next steps](#next-steps). 
+To configure a SQL Server availability group on Linux, first configure the availability group and then add it as a resource to a Linux cluster. The steps to configure the availability group are the same across Linux distributions. The tools to manage the cluster resources may be different, depending on the distribution. For specific steps, see [Next steps](#next-steps). 
 
-## New in SQL Server vNext for Availability Groups
+## New in SQL Server vNext for availability groups
 
 SQL Server vNext introduces two new features for availability groups.
 
@@ -113,8 +115,8 @@ Use with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRE
 
 [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
 
-[Add Availability Group Cluster Resource on RHEL](sql-server-linux-availability-group-cluster-rhel.md)
+[Add availability group Cluster Resource on RHEL](sql-server-linux-availability-group-cluster-rhel.md)
 
-[Add Availability Group Cluster Resource on SLES](sql-server-linux-availability-group-cluster-sles.md)
+[Add availability group Cluster Resource on SLES](sql-server-linux-availability-group-cluster-sles.md)
 
-[Add Availability Group Cluster Resource on Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Add availability group Cluster Resource on Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)

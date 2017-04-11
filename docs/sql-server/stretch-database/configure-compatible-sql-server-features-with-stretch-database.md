@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
 ms.suite: ""
 ms.technology: 
   - "dbe-stretch"

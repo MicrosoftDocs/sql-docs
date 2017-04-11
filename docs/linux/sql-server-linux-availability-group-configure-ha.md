@@ -26,9 +26,9 @@ ms.assetid: 150b0765-2c54-4bc4-b55a-7e57a5501a0f
 
 # Configure Always On Availability Group for SQL Server on Linux
 
-You can configure Always On availability group for SQL Server on Linux. There are two architectures for availability groups. A *high availability* architecture uses a cluster manager to provide improved business continuity. This architecture can also include read-scale replicas. This document explains how to create the availability group high availability architecture.
+You can configure an Always On availability group for SQL Server on Linux. There are two architectures for availability groups. A *high availability* (HA) architecture uses a cluster manager to provide improved business continuity. This architecture can also include read-scale replicas. This document explains how to create the availability group HA architecture.
 
-You can also create a *read-scale* availability group without a cluster manager. This architecture only provides read-only scalability. It does not provide high availability. To create a read-scale availability group, see [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
+You can also create a *read-scale* availability group without a cluster manager. This architecture only provides read-only scalability. It does not provide HA. To create a read-scale availability group, see [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 
 [!INCLUDE [Create Prereq](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 

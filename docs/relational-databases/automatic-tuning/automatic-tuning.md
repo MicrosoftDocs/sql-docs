@@ -44,7 +44,7 @@ unforce the plan and let the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] find
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides all necessary views and procedures required to monitor performance and fix problems in Query Store. However, continuous
 monitoring and fixing performance issues might be a tedious process.
 
-### Automatic plan change regression detection
+## Automatic plan change regression detection
 
 In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects and shows potential plan choice regressions and the recommended
 actions that should be applied in the **sys.dm\_db\_tuning\_recommendations** view. The view shows information about the problem, the importance of the issue, and details such as the
@@ -53,8 +53,8 @@ be executed to fix the problem.
 
 | type | description | datetime | score | details | … |
 | --- | --- | --- | --- | --- | --- |
-| FORCE\_LAST\_GOOD\_PLAN | CPU time changed from 4ms to 14ms | 3/17/2017 | 83 | `{queryId,forcedPlanId,regressedPlanId,T-SQL}` |   |
-| FORCE\_LAST\_GOOD\_PLAN | CPU time changed from 37ms to 84ms | 3/16/2017 | 26 | `{queryId,forcedPlanId,regressedPlanId,T-SQL}` |   |
+| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 4ms to 14ms | 3/17/2017 | 83 | {`queryId`,`forcedPlanId`,`regressedPlanId`,`T-SQL`} |   |
+| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 37ms to 84ms | 3/16/2017 | 26 | {`queryId`,`forcedPlanId`,`regressedPlanId`,`T-SQL`} |   |
 
 The most important information shown in this view are:
  - Type of the recommended action - `FORCE_LAST_GOOD_PLAN`.

@@ -55,7 +55,7 @@ SQL Server availability groups were first introduced in SQL Server 2012 and have
 - **Disaster recovery configurations**
    With distributed availability groups or multi-subnet availability group setup. 
 - **Read-scale capabilities**
-   In SQL Server vNext you can create an availability group with or without HA for to support scale-out read-only operations. 
+   In SQL Server vNext you can create an availability group with or without HA for scale-out read-only operations. 
 
 
 For details about SQL Server availability groups, see [SQL Server Always On availability groups](http://msdn.microsoft.com/library/hh510230.aspx).
@@ -97,7 +97,10 @@ To configure a SQL Server availability group on Linux, first configure the avail
 
 ## New in SQL Server vNext for availability groups
 
-SQL Server vNext introduces two new features for availability groups.
+SQL Server vNext introduces new features for availability groups.
+
+**Read-scale availability groups**
+Create an availability group without a cluster to support read-scale workloads. See [Read-scale availability groups](../database-engine/availability-groups/windows/read-scale-availability-groups.md).
 
 **CLUSTER_TYPE**
 Use with `CREATE AVAILABILITY GROUP`. Denotes an availability group on a server that is not a member of a Windows Server Failover Cluster (WSFC).

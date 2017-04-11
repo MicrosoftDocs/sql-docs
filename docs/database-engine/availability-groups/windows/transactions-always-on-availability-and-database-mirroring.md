@@ -22,7 +22,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Transactions - Always On availability groups and Database Mirroring
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 This topic describes cross-database and distributed transactions support for Always On Availability Groups and database mirroring.  
   

@@ -20,6 +20,7 @@
 ## [Distributed availability groups](distributed-availability-groups-always-on-availability-groups.md)  
 ## [Availability modes](availability-modes-always-on-availability-groups.md)  
 ## [Failover and failover modes](failover-and-failover-modes-always-on-availability-groups.md)  
+## [Read-scale only](read-scale-availability-groups.md)  
 ## [Flexible failover policy for automatic failover](flexible-automatic-failover-policy-availability-group.md)  
 ## [Possible failures during sessions between replicas](possible-failures-during-sessions-between-availability-replicas-sql-server.md)  
 ## [Database health detection](sql-server-always-on-database-health-detection-failover-option.md)  

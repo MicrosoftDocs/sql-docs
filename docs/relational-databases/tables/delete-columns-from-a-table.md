@@ -1,7 +1,7 @@
 ---
 title: "Delete Columns from a Table | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -60,7 +60,9 @@ manager: "jhubbard"
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  In **Object Explorer**, right-click the table from which you want to delete columns and choose **Delete**.  
+2.  In **Object Explorer**, locate the table from which you want to delete columns, and expand to expose the column names. 
+
+3.  Right-click the column that you want to delete, and choose **Delete**.  
   
 3.  In **Delete Object** dialog box, click **OK**.  
   

@@ -808,7 +808,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 )  
 ```  
   
- <index_option> ::=  
+ \<index_option> ::=  
  Specifies one or more index options. For a complete description of these options, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
  PAD_INDEX = { ON | **OFF** }  
@@ -1567,7 +1567,7 @@ Creates a tables with an inline filtered index.
       c1 int,
       index IX1  (c1) WHERE c1 > 0   
  )
- go
+GO
  ```
  
   

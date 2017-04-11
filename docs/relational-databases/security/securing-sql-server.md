@@ -48,7 +48,7 @@ manager: "jhubbard"
 |For information about|See|  
 |---------------------------|---------|  
 |Configuring a firewall to work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|Configuring a firewall to work with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configure a Windows Firewall for Access to the SSIS Service](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
+|Configuring a firewall to work with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
 |Configuring a firewall to work with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |Opening specific ports on a firewall to enable access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configuring support for Extended Protection for Authentication by using channel binding and service binding|[Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  

@@ -55,11 +55,11 @@ Before you create the availability group, you need to:
 
 Install SQL Server. The following links point to SQL Server installation instructions for various distributions. 
 
-- [Red Hat Enterprise Linux](..\database-engine\availability-groups\windows\ssql-server-linux-setup-red-hat.md)
+- [Red Hat Enterprise Linux](..\linux\sql-server-linux-setup-red-hat.md)
 
-- [SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](..\linux\sql-server-linux-setup-suse-linux-enterprise-server.md)
 
-- [Ubuntu](sql-server-linux-setup-ubuntu.md)
+- [Ubuntu](..\linux\sql-server-linux-setup-ubuntu.md)
 
 ## Enable Always On availability groups and restart sqlserver
 

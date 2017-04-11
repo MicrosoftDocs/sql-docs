@@ -44,9 +44,9 @@ unforce the plan and let the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] find
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides all necessary views and procedures required to monitor performance and fix problems in Query Store. However, continuous
 monitoring and fixing performance issues might be a tedious process.
 
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] provides information about regressed plans and recommended corrective actions in recomendations .
-Additionally, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] enables you to fully automate
-this process and 
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] provides information about regressed plans and recommended corrective actions.
+Additionally, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] enables you to fully automate this process and let [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fix any problem found related 
+to the plan changes.
 
 ## Automatic plan change regression detection
 

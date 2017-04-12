@@ -24,7 +24,7 @@ manager: "jhubbard"
 ---
 
 # ALTER TABLE (SQL Graph)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
 
 Alters a `NODE` or `EDGE` SQL graph table. For more information about SQL graph tables, see [SQL Graph](../../relational-databases/tables/create-tables-database-engine/sql-graph.md).
   

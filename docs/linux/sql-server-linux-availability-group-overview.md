@@ -108,6 +108,7 @@ For more information about these options, see [CREATE AVAILABILITY GROUP](http:/
 Use `REQUIRED_COPIES_TO_COMMIT` with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of **synchronous secondary** replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.
 
 **Read-scale availability groups**
+
 Create an availability group without a cluster to support read-scale workloads. See [Read-scale availability groups](../database-engine/availability-groups/windows/read-scale-availability-groups.md).
 
 ## Next steps

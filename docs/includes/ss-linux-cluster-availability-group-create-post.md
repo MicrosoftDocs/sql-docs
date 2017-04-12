@@ -1,12 +1,3 @@
-### Join secondary SQL Servers to the availability group
-
-The following Transact-SQL script joins a server to an availability group named `ag1`. Update the script for your environment. On each secondary SQL Server replica, run the following Transact-SQL to join the availability group.
-
-```Transact-SQL
-ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE);
-		 
-ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
-```
 
 ## Add a database to the availability group
 
@@ -15,7 +6,15 @@ Ensure the database you are adding to the Availability group is in full recovery
 ```Transact-SQL
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
-BACKUP DATABASE [db1] TO DISK = N'NUL';
+BACKUP DATABASE [db1] 
+   TO DISK = N'var/opt/mssql/data/demodb.bak' 
+   WITH NOFORMAT, 
+        NOINIT, 
+   NAME = 'db1-full', 
+   SKIP, 
+   NOREWIND, 
+   NOUNLOAD, 
+   STATS = 10 Done;
 ```
 
 On the primary SQL Server replica, run the following Transact-SQL to add a database called `db1` to an availability group called `ag1`.

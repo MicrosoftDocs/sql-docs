@@ -45,14 +45,13 @@ CREATE AVAILABILITY GROUP [ag1]
         N'**<node1>**' WITH (
             ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
 		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-		    FAILOVER_MODE = NONE,
-		    SEEDING_MODE = AUTOMATIC,
-		    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
+		    FAILOVER_MODE = MANUAL,
+		    SEEDING_MODE = AUTOMATIC
 		    ),
         N'**<node2>**' WITH ( 
 		    ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
 		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-		    FAILOVER_MODE = NONE,
+		    FAILOVER_MODE = MANUAL,
 		    SEEDING_MODE = AUTOMATIC,
 		    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
 		    );
@@ -63,10 +62,59 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 >[!NOTE]
 >`CLUSTER_TYPE` is a new option for `CREATE AVAILABILITY GROUP`. An availability group requires`CLUSTER_TYPE = NONE` when it is on a SQL Server instance that is not a member a cluster.
 
+### Join secondary SQL Servers to the availability group
+
+The following Transact-SQL script joins a server to an availability group named `ag1`. Update the script for your environment. On each secondary SQL Server replica, run the following Transact-SQL to join the availability group.
+
+```Transact-SQL
+ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = NONE);
+		 
+ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
+```
+
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 This is not an HA configuration, if you need HA, follow the instructions at [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md). Specifically, create the availability group with `CLUSTER_TYPE=WSFC` (in Windows) or `CLUSTER_TYPE=EXTERNAL` (in Linux) and integrate with a cluster manager - either WSFC on Windows or Pacemaker on Linux.
 
+## Connect to read only secondary replicas
+
+There are two ways to connect to the read only secondary replicas. Applications can connect directly to the SQL Server instance that hosts the secondary replica and query the databases, or they can use read-only routing. Read only routing requires a listener.
+
+[Readable secondary replicas](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
+
+[Read only routing](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)
+
+## Failover primary replica on read-scale availability group
+
+Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is the primary, you can failover. In an availability group for HA, the cluster manager automates in the failover process. In a read-scale availability group, the failover process is manual. There are two ways to failover the primary replica in a read scale availability group.
+
+- Manual failover with data loss
+
+- Manual failover without data loss
+
+### Manual failover with data loss
+
+Use this method when the primary replica is not available.
+
+### Manual failover without data loss
+
+Use this method when the primary replica is available. Choose one secondary replica to failover to. This is the target secondary replica.
+
+1. Make the target secondary replica synchronous commit.
+
+1. Update the required copies to commit to 1.
+
+   This ensures that any active connections to the primary replica commit transactions on the target secondary replica.
+
+1. Demote the primary replica to secondary replica.
+
+   After the primary replica is demoted, connections to the primary replica will not be able to write to the databases.
+
+1. Promote the target replica to primary. 
+
 ## Next steps
 
+[Configure distributed availability group](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
+
+[Learn more about availability groups](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
 

@@ -46,8 +46,7 @@ CREATE AVAILABILITY GROUP [ag1]
             ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
 		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = EXTERNAL,
-		    SEEDING_MODE = AUTOMATIC,
-		    SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL)
+		    SEEDING_MODE = AUTOMATIC
 		    ),
         N'**<node2>**' WITH ( 
 		    ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
@@ -62,6 +61,17 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 >[!NOTE]
 >`CLUSTER_TYPE` is a new option for `CREATE AVAILABILITY GROUP`. An availability group requires`CLUSTER_TYPE = EXTERNAL` when it is on a SQL Server instance that is not a member of a cluster that is not a Windows server failover cluster.
+
+### Join secondary SQL Servers to the availability group
+
+The following Transact-SQL script joins a server to an availability group named `ag1`. Update the script for your environment. On each secondary SQL Server replica, run the following Transact-SQL to join the availability group.
+
+```Transact-SQL
+ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
+		 
+ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
+```
+
 
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 

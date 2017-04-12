@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server vNext (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "04/11/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -61,15 +61,15 @@ manager: "jhubbard"
 - Database **COMPATIBILITY_LEVEL** 140 has been added.   Customers running in this level will get the latest language features and query optimizer behaviors. This includes changes in each pre-release version Microsoft releases.
 - Improvements to the way incremental statistics update thresholds are computed (140 compat mode required).
 - [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) is added.
-- We have added many performance and language enhancements to In-Memory Tables:
-    - `sp_spaceused` is now supported for in-memory tables.
-    - `sp_rename` is now supported for native modules.
-    - `CASE` statements are now supported for native modules.
-    - The limitation of 8 indexes on in-memory tables has been removed.
-    - `TOP (N) WITH TIES` is now supported in native modules.
-    - `ALTER TABLE` against in-memory tables is now substantially faster in some cases.
-    - Transaction redo In-memory tables is now done in parallel. This substantially reduces the time to do failovers or in some cases restarts.
-    - In-memory checkpoint files can now be stored on Azure Storage. This provides equivalent capabilities to MDF compared to LDF files,  which already have this capability.
+- We have made several performance and language enhancements to Memory-Optimized objects:
+    - `sp_spaceused` is now supported for memory-optimized tables.
+    - `sp_rename` is now supported for memory-optimized tables and natively compiled T-SQL modules.
+    - `CASE` statements are now supported for natively compiled T-SQL modules.
+    - The limitation of 8 indexes on memory-optimized tables has been eliminated.
+    - `TOP (N) WITH TIES` is now supported in natively compiled T-SQL modules.
+    - `ALTER TABLE` against memory-optimized tables is now substantially faster in most cases.
+    - Transaction log redo of memory-optimized tables is now done in parallel. This bolsters faster recovery times and significantly increases the sustained throughput of AlwaysOn availability group configuration.
+    - Memory-optimized filegroup files can now be stored on Azure Storage. Backup/Restore of memory-optimized files on Azure Storage is also available now.
 - Clustered Columnstore Indexes now support LOB columns (nvarchar(max), varchar(max), varbinary(max)).
 - The [STRING_AGG](../../t-sql/functions/string-agg-transact-sql.md) aggregate function has been added.  
 - New Permissions: `DATABASE SCOPED CREDENTIAL` is now a class of securable, supporting `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`, and `VIEW DEFINITION` permissions. `ADMINISTER DATABASE BULK OPERATIONS` which is restricted to SQL Database is now visible in `sys.fn_builtin_permissions`.   

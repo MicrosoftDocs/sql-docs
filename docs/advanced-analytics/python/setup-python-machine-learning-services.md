@@ -69,13 +69,13 @@ To perform an unattended installation, use the command-line options for SQL Serv
         > [!NOTE]
         > Do not select the option in **Shared Features** for **Microsoft R Server (Standalone)**. Use this option in a separate installation if you need to add the Machine Learning components to a different computer that is used for R development, such as your data scientist's laptop.
         
-        ![Setup options for Python](../python/media/ml-svcs-features-python-highlight.png "Setup options for Python")
+        ![Setup options for Python](media/ml-svcs-features-python-highlight.png "Setup options for Python")
 
 4.  On the page, **Consent to Install Python**, click **Accept**.  
   
      This license agreement is required to download the Python executable, Python packages from Anaconda.  
      
-     ![Agreement to Python license](../python/media/ml-svcs-license-python.PNG "License agreement for Python")
+     ![Agreement to Python license](media/ml-svcs-license-python.png "License agreement for Python")
   
     > [!NOTE]  
     >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md)  
@@ -90,7 +90,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
   
     These selections represent the minimum configuration required to use Python with SQL Server. 
     
-    ![Ready to install Python](../python/media/ready-to-install-python.png "Required components for Python install")
+    ![Ready to install Python](media/ready-to-install-python.png "Required components for Python install")
 
     Optionally, make a note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 

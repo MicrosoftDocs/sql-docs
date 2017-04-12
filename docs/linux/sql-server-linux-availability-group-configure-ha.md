@@ -167,6 +167,29 @@ Because the resource agent requires Pacemaker to send notifications to all repli
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=<**ag1**> --master meta notify=true
 ```
 
+## Manage availability group with two synchronous replicas
+
+The above default behavior applies to the case of 2 synchronous replicas (primary + secondary) as well. Pacemaker will default `REQUIRED_COPIES_TO_COMMIT` = 1 to ensure the secondary replica is always up to date for maximum data protection.  
+
+>[!WARNING]
+>This comes with higher risk of unavailability of the primary replica due to planned or unplanned outages on the secondary. The user can choose to change the default behavior of the resource agent and override the `REQUIRED_COPIES_TO_COMMIT` to 0:
+
+```bash
+sudo pcs resource update <**ag1**> required_copies_to_commit=0
+```
+
+Once overridden, the resource agent will use the new setting for `REQUIRED_COPIES_TO_COMMIT` and stop computing it. This means that users have to manually update it accordingly (for example, if they increase the number of replicas).
+
+The table below describes the outcome of an outage for primary or secondary replicas in different availability group resource configurations:
+
+| Availability group with 2 sync replicas |  |Availability Group with 3 sync replicas | | |
+|---|---|---|---|---|
+| |`REQUIRED_COPIES_TO_COMMIT=0`|`REQUIRED_COPIES_TO_COMMIT=1`* |`REQUIRED_COPIES_TO_COMMIT=0` |`REQUIRED_COPIES_TO_COMMIT=1`* |`REQUIRED_COPIES_TO_COMMIT=2` 
+|**Primary outage** |User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W |Cluster will automatically issue FAILOVER (no data loss) -> New primary is RO until former primary recovers and joins availability group as secondary | User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W | Cluster will automatically issue FAILOVER (no data loss) -> New primary is R/W |Cluster will automatically issue FAILOVER (no data loss) -> New primary is R/O until former primary recovers and joins availability group as secondary
+|**One secondary replica outage** |Primary is R/W, running exposed to data loss |Primary is RO until secondary recovers |Primary is R/W | Primary is R/W Primary is RO
+
+* SQL Server resource agent for Pacemaker default behavior
+
 
 ## Notes
 

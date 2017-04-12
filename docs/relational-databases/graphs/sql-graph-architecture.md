@@ -19,7 +19,8 @@ ms.author: "shkale"
 manager: "jhubbard"
 ---
 # SQL Graph Architecture  
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssvNxt-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+
 
 Learn how SQL Graph is architected. Knowing the basics will make it easier to understand other SQL Graph articles.
  

@@ -76,7 +76,7 @@ Actions performed by the script include:
   
 3.  Log in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and the login you specified, to verify that you can see the database, tables, functions, and stored procedures that were created.  
   
-    ![rsql_devtut_BrowseTables](../../advanced-analytics/r-services/media/rsql-devtut-browsetables.PNG "rsql_devtut_BrowseTables")  
+    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.PNG "rsql_devtut_BrowseTables")  
   
     > [!NOTE]  
     > If the database objects already exist, they cannot be created again.  
@@ -84,14 +84,14 @@ Actions performed by the script include:
     > If the table already exists, the data will be appended, not overwritten. Therefore, be sure to drop any existing objects before running the script.  
   
 ## Next Step  
-[Step 3: Explore and Visualize the Data](../../advanced-analytics/r-services/step-3-explore-and-visualize-the-data-in-database-advanced-analytics-tutorial.md)  
+[Step 3: Explore and Visualize the Data](../tutorials/sqldev-explore-and-visualize-the-data.md)  
   
 ## Previous Step  
-[Step 1: Download the Sample Data](../../advanced-analytics/r-services/step-1-download-the-sample-data-in-database-advanced-analytics-tutorial.md)  
+[Step 1: Download the Sample Data](../tutorials/sqldev-download-the-sample-data.md)  
   
 ## See Also  
-[In-Database Advanced Analytics for SQL Developers &#40;Tutorial&#41;](../../advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md)  
-[SQL Server R Services Tutorials](../../advanced-analytics/r-services/sql-server-r-services-tutorials.md)  
+[In-Database Advanced Analytics for SQL Developers &#40;Tutorial&#41;](../tutorials/sqldev-in-database-advanced-analytics-for-sql-developers.md)  
+[SQL Server R Services Tutorials](../tutorials/machine-learning-services-tutorials.md)  
   
   
   

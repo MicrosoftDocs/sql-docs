@@ -20,7 +20,7 @@ manager: "jhubbard"
  In SQL Server 2016 and vNext, the database engine includes optional components that support extensibility for external script languages, including R and Python. Support for the R language was added in SQL Server 2016; support for Python was added in SQL Server vNext Machine Learning Services
 
 This topic describes the new components that work specifically with the R language. 
-For a discussion of how these components work with open source R, see [R Interoperability](../../advanced-analytics/r-services/r-interoperability-in-sql-server.md)
+For a discussion of how these components work with open source R, see [R Interoperability](r-interoperability-in-sql-server.md)
 
 ## New Components and Providers
 
@@ -53,7 +53,7 @@ In addition to the shell that loads R and executes R code as described in the ar
   - Error handling
   - Writing standard output and errors back to the client
 
-  The SQL Satellite can be monitored by using Extended Events. For more information, see [Extended Events for SQL Server R Services](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md).
+  The SQL Satellite can be monitored by using Extended Events. For more information, see [Extended Events for SQL Server R Services](extended-events-for-sql-server-r-services.md).
 
 
 ## Communication Channels Between Components
@@ -120,5 +120,5 @@ When connecting from a remote data science client that supports Microsoft R, you
 9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] passes results back to the client.
 
 ## See Also
-[Architecture Overview](r/architecture-overview-sql-server-r.md)
+[Architecture Overview](architecture-overview-sql-server-r.md)
 

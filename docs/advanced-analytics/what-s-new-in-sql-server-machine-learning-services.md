@@ -29,7 +29,7 @@ manager: "jhubbard"
 
    MicrosoftML is a new machine learning package for R from the Microsoft R Server and Microsoft Data Science teams. MicrosoftML brings increased speed, performance and scale for handling a large corpus of text data and high-dimensional categorical data in R models with just a few lines of code. In addition, Microsoft R Server customers will get access to five fast, highly accurate learners that are included in Azure Machine Learning. 
    
-   For more information, see [Using the MicrosoftML Package in SQL Server R Services](r/using-the-microsoftml-package-with-sql-server-r-services.md).
+   For more information, see [Using the MicrosoftML Package in SQL Server R Services](using-the-microsoftml-package.md).
    
 + Easier package management for data scientists
 
@@ -68,7 +68,7 @@ manager: "jhubbard"
     
 -   Significant performance improvements, including optimization of the SQL Satellite processes, which connect R and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], support for paging of data to enable high-volume data usage, and streaming to enable fast processing of  billions of rows. 
   
--   Use SQL Server resource pools to manage memory used by R processes. For more information see [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md).  
+-   Use SQL Server resource pools to manage memory used by R processes. For more information see [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../t-sql/statements/create-external-resource-pool-transact-sql.md).  
   
 
 ### Tools and setup
@@ -94,5 +94,5 @@ manager: "jhubbard"
 
   
 ## See Also  
-[What's New in SQL Server vNext](../../sql-server/what-s-new-in-sql-server-vnext.md)
+[What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
   

@@ -6,7 +6,7 @@
 ### [Configure and Manage Machine Learning Extensions](r/configure-and-manage-advanced-analytics-extensions.md)  
 
 ## [Differences in Features between Editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)  
-## [What's New](r/what-s-new-in-sql-server-r-services.md)  
+## [What's New](what-s-new-in-sql-server-r-services.md)  
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)  
 
@@ -85,10 +85,10 @@
 # Reference  
 
 ## [R](./r/machine-learning-services-r-reference.md)  
-### [MicrosoftML](r/using-the-microsoftml-package-with-sql-server-r-services.md)  
+### [MicrosoftML](using-the-microsoftml-package.md)  
 ### [RevoScaleR](./r/revoscaler-overview.md)  
 #### [ScaleR Functions for Working with SQL Server Data](r/scaler-functions-for-working-with-sql-server-data.md)  
-### [DeployR](./r/operationalization-with-mrsdeploy.md)  
+### [DeployR](operationalization-with-mrsdeploy.md)  
 ### [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)  
 #### [How to Create a Stored Procedure Using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)  
 ### [Using Data from OLAP Cubes in R](r/using-data-from-olap-cubes-in-r.md)  
@@ -108,9 +108,9 @@
 ### [Installing Machine Learning Components without Internet Access](r/installing-ml-components-without-internet-access.md)  
 ### [Installing SQL Server Machine Learning Services on an Azure Virtual Machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)  
 ### [Modify the User Account Pool for SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)  
-### [Use sqlBindR.exe to Upgrade an Instance of Machine Learning Services](r/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md)  
+### [Use sqlBindR.exe to Upgrade an Instance of Machine Learning Services](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)  
 
-## [Known Issues](r/known-issues-for-sql-server-r-services.md)  
+## [Known Issues](r/known-issues-for-sql-server-machine-learning-services.md)  
 
 ## [Related Tools](r/setup-or-configure-r-tools.md)  
 ### [Provision the Machine Learning Server Only SQL Server 2016 Enterprise VM on Azure](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)  
@@ -120,57 +120,53 @@
 ## [Blog](https://blogs.technet.microsoft.com/machinelearning/)  
 ## [Feedback Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)  
 
+# [SQL Server R Services Tutorials](advanced-analytics/tutorials/machine-learning-services-tutorials.md)  
 
+## [Using R Code in Transact-SQL (Basic Tutorial)](advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-sql-server-r-services.md)  
+### [Working with Inputs and Outputs (R in T-SQL Tutorial)](advanced-analytics/tutorials/rtsql-working-with-inputs-and-outputs-r-in-t-sql-tutorial.md)  
+### [R and SQL Data Types and Data Objects (R in T-SQL Tutorial)](advanced-analytics/tutorials/rtsql-r-and-sql-data-types-and-data-objects-r-in-t-sql-tutorial.md)  
+### [Using R Functions with SQL Server Data (R in T-SQL Tutorial)](advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data-r-in-t-sql-tutorial.md)  
+### [Create a Predictive Model (R in T-SQL Tutorial)](advanced-analytics/tutorials/rtsql-create-a-predictive-model-r-in-t-sql-tutorial.md)  
+### [Predict and Plot from Model (R in T-SQL Tutorial)](advanced-analytics/tutorials/rtsql-predict-and-plot-from-model-r-in-t-sql-tutorial.md)  
 
-
-
-# [SQL Server R Services Tutorials](r/sql-server-r-services-tutorials.md)  
-
-## [Using R Code in Transact-SQL (Basic Tutorial)](r/using-r-code-in-transact-sql-sql-server-r-services.md)  
-### [Working with Inputs and Outputs (R in T-SQL Tutorial)](r/working-with-inputs-and-outputs-r-in-t-sql-tutorial.md)  
-### [R and SQL Data Types and Data Objects (R in T-SQL Tutorial)](r/r-and-sql-data-types-and-data-objects-r-in-t-sql-tutorial.md)  
-### [Using R Functions with SQL Server Data (R in T-SQL Tutorial)](r/using-r-functions-with-sql-server-data-r-in-t-sql-tutorial.md)  
-### [Create a Predictive Model (R in T-SQL Tutorial)](r/create-a-predictive-model-r-in-t-sql-tutorial.md)  
-### [Predict and Plot from Model (R in T-SQL Tutorial)](r/predict-and-plot-from-model-r-in-t-sql-tutorial.md)  
-
-## [Data Science End-to-End Walkthrough](r/data-science-end-to-end-walkthrough.md)
-### [Prerequisites for Data Science Walkthroughs](r/prerequisites-for-data-science-walkthroughs-sql-server-r-services.md)  
-### [Prepare the Data](r/lesson-1-prepare-the-data-data-science-end-to-end-walkthrough.md)  
-### [View and Explore the Data](r/lesson-2-view-and-explore-the-data-data-science-end-to-end-walkthrough.md)  
-#### [View and Summarize Data using R](r/lesson-2-1-view-and-summarize-data-using-r.md)  
-#### [Create Graphs and Plots Using R](r/lesson-2-2-create-graphs-and-plots-using-r.md) 
-### [Create Data Features](r/lesson-3-create-data-features-data-science-end-to-end-walkthrough.md)  
-### [Build and Save the Model](r/lesson-4-build-and-save-the-model-data-science-end-to-end-walkthrough.md)  
-### [Deploy and Use the Model](r/lesson-5-deploy-and-use-the-model-data-science-end-to-end-walkthrough.md)    
+## [Data Science End-to-End Walkthrough](advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+### [Prerequisites for Data Science Walkthroughs](dvanced-analytics/tutorials/walkthroughprerequisites-for-data-science-walkthroughs-sql-server-r-services.md)  
+### [Prepare the Data](dvanced-analytics/tutorials/walkthrough-prepare-the-data-data-science-end-to-end-walkthrough.md)  
+### [View and Explore the Data](dvanced-analytics/tutorials/walkthrough-view-and-explore-the-data-data-science-end-to-end-walkthrough.md)  
+#### [View and Summarize Data using R](dvanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md)  
+#### [Create Graphs and Plots Using R](dvanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md) 
+### [Create Data Features](dvanced-analytics/tutorials/walkthrough-create-data-features-data-science-end-to-end-walkthrough.md)  
+### [Build and Save the Model](dvanced-analytics/tutorials/walkthrough-build-and-save-the-model-data-science-end-to-end-walkthrough.md)  
+### [Deploy and Use the Model](dvanced-analytics/tutorials/walkthrough-deploy-and-use-the-model-data-science-end-to-end-walkthrough.md)    
  
-## [Data Science Deep Dive: Using the RevoScaleR Packages](r/data-science-deep-dive-using-the-revoscaler-packages.md)
-### [Lesson 1: Work with SQL Server Data using R](r/lesson-1-work-with-sql-server-data-using-r-data-science-deep-dive.md)
-#### [Create SQL Server Data Objects using RxSqlServerData](r/lesson-1-1-create-sql-server-data-objects-using-rxsqlserverdata.md)  
-#### [Query and Modify the SQL Server Data](r/lesson-1-2-query-and-modify-the-sql-server-data.md)  
-#### [Define and Use Compute Contexts](r/lesson-1-3-define-and-use-compute-contexts.md)  
+## [Data Science Deep Dive: Using the RevoScaleR Packages](advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+### [Lesson 1: Work with SQL Server Data using R](advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r-data-science-deep-dive.md)
+#### [Create SQL Server Data Objects using RxSqlServerData](advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)  
+#### [Query and Modify the SQL Server Data](advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)  
+#### [Define and Use Compute Contexts](advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)  
 
-### [Lesson 2: Create and Run R Scripts](r/lesson-2-create-and-run-r-scripts-data-science-deep-dive.md)
-#### [Visualize SQL Server Data using R](r/lesson-2-1-visualize-sql-server-data-using-r.md)  
-#### [Create Models](r/lesson-2-2-create-models.md)  
-#### [Score New Data](r/lesson-2-3-score-new-data.md)
+### [Lesson 2: Create and Run R Scripts](advanced-analytics/tutorials/deepdive-create-and-run-r-scripts-data-science-deep-dive.md)
+#### [Visualize SQL Server Data using R](advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)  
+#### [Create Models](advanced-analytics/tutorials/deepdive-create-models.md)  
+#### [Score New Data](advanced-analytics/tutorials/deepdive-score-new-data.md)
 
-### [Lesson 3: Transform Data Using R](r/lesson-3-transform-data-using-r-data-science-deep-dive.md)
-#### [Load Data into Memory using rxImport](r/lesson-3-1-load-data-into-memory-using-rximport.md)  
-#### [Create New SQL Server Table using rxDataStep](r/lesson-3-2-create-new-sql-server-table-using-rxdatastep.md)  
-#### [Perform Chunking Analysis using rxDataStep](r/lesson-3-3-perform-chunking-analysis-using-rxdatastep.md)  
+### [Lesson 3: Transform Data Using R](advanced-analytics/tutorials/deepdive-transform-data-using-r-data-science-deep-dive.md)
+#### [Load Data into Memory using rxImport](advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)  
+#### [Create New SQL Server Table using rxDataStep](advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)  
+#### [Perform Chunking Analysis using rxDataStep](advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)  
 
-### [Lesson 4: Analyze Data in Local Compute Context](r/lesson-4-analyze-data-in-local-compute-context-data-science-deep-dive.md)  
-#### [Move Data between SQL Server and XDF File](r/lesson-4-1-move-data-between-sql-server-and-xdf-file.md)  
+### [Lesson 4: Analyze Data in Local Compute Context](advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context-data-science-deep-dive.md)  
+#### [Move Data between SQL Server and XDF File](advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)  
 
-### [Lesson 5: Create a Simple Simulation](r/lesson-5-create-a-simple-simulation-data-science-deep-dive.md)  
+### [Lesson 5: Create a Simple Simulation](advanced-analytics/tutorials/deepdive-create-a-simple-simulation-data-science-deep-dive.md)  
 
-## [In-Database Advanced Analytics for SQL Developers](r/in-database-advanced-analytics-for-sql-developers-tutorial.md)  
-### [Step 1: Download the Sample Data](r/step-1-download-the-sample-data-in-database-advanced-analytics-tutorial.md)  
-### [Step 2: Import Data to SQL Server using PowerShell](r/step-2-import-data-to-sql-server-using-powershell.md)  
-### [Step 3: Explore and Visualize the Data](r/step-3-explore-and-visualize-the-data-in-database-advanced-analytics-tutorial.md)  
-### [Step 4: Create Data Features using T-SQL](r/step-4-create-data-features-using-t-sql-in-database-advanced-analytics-tutorial.md)  
-### [Step 5: Train and Save a Model using T-SQL](r/step-5-train-and-save-a-model-using-t-sql.md)  
-### [Step 6: Operationalize the Model](r/step-6-operationalize-the-model-in-database-advanced-analytics-tutorial.md)
+## [In-Database Advanced Analytics for SQL Developers](advanced-analytics/tutorials/sqldev-in-database-advanced-analytics-for-sql-developers-tutorial.md)  
+### [Step 1: Download the Sample Data](advanced-analytics/tutorials/sqldev-step-1-download-the-sample-data-in-database-advanced-analytics-tutorial.md)  
+### [Step 2: Import Data to SQL Server using PowerShell](advanced-analytics/r/sqldev-import-data-to-sql-server-using-powershell.md)  
+### [Step 3: Explore and Visualize the Data](advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data-in-database-advanced-analytics-tutorial.md)  
+### [Step 4: Create Data Features using T-SQL](advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql-in-database-advanced-analytics-tutorial.md)  
+### [Step 5: Train and Save a Model using T-SQL](advanced-analytics/r/sqldev-train-and-save-a-model-using-t-sql.md)  
+### [Step 6: Operationalize the Model](advanced-analytics/tutorials/sqldev-operationalize-the-model-in-database-advanced-analytics-tutorial.md)
 
-## [Data Science Scenarios and Solution Templates](r/data-science-scenarios-and-solution-templates.md)  
+## [Data Science Scenarios and Solution Templates](advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md)  
 

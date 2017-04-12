@@ -36,7 +36,7 @@ The goal of the extensibility framework was to create a better interface between
 
 By executing a trusted scripting language within a secure framework managed by SQL Server, the database developer can maintain security while allowing data scientists to use enterprises data.
 
-![Goals of integration with SQL Server](../advanced-analytics/media/ml-service-value-add.png "Machine Learning Services Value Add")
+![Goals of integration with SQL Server](media/ml-service-value-add.png "Machine Learning Services Value Add")
 
 + Current users of R or Python should be able to port their R code and execute it in SQL Server with relatively minor modifications.
 + The data security model in SQL Server is extended to data used by external script languages. In other words, someone running R or Python script should not be able to use any data that could not be accessed by that user in a SQL query.
@@ -73,7 +73,7 @@ In addition to the core goals of the extensibility platform, Machine Learning Se
 +  
 Let's see how it works in practice.
 
-![ML solution development process](../advanced-analytics/media/ml-solution-development-process.png "Develop and deploy using Machine Learning Services")
+![ML solution development process](media/ml-solution-development-process.png "Develop and deploy using Machine Learning Services")
 
 1. Data is kept within the compliance boundary and use of data can be managed and monitored by SQL Server. Meanwhile, the DBA has full control over who can install packages or run scripts on the server, but can delegate permissions on a database level to data scientists or managers if desired. 
 2. Data scientists can build and test solutions in their preferred R or Python environments, disconnected from the server. 

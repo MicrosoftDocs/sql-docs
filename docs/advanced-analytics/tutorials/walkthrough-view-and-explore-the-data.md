@@ -39,7 +39,7 @@ First, take a minute to ascertain that your data was loaded correctly.
   
 2.  Click on the database you created, and expand to see the new database, tables, and functions  
   
-    ![rsql_e2e_ssms_newobjects](../../advanced-analytics/r-services/media/rsql-e2e-ssms-newobjects.PNG) 
+    ![rsql_e2e_ssms_newobjects](media/rsql-e2e-ssms-newobjects.PNG) 
   
 3.  To verify that the data was loaded correctly, right-click the table and select **Select top 1000 rows** to run this query:  
   

@@ -43,7 +43,7 @@ For this walkthrough, you will use the *rxHistogram* function to view the distri
  
 3.    The results are exactly the same, since you're using the same data source; however, the computations are performed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.  The results are then returned to your local workstation for plotting.  
    
-![histogram results](../../advanced-analytics/r-services/media/rsql-sue-histogramresults.jpg "histogram results")  
+![histogram results](media/rsql-sue-histogramresults.jpg "histogram results")  
 
   
 4.  You can also call the *rxCube* function and pass the results to an R plotting functions.  For example, the following example uses *rxCube* to compute the mean of *fraudRisk* for every combination of *numTrans* and *numIntlTrans*:  
@@ -77,7 +77,7 @@ For this walkthrough, you will use the *rxHistogram* function to view the distri
   
     **Results**  
   
-    ![scatterplot results](../../advanced-analytics/r-services/media/rsql-sue-scatterplotresults.jpg "scatterplot results")  
+    ![scatterplot results](media/rsql-sue-scatterplotresults.jpg "scatterplot results")  
   
 From even this quick analysis, you can see that the risk of fraud increases with both the number of transactions and the number of international transactions.
 

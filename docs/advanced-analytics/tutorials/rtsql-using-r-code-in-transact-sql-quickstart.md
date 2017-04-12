@@ -62,11 +62,11 @@ To run SQL queries that include R script, use SQL Server Management Studio (SSMS
 
     In Visual Studio Code, you can highlight the code you want to run and press CTRL+SHIFT+E. If this is too hard to remember, you can change it! See [Customize the shortcut key bindings](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).  
 
-    ![rsql-basictut_hello1code](../../advanced-analytics/r-services/media/rsql-basictut-hello1code.PNG)
+    ![rsql-basictut_hello1code](media/rsql-basictut-hello1code.PNG)
 
 **Results**
 
-![rsql_basictut_hello1](../../advanced-analytics/r-services/media/rsql-basictut-hello1.PNG)
+![rsql_basictut_hello1](media/rsql-basictut-hello1.PNG)
    
 ## Troubleshooting
 

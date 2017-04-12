@@ -60,7 +60,7 @@ In this step, you'll download the sample dataset and the [!INCLUDE[tsql](../../i
   
     **Results:**  
   
-    ![list of files downloaded by PowerShell script](../../advanced-analytics/r-services/media/rsql-devtut-filelist.PNG "list of files downloaded by PowerShell script")  
+    ![list of files downloaded by PowerShell script](media/rsql-devtut-filelist.png "list of files downloaded by PowerShell script")  
   
 ## Next Step  
 [Step 2: Import Data to SQL Server using PowerShell](../../advanced-analytics/r-services/step-2-import-data-to-sql-server-using-powershell.md)  

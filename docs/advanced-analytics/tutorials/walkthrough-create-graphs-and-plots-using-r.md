@@ -38,7 +38,7 @@ In this lesson, you'll learn techniques for generating plots and maps using R wi
   
 2.  The image is returned in the R graphics device for your development environment.  For example, in RStudio, click the **Plot** window.  In [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)], a separate graphics window is opened.  
   
-    ![using rxHistogram to plot fare amounts](../../advanced-analytics/r-services/media/rsql-e2e-rxhistogramresult.png "using rxHistogram to plot fare amounts")  
+    ![using rxHistogram to plot fare amounts](media/rsql-e2e-rxhistogramresult.png "using rxHistogram to plot fare amounts")  
   
     > [!NOTE]
     >  Because the ordering of rows using TOP is non-deterministic in the absence of an ORDER BY clause, you might see very different results. We recommend that you experiment with different numbers of rows to get different graphs, and note how long it takes to return the results in your environment.  This particular image was generated using about 10,000 rows of data.
@@ -98,7 +98,7 @@ This is a pattern that you might find useful when developing your own applicatio
   
 4.  The following image shows the output plot. The taxi pickup locations are added to the map as red dots.  
   
-    ![plotting taxi rides using a custom R function](../../advanced-analytics/r-services/media/rsql-e2e-mapplot.png "plotting taxi rides using a custom R function")  
+    ![plotting taxi rides using a custom R function](media/rsql-e2e-mapplot.png "plotting taxi rides using a custom R function")  
   
 ## Next Lesson  
 [Lesson 3: Create Data Features &#40;Data Science End-to-End Walkthrough&#41;](../../advanced-analytics/r-services/lesson-3-create-data-features-data-science-end-to-end-walkthrough.md)  

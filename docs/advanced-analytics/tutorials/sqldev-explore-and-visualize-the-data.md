@@ -161,7 +161,7 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
 4.  The output file will be created in the same directory where you ran the PowerShell command. To view the plot, just open the file plot.jpg.  
   
-    ![taxi trips with and without tips](../../advanced-analytics/r-services/media/rsql-devtut-tippedornot.jpg "taxi trips with and without tips")  
+    ![taxi trips with and without tips](media/rsql-devtut-tippedornot.jpg "taxi trips with and without tips")  
   
 ### Saving plots in files (jpg, pdf) on the server  
 Outputting an R plot to a binary data type might be convenient  for consumption by applications, but it is not very useful to a data scientist who needs the rendered plot during the data exploration stage. Typically the data scientist will generate multiple data visualizations, to get insights into the data from different perspectives.  
@@ -270,11 +270,11 @@ In this step, you'll create a new stored procedure, _PlotInOutputFiles_, that de
   
 *  rHistograms_Tip_and_Fare_Amount_*nnnn*.pdf: Shows  the distribution of values in the tip_amount and fare_amount columns.  
   
-        ![histogram showing tip_amount and fare_amount](../../advanced-analytics/r-services/media/rsql-devtut-tipamtfareamt.PNG "histogram showing tip_amount and fare_amount")  
+        ![histogram showing tip_amount and fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogram showing tip_amount and fare_amount")  
   
 *  rXYPlots_Tip_vs_Fare_Amount_*nnnn*.pdf: A scatterplot with the fare amount on the x-axis and the tip amount on the y-axis.  
   
-        ![tip amount plotted over fare amount](../../advanced-analytics/r-services/media/rsql-devtut-tipamtbyfareamt.PNG "tip amount plotted over fare amount")  
+        ![tip amount plotted over fare amount](media/rsql-devtut-tipamtbyfareamt.PNG "tip amount plotted over fare amount")  
   
 3.  To output the files to a different folder, change the value of the `mainDir` variable in the R script embedded in the stored procedure.  
   

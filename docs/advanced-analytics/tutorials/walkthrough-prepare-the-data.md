@@ -60,7 +60,7 @@ All the code that you will has been provided in a GitHub repository. You can use
   
 4.  Downloading might take a while. After it is complete, the Windows PowerShell command console should look like this:  
   
-    ![After completion of PowerShell script](../../advanced-analytics/r-services/media/rsql-e2e-psscriptresults.PNG "After completion of PowerShell script")  
+    ![After completion of PowerShell script](media/rsql-e2e-psscriptresults.PNG "After completion of PowerShell script")  
   
 5.  In the PowerShell console, you can run the command `ls` to view a list of the files that were downloaded to *DestDir*.  For a description of the filesls
 , see [What's Included](#What-the-Download-Includes).

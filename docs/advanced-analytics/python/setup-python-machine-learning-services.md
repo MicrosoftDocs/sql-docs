@@ -75,7 +75,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
   
      This license agreement is required to download the Python executable, Python packages from Anaconda.  
      
-     ![Agreement to Python license](media/ml-svcs-license-python.PNG "License agreement for Python")
+     ![Agreement to Python license](media/ml-svcs-license-python.png "License agreement for Python")
   
     > [!NOTE]  
     >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md)  

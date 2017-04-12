@@ -41,7 +41,7 @@ VALUES (40),  (50),  (60), (70), (80), (90), (100)
 
 By now, your table might contain multiple R models, all built using different parameters or algorithms, or trained on different subsets of data.  
 
-![rsql_basictut_listofmodels](../../advanced-analytics/r-services/media/rsql-basictut-listofmodels.png)
+![rsql_basictut_listofmodels](media/rsql-basictut-listofmodels.png)
 
 To get predictions based on a specific model, you must write a SQL script that does the following:
 
@@ -79,7 +79,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 
 **Results**
 
-![rsql_basictut_scoringresults_smalldata](../../advanced-analytics/r-services/media/rsql-basictut-scoringresults-smalldata.PNG)
+![rsql_basictut_scoringresults_smalldata](media/rsql-basictut-scoringresults-smalldata.PNG)
 
 
 
@@ -157,7 +157,7 @@ The following example demonstrates how to create a simple graphic using a plotti
 
 **Results**
 
-![rsql_basictut_plotresult_small](../../advanced-analytics/r-services/media/rsql-basictut-plotresult-small.png)
+![rsql_basictut_plotresult_small](media/rsql-basictut-plotresult-small.png)
 
 If you want to do some more elaborate plots, using some of the great graphics packages for R, we recommend these articles. Both require the popular **ggplot2** package.
 

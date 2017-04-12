@@ -135,7 +135,7 @@ VALUES (' latest model', @model)
 
 **Results**
 
-![rslq_basictut_coefficients](../../advanced-analytics/r-services/media/rslq-basictut-coefficients.PNG)
+![rslq_basictut_coefficients](media/rslq-basictut-coefficients.PNG)
 
 
 ### Summary

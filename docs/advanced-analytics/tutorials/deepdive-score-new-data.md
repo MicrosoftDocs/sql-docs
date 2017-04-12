@@ -148,7 +148,7 @@ After the new table has been created, you will compute and display a histogram o
   
     **Results**  
   
-    ![complex histogram created by R](../../advanced-analytics/r-services/media/rsql-sue-complex-histogram.png "complex histogram created by R")  
+    ![complex histogram created by R](media/rsql-sue-complex-histogram.png "complex histogram created by R")  
   
 ## Next Step  
 [Lesson 3: Transform Data Using R &#40;Data Science Deep Dive&#41;](../../advanced-analytics/r-services/lesson-3-transform-data-using-r-data-science-deep-dive.md)  

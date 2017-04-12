@@ -62,7 +62,7 @@ EXECUTE sp_execute_external_script
 ```    
 **Results**
 
-![rsql_basictut_getsamedataR](../../advanced-analytics/r-services/media/rsql-basictut-getsamedatar.PNG)
+![rsql_basictut_getsamedataR](media/rsql-basictut-getsamedatar.PNG)
 
 **Notes**    
 

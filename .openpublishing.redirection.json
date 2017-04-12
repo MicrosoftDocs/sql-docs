@@ -329,6 +329,11 @@
    "redirect_document_id" : false
 },
 {
+   "source_path" : "docs/advanced-analytics/r-services/architecture-overview-sql-server-r.md",
+   "redirect_url" : "/sql/advanced-analytics/r/architecture-overview-sql-server-r",
+   "redirect_document_id" : false
+},
+{
    "source_path" : "docs/advanced-analytics/r-services/configuration-sql-server-r-services.md",
    "redirect_url" : "/sql/advanced-analytics/r/configuration-sql-server-r-services",
    "redirect_document_id" : false

@@ -1,5 +1,5 @@
 ---
-title: "Transactions - Always On Availability and Database Mirroring | Microsoft Docs"
+title: "Transactions - Always On Availability Groups and Database Mirroring | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/29/2016"
 ms.prod: "sql-server-2016"
@@ -21,12 +21,13 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Transactions - Always On Availability and Database Mirroring
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# Transactions - Always On availability groups and Database Mirroring
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 This topic describes cross-database and distributed transactions support for Always On Availability Groups and database mirroring.  
   
 ## Support for cross-database transactions within the same SQL Server instance  
+
 Cross-database transactions within the same SQL Server instance are not supported for Always On Availability Groups. This means that no two databases in a cross-database transaction may be hosted by the same SQL Server instance. This is true even if those databases are part of the same Availability Group.  
   
 Cross-database transactions are also not supported for database mirroring.  

@@ -320,6 +320,8 @@ To remove the High Availability Extension software from a machine that you no lo
 
 ## Next steps
 
-[Create SQL Server Availability Group](sql-server-linux-availability-group-configure.md)
+[Configure availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
+
+[Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
 
 

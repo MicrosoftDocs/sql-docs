@@ -59,7 +59,7 @@ The following sections provide a high level overview of some typical analytical 
   
      When you need to deploy R code to production, [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] provides the best of the R and SQL worlds. You can use R for statistical computations that are difficult to implement using SQL, but leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance, using features such as the in-memory database engine and columnstore indexes.  
   
-    ![rsql_keyscenario1](rsql-keyscenario1.png)  
+    ![rsql_keyscenario1](media/rsql-keyscenario1.png)  
   
      For more information, see [Operationalizing Your R Code](operationalizing-your-r-code.md).  
  
@@ -103,24 +103,24 @@ The following sections provide a high level overview of some typical analytical 
   
 -   Learn how to call R from a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and returns results in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
-     [Using R Code in Transact-SQL](using-r-code-in-transact-sql-sql-server-r-services.md)  
+     [Using R Code in Transact-SQL](using-r-code-in-transact-sql-quickstart.md)  
   
 -   Understand the full flow for creating an advanced analytics solution and deploying it using SQL Server R Services  
   
-     [Data Science End-to-End Walkthrough](data-science-end-to-end-walkthrough.md)  
+     [Data Science End-to-End Walkthrough](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)  
   
 -   Learn how to use the RevoScaleR package for scalable and high performance analysis, and how to push R computations to the SQL Server computer  
   
-     [Data Science Deep Dive: Using the RevoScaleR Packages](data-science-deep-dive-using-the-revoscaler-packages.md)  
+     [Data Science Deep Dive: Using the RevoScaleR Packages](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
   
 -   Embed working R script in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures so that you can call models for prediction, retrain models, or get predictions from applications  
   
-     [In-Database Advanced Analytics for SQL Developers](in-database-advanced-analytics-for-sql-developers-tutorial.md)  
+     [In-Database Advanced Analytics for SQL Developers](../tutorials/sqldev-in-database-advanced-analytics-for-sql-developers-tutorial.md)  
   
 -   Use [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and related business intelligence tools in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stack to automate machine learning processes. Data preparation and reporting can be automated using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]; display R plots along with other reports using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or Power View.  
   
 + More samples, including solution templates and sample R code  
-   [SQL Server R Services Tutorials](sql-server-r-services-tutorials.md).  
+   [SQL Server R Services Tutorials](../tutorials/machine-learning-services-tutorials.md).  
   
 ## See Also  
  [SQL Server R Services](sql-server-r-services.md)   

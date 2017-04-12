@@ -2,29 +2,29 @@
 ## [What is Microsoft Machine Learning Services](r/r-services.md)  
 ## [Getting Started](getting-started-with-machine-learning-services.md)  
 ## [Architecture and Overview](architecture-overview-machine-learning.md)  
-### [Security Overview](r/security-overview-sql-server-r-services.md)  
+### [Security Overview](r/security-overview-sql-server-r.md)  
 ### [Configure and Manage Machine Learning Extensions](r/configure-and-manage-advanced-analytics-extensions.md)  
 
 ## [Differences in Features between Editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)  
-## [What's New](what-s-new-in-sql-server-r-services.md)  
+## [What's New](what-s-new-in-sql-server-machine-learning-services.md)  
 
 # [Machine Learning Services - R](r/sql-server-r-services.md)  
 
-## [Architecture](r/architecture-overview-sql-server-r-services.md)  
+## [Architecture](r/architecture-overview-sql-server-r.md)  
 ### [New Components in SQL Server to Support Machine Learning Services](r/new-components-in-sql-server-to-support-r.md)  
 ### [R Interoperability in SQL Server Machine Learning Services](r/r-interoperability-in-sql-server.md)  
 
 ## [Setup and Configuration](r/getting-started-with-sql-server-r-services.md)  
 ### [Set up SQL Server Machine Learning Services (In-Database)](r/set-up-sql-server-r-services-in-database.md)  
-### [Unattended Installs of SQL Server Machine Learning Services](r/unattended-installs-of-sql-server.md)
-### [Configuration (SQL Server Machine Learning Services)](r/configuration-sql-server.md)  
+### [Unattended Installs of SQL Server Machine Learning Services](r/unattended-installs-of-sql-server-r-services.md)
+### [Configuration (SQL Server Machine Learning Services)](r/configuration-sql-server-r-services.md)  
 ### [Security Considerations for the R Runtime in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)  
 ### [Managing and Monitoring Machine Learning Solutions](r/managing-and-monitoring-r-solutions.md)  
 
 ## [Monitoring](r/monitoring-r-services.md)  
 ### [How To: Create a Resource Pool for R](r/how-to-create-a-resource-pool-for-r.md)  
-### [Extended Events for SQL Server Machine Learning Services](r/extended-events-for-sql-server.md)  
-### [DMVs for SQL Server Machine Learning Services](r/dmvs-for-sql-server.md)  
+### [Extended Events for SQL Server Machine Learning Services](r/extended-events-for-sql-server-r-services.md)  
+### [DMVs for SQL Server Machine Learning Services](r/dmvs-for-sql-server-r-services.md)  
 ### [Using R Code Profiling Functions](r/using-r-code-profiling-functions.md)  
 ### [Monitor Machine Learning Services using Custom Reports in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)  
 ### [Resource Governance for Machine Learning Services](r/resource-governance-for-r-services.md)  
@@ -110,7 +110,7 @@
 ### [Modify the User Account Pool for SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)  
 ### [Use sqlBindR.exe to Upgrade an Instance of Machine Learning Services](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)  
 
-## [Known Issues](r/known-issues-for-sql-server-machine-learning-services.md)  
+## [Known Issues](known-issues-for-sql-server-machine-learning-services.md)  
 
 ## [Related Tools](r/setup-or-configure-r-tools.md)  
 ### [Provision the Machine Learning Server Only SQL Server 2016 Enterprise VM on Azure](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)  
@@ -122,11 +122,11 @@
 
 # [SQL Server R Services Tutorials](tutorials/machine-learning-services-tutorials.md)  
 
-## [Using R Code in Transact-SQL (Basic Tutorial)](tutorials/rtsql-using-r-code-in-transact-sql-sql-server-r-services.md)  
+## [Using R Code in Transact-SQL (Basic Tutorial)](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)  
 ### [Working with Inputs and Outputs (R in T-SQL Tutorial)](tutorials/rtsql-working-with-inputs-and-outputs.md)  
 ### [R and SQL Data Types and Data Objects (R in T-SQL Tutorial)](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)  
 ### [Using R Functions with SQL Server Data (R in T-SQL Tutorial)](tutorials/rtsql-using-r-functions-with-sql-server-data.md)  
-### [Create a Predictive Model (R in T-SQL Tutorial)](tutorials/rtsql-create-a-predictive-model.md)  
+### [Create a Predictive Model (R in T-SQL Tutorial)](tutorials/rtsql-create-a-predictive-model-r.md)  
 ### [Predict and Plot from Model (R in T-SQL Tutorial)](tutorials/rtsql-predict-and-plot-from-model.md)  
 
 ## [Data Science End-to-End Walkthrough](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

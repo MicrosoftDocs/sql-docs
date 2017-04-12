@@ -76,7 +76,7 @@ Actions performed by the script include:
   
 3.  Log in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and the login you specified, to verify that you can see the database, tables, functions, and stored procedures that were created.  
   
-    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.PNG "rsql_devtut_BrowseTables")  
+    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")  
   
     > [!NOTE]  
     > If the database objects already exist, they cannot be created again.  

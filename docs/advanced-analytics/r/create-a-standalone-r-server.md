@@ -53,7 +53,7 @@ You can install Microsoft R Server using two methods:
   
 2.  On the **Installation** tab, click **New R Server (Standalone) installation** .  
   
-     ![Setup option for R Server Standalone](../../advanced-analytics/r-services/media/rsql-rstandalonesetup.png "Setup option for R Server Standalone")  
+     ![Setup option for R Server Standalone](media/rsql-rstandalonesetup.png "Setup option for R Server Standalone")  
   
 3.  On the **Feature Selection** page, the following option should be already selected:  
   

@@ -33,7 +33,7 @@ This topic describes limitations and known issues with the following machine lea
 
 ## Setup and configuration issues 
 
-Additional guidance related to initial setup and configuration are listed here: [ Upgrade and Installation FAQ](../../advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md).  
+Additional guidance related to initial setup and configuration are listed here: [ Upgrade and Installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md).  
   
 The articles contains details on how to upgrade from previous versions, including earlier versions of the Revolution Analytics tools and libraries, side-by-side installation, and solutions for some common problems related to installing and uninstalling the R features. 
 
@@ -75,7 +75,7 @@ As a workaround, you can install the service release by using the command line a
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-To get the latest CAB files, see [Installing R Components without Internet Access](installing-ml-components-without-internet-access.md).
+To get the latest CAB files, see [Installing R Components without Internet Access](r/installing-ml-components-without-internet-access.md).
 
 ### SQLRUserGroup for Launchpad must have an account in the SQL Server instance
 
@@ -109,7 +109,7 @@ For example, this error might occur if you install the database engine using the
 
 To avoid this problem, make sure that all components have the same version number. If you upgrade one component, be sure to apply the same upgrade to all other installed components.
 
-To view a list of the R version numbers required for each release of SQL Server 2016, see [Installing R components without Internet Access](../r-services/installing-ml-components-without-internet-access.md).
+To view a list of the R version numbers required for each release of SQL Server 2016, see [Installing R components without Internet Access](r/installing-ml-components-without-internet-access.md).
 
 
 ### Service account for LaunchPad requires permission Replace Process Level Token
@@ -163,12 +163,12 @@ Having multiple copies of the R tools and libraries can lead to confusion when y
 
 It is possible to call the R tools and libraries that are installed for SQL Server R Services from an external R application such as RGui. This might be handy when you are installing new packages, or running ad hoc tests on very short code samples.
 
-However, be aware that outside of SQL Server, performance will be limited. For example, even if you have purchased the Enterprise Edition of SQL Server, R will run in single-threaded mode when you run your R code using external tools. Performance will be superior if you run your R code by initiating a SQL Server connection and using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), which will call the R libraries for you.
+However, be aware that outside of SQL Server, performance will be limited. For example, even if you have purchased the Enterprise Edition of SQL Server, R will run in single-threaded mode when you run your R code using external tools. Performance will be superior if you run your R code by initiating a SQL Server connection and using [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), which will call the R libraries for you.
 
 + Avoid calling the R libraries used by SQL Server from external R tools. 
 + If you need to run extensive R code on the SQL Server computer without using SQL server, install a separate instance of R such as Microsoft R  Client, and then ensure that your R development tools point to the new library. 
 
-For more information, see [Create a Standalone R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md).  
+For more information, see [Create a Standalone R Server](r/create-a-standalone-r-server.md).  
 
   
 ### Resource governance default values  
@@ -208,7 +208,7 @@ As a workaround, you can rewrite the SQL query to use CAST or CONVERT and presen
 
 
 ### Avoid clearing workspaces when executing R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context  
- If you use the R command to clear your workspace of objects while running R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context, or if you clear the workspace as part of an R script called by using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), you might get this error: *workspace object 'revoScriptConnection' not found*
+ If you use the R command to clear your workspace of objects while running R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context, or if you clear the workspace as part of an R script called by using [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), you might get this error: *workspace object 'revoScriptConnection' not found*
 
 `revoScriptConnection` is an object in the R workspace that contains information about an R session that is called from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However, if your R code includes a command to clear the workspace (such as `rm(list=ls()))`, all information about the session and other objects in the R workspace is cleared as well.
 
@@ -237,7 +237,7 @@ This limitation will be removed in a later release.
 
  Not all data types that are supported in SQL can be used in R. As a workaround, consider casting the unsupported data type to a supported data type before passing the data to sp_execute_external_script.  
   
- For more information, see [Working with R Data Types](../../advanced-analytics/r-services/working-with-r-data-types.md).  
+ For more information, see [Working with R Data Types](r/working-with-r-data-types.md).  
   
 ### Possible string corruption  
 
@@ -259,7 +259,7 @@ This limitation will be removed in a later release.
 
  [!INCLUDE[tsql](../includes/tsql-md.md)] and R support different data types; therefore, numeric data types can suffer loss of precision during conversion.  
   
- For more information about implicit data type conversion, see [Working with R Data Types](../../advanced-analytics/r-services/working-with-r-data-types.md).  
+ For more information about implicit data type conversion, see [Working with R Data Types](r/working-with-r-data-types.md).  
   
 ### Variable scoping error "The sample data set for the analysis has no variables" when using the transformFunc parameter  
 
@@ -352,5 +352,5 @@ However, for compatibility with  [!INCLUDE[rsql_productname](../includes/rsql-pr
  Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR; revisions 0.88-0.91 and 0.93 and later are known to be compatible.  
   
 ## See Also  
-[What's New in SQL Server 2016](../../sql-server/what-s-new-in-sql-server-2016.md)
+[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
   

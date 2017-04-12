@@ -29,7 +29,7 @@ manager: "jhubbard"
 
    MicrosoftML is a new machine learning package for R from the Microsoft R Server and Microsoft Data Science teams. MicrosoftML brings increased speed, performance and scale for handling a large corpus of text data and high-dimensional categorical data in R models with just a few lines of code. In addition, Microsoft R Server customers will get access to five fast, highly accurate learners that are included in Azure Machine Learning. 
    
-   For more information, see [Using the MicrosoftML Package in SQL Server R Services](../../advanced-analytics/r-services/using-the-microsoftml-package-with-sql-server-r-services.md).
+   For more information, see [Using the MicrosoftML Package in SQL Server R Services](r/using-the-microsoftml-package-with-sql-server-r-services.md).
    
 + Easier package management for data scientists
 
@@ -37,26 +37,26 @@ manager: "jhubbard"
   
   For the database administrator, new roles are included in [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] for managing permissions associated with packages, both on the instance level and database level. 
   
-  For more information, see [R Package Management for SQL Server R Services](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md). 
+  For more information, see [R Package Management for SQL Server R Services](r/r-package-management-for-sql-server-r-services.md). 
      
 + New functions in **RevoScaleR** for reading and writing R model objects
 
   RevoScaleR now includes new serialization functions and a more compact model storage format, to make loading and reading a model fast. 
   
-  For more information, see [Save and Load R Objects from SQL Server using ODBC](../../advanced-analytics/r-services/save-and-load-r-objects-from-sql-server-using-odbc.md). 
+  For more information, see [Save and Load R Objects from SQL Server using ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md). 
 
 + **sqlrutils** package for easier SQL integration
 
   This R package helps you generate the SQL stored procedure call for your R code. The generated SQL stored procedures can then be used in SQL Server R Services. Examples are provided to help you consolidate your R code into a function that can be parameterized in a SQL stored procedure.
   
-  For more information, see [Generating a Stored Procedure for R Code using sqlrutils](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md). 
+  For more information, see [Generating a Stored Procedure for R Code using sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md). 
   
 
 + **olapR** package for easy SSAS connectivity
 
    This new package provides a new dimension of connectivity for R and SQL Server Analysis Services, making it easier to use OLAP data for analysis in R. You can run existing MDX queries and get back an R data frame, or build simple MDX statements by defining cube axes and slicers in R code. 
    
-   For more information, see [Using Data from OLAP Cubes in R](../../advanced-analytics/r-services/using-data-from-olap-cubes-in-r.md).
+   For more information, see [Using Data from OLAP Cubes in R](r/using-data-from-olap-cubes-in-r.md).
    
 
   
@@ -73,9 +73,9 @@ manager: "jhubbard"
 
 ### Tools and setup
 
--   Easy setup of all components. The SQL Server setup wizard can install either **SQL Server R Services (In-Database)** or **Microsoft R Server (Standalone)**.   When you run the setup wizard, choose R Services if you are setting up a SQL Server instance, and choose R Server (Standalone) if you are setting up a data science workstation.   For more information on  setup options, see [Set up SQL Server R Services &#40;In-Database&#41;](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md) or [Create a Standalone R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md).  
+-   Easy setup of all components. The SQL Server setup wizard can install either **SQL Server R Services (In-Database)** or **Microsoft R Server (Standalone)**.   When you run the setup wizard, choose R Services if you are setting up a SQL Server instance, and choose R Server (Standalone) if you are setting up a data science workstation.   For more information on  setup options, see [Set up SQL Server R Services &#40;In-Database&#41;](r/set-up-sql-server-r-services-in-database.md) or [Create a Standalone R Server](r/create-a-standalone-r-server.md).  
 
--   If you don't need to use data in SQL Server, consider [!INCLUDE[rsql_platform](../includes/rsql-platform-md.md)], which runs on a wide variety of platforms, and provides enterprise scale and performance to the popular open source R language. [!INCLUDE[rsql_platform](../includes/rsql-platform-md.md)]. For details, see [R Server &#40;Standalone&#41;](../../advanced-analytics/r-services/r-server-standalone.md)  or [Introducing R Server](https://msdn.microsoft.com/microsoft-r/rserver) on MSDN.
+-   If you don't need to use data in SQL Server, consider [!INCLUDE[rsql_platform](../includes/rsql-platform-md.md)], which runs on a wide variety of platforms, and provides enterprise scale and performance to the popular open source R language. [!INCLUDE[rsql_platform](../includes/rsql-platform-md.md)]. For details, see [R Server &#40;Standalone&#41;](r/r-server-standalone.md)  or [Introducing R Server](https://msdn.microsoft.com/microsoft-r/rserver) on MSDN.
 
 - To upgrade your SQL Server 2016 instance to use Microsoft R Server 9.0.1, use the [SqlBindR.exe utility](https://msdn.microsoft.com/library/mt791781.aspx).  
 

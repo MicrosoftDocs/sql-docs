@@ -40,16 +40,16 @@ The following sections provide a high level overview of some typical analytical 
   
      To develop R solutions, the data scientists can use any Windows-based IDE that supports R, including [R Tools for Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx) or RStudio.  
  
-    ![rsql_keyscenario2](../../advanced-analytics/r-services/media/rsql-keyscenario2.PNG) 
+    ![rsql_keyscenario2](media/rsql-keyscenario2.png) 
  
-     For more information, see [Data Exploration and Predictive Modeling with R](../../advanced-analytics/r-services/data-exploration-and-predictive-modeling-with-r.md).  
+     For more information, see [Data Exploration and Predictive Modeling with R](r/data-exploration-and-predictive-modeling-with-r.md).  
 
   
 -   **Optimize**  
   
      When analyzing large datasets with R, data scientists often run into performance and scale issues, because the common runtime implementation is single-threaded and can accommodate only those data sets that fit into the available memory on the local computer. To get better performance and work with more data, the data scientist can use the **ScaleR** APIs that are provided as part of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. The **RevoScaleR** package contains implementations of some of the most popular R functions, redesigned to provide parallelism and scale. The package also includes functions that further boost  performance and scale by pushing computations to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, which typically has far greater memory and computational power.  
   
-     For more information, see [Data Exploration and Predictive Modeling with R](../../advanced-analytics/r-services/data-exploration-and-predictive-modeling-with-r.md).  
+     For more information, see [Data Exploration and Predictive Modeling with R](r/data-exploration-and-predictive-modeling-with-r.md).  
   
 -   **Deploy**  
   
@@ -59,9 +59,9 @@ The following sections provide a high level overview of some typical analytical 
   
      When you need to deploy R code to production, [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] provides the best of the R and SQL worlds. You can use R for statistical computations that are difficult to implement using SQL, but leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance, using features such as the in-memory database engine and columnstore indexes.  
   
-    ![rsql_keyscenario1](../../advanced-analytics/r-services/media/rsql-keyscenario1.PNG)  
+    ![rsql_keyscenario1](rsql-keyscenario1.png)  
   
-     For more information, see [Operationalizing Your R Code](../../advanced-analytics/r-services/operationalizing-your-r-code.md).  
+     For more information, see [Operationalizing Your R Code](r/operationalizing-your-r-code.md).  
  
  > [!TIP]
  > Learn more about how you can integrate SQL Server with data science in this book, available as a free download from Microsoft Virtual Academy:
@@ -73,14 +73,14 @@ The following sections provide a high level overview of some typical analytical 
   
      When R jobs are run in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can also control and audit the data used by analysts, or schedule jobs and author workflows containing R scripts, just like you would with other stored procedures.  
   
-     For more information, see [Managing and Monitoring R Solutions](../../advanced-analytics/r-services/managing-and-monitoring-r-solutions.md)  
+     For more information, see [Managing and Monitoring R Solutions](r/managing-and-monitoring-r-solutions.md)  
   
   
 -   **Integrate**  
   
      No longer do you have to spend your IT budget getting your enterprise tools to work with some external R runtime environment. You can work in the familiar environment of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and develop integrated workflows and reporting solutions using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-     For more information, see [Creating Workflows that Use R in SQL Server](../../advanced-analytics/r-services/creating-workflows-that-use-r-in-sql-server.md).  
+     For more information, see [Creating Workflows that Use R in SQL Server](r/creating-workflows-that-use-r-in-sql-server.md).  
   
   
 ## How Do I Get It?  
@@ -88,12 +88,12 @@ The following sections provide a high level overview of some typical analytical 
   
 +   **Install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or later and enable R Services (In-Database)** )  
   
-    [Set up SQL Server R Services &#40;In-Database&#41;](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
+    [Set up SQL Server R Services &#40;In-Database&#41;](r/set-up-sql-server-r-services-in-database.md).  
   
   
 -   **Set up a client workstation**  
   
-     [Set Up  a Data Science Client](../../advanced-analytics/r-services/set-up-a-data-science-client.md)  
+     [Set Up  a Data Science Client](r/set-up-a-data-science-client.md)  
    
 > [!TIP]  
 > Need to create a server for R jobs but don't need SQL Server? Try [Microsoft R Server](https://msdn.microsoft.com/library/mt674874.aspx).  
@@ -103,27 +103,27 @@ The following sections provide a high level overview of some typical analytical 
   
 -   Learn how to call R from a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and returns results in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
-     [Using R Code in Transact-SQL](../../advanced-analytics/r-services/using-r-code-in-transact-sql-sql-server-r-services.md)  
+     [Using R Code in Transact-SQL](r/using-r-code-in-transact-sql-sql-server-r-services.md)  
   
 -   Understand the full flow for creating an advanced analytics solution and deploying it using SQL Server R Services  
   
-     [Data Science End-to-End Walkthrough](../../advanced-analytics/r-services/data-science-end-to-end-walkthrough.md)  
+     [Data Science End-to-End Walkthrough](r/data-science-end-to-end-walkthrough.md)  
   
 -   Learn how to use the RevoScaleR package for scalable and high performance analysis, and how to push R computations to the SQL Server computer  
   
-     [Data Science Deep Dive: Using the RevoScaleR Packages](../../advanced-analytics/r-services/data-science-deep-dive-using-the-revoscaler-packages.md)  
+     [Data Science Deep Dive: Using the RevoScaleR Packages](r/data-science-deep-dive-using-the-revoscaler-packages.md)  
   
 -   Embed working R script in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures so that you can call models for prediction, retrain models, or get predictions from applications  
   
-     [In-Database Advanced Analytics for SQL Developers](../../advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md)  
+     [In-Database Advanced Analytics for SQL Developers](r/in-database-advanced-analytics-for-sql-developers-tutorial.md)  
   
 -   Use [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and related business intelligence tools in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stack to automate machine learning processes. Data preparation and reporting can be automated using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]; display R plots along with other reports using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or Power View.  
   
 + More samples, including solution templates and sample R code  
-   [SQL Server R Services Tutorials](../../advanced-analytics/r-services/sql-server-r-services-tutorials.md).  
+   [SQL Server R Services Tutorials](r/sql-server-r-services-tutorials.md).  
   
 ## See Also  
- [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
- [Getting Started with Microsoft R Server &#40;Standalone&#41;](../../advanced-analytics/r-services/getting-started-with-microsoft-r-server-standalone.md)  
+ [SQL Server R Services](r/sql-server-r-services.md)   
+ [Getting Started with Microsoft R Server &#40;Standalone&#41;](r/getting-started-with-microsoft-r-server-standalone.md)  
   
   

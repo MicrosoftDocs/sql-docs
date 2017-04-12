@@ -91,7 +91,7 @@ The component architecture just described has been provided to guarantee that op
 
 R code that is run from "inside" [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is executed by calling a stored procedure. Thus, any application that can make a stored procedure call can initiate execution of R code.  Thereafter [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] manages the execution of R code as summarized in the following diagram.
 
-![rsql_indb780-01](../../advanced-analytics/r-services/media/script_in-db-r.png)
+![rsql_indb780-01](media/script_in-db-r.png)
 
 1. A request for the R runtime is indicated by the parameter _@language='R'_ passed to the stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] sends this request to the Launchpad service.
 2. The Launchpad service starts the appropriate launcher; in this case, RLauncher.
@@ -107,7 +107,7 @@ R code that is run from "inside" [!INCLUDE[ssNoVersion_md](../../includes/ssnove
 When connecting from a remote data science client that supports Microsoft R, you can run R functions in the context of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] by using the ScaleR functions. This is a different workflow from the previous one, and is summarized in the following diagram.
 
 
-![rsql_fromR2db-01](../../advanced-analytics/r-services/media/remote-sqlcc-from-r.png)
+![rsql_fromR2db-01](media/remote-sqlcc-from-r.png)
 
 1. For RevoScaleR functions, the R runtime calls a linking function which in turn calls BxlServer. 
 2. BxlServer is provided with Microsoft R and runs in a separate process from the R runtime.
@@ -120,5 +120,5 @@ When connecting from a remote data science client that supports Microsoft R, you
 9. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] passes results back to the client.
 
 ## See Also
-[Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
+[Architecture Overview](r/architecture-overview-sql-server-r.md)
 

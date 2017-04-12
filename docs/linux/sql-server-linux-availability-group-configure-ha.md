@@ -84,10 +84,31 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## Failover availability group
 
->[!IMPORTANT]
->Do not fail over with Transact-SQL or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager - for example Pacemaker. Use external cluster management tools - for example, `pcs` - to perform manual failovers. 
->
->In extreme cases, if a user cannot use the cluster management tools for interacting with the cluster (i.e. the cluster is unresponsive, cluster management tools have a faulty behaviour), the user might have to perform a failover bypassing the external cluster manager. This is not recommended for regular operations, and should be used within cases cluster is failing to execute the failover action using the cluster management tools. 
+Use the cluster management tools to failover an availability group managed by an external cluster manager. For example, if a solution uses Pacemaker to manage a Linux cluster, use `pcs` to perform manual failovers. 
+
+> [!IMPORTANT]
+> Under normal conditions, do not fail over with Transact-SQL or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager - for example Pacemaker. 
+
+In extreme cases, you might have to failover with SQL Server tools to bypass the external cluster manager. For example, if the cluster is unresponsive, or the cluster management tools cannot interact with the cluster.  This is not recommended for regular operations, and should be used only when the cluster does not fail over with the cluster management tools. 
+
+If you cannot failover the availability group with the cluster management tools, follow these steps to failover from SQL Server tools:
+
+1. Verify that the availability group resource is not managed by the cluster any more. 
+
+      - Attempt to set the resource to unmanaged mode. This signals the resource agent to stop resource monitoring and management. For example: 
+      
+      ```bash
+      sudo pcs resource unmanage <resourceName>
+      ```
+
+      - If the attempt to set the resource mode to unmanaged mode fails, delete the resource. For example:
+
+      ```bash
+      sudo pcs resource delete <resourceName>
+      ```
+
+      >[!NOTE]
+      >When you delete a resource it also deletes all of the associated constraints. 
 
 
 ## Notes

@@ -98,18 +98,35 @@ If you cannot failover the availability group with the cluster management tools,
       - Attempt to set the resource to unmanaged mode. This signals the resource agent to stop resource monitoring and management. For example: 
       
       ```bash
-      sudo pcs resource unmanage <resourceName>
+      sudo pcs resource unmanage <**resourceName**>
       ```
 
       - If the attempt to set the resource mode to unmanaged mode fails, delete the resource. For example:
 
       ```bash
-      sudo pcs resource delete <resourceName>
+      sudo pcs resource delete <**resourceName**>
       ```
 
       >[!NOTE]
       >When you delete a resource it also deletes all of the associated constraints. 
 
+1. Manually set the session context to `external_cluster`.
+
+   ```Transact-SQL
+   EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
+   ```
+
+1. Fail over the availability group with Transact-SQL. In the example below replace `<**MyAg**>` with the name of your availability group. Connect to the instance of SQL Server that hosts the target secondary replica and run the following command:
+
+   ```Transact-SQL
+   ALTER AVAILABILITY GROUP <**MyAg**> FAILOVER;
+   ```
+
+1. Restart cluster resource monitoring and management. Run the following command:
+
+   ```bash
+   sudo pcs resource manage <**resourceName**>
+   ```
 
 ## Notes
 

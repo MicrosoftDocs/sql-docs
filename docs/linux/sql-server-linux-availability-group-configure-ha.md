@@ -182,13 +182,24 @@ Once overridden, the resource agent will use the new setting for `REQUIRED_COPIE
 
 The table below describes the outcome of an outage for primary or secondary replicas in different availability group resource configurations:
 
-| Availability group with 2 sync replicas |  |Availability Group with 3 sync replicas | | |
-|---|---|---|---|---|
+| | Availability group with 2 sync replicas |  |Availability Group with 3 sync replicas | | |
+|---|---|---|---|---|---|
 | |`REQUIRED_COPIES_TO_COMMIT=0`|`REQUIRED_COPIES_TO_COMMIT=1`* |`REQUIRED_COPIES_TO_COMMIT=0` |`REQUIRED_COPIES_TO_COMMIT=1`* |`REQUIRED_COPIES_TO_COMMIT=2` 
 |**Primary outage** |User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W |Cluster will automatically issue FAILOVER (no data loss) -> New primary is RO until former primary recovers and joins availability group as secondary | User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W | Cluster will automatically issue FAILOVER (no data loss) -> New primary is R/W |Cluster will automatically issue FAILOVER (no data loss) -> New primary is R/O until former primary recovers and joins availability group as secondary
 |**One secondary replica outage** |Primary is R/W, running exposed to data loss |Primary is RO until secondary recovers |Primary is R/W | Primary is R/W Primary is RO
 
 * SQL Server resource agent for Pacemaker default behavior
+
+| |Primary outage |One secondary outage
+|---|---|---|
+|**Availability group with two synchronous replicas** | ||
+|`REQUIRED_COPIES_TO_COMMIT=0`|
+
+| | Availability group with 2 sync replicas |  |Availability Group with 3 sync replicas | | |
+|---|---|---|---|---|---|
+| |`REQUIRED_COPIES_TO_COMMIT=0`|`REQUIRED_COPIES_TO_COMMIT=1`* |`REQUIRED_COPIES_TO_COMMIT=0` |`REQUIRED_COPIES_TO_COMMIT=1`* |`REQUIRED_COPIES_TO_COMMIT=2` 
+|**Primary outage** |User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W |Cluster will automatically issue FAILOVER (no data loss) -> New primary is RO until former primary recovers and joins availability group as secondary | User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W | Cluster will automatically issue FAILOVER (no data loss) -> New primary is R/W |Cluster will automatically issue FAILOVER (no data loss) -> New primary is R/O until former primary recovers and joins availability group as secondary
+|**One secondary replica outage** |Primary is R/W, running exposed to data loss |Primary is RO until secondary recovers |Primary is R/W | Primary is R/W Primary is RO
 
 
 ## Notes

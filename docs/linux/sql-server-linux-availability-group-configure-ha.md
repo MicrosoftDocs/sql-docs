@@ -128,6 +128,46 @@ If you cannot failover the availability group with the cluster management tools,
    sudo pcs resource manage <**resourceName**>
    ```
 
+## Pacemaker notification for availability group resource promotion
+
+Before the CTP 1.4 release, the Pacemaker resource agent for availability groups could not know if a replica marked as `SYNCHRONOUS_COMMIT` was really up-to-date or not. It was possible that the replica had stopped synchronizing with the primary but was not aware. Thus the agent could promote an out-of-date replica to primary - which, if successful, would cause data loss. 
+
+SQL Server vNext CTP 1.4 added `sequence_number` to `sys.availability_groups` to solve this issue. `sequence_number` is a monotonically increasing BIGINT that represents how up-to-date the local availability group replica is with respect to the rest of the replicas in the availability group. Performing failovers, adding or removing replicas, and other availability group operations update this number. The number is updated on the primary, then pushed to secondaries. Thus a secondary replica that is up-to-date will have the same sequence_number as the primary. 
+
+When Pacemaker decides to promote a replica to primary, it first sends a notification to all replicas to extract the sequence number and store it (we call this the pre-promote notification). Next, when Pacemaker actually tries to promote a replica to primary, the replica only promotes itself if its sequence number is the highest of all the sequence numbers from all replicas and rejects the promote operation otherwise. In this way only the replica with the highest sequence number can be promoted to primary, ensuring no data loss. 
+
+Note that this is only guaranteed to work as long as at least one replica available for promotion has the same sequence number as the previous primary. To ensure this, the default behavior is for the Pacemaker resource agent to automatically set `REQUIRED_COPIES_TO_COMMIT` such that at least one synchronous commit secondary replica is up to date and available to be the target of an automatic failover. With each monitoring action, the value of `REQUIRED_COPIES_TO_COMMIT` is computed (and updated if necessary)  as ('number of synchronous commit replicas' / 2). Then, at failover time, the resource agent will require (`total number of replicas` - `required_copies_to_commit` replicas) to respond to the pre-promote notification to be able to promote one of them to primary. The replica with the highest `sequence_number` will be promoted to primary. 
+
+For example, let's consider the case of an availability group with three synchronous replicas - one primary replica and two synchronous commit secondary replicas.
+
+- `REQUIRED_COPIES_TO_COMMIT`  is 3 / 2 = 1
+
+- The required number of replicas to respond to pre-promote action is 3 - 1 = 2. So 2 replicas have to be up for the failover to be triggered. This means that if one of the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
+
+A user can choose to override the default behavior, and configure the availability group resource to not set `REQUIRED_COPIES_TO_COMMIT` automatically as above.
+
+>[!IMPORTANT]
+>When `REQUIRED_COPIES_TO_COMMIT` is 0 there is risk of data loss. In the case of an outage of the primary, the resource agent will not automatically trigger a failover. The user has to decide if they want to wait for primary to recover or manually fail over.
+
+To set `REQUIRED_COPIES_TO_COMMIT` to 0, run:
+
+```bash
+sudo pcs resource update <**ag1**> required_copies_to_commit=0
+```
+
+To revert to default computed value, run:
+
+```bash
+sudo pcs resource update <**ag1**> required_copies_to_commit=
+```
+
+Because the resource agent requires Pacemaker to send notifications to all replicas, the availability resource needs to be configured with `notify=true`. The following commmand sets `notify=true`.
+
+```bash
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=<**ag1**> --master meta notify=true
+```
+
+
 ## Notes
 
 ### Database level monitoring and failover trigger

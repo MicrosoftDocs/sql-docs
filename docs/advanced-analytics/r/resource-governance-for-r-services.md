@@ -51,9 +51,7 @@ manager: "jhubbard"
  In addition, you can create *user-defined resource pools* to allocate resources to the database engine or other applications, and create *user-defined external resource pools* to manage R and other external processes.  
   
  For a good introduction to terminology and general concepts, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).  
-  
-> [!NOTE]  
->  Currently the new Resource Governor properties are available only via DDL statements or scripting; external resource groups cannot be created by using the user interface in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+
   
 ## Resource Management using Resource Governor 
 
@@ -81,3 +79,4 @@ manager: "jhubbard"
  [How To: Create a Resource Pool for R](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)  
  [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
   
+

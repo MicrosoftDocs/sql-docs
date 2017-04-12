@@ -17,7 +17,8 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Data Exploration and Predictive Modeling with R
-  Data scientists often use R to explore data and build predictive models. This is typically an iterative process of trial and error until a good predictive model is reached. As an experienced data scientist, you  might connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and fetch the data to your local workstation using the RODBC package, explore your data, and build a predictive model using standard R packages.  
+
+Data scientists often use R to explore data and build predictive models. This is typically an iterative process of trial and error until a good predictive model is reached. As an experienced data scientist, you  might connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database and fetch the data to your local workstation using the RODBC package, explore your data, and build a predictive model using standard R packages.  
   
  However, this  approach has drawbacks. Data movement can be slow, inefficient, or insecure, and R itself has performance and scale limitations. These drawbacks become more apparent when you need to move and analyze large amounts of data, or use data sets that don’t fit into the memory available on your computer.  
   
@@ -25,7 +26,7 @@ manager: "jhubbard"
   
  This section provides guidance for the data scientists on how to use [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] and how to perform tasks related to developing and testing R solutions.  
   
-##  <a name="bkmk_RDevTools"></a> R Development Tools  
+##  R Development Tools  
  Microsoft R Client gives the data scientist a complete environment for developing and testing predictive models. R Client includes:  
   
 -  **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** A distribution of the R runtime and a set of packages, such as the Intel math kernel library, that boost the performance of standard R operations.  
@@ -34,7 +35,7 @@ manager: "jhubbard"
   
 -   **Free choice of development tools:** You can use any Windows-based code editor that supports R, such as [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] or RStudio. The download of [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] also includes common command-line tools for R such as RGui.exe.  
   
-##  <a name="bkmk_packages"></a> R Environment and Packages  
+## R Environment and Packages  
  The R environment supported in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] consists of a runtime, the open source language, and a graphical engine supported and extended by multiple packages. The language allows a variety of extensions that are implemented using packages.  
   
  There are several sources of additional R  packages that you can use with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] :  
@@ -54,20 +55,21 @@ manager: "jhubbard"
   
      The **RevoPemaR** package lets you develop your own parallel external memory algorithms in R.  
   
-     For more information about these packages and how to use them, see [Data Exploration and Predictive Modeling &#40;Tutorial: SQL Server R Services&#41;](http://msdn.microsoft.com/library/65589d17-bd34-4baa-8ba1-998f60d0344f).  
+     For more information about these packages and how to use them, see Get started with ScaleR and data analysis](https://msdn.microsoft.com/microsoft-r/scaler-getting-started).  
   
 ## Using Data Sources and Compute Contexts  
- When using the RevoScaleR package to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are some important new functions to use in your R code:  
+
+When using the RevoScaleR package to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are some important new functions to use in your R code:  
   
--   [RxSqlServerData](http://msdn.microsoft.com/library/0d2c53a6-b64b-4760-9903-825238b772d6) is a function provided in the RevoScaleR package to support improved data connectivity to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **RxSqlServerData** is a function provided in the RevoScaleR package to support improved data connectivity to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      You use this function in your R code to define the *data source*. The data source object specifies the server and tables where the data resides and manages the task of  reading data from and writing data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   The [RxInSqlServer](http://msdn.microsoft.com/library/24bd1f0a-ec68-4b96-bf42-a4073014f1f1) function can be used to specify the *compute context*.  In other words, you can indicate where the R code should be executed: on your local workstation, or on the computer that hosts the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
+-   The **RxInSqlServer** function can be used to specify the *compute context*.  In other words, you can indicate where the R code should be executed: on your local workstation, or on the computer that hosts the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  For more information, see [RevoScaleR Functions](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
   
      When you set the compute context, it affects only computations that support remote execution context, which means R operations provided by the RevoScaleR package and related functions. Typically, R solutions based on standard CRAN packages cannot run in a remote compute context, though they can be run on the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computer if started by T-SQL. However, you can use the `rxExec` function to call individual R functions and run them remotely in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
- For examples of how to create and work with data sources and execution contexts,  see thee tutorials:
+ For examples of how to create and work with data sources and execution contexts,  see these tutorials:
  
  + [Data Science Deep Dive](../../advanced-analytics/r-services/data-science-deep-dive-using-the-revoscaler-packages.md)  
  +  [RevoScaleR SQL Server Getting Started](https://msdn.microsoft.com/microsoft-r/scaler-sql-server-getting-started).  
@@ -77,13 +79,11 @@ manager: "jhubbard"
   
  For more information about how you can move your code to run in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Operationalizing Your R Code](../../advanced-analytics/r-services/operationalizing-your-r-code.md).  
   
- Typically the deployment process begins with cleaning up your script to eliminate code that is not needed in production. as you move computations closer to the data, you might find ways to  more efficiently move, summarize, or present data than doing everything in R.  
+ Typically the deployment process begins with cleaning up your script to eliminate code that is not needed in production. As you move computations closer to the data, you might find ways to  more efficiently move, summarize, or present data than doing everything in R.  We recommend that the data scientist consult with a database developer about ways to improve performance, especially if the solution does data cleansing or feature engineering that might be more effective in SQL. Changes to ETL processes might be needed to ensure that workflows for building or scoring a model don't fail, and that input data is available in the right format.  
   
- We recommend that the data scientist consult with a database developer about ways to improve performance, especially if the solution does data cleansing or feature engineering that might be more effective in SQL. Changes to ETL processes might be needed to ensure that workflows for building or scoring a model don't fail, and that input data is available in the right format.  
-  
-##  <a name="bkmk_SQLInR"></a> In This Section  
+##  Resources 
 
-[Comparison of ScaleR Functions and CRAN R Functions](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions2)
+[Comparison of ScaleR Functions and CRAN R Functions](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
 [ScaleR Functions for Working with SQL Server](../../advanced-analytics/r-services/scaler-functions-for-working-with-sql-server-data.md)
    

@@ -17,7 +17,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # What&#39;s New in SQL Server R Services
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is a feature in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and SQL Server vNext that supports enterprise-scale data science.  R is the most popular programming language for advanced analytics, and offers an incredibly rich set of packages and a vibrant and fast-growing developer community. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] helps you embrace the highly popular open source R language in your business. 
+  [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] is a feature in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and SQL Server vNext that supports enterprise-scale data science.  R is the most popular programming language for advanced analytics, and offers an incredibly rich set of packages and a vibrant and fast-growing developer community. [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] helps you embrace the highly popular open source R language in your business. 
   
  > [!TIP]
  > Already have SQL Server 2016 R Services?
@@ -35,7 +35,7 @@ manager: "jhubbard"
 
   You no longer have to rely on the database administrator to install the R packages you need on SQL Server. New package install and uninstall functions in **RevoScaleR** let you easily install and update packages in R Services from a client computer. 
   
-  For the database administrator, new roles are included in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] for managing permissions associated with packages, both on the instance level and database level. 
+  For the database administrator, new roles are included in [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] for managing permissions associated with packages, both on the instance level and database level. 
   
   For more information, see [R Package Management for SQL Server R Services](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md). 
      
@@ -66,7 +66,7 @@ manager: "jhubbard"
 
 -   Supports both SQL logins and integrated Windows authentication.  
     
--   Significant performance improvements, including optimization of the SQL Satellite processes, which connect R and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], support for paging of data to enable high-volume data usage, and streaming to enable fast processing of  billions of rows. 
+-   Significant performance improvements, including optimization of the SQL Satellite processes, which connect R and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], support for paging of data to enable high-volume data usage, and streaming to enable fast processing of  billions of rows. 
   
 -   Use SQL Server resource pools to manage memory used by R processes. For more information see [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md).  
   
@@ -75,7 +75,7 @@ manager: "jhubbard"
 
 -   Easy setup of all components. The SQL Server setup wizard can install either **SQL Server R Services (In-Database)** or **Microsoft R Server (Standalone)**.   When you run the setup wizard, choose R Services if you are setting up a SQL Server instance, and choose R Server (Standalone) if you are setting up a data science workstation.   For more information on  setup options, see [Set up SQL Server R Services &#40;In-Database&#41;](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md) or [Create a Standalone R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md).  
 
--   If you don't need to use data in SQL Server, consider [!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)], which runs on a wide variety of platforms, and provides enterprise scale and performance to the popular open source R language. [!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)]. For details, see [R Server &#40;Standalone&#41;](../../advanced-analytics/r-services/r-server-standalone.md)  or [Introducing R Server](https://msdn.microsoft.com/microsoft-r/rserver) on MSDN.
+-   If you don't need to use data in SQL Server, consider [!INCLUDE[rsql_platform](../includes/rsql-platform-md.md)], which runs on a wide variety of platforms, and provides enterprise scale and performance to the popular open source R language. [!INCLUDE[rsql_platform](../includes/rsql-platform-md.md)]. For details, see [R Server &#40;Standalone&#41;](../../advanced-analytics/r-services/r-server-standalone.md)  or [Introducing R Server](https://msdn.microsoft.com/microsoft-r/rserver) on MSDN.
 
 - To upgrade your SQL Server 2016 instance to use Microsoft R Server 9.0.1, use the [SqlBindR.exe utility](https://msdn.microsoft.com/library/mt791781.aspx).  
 
@@ -85,7 +85,7 @@ manager: "jhubbard"
 
 ## Learn More
   
--  Resources are available for both data scientists who want to learn about SQL Server integration, and SQL developers who want to create R solutions using T-SQL and the familiar environment of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+-  Resources are available for both data scientists who want to learn about SQL Server integration, and SQL developers who want to create R solutions using T-SQL and the familiar environment of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
    + [SQL Server R Services Tutorials](https://msdn.microsoft.com/library/mt591993.aspx)
    + [Free ebook: Data Science with SQL Server 2016](https://mva.microsoft.com/ebooks/)
  

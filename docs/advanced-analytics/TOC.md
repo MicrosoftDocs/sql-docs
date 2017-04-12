@@ -93,8 +93,8 @@
 #### [How to Create a Stored Procedure Using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)  
 ### [Using Data from OLAP Cubes in R](r/using-data-from-olap-cubes-in-r.md)  
 #### [OlapR](r/how-to-create-mdx-queries-using-olapr.md)  
-### [Package management](r/rxpackage.md)  
-<!-- #### [rxInstallPackage](r/rxinstallpackage.md)  
+<!-- ### [Package management](r/rxpackage.md)  
+#### [rxInstallPackage](r/rxinstallpackage.md)  
 #### [rxUninstallPackage](r/rxuninstallpackage.md)  
 #### [rxSyncPackages](r/rxsyncpackages.md)  -->
 

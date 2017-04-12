@@ -103,7 +103,7 @@ The following sections provide a high level overview of some typical analytical 
   
 -   Learn how to call R from a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and returns results in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
-     [Using R Code in Transact-SQL](using-r-code-in-transact-sql-quickstart.md)  
+     [Using R Code in Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)  
   
 -   Understand the full flow for creating an advanced analytics solution and deploying it using SQL Server R Services  
   
@@ -115,7 +115,7 @@ The following sections provide a high level overview of some typical analytical 
   
 -   Embed working R script in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures so that you can call models for prediction, retrain models, or get predictions from applications  
   
-     [In-Database Advanced Analytics for SQL Developers](../tutorials/sqldev-in-database-advanced-analytics-for-sql-developers-tutorial.md)  
+     [In-Database Advanced Analytics for SQL Developers](../tutorials/sqldev-in-database-advanced-analytics-for-sql-developers.md)  
   
 -   Use [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and related business intelligence tools in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stack to automate machine learning processes. Data preparation and reporting can be automated using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]; display R plots along with other reports using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] or Power View.  
   

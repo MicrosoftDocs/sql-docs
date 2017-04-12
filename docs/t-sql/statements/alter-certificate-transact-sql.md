@@ -58,8 +58,8 @@ ALTER CERTIFICATE certificate_name
       REMOVE PRIVATE KEY  
     | WITH PRIVATE KEY (   
         FILE = '<path_to_private_key>',  
-        DECRYPTION BY PASSWORD = '<key password>'  
-    )}  
+        DECRYPTION BY PASSWORD = '<key password>' )
+}  
 ```  
   
 ## Arguments  

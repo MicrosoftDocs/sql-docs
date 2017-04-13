@@ -457,6 +457,46 @@
    "source_path" : "docs/integration-services/service/service/always-on-for-ssis-catalog-ssisdb.md",
    "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
    "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/package-configurations.md",
+   "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/create-package-configurations.md",
+   "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/package-configurations-organizer.md",
+   "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/package-configuration-wizard-ui-reference.md",
+   "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/create-a-deployment-utility.md",
+   "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/deploy-packages-by-using-the-deployment-utility.md",
+   "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/redeployment-of-packages.md",
+   "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/package-installation-wizard-ui-reference.md",
+   "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+   "redirect_document_id": false
   }
 
  ]

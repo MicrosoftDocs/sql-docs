@@ -25,7 +25,7 @@ In SQL Server vNext, machine learning becomes even more powerful, with addition 
 
 ## What's New in SQL Server vNext CTP 2.0
 
-SQL Server vNext includes many new features to make it easier to build and deploy machine learning solutions on SQL Server data. 
+SQL Server vNext includes many new features to make it easier to build and deploy machine learning solutions that use SQL Server data. 
 
 ### Python integration in SQL Server
 
@@ -68,9 +68,9 @@ This section highlights the additions in SQL Server vNext that improve the scala
    
 + Improved package management for data scientists
 
-  New package install and uninstall functions let you easily install and update packages in R Services from a client computer, without having to go through the database administrator each time. 
+  New package install and uninstall functions let you easily install and update R packages used in SQL Server from a client computer. 
   
-  Using the roles included in SQL Server for managing permissions associated with packages, the DBA can control packages at the database level and assign super-users the right to install their own packages, or share packages with other users. 
+  Using the roles included in SQL Server for managing permissions associated with packages, the DBA can also control packages at the database level, allow users to install their own packages, or create groups of users who can access shared packages. 
   
   In CTP 2.0, new functions have been added that let you easily back up and restore the package collections associated with users when you move or restore a database.
   
@@ -78,5 +78,6 @@ This section highlights the additions in SQL Server vNext that improve the scala
 
 
 ## See Also  
+
 
 

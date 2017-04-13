@@ -34,9 +34,11 @@ You can also create a *read-scale* availability group without a cluster manager.
 
 ## Create the availability group
 
-Create the availability group. In order to create the avalability group for HA on Linux, set `CLUSTER_TYPE = EXTERNAL`. This setting allows an external (non-Windows) cluster manager to manage SQL Server. When `CLUSTER_TYPE = EXTERNAL` the only valid setting for `FAILOVER_MODE` is `EXTERNAL`.
+Create the availability group. In order to create the availability group for HA on Linux, set `CLUSTER_TYPE = EXTERNAL`. 
 
-The following Transact-SQL script creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Update the following script for your environment. Replace the  `**<node1>**` and `**<node2>**` values with the names of the SQL Server instances that will host the replicas. Replace the `**<5022>**` with the port you set for the endpoint. Run the following Transact-SQL on the primary SQL Server replica to create the availability group.
+The `EXTERNAL` value for `CLUSTER_TYPE` option specifies that the an external cluster entity manages the availability group. Pacemaker is an example of an external cluster entity. When the availability group `CLUSTER_TYPE = EXTERNAL`, set each replica `FAILOVER_MODE = EXTERNAL`. After you create the availability group, configure the cluster resource for the availability group using the cluster management tools - for example with Pacemaker use `pcs`. See the Linux distribution specific cluster configuration section for an end-to-end example.
+
+The following Transact-SQL script creates an availability group for HA named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**` and `**<node2>**` values with the names of the SQL Server instances that will host the replicas. Replace the `**<5022>**` with the port you set for the endpoint. Run the following Transact-SQL on the SQL Server instance that will host the primary replica to create the availability group.
 
 ```Transact-SQL
 CREATE AVAILABILITY GROUP [ag1]
@@ -62,9 +64,11 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 >[!NOTE]
 >`CLUSTER_TYPE` is a new option for `CREATE AVAILABILITY GROUP`. An availability group requires`CLUSTER_TYPE = EXTERNAL` when it is on a SQL Server instance that is not a member of a cluster that is not a Windows server failover cluster.
 
-### Join secondary SQL Servers to the availability group
+You can also configure an EXTERNAL availability group with SQL Server Management Studio or PowerShell. 
 
-The following Transact-SQL script joins a server to an availability group named `ag1`. Update the script for your environment. On each secondary SQL Server replica, run the following Transact-SQL to join the availability group.
+### Join secondary replicas to the availability group
+
+The following Transact-SQL script joins a SQL Server instance to an availability group named `ag1`. Update the script for your environment. On each SQL Server instance that will host a secondary replica, run the following Transact-SQL to join the availability group.
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -79,10 +83,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 >After you create the availability group, you must configure integration with a cluster technology like WSFC (on Windows) and Pacemaker (Linux) for HA. In the case of a read-only scale-out architecture using availability groups, starting with SQL Server 2017, setting up a cluster is not required.
 
 ## Notes
-
-### Database level monitoring and failover trigger
-
-For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compared to WSFC. When the availability group is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the availability group health to report a fault. This signals the cluster manager to trigger a failover. In Linux, the SQL Server instance cannot communicate with the cluster. Monitoring for database health is done "outside-in". If you opted in for database level failover monitoring and failover (by setting the DDL option `DB_FAILOVER=ON`), the cluster will check if the database state is `ONLINE` every time when it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different than `ONLINE`, it triggers a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action as well as the database state being updated in sys.databases.
 
 ### The availability group is not a clustered resource at this point 
 

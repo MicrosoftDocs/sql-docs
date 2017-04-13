@@ -26,7 +26,7 @@ manager: "jhubbard"
 # Run Integration Services (SSIS) Packages
   To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, you can use one of several tools depending on where those packages are stored. The tools are listed in the table below.  
   
- To store a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you use the project deployment model to deploy the project to the server. For information, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ To store a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you use the project deployment model to deploy the project to the server. For information, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  To store a package in the SSIS Package store, the msdb database, or in the file system, you use the package deployment model. For more information, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   

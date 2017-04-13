@@ -26,12 +26,10 @@ manager: "jhubbard"
 # Deploy Integration Services (SSIS) Projects and Packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports two deployment models, the project deployment model and the legacy package deployment model. The project deployment model enables you to deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
- For more information about deploying projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
-  
- For more information about the legacy package deployment model, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+For more information about the legacy package deployment model, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project. See [Deploy Packages to Integration Services Server](../../integration-services/packages/deploy-packages-to-integration-services-server.md) for details about this feature.  
+>  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.  
   
 ## Compare Project Deployment Model and legacy Package Deployment Model  
  The type of deployment model that you choose for a project determines which development and administrative options are available for that project. The following table shows the differences and similarities between using the project deployment model and using the package deployment model.  
@@ -50,7 +48,7 @@ manager: "jhubbard"
 |Packages are run in a separate Windows process.|Packages are run in a separate Windows process.|  
 |SQL Server Agent is used to schedule package execution.|SQL Server Agent is used to schedule package execution.|  
   
- The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project. See [Deploy Packages to Integration Services Server](../../integration-services/packages/deploy-packages-to-integration-services-server.md) for details about this feature.  
+ The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. If you used this model, you were not able to deploy one or more packages without deploying the whole project. The [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] introduced the Incremental Package Deployment feature that allows you to deploy one or more packages without deploying the whole project.   
   
 ## Features of Project Deployment Model  
  The following table lists the features that are available to projects developed only for the project deployment model.  
@@ -68,8 +66,6 @@ manager: "jhubbard"
   
 ## Deploy Projects to Integration Services Server
   In the current release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server enables you to manage packages, run packages, and configure runtime values for packages by using environments.  
-  
- For more information about environments, see [Create and Map a Server Environment](../../integration-services/packages/create-and-map-a-server-environment.md).  
   
 > [!NOTE]  
 >  As in earlier versions of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], in the current release you can also deploy your packages to an instance of SQL Server and use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service to run and manage the packages. You use the package deployment model. For more information, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
@@ -101,7 +97,7 @@ manager: "jhubbard"
   
 3.  Deploy the project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information, see the instructions below: [To deploy a project to the Integration Services Server](#deploy).  
   
-4.  (Optional) Create an environment for the deployed project. For more information, see [Create and Map a Server Environment](../../integration-services/packages/create-and-map-a-server-environment.md).  
+4.  (Optional) Create an environment for the deployed project. 
   
 ###  <a name="convert"></a> To convert a project to the project deployment model  
   
@@ -111,7 +107,7 @@ manager: "jhubbard"
   
      From Object Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], right-click the **Projects** node and select **Import Packages**.  
   
-2.  Complete the wizard. For more information, see [Integration Services Project Conversion Wizard](../../integration-services/packages/integration-services-project-conversion-wizard.md).  
+2.  Complete the wizard.
   
 ###  <a name="deploy"></a> To deploy a project to the Integration Services Server  
   
@@ -131,7 +127,7 @@ manager: "jhubbard"
   
      Click **Integration Services catalog** to select a project that has already been deployed to the SSISDB catalog.  
   
-3.  Complete the wizard. For more information, see [Integration Services Deployment Wizard](../../integration-services/packages/integration-services-deployment-wizard.md).  
+3.  Complete the wizard. 
 
 ## Deploy Packages to Integration Services Server
   The Incremental Package Deployment feature introduced in  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] lets you deploy one or more packages to an existing or new project without deploying the whole project.  
@@ -142,7 +138,7 @@ manager: "jhubbard"
   
 2.  On the **Select Source** page, switch to **Package Deployment model**. Then, select the folder which contains source packages and configure the packages.  
   
-3.  Complete the wizard. Follow the remaining steps described in [Package Deployment Model](../../integration-services/packages/integration-services-deployment-wizard.md#PackageModel).  
+3.  Complete the wizard. Follow the remaining steps described in [Package Deployment Model](#PackageModel).  
   
 ###  <a name="SSMS"></a> Deploy packages by using SQL Server Management Studio  
   
@@ -154,7 +150,7 @@ manager: "jhubbard"
   
 4.  On the **Select Source** page, switch to **Package Deployment model**. Then, select the folder which contains source packages and configure the packages.  
   
-5.  Complete the wizard. Follow the remaining steps described in [Package Deployment Model](../../integration-services/packages/integration-services-deployment-wizard.md#PackageModel).  
+5.  Complete the wizard. Follow the remaining steps described in [Package Deployment Model](#PackageModel).  
   
 ###  <a name="SSDT"></a> Deploy packages by using SQL Server Data Tools (Visual Studio)  
   
@@ -162,7 +158,7 @@ manager: "jhubbard"
   
 2.  Right-click and select **Deploy Package**. The Deployment Wizard opens with the selected packages configured as the source packages.  
   
-3.  Complete the wizard. Follow the remaining steps described in [Package Deployment Model](../../integration-services/packages/integration-services-deployment-wizard.md#PackageModel).  
+3.  Complete the wizard. Follow the remaining steps described in [Package Deployment Model](#PackageModel).  
   
 ###  <a name="StoredProcedure"></a> Deploy packages by using the deploy_packages stored procedure  
  You can use the **[catalog].[deploy_packages]** stored procedure to deploy one or more SSIS packages to the SSIS Catalog. The following code example demonstrates the use of this stored procedure to deploy packages to an SSIS server. For more info, see [catalog.deploy_packages](../../integration-services/system-stored-procedures/catalog-deploy-packages.md).  
@@ -273,7 +269,7 @@ Launch the wizard by either:
  
  > **NOTE:** If you see the **Introduction** page, click **Next** to switch to the **Select Source** page. 
  
- The settings on this page are different for each deployment model. Follow  steps in the [Project Deployment Model](../../integration-services/packages/integration-services-deployment-wizard.md#ProjectModel) section or [Package Deployment Model](../../integration-services/packages/integration-services-deployment-wizard.md#PackageModel) section based on the model you selected in this page.  
+ The settings on this page are different for each deployment model. Follow  steps in the [Project Deployment Model](#ProjectModel) section or [Package Deployment Model](#PackageModel) section based on the model you selected in this page.  
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
@@ -522,7 +518,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   From Object Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], right-click the **Projects** node and select **Import Packages**.  
   
- Depending on whether you run the **Integration Services Project Conversion Wizard** from [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard performs different conversion tasks. For more information, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ Depending on whether you run the **Integration Services Project Conversion Wizard** from [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] or from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard performs different conversion tasks.   
   
 ###  <a name="locate"></a> Set Options on the Locate Packages Page  
   

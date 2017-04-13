@@ -72,7 +72,7 @@ The most important information shown in this view are:
 Use the following query to obtain a script that will fix the issue:
 
 ```   
-SELECT description, score,
+SELECT reason, score,
       JSON_VALUE(details, '$.implementationDetails.script') script,
       planForceDetails.*
 FROM sys.dm_db_tuning_recommendations
@@ -85,7 +85,7 @@ FROM sys.dm_db_tuning_recommendations
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| description | score | script | query\_id | new plan\_id | regressed plan\_id |
+| reason | score | script | query\_id | new plan\_id | recommended plan\_id |
 | --- | --- | --- | --- | --- | --- | --- |
 | CPU time changed from 3ms to 46ms | 36 | EXEC sp\_query\_store\_force\_plan 12, 17; | 12 | 28 | 17 |
 
@@ -129,7 +129,7 @@ gives information about the current state of automatic tuning option, and column
 | 2 | `DISABLED` | Option is disabled by system. |
 | 11 | `QUERY_STORE_OFF` | Query Store is turned off. |
 | 12 | `QUERY_STORE_READ_ONLY` | Query Store is in read-only mode. |
-| 13 | `NOT_SUPPORTED` | Available only in Enterprise edition of SQL Server. |
+| 13 | `NOT_SUPPORTED` | Available only in Enterprise Edition of SQL Server. |
 
 ## See Also  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

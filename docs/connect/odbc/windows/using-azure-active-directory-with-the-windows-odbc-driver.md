@@ -76,7 +76,7 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-The `ACCESSTOKEN` is a variable-length structure consisting of a 4-byte _length_ followed by _length_ bytes of opaque data that form the access token. Due to how SQL Server handles access tokens, one obtained via an [OAuth 2.0](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios) JSON response must be expanded so that each byte is followed by a 0 padding byte, similar to a UCS-2 string containing only ASCII characters; however, the token is an opaque value and the length specified, in bytes, must NOT include any null terminator.
+The `ACCESSTOKEN` is a variable-length structure consisting of a 4-byte _length_ followed by _length_ bytes of opaque data that form the access token. Due to how SQL Server handles access tokens, one obtained via an [OAuth 2.0](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios) JSON response must be expanded so that each byte is followed by a 0 padding byte, similar to a UCS-2 string containing only ASCII characters; however, the token is an opaque value and the length specified, in bytes, must NOT include any null terminator. Because of their considerable length and format constraints, this method of authentication is only available programmatically via the `SQL_COPT_SS_ACCESS_TOKEN` coonnection attribute; there is no corresponding DSN or connection string keyword. The connection string must not contain `UID`, `PWD`, `Authentication`, or `Trusted_Connection` keywords.
 
 ## Azure Active Directory Authentication Sample Code
 

@@ -82,7 +82,7 @@ manager: "erikre"
   
     1.  **Base URL** is optional. You should specify it if a data service document provides multiple feeds. Base URL should specify the portion of the URL that is common to all the feeds (for example, the server name and site). If you are creating a data service document to a Reporting Services report, the base URL would be the report server URL and report.  
   
-    2.  **Web Service URL** is required. Without the Base URL, this value must include http:// or https:// in the address. If you specified a Base URL, the Web service URL is the portion that follows the Base URL. For example, if the full URL is http://adventure-works/inventory/today.aspx, the Base URL would be http://adventure-works/inventory, and the Web service URL would be /today.aspx.  
+    2.  **Web Service URL** is required. Without the Base URL, this value must include `http://` or `https://` in the address. If you specified a Base URL, the Web service URL is the portion that follows the Base URL. For example, if the full URL is `http://adventure-works/inventory/today.aspx`, the Base URL would be `http://adventure-works/inventory`, and the Web service URL would be /today.aspx.  
   
          The Web service URL can include parameters that filter or select a subset of data. The application or service that provides the feed must support the parameters that you specify in the URL.  
   

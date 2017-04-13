@@ -126,17 +126,19 @@ sudo apt-get install mssql-server-ha
 ```
 
 ## Configure fencing (STONITH)
-Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. Fencing configuration is needed to allow a surviving cluster node to forcibly remove a non-responsive node from the cluster. For details, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again. 
+Resource level fencing ensures mainly that there is no data corruption in case of an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down. 
+Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, e.g. an uninterruptible power supply or management interface cards for servers. 
+For more details, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-To continue the configuration and validate the cluster setup , disable STONITH (it can be configured at a later time):
+Because the node level fencing configuration depends heavily on your environment, we will disable it for this tutorial (it can be configured at a later time): 
 
 ```bash
 sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->This is not supported by the clustering vendors in a production setup. For details, see [Pacemaker Clustersf from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and
-[Red Hat High Availability Add-On with Pacemaker: Fencing](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html).
+>Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. 
 
 ## Create a SQL Server login for Pacemaker
 
@@ -144,16 +146,10 @@ sudo pcs property set stonith-enabled=false
 
 ## Create availability group resource
 
-To create the availability group resource, set properties as follows:
-
-- **clone-max**: Number of AG replicas, including primary. For example, if you have one primary and one secondary, set this to 2. Default is number of nodes in the cluster.
-- **clone-node-max**: Number of replicas that can be started on a node. Set this to 1 (or use the default which is 1).
-
-The following script sets these properties.
+To create the availability group resource, use `pcs resource create` command and set the resource properties. Below command creates a `ocf:mssql:ag` master/slave type resource for availability group with name `ag1`. 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 \
---master meta master-max=1 master-node-max=1 clone-max=2 clone-node-max=1 notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
 ```
 
 ## Create virtual IP resource
@@ -168,7 +164,9 @@ There is no virtual server name equivalent in Pacemaker. To use a connection str
 
 ## Add colocation constraint
 
-To add colocation constraint, run the following command on one node.
+Almost every decision in a Pacemaker cluster, like choosing where a resource should run, is done by comparing scores. Scores are calculated per resource, and the cluster resource manager chooses the node with the highest score for a particular resource. (If a node has a negative score for a resource, the resource cannot run on that node.) 
+We can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than INFINITY, it is only a recommendation. A score of INFINITY means it is a must. 
+We want to ensure that primary of the availability group and the virtual ip resource are run on the same host, so we will define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node. 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master

@@ -111,7 +111,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 The status of advisor is shown in the following view:
 
 ```    
-SELECT name, desired_state_desc_, actual_state_desc, reason_desc
+SELECT name, desired_state_desc, actual_state_desc, reason_desc
 FROM sys.database_automatic_tuning_options;
 ```
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     

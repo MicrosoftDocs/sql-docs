@@ -42,7 +42,7 @@ The articles contains details on how to upgrade from previous versions, includin
  If you use the command line to install an instance of SQL Server 2016 or SQL Server vNext, and add the feature that supports use of external languages such as R or Python, you must add a separate licensing agreement parameter to the command line arguments for each language that you install.  
 
 + For R: */IACCEPTROPENLICENSEAGREEMENT* 
-+ For R: */IACCEPTPYTHONLICENSEAGREEMENT* 
++ For Python: */IACCEPTPYTHONLICENSEAGREEMENT* 
 
 Failure to use the correct argument will cause [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup to fail. 
 
@@ -52,11 +52,13 @@ If you install the latest version of Microsoft R Client and use it to run R on S
 
 *You are running version 9.x.x of Microsoft R client on your computer, which is incompatible with the Microsoft R Server version 8.x.x. Download and install a compatible version.*
 
-In SQL Server 2016, it was required that the R libraries on the client exactly match the R libraries on the server. Although that restriction has been removed for releases later than R Server 9.0.1, if you are using the RTM version of SQL Server 2016, you need to verify that your R clietn and server use the same versions.
+SQL Server 2016 required that the R libraries on the client exactly match the R libraries on the server. That restriction has been removed for releases later than R Server 9.0.1. However, if you encounter this error, verify the version of the R libraries used by your client and the server, nad if necessary, update the client to match the server version.
 
-Typically, the version of R that is installed with SQL Server R Services is updated when SQL Server service releases are published. To ensure that you always have the most up-to-date versions of R components, you should install all service packs. For compatibility with Microsoft R Client 9.0.0, you must install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262). 
+The version of R that is installed with SQL Server R Services is updated whenever a SQL Server service release is installed. Therefore, to ensure that you always have the most up-to-date versions of R components, you should install all service packs.
 
-Another option is to upgrade the version of the R libraries installed on the server, by changing to the Modern Lifecycle policy as described in [this section](#bkmk_sqlbindr). When you do so, the version of R installed with SQL Server is updated on the same schedule that updates are published for Microsoft R Server, ensuring that both server and client can always have the latest releases of Microsoft R. 
+For compatibility with Microsoft R Client 9.0.0, you must install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262). 
+
+To avoid problems with R packages, you can also upgrade the version of the R libraries that are installed on the server, by changing to the Modern Lifecycle policy as described in [this section](#bkmk_sqlbindr). When you do so, the version of R installed with SQL Server is updated on the same schedule that updates are published for Microsoft R Server, ensuring that both server and client can always have the latest releases of Microsoft R. 
   
   
 ### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when connecting to older version of SQL Server R Services from a client using [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 

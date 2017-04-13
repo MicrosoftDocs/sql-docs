@@ -1,7 +1,7 @@
 ---
 title: "R Package Management for SQL Server R Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/07/2017"
+ms.date: "04/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,33 +18,32 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # R Package - Management for SQL Server R Services
-To make it easier to manage R packages that are running on an instance of SQL Server, the **RevoScaleR** package now includes functions to support installation and management of R packages. 
 
-This new functionality supports several scenarios:
+This topic describes the package management functions that you can use to manage R packages that are running on an instance of SQL Server.
 
-- The data scientist can install a needed R packages on SQL Server without having administrative access to the SQL Server computer. The packages are installed on a per database basis.
-- It is easy to share packages with others. Just establish a local package repository and have each data scientist install the packages to the individual databases.
-- The database administrator does not need to learn how to run R commands, or understand package dependencies. The DBA uses database roles to control which SQL Server users are permitted to install, uninstall, or use packages.
+The **RevoScaleR** package now includes functions to support easier installation and management of R packages. These new functions, combined with database roles for package management, supports these scenarios:
+
+- The data scientist can install needed R packages on SQL Server without having administrative access to the SQL Server computer. 
+- The packages are installed on a per database basis, and when the database is moved, the packages move with it.
+- It is easier to share packages with others. If you set up a local package repository, each data scientist can use the respository to install packages to his or her own database.
+- The database administrator does not need to learn how to run R commands, and doesn't need to track complex package dependencies. 
+- The DBA can use familiar database roles to control which SQL Server users are permitted to install, uninstall, or use packages.
  
-**How It Works**
+### How Package Management Works
 
-* The database administrator is responsible for setting up roles and adding users to the roles, to control who has permission to add or remove R packages from the SQL Server environment.
-* If you have permission to install packages, you run one of the package management functions from your R code and specify the compute context where packages are to be added or removed. The compute context can be your local computer or a database on the SQL Server instance. 
-* If the call to install packages is run on SQL Server, your credentials determine whether the operation can be completed on the server. 
-- The package installation functions check for dependencies and ensure that any related packages can be installed to SQL Server, just like R package installation in the local compute context.
-- The function that uninstalls packages also computes dependencies and ensures that packages that are no longer used by other packages on SQL Server are removed, to free up resources.
-- Each data scientist can install private packages that are not visible to others, giving them an isolated sandbox to work with their own R packages.
--  Because packages can be scoped to a database and each user gets an isolated packages sandbox in each database, it is easier to install use different versions of the same R package. 
+The database administrator is responsible for setting up roles and adding users to the roles, to control who has permission to add or remove R packages from the SQL Server environment.
 
-### Supported versions
+If you have permission to install packages, you run one of the package management functions from your R code and specify the compute context where packages are to be added or removed. The compute context can be your local computer or a database on the SQL Server instance. If the call to install packages is run on SQL Server, your credentials determine whether the operation can be completed on the server. The package installation functions check for dependencies and ensure that any related packages can be installed to SQL Server, just like R package installation in the local compute context. The function that uninstalls packages also computes dependencies and ensures that packages that are no longer used by other packages on SQL Server are removed, to free up resources.
 
-**SQL Server 2016** 
+Each data scientist can install private packages that are not visible to others, creating a private sandbox for R packages. Because packages can be scoped to a database and each user gets an isolated package sandbox in each database, it is easier to install different versions of the same R package. 
 
-To get the new package maagement features, you must upgrade the instance of R that is associated with the instance of SQL Server. Doing so installs the latest version of Microsoft R and also switches the instance to use the  Modern Lifecycle Policy. For more information, see [Use SqlBindR.exe to Upgrade an Instance of R Services](https://docs.microsoft.com/sql/advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services).
+If you migrate your working database to a new server, you can use the package synchronization function to read a list of all your packages and install them in a database on the new server.
 
-**SQl Server vNext**
+### Supported Versions 
 
-The package management feature is included with this release.	
+- The R functions for package management are provided beginning with Microsoft R Server 9.0.1. 
+- These packages are included by default in SQL Server vNext.
+- You can add the packages to an instance of SQL Server 2016 if you upgrade the instance to use at least Microsoft R 9.0.1. For more information, see [Using SqlBindR.exe to Upgrade R](../r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md).	
 
 ## Database roles and database scoping
 
@@ -66,7 +65,7 @@ Another scenario might require greater isolation among users, or use of differen
 
 ### Database roles for package management
 
-The following new database roles support secure installation and package management for SQL R Services: 
+The following new database roles support secure installation and R package management in SQL Server: 
 
 - **rpkgs-users** Allows users to use any shared packages that were installed by members of the **rpkgs-shared** role.
 
@@ -76,9 +75,18 @@ The following new database roles support secure installation and package managem
  
 - **db_owner** - Has the same permissions as the **rpkgs-shared** role. Can also grant users the right to install or remove both shared and private packages.
 
+## R Package Synchronization
 
+The CTP 2.0 release of SQ Server vNext (and the April 2017 release of Microsoft R Server) includes new R functions for *synchronizing packages*.   
 
-## New package management functions
+Package synchronization means that the database engine tracks the packages that are used by a specific owner and group, and can write those packages to the file system if needed. You can use package synchronization in these scenarios:
+
++ You want to move R packages between instances of SQL Server
++ You need to re-install packages for a specific user or group after a database is restored 
+
+For more information, see [rxSyncPackages](../r/package-install-uninstall-and-sync.md).
+
+## List of Package Management Functions
 
 
 + `rxInstalledPackages`: Find information about packages installed in the specified compute context.
@@ -148,4 +156,4 @@ This example removes the **ggplot2** package and its dependencies from the compu
 
 ## See Also
 
-[How to Enable or Disable R package Management](../../advanced-analytics/r-services/r-package-how-to-enable-or-disable.md)
+[How to Enable or Disable R Package Management](../r/r-package-how-to-enable-or-disable.md)

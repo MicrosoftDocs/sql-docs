@@ -1,7 +1,7 @@
 ---
 title: "Package install, uninstall, and sync | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "04/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,9 +16,9 @@ manager: "jhubbard"
 
 # R Package Synchronization for SQL Server
 
-Microsoft R Server 9.1.0 includes a new function for synchronization of R packages to support back up and restore of R package collections associated with SQL Server databases. This feature helps ensure that complex sets of R packages created by users are not lost and can be easily restored.  
+SQL Server vNext CTP 2.0 includes a new function for synchronization of R packages, to support back up and restore of R package collections associated with SQL Server databases. This feature helps ensure that complex sets of R packages created by users are not lost and can be easily restored.  
 
-This topic describes how to use the `rxSyncPackages()` function to perform the following tasks:
+This topic describes what the package synchronization feature does, and how to use the `rxSyncPackages()` function to perform the following tasks:
 
 +  Synchronize a list of packages for an entire SQL Server database
 +  Synchonize packages used by an individual user, or by a group of users
@@ -28,37 +28,42 @@ This topic describes how to use the `rxSyncPackages()` function to perform the f
 
 ## What is Package Synchronization 
 
-Package synchronization is provided by a new function in RevoScaleR version 9.1.0, **rxSyncPackages**. Currently, this package works specifically with SQL Server compute contexts. It is designed to get a list of R packages that are installed on a particular database, and make a copy of those packages to the file system. 
+Package synchronization is a new feature that works specifically with SQL Server compute contexts. It is designed to get a list of R packages that are installed on a particular database, for a particular user or group, and ensure that the packages listed in the file system match those in the database. 
 
-The goal of package synchronization is to ensure that users can access all their R packages, if you ever need to back up and restore the associated SQL Server database.
+This is useful if you need to move a user database and move the packages along with the database. You can also use package synchronization when you back up and restore a SQL Server database used for R jobs.
 
-Typically, when you run R scripts using standard R tools, it is expected that R packages are installed on the file system. However, when R is integrated with SQL Server, the database administrator can install packages for a specific database, and share the use of those packages with other users of the database. The administrator can also give an individual user the ability to freely install the R packages he or she needs, such that the use of the package is scoped to a particular database and user. This mechanism ensures that multiple users can install different versions of R packages without causing conflicts for other users of the SQL Server computer.
+Package synchronization uses a new function, `rxSyncPackages()`. To synchronize the list of packages, you open an R command prompt, pass the compute context that defines the instance and database you want to work with, and then provide either a package scope or a user or owner name. 
 
-However, if something happens to the database or server, these customizations can be lost. By using package synchronization, you can restore database-specific packages and user configurations. 
+### How packages are managed in R and SQL Server
 
-## How rxSyncPackages Works
+Typically, when you run R scripts using standard R tools, R packages are installed on the file system. If multiple people use R on the same computer, there might be many copies of the same packages, in different folders or in differnt user libraries.
 
-To use any R package from SQL Server, the package must be installed in the default R library that is associated with the instance. A server computer might be hosting multiple instances of SQL Server with R enabled, and in this case, each instance can have a separate set of R packages. 
+However, to use an R package from SQL Server, the package must be installed in the default R library that is associated with the instance. A server computer might be hosting multiple instances of SQL Server with R enabled, and in this case, each instance can have a separate set of R packages. 
 
-An administrator installs packages for the SQL Server instance as a whole. The administrator has the ability to control, at the instance level and database level, which users can run R on the instance, and which packages they can use. The administrator can also use database roles to enable users to install their own packages, or to install and share packages with other users. 
+The database administrator is responsible for installing packages on the instance. However, with the package management libraries, the administrator can delegate this responsibility to users. 
 
-For example, the role **rpkgs-private** lets a database user install R packages freely, within a particular database. No other user can view or use the installed packages. In contrast, the **rpkgs-shared** role is useful if a group of users will use the same packages. 
++ For each database, the administrator can give users the ability to freely install the R packages they need. This mechanism ensures that multiple users can install different versions of R packages without causing conflicts for other users of the SQL Server computer. Individual users can install packages for their own use, using a file system location marked as **private**, if they belong to the database role **rpkgs-private**.
 
-Because the ability to install packages is based on **database roles**, each user must have the ability to connect to the database, and on top of that, must be a member of one of the package-management roles. 
++ The administrator can set up a group of package users on a database, and install packages that are shared by all users in the group. Packages can be shared among members of the database role **rpkgs-shared**. Such users can also install packages to private scope locations. 
 
-To synchronize packages, you create an R command, and pass the compute context, which defines the instance and database you want to work with, a package scope, and a user or owner name. 
+### Goal of package synchronization
 
-The person who executes the function must be a security principal on the SQL Server instance and database that has the packages, and must be a member of at least one of these package management roles: 
+If a database on a server is lost or must be moved, by using package synchronization, you can restore sets of packages specific to a database, user, or group. 
 
-+ **rpkgs-shared** - Users who belong to the role can install packages to any shared location, as well as to private scope locations. 
-+ **rpkgs-private** - Users who belong to this database role can install only packages that were installed for their own use using the **private** scope location. 
-+ **rpkgs-users** - This role allows a user to run code that uses packages installed on the SQL Server instance, but not to move or synch packages.
+The information about users and the packages that they have installed is stored in the SQL Server instance, and is used to update the packages in the file system. Whenever you add a new package using the package management functions, both the records in SQL Server and the file system are updated. Therefore, if a user moves to a different SQL Server, you can take a backup of the user's working databaes and restore it to the new server, and the packages for the user will be installed into the file system on the new server, as required by R.
+
+
+### Supported Versions
+
+This function is included in SQL Server vNext CTP 2.0.
+
+Because this function is part of Microsoft R version 9.1.0, you can add this feature to a instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to Upgrade SQL Server R Services](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ## To Synchronize Packages
 
 You call `rxSyncPackages` after restoring an instance of SQL Server to a new machine,  or if a R package on the file system is believed to be corrupted.
 
-If the command executes successfully, existing packages in the file system are added to the database, scope, and owner as specified.
+If the command executes successfully, existing packages in the file system are added to the database, scope, and owner as specified. If the file system is corrupted, the packages are restred based on the list maintained in the database.
 
 ### Syntax
 `rxSyncPackages(computeContext = rxGetOption("computeContext"),  scope = c("shared", "private"), owner = c(), verbose = getOption("verbose"))`
@@ -83,19 +88,17 @@ If the command executes successfully, existing packages in the file system are a
 
 ### Requirements
 
-The person who runs must be a security principal on the SQL database, meaning a windows account or SQL login. To sync packages on behalf of other users, the owner must be a member of the **db_owner** database role.
-
-Packages are shared per database, so users of the package must first have permission to access the same database, and must be added to the packing-sharing role for that database.
-
-+ To synchronize packages marked as **shared**, the person who is running the function must have membership in the **rpkgs-shared** role, and the packages that are being moved must have been installed to a shared scope library.
-
-+ To sychronize packages marked as **private**, either the owner of the package or the administrator must run the function, and the packages must be private.
++ The person who executes the function must be a security principal on the SQL Server instance and database that has the packages, and must be a member of a package management role: **rpkgs-shared** or **rpkgs-private** 
+  + To synchronize packages marked as **shared**, the person who is running the function must have membership in the **rpkgs-shared** role, and the packages that are being moved must have been installed to a shared scope library.
+  + To sychronize packages marked as **private**, either the owner of the package or the administrator must run the function, and the packages must be private.
++ **rpkgs-users** -Members of this role can run code that uses packages installed on the SQL Server instance, but cannot install or synch packages.
++ To sync packages on behalf of other users, the owner must be a member of the **db_owner** database role.
 
 ## Examples
 
 The following examples create a connection to a specific instance of SQL Server, specify a database, and then specify a set of packages to synchronize. 
 
-When the call to `rxSyncPackages` is made, the packages are copied  ensures that the packages are installed in the file system. 
+When the call to `rxSyncPackages` is made, the package lists are synchronized between the file system and the database. 
 
 ### Synchronize all by database
 
@@ -110,7 +113,7 @@ rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 
 ### Restrict synchronized packages by scope 
 
-The following examples demonstrate how to use the same compute context, but synchonize only the packages in either shared scope or private scope.
+The following examples synchonize only the packages in either shared scope or private scope.
 
 **Shared scope**
 
@@ -126,10 +129,12 @@ rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 
 ### Restrict synchronized packages by owner 
 
-The following example demonstrates how to get only the packages  that were installed for a specific user. In this example, the user is identified by the SQL login name, *user1*.
+The following example demonstrates how to get only the packages that were installed for a specific user. In this example, the user is identified by the SQL login name, *user1*.
 
 ```R
 rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", verbose=TRUE))
 ```
 
 ## See Also
+
+[R Package Management for SQL Server](../r/r-package-management-for-sql-server-r-services.md)

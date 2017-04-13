@@ -2,7 +2,7 @@
 title: "What&#39;s New in SQL Server R Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "01/20/2017"
+ms.date: "04/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,83 +16,68 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# What&#39;s New in SQL Server R Services
-  [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] is a feature in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] and SQL Server vNext that supports enterprise-scale data science.  R is the most popular programming language for advanced analytics, and offers an incredibly rich set of packages and a vibrant and fast-growing developer community. [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] helps you embrace the highly popular open source R language in your business. 
-  
- > [!TIP]
- > Already have SQL Server 2016 R Services?
- > Now you can install the latest version of Microsoft R Server on your 2016 instances, to take advantage of more frequent updates to R components. For more information, see [Microsoft R Server 9.0.1](https://msdn.microsoft.com/microsoft-r/rserver-whats-new).  
 
-## What's New in SQL Server vNext
-  
-+ Introducing the **MicrosoftML** package
+# What&#39;s New in Machine Learning with SQL Server
 
-   MicrosoftML is a new machine learning package for R from the Microsoft R Server and Microsoft Data Science teams. MicrosoftML brings increased speed, performance and scale for handling a large corpus of text data and high-dimensional categorical data in R models with just a few lines of code. In addition, Microsoft R Server customers will get access to five fast, highly accurate learners that are included in Azure Machine Learning. 
+In SQL Server 2016, Microsoft introduced SQL Server R Services, a feature that supports enterprise-scale data science by integrating the R language with SQL Server database engine.  
+
+In SQL Server vNext, machine learning becomes even more powerful, with addition of support for the popular Python language. To reflect the support for multiple languages, as of CTP 2.0, SQL Server R Services has also been renamed as **Machine Learning Services (In-Database)**.
+
+## What's New in SQL Server vNext CTP 2.0
+
+SQL Server vNext includes many new features to make it easier to build and deploy machine learning solutions on SQL Server data. 
+
+### Python integration in SQL Server
+
+You can now run Python in SQL Server, using stored procedures or remote compute contexts. 
+
+Machine Learning Services includes the RevoScalePy libraries, which have all the distributed algorithms and compute contexts supported in RevoScaleR.
+
+For more information, see these topics:
+
++ [Set up Python in Machine Learning Services](../advanced-analytics/python/setup-python-machine-learning-services.md)
++ Demo 
+
+### Pleasingly parallel compute for distributed models
+
+Often the data scientist needs to efficiently train a large number of small models over subsets of a very large dataset. For example, you might have collected a large dataset covering multiple products or devices over many days, but want to create individual models that are tailored to the product, device, or certain periods. 
+
+You can easily create multiple models in parallel by using the new **rxExecBy** function, available in SQL Server vNext CTP 2.0 and Microsoft R server 9.1.0. The function accepts a dataset containing ungrouped and unordered data, and lets you partition it by a single entity for training and model building. For example, you could partition by product, and then process the entire dataset in parallel. The outcome is multiple models, each model trained on the appropriate subset of data for each product. 
+
+Supported compute contexts include RxSpark and RxInSQLServer.
+
+For more information, see [Create Multiple Models using rxExecBy](../advanced-analytics/r/creating-multiple-models-using-rxexecby.md).
+
+## Other R Features and Improvements  
+
+R is the most popular programming language for advanced analytics, and offers an incredibly rich set of packages and a vibrant and fast-growing developer community. 
+
+This section highlights the additions in SQL Server vNext that improve the scalability and performance of R.
+
++ Upgrade your R experience 
+
+  The RevoScaleR package is included in SQL Server 2016, SQL Server vNext, and Microsoft R Server. It includes transforms and algorithms that support distributed or parallel processing, and multiple compute contexts. 
+  
+  If you installed an earlier version of RevoScaleR with SQL Server 2016, you can now upgrade to the very latest version by switching your server to use the Modern Lifecycle policy. By doing so you can take advantage of a faster release cycle for R and automatically upgrade all R components. For more information, see [Microsoft R Server 9.0.1](https://msdn.microsoft.com/microsoft-r/rserver-whats-new).  
+
++ MicrosoftML 
+
+   MicrosoftML is a machine learning package for R from the Microsoft Data Science team. MicrosoftML brings increased speed, performance and scale for handling a large corpus of text data and high-dimensional categorical data in R models with just a few lines of code. It also includes five fast, highly accurate learners that are included in Azure Machine Learning. 
    
-   For more information, see [Using the MicrosoftML Package in SQL Server R Services](using-the-microsoftml-package.md).
+   For more information, see [Using the MicrosoftML Package in SQL Server R Services](../advanced-analytics/using-the-microsoftml-package.md).
    
-+ Easier package management for data scientists
++ Improved package management for data scientists
 
-  You no longer have to rely on the database administrator to install the R packages you need on SQL Server. New package install and uninstall functions in **RevoScaleR** let you easily install and update packages in R Services from a client computer. 
+  New package install and uninstall functions let you easily install and update packages in R Services from a client computer, without having to go through the database administrator each time. 
   
-  For the database administrator, new roles are included in [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] for managing permissions associated with packages, both on the instance level and database level. 
+  Using the roles included in SQL Server for managing permissions associated with packages, the DBA can control packages at the database level and assign users the right to install their own packages, or share packages with other users. 
   
-  For more information, see [R Package Management for SQL Server R Services](r/r-package-management-for-sql-server-r-services.md). 
-     
-+ New functions in **RevoScaleR** for reading and writing R model objects
-
-  RevoScaleR now includes new serialization functions and a more compact model storage format, to make loading and reading a model fast. 
+  In CTP 2.0, new functions have been added that let you easily back up and restore the package collections associated with users when you move or restore a database.
   
-  For more information, see [Save and Load R Objects from SQL Server using ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md). 
+  For more information, see [R Package Management for SQL Server R Services](../advanced-analytics/r/r-package-management-for-sql-server-r-services.md). 
 
-+ **sqlrutils** package for easier SQL integration
 
-  This R package helps you generate the SQL stored procedure call for your R code. The generated SQL stored procedures can then be used in SQL Server R Services. Examples are provided to help you consolidate your R code into a function that can be parameterized in a SQL stored procedure.
-  
-  For more information, see [Generating a Stored Procedure for R Code using sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md). 
-  
-
-+ **olapR** package for easy SSAS connectivity
-
-   This new package provides a new dimension of connectivity for R and SQL Server Analysis Services, making it easier to use OLAP data for analysis in R. You can run existing MDX queries and get back an R data frame, or build simple MDX statements by defining cube axes and slicers in R code. 
-   
-   For more information, see [Using Data from OLAP Cubes in R](r/using-data-from-olap-cubes-in-r.md).
-   
-
-  
-## Features in SQL Server 2016 R Services and SQL Server vNext  
-  
-- The **RevoScaleR** package for fast, parallelizable machine learning with R.
-
--   Supports both SQL logins and integrated Windows authentication.  
-    
--   Significant performance improvements, including optimization of the SQL Satellite processes, which connect R and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], support for paging of data to enable high-volume data usage, and streaming to enable fast processing of  billions of rows. 
-  
--   Use SQL Server resource pools to manage memory used by R processes. For more information see [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../t-sql/statements/create-external-resource-pool-transact-sql.md).  
-  
-
-### Tools and setup
-
--   Easy setup of all components. The SQL Server setup wizard can install either **SQL Server R Services (In-Database)** or **Microsoft R Server (Standalone)**.   When you run the setup wizard, choose R Services if you are setting up a SQL Server instance, and choose R Server (Standalone) if you are setting up a data science workstation.   For more information on  setup options, see [Set up SQL Server R Services &#40;In-Database&#41;](r/set-up-sql-server-r-services-in-database.md) or [Create a Standalone R Server](r/create-a-standalone-r-server.md).  
-
--   If you don't need to use data in SQL Server, consider [!INCLUDE[rsql_platform](../includes/rsql-platform-md.md)], which runs on a wide variety of platforms, and provides enterprise scale and performance to the popular open source R language. [!INCLUDE[rsql_platform](../includes/rsql-platform-md.md)]. For details, see [R Server &#40;Standalone&#41;](r/r-server-standalone.md)  or [Introducing R Server](https://msdn.microsoft.com/microsoft-r/rserver) on MSDN.
-
-- To upgrade your SQL Server 2016 instance to use Microsoft R Server 9.0.1, use the [SqlBindR.exe utility](https://msdn.microsoft.com/library/mt791781.aspx).  
-
-- [Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-install) is a free R environment that includes all the tools and libraries you'll need to building R solutions that run on either R Services or R Server.  
-
--   R Tools for Visual Studio is a free plug-in for Visual Studio with rich support for R, including standard R interactive and variables windows, Intellisense for R functions, debugging, and R Markdown, complete with export to Word and HTML.  For more information, see [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/).  
-
-## Learn More
-  
--  Resources are available for both data scientists who want to learn about SQL Server integration, and SQL developers who want to create R solutions using T-SQL and the familiar environment of [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
-   + [SQL Server R Services Tutorials](https://msdn.microsoft.com/library/mt591993.aspx)
-   + [Free ebook: Data Science with SQL Server 2016](https://mva.microsoft.com/ebooks/)
- 
-+ If you need ready-made solutions, the [machine learning templates](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/) from the Microsoft data science team demonstrate practical solutions for common analytical tasks, including predictive maintenance and churn prevention.
- 
-
-  
 ## See Also  
-[What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
+
   
+

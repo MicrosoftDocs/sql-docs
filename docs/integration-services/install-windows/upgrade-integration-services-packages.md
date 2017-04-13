@@ -6,7 +6,7 @@ ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "setup-install"
+  - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 

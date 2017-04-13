@@ -1,7 +1,7 @@
 ---
 title: "ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -37,19 +37,18 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>  
   
 <alter_option> ::=  
-    <password_change_option>   
-    |   
-    REMOVE PRIVATE KEY  
+      <password_change_option>   
+    | REMOVE PRIVATE KEY   
+
 <password_change_option> ::=  
     WITH PRIVATE KEY ( <password_option> [ , <password_option> ] )  
+
 <password_option> ::=  
-    ENCRYPTION BY PASSWORD = 'strongPassword'  
-    |  
-    DECRYPTION BY PASSWORD = 'oldPassword'  
+      ENCRYPTION BY PASSWORD = 'strongPassword'  
+    | DECRYPTION BY PASSWORD = 'oldPassword'  
 ```  
   
 ## Arguments  

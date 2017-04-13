@@ -64,20 +64,20 @@ This section highlights the additions in SQL Server vNext that improve the scala
 
    MicrosoftML is a machine learning package for R from the Microsoft Data Science team. MicrosoftML brings increased speed, performance and scale for handling a large corpus of text data and high-dimensional categorical data in R models with just a few lines of code. It also includes five fast, highly accurate learners that are included in Azure Machine Learning. 
    
-   For more information, see [Using the MicrosoftML Package in SQL Server R Services](../../advanced-analytics/r-services/using-the-microsoftml-package-with-sql-server-r-services.md).
+   For more information, see [Using the MicrosoftML Package in SQL Server R Services](../../advanced-analytics/using-the-microsoftml-package.md).
    
 + Improved package management for data scientists
 
   New package install and uninstall functions let you easily install and update packages in R Services from a client computer, without having to go through the database administrator each time. 
   
-  Using the new roles included in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] for managing permissions associated with packages, the DBA can control packages at the database level and assign super-users the right to install their own packages, or share packages with other users. 
+  Using the roles included in SQL Server for managing permissions associated with packages, the DBA can control packages at the database level and assign users the right to install their own packages, or share packages with other users. 
   
   In CTP 2.0, new functions have been added that let you easily back up and restore the package collections associated with users when you move or restore a database.
   
-  For more information, see [R Package Management for SQL Server R Services](../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md). 
+  For more information, see [R Package Management for SQL Server R Services](../../advanced-analytics/r/r-package-management-for-sql-server-r-services.md). 
 
 
 ## See Also  
-[What's New in SQL Server vNext](../../sql-server/what-s-new-in-sql-server-vnext.md)
+
   
 

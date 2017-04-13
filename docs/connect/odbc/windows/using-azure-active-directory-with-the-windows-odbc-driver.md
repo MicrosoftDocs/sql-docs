@@ -1,7 +1,7 @@
 ---
 title: "Using Azure Active Directory with the Windows ODBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "04/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,19 +20,27 @@ manager: "jhubbard"
 
 ## Purpose
 
-The ODBC Driver 13.1 for SQL Server - Windows allows ODBC applications to connect to an instance of SQL Azure using a federated identity in Azure Active Directory with username/password or Windows Integrated Authentication.
-  
-## Connecting
-DSN Registry Entries, Connection String Keywords, and Connection Attributes are created/modified as follows:
+The ODBC Driver 13.1 for SQL Server - Windows allows ODBC applications to connect to an instance of SQL Azure using a federated identity in Azure Active Directory with username/password, an Azure Active Directory Access Token, or Windows Integrated Authentication. This is accomplished through the use of new DSN and connection string keywords, and connection attributes.
 
-|Connection Attribute|Equivalent Connection/DSN String Keyword|Comments|
-|-|-|-|
-`SQL_COPT_SS_AUTHENTICATION`|`SQLAuthentication`|Must be set before connecting. Connection string value overrides DSN and sets this attribute if also specified. <br><br> Valid values are the same as `SQLAuthentication` keyword.|
-|`SQL_COPT_SS_ACCESS_TOKEN`|N/A|Accepts an AAD access token. If, `UID`, `PWD`, `Trusted_Connection`, or `SQLAuthentication` connection string keywords and their equivalent attributes are also specified, and error occurs.|
-|`SQL_COPT_SS_ENCRYPT`|`Encrypt` (yes/no)||	
-|`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|`TrustServerCertificate` (yes/no)||	
-|`SQL_COPT_SS_OLDPWD`|N/A|	Not supported with Azure Active Directory. <br><br>Password expiration for SQL Server Authentication was introduced in SQL Server 2005. The `SQL_COPT_SS_OLDPWD` attribute was added to allow the client to provide both the old and the new password for the connection. When this property is set, the provider will not use the connection pool for the first connection or for subsequent connections, since the connection string will contain the "old password" which has now changed.|
-|`SQL_COPT_SS_INTEGRATED_SECURITY`|`Trusted_Connection` (yes/no)|Deprecated: Use `SQL_COPT_SS_AUTHENTICATION` set to Active Directory Integrated instead. <br><br>Forces use of Windows Authentication for access validation on server login. When Windows Authentication is used, the driver ignores user identifier and password values provided as part of `SQLConnect`, `SQLDriverConnect`, or `SQLBrowseConnect` processing.|
+## New and/or Modified DSN and Connection String Keywords
+
+The `Authentication` keyword can be used when connecting with a DSN or connection string to control the authentication mode. The value set in the connection string overrides that in the DSN, if provided. The _pre-attribute value_ of the `Authentication` setting is the value computed from the connection string and DSN values.
+
+|Name|Values|Default|Description|
+|-|-|-|-|
+|`Authentication`|(not set), (empty string), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`|(not set)|Controls the authentication mode.<table><tr><th>Value<th>Description<tr><td>(not set)<td>Authentication mode determined by other keywords (existing legacy connection options.)<tr><td>(empty string)<td>(Connection string only.) Override and unset an `Authentication` value set in the DSN.<tr><td>SqlPassword<td>Directly authenticate to a SQL Server instance using a username and password.<tr><td>ActiveDirectoryPassword<td>Authenticate with an Azure Active Directory identity using a username and password.<tr><td>ActiveDirectoryIntegrated<td>Authenticate with an Azure Active Directory identity using integrated authentication.</table>|
+|`Encrypt`|(not set), `Yes`, `No`|(see description)|Controls encryption for a connection. If the pre-attribute value of the `Authentication` setting is not _none_, the default is `Yes`. Otherwise, the default is `No`. The pre-attribute value of Encryption is `Yes` if the value is set to `Yes` in either the DSN or connection string.|
+
+## New and/or Modified Connection Attributes
+
+The following pre-connect connection attributes have either been introduced or modified to support Azure Active Directory authentication. When a connection attribute has a corresponding connection string or DSN keyword and is set, the connection attribute takes precedence.
+
+|Attribute|Type|Values|Default|Description|
+|-|-|-|-|-|
+|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_RESET`|(not set)|See description of `Authentication` keyword above. `SQL_AU_NONE` is provided in order to explicitly override a set `Authentication` value in the DSN and/or connection string, while `SQL_AU_RESET` unsets the attribute if it was set, allowing the DSN or connection string value to take precedence.|
+|`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|Pointer to `ACCESSTOKEN` or NULL|NULL|If non-null, specifies the AzureAD Access Token to use. It is an error to specify an access token and also `UID`, `PWD`, `Trusted_Connection`, or `Authentication` connection string keywords or their equivalent attributes.|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(see description)|Controls encryption for a connection. `SQL_EN_OFF` and `SQL_EN_ON` disable and enable encryption, respectively. If the pre-attribute value of the `Authentication` setting is not _none_, the default is `SQL_EN_ON`. Otherwise, the default is `SQL_EN_OFF`. ||`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Not supported with Azure Active Directory, since password changes to AAD principals cannot be accomplished through an ODBC connection. <br><br>Password expiration for SQL Server Authentication was introduced in SQL Server 2005. The `SQL_COPT_SS_OLDPWD` attribute was added to allow the client to provide both the old and the new password for the connection. When this property is set, the provider will not use the connection pool for the first connection or for subsequent connections, since the connection string will contain the "old password" which has now changed.|
+|`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|_Deprecated_; use `SQL_COPT_SS_AUTHENTICATION` set to `SQL_AU_AD_INTEGRATED` instead. <br><br>Forces use of Windows Authentication for access validation on server login. When Windows Authentication is used, the driver ignores user identifier and password values provided as part of `SQLConnect`, `SQLDriverConnect`, or `SQLBrowseConnect` processing.|
 
 
 ### Example connection strings

@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 3.  Right-click a subscription, and then click **View Details**.  
   
-4.  In the **Subscription \< SubscriptionName>** window, click **Action**, and then click **\<AgentName> Job Properties**.  
+4.  In the **Subscription < SubscriptionName>** window, click **Action**, and then click **\<AgentName> Job Properties**.  
   
 5.  On the **Schedules** page of the **Job Properties - \<JobName>** dialog box, click **Edit.**  
   

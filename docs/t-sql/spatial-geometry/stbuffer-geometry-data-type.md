@@ -57,7 +57,7 @@ manager: "jhubbard"
   
  When *distance* = 0, then a copy of the calling **geometry** instance is returned.  
   
- When *distance* \< 0, then  
+ When *distance* < 0, then  
   
 -   an empty **GeometryCollection** instance is returned when the dimensions of the instance are 0 or 1.  
   

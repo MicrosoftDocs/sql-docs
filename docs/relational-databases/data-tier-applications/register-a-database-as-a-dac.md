@@ -82,7 +82,7 @@ manager: "jhubbard"
   
  **Description.** - Optional. Text that explains the purpose of the DAC. When deploying a DAC, the description is stored in the **msdb** database and can later be viewed under the **Data-tier Applications** node in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- **\< Previous** - Returns you to the **Introduction** page.  
+ **< Previous** - Returns you to the **Introduction** page.  
   
  **Next >** - Verifies that a DAC can be built from the objects in the database, and displays the results in the **Validation and Summary** page.  
   
@@ -98,7 +98,7 @@ manager: "jhubbard"
 ### Retrieving Objects  
  **Retrieving database and server objects.** - Displays a progress bar as the wizard retrieves all of the required objects from the database and the instance of the Database Engine.  
   
- **\< Previous** - Returns you to the **Set Properties** page to change your entries.  
+ **< Previous** - Returns you to the **Set Properties** page to change your entries.  
   
  **Next >** - Registers the DAC and displays the results in the **Register DAC** page.  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
 ### Validating Objects  
  **Checking**  *SchemaName* **.** *ObjectName* **.** - Displays a progress bar as the wizard verifies the dependencies of the retrieved objects, and verifies that they are all valid objects for a DAC. *SchemaName***.***ObjectName* identify which object is currently being verified.  
   
- **\< Previous** - Returns you to the **Set Properties** page to change your entries.  
+ **< Previous** - Returns you to the **Set Properties** page to change your entries.  
   
  **Next >** - Registers the DAC and displays the results in the **Register DAC** page.  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
   
  **Save Report** - Select this button to save a copy of the validation report to an HTML file. The default folder is a **SQL Server Management Studio\DAC Packages** folder in the Documents folder of your Windows account.  
   
- **\< Previous** - Returns you to the **Set Properties** page to change your entries.  
+ **< Previous** - Returns you to the **Set Properties** page to change your entries.  
   
  **Next >** - Registers the DAC and displays the results in the **Register DAC** page.  
   

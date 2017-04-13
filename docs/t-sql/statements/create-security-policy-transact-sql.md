@@ -1,7 +1,7 @@
 ---
 title: "CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/30/2015"
+ms.date: "04/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,13 +39,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```     
 CREATE SECURITY POLICY [schema_name. ] security_policy_name    
-    { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
-      ( { column_name | arguments } [ , …n] ) ON table_schema_name. table_name }   
-      [ <block_dml_operation> ] } , [ , …n]   
+    { ADD [ FILTER | BLOCK ] } PREDICATE tvf_schema_name.security_predicate_function_name   
+      ( { column_name | arguments } [ , …n] ) ON table_schema_name. table_name    
+      [ <block_dml_operation> ] , [ , …n] 
     [ WITH ( STATE = { ON | OFF }  [,] [ SCHEMABINDING = { ON | OFF } ] ) ]  
-    [ NOT FOR REPLICATION ]  
+    [ NOT FOR REPLICATION ] 
 [;]  
   
 <block_dml_operation>  

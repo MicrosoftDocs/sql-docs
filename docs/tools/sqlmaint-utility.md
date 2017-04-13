@@ -196,7 +196,7 @@ dbname_log_yyyymmddhhmm.BAK
  **DISK**  
  Specifies that the backup medium is disk.  
   
- **-DelBkUps**\< *time_period* >  
+ **-DelBkUps**< *time_period* >  
  For disk backups, specifies that any backup file in the backup directory be deleted if the time interval after the creation of the backup exceeds the \<*time_period*>.  
   
  **-CrBkSubDir**  

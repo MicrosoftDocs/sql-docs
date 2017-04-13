@@ -1,7 +1,7 @@
 ---
 title: "ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "01/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,19 +38,18 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER ASSEMBLY assembly_name  
     [ FROM <client_assembly_specifier> | <assembly_bits> ]  
     [ WITH <assembly_option> [ ,...n ] ]  
     [ DROP FILE { file_name [ ,...n ] | ALL } ]  
     [ ADD FILE FROM   
     {   
-                client_file_specifier [ AS file_name ]   
+        client_file_specifier [ AS file_name ]   
       | file_bits AS file_name   
     } [,...n ]   
     ] [ ; ]  
 <client_assembly_specifier> :: =  
-        '\\computer_name\share-name\[path\]manifest_file_name'  
+    '\\computer_name\share-name\[path\]manifest_file_name'  
   | '[local_path\]manifest_file_name'  
   
 <assembly_bits> :: =  
@@ -67,12 +66,12 @@ ALTER ASSEMBLY assembly_name
  *assembly_name*  
  Is the name of the assembly you want to modify. *assembly_name* must already exist in the database.  
   
- FROM <client_assembly_specifier> | <assembly_bits>  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  Updates an assembly to the latest copy of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] modules that hold its implementation. This option can only be used if there are no associated files with the specified assembly.  
   
- <client_assembly_specifier> specifies the network or local location where the assembly being refreshed is located. The network location includes the computer name, the share name and a path within that share. *manifest_file_name* specifies the name of the file that contains the manifest of the assembly.  
+ \<client_assembly_specifier> specifies the network or local location where the assembly being refreshed is located. The network location includes the computer name, the share name and a path within that share. *manifest_file_name* specifies the name of the file that contains the manifest of the assembly.  
   
- <assembly_bits> is the binary value for the assembly.  
+ \<assembly_bits> is the binary value for the assembly.  
   
  Separate ALTER ASSEMBLY statements must be issued for any dependent assemblies that also require updating.  
   
@@ -174,10 +173,6 @@ ALTER ASSEMBLY assembly_name
  For more information about assembly permission sets, see [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 ## Examples  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
 ### A. Refreshing an assembly  
  The following example updates assembly `ComplexNumber` to the latest copy of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] modules that hold its implementation.  

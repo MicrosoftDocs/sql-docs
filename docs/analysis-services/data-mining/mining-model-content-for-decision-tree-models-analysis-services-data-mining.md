@@ -179,7 +179,7 @@ manager: "jhubbard"
 |Age >= 30|Age >= 30 and Gender = Male|  
 ||Age >= 30 and Gender = Female|  
 |Age < 30|Age < 30 and Gender = Male|  
-||Age \< 30 and Gender = Female|  
+||Age < 30 and Gender = Female|  
   
  When you use a decision tree model for prediction, the model takes the attributes that you provide to it as arguments and follows the path of the attributes down through the tree. In general, all predictions go to a leaf, and the interior nodes are used only for classification.  
   
@@ -194,7 +194,7 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Displays the attribute that distinguishes that particular node relative to the parent node. The node caption defines a sub-segment of the population based the split condition. For example, if the split was on [Age] and it was a three-way split, the node captions for the three child nodes might be "[Age] < 40", "40 <= [Age] \< 50", "[Age] >= 50".|  
+|**NODE_CAPTION**|Displays the attribute that distinguishes that particular node relative to the parent node. The node caption defines a sub-segment of the population based the split condition. For example, if the split was on [Age] and it was a three-way split, the node captions for the three child nodes might be "[Age] < 40", "40 <= [Age] < 50", "[Age] >= 50".|  
 |**NODE_DESCRIPTION**|Contains a full list of the attributes that distinguish that node from other nodes, starting from the model parent node. For example, Product name = Apple and Color = Red.|  
   
  [Top](#bkmk_Top)  
@@ -286,7 +286,7 @@ manager: "jhubbard"
   
 |Split condition|Result in node|  
 |---------------------|--------------------|  
-|if n \< 5|Relationship can be expressed as equation 1|  
+|if n < 5|Relationship can be expressed as equation 1|  
 |if n between 5 and 10|No equation|  
 |if n > 10|Relationship can be expressed as equation 2|  
   

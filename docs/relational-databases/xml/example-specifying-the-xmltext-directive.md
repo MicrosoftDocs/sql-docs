@@ -1,7 +1,7 @@
 ---
 title: "Example: Specifying the XMLTEXT Directive | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "04/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,7 +39,7 @@ INSERT INTO Person VALUES
 SELECT 1 as Tag, NULL as parent,  
        PersonID as [Parent!1!PersonID],  
        PersonName as [Parent!1!PersonName],  
-       Overflow as [Parent!1!!XMLTEST] -- No AttributeName; XMLTEXT directive  
+       Overflow as [Parent!1!!XMLTEXT] -- No AttributeName; XMLTEXT directive  
 FROM Person  
 FOR XML EXPLICIT;  
 ```  
@@ -52,11 +52,11 @@ FOR XML EXPLICIT;
   
  This is the result:  
   
- `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
-  
- `<Parent PersonID="P2" PersonName="Joe" attr2="data"></Parent>`  
-  
- `<Parent PersonID="P3" PersonName="Joe" attr3="data">content</Parent>`  
+ ```   
+ <Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>  
+ <Parent PersonID="P2" PersonName="Joe" attr2="data"></Parent>  
+ <Parent PersonID="P3" PersonName="Joe" attr3="data">content</Parent>
+ ```  
   
  If the overflow data has subelements and the same query is specified, the subelements in the `Overflow` column are added as the subelements of the enclosing <`Parent`> element.  
   
@@ -86,15 +86,13 @@ FOR XML EXPLICIT;
   
  This is the result:  
   
- `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
-  
- `<Parent PersonID="P2" PersonName="Joe" attr2="data"></Parent>`  
-  
- `<Parent PersonID="P3" PersonName="Joe" attr3="data">`  
-  
- `<name>PersonName</name>`  
-  
- `</Parent>`  
+ ```   
+ <Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>  
+ <Parent PersonID="P2" PersonName="Joe" attr2="data"></Parent>  
+ <Parent PersonID="P3" PersonName="Joe" attr3="data">  
+ <name>PersonName</name>  
+ </Parent>
+ ```  
   
  If *AttributeName* is specified with the `xmltext` directive, the attributes of the <`overflow`> element are added as attributes of the subelements of the enclosing <`Parent`> element. The name specified for *AttributeName* becomes the name of the subelement  
   
@@ -112,27 +110,19 @@ FOR XML EXPLICIT
   
  This is the result:  
   
- `<Parent PersonID="P1" PersonName="Joe">`  
-  
- `<overflow attr1="data">content</overflow>`  
-  
- `</Parent>`  
-  
- `<Parent PersonID="P2" PersonName="Joe">`  
-  
- `<overflow attr2="data" />`  
-  
- `</Parent>`  
-  
- `<Parent PersonID="P3" PersonName="Joe">`  
-  
- `<overflow attr3="data" PersonID="P">`  
-  
- `<name>PersonName</name>`  
-  
- `</overflow>`  
-  
- `</Parent>`  
+ ```   
+ <Parent PersonID="P1" PersonName="Joe">  
+ <overflow attr1="data">content</overflow>  
+ </Parent>  
+ <Parent PersonID="P2" PersonName="Joe">  
+ <overflow attr2="data" />  
+ </Parent>  
+ <Parent PersonID="P3" PersonName="Joe">  
+ <overflow attr3="data" PersonID="P">  
+ <name>PersonName</name>  
+ </overflow>  
+ </Parent>
+ ```  
   
  In this query element, *directive* is specified for `PersonName` attribute. This results in `PersonName` being added as a subelement of the enclosing <`Parent`> element. The attributes of the <`xmltext`> are still appended to the enclosing <`Parent`> element. The contents of the <`overflow`> element, subelements, are prepended to the other subelements of the enclosing <`Parent`> elements.  
   
@@ -147,23 +137,17 @@ FOR XML EXPLICIT;
   
  This is the result:  
   
- `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
-  
- `</Parent>`  
-  
- `<Parent PersonID="P2" attr2="data">`  
-  
- `<PersonName>Joe</PersonName>`  
-  
- `</Parent>`  
-  
- `<Parent PersonID="P3" attr3="data">`  
-  
- `<name>PersonName</name>`  
-  
- `<PersonName>Joe</PersonName>`  
-  
- `</Parent>`  
+ ```   
+ <Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>  
+ </Parent>  
+ <Parent PersonID="P2" attr2="data">  
+ <PersonName>Joe</PersonName>  
+ </Parent>  
+ <Parent PersonID="P3" attr3="data">  
+ <name>PersonName</name>  
+ <PersonName>Joe</PersonName>  
+ </Parent>
+ ```  
   
  If the `XMLTEXT` column data contains attributes on the root element, these attributes are not shown in the XML data schema and the MSXML parser does not validate the resulting XML document fragment. For example:  
   
@@ -176,21 +160,16 @@ FOR XML EXPLICIT, xmldata;
   
  This is the result. Note that in the returned schema, the overflow attribute `a` is missing from the schema:  
   
- `<Schema name="Schema2"`  
-  
- `xmlns="urn:schemas-microsoft-com:xml-data"`  
-  
- `xmlns:dt="urn:schemas-microsoft-com:datatypes">`  
-  
- `<ElementType name="overflow" content="mixed" model="open">`  
-  
- `</ElementType>`  
-  
- `</Schema>`  
-  
- `<overflow xmlns="x-schema:#Schema2" a="1">`  
-  
- `</overflow>`  
+ ```   
+ <Schema name="Schema2"  
+ xmlns="urn:schemas-microsoft-com:xml-data"  
+ xmlns:dt="urn:schemas-microsoft-com:datatypes">  
+ <ElementType name="overflow" content="mixed" model="open">`  
+ </ElementType>`  
+ </Schema>`  
+ <overflow xmlns="x-schema:#Schema2" a="1">  
+ </overflow>
+ ```  
   
 ## See Also  
  [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  

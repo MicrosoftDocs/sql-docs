@@ -1,7 +1,7 @@
 ---
 title: "Plan your adoption of In-Memory OLTP Features in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/05/2016"
+ms.date: "04/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -55,6 +55,7 @@ A memory-optimized table which contains 200 GB of data requires more than 200 GB
 
 For a database hosted in the Azure SQL Database cloud service, your chosen service tier affects the amount of active memory your database is allowed to consume. You should plan to monitor the memory usage of your database by using an alert. For details, see:
 
+- Review the In-Memory OLTP Storage limits for your [Pricing Tier](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
 - [Monitor In-Memory OLTP Storage](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### Memory-optimized table variables
@@ -107,7 +108,7 @@ You work with .dacpac files in the context of a Visual Studio project of type *D
 
 ### A.4 Guidance for whether In-Memory OLTP features are right for your application
 
-For guidance on whether In-Memory features can improve the performance of your particular application, see:
+For guidance on whether In-Memory OLTP features can improve the performance of your particular application, see:
 
 - [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -115,7 +116,7 @@ For guidance on whether In-Memory features can improve the performance of your p
 
 ## B. Unsupported features
 
-Features which are not supported in certain In-Memory scenarios are described at:
+Features which are not supported in certain In-Memory OLTP scenarios are described at:
 
 - [Unsupported SQL Server Features for In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 

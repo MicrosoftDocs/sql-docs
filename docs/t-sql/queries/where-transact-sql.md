@@ -42,7 +42,7 @@ manager: "jhubbard"
 ```  
   
 ## Arguments  
- \< *search_condition* >  
+ < *search_condition* >  
  Defines the condition to be met for the rows to be returned. There is no limit to the number of predicates that can be included in a search condition. For more information about search conditions and predicates, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## Examples  

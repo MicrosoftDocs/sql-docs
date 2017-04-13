@@ -25,19 +25,18 @@ robots: noindex,nofollow
 This is the landing page for the [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] technical documentation library. Under this page is the MSDN technical documentation for all supported versions of SQL Server.
 
 ## Downloads!
- - [SQL Server Developer Edition](https://my.visualstudio.com/downloads?q=sql%20server%20developer)
-
- - [SQL Server Management Studio](http://go.microsoft.com/fwlink/?linkid=832812)
- - [SQL Server Data Tools](https://msdn.microsoft.com/mt186501)
+- [SQL Server Developer Edition](https://my.visualstudio.com/downloads?q=sql%20server%20developer)
+- [SQL Server Management Studio (SSMS)](http://go.microsoft.com/fwlink/?linkid=832812)
+- [SQL Server Data Tools (SSDT) ](https://msdn.microsoft.com/mt186501)
 - [Visual Studio Community and Code](https://www.visualstudio.com/downloads/)
-- [SQL Server vNext CTP 1.2](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [SQL Server vNext Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)
 
 ## Technical documentation 
 -  [Transact SQL Language Reference](https://msdn.microsoft.com/library/dn198336.aspx) T-SQL reference documentation for all SQL offerings 
 -  [SQL Server Drivers](https://msdn.microsoft.com/library/mt654049(v=sql.1).aspx)
 -  [SQL Server Tools](https://msdn.microsoft.com/library/mt238365.aspx), including [SSMS](https://msdn.microsoft.com/library/hh213248.aspx)
  - [SQL Server Technical documentation](https://msdn.microsoft.com/library/ms130214.aspx)
- - [SQL Server vNext CTP 1.2 on Linux!](https://docs.microsoft.com/en-us/sql/linux/)
+ - [SQL Server vNext on Linux!](https://docs.microsoft.com/en-us/sql/linux/)
   
 Documentation for the current version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includes documentation that applies to  [SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/) and  [SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/) Azure services.  
   
@@ -54,49 +53,39 @@ SQL Server 2016 delivers breakthrough mission critical performance, deeper insig
     
 -   Have an [Azure account](https://azure.microsoft.com/en-us/free/)?  Spin up a **[Virtual Machine](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.
 
-  
 ## Blogs and resources  
   
--   [SQL Server Blog](https://blogs.technet.microsoft.com/dataplatforminsider/) 
-  
--   [Product page with Datasheet and Announcements](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2016/)  
-  
--   [SQL Server Reporting Services Team Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/)  
--   [The Analysis Services & Power Pivot Blog](http://blogs.msdn.com/b/analysisservices/)  
--  [Microsoft Support (CSS) SQL Server Engineers Blog](https://blogs.msdn.microsoft.com/psssql/)
-- **[Microsoft Support (CSS) articles](https://support.microsoft.com/search?query=sql%20server%20kb)**
- - [File a SQL Server support incident](https://support.microsoft.com/en-us/assistedsupportproducts)
- - SQL Server courses on [Virtual Academy](https://mva.microsoft.com/product-training/sql-server#!lang=1033)
- - [MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=SQLServer2016)
-- [Stackoverflow](http://stackoverflow.com/questions/tagged/sql-server-2016), [Connect](https://connect.microsoft.com/SQLServer/Feedback)
-  
+- [SQL Server Blog](https://blogs.technet.microsoft.com/dataplatforminsider/) 
+- [Product page with Datasheet and Announcements](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2016/)  
+- [SQL Server Reporting Services (SSRS)  Team Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/)  
+- [The Analysis Services (SSAS) & Power Pivot Blog](http://blogs.msdn.com/b/analysisservices/)  
+- SQL Server courses on [Virtual Academy](https://mva.microsoft.com/product-training/sql-server#!lang=1033)
+- [MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=SQLServer2016)
+- [Stackoverflow](http://stackoverflow.com/questions/tagged/sql-server-2016)
+- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+
+## Microsoft Support
+- [Microsoft Support (CSS) SQL Server Engineers Blog](https://blogs.msdn.microsoft.com/psssql/)
+- [Microsoft Support (CSS) articles](https://support.microsoft.com/search?query=sql%20server%20kb)
+- [File a SQL Server support incident](https://support.microsoft.com/en-us/assistedsupportproducts)
+
 ## Product documentation  
   
--   [What's New in SQL Server 2016](http://msdn.microsoft.com/library/bb500435(v=sql.130).aspx)  
-  
--   [SQL Server 2016 Technical Documentation](http://msdn.microsoft.com/library/ms130214(v=sql.130).aspx)  
-  
--   [Install SQL Server 2016](https://msdn.microsoft.com/library/bb500395(v=sql.130).aspx)  
-  
+- [What's New in SQL Server 2016](http://msdn.microsoft.com/library/bb500435(v=sql.130).aspx)  
+- [SQL Server 2016 Technical Documentation](http://msdn.microsoft.com/library/ms130214(v=sql.130).aspx)  
+- [Install SQL Server 2016](https://msdn.microsoft.com/library/bb500395(v=sql.130).aspx)  
 - [SQL Server 2016 Release Notes](http://msdn.microsoft.com/library/dn876712.aspx)
-
 - [SQL Shared Language Reference (T-SQL)](https://msdn.microsoft.com/library/dn198336.aspx)
-
--   [Microsoft JDBC Driver 4.0 for SQL Server](https://msdn.microsoft.com/library/dn197841(v=sql.10).aspx)  
-  
--   [Microsoft Drivers for PHP for SQL Server](https://msdn.microsoft.com/library/dn865013.aspx)  
-  
--   [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730308.aspx)  
-  
--   [Microsoft OLE DB Provider for DB2 Version 4.0](https://msdn.microsoft.com/library/dn197844(v=sql.10).aspx)  
-  
--   [Microsoft OLE DB Provider for DB2 Version 5.0](https://msdn.microsoft.com/library/dn539024(v=sql.10).aspx)   
+- [Microsoft JDBC Driver 4.0 for SQL Server](https://msdn.microsoft.com/library/dn197841(v=sql.10).aspx)  
+- [Microsoft Drivers for PHP for SQL Server](https://msdn.microsoft.com/library/dn865013.aspx)  
+- [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730308.aspx)  
+- [Microsoft OLE DB Provider for DB2 Version 4.0](https://msdn.microsoft.com/library/dn197844(v=sql.10).aspx)  
+- [Microsoft OLE DB Provider for DB2 Version 5.0](https://msdn.microsoft.com/library/dn539024(v=sql.10).aspx)   
   
 **Sample databases**  
 - [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
--   [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
-
--  [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
+- [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
+  [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
   
 **Watch some videos**  
   
@@ -133,13 +122,7 @@ SQL Server 2016 delivers breakthrough mission critical performance, deeper insig
   
     
 ## Earlier SQL Server versions  
-  
--   [SQL Server 2012 technical documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
-  
--   [SQL Server 2008 R2 Product Documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
-  
--   [SQL Server 2008 technical documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
-
--  [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
-
-  
+- [SQL Server 2012 technical documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
+- [SQL Server 2008 R2 Product Documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
+- [SQL Server 2008 technical documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
+- [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)

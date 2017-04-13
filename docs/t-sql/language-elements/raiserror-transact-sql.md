@@ -196,13 +196,13 @@ RAISERROR (N'<\<%*.*s>>', -- Message text.
            7, -- First argument used for width.  
            3, -- Second argument used for precision.  
            N'abcde'); -- Third argument supplies the string.  
--- The message text returned is: <\<    abc>>.  
+-- The message text returned is: <<    abc>>.  
 GO  
 RAISERROR (N'<\<%7.3s>>', -- Message text.  
            10, -- Severity,  
            1, -- State,  
            N'abcde'); -- First argument supplies the string.  
--- The message text returned is: <\<    abc>>.  
+-- The message text returned is: <<    abc>>.  
 GO  
 ```  
   
@@ -255,7 +255,7 @@ RAISERROR (50005, -- Message id.
            10, -- Severity,  
            1, -- State,  
            N'abcde'); -- First argument supplies the string.  
--- The message text returned is: <\<    abc>>.  
+-- The message text returned is: <<    abc>>.  
 GO  
 sp_dropmessage @msgnum = 50005;  
 GO  
@@ -272,7 +272,7 @@ RAISERROR (@StringVariable, -- Message text.
            10, -- Severity,  
            1, -- State,  
            N'abcde'); -- First argument supplies the string.  
--- The message text returned is: <\<    abc>>.  
+-- The message text returned is: <<    abc>>.  
 GO  
 ```  
   
@@ -323,7 +323,7 @@ RAISERROR (@StringVariable, -- Message text.
            10, -- Severity,  
            1, -- State,  
            N'abcde'); -- First argument supplies the string.  
--- The message text returned is: <\<    abc>>.  
+-- The message text returned is: <<    abc>>.  
 GO  
 ```  
   

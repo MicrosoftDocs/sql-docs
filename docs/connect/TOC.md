@@ -1,12 +1,12 @@
-# [SQL Data Developer](sql-data-developer.md)
-
-# [SQL Server Drivers](sql-server-drivers.md)
-## [SQL Server Driver Documentation](sql-server-driver-documentation.md)
-
-# [ADO.NET](./ado-net/TOC.md)
-# [JDBC](./jdbc/TOC.md)
-# [Node.js](./node-js/TOC.md)
-# [ODBC](./odbc/TOC.md)
+# [ADO.NET +](./ado-net/index.md)
+# [JDBC +](./jdbc/index.md)
+# [Node.js +](./node-js/index.md)
+# [ODBC +](./odbc/index.md)
 # [PHP +](./php/index.md)
-# [Python](./python/TOC.md)
-# [Ruby](./ruby/TOC.md)
+# [Python +](./python/index.md)
+# [Ruby +](./ruby/index.md)
+
+# [SQL Data Developer](sql-data-developer.md)
+# [SQL Server Drivers](sql-server-drivers.md)
+# [SQL Server Driver Documentation](sql-server-driver-documentation.md)
+

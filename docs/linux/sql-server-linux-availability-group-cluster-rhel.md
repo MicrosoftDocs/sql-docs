@@ -4,7 +4,7 @@
 title: Configure RHEL Cluster for SQL Server Availability Group | Microsoft Docs
 description: 
 author: MikeRayMSFT 
-pms.author: mikeray 
+ms.author: mikeray 
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
@@ -14,7 +14,9 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 
 # optional metadata
 # keywords: ""
-# ROBOTS: ""# audience: ""# ms.devlang: ""
+# ROBOTS: ""
+# audience: ""
+# ms.devlang: ""
 # ms.reviewer: ""
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
@@ -68,11 +70,6 @@ To create the availability group resource, use `pcs resource create` command and
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
 ```
-
-Every resource agent name has either three or two fields that are separated by a colon:
--The first field depends on the standard. OCF resources use the second field for the OCF namespace.
--The second field is the resource class, which is the standard the resource agent conforms to. It also tells Pacemaker where to find the script. 
--The third field is the name of the resource agent.
 
 ## Create virtual IP resource
 

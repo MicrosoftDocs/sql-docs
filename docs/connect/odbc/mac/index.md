@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/connect/odbc/mac/connection-string-keywords-and-data-source-names-dsns
+redirect_url: /sql/connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac
 ---

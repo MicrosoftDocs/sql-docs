@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/ado/reference/ado-programmer-s-reference
+redirect_url: /sql/ado/reference/ado-glossary
 ---

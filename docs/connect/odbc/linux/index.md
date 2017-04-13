@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/connect/odbc/linux/connecting-with-bcp
+redirect_url: /sql/connect/odbc/linux/microsoft-odbc-driver-for-sql-server-on-linux
 ---

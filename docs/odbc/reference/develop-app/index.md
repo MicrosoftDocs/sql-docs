@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/odbc/reference/develop-app/affected-odbc-components
+redirect_url: /sql/odbc/reference/develop-app/checking-feature-support-and-variability
 ---

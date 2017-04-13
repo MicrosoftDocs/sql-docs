@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/odbc/admin/about-drivers-and-data-sources
+redirect_url: /sql/odbc/admin/odbc-data-source-administrator
 ---

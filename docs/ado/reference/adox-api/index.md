@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/ado/reference/adox-api/actionenum
+redirect_url: /sql/ado/reference/adox-api/datemodified-property-adox
 ---

@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel
+redirect_url: /sql/odbc/microsoft/update-sql-command
 ---

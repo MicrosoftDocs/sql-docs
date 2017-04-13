@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/odbc/reference/appendixes/64-bit-integer-structures
+redirect_url: /sql/odbc/reference/appendixes/sqlgetdata-cursor-library
 ---

@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/ado/guide/appendixes/ado-appendixes
+redirect_url: /sql/ado/guide/appendixes/appendix-a-providers
 ---

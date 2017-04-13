@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/connect/jdbc/code-samples/basic-data-types-sample
+redirect_url: /sql/connect/jdbc/code-samples/sample-jdbc-driver-applications
 ---

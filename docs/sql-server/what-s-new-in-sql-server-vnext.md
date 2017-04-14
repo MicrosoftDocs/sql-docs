@@ -21,8 +21,8 @@ SQL Server vNext represents a major step towards making SQL Server a platform th
 This topic is a summary of what is new in the most recent Community Technical Preview (CTP) release, links to more detailed what's new information for specific feature areas.
 
 ![info_tip](../sql-server/media/info-tip.png) Run SQL Server on Linux! For more information, see:
--  [What's new for SQL Server vNext on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-whats-new)
--  [SQL Server on Linux Documentation](https://docs.microsoft.com/en-us/sql/linux/)
+-  [What's new for SQL Server vNext on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)
+-  [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)
 
 
 **Try it out:**    
@@ -30,7 +30,8 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 
 ## What's New in SQL Server vNext CTP 2.0 (April 2017)
 ### SQL Server Database Engine
-- There are no new Database Engine features in this CTP.
+- Resumable online index rebuild. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md)
+- IDENTITY_CACHE option for [ALTER DATBASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
 - This CTP contains bug fixes for the Database Engine.
 - For a detailed list of vNext CTP enhancements in previous CTP releases, see [What's New in SQL Server vNext (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md).
 
@@ -71,7 +72,7 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 - Availability Groups can now work across Windows-Linux to enable cross-OS migrations and testing.
 - Temporal Tables Retention Policy support added,
 - New DMV SYS.DM_DB_STATS_HISTOGRAM
-- Online non-clustered columnstore index buill and rebuild support added
+- Online non-clustered columnstore index build and rebuild support added
 - 5 new dynamic management views to return information about Linux process. For more information, see [Linux Process Dynamic Management Views](../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md).   
 - [sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) is added for examining statistics.
 

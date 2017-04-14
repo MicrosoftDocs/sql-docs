@@ -497,6 +497,41 @@
    "source_path" : "docs/integration-services/packages/package-installation-wizard-ui-reference.md",
    "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
    "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/deploy-projects-to-integration-services-server.md",
+   "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/deploy-packages-to-integration-services-server.md",
+   "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/convert-to-package-deployment-model-dialog-box.md",
+   "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/integration-services-deployment-wizard.md",
+   "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/create-and-map-a-server-environment.md",
+   "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/deploy-and-execute-ssis-packages-using-stored-procedures.md",
+   "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+   "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/integration-services/packages/integration-services-project-conversion-wizard.md",
+   "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+   "redirect_document_id": false
   }
 
  ]

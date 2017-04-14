@@ -649,3 +649,4 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **Finish**  
  Exit the wizard by clicking **Finish**.  
+

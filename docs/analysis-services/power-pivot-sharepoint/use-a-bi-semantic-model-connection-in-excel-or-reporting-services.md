@@ -39,7 +39,7 @@ manager: "erikre"
   
 2.  Click **From Analysis Services** and use the Data Connection Wizard to import the data.  
   
-3.  Enter the SharePoint URL of the BI semantic model connection file (for example, **http://mysharepoint/shared documents/myData.bism**). Accept the default log on credentials option, **Use Windows Authentication**. Click **Next**.  
+3.  Enter the SharePoint URL of the BI semantic model connection file (for example, `http://mysharepoint/shared documents/myData.bism`). Accept the default log on credentials option, **Use Windows Authentication**. Click **Next**.  
   
 4.  On the next page, click **Next** again. Although you are prompted to select a database, you can only use the one database that is specified in the BI semantic model connection.  
   

@@ -79,7 +79,7 @@ Here's the screen that you see after entering the connection string.
 > The connection options for this data provider and ODBC driver are the same whether PostgreSQL is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
 
 ## Other data providers and more info
-For info about how to connect to PostgreSQL with a data provider that's not listed here, see [PostgreSQL connection strings](https://www.connectionstrings.com/PostgreSQL/). This third-party site also contains more info about the data providers and the connection parameters described on this page.
+For info about how to connect to PostgreSQL with a data provider that's not listed here, see [PostgreSQL connection strings](https://www.connectionstrings.com/postgresql/). This third-party site also contains more info about the data providers and the connection parameters described on this page.
 
 ## See also
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

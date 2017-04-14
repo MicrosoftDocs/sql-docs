@@ -6,12 +6,131 @@
     href: /sql/
     homepage: /sql/microsoft-sql-documentation-table-of-contents
     items:
+    - name: ADO
+      href: /sql/ado/
+      homepage: /sql/ado/
+      items:
+      - name: ADO guides
+        href: /sql/ado/guide/
+        homepage: /sql/ado/guide/
+        items:
+        - name: ADO appendixes
+          href: /sql/ado/guide/appendixes/
+          homepage: /sql/ado/guide/appendixes/
+        - name: ADO data
+          href: /sql/ado/guide/data/
+          homepage: /sql/ado/guide/data/
+        - name: ADO extensions
+          href: /sql/ado/guide/extensions/
+          homepage: /sql/ado/guide/extensions/
+        - name: ADO multidimensional
+          href: /sql/ado/guide/multidimensional/
+          homepage: /sql/ado/guide/multidimensional/
+        - name: ADO remote data service
+          href: /sql/ado/guide/remote-data-service/
+          homepage: /sql/ado/guide/remote-data-service/
+      - name: ADO reference
+        href: /sql/ado/reference/
+        homepage: /sql/ado/reference/
+        items:
+        - name: API
+          href: /sql/ado/reference/ado-api/
+          homepage: /sql/ado/reference/ado-api/
+        - name: MD API
+          href: /sql/ado/reference/ado-md-api/
+          homepage: /sql/ado/reference/ado-md-api/
+        - name: ADOX API
+          href: /sql/ado/reference/adox-api/
+          homepage: /sql/ado/reference/adox-api/
+        - name: ADO RDS API
+          href: /sql/ado/reference/ado-rds-api/
+          homepage: /sql/ado/reference/ado-rds-api/
+    - name: Connect your client to SQL
+      href: /sql/connect/
+      homepage: /sql/connect/
+      items:
+      - name: ADO.NET
+        href: /sql/connect/ado-net/
+        homepage: /sql/connect/ado-net/
+      - name: JDBC
+        href: /sql/connect/jdbc/
+        homepage: /sql/connect/jdbc/
+        items:
+        - name: Code samples
+          href: /sql/connect/jdbc/code-samples/
+          homepage: /sql/connect/jdbc/code-samples/
+        - name: Reference
+          href: /sql/connect/jdbc/reference/
+          homepage: /sql/connect/jdbc/reference/
+      - name: Node.js
+        href: /sql/connect/node-js/
+        homepage: /sql/connect/node-js/
+      - name: ODBC
+        href: /sql/connect/odbc/
+        homepage: /sql/connect/odbc/
+        items:
+        - name: Linux
+          href: /sql/connect/odbc/linux/
+          homepage: /sql/connect/odbc/linux/
+        - name: Mac
+          href: /sql/connect/odbc/mac/
+          homepage: /sql/connect/odbc/mac/
+        - name: Windows
+          href: /sql/connect/odbc/windows/
+          homepage: /sql/connect/odbc/windows/
+        - name: ODBC advanced
+          href: /sql/odbc/
+          homepage: /sql/odbc/
+          items:
+          - name: Administration
+            href: /sql/odbc/admin/
+            homepage: /sql/odbc/admin/
+          - name: Microsoft
+            href    : /sql/odbc/microsoft/
+            homepage: /sql/odbc/microsoft/
+          - name: Reference
+            href    : /sql/odbc/reference/
+            homepage: /sql/odbc/reference/
+          - name: Appendixes
+            href    : /sql/odbc/reference/appendixes/
+            homepage: /sql/odbc/reference/appendixes/
+          - name: Develop an application
+            href    : /sql/odbc/reference/develop-app/
+            homepage: /sql/odbc/reference/develop-app/
+          - name: Develop a driver
+            href    : /sql/odbc/reference/develop-driver/
+            homepage: /sql/odbc/reference/develop-driver/
+          - name: Install
+            href    : /sql/odbc/reference/install/
+            homepage: /sql/odbc/reference/install/
+          - name: Syntax
+            href    : /sql/odbc/reference/syntax/
+            homepage: /sql/odbc/reference/syntax/
+      - name: PHP
+        href: /sql/connect/php/
+        homepage: /sql/connect/php/
+      - name: Python
+        href: /sql/connect/python/
+        homepage: /sql/connect/python/
+        items:
+        - name: PyMsSql
+          href: /sql/connect/python/pymssql/
+          homepage: /sql/connect/python/pymssql/
+        - name: PyOdbc
+          href: /sql/connect/python/pyodbc/
+          homepage: /sql/connect/python/pyodbc/
+      - name: Ruby
+        href: /sql/connect/ruby/
+        homepage: /sql/connect/ruby/
     - name: SQL Server on Linux
       href: /sql/linux/
       homepage: /sql/linux
     - name: R on SQL Server
       href: /sql/advanced-analytics/
       homepage: /sql/advanced-analytics
+    - name: R Services on SQL Server
+      href: /sql/advanced-analytics/r-services/
+      homepage: /sql/advanced-analytics/r-services/
     - name: SQL Server
       href: /sql/sql-server/
       homepage: /sql/sql-server
@@ -951,3 +1070,50 @@
     - name: XQuery
       href: /sql/xquery/
       homepage: /sql/xquery
+    - name: SSDT (SQL Server Data Tools)
+      href: /sql/ssdt/
+      homepage: /sql/ssdt/
+    - name: SSMA (SQL Server Migration Assistant)
+      href: /sql/ssma/
+      homepage: /sql/ssma/
+      items:
+      - name: SSMA Access
+        href: /sql/ssma/access/
+        homepage: /sql/ssma/access/
+      - name: SSMA DB2
+        href: /sql/ssma/db2/
+        homepage: /sql/ssma/db2/
+      - name: SSMA MySql
+        href: /sql/ssma/mysql/
+        homepage: /sql/ssma/mysql/
+      - name: SSMA Oracle
+        href: /sql/ssma/oracle/
+        homepage: /sql/ssma/oracle/
+      - name: SSMA Sybase
+        href: /sql/ssma/sybase/
+        homepage: /sql/ssma/sybase/
+    - name: SSMS
+      href: /sql/ssms/
+      homepage: /sql/ssms/
+      items:
+      - name: Agent
+        href: /sql/ssms/agent/
+        homepage: /sql/ssms/agent/
+      - name: F1 help
+        href: /sql/ssms/f1-help/
+        homepage: /sql/ssms/f1-help/
+      - name: Menu help
+        href: /sql/ssms/menu-help/
+        homepage: /sql/ssms/menu-help/
+      - name: Object
+        href: /sql/ssms/object/
+        homepage: /sql/ssms/object/
+      - name: Solution
+        href: /sql/ssms/solution/
+        homepage: /sql/ssms/solution/
+      - name: Template
+        href: /sql/ssms/template/
+        homepage: /sql/ssms/template/
+      - name: Visual DB tools
+        href: /sql/ssms/visual-db-tools/
+        homepage: /sql/ssms/visual-db-tools/

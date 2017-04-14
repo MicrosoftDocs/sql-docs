@@ -30,16 +30,20 @@ ms.assetid:
 
 SQL Server Log shipping is a HA-like configuration where a database from a primary server is replicated onto one or more secondary servers The process of transferring the transaction log files and restoring is automated across the SQL Servers. As the process result there are two copies of the data on two separate locations. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
 
-A log shipping session involves the following steps:
+  ![Logshipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
+
+
+As described in the picture above, a log shipping session involves the following steps:
 
 - Backing up the transaction log file on the primary SQL Server instance
 - Copying the transaction log backup file across the network to one or more secondary SQL Server instances
 - Restoring the transaction log backup file on the secondary SQL Server instances
+  
 
 # Setup a network share for Log Shipping
 
 - Mount a network share
-  //Instructions
+  //Work with Val for Instructions
 
 # Setup Log Shipping via T-SQL
 

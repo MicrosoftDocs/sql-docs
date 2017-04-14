@@ -21,8 +21,8 @@ SQL Server vNext represents a major step towards making SQL Server a platform th
 This topic is a summary of what is new in the most recent Community Technical Preview (CTP) release, links to more detailed what's new information for specific feature areas.
 
 ![info_tip](../sql-server/media/info-tip.png) Run SQL Server on Linux! For more information, see:
--  [What's new for SQL Server vNext on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-whats-new)
--  [SQL Server on Linux Documentation](https://docs.microsoft.com/en-us/sql/linux/)
+-  [What's new for SQL Server vNext on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)
+-  [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)
 
 
 **Try it out:**    
@@ -30,7 +30,8 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 
 ## What's New in SQL Server vNext CTP 2.0 (April 2017)
 ### SQL Server Database Engine
-- There are no new Database Engine features in this CTP.
+- **Resumable online index rebuild**. Resumable online index rebuild allows you to resume an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space). You can also pause and later resume an online index rebuild operation. For example, you might need to temporarily free up systems resources in order to execute a high priority task or complete the index rebuild in another miniatous window if the available maintenance windows is too short for a large table. Finally, resumable online index rebuild does not require significant log space, which allows you to perform log truncation while the resumable rebuild operation is running. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md).
+- **IDENTITY_CACHE option for ALTER DATABASE SCOPED CONFIGURATION**. A new option IDENTITY_CACHE was added to ALTER DATABASE SCOPED CONFIGURATION T-SQL statement. When this option is set to OFF it allows to avoid gaps in the values of identity columns in case a server restarts unexpectedly or fails over to a secondary server. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 - This CTP contains bug fixes for the Database Engine.
 - For a detailed list of vNext CTP enhancements in previous CTP releases, see [What's New in SQL Server vNext (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md).
 
@@ -71,7 +72,7 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 - Availability Groups can now work across Windows-Linux to enable cross-OS migrations and testing.
 - Temporal Tables Retention Policy support added,
 - New DMV SYS.DM_DB_STATS_HISTOGRAM
-- Online non-clustered columnstore index buill and rebuild support added
+- Online non-clustered columnstore index build and rebuild support added
 - 5 new dynamic management views to return information about Linux process. For more information, see [Linux Process Dynamic Management Views](../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md).   
 - [sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) is added for examining statistics.
 

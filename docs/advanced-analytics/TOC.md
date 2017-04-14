@@ -45,7 +45,7 @@
 ### [Python interoperability](python/python-interoperability.md)  
 ### [Python Libraries](python/python-libraries.md)  
 
-## [Setup and Configuration](python/setup-and-configuration-python.md)  
+## [Setup and Configuration](python/setup-python-machine-learning-services.md)  
 
 ## [Monitoring](python/managing-and-monitoring-python-solutions.md)  
 ### [Monitoring Python Services](python/monitoring-python-services.md)  

@@ -66,25 +66,58 @@ CREATE TABLE
  Is the name of the schema to which the new table belongs.  
   
  *table_name*  
- Is the name of the new table. Table names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). *table_name* can be a maximum of 128 characters, except for local temporary table names (names prefixed with a single number sign (#)) that cannot exceed 116 characters.  
+ Is the name of the node or edge table. Table names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). *table_name* can be a maximum of 128 characters, except for local temporary table names (names prefixed with a single number sign (#)) that cannot exceed 116 characters.  
   
  NODE   
  Creates a node table.
 
  EDGE  
- Create an edge table.  
+ Creates an edge table.  
   
 ## Remarks  
- 
+1. Creating a temporary table as node or edge table is not supported.
+2. Creating a node or edge table as a temporal table is not supported.
+3. Stretch database is not supported for node or edge table.
+4. Node or edge tables cannot be external tables (no polybase support for graph tables). 
   
 ## Permissions  
 
   
 ## Examples  
   
-### A. Create a ...  
- The following example shows ...  
+### A. Create a `NODE` table
+ The following example shows how to create a `NODE` table
+
+```
+ -- Create a Person node table 
+ 
+ CREATE TABLE Person (
+        ID INTEGER PRIMARY KEY, 
+        name VARCHAR(100), 
+        email VARCHAR(100)
+ ) AS NODE;
+
+```
+
+### B. Create an `EDGE` table
+The following examples show how to create `EDGE` tables
+```
+ -- Create a friends edge table with some user defined attributes
+ 
+ CREATE TABLE friends (
+    id integer PRIMARY KEY,
+    start_date date
+ ) AS EDGE;
+
+```
+
+```
+ -- Create a likes edge table, this table does not have any user defined attributes
   
+ CREATE TABLE likes AS EDGE;
+
+```
+
 
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

@@ -28,7 +28,7 @@ Learn how SQL Graph is architected. Knowing the basics will make it easier to un
 Users can create one graph per database. A graph is a collection of node and edge tables. Node or edge tables can be created under any schema in the database, but they all belong to one logical graph. A node table is collection of similar type of nodes. For example, a Person node table holds all the Person nodes belonging to a graph. Similarly, an edge table is a collection of similar type of edges. Since nodes and edges are stored in tables, most of the operations supported on regular tables are supported on node or edge tables. 
  
  
-![sql-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql graph database architecture")   
+![sql-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql graph database architecture")   
 Figure 1: SQL Graph database architecture
  
 ## Node Table
@@ -39,14 +39,20 @@ It is recommended that users create a unique constraint or index on the $node_id
 
 ## Edge Table
 An edge table represents a relationship in a graph. Edges are always directed and they go from one node to another. An edge table enables users to model many-to-many relationships in the graph. An edge table may or may not have any user defined attributes in it. Every time an edge table is created, along with the user defined attributes, three implicit columns are created in the edge table:
-•	$edge_id, which uniquely identifies a given edge in the database. It is a generated column and the value is a combination of object_id of the edge table and a internally generated bigint value. However, when the $edge_id column is selected, a computed value in the form of a JSON string is displayed. 
-•	$from_id which stores the $node_id of the node, this edge starts from. 
-•	$to_id, which stores $node_id of the node, this edge goes to.  
+
+|Column name    |Description  |
+|---   |---  |
+|$edge_id   |Uniquely identifies a given edge in the database. It is a generated column and the value is a combination of object_id of the edge table and a internally generated bigint value. However, when the $edge_id column is selected, a computed value in the form of a JSON string is displayed. |
+|$from_id   |Stores $node_id of the node, the edge starts from  |
+|$to_id   |Stores $node_id of the node, the edge points to  |
+
 The nodes that a given edge can connect is governed by the data inserted in the $from_id and $to_id columns. In the first release, there are no constraints defined on the edge table, that will restrict it from connecting any two type of nodes. That is, an edge can connect any node to any node in a graph.
 
 Similar to the $node_id column, it is recommended that users create a unique index or constraint on the $edge_id column at the time of creation of the edge table, but if one is not created, a default unique, non-clustered index is created on this column. It is also recommended, that users create an index on ($from_id, $to_id) columns, for faster lookups in the direction of the edge. 
- 
-![person-friends-tables](../../relational-databases/graphs/media/person-friends-tables.png "Person node and friends edge tables")   
+
+Figure 2 shows how node and edge tables are stored in the database. 
+
+![person-friends-tables](../../relational-databases/graphs/media/person-friends-tables.png "Person node and friends edge tables")   
 Figure 2: Node and edge table representation
  
 ## Metadata
@@ -60,7 +66,7 @@ Following new, bit type, columns will be added to SYS.TABLES. If is_node is set 
 |is_node |bit |1 = this is a node table |
 |is_edge |bit |1 = this is an edge table |
  
-### `SYS.COLUMNS`
+### SYS.COLUMNS
 The `sys.columns` view will contain additional bit columns`is_from_id`, `is_to_id`, `is_system_generated` that indicate the type of the column in node and edge tables.
  
 |Column Name |Data Type |Description |

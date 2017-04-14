@@ -91,6 +91,6 @@ After installation, you can install additional R packages. For more information,
 
 After you have installed Machine Learning Services for R (In-Database), you can use the separate Windows installer to upgrade the version of R that is associated with a specified SQL Server instance. For more information, see [Use SqlBindR to Upgrade R](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).  
 
-## See Also  
+
 
   

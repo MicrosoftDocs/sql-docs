@@ -39,7 +39,7 @@
 
 # [Security and protection](security/index.md)
 # [Subscriptions and delivery](subscriptions/index.md)
-# [Tools](tools/toc.md)
+# [Tools +](tools/index.md)
 
 # [Data Alerts (SharePoint)](reporting-services-data-alerts.md)  
 ## [Data Alert Designer](data-alert-designer.md)  
@@ -66,7 +66,7 @@
 ## [Render a Report History Snapshot Using URL Access](render-a-report-history-snapshot-using-url-access.md)  
 
 # [WMI provider](wmi-provider-library-reference/index.md)
-# [Troubleshooting](troubleshooting/toc.md)
+# [Troubleshooting +](troubleshooting/index.md)
 
 
 # Developer

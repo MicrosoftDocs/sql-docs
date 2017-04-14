@@ -38,6 +38,4 @@ manager: "jhubbard"
   
 ## See Also  
  [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md)   
- [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md)  
-  
-  
+ [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  

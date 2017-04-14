@@ -34,7 +34,7 @@ Operationalization means many things:
 If you have installed Machine Learning Services with SQL Server, it is fairly easy to deploy any machine learning code, by wrapping the code in a stored procedure and then calling the stored procedure from applications. However, Microsoft R Server provides additional web services to support publishing of R jobs, and an administrative utility for running distributed R jobs.
 
 > [!NOTE]
-> Typically, you would not install this feature on the same computer that is running SQL Server Machine Learning Services. It is possible, but we recommend that you install **Microsoft Machine Learning Server** on a separate computer.
+> Typically, you would not install this feature on the same computer that is running SQL Server Machine Learning Services. It is possible, but we recommend that you install **Microsoft Machine Learning Server** on a separate computer, and configure the operaitonalization features on that computer.
 
 For general information about scenarios supported by operationalization, see [Operationalization with R Server](https://msdn.microsoft.com/microsoft-r/operationalize/about).
 
@@ -46,11 +46,11 @@ For general information about scenarios supported by operationalization, see [Op
 
 ## Requirements
 
-The **mrsdeploy** package is installed together with other R components if you use the option to install **Microsoft Machine Learning Server**, from the **Shared Features** section of SQL Server setup.
+The **mrsdeploy** package is installed when you use the option to install **Microsoft Machine Learning Server**, from the **Shared Features** section of SQL Server setup.
 
 Microsoft R Server uses the functions in the **mrsdeploy** package to establish a session with remote compute nodes and execute R code in a console application. For more information, see [mrsdeploy functions](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy).
 
-To actually use the functions or the administrative utility that is included with it, some additional steps are required.
+To actually use the feature, some additional steps are required.
 
 1. Install DotNetCore 1.1
     If .NET Core was not installed as part of SQL Server, you must install it before beginning R Server setup.
@@ -63,4 +63,3 @@ To actually use the functions or the administrative utility that is included wit
 4. When done, open the Administrator Utility. For help, see [R Server help](https://msdn.microsoft.com/microsoft-r/operationalize/admin-utility#launch)
 5. Configure the service as described here: [Configuring R Server for Operationalization](https://msdn.microsoft.com/en-us/microsoft-r/operationalize/configure-enterprise)
 
-## See Also

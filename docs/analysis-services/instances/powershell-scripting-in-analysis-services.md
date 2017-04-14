@@ -1,4 +1,4 @@
----
+﻿---
 title: "PowerShell scripting in Analysis Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
@@ -135,7 +135,7 @@ manager: "erikre"
 |Tabular instances and databases|Supported for local and remote administration, at all compatibility levels.<br /><br /> SQLAS cmdlets for Tabular models at the 1200 compatibility level using Tabular Model Scripting Language (TMSL) in JSON instead of XMLA.|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint instances and databases|Limited support. You can use HTTP connections and the SQLAS provider to view instance and database information.<br /><br /> However, using the cmdlets is not supported. You can't use Analysis Services PowerShell to backup and restore an in-memory [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] database, nor should you add or remove roles, process data, or run arbitrary XMLA script.<br /><br /> For configuration purposes, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint has built-in PowerShell support that is provided separately. For more information, see [PowerShell Reference for Power Pivot for SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).|  
 |Native connections to local cubes<br /><br /> “Data Source=c:\backup\test.cub”|Not supported.|  
-|HTTP connections to BI semantic model (.bism) connection files in SharePoint<br /><br /> “Data Source=http://server/shared_docs/name.bism”|Not supported.|  
+|HTTP connections to BI semantic model (.bism) connection files in SharePoint<br /><br /> `Data Source=http://server/shared_docs/name.bism`|Not supported.|  
 |Embedded connections to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] databases<br /><br /> “Data Source=$Embedded$”|Not supported.|  
 |Local server context in Analysis Services stored procedures<br /><br /> “Data Source=*”|Not supported.|  
   

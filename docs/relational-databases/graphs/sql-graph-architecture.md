@@ -105,6 +105,6 @@ Following built-in functions are added. These will help users extract part of in
 |EDGE_ID_FROM_PARTS	|Construct edge_id from object_id and identity  |
  
 ## Next Steps
-To learn more about the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced for SQL graph please see <SQL Graph database - [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Extensions>
+To learn more about the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced for SQL graph please see [SQL Graph Database - TSQL reference](./sql-graph-tsql-reference.md)
  
 

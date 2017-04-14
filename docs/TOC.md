@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [Using relational databases](./relational-databases/toc.md)
 
 # [SQL Server on Linux](./linux/TOC.md)
@@ -23,3 +24,26 @@
 ## [SQL Server Management Studio (SSMS)](./ssms/toc.md)
 
 # [Whitepapers](./whitepapers/toc.md)
+=======
+# [Using relational databases](./relational-databases/index.md)
+# [SQL Server on Linux](./linux/index.md)		
+# [R on SQL Server](./advanced-analytics/r-services/index.md)		
+# [SQL Server](./sql-server/index.md)		
+		
+# Languages		
+## [dmx](./dmx/index.md)		
+## [mdx](./mdx/index.md)		
+## [Transact-SQL](./t-sql/index.md)		
+## [XQuery](./xquery/index.md)		
+		
+# [Samples](./sample/index.md)		
+# [Tools](./tools/index.md)		
+		
+# Developer		
+## [SQL Server Data Tools (SSDT)](./ssdt/index.md)		
+## [ActiveX Data Objects (ADO)](./ado/index.md)		
+## [SQL Server Connection and Data Drivers](./connect/index.md)		
+## [SQL Server Management Studio (SSMS)](./ssms/index.md)		
+		
+# [Whitepapers](./whitepapers/index.md)
+>>>>>>> 158ce3950634fa1c8f2bb31496f52b056450ea19

@@ -34,12 +34,3 @@ manager: "jhubbard"
 3.  The third step is to copy the deployment folder that was created when you built the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to the target computer.  
   
 4.  The fourth step is to run, on the target computer, the Package Installation Wizard to install the packages to the file system or to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-## Related Tasks  
- For information about how to create a deployment utility, see [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md).  
-  
- For information about how to deploy packages using the deployment utility, see [Deploy Packages by Using the Deployment Utility](../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
-  
- For information about how to create package configurations, see [Create Package Configurations](../../integration-services/packages/create-package-configurations.md).  
-  
-  

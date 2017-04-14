@@ -95,7 +95,7 @@ SQL Server vNext introduces new features for availability groups.
 Use with `CREATE AVAILABILITY GROUP`. Identifies the type of server cluster manager that manages an availability group. Can be one of the following types:
 
    - **WSFC**
-      Winows server failover cluster. on Windows, it is the default value for CLUSTER_TYPE.
+      Winows server failover cluster. On Windows, it is the default value for CLUSTER_TYPE.
    - **EXTERNAL** 
       A cluster manager that is not Windows server failover cluster - for example, on Linux with Pacemaker.
    - **NONE**

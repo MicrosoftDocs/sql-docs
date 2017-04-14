@@ -45,9 +45,7 @@ A log shipping session involves the following steps:
 
 - Run this script from your primary server
 
-
     ```tsql
-
     DECLARE @LS_BackupJobId    AS uniqueidentifier 
     DECLARE @LS_PrimaryId      AS uniqueidentifier 
     DECLARE @SP_Add_RetCode    As int 
@@ -112,7 +110,8 @@ A log shipping session involves the following steps:
 
 
 - Run this script from your secondary server
-    '''tsql
+
+    ```tsql
       DECLARE @LS_Secondary__CopyJobId  AS uniqueidentifier 
       DECLARE @LS_Secondary__RestoreJobId      AS uniqueidentifier 
       DECLARE @LS_Secondary__SecondaryId AS uniqueidentifier 

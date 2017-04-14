@@ -186,11 +186,8 @@ The following command creates and configures the availability group resource for
    primitive ag_cluster \
       ocf:mssql:ag \
       params ag_name="ag1" \
-      op monitor interval="10" role="Master" \
-      op monitor interval="11" role="Slave" 
    ms ms-ag_cluster ag_cluster \
-      meta master-max="1" master-node-max="1" clone-max="2" \
-      clone-node-max="1" notify="true"
+      meta notify="true"
    commit
    ```
 
@@ -203,12 +200,12 @@ crm configure \
 primitive admin_addr \
    ocf:heartbeat:IPaddr2 \
    params ip=<**0.0.0.0**> \
-      cidr_netmask=<**24**> \
-   op monitor interval="12s"
-
+      cidr_netmask=<**24**>
 ```
 
 ### Add colocation constraint
+Almost every decision in a Pacemaker cluster, like choosing where a resource should run, is done by comparing scores. Scores are calculated per resource, and the cluster resource manager chooses the node with the highest score for a particular resource. (If a node has a negative score for a resource, the resource cannot run on that node.) We can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than INFINITY, it is only a recommendation. A score of INFINITY means it is a must. We want to ensure that primary of the availability group and the virtual ip resource are run on the same host, so we will define a colocation constraint with a score of INFINITY. 
+
 To set colocation constraint for the virtual IP to run on same node as the master, run the following command on one node:
 
 ```bash
@@ -247,9 +244,6 @@ Manage failover of the availability group with `crm`. Do not initiate failover w
 ```bash
 crm resource migrate ms-ag_cluster sles1
 ```
-
->[!NOTE]
->At this time manual failover to an asynchronous replica does not work properly. This will be fixed in a future release.
 
 During a manual move, the `migrate` command adds a location constraint for the resource to be placed on the new target node. To see the new constraint, run the following command after manually moving the resource:
 

@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  At the top of each report page, the back icon takes you to the previous page you viewed, the refresh icon refreshes the information displayed on the page, and the print icon allows you to print the current page.  
   
- For information on how to deploy packages to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ For information on how to deploy packages to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ## Integration Services Dashboard  
  The **Integration Services Dashboard** report provides an overview of all the package executions on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For each package that has run on the server, the dashboard allows you to "zoom in" to find specific details on package execution errors that may have occurred.  

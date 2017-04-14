@@ -69,27 +69,25 @@ Following new, bit type, columns will be added to SYS.TABLES. If is_node is set 
 |is_edge |bit |1 = this is an edge table |
  
 ### SYS.COLUMNS
-The `sys.columns` view will contain additional bit columns`is_from_id`, `is_to_id`, `is_system_generated` that indicate the type of the column in node and edge tables.
+The `sys.columns` view will contain additional integer columns`graph_type`, `graph_type_desc`, that indicate the type of the column in node and edge tables.
  
 |Column Name |Data Type |Description |
 |--- |---|--- |
-|is_from_id |Bit/int (with set of values) |1 = this is the ‘from’ node |
-|is_to_id |Bit/int (with set of values) |1 = this is the ‘to’ node |
-|is_system_generated |bit |1 = id is system generated |
+|graph_type |int |1 = graph_id column |
+|graph_type_desc |int  |internal column with a set of values |
  
 `sys.columns` will also store information about implicit columns created in node or edge tables. Following information can be retrieved from sys.columns. Users will be able to select these columns in a query, but they will not be able to modify them.
 
 |Column Name	|Data Type	|is_computed	|is_hidden	|Comment  |
 |---  |---|---|---|---  |
-|edge_id_\<hex_string>	|BIGINT	|0	|1	|internal identity column  |
+|graph_id_\<hex_string>	|BIGINT	|0	|1	|internal identity column  |
 |$edge_id_\<hex_string>	|NVARCHAR	|1	|0	|external edge id column  |
-|from_object_id_\<hex_string>	|INT	|0	|1	|internal from node object id  |
-|from_node_id_\<hex_string>	|BIGINT	|0	|1	|Internal from node id  |
+|from_obj_id_\<hex_string>	|INT	|0	|1	|internal from node object id  |
+|from_id_\<hex_string>	|BIGINT	|0	|1	|Internal from node id  |
 |$from_id_\<hex_string>	|NVARCHAR	|1	|0	|external from node id  |
-|to_object_id_\<hex_string>	|INT	|0	|1	|internal to node object id  |
-|to_node_id_\<hex_string>	|BIGINT	|0	|1	|Internal to node id  |
+|to_obj_id_\<hex_string>	|INT	|0	|1	|internal to node object id  |
+|to_id_\<hex_string>	|BIGINT	|0	|1	|Internal to node id  |
 |$to_id_\<hex_string>	|NVARCHAR	|1	|0	|external to node id  |
-|node_id_\<hex_string>	|BIGINT	|0	|1	|Internal identity column  |
 |$node_id_\<hex_string>	|NVARCHAR	|1	|0	|External node id column  |
  
 ### System Functions

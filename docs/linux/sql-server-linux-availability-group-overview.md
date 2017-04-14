@@ -95,7 +95,7 @@ SQL Server vNext introduces new features for availability groups.
 Use with `CREATE AVAILABILITY GROUP`. Identifies the type of server cluster manager that manages an availability group. Can be one of the following types:
 
    - **WSFC**
-      Winows server failover cluster. For example, a normal Windows failover cluster.
+      Winows server failover cluster. on Windows, it is the default value for CLUSTER_TYPE.
    - **EXTERNAL** 
       A cluster manager that is not Windows server failover cluster - for example, on Linux with Pacemaker.
    - **NONE**
@@ -103,9 +103,9 @@ Use with `CREATE AVAILABILITY GROUP`. Identifies the type of server cluster mana
 
 For more information about these options, see [CREATE AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878399.aspx) or [ALTER AVAILABILITY GROUP](http://msdn.microsoft.com/library/ff878601.aspx).
 
-**Guarantee commits on required number of synchronous secondary replicas**
+**Guarantee commits on synchronous secondary replicas**
 
-Use `REQUIRED_COPIES_TO_COMMIT` with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set, transactions at the primary replica databases will wait until the transaction is committed on the required number of **synchronous secondary** replica database transaction logs. If enough synchronous secondary replicas are not online, transactions will stop until communication with sufficient secondary replicas resume.
+Use `REQUIRED_COPIES_TO_COMMIT` with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set to a value higher than 0, transactions at the primary replica databases will wait until the transaction is committed on the specified number of **synchronous secondary** replica database transaction logs. If enough synchronous secondary replicas are not online, write transactions to primary replica will stop until communication with sufficient secondary replicas resume.
 
 **Read-scale availability groups**
 

@@ -53,7 +53,7 @@ manager: "erikre"
  Explains how to open ports used for inbound requests and outbound responses from a report server.  
   
  [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Describes additional steps required to connect to Report Manager or a report server using http://localhost.  
+ Describes additional steps required to connect to Report Manager or a report server using `http://localhost`.  
   
  [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Explains how to configure a remote report server instance so that you can connect to and configure it from a different computer.  

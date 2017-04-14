@@ -151,7 +151,7 @@ The below tables captures the names of system providers:
 
 Example:
  
-**N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700**'.  
+`N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700'`  
   
 ## Remarks  
 

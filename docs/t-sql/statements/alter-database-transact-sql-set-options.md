@@ -101,7 +101,7 @@ SET
   
 <automatic_tuning_option> ::=  
 {  
-  AUTOMATIC_TUNING ( FORCE\_LAST\_GOOD\_PLAN = { ON | OFF } )
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
 }  
 
 <change_tracking_option> ::=  

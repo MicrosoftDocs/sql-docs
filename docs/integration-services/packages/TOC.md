@@ -4,7 +4,6 @@
 ## [Execute Package Utility (dtexecui)](execute-package-utility-dtexecui-ui-reference.md)  
 ## [dtexec Utility](dtexec-utility.md)  
 ## [Restart Packages by Using Checkpoints](restart-packages-by-using-checkpoints.md)  
-### [Configure Checkpoints for Restarting a Failed Package](configure-checkpoints-for-restarting-a-failed-package.md)  
 ## [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md)  
 ### [Schedule a Package by using SQL Server Agent](schedule-a-package-by-using-sql-server-agent.md)  
 ### [Execute SQL Server Agent Job Task](execute-sql-server-agent-job-task.md)  

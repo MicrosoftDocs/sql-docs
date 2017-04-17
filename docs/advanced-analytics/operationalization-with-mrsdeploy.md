@@ -1,5 +1,5 @@
 ---
-title: "DeployR | Microsoft Docs"
+title: "Deploy and Consume Analytics | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/12/2017"
 ms.prod: "sql-server-2016"
@@ -14,27 +14,45 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 
-# Operationalization with mrsdeploy
+# Deploy and Consume Analytics
 
-Microsoft R Server includes features that make it easier to deploy a machine learning solution to multiple nodes for distributed computing, often referred to as **operationalization**. 
+Microsoft R Server includes an operationalization feature that make it easier to:
+
++ Publish and manage R and Python models and code in the form of web services
++ Consume these services within client applications to affect business results
 
 SQL Server vNext CP 2.0 now includes this feature as an option, although it was not installed in previous versions of SQL Server R Services.
 
-This topic provides information about how to enable and configure the feature. 
+This topic provides information about how to enable and configure the feature.
 
-## More about operationalization
+## What's New
 
-Operationalization means many things:
++ Role-based access control to analytical web services.  These roles determine who can publish, update, and delete their own web services, those who can also update and delete the web services published by other users, and who can only list and consume web services. Learn more about [roles](https://msdn.microsoft.com/microsoft-r/operationalize/security-roles.md).
+
++ Scoring perform boosts with [real time scoring of web services](https://msdn.microsoft.com/microsoft-r/operationalize/data-scientist-manage-services.md#realtime) with a supported R model object.
+
++ Publish Python code as a web service
+
++ [Asynchronously batch consumption](https://msdn.microsoft.com/microsoft-r/operationalize/data-scientist-batch-mode.md) for large input data: Web services can now be consumed asynchronously via batch execution.
+
++ Autoscaling of a grid of web and compute nodes on Azure. A script template will be offered to easily spin up a set of R Server VMs in Azure, configure them as a grid for operationalizing analytics and remote execution. This grid can be scaled up or down based on CPU usage.
+
++ [Asynchronous remote execution](https://msdn.microsoft.com/microsoft-r/operationalize/remote-execution.md#async) is now supported using the `mrsdeploy` R package.  To continue working in your development environment during the remote script execution, execute your R script asynchronously using the `async` parameter. This is particularly useful when you are running scripts that have long execution times.
+
+## Background
+
+The word *operationalization* can mean many things:
 
 + The ability to publish models to a web service for use by applications
-+ Distributed computing
++ Support for scalable or distributed computing
 + Develop once, deploy many times
 + Fast scoring, for both single-row and batch scoring
 
-If you have installed Machine Learning Services with SQL Server, it is fairly easy to deploy any machine learning code, by wrapping the code in a stored procedure and then calling the stored procedure from applications. However, Microsoft R Server provides additional web services to support publishing of R jobs, and an administrative utility for running distributed R jobs.
+If you have installed Machine Learning Services with SQL Server, *operationalization* is a matter of wrapping your R or Python code in a stored procedure. Any application can then call the stored procedure to retrain a model, generate scores, or create reports. YOu can also automate jobs using existing scheduling mechanisms in SQL Server.
 
-> [!NOTE]
-> Typically, you would not install this feature on the same computer that is running SQL Server Machine Learning Services. It is possible, but we recommend that you install **Microsoft Machine Learning Server** on a separate computer, and configure the operaitonalization features on that computer.
+However, Microsoft Machine Learning Server provides support for deployment through web services that support publishing of R jobs, and an administrative utility for running distributed R jobs.
+
+Typically, you would not install Machine Learning Server on the same computer that is running SQL Server Machine Learning Services. It is possible, but we recommend that you keep them separate. In other words, install **Microsoft Machine Learning Server** on a separate computer form SQL Server, and then configure the operationalization features on that computer.
 
 For general information about scenarios supported by operationalization, see [Operationalization with R Server](https://msdn.microsoft.com/microsoft-r/operationalize/about).
 

@@ -38,7 +38,7 @@ To find the version of R included in a particular version of Microsoft R Server,
 
 Additional information about recent releases can be found in the [R Server - What’s New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) notes.
 
-Note that the package management system in SQL Server means that multiple versions of an R package can be installed on the same computer, with multiple users sharing the same package, or using different versions of the same package. For more information, see [R Package Management in SQL Server](.r-package-management-for-sql-server-r-services).
+Note that the package management system in SQL Server means that multiple versions of an R package can be installed on the same computer, with multiple users sharing the same package, or using different versions of the same package. For more information, see [R Package Management in SQL Server](r-package-management-for-sql-server-r-services).
 
 ## R and SQL Data Types
 
@@ -121,7 +121,7 @@ If you use the **rxDataStep** to drop incompatible columns while moving data, be
 
 The following example demonstrates how data is transformed when making the round-trip between SQL Server and R.
 
-The query gets a series of values from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, and uses the stored procedure  [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to output the values using the R runtime.
+The query gets a series of values from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, and uses the stored procedure  [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to output the values using the R runtime.
 
 ```SQL
 CREATE TABLE MyTable (    

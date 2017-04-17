@@ -28,7 +28,7 @@ SQL Server vNext CTP 2.0 includes a portion of the Anaconda distribution and Pyt
 
 A subset of the RevoScaleR functionality (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, maybe a few others) is provided using Python APIS, using a new Python package **RevoScalePy**. You can use this packages to work with data using Pandas data frames, .XDF files, or SQL data queries.
 
-For more information, see [What Is revoscalepy?](.what-is-revoscalepy.md).
+For more information, see [What Is revoscalepy?](what-is-revoscalepy.md).
 
 ## Python and SQL Data Types
 

@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server vNext (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/14/2017"
+ms.date: "04/19/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,8 +21,9 @@ manager: "jhubbard"
 **Note:** SQL Server vNext also includes the features added in SQL Server 2016 service packs. For those items, see [What's New in SQL Server 2016 (Database Engine)](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 
 ## SQL Server Database Engine (CTP 2.0)  
-- CLR uses Code Access Security (CAS) in the .NET Framework, which has been marked as obsolete. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](clr-strict-security.md).  
--  [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] now offers graph database capabilities to model many-to-many relationships. This includes new [CREATE TABLE](../../t-sql/statements/create-table-sql-graph.md) syntax for creating node and edge tables, and the keyword [MATCH](../../t-sql/statements/match-sql-graph.md) for queries. For more information, see [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md).
+- CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundar. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](clr-strict-security.md).  
+-  [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] now offers graph database capabilities to model many-to-many relationships. This includes new [CREATE TABLE](../../t-sql/statements/create-table-sql-graph.md) syntax for creating node and edge tables, and the keyword [MATCH](../../t-sql/statements/match-sql-graph.md) for queries. For more information, see [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md).   
+- Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems. Automatic tuning in [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], notifies you whenever a potential performance issue is detected, and lets you apply corrective actions, or lets the [!INCLUDEssde_md] automatically fix performance problems. For more information, see [Automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md).
 
 
 ## SQL Server Database Engine (CTP 1.4)

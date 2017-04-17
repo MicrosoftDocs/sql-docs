@@ -263,7 +263,34 @@ USE AdventureWorks2016
 GO  
 EXEC sp_spaceused @oneresultset = 1  
 ```  
-  
+
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+### E. Displaying space usage information for a database with at least one MEMORY_OPTIMIZED file group in a single result set 
+ The following example summarizes space usage for the current database with at least one MEMORY_OPTIMIZED file group in a single result set.
+ 
+```tsql
+USE WideWorldImporters
+GO
+EXEC sp_spaceused @updateusage = 'FALSE', @mode = 'ALL', @oneresultset = '1', @include_total_xtp_storage = '1';
+GO
+``` 
+
+### F. Displaying space usage information for a MEMORY_OPTIMIZED table object in a database.
+ The following example summarizes space usage for a MEMORY_OPTIMIZED table object in the current database with at least one MEMORY_OPTIMIZED file group.
+ 
+```tsql
+USE WideWorldImporters
+GO
+EXEC sp_spaceused
+@objname = N'VehicleTemparatures',
+@updateusage = 'FALSE',
+@mode = 'ALL',
+@oneresultset = '0',
+@include_total_xtp_storage = '1';
+GO
+```  
+
 ## See Also  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

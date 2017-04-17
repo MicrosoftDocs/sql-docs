@@ -24,12 +24,16 @@ manager: "jhubbard"
 # INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
-  Adds one or more rows to a table or a view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#InsertExamples).  
+  Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#Examples).  
+
+> [!NOTE]   
+>  For standard Transact-SQL statements, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
-  
+## INSERT Into Node Table Syntax 
+The syntax for inserting into a Node table is same as that of a regular table. 
+
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
 
@@ -42,7 +46,7 @@ INSERT
           [ WITH ( <Table_Hint_Limited> [ ...n ] ) ]  
         }  
     {  
-        [ ( column_list ) ]   
+        [ (column_list) ] | [(<edge_table_column_list>)]  
         [ <OUTPUT Clause> ]  
         { VALUES ( { DEFAULT | NULL | expression } [ ,...n ] ) [ ,...n     ]   
         | derived_table   
@@ -60,69 +64,67 @@ INSERT
       | database_name .[ schema_name ] .   
       | schema_name .   
     ]  
-  table_or_view_name  
+    node_table_name  | edge_table_name
 }  
   
 <dml_table_source> ::=  
     SELECT <select_list>  
     FROM ( <dml_statement_with_output_clause> )   
       [AS] table_alias [ ( column_alias [ ,...n ] ) ]  
-    [ WHERE <search_condition> ]  
+    [ WHERE <on_or_where_search_condition> ]  
         [ OPTION ( <query_hint> [ ,...n ] ) ]  
-```  
-  
-```  
--- External tool only syntax  
 
-INSERT   
-{  
-    [BULK]  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-    [ table_name | view_name ]  
-    ( <column_definition> )  
-    [ WITH (  
-        [ [ , ] CHECK_CONSTRAINTS ]  
-        [ [ , ] FIRE_TRIGGERS ]  
-        [ [ , ] KEEP_NULLS ]  
-        [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]  
-        [ [ , ] ROWS_PER_BATCH = rows_per_batch ]  
-        [ [ , ] ORDER ( { column [ ASC | DESC ] } [ ,...n ] ) ]  
-        [ [ , ] TABLOCK ]  
-    ) ]  
-}  
-  
-[; ] <column_definition> ::=  
- column_name <data_type>  
-    [ COLLATE collation_name ]  
-    [ NULL | NOT NULL ]  
-  
-<data type> ::=   
-[ type_schema_name . ] type_name   
-    [ ( precision [ , scale ] | max ]  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+<on_or_where_search_condition> ::=
+    {  <search_condition_with_match> | <search_condition> }
 
-INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name   
-    [ ( column_name [ ,...n ] ) ]  
-    {   
-      VALUES ( { NULL | expression } )  
-      | SELECT <select_criteria>  
-    }  
-    [ OPTION ( <query_option> [ ,...n ] ) ]  
-[;]  
+<search_condition_with_match> ::=
+    { <graph_predicate> | [ NOT ] <predicate> | ( <search_condition> ) }
+    [ AND { <graph_predicate> | [ NOT ] <predicate> | ( <search_condition> ) } ]
+    [ ,...n ]
+
+<search_condition> ::=
+    { [ NOT ] <predicate> | ( <search_condition> ) }
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]
+    [ ,...n ]
+
+<graph_predicate> ::=
+    MATCH( <graph_search_pattern> [ AND <graph_search_pattern> ] [ , ...n] )
+
+<graph_search_pattern>::=
+    <node_alias> { { <-( <edge_alias> )- | -( <edge_alias> )-> } <node_alias> }
+
+<edge_table_column_list> ::=
+    ($from_id, $to_id, [column_list])
+
 ```  
   
+ 
 ## Arguments  
   
  INTO  
- Is an optional keyword that can be used between INSERT and the target table.  
+ Is an optional keyword that can be used between `INSERT` and the target table.  
   
+ *search_condition_with_match*
  
+ `MATCH` clause can be used in a subquery while inserting into a node or edge table. For `MATCH` statement syntax, see [GRAPH MATCH (Transact-SQL)](../../t-sql/statements/match-sql-graph.md)
+
+ *graph_search_pattern*
+ 
+ Search pattern provided to `MATCH` clause as part of the graph predicate.
+
+ *edge_table_column_list*
+ 
+ Users must provide values for `$from_id` and `$to_id` while inserting into an edge. An error will be returned if a value is not provided or NULLs are inserted into these columns. 
   
+
 ## Remarks  
-  
+Inserting into a node is same as inserting into any relational table. Values for the $node_id column are automatically generated.
+
+While inserting into an edge table, users must provide values for `$from_id` and `$to_id` columns.   
+
+BULK insert for node table is remains same as that of a relational table.
+
+Before bulk inserting into an edge table, the node tables must be imported. Values for `$from_id` and `$to_id` can then be extracted and inserted edges. 
 
   
 ### Permissions  
@@ -132,15 +134,36 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
   
  To execute INSERT with the OPENROWSET function BULK option, you must be a member of the **sysadmin** fixed server role or of the **bulkadmin** fixed server role.  
   
-##  Examples  
-  
+
+## Examples  
   
 #### A.  
- The following example 
+ The following example creates a Person node table and inserts 2 rows into that table.
+
+ ```
+ -- Create person node table
+ CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
+ 
+ -- Insert records for Alice and John
+ INSERT INTO dbo.Person VALUES (1, 'Alice');
+ INSERT INTO dbo.Person VALUES (2,'John')
+ ```
   
+#### B.  
+ The following example creates a friend edge table and inserts an edge into the table.
+
+ ```
+ -- Create friend edge table
+ CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
+
+ -- Create a friend edge, that connect Alice and John
+ INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
+        (SELECT $node_id FROM dbo.Person WHERE name = 'John'), '9/15/2011');
+ ```
+
   
 ## See Also  
-  
+
   
 
 

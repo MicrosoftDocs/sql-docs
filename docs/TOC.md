@@ -1,5 +1,5 @@
 # [Using relational databases](./relational-databases/index.md)
-# [SQL Server on Linux](./linux/index.md)		
+# [SQL Server on Linux](./linux/index.md?toc=%2fsql%2fdocs%2flinux%2ftoc.json)
 # [R on SQL Server](./advanced-analytics/r-services/index.md)		
 # [SQL Server](./sql-server/index.md)		
 		

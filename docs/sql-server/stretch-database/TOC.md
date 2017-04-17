@@ -17,3 +17,8 @@
 ### [Restore](restore-stretch-enabled-databases-stretch-database.md)  
 ### [Disable and bring back data](disable-stretch-database-and-bring-back-remote-data.md)
 ### [Extended events](extended-events-for-stretch-database.md)  
+# Resources
+## [Pricing](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)
+## [Blog](https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/)
+## [Service updates](https://azure.microsoft.com/updates/?product=sql-server-stretch-database)
+## [Videos](https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database)

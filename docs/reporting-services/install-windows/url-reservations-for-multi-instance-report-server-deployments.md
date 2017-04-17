@@ -27,8 +27,8 @@ manager: "erikre"
   
 |SQL Server Instance|Default URL Reservation|  
 |-------------------------|-----------------------------|  
-|Default (MSSQLServer)|http://+:80/reportserver|  
-|Named (MynamedInstance)|http://+:80/reportserver_MyNamedInstance|  
+|Default (MSSQLServer)|`http://+:80/reportserver`|  
+|Named (MynamedInstance)|`http://+:80/reportserver_MyNamedInstance`|  
   
  For the named instance, the virtual directory includes the instance name. Both the default instance and the named instance listen on the same port, but the unique virtual directory names determine which report server gets the request.  
   
@@ -39,8 +39,8 @@ manager: "erikre"
   
 |Report Server default instance (MSSQLSERVER)|ReportServer_MyNamedInstance|Uniqueness|  
 |----------------------------------------------------|-----------------------------------|----------------|  
-|http://+:80/reportserver|http://+:8888/reportserver|Each instance listens on a different port.|  
-|http://www.contoso.com/reportserver|http://SRVR-46/reportserver|Each instance responds to different server names (fully qualified domain name, and machine name).|  
+|`http://+:80/reportserver`|`http://+:8888/reportserver`|Each instance listens on a different port.|  
+|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Each instance responds to different server names (fully qualified domain name, and machine name).|  
   
 ## Uniqueness Requirements  
  The underlying technologies used by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impose requirements around unique names. HTTP.SYS requires that all URLs within its repository be unique. You can vary the port, host name, or virtual directory name to create a unique URL. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requires that application identities be unique within the same process. This requirement affects the virtual directory names. It specifies that you cannot duplicate a virtual directory name within the same report server instance.  

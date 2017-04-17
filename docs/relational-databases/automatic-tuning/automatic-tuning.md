@@ -1,5 +1,6 @@
 ---
 title: "Automatic tuning | Microsoft Docs"
+description: Learn about automatic tuning in SQL Server and Azure SQL Database
 ms.custom: ""
 ms.date: "4/16/2017"
 ms.prod: "sql-server-2017"
@@ -11,7 +12,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
   - "performance tuning [SQL Server]"
-  - "binary collations [SQL Server]"
 ms.assetid: 
 caps.latest.revision: 
 author: "jovanpop-msft"

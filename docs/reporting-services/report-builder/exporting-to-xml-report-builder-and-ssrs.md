@@ -1,4 +1,4 @@
----
+﻿---
 title: "Exporting to XML (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -77,7 +77,7 @@ manager: "erikre"
   
  XML namespace definitions and schema reference attributes are also included in the report element. Variables are noted in bold face type:  
   
- \<**Report** xmlns=”**SchemaName**” xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance” xsi:**schemaLocation**=”**SchemaNameReportURL**&amp;rc%3aSchema=true” Name=”ReportName”>  
+ <**Report** xmlns="**SchemaName**" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  The values for the variables are as follows:  
   

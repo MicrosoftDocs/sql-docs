@@ -1,42 +1,52 @@
-# Machine Learning
-
+# Machine Learning  
+## [What is Microsoft Machine Learning Services](r/r-services.md)  
 ## [Getting Started](getting-started-with-machine-learning-services.md)  
+## [What's New](what-s-new-in-sql-server-machine-learning-services.md)
+## [Architecture and Overview](architecture-overview-machine-learning.md)   
+## [Differences in Features between Editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)  
 
-### [What's New](what-s-new-in-sql-server-machine-learning-services.md)
-### [Getting Started with SQL Server Machine Learning](r/getting-started-with-sql-server-r-services.md)
-### [Getting Started with Microsoft R Server](r/getting-started-with-microsoft-r-server-standalone.md)
-### [Set up Machine Learning Services (In-Database)](r/set-up-sql-server-r-services-in-database.md)
-### [Set up a Standalone R Server](r/create-a-standalone-r-server.md)
+# [Machine Learning Services - R](r/sql-server-r-services.md)  
 
-
-## [Architecture and Security](architecture-overview-machine-learning.md)
-
-### [R Architecture](/r/architecture-overview-sql-server-r.md)
-### [R Security](r/security-overview-sql-server-r.md)
+## [Setup and Configuration](r/getting-started-with-sql-server-r-services.md)  
+### [Set up SQL Server Machine Learning Services (In-Database)](r/set-up-sql-server-r-services-in-database.md)  
+### [Unattended Installs of SQL Server Machine Learning Services](r/unattended-installs-of-sql-server-r-services.md)
+## [Architecture](r/architecture-overview-sql-server-r.md)  
 ### [R Interoperability](r/r-interoperability.md)
-### [New R Components](r/new-components-in-sql-server-to-support-r.md)
+### [New Components](r/new-components-in-sql-server-to-support-r.md)
+### [Security Overview](r/security-overview-sql-server-r.md) 
+## [Monitoring](r/monitoring-r-services.md)  
 
-### [Python Architecture](python/architecture-overview-sql-server-python.md)
-### [Python Security](python/security-overview-sql-server-python.md)
+# [Machine Learning Services - Python](python/sql-server-python-services.md)  
+
+## [Getting Started with Python](python/setup-python-machine-learning-services.md)
+## [Architecture](python/architecture-overview-sql-server-python.md)
 ### [Python Interoperability](python/python-interoperability.md)
 ### [New Python Components](python/new-components-in-sql-server-to-support-r.md)
+### [Python Security](python/security-overview-sql-server-python.md)
+## [Monitoring](python/managing-and-monitoring-python-solutions.md)
+<!-- ### [Monitoring Python Services](python/monitoring-python-services.md)-->
+<!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
+<!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
+<!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
+<!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-### [Differences in Features between Editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
-## [Configure and Manage](r/configuration-sql-server-r-services.md)
-### [Advanced Configuration Options for Machine Learning Services](r/configure-and-manage-advanced-analytics-extensions.md)
-### [Security Considerations for the R Runtime in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
-### [Managing and Monitoring Machine Learning Solutions](r/managing-and-monitoring-r-solutions.md)
-### [Modify the User Account Pool for SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
+# [Machine Learning Server (Standalone)](r/r-server-standalone.md)
+## [Getting Started](r/getting-started-with-microsoft-r-server-standalone.md)
+## [Set up Machine Learning Server Standalone](r/create-a-standalone-r-server.md)
+### [Install Microsoft Machine Learning Server from the Command Line](r/install-microsoft-r-server-from-the-command-line.md)
+### [Provision the Data Science Virtual Machine](provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
-### [Monitor R Services](r/monitoring-r-services.md)
-### [Resource Governance for Machine Learning Services](r/resource-governance-for-r-services.md)
-### [Create a Resource Pool for R](r/how-to-create-a-resource-pool-for-r.md)
-### [Extended Events for SQL Server Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
+# [How To](r/sql-server-machine-learning-tasks.md)
 
-### [DMVs for SQL Server Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
-### [Monitor Machine Learning Services using Custom Reports in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)
-
+## [Package Management](r/installing-and-managing-r-packages.md)  
+### [Determine Which Packages are Installed on SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)  
+### [Install Additional Machine Learning Packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)  
+### [Create a Local Package Repository Using miniCRAN](r/create-a-local-package-repository-using-minicran.md)  
+### [R Package - Enable or Disable](r/r-package-how-to-enable-or-disable.md)  
+### [R Package - Management for SQL Machine Learning Services](r/r-package-management-for-sql-server-r-services.md)  
+### [Packages Installed in User Libraries](r/packages-installed-in-user-libraries.md)  
+### [Synchronize R Packages used by SQL Server](r/package-install-uninstall-and-sync.md)  
 ### [R Package Management for SQL Server](r/r-package-management-for-sql-server-r-services.md)
 ### [How to Enable R Package Management for a SQL Server Instance](r/r-package-how-to-enable-or-disable.md)
 ### [Where to Get R Packages](r/installing-and-managing-r-packages.md)
@@ -46,50 +56,53 @@
 ### [User Package Libraries](r/packages-installed-in-user-libraries.md)
 ### [Synchronize R Packages used by SQL Server](r/package-install-uninstall-and-sync.md)
 
-# [Machine Learning Services - Python](python/sql-server-python-services.md)
-
-## [Getting Started with Python](python/setup-python-machine-learning-services.md)
-## [Architecture](python/architecture-overview-sql-server-python.md)
-## [Monitoring](python/managing-and-monitoring-python-solutions.md)
-<!-- ### [Monitoring Python Services](python/monitoring-python-services.md)-->
-<!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
-<!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
-<!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
-<!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
-
-# [Machine Learning Server (Standalone)](r/r-server-standalone.md)
-## [Getting Started](r/getting-started-with-microsoft-r-server-standalone.md)
-### [Set up Machine Learning Server Standalone](r/create-a-standalone-r-server.md)
-### [Install Microsoft Machine Learning Server from the Command Line](r/install-microsoft-r-server-from-the-command-line.md)
-### [Provision the Data Science Virtual Machine](provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
-
-# [How To](r/sql-server-machine-learning-tasks.md)
+## Data Exploration and Modeling
 ### [Real-time scoring](real-time-scoring.md)
-### [Create multiple models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)
+### [Predictive Modeling with R](r/data-exploration-and-predictive-modeling-with-r.md)  
+### [Converting R Code for Use in Machine Learning Services](r/converting-r-code-for-use-in-sql-server.md)  
+### [Creating multiple models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)  
+<!-- ## [Native Scoring](native-scoring-in-sql-server-2017.md)-->
+
 ### [SQL and R Data Types](r/working-with-r-data-types.md)
+### [SQL and Python Data Types](r/working-with-python-data-types.md)
 ### [Predictive Modeling with R](r/data-exploration-and-predictive-modeling-with-r.md)
 ### [Converting R Code for Use in Machine Learning Services](r/converting-r-code-for-use-in-sql-server.md)
 <!-- ## [Native Scoring](native-scoring-in-sql-server-2017.md)-->
 <!-- ### [sp_rxPredict](sp_rxpredict.md)-->
 <!-- ### [PREDICT (T-SQL)](predict-t-sql.md)-->
 ### [Save and Load R Objects using ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md)
-### [Create a Stored Procedure Using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 ### [Use Data from OLAP Cubes in R](r/using-data-from-olap-cubes-in-r.md)
+
+## Performance 
+### [Create a Stored Procedure Using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+
 ### [Use R Code Profiling Functions](r/using-r-code-profiling-functions.md)
-## [Performance Tuning - Overview](r/sql-server-r-services-performance-tuning.md)
+### [Performance Tuning - Overview](r/sql-server-r-services-performance-tuning.md)
 ### [Performance Tuning - SQL Server Configuration (Machine Learning Services)](r/sql-server-configuration-r-services.md)
 ### [Performance Tuning - R and Data Optimization (Machine Learning Services)](r/r-and-data-optimization-r-services.md)
 ### [Performance Tuning - Case Study](r/performance-case-study-r-services.md)
 ### [Deploy and Consume Models using Web Services](operationalization-with-mrsdeploy.md)
 
+## Administration
+## [Configure and Manage](r/configuration-sql-server-r-services.md)
+### [Advanced Configuration Options for Machine Learning Services](r/configure-and-manage-advanced-analytics-extensions.md)
+### [Security Considerations for the R Runtime in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
+### [Modify the User Account Pool for SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
+### [Configure and Manage Machine Learning Extensions](r/configure-and-manage-advanced-analytics-extensions.md)  
 
-# Machine Learning Resources
+### [Managing and Monitoring Machine Learning Solutions](r/managing-and-monitoring-r-solutions.md)
+### [Resource Governance for Machine Learning Services](r/resource-governance-for-r-services.md)  
+### [Create a Resource Pool for R](r/how-to-create-a-resource-pool-for-r.md)
+### [Extended Events for SQL Server Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
+
+### [DMVs for SQL Server Machine Learning Services](r/dmvs-for-sql-server-r-services.md)  
+### [Using R Code Profiling Functions](r/using-r-code-profiling-functions.md)  
+### [Monitor Machine Learning Services using Custom Reports in Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)  
+
+# Resources
 
 ## [Known Issues](known-issues-for-sql-server-machine-learning-services.md)
 ## [Release Notes](https://docs.microsoft.com/sql/sql-server/sql-server-vnext-release-notes)
-## [Blog](https://blogs.technet.microsoft.com/machinelearning/)
-## [Feedback Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-
 
 ## [Setup and Troubleshooting Tips](machine-learning-troubleshooting-faq.md)
 ### [Upgrade and Installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
@@ -103,13 +116,16 @@
 ### [Set up Data Science Tools](r/setup-or-configure-r-tools.md)
 ### [Set Up a Data Science Client](r/set-up-a-data-science-client.md)
 
-## [Reference](r/machine-learning-services-r-reference.md)
-### [MicrosoftML](using-the-microsoftml-package.md)
-### [RevoScaleR](r/revoscaler-overview.md)
+## [Blog](https://blogs.technet.microsoft.com/machinelearning/)
+## [Feedback Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
+
+# [Reference](r/machine-learning-services-r-reference.md)
+## [MicrosoftML](using-the-microsoftml-package.md)
+## [RevoScaleR](r/revoscaler-overview.md)
 ### [ScaleR Functions for Working with SQL Server Data](r/scaler-functions-for-working-with-sql-server-data.md)
-### [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-### [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
-### [What is RevoScalePy](python/what-is-revoscalepy.md)
+## [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+## [OlapR](r/how-to-create-mdx-queries-using-olapr.md)
+## [What is RevoScalePy](python/what-is-revoscalepy.md)
 
 # [Machine Learning Tutorials](tutorials/machine-learning-services-tutorials.md)
 

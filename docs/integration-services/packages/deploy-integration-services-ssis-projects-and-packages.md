@@ -388,7 +388,7 @@ Launch the wizard by either:
 > 2.  Right-click the package, and then click **Execute**.  
 > 3.  As needed, set parameters values, connection manager properties, and options in the **Advanced** tab such as the logging level.  
 >   
->      For more information about logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md).  
+>      For more information about logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
 > 4.  Before clicking **OK** to execute the package, click **Script**. The Transact-SQL appears in a Query Editor window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### To deploy and execute a package using stored procedures  

@@ -122,7 +122,7 @@ manager: "jhubbard"
   
  To view the log files, the administrator only has to log on to a single server to view the log files for all child packages.  
   
- For information about how to enable logging in a package, see [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md).  
+ For information about how to enable logging in a package, see [Integration Services (SSIS) Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
 
 ## Related Tasks  
  [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  

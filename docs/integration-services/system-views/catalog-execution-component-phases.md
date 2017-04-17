@@ -39,7 +39,7 @@ manager: "jhubbard"
  The following example uses the catalog.execution_component_phases view to find the total amount of time that a specific package has spent executing in all phases (**active_time**), and the total elapsed time for the package (**total_time**).  
   
 > [!WARNING]  
->  The catalog.execution_component_phases view provides this information when the logging level of the package execution is set to Performance or Verbose. For more information, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md).  
+>  The catalog.execution_component_phases view provides this information when the logging level of the package execution is set to Performance or Verbose. For more information, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
 ```  
 use SSISDB  

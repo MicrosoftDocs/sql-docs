@@ -37,7 +37,7 @@ manager: "jhubbard"
 # Integration Services (SSIS) Logging
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes log providers that you can use to implement logging in packages, containers, and tasks. With logging, you can capture run-time information about a package, helping you audit and troubleshoot a package every time it is run. For example, a log can capture the name of the operator who ran the package and the time the package began and finished.  
   
- You can configure the scope of logging that occurs during a package execution on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md).  
+ You can configure the scope of logging that occurs during a package execution on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information, see [Enable Logging for Package Execution on the SSIS Server](#server_logging).  
   
  You can also include logging when you run a package using the **dtexec** command prompt utility. For more information about the command prompt arguments that support logging, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
@@ -133,7 +133,7 @@ manager: "jhubbard"
 |**PipelineComponentTime**|For each data flow component, writes a log entry for each phase of validation and execution. The log entry specifies the processing time for each phase.|  
 |**Diagnostic**<br /><br /> **DiagnosticEx**|Writes a log entry that provides diagnostic information.<br /><br /> For example, you can log a message before and after every call to an external data provider. For more information, see [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Log the **DiagnosticEx** event when you want to find the column names for  columns in the data flow that have errors. This event writes a data flow lineage map to the log. You can then look up the column name in this lineage map by using the column identifier captured by an error output. For more info, see [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Note that the **DiagnosticEx** event does not preserve whitespace in its XML output to reduce the size of the log. To improve readability, copy the log into an XML editor - in Visual Studio, for example - that supports XML formatting and syntax highlighting.<br /><br /> Note: If you log the **DiagnosticEx** event with the SQL Server log provider, the output may be truncated. The **message** field of the SQL Server log provider is of type nvarchar(2048). To avoid truncation, use a different log provider when you log the **DiagnosticEx** event.|  
   
- The package and many tasks have custom log entries that can be enabled for logging. For example, the Send Mail task provides the **SendMailTaskBegin** custom log entry, which logs information when the Send Mail task starts to run, but before the task sends an e-mail message. For more information, see [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The package and many tasks have custom log entries that can be enabled for logging. For example, the Send Mail task provides the **SendMailTaskBegin** custom log entry, which logs information when the Send Mail task starts to run, but before the task sends an e-mail message. For more information, see [Custom Messages for Logging](#custom_messages).  
   
 ### Differentiating Package Copies  
  Log data includes the name and the GUID of the package to which the log entries belong. If you create a new package by copying an existing package, the name and the GUID of the existing package are also copied. As a result, you may have two packages that have the same GUID and name, making it difficult to differentiate between the packages in the log data.  
@@ -150,9 +150,9 @@ manager: "jhubbard"
   
 1.  Enable the package and its tasks for logging. Logging can occur at the package, the container, and the task level. You can specify different logs for packages, containers, and tasks.  
   
-2.  Select a log provider and add a log for the package. Logs can be created only at the package level, and a task or container must use one of the logs created for the package. Each log is associated with one of the following log providers: Text file, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Windows Event Log, or XML file. For more information, see [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md).  
+2.  Select a log provider and add a log for the package. Logs can be created only at the package level, and a task or container must use one of the logs created for the package. Each log is associated with one of the following log providers: Text file, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Windows Event Log, or XML file. For more information, see [Enable Package Logging in SQL Server Data Tools](#ssdt).  
   
-3.  Select the events and the log schema information about each event you want to capture in the log. For more information, see [Configure Logging by Using a Saved Configuration File](../../integration-services/performance/configure-logging-by-using-a-saved-configuration-file.md).  
+3.  Select the events and the log schema information about each event you want to capture in the log. For more information, see [Configure Logging by Using a Saved Configuration File](#saved_config).  
   
 ### Configuration of Log Provider  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
@@ -208,13 +208,13 @@ manager: "jhubbard"
   
 -   The Aggregate transformation that is named "Sum Quantity and LineItemTotalCost" spent a combined 220 ms—141 in PrimeOutput and 79 in ProcessInput—performing calculations and passing the data to the next transformation.  
 
-## Enable Package Logging in SQL Server Data Tools
+## <a name="ssdt"></a> Enable Package Logging in SQL Server Data Tools
   This procedure describes how to add logs to a package, configure package-level logging, and save the logging configuration to an XML file. You can add logs only at the package level, but the package does not have to perform logging to enable logging in the containers that the package includes.  
   
 > [!IMPORTANT]  
 >  If you deploy the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, the logging level that you set for the package execution overrides the package logging that you configure using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- By default, the containers in the package use the same logging configuration as their parent container. For information about setting logging options for individual containers, see [Configure Logging by Using a Saved Configuration File](../../integration-services/performance/configure-logging-by-using-a-saved-configuration-file.md).  
+ By default, the containers in the package use the same logging configuration as their parent container. For information about setting logging options for individual containers, see [Configure Logging by Using a Saved Configuration File](#saved_config).  
   
 ### To enable logging in a package  
   
@@ -256,7 +256,7 @@ manager: "jhubbard"
   
 11. To save the updated package, click **Save Selected Items** on the **File** menu.  
 
-## Configure SSIS Logs Dialog Box
+## <a name="configure_logs"></a> Configure SSIS Logs Dialog Box
   Use the **Configure SSIS Logs** dialog box to define logging options for a package.  
   
  **What do you want to do?**  
@@ -345,7 +345,7 @@ manager: "jhubbard"
  **Save**  
  Save configuration details as a template to an XML file.  
 
-## Configure Logging by Using a Saved Configuration File
+## <a name="saved_config"></a> Configure Logging by Using a Saved Configuration File
   This procedure describes how to configure logging for new containers in a package by loading a previously saved logging configuration file.  
   
  By default, all containers in a package use the same logging configuration as their parent container. For example, the tasks in a Foreach Loop use the same logging configuration as the Foreach Loop.  
@@ -361,7 +361,7 @@ manager: "jhubbard"
 4.  On the **Providers and Logs** tab, select the logs to use for the container.  
   
     > [!NOTE]  
-    >  You can create logs only at the package level. For more information, see [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md).  
+    >  You can create logs only at the package level. For more information, see [Enable Package Logging in SQL Server Data Tools](#ssdt).  
   
 5.  Click the **Details** tab and click **Load**.  
   
@@ -376,8 +376,8 @@ manager: "jhubbard"
   
 9. To save the updated package, click **Save Selected Items** on the **File** menu.  
 
-## Enable Logging for Package Execution on the SSIS Server
-  This topic describes how to set or change the logging level for a package when you run a package that you have deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The logging level you set when you run the package overrides the package logging you configure at design time in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. See [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md) for more information.  
+## <a name="server_logging"></a> Enable Logging for Package Execution on the SSIS Server
+  This topic describes how to set or change the logging level for a package when you run a package that you have deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The logging level you set when you run the package overrides the package logging you configure at design time in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. See [Enable Package Logging in SQL Server Data Tools](#ssdt) for more information.  
   
  In SQL Server **Server Properties**, under the **Server logging level** property, you can select a default server-wide logging level. You can pick from one of the built-in logging levels described in this topic, or you can pick an existing customized logging level. The selected logging level applies by default to all packages deployed to the SSIS Catalog. It also applies by default to a SQL Agent job step that runs an SSIS package.  
   
@@ -410,7 +410,7 @@ manager: "jhubbard"
 |Basic|All events are logged, except custom and diagnostic events. This is the default value.|  
 |RuntimeLineage|Collects the data required to track lineage information in the data flow. You can parse this lineage information to map the lineage relationship between tasks. ISVs and developers  can build custom lineage mapping tools with this information.|  
 |Performance|Only performance statistics, and OnError and OnWarning events, are logged.<br /><br /> The **Execution Performance** report displays Active Time and Total Time for package data flow components. This information is available when the logging level of the last package execution was set to **Performance** or **Verbose**. For more information, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> The [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) view displays the start and end times for the data flow components, for each phase of an execution. This view displays this information for these components only when the logging level of the package execution is set to **Performance** or **Verbose**.|  
-|Verbose|All events are logged, including custom and diagnostic events.<br /><br /> Custom events include those events that are logged by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tasks. For more information about custom events, see [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).<br /><br /> An example of a diagnostic event is the **DiagnosticEx** event. Whenever an Execute Package task executes a child package, this event captures the parameter values passed to child packages.<br /><br /> The **DiagnosticEx** event also helps you to get the names of columns in which row-level errors occur. This event writes a data flow lineage map to the log. You can then look up the column name in this lineage map by using the column identifier captured by an error output.  For more info, see [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> The value of the message column for **DiagnosticEx** is XML text. To view the message text for a package execution, query the [catalog.operation_messages &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) view. Note that the **DiagnosticEx** event does not preserve whitespace in its XML output to reduce the size of the log. To improve readability, copy the log into an XML editor - in Visual Studio, for example - that supports XML formatting and syntax highlighting.<br /><br /> The [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) view displays a row each time a data flow component sends data to a downstream component, for a package execution. The logging level must be set to **Verbose** to capture this information in the view.|  
+|Verbose|All events are logged, including custom and diagnostic events.<br /><br /> Custom events include those events that are logged by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tasks. For more information about custom events, see [Custom Messages for Logging](#custom_messages).<br /><br /> An example of a diagnostic event is the **DiagnosticEx** event. Whenever an Execute Package task executes a child package, this event captures the parameter values passed to child packages.<br /><br /> The **DiagnosticEx** event also helps you to get the names of columns in which row-level errors occur. This event writes a data flow lineage map to the log. You can then look up the column name in this lineage map by using the column identifier captured by an error output.  For more info, see [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> The value of the message column for **DiagnosticEx** is XML text. To view the message text for a package execution, query the [catalog.operation_messages &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) view. Note that the **DiagnosticEx** event does not preserve whitespace in its XML output to reduce the size of the log. To improve readability, copy the log into an XML editor - in Visual Studio, for example - that supports XML formatting and syntax highlighting.<br /><br /> The [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) view displays a row each time a data flow component sends data to a downstream component, for a package execution. The logging level must be set to **Verbose** to capture this information in the view.|  
   
 ### Create and manage customized logging levels by using the Customized Logging Level Management dialog box  
  You can create customized logging levels that collect only the statistics and events that you want. Optionally you can also capture the context of events, which includes variable values, connection strings, and component properties. When you run a package, you can select a customized logging level wherever you can select a built-in logging level.  
@@ -432,7 +432,7 @@ manager: "jhubbard"
   
 -   Only users in the ssis_admin or sysadmin role can create, update, or delete customized logging levels.  
 
-## Custom Messages for Logging
+## <a name="custom_messages"></a> Custom Messages for Logging
 SQL Server Integration Services provides a rich set of custom events for writing log entries for packages and many tasks. You can use these entries to save detailed information about execution progress, results, and problems by recording predefined events or user-defined messages for later analysis. For example, you can record when a bulk insert begins and ends to identify performance issues when the package runs.  
   
  The custom log entries are a different set of entries than the set of standard logging events that are available for packages and all containers and tasks. The custom log entries are tailored to capture useful information about a specific task in a package. For example, one of the custom log entries for the Execute SQL task records the SQL statement that the task executes in the log.  

@@ -56,7 +56,9 @@ Figure 2 shows how node and edge tables are stored in the database.
 ![person-friends-tables](../../relational-databases/graphs/media/person-friends-tables.png "Person node and friends edge tables")   
 
 Figure 2: Node and edge table representation
- 
+
+
+
 ## Metadata
 Use these metadata view to see attributes of a node or edge table.
  
@@ -101,8 +103,47 @@ Following built-in functions are added. These will help users extract part of in
 |OBJECT_ID_FROM_EDGE_ID	|Extract object_id from edge_id  |
 |IDENTITY_FROM_EDGE_ID	|Extract identity from edge_id  |
 |EDGE_ID_FROM_PARTS	|Construct edge_id from object_id and identity  |
+
+
+
+## Transact-SQL reference 
+Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced in SQL Server, that enable creating and querying graph objects. The query language extensions help query and traverse the graph using ASCII art syntax.
  
+### Data Definition Language (DDL) statements
+|Task	|Related Topic  |Notes
+|---  |---  |---  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` is now extended to support creating a table AS NODE or AS EDGE. Note that an edge table may or may not have any user defined attributes  |
+|ALTER TABLE	|[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Node and edge tables can be altered the same way a relational table is, using the `ALTER TABLE`. Users can add or modify user defined columns, indexes or constraints. However, altering internal graph columns, like `$node_id` or `$edge_id`, will result in an error.  |
+|CREATE INDEX	|[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Users can create indexes on node and edge tables, including clustered and non-clustered columnstore indexes  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Node and edge tables can be dropped the same way a relational table is, using the `DROP TABLE`. However, in this release, cascade deletion of edges, upon deletion of a node or node table is not supported. It is recommended that if a node table is dropped, users drop any edges connected to the nodes in that node table manually to maintain the integrity of the graph.  |
+
+
+### Data Manipulation Language (DML) statements
+|Task	|Related Topic  |Notes
+|---  |---  |---  |
+|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Inserting into a node table is no different than inserting into a relational table. The values for `$node_id` and `$edge_id` columns are automatically generated. Trying to insert a value in `$node_id` or `$edge_id` column will result in an error. Users must provide values for `$from_id` and `$to_id` columns while inserting into an edge table. `$from_id` and `$to_id` are the `$node_ids` of the nodes a given edge connects.  |
+|DELETE	| [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Data from node or edge tables can be deleted in same way as it is deleted from relational tables. However, in the first release, cascade deletion of connecting edges, upon deletion of a node is not supported. It is recommended that whenever a node is deleted, all the connecting edges to that node are also deleted, to maintain the integrity of the graph.  |
+|UPDATE	|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Values in user defined columns can be updated using the UPDATE statement. Updating internal graph columns, `$node_id`, `$edge_id`, `$from_id` and `$to_id` is not allowed.  |
+|MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` statement is not supported on node or edge table.  |
+
+
+### Query Statements
+|Task	|Related Topic  |Notes
+|---  |---  |---  |
+|SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nodes and edges are stored as tables internally, hence all operations supported on a table in SQL Server or Azure SQL Database are supported on node and edge tables  |
+|MATCH	| [MATCH &#40;Transact-SQL&#41;](../../t-sql/statements/match-sql-graph.md)|MATCH clause is introduced to support pattern matching and traversal through the graph. In this release, MATCH clause can be used only on node or edge tables.  |
+
+
+
+## Limitations and known issues  
+There are certain limitations on node and edge tables in this release:
+* Local or global temporary tables cannot be node or edge tables.
+* Node and edge tables cannot be created as system-versioned temporal tables.   
+* Node and edge tables cannot be memory optimized tables.  
+* Users cannot update the $from_id and $to_id columns of an edge using UPDATE statement. To update the nodes that an edge connects, users will have to insert the new edge pointing to new nodes and delete the previous one.
+
+
 ## Next Steps
-To learn more about the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced for SQL graph please see [SQL Graph Database - TSQL reference](./sql-graph-tsql-reference.md)
+To get started with the new syntax, see [SQL Graph Database - Sample](./sql-graph-sample.md)
  
 

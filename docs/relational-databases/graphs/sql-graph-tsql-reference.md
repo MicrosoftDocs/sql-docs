@@ -53,4 +53,4 @@ Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced i
 
 
 ## Next Steps
-To get started with SQL graph, please refer to SQL graph sample [SQL Graph Database - sample] (github link to a sample)
+To get started with SQL graph, please refer to SQL graph sample. 

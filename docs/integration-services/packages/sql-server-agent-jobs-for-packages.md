@@ -87,7 +87,7 @@ manager: "jhubbard"
   
     5.  In the **All Executions** report, locate the Execution ID in the **ID** column. Click **Overview**, **All Messages**, or **Execution Performance** to view information about this package execution.  
   
-         For more information about the Overview, All Messages, and Execution Performance reports, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+    For more information about the Overview, All Messages, and Execution Performance reports, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
 
 ## <a name="schedule"></a> Schedule a Package by using SQL Server Agent
   The following procedure provides steps to automate the execution of a package by using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step to run the package.  

@@ -102,7 +102,7 @@ manager: "jhubbard"
   
  ![Overview Report with list of child packages](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Overview Report with list of child packages")  
   
- For information about accessing the **Overview** report, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+ For information about accessing the **Overview** report, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
 ### Precedence Constraints in the Parent Package  
  When you create precedence constraints between the Execute SQL Server Agent Job tasks in the parent package, these precedence constraints control only the time that the SQL Server Agent jobs on the remote servers are started. Precedence constraints cannot receive information regarding the success or failure of the child packages that are run from the steps of the SQL Server Agent jobs.  

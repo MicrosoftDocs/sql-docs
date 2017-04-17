@@ -49,7 +49,7 @@ manager: "jhubbard"
 ## Execution and Logging  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages can be enabled for logging and you can capture run-time information in log files. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
- You can monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages that are deployed to and run on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using operation reports. The reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+ You can monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages that are deployed to and run on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using operation reports. The reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
 ## Run a Package in SQL Server Data Tools
   You typically run packages in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] during the development, debugging, and testing of packages. When you run a package from [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the package always runs immediately.  
@@ -82,7 +82,7 @@ manager: "jhubbard"
 ## Run a Package on the SSIS Server Using SQL Server Management Studio
   After you deploy your project to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, you can run the package on the server.  
   
- You can use operations reports to view information about packages that have run, or are currently running, on the server. For more information, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+ You can use operations reports to view information about packages that have run, or are currently running, on the server. For more information, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
 ### To run a package on the server using SQL Server Management Studio  
   

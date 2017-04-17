@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Reports  
   
-     For more information, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+     For more information, see [Reports for the Integration Services Server](#reports).  
   
 -   Views  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  Nine different status types are used to indicate the status of an operation. For a full list of the status types, see the [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) view.  
 
-## Active Operations Dialog Box
+## <a name="active_ops"></a> Active Operations Dialog Box
   Use the **Active Operations** dialog box to view the status of currently running [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] operations on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, such as deployment, validation, and package execution. This data is stored in the SSISDB catalog.  
   
  For more information about related [!INCLUDE[tsql](../../includes/tsql-md.md)] views, see [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md), and [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
@@ -90,7 +90,7 @@ manager: "jhubbard"
  Typically you manage [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] objects on the server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. However you can also query the database views and call the stored procedures directly, or write custom code that calls the managed API. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and the managed API query the views and call the stored procedures to perform many of their tasks. For example, you can view the list of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages that are currently running on the server, and request packages to stop if you have to.  
   
 ### Viewing the List of Running Packages  
- You can view the list of packages that are currently running on the server in the **Active Operations** dialog box. For more information, see [Active Operations Dialog Box](../../integration-services/performance/active-operations-dialog-box.md).  
+ You can view the list of packages that are currently running on the server in the **Active Operations** dialog box. For more information, see [Active Operations Dialog Box](#active_ops).  
   
  For information about the other methods that you can use to view the list of running packages, see the following topics.  
   
@@ -101,7 +101,7 @@ manager: "jhubbard"
  See the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace and its classes.  
   
 ### Stopping a Running Package  
- You can request a running package to stop in the **Active Operations** dialog box. For more information, see [Active Operations Dialog Box](../../integration-services/performance/active-operations-dialog-box.md).  
+ You can request a running package to stop in the **Active Operations** dialog box. For more information, see [Active Operations Dialog Box](#active_ops).  
   
  For information about the other methods that you can use to stop a running package, see the following topics.  
   
@@ -112,7 +112,7 @@ manager: "jhubbard"
  See the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace and its classes.  
   
 ### Viewing the History of Packages That Have Run  
- To view the history of packages that have run in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use the **All Executions** report. For more information on the **All Executions** report and other standard reports, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+ To view the history of packages that have run in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use the **All Executions** report. For more information on the **All Executions** report and other standard reports, see [Reports for the Integration Services Server](#reports).  
   
  For information about the other methods that you can use to view the history of running packages, see the following topics.  
   
@@ -122,7 +122,7 @@ manager: "jhubbard"
  Programmatic access through the managed API  
  See the <xref:Microsoft.SqlServer.Management.IntegrationServices> namespace and its classes.  
 
-## Reports for the Integration Services Server
+## <a name="reports"></a> Reports for the Integration Services Server
   In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. These reports help you to view package status and history, and, if necessary, identify the cause of package execution failures.  
   
  At the top of each report page, the back icon takes you to the previous page you viewed, the refresh icon refreshes the information displayed on the page, and the print icon allows you to print the current page.  
@@ -182,7 +182,7 @@ manager: "jhubbard"
  For instructions on how to create and add a custom report, see [Add a Custom Report to Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f).  
 
 ## View Reports for the Integration Services Server
-  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+  In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  For more information about the reports, see [Reports for the Integration Services Server](#reports).  
   
 ### To view reports for the Integration Services server  
   

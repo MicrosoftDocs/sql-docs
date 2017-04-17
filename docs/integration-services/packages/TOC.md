@@ -5,8 +5,6 @@
 ## [dtexec Utility](dtexec-utility.md)  
 ## [Restart Packages by Using Checkpoints](restart-packages-by-using-checkpoints.md)  
 ## [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md)  
-### [Schedule a Package by using SQL Server Agent](schedule-a-package-by-using-sql-server-agent.md)  
-### [Execute SQL Server Agent Job Task](execute-sql-server-agent-job-task.md)  
 ## [Load-Balancing Packages on Remote Servers by Using SQL Server Agent](load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md)  
 ### [Implementation of Child Packages](implementation-of-child-packages.md)  
 ### [Implementation of the Parent Package](implementation-of-the-parent-package.md)  

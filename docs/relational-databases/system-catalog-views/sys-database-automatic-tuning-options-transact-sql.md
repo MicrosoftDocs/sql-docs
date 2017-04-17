@@ -1,5 +1,6 @@
 ---
 title: "sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs"
+description: Learn how to view automatic tuning options on a SQL Database
 ms.custom: ""
 ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
@@ -22,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 caps.latest.revision: 24
 author: "jovanpop-msft"
-ms.author: "jovanpop-msft"
+ms.author: "jovanpop"
 manager: "jhubbard"
 ---
 # sys.database\_automatic\_tuning_options (Transact-SQL)

@@ -1,5 +1,6 @@
 ---
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
+description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "04/04/2017"
@@ -23,6 +24,8 @@ helpviewer_keywords:
   - "offline database state [SQL Server]"
   - "snapshot isolation framework option"
   - "checksums [SQL Server]"
+  - "automatic tuning"
+  - "SQL plan regression correction"
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 caps.latest.revision: 159
 author: "BYHAM"
@@ -98,7 +101,7 @@ SET
   
 <automatic_tuning_option> ::=  
 {  
-  AUTOMATIC_TUNING ( FORCE\_LAST\_GOOD\_PLAN = { ON | OFF } )
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
 }  
 
 <change_tracking_option> ::=  
@@ -1095,8 +1098,6 @@ MULTI_USER
   
  NO_WAIT  
  Specifies that if the requested database state or option change cannot complete immediately without waiting for transactions to commit or roll back on their own, the request will fail.  
-  
-## Remarks  
   
 ##  <a name="SettingOptions"></a> Setting Options  
  To retrieve current settings for database options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)  

@@ -29,14 +29,14 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 This document explains how to create a two-node availability group cluster for SQL Server on Red Hat Enterprise Linux. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). 
 
 > [!NOTE] 
-> Access to Red Hat documentation requires a subscription. 
+> Access to Red Hat full documentation requires a valid subscription. 
 
 For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > At this point, SQL Server service's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. It is expected Always On dmvs that query cluster information to return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
 
-The following sections walk through the steps to set up a failover cluster solution. 
+The following sections walk through the steps to set up a Pacemaker cluster and add an availability group as resource in the cluster for high availability.
 
 ## Configure Pacemaker for RHEL
 
@@ -57,7 +57,7 @@ sudo pcs property set stonith-enabled=false
 ```
   
 >[!IMPORTANT]
->Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled.
+>Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that RHEL does not provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
 
 ## Create a SQL Server login for Pacemaker
 

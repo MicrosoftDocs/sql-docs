@@ -42,8 +42,92 @@ As described in the picture above, a log shipping session involves the following
 
 # Setup a network share for Log Shipping
 
-- Mount a network share
-  //Work with Val for Instructions
+## Usisng CIFS via Samba
+
+### Configure Primary Server
+-   Run the following on your install Samba
+    
+    	sudo apt-get install samba #For Ubuntu
+    	sudo yum -y install samba #For RHEL/CentOS
+    	
+-   Create a directory to store the logs for Log Shipping and give mssql the required permissions
+
+        mkdir /var/opt/mssql/tlogs
+        chown mssql:mssql /var/opt/mssql/tlogs
+        chmod 0700 /var/opt/mssql/tlogs
+
+-   Edit the /etc/samba/smb.conf file (you need root permissions for that) and add the following section:
+
+        [tlogs]
+        path=/var/opt/mssql/tlogs
+        available=yes
+        valid users=mssql
+        read only=yes
+        browsable=yes
+        public=yes
+        writable=no
+
+-   Restart the Samba services
+
+        sudo systemctl restart smbd.service nmbd.service
+        
+### Configure Secondary Server
+
+-   Run the following on your install the CIFS client
+    
+    	sudo apt-get install cifs-utils #For Ubuntu
+    	sudo yum -y install cifs-utils #For RHEL/CentOS
+
+-   Create a file to store your credentials
+
+        vim /var/opt/mssql/.tlogcreds
+        #Paste the following in .tlogcreds
+        username=<user name>
+        domain=<domain>
+        password=<password>
+
+-   Run the following commands to create an empty directory for mounting and set permission and ownership correctly
+
+        mkdir /var/opt/mssql/tlogs
+        chown root:root /var/opt/mssql/tlogs
+        chmod 0550 /var/opt/mssql/tlogs
+        chown root:root /var/opt/mssql/.tlogcreds
+        chmod 0660 /var/opt/mssql/.tlogcreds
+
+-   Add the line to fstab to persist the share 
+
+        //server/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,rw,uid=mssql,gid=mssql 0 0
+-   Mount the shares
+
+        mount -a
+## Using NFS
+
+### Configure Primary Server
+-   Run the following on your install NFS and start the service
+    
+    	sudo apt-get install nfs-utils #For Ubuntu
+    	sudo yum -y install nfs-utils #For RHEL/CentOS
+        sudo systemctl enable rpcbind
+        sudo systemctl start rpcbind
+        sudo systemctl enable nfs-server
+        sudo systemctl start nfs-server
+
+-   Create a directory to store the logs for Log Shipping and give mssql the required permissions
+
+        mkdir /var/opt/mssql/tlogs
+        chown mssql:mssql /var/opt/mssql/tlogs
+        chmod 0700 /var/opt/mssql/tlogs
+
+-   Add the following line to /etc/expots file
+
+        /var/opt/mssql/tlog 192.168.1.1(ro,sync,no_subtree_check,no_root_squash) 192.168.1.11(rw,sync, no_subtree_check,no_root_squash)
+        
+This allows read-only access to the share from 192.168.1.1 IP address and read/write access from 192.168.1.11 IP address. The list of servers may have one or more entries (two in the example above), they may be referred to using IP addresses as in the example above, a subnet specification (such as 192.168.1.0/24), or * (for any).
+
+-   Start exporting and verify the exports by running the following commands:
+-  
+        sudo exportfs -rav
+        sudo showmount -e
 
 # Setup Log Shipping via T-SQL
 

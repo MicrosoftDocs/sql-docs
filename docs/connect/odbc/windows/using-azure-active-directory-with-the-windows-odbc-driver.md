@@ -29,7 +29,7 @@ The `Authentication` keyword can be used when connecting with a DSN or connectio
 |Name|Values|Default|Description|
 |-|-|-|-|
 |`Authentication`|(not set), (empty string), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`|(not set)|Controls the authentication mode.<table><tr><th>Value<th>Description<tr><td>(not set)<td>Authentication mode determined by other keywords (existing legacy connection options.)<tr><td>(empty string)<td>(Connection string only.) Override and unset an `Authentication` value set in the DSN.<tr><td>`SqlPassword`<td>Directly authenticate to a SQL Server instance using a username and password.<tr><td>`ActiveDirectoryPassword`<td>Authenticate with an Azure Active Directory identity using a username and password.<tr><td>`ActiveDirectoryIntegrated`<td>Authenticate with an Azure Active Directory identity using integrated authentication.</table>|
-|`Encrypt`|(not set), `Yes`, `No`|(see description)|Controls encryption for a connection. If the pre-attribute value of the `Authentication` setting is not _none_, the default is `Yes`. Otherwise, the default is `Moo`. The pre-attribute value of Encryption is `Yes` if the value is set to `Yes` in either the DSN or connection string.|
+|`Encrypt`|(not set), `Yes`, `No`|(see description)|Controls encryption for a connection. If the pre-attribute value of the `Authentication` setting is not _none_, the default is `Yes`. Otherwise, the default is `No`. The pre-attribute value of Encryption is `Yes` if the value is set to `Yes` in either the DSN or connection string.|
 
 ## New and/or Modified Connection Attributes
 
@@ -43,6 +43,25 @@ The following pre-connect connection attributes have either been introduced or m
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Not supported with Azure Active Directory, since password changes to AAD principals cannot be accomplished through an ODBC connection. <br><br>Password expiration for SQL Server Authentication was introduced in SQL Server 2005. The `SQL_COPT_SS_OLDPWD` attribute was added to allow the client to provide both the old and the new password for the connection. When this property is set, the provider will not use the connection pool for the first connection or for subsequent connections, since the connection string will contain the "old password" which has now changed.|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`,`SQL_IS_ON`|`SQL_IS_OFF`|_Deprecated_; use `SQL_COPT_SS_AUTHENTICATION` set to `SQL_AU_AD_INTEGRATED` instead. <br><br>Forces use of Windows Authentication for access validation on server login. When Windows Authentication is used, the driver ignores user identifier and password values provided as part of `SQLConnect`, `SQLDriverConnect`, or `SQLBrowseConnect` processing.|
 
+## UI Additions for Azure Active Directory
+
+The DSN setup and connection UIs of the driver have been enhanced with the additional options necessary for using authentication with Azure AD.
+
+### Creating and editing DSNs in the UI
+
+It is possible to use the new Azure AD authentication options when creating or editing an existing DSN using the driver's setup UI:
+
+![CreateNewDSN.png](CreateNewDSN.png)
+
+The four options correspond to `Trusted_Connection=Yes` (existing legacy Windows SSPI-only integrated authentication) and `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, and `ActiveDirectoryPassword`, respectively.
+
+### SQLDriverConnect Prompt
+
+The prompt dialog displayed by SQLDriverConnect when it requests information required to complete the connection contains two new options for Azure AD authentication:
+
+![SQLServerLogin.png](SQLServerLogin.png)
+
+These options correspond to the same four available in the DSN setup UI above.
 
 ### Example connection strings
 1.	SQL Server Authentication – legacy syntax. Server certificate is not validated, and encryption is used only if the server enforces it. The username/password is passed in the connection string.
@@ -64,9 +83,9 @@ The following pre-connect connection attributes have either been introduced or m
 >- To connect using an Azure Active Directory account username and password, specify Authentication=ActiveDirectoryPassword in the connection string and the `UID` and `PWD` keywords with the username and password, respectively.
 >- To connect using Windows Integrated or Active Directory Integrated authentication, specify `Authentication=ActiveDirectoryIntegrated` in the connection string. The driver will choose the correct authentication mode automatically. `UID` and `PWD` must not be specified.
 
-## Authenticating with an existing Access Token
+## Authenticating with an Access Token
 
-The `SQL_COPT_SS_ACCESS_TOKEN` pre-connection attribute allows the use of an access token for authentication instead of username and password, and also bypasses the negotiation and obtaining of an access token by the driver. To use an access token, set the `SQL_COPT_SS_ACCESS_TOKEN` connection attribute to a pointer to an `ACCESSTOKEN` structure:
+The `SQL_COPT_SS_ACCESS_TOKEN` pre-connection attribute allows the use of an access token obtained from Azure AD for authentication instead of username and password, and also bypasses the negotiation and obtaining of an access token by the driver. To use an access token, set the `SQL_COPT_SS_ACCESS_TOKEN` connection attribute to a pointer to an `ACCESSTOKEN` structure:
 
 ~~~
 typedef struct AccessToken
@@ -88,7 +107,7 @@ The following sample shows the code required to connect to SQL Server using Azur
     SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);	
     ...
 ~~~
-The following sample shows the code required to connect to SQL Server using Azure Active Directory with access token authentication.
+The following sample shows the code required to connect to SQL Server using Azure Active Directory with access token authentication. In this case, it is necessary to modify application code to process the access token and set the associated connection attribute.
 ~~~
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server}"
     SQLCHAR accessToken[] = "eyJ0eXAiOi..."; // In the format extracted from an OAuth JSON response

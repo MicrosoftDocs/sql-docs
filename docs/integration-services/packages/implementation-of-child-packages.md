@@ -58,9 +58,3 @@ manager: "jhubbard"
  The SQL Server Agent checks subsystem access for a proxy and gives access to the proxy every time the job step runs.  
   
  You can create a proxy in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-  
-## Related Tasks  
-  
--   [Run a Package on the SSIS Server Using SQL Server Management Studio](../../integration-services/packages/run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
-  
-  

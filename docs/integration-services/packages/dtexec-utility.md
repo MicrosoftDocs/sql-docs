@@ -627,9 +627,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
   
 ```  
   
-## Related Tasks  
- [Run a Package in SQL Server Data Tools](../../integration-services/packages/run-a-package-in-sql-server-data-tools.md)  
-  
 ## Related Content  
  Blog entry, [Exit Codes, DTEXEC, and SSIS Catalog](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), on www.mattmasson.com.  
   

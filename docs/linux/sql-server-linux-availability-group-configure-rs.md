@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 04/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -92,7 +92,7 @@ Each availability group has only one primary replica. The primary replica allows
 
 ### Forced failover with data loss
 
-Use this method when the primary replica is not available and can not be recovered. You can find more information about forced failover with data loss at [Perform a Forced Manual Failover](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server).
+Use this method when the primary replica is not available and can not be recovered. You can find more information about forced failover with data loss at [Perform a Forced Manual Failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).
 
 To issue a forced failover with data loss, connect to the SQL instance hosting the target secondary replica and run:
 ```Transact-SQL

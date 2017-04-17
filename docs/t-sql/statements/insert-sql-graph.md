@@ -1,6 +1,6 @@
 ---
 title: "INSERT (SQL Graph) | Microsoft Docs"
-ms.custom: 
+ms.custom: INSERT syntax for SQL Graph node or edge tables. 
 ms.date: "04/19/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
@@ -146,7 +146,7 @@ Before bulk inserting into an edge table, the node tables must be imported. Valu
  
  -- Insert records for Alice and John
  INSERT INTO dbo.Person VALUES (1, 'Alice');
- INSERT INTO dbo.Person VALUES (2,'John')
+ INSERT INTO dbo.Person VALUES (2,'John');
  ```
   
 #### B.  
@@ -163,7 +163,7 @@ Before bulk inserting into an edge table, the node tables must be imported. Valu
 
   
 ## See Also  
-
+ [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
   
 
 

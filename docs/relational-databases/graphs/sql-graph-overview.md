@@ -25,10 +25,6 @@ manager: "jhubbard"
 
 
 ## What is a graph database?  
-
-![sql-graph-architecture](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql graph database architecture")  
-Graph database – Nodes represent entities and edges represent relationships. Both can have properties. 
-
 A Graph Database is a collection of nodes (or vertices) and edges (or relationships). A node represents an entity (for example, a person or an organization) and an edge represents a relationship between the two nodes that it connects (for example, likes or friends). Both nodes and edges may have properties associated to them. Here are some features that make a graph database unique:  
 -	Unlike relational databases, edges or relationships in Graph Database can have attributes or properties associated to them. 
 -	A single edge can flexibly connect multiple nodes in a Graph Database.
@@ -75,6 +71,6 @@ Graph extensions are fully integrated in [!INCLUDE[ssNoVersion](../../includes/s
 Users benefit from existing tools and ecosystem that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers. Tools like backup and restore, import and export, BCP just work out of the box. Other tools or services like SSIS, SSRS or PowerBI will work with graph tables, just the way they work with relational tables.
  
  ## Next steps  
-
+Read the [SQL Graph Database - Architecture](./sql-graph-architecture.md)
    
 

@@ -421,6 +421,52 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Finish**  
  Create the configuration and exit the **Package Configuration Wizard**.  
 
+## Use the Values of Variables and Parameters in a Child Package
+  This procedure describes how to create a package configuration that uses the parent variable configuration type. This configuration type enables a child package that is run from a parent package to access a variable in the parent.  
+  
+> [!NOTE]  
+>  You can also pass values to a child package by configuring the Execute Package Task to map parent package variables or parameters, or project parameters, to child package parameters. For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
+  
+ It is not necessary to create the variable in the parent package before you create the package configuration in the child package. You can add the variable to the parent package at any time, but you must use the exact name of the parent variable in the package configuration. However, before you can create a parent variable configuration, there must be an existing variable in the child package that the configuration can update. For more information about adding and configuring variables, see [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+  
+ The scope of the variable in the parent package that is used in a parent variable configuration can be set to the Execute Package task, to the container that has the task, or to the package. If multiple variables with the same name are defined in a package, the variable that is closest in scope to the Execute Package task is used. The closest scope to the Execute Package task is the task itself.  
+  
+### To add a variable to a parent package  
+  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package to which you want to add a variable to pass to a child package.  
+  
+2.  In Solution Explorer, double-click the package to open it.  
+  
+3.  In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, to define the scope of the variable, do one of the following:  
+  
+    -   To set the scope to the package, click anywhere on the design surface of the **Control Flow** tab.  
+  
+    -   To set the scope to a parent container of the Execute Package task, click the container.  
+  
+    -   To set the scope to the Execute Package task, click the task.  
+  
+4.  Add and configure a variable.  
+  
+    > [!NOTE]  
+    >  Select a data type that is compatible with the data that the variable will store.  
+  
+5.  To save the updated package, click **Save Selected Items** on the **File** menu.  
+  
+### To add a variable to a child package  
+  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package to which you want to add a parent variable configuration.  
+  
+2.  In Solution Explorer, double-click the package to open it.  
+  
+3.  In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, to set the scope to the package, click anywhere on the design surface of the **Control Flow** tab.  
+  
+4.  Add and configure a variable.  
+  
+    > [!NOTE]  
+    >  Select a data type that is compatible with the data that the variable will store.  
+  
+5.  To save the updated package, click **Save Selected Items** on the **File** menu.  
+
 ## Create a Deployment Utility
   The first step in deploying packages is to create a deployment utility for an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. The deployment utility is a folder that contains the files you need to deploy the packages in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project on a different server. The deployment utility is created on the computer on which the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project is stored.  
   

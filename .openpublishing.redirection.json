@@ -654,12 +654,7 @@
    "redirect_document_id": false
   },
   {
-   "source_path" : "docs/integration-services/performance/reports-for-the-integration-services-server.md",
-   "redirect_url": "/sql/integration-services/performance/monitor-running-packages-and-other-operations",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/performance/reports-for-the-integration-services-server.md",
+   "source_path" : "docs/integration-services/performance/view-reports-for-the-integration-services-server.md",
    "redirect_url": "/sql/integration-services/performance/monitor-running-packages-and-other-operations",
    "redirect_document_id": false
   },

@@ -12,4 +12,3 @@
 ## [Enable Package Logging in SQL Server Data Tools](enable-package-logging-in-sql-server-data-tools.md)  
 ## [Enable Logging for Package Execution on the SSIS Server](enable-logging-for-package-execution-on-the-ssis-server.md)  
 # [Performance Counters](performance-counters.md)  
-## [Add a Log for Data Flow Performance Counters](add-a-log-for-data-flow-performance-counters.md)  

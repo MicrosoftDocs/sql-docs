@@ -47,7 +47,7 @@ manager: "jhubbard"
   
 #### To add a data viewer  
   
--   [Add a Data Viewer to a Data Flow](../../integration-services/troubleshooting/add-a-data-viewer-to-a-data-flow.md)  
+-   [Add a Data Viewer to a Data Flow](#add_viewer)  
   
 ## Row Counts  
  The number of rows that have passed through a path is displayed on the design surface of the **Data Flow** tab in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer next to the path. The number is updated periodically while the data moves through the path.  
@@ -179,7 +179,7 @@ order by source_component_name desc
   
 8.  To save the updated package, on the **File** menu, click **Save Selected Items**.  
 
-## Add a Data Viewer to a Data Flow
+## <a name="add_viewer"></a> Add a Data Viewer to a Data Flow
   This topic describes how to add and configure a data viewer in a data flow. A data viewer displays data that is moving between two data flow components. For example, a data viewer can display the data that is extracted from a data source before a transformation in the data flow modifies the data.  
   
  A path connects components in a data flow by connecting the output of one data flow component to the input of another component.  

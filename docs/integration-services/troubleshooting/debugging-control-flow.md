@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 #### To set breakpoints  
   
--   [Debug a Package by Setting Breakpoints on a Task or a Container](../../integration-services/troubleshooting/debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
+-   [Debug a Package by Setting Breakpoints on a Task or a Container](#debug)  
   
 ## Progress Reporting  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer includes two types of progress reporting: color-coding on the design surface of the **Control Flow** tab, and progress messages on the **Progress** tab.  
@@ -112,7 +112,7 @@ manager: "jhubbard"
 |Output|Displays status messages for features in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Immediate|Used to debug and evaluate expressions and print variable values.|  
 
-## Debug a Package by Setting Breakpoints on a Task or a Container
+## <a name="debug"></a> Debug a Package by Setting Breakpoints on a Task or a Container
   This procedure describes how to set breakpoints in a package, a task, a For Loop container, a Foreach Loop container, or a Sequence container.  
   
 ### To set breakpoints in a package, a task, or a container  

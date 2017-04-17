@@ -29,9 +29,9 @@ ms.assetid:
 Use the cluster management tools to failover an availability group managed by an external cluster manager. For example, if a solution uses Pacemaker to manage a Linux cluster, use `pcs` to perform manual failovers. 
 
 > [!IMPORTANT]
-> Under normal conditions, do not fail over with Transact-SQL or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager - for example Pacemaker. 
+> Under normal operations, do not fail over with Transact-SQL or SQL Server management tools like SSMS or PowerShell. When `CLUSTER_TYPE = EXTERNAL`, the only acceptable value for `FAILOVER_MODE` is `EXTERNAL`. With these settings, all manual or automatic failover actions are executed by the external cluster manager - for example Pacemaker for automatic failover or using the external cluster management tools like `pcs` on RHEL/Ubuntu or `crm` on SLES. 
 
-In extreme cases, you might have to failover with SQL Server tools to bypass the external cluster manager. For example, if the cluster is unresponsive, or the cluster management tools cannot interact with the cluster.  This is not recommended for regular operations, and should be used only when the cluster does not fail over with the cluster management tools. 
+In extreme cases, if a user cannot use the cluster management tools for interacting with the cluster (i.e. the cluster is unresponsive, cluster management tools have a faulty behaviour), the user might have to perform a failover bypassing the external cluster manager. This is not recommended for regular operations, and should be used within cases cluster is failing to execute the failover action using the cluster management tools.
 
 If you cannot failover the availability group with the cluster management tools, follow these steps to failover from SQL Server tools:
 
@@ -52,7 +52,7 @@ If you cannot failover the availability group with the cluster management tools,
       >[!NOTE]
       >When you delete a resource it also deletes all of the associated constraints. 
 
-1. Manually set the session context to `external_cluster`.
+1. Manually set the session context variable `external_cluster`.
 
    ```Transact-SQL
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
@@ -68,13 +68,14 @@ If you cannot failover the availability group with the cluster management tools,
 
    ```bash
    sudo pcs resource manage <**resourceName**>
+   sudo pcs resource cleanup <**resourceName**>
    ```
 
 ## Pacemaker notification for availability group resource promotion
 
 Before the CTP 1.4 release, the Pacemaker resource agent for availability groups could not know if a replica marked as `SYNCHRONOUS_COMMIT` was really up-to-date or not. It was possible that the replica had stopped synchronizing with the primary but was not aware. Thus the agent could promote an out-of-date replica to primary - which, if successful, would cause data loss. 
 
-SQL Server vNext CTP 1.4 added `sequence_number` to `sys.availability_groups` to solve this issue. `sequence_number` is a monotonically increasing BIGINT that represents how up-to-date the local availability group replica is with respect to the rest of the replicas in the availability group. Performing failovers, adding or removing replicas, and other availability group operations update this number. The number is updated on the primary, then pushed to secondaries. Thus a secondary replica that is up-to-date will have the same sequence_number as the primary. 
+SQL Server vNext CTP 1.4 added `sequence_number` to `sys.availability_groups` to solve this issue. `sequence_number` is a monotonically increasing BIGINT that represents how up-to-date the local availability group replica is with respect to the rest of the replicas in the availability group. Performing failovers, adding or removing replicas, and other availability group operations update this number. The number is updated on the primary, then pushed to secondary replicas. Thus a secondary replica that is up-to-date will have the same sequence_number as the primary. 
 
 When Pacemaker decides to promote a replica to primary, it first sends a notification to all replicas to extract the sequence number and store it (we call this the pre-promote notification). Next, when Pacemaker actually tries to promote a replica to primary, the replica only promotes itself if its sequence number is the highest of all the sequence numbers from all replicas and rejects the promote operation otherwise. In this way only the replica with the highest sequence number can be promoted to primary, ensuring no data loss. 
 
@@ -84,7 +85,7 @@ For example, let's consider the case of an availability group with three synchro
 
 - `REQUIRED_COPIES_TO_COMMIT`  is 3 / 2 = 1
 
-- The required number of replicas to respond to pre-promote action is 3 - 1 = 2. So 2 replicas have to be up for the failover to be triggered. This means that if one of the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
+- The required number of replicas to respond to pre-promote action is 3 - 1 = 2. So 2 replicas have to be up for the failover to be triggered. This means that, in the case of primary outage, if one of the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
 
 A user can choose to override the default behavior, and configure the availability group resource to not set `REQUIRED_COPIES_TO_COMMIT` automatically as above.
 
@@ -103,11 +104,8 @@ To revert to default computed value, run:
 sudo pcs resource update <**ag1**> required_copies_to_commit=
 ```
 
-Because the resource agent requires Pacemaker to send notifications to all replicas, the availability resource needs to be configured with `notify=true`. The following commmand sets `notify=true`.
-
-```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=<**ag1**> --master meta notify=true
-```
+>[!NOTE]
+>Updating resource properties causes all replicas to stop and restart. This means primary will temporarily be demoted to secondary, then promoted again which will casue temporary write unavailability. The new value for REQUIRED_COPIES_TO_COMMIT will only be set once replicas are restarted, so it won't be instantaneous with running the pcs command.
 
 ## Manage availability group with two synchronous replicas
 
@@ -136,7 +134,7 @@ The table below describes the outcome of an outage for primary or secondary repl
 
 ### Database level monitoring and failover trigger
 
-For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compared to WSFC. When the availability group is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the availability group health to report a fault. This signals the cluster manager to trigger a failover. In Linux, the SQL Server instance cannot communicate with the cluster. Monitoring for database health is done "outside-in". If you opted in for database level failover monitoring and failover (by setting the DDL option `DB_FAILOVER=ON`), the cluster will check if the database state is `ONLINE` every time when it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different than `ONLINE`, it triggers a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action as well as the database state being updated in sys.databases.
+For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compared to WSFC. When the availability group is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the availability group health to report a fault. This will signal the cluster manager to trigger a failover action. On Linux, the SQL Server instance cannot communicate with the cluster. Monitoring for database health is done "outside-in". If user opted in for database level failover monitoring and failover (by setting the option `DB_FAILOVER=ON` when creating the availability group), the cluster will check if the database state is `ONLINE` every time when it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different than `ONLINE`, it will trigger a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action as well as the database state being updated in sys.databases.
 
 ## Next steps
 

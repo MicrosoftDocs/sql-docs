@@ -1,5 +1,6 @@
 ---
 title: "sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs"
+description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
 ms.custom: ""
 ms.date: "04/06/2017"
 ms.prod: "sql-non-specified"
@@ -22,7 +23,7 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 caps.latest.revision: 37
 author: "jovanpop-msft"
-ms.author: "jovanpop-msft"
+ms.author: "jovanpop"
 manager: "jhubbard"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)

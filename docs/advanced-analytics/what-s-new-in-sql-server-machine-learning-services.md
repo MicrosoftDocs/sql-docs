@@ -17,7 +17,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 
-# What&#39;s New in Machine Learning with SQL Server
+# What's New in Machine Learning with SQL Server
 
 In SQL Server 2016, Microsoft introduced SQL Server R Services, a feature that supports enterprise-scale data science by integrating the R language with SQL Server database engine.
 
@@ -49,6 +49,7 @@ The rxExecBy function is available in SQL Server vNext CTP 2.0 and Microsoft R S
 
 For more information, see [Create Multiple Models using rxExecBy](../advanced-analytics/r/creating-multiple-models-using-rxexecby.md).
 
+
 ### mrsdeploy for Microsoft Machine Learning Server
 
 When you install Microsoft Machine Learning Server by using SQL Server setup, you'll now get support for deploying and consuming models using web services, using the mrsdeploy package and related tools.
@@ -70,7 +71,7 @@ For more information, see [R Package Management for SQL Server R Services](../ad
 ### Upgrade your R experience
 
 The RevoScaleR package is included in SQL Server 2016, SQL Server vNext, and Microsoft R Server. It includes transforms and algorithms that support distributed or parallel processing, and multiple compute contexts.
-
+  
 If you installed an earlier version of RevoScaleR with SQL Server 2016, you can now upgrade to the very latest version by switching your server to use the Modern Lifecycle policy. By doing so you can take advantage of a faster release cycle for R and automatically upgrade all R components. For more information, see [Microsoft R Server 9.0.1](https://msdn.microsoft.com/microsoft-r/rserver-whats-new).
 
 In CTP 2.0, Microsoft R components are upgraded to version 9.1.0.
@@ -78,7 +79,7 @@ In CTP 2.0, Microsoft R components are upgraded to version 9.1.0.
 ### New functions and features in MicrosoftML
 
 MicrosoftML is a machine learning package for R from the Microsoft Data Science team. MicrosoftML brings increased speed, performance and scale for handling a large corpus of text data and high-dimensional categorical data in R models with just a few lines of code. It also includes five fast, highly accurate learners that are included in Azure Machine Learning.
-
+   
 In CTP 2.0, MicrosoftML includes new image and test featurization functions, as well as support for parallelizable models with rxExecby.
 
 For more information, see the [MicrosoftML Package Reference](https://msdn.microsoft.com/en-us/microsoft-r/microsoftml/microsoftml).

@@ -13,7 +13,7 @@ applies_to:
   - "SQL Server 2016"
 dev_langs: 
   - "Python"
-caps.latest.revision: 21
+caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"

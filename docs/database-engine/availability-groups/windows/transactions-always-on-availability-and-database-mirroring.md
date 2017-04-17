@@ -35,10 +35,12 @@ SQL Server 2017 supports distributed transactions for databases in availability 
 Distributed transaction coordinator (DTC) distributed transactions follow a 2-phase commit protocol (2PC). 
 
 - **Prepare phase**
-   >When DTC receives a commit request, it sends a prepare command to all the resource managers involved in the transaction. Each resource manager then ensures that the transaction is durable (e.g. hardening log to disk). As each resource manager completes the prepare phase, it returns success or failure to the transaction manager.
+   
+   When DTC receives a commit request, it sends a prepare command to all the resource managers involved in the transaction. Each resource manager then ensures that the transaction is durable (e.g. hardening log to disk). As each resource manager completes the prepare phase, it returns success or failure to the transaction manager.
 
 - **Commit phase**
-   >If DTC receives successful prepares from all the resource managers, it sends commit commands to all resource managers. The resource managers can then complete the commit. If all resource managers report a successful commit, then DTC sends a success notification to the application. If any resource manager reported a failure to prepare, DTC sends a rollback command to each resource manager and indicates the failure of the commit to the application.
+   
+   If DTC receives successful prepares from all the resource managers, it sends commit commands to all resource managers. The resource managers can then complete the commit. If all resource managers report a successful commit, then DTC sends a success notification to the application. If any resource manager reported a failure to prepare, DTC sends a rollback command to each resource manager and indicates the failure of the commit to the application.
 
 See more information at:
 

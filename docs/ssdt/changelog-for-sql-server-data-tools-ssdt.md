@@ -23,7 +23,7 @@ For detailed posts about what’s new and changed, please visit [the SSDT Team b
 ## SSDT 17.0 (supports up to SQL Server vNext)
 Build number: 14.0.61704.140
 
-## What's New?
+### What's New?
 **Database projects:**
 - Amending a clustered index on a view will no longer block deployment.
 - Schema comparison strings relating to column encryption will use the proper name rather than the instance name.   
@@ -60,7 +60,7 @@ Build number: 14.0.61704.140
 **RS projects:**
 - Embeddable RVC Control is now available supporting SSRS 2016
 
-## Bug fixes
+### Bug fixes
 **AS projects:**
 - Fixed the template priority for BI Projects so they don’t show up at the top of the New Projects categories in VS
 - Fixed a VS crash that may occur in rare circumstances when SSIS, SSAS or SSRS solution opened
@@ -122,7 +122,7 @@ Build number: 14.0.61704.140
 - Always Encrypted: Online encryption does not disable change tracking on cancellation and does not work properly if change tracking has not been cleaned prior to start encryption
 
 
-## SSDT 16.5 (support up to SQL Server 2016)
+## SSDT 16.5 (supports up to SQL Server 2016)
 Released: October 20, 2016
 
 Build number: 14.0.61021.0

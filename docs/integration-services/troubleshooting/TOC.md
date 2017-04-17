@@ -3,8 +3,6 @@
 ## [Debugging Control Flow](debugging-control-flow.md)  
 ## [Debugging Script](debugging-script.md)  
 ## [Debugging Data Flow](debugging-data-flow.md)  
-## [Add a Data Viewer to a Data Flow](add-a-data-viewer-to-a-data-flow.md)  
-## [Configure an Error Output in a Data Flow Component](configure-an-error-output-in-a-data-flow-component.md)  
 # [Troubleshooting Tools for Package Connectivity](troubleshooting-tools-for-package-connectivity.md)  
 # [Troubleshooting Tools for Package Execution](troubleshooting-tools-for-package-execution.md)  
 # [Troubleshooting Reports for Package Execution](troubleshooting-reports-for-package-execution.md)  

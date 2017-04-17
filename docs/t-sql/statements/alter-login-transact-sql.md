@@ -1,7 +1,7 @@
 ---
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/24/2017"
+ms.date: "04/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -162,7 +162,7 @@ ALTER LOGIN login_name
  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Specifies a default language to be assigned to the login.  
+ Specifies a default language to be assigned to the login. The default language for SQL Databsae is English and cannot be changed. The default language of the `sa` login on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux, is English but it can be changed.  
   
  NAME = *login_name*  
  The new name of the login that is being renamed. If this is a Windows login, the SID of the Windows principal corresponding to the new name must match the SID associated with the login in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The new name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login cannot contain a backslash character (\\).  

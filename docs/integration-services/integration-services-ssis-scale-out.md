@@ -18,12 +18,12 @@ manager: "jhubbard"
 # Integration Services (SSIS) Scale Out
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Scale Out provides high performance package execution by distributing executions to multiple machines. You are able to submit a request for multiple package executions in SQL Server Management Studio. These packages will be executed in parallel, in a scale out mode.  
 
-[!INCLUDE[ssIS_md](../includes/ssis-md.md)] Scale Out consists of a [!INCLUDE[ssIS_md](../includes/ssis-md.md)] Scale Out Master and several [!INCLUDE[ssIS_md](../includes/ssis-md.md)] Scale Out Workers. The Scale Out Master is responsible for Scale Out management and receives package execution requests from users. Scale Out Workers pull execution tasks from the Scale Out Master and do the package execution work. For more information, see [Scale Out Master](../integration-services/integration-services-ssis-scale-out-master.md), [Scale Out Worker](../integration-services/integration-services-ssis-scale-out-worker.md).
+[!INCLUDE[ssIS_md](../includes/ssis-md.md)] Scale Out consists of a [!INCLUDE[ssIS_md](../includes/ssis-md.md)] Scale Out Master and several [!INCLUDE[ssIS_md](../includes/ssis-md.md)] Scale Out Workers. The Scale Out Master is responsible for Scale Out management and receives package execution requests from users. Scale Out Workers pull execution tasks from the Scale Out Master and do the package execution work. For more information, see [Scale Out Master](#master), [Scale Out Worker](#worker).
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Scale Out can run on one machine, where a Scale Out Master and a Scale Out Worker are set up side-by-side on the machine. Scale Out can also run on multiple machines, where each Scale Out Worker is on a different machine.
 - [Walkthrough: Set up Integration Services Scale Out](#walkthrough)
 
-Scale Out supports running multiple packages in the SSISDB catalog in parallel. For more details, see [Run packages in Scale Out](../integration-services/run-packages-in-integration-services-ssis-scale-out.md).
+Scale Out supports running multiple packages in the SSISDB catalog in parallel. For more details, see [Run packages in Scale Out](#run_scale_out).
 
 ## <a name="walkthrough"></a> Walkthrough: Set Up Integration Services Scale Out
 Set up [!INCLUDE[ssISnoversion_md](../includes/ssisnoversion-md.md)] Scale Out by completing the following tasks. 
@@ -151,12 +151,12 @@ EXEC [catalog].[enable_worker_agent] '6583054A-E915-4C2A-80E4-C765E79EF61D'
 GO 
 ```
 ### Next Steps
-The set up of the Scale Out feature is finished. You can now run packages in Scale Out. For more information, see [Execute Packages in Integration Services (SSIS) Scale Out](../integration-services/run-packages-in-integration-services-ssis-scale-out.md).
+The set up of the Scale Out feature is finished. You can now run packages in Scale Out. For more information, see [Execute Packages in Integration Services (SSIS) Scale Out](#run_scale_out).
 
-## Integration Services (SSIS) Scale Out Master
+## <a name="master"<>/a> Integration Services (SSIS) Scale Out Master
 Scale Out Master manages the Scale Out system through the SSISDB Catalog and the Scale Out Master service. 
 
-The SSISDB Catalog stores all the information for Scale Out Workers, packages and executions. It provides the interface to enable a Scale Out Worker and execute packages in Scale Out. For more information, see [Walkthrough: Set up Integration Services Scale Out](../integration-services/walkthrough-set-up-integration-services-scale-out.md), [Run Packages in Integration Services](../integration-services/run-packages-in-integration-services-ssis-scale-out.md).
+The SSISDB Catalog stores all the information for Scale Out Workers, packages and executions. It provides the interface to enable a Scale Out Worker and execute packages in Scale Out. For more information, see [Walkthrough: Set up Integration Services Scale Out](#walkthrough), [Run Packages in Integration Services](#run_scale_out).
 
 Scale Out Master service is a Windows service that is responsible for the communication with Scale Out Workers. It exchanges the status of package executions with Scale Out Workers through HTTPS and operates on the data in SSISDB. 
 
@@ -190,7 +190,7 @@ The Scale Out Master service log file is located in the \<driver\>:\Users\\*[acc
 
 The *[account]* folder refers to the account running Scale Out Master service. By default, this account is SSISScaleOutMaster140.
 
-## Integration Services (SSIS) Scale Out Worker
+## <a name="worker"<>/a> Integration Services (SSIS) Scale Out Worker
 Scale Out Worker runs a [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion_md](../includes/ssisnoversion-md.md)] Scale Out Worker service to pull execution tasks from Scale Out Master and, executes the packages locally with ISServerExec.exe.
 
 ### Configure SQL Server Integration Services Scale Out Worker service
@@ -229,7 +229,7 @@ The log location of each individual task is configured in the WorkerSettings.con
 
 The *[account]* folder is the account running Scale Out Worker service. By default, the account is SSISScaleOutWorker140.
 
-## Run Packages in Integration Services (SSIS) Scale Out
+## <a name="run_scale_out"<>/a> Run Packages in Integration Services (SSIS) Scale Out
 After the packages are deployed to the Integration Services server, you can execute them in Scale Out.
 
 ### Run packages with **Execute Package In Scale Out** dialog 

@@ -50,7 +50,7 @@ manager: "jhubbard"
   
  Running an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package from a job step is like running a package by using the **dtexec** (dtexec.exe) and **DTExecUI** (dtexecui.exe) utilities. Instead of setting the run-time options for a package by using command-line options or the **Execute Package Utility** dialog box, you set the run-time options in the **New Job Step** dialog box. For more information about the options for running a package, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
- For more information, see [Schedule a Package by using SQL Server Agent](../../integration-services/packages/schedule-a-package-by-using-sql-server-agent.md).  
+ For more information, see [Schedule a Package by using SQL Server Agent](#schedule).  
   
  For a video that demonstrates how to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to run a package, see the video home page, [How to: Automate Package Execution by Using the SQL Server Agent (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=141771), in the MSDN Library.  
   
@@ -89,7 +89,7 @@ manager: "jhubbard"
   
          For more information about the Overview, All Messages, and Execution Performance reports, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
 
-## Schedule a Package by using SQL Server Agent
+## <a name="schedule"></a> Schedule a Package by using SQL Server Agent
   The following procedure provides steps to automate the execution of a package by using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step to run the package.  
   
 ### To automate package execution by using SQL Server Agent  

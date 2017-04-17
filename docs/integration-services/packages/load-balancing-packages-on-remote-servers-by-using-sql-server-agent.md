@@ -93,7 +93,7 @@ manager: "jhubbard"
  You can create a proxy in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
 ## Implementation of the Parent Package
-  When load balancing SSIS packages across various servers, the next step after the child packages have been created, deployed, and remote SQL Server Agent Jobs created to run them, is to create the parent package. The parent package will contain many Execute SQL Server Agent Job tasks, each task responsible for calling a different SQL Server Agent job that runs one of the child packages. The Execute SQL Server Agent Job tasks in the parent package in turn run the various SQL Server Agent jobs. Each task in the parent package contains information such as how to connect to the remote server and what job to run on that server. For more information, see [Execute SQL Server Agent Job Task](../../integration-services/packages/execute-sql-server-agent-job-task.md).  
+  When load balancing SSIS packages across various servers, the next step after the child packages have been created, deployed, and remote SQL Server Agent Jobs created to run them, is to create the parent package. The parent package will contain many Execute SQL Server Agent Job tasks, each task responsible for calling a different SQL Server Agent job that runs one of the child packages. The Execute SQL Server Agent Job tasks in the parent package in turn run the various SQL Server Agent jobs. Each task in the parent package contains information such as how to connect to the remote server and what job to run on that server. For more information, see [Execute SQL Server Agent Job Task](../../integration-services/control-flow/execute-sql-server-agent-job-task.md).  
   
  To identify the parent package that executes child packages, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] right click the package in Solution Explorer and then click **Entry-point Package**.  
   
@@ -125,6 +125,6 @@ manager: "jhubbard"
  For information about how to enable logging in a package, see [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md).  
 
 ## Related Tasks  
- [Schedule a Package by using SQL Server Agent](../../integration-services/packages/schedule-a-package-by-using-sql-server-agent.md)  
+ [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   

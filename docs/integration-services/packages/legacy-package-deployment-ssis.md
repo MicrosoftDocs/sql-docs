@@ -421,7 +421,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Finish**  
  Create the configuration and exit the **Package Configuration Wizard**.  
 
-## Use the Values of Variables and Parameters in a Child Package
+## <a name="child"></a> Use the Values of Variables and Parameters in a Child Package
   This procedure describes how to create a package configuration that uses the parent variable configuration type. This configuration type enables a child package that is run from a parent package to access a variable in the parent.  
   
 > [!NOTE]  

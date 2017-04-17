@@ -116,4 +116,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 
 ## See Also  
  [Execution of Projects and Packages](https://msdn.microsoft.com/library/ms141708.aspx)
- [View Log Entries in the Log Events Window](../../integration-services/performance/view-log-entries-in-the-log-events-window.md)  
+ [Events Logged by an Integration Services Package](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

@@ -1,8 +1,4 @@
 # [Monitor Running Packages and Other Operations](monitor-running-packages-and-other-operations.md)  
-# [Reports for the Integration Services Server](reports-for-the-integration-services-server.md)  
-# [View Reports for the Integration Services Server](view-reports-for-the-integration-services-server.md)  
-# [Viewing and Stopping Packages Running on the Integration Services Server](viewing-and-stopping-packages-running-on-the-integration-services-server.md)  
-# [Active Operations Dialog Box](active-operations-dialog-box.md)  
 # [Events Logged by an Integration Services Package](events-logged-by-an-integration-services-package.md)  
 # [Integration Services (SSIS) Logging](integration-services-ssis-logging.md)  
 ## [Custom Messages for Logging](custom-messages-for-logging.md)  

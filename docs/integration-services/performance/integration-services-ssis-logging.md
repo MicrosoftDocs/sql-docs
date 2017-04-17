@@ -212,12 +212,7 @@ manager: "jhubbard"
   
 -   [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md)  
   
--   [View Log Entries in the Log Events Window](../../integration-services/performance/view-log-entries-in-the-log-events-window.md)  
+-   [Events Logged by an Integration Services Package](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## Related Content  
  [DTLoggedExec Tool for Full and Detail Logging (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=150579)  
-  
-## See Also  
- [View Log Entries in the Log Events Window](../../integration-services/performance/view-log-entries-in-the-log-events-window.md)  
-  
-  

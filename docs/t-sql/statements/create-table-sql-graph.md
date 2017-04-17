@@ -80,9 +80,7 @@ CREATE TABLE
 3. Stretch database is not supported for node or edge table.
 4. Node or edge tables cannot be external tables (no polybase support for graph tables). 
   
-## Permissions  
-
-  
+ 
 ## Examples  
   
 ### A. Create a `NODE` table

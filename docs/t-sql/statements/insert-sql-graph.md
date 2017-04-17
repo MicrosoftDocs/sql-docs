@@ -21,7 +21,7 @@ ms.author: "shkale"
 manager: "jhubbard"
 ---
 
-# INSERT (Transact-SQL)
+# INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
   Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#Examples).  

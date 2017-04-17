@@ -1,6 +1,6 @@
 ---
 title: "INSERT (SQL Graph) | Microsoft Docs"
-ms.custom: INSERT syntax for SQL Graph node or edge tables. 
+description: INSERT syntax for SQL Graph node or edge tables. 
 ms.date: "04/19/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
@@ -100,20 +100,18 @@ INSERT
   
  
 ## Arguments  
-  
+ This document describes arguments pertaining to SQL graph. For a full list and description of supported arguments in INSERT statement, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+
  INTO  
  Is an optional keyword that can be used between `INSERT` and the target table.  
   
- *search_condition_with_match*
- 
+ *search_condition_with_match*   
  `MATCH` clause can be used in a subquery while inserting into a node or edge table. For `MATCH` statement syntax, see [GRAPH MATCH (Transact-SQL)](../../t-sql/statements/match-sql-graph.md)
 
- *graph_search_pattern*
- 
+ *graph_search_pattern*   
  Search pattern provided to `MATCH` clause as part of the graph predicate.
 
- *edge_table_column_list*
- 
+ *edge_table_column_list*   
  Users must provide values for `$from_id` and `$to_id` while inserting into an edge. An error will be returned if a value is not provided or NULLs are inserted into these columns. 
   
 
@@ -137,7 +135,7 @@ Before bulk inserting into an edge table, the node tables must be imported. Valu
 
 ## Examples  
   
-#### A.  
+#### A.  Insert into node table  
  The following example creates a Person node table and inserts 2 rows into that table.
 
  ```
@@ -149,7 +147,7 @@ Before bulk inserting into an edge table, the node tables must be imported. Valu
  INSERT INTO dbo.Person VALUES (2,'John');
  ```
   
-#### B.  
+#### B.  Insert into edge table  
  The following example creates a friend edge table and inserts an edge into the table.
 
  ```

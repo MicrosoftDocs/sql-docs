@@ -37,7 +37,11 @@ manager: "jhubbard"
 MATCH <graph_search_pattern> 
 
 <graph_search_pattern>::=
-    <node_alias> { { <-( <edge_alias> )- | -( <edge_alias> )-> } <node_alias> }
+    <node_alias> { 
+                     { <-( <edge_alias> )- } 
+                   | { -( <edge_alias> )-> }
+                <node_alias> 
+                 }
   
 <node_alias> ::=
     node_table_name | node_alias 
@@ -47,16 +51,13 @@ MATCH <graph_search_pattern>
 ```
 
 ## Arguments  
-*graph_search_pattern*
-
+*graph_search_pattern*  
 Specifies the pattern to search or path to traverse in the graph. This pattern uses ASCII art syntax to traverse a path in the graph. The pattern goes from one node to another via an edge, in the direction of the arrow provided. Edge names or aliases are provided inside paranthesis. Node names or aliases appear at the two ends of the arrow. The arrow can go in either direction in the pattern.
 
-*node_alias*
-
+*node_alias*  
 Name or alias of the node table provided in the FROM clause
 
-*edge_alias*
-
+*edge_alias*  
 Name or alias of the edge table provided in the FROM clause
 
 
@@ -69,7 +70,7 @@ A single edge cannot be traversed twice in the same subquery; however, each subq
 
 
 ## Examples  
-#### A.  
+#### A.  Find a friend 
  The following example creates a Person node table and friends Edge table, inserts some data and then uses MATCH to find friends of Alice, a person in the graph.
 
  ```
@@ -100,11 +101,10 @@ AND Person1.name = 'Alice';
 
  ```
 
- #### B.  
+ #### B.  Find friend of a friend
  The following example tries to find friend of a friend of Alice. 
 
  ```
- -- use MATCH in SELECT to find friends of Alice
 SELECT Person2.name AS FriendName
 FROM Person Person1, friend, Person Person2, friend friend2, Person Person3
 WHERE MATCH(Person1-(friend)->Person2-(friend2)->Person3)
@@ -112,7 +112,7 @@ AND Person1.name = 'Alice';
 
  ```
 
-#### C.  
+#### C.  More `MATCH` patterns
  Following are some more ways in which a pattern can be specified inside MATCH.
 
  ```
@@ -125,9 +125,8 @@ AND Person1.name = 'Alice';
     (Person1-(friend1)->Person0<-(friend2)-Person2)
     OR
     (Person1-(friend1)->Person0 AND Person2-(friend2)->Person0)
-
  ```
-  
+ 
 
 ## See Also  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)   

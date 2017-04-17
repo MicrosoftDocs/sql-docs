@@ -272,6 +272,6 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 ```  
   
 ## See Also  
-[Run Integration Services (SSIS) Packages](../../integration-services/packages/run-integration-services-ssis-packages.md)  
+[Run Integration Services (SSIS) Packages](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   

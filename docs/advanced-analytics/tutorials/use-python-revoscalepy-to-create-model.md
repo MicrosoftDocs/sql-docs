@@ -19,16 +19,16 @@ manager: "jhubbard"
 
 This code sample demonstrates how you can create a logistic regression model using one of the algorithms in the **revoscalepy** package for Python, using Microsoft Machine Learning Services.
 
-The **revoscalepy** package for Python contains objects, transformation, and algorithms similar to those provided for R in the RevoScaleR package. With this library, you can create a compute context, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more.
+The **revoscalepy** package for Python contains objects, transformation, and algorithms similar to those provided for the R language's **RevoScaleR** package. With this library, you can create a compute context, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more.
 
 For more information about revoscalepy, see [What is revoscalepy?](.what-is-revoscalepy.md) 
 
 You would run this example as a Python script from the command line, or in a Python development environment.
 
-Note that the entire operation is performed using an instance of SQL server as the compute context. 
+Note that the entire operation is performed using an instance of SQL Server as the compute context.
 
 [!NOTE] 
-> To run Python code in SQL Server, you must have installed SQL Server vNext and enabled the feature **Machine Learning Services** with Python. Other versions of SQL Server do not support Python integration.
+> To run Python code in SQL Server, you must have installed SQL Server vNext CTP 2.0, with the feature, **Machine Learning Services** with Python. Other versions of SQL Server do not support Python integration.
 
 
 ## Sample Code

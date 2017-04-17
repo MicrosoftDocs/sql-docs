@@ -20,7 +20,7 @@ manager: "jhubbard"
 
 You can deploy a working Python solution to a web service by using the operationalization feature in Microsoft Machine Learning Server.
 
-This topic describes the steps to follow, to successfully publish and then run your solution. 
+This topic describes the steps to follow, to successfully publish and then run your solution.
 
 The target audience for this article is data scientists who want to learn how to publish Python code or models as web services hosted in Microsoft Machine Learning Server. The article also explains how applications can consume the the code or models. This article assumes that you are proficient in Python.
 
@@ -38,7 +38,7 @@ The workflow from publishing to consuming a Python web service can be summarized
 5. Try out the web service by consuming it in your session.
 6. Manage these services.
 
-Insert image Swagger Workflow data-scientist-python-workflow.png)
+![Swagger workflow](./media/data-scientist-python-workflow.png)
 
 This article discusses each step of the workflow, and includes sample Python code using the iris dataset.
 
@@ -304,11 +304,11 @@ Before you can start publishing your Python code and models thorugh Microsoft Ma
 
    In our example, Autorest generated some directories and files for the Python client library on your local system. By default, the namespace (and directory) is `deployrclient` and might look like this:
    
-   Insert image  data-scientist-python-autorest.png
+   ![Autorest output path](./media/data-scientist-python-autorest.png)
 
    For this default namespace, the client library itself is called `deploy_rclient.py`. If you open this file in your IDE such as Visual Studio, you will see something like this:
    
-   Insert image  data-scientist-python-client-library.png
+   ![Python client library](./media/data-scientist-python-client-library.png)
 
 
 
@@ -316,24 +316,24 @@ Before you can start publishing your Python code and models thorugh Microsoft Ma
 
 Keep in mind that all APIs require authentication; therefore, all users must authenticate when making an API call using the `POST /login` API or through Azure Active Directory (AAD). 
 
-To simplify this process, bearer access tokens are issued so that users need not provide their credentials for every single call.  This bearer token is a lightweight security token that grants the “bearer” access to a protected resource: in this case, the Machine Learning Server's APIs. After a user has been authenticated, the application must validate the user’s bearer token to ensure that authentication was successful for the intended parties. To learn more about managing these tokens, see path-security-access-tokens.md. 
+To simplify this process, bearer access tokens are issued so that users need not provide their credentials for every single call.  This bearer token is a lightweight security token that grants the “bearer” access to a protected resource: in this case, the Machine Learning Server's APIs. After a user has been authenticated, the application must validate the user’s bearer token to ensure that authentication was successful for the intended parties. To learn more about managing these tokens, see [Security Access Tokens](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens).
 
-Before you interact with the core APIs, first authenticate, get the bearer access token using the authentication method configured by your administrator, and then include it in each header for each subsequent request:
+Before you interact with the core APIs, first authenticate, get the bearer access token using the [authentication method](https://msdn.microsoft.com/microsoft-r/operationalize/security-authentication) configured by your administrator, and then include it in each header for each subsequent request:
 
 1. Get started by importing the client library to make it accessible from your preferred Python code editor, such as Jupyter, Visual Studio, VS Code, or iPython.
 
    Specify the parent directory of the client library. In our example, the Autorest generated client library is under `C:\Users\rserver-user\Documents\Python\deployrclient`:
 
    ```python
-   # Import the generated client library. 
+   # Import the generated client library
    import deployrclient
-   ```   
+   ```
 
 2. Add the authentication logic to your application to define a connection from your local machine to Machine Learning Server, provide credentials, capture the access token, add that token to the header, and use that header for all subsequent requests.  Use the authentication method defined by your administrator: basic admin account, Active Directory/LDAP (AD/LDAP), or Azure Active Directory (AAD).
 
    **AD/LDAP or `admin` account authentication**
 
-   You must call the `POST /login` API in order to authenticate. You'll need to pass in the  `username` and `password` for the local administrator, or if Active Directory is enabled, pass the LDAP account information. In turn, Machine Learning Server will issue you a [bearer/access token](security-access-tokens.md). After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with every request. If you do not know your connection settings, please contact your administrator.
+   You must call the `POST /login` API in order to authenticate. You'll need to pass in the  `username` and `password` for the local administrator, or if Active Directory is enabled, pass the LDAP account information. In turn, Machine Learning Server will issue you a bearer/access token. After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with every request. If you do not know your connection settings, please contact your administrator.
 
    ```python
    #Using client library generated from Autorest
@@ -351,7 +351,7 @@ Before you interact with the core APIs, first authenticate, get the bearer acces
 
    **Azure Active Directory (AAD) authentication**
 
-   You must pass the AAD credentials, authority, and client ID. In turn, AAD will issue the Bearer access token. After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with every request. If you do not know your connection settings, please contact your administrator.
+   You must pass the AAD credentials, authority, and client ID. In turn, AAD will issue the [Bearer access token](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with every request. If you do not know your connection settings, please contact your administrator.
 
    ```python
    #Import the AAD authentication library
@@ -415,7 +415,7 @@ After authentication, you can start a Python session and create a model you'll p
    session_id = response.session_id
    ```
 
-2. Create or call a model in Python that you'll publish as a web service. 
+2. Create or call a model in Python that you'll publish as a web service
 
    In this example, we train a SciKit-Learn support vector machines (SVM) model on the Iris Dataset on a remote instance of Machine Learning Server.  This dataset is available from the [scikit-learn site](http://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html).
 
@@ -542,14 +542,14 @@ This section demonstrates how to consume the service in the same session where i
    #so you don't have to repeat it with each request.
    s.headers = headers
 
-   #Retrieve the service-specific swagger file using the requests library.
+   # Retrieve the service-specific swagger file using the requests library.
    swagger_resp = s.get(url+"/api/Iris/V1.0/swagger.json")
 
-   #Either, download service-specific swagger file using the json library.
+   #Either download service-specific swagger file using the json library.
    with open('iris_swagger.json','w') as f:
       (json.dump(client.get_web_service_swagger("Iris","V1.0",headers),f, indent = 1))
 
-   #Or, print just what you need from the Swagger file, 
+   #Or print just what you need from the Swagger file, 
    #such as the routing paths for the endpoints to be consumed.
    print(json.dumps(swagger_resp.json()["paths"], indent = 1, sort_keys = True))
 
@@ -582,7 +582,7 @@ Now that you've created a web service, you can update, delete, or republish that
 
 ### Update a web service
 
-You can update a web service to change the code, model, description, inputs, outputs and more. In this example, we update the service to add a description useful to people who might consume this service. 
+You can update a web service to change the code, model, description, inputs, outputs and more. In this example, we update the service to add a description useful to people who might consume this service.
 
 ```python
 #Define what needs to be updated. Here we add a description.
@@ -638,7 +638,7 @@ for service in client.get_all_web_services(headers):
 
 ### Delete services
 
-You can delete services you've created. You can also delete the services of others if you are [assigned to a role](security-roles.md) with those permissions.
+You can delete services you've created. You can also delete the services of others if you are assigned to a role that has the appropriate permissions.
 
 In this example, we delete the second web service version we just published.
 

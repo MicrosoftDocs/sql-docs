@@ -4,7 +4,6 @@
 # [Viewing and Stopping Packages Running on the Integration Services Server](viewing-and-stopping-packages-running-on-the-integration-services-server.md)  
 # [Active Operations Dialog Box](active-operations-dialog-box.md)  
 # [Events Logged by an Integration Services Package](events-logged-by-an-integration-services-package.md)  
-## [View Log Entries in the Log Events Window](view-log-entries-in-the-log-events-window.md)  
 # [Integration Services (SSIS) Logging](integration-services-ssis-logging.md)  
 ## [Custom Messages for Logging](custom-messages-for-logging.md)  
 ## [Configure SSIS Logs Dialog Box](configure-ssis-logs-dialog-box.md)  

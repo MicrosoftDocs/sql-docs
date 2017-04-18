@@ -42,7 +42,7 @@ As described in the picture above, a log shipping session involves the following
 
 # Setup a network share for Log Shipping
 
- 	> [!NOTE] 
+ 	  > [!NOTE] 
     > You can use CIFS or NFS (but not both) to setup a network share for Log Shipping. 
 
 ## Usisng CIFS via Samba
@@ -68,6 +68,10 @@ As described in the picture above, a log shipping session involves the following
         public=yes
         writable=no
 
+-   Create a mssql user for Samba
+
+      sudo smbpasswd -a mssql
+
 -   Restart the Samba services
 
         sudo systemctl restart smbd.service nmbd.service
@@ -79,28 +83,30 @@ As described in the picture above, a log shipping session involves the following
     	sudo apt-get install cifs-utils #For Ubuntu
     	sudo yum -y install cifs-utils #For RHEL/CentOS
 
--   Create a file to store your credentials
+-   Create a file to store your credentials. Use the password you recently set for your mssql Samba account 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
-        username=<user name>
+        username=mssql
         domain=<domain>
         password=<password>
 
 -   Run the following commands to create an empty directory for mounting and set permission and ownership correctly
 
         mkdir /var/opt/mssql/tlogs
-        chown root:root /var/opt/mssql/tlogs
-        chmod 0550 /var/opt/mssql/tlogs
-        chown root:root /var/opt/mssql/.tlogcreds
-        chmod 0660 /var/opt/mssql/.tlogcreds
+        sudo chown root:root /var/opt/mssql/tlogs
+        sudo chmod 0550 /var/opt/mssql/tlogs
+        sudo chown root:root /var/opt/mssql/.tlogcreds
+        sudo chmod 0660 /var/opt/mssql/.tlogcreds
 
--   Add the line to fstab to persist the share 
+-   Add the line to etc/fstab to persist the share 
 
         //server/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
+        
 -   Mount the shares
 
-        mount -a
+        sudo mount -a
+        
 ## Using NFS
 
 ### Configure Primary Server

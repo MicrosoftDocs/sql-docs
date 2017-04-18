@@ -152,7 +152,7 @@ As described in the picture above, a log shipping session involves the following
     
 -   Add the following to /etc/fstab to persist the mount
 
-    	<ip_address_of_primary_server>:/var/opt/mssql/tlogs /var/opt/mssql/tlogs nfs timeo=14,intr 0 0 
+        <ip_address_of_primary_server>:/var/opt/mssql/tlogs /var/opt/mssql/tlogs nfs timeo=14,intr 0 0 
 
 -   Mount the shares
 
@@ -168,7 +168,7 @@ As described in the picture above, a log shipping session involves the following
 
 
     EXEC @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
-            @database = N'SampleDB' 
+             @database = N'SampleDB' 
             ,@backup_directory = N'/var/opt/mssql/tlogs' 
             ,@backup_share = N'/var/opt/mssql/tlogs' 
             ,@backup_job_name = N'LSBackup_SampleDB' 
@@ -338,19 +338,19 @@ As described in the picture above, a log shipping session involves the following
 
 - Verify that Log Shipping works by starting the following job on the primary server
 
-    USE msdb ;  
-    GO  
+      USE msdb ;  
+      GO  
 
-    EXEC dbo.sp_start_job N'LSBackup_SampleDB' ;  
-    GO  
+      EXEC dbo.sp_start_job N'LSBackup_SampleDB' ;  
+      GO  
     
  - Verify that Log Shipping works by starting the following job on the secondary server
  
-    USE msdb ;  
-    GO  
+      USE msdb ;  
+      GO  
 
-    EXEC dbo.sp_start_job N'LSCopy_SampleDB4' ;  
-    GO  
-    EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
-    GO  
+      EXEC dbo.sp_start_job N'LSCopy_SampleDB' ;  
+      GO  
+      EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
+      GO  
 

@@ -120,8 +120,6 @@ The following sections describe known issues with this release of SQL Server vNe
 
     - **Resolution**: If you want to have more than one instance on a given host, consider using VMs or Docker containers. 
 
-- All log files and error logs are encoded in UTF-16.
-
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
 - The default language of the **sa** login is English.

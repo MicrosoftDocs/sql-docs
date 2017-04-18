@@ -38,7 +38,7 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 -	Batch Mode Adaptive Join to improve plan quality (under db compatability 140).
 -	Interleaved Execution for multi-statement T-SQL TVFs to improve plan quality (under db compatability 140).
 - Query Store now also tracks wait stats summary information.
-- DTC support for AlwaysOn Availability Groups.
+- DTC support for Always On Availability Groups for all cross database transactions among databases that are part of the availability group, including for databases that are part of same instance. For more information, see [Transactions - Always On Availability Groups and Database Mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - This CTP contains bug fixes for the Database Engine.
 - For a detailed list of vNext CTP enhancements in previous CTP releases, see [What's New in SQL Server vNext (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md).   
 

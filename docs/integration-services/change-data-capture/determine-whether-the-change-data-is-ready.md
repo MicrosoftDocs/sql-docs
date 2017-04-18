@@ -247,7 +247,7 @@ manager: "jhubbard"
   
 #### To configure an optional Script task to log an error condition  
   
-1.  If you want to report the error or timeout by writing a message to the log, configure logging for the package. For more information, see [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md).  
+1.  If you want to report the error or timeout by writing a message to the log, configure logging for the package. For more information, see [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#ssdt).  
   
 2.  Inside the For Loop container, add a Script task.  
   

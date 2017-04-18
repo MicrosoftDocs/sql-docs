@@ -306,6 +306,6 @@ Use the **Add Variable** dialog box to specify the properties of a new variable.
  To dynamically update variables, you can create configurations for the variables, deploy the configurations with the package, and then update the variable values in the configuration file when you deploy the packages. At run time, the package uses the updated variable values. For more information, see [Create Package Configurations](../integration-services/packages/create-package-configurations.md).  
 
 ## Related Tasks  
- [Use the Values of Variables and Parameters in a Child Package](../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
+ [Use the Values of Variables and Parameters in a Child Package](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Map Query Parameters to Variables in a Data Flow Component](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

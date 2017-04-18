@@ -54,7 +54,7 @@ manager: "jhubbard"
  The task uses an SMTP connection manager to connect to a mail server. For more information, see [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md).  
   
 ## Custom Logging Messages Available on the Send Mail Task  
- The following table lists the custom log entries for the Send Mail task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries for the Send Mail task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

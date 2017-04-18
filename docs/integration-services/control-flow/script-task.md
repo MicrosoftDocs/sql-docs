@@ -62,7 +62,7 @@ manager: "jhubbard"
  You can set these properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
 ### Configuring the Script Task in the Designer  
- The following table describes the **ScriptTaskLogEntry** event that can be logged for Script task. The **ScriptTaskLogEntry** event is selected for logging on the **Details** tab of the **Configure SSIS Logs** dialog box. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table describes the **ScriptTaskLogEntry** event that can be logged for Script task. The **ScriptTaskLogEntry** event is selected for logging on the **Details** tab of the **Configure SSIS Logs** dialog box. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

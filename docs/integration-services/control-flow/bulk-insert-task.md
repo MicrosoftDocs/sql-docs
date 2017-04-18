@@ -60,7 +60,7 @@ manager: "jhubbard"
 -   The Bulk Insert task does not log error-causing rows. If you must capture this information, use the error outputs of data flow components to capture error-causing rows in an exception file.  
   
 ## Custom Log Entries Available on the Bulk Insert Task  
- The following table lists the custom log entries for the Bulk Insert task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries for the Bulk Insert task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

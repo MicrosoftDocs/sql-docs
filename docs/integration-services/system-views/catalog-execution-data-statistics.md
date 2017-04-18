@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   By default, when an execution is started, the information about the number of rows that are sent is not logged.  
   
--   To view this data for a given package execution, set the logging level to **Verbose**. For more information, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md).  
+-   To view this data for a given package execution, set the logging level to **Verbose**. For more information, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
   
 ## Permissions  
  This view requires one of the following permissions:  

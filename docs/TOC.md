@@ -1,6 +1,6 @@
 # [Using relational databases](./relational-databases/index.md)
 # [SQL Server on Linux](./linux/index.md)		
-# [R on SQL Server](./advanced-analytics/r-services/index.md)		
+# [Advanced analytics on SQL Server](./advanced-analytics/index.md)
 # [SQL Server](./sql-server/index.md)		
 		
 # Languages		

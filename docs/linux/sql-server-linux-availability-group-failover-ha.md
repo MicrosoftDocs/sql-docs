@@ -56,7 +56,7 @@ To manually failover an availability group resource named *ag_cluster* to cluste
 >[!IMPORTANT]
 >After you manually failover a resource, you need to remove a location constraint that is automatically added during the move.
 
-### Remove the location constraint
+#### Remove the location constraint
 
 During a manual move, the `pcs` command `move` or `crm` command `migrate` adds a location constraint for the resource to be placed on the new target node. To see the new constraint, run the following command after manually moving the resource:
 
@@ -121,10 +121,7 @@ For more information:
  [SLES Admininstration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-#### Manual failover availability group on RHEL or Ubuntu clusters with pacemaker. 
-
-[!INCLUDE [Move-Resource](../includes/ss-linux-cluster-pacemaker-configure-rhel-ubuntu-move-resource.md)]
-
+#### Manual move when cluster tools are not responsive 
 
 In extreme cases, if a user cannot use the cluster management tools for interacting with the cluster (i.e. the cluster is unresponsive, cluster management tools have a faulty behaviour), the user might have to perform a failover bypassing the external cluster manager. This is not recommended for regular operations, and should be used within cases cluster is failing to execute the failover action using the cluster management tools.
 
@@ -166,7 +163,7 @@ If you cannot failover the availability group with the cluster management tools,
    sudo pcs resource cleanup <**resourceName**>
    ```
 
-## Pacemaker notification for availability group resource promotion
+## <a name="pacemakerNotify"></a>Pacemaker notification for availability group resource promotion
 
 Before the CTP 1.4 release, the Pacemaker resource agent for availability groups could not know if a replica marked as `SYNCHRONOUS_COMMIT` was really up-to-date or not. It was possible that the replica had stopped synchronizing with the primary but was not aware. Thus the agent could promote an out-of-date replica to primary - which, if successful, would cause data loss. 
 

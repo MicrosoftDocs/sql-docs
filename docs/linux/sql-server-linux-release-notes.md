@@ -160,10 +160,7 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See details as appropriate for your Linux distribution. 
 
-   - [RHEL](sql-server-linux-availability-group-cluster-rhel.md#sync-commit)
-   - [SLES](sql-server-linux-availability-group-cluster-sles.md#sync-commit)
-   - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#sync-commit)
-
+   - [Possible data loss during manual failover](sql-server-linux-availability-group-failover-ha.md#pacemakerNotify)
 
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
@@ -334,10 +331,7 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See details as appropriate for your Linux distribution. 
 
-   - [RHEL](sql-server-linux-availability-group-cluster-rhel.md#sync-commit)
-   - [SLES](sql-server-linux-availability-group-cluster-sles.md#sync-commit)
-   - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#sync-commit)
-
+   - [Possible data loss during manual failover](sql-server-linux-availability-group-failover-ha.md#pacemakerNotify)
 
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
@@ -488,9 +482,8 @@ The following sections describe known issues with this release of SQL Server vNe
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 - Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See 
-   - [RHEL](sql-server-linux-availability-group-cluster-rhel.md#sync-commit)
-   - [SLES](sql-server-linux-availability-group-cluster-sles.md#sync-commit)
-   - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#sync-commit)
+
+   - [Possible data loss during manual failover](sql-server-linux-availability-group-failover-ha.md#pacemakerNotify)
 
    
 #### Full-Text Search

@@ -44,7 +44,7 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
 Connect to the SQL Server instance hosting the new primary replica and remove the faulty secondary replica from the configuration. 
 
 ```Transact SQL
-ALTER AVAILABILITY GROUP <agName> REMOVE REPLICA ON NODE <instanceName>
+ALTER AVAILABILITY GROUP agName REMOVE REPLICA ON NODE instanceName
 ```
 
 The instance of SQL Server that hosted the secondary replica recovers.

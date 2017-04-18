@@ -129,6 +129,24 @@ This allows read-only access to the share from 192.168.1.1 IP address and read/w
         sudo exportfs -rav
         sudo showmount -e
 
+### Configure Secondary Server
+-   Run the following on your install NFS and start the service
+
+        sudo apt-get install nfs-common #For Ubuntu
+        sudo yum install -y nfs-common 
+        
+-   Create an empty directory for mounting and set the appropriate permissions and ownership
+    
+    mkdir /var/opt/mssql/tlogs 
+    chown root:root /var/opt/mssql/tlogs 
+    chmod 0550 /var/opt/mssql/tlogs 
+    
+-   Add the following to /etc/fstab to persist the mount
+    <server_ip_address>:/var/opt/mssql/tlogs /var/opt/mssql/tlogs nfs timeo=14,intr 0 0 
+
+-   Mount the shares
+    mount -a 
+
 # Setup Log Shipping via T-SQL
 
 - Run this script from your primary server

@@ -104,6 +104,7 @@ As described in the picture above, a log shipping session involves the following
 
 ### Configure Primary Server
 -   Run the following on your install NFS and start the service
+    
     	sudo apt-get install nfs-utils #For Ubuntu
     	sudo yum -y install nfs-utils #For RHEL/CentOS
         sudo systemctl enable rpcbind
@@ -115,16 +116,15 @@ As described in the picture above, a log shipping session involves the following
 
         mkdir /var/opt/mssql/tlogs
         chown mssql:mssql /var/opt/mssql/tlogs
-        chmod 0700 /var/opt/mssql/tlogs
+        chmod 0770 /var/opt/mssql/tlogs
 
 -   Add the following line to /etc/expots file
 
-        /var/opt/mssql/tlog 192.168.1.1(ro,sync,no_subtree_check,no_root_squash) 192.168.1.11(rw,sync, no_subtree_check,no_root_squash)
+        /var/opt/mssql/tlog 192.168.1.1(ro,sync,no_subtree_check,no_root_squash) 192.168.1.11(ro,sync, no_subtree_check,no_root_squash)
         
-This allows read-only access to the share from 192.168.1.1 IP address and read/write access from 192.168.1.11 IP address. The list of servers may have one or more entries (two in the example above), they may be referred to using IP addresses as in the example above, a subnet specification (such as 192.168.1.0/24), or * (for any).
 
 -   Start exporting and verify the exports by running the following commands:
--  
+
         sudo exportfs -rav
         sudo showmount -e
 
@@ -144,7 +144,8 @@ This allows read-only access to the share from 192.168.1.1 IP address and read/w
     <server_ip_address>:/var/opt/mssql/tlogs /var/opt/mssql/tlogs nfs timeo=14,intr 0 0 
 
 -   Mount the shares
-    mount -a 
+
+        mount -a 
 
 # Setup Log Shipping via T-SQL
 

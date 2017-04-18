@@ -45,10 +45,9 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 ### SQL Server Machine Learning Services
 - SQL Server R Services has a new name, to reflect support for the Python language in CTP 2.0. 
 You can now use SQL Server Machine Learning Services (In-Database) to run either R or Python scripts in SQL Server. 
-Or, install Microsoft Machine Learning Server (Standalone) to deploy and consume R and Python models that don’t require SQL Server.
-Both platforms include new MicrosoftML algorithms for distributed machine learning, and the latest version of Microsoft R (version 9.1.0).
-- For more information, see [What’s New for Machine Learning](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)
-
+Or, install Microsoft Machine Learning Server (Standalone) to deploy and consume R and Python models that don’t require SQL Server. 
+- Both platforms include new MicrosoftML algorithms for distributed machine learning, and the latest version of Microsoft R (version 9.1.0).
+- For more information, see [What’s new for Machine Learning](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 

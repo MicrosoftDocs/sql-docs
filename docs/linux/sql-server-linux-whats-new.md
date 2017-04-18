@@ -42,6 +42,8 @@ The CTP 2.0 release contains the following improvements and fixes:
 - Resumable Online Index Rebuilds.
 - Adaptive Query Processing.
 - Availability Group Listener.
+- Added UTF-8 encoding for system files, including log files.
+- Fixed In-memory databases location limitation. 
 - Production support for Early Adoption Program (EAP) customers.  Sign up [here](http://aka.ms/eapsignup).
 
 

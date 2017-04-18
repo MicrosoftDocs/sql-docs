@@ -37,7 +37,8 @@ Resource governance is designed to identify and prevent problems that are common
 
 You can use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to manage the resources used by the external runtimes. This includes Python scripts that are started from a remote terminal but executed using the SQL Server computer as the compute context.
 
-> [!NOTE] Resource Governor is available in Enterpprise Edition.
+> [!NOTE] 
+> Resource Governor is available in Enterprise Edition.
 
 ## How to Use Resource Governor to Manage Python Execution
 

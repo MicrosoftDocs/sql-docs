@@ -27,7 +27,6 @@
 ### [New Components](python/new-components-in-sql-server-to-support-python-integration.md)
 ### [Security](python/security-overview-sql-server-python-services.md)
 ## [Monitoring](python/managing-and-monitoring-python-solutions.md)
-<!-- ### [Monitoring Python Services](python/monitoring-python-services.md)-->
 <!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
 <!-- ### [Extended Events for Python](python/extended-events-for-python.md)-->
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
@@ -69,7 +68,6 @@
 ### [Create a Stored Procedure Using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## Performance 
-
 
 ### [Performance Tuning - Overview](r/sql-server-r-services-performance-tuning.md)
 ### [Performance Tuning - SQL Server Configuration (Machine Learning Services)](r/sql-server-configuration-r-services.md)

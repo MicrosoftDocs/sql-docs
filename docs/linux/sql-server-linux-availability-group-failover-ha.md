@@ -35,7 +35,17 @@ Use the cluster management tools to failover an availability group managed by an
 
 ### Manual failover examples
 
-Manually fail over the availability group with the external cluster management tools. Do not initiate failover with Transact-SQL.
+Manually fail over the availability group with the external cluster management tools. Under normal operations, do not initiate failover with Transact-SQL. If the external cluster management tools do not respond, you can force the availability group to failover. For instructions to force the manual failover, see [Manual move when cluster tools are not responsive](#forceManual).
+
+Complete the manual failover in two steps. 
+
+1. Move the availability group resource from the cluster node that owns the resources to a new node.
+
+   The cluster manager moves the availability group resource and adds a location constraint. This constraint configures the resource to run on the new node. You must remove this constraint in order to move either manually or automatically failover in the future.
+
+2. Remove the location constraint.
+
+#### 1. Manually fail over
 
 To manually failover an availability group resource named *ag_cluster* to cluster node named *nodeName2*, run appropriate command for your distribution:
 
@@ -56,7 +66,7 @@ To manually failover an availability group resource named *ag_cluster* to cluste
 >[!IMPORTANT]
 >After you manually failover a resource, you need to remove a location constraint that is automatically added during the move.
 
-#### Remove the location constraint
+#### 2. Remove the location constraint
 
 During a manual move, the `pcs` command `move` or `crm` command `migrate` adds a location constraint for the resource to be placed on the new target node. To see the new constraint, run the following command after manually moving the resource:
 
@@ -77,7 +87,6 @@ You need to remove the location constraint so future moves - including automatic
 To remove the constraint run the following command. 
 
 - **RHEL/Ubuntu example**
-
 
    In this example `ag_cluster-master` is the name of the resource that was moved. 
 
@@ -121,7 +130,7 @@ For more information:
  [SLES Admininstration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 
-#### Manual move when cluster tools are not responsive 
+### <a name="forceManual"></a> Manual move when cluster tools are not responsive 
 
 In extreme cases, if a user cannot use the cluster management tools for interacting with the cluster (i.e. the cluster is unresponsive, cluster management tools have a faulty behaviour), the user might have to perform a failover bypassing the external cluster manager. This is not recommended for regular operations, and should be used within cases cluster is failing to execute the failover action using the cluster management tools.
 
@@ -212,15 +221,25 @@ sudo pcs resource update <**ag1**> required_copies_to_commit=0
 
 Once overridden, the resource agent will use the new setting for `REQUIRED_COPIES_TO_COMMIT` and stop computing it. This means that users have to manually update it accordingly (for example, if they increase the number of replicas).
 
-The table below describes the outcome of an outage for primary or secondary replicas in different availability group resource configurations:
+The tables below describes the outcome of an outage for primary or secondary replicas in different availability group resource configurations:
 
-| | Availability group with 2 sync replicas |  |Availability Group with 3 sync replicas | | |
-|---|---|---|---|---|---|
-| |`REQUIRED_COPIES_TO_COMMIT=0`|`REQUIRED_COPIES_TO_COMMIT=1`* |`REQUIRED_COPIES_TO_COMMIT=0` |`REQUIRED_COPIES_TO_COMMIT=1`* |`REQUIRED_COPIES_TO_COMMIT=2` 
-|**Primary outage** |User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W |Cluster will automatically issue FAILOVER (no data loss) -> New primary is RO until former primary recovers and joins availability group as secondary | User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W | Cluster will automatically issue FAILOVER (no data loss) -> New primary is R/W |Cluster will automatically issue FAILOVER (no data loss) -> New primary is R/O until former primary recovers and joins availability group as secondary
-|**One secondary replica outage** |Primary is R/W, running exposed to data loss |Primary is RO until secondary recovers |Primary is R/W | Primary is R/W Primary is RO
+### Availability group - 2 sync replicas
 
-* SQL Server resource agent for Pacemaker default behavior
+| |Primary outage |One secondary replica outage
+|:---|:--- |:--- |
+|`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W |Primary is R/W, running exposed to data loss
+|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER (no data loss) -> New primary is RO until former primary recovers and joins availability group as secondary |Primary is RO until secondary recovers
+
+\* SQL Server resource agent for Pacemaker default behavior.
+
+### Availability group - 3 sync replicas
+
+| |Primary outage |One secondary replica outage
+|:---|:--- |:--- |
+|`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W |Primary is R/W
+|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER (no data loss) -> New primary is RW |Primary is R/W secondary is RO
+
+\* SQL Server resource agent for Pacemaker default behavior.
 
 ## Database level monitoring and failover trigger
 

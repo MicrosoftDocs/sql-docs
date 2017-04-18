@@ -63,7 +63,6 @@ As described in the picture above, a log shipping session involves the following
         [tlogs]
         path=/var/opt/mssql/tlogs
         available=yes
-        valid users=mssql
         read only=yes
         browsable=yes
         public=yes

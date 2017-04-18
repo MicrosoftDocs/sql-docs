@@ -172,11 +172,8 @@ As described in the picture above, a log shipping session involves the following
                     ,@overwrite = 1 
       IF (@@ERROR = 0 AND @SP_Add_RetCode = 0) 
       BEGIN 
-
       DECLARE @LS_BackUpScheduleUID     As uniqueidentifier 
       DECLARE @LS_BackUpScheduleID      AS int 
-
-
       EXEC msdb.dbo.sp_add_schedule 
                     @schedule_name =N'LSBackupSchedule_40.86.189.2341' 
                     ,@enabled = 1 
@@ -191,21 +188,14 @@ As described in the picture above, a log shipping session involves the following
                     ,@active_end_time = 235900 
                     ,@schedule_uid = @LS_BackUpScheduleUID OUTPUT 
                     ,@schedule_id = @LS_BackUpScheduleID OUTPUT 
-
       EXEC msdb.dbo.sp_attach_schedule 
                     @job_id = @LS_BackupJobId 
                     ,@schedule_id = @LS_BackUpScheduleID  
-
       EXEC msdb.dbo.sp_update_job 
                     @job_id = @LS_BackupJobId 
                     ,@enabled = 1 
-
-
       END 
-
-
       EXEC master.dbo.sp_add_log_shipping_alert_job 
-
       EXEC master.dbo.sp_add_log_shipping_primary_secondary 
                     @primary_database = N'SampleDB' 
                     ,@secondary_server = N'<id_address_of_your_secondary_server>' 
@@ -231,14 +221,10 @@ As described in the picture above, a log shipping session involves the following
                     ,@copy_job_id = @LS_Secondary__CopyJobId OUTPUT 
                     ,@restore_job_id = @LS_Secondary__RestoreJobId OUTPUT 
                     ,@secondary_id = @LS_Secondary__SecondaryId OUTPUT 
-
       IF (@@ERROR = 0 AND @LS_Add_RetCode = 0) 
       BEGIN 
-
       DECLARE @LS_SecondaryCopyJobScheduleUID  As uniqueidentifier 
       DECLARE @LS_SecondaryCopyJobScheduleID   AS int 
-
-
       EXEC msdb.dbo.sp_add_schedule 
                     @schedule_name =N'DefaultCopyJobSchedule' 
                     ,@enabled = 1 
@@ -253,15 +239,11 @@ As described in the picture above, a log shipping session involves the following
                     ,@active_end_time = 235900 
                     ,@schedule_uid = @LS_SecondaryCopyJobScheduleUID OUTPUT 
                     ,@schedule_id = @LS_SecondaryCopyJobScheduleID OUTPUT 
-
       EXEC msdb.dbo.sp_attach_schedule 
                     @job_id = @LS_Secondary__CopyJobId 
                     ,@schedule_id = @LS_SecondaryCopyJobScheduleID  
-
       DECLARE @LS_SecondaryRestoreJobScheduleUID      As uniqueidentifier 
       DECLARE @LS_SecondaryRestoreJobScheduleID AS int 
-
-
       EXEC msdb.dbo.sp_add_schedule 
                     @schedule_name =N'DefaultRestoreJobSchedule' 
                     ,@enabled = 1 
@@ -276,21 +258,13 @@ As described in the picture above, a log shipping session involves the following
                     ,@active_end_time = 235900 
                     ,@schedule_uid = @LS_SecondaryRestoreJobScheduleUID OUTPUT 
                     ,@schedule_id = @LS_SecondaryRestoreJobScheduleID OUTPUT 
-
       EXEC msdb.dbo.sp_attach_schedule 
                     @job_id = @LS_Secondary__RestoreJobId 
                     ,@schedule_id = @LS_SecondaryRestoreJobScheduleID  
-
-
       END 
-
-
       DECLARE @LS_Add_RetCode2   As int 
-
-
       IF (@@ERROR = 0 AND @LS_Add_RetCode = 0) 
       BEGIN 
-
       EXEC @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
                     @secondary_database = N'SampleDB' 
                     ,@primary_server = N'<id_address_of_your_primary_server>' 
@@ -302,13 +276,9 @@ As described in the picture above, a log shipping session involves the following
                     ,@threshold_alert_enabled = 1 
                     ,@history_retention_period = 5760 
                     ,@overwrite = 1 
-
       END 
-
-
       IF (@@error = 0 AND @LS_Add_RetCode = 0) 
       BEGIN 
-
       EXEC msdb.dbo.sp_update_job 
                     @job_id = @LS_Secondary__CopyJobId 
                     ,@enabled = 1 

@@ -59,32 +59,63 @@ CREATE TABLE
   
   
 ## Arguments  
- *database_name*  
+This document lists only arguments pertaining to SQL graph. For a full list and description of supported arguments, see [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
+
+ *database_name*    
  Is the name of the database in which the table is created. *database_name* must specify the name of an existing database. If not specified, *database_name* defaults to the current database. The login for the current connection must be associated with an existing user ID in the database specified by *database_name*, and that user ID must have CREATE TABLE permissions.  
   
- *schema_name*  
+ *schema_name*    
  Is the name of the schema to which the new table belongs.  
   
- *table_name*  
- Is the name of the new table. Table names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). *table_name* can be a maximum of 128 characters, except for local temporary table names (names prefixed with a single number sign (#)) that cannot exceed 116 characters.  
+ *table_name*    
+ Is the name of the node or edge table. Table names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). *table_name* can be a maximum of 128 characters, except for local temporary table names (names prefixed with a single number sign (#)) that cannot exceed 116 characters.  
   
  NODE   
  Creates a node table.
 
  EDGE  
- Create an edge table.  
+ Creates an edge table.  
   
 ## Remarks  
- 
-  
-## Permissions  
+Creating a temporary table as node or edge table is not supported.  
 
+Creating a node or edge table as a temporal table is not supported.
+
+Stretch database is not supported for node or edge table.
+
+Node or edge tables cannot be external tables (no polybase support for graph tables). 
   
+ 
 ## Examples  
   
-### A. Create a ...  
- The following example shows ...  
-  
+### A. Create a `NODE` table
+ The following example shows how to create a `NODE` table
+
+```
+ CREATE TABLE Person (
+        ID INTEGER PRIMARY KEY, 
+        name VARCHAR(100), 
+        email VARCHAR(100)
+ ) AS NODE;
+```
+
+### B. Create an `EDGE` table
+The following examples show how to create `EDGE` tables
+
+```
+ CREATE TABLE friends (
+    id integer PRIMARY KEY,
+    start_date date
+ ) AS EDGE;
+
+```
+
+```
+ -- Create a likes edge table, this table does not have any user defined attributes   
+ CREATE TABLE likes AS EDGE;
+
+```
+
 
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

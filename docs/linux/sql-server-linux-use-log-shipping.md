@@ -135,12 +135,13 @@ As described in the picture above, a log shipping session involves the following
         
 -   Create an empty directory for mounting and set the appropriate permissions and ownership
     
-    mkdir /var/opt/mssql/tlogs 
-    chown root:root /var/opt/mssql/tlogs 
-    chmod 0550 /var/opt/mssql/tlogs 
+      mkdir /var/opt/mssql/tlogs 
+      chown root:root /var/opt/mssql/tlogs 
+      chmod 0550 /var/opt/mssql/tlogs 
     
 -   Add the following to /etc/fstab to persist the mount
-    <server_ip_address>:/var/opt/mssql/tlogs /var/opt/mssql/tlogs nfs timeo=14,intr 0 0 
+
+    	<server_ip_address>:/var/opt/mssql/tlogs /var/opt/mssql/tlogs nfs timeo=14,intr 0 0 
 
 -   Mount the shares
 
@@ -166,8 +167,6 @@ As described in the picture above, a log shipping session involves the following
                     ,@backup_job_id = @LS_BackupJobId OUTPUT 
                     ,@primary_id = @LS_PrimaryId OUTPUT 
                     ,@overwrite = 1 
-
-
       IF (@@ERROR = 0 AND @SP_Add_RetCode = 0) 
       BEGIN 
 
@@ -217,8 +216,6 @@ As described in the picture above, a log shipping session involves the following
       DECLARE @LS_Secondary__RestoreJobId      AS uniqueidentifier 
       DECLARE @LS_Secondary__SecondaryId AS uniqueidentifier 
       DECLARE @LS_Add_RetCode    As int 
-
-
       EXEC @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
                     @primary_server = N'<id_address_of_your_primary_server>' 
                     ,@primary_database = N'SampleDB1' 

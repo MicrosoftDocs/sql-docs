@@ -20,7 +20,7 @@ manager: "jhubbard"
 
 This topic describes the R libraries that are included and the data types that are supported in the following products:
 
-+ SQL Server 2016 R Services (In-Datbase)
++ SQL Server 2016 R Services (In-Database)
 + SQL Server Machine Learning Services (In-Database)
 
 This topic also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between R and SQL Server.
@@ -38,7 +38,7 @@ To find the version of R included in a particular version of Microsoft R Server,
 
 Additional information about recent releases can be found in the [R Server - What’s New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) notes.
 
-Note that the package management system in SQL Server means that multiple versions of an R package can be installed on the same computer, with multiple users sharing the same package, or using different versions of the same package. For more information, see [R Package Management in SQL Server](r-package-management-for-sql-server-r-services).
+Note that the package management system in SQL Server means that multiple versions of an R package can be installed on the same computer, with multiple users sharing the same package, or using different versions of the same package. For more information, see [R Package Management in SQL Server](r-package-management-for-sql-server-r-services.md).
 
 ## R and SQL Data Types
 

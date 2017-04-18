@@ -41,9 +41,9 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
    1. The availability group is in an unsupported configuration and any remaining secondary replicas cannot be recovered. 
 
 **Workaround**
-Connect to the SQL Server instance hosting the new primary replica and remove the faulty secondary replica from the configuration. 
+Connect to the SQL Server instance hosting the new primary replica and remove the faulty secondary replica from the configuration.
 
-```Transact SQL
+```Transact-SQL
 ALTER AVAILABILITY GROUP agName REMOVE REPLICA ON NODE instanceName
 ```
 

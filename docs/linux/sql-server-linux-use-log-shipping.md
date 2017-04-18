@@ -46,7 +46,6 @@ As described in the picture above, a log shipping session involves the following
 
 ### Configure Primary Server
 -   Run the following on your install Samba
-    
     	sudo apt-get install samba #For Ubuntu
     	sudo yum -y install samba #For RHEL/CentOS
     	

@@ -264,7 +264,7 @@ Note that you can return parameter values together with the results of the store
 
 [!INCLUDE[tsql](../includes/tsql-md.md)] and R support different data types; therefore, numeric data types can suffer loss of precision during conversion.
 
-For more information about implicit data type conversion, see [Working with R Data Types](r/r/r-libraries-and-data-types.md).
+For more information about implicit data type conversion, see [Working with R Data Types](r/r-libraries-and-data-types.md).
 
 ### Variable scoping error "The sample data set for the analysis has no variables" when using the transformFunc parameter
 

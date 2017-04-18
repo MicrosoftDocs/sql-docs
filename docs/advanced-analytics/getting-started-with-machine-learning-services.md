@@ -57,8 +57,8 @@ This demo illustrates how a ski rental business might use machine learning to pr
 See this page for links to tutorials and end-to-end solutions for using R in SQL Server.
 + [SQL Server R Services Tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-See these samples to learn how to run Python in SQL Server, build a model using Python and use it to score SQL Server data, or deploy a model to a web service using Machine Learning Server.
-+ [Python tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials/#bkmk_pythontutorials)
+See the machine learning tutorials page for Pthon examples: how to run Python in SQL Server, build a model using Python and use it to score SQL Server data, and deploy a model to a web service using Machine Learning Server.
++ [Machine Learning Tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
 This example demonstrates how to use unsupervised learning, using the rxKmeans library on SQL Server, to segment customers based on sales data.  (English only)
 + [Clustering in SQL Server R Services](https://www.microsoft.com/sql-server/developer-get-started/rclustering)

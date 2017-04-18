@@ -32,7 +32,6 @@ This topic describes what's new for SQL Server vNext running on Linux.
 The CTP 2.0 release contains the following improvements and fixes:
 
 - Added **Log Shipping** functionality for SQL Server Agent.
-- Modified service control commands in mssql-conf. Learn more at [mssql-conf](sql-server-linux-configure-mssql-conf.md).
 - Localized messages of mssql-conf.
 - Linux path formatting are now compatible throughout the SQL Server Engine. But support for "C:\" prefixed paths will continue.
 - Enabled DMV **sys.dm_os_file_exists**.

@@ -1,7 +1,7 @@
 ---
-title: "What is RevoScalePy | Microsoft Docs"
+title: "What is revoscalepy | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "04/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,12 +15,24 @@ manager: "jhubbard"
 ---
 # What is revoscalepy
 
-The **revoscalepy** package for Python contains objects, transformation, and algorithms similar to those provided for R in the RevoScaleR package. With this library, you can create a compute context, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more.
+**revoscalepy** (note: all lower case) is a new API provided by Microsoft to support distributed computing, remote compute contexts, and high-performance algorithms for Python.
+
+It is based on the **RevoScaleR** package for R, which was provided in Microsoft R Server and SQL Server R Services. It provides much the same features:
+
++ Multiple compute contexts
++ Functions equivalent to those in RevoScaleR for data transformation and visualization
++ Scalable, fast machine learning algorithms that provide distributed or parallel processing
++ Use of the Intel math libraries
 
 > [!NOTE]
-> This section is under development.
-> 
-> Python support is a new feature in SQL Server vNext and is in prerelease. Look for more information soon.
+> Python support is a new feature in SQL Server vNext and is in prerelease.
+
+## Versions and Supported Platforms
+
+The **revoscalepy** library is available only when you install one of the following Microsoft products:
+
++ Machine Learning Services, in SQL Server vNext CTP 2.0
++ Microsoft Machine Learning Server 9.1.0, using SQL Server vNext CTP 2.0 setup
 
 ## Examples
 
@@ -48,5 +60,4 @@ This example demonstrates how to run Python using an instance of SQL server as t
 
 ## Function List
 
-> [!NOTE]
-> More information on specific functions will be published soon.
+More information on specific functions will be published soon.

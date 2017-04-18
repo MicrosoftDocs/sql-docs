@@ -28,7 +28,7 @@ ms.assetid:
 
 #What is SQL Server log shipping?
 
-SQL Server Log shipping is a HA-like configuration where a database from a primary server is replicated onto one or more secondary servers The process of transferring the transaction log files and restoring is automated across the SQL Servers. As the process result there are two copies of the data on two separate locations. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
+SQL Server Log shipping is a HA configuration where a database from a primary server is replicated onto one or more secondary servers The process of transferring the transaction log files and restoring is automated across the SQL Servers. As the process result there are two copies of the data on two separate locations. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
 
   ![Logshipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
 

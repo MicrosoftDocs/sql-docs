@@ -1041,6 +1041,11 @@
    "source_path" : "docs/integration-services/packages/integration-services-project-conversion-wizard.md",
    "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
    "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/ssdt/sql-server-data-tools-ssdt-release-candidate.md",
+   "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
+   "redirect_document_id": false
   }
 
  ]

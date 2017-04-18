@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: What's New for SQL Server vNext CTP 1.3 on Linux | Microsoft Docs
+title: What's New for SQL Server vNext CTP 2.0 on Linux | Microsoft Docs
 description: This topic highlights what's new for the current release of SQL Server vNext on Linux.
 author: rothja 
 ms.author: jroth 
@@ -32,17 +32,17 @@ This topic describes what's new for SQL Server vNext running on Linux.
 The CTP 2.0 release contains the following improvements and fixes:
 
 - Added **Log Shipping** functionality for SQL Server Agent.
-- Modified service control commands in mssql-conf. Learn more at [mssql-conf]().
+- Modified service control commands in mssql-conf. Learn more at [mssql-conf](sql-server-linux-configure-mssql-conf.md).
 - Localized messages of mssql-conf.
 - Linux path formatting are now compatible throughout the SQL Server Engine. But support for "C:\" prefixed paths will continue.
-- Enabled DMV sys.dm_os_file_exists.
-- Enabled DMV sys.fn_trace_gettable.
+- Enabled DMV **sys.dm_os_file_exists**.
+- Enabled DMV **sys.fn_trace_gettable**.
 - Added [CLR Strict Security mode](/sql/database-engine/configure-windows/clr-strict-security).
 - SQL Graph.
 - Resumable Online Index Rebuilds.
 - Adaptive Query Processing.
 - Availability Group Listener.
-- Production support for Early Adoption Program (EAP) customers.  Sign up [here](http://aka.ms/eapsignup).
+- Production support for Early Adoption Program (EAP) customers. Sign up [here](http://aka.ms/eapsignup).
 
 
 ## CTP 1.4

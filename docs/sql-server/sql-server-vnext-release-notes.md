@@ -40,12 +40,11 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
    1. After upgrade, an automatic failover incidentally occurs and newly upgraded secondary becomes primary before completing upgrade for all secondary replicas in the availability group. Old primary is now a secondary which is lower version than primary.
    1. The availability group is in an unsupported configuration and any remaining secondary replicas cannot be recovered. 
 
-**Workaround**
-Connect to the SQL Server instance hosting the new primary replica and remove the faulty secondary replica from the configuration.
+- **Workaround** Connect to the SQL Server instance hosting the new primary replica and remove the faulty secondary replica from the configuration.
 
-`ALTER AVAILABILITY GROUP agName REMOVE REPLICA ON NODE instanceName`
+   `ALTER AVAILABILITY GROUP agName REMOVE REPLICA ON NODE instanceName`
 
-The instance of SQL Server that hosted the secondary replica recovers.
+   The instance of SQL Server that hosted the secondary replica recovers.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 

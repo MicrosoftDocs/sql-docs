@@ -21,15 +21,14 @@ This code sample demonstrates how you can create a logistic regression model usi
 
 The **revoscalepy** package for Python contains objects, transformation, and algorithms similar to those provided for the R language's **RevoScaleR** package. With this library, you can create a compute context, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more.
 
-For more information about revoscalepy, see [What is revoscalepy?](../python/what-is-revoscalepy.md)
+For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.md)
 
-You would run this example as a Python script from the command line, or in a Python development environment.
+## Prerequisites
 
-Note that the entire operation is performed using an instance of SQL Server as the compute context.
-
-[!NOTE] 
+> [!IMPORTANT]
 > To run Python code in SQL Server, you must have installed SQL Server vNext CTP 2.0, with the feature, **Machine Learning Services** with Python. Other versions of SQL Server do not support Python integration.
 
+To run this code, execute the sample as a Python script from the command line, or by using a Python development environment that includes the Python integration components provide in this release.
 
 ## Sample Code
 
@@ -41,6 +40,8 @@ This sample contains the following steps:
 4. Call rxLinMod and define the formula to train the model
 5. Generate a set of predictions based on the original data set
 6. Create a summary based on the predicted values
+
+All operations are performed using an instance of SQL Server as the compute context.
 
 In general, the process of calling Python in a remote compute context is very much like that used for using R in a remote compute context.
 
@@ -114,3 +115,7 @@ def test_linmod_sql():
 test_linmod_sql()
 
 ```
+
+## See Also
+
+[Deploy and Consume Python Models](../python/publish-consume-python-code.md)

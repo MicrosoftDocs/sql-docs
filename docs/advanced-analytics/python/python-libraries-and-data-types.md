@@ -38,8 +38,8 @@ As a result, whenever you use data from  [!INCLUDE[ssNoVersion](../../includes/s
 
 This table lists the implicit conversions that are provided. Other data types are not supported.
 
-|SQLtype|Python type|Comment|
-|-|-|-|
+|SQLtype|Python type|
+|-|-|
 |**bigint**|`numeric`|
 |**binary**|`raw`|
 |**bit**|`bool`|

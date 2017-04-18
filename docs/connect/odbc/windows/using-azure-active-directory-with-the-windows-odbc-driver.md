@@ -1,7 +1,7 @@
 ---
 title: "Using Azure Active Directory with the Windows ODBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/12/2017"
+ms.date: "04/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -116,8 +116,8 @@ The following sample shows the code required to connect to SQL Server using Azur
     ACCESSTOKEN *pAccToken = malloc(sizeof(ACCESSTOKEN) + dataSize);
     pAccToken->dataSize = dataSize;
     // Expand access token with padding bytes
-    for(int i = 0; i < dataSize; i += 2) {
-        pAccToken->data[i] = accessToken[i];
+    for(int i = 0, j = 0; i < dataSize; i += 2, j++) {
+        pAccToken->data[i] = accessToken[j];
         pAccToken->data[i+1] = 0;
     }
     ...

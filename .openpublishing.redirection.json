@@ -1191,6 +1191,11 @@
    "source_path" : "docs/integration-services/performance/custom-messages-for-logging.md",
    "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
    "redirect_document_id": false
+  },
+  {
+   "source_path" : "docs/ssdt/sql-server-data-tools-ssdt-release-candidate.md",
+   "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
+   "redirect_document_id": false
   }
 
  ]

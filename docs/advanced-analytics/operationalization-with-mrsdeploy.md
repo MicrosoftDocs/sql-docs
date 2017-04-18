@@ -16,28 +16,38 @@ manager: "jhubbard"
 
 # Deploy and Consume Analytics
 
+
 Microsoft R Server includes an operationalization feature that make it easier to:
 
 + Publish and manage R and Python models and code in the form of web services
 + Consume these services within client applications to affect business results
 
-SQL Server vNext CP 2.0 now includes this feature as an option, although it was not installed in previous versions of SQL Server R Services.
-
+SQL Server vNext CP 2.0 now includes this feature as an option, although it was not installed in previous versions of SQL Server R Services. This topic provides information about how to enable and configure the feature.
 This topic provides information about how to enable and configure the feature.
 
-## What's New
+## What's New in This Feature
 
 + Role-based access control to analytical web services.  These roles determine who can publish, update, and delete their own web services, those who can also update and delete the web services published by other users, and who can only list and consume web services. Learn more about [roles](https://msdn.microsoft.com/microsoft-r/operationalize/security-roles.md).
 
-+ Scoring perform boosts with [real time scoring of web services](https://msdn.microsoft.com/microsoft-r/operationalize/data-scientist-manage-services.md#realtime) with a supported R model object.
++ Scoring performance
+  
+  Use [real time scoring of web services](https://msdn.microsoft.com/microsoft-r/operationalize/data-scientist-manage-services.md#realtime) with a supported R model object to improve the speeed of scoring operations
 
 + Publish Python code as a web service
 
-+ [Asynchronously batch consumption](https://msdn.microsoft.com/microsoft-r/operationalize/data-scientist-batch-mode.md) for large input data: Web services can now be consumed asynchronously via batch execution.
+  For more information, see [Publish and consume Python code](./python/publish-consume-python-code.md).
 
-+ Autoscaling of a grid of web and compute nodes on Azure. A script template will be offered to easily spin up a set of R Server VMs in Azure, configure them as a grid for operationalizing analytics and remote execution. This grid can be scaled up or down based on CPU usage.
++ [Asynchronous batch consumption](https://msdn.microsoft.com/microsoft-r/operationalize/data-scientist-batch-mode.md) for large input data
 
-+ [Asynchronous remote execution](https://msdn.microsoft.com/microsoft-r/operationalize/remote-execution.md#async) is now supported using the `mrsdeploy` R package.  To continue working in your development environment during the remote script execution, execute your R script asynchronously using the `async` parameter. This is particularly useful when you are running scripts that have long execution times.
+  Web services can now be consumed asynchronously via batch execution. 
+
++ Autoscaling of a grid of web and compute nodes on Azure
+
+  A script template is provided to let you easily spin up a set of R Server VMs in Azure, and then configure them as a grid for operationalizing analytics and remote execution. This grid can be scaled up or down based on CPU usage.
+
++ [Asynchronous remote execution](https://msdn.microsoft.com/microsoft-r/operationalize/remote-execution.md#async)  now supported using the `mrsdeploy` R package
+
+  To continue working in your development environment during the remote script execution, execute your R script asynchronously using the `async` parameter. This is particularly useful when you are running scripts that have long execution times.
 
 ## Background
 

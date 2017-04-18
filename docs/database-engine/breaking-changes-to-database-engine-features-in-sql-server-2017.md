@@ -28,7 +28,6 @@ manager: "jhubbard"
 -  CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. Beginning with [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. clr strict security is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` CLR assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. When `clr strict security` is disabled, a CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire **sysadmin** privileges. After enabling strict security, any assemblies that are not signed will fail to load. You must either alter or drop and recreate each assembly so that it is signed with a certificate or asymmetric key that has a corresponding login with the `UNSAFE ASSEMBLY` permission on the server. For more information, see [clr strict security](../database-engine/configure-windows/clr-strict-security.md).  
   
   
-  
 ## Previous Versions  
 
 -   [Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)  

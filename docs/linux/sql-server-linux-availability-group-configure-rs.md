@@ -111,7 +111,7 @@ Use this method when the primary replica is available, but you need to temporarl
 1. Update `REQUIRED_COPIES_TO_COMMIT` to 1.
 
    This ensures no active transactions are committed to the primary replica without committing first to at least one synchronous secondary. The availabilty group is ready to failover when they synchronization_state_desc is SYNCHRONIZED and the sequence_number is the same for both primary and target secondary replica. Run this query to check:
-   
+
    ```Transact-SQL
    SELECT ag.name, 
       drs.database_id, 
@@ -123,14 +123,14 @@ Use this method when the primary replica is available, but you need to temporarl
    WHERE drs.group_id = ag.group_id; 
    ```
 
- 1. Demote the primary replica to secondary replica. After the primary replica is demoted, connections to the primary replica will not be able to write to the databases. Run this command on the SQL instance hosting the primary replica to to update the role to SECONDARY:
+1. Demote the primary replica to secondary replica. After the primary replica is demoted, connections to the primary replica will not be able to write to the databases. Run this command on the SQL instance hosting the primary replica to to update the role to SECONDARY:
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY); 
    ```
 
- 1. Promote the target secondary replica to primary. 
- 
+1. Promote the target secondary replica to primary. 
+
    ```Transact-SQL
    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ```  

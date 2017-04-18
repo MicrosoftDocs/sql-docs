@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 9. Optionally, modify the name of the default output for data rows that do not match any condition.  
   
-10. To configure an error output, click **Configure Error Output**. For more information, see [Configure an Error Output in a Data Flow Component](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+10. To configure an error output, click **Configure Error Output**. For more information, see [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 11. Click **OK**.  
   

@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 9. Optionally, modify the values in the **Derived Column Name** column.  
   
-10. To configure the error output, click **Configure Error Output**. For more information, see [Configure an Error Output in a Data Flow Component](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+10. To configure the error output, click **Configure Error Output**. For more information, see [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 11. Click **OK**.  
   

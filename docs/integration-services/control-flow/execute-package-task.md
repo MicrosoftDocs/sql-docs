@@ -94,7 +94,7 @@ manager: "jhubbard"
   
  The parent package variable can be defined in the scope of the Execute Package task or in a parent container such as the package. If multiple variables with the same name are available, the variable defined in the scope of the Execute Package task is used, or the variable that is closest in scope to the task.  
   
- For more information, see [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+ For more information, see [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 ### Accessing Parent Package Variables  
  Child packages can access parent package variables by using the Script task. When you enter the name of the parent package variable on the **Script** page in the **Script Task Editor**, don’t include **User:** in the variable name. Otherwise, the child package doesn’t locate the variable when you run the parent package.  

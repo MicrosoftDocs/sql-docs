@@ -31,7 +31,7 @@ The target audience for this article is data scientists who want to learn how to
 
 The workflow from publishing to consuming a Python web service can be summarized as follows:
 
-1. Fulfill the [prerequisite](#prereq) of having a Python client library generated from the core API Swagger document.
+1. Fulfill the [prerequisite](#prereq) of generating the Python client library from the core API Swagger document.
 2. Add authentication and header logic to your Python script.
 3. Create a Python session, prepare the environment, and create a snapshot to preserve the environment.
 4. Publish the web service and embed this snapshot.
@@ -280,7 +280,7 @@ client.delete_web_service_version("Iris","V2.0",headers)
 This section describes how the code works in more detail.
 
 
-### <a name="prereq"></a> Prerequisites
+### <a name="prereq"></a> Step 1. Create prerequisite client libraries
 
 Before you can start publishing your Python code and models thorugh Microsoft Machine Learning Server, you must generate a client library using the Swagger document provided for this release.
 
@@ -312,7 +312,7 @@ Before you can start publishing your Python code and models thorugh Microsoft Ma
 
 
 
-### Step 1. Add authentication and header logic
+### Step 2. Add authentication and header logic
 
 Keep in mind that all APIs require authentication; therefore, all users must authenticate when making an API call using the `POST /login` API or through Azure Active Directory (AAD). 
 
@@ -388,7 +388,7 @@ Before you interact with the core APIs, first authenticate, get the bearer acces
    print(status_response.status_code)
    ```
 
-### Step 2: Prepare session and code
+### Step 3. Prepare session and code
 
 After authentication, you can start a Python session and create a model you'll publish later. You can include any Python code or models in a web service. Once you've set up your session environment, you can even save it as a snapshot so you can reload your session as you had it before. 
 
@@ -474,14 +474,14 @@ After authentication, you can start a Python session and create a model you'll p
        print(snapshot)
    ```
 
-### Step 3: Publish the model 
+### Step 4. Publish the model 
 
 After your client library has been generated and you've built the authentication logic into your application, you can interact with the core APIs to create a Python session, create a model, and then publish a web service using that model.
 
 > [!NOTE]
 > Remember that you must be authenticated before you make any API calls. Therefore, include `headers` in every request.
 
-1. Publish this SVM model as a Python web service in Machine Learning  Server. This web service will score a vector that gets passed to it.
++ Publish this SVM model as a Python web service in Machine Learning  Server. This web service will score a vector that gets passed to it.
 
 > [!IMPORTANT]
 > To ensure that the web service is registered as a Python service, be sure to specify `runtime_type="Python"`. If you don't set the runtime type to Python, it defaults to R.
@@ -509,7 +509,7 @@ After your client library has been generated and you've built the authentication
    client.publish_web_service_version("Iris", "V1.0", publish_request, headers)
 ```
 
-### Step 4: Consume the web service
+### Step 5. Consume the web service
 
 This section demonstrates how to consume the service in the same session where it was created.
 

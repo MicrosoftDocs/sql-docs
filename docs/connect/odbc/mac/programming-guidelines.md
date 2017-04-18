@@ -20,7 +20,7 @@ The programming features of the [!INCLUDE[msCoName](../../../includes/msconame_m
 > [!IMPORTANT]  
 > These instructions refer to msodbcsql-13.1.7.0.tar.gz, which is the installation file for macOS.
 
-An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] specific features by including `/usr/local/opt/msodbcsql/include/msodbcsql.h` after including the unixODBC headers (`sql.h`, `sqlext.h`, `sqltypes.h`, and `sqlucode.h`). Then use the same symbolic names for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-specific items that you would in your Windows ODBC applications.  
+An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] specific features by including `/usr/local/include/msodbcsql.h` after including the unixODBC headers (`sql.h`, `sqlext.h`, `sqltypes.h`, and `sqlucode.h`). Then use the same symbolic names for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-specific items that you would in your Windows ODBC applications.  
 
 ## Available Features  
 The following sections in from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client documentation for ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) are valid when using the ODBC driver on macOS:  

@@ -1,7 +1,7 @@
 ---
-title: "Replicate, Track, Change Data Capture - Always On Availability | Microsoft Docs"
+title: "Replication, Change Tracking, & Change Data Capture - Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
+ms.date: "04/18/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,42 +20,24 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Replicate, Track, Change Data Capture - Always On Availability
+# Replication, change tracking, & change data capture - Always On availability groups
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication, change data capture (CDC), and change tracking (CT) are supported on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] helps provide high availability and additional database recovery capabilities.  
   
- **In this Topic:**  
-  
--   [Overview of Replication on Always On Availability Groups](#Overview)  
-  
-    -   [Publisher Redirection](#PublisherRedirect)  
-  
-    -   [Changes to Replication Agents to Support Always On Availability Groups](#Changes)  
-  
-    -   [Stored Procedures Supporting Always On](#StoredProcs)  
-  
-    -   [Change Data Capture](#CDC)  
-  
-    -   [Change Tracking](#CT)  
-  
--   [Prerequisites, Restrictions, and Considerations for Using Replication with Always On Availability Groups](#Prereqs)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
-##  <a name="Overview"></a> Overview of Replication on Always On Availability Groups  
+##  <a name="Overview"></a> Overview of replication with availability groups  
   
 ###  <a name="PublisherRedirect"></a> Publisher Redirection  
  When a published database is aware of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the distributor that provides agent access to the publishing database is configured with redirected_publishers entries. These entries redirect the originally configured publisher/database pair, making use of an availability group listener name to connect to the publisher and publishing database. Established connections through the availability group listener name will fail on failover. When the replication agent restarts after failover, the connection will automatically be redirected to the new primary.  
   
- In an Always On availability group a secondary database cannot be a publisher. Republishing is only supported when transactional replication is combined with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+ In an availability group a secondary database cannot be a publisher. Republishing is only supported when transactional replication is combined with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
  If a published database is a member of an availability group and the publisher is redirected, it must be redirected to an availability group listener name associated with the availability group. It may not be redirected to an explicit node.  
   
 > [!NOTE]  
 >  After failover to a secondary replica, Replication Monitor is unable to adjust the name of the publishing instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and will continue to display replication information under the name of the original primary instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. After failover, a tracer token cannot be entered by using the Replication Monitor, however a tracer token entered on the new publisher by using [!INCLUDE[tsql](../../../includes/tsql-md.md)], is visible in Replication Monitor.  
   
-###  <a name="Changes"></a> General Changes to Replication Agents to Support Always On Availability Groups  
+###  <a name="Changes"></a> General changes to replication agents to support availability groups  
  Three replication agents were modified to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. The Log Reader, Snapshot, and Merge agents were modified to query the distribution database for the redirected publisher and to use the returned availability group listener name, if a redirected publisher was declared, to connect to the database publisher.  
   
  By default, when the agents query the distributor to determine whether the original publisher has been redirected, the suitability of the current target or redirection will be verified prior to returning the redirected host to the agent. This is recommended behavior. However, if agent start up occurs very frequently the overhead associated with the validation stored procedure may be deemed too costly. A new command line switch, *BypassPublisherValidation*, has been added to the Logreader, Snapshot, and Merge agents. When the switch is used, the redirected publisher is returned immediately to the agent and execution of the validation stored procedure is bypassed.  
@@ -67,15 +49,15 @@ manager: "jhubbard"
   
 -   **Replicated Database Consistency**  
   
-     When a published database is a member of an Always On availability group, by default the log reader will not process log records that have not already been hardened at all availability group secondary replicas. This insures that on failover, all rows replicated to a subscriber also are present at the new primary.  
+     When a published database is a member of an availability group, by default the log reader will not process log records that have not already been hardened at all availability group secondary replicas. This insures that on failover, all rows replicated to a subscriber also are present at the new primary.  
   
-     When the publisher has only two Always On availability replicas (one primary and one secondary) and a failover happens, the original primary replica remains down because the logreader does not move forward until all secondary databases are brought back online or until the failing secondary replicas are removed from the availability group. The logreader, now running against the secondary database, will not proceed forward since Always On cannot harden any changes to any secondary database. To allow the logreader to proceed further and still have disaster recovery capacity, remove the original primary replica from the availability group using ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA. Then add a new secondary replica to the availability group.  
+     When the publisher has only two availability replicas (one primary and one secondary) and a failover happens, the original primary replica remains down because the logreader does not move forward until all secondary databases are brought back online or until the failing secondary replicas are removed from the availability group. The logreader, now running against the secondary database, will not proceed forward since Always On cannot harden any changes to any secondary database. To allow the logreader to proceed further and still have disaster recovery capacity, remove the original primary replica from the availability group using ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA. Then add a new secondary replica to the availability group.  
   
 -   **Trace flag 1448**  
   
      Trace flag 1448 enables the replication log reader to move forward even if the asynchronous secondary replicas have not acknowledged the reception of a change. Even with this trace flag enabled,, the log reader always waits for the synchronous secondary replicas. The log reader will not go beyond the min ack of the synchronous secondary replicas. This trace flag applies to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], not just to an availability group, an availability database, or a log reader instance. This trace flag takes effect immediately without a restart. It can be activated ahead of time or when an asynchronous secondary replica fails.  
   
-###  <a name="StoredProcs"></a> Stored Procedures Supporting Always On  
+###  <a name="StoredProcs"></a> Stored procedures supporting availability groups  
   
 -   **sp_redirect_publisher**  
   

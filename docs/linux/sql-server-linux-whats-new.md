@@ -40,7 +40,8 @@ The CTP 2.0 release contains the following improvements and fixes:
 - SQL Graph.
 - Resumable Online Index Rebuilds.
 - Adaptive Query Processing.
-- Availability Group Listener.
+- Add new cluster type `CLUSTER_TYPE = EXTERNAL` for configuring an availability group for high availability.
+- Fix Availability Group Listener for read-only routing.
 - Production support for Early Adoption Program (EAP) customers. Sign up [here](http://aka.ms/eapsignup).
 
 

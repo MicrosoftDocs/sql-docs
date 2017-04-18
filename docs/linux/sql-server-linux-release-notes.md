@@ -134,30 +134,9 @@ The following sections describe known issues with this release of SQL Server vNe
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### Always On Availability Group
-- Always On Availability Group clustered resources on Linux that were created with CTP 1.3 will fail after you upgrade HA package (mssql-server-ha). 
-
-   - **Resolution**: Before you upgrade the HA package, set the cluster resource parameter `notify=true`. 
-   
-      - The following example sets the cluster resource parameter on a resource named **ag1** on RHEL or Ubuntu: 
-
-      ```bash
-      sudo pcs resource update ag1-master notify=true
-      ```
-
-      - For SLES, update availability group resource configuration to add `notify=true`.  
-
-      ```bash
-      crm configure edit ms-ag_cluster 
-      ```
-
-      Add `notify=true` and save the resource configuration.
-
-- Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See details as appropriate for your Linux distribution. 
-
-   - [RHEL](sql-server-linux-availability-group-cluster-rhel.md#sync-commit)
-   - [SLES](sql-server-linux-availability-group-cluster-sles.md#sync-commit)
-   - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#sync-commit)
-
+- All HA configurations - meaning availability group is added as a resource to a Pacemaker cluster - created with pre CTP2.0 packages are not backwards compatible with the new package. Delete all previousely configured clustered resources and create new availability groups with `CLUSTER_TYPE=EXTERNAL`. See [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
+- Availability groups created with `CLUSTER_TYPE=NONE` and not added as resources in the cluster will continue working after upgrade. Use for read-scale scenarios. See [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
+- `sys.fn_hadr_backup_is_preffered_replica` does not work for `CLUSTER_TYPE=NONE` or `CLUSTER_TYPE=EXTERNAL` because it relies on the WSFC-replicated cluster registry key which not available. We are working on providing a similar functionality through a different function. 
 
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
@@ -322,9 +301,9 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See details as appropriate for your Linux distribution. 
 
-   - [RHEL](sql-server-linux-availability-group-cluster-rhel.md#sync-commit)
-   - [SLES](sql-server-linux-availability-group-cluster-sles.md#sync-commit)
-   - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#sync-commit)
+   - [RHEL](sql-server-linux-availability-group-cluster-rhel.md)
+   - [SLES](sql-server-linux-availability-group-cluster-sles.md)
+   - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
 
 #### Full-Text Search
@@ -476,9 +455,9 @@ The following sections describe known issues with this release of SQL Server vNe
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 - Always On Availability Groups in Linux may be subject to data loss if replicas are in synchronous commit mode. See 
-   - [RHEL](sql-server-linux-availability-group-cluster-rhel.md#sync-commit)
-   - [SLES](sql-server-linux-availability-group-cluster-sles.md#sync-commit)
-   - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#sync-commit)
+   - [RHEL](sql-server-linux-availability-group-cluster-rhel.md)
+   - [SLES](sql-server-linux-availability-group-cluster-sles.md)
+   - [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
    
 #### Full-Text Search

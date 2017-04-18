@@ -11,7 +11,7 @@
 ### [Set up SQL Server Machine Learning Services (In-Database)](r/set-up-sql-server-r-services-in-database.md)  
 ### [Unattended Installs of SQL Server Machine Learning Services](r/unattended-installs-of-sql-server-r-services.md)
 ## [Architecture](r/architecture-overview-sql-server-r.md)  
-### [R Interoperability](r/r-interoperability.md)
+### [R Interoperability](r/r-interoperability-in-sql-server.md)
 ### [New Components](r/new-components-in-sql-server-to-support-r.md)
 ### [Security Overview](r/security-overview-sql-server-r.md) 
 ## [Monitoring](r/monitoring-r-services.md)  
@@ -21,8 +21,8 @@
 ## [Getting Started with Python](python/setup-python-machine-learning-services.md)
 ## [Architecture](python/architecture-overview-sql-server-python.md)
 ### [Python Interoperability](python/python-interoperability.md)
-### [New Python Components](python/new-components-in-sql-server-to-support-r.md)
-### [Python Security](python/security-overview-sql-server-python.md)
+### [New Python Components](python/new-components-in-sql-server-to-support-python-integration.md)
+### [Python Security](python/security-overview-sql-server-python-services.md)
 ## [Monitoring](python/managing-and-monitoring-python-solutions.md)
 <!-- ### [Monitoring Python Services](python/monitoring-python-services.md)-->
 <!-- ### [How To Create a Resource Pool for Python](python/how-to-create-a-resource-pool-for-python.md)-->
@@ -35,7 +35,7 @@
 ## [Getting Started](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [Set up Machine Learning Server Standalone](r/create-a-standalone-r-server.md)
 ### [Install Microsoft Machine Learning Server from the Command Line](r/install-microsoft-r-server-from-the-command-line.md)
-### [Provision the Data Science Virtual Machine](provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Provision the Data Science Virtual Machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
 # [How To](r/sql-server-machine-learning-tasks.md)
 
@@ -63,8 +63,8 @@
 ### [Creating multiple models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)  
 <!-- ## [Native Scoring](native-scoring-in-sql-server-2017.md)-->
 
-### [SQL and R Data Types](r/working-with-r-data-types.md)
-### [SQL and Python Data Types](r/working-with-python-data-types.md)
+### [SQL and R Data Types](r/r-libraries-and-data-types.md)
+### [SQL and Python Data Types](python/python-libraries-and-data-types.md)
 ### [Predictive Modeling with R](r/data-exploration-and-predictive-modeling-with-r.md)
 ### [Converting R Code for Use in Machine Learning Services](r/converting-r-code-for-use-in-sql-server.md)
 <!-- ## [Native Scoring](native-scoring-in-sql-server-2017.md)-->

@@ -37,7 +37,12 @@ The CTP 2.0 release contains the following improvements and fixes:
 - Linux path formatting are now compatible throughout the SQL Server Engine. But support for "C:\" prefixed paths will continue.
 - Enabled DMV sys.dm_os_file_exists.
 - Enabled DMV sys.fn_trace_gettable.
-- Added CLR Strict Security mode.
+- Added [CLR Strict Security mode](/sql/database-engine/configure-windows/clr-strict-security).
+- SQL Graph.
+- Resumable Online Index Rebuilds.
+- Adaptive Query Processing.
+- Availability Group Listener.
+- Production support for Early Adoption Program (EAP) customers.  Sign up [here](http://aka.ms/eapsignup).
 
 
 ## CTP 1.4

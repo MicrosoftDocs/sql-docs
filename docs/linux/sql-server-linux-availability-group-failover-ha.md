@@ -210,7 +210,7 @@ sudo pcs resource update <**ag1**> required_copies_to_commit=
 
 ## Manage availability group with two synchronous replicas
 
-The above default behavior applies to the case of 2 synchronous replicas (primary + secondary) as well. Pacemaker will default `REQUIRED_COPIES_TO_COMMIT` = 1 to ensure the secondary replica is always up to date for maximum data protection.  
+The above default behavior applies to the case of 2 synchronous replicas (primary + secondary) as well. Pacemaker will default `REQUIRED_COPIES_TO_COMMIT = 1` to ensure the secondary replica is always up to date for maximum data protection.  
 
 >[!WARNING]
 >This comes with higher risk of unavailability of the primary replica due to planned or unplanned outages on the secondary. The user can choose to change the default behavior of the resource agent and override the `REQUIRED_COPIES_TO_COMMIT` to 0:
@@ -227,8 +227,8 @@ The tables below describes the outcome of an outage for primary or secondary rep
 
 | |Primary outage |One secondary replica outage
 |:---|:--- |:--- |
-|`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W |Primary is R/W, running exposed to data loss
-|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER (no data loss) -> New primary is RO until former primary recovers and joins availability group as secondary |Primary is RO until secondary recovers
+|`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER. <br>Might have data loss.<br> New primary is R/W |Primary is R/W, running exposed to data loss
+|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER <br>No data loss. <br> New primary is RO until former primary recovers and joins availability group as secondary |Primary is RO until secondary recovers
 
 \* SQL Server resource agent for Pacemaker default behavior.
 
@@ -236,8 +236,8 @@ The tables below describes the outcome of an outage for primary or secondary rep
 
 | |Primary outage |One secondary replica outage
 |:---|:--- |:--- |
-|`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER (might have data loss) -> New primary is R/W |Primary is R/W
-|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER (no data loss) -> New primary is RW |Primary is R/W secondary is RO
+|`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER. <br>Might have data loss. <br>New primary is R/W |Primary is R/W
+|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER. <br>No data loss. <br>New primary is RW |Primary is R/W secondary is RO
 
 \* SQL Server resource agent for Pacemaker default behavior.
 

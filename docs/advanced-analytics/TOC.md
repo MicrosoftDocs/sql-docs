@@ -106,7 +106,7 @@
 ### [Installing SQL Server Machine Learning Services on an Azure Virtual Machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Use sqlBindR.exe to Upgrade an Instance](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [Install R Server from the Command Line](r/install-microsoft-r-server-from-the-command-line.md)
-### [Provision the Data Science Virtual Machine](provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Provision the Data Science Virtual Machine](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [Set up Data Science Tools](r/setup-or-configure-r-tools.md)
 ### [Set Up a Data Science Client](r/set-up-a-data-science-client.md)
 

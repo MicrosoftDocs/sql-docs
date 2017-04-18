@@ -512,7 +512,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 8.  Determine whether the SSISDB catalog schema and the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] binaries (ISServerExec and SQLCLR assembly) are compatible, by running [catalog.check_schema_version](../../integration-services/system-stored-procedures/catalog-check-schema-version.md).  
   
-9. To confirm that the SSISDB database has been restored successfully, perform operations against the SSISDB catalog such as running packages that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information, see [Run a Package on the SSIS Server Using SQL Server Management Studio](../../integration-services/packages/run-a-package-on-the-ssis-server-using-sql-server-management-studio.md).  
+9. To confirm that the SSISDB database has been restored successfully, perform operations against the SSISDB catalog such as running packages that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information, see [Run Integration Services (SSIS) Packages](../../integration-services/packages/run-integration-services-ssis-packages.md).  
   
 ### To Move the SSIS Database  
   

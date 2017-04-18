@@ -49,7 +49,7 @@ manager: "jhubbard"
 -   **Add and configure a File System task** Add a File System task to the Foreach Loop container. On the **General** page of the File System Task Editor, set the **SourceVariable** or **DestinationVariable** property to the variable that you defined in the Foreach Loop container.  
   
 ## Custom Log Entries Available on the File System Task  
- The following table describes the custom log entry for the File System task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table describes the custom log entry for the File System task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

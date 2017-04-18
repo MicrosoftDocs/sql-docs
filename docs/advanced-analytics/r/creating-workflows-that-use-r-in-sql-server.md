@@ -1,8 +1,8 @@
 ---
-title: "Creating Workflows that Use R in SQL Server | Microsoft Docs"
+title: "Creating BI Workflows with R | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/31/2016"
+ms.date: "04/18/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,65 +16,75 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Creating Workflows that Use R in SQL Server
-  A relational database is a highly optimized technology for delivering scalable solutions for transaction processing, storage, and querying of data. However, traditionally R solutions have generally relied on importing data from various sources, often in CSV format, to perform further data exploration and modeling. Such practices are not only inefficient but insecure.  
-  
- Using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] provides multiple advantages:  
-  
--   Data security. The power of R is brought into the database, closer to the source of data. Avoids wasteful or insecure data movement.  
-  
--   Speed. Databases are optimized for set-based operations. Moreover, recent innovations in databases such as in-memory tables and columnar data storage further improve data science by making aggregations lightning fast.  
-  
--   Integration. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is the central point of operations for many other data management tasks and applications that consume enterprise. Using data already in the database ensures that data is consistent and up-to-date. Rather than process data in R, you can rely on enterprise data pipelines including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Azure Data Factory. Reporting of results or analyses is easy via Power BI or [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
- By using the right combination of SQL and R for different data processing and analytical tasks, both data scientists and developers can be more productive. This section describes how you can integrate R with other enterprise solutions for data transformation, analysis, and reporting.  
-  
-##  <a name="bkmk_ssis"></a> Create Efficient Workflows that Span R and the Database  
- Data science workflows are highly iterative and involve much transformation of data, including scaling, aggregations, computation of probabilities, and renaming and merging of attributes. Data scientists are accustomed to doing many of these tasks in R, Python, or another language; however, executing such workflows on enterprise data requires seamless integration with ETL tools and processes.  
-  
- Because [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] enables you to run complex operations in R via Transact-SQL and stored procedures, you can integrate R-specific tasks with existing ETL processes without minimal re-development work. Rather than perform a chain of memory-ntensive tasks in R, data preparation can be optimized using the most efficient tools, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
- For example, you can combine R with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in scenarios such as these:  
-  
--   Use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tasks to create necessary objects in the SQL database  
-  
--   Use conditional branching to switch compute context for R jobs  
-  
--   Run R jobs that generate their own data  
-  
--   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to call an R script saved in a text variable  
-  
-### Samples and Resources  
- [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/)  
-  
- In this blog post, you'll learn how to:  
-  
--   Use R in the Execute SQL Task to generate data and save it into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
--   Use  a stored procedure to train an R model and store it in the database  
-  
--   Perform scoring on the model using the Script Task and the Execute SQL Task  
-  
-##  <a name="bkmk_ssrs"></a> Create Visualizations that Span R and Enterprise Reporting Tools  
- Although R can create charts and interesting visualization, it is not well-integrated with external data sources, meaning that each chart or graph has to be individually produced. Sharing also can be difficult.  
-  
- Using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], you can run complex operations in R via [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, which can easily be consumed by a variety of enterprise reporting tools, including [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and Power BI.  
-  
--   Visualize graphics objects returned from an R script   
-    using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
-  
--   Use the table in Power BI  
-  
-## Samples and Resources  
- [R Graphics Device for Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/)  
-  
- This CodePlex project provides the code to help you create a custom report item that renders the graphics output of  R as an image that can be used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports.  By using the custom report item, you can:  
-  
--   Publish charts and plots created using the R Graphics Device to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dashboards  
-  
--   Pass [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] parameters to R plots  
-  
-> [!NOTE]  
->  Note that the code that supports the R Graphics Device for Reporting Services must be installed on the Reporting Services server, as well as in Visual Studio. Manual compilation and configuration is also required.  
-  
-  
+# Creating BI Workflows with R
+
+A relational database is a highly optimized technology for delivering scalable solutions for transaction processing, storage, and querying of data.
+
+In contrast, traditionally R solutions have generally relied on importing data from various sources, often in CSV format, to perform further data exploration and modeling. Such practices are not only inefficient but insecure.
+
+This topic describes integration scenarios for R with SQL Server that avoid common pitfalls and security risks that can occur if machine learning solutions are developed outside the database.
+
+It also describes examples of how business intelligence applications, notably Integration Services and Reportng Services, can interact with R code and consume data or graphics generated by R.
+
+Applies to: SQL Server 2016 R Services, SQL Server vNext Machine Learning Services
+
+## Bring Compute Power to the Data
+
+A key design goal of integrating machine learning with SQL Server has been to bring analytics close to the data. This provides multiple advantages:
+
++ Data security. Bringing R closer to the source of data avoids wasteful or insecure data movement.
+
++ Speed. Databases are optimized for set-based operations. Recent innovations in databases such as in-memory tables make summaries and aggregations lightning, and are a perfect complement to data science.
+
++ Ease of deployment and integration. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is the central point of operations for many other data management tasks and applications. By using data that resides in the database or reporting warehouse, you ensure that the data used by machine learning solutions is  consistent and up-to-date. 
+
++ Efficiency across cloud and on-premises. Rather than process data in R, you can rely on enterprise data pipelines including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and Azure Data Factory. Reporting of results or analyses is easy via Power BI or [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+
+By using the right combination of SQL and R for different data processing and analytical tasks, both data scientists and developers can be more productive.
+
+## Use Integration Services for Data Transformation and Automation
+
+Data science workflows are highly iterative and involve much transformation of data, including scaling, aggregations, computation of probabilities, and renaming and merging of attributes. Data scientists are accustomed to doing many of these tasks in R, Python, or another language; however, executing such workflows on enterprise data requires seamless integration with ETL tools and processes.
+
+Because [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] enables you to run complex operations in R via Transact-SQL and stored procedures, you can integrate R-specific tasks with existing ETL processes without minimal re-development work. Rather than perform a chain of memory-intensive tasks in R, data preparation can be optimized using the most efficient tools, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+
+Here are some ideass for how you can automate your data processing an dmodeling pipelines using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
+
++ Use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tasks to create necessary data features in the SQL database
++ Use conditional branching to switch compute context for R jobs
++ Run R jobs that generate their own data in the database, and share that data with applications
++ When using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], load R script saved in a text variable and run it in SQL Server
+
+### Examples
+
+[Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/)  
+
+This blog post demonstrates basic techniques for manipulating R code using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: 
+
++ Call R using the Execute SQL Task, to generate data and save it into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
++ Use  a stored procedure to train an R model and store it in the database
+
++ Perform scoring on the model using the Script Task and the Execute SQL Task
+
+##  <a name="bkmk_ssrs"></a> Use Reporting Services for Visualization
+
+Although R can create charts and interesting visualization, it is not well-integrated with external data sources, meaning that each chart or graph has to be individually produced. Sharing also can be difficult.
+
+Using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], you can run complex operations in R via [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, which can easily be consumed by a variety of enterprise reporting tools, including [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and Power BI.
+
++ Visualize graphics objects returned from an R script using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ Use the table in Power BI
+
+### Examples
+
+[R Graphics Device for Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/)
+
+This CodePlex project provides the code to help you create a custom report item that renders the graphics output of  R as an image that can be used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports.  By using the custom report item, you can:
+
++ Publish charts and plots created using the R Graphics Device to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dashboards
+
++ Pass [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] parameters to R plots
+
+> [!NOTE]
+> For this sample, the code that supports the R Graphics Device for Reporting Services must be installed on the Reporting Services server, as well as in Visual Studio. Manual compilation and configuration is also required.

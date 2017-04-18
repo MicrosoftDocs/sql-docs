@@ -11,8 +11,9 @@
 # [Machine Learning Services - R](r/sql-server-r-services.md)  
 
 ## [Architecture](r/architecture-overview-sql-server-r.md)  
-### [New Components in SQL Server to Support Machine Learning Services](r/new-components-in-sql-server-to-support-r.md)  
-### [R Interoperability in SQL Server Machine Learning Services](r/r-interoperability-in-sql-server.md)  
+### [New Components for R Integration](r/new-components-in-sql-server-to-support-r.md)  
+### [R Interoperability](r/r-interoperability-in-sql-server.md)  
+### [R Security](r/security-overview-sql-server-r.md)
 
 ## [Setup and Configuration](r/getting-started-with-sql-server-r-services.md)  
 ### [Set up SQL Server Machine Learning Services (In-Database)](r/set-up-sql-server-r-services-in-database.md)  
@@ -41,9 +42,9 @@
 # [Machine Learning Services - Python](python/sql-server-python-services.md)  
 
 ## [Architecture](python/architecture-overview-sql-server-python.md)  
-### [New components in SQL Server to support Python integration](python/new-components-in-sql-server-to-support-python-integration.md)  
-### [Python interoperability](python/python-interoperability.md)  
-### [Python Libraries](python/python-libraries.md)  
+### [New Components for Python integration](python/new-components-in-sql-server-to-support-python-integration.md)  
+### [Python Interoperability](python/python-interoperability.md)  
+### [Python Libraries and Data Types](python/python-libraries-and-data-types.md)  
 
 ## [Setup and Configuration](python/setup-python-machine-learning-services.md)  
 
@@ -61,7 +62,7 @@
 
 # [How To](r/sql-server-r-services-features-and-tasks.md)  
 ## [Data Exploration and Transformation](r/save-and-load-r-objects-from-sql-server-using-odbc.md)  
-### [Working with R Data Types](r/working-with-r-data-types.md)  
+### [R Libraries and Data Types](r/r-libraries-and-data-types.md)  
 
 ## [Predictive Modeling](r/data-exploration-and-predictive-modeling-with-r.md)  
 ### [Converting R Code for Use in Machine Learning Services](r/converting-r-code-for-use-in-sql-server.md)  

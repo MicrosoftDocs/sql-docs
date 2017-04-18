@@ -38,9 +38,16 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 -	Batch Mode Adaptive Join to improve plan quality (under db compatability 140).
 -	Interleaved Execution for multi-statement T-SQL TVFs to improve plan quality (under db compatability 140).
 - Query Store now also tracks wait stats summary information.
+- DTC support for AlwaysOn Availability Groups.
 - This CTP contains bug fixes for the Database Engine.
 - For a detailed list of vNext CTP enhancements in previous CTP releases, see [What's New in SQL Server vNext (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md).   
 
+### SQL Server Machine Learning Services
+- SQL Server R Services has a new name, to reflect support for the Python language in CTP 2.0. 
+You can now use SQL Server Machine Learning Services (In-Database) to run either R or Python scripts in SQL Server. 
+Or, install Microsoft Machine Learning Server (Standalone) to deploy and consume R and Python models that don’t require SQL Server. 
+- Both platforms include new MicrosoftML algorithms for distributed machine learning, and the latest version of Microsoft R (version 9.1.0).
+- For more information, see [What’s new for Machine Learning](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 

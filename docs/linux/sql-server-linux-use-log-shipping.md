@@ -104,7 +104,6 @@ As described in the picture above, a log shipping session involves the following
 
 ### Configure Primary Server
 -   Run the following on your install NFS and start the service
-    
     	sudo apt-get install nfs-utils #For Ubuntu
     	sudo yum -y install nfs-utils #For RHEL/CentOS
         sudo systemctl enable rpcbind

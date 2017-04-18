@@ -62,7 +62,7 @@ For example:
 Add under `<system.web>`.
 	
 ```
-	/<machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
+	<machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
 ```
 
 **\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe.config**
@@ -70,9 +70,9 @@ Add under `<system.web>`.
 Add under `<configuration>`.
 
 ```
-	/<system.web>
+	<system.web>
 	    <machineKey validationKey=="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
-    /</system.web>
+    </system.web>
 ```
 
 You should use a validation key specific for you deployment, there are several tools to generate the keys like Internet Information Services Manager (IIS). Other tools can be found on the internet.

@@ -38,9 +38,11 @@ As described in the picture above, a log shipping session involves the following
 - Backing up the transaction log file on the primary SQL Server instance
 - Copying the transaction log backup file across the network to one or more secondary SQL Server instances
 - Restoring the transaction log backup file on the secondary SQL Server instances
-  
 
-# Setup a network share for Log Shipping
+## Prerequisites
+- [Install SQL Server Agent on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
+
+## Setup a network share for Log Shipping
 
         > [!NOTE] 
         > You can use CIFS or NFS (but not both) to setup a network share for Log Shipping. 
@@ -332,5 +334,23 @@ As described in the picture above, a log shipping session involves the following
 
     END 
 
-## Next Steps
-TBD
+## Verify Log Shipping works
+
+- Verify that Log Shipping works by starting the following job on the primary server
+
+    USE msdb ;  
+    GO  
+
+    EXEC dbo.sp_start_job N'LSBackup_SampleDB' ;  
+    GO  
+    
+ - Verify that Log Shipping works by starting the following job on the secondary server
+ 
+    USE msdb ;  
+    GO  
+
+    EXEC dbo.sp_start_job N'LSCopy_SampleDB4' ;  
+    GO  
+    EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
+    GO  
+

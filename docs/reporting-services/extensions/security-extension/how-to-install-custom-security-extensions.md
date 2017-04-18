@@ -79,7 +79,7 @@ You should use a validation key specific for you deployment, there are several t
 
 ## Configure Passthrough cookies
 
-The new portal and the reportserver communicate using internal soap APIs for some of its operations (similar to the previous version of the Report Manager). When additional cookies are required to be passed from the portal to the server the PassThroughCookies properties is still available. For more information, see [Configure the Web Portal to Pass Custom Authentication Cookies](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
+The new portal and the reportserver communicate using internal soap APIs for some of its operations (similar to the previous version of the Report Manager). When additional cookies are required to be passed from the portal to the server the PassThroughCookies properties is still available. For more information, see [Configure the Web Portal to Pass Custom Authentication Cookies](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
 
 ```
 <UI>

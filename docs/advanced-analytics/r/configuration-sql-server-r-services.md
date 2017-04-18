@@ -19,15 +19,15 @@ manager: "jhubbard"
 
 This article provides links to more detailed information about how to configure a server to support machine learnign servies with SQL Server in thee products:
 
-+ SQL Server 2016 R service (In-Database)
-+ SQL Server vNext Machine LEarning Services (In-Databae)
++ SQL Server 2016 R Services (In-Database)
++ SQL Server vNext Machine Learning Services (In-Databae)
 
 > [!NOTE]
 > **Support for Python**
 > This content was originally written for the SQL Server 2016 release, which supported only the R language.
 > In SQL Server vNext, support for Python has been added, but the underlying architecture and services framework is the same. Therefore, you can configure security, memory, resource governance and other options to support execution of Python scripts, the same way that you would for R scripts.
 > 
-> However, because support for Python is a new feature, detailed information about potential optimizations for Python workloads are not available yet. Please check back later.
+> However, because support for Python is a new feature, detailed information about potential optimizations for Python workloads is not available yet. Please check back later.
 
 ## R Package Management  
 
@@ -36,8 +36,8 @@ These topics describe how to install new R packages on the SQL Server instance, 
 + [Installing and Managing R Packages](installing-and-managing-r-packages.md)
 + [Installing New R Packages](install-additional-r-packages-on-sql-server.md)
 + [Enable Package Management for an Instance using Database Roles](r-package-how-to-enable-or-disable.md)
-+ [Create a Local Package Repository using miniCRAN](create-a-local-package-repository-using-minicran)
-+ [Determine Which R Packages are Installed on SQl Server](determine-which-packages-are-installed-on-sql-server)
++ [Create a Local Package Repository using miniCRAN](create-a-local-package-repository-using-minicran.md)
++ [Determine Which R Packages are Installed on SQl Server](determine-which-packages-are-installed-on-sql-server.md)
 + [Synchronizing R Packages between SQL Server and the File System](package-install-uninstall-and-sync.md)
 + [R Packages Installed in User Libraries](packages-installed-in-user-libraries.md)
 

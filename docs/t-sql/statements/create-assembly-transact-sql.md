@@ -60,12 +60,12 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  AUTHORIZATION *owner_name*  
  Specifies the name of a user or role as owner of the assembly. *owner_name* must either be the name of a role of which the current user is a member, or the current user must have IMPERSONATE permission on *owner_name*. If not specified, ownership is given to the current user.  
   
- <client_assembly_specifier>  
+ \<client_assembly_specifier>  
  Specifies the local path or network location where the assembly that is being uploaded is located, and also the manifest file name that corresponds to the assembly.  <client_assembly_specifier> can be expressed as a fixed string or an expression evaluating to a fixed string, with variables. CREATE ASSEMBLY does not support loading multimodule assemblies. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also looks for any dependent assemblies of this assembly in the same location and also uploads them with the same owner as the root level assembly. If these dependent assemblies are not found and they are not already loaded in the current database, CREATE ASSEMBLY fails. If the dependent assemblies are already loaded in the current database, the owner of those assemblies must be the same as the owner of the newly created assembly.  
   
- <client_assembly_specifier> cannot be specified if the logged in user is being impersonated.  
+ \<client_assembly_specifier> cannot be specified if the logged in user is being impersonated.  
   
- <assembly_bits>  
+ \<assembly_bits>  
  Is the list of binary values that make up the assembly and its dependent assemblies. The first value in the list is considered the root-level assembly. The values corresponding to the dependent assemblies can be supplied in any order. Any values that do not correspond to dependencies of the root assembly are ignored.  
   
 > [!NOTE]  

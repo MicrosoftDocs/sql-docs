@@ -105,7 +105,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Master Data Services |
 
 ### Known issues
-The following sections describe known issues with this release of SQL Server vNext CTP 1.4 on Linux.
+The following sections describe known issues with this release of SQL Server vNext CTP 2.0 on Linux.
 
 #### General
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
@@ -116,21 +116,15 @@ The following sections describe known issues with this release of SQL Server vNe
 
     - **Resolution**: Restart SQL Server.
 
-- Some time zone names in Linux don’t map exactly to Windows time zone names.
-
-    - **Resolution**: Use time zone names from TZID column in the ‘Mapping for: Windows’ section table on the [Unicode.org documentation page](http://www.unicode.org/cldr/charts/latest/supplemental/zone_tzid.html).
-
-- SQL Server Engine expects lines in text files to be terminated with CR-LF (Windows-style line formatting).
-
 - Only single instance installations are supported.
 
     - **Resolution**: If you want to have more than one instance on a given host, consider using VMs or Docker containers. 
 
-- All log files and error logs are encoded in UTF-16.
-
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
-- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now. 
+- The default language of the **sa** login is English.
+
+    - **Resolution**: Change the language of the **sa** login with the **ALTER LOGIN** statement.
 
 #### Databases
 - System databases can not be moved with the mssql-conf utility.
@@ -172,22 +166,18 @@ The following sections describe known issues with this release of SQL Server vNe
 
 #### SQL Agent
 - The following components and subsystems of SQL Agent jobs are not currently supported on Linux:
-	-	Subsystems: CmdExec, PowerShell, Replication Distributor, Snapshot, Merge, Queue Reader, SSIS, SSAS, SSRS
-	-   Alerts
-    -   DB Mail
-    -   Log Shipping
-    -   Log Reader Agent 
-    -   Change Data Capture
-
-#### In-Memory OLTP
-- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
+    - Subsystems: CmdExec, PowerShell, Replication Distributor, Snapshot, Merge, Queue Reader, SSIS, SSAS, SSRS
+    - Alerts
+    - DB Mail
+    - Log Reader Agent 
+    - Change Data Capture
 
 #### SqlPackage
-- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 
+- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the "/tmp/sqlpackage.\<code\>/system/system32" folder. 
 
     - **Resolution**: Use absolute file paths.
 
-- SqlPackage shows the location of files with a “C:\” prefix.
+- SqlPackage shows the location of files with a "C:\\" prefix.
 
     
 #### SQL Server Management Studio (SSMS)
@@ -198,8 +188,6 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 - Management Data Warehouse (MDW) and the data collector in SSMS is not supported. 
 
 - SSMS UI components that have Windows Authentication or Windows event log options do not work with Linux. You can still use these features with other options, such as SQL logins. 
-
-- The file browser is restricted to the  “C:\” scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\ paths with Linux paths. Then execute the script manually in SSMS.
 
 - Number of log files to retain cannot be modified.
 
@@ -304,7 +292,7 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
-- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now. 
+- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM \<bits\>** method instead for now. 
 
 #### Databases
 - System databases can not be moved with the mssql-conf utility.
@@ -346,22 +334,22 @@ The following sections describe known issues with this release of SQL Server vNe
 
 #### SQL Agent
 - The following components and subsystems of SQL Agent jobs are not currently supported on Linux:
-	-	Subsystems: CmdExec, PowerShell, Replication Distributor, Snapshot, Merge, Queue Reader, SSIS, SSAS, SSRS
-	-   Alerts
-    -   DB Mail
-    -   Log Shipping
-    -   Log Reader Agent 
-    -   Change Data Capture
+    - Subsystems: CmdExec, PowerShell, Replication Distributor, Snapshot, Merge, Queue Reader, SSIS, SSAS, SSRS
+    - Alerts
+    - DB Mail
+    - Log Shipping
+    - Log Reader Agent 
+    - Change Data Capture
 
 #### In-Memory OLTP
 - In-Memory OLTP databases can only be created in the /var/opt/mssql directory. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
 #### SqlPackage
-- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 
+- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the "/tmp/sqlpackage.\<code\>/system/system32" folder. 
 
     - **Resolution**: Use absolute file paths.
 
-- SqlPackage shows the location of files with a “C:\” prefix.
+- SqlPackage shows the location of files with a "C:\\" prefix.
 
     
 #### SQL Server Management Studio (SSMS)
@@ -373,7 +361,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 - SSMS UI components that have Windows Authentication or Windows event log options do not work with Linux. You can still use these features with other options, such as SQL logins. 
 
-- The file browser is restricted to the  “C:\” scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\ paths with Linux paths. Then execute the script manually in SSMS.
+- The file browser is restricted to the  "C:\\" scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\\ paths with Linux paths. Then execute the script manually in SSMS.
 
 - Number of log files to retain cannot be modified.
 
@@ -476,7 +464,7 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
-- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now. 
+- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM \<bits\>** method instead for now. 
 
 #### Databases
 - Changing the locations of TempDB data and log files is not supported.
@@ -502,11 +490,11 @@ The following sections describe known issues with this release of SQL Server vNe
 - In-Memory OLTP databases can only be created in the /var/opt/mssql directory. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
 #### SqlPackage
-- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 
+- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the "/tmp/sqlpackage./<code/>/system/system32" folder. 
 
     - **Resolution**: Use absolute file paths.
 
-- SqlPackage shows the location of files with a “C:\” prefix.
+- SqlPackage shows the location of files with a "C:\\" prefix.
 
 #### Sqlcmd/BCP & ODBC 
 - SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql) depends on a custom unixODBC Driver Manager. This causes conflicts if you have a previously installed unixODBC Driver Manager. 
@@ -524,7 +512,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 - The SQL Server Agent is not supported yet. Therefore, SQL Server Agent functionality in SSMS does not work on Linux at the moment.
 
-- The file browser is restricted to the  “C:\” scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\ paths with Linux paths. Then execute the script manually in SSMS.
+- The file browser is restricted to the  "C:\\" scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\\ paths with Linux paths. Then execute the script manually in SSMS.
 
 - Number of log files to retain cannot be modified.
 
@@ -629,7 +617,7 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
-- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now. 
+- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM \<bits\>** method instead for now. 
 
 #### Databases
 - Changing the locations of TempDB data and log files is not supported.
@@ -641,14 +629,14 @@ The following sections describe known issues with this release of SQL Server vNe
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### In-Memory OLTP
-- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
+- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
 #### SqlPackage
-- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 
+- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the “/tmp/sqlpackage.\<code\>/system/system32” folder. 
 
     - **Resolution**: Use absolute file paths.
 
-- SqlPackage shows the location of files with a “C:\” prefix.
+- SqlPackage shows the location of files with a "C:\\" prefix.
 
 #### Sqlcmd/BCP & ODBC 
 - If you have an older version of SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql), you might have installed a custom unixODBC Driver Manager (unixODBC-utf16). This could casue a potential conflict as we no longer use a custom driver manager. 
@@ -666,7 +654,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 - The SQL Server Agent is not supported yet. Therefore, SQL Server Agent functionality in SSMS does not work on Linux at the moment.
 
-- The file browser is restricted to the  “C:\” scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\ paths with Linux paths. Then execute the script manually in SSMS.
+- The file browser is restricted to the  "C:\\" scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\\ paths with Linux paths. Then execute the script manually in SSMS.
 
 ### Next steps
 To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
@@ -768,7 +756,7 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
-- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now. 
+- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM \<bits\>** method instead for now. 
 
 #### Databases
 - Changing the locations of TempDB data and log files is not supported.
@@ -783,11 +771,11 @@ The following sections describe known issues with this release of SQL Server vNe
 - In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
 #### SqlPackage
-- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 
+- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the "/tmp/sqlpackage.\<code\>/system/system32" folder. 
 
     - **Resolution**: Use absolute file paths.
 
-- SqlPackage shows the location of files with a “C:\” prefix.
+- SqlPackage shows the location of files with a "C:\\" prefix.
 
 #### Sqlcmd/BCP & ODBC 
 - SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql) depends on a custom unixODBC Driver Manager. This causes conflicts if you have a previously installed unixODBC Driver Manager. 
@@ -805,7 +793,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 - The SQL Server Agent is not supported yet. Therefore, SQL Server Agent functionality in SSMS does not work on Linux at the moment.
 
-- The file browser is restricted to the  “C:\” scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\ paths with Linux paths. Then execute the script manually in SSMS.
+- The file browser is restricted to the  "C:\\" scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\\ paths with Linux paths. Then execute the script manually in SSMS.
 
 ### Next steps
 To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
@@ -903,7 +891,7 @@ The following sections describe known issues with this release of SQL Server vNe
 
 - SQL Server Configuration Manager can’t connect to SQL Server on Linux.
 
-- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM <bits>** method instead for now.
+- **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM \<bits\>** method instead for now.
 
 #### Databases
 - Changing the locations of TempDB data and log files is not supported.
@@ -915,14 +903,14 @@ The following sections describe known issues with this release of SQL Server vNe
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### In-Memory OLTP
-- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
+- In-Memory OLTP databases can only be created in the /var/opt/mssql directory. These databases also need to have the "C:\\" notation when referred. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).  
 
 #### SqlPackage
-- Using SqlPackage requires to specify an absolute path for files. Using relative paths will map the files under the“/tmp/sqlpackage.\<code\>/system/system32” folder. 
+- Using SqlPackage requires to specify an absolute path for files. Using relative paths will map the files under the "/tmp/sqlpackage.\<code\>/system/system32" folder. 
 
     - **Resolution**: Use absolute file paths.
 
-- SqlPackage shows the location of files with a “C:\” prefix.
+- SqlPackage shows the location of files with a "C:\\" prefix.
 
 #### Sqlcmd/BCP & ODBC 
 - SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql) depends on a custom unixODBC Driver Manager. This causes conflicts if you have a previously installed unixODBC Driver Manager. 
@@ -940,7 +928,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 - The SQL Server Agent is not supported yet. Therefore, SQL Server Agent functionality in SSMS does not work on Linux at the moment.
 
-- The file browser is restricted to the  “C:\” scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\ paths with Linux paths. Then execute the script manually in SSMS.
+- The file browser is restricted to the  "C:\\" scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\\ paths with Linux paths. Then execute the script manually in SSMS.
 
 ### Next steps
 To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).

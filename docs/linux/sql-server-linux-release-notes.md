@@ -112,8 +112,6 @@ The following sections describe known issues with this release of SQL Server vNe
 
     - **Resolution**: Change the name in /etc/hostname to something 15 characters long or less.
 
-- Do not run the command `ALTER SERVICE MASTER KEY REGENERATE`. There is a known bug that will cause SQL Server to become unstable. If you need to regenerate the Service Master Key, you should back up your database files, uninstall and then re-install SQL Server, and then restore your database files again.
-
 - Manually setting the system time backwards in time will cause SQL Server to stop updating the internal system time within SQL Server.
 
     - **Resolution**: Restart SQL Server.

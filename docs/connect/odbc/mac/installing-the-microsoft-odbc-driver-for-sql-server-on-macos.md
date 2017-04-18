@@ -36,7 +36,7 @@ This topic explains how to install the [!INCLUDE[msCoName](../../../includes/msc
 ## Troubleshooting Connection Problems  
 If you are unable to make a connection to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] using the ODBC driver on macOS, use the following information to identify the problem.  
 
-The most common connection problem is to have two copies of the UnixODBC Driver Manager installed. Search `/usr/local` for `libodbc*.so*`. If you see more than one version of the file, you (possibly) have more than one driver manager installed. Your application might use the wrong version.
+The most common connection problem is to have two copies of the UnixODBC Driver Manager installed. Search `/usr/` for `libodbc*.so*`. If you see more than one version of the file, you (possibly) have more than one driver manager installed. Your application might use the wrong version.
 
 Enable the connection log by editing your `/etc/odbcinst.ini` file to contains the following section with these items:
 

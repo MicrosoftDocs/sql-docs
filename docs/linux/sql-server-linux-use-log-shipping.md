@@ -98,7 +98,7 @@ As described in the picture above, a log shipping session involves the following
 
 -   Add the line to fstab to persist the share 
 
-        //server/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,rw,uid=mssql,gid=mssql 0 0
+        //server/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
 -   Mount the shares
 
         mount -a

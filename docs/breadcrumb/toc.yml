@@ -555,6 +555,9 @@
       - name: Extended events
         href: /sql/relational-databases/extended-events/
         homepage: /sql/relational-databases/extended-events
+      - name: Graphs
+        href: /sql/relational-databases/graphs/
+        homepage: /sql/relational-databases/graphs
       - name: Import and export
         href: /sql/relational-databases/import-export/
         homepage: /sql/relational-databases/import-export

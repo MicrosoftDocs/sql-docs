@@ -16,18 +16,16 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server vNext Release Notes
-This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
+This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. For related informaiton, see the following:
 
-- To read what's new in this release, see [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md).
+- [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md).
 - [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
-- [SQL Server Reporting Services release notes](../reporting-services/reporting-services-release-notes.md) are published within the Reporting Services section.
+- [SQL Server Reporting Services release notes](../reporting-services/reporting-services-release-notes.md).
 
  **Try it out:**    
    -   [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## SQL Server vNext CTP 2.0 (April  2017)
-### Database Engine (CTP 2.0)
-
 ### Documentation (CTP 2.0)
 - **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] will be noted with **Applies To**. 
 - **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
@@ -36,9 +34,9 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
 
 - **Issue and customer impact:** A SQL Server instance hosting an availability group secondary replica crashes if the SQL Server major version is lower than the instance that hosts the primary replica. Affects upgrades from all supported versions of SQL Server that host availability groups to SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0. This happens under the following steps. 
 
-   1. User upgrades SQL Server instance hosting secondary replica in accordance with [best practices](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
-   1. After upgrade, a failover occurs and newly upgraded secondary becomes primary before completing upgrade for all secondary replicas in the availability group. The old primary is now a secondary which is lower version than primary.
-   1. The availability group is in an unsupported configuration and any remaining secondary replicas might be vulnerable to crash. 
+> 1. User upgrades SQL Server instance hosting secondary replica in accordance with [best practices](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
+> 2. After upgrade, a failover occurs and newly upgraded secondary becomes primary before completing upgrade for all secondary replicas in the availability group. The old primary is now a secondary which is lower version than primary.
+> 3. The availability group is in an unsupported configuration and any remaining secondary replicas might be vulnerable to crash. 
 
 - **Workaround** Connect to the SQL Server instance hosting the new primary replica and remove the faulty secondary replica from the configuration.
 

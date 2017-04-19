@@ -49,12 +49,6 @@ manager: "jhubbard"
   
  For more information about related [!INCLUDE[tsql](../../includes/tsql-md.md)] views, see [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md), and [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
   
- **What do you want to do?**  
-  
--   [Open the Active Operations Dialog Box](#open_dialog)  
-  
--   [Options](#options)  
-  
 ###  <a name="open_dialog"></a> Open the Active Operations Dialog Box  
   
 1.  Open [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  

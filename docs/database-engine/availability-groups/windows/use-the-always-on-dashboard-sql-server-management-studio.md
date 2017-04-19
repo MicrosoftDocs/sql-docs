@@ -1,5 +1,5 @@
 ---
-title: "Use the Always On Dashboard (SQL Server Management Studio) | Microsoft Docs"
+title: "Use the Always On availability group dashboard (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -20,10 +20,10 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Use the Always On Dashboard (SQL Server Management Studio)
+# Use the Always On availability group dashboard (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Database administrators use the Always On Dashboard to obtains an at-a-glance view the health of an Always On availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Some of the typical uses for the Always On Dashboard are:  
+  Database administrators use the Always On availability group dashboard to obtain an at-a-glance view the health of an availability group and its availability replicas and databases in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Some of the typical uses for the availability group d dashboard are:  
   
 -   Choosing a replica for a manual failover.  
   
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 -   Evaluating the performance impact of a synchronous-commit secondary replica  
   
- The Always On Dashboard provides key availability group states and performance indicators allowing you to easily make high availability operational decisions using the following types of information.  
+ The dashboard provides key availability group states and performance indicators allowing you to easily make high availability operational decisions using the following types of information.  
   
 -   Replica roll-up state  
   
@@ -48,34 +48,6 @@ manager: "jhubbard"
 -   Synchronization mode and state  
   
 -   Time to restore log  
-  
- **In This Topic:**  
-  
--   **Before you begin:**  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
-     [Permissions](#Permissions)  
-  
--   **Getting started with:**  
-  
-     [Always On Dashboard](#SSMSProcedure)  
-  
-     [To Change Always On Dashboard Options](#DashboardOptions)  
-  
--   **Dashboard panes:**  
-  
-     [Availability Groups Summary](#AvGroupsView)  
-  
-     [Availability Group Details](#AvGroupDetails)  
-  
-     [Availability Replica Details](#AvReplicaDetails)  
-  
-     [To Group Availability Group Information](#AvDbDetails)  
-  
--   [Related Tasks](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   

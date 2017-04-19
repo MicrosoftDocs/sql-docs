@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: What's New for SQL Server vNext CTP 1.3 on Linux | Microsoft Docs
+title: What's New for SQL Server vNext CTP 2.0 on Linux | Microsoft Docs
 description: This topic highlights what's new for the current release of SQL Server vNext on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/23/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -27,6 +27,24 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 # What's new for SQL Server vNext on Linux
 
 This topic describes what's new for SQL Server vNext running on Linux.
+
+## CTP 2.0
+The CTP 2.0 release contains the following improvements and fixes:
+
+- Added **Log Shipping** functionality for SQL Server Agent.
+- Localized messages of mssql-conf.
+- Linux path formatting are now compatible throughout the SQL Server Engine. But support for "C:\\" prefixed paths will continue.
+- Enabled DMV **sys.dm_os_file_exists**.
+- Enabled DMV **sys.fn_trace_gettable**.
+- Added [CLR Strict Security mode](/sql/database-engine/configure-windows/clr-strict-security).
+- SQL Graph.
+- Resumable Online Index Rebuilds.
+- Adaptive Query Processing.
+- Added UTF-8 encoding for system files, including log files.
+- Fixed In-memory databases location limitation. 
+- Add new cluster type `CLUSTER_TYPE = EXTERNAL` for configuring an availability group for high availability.
+- Fix Availability Group Listener for read-only routing.
+- Production support for Early Adoption Program (EAP) customers. Sign up [here](http://aka.ms/eapsignup).
 
 ## CTP 1.4
 The CTP 1.4 release contains the following improvements and fixes:

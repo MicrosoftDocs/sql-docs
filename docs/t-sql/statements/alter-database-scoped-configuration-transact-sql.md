@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/09/2017"
+ms.date: "04/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -55,6 +55,7 @@ ALTER DATABASE SCOPED CONFIGURATION
      {  [ FOR SECONDARY] SET <set_options>  }    
 }  
 | CLEAR PROCEDURE_CACHE  
+| IDENTITY_CACHE = { ON | OFF }
 [;]    
   
 < set_options > ::=    
@@ -115,6 +116,14 @@ This value is only valid on secondaries and specifies that the value for this se
 CLEAR PROCEDURE_CACHE  
 
 Clears the procedure cache for the database. This can be executed both on the primary and the secondaries.  
+
+IDENTITY_CACHE = { **ON** | OFF }  
+
+Enables or disables identity cache at the database level. The default is **ON**. Identity caching is used to improve INSERT performance on tables with Identity columns. To avoid gaps in the values of the Identity column in cases where the server restarts unexpectedly or fails over to a secondary server, disable the IDENTITY_CACHE option. This option is similar to the existing SQL Server Trace Flag 272, except that it can be set at the database level rather than only at the server level.   
+
+> [!NOTE] 
+> This option can only be set for the PRIMARY. For more information, see [Identity columns](create-table-transact-sql-identity-property.md).  
+>
 
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER ANY DATABASE SCOPE CONFIGURATION   
@@ -242,6 +251,15 @@ This example clears the procedure cache (possible only for a primary database).
 ```tsql  
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;  
 ```  
+
+### G. Set IDENTITY_CACHE
+
+This example disables the identity cache.
+
+```tsql 
+ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
+```
+
 ## Additional Resources
 
 ### MAXDOP Resources 

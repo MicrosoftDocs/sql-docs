@@ -18,6 +18,22 @@ manager: "erikre"
 # What&#39;s new in SQL Server Analysis Services vNext
 [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
+## SQL Server Analysis Services on Windows CTP 2.0
+This release see many new enhancements for tabular model, including:
+
+* Object-level security to secure the metadata of tabular models.
+* Transaction-performance improvements for a more responsive developer experience.
+* Dynamic Management View improvements for 1200 and 1400 models enabling dependency analysis and reporting.
+* Improvements to the authoring experience for Detail Rows Expressions.
+* Hierarchy and column reuse to be surfaced in more helpful locations in the Power BI field list.
+* Date relationships to easily create relationships to date dimensions based on date fields.
+* Default installation option for Analysis Services is now for tabular mode.
+* New Get Data (Power Qery) data sources.
+* DAX Editor for SSDT.
+* Existing DirectQuery data sources support for M queries.
+* SSMS improvements, such as viewing, editing, and scripting support for structured data sources.
+
+To get more details about this CTP 2.0 release, see the [Analysis Services blog](https://blogs.msdn.microsoft.com/analysisservices/).
 
 ## SQL Server Analysis Services on Windows CTP 1.4
 [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate) and [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms-release-candidate) preview releases coincide with SQL Server vNext preview releases. Be sure to use the latest to get new features. To learn more, see the [Analysis Services blog](https://blogs.msdn.microsoft.com/analysisservices/).

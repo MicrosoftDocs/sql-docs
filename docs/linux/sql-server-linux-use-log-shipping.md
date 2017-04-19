@@ -52,37 +52,41 @@ As described in the picture above, a log shipping session involves the following
 ### Configure Primary Server
 -   Run the following on your install Samba
 
-      ```bash
-    	sudo apt-get install samba #For Ubuntu
-    	sudo yum -y install samba #For RHEL/CentOS
-    	```
-
+    ```bash
+    sudo apt-get install samba #For Ubuntu
+    sudo yum -y install samba #For RHEL/CentOS
+    ```
 -   Create a directory to store the logs for Log Shipping and give mssql the required permissions
 
-      ```bash
-        mkdir /var/opt/mssql/tlogs
-        chown mssql:mssql /var/opt/mssql/tlogs
-        chmod 0700 /var/opt/mssql/tlogs
-    	```
+    ```bash
+    mkdir /var/opt/mssql/tlogs
+    chown mssql:mssql /var/opt/mssql/tlogs
+    chmod 0700 /var/opt/mssql/tlogs
+    ```
 
 -   Edit the /etc/samba/smb.conf file (you need root permissions for that) and add the following section:
 
-        [tlogs]
-        path=/var/opt/mssql/tlogs
-        available=yes
-        read only=yes
-        browsable=yes
-        public=yes
-        writable=no
+    ```bash
+    [tlogs]
+    path=/var/opt/mssql/tlogs
+    available=yes
+    read only=yes
+    browsable=yes
+    public=yes
+    writable=no
+    ```
 
 -   Create a mssql user for Samba
 
-        sudo smbpasswd -a mssql
+    ```bash
+    sudo smbpasswd -a mssql
+    ```
 
 -   Restart the Samba services
-
-        sudo systemctl restart smbd.service nmbd.service
-        
+    ```bash
+    sudo systemctl restart smbd.service nmbd.service
+    ```
+ 
 ### Configure Secondary Server
 
 -   Run the following on your install the CIFS client
@@ -125,8 +129,6 @@ As described in the picture above, a log shipping session involves the following
     DECLARE @LS_BackupJobId	AS uniqueidentifier 
     DECLARE @LS_PrimaryId	AS uniqueidentifier 
     DECLARE @SP_Add_RetCode	As int 
-
-
     EXEC @SP_Add_RetCode = master.dbo.sp_add_log_shipping_primary_database 
              @database = N'SampleDB' 
             ,@backup_directory = N'/var/opt/mssql/tlogs' 
@@ -141,13 +143,11 @@ As described in the picture above, a log shipping session involves the following
             ,@primary_id = @LS_PrimaryId OUTPUT 
             ,@overwrite = 1 
 
-
     IF (@@ERROR = 0 AND @SP_Add_RetCode = 0) 
     BEGIN 
 
     DECLARE @LS_BackUpScheduleUID	As uniqueidentifier 
     DECLARE @LS_BackUpScheduleID	AS int 
-
 
     EXEC msdb.dbo.sp_add_schedule 
             @schedule_name =N'LSBackupSchedule' 
@@ -283,7 +283,6 @@ As described in the picture above, a log shipping session involves the following
 
     END 
 
-
     IF (@@error = 0 AND @LS_Add_RetCode = 0) 
     BEGIN 
 
@@ -303,26 +302,23 @@ As described in the picture above, a log shipping session involves the following
 - Verify that Log Shipping works by starting the following job on the primary server
 
     ```tsql
+    USE msdb ;  
+    GO  
 
-      USE msdb ;  
-      GO  
-
-      EXEC dbo.sp_start_job N'LSBackup_SampleDB' ;  
-      GO  
+    EXEC dbo.sp_start_job N'LSBackup_SampleDB' ;  
+    GO  
     ```
 
  - Verify that Log Shipping works by starting the following job on the secondary server
  
-     ```tsql
+    ```tsql
+    USE msdb ;  
+    GO  
 
-      USE msdb ;  
-      GO  
+    EXEC dbo.sp_start_job N'LSCopy_SampleDB' ;  
+    GO  
+    EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
+    GO  
+    ```
 
-      EXEC dbo.sp_start_job N'LSCopy_SampleDB' ;  
-      GO  
-      EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
-      GO  
-     ```
 
-## References
--  

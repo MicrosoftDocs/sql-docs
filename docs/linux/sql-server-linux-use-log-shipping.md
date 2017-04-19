@@ -44,9 +44,8 @@ As described in the picture above, a log shipping session involves the following
 
 ## Setup a network share for Log Shipping
 
-        > [!NOTE] 
-        > You can use CIFS or NFS (but not both) to setup a network share for Log Shipping. 
-
+> [!NOTE] 
+> This tutorial uses CIFS + Samba to setup the network share. If you want to use NFS, leave a comment and we will add it to the doc.       
 ## Usisng CIFS via Samba
 
 ### Configure Primary Server

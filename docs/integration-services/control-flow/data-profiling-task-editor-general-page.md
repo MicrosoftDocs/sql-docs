@@ -43,7 +43,7 @@ manager: "jhubbard"
 ## Destination Options  
   
 > [!IMPORTANT]  
->  The output file might contain sensitive data about your database and the data that database contains. For suggestions about how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md).  
+>  The output file might contain sensitive data about your database and the data that database contains. For suggestions about how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
  **DestinationType**  
  Specify whether to save the data profile output to a file or a variable:  

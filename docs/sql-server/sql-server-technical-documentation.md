@@ -31,16 +31,16 @@ manager: "jhubbard"
 
 **SQL Server vNext**
 
-For the latest release notes, see [SQL Server vNext Release Notes](../sql-server/sql-server-vnext-release-notes.md)
-
-For the latest information on what is new, see [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
+- For the latest release notes, see [SQL Server vNext Release Notes](../sql-server/sql-server-vnext-release-notes.md)
+- For the latest information on what is new, see [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
  
 **SQL Server 2016:**
  
- [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
-
-[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+- [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
+- [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
+ **Content for previous versions of SQL Server:** [!INCLUDE[previous-content-versions](../includes/previous-content-versions.md)]
+ 
  **Try SQL Server!**    
     
  - [**Download SQL Server 2016  from the Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)    

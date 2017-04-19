@@ -28,7 +28,7 @@ ms.assetid:
 
 #What is SQL Server log shipping?
 
-SQL Server Log shipping is a HA configuration where a database from a primary server is replicated onto one or more secondary servers The process of transferring the transaction log files and restoring is automated across the SQL Servers. As the process result there are two copies of the data on two separate locations. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
+SQL Server Log shipping is a HA configuration where a database from a primary server is replicated onto one or more secondary servers. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
 
   ![Logshipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
@@ -110,53 +110,7 @@ As described in the picture above, a log shipping session involves the following
 
         sudo mount -a
         
-## Using NFS
 
-### Configure Primary Server
--   Run the following on your install NFS and start the service
-    
-    	sudo apt-get install nfs-utils #For Ubuntu
-    	sudo yum -y install nfs-utils #For RHEL/CentOS
-        sudo systemctl enable rpcbind
-        sudo systemctl start rpcbind
-        sudo systemctl enable nfs-server
-        sudo systemctl start nfs-server
-
--   Create a directory to store the logs for Log Shipping and give mssql the required permissions
-
-        mkdir /var/opt/mssql/tlogs
-        chown mssql:mssql /var/opt/mssql/tlogs
-        chmod 0770 /var/opt/mssql/tlogs
-
--   Add the following line to /etc/expots file
-
-        /var/opt/mssql/tlog <ip_address_of_secondary_server>(ro,sync,no_subtree_check,no_root_squash) <ip_address_of_primary_server>(rw,sync, no_subtree_check,no_root_squash)
-        
-
--   Start exporting and verify the exports by running the following commands:
-
-        sudo exportfs -rav
-        sudo showmount -e
-
-### Configure Secondary Server
--   Run the following on your install NFS and start the service
-
-        sudo apt-get install nfs-common #For Ubuntu
-        sudo yum install -y nfs-common 
-     
--   Create an empty directory for mounting and set the appropriate permissions and ownership
-    
-        mkdir /var/opt/mssql/tlogs 
-        chown root:root /var/opt/mssql/tlogs 
-        chmod 0550 /var/opt/mssql/tlogs 
-    
--   Add the following to /etc/fstab to persist the mount
-
-        <ip_address_of_primary_server>:/var/opt/mssql/tlogs /var/opt/mssql/tlogs nfs timeo=14,intr 0 0 
-
--   Mount the shares
-
-        mount -a 
 
 # Setup Log Shipping via T-SQL
 
@@ -354,3 +308,5 @@ As described in the picture above, a log shipping session involves the following
       EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
       GO  
 
+## References
+-  

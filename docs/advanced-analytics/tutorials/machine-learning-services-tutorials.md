@@ -21,6 +21,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # SQL Server Machine Learning Tutorials
+
 Use these tutorials to learn how to do machine learning in SQL Server 2016 and SQL Server vNext. Topics covered include:
 
 + How to run R or Python from T-SQL
@@ -29,7 +30,7 @@ Use these tutorials to learn how to do machine learning in SQL Server 2016 and S
 + How to wrap R or code in a stored procedure
 + Methods for optimizing R and SQL code for a production environment
 
-**Prerequisites**
+## Prerequisites
 
 To use these tutorials, you must have installed one of the following server products:
 
@@ -45,17 +46,27 @@ For more information about setup, see [Prerequisites](#bkmk_Prerequisites).
 
 ## <a name="bkmk_pythontutorials"></a>Python Tutorials
 
-Running Python in T-SQL
+> [!NOTE]
+>
+> Support for Python is a new feature in SQL Server vNext 2.0. Although the feature is in pre-release and not supported for production environments, we invite you to try it out and send feedback.
 
-Create a Machine Learning Model in Python using revoscalepy
+Learn how to call Python in T-SQL, using the extensibility mechanism pioneered in SQL Server 2016. Now supports Python!
 
-Deploying and Consuming a Python Model using Microsft Machine Learning Server
++ [Running Python in T-SQL](run-python-using-t-sql.md)
+
+Create a model using rxLinMod, and run it in SQL Server, using the new **revoscalepy** lilbrary from a remote Python terminal.
+
++ [Create a Machine Learning Model in Python using revoscalepy](use-python-revoscalepy-to-create-model.md)
+
+Learn how to deploy a Python model using the latest version of Microsoft Machine Learning Server.
+
++ [Deploy and Consume a Python Model](..\python\publish-consume-python-code.md)
 
 ## <a name="bkmk_sqltutorials"></a>R Tutorials using SQL Server
 
 This section lists tutorials that were developed for SQL Server 2016 R Services. All require Microsoft R, and make extensive use of features in the RevoScaleR package for SQl Server compute contexts.
 
-> [!NOTE] 
+> [!NOTE]
 > Unless otherwise indicated, these tutorials are expected to work without modification in SQL Server vNext.
 
 ### <a name="bkmk_dataScience"></a>Data Science Deep Dive
@@ -155,12 +166,15 @@ For more information, see [Machine Learning Templates with SQL Server 2016 R Ser
 ## <a name="bkmk_Prerequisites"></a>Prerequisites
 
 **SQL Server 2016**
+
 To run any of these tutorials, you must download and install **R Services (in-Database)** as described here:  [Set up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)
 
 **SQL Server vNext**
-R Services has been renamed **Machine Learning Services (in-Database)**. Moreover, now you can install either R or Python, or both. Otherwise the overall setup process, architecture, and requirements are the same.
+
+In SQL Server vNext CTP 2.0, R Services has been renamed **Machine Learning Services (in-Database)**. With this latest release, you can install either R or Python, or both. Otherwise the overall setup process, architecture, and requirements are the same.
 
 After running SQL Server setup, don't forget these important steps:
+
 + Enable the external script execution feature by running `sp_configure 'enable external script', 1`
 + Restart the server
 + Ensure that the service that calls the external runtime has necessary permissions
@@ -178,8 +192,8 @@ Note that standard R libraries are insufficient to use these tutorials; both you
 
 ## See Also
 
-[Getting Started with SQL Server R Services](../../advanced-analytics/r/getting-started-with-sql-server-r-services.md)  
+[Getting Started with SQL Server R Services](../../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
 
-[SQL Server Machine Learning Tasks](../../advanced-analytics/r/sql-server-machine-learning-tasks.md)  
-  
+[SQL Server Machine Learning Tasks](../../advanced-analytics/r/sql-server-machine-learning-tasks.md)
+
 

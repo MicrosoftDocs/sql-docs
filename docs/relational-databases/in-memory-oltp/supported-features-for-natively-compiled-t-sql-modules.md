@@ -45,6 +45,10 @@ manager: "jhubbard"
 
 The following query constructs are supported:  
 
+CASE expression: CASE can be used in any statement or clause that allows a valid expression.
+  - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
+    Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], CASE statements are now supported for natively compiled T-SQL modules.
+
 SELECT clause:  
 
 -   Columns and  name aliases (using either AS or = syntax).  

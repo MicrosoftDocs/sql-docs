@@ -52,14 +52,18 @@ As described in the picture above, a log shipping session involves the following
 ### Configure Primary Server
 -   Run the following on your install Samba
 
+      ```bash
     	sudo apt-get install samba #For Ubuntu
     	sudo yum -y install samba #For RHEL/CentOS
-    	
+    	```
+
 -   Create a directory to store the logs for Log Shipping and give mssql the required permissions
 
+      ```bash
         mkdir /var/opt/mssql/tlogs
         chown mssql:mssql /var/opt/mssql/tlogs
         chmod 0700 /var/opt/mssql/tlogs
+    	```
 
 -   Edit the /etc/samba/smb.conf file (you need root permissions for that) and add the following section:
 
@@ -115,6 +119,8 @@ As described in the picture above, a log shipping session involves the following
 # Setup Log Shipping via T-SQL
 
 - Run this script from your primary server
+
+    ```tsql
 
     DECLARE @LS_BackupJobId	AS uniqueidentifier 
     DECLARE @LS_PrimaryId	AS uniqueidentifier 
@@ -178,6 +184,7 @@ As described in the picture above, a log shipping session involves the following
             ,@secondary_database = N'SampleDB' 
             ,@overwrite = 1 
 
+    ```
 
 
 - Run this script from your secondary server
@@ -287,6 +294,7 @@ As described in the picture above, a log shipping session involves the following
             ,@enabled = 1 
 
     END 
+    ```
 
 ## Verify Log Shipping works
 

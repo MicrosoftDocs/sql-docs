@@ -63,7 +63,7 @@ In addition to the proprietary R libraries included with Microsoft Machine Learn
   
      For more information about these packages and how to use them, see Get started with ScaleR and data analysis](https://msdn.microsoft.com/microsoft-r/scaler-getting-started).  
 
-+ **MicrosoftML** contains a collection of highly optimized machine learning algorithms and data transformations from the Microsoft Data Science team. Many of the algorithms are also used in Azure Machine Learning. For more information, see [Using the MicrosoftML Package](..\..\advanced-analytics\using-the-microsoftml-package.md).
++ **MicrosoftML** contains a collection of highly optimized machine learning algorithms and data transformations from the Microsoft Data Science team. Many of the algorithms are also used in Azure Machine Learning. For more information, see [Using the MicrosoftML Package](../../advanced-analytics/using-the-microsoftml-package.md).
 
 ### R Development Tools
 

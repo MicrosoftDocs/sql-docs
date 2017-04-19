@@ -189,6 +189,8 @@ As described in the picture above, a log shipping session involves the following
 
 - Run this script from your secondary server
 
+    ```tsql
+
     DECLARE @LS_Secondary__CopyJobId	AS uniqueidentifier 
     DECLARE @LS_Secondary__RestoreJobId	AS uniqueidentifier 
     DECLARE @LS_Secondary__SecondaryId	AS uniqueidentifier 
@@ -300,14 +302,19 @@ As described in the picture above, a log shipping session involves the following
 
 - Verify that Log Shipping works by starting the following job on the primary server
 
+    ```tsql
+
       USE msdb ;  
       GO  
 
       EXEC dbo.sp_start_job N'LSBackup_SampleDB' ;  
       GO  
-    
+    ```
+
  - Verify that Log Shipping works by starting the following job on the secondary server
  
+     ```tsql
+
       USE msdb ;  
       GO  
 
@@ -315,6 +322,7 @@ As described in the picture above, a log shipping session involves the following
       GO  
       EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
       GO  
+     ```
 
 ## References
 -  

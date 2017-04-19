@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "04/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
@@ -125,7 +125,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
   
 
 ### <a name="TableOptions"></a> Table structure options
-For guidance on choosing the type of table, see [Indexing tables in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/).
+For guidance on choosing the type of table, see [Indexing tables in Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
   
  `CLUSTERED COLUMNSTORE INDEX`  
 Stores the table as a clustered columnstore index. The clustered columnstore index applies to all of the table data. This is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   

@@ -1,7 +1,7 @@
 ---
 title: "Creating multiple models using rxExecBy | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "04/18/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,6 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-
 # Creating multiple models using rxExecBy
 
 SQL Server vNext CTP 2.0 includes a new function, **rxExecBy**, that supports parallel processing of multiple related models. Rather than train one very large model based on data from multiple similar entities, the data scientist can very quickly create many related models, each using data specific to a single entity.

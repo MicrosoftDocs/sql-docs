@@ -49,7 +49,7 @@ You construct the data flow in a package on the design surface of the **Data Flo
   
 ## See Also  
  [Add or Delete a Component in a Data Flow](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)   
+ [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   
   

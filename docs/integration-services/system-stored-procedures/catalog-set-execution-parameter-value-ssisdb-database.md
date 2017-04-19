@@ -77,9 +77,9 @@ set_execution_parameter_value [ @execution_id = execution_id
 |0|None<br /><br /> Logging is turned off. Only the package execution status is logged.|  
 |1|Basic<br /><br /> All events are logged, except custom and diagnostic events. This is the default value.|  
 |2|Performance<br /><br /> Only performance statistics, and OnError and OnWarning events, are logged.|  
-|3|Verbose<br /><br /> All events are logged, including custom and diagnostic events. <br />Custom events include those events that are logged by Integration Services tasks. For more information, see [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md)|  
+|3|Verbose<br /><br /> All events are logged, including custom and diagnostic events. <br />Custom events include those events that are logged by Integration Services tasks. For more information, see [Custom Messages for Logging](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)|  
 |4|Runtime lineage<br /><br /> Collects the data required to track lineage in the data flow.|  
-|100|Custom logging level<br /><br /> Specify the settings in the CUSTOMIZED_LOGGING_LEVEL parameter. For more info about the values that you can specify, see [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> For more info about customized logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md).|  
+|100|Custom logging level<br /><br /> Specify the settings in the CUSTOMIZED_LOGGING_LEVEL parameter. For more info about the values that you can specify, see [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> For more info about customized logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
  To specify that the Integration Services server generates dump files when any error occurs during a package execution, set the following parameter values for an execution instance that hasn’t run.  
   

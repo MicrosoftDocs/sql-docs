@@ -80,7 +80,7 @@ manager: "jhubbard"
  Setting a transaction attribute on the package enables tasks, containers, and connections in the package to join the transaction. Transaction attributes ensure that the package and its elements succeed or fail as a unit. Packages can also run other packages and enroll other packages in transactions, so that you can run multiple packages as a single unit of work. For more information, see [Integration Services Transactions](../integration-services/integration-services-transactions.md).  
   
 ## Custom log entries available on the package  
- The following table lists the custom log entries for packages. For more information, see [Integration Services &#40;SSIS&#41; Logging](../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries for packages. For more information, see [Integration Services &#40;SSIS&#41; Logging](../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

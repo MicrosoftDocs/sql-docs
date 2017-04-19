@@ -65,10 +65,6 @@
 ## [System Variables](system-variables.md)
 
 # [Scale Out](integration-services-ssis-scale-out.md)
-## [Walkthrough: Set Up Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)
-## [Run Packages in Integration Services (SSIS) Scale Out](run-packages-in-integration-services-ssis-scale-out.md)
-## [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
-## [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)
 
 # [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)
 

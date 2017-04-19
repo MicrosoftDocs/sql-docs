@@ -24,7 +24,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sp_spaceused (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Displays the number of rows, disk space reserved, and disk space used by a table, indexed view, or [!INCLUDE[ssSB](../../includes/sssb-md.md)] queue in the current database, or displays the disk space reserved and used by the whole database.  
   

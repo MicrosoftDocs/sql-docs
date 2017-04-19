@@ -50,7 +50,7 @@ As described in the picture above, a log shipping session involves the following
 ## Using CIFS via Samba
 
 ### Configure Primary Server
--   Run the following on your install Samba
+-   Run the following to install Samba
 
     ```bash
     sudo apt-get install samba #For Ubuntu
@@ -89,7 +89,7 @@ As described in the picture above, a log shipping session involves the following
  
 ### Configure Secondary Server
 
--   Run the following on your install the CIFS client
+-   Run the following to install the CIFS client
     ```bash   
     sudo apt-get install cifs-utils #For Ubuntu
     sudo yum -y install cifs-utils #For RHEL/CentOS

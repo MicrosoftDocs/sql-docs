@@ -168,7 +168,7 @@
 ## [sys.periods](sys-periods-transact-sql.md)  
 ## [sys.plan_guides](sys-plan-guides-transact-sql.md)  
 ## [sys.procedures](sys-procedures-transact-sql.md)  
-## [sys.resumable_index_operations](sys-resumable-index-operations.md)
+## [sys.resumable_index_operations](sys-index_resumable_operations)
 ## [sys.sequences](sys-sequences-transact-sql.md)  
 ## [sys.server_assembly_modules](sys-server-assembly-modules-transact-sql.md)  
 ## [sys.server_events](sys-server-events-transact-sql.md)  

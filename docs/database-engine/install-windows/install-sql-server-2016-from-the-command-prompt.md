@@ -1,7 +1,7 @@
 ---
-title: "Install SQL Server 2016 from the Command Prompt | Microsoft Docs"
+title: "Install SQL Server from the Command Prompt | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/04/2016"
+ms.date: "04/19/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -89,7 +89,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Install SQL Server 2016 from the Command Prompt
+# Install SQL Server from the Command Prompt
   Before you run SQL Server Setup, review [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
   
  Installing a new instance of SQL Server at the command prompt enables you to specify the features to install and how they should be configured. You can also specify silent, basic, or full interaction with the Setup user interface.  
@@ -240,7 +240,7 @@ manager: "jhubbard"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Optional**|Specifies the directories for tempdb data files. When specifying more than one directory, separate the directories with a blank space. If multiple directories are specified the tempdb data files will be spread across the directories in a round-robin fashion.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> NOTE: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Optional**|Specifies the directory for  tempdb  log file.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Note: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Optional**|Specifies the number of tempdb data files to be added by setup. This value can be increased up to the number of cores. Default value:<br /><br /> 1  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 or the number of cores, whichever is lower for all other editions<br /><br /> **\*\* Important \*\*** The primary database file for tempdb will still be tempdb.mdf. The additional tempdb files are named as tempdb_mssql_#.ndf where # represents a unique number for each additional tempdb database file created during setup. The purpose of this naming convention is to make them unique. Uninstalling an instance of SQL Server deletes the files with naming convention tempdb_mssql_#.ndf. Do not use tempdb_mssql_*.ndf naming convention for user database files.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Specifies the initial size of each tempdb data file in MB. Setup allows the size up to 1024 MB. Default value = 8<br /><br /> Allowed range: Min = 8, Max = 1024.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Specifies the initial size of each tempdb data file in MB. Setup allows the size up to 1024 MB.<br /><br /> [!INCLUDE[SQL VERSION](..\includes\sssqlv14-md.md)] Maximum size is 256,000 MB. Default value = 8<br /><br /> Allowed range: Min = 8, Max = 1024 or 256,000 for [!INCLUDE[SQL VERSION](..\includes\sssqlv14-md.md)].|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64.  Allowed range: Min = 0, Max = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Specifies the initial size of the tempdb log file in MB. Setup allows the size up to 1024 MB. <br />Default value: 8<br /><br /> Allowed range: Min = 8, Max = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64.  Allowed range: Min = 0, Max = 1024|  

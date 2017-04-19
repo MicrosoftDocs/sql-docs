@@ -134,7 +134,4 @@ You will create two configuration files, DataTransferConfig.dtsConfig and LoadXM
 ## See Also  
 [Package Configurations](../integration-services/packages/package-configurations.md)  
 [Create Package Configurations](../integration-services/packages/create-package-configurations.md)  
-[Access to Files Used by Packages](security-overview-integration-services.md#files)  
-  
-  
-  
+[Access to Files Used by Packages](../integration-services/security/security-overview-integration-services.md#files)  

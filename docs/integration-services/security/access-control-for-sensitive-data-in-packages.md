@@ -80,10 +80,10 @@ manager: "jhubbard"
   
 3.  After the packages have been deployed to the production environment, the operations team can re-encrypt the deployed packages by assigning a strong password that is known only to them. Or, they can encrypt the deployed packages by selecting **EncryptSensitiveWithUserKey** or **EncryptAllWithUserKey**, and using the local credentials of the account that will run the packages.  
 
-## Set or Change the Protection Level of Packages
+## <a name="set_protection"></a> Set or Change the Protection Level of Packages
   To control access to the contents of packages and to the sensitive values that they contain, such as passwords, set the value of the **ProtectionLevel** property. The packages contained in a project need to have the same protection level as the project, to build the project. If you change the **ProtectionLevel** property setting on the project, you need to manually update the property setting for the packages.  
   
- For information about how to determine the **ProtectionLevel** settings that are appropriate for your packages at different stages in the package life cycle, see [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md). For an overview of security features in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
+ For an overview of security features in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
  The procedures in this topic describe how to use either [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or the dtutil command prompt utility to change the **ProtectionLevel** property.  
   
@@ -92,7 +92,7 @@ manager: "jhubbard"
   
 ### To set or change the protection level of a package in SQL Server Data Tools  
   
-1.  Review the available values for the **ProtectionLevel** property in the topic, [Setting the Protection Level of Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md), and determine the appropriate value for your package.  
+1.  Review the available values for the **ProtectionLevel** property in the topic, [Setting the Protection Level of Packages](#set_protection), and determine the appropriate value for your package.  
   
 2.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package.  
   
@@ -108,7 +108,7 @@ manager: "jhubbard"
   
 ### To set or change the protection level of packages at the command prompt  
   
-1.  Review the available values for the **ProtectionLevel** property in the topic, [Setting the Protection Level of Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md), and determine the appropriate value for your package.  
+1.  Review the available values for the **ProtectionLevel** property in the section, [Setting the Protection Level of Packages](#set_protection), and determine the appropriate value for your package.  
   
 2.  Review the mappings for the **Encrypt** option in the topic, [dtutil Utility](../../integration-services/dtutil-utility.md), and determine the appropriate integer to use as the value of the selected **ProtectionLevel** property.  
   
@@ -130,10 +130,10 @@ manager: "jhubbard"
   
          If you use a similar command in a batch file, enter the file placeholder, "%f", as "%%f" in the batch file.  
 
-## Package and Project Protection Level Dialog Box
+## <a name="protection_dialog"></a> Package Project Protection Level Dialog Box
   Use the **Package Protection Level** dialog box to update the protection level of a package. The protection level determines the protection method, the password or user key, and the scope of package protection. Protection can include all data or sensitive data only.  
   
- To understand the requirements and options for package security, you may find it useful to see [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md) and [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
+ To understand the requirements and options for package security, you may find it useful to see [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
 ### Options  
  **Package protection level**  
@@ -145,7 +145,7 @@ manager: "jhubbard"
  **Retype password**  
  Type the password again.  
 
-## Package Password Dialog Box
+## <a name="password_dialog"></a> Package Password Dialog Box
   Use the **Package Password** dialog box to provide the package password for a package that is encrypted with a password. You must provide a password if the package uses the **Encrypt sensitive with passwor**d or **Encrypt all with password** protection level.  
   
 ### Options  

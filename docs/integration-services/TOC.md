@@ -7,16 +7,28 @@
 ## [Integration Services (SSIS) Projects and Solutions](integration-services-ssis-projects-and-solutions.md)
 
 # [Install](install-windows/index.md)
+
+# [Catalog and Server](service/integration-services-ssis-server-and-catalog.md)  
+## [SSIS Catalog](service/ssis-catalog.md)  
+## [Integration Services (SSIS) Catalog Transact-SQL Reference](service/integration-services-ssis-catalog-transact-sql-reference.md)  
+## [View the List of Packages on the Integration Services Server](service/view-the-list-of-packages-on-the-integration-services-server.md)  
+## [Project Properties Dialog Box](service/project-properties-dialog-box.md)  
+## [Project Versions Dialog Box](service/project-versions-dialog-box.md)  
+## [Browse All Principals Dialog Box](service/browse-all-principals-dialog-box.md)  
+## [Package Properties Dialog Box](service/package-properties-dialog-box.md)  
+## [Validate Dialog Box](service/validate-dialog-box.md)  
+## [Configure Dialog Box](service/configure-dialog-box.md)  
+## [Set Parameter Value Dialog Box](service/set-parameter-value-dialog-box.md)  
+## [Folder Properties Dialog Box](service/folder-properties-dialog-box.md)  
+## [Integration Services Roles (SSIS Service)](service/integration-services-roles-ssis-service.md)  
+### [Create a User-Defined Role](service/create-a-user-defined-role.md)  
+### [Assign a Reader and Writer Role to a Package](service/assign-a-reader-and-writer-role-to-a-package.md)  
+### [Package Roles Dialog Box UI Reference](service/package-roles-dialog-box-ui-reference.md)  
+
 # [Change data capture](change-data-capture/index.md)
-# [Connection Manager](connection-manager/index.md)
+# [Connections](connection-manager/index.md)
 # [Control flow](control-flow/index.md)
 # [Data flow](data-flow/index.md)
-
-# Develop Packages for Integration
-## [Build packages programmatically](building-packages-programmatically/index.md)
-## [Extend packages custom objects](extending-packages-custom-objects/index.md)
-## [Extend packages scripting](extending-packages-scripting/index.md)
-## [Run and manage packages programmatically](run-manage-packages-programmatically/index.md)
 
 # [Event Handlers](integration-services-ssis-event-handlers.md)
 # [Expressions](expressions/index.md)
@@ -48,9 +60,17 @@
 # [Performance](performance/index.md)
 # [Queries](integration-services-ssis-queries.md)
 
+# Scripting and programming
+## [Build packages programmatically](building-packages-programmatically/index.md)
+## [Extend packages custom objects](extending-packages-custom-objects/index.md)
+## [Extend packages scripting](extending-packages-scripting/index.md)
+## [Run and manage packages programmatically](run-manage-packages-programmatically/index.md)
+
 # [Security](security/index.md)
 
-# [Service](service/index.md)
+# [Service (legacy)](service/index.md)
+
+# [System function - dm_execution_performance_counters](functions-dm-execution-performance-counters.md)
 
 # [System stored procedures](system-stored-procedures/index.md)
 
@@ -78,7 +98,6 @@
 # [Errors and Events Reference](errors-and-events-reference-integration-services.md)
 ## [Integration Services Error and Message Reference](integration-services-error-and-message-reference.md)
 # [Integration Services Language Reference](integration-services-language-reference.md)
-# [Functions - dm_execution_performance_counters](functions-dm-execution-performance-counters.md)
  
 # [Tutorials](integration-services-tutorials.md)
 

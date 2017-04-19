@@ -164,6 +164,7 @@
 
 ## [TABLE](create-table-transact-sql.md)  
 ## [TABLE (Azure SQL Data Warehouse)](create-table-azure-sql-data-warehouse.md)  
+## [TABLE (SQL Graph)](create-table-sql-graph.md)  
 ## [TABLE AS SELECT (Azure SQL Data Warehouse)](create-table-as-select-azure-sql-data-warehouse.md)
 ## [TABLE IDENTITY (Property)](create-table-transact-sql-identity-property.md) 
 ## [TRIGGER](create-trigger-transact-sql.md)  
@@ -249,6 +250,8 @@
 
 # [ENABLE TRIGGER](enable-trigger-transact-sql.md)
 # [INSERT](insert-transact-sql.md) 
+# [INSERT (SQL Graph)](insert-sql-graph.md) 
+# [MATCH (SQL Graph)](match-sql-graph.md) 
 # [MERGE](merge-transact-sql.md) 
 # [RENAME](rename-transact-sql.md)  
 

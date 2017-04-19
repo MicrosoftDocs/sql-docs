@@ -23,16 +23,6 @@ manager: "jhubbard"
 
   This topic documents interoperability of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- **In This Topic:**  
-  
--   [Features That Interoperate with Always On Availability Groups](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md#Interop)  
-  
--   [Features that Interoperate with Always On Availability Groups with Restrictions](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md#restrictions)  
-  
--   [Features that Do Not Interoperate with Always On Availability Groups](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md#NoInterop)  
-  
--   [Related Content](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md#RelatedContent)  
-  
 ##  <a name="Interop"></a> Features That Interoperate with Always On Availability Groups  
  The following table lists [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] features that interoperate with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A link in the **More Information** column indicates that interoperability considerations exist for a given feature.  
   

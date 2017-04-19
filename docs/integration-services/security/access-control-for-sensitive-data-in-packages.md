@@ -9,6 +9,11 @@ ms.technology:
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.packageprotectionlevel.f1"
+  - "sql13.ssis.bids.projectprotectionlevel.f1"
+  - "sql13.dts.designer.packagepassword.f1"
+  - "sql13.ssis.bids.projectpassword.f1"
 helpviewer_keywords: 
   - "passwords [Integration Services]"
   - "packages [Integration Services], security"
@@ -74,13 +79,81 @@ manager: "jhubbard"
 2.  When it is time to deploy the packages, you have to change the protection level to one that does not depend on the developer's user key. Therefore you typically have to select **EncryptSensitiveWithPassword**, or **EncryptAllWithPassword**. Encrypt the packages by assigning a temporary strong password that is also known to the operations team in the production environment.  
   
 3.  After the packages have been deployed to the production environment, the operations team can re-encrypt the deployed packages by assigning a strong password that is known only to them. Or, they can encrypt the deployed packages by selecting **EncryptSensitiveWithUserKey** or **EncryptAllWithUserKey**, and using the local credentials of the account that will run the packages.  
+
+## Set or Change the Protection Level of Packages
+  To control access to the contents of packages and to the sensitive values that they contain, such as passwords, set the value of the **ProtectionLevel** property. The packages contained in a project need to have the same protection level as the project, to build the project. If you change the **ProtectionLevel** property setting on the project, you need to manually update the property setting for the packages.  
   
-## Related Tasks  
+ For information about how to determine the **ProtectionLevel** settings that are appropriate for your packages at different stages in the package life cycle, see [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md). For an overview of security features in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
--   [Set or Change the Protection Level of Packages](../../integration-services/packages/set-or-change-the-protection-level-of-packages.md)  
+ The procedures in this topic describe how to use either [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or the dtutil command prompt utility to change the **ProtectionLevel** property.  
+  
+> [!NOTE]  
+>  In addition to the procedures in this topic, you can typically set or change the **ProtectionLevel** property of a package when you import or export the package. You can also change the **ProtectionLevel** property of a package when you use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard to save a package.  
+  
+### To set or change the protection level of a package in SQL Server Data Tools  
+  
+1.  Review the available values for the **ProtectionLevel** property in the topic, [Setting the Protection Level of Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md), and determine the appropriate value for your package.  
+  
+2.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package.  
+  
+3.  Open the package in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] designer.  
+  
+4.  If the Properties window does not show the properties of the package, click the design surface.  
+  
+5.  In the Properties window, in the **Security** group, select the appropriate value for the **ProtectionLevel** property.  
+  
+     If you select a protection level that requires a password, enter the password as the value of the **PackagePassword** property.  
+  
+6.  On the **File** menu, select **Save Selected Items** to save the modified package.  
+  
+### To set or change the protection level of packages at the command prompt  
+  
+1.  Review the available values for the **ProtectionLevel** property in the topic, [Setting the Protection Level of Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md), and determine the appropriate value for your package.  
+  
+2.  Review the mappings for the **Encrypt** option in the topic, [dtutil Utility](../../integration-services/dtutil-utility.md), and determine the appropriate integer to use as the value of the selected **ProtectionLevel** property.  
+  
+3.  Open a Command Prompt window.  
+  
+4.  At the command prompt, navigate to the folder that contains the package or packages for which you want to set the **ProtectionLevel** property.  
+  
+     The syntax examples shown in the following step assume that this folder is the current folder.  
+  
+5.  Set or change the protection level of the package or packages by using a command similar to the one of the following examples:  
+  
+    -   The following command sets the **ProtectionLevel** property of an individual package in the file system to level 2, "Encrypt sensitive with password", with the password, "strongpassword":  
+  
+         `dtutil.exe /file "C:\Package.dtsx" /encrypt file;"C:\Package.dtsx";2;strongpassword`  
+  
+    -   The following command sets the **ProtectionLevel** property of all packages in a particular folder in the file system to level 2, "Encrypt sensitive with password", with the password, "strongpassword":  
+  
+         `for %f in (*.dtsx) do dtutil.exe /file %f /encrypt file;%f;2;strongpassword`  
+  
+         If you use a similar command in a batch file, enter the file placeholder, "%f", as "%%f" in the batch file.  
+
+## Package and Project Protection Level Dialog Box
+  Use the **Package Protection Level** dialog box to update the protection level of a package. The protection level determines the protection method, the password or user key, and the scope of package protection. Protection can include all data or sensitive data only.  
+  
+ To understand the requirements and options for package security, you may find it useful to see [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md) and [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
+  
+### Options  
+ **Package protection level**  
+ Select a protection level from the list.  
+  
+ **Password**  
+ If using the **Encrypt sensitive data with password** or **Encrypt all data with password** protection level, type a password.  
+  
+ **Retype password**  
+ Type the password again.  
+
+## Package Password Dialog Box
+  Use the **Package Password** dialog box to provide the package password for a package that is encrypted with a password. You must provide a password if the package uses the **Encrypt sensitive with passwor**d or **Encrypt all with password** protection level.  
+  
+### Options  
+ **Password**  
+ Enter the password.  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)   
  [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
- [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md)    
+ [dtutil Utility](../../integration-services/dtutil-utility.md)  
   

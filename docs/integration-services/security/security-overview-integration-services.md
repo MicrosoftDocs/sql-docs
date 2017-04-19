@@ -37,7 +37,7 @@ manager: "jhubbard"
 |-----------------------------|----------------|----------------|  
 |Package source|The source of a package is the individual or organization that created the package. Running a package from an unknown or untrusted source might be risky.|Identify the source of a package by using a digital signature, and run packages that come from only known, trusted sources. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).|  
 |Package contents|Package contents include the elements in the package and their properties. The properties can contain sensitive data such as a password or a connection string. Package elements such as an SQL statement can reveal the structure of your database.|Control access to a package and to the contents by doing the following steps:<br /><br /> 1) To control access to the package itself, apply [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features to packages that are saved to the **msdb** database in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To packages that are saved in the file system, apply file system security features, such as access controls lists (ACLs).<br /><br /> 2) To control access to the package's contents, set the protection level of the package.<br /><br /> For more information, see [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) and [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).|  
-|Package output|When you configure a package to use configurations, checkpoints, and logging, the package stores this information outside the package. The information that is stored outside the package might contain sensitive data.|To protect configurations and logs that the package saves to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database tables, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features.<br /><br /> To control access to files, use the access control lists (ACLs) available in the file system.<br /><br /> For more information, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md)|  
+|Package output|When you configure a package to use configurations, checkpoints, and logging, the package stores this information outside the package. The information that is stored outside the package might contain sensitive data.|To protect configurations and logs that the package saves to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database tables, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features.<br /><br /> To control access to files, use the access control lists (ACLs) available in the file system.<br /><br /> For more information, see [Access to Files Used by Packages](#files)|  
   
 ## Identity Features  
  By implementing identity features in your packages, you can achieve the following goal:  
@@ -84,7 +84,7 @@ manager: "jhubbard"
 ### Controlling Access to Files Used by Packages  
  Packages that have been configured to use configurations, checkpoints, and logging generate information that is stored outside the package. This information might be sensitive and should be protected. Checkpoint files can be saved only to the file system, but configurations and logs can be saved to the file system or to tables in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Configurations and logs that are saved to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are subject to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security, but information written to the file system requires additional security.  
   
- For more information, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md).  
+ For more information, see [Access to Files Used by Packages](#files).  
   
 #### Storing Package Configurations Securely  
  Package configurations can be saved to a table in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database or to the file system.  
@@ -98,7 +98,7 @@ manager: "jhubbard"
 ### Controlling Access to the Integration Services Service  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service to list stored packages. To prevent unauthorized users from viewing information about packages that are stored on local and remote computers, and thereby learning private information, restrict access to computers that run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
   
- For more information, see [Access to the Integration Services Service](../../integration-services/security/access-to-the-integration-services-service.md).  
+ For more information, see [Access to the Integration Services Service](#service).  
 
 ## <a name="files"></a> Access to Files Used by Packages
   The package protection level does not protect files that are stored outside the package. These files include the following:  

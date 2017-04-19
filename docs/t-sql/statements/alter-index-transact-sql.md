@@ -737,7 +737,7 @@ The following functionality is disabled for resumable index rebuild operations
    -	The SORT_IN_TEMPDB=ON option is not supported for resumable index 
 
 > [!NOTE]
-> The DDL command runs until it completes, pauses or fails. In case the command pauses, an error will be issued indicating that the operation was paused and that the index creation did not complete. More information about the current index status can be obtained from [sys.resumable_index_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). As before in case of a failure an error will be issued as well. 
+> The DDL command runs until it completes, pauses or fails. In case the command pauses, an error will be issued indicating that the operation was paused and that the index creation did not complete. More information about the current index status can be obtained from [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). As before in case of a failure an error will be issued as well. 
 
   
  For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  

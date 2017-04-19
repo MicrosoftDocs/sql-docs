@@ -46,6 +46,7 @@ As described in the picture above, a log shipping session involves the following
 
 > [!NOTE] 
 > This tutorial uses CIFS + Samba to setup the network share. If you want to use NFS, leave a comment and we will add it to the doc.       
+
 ## Usisng CIFS via Samba
 
 ### Configure Primary Server
@@ -88,10 +89,11 @@ As described in the picture above, a log shipping session involves the following
  
 ### Configure Secondary Server
 
--   Run the following on your install the CIFS client
-    
-    	sudo apt-get install cifs-utils #For Ubuntu
-    	sudo yum -y install cifs-utils #For RHEL/CentOS
+-   Run the following on your install the CIFS client 
+    ```bash   
+    sudo apt-get install cifs-utils #For Ubuntu
+    sudo yum -y install cifs-utils #For RHEL/CentOS
+    ```
 
 -   Create a file to store your credentials. Use the password you recently set for your mssql Samba account 
 
@@ -102,20 +104,22 @@ As described in the picture above, a log shipping session involves the following
         password=<password>
 
 -   Run the following commands to create an empty directory for mounting and set permission and ownership correctly
-
-        mkdir /var/opt/mssql/tlogs
-        sudo chown root:root /var/opt/mssql/tlogs
-        sudo chmod 0550 /var/opt/mssql/tlogs
-        sudo chown root:root /var/opt/mssql/.tlogcreds
-        sudo chmod 0660 /var/opt/mssql/.tlogcreds
+    ```bash   
+    mkdir /var/opt/mssql/tlogs
+    sudo chown root:root /var/opt/mssql/tlogs
+    sudo chmod 0550 /var/opt/mssql/tlogs
+    sudo chown root:root /var/opt/mssql/.tlogcreds
+    sudo chmod 0660 /var/opt/mssql/.tlogcreds
+    ```
 
 -   Add the line to etc/fstab to persist the share 
 
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
         
 -   Mount the shares
-
-        sudo mount -a
+    ```bash   
+    sudo mount -a
+    ```
         
 
 
@@ -170,10 +174,8 @@ As described in the picture above, a log shipping session involves the following
     EXEC msdb.dbo.sp_update_job 
             @job_id = @LS_BackupJobId 
             ,@enabled = 1 
-
-
+            
     END 
-
 
     EXEC master.dbo.sp_add_log_shipping_alert_job 
 
@@ -182,7 +184,6 @@ As described in the picture above, a log shipping session involves the following
             ,@secondary_server = N'<ip_address_of_secondary_server>' 
             ,@secondary_database = N'SampleDB' 
             ,@overwrite = 1 
-
     ```
 
 
@@ -194,7 +195,6 @@ As described in the picture above, a log shipping session involves the following
     DECLARE @LS_Secondary__RestoreJobId	AS uniqueidentifier 
     DECLARE @LS_Secondary__SecondaryId	AS uniqueidentifier 
     DECLARE @LS_Add_RetCode	As int 
-
 
     EXEC @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
             @primary_server = N'<ip_address_of_primary_server>' 
@@ -214,7 +214,6 @@ As described in the picture above, a log shipping session involves the following
 
     DECLARE @LS_SecondaryCopyJobScheduleUID	As uniqueidentifier 
     DECLARE @LS_SecondaryCopyJobScheduleID	AS int 
-
 
     EXEC msdb.dbo.sp_add_schedule 
             @schedule_name =N'DefaultCopyJobSchedule' 
@@ -238,7 +237,6 @@ As described in the picture above, a log shipping session involves the following
     DECLARE @LS_SecondaryRestoreJobScheduleUID	As uniqueidentifier 
     DECLARE @LS_SecondaryRestoreJobScheduleID	AS int 
 
-
     EXEC msdb.dbo.sp_add_schedule 
             @schedule_name =N'DefaultRestoreJobSchedule' 
             ,@enabled = 1 
@@ -257,14 +255,9 @@ As described in the picture above, a log shipping session involves the following
     EXEC msdb.dbo.sp_attach_schedule 
             @job_id = @LS_Secondary__RestoreJobId 
             ,@schedule_id = @LS_SecondaryRestoreJobScheduleID  
-
-
+            
     END 
-
-
     DECLARE @LS_Add_RetCode2	As int 
-
-
     IF (@@ERROR = 0 AND @LS_Add_RetCode = 0) 
     BEGIN 
 
@@ -308,7 +301,7 @@ As described in the picture above, a log shipping session involves the following
     GO  
     ```
 
- - Verify that Log Shipping works by starting the following job on the secondary server
+- Verify that Log Shipping works by starting the following job on the secondary server
  
     ```tsql
     USE msdb ;  

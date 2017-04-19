@@ -38,7 +38,7 @@ manager: "jhubbard"
  After using the task to compute data profiles and save them in a file, you can use the stand-alone Data Profile Viewer to review the profile output. The Data Profile Viewer also supports drilldown capability to help you understand data quality issues tha are identified in the profile output. For more information, see [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md).  
   
 > [!IMPORTANT]  
->  The output file might contain sensitive data about your database and the data that the database contains. For suggestions about how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md).  
+>  The output file might contain sensitive data about your database and the data that the database contains. For suggestions about how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
 >   
 >  The drilldown capability, that is available in the Data Profile Viewer, sends live queries to the original data source.  
   

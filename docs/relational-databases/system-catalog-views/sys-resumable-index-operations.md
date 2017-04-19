@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/relational-databases/system-catalog-views/sys-resumable-operations
+redirect_url: /sql/relational-databases/system-catalog-views/sys-index-resumable-operations
 --- 

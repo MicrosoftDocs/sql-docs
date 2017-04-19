@@ -1,7 +1,7 @@
 ---
 title: "sys.indexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "04/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,7 +35,7 @@ manager: "jhubbard"
 |**name**|**sysname**|Name of the index. **name** is unique only within the object.<br /><br /> NULL = Heap|  
 |**index_id**|**int**|ID of the index. **index_id** is unique only within the object.<br /><br /> 0 = Heap<br /><br /> 1 = Clustered index<br /><br /> > 1 = Nonclustered index|  
 |**type**|**tinyint**|Type of index:<br /><br /> 0 = Heap<br /><br /> 1 = Clustered<br /><br /> 2 = Nonclustered<br /><br /> 3 = XML<br /><br /> 4 = Spatial<br /><br /> 5 = Clustered columnstore index. **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 6 = Nonclustered columnstore index. **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 7 = Nonclustered hash index. **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**type_desc**|**nvarchar(60)**|Description of index type:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> CLUSTERED COLUMNSTORE - **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> NONCLUSTERED COLUMNSTORE - **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> NONCLUSTERED HASH : NONCLUSTERED HASH indexes are supported only on memory-optimized tables. The sys.hash_indexes view shows the current hash indexes and the hash properties. For more information, see [sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**type_desc**|**nvarchar(60)**|Description of index type:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> CLUSTERED COLUMNSTORE - **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> NONCLUSTERED COLUMNSTORE - **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> NONCLUSTERED HASH : NONCLUSTERED HASH indexes are supported only on memory-optimized tables. The sys.hash_indexes view shows the current hash indexes and the hash properties. For more information, see [sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**is_unique**|**bit**|1 = Index is unique.<br /><br /> 0 = Index is not unique.<br /><br /> Always 0 for clustered columnstore indexes.|  
 |**data_space_id**|**int**|ID of the data space for this index. Data space is either a filegroup or partition scheme.<br /><br /> 0 = **object_id** is a table-valued function or in-memory index.|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY is ON.<br /><br /> 0 = IGNORE_DUP_KEY is OFF.|  

@@ -50,6 +50,6 @@ manager: "jhubbard"
 |Recent messages|Recent messages issued by the system. Includes the time, type, description, and thread ID of each message.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( @ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description: The component is missing, not registered, not upgradeable, or missing required interfaces. The contact information for this component is "".|  
   
 ## Related information  
- [Execute Package Dialog Box](../../integration-services/packages/execute-package-dialog-box.md)  
+ [Execute Package Dialog Box](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
   

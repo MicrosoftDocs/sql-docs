@@ -105,13 +105,7 @@ manager: "jhubbard"
  If you encounter an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error that does not have an accompanying description, you can locate the description in [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md) by looking up the error by its number. The list does not include troubleshooting information at this time.  
   
 ## Related Tasks  
- [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)  
+ [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## Related Content  
  Blog entry, [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546), on dougbert.com.  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the rss feeds available on the page.|  
-  
-  

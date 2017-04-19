@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 4.  Use multiple Execute Package tasks to execute child packages for each table to be loaded. Pass the endpoints calculated in the parent package to each child package by using Parent Package Variable configurations.  
   
-     For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md) and [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+     For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md) and [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 #### To create child packages to perform those steps that have to be done for each source table  
   

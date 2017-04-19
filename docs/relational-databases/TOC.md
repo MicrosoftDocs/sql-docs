@@ -42,6 +42,7 @@
 # [Errors and events](errors-events/index.md)
 # [Event classes](event-classes/index.md)
 # [Extended events](extended-events/index.md)
+# [Graphs](graphs/index.md)
 # [Hierarchical Data](hierarchical-data-sql-server.md)  
 # [Import and export](import-export/index.md)
 # [In-memory OLTP](in-memory-oltp/index.md)

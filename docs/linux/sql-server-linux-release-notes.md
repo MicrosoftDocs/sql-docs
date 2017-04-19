@@ -145,6 +145,7 @@ The following sections describe known issues with this release of SQL Server vNe
 
 #### SQL Agent
 - The following components and subsystems of SQL Agent jobs are not currently supported on Linux:
+
     - Subsystems: CmdExec, PowerShell, Replication Distributor, Snapshot, Merge, Queue Reader, SSIS, SSAS, SSRS
     - Alerts
     - DB Mail
@@ -164,7 +165,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 - Maintenance plans are not supported.
 
-- Management Data Warehouse (MDW) and the data collector in SSMS is not supported. 
+- Management Data Warehouse (MDW) and the data collector in SSMS are not supported. 
 
 - SSMS UI components that have Windows Authentication or Windows event log options do not work with Linux. You can still use these features with other options, such as SQL logins. 
 

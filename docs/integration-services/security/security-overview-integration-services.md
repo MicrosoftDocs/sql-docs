@@ -27,6 +27,17 @@ manager: "jhubbard"
 ---
 # Security Overview (Integration Services)
   Security in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consists of several layers that provide a rich and flexible security environment. These security layers include the use of digital signatures, package properties, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database roles, and operating system permissions. Most of these security features fall into the categories of identity and access control.  
+
+## Threat and Vulnerability Mitigation
+  Although [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes a variety of security mechanisms, packages and the files that packages create or use could be exploited for malicious purposes.  
+  
+ The following table describes these risks and the proactive steps that you can take to lessen the risks.  
+  
+|Threat or vulnerability|Definition|Mitigation|  
+|-----------------------------|----------------|----------------|  
+|Package source|The source of a package is the individual or organization that created the package. Running a package from an unknown or untrusted source might be risky.|Identify the source of a package by using a digital signature, and run packages that come from only known, trusted sources. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).|  
+|Package contents|Package contents include the elements in the package and their properties. The properties can contain sensitive data such as a password or a connection string. Package elements such as an SQL statement can reveal the structure of your database.|Control access to a package and to the contents by doing the following steps:<br /><br /> 1) To control access to the package itself, apply [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features to packages that are saved to the **msdb** database in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To packages that are saved in the file system, apply file system security features, such as access controls lists (ACLs).<br /><br /> 2) To control access to the package's contents, set the protection level of the package.<br /><br /> For more information, see [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) and [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).|  
+|Package output|When you configure a package to use configurations, checkpoints, and logging, the package stores this information outside the package. The information that is stored outside the package might contain sensitive data.|To protect configurations and logs that the package saves to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database tables, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features.<br /><br /> To control access to files, use the access control lists (ACLs) available in the file system.<br /><br /> For more information, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md)|  
   
 ## Identity Features  
  By implementing identity features in your packages, you can achieve the following goal:  
@@ -88,7 +99,36 @@ manager: "jhubbard"
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service to list stored packages. To prevent unauthorized users from viewing information about packages that are stored on local and remote computers, and thereby learning private information, restrict access to computers that run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
   
  For more information, see [Access to the Integration Services Service](../../integration-services/security/access-to-the-integration-services-service.md).  
+
+## <a name="files"></a> Access to Files Used by Packages
+  The package protection level does not protect files that are stored outside the package. These files include the following:  
   
+-   Configuration files  
+  
+-   Checkpoint files  
+  
+-   Log files  
+  
+ These files must be protected separately, especially if they include sensitive information.  
+  
+### Configuration Files  
+ If you have sensitive information in a configuration, such as login and password information, you should consider saving the configuration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or use an access control list (ACL) to restrict access to the location or folder where you store the files and allow access only to certain accounts. Typically, you would grant access to the accounts that you permit to run packages, and to the accounts that manage and troubleshoot packages, which may include reviewing the contents of configuration, checkpoint, and log files. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the more secure storage because it offers protection at the server and database levels. To save configurations to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration type. To save to the file system, you use the XML configuration type.  
+  
+ For more information, see [Package Configurations](../../integration-services/packages/package-configurations.md), [Create Package Configurations](../../integration-services/packages/create-package-configurations.md), and [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+  
+### Checkpoint Files  
+ Similarly, if the checkpoint file that the package uses includes sensitive information, you should use an access control list (ACL) to secure the location or folder where you store the file. Checkpoint files save current state information on the progress of the package as well as the current values of variables. For example, the package may include a custom variable that contains a telephone number. For more information, see [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+  
+### Log Files  
+ Log entries that are written to the file system should also be secured using an access control list (ACL). Log entries can also be stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables and protected by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security. Log entries may include sensitive information, For example, if the package contains an Execute SQL task that constructs an SQL statement that refers to a telephone number, the log entry for the SQL statement includes the telephone number. The SQL statement may also reveal private information about table and column names in databases. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
+
+## <a name="service"></a> Access to the Integration Services Service
+  Package protection levels can limit who is allowed to edit and execute a package. Additional protection is needed to limit who can view the list of packages currently running on a server and who can stop currently executing packages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service to list running packages. Members of the Windows Administrators group can view and stop all currently running packages. Users who are not members of the Administrators group can view and stop only packages that they started.  
+  
+ It is important to restrict access to computers that run an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service, especially an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service that can enumerate remote folders. Any authenticated user can request the enumeration of packages. Even if the service does not find the service, the service enumerates folders. These folder names may be useful to a malicious user. If an administrator has configured the service to enumerate folders on a remote machine, users may also be able to see folder names that they would normally not be able to see.  
+
 ## Related Tasks  
  The following list contains links to topics that show you how to perform a certain task pertaining to the security.  
   
@@ -101,8 +141,3 @@ manager: "jhubbard"
 -   [Sign a Package by Using a Digital Certificate](../../integration-services/packages/sign-a-package-by-using-a-digital-certificate.md)  
   
 -   [Set or Change the Protection Level of Packages](../../integration-services/packages/set-or-change-the-protection-level-of-packages.md)  
-  
-## See Also  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-  
-  

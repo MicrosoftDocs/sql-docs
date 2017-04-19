@@ -121,7 +121,7 @@ The following built-in functions are added. These will help users extract inform
 |GRAPH_ID_FROM_NODE_ID	|Extract the graph_id from a node_id  |
 |NODE_ID_FROM_PARTS	|Construct a node_id from an object_id and a graph_id  |
 |OBJECT_ID_FROM_EDGE_ID	|Extract object_id from edge_id  |
-|IDENTITY_FROM_EDGE_ID	|Extract identity from edge_id  |
+|GRAPH_ID_FROM_EDGE_ID	|Extract identity from edge_id  |
 |EDGE_ID_FROM_PARTS	|Construct edge_id from object_id and identity  |
 
 

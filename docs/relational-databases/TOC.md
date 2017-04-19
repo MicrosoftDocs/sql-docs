@@ -86,8 +86,6 @@
 # [Views](views/index.md)
 # [xml](xml/index.md)
 
-# [SQL Graph](graphs/index.md)
-
 # [Tutorials](database-engine-tutorials.md)  
 
 ## [Getting Started with the Database Engine](tutorial-getting-started-with-the-database-engine.md)  

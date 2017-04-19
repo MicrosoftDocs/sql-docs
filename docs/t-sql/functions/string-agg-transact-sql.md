@@ -1,7 +1,7 @@
 ---
 title: "STRING_AGG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/24/2017"
+ms.date: "04/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,7 +51,7 @@ Optionally specify order of concatenated results using `WITHIN GROUP` clause:
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+ 
   A list of non-constant [expressions](../../t-sql/language-elements/expressions-transact-sql.md) that can be used for sorting results. Only one `order_by_expression` is allowed per query. The default sort order is ascending.   
   
 
@@ -169,7 +169,7 @@ GROUP BY town;
 Emails returned in the emails column can be directly used to send emails to group of people working in some particular towns. 
 
 ### F. Generate a sorted list of emails per towns   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+   
 Similar to previous example, the following query finds the email addresses of employees, groups them by town, and sorts the emails alphabetically:   
 ```tsql
 SELECT town, 

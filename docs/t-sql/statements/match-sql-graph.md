@@ -34,14 +34,17 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-MATCH (<graph_search_pattern> | [AND <graph_search_pattern>])
+MATCH (<graph_search_pattern>)
 
 <graph_search_pattern>::=
-    <node_alias> { 
+    {<node_alias> { 
                      { <-( <edge_alias> )- } 
                    | { -( <edge_alias> )-> }
-                <node_alias> 
-                 } ...
+                 <node_alias> 
+                 } 
+     }
+     [ { AND } { ( <graph_search_pattern> ) } ]
+     [ ,...n ]
   
 <node_alias> ::=
     node_table_name | node_alias 

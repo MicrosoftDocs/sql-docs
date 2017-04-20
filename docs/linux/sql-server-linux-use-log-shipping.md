@@ -42,12 +42,10 @@ As described in the picture above, a log shipping session involves the following
 ## Prerequisites
 - [Install SQL Server Agent on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
 
-## Setup a network share for Log Shipping
+## Setup a network share for Log Shipping using CIFS 
 
 > [!NOTE] 
 > This tutorial uses CIFS + Samba to setup the network share. If you want to use NFS, leave a comment and we will add it to the doc.       
-
-## Using CIFS via Samba
 
 ### Configure Primary Server
 -   Run the following to install Samba

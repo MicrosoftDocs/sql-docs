@@ -64,7 +64,7 @@ manager: "erikre"
 |-|-|-|-|-|  
 |**Version**|**Multidimensional**|**Tabular 110x**|**Tabular 1200**| **Tabular 1400** |
 |Azure Analysis Services|NA|NA|TMSL|NA| 
-|SQL Server vNext|ASSL|ASSL|TMSL|TMSL| 
+|SQL Server 2017|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2014|ASSL|ASSL|NA|NA|   
 |SQL Server 2012|ASSL|ASSL|NA|NA|  

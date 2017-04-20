@@ -20,19 +20,19 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Compatibility level for Analysis Services tabular models
-  The *compatibility level* refers to release-specific behaviors in the Analysis Services engine. You can create models at any supported compatibility level to get behaviors of a particular release. For example, DirectQuery and tabular object metadata have different implementations depending on the compatibility level. In-general, you should choose the latest compatibility level supported by your servers.
+  The *compatibility level* refers to release-specific behaviors in the Analysis Services engine. For example, DirectQuery and tabular object metadata have different implementations depending on the compatibility level. In-general, you should choose the latest compatibility level supported by your servers.
 
   **The latest compatibility level is 1400** 
   
-## Supported compatibility levels 
+## Supported compatibility levels by version
   
 |||  
 |-|-|- 
 |**Compatibility level**|**Server version**| 
-|1400|SQL Server vNext |  
-|1200|SQL Server vNext, SQL Server 2016| 
-|1103|SQL Server vNext, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
-|1100|SQL Server vNext, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
+|1400|SQL Server 2017 |  
+|1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
+|1103|SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
+|1100|SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
   
 ## Set compatibility level 

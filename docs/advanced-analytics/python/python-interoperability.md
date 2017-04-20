@@ -15,10 +15,10 @@ manager: "jhubbard"
 ---
 # Python Interoperability
 
-This topic describes the Python components that are installed if you enable the feature **Machine Learning Services (In-Database)** and select Python as the lanaguage.
+This topic describes the Python components that are installed if you enable the feature **Machine Learning Services (In-Database)** and select Python as the language.
 
 > [!NOTE]
-> Support for Python is a prerelease feature and is still under development.
+> Support for Python is a pre-release feature and is still under development.
 
 ## Python Components
 
@@ -30,32 +30,38 @@ For example, if you installed Machine Learning Services with the Python option o
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER`
 
-Installation of SQL Server vNext Machine Learning Services adds the Anaconda distribution of Python. Specifically, the Anaconda 3 installers are used, based on the Anaconda 4.3 branch. The expected Python level for SQL Server vNext CTP 2.0 is Python 3.6.
-
-To work with SQL Server, Python script requires that input data be tabular data. All Python results must be returned in the form of a **pandas** data frame.
+Installation of SQL Server 2017 Machine Learning Services adds the Anaconda distribution of Python. Specifically, the Anaconda 3 installers are used, based on the Anaconda 4.3 branch. The expected Python level for SQL Server 2017 is Python 3.5.
 
 ## New in This Release
 
 For a list of packages supported by the Anaconda distribution, see the Continuum analytics site: [Anaconda package list](https://docs.continuum.io/anaconda/pkg-docs)
 
-Machine Learning Services in SQL Server vNext also includes the new **revoscalepy** library for Python.
+Machine Learning Services in SQL Server 2017 also includes the new **revoscalepy** library for Python.
 
 This library provides functionality equivalent to that of the **RevoScaleR** package for Microsoft R. In other words, it supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. For more information about RevoScaleR, see [Distributed and parallel computing with ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing).
 
-Because support for Python is a prerelease feature and under development, the **revscalepy** library currently includes a subset of the RevoScaleR functionality.
+Because support for Python is a pre-release feature and still under development, the **revscalepy** library currently includes only a subset of the RevoScaleR functionality. 
 
-| Version| Supported functions |
-| ------ | ------ |
-| CTP 2.0 | rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees|
-
-
-You can call functions from **revoscalepy** from your Python code, like any other Python functions.
-Use this library to create compute contexts that run in SQL Server, or access data sources such as .XDF files and SQL queries.
-
-Additionally, support is planned for these popular machine learning libraries:
+Future additions might include these popular machine learning libraries:
 
 + [Microsoft Cognitive Toolkit](https://www.microsoft.com/research/product/cognitive-toolkit/). Formerly known as CNTK, this library supports a variety of neural network models, including convolutional networks (CNN), recurrent networks (RNN), and Long Short Term Memory networks (LSTM).
 
+## Using Python in SQL Server
+
+You import the **revoscalepy** module into your Python code, and then call functions from the module, like any other Python functions.
+
+Input data for Python must be tabular. All Python results must be returned in the form of a **pandas** data frame.
+
+You can execute your Python code inside T-SQL, by embedding the script in a stored procedure. Or, you can run the code from a local Python IDE and have the script executed in a remote SQL Server computer, by defining a remote compute context.
+
+You can work with local data, get data from SQL Server or other ODBC data sources, or use the XDF file format to exchange data with R solutions.
+
+**For more information**
+
++ Supported functions: See [What is revoscalepy](what-is-revoscalepy.md) 
++ Supported Python data types: see [Python Libraries and Data Types](python-libraries-and-data-types.md)
++ Supported data sources: ODBC databases, SQL Server, and XDF files
++ Supported compute contexts: local, or SQL Server
 
 ### Licensing
 
@@ -63,4 +69,4 @@ As part of the installation of Machine Learning Services with Python, you must c
 
 ## See Also
 
-[Python LIbraries and Data Types](python-libraries-and-data-types.md)
+[Python Libraries and Data Types](python-libraries-and-data-types.md)

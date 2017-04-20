@@ -2,7 +2,7 @@
 title: "SQL Server Machine Learning Tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/16/2017"
+ms.date: "04/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,13 +22,14 @@ manager: "jhubbard"
 ---
 # SQL Server Machine Learning Tutorials
 
-Use these tutorials to learn how to do machine learning in SQL Server 2016 and SQL Server vNext. Topics covered include:
+Use these tutorials to learn about machine learning in SQL Server 2016 and SQL Server 2017. Topics covered include:
 
 + How to run R or Python from T-SQL
 + What are remote and local compute contexts? How to execute R or Python in a SQL Server compute context
 + Developing models in R and saving trained models in a SQL Server table
 + How to wrap R or code in a stored procedure
 + Methods for optimizing R and SQL code for a production environment
++ Real-world scenarios for embedding machine learning in applications
 
 ## Prerequisites
 
@@ -36,11 +37,11 @@ To use these tutorials, you must have installed one of the following server prod
 
 + SQL Server 2016 R Services (In-Database)
   
-  Supports R. Requires that the extensibility feature be installed and then enabled.
+  Supports R. Be sure to install the machine learning features, and then enable external scripting.
 
-+ SQL Server vNext Machine Learning Services (In-Database)
++ SQL Server 2017 Machine Learning Services (In-Database)
   
-  Supports either R or Python, but the extensibility feature must be installed and then enabled.
+  Supports either R or Python. You must select the machine learning feature and the language to install, and then enable external scripting.
 
 For more information about setup, see [Prerequisites](#bkmk_Prerequisites).
 
@@ -48,7 +49,7 @@ For more information about setup, see [Prerequisites](#bkmk_Prerequisites).
 
 > [!NOTE]
 >
-> Support for Python is a new feature in SQL Server vNext 2.0. Although the feature is in pre-release and not supported for production environments, we invite you to try it out and send feedback.
+> Support for Python is a new feature in SQL Server 2017 (CTP 2.0). Although the feature is in pre-release and not supported for production environments, we invite you to try it out and send feedback.
 
 Learn how to call Python in T-SQL, using the extensibility mechanism pioneered in SQL Server 2016. Now supports Python!
 
@@ -58,28 +59,32 @@ Create a model using rxLinMod, and run it in SQL Server, using the new **revosca
 
 + [Create a Machine Learning Model in Python using revoscalepy](use-python-revoscalepy-to-create-model.md)
 
+Create a machine learning model to predict demand for a ski rental business, and operationalize that model for day-to-day demand prediction using stored procedures. All code and data provided!
+
++ [Build a predictive model with Python](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/python/getting-started/rental-prediction)
+
 Learn how to deploy a Python model using the latest version of Microsoft Machine Learning Server.
 
 + [Deploy and Consume a Python Model](..\python\publish-consume-python-code.md)
 
 ## <a name="bkmk_sqltutorials"></a>R Tutorials using SQL Server
 
-This section lists tutorials that were developed for SQL Server 2016 R Services. All require Microsoft R, and make extensive use of features in the RevoScaleR package for SQl Server compute contexts.
+This section lists tutorials that were developed for SQL Server 2016 R Services. All require Microsoft R, and make extensive use of features in the RevoScaleR package for SQL Server compute contexts.
 
 > [!NOTE]
-> Unless otherwise indicated, these tutorials are expected to work without modification in SQL Server vNext.
+> Unless otherwise indicated, these tutorials are expected to work without modification in SQL Server 2017.
 
 ### <a name="bkmk_dataScience"></a>Data Science Deep Dive
 
 [Getting Started with RevoScaleR and SQL Server](http://go.microsoft.com/fwlink/?LinkID=691640&clcid=0x809)
 
-**What's in it:**  You'll learn how to use the functions in the ScaleR packages to  move data between R and SQL, and to switch compute contexts to suit a particular task. You will create some models and plots and move them between your development environment and SQL Server.
+**What's in it:**  You'll learn how to use the functions in the RevoScaleR packages to  move data between R and SQL, and to switch compute contexts to suit a particular task. You will create some models and plots and move them between your development environment and SQL Server.
 
 This walkthrough is a good place to start for data scientists or developers who are already familiar with the R language, and who want to learn about the enhanced R packages and functions in Microsoft R by Revolution Analytics.
 
-**Audience:** This tutorial is intended for people who have been using R and want to learn more about how RevoScaleR and SQL Server can improve the R experience.
+**Audience:** People who have been using R and want to learn more about how RevoScaleR and SQL Server can improve the R experience.
 
-**Requirements:** Some basic R knowledge. Access to a server with SQL Server R Services or Machine Learning Services with R already enabled. For setup help, see [Prerequisites](#bkmk_Prerequisites).
+**Requirements:** Some basic R knowledge. Access to a server with SQL Server R Services or Machine Learning Services with R. For setup help, see [Prerequisites](#bkmk_Prerequisites).
 
 ### <a name="bkmk_indb-analytics"></a>In-Database Advanced Analytics for the SQL Developer
 
@@ -89,21 +94,21 @@ This walkthrough is a good place to start for data scientists or developers who 
 
 This example focuses on moving a solution into production. You'll learn how to wrap R code in a stored procedure, save an R model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, and make parameterized calls to the R model for prediction.
 
-**Audience:** TThis tutorial is intended for SQL developers, application developers, or SQL DBAs who will be supporting R solutions and want to learn how to deploy R models to SQL Server.
+**Audience:** This tutorial is intended for SQL developers, application developers, or SQL professionals who will be supporting R solutions and want to learn how to deploy R models to SQL Server.
 
-**Requirements:** Some basic R knowledge. No R environment is needed; all R code is provided and you can build the complete solution using only [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and familiar business intelligence and SQL development tools.
+**Requirements:** No R environment is needed! All R code is provided and you can build the complete solution using only [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and familiar business intelligence and SQL development tools. However, some basic knowledge of R is helpful.
 
-Access to a server with SQL Server R Services or Machine Learning Services with R already enabled. For setup help, see [Prerequisites](#bkmk_Prerequisites).
+You must have access to a SQL Server with the R language installed and enabled. For setup help, see [Prerequisites](#bkmk_Prerequisites).
 
 ### <a name="bkmk_rtsql"></a>Using R Code in T-SQL
 
 [Using R Code in Transact-SQL &#40;SQL Server R Services&#41;](../../advanced-analytics/r-services/using-r-code-in-transact-sql-sql-server-r-services.md)
 
-**What's in it:** This quick-start covers the basic syntax for using R in [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+**What's in it:** This quick-start covers the basic syntax for using R in [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 You'll learn how to call the R run-time from T-SQL, wrap R functions in SQL code, and run a stored procedure that saves R output and R models to a SQL table.
 
-**Audience:** This tutorial is for people who are new to the feature, and want to learn the basics. No R or SQL experience is required.
+**Audience:** This tutorial is for people who are new to the feature, and want to learn the basics of calling R from a stored procedure.
 
 **Requirements:** No knowledge of R or SQL required.
 

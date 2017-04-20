@@ -21,7 +21,7 @@ Typically, setup of the machine components used in SQL Server 2016 and SQL Serve
 
 After you have downloaded the installers, you use them when installing the feature as part of SQL Server setup.
 
-## Why Separate Installers and License are Required
+## Separate Installers and License Required
 
 Because some components and libraries are open source, Microsoft does not install R or Python components by default.
 
@@ -43,9 +43,7 @@ Be sure to download the R or Python installers that are supported for the versio
 4. Optionally, you can also download the archived source code for the open source components. For more information, see .
 
 
-### What do I install?
-
-**For R**
+### Install for R
 
 For SQL Server 2016 and SQL Server 2017, you'll need to get two different installers for R:
 
@@ -59,13 +57,12 @@ You must download and install both installers. The SQL Server setup wizard will 
 
 For a step-by-step walkthrough of the offline installation process for R Services in SQL Server 2016, see this article by the [SQL Server Customer Advisory Team](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/). It also covers patching and slipstream setup scenarios.
 
-**For Python**
+### Install for Python
 
-Python integration requires a single CAB file. Be sure to get the installer that match the build of SQL Server you are installing.
+Python integration requires a single CAB file. Be sure to get the installer that match the build of SQL Server you are installing. Prerequisites such as .NET core are installed silently by default.
 
-Support for Python is provided in SQL Server 2017 CTP 2.0. Earlier versions, including SQL Server 2016, do not support Python.
-
-Prerequisites such as .NET core are installed silently by default.
+> [NOTE]
+> Support for Python is provided in SQL Server 2017 CTP 2.0. Earlier versions, including SQL Server 2016, do not support Python.
 
 
 ## Step 2. Run offline setup using the SQL Server setup wizard 

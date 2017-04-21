@@ -130,10 +130,10 @@ This topic describes some of the configuration pages in the [!INCLUDE[ssNoVersio
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  
-|Data root directory|C:\Program Files\Microsoft SQL Server\MSAS12.\<InstanceID>\OLAP\Data\|Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest performing storage that is attached to the system. For failover cluster installations, ensure that data directories are placed on the shared disk.|  
-|Log file directory|C:\Program Files\Microsoft SQL Server\MSAS12.\<InstanceID>\OLAP\Log\|This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight recorder duration, ensure that the log directory has adequate space.|  
-|Temp directory|C:\Program Files\Microsoft SQL Server\MSAS12.\<InstanceID>\OLAP\Temp\|Place the Temp directory on the high performance storage subsystem.|  
-|Backup directory|C:\Program Files\Microsoft SQL Server\MSAS12.\<InstanceID>\OLAP\Backup\|This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, it also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories is not supported.|  
+|Data root directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest performing storage that is attached to the system. For failover cluster installations, ensure that data directories are placed on the shared disk.|  
+|Log file directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight recorder duration, ensure that the log directory has adequate space.|  
+|Temp directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |Place the Temp directory on the high performance storage subsystem.|  
+|Backup directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, it also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories is not supported.|  
   
 ### Notes  
   
@@ -220,10 +220,10 @@ This topic describes some of the configuration pages in the [!INCLUDE[ssNoVersio
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  
-|Data root directory|C:\Program Files\Microsoft SQL Server\MSAS12.\<InstanceID>\OLAP\Data\|Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest performing storage that is attached to the system. For failover cluster installations, ensure that data directories are placed on the shared disk.|  
-|Log file directory|C:\Program Files\Microsoft SQL Server\MSAS12.\<InstanceID>\OLAP\Log\|This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight recorder duration, ensure that the log directory has adequate space.|  
-|Temp directory|C:\Program Files\Microsoft SQL Server\MSAS12.\<InstanceID>\OLAP\Temp\|Place the Temp directory on the high performance storage subsystem.|  
-|Backup directory|C:\Program Files\Microsoft SQL Server\MSAS12.\<InstanceID>\OLAP\Backup\|This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, it also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories is not supported.|  
+|Data root directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\|Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest performing storage that is attached to the system. For failover cluster installations, ensure that data directories are placed on the shared disk.|  
+|Log file directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\|This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight recorder duration, ensure that the log directory has adequate space.|  
+|Temp directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\|Place the Temp directory on the high performance storage subsystem.|  
+|Backup directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\|This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, it also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories is not supported.|  
   
 #### Notes  
   
@@ -350,12 +350,10 @@ This topic describes some of the configuration pages in the [!INCLUDE[ssNoVersio
  Passwords entered on this page must meet strong password policy requirements. If you have any automation that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, ensure that the password meets strong password policy requirements.  
   
 ### Related Content  
- For more information about choosing Windows Authentication vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, see the topic **Choose an Authentication Mode** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+ For more information about choosing Windows Authentication vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, see [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md).  
   
- For more information about choosing an account to run the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], see the topic **Configure Windows Service Accounts and Permissions** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
-  
-### See Also  
-[Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
+ For more information about choosing an account to run the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], see 
+[Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
   
 ## Database Engine Configuration - TempDB
   Use this page to specify **tempdb** data and log  file location, size, growth settings, and number of files for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server.  
@@ -383,13 +381,13 @@ This topic describes some of the configuration pages in the [!INCLUDE[ssNoVersio
 ### UIElement List  
  Configure the settings for **tempdb** according to your workload and requirements. The following settings apply to **tempdb** data files:  
   
--   **Number of files** is the total number of data files for **tempdb**. The default value is the lower of 8 or the number of logical cores detected by setup.    As a general rule, if the number of logical processors is less than or equal to 8, use the same number of data files as logical processors. If the number of logical processors is greater than 8, use 8 data files and then if contention continues, increase the number of data files by multiples of 4 (up to the number of logical processors) until the contention is reduced to acceptable levels or make changes to the workload/code.  
+-   **Number of files** is the total number of data files for **tempdb**. The default value is the lower of 8 or the number of logical cores detected by setup. As a general rule, if the number of logical processors is less than or equal to 8, use the same number of data files as logical processors. If the number of logical processors is greater than 8, use 8 data files and then if contention continues, increase the number of data files by multiples of 4 (up to the number of logical processors) until the contention is reduced to acceptable levels or make changes to the workload/code. 
   
--   **Initial size (MB)** is the initial size in MB for each **tempdb** data file. All **tempdb** data files are the same initial size. Because **tempdb** is recreated every time SQL Server starts or fails over you should specify a size that is close to the size required by your workload for normal operation.   To further optimize the creation of **tempdb** during start-up, enable [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
+-   **Initial size (MB)** is the initial size in MB for each **tempdb** data file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] had a maximum initial file size of 1024 MB. All **tempdb** data files are the same initial size. Because **tempdb** is recreated every time SQL Server starts or fails over you should specify a size that is close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during start-up, enable [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
   
 -   **Total initial size (MB)** is the cumulative size of all of the **tempdb** data files.  
   
--   **Autogrowth (MB)** is the amount of space in megabytes that each **tempdb** data file will automatically grow by when they run out of space. In SQL Server 2016 and later all data files will grow at the same time by the amount specified in this setting.  
+-   **Autogrowth (MB)** is the amount of space in megabytes that each **tempdb** data file will automatically grow by when they run out of space. In [!INCLUDE[sssql15](../../includes/sssql15-md.md)] and later all data files will grow at the same time by the amount specified in this setting.  
   
 -   **Total autogrowth (MB)** is the cumulative size of each autogrowth event.  
   
@@ -401,7 +399,7 @@ This topic describes some of the configuration pages in the [!INCLUDE[ssNoVersio
   
  **TempDB log file** is the name of the log file. It is created automatically. The following settings apply only to **tempdb** log files:  
   
--   **Initial size (MB)** is the initial size of the **tempdb** log file.  
+-   **Initial size (MB)** is the initial size of the **tempdb** log file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] had a maximum initial file size of 1024 MB.
   
 -   **Note:Tempdb** uses minimal logging. The **tempdb** log cannot be backed up. It is recreated every time SQL Server starts or when a cluster instance fails over.  
   
@@ -413,7 +411,7 @@ This topic describes some of the configuration pages in the [!INCLUDE[ssNoVersio
   
 ### Security Considerations  
  Setup will configure ACLs for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and break inheritance as part of configuration.  
-  
+
  The following recommendations apply to the SMB file server:  
   
 -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account must be a domain account if an SMB file server is used.  

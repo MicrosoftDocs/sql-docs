@@ -399,7 +399,7 @@ This topic describes some of the configuration pages in the [!INCLUDE[ssNoVersio
   
  **TempDB log file** is the name of the log file. It is created automatically. The following settings apply only to **tempdb** log files:  
   
--   **Initial size (MB)** is the initial size of the **tempdb** log file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] had a maximum initial file size of 1024 MB.
+-   **Initial size (MB)** is the initial size of the **tempdb** log file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] had a maximum initial file size of 1024 MB. Because **tempdb** is recreated every time SQL Server starts or fails over you should specify a size that is close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during start-up, enable [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
   
 -   **Note:Tempdb** uses minimal logging. The **tempdb** log cannot be backed up. It is recreated every time SQL Server starts or when a cluster instance fails over.  
   

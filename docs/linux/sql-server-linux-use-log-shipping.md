@@ -26,7 +26,7 @@ ms.assetid:
 ---
 
 
-#What is SQL Server log shipping?
+# Get started with Log Shipping on Linux
 
 SQL Server Log shipping is a HA configuration where a database from a primary server is replicated onto one or more secondary servers. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
 
@@ -42,15 +42,13 @@ As described in the picture above, a log shipping session involves the following
 ## Prerequisites
 - [Install SQL Server Agent on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
 
-## Setup a network share for Log Shipping
+## Setup a network share for Log Shipping using CIFS 
 
 > [!NOTE] 
 > This tutorial uses CIFS + Samba to setup the network share. If you want to use NFS, leave a comment and we will add it to the doc.       
 
-## Usisng CIFS via Samba
-
 ### Configure Primary Server
--   Run the following on your install Samba
+-   Run the following to install Samba
 
     ```bash
     sudo apt-get install samba #For Ubuntu
@@ -89,7 +87,7 @@ As described in the picture above, a log shipping session involves the following
  
 ### Configure Secondary Server
 
--   Run the following on your install the CIFS client 
+-   Run the following to install the CIFS client
     ```bash   
     sudo apt-get install cifs-utils #For Ubuntu
     sudo yum -y install cifs-utils #For RHEL/CentOS
@@ -120,15 +118,17 @@ As described in the picture above, a log shipping session involves the following
     ```bash   
     sudo mount -a
     ```
-        
-
-
-# Setup Log Shipping via T-SQL
+       
+## Setup Log Shipping via T-SQL
 
 - Run this script from your primary server
 
     ```tsql
-
+    BACKUP DATABASE SampleDB
+    TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
+    GO
+    ```
+    ```tsql
     DECLARE @LS_BackupJobId	AS uniqueidentifier 
     DECLARE @LS_PrimaryId	AS uniqueidentifier 
     DECLARE @SP_Add_RetCode	As int 
@@ -190,7 +190,11 @@ As described in the picture above, a log shipping session involves the following
 - Run this script from your secondary server
 
     ```tsql
-
+    RESTORE DATABASE SampleDB2 WITH NORECOVERY
+    FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak' ;
+    ```
+    
+    ```tsql
     DECLARE @LS_Secondary__CopyJobId	AS uniqueidentifier 
     DECLARE @LS_Secondary__RestoreJobId	AS uniqueidentifier 
     DECLARE @LS_Secondary__SecondaryId	AS uniqueidentifier 

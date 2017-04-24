@@ -62,9 +62,9 @@ manager: "jhubbard"
 >  If a SQL Server or Sybase source table includes an identity column, you must use Execute SQL tasks to enable IDENTITY_INSERT before the ADO NET destination and to disable it again afterward. (The identity column property specifies an incremental value for the column. The SET IDENTITY_INSERT statement lets explicit values from the source table be inserted into the identity column in the destination table.)  
 >   
 >   To run the SET IDENTITY_INSERT statements and the data loading successfully, you have to do the following things.
->   1. Use the same ADO.NET connection manager for the Execute SQL tasks and for the ADO.NET destination.
->   2. On the connection manager, set the **RetainSameConnection** property and the **MultipleActiveResultSets** property to True.
->   3. On the ADO.NET destination, set the **UseBulkInsertWhenPossible** property to False.
+>       1. Use the same ADO.NET connection manager for the Execute SQL tasks and for the ADO.NET destination.
+>       2. On the connection manager, set the **RetainSameConnection** property and the **MultipleActiveResultSets** property to True.
+>       3. On the ADO.NET destination, set the **UseBulkInsertWhenPossible** property to False.
 >
 >  For more information, see [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) and [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   

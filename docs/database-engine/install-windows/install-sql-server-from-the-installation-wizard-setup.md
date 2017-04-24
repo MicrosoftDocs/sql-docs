@@ -131,17 +131,17 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
 15. Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration — Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, choose the default option, Multidimensional and Data Mining server mode. Regarding administrator permissions, you must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To add the account under which SQL Server Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning).  
 
-  
-     When you are finished editing the list, click **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, click **Next**.  
-  
-     Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration — Data Directories page to specify non-default installation directories. To install to default directories, click **Next**.  
-  
-    > [!IMPORTANT]  
-    >  -   When installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  if you specify the same directory path for INSTANCEDIR and SQLUSERDBDIR, SQL Server Agent and Full Text Search do not start due to missing permissions.  
-    > -   If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-     For more information, see [Analysis Services Configuration - Data Directories](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories).  
-  
+   When you are finished editing the list, click **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, click **Next**.
+   
+   Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration — Data Directories page to specify non-default installation directories. To install to default directories, click **Next**.  
+   
+   >[!IMPORTANT]  
+   >When installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  if you specify the same directory path for INSTANCEDIR and SQLUSERDBDIR, SQL Server Agent and Full Text Search do not start due to missing permissions.  
+   >
+   >If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+   
+   For more information, see [Analysis Services Configuration - Data Directories](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories).  
+   
 17. Use the Distributed Replay Controller Configuration page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Users that have administrative permissions will have unlimited access to the Distributed Replay controller service.  
   
      Click the **Add Current User** button to add the users to whom you want to grant access permissions for the Distributed Replay controller service. Click the **Add** button to add access permissions for the Distributed Replay controller service. Click the **Remove** button to remove access permissions from the Distributed Replay controller service.  

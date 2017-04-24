@@ -68,6 +68,9 @@ This topic explains how to pull and run the [mssql-server Docker image](https://
     docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
     ```
 
+    > [!NOTE]
+    > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image. Setting the **ACCEPT_EULA** variable to any value confirms your acceptance of the [End-User Licensing Agreement](http://go.microsoft.com/fwlink/?LinkId=746388). 
+
 3. To persist the data generated from your Docker container, you must map volume to the host machine. To do that, use the run command with the **-v \<host directory\>:/var/opt/mssql** flag. This will allow the data to be restored between container executions.
 
     ```
@@ -76,9 +79,6 @@ This topic explains how to pull and run the [mssql-server Docker image](https://
 
     > [!IMPORTANT]
     > Volume mapping for Docker-machine on Mac with the SQL Server on Linux image is not supported at this time.
-
-> [!NOTE]
-> The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image. Setting the **ACCEPT_EULA** variable to any value confirms your acceptance of the [End-User Licensing Agreement](http://go.microsoft.com/fwlink/?LinkId=746388). 
 
 ## Upgrading the Docker image
 Upgrading the Docker image will require just pulling the latest version from the registry. In order to do so, you just need to execute the `pull` command:

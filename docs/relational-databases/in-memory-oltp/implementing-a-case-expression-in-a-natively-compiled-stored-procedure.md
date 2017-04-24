@@ -18,6 +18,7 @@ manager: "jhubbard"
 ---
 # Implementing a CASE Expression in a Natively Compiled Stored Procedure
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+
   CASE expressions are supported in natively compiled stored procedures. The following example demonstrates a way to use
 the CASE expression in a query. The workaround described for CASE expressions in natively compiled modules would be no longer needed.
 
@@ -39,6 +40,7 @@ GO
 EXEC dbo.usp_SOHOnlineOrderResult  
 GO  
 ```  
+
 
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 

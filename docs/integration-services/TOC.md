@@ -20,10 +20,6 @@
 ## [Configure Dialog Box](service/configure-dialog-box.md)  
 ## [Set Parameter Value Dialog Box](service/set-parameter-value-dialog-box.md)  
 ## [Folder Properties Dialog Box](service/folder-properties-dialog-box.md)  
-## [Integration Services Roles (SSIS Service)](service/integration-services-roles-ssis-service.md)  
-### [Create a User-Defined Role](service/create-a-user-defined-role.md)  
-### [Assign a Reader and Writer Role to a Package](service/assign-a-reader-and-writer-role-to-a-package.md)  
-### [Package Roles Dialog Box UI Reference](service/package-roles-dialog-box-ui-reference.md)  
 
 # [Change data capture](change-data-capture/index.md)
 # [Connections](connection-manager/index.md)

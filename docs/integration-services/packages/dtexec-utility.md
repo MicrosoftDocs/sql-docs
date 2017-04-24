@@ -443,7 +443,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyP[ackageID]** *packageID*: (Optional). Verifies the GUID of the package to be executed by comparing it to the value specified in the *package_id* argument.  
   
--   **/VerifyS[igned]**: (Optional). Causes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to check the digital signature of the package. If the package is not signed or the signature is not valid, the package fails. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).  
+-   **/VerifyS[igned]**: (Optional). Causes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to check the digital signature of the package. If the package is not signed or the signature is not valid, the package fails. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
     > **IMPORTANT!!** When configured to check the signature of the package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] only checks whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not check whether the package has been changed.  
   

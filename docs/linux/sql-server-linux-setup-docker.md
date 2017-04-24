@@ -6,7 +6,7 @@ description: Download and run the Docker image for SQL Server vNext.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/15/2017
+ms.date: 04/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -74,11 +74,11 @@ This topic explains how to pull and run the [mssql-server Docker image](https://
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
     ```
 
-    > [!NOTE]
-    > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image.
-
     > [!IMPORTANT]
     > Volume mapping for Docker-machine on Mac with the SQL Server on Linux image is not supported at this time.
+
+> [!NOTE]
+> The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image. Setting the **ACCEPT_EULA** variable to any value confirms your acceptance of the [End-User Licensing Agreement](http://go.microsoft.com/fwlink/?LinkId=746388). 
 
 ## Upgrading the Docker image
 Upgrading the Docker image will require just pulling the latest version from the registry. In order to do so, you just need to execute the `pull` command:

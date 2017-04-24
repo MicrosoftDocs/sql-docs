@@ -6,7 +6,7 @@ description: Download and run the Docker image for SQL Server vNext.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/15/2017
+ms.date: 04/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -68,14 +68,14 @@ This topic explains how to pull and run the [mssql-server Docker image](https://
     docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
     ```
 
+    > [!NOTE]
+    > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image. Setting the **ACCEPT_EULA** variable to any value confirms your acceptance of the [End-User Licensing Agreement](http://go.microsoft.com/fwlink/?LinkId=746388). 
+
 3. To persist the data generated from your Docker container, you must map volume to the host machine. To do that, use the run command with the **-v \<host directory\>:/var/opt/mssql** flag. This will allow the data to be restored between container executions.
 
     ```
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
     ```
-
-    > [!NOTE]
-    > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image.
 
     > [!IMPORTANT]
     > Volume mapping for Docker-machine on Mac with the SQL Server on Linux image is not supported at this time.

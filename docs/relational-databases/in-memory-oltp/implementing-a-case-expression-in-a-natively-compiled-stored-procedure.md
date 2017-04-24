@@ -17,8 +17,8 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Implementing a CASE Expression in a Natively Compiled Stored Procedure
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
-  CASE expressions are now fully supported in natively compiled stored procedurs. The following example demonstrates a way to use
+[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+  CASE expressions are supported in natively compiled stored procedures. The following example demonstrates a way to use
 the CASE expression in a query. The workaround described for CASE expressions in natively compiled modules would be no longer needed.
 
 ``` 

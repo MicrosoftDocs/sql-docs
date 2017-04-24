@@ -24,8 +24,11 @@ It is based on the **RevoScaleR** package for R, which was provided in Microsoft
 + Provide Python versions of RevoScaleR machine learning algorithms for distributed or parallel processing
 + Improved performance and use of the Intel math libraries
 
-> [!NOTE]
-> Python support is a new feature in SQL Server 2017 and is in prerelease.
+> [!WARNING]
+> 
+> Python support is a new feature in SQL Server 2017 and is supported for preview only.
+> 
+> The **revoscalepy** module contains only a subset of the functionality provided in the corresponding **RevoScaler** package for R.
 
 ## Versions and Supported Platforms
 

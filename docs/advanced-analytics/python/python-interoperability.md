@@ -40,11 +40,9 @@ Machine Learning Services in SQL Server 2017 also includes the new **revoscalepy
 
 This library provides functionality equivalent to that of the **RevoScaleR** package for Microsoft R. In other words, it supports creation of remote compute contexts, as well as a various scalable machine learning models, such as **rxLinMod**. For more information about RevoScaleR, see [Distributed and parallel computing with ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing).
 
-Because support for Python is a pre-release feature and still under development, the **revscalepy** library currently includes only a subset of the RevoScaleR functionality. 
+Because support for Python is a pre-release feature and still under development, the **revoscalepy** library currently includes only a subset of the RevoScaleR functionality. 
 
-Future additions might include these popular machine learning libraries:
-
-+ [Microsoft Cognitive Toolkit](https://www.microsoft.com/research/product/cognitive-toolkit/). Formerly known as CNTK, this library supports a variety of neural network models, including convolutional networks (CNN), recurrent networks (RNN), and Long Short Term Memory networks (LSTM).
+Future additions might include the [Microsoft Cognitive Toolkit](https://www.microsoft.com/research/product/cognitive-toolkit/). Formerly known as CNTK, this library supports a variety of neural network models, including convolutional networks (CNN), recurrent networks (RNN), and Long Short Term Memory networks (LSTM).
 
 ## Using Python in SQL Server
 
@@ -52,14 +50,16 @@ You import the **revoscalepy** module into your Python code, and then call funct
 
 Input data for Python must be tabular. All Python results must be returned in the form of a **pandas** data frame.
 
-You can execute your Python code inside T-SQL, by embedding the script in a stored procedure. Or, you can run the code from a local Python IDE and have the script executed in a remote SQL Server computer, by defining a remote compute context.
+You can execute your Python code inside T-SQL, by embedding the script in a stored procedure.
 
-You can work with local data, get data from SQL Server or other ODBC data sources, or use the XDF file format to exchange data with R solutions.
+Or, run the code from a local Python IDE and have the script executed on the SQL Server computer, by defining a remote compute context.
+
+You can work with local data, get data from SQL Server or other ODBC data sources, or use the XDF file format to exchange data with other sources, or with R solutions.
 
 **For more information**
 
-+ Supported functions: See [What is revoscalepy](what-is-revoscalepy.md) 
-+ Supported Python data types: see [Python Libraries and Data Types](python-libraries-and-data-types.md)
++ Supported functions:  [What is revoscalepy](what-is-revoscalepy.md) 
++ Supported Python data types:  [Python Libraries and Data Types](python-libraries-and-data-types.md)
 + Supported data sources: ODBC databases, SQL Server, and XDF files
 + Supported compute contexts: local, or SQL Server
 

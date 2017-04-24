@@ -67,7 +67,7 @@ Learn how to deploy a Python model using the latest version of Microsoft Machine
 
 + [Deploy and Consume a Python Model](..\python\publish-consume-python-code.md)
 
-## <a name="bkmk_sqltutorials"></a>R Tutorials using SQL Server
+## <a name="bkmk_sqltutorials"></a>R Tutorials with SQL Server
 
 This section lists tutorials that were developed for SQL Server 2016 R Services. All require Microsoft R, and make extensive use of features in the RevoScaleR package for SQL Server compute contexts.
 
@@ -76,25 +76,25 @@ This section lists tutorials that were developed for SQL Server 2016 R Services.
 
 ### <a name="bkmk_dataScience"></a>Data Science Deep Dive
 
-[Getting Started with RevoScaleR and SQL Server](http://go.microsoft.com/fwlink/?LinkID=691640&clcid=0x809)
+Learn how to use the functions in the RevoScaleR packages.
 
-**What's in it:**  You'll learn how to use the functions in the RevoScaleR packages to  move data between R and SQL, and to switch compute contexts to suit a particular task. You will create some models and plots and move them between your development environment and SQL Server.
++ [Getting Started with RevoScaleR and SQL Server](http://go.microsoft.com/fwlink/?LinkID=691640&clcid=0x809)
 
-This walkthrough is a good place to start for data scientists or developers who are already familiar with the R language, and who want to learn about the enhanced R packages and functions in Microsoft R by Revolution Analytics.
+Move data between R and SQL, and switch compute contexts to suit a particular task. You will create models and plots and move them between your development environment and SQL Server. 
 
-**Audience:** People who have been using R and want to learn more about how RevoScaleR and SQL Server can improve the R experience.
+**Audience:** For data scientists or developers who are already familiar with the R language, and who want to learn about the enhanced R packages and functions in Microsoft R by Revolution Analytics.
 
 **Requirements:** Some basic R knowledge. Access to a server with SQL Server R Services or Machine Learning Services with R. For setup help, see [Prerequisites](#bkmk_Prerequisites).
 
 ### <a name="bkmk_indb-analytics"></a>In-Database Advanced Analytics for the SQL Developer
 
-[In-Database Advanced Analytics for SQL Developers &#40;Tutorial&#41;](../../advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md)
+Learn to build and deploy a complete advanced analytics solution using [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-**What's in it:** Learn to build and deploy a complete advanced analytics solution using [!INCLUDE[tsql](../../includes/tsql-md.md)].
++ [In-Database Advanced Analytics for SQL Developers &#40;Tutorial&#41;](../../advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md)
 
-This example focuses on moving a solution into production. You'll learn how to wrap R code in a stored procedure, save an R model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, and make parameterized calls to the R model for prediction.
+Focuses on moving a solution into production. You'll learn how to wrap R code in a stored procedure, save an R model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, and make parameterized calls to the R model for prediction.
 
-**Audience:** This tutorial is intended for SQL developers, application developers, or SQL professionals who will be supporting R solutions and want to learn how to deploy R models to SQL Server.
+**Audience:** For SQL developers, application developers, or SQL professionals who will be supporting R solutions and want to learn how to deploy R models to SQL Server.
 
 **Requirements:** No R environment is needed! All R code is provided and you can build the complete solution using only [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and familiar business intelligence and SQL development tools. However, some basic knowledge of R is helpful.
 
@@ -102,54 +102,61 @@ You must have access to a SQL Server with the R language installed and enabled. 
 
 ### <a name="bkmk_rtsql"></a>Using R Code in T-SQL
 
-[Using R Code in Transact-SQL &#40;SQL Server R Services&#41;](../../advanced-analytics/r-services/using-r-code-in-transact-sql-sql-server-r-services.md)
+This quick-start covers the basic syntax for using R in [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-**What's in it:** This quick-start covers the basic syntax for using R in [!INCLUDE[tsql](../../includes/tsql-md.md)].
++ [Using R Code in Transact-SQL &#40;SQL Server R Services&#41;](../../advanced-analytics/r-services/using-r-code-in-transact-sql-sql-server-r-services.md)
 
-You'll learn how to call the R run-time from T-SQL, wrap R functions in SQL code, and run a stored procedure that saves R output and R models to a SQL table.
+Learn how to call the R run-time from T-SQL, wrap R functions in SQL code, and run a stored procedure that saves R output and R models to a SQL table.
 
-**Audience:** This tutorial is for people who are new to the feature, and want to learn the basics of calling R from a stored procedure.
+**Audience:** For people who are new to the feature, and want to learn the basics of calling R from a stored procedure.
 
-**Requirements:** No knowledge of R or SQL required.
+**Requirements:** No knowledge of R or SQL required. However, you'll need either SQL Server Management Studio or another client that can connect to a database and run T-SQL. We recommend the free MSSQL extension for Visual Studio Code if you are new to T-SQL queries.
 
-To run the code, you'll need either SQL Server Management Studio or another client that can connect to a database and run T-SQL. We recommend the free MSSQL extension for Visual Studio Code if you are new to T-SQL queries.
-
-You must have access to a server with SQL Server R Services or Machine Learning Services with R already enabled. For setup help, see [Prerequisites](#bkmk_Prerequisites).
+You must also have access to a server with SQL Server R Services or Machine Learning Services with R already enabled. For setup help, see [Prerequisites](#bkmk_Prerequisites).
 
 ### <a name="bkmk_E2E"></a>Developing an End-to-End Advanced Analytics Solution
 
-[Data Science End-to-End Walkthrough](../../advanced-analytics/r-services/data-science-end-to-end-walkthrough.md) 
-
 Demonstrates the data science process from beginning to end, as you acquire data and save it to SQL Server, analyze the data with R and build graphs.
+
++ [Data Science End-to-End Walkthrough](../../advanced-analytics/r-services/data-science-end-to-end-walkthrough.md) 
 
 You'll learn how to move graphics between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and R, and compare feature engineering in T-SQL with R functions.
 
-Finally, you'll learn how to use the predictive model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for both batch scoring single-row scoring.
+Finally, you'll learn how to use the predictive model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for both batch scoring and single-row scoring.
 
-**Audience:** This tutorial is intended for people who have some familiarity with R as well as developer tools such as SQL Server Management Studio.
+**Audience:** For people who are familiar with R and with developer tools such as SQL Server Management Studio.
 
-**Requirements:** You should have access to an R development environment and be familiar with R commands. You'll need to download the New York City taxi dataset using PowerShell.
+**Requirements:** You should have access to an R development environment and know how to run R commands. You'll need to download the New York City taxi dataset using PowerShell. Access to a server with SQL Server R Services or Machine Learning Services with R already enabled. For setup help, see [Prerequisites](#bkmk_Prerequisites).
 
-Access to a server with SQL Server R Services or Machine Learning Services with R already enabled. For setup help, see [Prerequisites](#bkmk_Prerequisites).
+## SQL Server Product Samples
 
-## Other R Tutorials
+These samples and demos provided by the SQL Server and R Server development team highlight ways that you can use embedded analytics in real-world applications.
 
-[Build an intelligent app with SQL Server and R](https://www.microsoft.com/sql-server/developer-get-started/r)
+### Predicting customer demand using R in SQL Server
 
-In this tutorial from the SQL Server development team, you'll learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand. 
+Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand.
+
++ [Build an intelligent app with SQL Server and R](https://www.microsoft.com/sql-server/developer-get-started/r)
 
 ### Customer segmentation using K-Means Clustering
 
-[Clustering in SQL Server R Services](https://www.microsoft.com/sql-server/developer-get-started/rclustering)
+Use unsupervised learning to segment customers based on sales data.  (English only)
 
-This example demonstrates how to use unsupervised learning, using the rxKmeans library on SQL Server, to segment customers based on sales data.  (English only)
++ [Clustering in SQL Server R Services](https://www.microsoft.com/sql-server/developer-get-started/rclustering)
 
 
-### Learn RevoScaleR
+## Learn RevoScaleR
 
-[Explore R and Scale R in 25 Short Functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started-tutorial)
+Wondering what RevoScaleR offers that R doesn't? See these tutorials
 
-New to R? Wondering what RevoScaleR offers that R doesn't? See this R Server quick-start.
+
+This R Server quick-start demonstrates how you can write R code once, and deploy anywhere, using RevoScaleR data sources and remote compute contexts.
+
++ [Explore R and Scale R in 25 Short Functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started-tutorial)
+
+Learn how to use RevoScaleR for advanced modeling and data transformation, and optimize for different compute contexts.
+
++ [Diving Deep into Data Analysis](https://msdn.microsoft.com/en-us/microsoft-r/data-analysis-in-microsoft-r)
 
 ## Customizable End-to-End Solutions
 
@@ -174,9 +181,9 @@ For more information, see [Machine Learning Templates with SQL Server 2016 R Ser
 
 To run any of these tutorials, you must download and install **R Services (in-Database)** as described here:  [Set up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)
 
-**SQL Server vNext**
+**SQL Server 2017**
 
-In SQL Server vNext CTP 2.0, R Services has been renamed **Machine Learning Services (in-Database)**. With this latest release, you can install either R or Python, or both. Otherwise the overall setup process, architecture, and requirements are the same.
+In SQL Server 2017 CTP 2.0, R Services has been renamed **Machine Learning Services (in-Database)**. With this latest release, you can install either R or Python, or both. Otherwise the overall setup process, architecture, and requirements are the same.
 
 After running SQL Server setup, don't forget these important steps:
 
@@ -193,7 +200,6 @@ If you do not already have a preferred R development environment, you can instal
 + [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)
 
 Note that standard R libraries are insufficient to use these tutorials; both your R development environment and the SQL Server computer running R must have the R packages provided by Microsoft. For more information about what's in Microsoft R, see this article: [Microsoft R Products](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started#compare-prods).
-
 
 ## See Also
 

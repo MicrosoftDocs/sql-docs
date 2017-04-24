@@ -51,7 +51,21 @@ The DSN setup and connection UIs of the driver have been enhanced with the addit
 
 It is possible to use the new Azure AD authentication options when creating or editing an existing DSN using the driver's setup UI:
 
+`Authentication=SqlPassword` for username/password authentication to SQL Server (Azure or otherwise)
+
 ![CreateNewDSN.png](CreateNewDSN.png)
+
+`Trusted_Connection=Yes` for Windows legacy SSPI integrated authentication
+
+![CreateNewDSN2.png](CreateNewDSN2.png)
+
+`Authentication=ActiveDirectoryIntegrated` for Azure Active Directory Integrated authentication to SQL Azure
+
+![CreateNewDSN3.png](CreateNewDSN3.png)
+
+`Authentication=ActiveDirectoryPassword` for Azure Active Directory username/password authentication to SQL Azure
+
+![CreateNewDSN4.png](CreateNewDSN4.png)
 
 The four options correspond to `Trusted_Connection=Yes` (existing legacy Windows SSPI-only integrated authentication) and `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, and `ActiveDirectoryPassword`, respectively.
 

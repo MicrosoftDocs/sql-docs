@@ -9,6 +9,8 @@ ms.technology:
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.dtsserver.packageroles.f1"
 helpviewer_keywords: 
   - "security [Integration Services], roles"
   - "db_ssisoperator role"
@@ -84,9 +86,61 @@ manager: "jhubbard"
 -   **Assign Reader and Writer Roles to Packages**  
   
      You can assign a reader and a writer role to each package.  
+
+## <a name="assign"></a> Assign a Reader and Writer Role to a Package
+  You can assign a reader and a writer role to each package.  
   
-## Related Tasks  
+### Assign a reader and writer role to a package  
   
--   [Assign a Reader and Writer Role to a Package](../../integration-services/service/assign-a-reader-and-writer-role-to-a-package.md)  
+1.  In Object Explorer, locate the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] connection.  
   
--   [Create a User-Defined Role](../../integration-services/service/create-a-user-defined-role.md)  
+2.  Expand the Stored Packages folder, and then expand the subfolder that contains the package to which you want to assign roles.  
+  
+3.  Right-click the package to which you want to assign roles.  
+  
+4.  In the **Packages Roles** dialog box, select a reader role in the **Reader Role** list and a writer role in the **Writer Role** list.  
+  
+5.  Click **OK**.
+
+## <a name="create"></a> Create a User-Defined Role
+    
+### To create a user-defined role  
+  
+1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  
+2.  Click **Object Explorer** on the **View** menu.  
+  
+3.  On the Object Explorer toolbar, click **Connect**, and then click **Database Engine**.  
+  
+4.  In the **Connect to Server** dialog box, provide a server name and select an authentication mode. You can use a period (.), (local), or **localhost** to indicate the local server.  
+  
+5.  Click **Connect**.  
+  
+6.  Expand Databases, System Databases, msdb, Security, and Roles.  
+  
+7.  In the Roles node, right-click Database Roles, and click **New Database Role**.  
+  
+8.  On the General page, provide a name and optionally, specify an owner and owned schemas and add role members.  
+  
+9. Optionally, click **Permissions** and configure object permissions.  
+  
+10. Optionally, click **Extended Properties** and configure any extended properties.  
+  
+11. Click **OK**.
+
+## <a name="roles_dialog"></a> Package Roles Dialog Box UI Reference
+  Use the **Package Roles** dialog box, available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], to specify the database-level roles that have read access to the package and the database-level roles that have write access to the package. Database-level roles apply only to packages that are stored in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** database.  
+  
+ The roles listed in the dialog box are the current database roles of the **msdb** system database. If no roles are selected, the default [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] roles apply. By default, the reader role includes **db_ssisadmin**, **db_ssisoperator**, and the user who created the package. A user who is a member of one of these roles or created the packages can enumerate, view, export, and run packages. By default, the writer role includes **db_ssisadmin** and the user who created the package. A user who is a member of this role and the user who created the packages can import, delete, and change packages.  
+  
+ The **ownersid** column in the **sysssispackages** table lists the unique security identifier of the user who created the package.  
+  
+### Options  
+ **Package Name**  
+ Specify the name of the package.  
+  
+ **Reader Role**  
+ Select a role in the list.  
+  
+ **Writer Role**  
+ Select a role in the list  

@@ -221,6 +221,7 @@
 ## [sys.query_store_query](sys-query-store-query-transact-sql.md)  
 ## [sys.query_store_query_text](sys-query-store-query-text-transact-sql.md)  
 ## [sys.query_store_runtime_stats](sys-query-store-runtime-stats-transact-sql.md)  
+## [sys.query_store_wait_stats](sys-query-store-wait-stats-transact-sql.md) 
 ## [sys.query_store_runtime_stats_interval](sys-query-store-runtime-stats-interval-transact-sql.md)  
 
 # [Scalar Types](scalar-types-catalog-views-transact-sql.md)  

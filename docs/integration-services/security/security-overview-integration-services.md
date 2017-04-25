@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 |Threat or vulnerability|Definition|Mitigation|  
 |-----------------------------|----------------|----------------|  
-|Package source|The source of a package is the individual or organization that created the package. Running a package from an unknown or untrusted source might be risky.|Identify the source of a package by using a digital signature, and run packages that come from only known, trusted sources. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).|  
+|Package source|The source of a package is the individual or organization that created the package. Running a package from an unknown or untrusted source might be risky.|Identify the source of a package by using a digital signature, and run packages that come from only known, trusted sources. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).|  
 |Package contents|Package contents include the elements in the package and their properties. The properties can contain sensitive data such as a password or a connection string. Package elements such as an SQL statement can reveal the structure of your database.|Control access to a package and to the contents by doing the following steps:<br /><br /> 1) To control access to the package itself, apply [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features to packages that are saved to the **msdb** database in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To packages that are saved in the file system, apply file system security features, such as access controls lists (ACLs).<br /><br /> 2) To control access to the package's contents, set the protection level of the package.<br /><br /> For more information, see [Security Overview &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) and [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).|  
 |Package output|When you configure a package to use configurations, checkpoints, and logging, the package stores this information outside the package. The information that is stored outside the package might contain sensitive data.|To protect configurations and logs that the package saves to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database tables, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security features.<br /><br /> To control access to files, use the access control lists (ACLs) available in the file system.<br /><br /> For more information, see [Access to Files Used by Packages](#files)|  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
   
  **Ensure that you only open and run packages from trusted sources**.  
   
- To ensure that you only open and run packages from trusted sources, you first have to identify the source of packages. You can identify the source by signing packages with certificates. Then, when you open or run the packages, you can have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] check for the presence and the validity of the digital signatures. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).  
+ To ensure that you only open and run packages from trusted sources, you first have to identify the source of packages. You can identify the source by signing packages with certificates. Then, when you open or run the packages, you can have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] check for the presence and the validity of the digital signatures. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## Access Control Features  
  By implementing identity features in your packages, you can achieve the following goal:  
@@ -76,7 +76,7 @@ manager: "jhubbard"
 #### Saving Packages to the msdb Database  
  Saving the packages to the msdb database helps provide security at the server, database, and table levels. In the msdb database, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages are stored in the sysssispackages table. Because the packages are saved to the sysssispackages and sysdtspackages tables in the msdb database, the packages are automatically backed up when you backup the msdb database.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] packages stored in the msdb database can also be protected by applying the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] database-level roles. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes three fixed database-level roles db_ssisadmin, db_ssisltduser, and db_ssisoperator for controlling access to packages. A reader and a writer role can be associated with each package. You can also define custom database-level roles to use in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. Roles can be implemented only on packages that are saved to the msdb database in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] packages stored in the msdb database can also be protected by applying the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] database-level roles. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes three fixed database-level roles db_ssisadmin, db_ssisltduser, and db_ssisoperator for controlling access to packages. A reader and a writer role can be associated with each package. You can also define custom database-level roles to use in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. Roles can be implemented only on packages that are saved to the msdb database in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 #### Saving Packages to the File System  
  If you store packages to the file system instead of in the msdb database, make sure to secure the package files and the folders that contain package files.  
@@ -132,12 +132,12 @@ manager: "jhubbard"
 ## Related Tasks  
  The following list contains links to topics that show you how to perform a certain task pertaining to the security.  
   
--   [Create a User-Defined Role](../../integration-services/service/create-a-user-defined-role.md)  
+-   [Create a User-Defined Role](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
   
--   [Assign a Reader and Writer Role to a Package](../../integration-services/service/assign-a-reader-and-writer-role-to-a-package.md)  
+-   [Assign a Reader and Writer Role to a Package](../../integration-services/security/integration-services-roles-ssis-service.md#assign)  
   
--   [Implement a Signing Policy by Setting a Registry Value](../../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md)  
+-   [Implement a Signing Policy by Setting a Registry Value](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#registry)  
   
--   [Sign a Package by Using a Digital Certificate](../../integration-services/packages/sign-a-package-by-using-a-digital-certificate.md)  
+-   [Sign a Package by Using a Digital Certificate](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
 -   [Set or Change the Protection Level of Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  

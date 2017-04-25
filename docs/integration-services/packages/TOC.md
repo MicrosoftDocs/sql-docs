@@ -6,7 +6,3 @@
 ## [Restart Packages by Using Checkpoints](restart-packages-by-using-checkpoints.md)  
 ## [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md)  
 ## [Load-Balancing Packages on Remote Servers by Using SQL Server Agent](load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md)  
-## [Identify the Source of Packages with Digital Signatures](identify-the-source-of-packages-with-digital-signatures.md)  
-### [Implement a Signing Policy by Setting a Registry Value](implement-a-signing-policy-by-setting-a-registry-value.md)  
-### [Sign a Package by Using a Digital Certificate](sign-a-package-by-using-a-digital-certificate.md)  
-### [Digital Signing Dialog Box UI Reference](digital-signing-dialog-box-ui-reference.md)  

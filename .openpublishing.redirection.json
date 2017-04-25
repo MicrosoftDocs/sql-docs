@@ -1198,6 +1198,11 @@
    "redirect_document_id": false
   },
   {
+   "source_path" : "docs/ssms/sql-server-management-studio-ssms-release-candidate.md",
+   "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+   "redirect_document_id": false
+  },
+  {
    "source_path" : "docs/integration-services/security/threat-and-vulnerability-mitigation-integration-services.md",
    "redirect_url": "/sql/integration-services/security/security-overview-integration-services",
    "redirect_document_id": false

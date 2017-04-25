@@ -1,6 +1,6 @@
 # [Performance Center for SQL Server Database Engine and Azure SQL Database](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 ## [Configuring Storage Spaces with a NVDIMM-N write-back cache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
-#[Monitor Resource Usage (System Monitor)](../performance-monitor/monitor-resource-usage-system-monito.md) 
+#[Monitor Resource Usage (System Monitor)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
 # [Monitor and Tune for Performance](monitor-and-tune-for-performance.md)  
 ## [Monitor SQL Server Components](monitor-sql-server-components.md)  
 ## [Performance Monitoring and Tuning Tools](performance-monitoring-and-tuning-tools.md)  

@@ -237,7 +237,7 @@ This option will let you change the collation value to any of the supported coll
 
 2. The mssql-conf utility will try to restore the databases using the specified collation and restart the service. If there are any errors, it will roll-back the collation to the previous value.
 
-For a list of supported collations, run the [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql) function: `SELECT Name from sys.fn_helpcollations()`.
+For a list of supported collations, run the [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) function: `SELECT Name from sys.fn_helpcollations()`.
 
 ## Next steps
 

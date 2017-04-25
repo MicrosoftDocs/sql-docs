@@ -10,8 +10,9 @@
 # [Download SSMS](download-sql-server-management-studio-ssms.md)
 # [SSMS Changelog](sql-server-management-studio-changelog-ssms.md)
 # [Release notes](sql-server-management-studio-release-notes.md)
+# [Previous SQL Server Management Studio Releases](previous-sql-server-management-studio-releases.md)
 # [Usage Feedback Collection](sql-server-management-studio-telemetry-ssms.md)
-# [SQL Server Management Studio (SSMS) - Release Candidate](sql-server-management-studio-ssms-release-candidate.md)
+# [Download SQL Server PowerShell Module](download-sql-server-ps-module.md)
 
 # [Introduction to SSMS for BI](introduction-to-sql-server-management-studio-for-business-intelligence.md)
 # [Customize Menus and Shortcut Keys](customize-menus-and-shortcut-keys.md)

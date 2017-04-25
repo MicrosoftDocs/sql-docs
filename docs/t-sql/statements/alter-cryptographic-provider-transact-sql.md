@@ -1,7 +1,7 @@
 ---
 title: "ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "0/20/2017"
+ms.date: "04/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

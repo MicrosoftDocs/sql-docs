@@ -717,18 +717,18 @@ MULTI_USER
  SIZE_BASED_CLEANUP_MODE  
  Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:  
   
- OFF – size based cleanup won’t be automatically activated. This is the default configuration value.  
+ OFF – size based cleanup won’t be automatically activated. 
   
- AUTO – size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  
+ AUTO – size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
   
  SIZE_BASED_CLEANUP_MODE is type **nvarchar**.  
   
  QUERY_CAPTURE_MODE  
  Designates the currently active query capture mode:  
   
- ALL – all queries are captured. This is the default configuration value.  
+ ALL – all queries are captured. This is the default configuration value.  This is the default configuration value for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
   
- AUTO – capture relevant queries based on execution count and resource consumption.  
+ AUTO – capture relevant queries based on execution count and resource consumption.  This is the default configuration value for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  NONE – stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss to capture important queries.  
   

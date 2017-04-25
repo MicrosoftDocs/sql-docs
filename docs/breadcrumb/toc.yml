@@ -138,6 +138,9 @@
       - name: Failover clusters
         href: /sql/sql-server/failover-clusters/
         homepage: /sql/sql-server/failover-clusters
+      - name: Install
+        href: /sql/sql-server/install/
+        homepage: /sql/sql-server/install
       - name: Stretch Database
         href: /sql/sql-server/stretch-database/
         homepage: /sql/sql-server/stretch-database

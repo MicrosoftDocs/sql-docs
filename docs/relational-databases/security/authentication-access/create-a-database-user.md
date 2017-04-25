@@ -1,7 +1,7 @@
 ---
 title: "Create a Database User | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2016"
+ms.date: "04/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "mapping users"
   - "users [SQL Server], creating"
   - "database user additions [SQL Server]"
-  - "database users, mapping\"
+  - "database users, mapping"
   - "CREATE USER [Management Studio]"
   - "users [SQL Server], adding"
   - "mapping database users"
@@ -27,7 +27,8 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
----
+---   
+
 # Create a Database User
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 

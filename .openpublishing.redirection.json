@@ -8,6 +8,12 @@
    "redirect_document_id": true
   },
 
+  {
+   "source_path" : "docs/ado/guide/appendixes/ado-appendixes.md",
+   "redirect_url": "/sql/ado/guide/appendixes/appendix-a-providers",
+   "redirect_document_id": true
+  },
+
 
   {
    "source_path" : "docs/ado/guide/appendixes/using-ado-with-microsoft-visual-j.md",

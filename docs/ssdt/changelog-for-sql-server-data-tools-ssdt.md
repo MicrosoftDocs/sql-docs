@@ -20,7 +20,7 @@ This change log is for [SQL Server Data Tools (SSDT) for Visual Studio 2015](htt
   
 For detailed posts about what’s new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).  
 
-## SSDT 17.0 (supports up to SQL Server vNext)
+## SSDT 17.0 (supports up to SQL Server 2017)
 Build number: 14.0.61704.140
 
 ### What's New?
@@ -32,8 +32,8 @@ Build number: 14.0.61704.140
 
 **IS projects:**
 - The SSIS OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online.
-- SSIS project now supports target server version of "SQL Server vNext" 
-- Support for CDC Control Task, CDC Splitter and CDC Source when targeting SQL Server vNext. 
+- SSIS project now supports target server version of "SQL Server 2017" 
+- Support for CDC Control Task, CDC Splitter and CDC Source when targeting SQL Server 2017. 
 
 **AS projects:**
 - Analysis Services PowerQuery Integration (1400 compat-level tabular models):

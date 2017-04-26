@@ -53,10 +53,10 @@ manager: "jhubbard"
 ```  
   
 ## Arguments  
- `\<first section of string>`  
+ \<first section of string>  
  Is the start of a string.  
   
- `<continued section of string>`  
+ \<continued section of string>  
  Is the continuation of a string.  
   
 ## Remarks  

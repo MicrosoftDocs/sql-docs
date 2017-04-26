@@ -1011,7 +1011,7 @@
     - name: Samples
       href: /sql/sample/
       homepage: /sql/sample
-s    - name: Tools
+    - name: Tools
       href: /sql/tools/
       homepage: /sql/tools
       items:

@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 -   **Replicated Database Consistency**  
   
-     When a published database is a member of an availability group, by default the log reader will not process log records that have not already been hardened at all availability group secondary replicas. This insures that on failover, all rows replicated to a subscriber also are present at the new primary.  
+     When a published database is a member of an availability group, by default the log reader will not process log records that have not already been hardened at all availability group secondary replicas. This ensures that on failover, all rows replicated to a subscriber also are present at the new primary.  
   
      When the publisher has only two availability replicas (one primary and one secondary) and a failover happens, the original primary replica remains down because the logreader does not move forward until all secondary databases are brought back online or until the failing secondary replicas are removed from the availability group. The logreader, now running against the secondary database, will not proceed forward since Always On cannot harden any changes to any secondary database. To allow the logreader to proceed further and still have disaster recovery capacity, remove the original primary replica from the availability group using ALTER AVAILABITY GROUP <group_name> REMOVE REPLICA. Then add a new secondary replica to the availability group.  
   
@@ -75,12 +75,12 @@ manager: "jhubbard"
   
 -   **sp_validate_replicate_hosts_as_publishers**  
   
-     While it is useful for the agents to insure that the current primary can function as the replication publisher for a publisher database, a more general validation capability is needed to establish the validity of an entire replication topology on an Always On availability database. The stored procedure **sp_validate_replica_hosts_as_publishers** is designed to fill this need.  
+     While it is useful for the agents to ensure that the current primary can function as the replication publisher for a publisher database, a more general validation capability is needed to establish the validity of an entire replication topology on an Always On availability database. The stored procedure **sp_validate_replica_hosts_as_publishers** is designed to fill this need.  
   
      This stored procedure is always run manually. The caller must either be **sysadmin** at the distributor, **dbowner** of the distribution database, or a member of the **Publication Access List** of a publication of the publisher database. In addition, the login of the caller must be a valid login for all of the availability replica hosts, and have select privileges on the availability database associated with the publisher database.  
   
 ###  <a name="CDC"></a> Change Data Capture  
- Databases enabled for change data capture (CDC) are able to leverage [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in order to insure not only that the database remains available in the event of failure, but that changes to the database tables continue to be monitored and deposited in the CDC change tables. The order in which CDC and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] are configured is not important. CDC enabled databases can be added to [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], and databases that are members of an Always On availability group can be enabled for CDC. In both cases, however, CDC configuration is always performed on the current or intended primary replica. CDC uses the log reader agent and has the same limitations as described in the **Log Reader Agent Modifications** section earlier in this topic.  
+ Databases enabled for change data capture (CDC) are able to leverage [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in order to ensure not only that the database remains available in the event of failure, but that changes to the database tables continue to be monitored and deposited in the CDC change tables. The order in which CDC and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] are configured is not important. CDC enabled databases can be added to [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], and databases that are members of an Always On availability group can be enabled for CDC. In both cases, however, CDC configuration is always performed on the current or intended primary replica. CDC uses the log reader agent and has the same limitations as described in the **Log Reader Agent Modifications** section earlier in this topic.  
   
 -   **Harvesting Changes for Change Data Capture Without Replication**  
   
@@ -96,11 +96,11 @@ manager: "jhubbard"
   
 -   **Harvesting Changes for Change Data Capture With Replication**  
   
-     If both CDC and replication are enabled for a database, the log reader handles the population of the CDC change tables. In this case, the techniques used by replication to leverage [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] will insure that changes continue to be harvested from the log and deposited in CDC change tables after failover. Nothing additional needs to be done for CDC in this configuration to insure that the change tables are populated.  
+     If both CDC and replication are enabled for a database, the log reader handles the population of the CDC change tables. In this case, the techniques used by replication to leverage [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] will ensure that changes continue to be harvested from the log and deposited in CDC change tables after failover. Nothing additional needs to be done for CDC in this configuration to ensure that the change tables are populated.  
   
 -   **Change Data Capture Cleanup**  
   
-     To insure that appropriate cleanup occurs at the new primary database, a local cleanup job should always be created. The following example creates the cleanup job.  
+     To ensure that appropriate cleanup occurs at the new primary database, a local cleanup job should always be created. The following example creates the cleanup job.  
   
     ```  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
@@ -117,9 +117,9 @@ manager: "jhubbard"
   
      Client applications that use the table-valued functions (TVFs) or linked servers to access change table data also need the ability to locate an appropriate CDC host after failover. The availability group listener name is the mechanism provided by [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] to transparently allow a connection to be retargeted to a different host. Once an availability group listener name is associated with an availability group, it is available to be used in TCP connection strings. Two different connection scenarios are supported through the availability group listener name.  
   
-    -   One insures that connection requests are always directed to the current primary replica.  
+    -   One ensures that connection requests are always directed to the current primary replica.  
   
-    -   One insures that connection requests are directed to a read-only secondary replica.  
+    -   One ensures that connection requests are directed to a read-only secondary replica.  
   
      If used to locate a read-only secondary replica, a read-only routing list must also be defined for the availability group. For more information about routing access to readable secondaries, see [To Configure Availability Replicas for Read-Only Routing](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConfigureARsForROR).  
   
@@ -168,7 +168,7 @@ manager: "jhubbard"
   
 -   **Client Access to CDC Change Data and Domain Logins**  
   
-     In general, you should use domain logins for client access to change data residing in databases that are members of Always On availability groups. To insure continued access to change data after failover, the domain user will need access privileges on all of the hosts supporting availability group replicas. If a database user is added to a database in a primary replica, and the user is associated with a domain login, the database user is propagated to secondary databases and continues to be associated with the specified domain login. If the new database user is associated with a SQL Server authentication login, the user at the secondary databases will be propagated without a login. While the associated [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication login could be used to access change data at the primary where the database user was originally defined, that node is the only one where access would be possible. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication login would not be able to access data from any secondary database, nor from any new primary databases other than the original database where the database user was defined.  
+     In general, you should use domain logins for client access to change data residing in databases that are members of Always On availability groups. To ensure continued access to change data after failover, the domain user will need access privileges on all of the hosts supporting availability group replicas. If a database user is added to a database in a primary replica, and the user is associated with a domain login, the database user is propagated to secondary databases and continues to be associated with the specified domain login. If the new database user is associated with a SQL Server authentication login, the user at the secondary databases will be propagated without a login. While the associated [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication login could be used to access change data at the primary where the database user was originally defined, that node is the only one where access would be possible. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication login would not be able to access data from any secondary database, nor from any new primary databases other than the original database where the database user was defined.  
      
 -   **Disabling Change Data Capture**  
 If Change Data Capture needs to be disabled on a database which is part of an Always On Availability Group, then you will need to perform additional steps to ensure that log truncation is not affected. You will need to implement one of the following steps to prevent Change Data Capture from blocking log truncation after disabling Change Data Capture:

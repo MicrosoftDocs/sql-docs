@@ -1,7 +1,7 @@
 ---
 title: "Configure a Server to Listen on a Specific TCP Port | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/24/2017"
+ms.date: "04/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -37,11 +37,6 @@ Because port 1433 is the known standard for [!INCLUDE[ssNoVersion](../../include
 > [!WARNING]  
 >  The Database Engine begins listening on a new port when restarted. However the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service monitors the registry and reports the new port number as soon as the configuration is changed, even though the Database Engine might not be using it. Restart the Database Engine to ensure consistency and avoid connection failures.  
   
- **In This Topic**  
-  
--   **To configure a server to listen on a specific TCP port, using:**  
-  
-     [SQL Server Configuration Manager](#SSMSProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Configuration Manager  
   

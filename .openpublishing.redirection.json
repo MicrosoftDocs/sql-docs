@@ -1261,7 +1261,19 @@
    "source_path" : "docs/integration-services/packages/package-roles-dialog-box-ui-reference.md",
    "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
    "redirect_document_id": false
-  }
+  },
+
+
+  {
+   "source_path" : "docs/ado/reference/ado-md-api/ado-md-api-reference.md",
+   "redirect_url": "/sql/ado/reference/ado-md-api/ado-md-object-model",
+   "redirect_document_id": true
+  },
+  {
+   "source_path" : "docs/ado/reference/adox-api/adox-api-reference.md",
+   "redirect_url": "/sql/ado/reference/adox-api/adox-object-model",
+   "redirect_document_id": true
+  },
 
  ]
 }

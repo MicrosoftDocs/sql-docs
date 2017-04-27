@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "sp_backup_config_schedule"
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 caps.latest.revision: 12
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

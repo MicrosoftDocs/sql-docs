@@ -126,7 +126,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
     {  
           = OFF   
         | = ON [ ( <query_store_option_list> [,... n] ) ]  
-        | ( \< query_store_option_list> [,... n] )  
+        | ( < query_store_option_list> [,... n] )  
         | CLEAR [ ALL ]  
     }  
 }   
@@ -211,7 +211,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 |400 GB|||√|√|  
 |500 GB|||√ (D) **\***|√|  
   
- **\*** Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, West Europe, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Current 4 TB limitations](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers.md#current-limitations-of-p11-and-p15-databases-with-4-tb-maxsize).  
+ **\*** Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, West Europe, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Current 4 TB limitations](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#current-limitations-of-p11-and-p15-databases-with-4-tb-maxsize).  
   
  The following rules apply to MAXSIZE and EDITION arguments:  
   

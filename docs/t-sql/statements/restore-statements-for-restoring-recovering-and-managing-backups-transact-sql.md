@@ -1,5 +1,5 @@
 ---
-title: "RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL) | Microsoft Docs"
+title: "RESTORE Statements for Restoring, Recovering, Managing Backups (T-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-non-specified"

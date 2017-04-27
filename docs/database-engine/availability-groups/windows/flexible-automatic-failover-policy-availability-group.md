@@ -1,5 +1,5 @@
 ---
-title: "Flexible Failover Policy for Automatic Failover of an Availability Group (SQL Server) | Microsoft Docs"
+title: "Flexible Automatic Failover Policy - Availability Group | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 caps.latest.revision: 29
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

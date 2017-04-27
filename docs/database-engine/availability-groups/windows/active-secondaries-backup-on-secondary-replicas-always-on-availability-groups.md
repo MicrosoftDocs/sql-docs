@@ -1,5 +1,5 @@
 ---
-title: "Active Secondaries: Backup on Secondary Replicas (Always On Availability Groups) | Microsoft Docs"
+title: "Active Secondaries Backup on Secondary Replicas-Always On Availability | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -19,6 +19,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 caps.latest.revision: 34
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "RemoveUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
+title: "ConfigurationSetting Method - RemoveUnattendedExecutionAccount | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-server-2016"

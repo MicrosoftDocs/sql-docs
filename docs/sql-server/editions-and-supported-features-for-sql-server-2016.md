@@ -69,7 +69,6 @@ For a list of features that were added to the Developer edition for [!INCLUDE[ss
 |Always On failover cluster instances|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No|No|  
 |Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|No|
 |Basic availability groups <sup>2</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
-|Connection director|Yes|No|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
 |Online indexing|Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|
@@ -137,7 +136,7 @@ For a list of features that were added to the Developer edition for [!INCLUDE[ss
 |Snapshot replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
 |SQL Server change tracking|Yes|Yes|Yes|Yes|Yes| 
 |Transactional replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
-|Transactional replication to Azure|Yes|Yes|Yes|No|No|   
+|Transactional replication to Azure|Yes|Yes|No|No|No|   
 |Transactional replication updateable subscription|Yes|No|No|No|No|  
   
 ##  <a name="SSMS"></a> Management Tools  
@@ -239,7 +238,7 @@ For info about the Integration Services (SSIS) features supported by the edition
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Create cubes without a database|Yes|Yes|No|No|No |   
 |Auto-generate staging and data warehouse schema|Yes|Yes|No|No|No| 
-|Change data capture|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|No|No| 
+|Change data capture|Yes|Yes <sup>1</sup>|No|No|No| 
 |Star join query optimizations|Yes|No|No|No|No| 
 |Scalable read-only Analysis Services configuration|Yes|No|No|No|No| 
 |Parallel query processing on partitioned tables and indexes|Yes|No|No|No|No|   

@@ -14,6 +14,7 @@ f1_keywords:
   - "sql13.swb.newagwizard.selectdatabases.f1"
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 caps.latest.revision: 16
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -25,7 +26,7 @@ manager: "jhubbard"
   
  **Name**  
  Displays the name of a local user database.  
-  
+
  **Size**  
  Displays the database size, if the size is available to the wizard.  
   

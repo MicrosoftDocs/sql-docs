@@ -190,8 +190,8 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*(Before start AND FetchOffset > 0) OR (After end AND FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart AND FetchOffset <= 0*|*Before start*|  
-|*CurrRowsetStart = 1 AND FetchOffset \< 0*|*Before start*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset \< 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Before start*|  
+|*CurrRowsetStart = 1 AND FetchOffset < 0*|*Before start*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Before start*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 <= CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*After end*|  
@@ -209,8 +209,8 @@ SQLRETURN SQLFetchScroll(
 |Condition|First row of new rowset|  
 |---------------|-----------------------------|  
 |*FetchOffset < 0 AND &#124; FetchOffset &#124; <= LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset \< 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Before start*|  
-|*FetchOffset \< 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Before start*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Before start*|  
 |*1 <= FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*After end*|  

@@ -1,5 +1,5 @@
 ---
-title: "Subscription, Undistributed Commands (Transactional Subscription, SQL Server 2005 and Later) | Microsoft Docs"
+title: "Subscription, Undistributed Commands (Transactional Subscription) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

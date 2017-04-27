@@ -27,6 +27,7 @@ manager: "jhubbard"
 |-----------|-----------------|  
 |[Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)|Deprecated [!INCLUDE[ssDE](../includes/ssde-md.md)] features in this release.|  
 |[Discontinued Database Engine Functionality in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)|Discontinued [!INCLUDE[ssDE](../includes/ssde-md.md)] features in this release.|  
+|[Breaking Changes to Database Engine Features in SQL Server 2017](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] feature changes that might require changes to applications.|  
 |[Breaking Changes to Database Engine Features in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] feature changes that might require changes to applications.|  
   
   

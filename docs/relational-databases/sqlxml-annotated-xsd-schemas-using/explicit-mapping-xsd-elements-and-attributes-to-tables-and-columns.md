@@ -1,5 +1,5 @@
 ---
-title: "Explicit Mapping of XSD Elements and Attributes to Tables and Columns (SQLXML 4.0) | Microsoft Docs"
+title: "Explicit Mapping XSD Elements and Attributes to Tables and Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

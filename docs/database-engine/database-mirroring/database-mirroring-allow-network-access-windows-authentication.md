@@ -1,5 +1,5 @@
 ---
-title: "Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication (SQL Server) | Microsoft Docs"
+title: "Database Mirroring - Allow Network Access - Windows Authentication | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], security"
 ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 caps.latest.revision: 34
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

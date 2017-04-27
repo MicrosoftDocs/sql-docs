@@ -1,5 +1,5 @@
 ---
-title: "Configuration of a Server Instance for Always On Availability Groups (SQL Server) | Microsoft Docs"
+title: "Configure SQL Server Instance for Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], about"
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 caps.latest.revision: 18
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

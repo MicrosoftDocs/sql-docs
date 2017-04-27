@@ -25,10 +25,13 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sys.dm_db_stats_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Returns the statistics histogram for the specified database object (table or indexed view) in the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Similar to `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
- 
+
+> [!NOTE] 
+> This DMF is available starting with [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
+
 ## Syntax  
   
 ```  
@@ -49,7 +52,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |object_id |**int**|ID of the object (table or indexed view) for which to return the properties of the statistics object.|  
 |stats_id |**int**|ID of the statistics object. Is unique within the table or indexed view. For more information, see [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
 |step_number |**int** |The number of step in the histogram. |
-|range_high_key |**sql_variant** |Upper bound column value for a histogram step. The column value is also called a key value. |
+|range_high_key |**sql_variant** |Upper bound column value for a histogram step. The column value is also called a key value.|
 |range_rows |**real** |Estimated number of rows whose column value falls within a histogram step, excluding the upper bound. |
 |equal_rows |**real** |Estimated number of rows whose column value equals the upper bound of the histogram step. |
 |distict_range_rows |**bigint** |Estimated number of rows with a distinct column value within a histogram step, excluding the upper bound. |
@@ -57,7 +60,9 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  ## Remarks  
  
- The resultset for `sys.dm_db_stats_histogram` returns information similar to `DBCC SHOW_STATISTICS WITH HISTROGRAM` and also includes `object_id`, `stats_id`, and `step_number`.
+ The resultset for `sys.dm_db_stats_histogram` returns information similar to `DBCC SHOW_STATISTICS WITH HISTOGRAM` and also includes `object_id`, `stats_id`, and `step_number`.
+
+ Because the column `range_high_key` is a sql_variant data type, you may need to use `CAST` or `CONVERT` if a predicate does comparison with a non-string constant.
 
 ### Histogram
   
@@ -111,10 +116,34 @@ FROM sys.stats AS s
 CROSS APPLY sys.dm_db_stats_histogram(s.[object_id], s.stats_id) AS hist
 WHERE s.[name] = N'<statistic_name>';
 ```
+
+### C. Useful query:
+The following example selects from table `Country` with a predicate on column `Country_Name`.
+
+```tsql  
+SELECT * FROM Country 
+WHERE Country_Name = 'Canada';
+```
+
+The following example looks at the previously created statistic on table `Country` and column `Country_Name` for the histogram step matching the predicate in the query above.
+
+```tsql  
+SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
+    shr.modification_counter, shr.last_updated, sh.range_rows, sh.equal_rows
+FROM sys.stats ss
+INNER JOIN sys.stats_columns sc 
+    ON ss.stats_id = sc.stats_id AND ss.object_id = sc.object_id
+INNER JOIN sys.all_columns ac 
+    ON ac.column_id = sc.column_id AND ac.object_id = sc.object_id
+CROSS APPLY sys.dm_db_stats_properties(ss.object_id, ss.stats_id) shr
+CROSS APPLY sys.dm_db_stats_histogram(ss.object_id, ss.stats_id) sh
+WHERE ss.[object_id] = OBJECT_ID('Country') 
+    AND ac.name = 'Country_Name'
+    AND sh.range_high_key = CAST('Canada' AS CHAR(8));
+```
   
 ## See Also  
 
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Object Related Dynamic Management Views and Functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
-  
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**\< inherited columns>**||Inherits columns from [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**< inherited columns>**||Inherits columns from [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**site**|**nvarchar(128)**|Name of the host computer for the site, as specified in the SITE = option.|  
 |**url_path**|**nvarchar(4000)**|Path-only portion of the URL for this HTTP endpoint, as specified by the PATH= option.|  
 |**is_clear_port_enabled**|**bit**|1 = Clear port is enabled using the PORT = CLEAR option.|  

@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 -   *Sometext* IN *Property1*  
   
--   *Property1*\< Fn(*Property2*)  
+-   *Property1*< Fn(*Property2*)  
   
 -   BitwiseAnd(*Property1*,*Property2*)= 0  
   

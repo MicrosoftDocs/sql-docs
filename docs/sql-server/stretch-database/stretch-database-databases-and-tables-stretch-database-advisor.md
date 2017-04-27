@@ -1,11 +1,10 @@
 ---
-title: "Identify databases and tables for Stretch Database by running Stretch Database Advisor | Microsoft Docs"
+title: "Stretch Database databases and tables - Stretch Database Advisor | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "06/14/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
 ms.suite: ""
 ms.technology: 
   - "dbe-stretch"

@@ -1,18 +1,16 @@
 ---
 title: "Implement Dynamic Security by Using Row Filters | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: "04/10/2017"
+ms.prod:
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
-caps.latest.revision: 15
+applies_to:
+ms.assetid:
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"

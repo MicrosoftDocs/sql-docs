@@ -16,6 +16,7 @@ helpviewer_keywords:
   - "recovering failover cluster failures [SQL Server]"
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 caps.latest.revision: 31
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 -   [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## Managing Backups  
  The following list includes general recommendations to manage backups:  
@@ -93,8 +93,8 @@ manager: "jhubbard"
   
 -   When restoring from a compressed backup, you might see the following error:  
   
-    -   **SqlException 3284 occurred. Severity: 16 State: 5**  
-        **Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned. Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.**  
+    -   `SqlException 3284 occurred. Severity: 16 State: 5`  
+        **Message Filemark on device `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` is not aligned. Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.**  
   
          To solve this error, reissue the **BACKUP** statement with **BLOCKSIZE = 65536** specified.  
   
@@ -119,7 +119,7 @@ manager: "jhubbard"
   
 -   Write on "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.  
   
--   A nonrecoverable I/O error occurred on file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint.  
+-   A nonrecoverable I/O error occurred on file "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" Error could not be gathered from Remote Endpoint.  
   
      Msg 3013, Level 16, State 1, Line 2  
   
@@ -133,7 +133,7 @@ manager: "jhubbard"
   
  **Default Proxy Settings not picked up:**  
   
- Sometimes the default settings are not picked up causing proxy authentication errors such as the one shown below:*A nonrecoverable I/O error occurred on file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (407)* **Proxy Authentication Required**.  
+ Sometimes the default settings are not picked up causing proxy authentication errors such as the one shown below:*A nonrecoverable I/O error occurred on file "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (407)* **Proxy Authentication Required**.  
   
  To resolve this issue, create a configuration file that allows the Backup to URL process to use the default proxy settings using the following steps:  
   

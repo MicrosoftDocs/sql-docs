@@ -1,5 +1,5 @@
 ---
-title: "Create a Custom Collection Set That Uses the Generic T-SQL Query Collector Type (Transact-SQL) | Microsoft Docs"
+title: "Create Custom Collection Set - Generic T-SQL Query Collector Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

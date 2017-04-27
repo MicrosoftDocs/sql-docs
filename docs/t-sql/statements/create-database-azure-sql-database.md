@@ -3,7 +3,7 @@ title: "CREATE DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "03/13/2017"
+ms.date: "04/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -54,8 +54,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
     | ( EDITION = {  'basic' | 'standard' | 'premium' | 'premiumrs'}   
     | SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3'   
-            | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
+            | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11'  | 'P15'  
+            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  
 [;]  
@@ -68,8 +68,8 @@ CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name  
     [ ( SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3'   
-            | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' | 
-            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
+            | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15'  
+            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
     ]  
 [;]  
@@ -112,9 +112,9 @@ CREATE DATABASE database_name
 |250 GB||√ (D)|√|√|  
 |300 GB|||√|√|  
 |400 GB|||√|√|  
-|500 GB|||√ (D) **\***|√|  
+|500 GB|||√ (D) \* |√|  
   
- **\*** Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, West Europe, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Current 4 TB limitations](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers.md#current-limitations-of-p11-and-p15-databases-with-4-tb-maxsize).  
+ \* Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, West Europe, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Current 4 TB limitations](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#current-limitations-of-p11-and-p15-databases-with-4-tb-maxsize).  
   
  The following rules apply to MAXSIZE and EDITION arguments:  
   

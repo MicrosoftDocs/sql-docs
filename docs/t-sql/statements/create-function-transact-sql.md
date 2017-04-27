@@ -1,7 +1,7 @@
 ---
 title: "CREATE FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2017"
+ms.date: "04/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -152,7 +152,7 @@ RETURNS @return_variable TABLE <table_type_definition>
     { PRIMARY KEY | UNIQUE }  
       [ CLUSTERED | NONCLUSTERED ]   
       [ WITH FILLFACTOR = fillfactor   
-        | WITH ( \< index_option > [ , ...n ] )  
+        | WITH ( < index_option > [ , ...n ] )  
       [ ON { filegroup | "default" } ]  
   | [ CHECK ( logical_expression ) ] [ ,...n ]  
 }  
@@ -258,9 +258,7 @@ RETURNS return_data_type
   
 ## Arguments
 *OR ALTER*  
- ||  
-|-|  
-|**Applies to**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).|  
+ **Applies to**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).  
   
  Conditionally alters the function only if it already exists. 
  
@@ -338,9 +336,7 @@ RETURNS return_data_type
  Specifies the order in which results are being returned from the table-valued function. For more information, see the section, "Guidance on Using Sort Order," later in this topic.  
   
  EXTERNAL NAME <method_specifier> *assembly_name*.*class_name*.*method_name*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the assembly and method to which the created function name shall refer.  
   
@@ -368,10 +364,8 @@ RETURNS return_data_type
  *\<*table_type_definition*>* ( { <column_definition> <column_constraint>    | <computed_column_definition> }    [ <table_constraint> ] [ ,...*n* ] )  
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints. The table is always put in the primary filegroup.  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+ < clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types. The table is always put in the primary filegroup.  
   
@@ -395,9 +389,7 @@ RETURNS return_data_type
  Specifies that the function will have one or more of the following options.  
   
  ENCRYPTION  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will convert the original text of the CREATE FUNCTION statement to an obfuscated format. The output of the obfuscation is not directly visible in any catalog views. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -437,7 +429,7 @@ RETURNS return_data_type
   
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
- **\< column_definition >::=**  
+ **< column_definition >::=**  
   
  Defines the table data type. The table declaration includes column definitions and constraints. For CLR functions, only *column_name* and *data_type* can be specified.  
   
@@ -473,7 +465,7 @@ RETURNS return_data_type
  *increment*  
  Is the integer value to add to the *seed* value for successive rows in the table.  
   
- **\< column_constraint >::= and \< table_constraint>::=**  
+ **< column_constraint >::= and < table_constraint>::=**  
   
  Defines the constraint for a specified column or table. For CLR functions, the only constraint type allowed is NULL. Named constraints are not allowed.  
   
@@ -499,7 +491,7 @@ RETURNS return_data_type
  *logical_expression*  
  Is a logical expression that returns TRUE or FALSE.  
   
- **<computed_column_definition>::=**  
+ **\<computed_column_definition>::=**  
   
  Specifies a computed column. For more information about computed columns, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
@@ -509,7 +501,7 @@ RETURNS return_data_type
  *computed_column_expression*  
  Is an expression that defines the value of a computed column.  
   
- **<index_option>::=**  
+ **\<index_option>::=**  
   
  Specifies the index options for the PRIMARY KEY or UNIQUE index. For more information about index options, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
@@ -674,9 +666,6 @@ RETURNS return_data_type
  Here is the function call. Notice that `DATEFIRST` is set to `1`.  
   
 ```  
-IF OBJECT_ID (N'dbo.ISOweek', N'FN') IS NOT NULL  
-    DROP FUNCTION dbo.ISOweek;  
-GO  
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -698,24 +687,20 @@ END;
 GO  
 SET DATEFIRST 1;  
 SELECT dbo.ISOweek(CONVERT(DATETIME,'12/26/2004',101)) AS 'ISO Week';  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `ISO Week`  
-  
- `----------------`  
-  
- `52`  
+```   
+ISO Week  
+----------------  
+52  
+```  
   
 ### B. Creating an inline table-valued function  
  The following example returns an inline table-valued function in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. It returns three columns `ProductID`, `Name` and the aggregate of year-to-date totals by store as `YTD Total` for each product sold to the store.  
   
 ```  
-IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
-    DROP FUNCTION Sales.ufn_SalesByStore;  
-GO  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -730,25 +715,16 @@ RETURN
     GROUP BY P.ProductID, P.Name  
 );  
 GO  
-  
 ```  
-  
+ To invoke the function, run this query.    
 ```  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
-  
 ```  
-  
- To invoke the function, run this query.  
-  
- [!code-sql[FunctionDDL#CreateFunction3](../../t-sql/statements/codesnippet/tsql/create-function-transact_1.sql)]  
   
 ### C. Creating a multi-statement table-valued function  
  The following example creates the table-valued function `fn_FindReports(InEmpID)` in the AdventureWorks2012 database. When supplied with a valid employee ID, the function returns a table that corresponds to all the employees that report to the employee either directly or indirectly. The function uses a recursive common table expression (CTE) to produce the hierarchical list of employees. For more information about recursive CTEs, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
 ```  
-IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
-    DROP FUNCTION dbo.ufn_FindReports;  
-GO  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -764,13 +740,15 @@ AS
 BEGIN  
 WITH EMP_cte(EmployeeID, OrganizationNode, FirstName, LastName, JobTitle, RecursionLevel) -- CTE name and columns  
     AS (  
-        SELECT e.BusinessEntityID, e.OrganizationNode, p.FirstName, p.LastName, e.JobTitle, 0 -- Get the initial list of Employees for Manager n  
+        -- Get the initial list of Employees for Manager n
+        SELECT e.BusinessEntityID, e.OrganizationNode, p.FirstName, p.LastName, e.JobTitle, 0   
         FROM HumanResources.Employee e   
 INNER JOIN Person.Person p   
 ON p.BusinessEntityID = e.BusinessEntityID  
         WHERE e.BusinessEntityID = @InEmpID  
         UNION ALL  
-        SELECT e.BusinessEntityID, e.OrganizationNode, p.FirstName, p.LastName, e.JobTitle, RecursionLevel + 1 -- Join recursive member to anchor  
+        -- Join recursive member to anchor
+        SELECT e.BusinessEntityID, e.OrganizationNode, p.FirstName, p.LastName, e.JobTitle, RecursionLevel + 1   
         FROM HumanResources.Employee e   
             INNER JOIN EMP_cte  
             ON e.OrganizationNode.GetAncestor(1) = EMP_cte.OrganizationNode  
@@ -794,15 +772,14 @@ GO
 ### D. Creating a CLR function  
  The example creates CLR function `len`_`s`. Before the function is created, the assembly `SurrogateStringFunction.dll` is registered in the local database.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
-SELECT @SamplesPath = REPLACE(physical_name, 'Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\master.mdf', 'Microsoft SQL Server\130\Samples\Engine\Programmability\CLR\')   
+SELECT @SamplesPath = REPLACE(physical_name, 'Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\master.mdf', 
+                                              'Microsoft SQL Server\130\Samples\Engine\Programmability\CLR\')   
     FROM master.sys.database_files   
     WHERE name = 'master';  
   
@@ -819,7 +796,7 @@ GO
   
  For an example of how to create a CLR table-valued function, see [CLR Table-Valued Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md).  
   
-## E. Displaying the definition of [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions  
+### E. Displaying the definition of [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions  
   
 ```  
 SELECT definition, type   
@@ -827,7 +804,6 @@ FROM sys.sql_modules AS m
 JOIN sys.objects AS o ON m.object_id = o.object_id   
     AND type IN ('FN', 'IF', 'TF');  
 GO  
-  
 ```  
   
  The definition of functions created by using the ENCRYPTION option cannot be viewed by using sys.sql_modules; however, other information about the encrypted functions is displayed.  

@@ -1,5 +1,5 @@
 ---
-title: "View and Modify Replication Agent Command Prompt Parameters (SQL Server Management Studio) | Microsoft Docs"
+title: "View and Modify Replication Agent Command Prompt Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"
@@ -69,7 +69,7 @@ manager: "jhubbard"
   
 3.  Right-click a subscription, and then click **View Details**.  
   
-4.  In the **Subscription \< SubscriptionName>** window, click **Action**, and then click **\<AgentName> Job Properties**.  
+4.  In the **Subscription < SubscriptionName>** window, click **Action**, and then click **\<AgentName> Job Properties**.  
   
 5.  On the **Steps** page of the **Job Properties - \<Job>** dialog box, select the step **Run agent**, and then click **Edit**.  
   

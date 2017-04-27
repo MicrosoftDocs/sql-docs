@@ -2,7 +2,7 @@
 title: "Row-Level Security | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/13/2016"
+ms.date: "03/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,30 +35,9 @@ manager: "jhubbard"
   
  Implement RLS by using the [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement, and predicates created as [inline table valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Get it](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
-##  <a name="Top"></a> In this Topic  
-  
--   [Description](#Description)  
-  
--   [Use Cases](#UseCases)  
-  
--   [Permissions](#Permissions)  
-  
--   [Best Practices](#Best)  
-  
--   [Security Note: Side-Channel Attacks](#SecNote)  
-  
--   [Cross-Feature Compatibility](#Limitations)  
-  
--   [Code Examples](#CodeExamples)  
-  
-    -   [A. Scenario for Directly Connected Users](#Typical)  
-  
-    -   [B. Middle-Tier Application Scenario](#MidTier)  
-  
+
 ##  <a name="Description"></a> Description  
  RLS supports two types of security predicates.  
   
@@ -106,7 +85,6 @@ manager: "jhubbard"
   
 -   No changes have been made to the bulk APIs, including BULK INSERT. This means that block predicates AFTER INSERT will apply to bulk insert operations just as they would regular insert operations.  
   
- [Top](#Top)  
   
 ##  <a name="UseCases"></a> Use Cases  
  Here are design examples of how RLS can be used:  
@@ -121,7 +99,6 @@ manager: "jhubbard"
   
  In more formal terms, RLS introduces predicate based access control. It features a flexible, centralized, predicate-based evaluation that can take into consideration metadata or any other criteria the administrator determines as appropriate. The predicate is used as a criterion to determine whether or not the user has the appropriate access to the data based on user attributes. Label-based access control can be implemented by using predicate-based access control.  
   
- [Top](#Top)  
   
 ##  <a name="Permissions"></a> Permissions  
  Creating, altering, or dropping security policies requires the **ALTER ANY SECURITY POLICY** permission. Creating or dropping a security policy requires **ALTER** permission on the schema.  
@@ -138,7 +115,6 @@ manager: "jhubbard"
   
  If a security policy is created with `SCHEMABINDING = OFF`, then to query the target table, users must have the  **SELECT** or **EXECUTE** permission on the predicate function and any additional tables, views, or functions used within the predicate function. If a security policy is created with `SCHEMABINDING = ON` (the default), then these permission checks are bypassed when users query the target table.  
   
- [Top](#Top)  
   
 ##  <a name="Best"></a> Best Practices  
   
@@ -161,15 +137,13 @@ manager: "jhubbard"
 -   Predicate functions should not rely on arithmetic or aggregation expressions returning **NULL** in case of error (such as overflow or divide-by-zero), because this behavior is affected by the [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md), and [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md) options.  
   
 -   Predicate functions should not compare concatenated strings with **NULL**, because this behavior is affected by the [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) option.  
-  
- [Top](#Top)  
+   
   
 ##  <a name="SecNote"></a> Security Note: Side-Channel Attacks  
  **Malicious security policy manager:** It is important to observe that a malicious security policy manager, with sufficient permissions to create a security policy on top of a sensitive column and having permission to create or alter inline table valued functions, can collude with another user that has select permissions on a table to perform data exfiltration by maliciously creating inline table valued functions designed to use side channel attacks to infer data. Such attacks would require collusion (or excessive permissions granted to a malicious user) and would likely require several iterations of modifying the policy (requiring permission to remove the predicate in order to break the schema binding), modifying the inline table valued functions, and repeatedly running select statements on the target table. It is strongly recommended to limit permissions as it is necessary and to monitor for any suspicious activity such as constantly changing policies and inline table valued functions related to row-level security.  
   
  **Carefully crafted queries:** It is possible to cause information leakage through the use of carefully crafted queries. For example, `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` would let a malicious user know that John Doe's salary is $100,000. Even though there is a security predicate in place to prevent a malicious user from directly querying other people's salary, the user can determine when the query returns a divide-by-zero exception.  
-  
- [Top](#Top)  
+   
   
 ##  <a name="Limitations"></a> Cross-Feature Compatibility  
  In general, row-level security will work as expected across features. However, there are a few exceptions. This section documents several notes and caveats for using row-level security with certain other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -196,7 +170,6 @@ manager: "jhubbard"
   
 -   **Temporal tables** are compatible with RLS. However, security predicates on the current table are not automatically replicated to the history table. To apply a security policy to both the current and the history tables, you must individually add a security predicate on each table.  
   
- [Top](#Top)  
   
 ##  <a name="CodeExamples"></a> Examples  
   
@@ -205,7 +178,7 @@ manager: "jhubbard"
   
  Create three user accounts that will demonstrate different access capabilities.  
   
-```  
+```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
 CREATE USER Sales2 WITHOUT LOGIN;  
@@ -295,7 +268,6 @@ WITH (STATE = OFF);
   
  Now the Sales1 and Sales2 users can see all 6 rows.  
   
- [Top](#Top)  
   
 ###  <a name="MidTier"></a> B. Scenario for users who connect to the database through a middle-tier application  
  This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary .  

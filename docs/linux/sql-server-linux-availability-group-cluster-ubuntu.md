@@ -62,7 +62,7 @@ The following sections walk through the steps to set up a failover cluster solut
    sudo apt-get install pacemaker pcs fence-agents resource-agents
    ```
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
 
    ```bash
    sudo passwd hacluster
@@ -84,24 +84,38 @@ sudo systemctl enable pacemaker
 
 1. Remove any existing cluster configuration. 
 
-   The following command removes any existing cluster configuration files and stops all cluster services. This permanently destroys the cluster. Run it as a first step in a pre-production environment. Run the following command on all nodes. 
+   Running 'sudo apt-get install pcs' installs pacemaker, corosync, and pcs at the same time and starts running all 3 of the services.  Starting corosync generates a template '/etc/cluster/corosync.conf' file.  To have next steps succeed this file should not exist – so the workaround is to stop pacemaker / corosync and delete '/etc/cluster/corosync.conf', and then next steps will complete successfully. 'pcs cluster destroy' does the same thing, and you can use it as a one time initial cluster setup step.
+   
+   The following command removes any existing cluster configuration files and stops all cluster services. This permanently destroys the cluster. Run it as a first step in a pre-production environment. Run the following command on all nodes. Note that 'pcs cluster destroy' disabled the pacemaker service and needs to be reenabled.
    
    >[!WARNING]
    >The command will destroy any existing cluster resources.
 
    ```bash
    sudo pcs cluster destroy # On all nodes
+   sudo systemctl enable pacemaker
    ```
 
 1. Create the cluster. 
 
-   The following command creates a two node cluster. Before you run the script, replace the values between `**< ... >**`. Run the following command the primary SQL Server. 
+   >[!WARNING]
+   >Due to a known issue that the clustering vendor is investigating, starting the cluster ('pcs cluster start') will fail with below error. This is because the log file configured in /etc/corosync/corosync.conf is wrong. To workaround this issue, change the log file to: /var/log/corosync/corosync.log. Alternatively you could create the /var/log/cluster/corosync.log file.
+ 
+ ```bash
+ Job for corosync.service failed because the control process exited with error code. 
+ See "systemctl status corosync.service" and "journalctl -xe" for details.
+  ```
+  
+The following command creates a two node cluster. Before you run the script, replace the values between `**< ... >**`. Run the following command on the primary SQL Server. 
 
    ```bash
    sudo pcs cluster auth **<nodeName1>** **<nodeName2>**  -u hacluster -p **<password for hacluster>**
-   sudo pcs cluster setup --name **<clusterName>** **<nodeName1>** **<nodeName2…>** --force
+   sudo pcs cluster setup --name **<clusterName>** **<nodeName1>** **<nodeName2…>** 
    sudo pcs cluster start --all
    ```
+   
+   >[!NOTE]
+   >If you previously configured a cluster on the same nodes, you need to use '--force' option when running 'pcs cluster setup'. Note this is equivalent to running 'pcs cluster destroy' and pacemaker service needs to be reenabled using 'sudo systemctl enable pacemaker'.
 
 ## Install SQL Server resource agent for integration with Pacemaker
 
@@ -111,17 +125,20 @@ Run the following commands on all nodes.
 sudo apt-get install mssql-server-ha
 ```
 
-## Disable STONITH
+## Configure fencing (STONITH)
+Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again. 
+Resource level fencing ensures mainly that there is no data corruption in case of an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down. 
+Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, e.g. an uninterruptible power supply or management interface cards for servers. 
+For more details, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
 
-Run the following command to disable STONITH.
+Because the node level fencing configuration depends heavily on your environment, we will disable it for this tutorial (it can be configured at a later time): 
 
 ```bash
 sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->This is not supported by the clustering vendors in a production setup. For details, see [Pacemaker Clustersf from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) and
-[Red Hat High Availability Add-On with Pacemaker: Fencing](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html).
+>Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that at this point there are no fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
 
 ## Create a SQL Server login for Pacemaker
 
@@ -129,16 +146,10 @@ sudo pcs property set stonith-enabled=false
 
 ## Create availability group resource
 
-To create the availability group resource, set properties as follows:
-
-- **clone-max**: Number of AG replicas, including primary. For example, if you have one primary and one secondary, set this to 2.
-- **clone-node-max**: Number of secondaries. For example, if you have one primary and one secondary, set this to 1.
-
-The following script sets these properties.
+To create the availability group resource, use `pcs resource create` command and set the resource properties. Below command creates a `ocf:mssql:ag` master/slave type resource for availability group with name `ag1`. 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 \
---master meta master-max=1 master-node-max=1 clone-max=2 clone-node-max=1 notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
 ```
 
 ## Create virtual IP resource
@@ -153,7 +164,9 @@ There is no virtual server name equivalent in Pacemaker. To use a connection str
 
 ## Add colocation constraint
 
-To add colocation constraint, run the following command on one node.
+Almost every decision in a Pacemaker cluster, like choosing where a resource should run, is done by comparing scores. Scores are calculated per resource, and the cluster resource manager chooses the node with the highest score for a particular resource. (If a node has a negative score for a resource, the resource cannot run on that node.) 
+We can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than INFINITY, it is only a recommendation. A score of INFINITY means it is a must. 
+We want to ensure that primary of the availability group and the virtual ip resource are run on the same host, so we will define a colocation constraint with a score of INFINITY. To add the colocation constraint, run the following command on one node. 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
@@ -181,23 +194,8 @@ To add an ordering constraint, run the following command on one node:
 sudo pcs constraint order promote ag_cluster-master then start virtualip
 ```
 
-## Manual failover
-
 >[!IMPORTANT]
 >After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs`. 
 
->[!IMPORTANT]
->If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
+[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]
 
-Manually failover the availability group with `pcs`. Do not initiate failover with Transact-SQL.
-
-To manually failover to cluster nodeName2, run the following command.
-
-```bash
-sudo pcs resource move ag_cluster-master nodeName2 --master
-```
-
-[!INCLUDE [Move-Resource](../includes/ss-linux-cluster-pacemaker-configure-rhel-ubuntu-move-resource.md)]
-
-<a name="sync-commit"></a>
-[!INCLUDE [Manage-Sync-Commit](../includes/ss-linux-cluster-availability-group-manage-sync-commit.md)]

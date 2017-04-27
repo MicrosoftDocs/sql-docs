@@ -215,5 +215,5 @@
 ## [Tracing](tracing-master-data-services.md)  
 
 
-# [Developer in MDS +](develop/index.md)
+# [Developer articles for MDS](develop/index.md)
 

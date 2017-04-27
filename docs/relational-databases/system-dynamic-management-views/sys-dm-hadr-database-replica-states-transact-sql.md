@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "sys.dm_hadr_database_replica_states dynamic management view"
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 caps.latest.revision: 84
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -74,7 +75,7 @@ manager: "jhubbard"
 ##  <a name="LSNcolumns"></a> Understanding the LSN Column Values  
  The values of the **end_of_log_lsn**, **last_hardened_lsn**, **last_received_lsn**, **last_sent_lsn**, **recovery_lsn**, and **truncation_lsn** columns are not actual log sequence numbers (LSNs). Rather each of these values reflects a log-block ID padded with zeroes.  
   
- **end_of_log_lsn**, **last_hardened_lsn**, and **recovery_lsn** are flush LSNs. For example, **last_hardened_lsn** indicates the start of the next block past the blocks that are already on disk.  So any LSN \< the value of **last_hardened_lsn** is on disk.  LSN that are >= to this value are not flushed.  
+ **end_of_log_lsn**, **last_hardened_lsn**, and **recovery_lsn** are flush LSNs. For example, **last_hardened_lsn** indicates the start of the next block past the blocks that are already on disk.  So any LSN < the value of **last_hardened_lsn** is on disk.  LSN that are >= to this value are not flushed.  
   
  Of the LSN values returned by **sys.dm_hadr_database_replica_states**, only **last_redone_lsn** is a real LSN.  
   

@@ -22,6 +22,7 @@ helpviewer_keywords:
   - "sys.availability_group_listener_ip_addresses catalog view"
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 caps.latest.revision: 12
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

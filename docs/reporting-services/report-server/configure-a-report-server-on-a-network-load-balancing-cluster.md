@@ -86,16 +86,16 @@ manager: "erikre"
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3.  Find **UrlRoot**. The element is unspecified in the configuration file, but the default value used is a URL in this format: http:// or https://\<*computername*>/\<*reportserver*>, where \<*reportserver*> is the virtual directory name of the Report Server Web service.  
+3.  Find **UrlRoot**. The element is unspecified in the configuration file, but the default value used is a URL in this format: http:// or `https://<computername>/<reportserver>`, where \<*reportserver*> is the virtual directory name of the Report Server Web service.  
   
-4.  Type a value for **UrlRoot** that includes the virtual name of the cluster in this format: http:// or https://\<*virtual_server*>/\<*reportserver*>.  
+4.  Type a value for **UrlRoot** that includes the virtual name of the cluster in this format: http:// or `https://<virtual_server>/<reportserver>`.  
   
 5.  Save the file.  
   
 6.  Repeat these steps in each RSReportServer.config file for each report server in the scale-out deployment.  
   
 ##  <a name="Verify"></a> Verify Report Server Access  
- Verify that you can access the scale-out deployment through the virtual server name (for example, https://MyVirtualServerName/reportserver and https://MyVirtualServerName/reports).  
+ Verify that you can access the scale-out deployment through the virtual server name (for example, `https://MyVirtualServerName/reportserver` and `https://MyVirtualServerName/reports`).  
   
  You can check which node actually processes reports by looking at the report server log files or by checking the RS execution log (the execution log table contains a column called **InstanceName** that shows which instance processed a particular request). For more information, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   

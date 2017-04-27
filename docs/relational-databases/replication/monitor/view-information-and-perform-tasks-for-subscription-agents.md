@@ -1,5 +1,5 @@
 ---
-title: "View Information and Perform Tasks for the Agents Associated With a Subscription (Replication Monitor) | Microsoft Docs"
+title: "View Information and Perform Tasks for Subscription Agents | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

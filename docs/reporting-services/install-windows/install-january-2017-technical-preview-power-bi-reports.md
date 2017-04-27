@@ -1,5 +1,5 @@
 ---
-title: "Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services | Microsoft Docs"
+title: "Install January 2017 Technical Preview Power BI reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/23/2017"
 ms.prod: "sql-vnext"
@@ -16,6 +16,8 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Install January 2017 Technical Preview Power BI reports
+[!INCLUDE[ssrs-appliesto-xxx-preview](../../includes/ssrs-appliesto-xxx-preview.md)]
+
 Learn how to install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services. This will install Reporting Services outside of the SQL Server setup experience.
 
  **Download** ![download](../../analysis-services/media/download.png "download")
@@ -23,10 +25,6 @@ Learn how to install the January 2017 Technical Preview of Power BI reports in S
 To download the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services, along with Power BI Desktop (SQL Server Reporting Services), go to the [Microsoft download center](https://go.microsoft.com/fwlink/?linkid=839351). 
   
  ![note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") For the current release notes, see [Technical Preview of Power BI reports in SSRS - Release notes](../../reporting-services/reporting-services-release-notes.md). 
- 
- ||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services|
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/A9O5BHZ4-9A?showinfo=0" frameborder="0" allowfullscreen></iframe>
 
@@ -52,15 +50,15 @@ The January 2017 Technical Preview of Power BI reports in SQL Server Reporting S
 |Part|Description|  
 |----------|-----------------|  
 |Prefix|The default prefix is HTTP. If you previously installed a Secure Sockets Layer (SSL) certificate, Setup will try to create URL reservations that use the HTTPS prefix.|  
-|Host name|The default host name is a strong wildcard (+). It specifies that the report server will accept any HTTP request on the designated port for any host name that resolves to the computer, including http://\<computername>/reportserver, http://localhost/reportserver, or http://\<IPAddress>/reportserver.|  
+|Host name|The default host name is a strong wildcard (+). It specifies that the report server will accept any HTTP request on the designated port for any host name that resolves to the computer, including `http://<computername>/reportserver`, `http://localhost/reportserver`, or `http://<IPAddress>/reportserver.`|  
 |Port|The default port is 80. Note that if you use any port other than port 80, you will have to explicitly add it to the URL when you open a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web application in a browser window.|  
 |Virtual directory|By default, virtual directories are created in the format of ReportServer for the Report Server Web service and Reports for the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. For the Report Server Web service, the default virtual directory is **reportserver**. For the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], the default virtual directory is **reports**.|  
   
  An example of the complete URL string might be as follows:  
   
--   http://+:80/reportserver, provides access to the report server.  
+-   `http://+:80/reportserver`, provides access to the report server.  
   
--   http://+:80/reports, provides access to the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].  
+-   `http://+:80/reports`, provides access to the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].  
  
 ## Install Reporting Services Standalone
 

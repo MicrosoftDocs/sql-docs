@@ -36,6 +36,6 @@ manager: "jhubbard"
  The expression evaluator also compares data values when it evaluates the expressions that variables, precedence constraints, and transformations use.  
   
 ## Data Flow Troubleshooting  
- Once you have deployed a package to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog, you can analyze the data flow in the package during execution to check performance or look for other issues. Standard reports are available that allow you to view package status and history, and you can query database views that provide detailed information about package execution. You also can dynamically add and remove data taps during execution to target specific components of your package. For more information, see [Analysis of Data Flow](../../integration-services/performance/analysis-of-data-flow.md).  
+ Once you have deployed a package to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog, you can analyze the data flow in the package during execution to check performance or look for other issues. Standard reports are available that allow you to view package status and history, and you can query database views that provide detailed information about package execution. You also can dynamically add and remove data taps during execution to target specific components of your package. For more information, see [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
   

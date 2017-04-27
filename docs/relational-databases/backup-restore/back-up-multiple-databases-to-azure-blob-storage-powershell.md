@@ -1,5 +1,5 @@
 ---
-title: "Use PowerShell to Backup Multiple Databases to Microsoft Azure Blob Storage Service | Microsoft Docs"
+title: "Back up Multiple Databases to Azure Blob Storage - PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/20/2016"
 ms.prod: "sql-server-2016"

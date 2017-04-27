@@ -1,5 +1,5 @@
 ---
-title: "What&#39;s new in SQL Server Analysis Services vNext | Microsoft Docs"
+title: "What&#39;s new in SQL Server Analysis Services 2017 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-vnext"
@@ -15,12 +15,28 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# What&#39;s new in SQL Server Analysis Services vNext
+# What&#39;s new in SQL Server Analysis Services 2017
 [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
+## SQL Server Analysis Services on Windows CTP 2.0
+This release see many new enhancements for tabular model, including:
+
+* Object-level security to secure the metadata of tabular models.
+* Transaction-performance improvements for a more responsive developer experience.
+* Dynamic Management View improvements for 1200 and 1400 models enabling dependency analysis and reporting.
+* Improvements to the authoring experience for Detail Rows Expressions.
+* Hierarchy and column reuse to be surfaced in more helpful locations in the Power BI field list.
+* Date relationships to easily create relationships to date dimensions based on date fields.
+* Default installation option for Analysis Services is now for tabular mode.
+* New Get Data (Power Qery) data sources.
+* DAX Editor for SSDT.
+* Existing DirectQuery data sources support for M queries.
+* SSMS improvements, such as viewing, editing, and scripting support for structured data sources.
+
+To get more details about this CTP 2.0 release, see the [Analysis Services blog](https://blogs.msdn.microsoft.com/analysisservices/).
 
 ## SQL Server Analysis Services on Windows CTP 1.4
-[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate) and [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms-release-candidate) preview releases coincide with SQL Server vNext preview releases. Be sure to use the latest to get new features. To learn more, see the [Analysis Services blog](https://blogs.msdn.microsoft.com/analysisservices/).
+[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate) and [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms-release-candidate) preview releases coincide with SQL Server 2017 preview releases. Be sure to use the latest to get new features. To learn more, see the [Analysis Services blog](https://blogs.msdn.microsoft.com/analysisservices/).
 
 
 
@@ -56,7 +72,7 @@ SSAS extended events do not work in CTP 1.3. A fix is planned in the next CTP.
 
 There are no new features in this release. Improvements include bug fixes and performance.
 
-The latest preview release of SQL Server Data Tools (SSDT), which coincides with the SQL Server vNext CTP 1.2, improves upon the new modern Get Data experience introduced in CTP 1.1 with new query editor menu and quick access functionality. 
+The latest preview release of SQL Server Data Tools (SSDT), which coincides with the SQL Server 2017 CTP 1.2, improves upon the new modern Get Data experience introduced in CTP 1.1 with new query editor menu and quick access functionality. 
 
 ## SQL Server Analysis Services on Windows CTP 1.1 
 
@@ -74,7 +90,7 @@ In SSDT, you can select the new 1400 compatibility level when creating new tabul
 >[!NOTE]
 > Integrated workspace in the December release of SQL Server Data Tools (SSDT) supports the 1400 compatibility level. If you create new tabular model projects on a Workspace server instance, that instance or any instance you deploy to must be [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 1.1. 
 
-To upgrade an existing tabular model in SSDT, in Solution Explorer, right-click **Model.bim**, and then in **Properties**, set the  **Compatibility Level** property to **SQL Server vNext (1400)**. 
+To upgrade an existing tabular model in SSDT, in Solution Explorer, right-click **Model.bim**, and then in **Properties**, set the  **Compatibility Level** property to **SQL Server 2017 (1400)**. 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -230,5 +246,4 @@ if (role != null && productTable != null)
 }
 db.Update(UpdateOptions.ExpandFull);
 ```
-## Future updates
-Additional enhancements will be included in future release. This article will be updated with significant announcements about new features in SQL Server vNext.
+

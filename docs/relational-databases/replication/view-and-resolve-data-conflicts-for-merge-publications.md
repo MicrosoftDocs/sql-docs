@@ -1,5 +1,5 @@
 ---
-title: "View and Resolve Data Conflicts for Merge Publications (SQL Server Management Studio) | Microsoft Docs"
+title: "View and Resolve Data Conflicts for Merge Publications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

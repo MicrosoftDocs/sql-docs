@@ -1,5 +1,5 @@
 ---
-title: "Perform a Dummy Update for a Merge Article (Replication Transact-SQL Programming) | Microsoft Docs"
+title: "Perform Dummy Update for Merge Article (Replication T-SQL Programming) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: "sql-server-2016"

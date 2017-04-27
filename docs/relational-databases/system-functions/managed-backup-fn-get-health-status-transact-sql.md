@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "fn_get_health_status"
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 caps.latest.revision: 12
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

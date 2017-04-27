@@ -1,8 +1,8 @@
-# [Installation](./install/TOC.md)
-# [Develop Applications](./develop-app/TOC.md)
-# [Develop Drivers ](./develop-driver/TOC.md)
-# [Syntax](./syntax/TOC.md)
-# [Appendixes](./appendixes/TOC.md)
+# [Installation +](./install/index.md)
+# [Develop Applications +](./develop-app/index.md)
+# [Develop Drivers +](./develop-driver/index.md)
+# [Syntax +](./syntax/index.md)
+# [Appendixes +](./appendixes/index.md)
 
 # [Introduction to ODBC](introduction-to-odbc.md)
 # [What Is ODBC?](what-is-odbc.md)

@@ -186,11 +186,8 @@ The following command creates and configures the availability group resource for
    primitive ag_cluster \
       ocf:mssql:ag \
       params ag_name="ag1" \
-      op monitor interval="10" role="Master" \
-      op monitor interval="11" role="Slave" 
    ms ms-ag_cluster ag_cluster \
-      meta master-max="1" master-node-max="1" clone-max="2" \
-      clone-node-max="1" notify="true"
+      meta notify="true"
    commit
    ```
 
@@ -203,12 +200,12 @@ crm configure \
 primitive admin_addr \
    ocf:heartbeat:IPaddr2 \
    params ip=<**0.0.0.0**> \
-      cidr_netmask=<**24**> \
-   op monitor interval="12s"
-
+      cidr_netmask=<**24**>
 ```
 
 ### Add colocation constraint
+Almost every decision in a Pacemaker cluster, like choosing where a resource should run, is done by comparing scores. Scores are calculated per resource, and the cluster resource manager chooses the node with the highest score for a particular resource. (If a node has a negative score for a resource, the resource cannot run on that node.) We can manipulate the decisions of the cluster with constraints. Constraints have a score. If a constraint has a score lower than INFINITY, it is only a recommendation. A score of INFINITY means it is a must. We want to ensure that primary of the availability group and the virtual ip resource are run on the same host, so we will define a colocation constraint with a score of INFINITY. 
+
 To set colocation constraint for the virtual IP to run on same node as the master, run the following command on one node:
 
 ```bash
@@ -234,47 +231,11 @@ crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
 ```
 
-## Manual failover
 
 >[!IMPORTANT]
 >After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In SLES use `crm`. 
 
->[!IMPORTANT]
->If the availability group is a cluster resource, there is a known issue in current release where manual failover to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
-
-Manage failover of the availability group with `crm`. Do not initiate failover with Transact-SQL. To manually failover to cluster node2, run the following command. 
-
-```bash
-crm resource migrate ms-ag_cluster sles1
-```
-
->[!NOTE]
->At this time manual failover to an asynchronous replica does not work properly. This will be fixed in a future release.
-
-During a manual move, the `migrate` command adds a location constraint for the resource to be placed on the new target node. To see the new constraint, run the following command after manually moving the resource:
-
-```bash
-crm config show
-```
-
-To remove the constraint run the following command. In the following command `ms-ag_cluster` is the name of the resource that was moved. Replace this name with the name of your resource:
-
-```bash
-crm resource clear ms-ag_cluster
-```
-
-Alternatively, you can run the following command to remove the location constraint. In the following command `cli-prefer-ms-ag_cluster` is the ID of the constraint. `crm config show` returns this ID. 
-
-```bash
-crm configure
-delete cli-prefer-ms-ag_cluster 
-commit
-```
-
->[!NOTE]
->Automatic failover does not add a location constraint, so no cleanup is necessary. 
-
-For more information, see [SLES Admininstration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
+Manually fail over the availability group with `crm`. Do not initiate failover with Transact-SQL. For instructions, see [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
 
 
 For additional details see:
@@ -282,44 +243,12 @@ For additional details see:
 - [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 
 
-<a name="sync-commit"></a>
-[!INCLUDE [Manage-Sync-Commit](../includes/ss-linux-cluster-availability-group-manage-sync-commit.md)]
-
-
-## Removing Nodes From An Existing Cluster
-If you have a cluster running (with at least two nodes), you can remove single nodes from the cluster with the `sleha-remove` bootstrap script. You need to know the IP address or host name of the node you want to remove from the cluster. Follow the steps below:
-
-1. Log in as root to one of the cluster nodes. 
-2. Start the bootstrap script by executing: 
-
-   ```branch
-   ha-cluster-remove -c IP_ADDR_OR_HOSTNAME
-   ```
-
-   The script enables the `sshd`, stops the pacemaker service on the specified node, and propagates the files to synchronize with `Csync2` across the remaining nodes.
-
-   If you specified a host name and the node to remove cannot be contacted (or the host name cannot be resolved), the script will inform you and ask whether to remove the node anyway. If you specified an IP address and the node cannot be contacted, you will be asked to enter the host name and to confirm whether to remove the node anyway. 
-
-3. To remove more nodes, repeat the step above. 
-4. For details of the process, check `/var/log/ha-cluster-bootstrap.log`.
-
-## Removing the High Availability Extension Software From a Machine
-To remove the High Availability Extension software from a machine that you no longer need as cluster node, proceed as follows:
-
-1. Stop the cluster service:
-
-   ```bash
-   rcopenais stop
-   ```
-
-2. Remove the High Availability Extension add-on:
-
-   ```
-   zypper rm -t products sle-hae
-   ```
+[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]
 
 ## Next steps
 
-[Create SQL Server Availability Group](sql-server-linux-availability-group-configure.md)
+[Configure availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
+
+[Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Bi-directional cross filters for tabular models in SQL Server 2016 Analysis Services | Microsoft Docs"
+title: "Bi-directional cross filters - tabular models - Analysis Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "03/07/2017"

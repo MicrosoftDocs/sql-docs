@@ -1,5 +1,5 @@
 ---
-title: "Creating and Accessing Tables in TempDB from Natively Compiled Stored Procedures | Microsoft Docs"
+title: "Create and Access Tables in TempDB from Stored Procedures | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "03/07/2017"

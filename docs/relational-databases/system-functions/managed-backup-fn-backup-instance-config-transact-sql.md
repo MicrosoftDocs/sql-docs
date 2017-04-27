@@ -21,6 +21,7 @@ helpviewer_keywords:
   - "fn_backup_instance_config"
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 caps.latest.revision: 16
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

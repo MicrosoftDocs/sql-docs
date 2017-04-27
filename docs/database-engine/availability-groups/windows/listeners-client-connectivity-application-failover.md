@@ -1,5 +1,5 @@
 ---
-title: "Availability Group Listeners, Client Connectivity, and Application Failover (SQL Server) | Microsoft Docs"
+title: "Listeners, Client Connectivity, Application Failover | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -18,6 +18,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], client connectivity"
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 48
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

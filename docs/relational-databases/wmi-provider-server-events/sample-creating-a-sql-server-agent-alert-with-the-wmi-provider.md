@@ -1,5 +1,5 @@
 ---
-title: "Sample: Creating a SQL Server Agent Alert by Using the WMI Provider for Server Events | Microsoft Docs"
+title: "Sample: Creating a SQL Server Agent Alert with the WMI Provider | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"

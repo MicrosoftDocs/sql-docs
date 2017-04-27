@@ -1,5 +1,5 @@
 ---
-title: "Prevent Automatic Startup of an Instance of SQL Server (SQL Server Configuration Manager) | Microsoft Docs"
+title: "SCM Services - Prevent Automatic Startup of an Instance | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "01/06/2016"

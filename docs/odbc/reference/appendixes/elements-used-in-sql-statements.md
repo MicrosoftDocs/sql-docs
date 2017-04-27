@@ -39,7 +39,7 @@ The following elements are used in the SQL statements listed previously.
   
  *column-name* ::= [*table-name*.]*column-identifier*  
   
- *comparison-operator* ::= \< &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
+ *comparison-operator* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
  *comparison-predicate* ::= *expression* comparison-operator expression  
   

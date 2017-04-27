@@ -53,7 +53,7 @@ manager: "jhubbard"
 |Import data from Azure Data Lake Store|yes|     
 |Export data to Hadoop|no|  
 |Export data to Azure blob storage|yes|  
-|Export data from Azure Data Lake Store|yes|
+|Export data to Azure Data Lake Store|yes|
 |Run PolyBase queries from Microsoft's BI tools|yes|  
 |Push down query computations to Hadoop|no|  
   
@@ -70,7 +70,7 @@ manager: "jhubbard"
 |Import data from Azure Data Lake Store|no|   
 |Export data to Hadoop|yes|  
 |Export data to Azure blob storage|yes|  
-|Export data from Azure Data Lake Store|no|
+|Export data to Azure Data Lake Store|no|
 |Run PolyBase queries from Microsoft's BI tools|yes|  
 |Push down query computations to Hadoop|yes|  
   

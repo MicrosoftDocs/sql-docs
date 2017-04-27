@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server) | Microsoft Docs"
+title: "Prereqs, Restrictions, Recommendations - Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/30/2016"
 ms.prod: "sql-server-2016"
@@ -20,10 +20,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server]"
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 caps.latest.revision: 151
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Prereqs, Restrictions, Recommendations - Always On Availability
+# Prereqs, Restrictions, Recommendations - Always On Availability Groups
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   This topic describes considerations for deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations for host computers, Windows Server Failover Clustering (WSFC) clusters, server instances, and availability groups. For each of these components security considerations and required permissions, if any, are indicated.  
@@ -93,7 +94,7 @@ manager: "jhubbard"
   
      Get-ClusterResource “*\<NetworkResourceName>*” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
-     The following PowerShell example sets the HostRecordTTL to 300 seconds for a Network Name resource named "`SQL Network Name (SQL35)`".  
+     The following PowerShell example sets the HostRecordTTL to 300 seconds for a Network Name resource named `SQL Network Name (SQL35)`.  
   
     ```  
     Import-Module FailoverClusters  

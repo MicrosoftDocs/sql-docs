@@ -1,5 +1,5 @@
 ---
-title: "Use the Object Explorer Details to Monitor Availability Groups (SQL Server Management Studio) | Microsoft Docs"
+title: "Use Object Explorer Details to Monitor Availability Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
@@ -17,6 +17,7 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server]"
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

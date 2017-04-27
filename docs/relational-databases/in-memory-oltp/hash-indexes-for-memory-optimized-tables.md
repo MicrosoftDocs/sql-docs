@@ -173,7 +173,8 @@ Too *many* buckets has the following drawbacks:
   - Empty buckets use memory, though each bucket uses only 8 bytes.  
     
   
-> [AZURE.NOTE] Adding more buckets does nothing to reduce the chaining together of entries that share a duplicate value. The rate of value duplication is used to decide whether a hash is the appropriate index type, not to calculate the bucket count.  
+> [!NOTE]
+> Adding more buckets does nothing to reduce the chaining together of entries that share a duplicate value. The rate of value duplication is used to decide whether a hash is the appropriate index type, not to calculate the bucket count.  
   
   
   

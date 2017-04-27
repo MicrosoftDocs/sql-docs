@@ -1,5 +1,5 @@
 ---
-title: "Set the Distribution Retention Period for Transactional Publications (SQL Server Management Studio) | Microsoft Docs"
+title: "Set Distribution Retention Period for Transactional Publications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"

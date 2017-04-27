@@ -1,5 +1,5 @@
 ---
-title: "Estimate the Interruption of Service During Role Switching (Database Mirroring) | Microsoft Docs"
+title: "Estimate Service Interruption for Role Switching (Database Mirroring) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: "sql-server-2016"
@@ -18,6 +18,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], failover"
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 caps.latest.revision: 41
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

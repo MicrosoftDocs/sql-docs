@@ -1,7 +1,7 @@
 ---
 title: "Data Types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Data Types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], each column, local variable, expression, and parameter has a related data type. A data type is an attribute that specifies the type of data that the object can hold: integer data, character data, monetary data, date and time data, binary strings, and so on.  
   
@@ -50,9 +50,9 @@ manager: "jhubbard"
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based on their storage characteristics, some data types are designated as belonging to the following groups:  
   
--   Large value data types: **varchar(max)**, **nvarchar(max)**, and **varbinary(max)**  
+-   Large value data types: **varchar(max)**, and **nvarchar(max)**  
   
--   Large object data types: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and **xml**  
+-   Large object data types: **text**, **ntext**, **image**, **varbinary(max)**, and **xml**  
   
     > [!NOTE]  
     >  sp_help returns -1 as the length for the large-value and **xml** data types.  

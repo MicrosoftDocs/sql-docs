@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_linux_proc_sql_threads (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/09/2017"
+ms.date: "03/29/2017"
 ms.prod: "sql-vnext"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,6 +27,8 @@ manager: "jhubbard"
 
 This dmv is based off of the linux stat file for every thread under `/proc/self/task` (aka [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]). It has one row per thread. 
 
+> [!NOTE]  
+> Implementation of this DMV has been delayed. Expect it, or something similar in a future CTP.
 
 |Column name |Data type |Description |  
 |-----------------|---------------|-----------------|  

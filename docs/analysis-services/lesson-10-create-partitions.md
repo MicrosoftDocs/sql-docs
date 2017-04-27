@@ -1,7 +1,7 @@
 ---
 title: "Lesson 11: Create Partitions | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "03/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,7 +23,7 @@ In this lesson, you will create partitions to divide the FactInternetSales table
 Estimated time to complete this lesson: **15 minutes**  
   
 ## Prerequisites  
-This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson.  
+This topic is part of a tabular modeling tutorial, which should be completed in order. Before performing the tasks in this lesson, you should have completed the previous lesson: [Lesson 9: Create Hierarchies](../analysis-services/lesson-9-create-hierarchies.md).  
   
 ## Create partitions  
   
@@ -113,7 +113,14 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     ```  
     WHERE (([OrderDate] >= N'2014-01-01 00:00:00') AND ([OrderDate] < N'2015-01-01 00:00:00'))  
     ```  
-  
+
+## Delete the FactInternetSales partition
+Now that you have partitions for each year, you can delete the FactInternetSales partition. This prevents overlap when choosing Process all when processing partitions.
+#### To delete the FactInternetSales partition
+-  Click the FactInternetSales partition, and then click **Delete**.
+
+
+
 ## Process partitions  
 In Partition Manager, notice the **Last Processed** column for each of the new partitions you just created shows these partitions have never been processed. When you create new partitions, you should run a Process Partitions or Process Table operation to refresh the data in those partitions.  
   
@@ -135,4 +142,5 @@ In Partition Manager, notice the **Last Processed** column for each of the new p
   
     ![as-tabular-lesson10-process-complete](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
-  
+ ## What's next?
+Go to the next lesson: [Lesson 11: Create Roles](../analysis-services/lesson-11-create-roles.md). 

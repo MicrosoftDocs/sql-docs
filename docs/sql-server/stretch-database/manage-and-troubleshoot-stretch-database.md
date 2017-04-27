@@ -5,7 +5,6 @@ ms.custom:
 ms.date: "06/27/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
 ms.suite: ""
 ms.technology: 
   - "dbe-stretch"
@@ -34,9 +33,9 @@ manager: "jhubbard"
  To see how much space a Stretch-enabled table is using in SQL Server, run the following statement.
  
  ```tsql
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
-EXEC sp_spaceused '\<Stretch-enabled table name>', 'true', 'LOCAL_ONLY';
+EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'LOCAL_ONLY';
 GO
  ```
    
@@ -61,9 +60,9 @@ GO
 To see how much space a Stretch-enabled table is using in Azure, run the following statement.
  
  ```tsql
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
-EXEC sp_spaceused '\<Stretch-enabled table name>', 'true', 'REMOTE_ONLY';
+EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'REMOTE_ONLY';
 GO
  ```
 
@@ -115,7 +114,7 @@ If you have accidentally deleted columns from the remote table, run **sp_rda_rec
 For example, the following query returns local results only.  
   
  ```tsql  
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
 SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY) WHERE ... ;
 GO

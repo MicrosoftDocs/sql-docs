@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016 Technical Documentation | Microsoft Docs"
-ms.date: "02/27/2017"
+ms.date: "03/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,26 +31,22 @@ manager: "jhubbard"
 
 **SQL Server vNext**
 
-For the latest release notes, see [SQL Server vNext Release Notes](../sql-server/sql-server-vnext-release-notes.md)
-
-For the latest information on what is new, see [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
+- For the latest release notes, see [SQL Server vNext Release Notes](../sql-server/sql-server-vnext-release-notes.md)
+- For the latest information on what is new, see [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
  
 **SQL Server 2016:**
  
- [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
-
-[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+- [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
+- [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
+**Content for previous versions of SQL Server:**
+- [!INCLUDE[previous-content-versions](../includes/previous-content-versions.md)]
+ 
  **Try SQL Server!**    
-    
- - [**Download SQL Server 2016  from the Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)    
-    
-- **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
-    
--  **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
-    
-  
-    
+ - [**Download SQL Server 2016  from the Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+ - **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+ - **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
+      
 ## SQL Server Technologies    
     
 |||    
@@ -72,7 +68,5 @@ For the latest information on what is new, see [What's New in SQL Server vNext](
 + [Install SQL Server Management Tools with SSMS](https://msdn.microsoft.com/library/bb500441.aspx) 
 + [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501.aspx)
 + [Videos, samples, and community resources](https://msdn.microsoft.com/library/dn237258.aspx)
-+ [Introducing SQL Server 2016](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx?WT.srch=1&WT.mc_id=SEM_%5B_uniqid%5D&utm_source=Bing&utm_medium=CPC&utm_term=SQL%20Server%202016&utm_campaign=Data_Management)  
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

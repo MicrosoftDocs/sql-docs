@@ -1,5 +1,5 @@
 ---
-title: "Convert Data to a Different Data Type by Using the Data Conversion Transformation | Microsoft Docs"
+title: "Convert Data Type by Using Data Conversion Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2016"
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 9. Optionally, depending on the selected data type, update the values in the **Length**, the **Precision**, the **Scale**, and the **Code Page** columns.  
   
-10. To configure the error output, click **Configure Error Output**. For more information, see [Configure an Error Output in a Data Flow Component](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+10. To configure the error output, click **Configure Error Output**. For more information, see [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 11. Click **OK**.  
   

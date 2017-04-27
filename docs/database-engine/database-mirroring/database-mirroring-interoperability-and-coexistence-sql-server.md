@@ -14,6 +14,7 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], high availability"
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 caps.latest.revision: 16
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

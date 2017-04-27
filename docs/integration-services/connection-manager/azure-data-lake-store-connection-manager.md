@@ -31,7 +31,7 @@ manager: "jhubbard"
  
 1.  In the **Add SSIS Connection Manager** dialog box, select **AzureDataLake**, and click **Add**.  
   
-2.  In the Azure Data Lake Store Connection Manager Editor dialog box, type in the Azure Data Lake Store host URL in **ADLS Host** field. For example: https://test.azuredatalakestore.net or test.azuredatalakestore.net.
+2.  In the Azure Data Lake Store Connection Manager Editor dialog box, type in the Azure Data Lake Store host URL in **ADLS Host** field. For example: `https://test.azuredatalakestore.net` or `test.azuredatalakestore.net`.
   
 3.  Choose corresponding authentication type to access Azure Data Lake Store data.
 

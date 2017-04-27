@@ -24,6 +24,7 @@ helpviewer_keywords:
   - "virtual servers [SQL Server], adding nodes"
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 caps.latest.revision: 35
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

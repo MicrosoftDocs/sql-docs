@@ -5,7 +5,6 @@ ms.custom:
 ms.date: "06/14/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
 ms.suite: ""
 ms.technology: 
   - "dbe-stretch"
@@ -40,9 +39,9 @@ manager: "jhubbard"
  Run the following command.  
   
 ```tsql  
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
-ALTER TABLE \<Stretch-enabled table name>  
+ALTER TABLE <Stretch-enabled table name>  
     SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = PAUSED ) ) ;  
 GO 
 ```  
@@ -59,9 +58,9 @@ GO
  Run the following command.  
   
 ```tsql  
-USE \<Stretch-enabled database name>;
+USE <Stretch-enabled database name>;
 GO
-ALTER TABLE \<Stretch-enabled table name>   
+ALTER TABLE <Stretch-enabled table name>   
     SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = OUTBOUND ) ) ;  
  GO
 ```  

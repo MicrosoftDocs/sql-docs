@@ -15,6 +15,7 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], witness"
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: 72
+author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---

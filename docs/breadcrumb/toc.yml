@@ -591,12 +591,12 @@
       - name: Performance
         href: /sql/relational-databases/performance/
         homepage: /sql/relational-databases/performance
-        -name: Automatic Tuning
-         href: /sql/relational-databases/automatic-tuning/
-         homepage: /sql/relational-databases/automatic-tuning/
-        -name: Performance Monitor
-         href: /sql/relational-databases/performance-monitor/
-         homepage: /sql/relational-databases/performance-monitor/
+        - name: Automatic tuning
+          href: /sql/relational-databases/automatic-tuning/
+          homepage: /sql/relational-databases/automatic-tuning/
+        - name: Performance Monitor
+          href: /sql/relational-databases/performance-monitor/
+          homepage: /sql/relational-databases/performance-monitor/
       - name: Policy-based management
         href: /sql/relational-databases/policy-based-management/
         homepage: /sql/relational-databases/policy-based-management

@@ -30,7 +30,6 @@ manager: "jhubbard"
  We recommend that you **do not query the system tables directly**. Instead, execute the [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) and [cdc.fn_cdc_get_net_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) functions.  
   
 
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Log sequence number (LSN) associated with the commit transaction for the change.<br /><br /> All changes committed in the same transaction share the same commit LSN. For example, if a delete operation on the source table removes two rows, the change table will contain two rows, each with the same **__$start_lsn** value.|  

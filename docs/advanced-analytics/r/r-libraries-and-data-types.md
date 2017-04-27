@@ -27,7 +27,7 @@ This topic also lists unsupported data types, and lists the data type conversion
 
 ## R Libraries
 
-Both products, R Services and Machine Learning Services with R, are aligned with specific releases of Microsoft R Open. For example, the latest release, SQL Server vNext Machine Learning Services, is built on Microsoft R Open 3.3.3.
+Both products, R Services and Machine Learning Services with R, are aligned with specific releases of Microsoft R Open. For example, the latest release, SQL Server 2017 Machine Learning Services, is built on Microsoft R Open 3.3.3.
 
 To view the R version associated with a particular instance of SQL Server, open RGui.
 

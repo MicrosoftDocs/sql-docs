@@ -39,7 +39,7 @@ As hotfixes or improvements to SQL Server 2016 are released, R components will b
 
 If you install or upgrade servers that are not connected to the Internet, you must download an updated version of the R components manually before beginning the refresh. For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
 
-If you are using SQL Server vNext, upgrades to R components are automatically installed.
+If you are using SQL Server 2017, upgrades to R components are automatically installed.
 
 As of December 2016, it is now possible to upgrade R components on a faster cadence than the SQL Server release cycle, by _binding_ an instance of R Services to the Modern Software Lifecycle policy. For more information, see [Use SqlBindR to Upgrade an Instance of SQL Server R Services](../../advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md)
 

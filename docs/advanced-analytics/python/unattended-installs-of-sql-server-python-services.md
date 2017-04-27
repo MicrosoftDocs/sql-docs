@@ -17,7 +17,7 @@ manager: "jhubbard"
 ---
 # Unattended Installs of Python Machine Learning Services (In-Database)
     
-This topic describes how to use the command-line arguments in SQL Server vNext setup to install the SQL Server database engine with Machine Learning Services and Python, using quiet mode. 
+This topic describes how to use the command-line arguments in SQL Server 2017 setup to install the SQL Server database engine with Machine Learning Services and Python, using quiet mode. 
 
 > [!NOTE]
 > Don't forget to include the command-line arguments for the licensing agreements, one for Python and one for SQL Server. 
@@ -26,7 +26,7 @@ This topic describes how to use the command-line arguments in SQL Server vNext s
 
 Before beginning the installation process, note these requirements:
 
-+ The Python service cannot be installed independently of the SQL Server vNext database engine. You must include the **SQL** feature. 
++ The Python service cannot be installed independently of the SQL Server 2017 database engine. You must include the **SQL** feature. 
 + If you are performing an offline install, you must download the required Python components in advance, and copy them to a local folder. For download locations, see [Installing Machine Learning Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).   
 + There is a new parameter, */IACCEPTPYTHONLICENSETERMS*, that indicates you have accepted the license terms for using the Python components provided by Continuum Analytics. If you do not include this parameter in your command line, setup will fail. 
 + To complete setup without having to respond to prompts, make sure that you have identified all required arguments, including those for Python and SQL Server licensing, and for any other features that you might want to install. 
@@ -37,7 +37,7 @@ Before beginning the installation process, note these requirements:
 The following example shows the **minimum** required features to specify in the command line when performing a silent, unattended install of Python with the database engine on the default instance. 
 
 > [!NOTE] 
-> This feature requires SQ Server vNext. It is not supported  in earlier versions of SQL Server.
+> This feature requires SQ Server 2017. It is not supported  in earlier versions of SQL Server.
 
 1. Open an elevated command prompt, and run the following command:  
 

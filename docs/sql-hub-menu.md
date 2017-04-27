@@ -21,7 +21,7 @@ description: Learn about SQL
                                 </div>
                             </li>
                             <li>
-                                <a href="/sql/sql-server/sql-server-vnext-release-notes">
+                                <a href="/sql/sql-server/sql-server-2017-release-notes">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">

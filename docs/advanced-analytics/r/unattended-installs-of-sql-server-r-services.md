@@ -20,11 +20,11 @@ manager: "jhubbard"
 This topic describes how to use command-line arguments with SQL Server setup to install R together with an instance of the database engine, in quiet mode. In an unattended installation, you do not use the interactive features of the setup wizard, and must provide all arguments required to complete installation, including licensing agreements for SQL Server and for machine learning components. 
 
 > [!IMPORTANT]
-The setup process is different in SQL Server 2016 and SQL Server vNext.
+The setup process is different in SQL Server 2016 and SQL Server 2017.
 + SQL Server 2016 supports R integration using the feature, **SQL Server R Services**. See [this section](#bkmk_OldInstall) for setup arguments.
-+ SQL Server vNext includes support for both R and Python, using the feature **Machine Learning Services (In-Database). See [this section](#bkmk_OldInstall) for R Service setup arguments.
++ SQL Server 2017 includes support for both R and Python, using the feature **Machine Learning Services (In-Database). See [this section](#bkmk_OldInstall) for R Service setup arguments.
 + The prerequisites are the same. Be sure to install the R components beforehand if the computer does not have Internet access.
-+ In both SQL Server 2016 and SQL Server vNext, additional steps are required after setup to enable the feature.
++ In both SQL Server 2016 and SQL Server 2017, additional steps are required after setup to enable the feature.
 
 ## Prerequisites
 
@@ -36,9 +36,9 @@ The setup process is different in SQL Server 2016 and SQL Server vNext.
 > [!NOTE] 
 > The Mixed security mode that supports SQL logins was required in early releases. However, you might consider enabling Mixed Mode authentication to support solution development by data scientists using a SQL login.
 
-## <a name="bkmk_NewInstall"></a> Unattended Install of R Machine Learning Services in SQL Server vNext
+## <a name="bkmk_NewInstall"></a> Unattended Install of R Machine Learning Services in SQL Server 2017
 
-The following example shows the **minimum** required features to specify in the command line when performing a silent, unattended install of Machine Services (In-Database). Requires SQL Server vNext.  
+The following example shows the **minimum** required features to specify in the command line when performing a silent, unattended install of Machine Services (In-Database). Requires SQL Server 2017.  
 
 
 1. Open an elevated command prompt, and run the following command:  
@@ -46,7 +46,7 @@ The following example shows the **minimum** required features to specify in the 
     ```  
     Setup.exe /q /ACTION=Install /FEATURES=SQL,AdvancedAnalytics, SQL_INST_MR /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS  
     ```  
-    Note the flags required for R in SQL Server vNext: `AdvancedAnalytics`, `SQL_INST_MR`, and `IACCEPTRLICENSETERMS`. 
+    Note the flags required for R in SQL Server 2017: `AdvancedAnalytics`, `SQL_INST_MR`, and `IACCEPTRLICENSETERMS`. 
 2. Restart the server.
 3. Perform the post-installation configuration steps as described in [this section](#bkmk_PostInstall). Another restart of the SQL Server services will be required.
 

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure SQL Server settings on Linux | Microsoft Docs
-description: This topic describes how to use the mssql-conf tool to  configure SQL Server vNext settings on Linux.
+description: This topic describes how to use the mssql-conf tool to  configure SQL Server 2017 settings on Linux.
 author: luisbosquez 
 ms.author: lbosq 
 manager: jhubbard
@@ -25,7 +25,7 @@ ms.custom: H1Hack27Feb2017
 
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
-**mssql-conf** is a configuration script that installs with SQL Server vNext CTP 2.0 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with SQL Server 2017 CTP 2.0 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 - [TCP port](#tcpport): Change the port where SQL Server will listen for connections.
 - [Default data directory](#datadir): Change the directory where the new SQL Server database data files (.mdf).

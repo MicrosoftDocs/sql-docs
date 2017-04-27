@@ -150,7 +150,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
      
 > [!NOTE]
-> The above graphic may feature different shapes for featured query plans:<br />  Circle – Completed (Regular Execution successfully finished)<br />  Square – Cancelled (Client initiated aborted execution)<br />  Triangle – Failed (Exception aborted execution)<br />Also, the size of the shape reflects query execution count within the specified time interval, increasing in size with a higher number of executions.
+> The above graphic may feature different shapes for specific query plans, with the following meanings for each possible status:<br />  **Circle** – Query Completed (Regular Execution successfully finished)<br />  **Square** – Cancelled (Client initiated aborted execution)<br />  **Triangle** – Failed (Exception aborted execution)<br />Also, the size of the shape reflects query execution count within the specified time interval, increasing in size with a higher number of executions.
 
 -   You may conclude that your query is missing an index for optimal execution. This information is surfaced within the query execution plan. Create the missing index and check the query performance using the Query Store.  
   

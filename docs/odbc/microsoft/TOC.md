@@ -256,7 +256,7 @@
 ### [Supported Cursor Model (Visual FoxPro ODBC Driver)](supported-cursor-model-visual-foxpro-odbc-driver.md)
 ### [Supported Data Types (Visual FoxPro ODBC Driver)](supported-data-types-visual-foxpro-odbc-driver.md)
 ### [International Support (Visual FoxPro ODBC Driver)](international-support-visual-foxpro-odbc-driver.md)
-### [Support for Rules, Triggers, Default Values, and Stored Procedures (Visual FoxPro ODBC Driver)](support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver.md)
+### [Support for Rules, Triggers, Default Values, and Stored Procedures (Visual FoxPro ODBC Driver)](support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)
 ### [Supported ODBC SQL Grammar (Visual FoxPro ODBC Driver)](supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)
 ### [Registry Entries (Visual FoxPro ODBC Driver)](registry-entries-visual-foxpro-odbc-driver.md)
 ### [Supported Scalar Functions (Visual FoxPro ODBC Driver)](supported-scalar-functions-visual-foxpro-odbc-driver.md)

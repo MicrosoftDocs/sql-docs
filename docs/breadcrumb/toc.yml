@@ -591,6 +591,7 @@
       - name: Performance
         href: /sql/relational-databases/performance/
         homepage: /sql/relational-databases/performance
+        items:
         - name: Automatic tuning
           href: /sql/relational-databases/automatic-tuning/
           homepage: /sql/relational-databases/automatic-tuning/

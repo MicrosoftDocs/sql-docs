@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 ## Remarks  
 
-The `__$command_id` column was column was introduced in a cumalative update in versions 2012 through 2016. For version and download information, see KB article 3030352 at [FIX: The change table is ordered incorrectly for updated rows after you enable change data capture for a Microsoft SQL Server database](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  For more information, see [CDC functionality may break after upgrading to the latest CU for SQL Server 2012, 2014 and 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+The `__$command_id` column was column was introduced in a cumulative update in versions 2012 through 2016. For version and download information, see KB article 3030352 at [FIX: The change table is ordered incorrectly for updated rows after you enable change data capture for a Microsoft SQL Server database](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  For more information, see [CDC functionality may break after upgrading to the latest CU for SQL Server 2012, 2014 and 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
 ## Captured Column Data Types  
  Captured columns included in this table have the same data type and value as their corresponding source columns with the following exceptions:  

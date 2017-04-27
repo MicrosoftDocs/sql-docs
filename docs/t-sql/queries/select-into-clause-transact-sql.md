@@ -234,7 +234,7 @@ ORDER BY YearlyIncome
 ### F. Creating a new table as a copy of another table and loading it a specified filegroup
 The following example demostrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
 
-**Applies to:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Starting SQL Server 2017**
 
 ```
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

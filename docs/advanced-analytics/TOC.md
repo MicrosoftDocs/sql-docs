@@ -67,7 +67,7 @@
 ### [Use Data from OLAP Cubes in R](r/using-data-from-olap-cubes-in-r.md)
 ### [Create a Stored Procedure Using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## Performance 
+## Performance
 
 ### [Performance Tuning - Overview](r/sql-server-r-services-performance-tuning.md)
 ### [Performance Tuning - SQL Server Configuration (Machine Learning Services)](r/sql-server-configuration-r-services.md)
@@ -77,7 +77,8 @@
 
 
 ## Administration
-## [Configure and Manage](r/configuration-sql-server-r-services.md)
+
+### [Configure and Manage R](r/configuration-sql-server-r-services.md)
 ### [Advanced Configuration Options for Machine Learning Services](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [Security Considerations for the R Runtime in SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Modify the User Account Pool for SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
@@ -124,7 +125,8 @@
 # [Machine Learning Tutorials](tutorials/machine-learning-services-tutorials.md)
 
 ## [Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
-
+## [Create a Model using revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+## [Deploy and Consume Python Models](../advanced-analytics/python/publish-consume-python-code.md)
 ## [Using R Code in Transact-SQL (Basic Tutorial)](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 ### [Working with Inputs and Outputs (R in T-SQL Tutorial)](tutorials/rtsql-working-with-inputs-and-outputs.md)
 ### [R and SQL Data Types and Data Objects (R in T-SQL Tutorial)](tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)

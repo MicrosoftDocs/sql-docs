@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2017"
+ms.date: "04/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,7 +58,9 @@ manager: "jhubbard"
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
-For Azure SQL Database, see [ALTER DATABASE &#40;Azure SQL Database&#41;](https://msdn.microsoft.com/library/mt574871.aspx)  
+For Azure SQL Database, see [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
+For Azure SQL Data Warehouse, see [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
+For Parallel Data Warehouse, see [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).
   
 ## Syntax  
   
@@ -172,9 +174,9 @@ ALTER DATABASE { database_name  | CURRENT }
 ## Changing the Database Collation  
  Before you apply a different collation to a database, make sure that the following conditions are in place:  
   
-1.  You are the only one currently using the database.  
+-   You are the only one currently using the database.  
   
-2.  No schema-bound object depends on the collation of the database.  
+-   No schema-bound object depends on the collation of the database.  
   
      If the following objects, which depend on the database collation, exist in the database, the ALTER DATABASE*database_name*COLLATE statement will fail. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error message for each object blocking the ALTER action:  
   
@@ -204,7 +206,7 @@ ALTER DATABASE { database_name  | CURRENT }
   
 -   Index names within a table.  
   
- Duplicate names resulting from the new collation will cause the change action to fail, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error message specifying the namespace where the duplicate was found.  
+Duplicate names resulting from the new collation will cause the change action to fail, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will return an error message specifying the namespace where the duplicate was found.  
   
 ## Viewing Database Information  
  You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.  

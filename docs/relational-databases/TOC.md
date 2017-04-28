@@ -15,7 +15,7 @@
 
 # [Backup and restore](backup-restore/index.md)
 # [Blob](blob/index.md)
-
+# [Bulk Import and Export of Data](import-export/index.md)  
 # [Collations](collations/index.md)
 # [Configuration Manager](sql-server-configuration-manager.md)  
 # [Cursors](cursors.md)  
@@ -42,6 +42,7 @@
 # [Errors and events](errors-events/index.md)
 # [Event classes](event-classes/index.md)
 # [Extended events](extended-events/index.md)
+# [Graphs](graphs/index.md)
 # [Hierarchical Data](hierarchical-data-sql-server.md)  
 # [Import and export](import-export/index.md)
 # [In-memory OLTP](in-memory-oltp/index.md)
@@ -54,7 +55,7 @@
 ## [Administer Multiple Servers Using Central Management Servers](administer-multiple-servers-using-central-management-servers.md)  
 
 # [Partitions](partitions/index.md)
-# [Performance Monitor](performance-monitor/index.md)
+# [Performance](performance/index.md)
 # [Policy-based management](policy-based-management/index.md)
 # [PolyBase](polybase/index.md)
 # [Replication](replication/index.md)
@@ -79,13 +80,12 @@
 # [System tables](system-tables/index.md)
 # [System views](system-views/index.md)
 # [Tables](tables/index.md)
+# [Transaction logs](logs/index.md)
 # [Track changes](track-changes/index.md)
 # [Triggers](triggers/index.md)
 # [User-defined functions](user-defined-functions/index.md)
 # [Views](views/index.md)
 # [xml](xml/index.md)
-
-# [SQL Graph](graphs/index.md)
 
 # [Tutorials](database-engine-tutorials.md)  
 

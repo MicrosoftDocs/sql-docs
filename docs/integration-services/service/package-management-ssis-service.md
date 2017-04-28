@@ -224,7 +224,7 @@ Stop a running package from the **Running Packages** folder by right-clicking th
  Optionally, rename the package. The default name is the name of the package to import.  
   
  **Protection level**  
- Click the browse button **(…)** and, in the **Package Protection Level** dialog box, update the protection level. For more information, see [Package and Project Protection Level Dialog Box](../../integration-services/packages/package-and-project-protection-level-dialog-box.md).  
+ Click the browse button **(…)** and, in the **Package Protection Level** dialog box, update the protection level. For more information, see [Package and Project Protection Level Dialog Box](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## Export Package Dialog Box UI Reference
   Use the **Export Package** dialog box, available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], to export a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to a different location and optionally, modify the protection level of the package.  
@@ -261,7 +261,7 @@ Stop a running package from the **Running Packages** folder by right-clicking th
  Type the package path, or click the browse button **(…)** and locate the folder in which to store the package.  
   
  **Protection level**  
- Click the browse button **(…)** and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../integration-services/packages/package-and-project-protection-level-dialog-box.md).  
+ Click the browse button **(…)** and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## Back up and restore packages
   

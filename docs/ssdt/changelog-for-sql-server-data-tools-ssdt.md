@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Changelog for SQL Server Data Tools (SSDT)
 This change log is for [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-For detailed posts about what’s new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).  
+For detailed posts about what’s new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## DacFx 17.0.1 
 - Fix for issue with databases with an asymmetric key by an HSM with an EKM provider [Connect item](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
@@ -34,9 +34,9 @@ Build number: 14.0.61704.140
 - The DacFx API was extended to support  Azure AD Universal Authentication and Multi-factor authentication (MFA)
 
 **IS projects:**
-- The SSIS OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online
+- The SSIS OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online.
 - SSIS project now supports target server version of "SQL Server 2017" 
-- Support for CDC Control Task, CDC Splitter and CDC Source when targeting SQL Server 2017
+- Support for CDC Control Task, CDC Splitter and CDC Source when targeting SQL Server 2017. 
 
 **AS projects:**
 - Analysis Services PowerQuery Integration (1400 compat-level tabular models):

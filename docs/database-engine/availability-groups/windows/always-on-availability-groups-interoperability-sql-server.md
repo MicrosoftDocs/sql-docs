@@ -1,7 +1,7 @@
 ---
 title: "Always On Availability Groups: Interoperability (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
+ms.date: "04/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -46,7 +46,7 @@ manager: "jhubbard"
 ##  <a name="restrictions"></a> Features that Interoperate with Always On Availability Groups with Restrictions  
  The following features interoperate with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with specific restrictions. See the linked topics for details.  
   
--   Cross-database transactions/distributed transactions ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and Windows Server 2016 Technical Preview 2). For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)  
+-   Cross-database transactions/distributed transactions ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and Windows Server 2016). For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)  
   
 ##  <a name="NoInterop"></a> Features that Do Not Interoperate with Always On Availability Groups  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] does not interoperate with the following features:  

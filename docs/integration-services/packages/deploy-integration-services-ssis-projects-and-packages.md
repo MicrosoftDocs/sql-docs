@@ -590,7 +590,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Type the project name.  
   
  **Protection level**  
- Select the protection level. For more information, see [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ Select the protection level. For more information, see [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
  **Project description**  
  Type an optional description for the project.  
@@ -604,7 +604,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Lists the project name.  
   
  **Protection level**  
- Select a protection level for the packages contained in the project. For more information about protection levels, see [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ Select a protection level for the packages contained in the project. For more information about protection levels, see [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
  **Project description**  
  Type an optional project description.  

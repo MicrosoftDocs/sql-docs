@@ -21,18 +21,21 @@ manager: "jhubbard"
 
 In SQL Server 2016, Microsoft introduced SQL Server R Services, a feature that supports enterprise-scale data science by integrating the R language with SQL Server database engine.
 
-In SQL Server vNext, machine learning becomes even more powerful, with addition of support for the popular Python language. To reflect the support for multiple languages, as of CTP 2.0, SQL Server R Services has also been renamed as **Machine Learning Services (In-Database)**.
+In SQL Server 2017, machine learning becomes even more powerful, with addition of support for the popular Python language. To reflect the support for multiple languages, as of CTP 2.0, SQL Server R Services has also been renamed as **Machine Learning Services (In-Database)**.
 
-## What's New in SQL Server vNext CTP 2.0
+## What's New in SQL Server 2017 CTP 2.0
 
-SQL Server vNext includes many new features to make it easier to build and deploy machine learning solutions that use SQL Server data.
+SQL Server 2017 includes many new features to make it easier to build and deploy machine learning solutions that use SQL Server data.
 
+> [!IMPORTANT]
+> 
+> Machine learning services, including use of R or Python, are currently not supported when running SQL Server on Linux. This feature will be added in a later release.
 
 ### Python integration in SQL Server
 
-You can now run Python in SQL Server, using stored procedures or remote compute contexts. 
+You can now run Python in SQL Server, using stored procedures or remote compute contexts.
 
-Machine Learning Services includes the RevoScalePy libraries, which have all the distributed algorithms and compute contexts supported in RevoScaleR.
+Machine learning with Python includes the **revoscalepy** module, which includes  subset of the distributed algorithms and compute contexts supported in RevoScaleR. More algorithms are transformations will be added.
 
 For more information, see these topics:
 
@@ -45,7 +48,7 @@ Often the data scientist needs to efficiently train a large number of small mode
 
 You can easily create multiple models in parallel from R, by using the new **rxExecBy** function. The function accepts a dataset containing ungrouped and unordered data, and lets you partition it by a single entity for training and model building. For example, you could partition by product, and then process the entire dataset in parallel. The outcome is multiple models, each model trained on the appropriate subset of data for each product.
 
-The rxExecBy function is available in SQL Server vNext CTP 2.0 and Microsoft R Server 9.1.0. Supported compute contexts include RxSpark and RxInSQLServer.
+The rxExecBy function is available in SQL Server 2017 CTP 2.0 and Microsoft R Server 9.1.0. Supported compute contexts include RxSpark and RxInSQLServer.
 
 For more information, see [Create Multiple Models using rxExecBy](../advanced-analytics/r/creating-multiple-models-using-rxexecby.md).
 
@@ -58,7 +61,7 @@ For more information, see [Deploying and Consuming Analytics](../advanced-analyt
 
 ## Other Updates
 
-This section lists features that were released previously, with updates in CTP 2.0.
+This section lists features that were released previously, but that have been updated in CTP 2.0.
 
 ### Improved package management for data scientists
 
@@ -70,7 +73,7 @@ For more information, see [R Package Management for SQL Server R Services](../ad
 
 ### Upgrade your R experience
 
-The RevoScaleR package is included in SQL Server 2016, SQL Server vNext, and Microsoft R Server. It includes transforms and algorithms that support distributed or parallel processing, and multiple compute contexts.
+The RevoScaleR package is included in SQL Server 2016, SQL Server 2017, and Microsoft R Server. It includes transforms and algorithms that support distributed or parallel processing, and multiple compute contexts.
   
 If you installed an earlier version of RevoScaleR with SQL Server 2016, you can now upgrade to the very latest version by switching your server to use the Modern Lifecycle policy. By doing so you can take advantage of a faster release cycle for R and automatically upgrade all R components. For more information, see [Microsoft R Server 9.0.1](https://msdn.microsoft.com/microsoft-r/rserver-whats-new).
 

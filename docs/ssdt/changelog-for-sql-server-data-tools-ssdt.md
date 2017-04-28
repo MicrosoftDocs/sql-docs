@@ -20,20 +20,23 @@ This change log is for [SQL Server Data Tools (SSDT) for Visual Studio 2015](htt
   
 For detailed posts about what’s new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).  
 
-## SSDT 17.0 (supports up to SQL Server vNext)
+## DacFx 17.0.1 
+- Fix for issue with databases with an asymmetric key by an HSM with an EKM provider [Connect item](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
+
+## SSDT 17.0 (supports up to SQL Server 2017)
 Build number: 14.0.61704.140
 
 ### What's New?
 **Database projects:**
-- Amending a clustered index on a view will no longer block deployment.
+- Amending a clustered index on a view will no longer block deployment
 - Schema comparison strings relating to column encryption will use the proper name rather than the instance name.   
-- Added a new command line option to SqlPackage: ModelFilePath.  This provides an option for advanced users to specify an external model.xml file for import, publishing and scripting operations.   
+- Added a new command line option to SqlPackage: ModelFilePath.  This provides an option for advanced users to specify an external model.xml file for import, publishing and scripting operations   
 - The DacFx API was extended to support  Azure AD Universal Authentication and Multi-factor authentication (MFA)
 
 **IS projects:**
-- The SSIS OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online.
-- SSIS project now supports target server version of "SQL Server vNext" 
-- Support for CDC Control Task, CDC Splitter and CDC Source when targeting SQL Server vNext. 
+- The SSIS OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online
+- SSIS project now supports target server version of "SQL Server 2017" 
+- Support for CDC Control Task, CDC Splitter and CDC Source when targeting SQL Server 2017
 
 **AS projects:**
 - Analysis Services PowerQuery Integration (1400 compat-level tabular models):

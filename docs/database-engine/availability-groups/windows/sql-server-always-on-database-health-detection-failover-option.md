@@ -23,9 +23,9 @@ author: "JasonWHowell"
 ms.author: "jasonh"
 manager: "jhubbard"
 ---
-# SQL Server Always On Database Health Detection Failover Option
+# Availability Group Database Health Detection Failover Option
 ## 
-Starting in SQL Server 2016, database level health detection (DB_FAILOVER) option is available when configuring an Always On Availability Group. The database health detection notices when a database is no longer in the online status, when something goes wrong, and will trigger the automatic failover of the availability group. 
+Starting in SQL Server 2016, database level health detection (DB_FAILOVER) option is available when configuring an Always On availability group. The database health detection notices when a database is no longer in the online status, when something goes wrong, and will trigger the automatic failover of the availability group. 
 
 The database level health detection is enabled for the availability group as a whole, therefore database level health detection monitors every database in the availability group. It cannot be enabled selectively for specific databases in the availability group. 
 
@@ -43,37 +43,36 @@ There are several easy ways to enable Database Health Detection setting:
 
 1. In SQL Server Management Studio, connect to your SQL Server database engine. Using the Object Explorer window, right click on the AlwaysOn High Availability node, and run the **New Availability Group Wizard**. Check the **Database Level Health Detection** checkbox on the Specify Name page. Then complete the rest of the pages in the wizard. 
 
-![Always On Enable Database Health Checkbox](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
+   ![Always On Enable Database Health Checkbox](../../../database-engine/availability-groups/windows/media/always-on-enable-database-health-checkbox.png)
 
 2. View the **Properties** of an existing Availability Group in SQL Server Management Studio. Connect to your SQL Server. Using the Object Explorer window, expand AlwaysOn High Availability node. Expand Availability Groups. Right click on the availability group, and choose Properties. Check the option **Database Level Health Detection**, then click OK or Script the change. 
 
-![Always On AG Properties Database Level Health Detection](../../../database-engine/availability-groups/windows/media/always-on-ag-properties-database-level-health-detection.png)
+   ![Always On AG Properties Database Level Health Detection](../../../database-engine/availability-groups/windows/media/always-on-ag-properties-database-level-health-detection.png)
 
 
 3. Transact-SQL Syntax to **CREATE AVAILABILITY GROUP**. The DB_FAILOVER parameter accepts values ON or OFF.
 
-~~~
-CREATE AVAILABILITY GROUP [Contoso-ag] 
-WITH (DB_FAILOVER=ON)
-FOR DATABASE [AutoHa-Sample] 
-REPLICA ON 
-    N'SQLSERVER-0' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-0.DOMAIN.COM:5022', 
+   ```Transact-SQL
+   CREATE AVAILABILITY GROUP [Contoso-ag] 
+   WITH (DB_FAILOVER=ON)
+   FOR DATABASE [AutoHa-Sample] 
+   REPLICA ON 
+       N'SQLSERVER-0' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-0.DOMAIN.COM:5022', 
          FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT), 
-    N'SQLSERVER-1' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-1.DOMAIN.COM:5022',  
+       N'SQLSERVER-1' WITH (ENDPOINT_URL = N'TCP://SQLSERVER-1.DOMAIN.COM:5022',  
         FAILOVER_MODE = AUTOMATIC, AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
-~~~
-
-
+    ```
 
 4. Transact-SQL Syntax to **ALTER AVAILABILITY GROUP**. The DB_FAILOVER parameter accepts values ON or OFF.
-~~~
-ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
 
-ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
-~~~
+   ```Transact-SQL
+   ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
+   
+   ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
+   ```
 
-Caveats
----
+### Caveats
+
 It is important to note that the Database Level Heath Detection option currently does not cause SQL Server to monitor disk uptime and SQL Server does not directly monitor database file availability. Should a disk drive fail or become unavailable, that alone will not necessarily trigger the availability group to automatically failover. 
 
 As an example, when a database is idle with no active transactions, and with no physical writes occurring, should some of the database files become inaccessible, SQL Server may not do any read or write IO to the files, and may not change the status for that database immediately, so no failover would be triggered. Later, when a database checkpoint occurs, or a physical read or write occurs for fulfilling a query, then SQL Server may then notice the file issue, and react by changing the database status, and subsequently the Availability Group with Database Level Health Detection set on would failover due to the database health change.
@@ -85,15 +84,18 @@ As another example, when the SQL Server database engine needs to read a data pag
 SQL Server Always On health detection implements a flexible failover policy which configures the thresholds of the SQL Server process health for failover policy. The Database Level Health Detection is configured using the DB_FAILOVER parameter, whereas the availability group option FAILURE_CONDITION_LEVEL is separate for configuring SQL Server process health detection. The two options are independent.
 
 Managing and Monitoring Database Health Detection
----
+
 ### Dynamic Management Views
 
 The system DMV sys.availability_groups shows a column db_failover which indicates if the database health detection option is off (0) or on (1).
-~~~
+
+```Transact-SQL
 select name, db_failover from sys.availability_groups
-~~~
+```
+
 
 Example dmv output:
+
 name  |  db_failover  
 ---------|---------
 | Contoso-ag |	1  |
@@ -102,6 +104,7 @@ name  |  db_failover
 The SQL Server Errorlog (or text from sp_readerrorlog) will show the error message 41653 when an availability group has failed over, due to the Database Level Health Detection checks. 
 
 For example, this errorlog excerpt shows that a transaction log write had failed due to a disk issue, and subsequently the database named AutoHa-Sample was shutdown, which triggered the database health detection to failover the availability group.  
+
 >2016-04-25 12:20:21.08 spid1s      Error: 17053, Severity: 16, State: 1.
 >
 >2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: Operating system error 21(The device is not ready.) encountered.
@@ -132,7 +135,7 @@ This XEvent is triggered on the primary replica only. This XEvent is triggered w
 Here is a example to create an XEvent session that captures this event. As no path is specified, the XEvent output file should be located in the default SQL Server error log path. Execute this on the primary replica of your availability group:
 
 Example Extended Event Session Script
-~~~ 
+```
 CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER 
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
@@ -141,41 +144,43 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO 
 ALTER EVENT SESSION AlwaysOn_dbfault ON SERVER STATE=START
 GO 
-~~~
+```
 
 #### Extended Event Output
 Using SQL Server Management Studio, connect to the primary SQL Server, and expand the Management node, then expand Extended Events. Locate the session (AlwaysOn_dbfault was the name in the sample above) and expand it to see the output files. Click on the output file and the event file will open into a new tab.
 
 Explanation of the fields:
-Column Data	| Description
----------|---------
-availability_group_id	|The ID of the availability group.
-availability_group_name	|The name of the availability group.
-availability_replica_id	|The ID of the availability replica.
-availability_replica_name	|The name of the availability replica.
-database_name	|The name of the database reporting the fault.
-database_replica_id	|The ID of the availability replica database.
-failover_ready_replicas	|The number of automatic failover secondary replicas that are synchronized. 
-fault_type 	| The fault id reported. Possible values:  <br/> 0 - NONE <br/>1 - Unknown<br/>2 – Shutdown
-is_critical	| This  value should always return true for the XEvent as of SQL Server 2016.
+
+|Column Data	| Description
+|---------|---------
+|availability_group_id	|The ID of the availability group.
+|availability_group_name	|The name of the availability group.
+|availability_replica_id	|The ID of the availability replica.
+|availability_replica_name	|The name of the availability replica.
+|database_name	|The name of the database reporting the fault.
+|database_replica_id	|The ID of the availability replica database.
+|failover_ready_replicas	|The number of automatic failover secondary replicas that are synchronized. 
+|fault_type 	| The fault id reported. Possible values:  <br/> 0 - NONE <br/>1 - Unknown<br/>2 – Shutdown
+|is_critical	| This  value should always return true for the XEvent as of SQL Server 2016.
 
 
 In this example output, the fault_type shows that a critical event happened on the availability group Contoso-ag, on replica named SQLSERVER-1, due to database name AutoHa-Sample2, with fault type 2- Shutdown.
-Field  | Value
----------|---------
-availability_group_id |	24E6FE58-5EE8-4C4E-9746-491CFBB208C1
-availability_group_name |	Contoso-ag
-availability_replica_id	| 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
-availability_replica_name |	SQLSERVER-1
-database_name |	AutoHa-Sample2
-database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-failover_ready_replicas |	1
-fault_type |	2
-is_critical	| True
+
+|Field  | Value
+|---------|---------
+|availability_group_id |	24E6FE58-5EE8-4C4E-9746-491CFBB208C1
+|availability_group_name |	Contoso-ag
+|availability_replica_id	| 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
+|availability_replica_name |	SQLSERVER-1
+|database_name |	AutoHa-Sample2
+|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
+|failover_ready_replicas |	1
+|fault_type |	2
+|is_critical	| True
 
 
-Related References
----
+### Related References
+
 * [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)

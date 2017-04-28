@@ -36,7 +36,7 @@ In SQL Server 2016, Microsoft laucnhed two server platforms for integrating the 
 + **SQL Server R Services (In-Database)**, for integration with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, for enterprise-level R deployments on Windows and Linux servers
 
-In SQL Server vNext CTP 2.0, the name has been changed to reflect support for the popular Python language.
+In SQL Server 2017 CTP 2.0, the name has been changed to reflect support for the popular Python language.
 
 + **SQL Server Machine Learning Services (In-Database)** supports both R and Python, and offers additional.
 version-md.md)]
@@ -57,7 +57,7 @@ To get started, see [SQL Server R Services](../../advanced-analytics/r/sql-serve
 For walkthroughs and tutorials, see [Machine Learning Tutorials](../tutorials/machine-learning-services-tutorials.md).
 
 > [!NOTE]
-> Support for Python is provided only in SQL Server vNext. This is a new feature and still under development.
+> Support for Python is provided only in SQL Server 2017. This is a new feature and still under development.
 
 ## Microsoft R Server and Machine Learning Server (Standalone)
 
@@ -67,7 +67,7 @@ For more information, see [Microsoft R Server (MSDN)](https://msdn.microsoft.com
 
 If you don't need to integrate with SQL Server, you can install R Server to enable rapid development, deployment, and operationalization of machine learning solutions.
 
-Moreover, if you install Microsoft Machine Learning Server using SQL Server vNext setup, you can also deploy and consume Python applications.
+Moreover, if you install Microsoft Machine Learning Server using SQL Server 2017 setup, you can also deploy and consume Python applications.
 
 ## Related Technologies
 

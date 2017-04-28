@@ -98,10 +98,7 @@ The properties of the SQL Server Launchpad are edited to use the R libraries in 
 2. Run the installer on the computer that has the instance you want to unbind.
 2. The installer will identify local instances that are candidates for unbinding.
 3. Deselect the check box next to the instance that you want to revert to the original SQL Server R Services configuration.
-4. Accept the licensing agreement for Microsoft R Server 9.1.0.
-    
-    > [!NOTE] You must accept the licensing agreement even if you are removing R Server.
-    
+4. Accept the licensing agreement for Microsoft R Server 9.1.0. You must accept the licensing agreement even if you are removing R Server.
 5. Click **Finish**. The process takes a while.
 
 
@@ -144,7 +141,8 @@ As a workaround, you can modify the existing R Server installation as follows:
 Sometimes the binding and unbinding operations fail to clean up temporary folders.
 If you find folders with a name like this, you can remove it after installation is complete: `R_SERVICES_<guid>`
 
-> [!NOTE] Be sure to wait until installation is complete. It can take a long time to remove R libraries associated with one version and then add the new R libraries. When the operation completes, temporary folders will be removed.
+> [!NOTE]
+> Be sure to wait until installation is complete. It can take a long time to remove R libraries associated with one version and then add the new R libraries. When the operation completes, temporary folders will be removed.
 
 ## sqlbindr.exe command syntax
 

@@ -1,7 +1,7 @@
 ---
 title: "Database Health Detection Failover Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "04/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,23 +23,23 @@ author: "JasonWHowell"
 ms.author: "jasonh"
 manager: "jhubbard"
 ---
-# Availability Group Database Health Detection Failover Option
-## 
-Starting in SQL Server 2016, database level health detection (DB_FAILOVER) option is available when configuring an Always On availability group. The database health detection notices when a database is no longer in the online status, when something goes wrong, and will trigger the automatic failover of the availability group. 
+# Availability group database level health detection failover option
+
+Starting in SQL Server 2016, database level health detection (DB_FAILOVER) option is available when configuring an Always On availability group. The database level health detection notices when a database is no longer in the online status, when something goes wrong, and will trigger the automatic failover of the availability group. 
 
 The database level health detection is enabled for the availability group as a whole, therefore database level health detection monitors every database in the availability group. It cannot be enabled selectively for specific databases in the availability group. 
 
-Benefits of Database Level Health Detection option
+## Benefits of database level health detection option
 ---
-The Database Level Health Detection option in Always On Availability Groups is widely recommended as a good option to help guarantee the high availability for your databases. You should consider turning it on for all availability groups. If your application depends on several databases to be highly available, group them into an availability group with the database health option turned on.
+The availability group database level health detection option is widely recommended as a good option to help guarantee the high availability for your databases. You should consider turning it on for all availability groups. If your application depends on several databases to be highly available, group them into an availability group with the database health option turned on.
 
 For example, with database level health detection option on, if SQL Server was unable to write to the transaction log file for one of the databases, the status of that database would change to indicate failure, and the availability group would soon fail over, and your application could reconnect and continue working with minimal interruption once the databases are online again.
 
-Enabling Database Health Detection
+Enabling database level health detection
 ----
 Though it is generally recommended, the Database Health option is **off by default**, in effort to keep backward compatibility with the default settings in prior versions. 
 
-There are several easy ways to enable Database Health Detection setting:
+There are several easy ways to enable database level health detection setting:
 
 1. In SQL Server Management Studio, connect to your SQL Server database engine. Using the Object Explorer window, right click on the AlwaysOn High Availability node, and run the **New Availability Group Wizard**. Check the **Database Level Health Detection** checkbox on the Specify Name page. Then complete the rest of the pages in the wizard. 
 
@@ -75,19 +75,19 @@ There are several easy ways to enable Database Health Detection setting:
 
 It is important to note that the Database Level Heath Detection option currently does not cause SQL Server to monitor disk uptime and SQL Server does not directly monitor database file availability. Should a disk drive fail or become unavailable, that alone will not necessarily trigger the availability group to automatically failover. 
 
-As an example, when a database is idle with no active transactions, and with no physical writes occurring, should some of the database files become inaccessible, SQL Server may not do any read or write IO to the files, and may not change the status for that database immediately, so no failover would be triggered. Later, when a database checkpoint occurs, or a physical read or write occurs for fulfilling a query, then SQL Server may then notice the file issue, and react by changing the database status, and subsequently the Availability Group with Database Level Health Detection set on would failover due to the database health change.
+As an example, when a database is idle with no active transactions, and with no physical writes occurring, should some of the database files become inaccessible, SQL Server may not do any read or write IO to the files, and may not change the status for that database immediately, so no failover would be triggered. Later, when a database checkpoint occurs, or a physical read or write occurs for fulfilling a query, then SQL Server may then notice the file issue, and react by changing the database status, and subsequently the availability group with database level health detection set on would failover due to the database health change.
 
 As another example, when the SQL Server database engine needs to read a data page to fulfill a query, if the data page is cached in the buffer pool memory, then no disk read with physical access may be required to fulfill the query request. Therefore, a missing or unavailable data file may not immediately trigger an automatic failover even when database health option is enabled, since database status is not immediately.  
 
 
-## Database Failover is separate from Flexible Failover Policy 
-SQL Server Always On health detection implements a flexible failover policy which configures the thresholds of the SQL Server process health for failover policy. The Database Level Health Detection is configured using the DB_FAILOVER parameter, whereas the availability group option FAILURE_CONDITION_LEVEL is separate for configuring SQL Server process health detection. The two options are independent.
+## Database failover is separate from flexible failover policy 
+Database level health detection implements a flexible failover policy which configures the thresholds of the SQL Server process health for failover policy. The database level health detection is configured using the DB_FAILOVER parameter, whereas the availability group option FAILURE_CONDITION_LEVEL is separate for configuring SQL Server process health detection. The two options are independent.
 
-Managing and Monitoring Database Health Detection
+## Managing and monitoring database level health detection
 
 ### Dynamic Management Views
 
-The system DMV sys.availability_groups shows a column db_failover which indicates if the database health detection option is off (0) or on (1).
+The system DMV sys.availability_groups shows a column db_failover which indicates if the database level health detection option is off (0) or on (1).
 
 ```Transact-SQL
 select name, db_failover from sys.availability_groups
@@ -101,9 +101,9 @@ name  |  db_failover
 | Contoso-ag |	1  |
 
 ### ErrorLog 
-The SQL Server Errorlog (or text from sp_readerrorlog) will show the error message 41653 when an availability group has failed over, due to the Database Level Health Detection checks. 
+The SQL Server Errorlog (or text from sp_readerrorlog) will show the error message 41653 when an availability group has failed over, due to the database level health detection checks. 
 
-For example, this errorlog excerpt shows that a transaction log write had failed due to a disk issue, and subsequently the database named AutoHa-Sample was shutdown, which triggered the database health detection to failover the availability group.  
+For example, this errorlog excerpt shows that a transaction log write had failed due to a disk issue, and subsequently the database named AutoHa-Sample was shutdown, which triggered the database level health detection to failover the availability group.  
 
 >2016-04-25 12:20:21.08 spid1s      Error: 17053, Severity: 16, State: 1.
 >
@@ -128,7 +128,7 @@ For example, this errorlog excerpt shows that a transaction log write had failed
 
 ### Extended Event sqlserver.availability_replica_database_fault_reporting
 
-There is a new Extended Event defined starting in SQL Server 2016 that is triggered by AlwaysOn database level health detection.  The event name is **sqlserver.availability_replica_database_fault_reporting** 
+There is a new Extended Event defined starting in SQL Server 2016 that is triggered by database level health detection.  The event name is **sqlserver.availability_replica_database_fault_reporting** 
 
 This XEvent is triggered on the primary replica only. This XEvent is triggered when database level health issue is detected for a database hosted in an availability group. 
 

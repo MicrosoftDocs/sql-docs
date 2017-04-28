@@ -1274,6 +1274,16 @@
             "source_path" : "docs/ado/guide/data/activex-data-objects-ado.md",
             "redirect_url": "/sql/ado/guide/data/ado-fundamentals",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/reference/ado-md-api/ado-md-api-reference.md",
+            "redirect_url": "/sql/ado/reference/ado-md-api/ado-md-object-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/reference/adox-api/adox-api-reference.md",
+            "redirect_url": "/sql/ado/reference/adox-api/adox-object-model",
+            "redirect_document_id": true
         }
     ]
 }

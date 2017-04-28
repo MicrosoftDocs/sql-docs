@@ -1264,6 +1264,16 @@
             "source_path": "docs/integration-services/packages/package-roles-dialog-box-ui-reference.md",
             "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
             "redirect_document_id": false
+        },
+        {
+            "source_path" : "docs/ado/guide/appendixes/ado-appendixes.md",
+            "redirect_url": "/sql/ado/guide/appendixes/appendix-a-providers",
+            "redirect_document_id": true
+        },
+        {
+            "source_path" : "docs/ado/guide/data/activex-data-objects-ado.md",
+            "redirect_url": "/sql/ado/guide/data/ado-fundamentals",
+            "redirect_document_id": true
         }
     ]
 }

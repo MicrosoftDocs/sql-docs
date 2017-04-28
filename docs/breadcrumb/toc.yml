@@ -1011,6 +1011,10 @@
     - name: Samples
       href: /sql/sample/
       homepage: /sql/sample
+      items:
+      - name: Wide World Importers
+        href: /sql/sample/world-wide-importers/
+        homepage: /sql/sample/world-wide-importers
     - name: Tools
       href: /sql/tools/
       homepage: /sql/tools

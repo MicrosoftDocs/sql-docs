@@ -1,14 +1,11 @@
 {
  "redirections":
  [
-
   {
    "source_path" : "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
    "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate",
    "redirect_document_id": true
   },
-
-
   {
    "source_path" : "docs/ado/guide/appendixes/using-ado-with-microsoft-visual-j.md",
    "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
@@ -327,42 +324,42 @@
    "source_path" : "docs/advanced-analytics/r/operationalization-with-mrsdeploy.md",
    "redirect_url" : "/sql/advanced-analytics/operationalization-with-mrsdeploy",
    "redirect_document_id" : false
-},
-{
+  },
+  {
    "source_path" : "docs/advanced-analytics/r-services/architecture-overview-sql-server-r.md",
    "redirect_url" : "/sql/advanced-analytics/r/architecture-overview-sql-server-r",
    "redirect_document_id" : false
-},
-{
+  },
+  {
    "source_path" : "docs/advanced-analytics/r-services/configuration-sql-server-r-services.md",
    "redirect_url" : "/sql/advanced-analytics/r/configuration-sql-server-r-services",
    "redirect_document_id" : false
-},
-{
+  },
+  {
    "source_path" : "docs/advanced-analytics/r-services/configure-and-manage-advanced-analytics-extensions.md",
    "redirect_url" : "/sql/advanced-analytics/r/configure-and-manage-advanced-analytics-extensions",
    "redirect_document_id" : false
-},
-{
+  },
+  {
    "source_path" : "docs/advanced-analytics/r-services/converting-r-code-for-use-in-r-services.md",
    "redirect_url" : "/sql/advanced-analytics/r/converting-r-code-for-use-in-sql-server",
    "redirect_document_id" : false
-},
-{
+  },
+  {
    "source_path" : "docs/advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md",
    "redirect_url" : "/sql/advanced-analytics/r/create-a-local-package-repository-using-minicran",
    "redirect_document_id" : false
-},
-{
+  },
+  {
    "source_path" : "docs/advanced-analytics/r-services/create-a-standalone-r-server.md",
    "redirect_url" : "/sql/advanced-analytics/r/create-a-standalone-r-server",
    "redirect_document_id" : false
-},
-{
+  },
+  {
    "source_path" : "docs/advanced-analytics/r-services/creating-workflows-that-use-r-in-sql-server.md",
    "redirect_url" : "/sql/advanced-analytics/r/creating-workflows-that-use-r-in-sql-server",
    "redirect_document_id" : false
-},
+  },
 {
    "source_path" : "docs/advanced-analytics/r-services/data-exploration-and-predictive-modeling-with-r.md",
    "redirect_url" : "/sql/advanced-analytics/r/data-exploration-and-predictive-modeling-with-r",
@@ -818,20 +815,16 @@
    "redirect_url" : "/sql/advanced-analytics/using-the-microsoftml-package",
    "redirect_document_id" : false
 },
-{
+  {
    "source_path" : "docs/advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md",
    "redirect_url" : "/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services",
    "redirect_document_id" : false
-},
-{
+  },
+  {
    "source_path" : "docs/advanced-analytics/r-services/working-with-r-data-types.md",
    "redirect_url" : "/sql/advanced-analytics/r/working-with-r-data-types",
    "redirect_document_id" : false
-},
-
-  
-  
-  
+  },  
   {
    "source_path" : "docs/t-sql/statements/alter-statements-transact-sql.md",
    "redirect_url": "/sql/t-sql/statements/statements",
@@ -1218,6 +1211,11 @@
    "redirect_document_id": false
   },
   {
+   "source_path": "docs/integration-services/packages/access-control-for-sensitive-data-in-packages.md",
+   "redirect_url": "/sql/integration-services/security/access-control-for-sensitive-data-in-packages",
+   "redirect_document_id": false
+  },
+  {
    "source_path" : "docs/integration-services/security/set-or-change-the-protection-level-of-packages.md",
    "redirect_url": "/sql/integration-services/security/access-control-for-sensitive-data-in-packages",
    "redirect_document_id": false
@@ -1262,8 +1260,6 @@
    "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
    "redirect_document_id": false
   },
-
-
   {
    "source_path" : "docs/ado/reference/ado-md-api/ado-md-api-reference.md",
    "redirect_url": "/sql/ado/reference/ado-md-api/ado-md-object-model",
@@ -1274,6 +1270,5 @@
    "redirect_url": "/sql/ado/reference/adox-api/adox-object-model",
    "redirect_document_id": true
   }
-
  ]
-}
+} 

@@ -20,7 +20,7 @@ manager: "jhubbard"
 
 This article describes changes that you can make after setup, to modify the configuration of the R runtime and other services associated with machine learning in SQL Server.
 
-Applies to: SQL Server 2016 R Services, SQL Server vNext Machine Learning Services
+Applies to: SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
 ##  <a name="bkmk_Provisioning"></a> Provision User Accounts for Machine Learning
 

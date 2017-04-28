@@ -18,7 +18,7 @@ manager: "jhubbard"
 ---
 # Machine Learning Services with Python
 
-Python is a language that offers great flexibility and power for a variety of machine learning tasks. Open source libraries for Python include several platforms for customizable neural networks, as well as natural language processing. Now, this popular language is supported in SQL Server vNext CTP 2.0.
+Python is a language that offers great flexibility and power for a variety of machine learning tasks. Open source libraries for Python include several platforms for customizable neural networks, as well as natural language processing. Now, this popular language is supported in SQL Server 2017 CTP 2.0.
 
 Because Python is integrated with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine, you can keep analytics close to the data and eliminate the costs and security risks associated with data movement.  You can deploy machine learning solutions based on Python using convenient, familiar tools such as Visual Studio, and your production applications can get predictions, models, or visuals from the Python 3.5 runtime by simply calling a T-SQL stored procedure.
 

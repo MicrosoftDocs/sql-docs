@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Release notes for SQL Server vNext on Linux | Microsoft Docs
-description: This topic contains the release notes and supported features for SQL Server vNext running on Linux. Release notes are included for CTP 2.0 and prior versions.
+title: Release notes for SQL Server 2017 on Linux | Microsoft Docs
+description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for CTP 2.0 and prior versions.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -24,10 +24,10 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 # ms.custom: ""
 
 ---
-# Release notes for SQL Server vNext on Linux
-The following release notes apply to SQL Server vNext running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, CTP 2.0. See the information in each section for supported platforms, tools, features, and known issues.
+# Release notes for SQL Server 2017 on Linux
+The following release notes apply to SQL Server 2017 running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, CTP 2.0. See the information in each section for supported platforms, tools, features, and known issues.
 
-The following table lists the releases of SQL Server vNext covered in this topic.
+The following table lists the releases of SQL Server 2017 covered in this topic.
 
 | Release | Version | Release date |
 |-----|-----|-----|
@@ -105,7 +105,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Master Data Services |
 
 ### Known issues
-The following sections describe known issues with this release of SQL Server vNext CTP 2.0 on Linux.
+The following sections describe known issues with this release of SQL Server 2017 CTP 2.0 on Linux.
 
 #### General
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
@@ -245,7 +245,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Master Data Services |
 
 ### Known issues
-The following sections describe known issues with this release of SQL Server vNext CTP 1.4 on Linux.
+The following sections describe known issues with this release of SQL Server 2017 CTP 1.4 on Linux.
 
 #### General
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
@@ -416,7 +416,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Master Data Services |
 
 ### Known issues
-The following sections describe known issues with this release of SQL Server vNext CTP 1.3 on Linux.
+The following sections describe known issues with this release of SQL Server 2017 CTP 1.3 on Linux.
 
 #### General
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
@@ -568,7 +568,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Master Data Services |
 
 ### Known issues
-The following sections describe known issues with this release of SQL Server vNext CTP 1.2 on Linux.
+The following sections describe known issues with this release of SQL Server 2017 CTP 1.2 on Linux.
 
 #### General
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
@@ -707,7 +707,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Master Data Services |
 
 ### Known issues
-The following sections describe known issues with this release of SQL Server vNext CTP 1.1 on Linux.
+The following sections describe known issues with this release of SQL Server 2017 CTP 1.1 on Linux.
 
 #### General
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
@@ -846,7 +846,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Master Data Services |
 
 ### Known issues
-The following sections describe known issues with this release of SQL Server vNext CTP1 on Linux.
+The following sections describe known issues with this release of SQL Server 2017 CTP1 on Linux.
 
 #### General
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 

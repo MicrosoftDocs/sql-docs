@@ -16,7 +16,7 @@ manager: "jhubbard"
 
 # Real-time Scoring
 
-This topic describes a new feature in SQL Server vNext that provides scoring on machine learning models in near real-time. 
+This topic describes a new feature in SQL Server 2017 that provides scoring on machine learning models in near real-time. 
 
 + What is real-time scoring vs. native scoring
 + How it works
@@ -32,7 +32,7 @@ In large deployments, scoring more typically involve getting scores from a model
 ### Supported platforms
 + Microsoft R Server 
 + SQL Server R Services 2016: requires upgrade of the R Services instance to Microsoft R Server 9.1.0  
-+ SQL Server Machine Learning Services (vNext; includes Microsoft R Server 9.1.0) 
++ SQL Server Machine Learning Services (2017; includes Microsoft R Server 9.1.0) 
 
 ### Benefits
 

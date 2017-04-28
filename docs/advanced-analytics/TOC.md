@@ -97,7 +97,7 @@
 # Resources
 
 ## [Known Issues](known-issues-for-sql-server-machine-learning-services.md)
-## [Release Notes](https://docs.microsoft.com/sql/sql-server/sql-server-vnext-release-notes)
+## [Release Notes](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
 
 ## [Setup and Troubleshooting Tips](machine-learning-troubleshooting-faq.md)
 ### [Upgrade and Installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)

@@ -28,7 +28,7 @@ Overall, the extensibility framework is the same, or similar, for R and Python, 
 
 ## Design Goals
 
-In SQL Server 2016, numerous changes were introduced to the database engine to support execution of R scripts using SQL Server. In SQL Server vNext, this underlying infrastructure was improved to add support for the Python language. 
+In SQL Server 2016, numerous changes were introduced to the database engine to support execution of R scripts using SQL Server. In SQL Server 2017, this underlying infrastructure was improved to add support for the Python language. 
 
 The goal of the extensibility framework was to create a better interface between SQL Server and data science languages such as R and Python, both to reduce the friction that occurs when data science solutions are moved into production, and to protect data that might be exposed during the data science development process.
 
@@ -83,7 +83,7 @@ Let's see how it works in practice.
 
 Not sure which machine learning solution meets your needs? 
 
-in addition to embedded analytics in SQL Server 2016 and SQL Server vNext, Microsoft provides the following machine learning platforms:
+in addition to embedded analytics in SQL Server 2016 and SQL Server 2017, Microsoft provides the following machine learning platforms:
 
 Microsoft R Server
 

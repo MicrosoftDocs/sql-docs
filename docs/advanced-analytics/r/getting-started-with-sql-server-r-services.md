@@ -22,20 +22,20 @@ Machine Learning Services in SQL Server is designed to support data science task
 
 + In SQL Server 2016, you can work with your favorite R tools, but scale your analysis to billions of records while boosting performance. Integrating machine learning with SQL Server also means that you can put R code into production without having to re-code.
 
-+ SQL Server vNext adds support for Python code, using the same extensibility framework.
++ SQL Server 2017 adds support for Python code, using the same extensibility framework.
 
 This topic describes the key scenarios for using R or Python in-database, and provides resources to help you get started with your own solutions.
 
-Applies to: SQL Server 2016 R Services, SQL Server vNext Machine Learning Services (In-Database)
+Applies to: SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
 
 > [!NOTE]
-> SQL Server 2016 includes support only for the R language. Support for Python language requires SQL Server vNext CTP 2.0.
+> SQL Server 2016 includes support only for the R language. Support for Python language requires SQL Server 2017 CTP 2.0.
 
 ## Step 1. Set Up SQL Server Machine Learning Services
 
 1. Run SQL Server setup and install at least one instance of the SQL Server database engine.
 2. Add the feature that supports execution of external runtimes.
-3. In SQL Server 2016, R is added by default. In SQL Server vNext, you must select a language to add. You can select either R or Python, or enable both.
+3. In SQL Server 2016, R is added by default. In SQL Server 2017, you must select a language to add. You can select either R or Python, or enable both.
 4. When setup is done, perform some additional steps to enable external script execution, and restart the server.
 
 **Resources**
@@ -76,7 +76,7 @@ Traditionally data scientists using R have had problems with both performance an
 
 + **RevoScaleR**.: This R package contains implementations of some of the most popular R functions, redesigned to provide parallelism and scale. The package also includes functions that further boost  performance and scale by pushing computations to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, which typically has far greater memory and computational power.
 
-+ **revoscalepy**. This Python library, new and available only in SQL Server vNext CTP 2.0, implements the most popular functions in RevoScaleR, such as remote compute contexts, and many algorithms that support distributed processing.
++ **revoscalepy**. This Python library, new and available only in SQL Server 2017 CTP 2.0, implements the most popular functions in RevoScaleR, such as remote compute contexts, and many algorithms that support distributed processing.
 
 + Choose the best language for the task.  R is best for statistical computations that are difficult to implement using SQL. For set-based operations over data, leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance. Use the in-memory database engine for very fast computations over columns.
 

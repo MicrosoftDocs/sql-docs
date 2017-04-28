@@ -34,8 +34,8 @@ It is based on the **RevoScaleR** package for R, which was provided in Microsoft
 
 The **revoscalepy** module is available only when you install one of the following Microsoft products:
 
-+ Machine Learning Services, in SQL Server vNext CTP 2.0
-+ Microsoft Machine Learning Server 9.1.0, using SQL Server vNext CTP 2.0 setup
++ Machine Learning Services, in SQL Server 2017 CTP 2.0
++ Microsoft Machine Learning Server 9.1.0, using SQL Server 2017 CTP 2.0 setup
 
 ## Supported Functions and Data Types
 

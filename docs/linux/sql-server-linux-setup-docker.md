@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Run SQL Server vNext on Docker | Microsoft Docs
-description: Download and run the Docker image for SQL Server vNext.
+title: Run SQL Server 2017 on Docker | Microsoft Docs
+description: Download and run the Docker image for SQL Server 2017.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -24,7 +24,7 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 
 ---
-# Run the SQL Server vNext Docker image on Linux, Mac, or Windows
+# Run the SQL Server 2017 Docker image on Linux, Mac, or Windows
 
 This topic explains how to pull and run the [mssql-server Docker image](https://hub.docker.com/r/microsoft/mssql-server-linux/). This image consists of SQL Server running on Linux and can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. We are currently tracking all issues with the Docker image in our [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker).
 
@@ -90,7 +90,7 @@ Upgrading the Docker image will require just pulling the latest version from the
 You can now create new containers that will have the latest version of SQL Server in Linux on Docker.
 
 ## SQL Server command-line tools
-Starting with SQL Server vNext CTP 2.0, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally. 
+Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally. 
 
 Alternatively, you can connect to the SQL Server instance on your Docker machine from any external Windows or Linux tool that supports SQL connections, such as SQL Server Management Studio (SSMS) on Windows.
 

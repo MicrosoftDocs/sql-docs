@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: What's New for SQL Server vNext CTP 2.0 on Linux | Microsoft Docs
-description: This topic highlights what's new for the current release of SQL Server vNext on Linux.
+title: What's New for SQL Server 2017 CTP 2.0 on Linux | Microsoft Docs
+description: This topic highlights what's new for the current release of SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -24,9 +24,9 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 # ms.custom: ""
 
 ---
-# What's new for SQL Server vNext on Linux
+# What's new for SQL Server 2017 on Linux
 
-This topic describes what's new for SQL Server vNext running on Linux.
+This topic describes what's new for SQL Server 2017 running on Linux.
 
 ## CTP 2.0
 The CTP 2.0 release contains the following improvements and fixes:
@@ -122,8 +122,8 @@ Under compatibility mode 140:
 
 Learn more about these fixes in the [Service Pack 1 Release description](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/).
 
-Many database engine improvements apply to both Windows and Linux. The only exception would be for database engine features that are currently not supported on Linux. For more information, see [What's New in SQL Server vNext (Database Engine)](https://msdn.microsoft.com/library/mt775028).
+Many database engine improvements apply to both Windows and Linux. The only exception would be for database engine features that are currently not supported on Linux. For more information, see [What's New in SQL Server 2017 (Database Engine)](https://msdn.microsoft.com/library/mt775028).
 
 ## See also
 
-For installation requirements, unsupported feature areas, and known issues, see [Release notes for SQL Server vNext on Linux](sql-server-linux-release-notes.md).
+For installation requirements, unsupported feature areas, and known issues, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes.md).

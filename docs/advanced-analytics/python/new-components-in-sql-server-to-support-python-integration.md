@@ -15,13 +15,13 @@ manager: "jhubbard"
 ---
 # New components in SQL Server to Support Python Integration
 
-Beginning in SQL Server vNext, Machine Learning Services supports Python as an external language that can be executed from T-SQL, or executed remotely using SQL Server as the compute context. 
+Beginning in SQL Server 2017, Machine Learning Services supports Python as an external language that can be executed from T-SQL, or executed remotely using SQL Server as the compute context. 
 
-This topic describes the components in SQL Server vNext that support extensibility in general and the Python language specifically.
+This topic describes the components in SQL Server 2017 that support extensibility in general and the Python language specifically.
 
 ## SQL Server Components and Providers
 
-To configure SQL Server vNext to allow Python script execution is a multi-step process.
+To configure SQL Server 2017 to allow Python script execution is a multi-step process.
 
 1. Install the extensibility feature.
 2. Enable the external script execution feature.
@@ -37,7 +37,7 @@ The SQL Server Trusted Launchpad is a service introduced in SQL Server 2016 that
 
 The Launchpad service will start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
 + SQL Server 2016 supports R
-+ SQL Server vNext supports R and Python 3.5
++ SQL Server 2017 supports R and Python 3.5
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account.
 

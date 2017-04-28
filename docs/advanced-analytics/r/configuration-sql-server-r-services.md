@@ -20,13 +20,13 @@ manager: "jhubbard"
 This article provides links to more detailed information about how to configure a server to support machine learning services with SQL Server in these products:
 
 + SQL Server 2016 R Services (In-Database)
-+ SQL Server vNext Machine Learning Services (In-Database)
++ SQL Server 2017 Machine Learning Services (In-Database)
 
 > [!NOTE]
 > 
 > This content was originally written for the SQL Server 2016 release, which supported only the R language.
 > 
-> In SQL Server vNext, support for Python has been added, but the underlying architecture and services framework is the same. Therefore, you can configure security, memory, resource governance and other options to support execution of Python scripts, the same way that you would for R scripts.
+> In SQL Server 2017, support for Python has been added, but the underlying architecture and services framework is the same. Therefore, you can configure security, memory, resource governance and other options to support execution of Python scripts, the same way that you would for R scripts.
 > 
 > However, because support for Python is a new feature, detailed information about potential optimizations for the Python workload is not available yet. Please check back later.
 

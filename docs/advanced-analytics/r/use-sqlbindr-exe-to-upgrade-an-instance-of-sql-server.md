@@ -34,7 +34,7 @@ If you later decide that you want to stop upgrading the instance at each release
 > [!NOTE]
 > The upgrade process is supported only for SQL Server 2016 instances that have been patched with Cumulative Update 3.0.  
 > 
-> If you are using Machine Learning Services in SQL Server vNext, you do not need to apply this upgrade. Machine learning components are always automatically upgraded at each milestone.
+> If you are using Machine Learning Services in SQL Server 2017, you do not need to apply this upgrade. Machine learning components are always automatically upgraded at each milestone.
 
 ## How to upgrade an instance
 

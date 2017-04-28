@@ -16,7 +16,7 @@ manager: "jhubbard"
 
 # R Package Synchronization for SQL Server
 
-SQL Server vNext CTP 2.0 includes a new function for synchronization of R packages, to support back up and restore of R package collections associated with SQL Server databases. This feature helps ensure that complex sets of R packages created by users are not lost and can be easily restored.  
+SQL Server 2017 CTP 2.0 includes a new function for synchronization of R packages, to support back up and restore of R package collections associated with SQL Server databases. This feature helps ensure that complex sets of R packages created by users are not lost and can be easily restored.  
 
 This topic describes what the package synchronization feature does, and how to use the `rxSyncPackages()` function to perform the following tasks:
 
@@ -55,7 +55,7 @@ The information about users and the packages that they have installed is stored 
 
 ### Supported Versions
 
-This function is included in SQL Server vNext CTP 2.0.
+This function is included in SQL Server 2017 CTP 2.0.
 
 Because this function is part of Microsoft R version 9.1.0, you can add this feature to a instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to Upgrade SQL Server R Services](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 

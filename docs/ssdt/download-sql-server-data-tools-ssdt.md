@@ -24,7 +24,7 @@ manager: "jhubbard"
     
 ![download](../ssdt/media/download.png) [Download SQL Server Data Tools 17.0 for Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=846626)
 
-![download](../ssdt/media/download.png) [Download Data-Tier Application Framework (DacFx) 17.0](https://www.microsoft.com/download/details.aspx?id=55088)
+![download](../ssdt/media/download.png) [Download Data-Tier Application Framework (DacFx) 17.0.1](https://www.microsoft.com/download/details.aspx?id=55114)
 
 ## SQL Server Data Tools   
 **Version Information**  

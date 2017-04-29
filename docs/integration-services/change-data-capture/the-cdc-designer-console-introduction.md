@@ -26,15 +26,24 @@ manager: "jhubbard"
 ## Supported Windows Environments  
  The CDC Designer Console can run in the following Windows environments:  
   
+-   Windows Vista with Service Pack 2  
+  
+-   Windows 7  
+  
 -   Windows 8 and 8.1  
+  
 -   Windows 10  
--   Windows Server 2012 and 2012 R2
--   Windows Server 2016
+  
+-   Windows Server 2008 R2  
+  
+-   Windows Server 2008 with Service Pack 2  
+  
+-   Windows Server 2012  
   
 ## Database Prerequisites  
  To work with the Change Data Capture Designer for Oracle by Attunity, you work with an Oracle database. The Change Data Capture Designer for Oracle by Attunity supports the following versions:  
   
- ### Source Oracle Database   
+ **Oracle Database**  
   
 -   Oracle Database 10g Release 2: 10.2.0.1-10.2.0.5 (patchset as of April 2010)  
   
@@ -44,7 +53,7 @@ manager: "jhubbard"
   
 -   Oracle Database 12c in classic installation. (Multitenant installation is not supported.)  
   
-### Target SQL Server Database  
+ **SQL Server Database**  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] edition with support for SQL Server CDC  
   

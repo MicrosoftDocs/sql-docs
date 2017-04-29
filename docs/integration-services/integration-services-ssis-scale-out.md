@@ -107,13 +107,13 @@ To enable the functionality of Scale Out Worker, you must install [!INCLUDE[ssIS
     2. Configure Scale Out Worker specifying the following parameters and their values: /ISWORKERSVCACCOUNT, /ISWORKERSVCPASSWORD, /ISWORKERSVCSTARTUPTYPE, /ISWORKERSVCMASTER(optional), /ISWORKERSVCCERT(optional).
 
  
-### <a name="InstallCert"></a> Install Scale Out Worker client certificate
+### <a name="InstallCert"><a/> Install Scale Out Worker client certificate
 
 During the installation of Scale Out Worker, a worker certificate will be automatically created and installed on the computer. Also, a corresponding client certificate, SSISScaleOutWorker.cer, is installed under \<driver\>:\Program Files\Microsoft SQL Server\140\DTS\Binn. For Scale Out Master to authenticate the Scale Out Worker, you must add this client certificate to the Root store of the local computer with Scale Out Master.
   
 To add the client certificate to the Root store, double click the .cer file and then click **Install Certificate** in the Certificate dialog box. The **Certificate Import Wizard** displays.  
 
-## <a name="Firewall"></a> Open firewall port
+## <a name="Firewall"><a/> Open firewall port
 
 Open the port specified during the Scale Out Master installation and the port of SQL Server (1433, by default), using Windows Firewall on the Scale Out Master computer.
     
@@ -140,7 +140,7 @@ You get the **WorkerAgentId** value from the *[catalog].[worker_agents]* databas
 
 #### Example
 This example enables the Scale Out Worker on computerA.
-```sql
+```tsql
 SELECT WorkerAgentId, computerName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -153,7 +153,7 @@ GO
 ### Next Steps
 The set up of the Scale Out feature is finished. You can now run packages in Scale Out. For more information, see [Execute Packages in Integration Services (SSIS) Scale Out](#run_scale_out).
 
-## <a name="master"></a> Integration Services (SSIS) Scale Out Master
+## <a name="master"<>/a> Integration Services (SSIS) Scale Out Master
 Scale Out Master manages the Scale Out system through the SSISDB Catalog and the Scale Out Master service. 
 
 The SSISDB Catalog stores all the information for Scale Out Workers, packages and executions. It provides the interface to enable a Scale Out Worker and execute packages in Scale Out. For more information, see [Walkthrough: Set up Integration Services Scale Out](#walkthrough), [Run Packages in Integration Services](#run_scale_out).
@@ -190,7 +190,7 @@ The Scale Out Master service log file is located in the \<driver\>:\Users\\*[acc
 
 The *[account]* folder refers to the account running Scale Out Master service. By default, this account is SSISScaleOutMaster140.
 
-## <a name="worker"></a> Integration Services (SSIS) Scale Out Worker
+## <a name="worker"<>/a> Integration Services (SSIS) Scale Out Worker
 Scale Out Worker runs a [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion_md](../includes/ssisnoversion-md.md)] Scale Out Worker service to pull execution tasks from Scale Out Master and, executes the packages locally with ISServerExec.exe.
 
 ### Configure SQL Server Integration Services Scale Out Worker service
@@ -198,8 +198,8 @@ Scale Out Worker service can be configured using the \<driver\>:\Program Files\M
 
 Configuration  |Description  |Default value  
 ---------|---------|---------
-DisplayName|The display name of the Scale Out Worker. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] vNext CTP1.**|Machine name         
-Description|The description of the Scale Out Worker. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] vNext CTP1.**|Empty         
+DisplayName|The display name of the Scale Out Worker. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2017 CTP1.**|Machine name         
+Description|The description of the Scale Out Worker. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2017 CTP1.**|Empty         
 MasterEndpoint|The endpoint to connect to Scale Out Master.|The endpoint set during the Scale Out Worker installation         
 MasterHttpsCertThumbprint|The thumbprint of the client SSL certificate used to authenticate Scale Out Master|The thumbprint of the client certificate specified during the Scale Out Worker installation.          
 WorkerHttpsCertThumbprint|The thumbprint of the certificate for Scale Out Master used to authenticate the Scale Out Worker.|The thumbprint of a certificate created and installed automatically during the Scale Out Worker installation          
@@ -208,8 +208,8 @@ StoreName|The store name that worker certificate is in.|My
 AgentHeartbeatInterval|The interval of the Scale Out Worker heartbeat.|00:01:00         
 TaskHeartbeatInterval|The interval of the Scale Out Worker reporting task state.|00:00:10         
 HeartbeatErrorTollerance|After this time period from last successful task heartbeat, the task is terminated if error response of heartbeat is received.|00:10:00      
-TaskRequestMaxCPU|The upper limit of CPU for Scale Out Worker to request tasks. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] vNext CTP1.**|70.0         
-TaskRequestMinMemory|The lower limit of memory in MB for Scale Out Worker to request tasks. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] vNext CTP1.**|100.0         
+TaskRequestMaxCPU|The upper limit of CPU for Scale Out Worker to request tasks. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2017 CTP1.**|70.0         
+TaskRequestMinMemory|The lower limit of memory in MB for Scale Out Worker to request tasks. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2017 CTP1.**|100.0         
 MaxTaskCount|The max number of tasks the Scale Out Worker can hold.|10         
 LeaseInternval|The lease interval of a task holding by the Scale Out Worker.|00:01:00         
 TasksRootFolder|The folder of task logs. The \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\Cluster\Tasks folder path is used if the value is empty. [account] is the account running Scale Out Worker service. By default, the account is SSISScaleOutWorker140.|Empty         
@@ -229,7 +229,7 @@ The log location of each individual task is configured in the WorkerSettings.con
 
 The *[account]* folder is the account running Scale Out Worker service. By default, the account is SSISScaleOutWorker140.
 
-## <a name="run_scale_out"></a> Run Packages in Integration Services (SSIS) Scale Out
+## <a name="run_scale_out"<>/a> Run Packages in Integration Services (SSIS) Scale Out
 After the packages are deployed to the Integration Services server, you can execute them in Scale Out.
 
 ### Run packages with **Execute Package In Scale Out** dialog 

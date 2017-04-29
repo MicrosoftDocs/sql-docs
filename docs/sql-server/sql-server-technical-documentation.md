@@ -29,10 +29,10 @@ manager: "jhubbard"
 
  Documentation to help you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] language topics, see [Language Reference](../t-sql/language-reference.md).
 
-**SQL Server vNext**
+**SQL Server 2017**
 
-- For the latest release notes, see [SQL Server vNext Release Notes](../sql-server/sql-server-vnext-release-notes.md)
-- For the latest information on what is new, see [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)
+- For the latest release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
+- For the latest information on what is new, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
  
 **SQL Server 2016:**
  

@@ -133,25 +133,20 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
   
 |SSMS view|Scenario|  
 |---------------|--------------|  
-|Regressed Queries|Pinpoint queries for which execution metrics have recently regressed (i.e. changed to worse). <br />Use this view to correlate observed performance problems in your application with the actual queries that needs to be fixed or improved.|
-|Overall Resource Consumption|Analyze the total resource consumption for the database for any of the execution metrics.<br />Use this view to identify resource patterns (daily vs. nightly workloads) and optimize overall consumption for your database.|
-|Top Resource Consuming Queries|Choose an execution metric of interest and identify queries that had the most extreme values for a provided time interval. <br />Use this view to focus your attention on the most relevant queries which have the biggest impact to database resource consumption.|
-|Queries With Forced Plans|Lists previously forced plans using Query Store. <br />Use this view to quickly access all currently forced plans.|
-|Queries With High Variation|Analyze queries with high execution variation as it relates to any of the available dimensions, such as Duration, CPU time, IO, and Memory usage in the desired time interval.<br />Use this view to identify queries with widely variant performance that can be impacting user experience accross your applications.|
-|Tracked Queries|Track the execution of the most important queries in real-time. Typically, you use this view when you have queries with forced plans and you want to make sure that query performance is stable.|
+|Regressed Queries|Pinpoint queries for which execution metrics have recently regressed (i.e. changed to worse). <br />Use this view to correlate observed performance problems in your application with the actual queries that needs to be fixed or improved.|  
+|Top Resource Consuming Queries|Choose an execution metric of interest and identify queries that had the most extreme values for a provided time interval. <br />Use this view to focus your attention on the most relevant queries which have the biggest impact to database resource consumption.|  
+|Tracked Queries|Track the execution of the most important queries in real-time. Typically, you use this view when you have queries with forced plans and you want to make sure that query performance is stable.|  
+|Overall Resource Consumption|Analyze the total resource consumption for the database for any of the execution metrics.<br />Use this view to identify resource patterns (daily vs. nightly workloads) and optimize overall consumption for your database.|  
   
 > [!TIP]  
 >  For a detailed description how to use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to identify the top resource consuming queries and fix those that regressed due to the change of a plan choice, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
- When you identify a query with sub-optimal performance, your action depends on the nature of the problem.  
+ When you identify a query with sub-optimal performance, your action depends on the nature of the  problem.  
   
 -   If the query was executed with multiple plans and the last plan is significantly worse than previous plan, you can use the plan forcing mechanism to force [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to always use the optimal plan for future executions.  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
-     
-> [!NOTE]
-> The above graphic may feature different shapes for specific query plans, with the following meanings for each possible status:<br />  **Circle** – Query Completed (Regular Execution successfully finished)<br />  **Square** – Cancelled (Client initiated aborted execution)<br />  **Triangle** – Failed (Exception aborted execution)<br />Also, the size of the shape reflects query execution count within the specified time interval, increasing in size with a higher number of executions.
-
+  
 -   You may conclude that your query is missing an index for optimal execution. This information is surfaced within the query execution plan. Create the missing index and check the query performance using the Query Store.  
   
      ![query-store-show-plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")  

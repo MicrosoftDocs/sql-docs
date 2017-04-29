@@ -36,7 +36,7 @@ manager: "jhubbard"
 # SELECT - INTO Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  SELECT…INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. Beginning with SQL Server 2017, SELECT..INTO also supports creating a new table in the specified filegroup and inserting the resulting rows from the query into it.To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+  SELECT…INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ||  
 |-|  
@@ -49,18 +49,13 @@ manager: "jhubbard"
 ```  
   
 [ INTO new_table ]  
-[ ON filegroup]
 ```  
   
 ## Arguments  
  *new_table*  
  Specifies the name of a new table to be created, based on the columns in the select list and the rows chosen from the data source.  
- 
- *filegroup*
- 
- Specifies the name of the filegroup in which new table will be created. The filegroup specified should exist on the database else the SQL Server engine throws an error. This option is only supported starting SQL Server 2017.  
   
-The format of *new_table* is determined by evaluating the expressions in the select list. The columns in *new_table* are created in the order specified by the select list. Each column in *new_table* has the same name, data type, nullability, and value as the corresponding expression in the select list. The IDENTITY property of a column is transferred except under the conditions defined in "Working with Identity Columns" in the Remarks section.  
+ The format of *new_table* is determined by evaluating the expressions in the select list. The columns in *new_table* are created in the order specified by the select list. Each column in *new_table* has the same name, data type, nullability, and value as the corresponding expression in the select list. The IDENTITY property of a column is transferred except under the conditions defined in "Working with Identity Columns" in the Remarks section.  
   
  To create the table in another database on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specify *new_table* as a fully qualified name in the form *database.schema.table_name*.  
   
@@ -231,24 +226,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 ORDER BY YearlyIncome  
   
 ```  
-### F. Creating a new table as a copy of another table and loading it a specified filegroup
-The following example demostrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
-
-**Starting SQL Server 2017**
-
-```
-ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
-ALTER DATABASE [AdventureWorksDW2016]
-ADD FILE
-(
-NAME=‘FG2_Data’,
-FILENAME = ‘/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf’
-)
-TO FILEGROUP FG2;
-GO
-SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
-```
-
+  
 ## See Also  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SELECT Examples &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   

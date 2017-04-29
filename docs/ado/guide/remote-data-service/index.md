@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/ado/guide/remote-data-service/address-book-navigation-buttons
+redirect_url: /sql/ado/guide/remote-data-service/remote-data-service-rds
 ---

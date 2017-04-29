@@ -17,9 +17,9 @@ manager: "jhubbard"
 ---
 # Architecture Overview (SQL Server R Services)
 
-This section provides an overview of the architecture of SQL Server 2016 R Services, and SQL Server vNext Machine Learning Services.
+This section provides an overview of the architecture of SQL Server 2016 R Services, and SQL Server 2017 Machine Learning Services.
 
-The architecture for the extensibility architecture is the same or very similar for the SQL Server 2016 and SQL Server vNext releases, and similar also for R and Python. However, to simplify the discussion, this topic discusses only the R components, including new components added in the SQL Server database engine to support external script execution, security, R libraries, and interoperability with open source R.
+The architecture for the extensibility architecture is the same or very similar for the SQL Server 2016 and SQL Server 2017 releases, and similar also for R and Python. However, to simplify the discussion, this topic discusses only the R components, including new components added in the SQL Server database engine to support external script execution, security, R libraries, and interoperability with open source R.
 
 Additional details are provided in the links for each section.
 
@@ -35,7 +35,7 @@ For more information about the external scripting components that are installed,
 
 ## New Components to Support R Integration
 
-The extensibility framework introduced in SQL Server 2016 is continued in SQL Server vNext. The extensibility components are used by SQL Server to start the external runtime for R, pass data between R and the database engine, and coordinate parallel tasks needed for an R job.
+The extensibility framework introduced in SQL Server 2016 is continued in SQL Server 2017. The extensibility components are used by SQL Server to start the external runtime for R, pass data between R and the database engine, and coordinate parallel tasks needed for an R job.
 
 The role of these additional components is to improve data exchange speed and compression, while providing a secure, high-performance platform for running external scripts.
 

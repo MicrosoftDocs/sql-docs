@@ -1,6 +1,6 @@
 # [Overview](sql-server-integration-services.md)
 ## [What's New in Integration Services in SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md)
-## [What's New in Integration Services in SQL Server vNext](what-s-new-in-integration-services-in-sql-server-vnext.md)
+## [What's New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
 ## [Integration Services (SSIS) Development and Management Tools](integration-services-ssis-development-and-management-tools.md)

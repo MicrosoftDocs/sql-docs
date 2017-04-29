@@ -17,7 +17,7 @@ manager: "jhubbard"
 ---
 # Install Microsoft R Server from the Command Line
     
-This topic describes how to use SQL Server command-line arguments to install Microsoft R Server in SQL Server 2016, or install Machine Learning Server (Standalone) in SQL Server vNext. 
+This topic describes how to use SQL Server command-line arguments to install Microsoft R Server in SQL Server 2016, or install Machine Learning Server (Standalone) in SQL Server 2017. 
 
 > [!NOTE]
 You can also install Microsoft R Server by using a separate Windows installer. For more information, see [Install R Server 9.0.1 for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows). 
@@ -31,7 +31,7 @@ This method of installation requires that you know how to perform a command-line
 
 For more information, see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
 
-## SQL Server vNext: Microsoft Machine Learning Server (Standalone)
+## SQL Server 2017: Microsoft Machine Learning Server (Standalone)
 
 Run the following command from an elevated command prompt to install only Microsoft Machine Learning Server (Standalone) and its prerequisites.  The example shows the arguments used to install R.
 
@@ -73,7 +73,7 @@ After setup is complete, you can review the configuration file created by SQL Se
 By default, all setup logs and summaries for SQL Server and related features are created in the following folders:
 
 - SQL Server 2016:  `C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log`
-- SQL Server vNext: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
+- SQL Server 2017: `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\Log`
 
 A separate subfolder is created  for each feature installed.
 

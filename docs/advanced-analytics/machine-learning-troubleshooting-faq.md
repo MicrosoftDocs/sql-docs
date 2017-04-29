@@ -17,7 +17,7 @@ manager: "jhubbard"
 # Troubleshooting and FAQ
 
 > [!NOTE] 
-> SQL Server vNext has brought lots of changes! 
+> SQL Server 2017 has brought lots of changes! 
 > We are in the process of reorganizing content related to setup and configuration, as well as troubleshooting. 
 > 
 > This section will include links to troubleshooting resources such as these:

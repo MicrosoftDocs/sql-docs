@@ -591,13 +591,9 @@
       - name: Performance
         href: /sql/relational-databases/performance/
         homepage: /sql/relational-databases/performance
-        items:
-        - name: Automatic tuning
-          href: /sql/relational-databases/automatic-tuning/
-          homepage: /sql/relational-databases/automatic-tuning/
-        - name: Performance Monitor
-          href: /sql/relational-databases/performance-monitor/
-          homepage: /sql/relational-databases/performance-monitor/
+      - name: Performance Monitor
+        href: /sql/relational-databases/performance-monitor/
+        homepage: /sql/relational-databases/performance-monitor
       - name: Policy-based management
         href: /sql/relational-databases/policy-based-management/
         homepage: /sql/relational-databases/policy-based-management
@@ -1015,6 +1011,10 @@
     - name: Samples
       href: /sql/sample/
       homepage: /sql/sample
+      items:
+      - name: Wide World Importers
+        href: /sql/sample/world-wide-importers/
+        homepage: /sql/sample/world-wide-importers
     - name: Tools
       href: /sql/tools/
       homepage: /sql/tools

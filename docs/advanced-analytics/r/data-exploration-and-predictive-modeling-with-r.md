@@ -20,7 +20,7 @@ manager: "jhubbard"
 
 This topic describes improvements to the data science process that are possible through integration with SQL Server.
 
-Applies to: SQL Server 2016 R Services, SQL Server vNext Machine Learnign Services
+Applies to: SQL Server 2016 R Services, SQL Server 2017 Machine Learnign Services
 
 ## The Data Science Process
 

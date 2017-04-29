@@ -73,7 +73,7 @@ There are two options for installing packages from a local share or repository:
 Copy the miniCRAN repository to the R_SERVICES library on the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance.
 
 + For SQL Server 2016, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library1`.
-+ For SQL Server vNext, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library1`.
++ For SQL Server 2017, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library1`.
 
 If you have installed R Services using a named instance, be sure to include the instance name in the path, to ensure that the libraries are installed to the correct instance. For example, if your named instance is RTEST02, the default path for the named instance would be:
 `C:\Program Files\Microsoft SQL Server\MSSQL13.RTEST02\R_SERVICES\library`.

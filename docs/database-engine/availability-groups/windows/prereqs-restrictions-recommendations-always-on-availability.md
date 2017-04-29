@@ -1,5 +1,5 @@
 ---
-title: "Prereqs, Restrictions, Recommendations - Always On Availability Groups | Microsoft Docs"
+title: "Prereqs, Restrictions, Recommendations - Always On Availability | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/30/2016"
 ms.prod: "sql-server-2016"
@@ -24,7 +24,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Prereqs, Restrictions, Recommendations - Always On Availability Groups
+# Prereqs, Restrictions, Recommendations - Always On Availability
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   This topic describes considerations for deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations for host computers, Windows Server Failover Clustering (WSFC) clusters, server instances, and availability groups. For each of these components security considerations and required permissions, if any, are indicated.  

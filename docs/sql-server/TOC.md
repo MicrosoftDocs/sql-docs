@@ -2,7 +2,7 @@
 
 # Overview
 ## [What's New in SQL Server 2016](what-s-new-in-sql-server-2016.md)
-## [What's New in SQL Server vNext](what-s-new-in-sql-server-vnext.md)
+## [What's New in SQL Server 2017](what-s-new-in-sql-server-2017.md)
 ## [Editions and Components of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 ## [Editions and Supported Features for SQL Server 2016](editions-and-supported-features-for-sql-server-2016.md)
 ## [Maximum Capacity Specifications for SQL Server](maximum-capacity-specifications-for-sql-server.md)
@@ -14,7 +14,7 @@
 ## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
 ## [SQL Server Release Notes](../release-notes/sql-server-release-notes.md)
 ## [SQL Server 2016 Release Notes](sql-server-2016-release-notes.md)
-## [SQL Server vNext Release Notes](sql-server-vnext-release-notes.md)
+## [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md)
 
 ## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
 ## [SQL Server 2012 Release Notes](../release-notes/sql-server-2012-release-notes.md)

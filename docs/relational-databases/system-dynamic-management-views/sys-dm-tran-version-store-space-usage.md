@@ -25,7 +25,7 @@ ms.author: "pariks"
 manager: "ajayj"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 Returns a table that displays total space reserved in tempdb by the version store records per database. **sys.dm_tran_version_store_space_usage** is efficient and performant to run as it doesnt navigate through individual version store records and returns aggregated version store space consumed in tempdb per database.
   

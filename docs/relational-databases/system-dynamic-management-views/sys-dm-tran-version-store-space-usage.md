@@ -18,8 +18,7 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_tran_version_store_space_usage dynamic management view"
-ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: 1
+ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51caps.latest.revision: 1
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
@@ -46,7 +45,7 @@ sys.dm_tran_version_store_space_usage
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Database ID of the database.|  
 |**reserved_page_count**|**bigint**|Total count of the pages reserved in tempdb for version store records of the database.|  
-|**reserved_page_count**|**bigint**|Total space used in kilobytes in tempdb for version store records of the database.|  
+|**reserved_space_kb**|**bigint**|Total space used in kilobytes in tempdb for version store records of the database.|  
   
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
@@ -73,7 +72,7 @@ msdb                      0                    0
 AdventureWorks2016        10                   80             
 AdventureWorks2016DW      0                    0             
 WideWorldImporters        20                   160             
-  
+```
  
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

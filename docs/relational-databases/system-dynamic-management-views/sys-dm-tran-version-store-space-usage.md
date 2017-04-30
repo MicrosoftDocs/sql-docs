@@ -26,11 +26,11 @@ manager: "ajayj"
 # sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-Returns a table that displays total space reserved in tempdb by the version store records per database. **sys.dm_tran_version_store_space_usage** is efficient and performant to run as it doesnt navigate through individual version store records and returns aggregated version store space consumed in tempdb per database.
+Returns a table that displays total space reserved in tempdb for the version store records for each database. **sys.dm_tran_version_store_space_usage** is efficient and performant to run as it doesnt navigate through individual version store records and returns aggregated version store space consumed in tempdb per database.
   
 Each versioned record is stored as binary data together with some tracking or status information. Similar to records in database tables, version-store records are stored in 8192-byte pages. If a record exceeds 8192 bytes, the record will be split across two different records.  
   
-Because the versioned record is stored as binary, there are no problems with different collations from different databases. Use **sys.dm_tran_version_store_space_usage** to monitor and plan tempdb size based on the version store space consumed in tempdb per database on the server instance.
+Because the versioned record is stored as binary, there are no problems with different collations from different databases. Use **sys.dm_tran_version_store_space_usage** to monitor and plan tempdb size depending on the version store space consumed for each database on the server instance.
   
   
 ## Syntax  

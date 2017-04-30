@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/29/2017"
+ms.date: "04/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,13 +12,14 @@ ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_tran_version_store_space_usage_TSQL"
   - "sys.dm_tran_version_store_space_usage"
-  - "dm_tran_version_store"
-  - "dm_tran_version_store_TSQL"
+  - "dm_tran_version_store_space_usage"
+  - "dm_tran_version_store_space_usage_TSQL"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_tran_version_store_space_usage dynamic management view"
-ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51caps.latest.revision: 1
+ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
+caps.latest.revision: 10
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"

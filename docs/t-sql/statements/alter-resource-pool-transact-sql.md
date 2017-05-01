@@ -91,8 +91,9 @@ ALTER RESOURCE POOL { pool_name | "default" }
 ```  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
 FROM sys.dm_os_nodes AS osn  
-INNER JOIN sys.dm_os_schedulers AS sc ON osn.node_id = sc.parent_node_id AND sc.scheduler_id < 1048576;  
-  
+INNER JOIN sys.dm_os_schedulers AS sc 
+   ON osn.node_id = sc.parent_node_id 
+      AND sc.scheduler_id < 1048576;  
 ```  
   
  MIN_MEMORY_PERCENT =*value*  

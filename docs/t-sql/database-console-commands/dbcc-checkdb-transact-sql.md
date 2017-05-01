@@ -312,87 +312,95 @@ In Microsoft SQL Server 2012 or an earlier version of SQL Server, you may encoun
 ## Result Sets    
  DBCC CHECKDB returns the following result set. The values might vary except when the ESTIMATEONLY, PHYSICAL_ONLY, or NO_INFOMSGS options are specified:    
     
- `DBCC results for 'model'.`    
+ ```
+ DBCC results for 'model'.    
     
- `Service Broker Msg 9675, Level 10, State 1: Message Types analyzed: 13.`    
+ Service Broker Msg 9675, Level 10, State 1: Message Types analyzed: 13.    
     
- `Service Broker Msg 9676, Level 10, State 1: Service Contracts analyzed: 5.`    
+ Service Broker Msg 9676, Level 10, State 1: Service Contracts analyzed: 5.    
     
- `Service Broker Msg 9667, Level 10, State 1: Services analyzed: 3.`    
+ Service Broker Msg 9667, Level 10, State 1: Services analyzed: 3.    
     
- `Service Broker Msg 9668, Level 10, State 1: Service Queues analyzed: 3.`    
+ Service Broker Msg 9668, Level 10, State 1: Service Queues analyzed: 3.    
     
- `Service Broker Msg 9669, Level 10, State 1: Conversation Endpoints analyzed: 0.`    
+ Service Broker Msg 9669, Level 10, State 1: Conversation Endpoints analyzed: 0.    
     
- `Service Broker Msg 9674, Level 10, State 1: Conversation Groups analyzed: 0.`    
+ Service Broker Msg 9674, Level 10, State 1: Conversation Groups analyzed: 0.    
     
- `Service Broker Msg 9670, Level 10, State 1: Remote Service Bindings analyzed: 0.`    
+ Service Broker Msg 9670, Level 10, State 1: Remote Service Bindings analyzed: 0.    
     
- `DBCC results for 'sys.sysrowsetcolumns'.`    
+ DBCC results for 'sys.sysrowsetcolumns'.    
     
- `There are 630 rows in 7 pages for object 'sys.sysrowsetcolumns'.`    
+ There are 630 rows in 7 pages for object 'sys.sysrowsetcolumns'.    
     
- `DBCC results for 'sys.sysrowsets'.`    
+ DBCC results for 'sys.sysrowsets'.    
     
- `There are 97 rows in 1 pages for object 'sys.sysrowsets'.`    
+ There are 97 rows in 1 pages for object 'sys.sysrowsets'.    
     
- `DBCC results for 'sysallocunits'.`    
+ DBCC results for 'sysallocunits'.    
     
- `There are 195 rows in 3 pages for object 'sysallocunits'.`    
+ There are 195 rows in 3 pages for object 'sysallocunits'.    
     
- `There are 0 rows in 0 pages for object "sys.sysasymkeys".`    
+ There are 0 rows in 0 pages for object "sys.sysasymkeys".    
     
- `DBCC results for 'sys.syssqlguides'.`    
+ DBCC results for 'sys.syssqlguides'.    
     
- `There are 0 rows in 0 pages for object "sys.syssqlguides".`    
+ There are 0 rows in 0 pages for object "sys.syssqlguides".    
     
- `DBCC results for 'sys.queue_messages_1977058079'.`    
+ DBCC results for 'sys.queue_messages_1977058079'.    
     
- `There are 0 rows in 0 pages for object "sys.queue_messages_1977058079".`    
+ There are 0 rows in 0 pages for object "sys.queue_messages_1977058079".    
     
- `DBCC results for 'sys.queue_messages_2009058193'.`    
+ DBCC results for 'sys.queue_messages_2009058193'.    
     
- `There are 0 rows in 0 pages for object "sys.queue_messages_2009058193".`    
+ There are 0 rows in 0 pages for object "sys.queue_messages_2009058193".    
     
- `DBCC results for 'sys.queue_messages_2041058307'.`    
+ DBCC results for 'sys.queue_messages_2041058307'.    
     
- `There are 0 rows in 0 pages for object "sys.queue_messages_2041058307".`    
+ There are 0 rows in 0 pages for object "sys.queue_messages_2041058307".    
     
- `CHECKDB found 0 allocation errors and 0 consistency errors in database 'model'.`    
+ CHECKDB found 0 allocation errors and 0 consistency errors in database 'model'.    
     
- `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`    
-    
+ DBCC execution completed. If DBCC printed error messages, contact your system administrator.    
+```
+
  DBCC CHECKDB returns the following result set (message) when NO_INFOMSGS is specified:    
     
- `The command(s) completed successfully.`    
-    
+ ```
+ The command(s) completed successfully.
+ ```
+ 
  DBCC CHECKDB returns the following result set when PHYSICAL_ONLY is specified:    
     
- `DBCC results for 'model'.`    
+ ```
+ DBCC results for 'model'.    
     
- `CHECKDB found 0 allocation errors and 0 consistency errors in database 'master'.`    
+ CHECKDB found 0 allocation errors and 0 consistency errors in database 'master'.  
     
- `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`    
-    
+ DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+ ```
+ 
  DBCC CHECKDB returns the following result set when ESTIMATEONLY is specified.    
     
- `Estimated TEMPDB space needed for CHECKALLOC (KB)`    
+ ```
+ Estimated TEMPDB space needed for CHECKALLOC (KB)    
     
- `-------------------------------------------------`    
+ -------------------------------------------------  
     
- `13`    
+ 13   
     
- `(1 row(s) affected)`    
+ (1 row(s) affected)   
     
- `Estimated TEMPDB space needed for CHECKTABLES (KB)`    
+ Estimated TEMPDB space needed for CHECKTABLES (KB)    
     
- `--------------------------------------------------`    
+ --------------------------------------------------    
     
- `57`    
+ 57 
     
- `(1 row(s) affected)`    
+ (1 row(s) affected)  
     
- `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`    
+ DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+```
     
 ## Permissions    
  Requires membership in the sysadmin fixed server role or the db_owner fixed database role.    
@@ -424,6 +432,3 @@ GO
  [View the Size of the Sparse File of a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)     
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)     
  [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)    
-    
-  
-

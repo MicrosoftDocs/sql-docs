@@ -6,7 +6,7 @@ description: This tutorial shows how to create a Linux SQL Server 2017 virtual m
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -21,7 +21,7 @@ ms.assetid: 222e23b2-51e7-429b-b8e5-61e0ebe7df9b
 # ms.reviewer: ""
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
-ms.custom: H1Hack27Feb2017
+# ms.custom: H1Hack27Feb2017
 ---
 # Create a Linux SQL Server 2017 virtual machine with the Azure portal
 Azure provides Linux virtual machine images that have SQL Server 2017 CTP 2.0 installed. This topic provides a short walkthrough on how to use the Azure portal to create a Linux SQL Server virtual machine. 
@@ -133,7 +133,7 @@ For more information about connecting to Linux VMs, see [Create a Linux VM on Az
 2. Set up SQL Server with the following command.
 
    ```bash
-   sudo /opt/mssql/bin/sqlservr-setup 
+   sudo /opt/mssql/bin/mssql-conf setup 
    ```
    
    Accept the License and enter a password for the system administrator account. You can start the server when prompted.

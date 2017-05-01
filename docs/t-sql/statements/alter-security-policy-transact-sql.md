@@ -2,7 +2,7 @@
 title: "ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/19/2016"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -73,7 +73,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  *table_schema_name.table_name*  
  Is the target table to which the security predicate will be applied. Multiple disabled security policies can target a single table for a particular DML operation, but only one can be enabled at any given time.  
   
- *<block_dml_operation>*  
+ *\<block_dml_operation>*  
  The particular DML operation for which the block predicate will be applied. AFTER specifies that the predicate will be evaluated on the values of the rows after the DML operation was performed (INSERT or UPDATE). BEFORE specifies that the predicate will be evaluated on the values of the rows before the DML operation is performed (UPDATE or DELETE). If no operation is specified, the predicate will apply to all operations.  
   
  You cannot ALTER the operation for which a block predicate will be applied, because the operation is used to uniquely identify the predicate. Instead, you must drop the predicate and add a new one for the new operation.  
@@ -100,9 +100,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  Additionally the following permissions are required for each predicate that is added:  
   
 -   SELECT and REFERENCES permissions on the function being used as a predicate.  
-  
 -   REFERENCES permission on the target table being bound to the policy.  
-  
 -   REFERENCES permission on every column from the target table used as arguments.  
   
 ## Examples  
@@ -151,7 +149,8 @@ ALTER SECURITY POLICY pol1
   
 ```  
 ALTER SECURITY POLICY rls.SecPol  
-    ALTER BLOCK PREDICATE rls.tenantAccessPredicate_v2(TenantId) ON dbo.Sales AFTER INSERT;  
+    ALTER BLOCK PREDICATE rls.tenantAccessPredicate_v2(TenantId) 
+    ON dbo.Sales AFTER INSERT;  
 ```  
   
 ## See Also  

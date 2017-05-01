@@ -129,7 +129,7 @@ DBCC CHECKDB
  ALL_ERRORMSGS    
  Displays all reported errors per object. All error messages are displayed by default. Specifying or omitting this option has no effect. Error messages are sorted by object ID, except for those messages generated from [tempdb database](../../relational-databases/databases/tempdb-database.md).    
     
- In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the maximum number of error messages returned is 1000. When you specify ALL_ERRORMSGS, we recommend that you run the DBCC command by using the [sqlcmd utility](../../tools/sqlcmd-utility.md) or by scheduling a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job to run the command and direct the output to a file. Either of these methods will ensure that running the command once will report all error messages.    
+ In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the maximum number of error messages returned is 1000. When you specify ALL_ERRORMSGS, we recommend that you run the DBCC command by using the [sqlcmd utility](../../tools/sqlcmd-utility.md) or by scheduling a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job to run the command and direct the output to a file. Either of these methods will ensure that running the command once will report all error messages.    
     
  EXTENDED_LOGICAL_CHECKS    
  If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.    
@@ -174,12 +174,10 @@ DBCC CHECKDB
  Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](http://support.microsoft.com/kb/923247).    
     
  MAXDOP    
- ||    
-|-|    
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).|    
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
     
- Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the Database Engine uses the Resource Governor MAXDOP value, described in ALTER WORKLOAD GROUP (Transact-SQL). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).    
-    
+ Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+ 
 >**CAUTION!!** If MAXDOP is set to zero then the server chooses the max degree of parallelism.    
     
 ## Remarks    
@@ -187,7 +185,7 @@ DBCC CHECKDB
     
  If a user-defined type is marked as being byte ordered, there must only be one serialization of the user-defined type. Not having a consistent serialization of byte-ordered user-defined types causes error 2537 when DBCC CHECKDB is run. For more information, see [User-Defined Type Requirements](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
     
- Because the [Resource database](../../relational-databases/databases/resource-database.md) is modifiable only in single-user mode, the DBCC CHECKDB command cannot be run on it directly. However, when DBCC CHECKDB is executed against the [master database](../../relational-databases/databases/master-database.md), a second CHECKDB is also run internally on the Resource database. This means that DBCC CHECKDB can return extra results. The command returns extra result sets when no options are set, or when either the PHYSICAL_ONLY or ESTIMATEONLY option is set.    
+ Because the [Resource database](../../relational-databases/databases/resource-database.md) is modifiable only in single-user mode, the DBCC CHECKDB command cannot be run on it directly. However, when DBCC CHECKDB is executed against the [master database](../../relational-databases/databases/master-database.md), a second CHECKDB is also run internally on the Resource database. This means that DBCC CHECKDB can return extra results. The command returns extra result sets when no options are set, or when either the PHYSICAL_ONLY or ESTIMATEONLY option is set.
     
  In versions of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] before SP2, executing DBCC CHECKDB clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes recompilation of all later execution plans and may cause a sudden, temporary decrease in query performance. In SP2 and later, executing DBCC CHECKDB does not clear the plan cache.    
     

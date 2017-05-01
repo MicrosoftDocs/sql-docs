@@ -121,7 +121,8 @@ Performs repairs that have no possibility of data loss. This can include quick r
     
 REPAIR_REBUILD does not repair errors involving FILESTREAM data.    
     
-> [!IMPORTANT] Since DBCC CHECKDB with any of the REPAIR options are completely logged and recoverable, [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user use CHECKDB with any REPAIR options within a transaction (execute BEGIN TRANSACTION before running the command) so that the user can confirm he/she wants  to accept the results of the operation. Then the user can execute COMMIT TRANSACTION to commit all work done by the repair operation. If the user does not want to accept the results of the operation, he/she can execute a ROLLBACK TRANSACTION to undo the effects of the repair operations.    
+> [!IMPORTANT] 
+> Since DBCC CHECKDB with any of the REPAIR options are completely logged and recoverable, [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user use CHECKDB with any REPAIR options within a transaction (execute BEGIN TRANSACTION before running the command) so that the user can confirm he/she wants  to accept the results of the operation. Then the user can execute COMMIT TRANSACTION to commit all work done by the repair operation. If the user does not want to accept the results of the operation, he/she can execute a ROLLBACK TRANSACTION to undo the effects of the repair operations.    
 >     
 >
 >  To repair errors, we recommend restoring from a backup. Repair operations do not consider any of the constraints that may exist on or between tables. If the specified table is involved in one or more constraints, we recommend running DBCC CHECKCONSTRAINTS after a repair operation. If you must use REPAIR, run DBCC CHECKDB without a repair option to find the repair level to use. If you use the REPAIR_ALLOW_DATA_LOSS level, we recommend that you back up the database before you run DBCC CHECKDB with this option.    
@@ -129,6 +130,7 @@ REPAIR_REBUILD does not repair errors involving FILESTREAM data.
 ALL_ERRORMSGS    
 Displays all reported errors per object. All error messages are displayed by default. Specifying or omitting this option has no effect. Error messages are sorted by object ID, except for those messages generated from [tempdb database](../../relational-databases/databases/tempdb-database.md).    
     
+> 
 > [!NOTE] In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the maximum number of error messages returned is 1000. When you specify ALL_ERRORMSGS, we recommend that you run the DBCC command by using the [sqlcmd utility](../../tools/sqlcmd-utility.md) or by scheduling a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job to run the command and direct the output to a file. Either of these methods will ensure that running the command once will report all error messages.    
 
 EXTENDED_LOGICAL_CHECKS    
@@ -142,7 +144,8 @@ Suppresses all informational messages.
 TABLOCK    
 Causes DBCC CHECKDB to obtain locks instead of using an internal database snapshot. This includes a short-term exclusive (X) lock on the database. TABLOCK will cause DBCC CHECKDB to run faster on a database under heavy load, but decreases the concurrency available on the database while DBCC CHECKDB is running.    
     
-> [!WARNING] TABLOCK limits the checks that are performed; DBCC CHECKCATALOG is not run on the database, and [!INCLUDE[ssSB](../../includes/sssb-md.md)] data is not validated.
+> [!WARNING] 
+> TABLOCK limits the checks that are performed; DBCC CHECKCATALOG is not run on the database, and [!INCLUDE[ssSB](../../includes/sssb-md.md)] data is not validated.
     
 ESTIMATEONLY    
 Displays the estimated amount of tempdb space that is required to run DBCC CHECKDB with all the other specified options. The actual database check is not performed.    
@@ -162,14 +165,16 @@ Limits the checking to the integrity of the physical structure of the page and r
     
  PHYSICAL_ONLY always implies NO_INFOMSGS and is not allowed with any one of the repair options.    
     
-> [!NOTE] Specifying PHYSICAL_ONLY causes DBCC CHECKDB to skip all checks of FILESTREAM data.
+> [!NOTE] 
+> Specifying PHYSICAL_ONLY causes DBCC CHECKDB to skip all checks of FILESTREAM data.
     
 DATA_PURITY    
 Causes DBCC CHECKDB to check the database for column values that are not valid or out-of-range. For example, DBCC CHECKDB detects columns with date and time values that are larger than or less than the acceptable range for the **datetime** data type; or **decimal** or approximate-numeric data type columns with scale or precision values that are not valid.    
     
 Column-value integrity checks are enabled by default and do not require the DATA_PURITY option. For databases upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], column-value checks are not enabled by default until DBCC CHECKDB WITH DATA_PURITY has been run error free on the database. After this, DBCC CHECKDB checks column-value integrity by default. For more information about how CHECKDB might be affected by upgrading database from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the Remarks section later in this topic.    
     
-> [!WARNING]If PHYSICAL_ONLY is specified, column-integrity checks are not performed.
+> [!WARNING]
+> If PHYSICAL_ONLY is specified, column-integrity checks are not performed.
     
 Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](http://support.microsoft.com/kb/923247).    
     
@@ -178,7 +183,8 @@ MAXDOP
     
 Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
  
-> [!WARNING] If MAXDOP is set to zero then the server chooses the max degree of parallelism.    
+> [!WARNING] 
+> If MAXDOP is set to zero then the server chooses the max degree of parallelism.    
 
 ## Remarks    
  DBCC CHECKDB does not examine disabled indexes. For more information about disabled indexes, see [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md).    

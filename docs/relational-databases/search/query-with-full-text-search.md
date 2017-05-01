@@ -24,32 +24,10 @@ manager: "jhubbard"
 ---
 # Query with Full-Text Search
 
-This topic describes how to write full-text queries with the full-text predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** .  
+Write full-text queries by using the full-text predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** with the **SELECT** statement. This topic provides examples of each predicate and function and helps you choose the best one to use.
 
-## Pick the best full-text predicate or function
-
-`CONTAINS/CONTAINSTABLE` and `FREETEXT/FREETEXTTABLE` are useful for different kinds of matching. The following table helps you to choose the best predicate or function for your query.
-
-For examples, see [Simple examples of each predicate and function](#examples_simple) and [Examples of specific types of searches](#examples_specific). Also see [What you can search for](#supported).
-
-| |CONTAINS/CONTAINSTABLE|FREETEXT/FREETEXTTABLE|
-|---|---|---|
-|**Type of query**|Match single words and phrases with precise or fuzzy (less precise) matching.|Match the meaning, but not the exact wording, of specified words, phrases or sentences (the *freetext string*).<br/><br/>Matches are generated if any term or form of any term is found in the full-text index of a specified column.|
-|**More query options**|You can specify the proximity of words within a certain distance of one another.<br/><br/>You can return weighted matches.<br/><br/>You can use logical operation to combine search conditions. For more info, see [Using Boolean operators (AND, OR, and NOT)](#Using_Boolean_Operators) later in this topic.|N/a|
-
-## Compare predicates and functions
-
-The predicates `CONTAINS/FREETEXT` and the rowset-valued functions `CONTAINSTABLE/FREETEXTTABLE` have different syntax and options. The following table helps you to choose the best predicate or function for your query.
-
-For examples, see [Simple examples of each predicate and function](#examples_simple) and [Examples of specific types of searches](#examples_specific). Also see [What you can search for](#supported).
-
-| |Predicates<br/>CONTAINS/FREETEXT|Functions<br/>CONTAINSTABLE/FREETEXTTABLE|
-|---|---|---|
-|**Usage**|Use the full-text **predicates** CONTAINS and FREETEXT in the WHERE or HAVING clause of a SELECT statement.|Use the full-text **functions** CONTAINSTABLE and FREETEXTTABLE functions like a regular table name in the FROM clause of a SELECT statement.|
-|**More query options**|You can combine them with any of the other [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates, such as LIKE and BETWEEN.<br/><br/>You can specify either a single column, a list of columns, or all columns in the table to be searched.<br/><br/>Optionally, you can specify the language whose resources will be used by the full-text query for word breaking and stemming, thesaurus lookups, and noise-word removal.|You have to specify the base table to search when you use either of these functions. As with the predicates, you can specify a single column, a list of columns, or all columns in the table to be searched, and optionally, the language whose resources will be used by given full-text query.<br/><br/>Typically you have to join the results of CONTAINSTABLE or FREETEXTTABLE with the base table. To do this, you have to know the unique key column name. This column, which occurs in every full-text enabled table, is used to enforce unique rows for the table (the *unique**key column*). For more info about the key column, see [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md).|
-|**Results**|The CONTAINS and FREETEXT predicates return a TRUE or FALSE value that indicates whether a given row matches the full-text query. Matching rows are returned in the result set.|These functions return a table of zero, one, or more rows that match the full-text query. The returned table contains only rows from the base table that match the selection criteria specified in the full-text search condition of the function.<br/><br/>Queries that use one of these functions also return a relevance ranking value (RANK) and full-text key (KEY) for each row returned, as follows<br/><ul><li>**KEY** column. The KEY column returns unique values of the returned rows. The KEY column can be used to specify selection criteria.</li><li>**RANK** column. The RANK column returns a *rank value* for each row that indicates how well the row matched the selection criteria. The higher the rank value of the text or document in a row, the more relevant the row is for the given full-text query. Note that different rows can be ranked identically. You can limit the number of matches to be returned by specifying the optional *top_n_by_rank* parameter. For more information, see [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md).</li></ul>|
-|**Additional options**|You can use a four-part name in the CONTAINS or FREETEXT predicate to query full-text indexed columns of the target tables on a linked server. To prepare a remote server to receive full-text queries, create a full-text index on the target tables and columns on the remote server and then add the remote server as a linked server.|N/a|
-|**More info**|For more info about the syntax and arguments of these predicates, see [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [FREETEXT](../../t-sql/queries/freetext-transact-sql.md).|For more info about the syntax and arguments of these functions, see [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).|
+-   Use **CONTAINS** and **CONTAINSTABLE** to match words and phrases.
+-   Use **FREETEXT** and **FREETEXTTABLE** to match the meaning, but not the exact wording.
 
 ## <a name="examples_simple"></a> Simple examples of each predicate and function
 
@@ -135,6 +113,31 @@ WHERE KEY_TBL.RANK >= 10
 ORDER BY KEY_TBL.RANK DESC  
 GO  
 ```  
+
+## Pick the best predicate or function
+
+`CONTAINS`/`CONTAINSTABLE` and `FREETEXT`/`FREETEXTTABLE` are useful for different kinds of matching. The following table helps you to choose the best predicate or function for your query.
+
+For examples, see [Simple examples of each predicate and function](#examples_simple) and [Examples of specific types of searches](#examples_specific). Also see [What you can search for](#supported).
+
+| |CONTAINS/CONTAINSTABLE|FREETEXT/FREETEXTTABLE|
+|---|---|---|
+|**Type of query**|Match single words and phrases with precise or fuzzy (less precise) matching.|Match the meaning, but not the exact wording, of specified words, phrases or sentences (the *freetext string*).<br/><br/>Matches are generated if any term or form of any term is found in the full-text index of a specified column.|
+|**More query options**|You can specify the proximity of words within a certain distance of one another.<br/><br/>You can return weighted matches.<br/><br/>You can use logical operation to combine search conditions. For more info, see [Using Boolean operators (AND, OR, and NOT)](#Using_Boolean_Operators) later in this topic.|N/a|
+
+## Compare predicates and functions
+
+The predicates `CONTAINS`/`FREETEXT` and the rowset-valued functions `CONTAINSTABLE`/`FREETEXTTABLE` have different syntax and options. The following table helps you to choose the best predicate or function for your query.
+
+For examples, see [Simple examples of each predicate and function](#examples_simple) and [Examples of specific types of searches](#examples_specific). Also see [What you can search for](#supported).
+
+| |Predicates<br/>CONTAINS/FREETEXT|Functions<br/>CONTAINSTABLE/FREETEXTTABLE|
+|---|---|---|
+|**Usage**|Use the full-text **predicates** CONTAINS and FREETEXT in the WHERE or HAVING clause of a SELECT statement.|Use the full-text **functions** CONTAINSTABLE and FREETEXTTABLE functions like a regular table name in the FROM clause of a SELECT statement.|
+|**More query options**|You can combine them with any of the other [!INCLUDE[tsql](../../includes/tsql-md.md)] predicates, such as LIKE and BETWEEN.<br/><br/>You can specify either a single column, a list of columns, or all columns in the table to be searched.<br/><br/>Optionally, you can specify the language whose resources will be used by the full-text query for word breaking and stemming, thesaurus lookups, and noise-word removal.|You have to specify the base table to search when you use either of these functions. As with the predicates, you can specify a single column, a list of columns, or all columns in the table to be searched, and optionally, the language whose resources will be used by given full-text query.<br/><br/>Typically you have to join the results of CONTAINSTABLE or FREETEXTTABLE with the base table. To do this, you have to know the unique key column name. This column, which occurs in every full-text enabled table, is used to enforce unique rows for the table (the *unique**key column*). For more info about the key column, see [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md).|
+|**Results**|The CONTAINS and FREETEXT predicates return a TRUE or FALSE value that indicates whether a given row matches the full-text query. Matching rows are returned in the result set.|These functions return a table of zero, one, or more rows that match the full-text query. The returned table contains only rows from the base table that match the selection criteria specified in the full-text search condition of the function.<br/><br/>Queries that use one of these functions also return a relevance ranking value (RANK) and full-text key (KEY) for each row returned, as follows<br/><ul><li>**KEY** column. The KEY column returns unique values of the returned rows. The KEY column can be used to specify selection criteria.</li><li>**RANK** column. The RANK column returns a *rank value* for each row that indicates how well the row matched the selection criteria. The higher the rank value of the text or document in a row, the more relevant the row is for the given full-text query. Note that different rows can be ranked identically. You can limit the number of matches to be returned by specifying the optional *top_n_by_rank* parameter. For more information, see [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md).</li></ul>|
+|**Additional options**|You can use a four-part name in the CONTAINS or FREETEXT predicate to query full-text indexed columns of the target tables on a linked server. To prepare a remote server to receive full-text queries, create a full-text index on the target tables and columns on the remote server and then add the remote server as a linked server.|N/a|
+|**More info**|For more info about the syntax and arguments of these predicates, see [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [FREETEXT](../../t-sql/queries/freetext-transact-sql.md).|For more info about the syntax and arguments of these functions, see [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).|
 
 ##  <a name="supported"></a> What you can search for
 
@@ -254,7 +257,7 @@ GO
 
 -   **Stopwords**. When defining a full-text query, the Full-Text Engine discards stopwords (also called noise words) from the search criteria. Stopwords are words such as "a," "and," "is," or "the," that can occur frequently but that typically do not help when searching for particular text. Stopwords are listed in a stoplist. Each full-text index is associated with a specific stoplist, which determines what stopwords are omitted from the query or the index at indexing time. For more info, see [Configure and Manage Stopwords and Stoplists for Full-Text Search](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   **Thesaurus**. FREETEXT and FREETEXTTABLE queries use the thesaurus by default. CONTAINS and CONTAINSTABLE support an optional THESAURUS argument. For more info, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md)
+-   **Thesaurus**. FREETEXT and FREETEXTTABLE queries use the thesaurus by default. CONTAINS and CONTAINSTABLE support an optional THESAURUS argument. For more info, see [Configure and Manage Thesaurus Files for Full-Text Search](configure-and-manage-thesaurus-files-for-full-text-search.md).
   
 ##  <a name="tokens"></a> Check the tokenization results
 

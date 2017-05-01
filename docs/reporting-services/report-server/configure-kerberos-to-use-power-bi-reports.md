@@ -2,7 +2,7 @@
 title: "Configure Kerberos to use Power BI reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/07/2017"
-ms.prod: "sql-vnext"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

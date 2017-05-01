@@ -1,7 +1,7 @@
 ---
 title: "CREATE FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/05/2017"
+ms.date: "04/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -796,7 +796,7 @@ GO
   
  For an example of how to create a CLR table-valued function, see [CLR Table-Valued Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md).  
   
-## E. Displaying the definition of [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions  
+### E. Displaying the definition of [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions  
   
 ```  
 SELECT definition, type   

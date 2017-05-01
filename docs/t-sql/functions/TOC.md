@@ -1,11 +1,5 @@
 # [Overview](functions.md)  
-# [Text and Image - TEXTPTR](text-and-image-functions-textptr-transact-sql.md)  
-# [Text and Image - TEXTVALID](text-and-image-functions-textvalid-transact-sql.md)  
-# [Logical - CHOOSE](logical-functions-choose-transact-sql.md)  
-# [Logical - IIF](logical-functions-iif-transact-sql.md)  
-# [Collation - COLLATIONPROPERTY](collation-functions-collationproperty-transact-sql.md)  
-# [Collation - TERTIARY_WEIGHTS](collation-functions-tertiary-weights-transact-sql.md)  
-# [Replication - PUBLISHINGSERVERNAME](replication-functions-publishingservername.md)  
+
 # [Aggregate](aggregate-functions-transact-sql.md)  
 ## [AVG](avg-transact-sql.md)  
 ## [CHECKSUM_AGG](checksum-agg-transact-sql.md)  
@@ -30,6 +24,12 @@
 ## [PERCENTILE_CONT](percentile-cont-transact-sql.md)  
 ## [PERCENTILE_DISC](percentile-disc-transact-sql.md)  
 ## [PERCENT_RANK](percent-rank-transact-sql.md)  
+
+
+# Collation
+## [Collation - COLLATIONPROPERTY](collation-functions-collationproperty-transact-sql.md)  
+## [Collation - TERTIARY_WEIGHTS](collation-functions-tertiary-weights-transact-sql.md)  
+
 
 # [Configuration](configuration-functions-transact-sql.md)  
 ## [@@DBTS](dbts-transact-sql.md)  
@@ -152,6 +152,11 @@
 ## [SQUARE](square-transact-sql.md)  
 ## [TAN](tan-transact-sql.md)  
 
+# Logical
+## [CHOOSE](logical-functions-choose-transact-sql.md)  
+## [IIF](logical-functions-iif-transact-sql.md)  
+
+
 # [Metadata](metadata-functions-transact-sql.md)  
 ## [@@PROCID](procid-transact-sql.md)  
 ## [APP_NAME](app-name-transact-sql.md)  
@@ -203,6 +208,9 @@
 ## [NTILE](ntile-transact-sql.md)  
 ## [RANK](rank-transact-sql.md)  
 ## [ROW_NUMBER](row-number-transact-sql.md)  
+
+# Replication
+## [PUBLISHINGSERVERNAME](replication-functions-publishingservername.md)  
 
 # [Rowset](rowset-functions-transact-sql.md)  
 ## [OPENDATASOURCE](opendatasource-transact-sql.md)  
@@ -316,6 +324,10 @@
 ## [@@TOTAL_ERRORS](total-errors-transact-sql.md)  
 ## [@@TOTAL_READ](total-read-transact-sql.md)  
 ## [@@TOTAL_WRITE](total-write-transact-sql.md)  
+
+# Text and Image
+## [TEXTPTR](text-and-image-functions-textptr-transact-sql.md)  
+## [TEXTVALID](text-and-image-functions-textvalid-transact-sql.md)  
 
 # [Trigger](trigger-functions-transact-sql.md)  
 ## [COLUMNS_UPDATED](columns-updated-transact-sql.md)  

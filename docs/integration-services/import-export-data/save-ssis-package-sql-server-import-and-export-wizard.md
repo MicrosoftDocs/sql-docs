@@ -100,7 +100,7 @@ The following screen shot shows the **Save SSIS Package** page of the wizard if 
   
 -   If you saved the package in SQL Server in the **msdb** database, connect to the Integration Services service. Then, in SQL Server Management Studio, in Object Explorer, navigate to **Stored Packages | MSDB**, right-click on the package, and select **Run Package**.
 
--   If you saved the package in the file system, see [Run a Package in SQL Server Data Tools](../../integration-services/packages/run-a-package-in-sql-server-data-tools.md) to run the package in the development environment. You have to add the package to an Integration Services project before you can open and run it.  
+-   If you saved the package in the file system, see [Run Integration Services (SSIS) Packages](../../integration-services/packages/run-integration-services-ssis-packages.md) to run the package in the development environment. You have to add the package to an Integration Services project before you can open and run it.  
 
 ## Customize the saved package  
  To learn how to customize the saved package, see [Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md).  

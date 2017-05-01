@@ -74,13 +74,13 @@ manager: "jhubbard"
  The package includes checkpoint properties that you can use to restart the package when one or more of its tasks fail. For example, if a package has two Data Flow tasks that update two different tables and the second task fails, the package can be rerun without repeating the first Data Flow task. Restarting a package can save time for long-running packages. Restarting means you can start the package from the failed task instead of having to rerun the whole package. For more information, see [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ### Securing Packages  
- A package can be signed with a digital signature and encrypted by using a password or a user key. A digital signature authenticates the source of the package. However, you must also configure [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to check the digital signature when the package loads. For more information, see [Identify the Source of Packages with Digital Signatures](../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md) and [Access Control for Sensitive Data in Packages](../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ A package can be signed with a digital signature and encrypted by using a password or a user key. A digital signature authenticates the source of the package. However, you must also configure [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to check the digital signature when the package loads. For more information, see [Identify the Source of Packages with Digital Signatures](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md) and [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
 ### Supporting Transactions  
  Setting a transaction attribute on the package enables tasks, containers, and connections in the package to join the transaction. Transaction attributes ensure that the package and its elements succeed or fail as a unit. Packages can also run other packages and enroll other packages in transactions, so that you can run multiple packages as a single unit of work. For more information, see [Integration Services Transactions](../integration-services/integration-services-transactions.md).  
   
 ## Custom log entries available on the package  
- The following table lists the custom log entries for packages. For more information, see [Integration Services &#40;SSIS&#41; Logging](../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries for packages. For more information, see [Integration Services &#40;SSIS&#41; Logging](../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

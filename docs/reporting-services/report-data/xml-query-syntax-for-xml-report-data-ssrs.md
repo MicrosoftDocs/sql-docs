@@ -62,7 +62,7 @@ manager: "erikre"
 |XML document that uses default.|*No query*.<br /><br /> The element path is derived from the XML document itself and is namespace-independent.|  
   
 > [!NOTE]  
->  The first Web service example lists the contents of the report server that uses the <xref:ReportService2006.ReportingService2006.ListChildren%2A> method. To run this query, you must create a new data source and set the connection string to http://localhost/reportserver/reportservice2006.asmx. The <xref:ReportService2006.ReportingService2006.ListChildren%2A> method takes two parameters: **Item** and **Recursive**. Set the default value for **Item** to **/** and **Recursive** to **1**.  
+>  The first Web service example lists the contents of the report server that uses the <xref:ReportService2006.ReportingService2006.ListChildren%2A> method. To run this query, you must create a new data source and set the connection string to `http://localhost/reportserver/reportservice2006.asmx`. The <xref:ReportService2006.ReportingService2006.ListChildren%2A> method takes two parameters: **Item** and **Recursive**. Set the default value for **Item** to **/** and **Recursive** to **1**.  
   
 ## Specifying Namespaces  
  Use the XML **Query** element to specify the namespaces that are used in the XML data from the data source. The following XML query uses the namespace **sales**. The XML **ElementPath** nodes for `sales:LineItems` and `sales:LineItem` use the namespace **sales**.  
@@ -86,7 +86,7 @@ manager: "erikre"
   
 |XML Query Element|Resulting fields in the dataset|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|Value A: http://schemas.microsoft.com/...<br /><br /> Value B: http://schemas.microsoft.com/...<br /><br /> Value C: http://schemas.microsoft.com/...|  
+|\<Query/>|Value A: `http://schemas.microsoft.com/...`<br /><br /> Value B: `http://schemas.microsoft.com/...`<br /><br /> Value C: `http://schemas.microsoft.com/...`|  
 |`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### XML document: DPNamespace.xml  

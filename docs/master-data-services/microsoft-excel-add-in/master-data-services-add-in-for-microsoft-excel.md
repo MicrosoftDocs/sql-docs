@@ -25,7 +25,7 @@ manager: "jhubbard"
 
 ## Downloads 
 >*  Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] SP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836866).
->* Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server vNext CTP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867).
+>* Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017 CTP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867).
 
  
   

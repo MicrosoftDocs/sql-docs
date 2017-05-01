@@ -1,7 +1,7 @@
 ---
 title: "ALTER SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "05/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,7 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER SEARCH PROPERTY LIST list_name  
 {  
    ADD 'property_name'  
@@ -49,7 +48,6 @@ ALTER SEARCH PROPERTY LIST list_name
  | DROP 'property_name'   
 }  
 ;  
-  
 ```  
   
 ## Arguments  
@@ -133,7 +131,10 @@ WITH (
  Adding a search property to a search property list registers the property. A newly added property can be immediately specified in [CONTAINS](../../t-sql/queries/contains-transact-sql.md) queries. However, property-scoped full-text queries on a newly added property will not return documents until the associated full-text index is repopulated. For example, the following property-scoped query on a newly added property, *new_search_property*, will not return any documents until the full-text index associated with the target table (*table_name*) is repopulated:  
   
 ```  
-SELECT column_name FROM table_name WHERE CONTAINS( PROPERTY( column_name, 'new_search_property' ), 'contains_search_condition');  
+SELECT column_name  
+FROM table_name  
+WHERE CONTAINS( PROPERTY( column_name, 'new_search_property' ), 
+               'contains_search_condition');  
 GO   
 ```  
   
@@ -191,8 +192,8 @@ ALTER SEARCH PROPERTY LIST DocumentPropertyList
 ALTER SEARCH PROPERTY LIST DocumentPropertyList   
     ADD 'Tags'  
    WITH ( PROPERTY_SET_GUID = 'F29F85E0-4FF9-1068-AB91-08002B27B3D9', PROPERTY_INT_ID = 5,   
-      PROPERTY_DESCRIPTION = 'System.Keywords - Set of keywords (also known as tags) assigned to the item.' );  
-  
+      PROPERTY_DESCRIPTION = 
+          'System.Keywords - Set of keywords (also known as tags) assigned to the item.' );  
 ```  
   
 > [!NOTE]  

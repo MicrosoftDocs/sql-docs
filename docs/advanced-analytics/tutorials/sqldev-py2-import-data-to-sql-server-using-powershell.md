@@ -71,6 +71,8 @@ Among the downloaded files you should see a PowerShell script. To prepare the en
   
 3. Log in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and the login you specified, to verify that you can see the database, tables, functions, and stored procedures that were created.
 
+    ![browse tables in SSMS](media/sqldev-python-browsetables1.png "view tables in SSMS")
+
     > [!NOTE]
     > If the database objects already exist, they cannot be created again. If the table already exists, the data will be appended, not overwritten. Therefore, be sure to drop any existing objects before running the script.
 

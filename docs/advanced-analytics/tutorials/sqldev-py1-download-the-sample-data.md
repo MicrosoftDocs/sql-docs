@@ -51,6 +51,9 @@ In this step, you'll download the sample dataset and the scripts that are used i
     ```
     ls
     ```
+**Results:**
+
+![list of files downloaded by PowerShell script](media/sqldev-python-filelist.png "list of files downloaded by PowerShell script")
 
 ## Next Step
 

@@ -162,9 +162,9 @@ The stored procedure returns a serialized `figure` Python object as a stream of 
   
 	*The plots are saved in directory: xxxx*
   
-4.  The output file will be created in the Python working directory. To view the plot, just open the python working directory. Below is an example plot saved on the client machine.
+4.  The output file will be created in the Python working directory. To view the plot, just open the Python working directory. The following image shows an example plot saved on the client computer.
   
-    ![Tip amount vs Fare amount](media/example-plot.png "Tip amount vs Fare amount")
+    ![Tip amount vs Fare amount](media/sqldev-python-sample-plot.png "Tip amount vs Fare amount") 
 
 ## Next Step
 

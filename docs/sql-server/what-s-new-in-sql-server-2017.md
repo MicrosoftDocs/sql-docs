@@ -39,6 +39,12 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 -	Interleaved Execution for multi-statement T-SQL TVFs to improve plan quality (under db compatability 140).
 - Query Store now also tracks wait stats summary information.
 - DTC support for Always On Availability Groups for all cross database transactions among databases that are part of the availability group, including for databases that are part of same instance. For more information, see [Transactions - Always On Availability Groups and Database Mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
+- A new column **modified_extent_page_count** is introduced in [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) to track differential changes in each database file of the database.
+- [SELECT INTO](../../t-sql/queries/select-into-clause-transact-sql.md) now supports loading a table into a filegroup other than a default filegroup of the user using the **ON** keyword.
+- The setup allows specifying initial tempdb file size up to **256 GB (262,144 MB)** per file with a warning if the file size is set to value greater than 1GB and if IFI is not enabled.
+- A new dmv **sys.dm_tran_version_store_space_usage** is introduced to track version store usage per database.
+- A new DMV **sys.dm_db_log_info** is introduced to expose the VLF information similar to DBCC LOGINFO.
+- DBCC CLONEDATABASE will flush runtime statistics while cloning to avoid missing query store runtime statistics in database clone. In addition to this, DBCC CLONEDATABASE is further enhanced to support and clone fulltext indexes.
 - This CTP contains bug fixes for the Database Engine.
 - For a detailed list of 2017 CTP enhancements in previous CTP releases, see [What's New in SQL Server 2017 (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).   
 

@@ -33,15 +33,6 @@ Each versioned record is stored as binary data together with some tracking or st
   
 Because the versioned record is stored as binary, there are no problems with different collations from different databases. Use **sys.dm_tran_version_store_space_usage** to monitor and plan tempdb size based on the version store space usage of databases in a SQL Server instance.
   
-  
-## Syntax  
-  
-```  
-sys.dm_tran_version_store_space_usage  
-```  
-  
-## Table Returned  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Database ID of the database.|  
@@ -51,17 +42,15 @@ sys.dm_tran_version_store_space_usage
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 
-
-  
 ## Examples  
  The following query can be used to determine space consumed in tempdb by version store of each database in a SQL Server instance. 
   
-```  
+```tsql  
 SELECT 
-DB_NAME(database_id) as 'Database Name',
-reserved_page_count,
-reserved_space_kb 
-from sys.dm_tran_version_store_space_usage;  
+  DB_NAME(database_id) as 'Database Name',
+  reserved_page_count,
+  reserved_space_kb 
+FROM sys.dm_tran_version_store_space_usage;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -78,5 +67,4 @@ WideWorldImporters        20                   160
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
   

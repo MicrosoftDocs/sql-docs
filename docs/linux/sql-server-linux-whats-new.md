@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: What's New for SQL Server vNext CTP 1.3 on Linux | Microsoft Docs
-description: This topic highlights what's new for the current release of SQL Server vNext on Linux.
+title: What's New for SQL Server 2017 CTP 2.0 on Linux | Microsoft Docs
+description: This topic highlights what's new for the current release of SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/23/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -24,9 +24,27 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 # ms.custom: ""
 
 ---
-# What's new for SQL Server vNext on Linux
+# What's new for SQL Server 2017 on Linux
 
-This topic describes what's new for SQL Server vNext running on Linux.
+This topic describes what's new for SQL Server 2017 running on Linux.
+
+## CTP 2.0
+The CTP 2.0 release contains the following improvements and fixes:
+
+- Added **Log Shipping** functionality for SQL Server Agent.
+- Localized messages of mssql-conf.
+- Linux path formatting are now compatible throughout the SQL Server Engine. But support for "C:\\" prefixed paths will continue.
+- Enabled DMV **sys.dm_os_file_exists**.
+- Enabled DMV **sys.fn_trace_gettable**.
+- Added [CLR Strict Security mode](/sql/database-engine/configure-windows/clr-strict-security).
+- SQL Graph.
+- Resumable Online Index Rebuilds.
+- Adaptive Query Processing.
+- Added UTF-8 encoding for system files, including log files.
+- Fixed In-memory databases location limitation. 
+- Add new cluster type `CLUSTER_TYPE = EXTERNAL` for configuring an availability group for high availability.
+- Fix Availability Group Listener for read-only routing.
+- Production support for Early Adoption Program (EAP) customers. Sign up [here](http://aka.ms/eapsignup).
 
 ## CTP 1.4
 The CTP 1.4 release contains the following improvements and fixes:
@@ -104,8 +122,8 @@ Under compatibility mode 140:
 
 Learn more about these fixes in the [Service Pack 1 Release description](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/).
 
-Many database engine improvements apply to both Windows and Linux. The only exception would be for database engine features that are currently not supported on Linux. For more information, see [What's New in SQL Server vNext (Database Engine)](https://msdn.microsoft.com/library/mt775028).
+Many database engine improvements apply to both Windows and Linux. The only exception would be for database engine features that are currently not supported on Linux. For more information, see [What's New in SQL Server 2017 (Database Engine)](https://msdn.microsoft.com/library/mt775028).
 
 ## See also
 
-For installation requirements, unsupported feature areas, and known issues, see [Release notes for SQL Server vNext on Linux](sql-server-linux-release-notes.md).
+For installation requirements, unsupported feature areas, and known issues, see [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes.md).

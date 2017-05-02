@@ -1,7 +1,7 @@
 ---
 title: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,9 +39,12 @@ manager: "jhubbard"
 |**__$operation**|**int**|Identifies the data manipulation language (DML) operation associated with the change. Can be one of the following:<br /><br /> 1 = delete<br /><br /> 2 = insert<br /><br /> 3 = update (old values)<br /><br /> Column data has row values before executing the update statement.<br /><br /> 4 = update (new values)<br /><br /> Column data has row values after executing the update statement.|  
 |**__$update_mask**|**varbinary(128)**|A bit mask based upon the column ordinals of the change table identifying those columns that changed.|  
 |*\<captured source table columns>*|varies|The remaining columns in the change table are the columns from the source table that were identified as captured columns when the capture instance was created. If no columns were specified in the captured column list, all columns in the source table are included in this table.|  
+|**__$command_id** |**int** |Tracks the order of operations within a transaction. |  
   
 ## Remarks  
-  
+
+The `__$command_id` column was column was introduced in a cumulative update in versions 2012 through 2016. For version and download information, see KB article 3030352 at [FIX: The change table is ordered incorrectly for updated rows after you enable change data capture for a Microsoft SQL Server database](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  For more information, see [CDC functionality may break after upgrading to the latest CU for SQL Server 2012, 2014 and 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+
 ## Captured Column Data Types  
  Captured columns included in this table have the same data type and value as their corresponding source columns with the following exceptions:  
   

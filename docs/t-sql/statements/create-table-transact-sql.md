@@ -2,7 +2,7 @@
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/30/2017"
+ms.date: "04/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,8 +65,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
-      --Simple CREATE TABLE Syntax (common if not using options)  
+--Simple CREATE TABLE Syntax (common if not using options)  
 CREATE TABLE   
     [ database_name . [ schema_name ] . | schema_name . ] table_name   
     ( { <column_definition> } [ ,...n ] )   
@@ -76,8 +75,7 @@ CREATE TABLE
 ## Syntax  
   
 ```  
-  
-      --Disk-Based CREATE TABLE Syntax  
+--Disk-Based CREATE TABLE Syntax  
 CREATE TABLE   
     [ database_name . [ schema_name ] . | schema_name . ] table_name   
     [ AS FileTable ]  
@@ -106,7 +104,7 @@ column_name <data_type>
     [ COLLATE collation_name ]   
     [ SPARSE ]  
     [ MASKED WITH ( FUNCTION = ' mask_function ') ]  
-    [ CONSTRAINT constraint_name ] DEFAULT constant_expression ]   
+    [ CONSTRAINT constraint_name [ DEFAULT constant_expression ] ]   
     [ IDENTITY [ ( seed,increment ) ]  
     [ NOT FOR REPLICATION ]   
     [ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] ]   
@@ -405,8 +403,6 @@ column_name <data_type>
  TEXTIMAGE_ON only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of sp_tableoption to store the entire LOB value out of the row. 
 
 
- 
-  
 > [!NOTE]  
 >  In this context, default is not a keyword. It is an identifier for the default filegroup and must be delimited, as in TEXTIMAGE_ON **"**default**"** or TEXTIMAGE_ON **[**default**]**. If **"**default**"** is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
@@ -812,7 +808,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 )  
 ```  
   
- <index_option> ::=  
+ \<index_option> ::=  
  Specifies one or more index options. For a complete description of these options, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
  PAD_INDEX = { ON | **OFF** }  
@@ -1571,7 +1567,7 @@ Creates a tables with an inline filtered index.
       c1 int,
       index IX1  (c1) WHERE c1 > 0   
  )
- go
+GO
  ```
  
   

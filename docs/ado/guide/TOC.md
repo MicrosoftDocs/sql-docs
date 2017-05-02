@@ -1,3 +1,9 @@
+# [Data +](./data/index.md)
+# [Extensions +](./extensions/index.md)
+# [Multidimensional +](./multidimensional/index.md)
+# [Remote Data service +](./remote-data-service/index.md)
+# [Appendixes +](./appendixes/index.md)
+
 # [ADO Programmer's Guide](ado-programmer-s-guide.md)
 # [Referencing the ADO Libraries In a Visual C++ Application](referencing-the-ado-libraries-in-a-visual-c-application.md)
 # [Referencing the ADO Libraries In a Visual Basic 6 Application](referencing-the-ado-libraries-in-a-visual-basic-6-application.md)
@@ -8,9 +14,3 @@
 # [Prerequisites for Using the ADO Documentation](prerequisites-for-using-the-ado-documentation.md)
 # [ADO Technology Table](ado-technology-table.md)
 # [ADO Task Table](ado-task-table.md)
-
-# [Data](./data/TOC.md)
-# [Extensions](./extensions/TOC.md)
-# [Multidimensional](./multidimensional/TOC.md)
-# [Remote Data service](./remote-data-service/TOC.md)
-# [Appendixes](./appendixes/TOC.md)

@@ -30,9 +30,7 @@ manager: "jhubbard"
 
   Returns the Query Store options for this database.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,8 +47,10 @@ manager: "jhubbard"
 |**max_plans_per_query**|**bigint**|Limits the maximum number of stored plans. Default value is 200. If the maximum value is reached, Query Store stops capturing new plans for that query. Setting to 0 removes the limitation with regards to the number of captured plans.<br /><br /> Change by using the `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` statement.|  
 |**query_capture_mode**|**smallint**|The currently active query capture mode:<br /><br /> 1 = ALL - all queries are captured. This is the default configuration value for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].<br /><br /> 2 = AUTO - capture relevant queries based on execution count and resource consumption. This is the default configuration value for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = NONE - stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration cautiously since you may miss to capture important queries.|  
 |**query_capture_mode_desc**|**nvarchar(60)**|Textual description of the actual capture mode of Query Store:<br /><br /> ALL (default for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> AUTO (default for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> NONE|  
-|**size_based_cleanup_mode**|**smallint**|Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:<br /><br /> 1 = OFF – size based cleanup won’t be automatically activated. This is the default configuration value.<br /><br /> 2 = AUTO - size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. This is the default configuration value.<br /><br />Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of max_storage_size_mb.|  
-|**size_based_cleanup_mode_desc**|**smallint**|Textual description of the actual size-based cleanup mode of Query Store:<br /><br /> OFF (default)<br /><br /> AUTO|  
+|**size_based_cleanup_mode**|**smallint**|Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:<br /><br /> 1 = OFF – size based cleanup won’t be automatically activated.<br /><br /> 2 = AUTO - size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. This is the default configuration value.<br /><br />Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of max_storage_size_mb.|  
+|**size_based_cleanup_mode_desc**|**smallint**|Textual description of the actual size-based cleanup mode of Query Store:<br /><br /> OFF <br /><br /> AUTO (default)|  
+|**wait_stats_capture_mode**|**smallint**| Controls whether Query Store performs capture of wait statistics: <br /><br /> 0 = OFF <br /><br /> 1 = ON|
+|**wait_stats_mode_capture_desc**|**nvarchar(60)**| Textual description of the actual wait statistics capture mode: <br /><br /> OFF <br /><br /> ON (default)| 
   
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  
@@ -61,6 +61,7 @@ manager: "jhubbard"
  [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -17,6 +17,171 @@ manager: "jhubbard"
 ---
 # SQL Server Management Studio - Changelog (SSMS)
 
+## SSMS 17.0 release
+Generally available | Build number: 14.0.17099.0
+
+### Enhancements 
+
+- Upgrade package and Windows Software Update Services (WSUS) 
+	- Future 17.X releases include a smaller cumulative update package 
+  - The update package will also be published to the WSUS catalog  
+- Icon Updates
+	- Icons have been updated to be consistent with VS Shell provided icons and support High DPI resolutions
+	- New SSMS and Profiler program icons to differentiate between 16.X and 17.X versions
+- SQL PowerShell Module
+  - SQL Server PowerShell module removed from SSMS and now ships via the PowerShell gallery (PowerShell 5.0 now required to support module versioning)
+  - Miscellaneous improvements to the "presentation" (formatting) of some SMO objects (e.g. databases now show the size and the available space and tables show row count and space usage)
+  - Added colorization when the PowerShell command prompt is invoked from the "Start PowerShell" menu in OE
+  - Added -ClusterType and -RequiredCopiesToCommit parameter to AG cmdlets (New-SqlAvailabilityGroup, Join-SqlAvailabilityGroup, and Set-SqlAvailabilityGroup cmdlets)
+  - Added parameters -ActiveDirectoryAuthority and -AzureKeyVaultResourceId to Add-SqlAzureAuthenticationContext cmdlet
+  - Added	Revoke-SqlAvailabilityGroupCreateAnyDatabase, Grant-SqlAvailabilityGroupCreateAnyDatabase and Set-SqlAvailabilityReplicaRoleToSecondary cmdlets
+  - Added -SeedingMode parameter to Set-SqlAvailabilityReplica and New-SqlAvailabilityReplica cmdlets
+  - Added -ConnectionString parameter to Get-SqlDatabase
+- SQL Server on Linux
+	- General improvements and fixes for Log Shipping
+  - Added support for native Linux paths Attach, Restore and Backup database
+  - Added support for native Linux paths for audit log destination folder
+- Analysis Services
+  - DAX Query Window:
+    - Parentheses matching in the editor
+    - DEFINE MEASURE and DEFINE VAR syntax support
+    - Assorted Intellisense improvements
+  - Universal Authentication
+    - Allows users to specify a username and no password and the Azure Login Dialog will handle the connection
+  - SSMS PQ Integration: 
+    - Scripting of structured data sources works 
+    - Viewing and Editing of structured data sources in PQ UI
+- New "Add Unique Constraint" template
+- Showplan
+	- Show max instead of sum across the threads in properties window for elapsed time
+	- Expose new mem grant operator properties
+	- Enabled the "Edit Query" button in Live Query Statistics
+	- Support for interleaved execution
+  - New option to "Analyze Actual Execution Plan"
+  - General improvements to showplan compare
+  - Introduced functionality in Showplan Comparison feature to find significant differences in Cardinality Estimation between matching nodes of two query plans and perform basic analysis of the possible root causes
+- Removed Configuration Manager from Registered Servers explorer
+- Enable reading audit logs from Azure blob storage
+- Added Parameterization for Always Encrypted, please refer to [this page](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) for more details 
+- AAD Universal auth connection to Azure SQL DB supports custom tenant id 
+- Generate scripts for Azure SQL Database, now scripts full text, rules, and database
+- Branding fixes in splash screens for SSMS and Profiler
+- Removed Utility Control Point UI from SSMS
+- SSMS can now create "PremiumRS" edition SQL Azure databases
+- Always On Availability Groups
+  - Add support for new cluster types: EXTERNAL and NONE
+	- Add support for SQL Server on Linux
+	- Add automatic seeding as an option for initial data synchronization
+	- Fixed the some defects, e.g. endpoint URL handling, DB refresh and UI layout
+	- Removed Azure replica related features
+  - Improved IntelliSense for several Availability Group keywords
+- Activity Monitor
+  - Added new "Activity Monitor" pane to the SSMS Output window
+  - Changed connection error/timeout message to log info to output window rather than a pop up message
+  - Removed empty chart (5th chart) in Overview section
+  - Added "(paused)" to Overview title if the Activity Monitor data collection is paused
+  - Graph Extensions to SQL Server 
+			- New icons for graph node and edge tables
+			- Graph node and edge tables will be displayed under Graph Tables folder
+			- Templates to create graph node and edge tables available
+- Presentation Mode
+	- 3 new tasks available via Quick Launch (Ctr-Q)
+	- PresentOn - Turn on presentation mode
+	- PresentEdit - Edit the presentation font sizes for presentation mode.  "Text Editor font" for the Query Editor.  "Environment font" for other components.
+	- RestoreDefaultFonts - Revert back to default settings.
+	- *Note: there is currently no PresentOff command at this time.  Use RestoreDefaultFonts to turn off Presentation Mode*
+
+### Bug fixes
+
+- Fixed an issue where SSMS crashed when showplan scrolled via surfacebook touchpad
+- Fixed an issue where SSMS hangs for a long times while getting the properties of a databases which is being restored or offline 
+- Fixed an issue where "Help viewer" could not be opened in RC builds
+- Fixed an issue where "Maintenance Plans Tasks Toolbox" items may be missing in SSMS.
+- Fixed an issue in SSMS where the user was unable to shrink a database when the database name contained curly braces. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3122618)
+- Fixed an issue where SSMS was trying to script the deletion of an Azure database was actually causing the deletion of the database itself. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3131458/)
+- Fixed an issue where default values were not scripted for user defined table types. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3119027)
+- Another round of perf improvements around context menu on indexes. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3120783)
+- Fixed issue which was causing excessive flickering when hovering mouse over missing index in execution plan. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3118510)
+- Fixed an issue where SSMS was taking the DB offline when scripting [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3118550)
+- Miscellaneous UI fixes on localized (non-English) versions of SSMS.
+- Fixed issue where "Always Encrypted Keys" node was missing when targeting SQL 2016 SP1 Standard Edition.
+- Always Encrypted
+	- "Always Encrypted" menu was incorrectly enabled when targeting SQL 2016 RTM Standard Edition or any SQL 2014 (and below) servers
+	- Fixed an issue where IntelliSense is reporting an error when the CREATE OR ALTER syntax is used
+	- Fixed issue where encryption fails in case CMK/CEK contain characters that should be escaped, i.e. enclosed in brackets
+	- When an Out of Memory exception occurs in SSMS, the user is presented an error that suggests to use the native (64bit) PowerShell instead.
+	- Fixed issue where the AE wizard was failing in case the user was using Resource Group Manager subscriptions instead of Classic Azure subscriptions
+	- Fixed issue where AE wizard was showing an incorrect error when the user had no permissions in any subscriptions or had no Azure Key Vaults in any of them.
+	- Fixed issue in AE wizard where the Azure Key Vault sign-in page was not showing Azure subscriptions in case of multiple AAD
+	- Fixed issue in AE wizard where the Azure Key Vault sign-in page was not showing Azure subscriptions for which the user has reader permission
+  - Fixed an issue where resource files may not be loaded correctly, thus resulting in inaccurate error messages
+- Improved contrast of hyperlinks on SSMS Setup page
+- Fixed an issue where Polybase nodes were not displayed when connected to SQL Server Express (2016 SP1)
+- Fixed an issue where SSMS is unable to change the Compatibility Level of an Azure DB to v140
+- Improved performance of Object Explorer when expanding the list of Azure databases [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
+- Fixed an issue where "View SQL Server Log" context menu item appeared incorrectly for non-relational server types (AS\RS\IS) 
+- Fixed an issue where checking syntax of an Analysis Services partition query using SQL auth could result in login failed message
+- Fixed an issue where renaming a preview 1400 compat-level AS tabular model would fail in SSMS
+- Fixed an “operation failed on model” issue that could occur after attempting an invalid operation on the AS server in rare circumstances, revert local changes after unsuccessful save on the model
+- Fixed a typo in Analysis Services Synchronize Database popup dialog
+- Backup/restore container dialogs come up offscreen on multiple monitor setups. 
+- SecurityPolicy create fails if target object has ] in its name.
+- SSMS 2016 "Open recent" menu doesn't show recently saved files. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+- Removed reset of user settings when VS Shell is updated.
+- Fixed an issue that was preventing the user from being able to change Compatibility Level of a database on SQL Server 2017.
+- Query windows using AAD Universal authentication cannot refresh the query after an hour.
+- Utility Control Point UI removed from SSMS.
+- AD Universal auth connections fail to query data after the initial token expiration.
+- Unable to script Rules from Azure SQL DB to Azure SQL DB.
+- Fixed issue were SQL PowerShell was not able to connect legacy SQL instances (2014 and older). [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/1138754/sql-server-sqlps-powershell-module-fails-connection-to-sql-2012-instance)
+- Fixed an issue that was causing SSMS to crash when failing to import registered servers.
+- Fixed an issue that was causing SSMS to crash if a user has certain permissions an a database. 
+- SSMS - tables disappear from design surface while reviewing views. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
+- The table scrollbar does not allow the user to scroll the table content, only the up/down Arrow allow this. Its also possible to scroll the table content after trying to scroll using the scrollbar which is a bug. [Connect Item](
+http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
+- Registered Servers not displaying icons after refreshing the root node.
+- Script button for Create Database on Azure v12 servers executes script then displays message "No action to be scripted".
+- SSMS Connect to Server dialog does not clear "Additional Properties" tab for each new connection.
+- Generate Tasks script doesn't generate Create Database scripts for an Azure SQL DB.
+- Scrollbar in View Designer appears disabled.
+- Always Encrypted AVK key paths do not include version ids.
+- Reduced number of engine edition queries in the query window. [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3113387)
+- Always Encrypted errors from refreshing modules after encryption are incorrectly handled.
+- Changed default connection timeout for OLTP and OLAP from 15 to 30 seconds to fix a class of ignored connection failures. 
+- Fixed a crash in SSMS when custom report is launched. [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3118856)
+- Fixed an issue where "Generate Script…" fails for Azure SQL databases.
+- Fix "Script As" and "Generate Script Wizard" to not add extra newlines when scripting objects such as stored procedures. [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3115850)
+- SQLAS PowerShell Provider: Add LastProcessed property to Dimension and MeasureGroup folders. [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3111879)
+- Live Query Statistics: fixed issue where it was only showing the first query in a batch. [Connect Item] (https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3114221)  
+- Showplan: show max instead of sum across the threads in properties window.
+- Query Store: add new report on queries with high execution variation.
+- Object explorer performance issues: [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3114074)
+	- Context menu for tables momentarily hangs
+	- SSMS is slow when right-clicking an index for a table (over a remote (Internet) connection). 
+	- Avoid issuing table queries that sort on the server
+- Removed Azure Deployment Wizard (Deploy Database to Azure VM) from SSMS
+- Fixed issue where missing indexes were not shown in execution plans in SSMS [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3114194)
+- Fixed common crash-on-shutdown issue in SSMS
+- Fixed issue in Object Explorer where an error occurred when bringing up the context menu on the Polybase|Scale-Out Group nodes [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3115128)
+- Fixed an issue where SSMS may crash when trying to display the permissions on a database
+- Query Store: general enhancements in context menu items for result grids of query store report
+- Configuring Always Encrypted for an existing table fails with errors on unrelated objects. [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3103181)
+- Configuring Always Encrypted for an existing database with multiple schemas doesn't work. [Connect Item] (https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3109591)
+- The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect Item] (https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3111925)
+- When encrypting using Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
+- Fixed UI truncation issue on "New Server Registration" dialog
+- Fix DMF Condition UI incorrectly updating expressions that contain string constant values with quotes in them
+- Fixed an issue that may cause SSMS to crash when running custom reports
+- Add “Execution in Scale Out…” menu item to the folder node
+- Fixed an issue with Azure SQL DB firewall whitelist IP address feature
+- Fixed an issue in SSMS which caused an Object reference not set exception when editing the source of AS multi-dimensional partition
+- Fixed an issue in SSMS which caused an Object reference not set exception when deleting a customer assembly from multi-dimensional AS server
+- Fixed an issue where renaming an AS tabular 1400 db failed
+- Fixed an issue with scripting a 1400 compat-level AS tabular datasource from connection properties dialog
+- Remove assumption that tables in AS 1400 compat-level model have at least one partition
+- Ctrl-R now toggles results pane in SSMS DAX query editor
+
+
 ## SSMS 16.5.3 release
 Generally available | Build number: 13.0.16106.4
 
@@ -563,11 +728,3 @@ Version number: 13.0.300.44
  * **Import/Export wizard support for new Azure SQL Database service tiers (Basic, Standard, Premium).**  
    
  * **Numerous bug fixes (scripting scenarios, enabling change tracking for SQL databases, and more).**   
-     
-  
-  
-  
-  
-  
-  
-    

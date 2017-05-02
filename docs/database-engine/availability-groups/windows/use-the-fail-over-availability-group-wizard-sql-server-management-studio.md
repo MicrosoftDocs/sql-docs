@@ -26,34 +26,8 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Use the Fail Over Availability Group Wizard (SQL Server Management Studio)
-  This topic describes how to perform a planned manual failover or forced manual failover (forced failover) on an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. If you fail over to a secondary replica in the SYNCHRONIZED state, the wizard performs a planned manual failover (without data loss). If you fail over to a secondary replica in the UNSYNCHRONIZED or NOT SYNCHRONIZING state, the wizard performs a forced manual failover—also known as a *forced failover* (with possible data loss). Both forms of manual failover transition the secondary replica to which you are connected to the primary role. A planned manual failover currently transitions the former primary replica to the secondary role. After a forced failover, when the former primary replAica comes online, it transitions to the secondary role.  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Prerequisites for Using the Failover Availability Group Wizard](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To fail over an availability group, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
--   **[!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] pages:**  
-  
-     [Select New Primary Replica page](#SelectNewPrimaryReplica) (later in this topic)  
-  
-     [Connect to Replica page](#ConnectToReplica) (later in this topic)  
-  
-     [Confirm Potential Data Loss page](#ConfirmPotentialDataLoss) (later in this topic)  
-  
-     [Summary Page &#40;Always On Availability Group Wizards&#41;](../../../database-engine/availability-groups/windows/summary-page-always-on-availability-group-wizards.md)  
-  
-     [Progress Page &#40;Always On Availability Group Wizards&#41;](../../../database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards.md)  
-  
-     [Results Page &#40;Always On Availability Group Wizards&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)  
-  
+  This topic describes how to perform a planned manual failover or forced manual failover (forced failover) on an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An availability group fails over at the level of an availability replica. If you fail over to a secondary replica in the SYNCHRONIZED state, the wizard performs a planned manual failover (without data loss). If you fail over to a secondary replica in the UNSYNCHRONIZED or NOT SYNCHRONIZING state, the wizard performs a forced manual failover—also known as a *forced failover* (with possible data loss). Both forms of manual failover transition the secondary replica to which you are connected to the primary role. A planned manual failover currently transitions the former primary replica to the secondary role. After a forced failover, when the former primary replica comes online, it transitions to the secondary role.  
+
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  Before your first planned manual failover, see the "Before You Begin" section in [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
@@ -62,12 +36,7 @@ manager: "jhubbard"
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   A failover command returns as soon as the target secondary replica has accepted the command. However, database recovery occurs asynchronously after the availability group has finished failing over.  
-  
--   Cross-database consistency across databases within the availability group might not be maintained on failover.  
-  
-    > [!NOTE]  
-    >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
-  
+    
 ###  <a name="Prerequisites"></a> Prerequisites for Using the Failover Availability Group Wizard  
   
 -   You must be connected to the server instance that hosts an availability replica that is currently available.  
@@ -132,16 +101,20 @@ manager: "jhubbard"
  Displays the status of the current primary replica, if it is online.  
   
  **Quorum Status**  
- Displays the WSFC quorum status for the availability replica, one of:  
+ For cluster type WSFC, displays the quorum status for the availability replica, one of:  
   
-|Value|Description|  
-|-----------|-----------------|  
-|**Normal quorum**|The cluster has started with normal quorum.|  
-|**Forced quorum**|The cluster has started with forced quorum.|  
-|**Unknown quorum**|The cluster quorum status is unavailable.|  
-|**Not applicable**|The node that hosts the availability replica has no quorum.|  
+   |Value|Description|  
+   |-----------|-----------------|  
+   |**Normal quorum**|The cluster has started with normal quorum.|  
+   |**Forced quorum**|The cluster has started with forced quorum.|  
+   |**Unknown quorum**|The cluster quorum status is unavailable.|  
+   |**Not applicable**|The node that hosts the availability replica has no quorum.|  
   
  For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+
+ For cluster type NONE, the quorum status does not apply.
+
+ For cluster type EXTERNAL, the quorum status is managed by the cluster manager, and not visible to SQL Server.
   
  **Choose a new primary replica**  
  Use this grid to select a secondary replica to become the new primary replica. The columns in this grid are as follows:  
@@ -219,5 +192,4 @@ manager: "jhubbard"
  [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   
  [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
-  
   

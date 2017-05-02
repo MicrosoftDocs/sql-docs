@@ -1,7 +1,7 @@
 ---
 title: "CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/24/2016"
+ms.date: "03/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,37 +39,31 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE SYMMETRIC KEY key_name   
     [ AUTHORIZATION owner_name ]  
     [ FROM PROVIDER provider_name ]  
-    WITH <key_options> [ , ... n ]  
-    |  
-    ENCRYPTION BY <encrypting_mechanism> [ , ... n ]  
+    WITH 
+      [
+          <key_options> [ , ... n ]  
+        | ENCRYPTION BY <encrypting_mechanism> [ , ... n ] 
+      ]
   
 <key_options> ::=  
-    KEY_SOURCE = 'pass_phrase'  
-    |  
-    ALGORITHM = <algorithm>  
-    |  
-    IDENTITY_VALUE = 'identity_phrase'  
-    |  
-    PROVIDER_KEY_NAME = 'key_name_in_provider'   
-    |  
-    CREATION_DISPOSITION = {CREATE_NEW | OPEN_EXISTING }  
+      KEY_SOURCE = 'pass_phrase'  
+    | ALGORITHM = <algorithm>  
+    | IDENTITY_VALUE = 'identity_phrase'  
+    | PROVIDER_KEY_NAME = 'key_name_in_provider'   
+    | CREATION_DISPOSITION = {CREATE_NEW | OPEN_EXISTING }  
   
 <algorithm> ::=  
     DES | TRIPLE_DES | TRIPLE_DES_3KEY | RC2 | RC4 | RC4_128  
     | DESX | AES_128 | AES_192 | AES_256   
   
 <encrypting_mechanism> ::=  
-    CERTIFICATE certificate_name   
-    |  
-    PASSWORD = 'password'   
-    |  
-    SYMMETRIC KEY symmetric_key_name   
-    |  
-    ASYMMETRIC KEY asym_key_name  
+      CERTIFICATE certificate_name   
+    | PASSWORD = 'password'   
+    | SYMMETRIC KEY symmetric_key_name   
+    | ASYMMETRIC KEY asym_key_name  
 ```  
   
 ## Arguments  

@@ -52,7 +52,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Hardware and Software Requirements for Installing SQL Server
-  The topic lists the minimum hardware and software requirements to install and run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  The topic lists the minimum hardware and software requirements to install and run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+
+ > For content related to previous versions of SQL Server, see [Hardware and Software Requirements for Installing SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
   
  **Try it out:**  
   

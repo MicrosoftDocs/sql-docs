@@ -21,7 +21,7 @@ description: Learn about SQL
                                 </div>
                             </li>
                             <li>
-                                <a href="/sql/sql-server/sql-server-vnext-release-notes">
+                                <a href="/sql/sql-server/sql-server-2017-release-notes">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -280,7 +280,7 @@ description: Learn about SQL
                         </ul>
                     </li>
                     <li>
-                        <a href="/en-us/sql/linux/">SQL Server on Linux</a>
+                        <a href="/en-us/sql/linux?toc=/sql/docs/linux/toc.json">SQL Server on Linux</a>
                     </li>
                     <li>
                         <a href="/en-us/sql/advanced-analytics/r-services/">SQL Server R Services</a>

@@ -42,7 +42,7 @@ manager: "jhubbard"
  ![Data flows](../../integration-services/control-flow/media/mw-dts-09.gif "Data flows")  
   
 ## Log Entries  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of log events that are available to all tasks. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also provides custom log entries to many tasks. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md). The Data Flow task includes the following custom log entries:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of log events that are available to all tasks. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also provides custom log entries to many tasks. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md). The Data Flow task includes the following custom log entries:  
   
 |Log entry|Description|  
 |---------------|-----------------|  

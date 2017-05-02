@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: Run SQL Server vNext on Docker | Microsoft Docs
-description: Download and run the Docker image for SQL Server vNext.
+title: Run SQL Server 2017 on Docker | Microsoft Docs
+description: Download and run the Docker image for SQL Server 2017.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/15/2017
+ms.date: 04/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -24,7 +24,7 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 
 ---
-# Run the SQL Server vNext Docker image on Linux, Mac, or Windows
+# Run the SQL Server 2017 Docker image on Linux, Mac, or Windows
 
 This topic explains how to pull and run the [mssql-server Docker image](https://hub.docker.com/r/microsoft/mssql-server-linux/). This image consists of SQL Server running on Linux and can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. We are currently tracking all issues with the Docker image in our [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker).
 
@@ -68,14 +68,14 @@ This topic explains how to pull and run the [mssql-server Docker image](https://
     docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
     ```
 
+    > [!NOTE]
+    > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image. Setting the **ACCEPT_EULA** variable to any value confirms your acceptance of the [End-User Licensing Agreement](http://go.microsoft.com/fwlink/?LinkId=746388). 
+
 3. To persist the data generated from your Docker container, you must map volume to the host machine. To do that, use the run command with the **-v \<host directory\>:/var/opt/mssql** flag. This will allow the data to be restored between container executions.
 
     ```
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
     ```
-
-    > [!NOTE]
-    > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image.
 
     > [!IMPORTANT]
     > Volume mapping for Docker-machine on Mac with the SQL Server on Linux image is not supported at this time.
@@ -90,7 +90,7 @@ Upgrading the Docker image will require just pulling the latest version from the
 You can now create new containers that will have the latest version of SQL Server in Linux on Docker.
 
 ## SQL Server command-line tools
-Starting with SQL Server vNext CTP 1.4, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally. 
+Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally. 
 
 Alternatively, you can connect to the SQL Server instance on your Docker machine from any external Windows or Linux tool that supports SQL connections, such as SQL Server Management Studio (SSMS) on Windows.
 

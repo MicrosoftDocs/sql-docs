@@ -1,7 +1,7 @@
 ---
-title: "Measures (SSAS Tabular) | Microsoft Docs"
+title: "Measures| Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "04/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,20 +17,8 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Measures (SSAS Tabular)
+# Measures
   In tabular models, a measure is a calculation created using a DAX formula for use in a reporting client. Measures are evaluated based on fields, filters, and slicers users select in the reporting client application.  
-  
- Sections in this topic:  
-  
--   [Benefits](#bkmk_understanding)  
-  
--   [Defining Measures by Using the Measure Grid](#bkmk_def_mg)  
-  
--   [Measure Properties](#bkmk_properties)  
-  
--   [Using a Measure in a KPI](#bkmk_KPI)  
-  
--   [Related Tasks](#bkmk_rel_tasks)  
   
 ##  <a name="bkmk_understanding"></a> Benefits  
  Measures can be based on standard aggregation functions, such as AVERAGE, COUNT, or SUM, or you can define your own formula by using DAX. In addition to the formula, each measure has properties defined by the measure data type, such as Name, Table Detail, Format, and Decimal Places.  
@@ -61,8 +49,8 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |Tv and Video|$946,989,702.51|  
 |**Grand Total**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a> Defining Measures by Using the Measure Grid  
- Measures are created at design time by using the measure grid in the model designer. Each table has a measure grid. By default, the measure Grid is displayed below each table in the model designer. You can also choose not to view the measure grid for a particular table. To toggle the display of a table’s measure grid, click the **Table** menu, and then click **Show Measure Grid**.  
+##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
+ Measures are created at design time by using the measure grid in the model designer. Each table has a measure grid. By default, the measure grid is displayed below each table in the model designer. You can also choose not to view the measure grid for a particular table. To toggle the display of a table’s measure grid, click the **Table** menu, and then click **Show Measure Grid**.  
   
  In the measure grid, you can create measures in the following ways:  
   
@@ -72,12 +60,12 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  By default, when using AutoSum, the name of the measure is defined by the name of the associated column followed by a colon, followed by the formula. The name can be changed in the formula bar or in the **Measure Name** property setting in the Properties window. When creating a measure by using a custom formula, you can type a name in the formula bar, followed by a colon, then followed by the formula, or you can type a name in the **Measure Name** property setting in the Properties window.  
   
- It is important to name measures carefully. The measure name will appear with the associated table in the Field List of the reporting client. A KPI will also be named according to the base measure. A measure cannot have the same name as any column in any table in the model.  
+ It's important to name measures carefully. The measure name will appear with the associated table in the Field List of the reporting client. A KPI will also be named according to the base measure. A measure cannot have the same name as any column in any table in the model.  
   
 > [!TIP]  
 >  You can group measures from multiple tables into one table by creating an empty table, and then moving or create new measures into it. Keep in-mind, you may need to include table names in DAX formulas when referencing columns in other tables.  
   
- If perspectives have been defined for the model, measures are not automatically added to any of those perspectives. You must manually add measures to a perspective by using the Perspectives dialog box. For more information, see [Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
+ If perspectives have been defined for the model, measures are not automatically added to any of those perspectives. You must manually add measures to a perspective by using the Perspectives dialog box. To learn more, see [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).  
   
 ##  <a name="bkmk_properties"></a> Measure Properties  
  Each measure has properties that define it. Measure properties, along with the associated column properties can be edited in the Properties window. Measures have the following properties:  
@@ -92,17 +80,17 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> Using a Measure in a KPI  
  A KPI (Key Performance Indicator) is defined by a *Base* value, defined by a measure, against a *Target* value, also defined by a measure or by an absolute value. A KPI also includes *Status*, a calculation where the Base value evaluates against the Target value between thresholds, displayed in graphical format. KPIs are often used by business professionals to identify trends in critical business metrics.  
   
- Any measure can serve as the Base measure of a KPI. To create a KPI, in the measure grid, right-click a measure, and then click **Create KPI**. The Key Performance Indicator dialog box appears where you can then specify a target value (defined by a measure or an absolute value) and define status thresholds, and a graphic type. For more information, see [KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
+ Any measure can serve as the Base measure of a KPI. To create a KPI, in the measure grid, right-click a measure, and then click **Create KPI**. The Key Performance Indicator dialog box appears where you can then specify a target value (defined by a measure or an absolute value) and define status thresholds, and a graphic type. To learn more, see [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
   
-##  <a name="bkmk_rel_tasks"></a> Related Tasks  
+##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create and Manage Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Describes how to create and manage measures using the measure grid in the model designer.|  
+|[Create and Manage Measures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Describes how to create and manage measures using the measure grid in the model designer.|  
   
 ## See Also  
- [KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Create and Manage KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
- [Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Create and Manage KPIs](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
+ [Calculated Columns](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

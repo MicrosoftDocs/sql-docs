@@ -49,8 +49,8 @@ sys.dm_db_log_info ( database_id )
 |database_id|**int**|Database ID.|
 |file_id|**smallint**|file id of the transaction log.|  
 |vlf_begin_offset|**bigint** |Offset location of the VLF from the beginning of the transaction log file.|
-|vlf_size_mb |**float** |Size of VLF in MB(megabytes) rounded to 2 decimal places.|     
-|vlf_sequence_number|**bigint** |Sequence number of VLF in the order of its creation. It can be used as unique identity of the VLF.|
+|vlf_size_mb |**float** |Size of VLF in megabytes rounded to 2 decimal places.|     
+|vlf_sequence_number|**bigint** |Sequence number of VLF in the order of its creation. It can be used to uniquely identify vlfs in log file.|
 |vlf_active|**bit** |Status flag to indicate if VLF is active. <br /> 1 - vlf is active <br /> 0 - vlf is either unused or inactive.|
 |vlf_status|**int** |Status of the VLF. Possible values include <br />0 - vlf is inactive <br />1 - vlf is initialized but unused <br /> 2 - vlf is active.|
 |vlf_parity|**tinyint** |Parity of VLF.|
@@ -59,16 +59,13 @@ sys.dm_db_log_info ( database_id )
 
 ## Remarks
  The sys.dm_db_log_info dynamic management function replaces the DBCC LOGINFO statement. 
-  u
-  
+ 
 ## Permissions  
- On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires `VIEW SERVER STATE` permission on the server.  
-  
- On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requires the `VIEW DATABASE STATE` permission in the database.  
+ Requires the `VIEW DATABASE STATE` permission in the database.  
   
 ## Examples  
   
-### A. Determing databases with more than 100 vlfs
+### A. Determing databases in a SQL Server instance with high number of vlfs
 The following query determines the databases with more than 100 vlfs in the log files which can affect the database startup, restore and recovery time.
 
 ```tsql

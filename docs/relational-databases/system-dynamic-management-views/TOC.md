@@ -293,4 +293,5 @@
 ## [sys.dm_tran_session_transactions](sys-dm-tran-session-transactions-transact-sql.md)  
 ## [sys.dm_tran_top_version_generators](sys-dm-tran-top-version-generators-transact-sql.md)  
 ## [sys.dm_tran_transactions_snapshot](sys-dm-tran-transactions-snapshot-transact-sql.md)  
-## [sys.dm_tran_version_store](sys-dm-tran-version-store-transact-sql.md)  
+## [sys.dm_tran_version_store](sys-dm-tran-version-store-transact-sql.md)
+## [sys.dm_tran_version_store_space_usage](sys-dm-tran-version-store-space-usage.md)

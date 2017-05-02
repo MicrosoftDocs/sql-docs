@@ -81,7 +81,7 @@ having count(l.database_id)> 100
 
 ### B. Determing the status of last vlf in transaction log before shrinking the log file
 
-The following query determines the status of last vlf before running shrinkfile on transaction log to determine if transaction log can shrink.
+The following query can be used to determine the status of last vlf before running shrinkfile on transaction log to determine if transaction log can shrink.
 
 ```tsql
 USE <database name>

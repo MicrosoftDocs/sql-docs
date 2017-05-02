@@ -1,7 +1,7 @@
 ---
 title: "ALTER SCHEMA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -60,7 +60,7 @@ ALTER SCHEMA schema_name
  *schema_name*  
  Is the name of a schema in the current database, into which the securable will be moved. Cannot be SYS or INFORMATION_SCHEMA.  
   
- <entity_type>  
+ \<entity_type>  
  Is the class of the entity for which the owner is being changed. Object is the default.  
   
  *securable_name*  

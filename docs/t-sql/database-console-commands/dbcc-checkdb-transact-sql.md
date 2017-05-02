@@ -235,7 +235,8 @@ In Microsoft SQL Server 2012 or an earlier version of SQL Server, you may encoun
 ## Checking Objects in Parallel    
  By default, DBCC CHECKDB performs parallel checking of objects. The degree of parallelism is automatically determined by the query processor. The maximum degree of parallelism is configured just like parallel queries. To restrict the maximum number of processors available for DBCC checking, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Parallel checking can be disabled by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).    
     
-> **NOTE:** This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see parallel consistency check in the RDBMS Manageability section of [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
+> [!NOTE]
+> This feature is not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see parallel consistency check in the RDBMS Manageability section of [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
     
 ## Understanding DBCC Error Messages    
  After the DBCC CHECKDB command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates success and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates that the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.    
@@ -264,7 +265,8 @@ In Microsoft SQL Server 2012 or an earlier version of SQL Server, you may encoun
 ## Resolving Errors in Database Emergency Mode    
  When a database has been set to emergency mode by using the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement, DBCC CHECKDB can perform some special repairs on the database if the REPAIR_ALLOW_DATA_LOSS option is specified. These repairs may allow for ordinarily unrecoverable databases to be brought back online in a physically consistent state. These repairs should be used as a last resort and only when you cannot restore the database from a backup. When the database is set to emergency mode, the database is marked READ_ONLY, logging is disabled, and access is limited to members of the sysadmin fixed server role.    
     
-> **NOTE:** You cannot run the DBCC CHECKDB command in emergency mode inside a user transaction and roll back the transaction after execution.    
+> [!NOTE]
+> You cannot run the DBCC CHECKDB command in emergency mode inside a user transaction and roll back the transaction after execution.    
     
  When the database is in emergency mode and DBCC CHECKDB with the REPAIR_ALLOW_DATA_LOSS clause is run, the following actions are taken:    
     
@@ -274,15 +276,16 @@ In Microsoft SQL Server 2012 or an earlier version of SQL Server, you may encoun
     
 -   If, because of transaction log corruption, database recovery is unsuccessful, the transaction log is rebuilt. Rebuilding the transaction log may result in the loss of transactional consistency.    
     
-    > **WARNING!** The REPAIR_ALLOW_DATA_LOSS option is a supported feature of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, it may not always be the best option for bringing a database to a physically consistent state. If successful, the REPAIR_ALLOW_DATA_LOSS option may result in some data loss. In fact, it may result in more data lost than if a user were to restore the database from the last known good backup. [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. The REPAIR_ALLOW_DATA_LOSS option is not an alternative for restoring from a known good backup. It is an emergency “last resort” option recommended for use only if restoring from a backup is not possible.    
-    >     
-    >  After rebuilding the log, there is no full ACID guarantee.    
-    >     
-    >  After rebuilding the log, DBCC CHECKDB will be automatically performed and will both report and correct physical consistency issues.    
-    >     
-    >  Logical data consistency and business logic enforced constraints must be validated manually.    
-    >     
-    >  The transaction log size will be left to its default size and must be manually adjusted back to its recent size.    
+> [!WARNING]
+> The REPAIR_ALLOW_DATA_LOSS option is a supported feature of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, it may not always be the best option for bringing a database to a physically consistent state. If successful, the REPAIR_ALLOW_DATA_LOSS option may result in some data loss. In fact, it may result in more data lost than if a user were to restore the database from the last known good backup. [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. The REPAIR_ALLOW_DATA_LOSS option is not an alternative for restoring from a known good backup. It is an emergency “last resort” option recommended for use only if restoring from a backup is not possible.    
+>     
+>  After rebuilding the log, there is no full ACID guarantee.    
+>     
+>  After rebuilding the log, DBCC CHECKDB will be automatically performed and will both report and correct physical consistency issues.    
+>     
+>  Logical data consistency and business logic enforced constraints must be validated manually.    
+>     
+>  The transaction log size will be left to its default size and must be manually adjusted back to its recent size.    
     
  If the DBCC CHECKDB command succeeds, the database is in a physically consistent state and the database status is set to ONLINE. However, the database may contain one or more transactional inconsistencies. We recommend that you run [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) to identify any business logic flaws and immediately back up the database.    
     

@@ -55,7 +55,7 @@
 ## [Administer Multiple Servers Using Central Management Servers](administer-multiple-servers-using-central-management-servers.md)  
 
 # [Partitions](partitions/index.md)
-# [Performance Monitor](performance-monitor/index.md)
+# [Performance](performance/index.md)
 # [Policy-based management](policy-based-management/index.md)
 # [PolyBase](polybase/index.md)
 # [Replication](replication/index.md)

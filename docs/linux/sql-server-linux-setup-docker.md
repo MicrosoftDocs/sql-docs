@@ -6,7 +6,7 @@ description: Download and run the Docker image for SQL Server 2017.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 04/24/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -65,7 +65,7 @@ This topic explains how to pull and run the [mssql-server Docker image](https://
 2. To run the Docker image, you can use the following commands:
 
     ```
-    docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
+    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
     ```
 
     > [!NOTE]

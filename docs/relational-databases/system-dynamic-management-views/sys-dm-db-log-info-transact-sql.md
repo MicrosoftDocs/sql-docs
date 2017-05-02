@@ -25,7 +25,7 @@ ms.author: "pariks"
 manager: "ajayj"
 ---
 # sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 Returns VLF information of the transaction log files. (All log files are combined in the table output). Each row in the output represents a VLF in the transaction log and provides information relevant to that VLF in the log.
 

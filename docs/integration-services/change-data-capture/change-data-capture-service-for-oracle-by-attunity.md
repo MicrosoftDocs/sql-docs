@@ -31,19 +31,10 @@ manager: "jhubbard"
 ## Supported Windows Environments  
  The Change Data Capture Service for Oracle by Attunity can run in the following Windows environments:  
   
--   Windows Vista with Service Pack 2  
-  
--   Windows 7  
-  
 -   Windows 8 and 8.1  
-  
 -   Windows 10  
-  
--   Windows Server 2008 R2  
-  
--   Windows Server 2008 with Service Pack 2  
-  
--   Windows Server 2012  
+-   Windows Server 2012 and 2012 R2
+-   Windows Server 2016
   
 ## Database Prerequisites  
  To work with the CDC Service for Oracle you must install the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client Oracle software. This is a prerequisite that should be obtained from Oracle and installed before installing the Oracle CDC Service. Additionally, you need to install the SQL Server ODBC Client using SQL Server Setup.  
@@ -51,10 +42,6 @@ manager: "jhubbard"
  The CDC Service for Oracle supports the following versions:  
   
 ### Source Oracle Database  
-  
--   Oracle Database 11x, any version  
-  
--   Oracle Database 10x, any version  
   
 -   Oracle Database 10g Release 2: 10.2.0.1-10.2.0.5 (patchset as of April 2010)  
   

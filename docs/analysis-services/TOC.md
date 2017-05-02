@@ -96,21 +96,23 @@
 
 # Developer
 ## Tabular models
-### [Tabular Model Scripting Language (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
+### [Tabular Model Programming for Compatibility Level 1200](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+#### [Tabular Model Scripting Language (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
 #### [Tabular Model Scripting Language (TMSL) commands](tabular-models-scripting-language-commands/index.md)
 #### [Tabular Model Scripting Language (TMSL) objects](tabular-models-scripting-language-objects/index.md)
-### [Tabular Object Model (TOM)](tabular-model-programming-compatibility-level-1200/index.md)
-### [CSDLBI](tabular-model-programming-compatibility-levels-1050-1103/index.md)
+#### [Tabular Object Model (TOM)](tabular-model-programming-compatibility-level-1200/index.md)
+### [Tabular Model Programming for Compatibility Levels 1050 and 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+#### [Analysis Services Scripting Language (ASSL)](../analysis-services/multidimensional-models/scripting-language-assl/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fscripting-language-assl%2ftoc.json)
+#### [CSDLBI](tabular-model-programming-compatibility-levels-1050-1103/index.md)
 
 ## Multimdimensional models
-### [Scripting language ASSL +](../analysis-services/multidimensional-models/scripting-language-assl/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fscripting-language-assl%2ftoc.json)
+### [Analysis Services Scripting Language (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fscripting-language-assl%2ftoc.json)
 ### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fadomd-net%2ftoc.json)
 ### [Analysis management objects +](../analysis-services/multidimensional-models/analysis-management-objects/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fanalysis-management-objects%2ftoc.json)
 ### [OLAP logical +](../analysis-services/multidimensional-models/olap-logical/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2folap-logical%2ftoc.json)
 ### [OLAP physical +](../analysis-services/multidimensional-models/olap-physical/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2folap-physical%2ftoc.json)
 ### [Extending OLAP +](../analysis-services/multidimensional-models/extending-olap/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fextending-olap%2ftoc.json)
 
-## [Analysis Services Scripting Language (ASSL)](scripting/index.md)
 ## [Schema rowsets](schema-rowsets/index.md)
 ## [XML for Analysis (XMLA)](xmla/index.md)
 

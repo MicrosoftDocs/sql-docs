@@ -1,4 +1,4 @@
---
+---
 title: "sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -95,24 +95,23 @@ manager: "jhubbard"
 ### Determing the Amount of Free Space in tempdb  
  The following query returns the total number of free pages and total free space in megabytes (MB) available in all files in **tempdb**.  
   
-```  
+```tsql
 USE tempdb;  
 GO  
 SELECT SUM(unallocated_extent_page_count) AS [free pages],   
 (SUM(unallocated_extent_page_count)*1.0/128) AS [free space in MB]  
 FROM sys.dm_db_file_space_usage;  
 ```  
-  
+
 ### Determining the Amount of Space Used by User Objects  
  The following query returns the total number of pages used by user objects and the total space used by user objects in tempdb.  
   
-```  
+```tsql  
 USE tempdb;  
 GO  
 SELECT SUM(user_object_reserved_page_count) AS [user object pages used],  
 (SUM(user_object_reserved_page_count)*1.0/128) AS [user object space in MB]  
-FROM sys.dm_db_file_space_usage;  
-  
+FROM sys.dm_db_file_space_usage;
 ```  
   
 ## See Also  
@@ -120,7 +119,3 @@ FROM sys.dm_db_file_space_usage;
  [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
-  
-  
-
-

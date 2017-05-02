@@ -1,7 +1,7 @@
 ---
 title: "(Backslash) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,8 +12,8 @@ ms.topic: "language-reference"
 applies_to: 
   - "SQL Server (starting with 2008)"
 f1_keywords: 
-  - "\_TSQL"
-  - "\"
+  - "\\_TSQL"
+  - "\\"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "backslash"
   - "excape character"
   - "hack character"
-  - "\ (backslash)"
+  - "\\ (backslash)"
   - "backslant"
   - "bash"
   - "reverse slant"
@@ -36,22 +36,19 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Utilities Statements - Backslash
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides commands that are not [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, but are recognized by the **sqlcmd** and **osql** utilities and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code Editor. These commands can be used to facilitate the readability and execution of batches and scripts.  
   
 \  breaks a long string constant into two or more lines for readability.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 <first section of string> \  
 <continued section of string>  
 ```  
@@ -79,11 +76,11 @@ def' AS ColumnResult;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `ColumnResult`  
-  
- `------------`  
-  
- `abcdef`  
+ ```  
+ ColumnResult  
+ ------------  
+ abcdef
+ ```    
   
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

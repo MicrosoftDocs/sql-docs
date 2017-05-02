@@ -1284,6 +1284,11 @@
             "source_path": "docs/ado/reference/adox-api/adox-api-reference.md",
             "redirect_url": "/sql/ado/reference/adox-api/adox-object-model",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/whitepapers/introducing-microsoft-technologies-for-data-storage-movement-and-transformation.md",
+            "redirect_url": "sql/whitepapers/microsoft-white-papers",
+            "redirect_document_id": true
         }
     ]
 }

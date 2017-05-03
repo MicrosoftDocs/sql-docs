@@ -21,12 +21,24 @@ manager: "jhubbard"
 # SQL Server Guides
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-The following guides are available. They discuss general concepts and apply to all versions of SQL Server.
+The following guides are available. They discuss general concepts and apply to all versions of SQL Server, unless stated otherwise in the respective guide.
 
-[SQL Server Transaction Log Architecture and Management Guide](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
-[Pages and Extents Architecture Guide](../relational-databases/pages-and-extents-architecture-guide.md)   
+[Always On Availability Groups Troubleshooting and Monitoring Guide](http://msdn.microsoft.com/library/dn135328)
+[Index design Guide](../relational-databases/sql-server-index-design-guide.md)
 [Memory Management Architecture Guide](../relational-databases/memory-management-architecture-guide.md)   
-[Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md)  
-[Query Processing Architecture Guide](../relational-databases/query-processing-architecture-guide.md)  
+[Pages and Extents Architecture Guide](../relational-databases/pages-and-extents-architecture-guide.md)   
+[Post-migration Validation and Optimization Guide](post-migration-validation-and-optimization-guide.md)
+[Query Processing Architecture Guide](../relational-databases/query-processing-architecture-guide.md)
 [SQL Server Transaction Locking and Row Versioning Guide](https://msdn.microsoft.com/library/jj856598)  
-[AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](http://msdn.microsoft.com/library/dn135328)
+[SQL Server Transaction Log Architecture and Management Guide](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
+[Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md)  
+
+## [Index design](sql-server-index-design-guide.md)
+## [Memory management](memory-management-architecture-guide.md)  
+### [Reading pages](reading-pages.md)  
+### [Writing pages](writing-pages.md)
+## [Pages and extents](pages-and-extents-architecture-guide.md)  
+## [Post-migration validation and optimization](post-migration-validation-and-optimization.md)
+## [Query processing](query-processing-architecture-guide.md)  
+## [Thread and task](thread-and-task-architecture-guide.md)
+## [Transaction log](sql-server-transaction-log-architecture-and-management-guide.md) 

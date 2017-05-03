@@ -125,7 +125,7 @@ manager: "jhubbard"
 |**UpdateObjects**|Indicates whether the package is updated to use newer versions of the objects it contains, if newer versions are available. For example, if this property is set to **True**, a package that includes a Bulk Insert task is updated to use the newer version of the Bulk Insert task that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides. The default value of this property is **False**.|  
   
 ###  <a name="Security"></a> Security  
- The properties in this category are used to set the protection level of the package. For more information, see [Access Control for Sensitive Data in Packages](../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ The properties in this category are used to set the protection level of the package. For more information, see [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
 |Property|Description|  
 |--------------|-----------------|  

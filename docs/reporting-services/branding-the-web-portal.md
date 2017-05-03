@@ -1,7 +1,7 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2016"
+ms.date: "04/18/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,19 +18,8 @@ manager: "erikre"
 # Branding the web portal
 You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package has been designed so you don’t need deep cascading style sheet (CSS) knowledge to create it.  
   
-In this topic:  
-  
--   [Creating the brand package](#create)  
-  
--   [Applying the brand package to the web portal](#apply)  
-  
--   [metadata.xml example](#metadata)  
-  
--   [colors.json example](#colors)  
-  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-  
-<a name="create">  
+   
 ## Creating the brand package  
   
 A brand package for Reporting Services consists of three items and is packaged as a zip file.   
@@ -120,8 +109,7 @@ You can then use that theme for any mobile reports that you create, even if they
 If you include a logo with your brand package, it will appear in the web portal in place of the name you set for the web portal in the Site Settings menu.  
   
 The file you include for the logo must use the PNG file format. The file dimensions will be scaled once uploaded to the server. It should scale to around 290px x 60px.  
-  
-<a name="apply">  
+   
 ## Applying the brand package to the web portal  
   
 To add, download, or remove a brand package, you can do the following.  
@@ -142,7 +130,6 @@ To add, download, or remove a brand package, you can do the following.
   
 You can also **Download** or **Remove** the package. Removing the package will reset the web portal to the default brand immediately.  
   
-<a name="metadata">  
 ## metadata.xml example  
   
     \<?xml version="1.0" encoding="utf-8"?>  
@@ -156,8 +143,7 @@ You can also **Download** or **Remove** the package. Removing the package will r
             <Item key="logo" path="logo.png" />  
         </Contents>  
     </SystemResourcePackage>  
-  
-<a name="colors">  
+   
 ## Colors.json example  
   
     {  
@@ -251,13 +237,5 @@ You can also **Download** or **Remove** the package. Removing the package will r
             "altTableAccent":"#fdc336"  
         }  
     }  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
+More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

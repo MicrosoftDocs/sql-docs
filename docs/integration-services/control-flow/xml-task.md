@@ -106,7 +106,7 @@ manager: "jhubbard"
  `<?xml version="1.0" encoding="UTF-8"?>`  
   
 ## Custom Logging Messages Available on the XML Task  
- The following table describes the custom log entry for the XML task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table describes the custom log entry for the XML task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

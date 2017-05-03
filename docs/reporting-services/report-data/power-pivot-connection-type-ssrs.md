@@ -30,7 +30,7 @@ manager: "erikre"
  Use report data source type **Microsoft SQL Server Analysis Services**.  
   
 ## Connection String  
- The connection string is the URL to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook published on SharePoint in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery or other library, for example, http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx.  
+ The connection string is the URL to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook published on SharePoint in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery or other library, for example, `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## Credentials  
  Specify the credentials that you need to access the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook and SharePoint site, for example, Windows Authentication (Integrated Security). For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  

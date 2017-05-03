@@ -1,7 +1,7 @@
 ---
 title: "Lesson 10: Create Hierarchies | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/27/2017"
+ms.date: "04/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -69,7 +69,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
 5.  Finally, in the **DimDate** table, create a **ProductionCalendar** hierarchy. Include the following columns:  
     *  CalendarYear
     *  WeekNumberOfYear
-    *  DayOfWeek
+    *  DayNumberOfWeek
   
  ## What's next?
 Go to the next lesson: [Lesson 10: Create Partitions](../analysis-services/lesson-10-create-partitions.md). 

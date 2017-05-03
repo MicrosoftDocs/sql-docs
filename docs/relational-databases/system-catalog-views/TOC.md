@@ -154,6 +154,7 @@
 ## [sys.identity_columns](sys-identity-columns-transact-sql.md)  
 ## [sys.indexes](sys-indexes-transact-sql.md)  
 ## [sys.index_columns](sys-index-columns-transact-sql.md)  
+## [sys.index_resumable_operations](sys-index-resumable-operations.md)
 ## [sys.internal_partitions](sys-internal-partitions-transact-sql.md)  
 ## [sys.internal_tables](sys-internal-tables-transact-sql.md)  
 ## [sys.key_constraints](sys-key-constraints-transact-sql.md)  

@@ -82,6 +82,7 @@
 ## [sys.dm_exec_procedure_stats](sys-dm-exec-procedure-stats-transact-sql.md)  
 ## [sys.dm_exec_query_memory_grants](sys-dm-exec-query-memory-grants-transact-sql.md)  
 ## [sys.dm_exec_query_optimizer_info](sys-dm-exec-query-optimizer-info-transact-sql.md)  
+## [sys.dm_exec_query_optimizer_memory_gateways](sys-dm-exec-query-optimizer-memory-gateways.md)
 ## [sys.dm_exec_query_plan](sys-dm-exec-query-plan-transact-sql.md)  
 ## [sys.dm_exec_query_profiles](sys-dm-exec-query-profiles-transact-sql.md)  
 ## [sys.dm_exec_query_resource_semaphores](sys-dm-exec-query-resource-semaphores-transact-sql.md)  
@@ -96,8 +97,8 @@
 ## [sys.dm_exec_valid_use_hints](sys-dm-exec-valid-use-hints-transact-sql.md)  
 ## [sys.dm_exec_xml_handles](sys-dm-exec-xml-handles-transact-sql.md)  
 ## [sys.dm_external_script_execution_stats](sys-dm-external-script-execution-stats.md)  
-## [sys.dm_external_script_requests](sys-dm-external-script-requests.md) 
- 
+## [sys.dm_external_script_requests](sys-dm-external-script-requests.md)
+
 # [Extended Events](extended-events-dynamic-management-views.md)  
 ## [sys.dm_xe_database_sessions (Azure SQL Database)](sys-dm-xe-database-sessions-azure-sql-database.md)  
 ## [sys.dm_xe_database_session_targets (Azure SQL Database)](sys-dm-xe-database-session-targets-azure-sql-database.md)  
@@ -149,22 +150,22 @@
 ## [sys.dm_db_missing_index_columns](sys-dm-db-missing-index-columns-transact-sql.md)  
 ## [sys.dm_db_missing_index_details](sys-dm-db-missing-index-details-transact-sql.md)  
 ## [sys.dm_db_missing_index_groups](sys-dm-db-missing-index-groups-transact-sql.md)  
-## [sys.dm_db_missing_index_group_stats](sys-dm-db-missing-index-group-stats-transact-sql.md) 
- 
+## [sys.dm_db_missing_index_group_stats](sys-dm-db-missing-index-group-stats-transact-sql.md)
+
 # [I O](i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
 ## [sys.dm_io_backup_tapes](sys-dm-io-backup-tapes-transact-sql.md)  
 ## [sys.dm_io_cluster_shared_drives](sys-dm-io-cluster-shared-drives-transact-sql.md)  
 ## [sys.dm_io_pending_io_requests](sys-dm-io-pending-io-requests-transact-sql.md)  
 ## [sys.dm_io_virtual_file_stats](sys-dm-io-virtual-file-stats-transact-sql.md)  
-## [sys.dm_io_cluster_valid_path_names](sys-dm-io-cluster-valid-path-names-transact-sql.md) 
- 
+## [sys.dm_io_cluster_valid_path_names](sys-dm-io-cluster-valid-path-names-transact-sql.md)
+
 # [Linux Process](linux-process-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_linux_proc_all_stat](sys-dm-linux-proc-all-stat-transact-sql.md)  
 ## [sys.dm_linux_proc_cpuinfo](sys-dm-linux-proc-cpuinfo-transact-sql.md)  
 ## [sys.dm_linux_proc_meminfo](sys-dm-linux-proc-meminfo-transact-sql.md)  
 ## [sys.dm_linux_proc_sql_maps](sys-dm-linux-proc-sql-maps-transact-sql.md)  
-## [sys.dm_linux_proc_sql_threads](sys-dm-linux-proc-sql-threads-transact-sql.md) 
- 
+## [sys.dm_linux_proc_sql_threads](sys-dm-linux-proc-sql-threads-transact-sql.md)
+
 # [Memory-Optimized Table](memory-optimized-table-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_db_xtp_checkpoint_stats](sys-dm-db-xtp-checkpoint-stats-transact-sql.md)  
 ## [sys.dm_db_xtp_checkpoint_files](sys-dm-db-xtp-checkpoint-files-transact-sql.md)  

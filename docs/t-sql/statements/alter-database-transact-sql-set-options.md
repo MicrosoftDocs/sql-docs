@@ -1,5 +1,6 @@
 ---
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
+description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "04/04/2017"
@@ -23,6 +24,8 @@ helpviewer_keywords:
   - "offline database state [SQL Server]"
   - "snapshot isolation framework option"
   - "checksums [SQL Server]"
+  - "automatic tuning"
+  - "SQL plan regression correction"
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 caps.latest.revision: 159
 author: "BYHAM"
@@ -42,7 +45,7 @@ manager: "jhubbard"
   
 -   [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
   
- Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are **SET** options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
 >  Many database set options can be configured for the current session by using [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
@@ -55,12 +58,13 @@ manager: "jhubbard"
 ALTER DATABASE { database_name  | CURRENT }  
 SET   
 {  
-    <optionspec> [ ,... n ] [ WITH <termination> ]   
+    <optionspec> [ ,...n ] [ WITH <termination> ]   
 }  
   
 <optionspec> ::=   
 {  
     <auto_option>   
+  | <automatic_tuning_option>   
   | <change_tracking_option>   
   | <containment_option>   
   | <cursor_option>   
@@ -95,13 +99,18 @@ SET
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
   
+<automatic_tuning_option> ::=  
+{  
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+}  
+
 <change_tracking_option> ::=  
 {  
   CHANGE_TRACKING   
    {   
        = OFF  
-     | = ON [ ( <change_tracking_option_list > [,... n] ) ]   
-     | ( <change_tracking_option_list> [,... n ] )  
+     | = ON [ ( <change_tracking_option_list > [,...n] ) ]   
+     | ( <change_tracking_option_list> [,...n] )  
    }  
 }  
   
@@ -170,8 +179,8 @@ SET
     QUERY_STORE   
     {  
           = OFF   
-        | = ON [ ( <query_store_option_list> [,... n] ) ]  
-        | ( < query_store_option_list> [,... n] )  
+        | = ON [ ( <query_store_option_list> [,...n] ) ]  
+        | ( < query_store_option_list> [,...n] )  
         | CLEAR [ ALL ]  
     }  
 }   
@@ -255,7 +264,7 @@ SET
  CURRENT  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- CURRENT performs the action in the current database. CURRENT is not supported for all options in all contexts. If CURRENT fails, provide the database name.  
+ `CURRENT` performs the action in the current database. `CURRENT` is not supported for all options in all contexts. If `CURRENT` fails, provide the database name.  
   
  **\<auto_option> ::=**  
   
@@ -265,7 +274,7 @@ SET
  ON  
  The database is shut down cleanly and its resources are freed after the last user exits.  
   
- The database automatically reopens when a user tries to use the database again. For example, by issuing a USE *database_name* statement. If the database is shut down cleanly while AUTO_CLOSE is set to ON, the database is not reopened until a user tries to use the database the next time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is restarted.  
+ The database automatically reopens when a user tries to use the database again. For example, by issuing a `USE database_name` statement. If the database is shut down cleanly while AUTO_CLOSE is set to ON, the database is not reopened until a user tries to use the database the next time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is restarted.  
   
  OFF  
  The database remains open after the last user exits.  
@@ -357,6 +366,18 @@ SET
   
  For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
   
+ **\<automatic\_tuning\_option> ::=**  
+ **Applies to**: [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  .  
+
+ Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.  
+  
+ FORCE\_LAST\_GOOD\_PLAN = { ON | **OFF** }  
+ ON  
+ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
+
+ OFF  
+ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view.
+
  **\<change_tracking_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -1077,8 +1098,6 @@ MULTI_USER
   
  NO_WAIT  
  Specifies that if the requested database state or option change cannot complete immediately without waiting for transactions to commit or roll back on their own, the request will fail.  
-  
-## Remarks  
   
 ##  <a name="SettingOptions"></a> Setting Options  
  To retrieve current settings for database options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)  

@@ -53,7 +53,7 @@ manager: "jhubbard"
  
   *filegroup*
  
- Specifies the name of the filegroup in which new table will be created. The filegroup specified should exist on the database else the SQL Server engine throws an error. This option is only supported beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ Specifies the name of the filegroup in which new table will be created. The filegroup specified should exist on the database else the SQL Server engine throws an error. This option is only supported beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
  
  The format of *new_table* is determined by evaluating the expressions in the select list. The columns in *new_table* are created in the order specified by the select list. Each column in *new_table* has the same name, data type, nullability, and value as the corresponding expression in the select list. The IDENTITY property of a column is transferred except under the conditions defined in "Working with Identity Columns" in the Remarks section.  
   

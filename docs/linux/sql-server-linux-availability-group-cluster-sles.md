@@ -157,8 +157,8 @@ After logging in to the specified node, the script will copy the Corosync config
    2 nodes configured
    1 resource configured
    Online: [ SLES1 SLES2 ]
-   Full list of resources:
-    admin_addr     (ocf::heartbeat:IPaddr2):       Started SLES1
+   Full list of resources:   
+   admin_addr     (ocf::heartbeat:IPaddr2):       Started SLES1
    ```
 
    >[!NOTE]
@@ -185,7 +185,7 @@ The following command creates and configures the availability group resource for
    ```bash
    primitive ag_cluster \
       ocf:mssql:ag \
-      params ag_name="ag1" \
+      params ag_name="ag1" 
    ms ms-ag_cluster ag_cluster \
       meta notify="true"
    commit

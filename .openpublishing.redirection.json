@@ -1309,6 +1309,11 @@
             "source_path": "docs/analysis-services/what-s-new-in-sql-server-analysis-services-vnext.md",
             "redirect_url": "/sql/analysis-services/what-s-new-in-sql-server-analysis-services-2017",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/whitepapers/introducing-microsoft-technologies-for-data-storage-movement-and-transformation.md",
+            "redirect_url": "sql/whitepapers/microsoft-white-papers",
+            "redirect_document_id": true
         }
     ]
 }

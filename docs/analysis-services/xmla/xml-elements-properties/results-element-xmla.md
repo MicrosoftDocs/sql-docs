@@ -32,7 +32,7 @@ manager: "erikre"
 # results Element (XMLA)
   Contains a collection of [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) elements returned by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method using the [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) command.  
   
- **Namespace** http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults  
+ **Namespace** `http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults`  
   
 ## Syntax  
   

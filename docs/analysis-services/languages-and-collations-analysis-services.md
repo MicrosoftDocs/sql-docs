@@ -2,7 +2,7 @@
 title: "Languages and Collations (Analysis Services) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
+ms.date: "04/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -32,24 +32,6 @@ manager: "erikre"
  In a multidimensional model (only), you can set these properties on a database or cube – you can also set them on translations that you create for objects within a cube. In a tabular model, language and collation are inherited from the host operating system.  
   
  When setting **Language** and **Collation** in a multidimensional model,  you are either specifying settings used by the data model during processing and query execution, or  you are equipping a model with multiple translations so that foreign language speakers can work with the model in their native language. Explicitly setting **Language** and **Collation** properties on an object (database, model, or cube) is for situations where the development environment and production server are configured for different locales, and you want to be sure that the language and collation matches those of the intended target environment.  
-  
- This topic includes these sections:  
-  
--   [Objects that support Language and Collation properties](#bkmk_object)  
-  
--   [Language support in Analysis Services](#bkmk_lang)  
-  
--   [Collation support in Analysis Services](#bkmk_collations)  
-  
--   [Change the default language or collation on the instance](#bkmk_defaultLang)  
-  
--   [Change the language or collation on a cube](#bkmk_cube)  
-  
--   [Change language and collation within a data model using XMLA](#bkmk_XMLA)  
-  
--   [Boost performance for English locales through EnableFast1033Locale](#bkmk_enablefast1033)  
-  
--   [GB18030 Support in Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="bkmk_object"></a> Objects that support Language and Collation properties  
  **Language** and **Collation** properties are often exposed together – where you can set **Language**, you can also set **Collation**.  

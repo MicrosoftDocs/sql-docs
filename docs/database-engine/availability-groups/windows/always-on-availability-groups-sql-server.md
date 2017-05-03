@@ -28,18 +28,6 @@ manager: "jhubbard"
   
  An availability group fails over at the level of an availability replica. Failovers are not caused by database issues such as a database becoming suspect due to a loss of a data file, deletion of a database, or corruption of a transaction log.  
   
- **In this Topic:**  
-  
--   [Benefits](#Benefits)  
-  
--   [Terms and Definitions](#TermsAndDefinitions)  
-  
--   [Interoperability and Coexistence with Other Database Engine Features](#Interoperability)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
-  
 ##  <a name="Benefits"></a> Benefits  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] provides a rich set of options that improve database availability and that enable improved resource use. The key components are as follows:  
   

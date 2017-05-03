@@ -1,7 +1,7 @@
 ---
 title: "Configure a Server to Listen on a Specific TCP Port | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/29/2016"
+ms.date: "04/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,7 +26,9 @@ manager: "jhubbard"
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   This topic describes how to configure an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to listen on a specific fixed port by using the SQL Server Configuration Manager. If enabled, the default instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] listens on TCP port 1433. Named instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssEW](../../includes/ssew-md.md)] are configured for [dynamic ports](https://msdn.microsoft.com/library/dd981060). This means they select an available port when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is started. When you are connecting to a named instance through a firewall, configure the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to listen on a specific port, so that the appropriate port can be opened in the firewall.  
-  
+
+Because port 1433 is the known standard for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], some organizations specify that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] port number should be changed to enhance security. This might be helpful in some environments. However, the TCP/IP architecture permits a [port scanner](https://wikipedia.org/wiki/Port_scanner) to query for open ports, so changing the port number is not considered a robust security measure.
+
  For more information about the default Windows firewall settings, and a description of the TCP ports that affect the Database Engine, Analysis Services, Reporting Services, and Integration Services, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!TIP]  
@@ -35,11 +37,6 @@ manager: "jhubbard"
 > [!WARNING]  
 >  The Database Engine begins listening on a new port when restarted. However the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service monitors the registry and reports the new port number as soon as the configuration is changed, even though the Database Engine might not be using it. Restart the Database Engine to ensure consistency and avoid connection failures.  
   
- **In This Topic**  
-  
--   **To configure a server to listen on a specific TCP port, using:**  
-  
-     [SQL Server Configuration Manager](#SSMSProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Configuration Manager  
   
@@ -62,12 +59,11 @@ manager: "jhubbard"
   
 6.  In the details pane, right-click **SQL Server (**\<instance name>**)** and then click **Restart**, to stop and restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- After you have configured [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to listen on a specific port, there are three ways to connect to a specific port with a client application:  
+## Connecting  
+After you have configured [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to listen on a specific port, there are three ways to connect to a specific port with a client application:  
   
 -   Run the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service on the server to connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance by name.  
-  
 -   Create an alias on the client, specifying the port number.  
-  
 -   Program the client to connect using a custom connection string.  
   
 ## See Also  

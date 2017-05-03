@@ -1,4 +1,4 @@
-# [Python Driver for SQL Server](python-driver-for-sql-server.md)
+# [pymssql +](./pymssql/index.md)
+# [pyodbc +](./pyodbc/index.md)
 
-# [pymssql](./pymssql/TOC.md)
-# [pyodbc](./pyodbc/TOC.md)
+# [Python Driver for SQL Server](python-driver-for-sql-server.md)

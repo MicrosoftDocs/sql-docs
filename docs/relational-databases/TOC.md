@@ -42,6 +42,7 @@
 # [Errors and events](errors-events/index.md)
 # [Event classes](event-classes/index.md)
 # [Extended events](extended-events/index.md)
+# [Graphs](graphs/index.md)
 # [Hierarchical Data](hierarchical-data-sql-server.md)  
 # [Import and export](import-export/index.md)
 # [In-memory OLTP](in-memory-oltp/index.md)
@@ -54,7 +55,7 @@
 ## [Administer Multiple Servers Using Central Management Servers](administer-multiple-servers-using-central-management-servers.md)  
 
 # [Partitions](partitions/index.md)
-# [Performance Monitor](performance-monitor/index.md)
+# [Performance](performance/index.md)
 # [Policy-based management](policy-based-management/index.md)
 # [PolyBase](polybase/index.md)
 # [Replication](replication/index.md)

@@ -1,7 +1,7 @@
 ---
 title: "ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/18/2016"
+ms.date: "04/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,7 +41,6 @@ manager: "jhubbard"
     
 ```    
 -- Syntax for SQL Server  
-  
 ALTER AUTHORIZATION    
    ON [ <class_type>:: ] entity_name    
    TO { principal_name | SCHEMA OWNER }    
@@ -50,10 +49,10 @@ ALTER AUTHORIZATION
 <class_type> ::=    
     {    
         OBJECT | ASSEMBLY | ASYMMETRIC KEY | AVAILABILITY GROUP | CERTIFICATE     
-    | CONTRACT | TYPE | DATABASE | ENDPOINT | FULLTEXT CATALOG     
-    | FULLTEXT STOPLIST | MESSAGE TYPE | REMOTE SERVICE BINDING    
-    | ROLE | ROUTE | SCHEMA | SEARCH PROPERTY LIST | SERVER ROLE     
-    | SERVICE | SYMMETRIC KEY | XML SCHEMA COLLECTION    
+      | CONTRACT | TYPE | DATABASE | ENDPOINT | FULLTEXT CATALOG     
+      | FULLTEXT STOPLIST | MESSAGE TYPE | REMOTE SERVICE BINDING    
+      | ROLE | ROUTE | SCHEMA | SEARCH PROPERTY LIST | SERVER ROLE     
+      | SERVICE | SYMMETRIC KEY | XML SCHEMA COLLECTION    
     }    
 ```    
 
@@ -91,7 +90,7 @@ ALTER AUTHORIZATION ON
     
 <entity_name> ::=    
 {    
-    schema_name    
+      schema_name    
     | [ schema_name. ] object_name    
 }    
 ```    
@@ -232,18 +231,15 @@ Azure AD user     |Azure AD user         |Success
 To verify an Azure AD owner of the database execute the following Transact-SQL command in a user database (in this example `testdb`).  
     
 ```    
-   
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID   
 FROM sys.databases   
 WHERE name = 'testdb';  
-    
 ```    
     
 The output will be an identifier (such as 6D8B81F6-7C79-444C-8858-4AF896C03C67) which corresponds to Azure AD ObjectID assigned to `richel@cqclinic.onmicrosoft.com`  
 When a SQL Server authentication login user is the database owner, execute the following statement in the master database to verify the database owner:  
     
 ```    
-    
 SELECT d.name, d.owner_sid, sl.name   
 FROM sys.databases AS d  
 JOIN sys.sql_logins AS sl  
@@ -255,27 +251,17 @@ ON d.owner_sid = sl.sid;
   
 Instead of using Azure AD users as individual owners of the database, use an Azure AD group as a member of the **db_owner** fixed database role. The following steps, show how to configure a disabled login as the database owner, and make an Azure Active Directory group (`mydbogroup`) a member of the **db_owner** role. 
 1.  Login to SQL Server as Azure AD admin, and change the owner of the database to a disabled SQL Server authentication login. For example, from the user database execute:  
-    
-```    
-ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
-    
-```    
-  
+  ```    
+  ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
+  ```    
 2.  Create an Azure AD group that should own the database and add it as a user to the user database. For example:  
-    
-```    
-  
-CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
-    
-```    
-  
+  ```    
+  CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
+  ```    
 3.  In the user database add the user representing the Azure AD group, to the **db_owner** fixed database role. For example:  
-    
-```    
-  
-ALTER ROLE db_owner ADD MEMBER mydbogroup;  
-    
-```    
+  ```    
+  ALTER ROLE db_owner ADD MEMBER mydbogroup;  
+  ```    
   
 Now the `mydbogroup` members can centrally manage the database as members of the **db_owner** role.  
 - When members of this group are removed from the Azure AD group, they automatically loose the dbo permissions for this database.  
@@ -284,9 +270,7 @@ Now the `mydbogroup` members can centrally manage the database as members of the
 To check if a specific user has the effective dbo permission, have the user execute the following statement:  
     
 ```    
-  
 SELECT IS_MEMBER ('db_owner');  
-    
 ```    
   
 A return value of 1 indicates the user is a member of the role.  
@@ -338,9 +322,7 @@ GO
 ### D. Transfer ownership of an endpoint to a SQL Server login    
  The following example transfers ownership of endpoint `CantabSalesServer1` to `JaePak`. Because the endpoint is a server-level securable, the endpoint can only be transferred to a server-level principal.    
     
-||    
-|-|    
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].    
     
 ```    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
@@ -349,13 +331,11 @@ GO
     
 ### E. Changing the owner of a table    
  Each of the following examples changes the owner of the `Sprockets` table in the `Parts` database to the database user `MichikoOsada`.    
-    
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON dbo.Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;    
-    
 ```    
     
 ### F. Changing the owner of a database    
@@ -371,9 +351,7 @@ ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;
 In the following example, an Azure Active Directory administrator for SQL Server in an organization with an active directory named `cqclinic.onmicrosoft.com`, can change the current ownership of a database `targetDB` and make an AAD user  `richel@cqclinic.onmicorsoft.com` the new database owner using the following command:  
     
 ```    
-    
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];   
-    
 ```    
     
  Note that for Azure AD users the brackets around the user name must be used.  

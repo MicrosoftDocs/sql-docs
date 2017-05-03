@@ -16,7 +16,6 @@ ms.author: "carlasab"
 manager: "jhubbard"
 ---
 # Microsoft White Papers
-[Introducing Microsoft Technologies for Data Storage, Movement and Transformation](https://msdn.microsoft.com/library/mt639326.aspx)  
 [Installing Master Data Services in an AlwaysOn Environment](https://msdn.microsoft.com/library/mt761778.aspx)  
 [SQL Server In-Memory OLTP Internals for SQL Server 2016](https://msdn.microsoft.com/library/mt764316.aspx)
   

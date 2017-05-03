@@ -45,7 +45,7 @@ manager: "jhubbard"
 -   [Examples](#example)  
   
 ##  <a name="server"></a> Integration Services Server and Project File  
- When you use **dtexec** to run packages on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, **dtexec** calls the [catalog.create_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) and [catalog.start_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) stored procedures to create an execution, set parameter values and start the execution. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+ When you use **dtexec** to run packages on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, **dtexec** calls the [catalog.create_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) and [catalog.start_execution &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) stored procedures to create an execution, set parameter values and start the execution. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
  The following is an example of executing a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- When you use **dtexec** to run a package from the .ispac project file, the related options are: /Proj[ect] and /Pack[age] that are used to specify the project path and package stream name. When you convert a project to the project deployment model by running the **Integration Services Project Conversion Wizard** from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard generates an .ispac projec file. For more information, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ When you use **dtexec** to run a package from the .ispac project file, the related options are: /Proj[ect] and /Pack[age] that are used to specify the project path and package stream name. When you convert a project to the project deployment model by running the **Integration Services Project Conversion Wizard** from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], the wizard generates an .ispac projec file. For more information, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  You can use **dtexec** with third-party scheduling tools to schedule packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
@@ -173,7 +173,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (Optional). Displays specified log entries to the console during package execution. If this option is omitted, no log entries are shown in the console. If the option is specified without parameters that limit the display, every log entry will display. To limit the entries that are displayed to the console, you can specify the columns to show by using the *displayoptions* parameter, and limit the log entry types by using the *list_options* parameter.  
   
-    > **NOTE:**  When you run a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using the **/ISSERVER** parameter, console output is limited and most of the **/Cons[oleLog]** options are not applicable. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/reports-for-the-integration-services-server.md).  
+    > **NOTE:**  When you run a package on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server by using the **/ISSERVER** parameter, console output is limited and most of the **/Cons[oleLog]** options are not applicable. All execution logs can be seen from the server in the related views or by using standard reports available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about the reports, see [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
      The *displayoptions* values are as follows:  
   
@@ -443,7 +443,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyP[ackageID]** *packageID*: (Optional). Verifies the GUID of the package to be executed by comparing it to the value specified in the *package_id* argument.  
   
--   **/VerifyS[igned]**: (Optional). Causes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to check the digital signature of the package. If the package is not signed or the signature is not valid, the package fails. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).  
+-   **/VerifyS[igned]**: (Optional). Causes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to check the digital signature of the package. If the package is not signed or the signature is not valid, the package fails. For more information, see [Identify the Source of Packages with Digital Signatures](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
     > **IMPORTANT!!** When configured to check the signature of the package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] only checks whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] does not check whether the package has been changed.  
   
@@ -626,9 +626,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 /Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
   
 ```  
-  
-## Related Tasks  
- [Run a Package in SQL Server Data Tools](../../integration-services/packages/run-a-package-in-sql-server-data-tools.md)  
   
 ## Related Content  
  Blog entry, [Exit Codes, DTEXEC, and SSIS Catalog](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), on www.mattmasson.com.  

@@ -138,6 +138,9 @@
       - name: Failover clusters
         href: /sql/sql-server/failover-clusters/
         homepage: /sql/sql-server/failover-clusters
+      - name: Install
+        href: /sql/sql-server/install/
+        homepage: /sql/sql-server/install
       - name: Stretch Database
         href: /sql/sql-server/stretch-database/
         homepage: /sql/sql-server/stretch-database
@@ -588,9 +591,13 @@
       - name: Performance
         href: /sql/relational-databases/performance/
         homepage: /sql/relational-databases/performance
-      - name: Performance Monitor
-        href: /sql/relational-databases/performance-monitor/
-        homepage: /sql/relational-databases/performance-monitor
+        items:
+        - name: Automatic tuning
+          href: /sql/relational-databases/automatic-tuning/
+          homepage: /sql/relational-databases/automatic-tuning/
+        - name: Performance Monitor
+          href: /sql/relational-databases/performance-monitor/
+          homepage: /sql/relational-databases/performance-monitor/
       - name: Policy-based management
         href: /sql/relational-databases/policy-based-management/
         homepage: /sql/relational-databases/policy-based-management

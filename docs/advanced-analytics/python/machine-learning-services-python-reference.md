@@ -15,10 +15,10 @@ manager: "jhubbard"
 ---
 # Python
 
-This section contains links to API reference specific to Machine Learning Services in SQL Server vNext.
+This section contains links to API reference specific to Machine Learning Services in SQL Server 2017.
 
 > [!NOTE]
-> Python support is a new feature in SQL Server vNext and is in prerelease. Look for more information soon.
+> Python support is a new feature in SQL Server 2017 and is in prerelease. Look for more information soon.
 
 **Libraries**
 

@@ -2,7 +2,7 @@
 title: "Install January 2017 Technical Preview Power BI reports | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/23/2017"
-ms.prod: "sql-vnext"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

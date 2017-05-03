@@ -2,7 +2,7 @@
 title: "INSERT (SQL Graph) | Microsoft Docs"
 description: INSERT syntax for SQL Graph node or edge tables. 
 ms.date: "04/19/2017"
-ms.prod: "sql-vnext"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

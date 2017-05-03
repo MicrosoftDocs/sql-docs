@@ -2,7 +2,7 @@
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: 
 ms.date: "04/19/2017"
-ms.prod: "sql-vnext"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,21 +27,24 @@ manager: "jhubbard"
 # MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
-  Specifies a search condition for a graph. MATCH can be used only with graph node and edge tables, in the SELECT statement as part of ON or WHERE clause.  
+  Specifies a search condition for a graph. MATCH can be used only with graph node and edge tables, in the SELECT statement as part of  WHERE clause. 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-MATCH <graph_search_pattern> 
+MATCH (<graph_search_pattern>)
 
 <graph_search_pattern>::=
-    <node_alias> { 
+    {<node_alias> { 
                      { <-( <edge_alias> )- } 
                    | { -( <edge_alias> )-> }
-                <node_alias> 
-                 }
+                 <node_alias> 
+                 } 
+     }
+     [ { AND } { ( <graph_search_pattern> ) } ]
+     [ ,...n ]
   
 <node_alias> ::=
     node_table_name | node_alias 
@@ -52,22 +55,21 @@ MATCH <graph_search_pattern>
 
 ## Arguments  
 *graph_search_pattern*  
-Specifies the pattern to search or path to traverse in the graph. This pattern uses ASCII art syntax to traverse a path in the graph. The pattern goes from one node to another via an edge, in the direction of the arrow provided. Edge names or aliases are provided inside paranthesis. Node names or aliases appear at the two ends of the arrow. The arrow can go in either direction in the pattern.
+Specifies the pattern to search or path to traverse in the graph. This pattern uses ASCII art syntax to traverse a path in the graph. The pattern goes from one node to another via an edge, in the direction of the arrow provided. Edge names or aliases are provided inside parantheses. Node names or aliases appear at the two ends of the arrow. The arrow can go in either direction in the pattern.
 
 *node_alias*  
-Name or alias of the node table provided in the FROM clause
+Name or alias of a node table provided in the FROM clause.
 
 *edge_alias*  
-Name or alias of the edge table provided in the FROM clause
+Name or alias of an edge table provided in the FROM clause.
 
 
 ## Remarks  
-The node names inside the match function can be repeated.  In other words, a node can be traversed an arbitrary number of times in the same subquery. 
-
-An edge can go in either direction, but it must have an explicit direction.
-
-A single edge cannot be traversed twice in the same subquery; however, each subquery is independent, so the main query, a subquery, and/or two subqueries can all traverse the same edge. If an edge is used twice in the from clause with different aliases, and implicit predicate edge1<>edge2 is applied. 
-
+The node names inside MATCH can be repeated.  In other words, a node can be traversed an arbitrary number of times in the same query.  
+An edge name cannot be repeated inside MATCH.  
+An edge can point in either direction, but it must have an explicit direction.  
+OR and NOT operators are not supported in the MATCH pattern. 
+MATCH can be combined with other expressions using AND in the WHERE clause. However, combining it with other expressions using OR or NOT is not supported. 
 
 ## Examples  
 #### A.  Find a friend 
@@ -105,7 +107,7 @@ AND Person1.name = 'Alice';
  The following example tries to find friend of a friend of Alice. 
 
  ```
-SELECT Person2.name AS FriendName
+SELECT Person3.name AS FriendName
 FROM Person Person1, friend, Person Person2, friend friend2, Person Person3
 WHERE MATCH(Person1-(friend)->Person2-(friend2)->Person3)
 AND Person1.name = 'Alice';
@@ -117,14 +119,29 @@ AND Person1.name = 'Alice';
 
  ```
  -- Find a friend
-    (Person-(friend)->Person2)
-    OR
-    (Person2<-(friend)-Person)
+    SELECT Person2.name AS FriendName
+    FROM Person Person1, friend, Person Person2
+    WHERE MATCH(Person1-(friend)->Person2);
+    
+-- The pattern can also be expressed as below
+
+    SELECT Person2.name AS FriendName
+    FROM Person Person1, friend, Person Person2 
+    WHERE MATCH(Person2<-(friend)-Person1);
+
 
 -- Find 2 people who are both friends with same person
-    (Person1-(friend1)->Person0<-(friend2)-Person2)
-    OR
-    (Person1-(friend1)->Person0 AND Person2-(friend2)->Person0)
+    SELECT Person1.name AS Friend1, Person2.name AS Friend2
+    FROM Person Person1, friend friend1, Person Person2, 
+         friend friend2, Person Person0
+    WHERE MATCH(Person1-(friend1)->Person0<-(friend2)-Person2);
+    
+-- this pattern can also be expressed as below
+
+    SELECT Person1.name AS Friend1, Person2.name AS Friend2
+    FROM Person Person1, friend friend1, Person Person2, 
+         friend friend2, Person Person0
+    WHERE MATCH(Person1-(friend1)->Person0 AND Person2-(friend2)->Person0);
  ```
  
 

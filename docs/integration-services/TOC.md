@@ -1,6 +1,6 @@
 # [Overview](sql-server-integration-services.md)
 ## [What's New in Integration Services in SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md)
-## [What's New in Integration Services in SQL Server vNext](what-s-new-in-integration-services-in-sql-server-vnext.md)
+## [What's New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
 ## [Integration Services (SSIS) Development and Management Tools](integration-services-ssis-development-and-management-tools.md)
@@ -20,10 +20,6 @@
 ## [Configure Dialog Box](service/configure-dialog-box.md)  
 ## [Set Parameter Value Dialog Box](service/set-parameter-value-dialog-box.md)  
 ## [Folder Properties Dialog Box](service/folder-properties-dialog-box.md)  
-## [Integration Services Roles (SSIS Service)](service/integration-services-roles-ssis-service.md)  
-### [Create a User-Defined Role](service/create-a-user-defined-role.md)  
-### [Assign a Reader and Writer Role to a Package](service/assign-a-reader-and-writer-role-to-a-package.md)  
-### [Package Roles Dialog Box UI Reference](service/package-roles-dialog-box-ui-reference.md)  
 
 # [Change data capture](change-data-capture/index.md)
 # [Connections](connection-manager/index.md)

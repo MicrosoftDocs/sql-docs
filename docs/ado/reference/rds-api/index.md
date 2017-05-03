@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/ado/reference/rds-api/handler-property-rds
+redirect_url: /sql/ado/reference/rds-api/rds-api-reference
 ---

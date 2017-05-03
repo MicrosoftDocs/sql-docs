@@ -3,7 +3,7 @@ title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/04/2017"
+ms.date: "04/27/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -367,7 +367,7 @@ SET
  For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
   
  **\<automatic\_tuning\_option> ::=**  
- **Applies to**: [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  .  
+ **Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
 
  Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.  
   
@@ -647,7 +647,7 @@ MULTI_USER
  FULL  
  Full non-transactional access to FILESTREAM data in FileTables is enabled.  
   
- DIRECTORY_NAME = *<directory_name>*  
+ DIRECTORY_NAME = *\<directory_name>*  
  A windows-compatible directory name. This name should be unique among all the database-level directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of collation settings. This option must be set before creating a FileTable in this database.  
   
  **\<HADR_options> ::=**  
@@ -699,7 +699,7 @@ MULTI_USER
   
 -   CLEAR remove the contents of the query store.  
   
- OPERATION_MODE  
+OPERATION_MODE  
  Describes the operation mode of the query store. Valid values are READ_ONLY and READ_WRITE. In READ_WRITE mode, the query store collects and persists query plan and runtime execution statistics information. In READ_ONLY mode, information can be read from the query store, but new information is not added. If the maximum allocated space of the query store has been exhausted, the query store will change is operation mode to READ_ONLY.  
   
  CLEANUP_POLICY  
@@ -717,18 +717,18 @@ MULTI_USER
  SIZE_BASED_CLEANUP_MODE  
  Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:  
   
- OFF – size based cleanup won’t be automatically activated. This is the default configuration value.  
+ OFF – size based cleanup won’t be automatically activated. 
   
- AUTO – size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  
+ AUTO – size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
   
  SIZE_BASED_CLEANUP_MODE is type **nvarchar**.  
   
  QUERY_CAPTURE_MODE  
  Designates the currently active query capture mode:  
   
- ALL – all queries are captured. This is the default configuration value.  
+ ALL – all queries are captured. This is the default configuration value.  This is the default configuration value for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
   
- AUTO – capture relevant queries based on execution count and resource consumption.  
+ AUTO – capture relevant queries based on execution count and resource consumption.  This is the default configuration value for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  NONE – stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss to capture important queries.  
   
@@ -804,7 +804,7 @@ MULTI_USER
   
  The current setting of this option can be determined by examining the page_verify_option column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the IsTornPageDetectionEnabled property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
- **\<remote_data_archive_option> ::=**  
+**\<remote_data_archive_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -816,13 +816,13 @@ MULTI_USER
   
  **Permissions**. Enabling Stretch Database for a database or a table requires db_owner permissions. Enabling Stretch Database for a database also requires CONTROL DATABASE permissions.  
   
- SERVER = \<server_name>  
+SERVER = \<server_name>  
  Specifies the address of the Azure server. Include the `.database.windows.net` portion of the name. For example, `MyStretchDatabaseServer.database.windows.net`.  
   
- CREDENTIAL = \<db_scoped_credential_name>  
+CREDENTIAL = \<db_scoped_credential_name>  
  Specifies the database scoped credential that the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to connect to the Azure server. Make sure the credential exists before you run this command. For more info, see [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
- FEDERATED_SERVICE_ACCOUNT =  ON | OFF  
+FEDERATED_SERVICE_ACCOUNT =  ON | OFF  
  You can use a federated service account for the on premises SQL Server to communicate with the remote Azure server when the following conditions are all true.  
   
 -   The service account under which the instance of SQL Server is running is a domain account.  
@@ -842,7 +842,7 @@ MULTI_USER
   
  Disabling Stretch does not remove the remote database. If you want to delete the remote database, you have to drop it by using the Azure management portal.  
   
- **\<service_broker_option> ::=**  
+**\<service_broker_option> ::=**  
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Not available in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

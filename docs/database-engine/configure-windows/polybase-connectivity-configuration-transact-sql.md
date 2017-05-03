@@ -69,9 +69,9 @@ RECONFIGURE
   
 -   Option 5: Hortonworks HDP 2.0 on Linux  
   
--   Option 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5,5.9, and 5.10 on Linux  
+-   Option 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, and 5.11 on Linux  
   
--   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, and 2.5 on Linux  
+-   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, and 2.6 on Linux  
   
 -   Option 7: Hortonworks 2.1, 2.2, and 2.3 on Windows Server  
   

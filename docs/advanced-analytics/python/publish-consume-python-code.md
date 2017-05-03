@@ -16,7 +16,7 @@ manager: "jhubbard"
 
 # Publish and consume Python web services
 
-**Applies to: SQL Server vNext CTP 2.0 (Public Preview)**
+**Applies to: SQL Server 2017 CTP 2.0 (Public Preview)**
 
 You can deploy a working Python solution to a web service by using the operationalization feature in Microsoft Machine Learning Server.
 
@@ -25,7 +25,7 @@ This topic describes the steps to follow, to successfully publish and then run y
 The target audience for this article is data scientists who want to learn how to publish Python code or models as web services hosted in Microsoft Machine Learning Server. The article also explains how applications can consume the the code or models. This article assumes that you are proficient in Python.
 
 > [!IMPORTANT]
-> Python web services are available only with Python-enabled installs of SQL Server vNext CTP 2.0 (Public Preview). Availability of this feature will be expanded in future releases.
+> Python web services are available only with Python-enabled installs of SQL Server 2017 CTP 2.0 (Public Preview). Availability of this feature will be expanded in future releases.
 
 ## Overview of workflow
 

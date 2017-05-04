@@ -132,7 +132,7 @@ Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-s
 
 ## Run multiple SQL Server containers
 
-Docker provides a way to support multiple SQL Server instances on the same Linux machine. The following example creates two SQL Server Docker containers and maps them to ports **1401** and **1402** on the host machine.
+Docker provides a way to support multiple SQL Server instances on the same host machine. The following example creates two SQL Server Docker containers and maps them to ports **1401** and **1402** on the host machine.
 
 ```bash
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux

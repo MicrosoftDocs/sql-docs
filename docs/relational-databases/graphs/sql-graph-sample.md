@@ -110,6 +110,14 @@ INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 2),
 INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 3),
       (SELECT $node_id FROM City WHERE id =3));
 
+-- Insert data into the friendof edge.
+INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 1), (SELECT $NODE_ID FROM person WHERE ID = 2));
+INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 2), (SELECT $NODE_ID FROM person WHERE ID = 3));
+INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 3), (SELECT $NODE_ID FROM person WHERE ID = 1));
+INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 4), (SELECT $NODE_ID FROM person WHERE ID = 2));
+INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 5), (SELECT $NODE_ID FROM person WHERE ID = 4));
+
+
 -- Find Restaurants that John likes
 SELECT Restaurant.name
 FROM Person, likes, Restaurant

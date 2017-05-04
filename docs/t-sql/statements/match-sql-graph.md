@@ -1,7 +1,7 @@
 ---
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: 
-ms.date: "04/19/2017"
+ms.date: "05/04/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -107,7 +107,7 @@ AND Person1.name = 'Alice';
  The following example tries to find friend of a friend of Alice. 
 
  ```
-SELECT Person3.name AS FriendName
+SELECT Person3.name AS FriendName 
 FROM Person Person1, friend, Person Person2, friend friend2, Person Person3
 WHERE MATCH(Person1-(friend)->Person2-(friend2)->Person3)
 AND Person1.name = 'Alice';
@@ -146,4 +146,6 @@ AND Person1.name = 'Alice';
  
 
 ## See Also  
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  

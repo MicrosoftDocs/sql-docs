@@ -1,4 +1,4 @@
--guide---
+---
 title: "SQL Server Guides | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/07/2016"

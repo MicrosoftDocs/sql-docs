@@ -128,4 +128,4 @@ Table Valued Functions return a table data type that can be an alternative to vi
 [User-Defined Functions](../relational-databases/user-defined-functions/user-defined-functions.md)  
 [Table Variables and Row Estimations - Part 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
 [Table Variables and Row Estimations - Part 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
-[Execution Plan Caching and Reuse](../relational-databases/query-processing-architecture-guide.md)
+[Execution Plan Caching and Reuse](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

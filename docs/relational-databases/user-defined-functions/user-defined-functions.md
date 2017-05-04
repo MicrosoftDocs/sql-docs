@@ -38,7 +38,8 @@ Why use them?
   
      An operation that filters data based on some complex constraint that cannot be expressed in a single scalar expression can be expressed as a function. The function can then invoked in the WHERE clause to reduce the number or rows sent to the client.  
   
-> **NOTE:**  [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions in queries can only be executed on a single thread (serial execution plan).  
+> [!NOTE]
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined functions in queries can only be executed on a single thread (serial execution plan).  
   
 ##  <a name="FunctionTypes"></a> Types of functions  
 **Scalar Function**  
@@ -56,12 +57,13 @@ Why use them?
   
  The statements in a BEGIN...END block cannot have any side effects. Function side effects are any permanent changes to the state of a resource that has a scope outside the function such as a modification to a database table. The only changes that can be made by the statements in the function are changes to objects local to the function, such as local cursors or variables. Modifications to database tables, operations on cursors that are not local to the function, sending e-mail, attempting a catalog modification, and generating a result set that is returned to the user are examples of actions that cannot be performed in a function.  
   
-> **NOTE:** If a CREATE FUNCTION statement produces side effects against resources that do not exist when the CREATE FUNCTION statement is issued, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes the statement. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not execute the function when it is invoked.  
+> [!NOTE]
+> If a CREATE FUNCTION statement produces side effects against resources that do not exist when the CREATE FUNCTION statement is issued, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes the statement. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not execute the function when it is invoked.  
   
  The number of times that a function specified in a query is actually executed can vary between execution plans built by the optimizer. An example is a function invoked by a subquery in a WHERE clause. The number of times the subquery and its function is executed can vary with different access paths chosen by the optimizer.  
   
 ##  <a name="ValidStatements"></a> Valid statements in a function  
- The types of statements that are valid in a function include:  
+The types of statements that are valid in a function include:  
   
 -   DECLARE statements can be used to define data variables and cursors that are local to the function.  
   
@@ -104,7 +106,7 @@ Why use them?
 ##  <a name="SchemaBound"></a> Schema-bound functions  
  CREATE FUNCTION supports a SCHEMABINDING clause that binds the function to the schema of any objects it references, such as tables, views, and other user-defined functions. An attempt to alter or drop any object referenced by a schema-bound function fails.  
   
- These conditions must be met before you can specify SCHEMABINDING in [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx):  
+ These conditions must be met before you can specify SCHEMABINDING in [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md):  
   
 -   All views and user-defined functions referenced by the function must be schema-bound.  
   
@@ -132,6 +134,3 @@ Why use them?
 |Describes how to view the definition of a user-defined function.|[View User-defined Functions](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-
-
-

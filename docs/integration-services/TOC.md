@@ -57,10 +57,13 @@
 # [Queries](integration-services-ssis-queries.md)
 
 # Scripting and programming
+## [Integration Services Programming Overview](integration-services-programming-overview.md)
+## [Understanding Synchronous and Asynchronous Transformations](understanding-synchronous-and-asynchronous-transformations.md)
+## [Working with Connection Managers Programmatically](working-with-connection-managers-programmatically.md)
 ## [Extend packages with scripting](extending-packages-scripting/index.md)
 ## [Extend packages with custom objects](extending-packages-custom-objects/index.md)
-## [Run and manage packages programmatically](run-manage-packages-programmatically/index.md)
 ## [Build packages programmatically](building-packages-programmatically/index.md)
+## [Run and manage packages programmatically](run-manage-packages-programmatically/index.md)
 
 # [Security](security/index.md)
 

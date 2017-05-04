@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Query Processing Architecture Guide
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-The Database Engine processes queries on a variety of data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on a variety of data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
 ## SQL Statement Processing
 
@@ -263,14 +263,13 @@ WHERE CustomerID = @CustomerIDParameter;
 ```tsql
 IF @CustomerIDParameter BETWEEN 1 and 3299999
    Retrieve row from local table CustomerData.dbo.Customer_33
-ELSEIF @CustomerIDParameter BETWEEN 3300000 and 6599999
+ELSE IF @CustomerIDParameter BETWEEN 3300000 and 6599999
    Retrieve row from linked table Server2.CustomerData.dbo.Customer_66
-ELSEIF @CustomerIDParameter BETWEEN 6600000 and 9999999
+ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
    Retrieve row from linked table Server3.CustomerData.dbo.Customer_99
 ```
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sometimes builds these types of dynamic execution plans even for queries that are not parameterized. The Query Optimizer may parameterize a query so that the execution plan can be reused. If the Query Optimizer parameterizes a query referencing a partitioned view, the Query Optimizer can no longer assume the required rows will come from a specified base table. It will then have to use dynamic filters in the execution plan.
-
 
 ## Stored Procedure and Trigger Execution
 
@@ -280,18 +279,18 @@ The execution plan for stored procedures and triggers is executed separately fro
 
 ## Execution Plan Caching and Reuse
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a pool of memory that is used to store both execution plans and data buffers. The percentage of the pool allocated to either execution plans or data buffers fluctuates dynamically, depending on the state of the system. The part of the memory pool that is used to store execution plans is referred to as the procedure cache.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has a pool of memory that is used to store both execution plans and data buffers. The percentage of the pool allocated to either execution plans or data buffers fluctuates dynamically, depending on the state of the system. The part of the memory pool that is used to store execution plans is referred to as the plan cache.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] execution plans have the following main components: 
 
-* Query Plan 
+* Query Execution Plan 
   The bulk of the execution plan is a re-entrant, read-only data structure used by any number of users. This is referred to as the query plan. No user context is stored in the query plan. There are never more than one or two copies of the query plan in memory: one copy for all serial executions and another for all parallel executions. The parallel copy covers all parallel executions, regardless of their degree of parallelism. 
 * Execution Context 
   Each user that is currently executing the query has a data structure that holds the data specific to their execution, such as parameter values. This data structure is referred to as the execution context. The execution context data structures are reused. If a user executes a query and one of the structures is not being used, it is reinitialized with the context for the new user. 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-When any SQL statement is executed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the relational engine first looks through the procedure cache to verify that an existing execution plan for the same SQL statement exists. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses any existing plan it finds, saving the overhead of recompiling the SQL statement. If no existing execution plan exists, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates a new execution plan for the query.
+When any SQL statement is executed in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the relational engine first looks through the plan cache to verify that an existing execution plan for the same SQL statement exists. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses any existing plan it finds, saving the overhead of recompiling the SQL statement. If no existing execution plan exists, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generates a new execution plan for the query.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has an efficient algorithm to find any existing execution plans for any specific SQL statement. In most systems, the minimal resources that are used by this scan are less than the resources that are saved by being able to reuse existing plans instead of compiling every SQL statement.
 
@@ -303,27 +302,26 @@ SELECT * FROM Person;
 SELECT * FROM Person.Person;
 ```
 
-### Removing Execution Plans from the Procedure Cache
+### Removing Execution Plans from the Plan Cache
 
-Execution plans remain in the procedure cache as long as there is enough memory to store them. When memory pressure exists, the Database Engine uses a cost-based approach to determine which execution plans to remove from the procedure cache. To make a cost-based decision, the Database Engine increases and decreases a current cost variable for each execution plan according to the following factors.
+Execution plans remain in the plan cache as long as there is enough memory to store them. When memory pressure exists, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses a cost-based approach to determine which execution plans to remove from the plan cache. To make a cost-based decision, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] increases and decreases a current cost variable for each execution plan according to the following factors.
 
 When a user process inserts an execution plan into the cache, the user process sets the current cost equal to the original query compile cost; for ad-hoc execution plans, the user process sets the current cost to zero. Thereafter, each time a user process references an execution plan, it resets the current cost to the original compile cost; for ad-hoc execution plans the user process increases the current cost. For all plans, the maximum value for the current cost is the original compile cost.
 
-When memory pressure exists, the Database Engine responds by removing execution plans from the procedure cache. To determine which plans to remove, the Database Engine repeatedly examines the state of each execution plan and removes plans when their current cost is zero. An execution plan with zero current cost is not removed automatically when memory pressure exists; it is removed only when the Database Engine examines the plan and the current cost is zero. When examining an execution plan, the Database Engine pushes the current cost towards zero by decreasing the current cost if a query is not currently using the plan.
+When memory pressure exists, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] responds by removing execution plans from the plan cache. To determine which plans to remove, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] repeatedly examines the state of each execution plan and removes plans when their current cost is zero. An execution plan with zero current cost is not removed automatically when memory pressure exists; it is removed only when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examines the plan and the current cost is zero. When examining an execution plan, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pushes the current cost towards zero by decreasing the current cost if a query is not currently using the plan.
 
-The Database Engine repeatedly examines the execution plans until enough have been removed to satisfy memory requirements. While memory pressure exists, an execution plan may have its cost increased and decreased more than once. When memory pressure no longer exists, the Database Engine stops decreasing the current cost of unused execution plans and all execution plans remain in the procedure cache, even if their cost is zero.
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] repeatedly examines the execution plans until enough have been removed to satisfy memory requirements. While memory pressure exists, an execution plan may have its cost increased and decreased more than once. When memory pressure no longer exists, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] stops decreasing the current cost of unused execution plans and all execution plans remain in the plan cache, even if their cost is zero.
 
-The Database Engine uses the resource monitor and user threads to free memory from the procedure cache in response to memory pressure. The resource monitor and user threads can examine plans run concurrently to decrease the current cost for each unused execution plan. The resource monitor removes execution plans from the procedure cache when global memory pressure exists. It frees memory to enforce policies for system memory, process memory, resource pool memory, and maximum size for all caches. 
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses the resource monitor and user threads to free memory from the plan cache in response to memory pressure. The resource monitor and user threads can examine plans run concurrently to decrease the current cost for each unused execution plan. The resource monitor removes execution plans from the plan cache when global memory pressure exists. It frees memory to enforce policies for system memory, process memory, resource pool memory, and maximum size for all caches. 
 
 The maximum size for all caches is a function of the buffer pool size and cannot exceed the maximum server memory. For more information on configuring the maximum server memory, see the `max server memory` setting in `sp_configure`. 
 
-The user threads remove execution plans from the procedure cache when single cache memory pressure exists. They enforce policies for maximum single cache size and maximum single cache entries. 
+The user threads remove execution plans from the plan cache when single cache memory pressure exists. They enforce policies for maximum single cache size and maximum single cache entries. 
 
-The following examples illustrate which execution plans get removed from the procedure cache:
+The following examples illustrate which execution plans get removed from the plan cache:
 
-* An execution plan is frequently referenced so that its cost never goes to zero. The plan remains in the procedure cache and is not removed unless there is memory pressure and the current cost is zero.
-* An ad-hoc execution plan is inserted and is not referenced again before memory pressure exists. Since ad-hoc plans are initialized with a current cost of zero, when the database engine examines the execution plan, it will see the zero current cost and remove the plan from the procedure cache. The ad-hoc execution plan remains in the procedure cache with a zero current cost when memory pressure does not exist.
-
+* An execution plan is frequently referenced so that its cost never goes to zero. The plan remains in the plan cache and is not removed unless there is memory pressure and the current cost is zero.
+* An ad-hoc execution plan is inserted and is not referenced again before memory pressure exists. Since ad-hoc plans are initialized with a current cost of zero, when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examines the execution plan, it will see the zero current cost and remove the plan from the plan cache. The ad-hoc execution plan remains in the plan cache with a zero current cost when memory pressure does not exist.
 
 To manually remove a single plan or all plans from the cache, use [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).
 
@@ -347,7 +345,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, whenever a state
 
 Statement-level recompilation benefits performance because, in most cases, a small number of statements causes recompilations and their associated penalties, in terms of CPU time and locks. These penalties are therefore avoided for the other statements in the batch that do not have to be recompiled.
 
-The `sql_statement_recompile` xEvent reports statement-level recompilations. This xEvent occurs when a statement-level recompilation is required by any kind of batch. This includes stored procedures, triggers, ad hoc batches and queries. Batches may be submitted through several interfaces, including sp_executesql, dynamic SQL, Prepare methods or Execute methods.
+The `sql_statement_recompile` extended event (xEvent) reports statement-level recompilations. This xEvent occurs when a statement-level recompilation is required by any kind of batch. This includes stored procedures, triggers, ad hoc batches and queries. Batches may be submitted through several interfaces, including sp_executesql, dynamic SQL, Prepare methods or Execute methods.
 The `recompile_cause` column of `sql_statement_recompile` xEvent contains an integer code that indicates the reason for the recompilation. The following table contains the possible reasons:
 
 |||
@@ -410,7 +408,6 @@ Separating constants from the SQL statement by using parameters helps the relati
    ```
 
    This method is recommended for Transact-SQL scripts, stored procedures, or triggers that generate SQL statements dynamically. 
-
 
 * ADO, OLE DB, and ODBC use parameter markers. Parameter markers are question marks (?) that replace a constant in an SQL statement and are bound to a program variable. For example, you would do the following in an ODBC application: 
 
@@ -576,7 +573,7 @@ Using the second way, the application does the following:
 
 The second way is more efficient when the statement is executed more than three times.
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the prepare/execute model has no significant performance advantage over direct execution, because of the way [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses execution plans. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has efficient algorithms for matching current SQL statements with execution plans that are generated for prior executions of the same SQL statement. If an application executes a SQL statement with parameter markers multiple times, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will reuse the execution plan from the first execution for the second and subsequent executions (unless the plan ages from the procedure cache). The prepare/execute model still has these benefits: 
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the prepare/execute model has no significant performance advantage over direct execution, because of the way [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reuses execution plans. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has efficient algorithms for matching current SQL statements with execution plans that are generated for prior executions of the same SQL statement. If an application executes a SQL statement with parameter markers multiple times, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will reuse the execution plan from the first execution for the second and subsequent executions (unless the plan ages from the plan cache). The prepare/execute model still has these benefits: 
 
 * Finding an execution plan by an identifying handle is more efficient than the algorithms used to match an SQL statement to existing execution plans.
 * The application can control when the execution plan is created and when it is reused.
@@ -617,22 +614,22 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does 
   Only computers that have more than one CPU can use parallel queries. 
 
 2. Whether sufficient threads are available.  
-  Each query or index operation requires a certain number of threads to execute. Executing a parallel plan requires more threads than a serial plan , and the number of required threads increases with the degree of parallelism. When the thread requirement of the parallel plan for a specific degree of parallelism cannot be satisfied, the Database Engine decreases the degree of parallelism automatically or completely abandons the parallel plan in the specified workload context. It then executes the serial plan (one thread). 
+  Each query or index operation requires a certain number of threads to execute. Executing a parallel plan requires more threads than a serial plan , and the number of required threads increases with the degree of parallelism. When the thread requirement of the parallel plan for a specific degree of parallelism cannot be satisfied, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] decreases the degree of parallelism automatically or completely abandons the parallel plan in the specified workload context. It then executes the serial plan (one thread). 
 
 3. The type of query or index operation executed.  
-  Index operations that create or rebuild an index, or drop a clustered index and queries that use CPU cycles heavily are the best candidates for a parallel plan. For example, joins of large tables, large aggregations, and sorting of large result sets are good candidates. Simple queries, frequently found in transaction processing applications, find the additional coordination required to execute a query in parallel outweigh the potential performance boost. To distinguish between queries that benefit from parallelism and those that do not benefit, The Database Engine compares the estimated cost of executing the query or index operation with the [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) value. Although not recommended, users can change the default value of 5 using [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
+  Index operations that create or rebuild an index, or drop a clustered index and queries that use CPU cycles heavily are the best candidates for a parallel plan. For example, joins of large tables, large aggregations, and sorting of large result sets are good candidates. Simple queries, frequently found in transaction processing applications, find the additional coordination required to execute a query in parallel outweigh the potential performance boost. To distinguish between queries that benefit from parallelism and those that do not benefit, The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compares the estimated cost of executing the query or index operation with the [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) value. Although not recommended, users can change the default value of 5 using [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
 
 4. Whether there are a sufficient number of rows to process.  
   If the Query Optimizer determines that the number of rows is too low, it does not introduce exchange operators to distribute the rows. Consequently, the operators are executed serially. Executing the operators in a serial plan avoids scenarios when the startup, distribution, and coordination costs exceed the gains achieved by parallel operator execution.
 
 5. Whether current distribution statistics are available.  
   If the highest degree of parallelism is not possible, lower degrees are considered before the parallel plan is abandoned.  
-  For example, when you create a clustered index on a view, distribution statistics cannot be evaluated, because the clustered index does not yet exist. In this case, the Database Engine cannot provide the highest degree of parallelism for the index operation. However, some operators, such as sorting and scanning, can still benefit from parallel execution.
+  For example, when you create a clustered index on a view, distribution statistics cannot be evaluated, because the clustered index does not yet exist. In this case, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] cannot provide the highest degree of parallelism for the index operation. However, some operators, such as sorting and scanning, can still benefit from parallel execution.
 
 > [!NOTE]
 > Parallel index operations are only available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.
  
-At execution time, the Database Engine determines whether the current system workload and configuration information previously described allow for parallel execution. If parallel execution is warranted, the Database Engine determines the optimal number of threads and spreads the execution of the parallel plan across those threads. When a query or index operation starts executing on multiple threads for parallel execution, the same number of threads is used until the operation is completed. The Database Engine re-examines the optimal number of thread decisions every time an execution plan is retrieved from the procedure cache. For example, one execution of a query can result in the use of a serial plan, a later execution of the same query can result in a parallel plan using three threads, and a third execution can result in a parallel plan using four threads.
+At execution time, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determines whether the current system workload and configuration information previously described allow for parallel execution. If parallel execution is warranted, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determines the optimal number of threads and spreads the execution of the parallel plan across those threads. When a query or index operation starts executing on multiple threads for parallel execution, the same number of threads is used until the operation is completed. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] re-examines the optimal number of thread decisions every time an execution plan is retrieved from the plan cache. For example, one execution of a query can result in the use of a serial plan, a later execution of the same query can result in a parallel plan using three threads, and a third execution can result in a parallel plan using four threads.
 
 In a parallel query execution plan, the insert, update, and delete operators are executed serially. However, the WHERE clause of an UPDATE or a DELETE statement, or the SELECT part of an INSERT statement may be executed in parallel. The actual data changes are then serially applied to the database.
 
@@ -640,7 +637,11 @@ Static and keyset-driven cursors can be populated by parallel execution plans. H
 
 #### Overriding Degrees of Parallelism
 
-You can use the [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) server configuration option ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) on [!INCLUDE[ssSDS_md](../includes/sssds-md.md)] ) to limit the number of processors to use in parallel plan execution. The max degree of parallelism option can be overridden for individual query and index operation statements by specifying the MAXDOP query hint or MAXDOP index option. MAXDOP provides more control over individual queries and index operations. For example, you can use the MAXDOP option to control, by extending or reducing, the number of processors dedicated to an online index operation. In this way, you can balance the resources used by an index operation with those of the concurrent users. Setting the max degree of parallelism option to 0 allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors upt to a maximum of 64 processors in a parallel plan execution. Setting MAXDOP to 0 for queries and indexes allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors for the given queries or indexes in a parallel plan execution.
+You can use the [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) server configuration option ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) on [!INCLUDE[ssSDS_md](../includes/sssds-md.md)] ) to limit the number of processors to use in parallel plan execution. The max degree of parallelism option can be overridden for individual query and index operation statements by specifying the MAXDOP query hint or MAXDOP index option. MAXDOP provides more control over individual queries and index operations. For example, you can use the MAXDOP option to control, by increasing or reducing, the number of processors dedicated to an online index operation. In this way, you can balance the resources used by an index operation with those of the concurrent users. 
+
+Setting the max degree of parallelism (MAXDOP) option to 0 (default) enables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to to a maximum of 64 processors in a parallel plan execution. Although [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sets a runtime target of 64 logical processors when MAXDOP option is set to 0, a different value can be manually set if needed. Setting MAXDOP to 0 for queries and indexes allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors for the given queries or indexes in a parallel plan execution.
+
+Refer to this [Microsoft Support Article](https://support.microsoft.com/en-us/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) for best practices on configuring MAXDOP.
 
 ### Parallel Query Example
 
@@ -1025,3 +1026,8 @@ GO
 SET STATISTICS XML OFF;
 GO
 ```
+
+
+##  <a name="Additional_Reading"></a> Additional Reading  
+ [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
+[Extended Events](../relational-databases/extended-events/extended-events.md)

@@ -205,11 +205,16 @@ Use the following troubleshooting suggestions if your SQL Server Docker containe
     sudo docker logs e6
     ```
 
-- Look at the SQL Server setup and error logs in /var/opt/mssql/log. If the container is not running, first start the container. Then use an interactive command-prompt to inspect the logs.
+- Look at the SQL Server setup and error logs in **/var/opt/mssql/log**. If the container is not running, first start the container. Then use an interactive command-prompt to inspect the logs.
 
     ```bash
     sudo docker start e6
-    sudo docker exec -it 73 "bash"
+    sudo docker exec -it e6 "bash"
+    ```
+
+    From the bash session insider your container, run the following commands:
+
+    ```bash
     cd /var/opt/mssql/log
     ls
     cat setup*.log
@@ -217,7 +222,7 @@ Use the following troubleshooting suggestions if your SQL Server Docker containe
     ```
 
     > [!TIP]
-    > If you mounted a host directory to **/var/opt/mssql** when you created your container, you can simply look in the **log** subdirectory on the mapped path on the host.
+    > If you mounted a host directory to **/var/opt/mssql** when you created your container, you can instead look in the **log** subdirectory on the mapped path on the host.
 
 - If you mapped to a non-default host port (not 1433), make sure you are specifying the port in your connection string.
 

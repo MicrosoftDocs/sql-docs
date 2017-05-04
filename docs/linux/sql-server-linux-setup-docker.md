@@ -94,7 +94,7 @@ You can connect to the SQL Server instance on your Docker machine from any exter
 
 - [sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md)
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-develop-use-ssms.md).
+- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-develop-use-ssms.md)
 
 ### Connect with sqlcmd
 

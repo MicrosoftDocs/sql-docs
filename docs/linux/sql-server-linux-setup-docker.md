@@ -164,7 +164,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 143
 This technique also enables you to share and view the files on the host outside of Docker.
 
 > [!IMPORTANT]
-> Host volume mapping for Docker-machine on Mac with the SQL Server on Linux image is not supported at this time. Use data volume containers instead.
+> Host volume mapping for Docker on Mac with the SQL Server on Linux image is not supported at this time. Use data volume containers instead.
 
 ### Use data volume containers
 

@@ -32,13 +32,3 @@ The following guides are available. They discuss general concepts and apply to a
 [SQL Server Transaction Locking and Row Versioning Guide](https://msdn.microsoft.com/library/jj856598)  
 [SQL Server Transaction Log Architecture and Management Guide](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
 [Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md)  
-
-## [Index design](sql-server-index-design-guide.md)
-## [Memory management](memory-management-architecture-guide.md)  
-### [Reading pages](reading-pages.md)  
-### [Writing pages](writing-pages.md)
-## [Pages and extents](pages-and-extents-architecture-guide.md)  
-## [Post-migration validation and optimization](post-migration-validation-and-optimization.md)
-## [Query processing](query-processing-architecture-guide.md)  
-## [Thread and task](thread-and-task-architecture-guide.md)
-## [Transaction log](sql-server-transaction-log-architecture-and-management-guide.md) 

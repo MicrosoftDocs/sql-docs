@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Guides | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/07/2016"
+ms.date: "5/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -343,35 +343,55 @@ Certain changes in a database can cause an execution plan to be either inefficie
 
 Most recompilations are required either for statement correctness or to obtain potentially faster query execution plans.
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, whenever a statement within a batch causes recompilation, the whole batch, whether submitted through a stored procedure, trigger, ad-hoc batch, or prepared statement, is recompiled. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 and later, only the statement inside the batch that causes recompilation is recompiled. Because of this difference, recompilation counts in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 and later releases are not comparable. Also, there are more types of recompilations in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 and later because of its expanded feature set.
+In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, whenever a statement within a batch causes recompilation, the whole batch, whether submitted through a stored procedure, trigger, ad-hoc batch, or prepared statement, is recompiled. Starting with [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], only the statement inside the batch that causes recompilation is recompiled. Because of this difference, recompilation counts in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 and later releases are not comparable. Also, there are more types of recompilations in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] and later because of its expanded feature set.
 
 Statement-level recompilation benefits performance because, in most cases, a small number of statements causes recompilations and their associated penalties, in terms of CPU time and locks. These penalties are therefore avoided for the other statements in the batch that do not have to be recompiled.
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler `SP:Recompile` trace event reports statement-level recompilations. This trace event reports only batch recompilations in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000. Further, the `TextData` column of this event is populated. Therefore, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 practice of having to trace `SP:StmtStarting` or `SP:StmtCompleted` to obtain the Transact-SQL text that caused recompilation is no longer required.
+The `sql_statement_recompile` xEvent reports statement-level recompilations. This xEvent occurs when a statement-level recompilation is required by any kind of batch. This includes stored procedures, triggers, ad hoc batches and queries. Batches may be submitted through several interfaces, including sp_executesql, dynamic SQL, Prepare methods or Execute methods.
+The `recompile_cause` column of `sql_statement_recompile` xEvent contains an integer code that indicates the reason for the recompilation. The following table contains the possible reasons:
 
-The trace event `SQL:StmtRecompile` reports statement-level recompilations. This trace event can be used to track and debug recompilations. Whereas `SP:Recompile` generates only for stored procedures and triggers, `SQL:StmtRecompile` generates for stored procedures, triggers, ad-hoc batches, batches that are executed by using `sp_executesql`, prepared queries, and dynamic SQL.
-
-The `EventSubClass` column of `SP:Recompile` and `SQL:StmtRecompile` contains an integer code that indicates the reason for the recompilation. The following table contains the meaning of each code number.
-
-|EventSubClass value	|Description	|
-|----|----|
-|1	|Schema changed.	|
-|2	|Statistics changed.	|
-|3	|Deferred compile.	|
-|4	|SET option changed.	|
-|5	|Temporary table changed.	|
-|6	|Remote rowset changed.	|
-|7	|`FOR BROWSE` permission changed.	|
-|8	|Query notification environment changed.	|
-|9	|Partitioned view changed.	|
-|10	|Cursor options changed.	|
-|11	|`OPTION (RECOMPILE)` requested	|
+|xEvent recompile_cause|
+|----|
+|Schema changed|
+|Statistics changed|
+|Deferred compile|
+|SET option changed|
+|Temporary table changed|
+|Remote rowset changed|
+|`FOR BROWSE` permission changed|
+|Query notification environment changed|
+|Partitioned view changed|
+|Cursor options changed|
+|`OPTION (RECOMPILE)` requested|
+|Parameterized plan flushed|
+|Plan affecting database version changed|
+|Query Store plan forcing policy changed|
+|Query Store plan forcing failed|
+|Query Store missing the plan|
 
 > [!NOTE]
-> When the `AUTO_UPDATE_STATISTICS` database option is `SET` to `ON`, queries are recompiled when they target tables or indexed views whose statistics have been updated or whose cardinalities have changed significantly since the last execution. 
-> This behavior applies to standard user-defined tables, temporary tables, and the inserted and deleted tables created by DML triggers. If query performance is affected by excessive recompilations, consider changing this setting to `OFF`. When the `AUTO_UPDATE_STATISTICS` database option is `SET` to `OFF`, no recompilations occur based on statistics or cardinality changes, with the exception of the inserted and deleted tables that are created by DML `INSTEAD OF` triggers. Because these tables are created in tempdb, the recompilation of queries that access them depends on the setting of `AUTO_UPDATE_STATISTICS` in tempdb. 
+> In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions where xEvents are not available, then the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) trace event can be used for the same purpose of reporting statement-level recompilations.
+> The trace event [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) also reports statement-level recompilations, and this trace event can also be used to track and debug recompilations. 
+> Whereas SP:Recompile generates only for stored procedures and triggers, SQL:StmtRecompile generates for stored procedures, triggers, ad-hoc batches, batches that are executed by using `sp_executesql`, prepared queries, and dynamic SQL.
+> The *EventSubClass* column of SP:Recompile and SQL:StmtRecompile contains an integer code that indicates the reason for the recompilation. The following table contains the meaning of each code number.
+> |EventSubClass value|Description|
+> |----|----|
+> |1	|Schema changed.	|
+> |2	|Statistics changed.	|
+> |3	|Deferred compile.	|
+> |4	|SET option changed.	|
+> |5	|Temporary table changed.	|
+> |6	|Remote rowset changed.	|
+> |7	|`FOR BROWSE` permission changed.	|
+> |8	|Query notification environment changed.	|
+> |9	|Partitioned view changed.	|
+> |10	|Cursor options changed.	|
+> |11	|`OPTION (RECOMPILE)` requested	|
+
+> [!NOTE]
+> When the `AUTO_UPDATE_STATISTICS` database option is set to `ON`, queries are recompiled when they target tables or indexed views whose statistics have been updated or whose cardinalities have changed significantly since the last execution. 
+> This behavior applies to standard user-defined tables, temporary tables, and the inserted and deleted tables created by DML triggers. If query performance is affected by excessive recompilations, consider changing this setting to `OFF`. When the `AUTO_UPDATE_STATISTICS` database option is set to `OFF`, no recompilations occur based on statistics or cardinality changes, with the exception of the inserted and deleted tables that are created by DML `INSTEAD OF` triggers. Because these tables are created in tempdb, the recompilation of queries that access them depends on the setting of `AUTO_UPDATE_STATISTICS` in tempdb. 
 > Note that in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, queries continue to recompile based on cardinality changes to the DML trigger inserted and deleted tables, even when this setting is `OFF`.
- 
 
 ### Parameters and Execution Plan Reuse
 
@@ -419,7 +439,7 @@ Separating constants from the SQL statement by using parameters helps the relati
    * Put the integer value in the variable.
    * Execute the statement, specifying the parameter marker (?): 
 
-   ```tsql
+   ```
    SQLExecDirect(hstmt, 
      "SELECT * 
      FROM AdventureWorks2014.Production.Product 
@@ -552,7 +572,6 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relational engine int
 * Execute the precompiled execution plan every time it has to execute the statement. This prevents having to recompile the SQL statement on each execution after the first time.   
   Preparing and executing statements is controlled by API functions and methods. It is not part of the Transact-SQL language. The prepare/execute model of executing SQL statements is supported by the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB Provider and the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC driver. On a prepare request, either the provider or the driver sends the statement to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with a request to prepare the statement. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compiles an execution plan and returns a handle for that plan to the provider or driver. On an execute request, either the provider or the driver sends the server a request to execute the plan that is associated with the handle. 
 
-
 Prepared statements cannot be used to create temporary objects on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Prepared statements cannot reference system stored procedures that create temporary objects, such as temporary tables. These procedures must be executed directly.
 
 Excess use of the prepare/execute model can degrade performance. If a statement is executed only once, a direct execution requires only one network round-trip to the server. Preparing and executing an SQL statement executed only one time requires an extra network round-trip; one trip to prepare the statement and one trip to execute it.
@@ -611,7 +630,6 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does 
 * A serial execution plan is considered faster than any possible parallel execution plan for the particular query.
 * The query contains scalar or relational operators that cannot be run in parallel. Certain operators can cause a section of the query plan to run in serial mode, or the whole plan to run in serial mode.
 
-
 ### Degree of Parallelism
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically detects the best degree of parallelism for each instance of a parallel query execution or index data definition language (DDL) operation. It does this based on the following criteria: 
@@ -644,7 +662,6 @@ Static and keyset-driven cursors can be populated by parallel execution plans. H
 #### Overriding Degrees of Parallelism
 
 You can use the [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) server configuration option ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) on [!INCLUDE[ssSDS_md](../includes/sssds-md.md)] ) to limit the number of processors to use in parallel plan execution. The max degree of parallelism option can be overridden for individual query and index operation statements by specifying the MAXDOP query hint or MAXDOP index option. MAXDOP provides more control over individual queries and index operations. For example, you can use the MAXDOP option to control, by extending or reducing, the number of processors dedicated to an online index operation. In this way, you can balance the resources used by an index operation with those of the concurrent users. Setting the max degree of parallelism option to 0 allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors upt to a maximum of 64 processors in a parallel plan execution. Setting MAXDOP to 0 for queries and indexes allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors for the given queries or indexes in a parallel plan execution.
-
 
 ### Parallel Query Example
 
@@ -722,30 +739,28 @@ Query plan with DOP 4, involves a two-table join
 
 The illustration shows a Query Optimizer plan executed with a degree of parallelism equal to 4 and involving a two-table join.
 
-The parallel plan contains three `Parallelism` operators. Both the `Index Seek` operator of the `o_datkey_ptr` index and the `Index Scan` operator of the `l_order_dates_idx` index are performed in parallel. This produces several exclusive streams. This can be determined from the nearest Parallelism operators above the `Index Scan` and `Index Seek` operators, respectively. Both are repartitioning the type of exchange. That is, they are just reshuffling data among the streams and producing the same number of streams on their output as they have on their input. This number of streams is equal to the degree of parallelism.
+The parallel plan contains three parallelism operators. Both the Index Seek operator of the `o_datkey_ptr` index and the Index Scan operator of the `l_order_dates_idx` index are performed in parallel. This produces several exclusive streams. This can be determined from the nearest Parallelism operators above the Index Scan and Index Seek operators, respectively. Both are repartitioning the type of exchange. That is, they are just reshuffling data among the streams and producing the same number of streams on their output as they have on their input. This number of streams is equal to the degree of parallelism.
 
-The `Parallelism `operator above the `l_order_dates_idx` `Index Scan` operator is repartitioning its input streams using the value of `L_ORDERKEY` as a key. In this way, the same values of `L_ORDERKEY` end up in the same output stream. At the same time, output streams maintain the order on the `L_ORDERKEY` column to meet the input requirement of the `Merge Join` operator.
+The parallelism operator above the `l_order_dates_idx` Index Scan operator is repartitioning its input streams using the value of `L_ORDERKEY` as a key. In this way, the same values of `L_ORDERKEY` end up in the same output stream. At the same time, output streams maintain the order on the `L_ORDERKEY` column to meet the input requirement of the Merge Join operator.
 
-The `Parallelism` operator above the `Index Seek` operator is repartitioning its input streams using the value of `O_ORDERKEY`. Because its input is not sorted on the `O_ORDERKEY` column values and this is the join column in the `Merge Join` operator, the Sort operator between the `Parallelism` and `Merge Join` operators make sure that the input is sorted for the `Merge Join` operator on the join columns. The `Sort` operator, like the `Merge Join` operator, is performed in parallel.
+The parallelism operator above the Index Seek operator is repartitioning its input streams using the value of `O_ORDERKEY`. Because its input is not sorted on the `O_ORDERKEY` column values and this is the join column in the `Merge Join` operator, the Sort operator between the parallelism and Merge Join operators make sure that the input is sorted for the `Merge Join` operator on the join columns. The `Sort` operator, like the Merge Join operator, is performed in parallel.
 
-The topmost `Parallelism` operator gathers results from several streams into a single stream. Partial aggregations performed by the `Stream Aggregate` operator below the `Parallelism` operator are then accumulated into a single `SUM` value for each different value of the `O_ORDERPRIORITY` in the `Stream Aggregate` operator above the `Parallelism` operator. Because this plan has two exchange segments, with degree of parallelism equal to 4, it uses eight threads.
-
+The topmost parallelism operator gathers results from several streams into a single stream. Partial aggregations performed by the Stream Aggregate operator below the parallelism operator are then accumulated into a single `SUM` value for each different value of the `O_ORDERPRIORITY` in the Stream Aggregate operator above the parallelism operator. Because this plan has two exchange segments, with degree of parallelism equal to 4, it uses eight threads.
 
 ### Parallel Index Operations
 
 The query plans built for the index operations that create or rebuild an index, or drop a clustered index, allow for parallel, multi-threaded operations on computers that have multiple microprocessors.
 
 > [!NOTE]
-> Parallel index operations are only available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008 Enterprise.
+> Parallel index operations are only available in Enterprise Edition, starting with [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].
  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses the same algorithms to determine the degree of parallelism (the total number of separate threads to run) for index operations as it does for other queries. The maximum degree of parallelism for an index operation is subject to the [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) server configuration option. You can override the max degree of parallelism value for individual index operations by setting the MAXDOP index option in the CREATE INDEX, ALTER INDEX, DROP INDEX, and ALTER TABLE statements.
 
-When the Database Engine builds an index execution plan, the number of parallel operations is set to the lowest value from among the following: 
+When the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] builds an index execution plan, the number of parallel operations is set to the lowest value from among the following: 
 
 * The number of microprocessors, or CPUs in the computer.
 * The number specified in the max degree of parallelism server configuration option.
 * The number of CPUs not already over a threshold of work performed for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] threads.
-
 
 For example, on a computer that has eight CPUs, but where max degree of parallelism is set to 6, no more than six parallel threads are generated for an index operation. If five of the CPUs in the computer exceed the threshold of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] work when an index execution plan is built, the execution plan specifies only three parallel threads.
 
@@ -756,7 +771,6 @@ The main phases of a parallel index operation include the following:
 * After all the parallel threads have completed, the coordinating thread connects the index subunits into a single index. This phase applies only to offline index operations.
 
 Individual `CREATE TABLE` or `ALTER TABLE` statements can have multiple constraints that require that an index be created. These multiple index creation operations are performed in series, although each individual index creation operation may be a parallel operation on a computer that has multiple CPUs.
-
 
 ## Distributted Query Architecture
 
@@ -795,7 +809,6 @@ Distributed queries can allow users to access another data source (for example, 
 When possible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pushes relational operations such as joins, restrictions, projections, sorts, and group by operations to the OLE DB data source. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not default to scanning the base table into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and performing the relational operations itself. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queries the OLE DB provider to determine the level of SQL grammar it supports, and, based on that information, pushes as many relational operations as possible to the provider. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specifies a mechanism for an OLE DB provider to return statistics indicating how key values are distributed within the OLE DB data source. This lets the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer better analyze the pattern of data in the data source against the requirements of each SQL statement, increasing the ability of the Query Optimizer to generate optimal execution plans. 
-
 
 ## Query Processing Enhancements on Partitioned Tables and Indexes
 

@@ -31,7 +31,7 @@ This topic explains how to pull and run the [mssql-server Docker image](https://
 > [!NOTE]
 > This image is running SQL Server on an Ubuntu Linux base image. To run the SQL Server on Windows Containers Docker image, check out the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows/).
 
-## Requirements for Docker
+## <a id="requirements"></a> Requirements for Docker
 
 - Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows.
 - Minimum of 4 GB of disk space
@@ -89,7 +89,12 @@ This topic explains how to pull and run the [mssql-server Docker image](https://
     > If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting](#troubleshooting) section.
 
 ## Connect and query
-You can connect to the SQL Server instance on your Docker machine from any external Windows or Linux tool that supports SQL connections, such as [sqlcmd](sql-server-linux-sql-server-linux-connect-and-query-sqlcmd.md), [Visual Studio Code](sql-server-sql-server-linux-develop-use-vscode.md), or [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-develop-sql-server-linux-develop-use-ssms.md). 
+
+You can connect to the SQL Server instance on your Docker machine from any external Windows or Linux tool that supports SQL connections, such as:
+
+- [sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md)
+- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-develop-use-ssms.md).
 
 ### Connect with sqlcmd
 
@@ -99,7 +104,7 @@ The following example uses **sqlcmd** to connect to SQL Server running in a Dock
 sqlcmd -S 10.3.2.4 -U SA -P '<YourPassword>'
 ```
 
-If you mapped a different host port with the `-p` parameter of the `docker run` command, then add that port to the connection string. For example, if you used `-p 1400:1433`, then explicitly specify port 1400 when you connect.
+If you mapped a host port that was not the default **1433**, add that port to the connection string. For example, if you specified `-p 1400:1433` in your `docker run` command, then connect by explicitly specify port 1400.
 
 ```bash
 sqlcmd -S 10.3.2.4,1400 -U SA -P '<YourPassword>'
@@ -109,13 +114,13 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P '<YourPassword>'
 
 Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
 
-1. Use the `docker exec` command to start an interactive bash shell inside your running container. In the following example `e6` is the first two characters of the container ID that uniquely identifies the target container.
+1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `e6` is the first two characters of the container ID that uniquely identifies the target container.
 
     ```bash
     sudo docker exec -it e6 "bash"
     ```
 
-2. Once insider the container, connect locally with sqlcmd. Note that it is not in the path by default, so you have to specify the directory.
+2. Once insider the container, connect locally with sqlcmd. Note that sqlcmd is not in the path by default, so you have to specify the full path.
 
     ```bash
     /opt/mssql-tools/bin/sqlcmd -H localhost -U SA -P '<YourPassword>'
@@ -123,18 +128,18 @@ Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-s
 
 3. When finished with sqlcmd, type `exit`.
 
-4. When finished with the interactive command-prompt, type `exit`. Your container continues to run after you exit.
+4. When finished with the interactive command-prompt, type `exit`. Your container continues to run after you exit the interactive bash shell.
 
 ## Run multiple SQL Server containers
 
-Docker provides one of the best ways to support multiple SQL Server instances on the same Linux machine. The following example creates two SQL Server Docker containers and maps them to ports **1401** and **1402** respectively.
+Docker provides a way to support multiple SQL Server instances on the same Linux machine. The following example creates two SQL Server Docker containers and maps them to ports **1401** and **1402** on the host machine.
 
 ```bash
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
-Now there are two instances of SQL Server running in separate containers. Clients can connect to each container using the IP address of the Docker host and the port number as in the following example.
+Now there are two instances of SQL Server running in separate containers. Clients can connect to each SQL Server instance by using the IP address of the Docker host and the port number for the container.
 
 ```bash
 sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
@@ -143,7 +148,7 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P '<YourPassword>'
 
 ## Docker and data persistence
 
-Your SQL Server configuration changes and database files are persisted in the container even if you restart the container with `docker stop` and `docker start`. However, if you remove the container with `docker rm`, everything in the container is deleted. The following section explains how to use **data volumes** to persist your database files even if the associated containers are deleted.
+Your SQL Server configuration changes and database files are persisted in the container even if you restart the container with `docker stop` and `docker start`. However, if you remove the container with `docker rm`, everything in the container is deleted, including SQL Server and all of your databases. The following section explains how to use **data volumes** to persist your database files even if the associated containers are deleted.
 
 > [!IMPORTANT]
 > For SQL Server, it is critical that you understand data persistence in Docker. In addition to the discussion in this section, see Docker's documentation on [how to manage data in Docker containers](https://docs.docker.com/engine/tutorials/dockervolumes/).
@@ -156,14 +161,14 @@ The first option is to mount a directory on your host as a data volume in your c
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
-> [!IMPORTANT]
-> Volume mapping for Docker-machine on Mac with the SQL Server on Linux image is not supported at this time. Use data volume containers instead.
-
 This technique also enables you to share and view the files on the host outside of Docker.
+
+> [!IMPORTANT]
+> Host volume mapping for Docker-machine on Mac with the SQL Server on Linux image is not supported at this time. Use data volume containers instead.
 
 ### Use data volume containers
 
-The second option is to use a data volume container. You can create a data volume container by specifying a volume name instead of a host directory with the `-v` parameter. The following example creates a shared data volume named `sqlvolume`.
+The second option is to use a data volume container. You can create a data volume container by specifying a volume name instead of a host directory with the `-v` parameter. The following example creates a shared data volume named **sqlvolume**.
 
 ```bash
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
@@ -192,7 +197,31 @@ You can now create new containers that will have the latest version of SQL Serve
 
 ## <a id="troubleshooting"></a> Troubleshooting
 
-TBD
+Use the following troubleshooting suggestions if your SQL Server Docker container fails to run or if you can't connect to the SQL Server instance running in your container.
+
+- First, check to see if there are any error messages from container.
+
+    ```bash
+    sudo docker logs e6
+    ```
+
+- Look at the SQL Server setup and error logs in /var/opt/mssql/log. If the container is not running, first start the container. Then use an interactive command-prompt to inspect the logs.
+
+    ```bash
+    sudo docker start e6
+    sudo docker exec -it 73 "bash"
+    cd /var/opt/mssql/log
+    ls
+    cat setup*.log
+    cat errorlog
+    ```
+
+    > [!TIP]
+    > If you mounted a host directory to **/var/opt/mssql** when you created your container, you can simply look in the **log** subdirectory on the mapped path on the host.
+
+- If you mapped to a non-default host port (not 1433), make sure you are specifying the port in your connection string.
+
+- Make sure that you meet the minimum memory and disk requirements specified in the [Requirements](#requirements) section of this topic.
 
 ## Next steps
 

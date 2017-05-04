@@ -21,14 +21,14 @@ manager: ""
 # Post-migration Validation and Optimization Guide
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload. 
 
 # Common Performance Scenarios
-Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Platform and how to resolve them.
+Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Platform and how to resolve them.
 
 ## <a name="Parameter Sniffing"></a> Sensitivity to parameter sniffing
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compiles query plans on stored procedures by using sniffing the input parameters at the first compile, generating a parameterized and reusable plan, optimized for that input data distribution. Even if not stored procedures, most statements generating trivial plans will be parameterized. After a plan is first cached, any future execution maps to a previously cached plan.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compiles query plans on stored procedures by using sniffing the input parameters at the first compile, generating a parameterized and reusable plan, optimized for that input data distribution. Even if not stored procedures, most statements generating trivial plans will be parameterized. After a plan is first cached, any future execution maps to a previously cached plan.
 A potential problem arises when that first compilation may not have used the most common sets of parameters for the usual workload. For different parameters, the same execution plan becomes inefficient.
 
 ### Steps to resolve
@@ -59,7 +59,7 @@ Incorrect or missing indexes causes extra I/O that leads to extra memory and CPU
 
 ## <a name="Inability to use predicates"></a> Inability to use predicates to filter data
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer can only account for information that is known at compile time. If a workload relies on predicates that can only be known at execution time, then the potential for a poor plan choice increases. For a better-quality plan, predicates must be SARGable, or **S**earch **Arg**ument**able**.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer can only account for information that is known at compile time. If a workload relies on predicates that can only be known at execution time, then the potential for a poor plan choice increases. For a better-quality plan, predicates must be SARGable, or **S**earch **Arg**ument**able**.
 
 Some examples of non-SARGable predicates:
 -   Implicit data conversions, like VARCHAR to NVARCHAR, or INT to VARCHAR. Look for runtime CONVERT_IMPLICIT warnings in the Actual Execution Plans. Converting from one type to another can also cause a loss of precision.
@@ -85,9 +85,9 @@ Some examples of non-SARGable predicates:
 Table Valued Functions return a table data type that can be an alternative to views. While views are limited to a single `SELECT` statement, user-defined functions can contain additional statements that allow more logic than is possible in views.
 
 > [!IMPORTANT] 
-> Since the output table of an MSTVF (Multi-Statement Table Valued Function) is not created at compile time, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer relies on heuristics, and not actual statistics, to determine row estimations. 
+> Since the output table of an MSTVF (Multi-Statement Table Valued Function) is not created at compile time, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relies on heuristics, and not actual statistics, to determine row estimations. 
 > Even if indexes are added to the base table(s), this is not going to help. 
-> For MSTVFs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a fixed estimation of 1 for the number of rows expected to be returned by an MSTVF (starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] that fixed estimation is 100 rows).
+> For MSTVFs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses a fixed estimation of 1 for the number of rows expected to be returned by an MSTVF (starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] that fixed estimation is 100 rows).
 
 ### Steps to resolve
 1.	If the Multi-Statement TVF is single statement only, convert to Inline TVF.

@@ -19,7 +19,7 @@ ms.author: "harinid"
 manager: ""
 ---
 # Post-migration Validation and Optimization Guide
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload. 
 
@@ -40,7 +40,7 @@ A potential problem arises when that first compilation may not have used the mos
 5.	Rewrite the query to use the hint `DISABLE_PARAMETER_SNIFFING`. Same effect as using the local variable technique by totally disabling parameter sniffing, unless `OPTION(RECOMPILE)`, `WITH RECOMPILE` or `OPTIMIZE FOR <value>` is used.
 
 > [!TIP] 
-> Leverage the [!INCLUDE[ssManStudio](../../includes/ssManStudio_md.md)] Plan Analysis feature to quickly identify if this is an issue. More information available [here](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
+> Leverage the [!INCLUDE[ssManStudio](../includes/ssManStudio_md.md)] Plan Analysis feature to quickly identify if this is an issue. More information available [here](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
 
 ## <a name="Missing indexes"></a> Missing indexes
 

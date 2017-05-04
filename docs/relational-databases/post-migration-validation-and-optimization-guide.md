@@ -123,9 +123,9 @@ Table Valued Functions return a table data type that can be an alternative to vi
 2.	If more complex, consider using intermediate results stored in Memory-Optimized tables or temporary tables.
 
 ##  <a name="Additional_Reading"></a> Additional Reading  
- [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store)
- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables)
- [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions)
- [Table Variables and Row Estimations - Part 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)
- [Table Variables and Row Estimations - Part 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)
- [Execution Plan Caching and Reuse](../../relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse)
+ [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store)  
+[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables)  
+[User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions)  
+[Table Variables and Row Estimations - Part 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
+[Table Variables and Row Estimations - Part 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[Execution Plan Caching and Reuse](../../relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse)

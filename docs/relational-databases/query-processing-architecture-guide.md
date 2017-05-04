@@ -221,7 +221,7 @@ When `NOEXPAND` is specified for a view, the Query Optimizer considers using any
 
 When neither `NOEXPAND` nor `EXPAND VIEWS` is specified in a query that contains a view, the view is expanded to access underlying tables. If the query that makes up the view contains any table hints, these hints are propagated to the underlying tables. (This process is explained in more detail in View Resolution.) As long as the set of hints that exists on the underlying tables of the view are identical to each other, the query is eligible to be matched with an indexed view. Most of the time, these hints will match each other, because they are being inherited directly from the view. However, if the query references tables instead of views, and the hints applied directly on these tables are not identical, then such a query is not eligible for matching with an indexed view. If the `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`, or `XLOCK` hints apply to the tables referenced in the query after view expansion, the query is not eligible for indexed view matching.
 
-If a table hint in the form of `INDEX (index_val[ ,...n] )` references a view in a query and you do not also specify the `NOEXPAND` hint, the index hint is ignored. To specify use of a particular index, use `NOEXPAND. 
+If a table hint in the form of `INDEX (index_val[ ,...n] )` references a view in a query and you do not also specify the `NOEXPAND` hint, the index hint is ignored. To specify use of a particular index, use `NOEXPAND`. 
 
 Generally, when the Query Optimizer matches an indexed view to a query, any hints specified on the tables or views in the query are applied directly to the indexed view. If the Query Optimizer chooses not to use an indexed view, any hints are propagated directly to the tables referenced in the view. For more information, see View Resolution. This propagation does not apply to join hints. They are applied only in their original position in the query. Join hints are not considered by the Query Optimizer when matching queries to indexed views. If a query plan uses an indexed view that matches part of a query that contains a join hint, the join hint is not used in the plan.
 
@@ -248,7 +248,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 The execution plan for this query extracts the rows with `CustomerID` key values from 3200000 through 3299999 from the local member table, and issues a distributed query to retrieve the rows with key values from 3300000 through 3400000 from Server2.
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] query processor can also build dynamic logic into query execution plans for SQL statements in which the key values are not known when the plan must be built. For example, consider this stored procedure:
+The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Processor can also build dynamic logic into query execution plans for SQL statements in which the key values are not known when the plan must be built. For example, consider this stored procedure:
 
 ```tsql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
@@ -350,14 +350,15 @@ Statement-level recompilation benefits performance because, in most cases, a sma
 The `sql_statement_recompile` xEvent reports statement-level recompilations. This xEvent occurs when a statement-level recompilation is required by any kind of batch. This includes stored procedures, triggers, ad hoc batches and queries. Batches may be submitted through several interfaces, including sp_executesql, dynamic SQL, Prepare methods or Execute methods.
 The `recompile_cause` column of `sql_statement_recompile` xEvent contains an integer code that indicates the reason for the recompilation. The following table contains the possible reasons:
 
-|----|----|
-|Schema changed|Statistics changed|
-|Deferred compile|SET option changed|
-|Temporary table changed|Remote rowset changed|
-|`FOR BROWSE` permission changed|Query notification environment changed|
-|Partitioned view changed|Cursor options changed|
-|`OPTION (RECOMPILE)` requested|Parameterized plan flushed|
-|Plan affecting database version changed|Query Store plan forcing policy changed|
+|||
+|----|----|  
+|Schema changed|Statistics changed|  
+|Deferred compile|SET option changed|  
+|Temporary table changed|Remote rowset changed|  
+|`FOR BROWSE` permission changed|Query notification environment changed|  
+|Partitioned view changed|Cursor options changed|  
+|`OPTION (RECOMPILE)` requested|Parameterized plan flushed|  
+|Plan affecting database version changed|Query Store plan forcing policy changed|  
 |Query Store plan forcing failed|Query Store missing the plan|
 
 > [!NOTE]

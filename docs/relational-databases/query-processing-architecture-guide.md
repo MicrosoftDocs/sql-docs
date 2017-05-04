@@ -350,43 +350,21 @@ Statement-level recompilation benefits performance because, in most cases, a sma
 The `sql_statement_recompile` xEvent reports statement-level recompilations. This xEvent occurs when a statement-level recompilation is required by any kind of batch. This includes stored procedures, triggers, ad hoc batches and queries. Batches may be submitted through several interfaces, including sp_executesql, dynamic SQL, Prepare methods or Execute methods.
 The `recompile_cause` column of `sql_statement_recompile` xEvent contains an integer code that indicates the reason for the recompilation. The following table contains the possible reasons:
 
-|xEvent recompile_cause|
-|----|
-|Schema changed|
-|Statistics changed|
-|Deferred compile|
-|SET option changed|
-|Temporary table changed|
-|Remote rowset changed|
-|`FOR BROWSE` permission changed|
-|Query notification environment changed|
-|Partitioned view changed|
-|Cursor options changed|
-|`OPTION (RECOMPILE)` requested|
-|Parameterized plan flushed|
-|Plan affecting database version changed|
-|Query Store plan forcing policy changed|
-|Query Store plan forcing failed|
-|Query Store missing the plan|
+|----|----|
+|Schema changed|Statistics changed|
+|Deferred compile|SET option changed|
+|Temporary table changed|Remote rowset changed|
+|`FOR BROWSE` permission changed|Query notification environment changed|
+|Partitioned view changed|Cursor options changed|
+|`OPTION (RECOMPILE)` requested|Parameterized plan flushed|
+|Plan affecting database version changed|Query Store plan forcing policy changed|
+|Query Store plan forcing failed|Query Store missing the plan|
 
 > [!NOTE]
 > In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions where xEvents are not available, then the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) trace event can be used for the same purpose of reporting statement-level recompilations.
 > The trace event [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) also reports statement-level recompilations, and this trace event can also be used to track and debug recompilations. 
 > Whereas SP:Recompile generates only for stored procedures and triggers, SQL:StmtRecompile generates for stored procedures, triggers, ad-hoc batches, batches that are executed by using `sp_executesql`, prepared queries, and dynamic SQL.
-> The *EventSubClass* column of SP:Recompile and SQL:StmtRecompile contains an integer code that indicates the reason for the recompilation. The following table contains the meaning of each code number.
-> |EventSubClass value|Description|
-> |----|----|
-> |1	|Schema changed.	|
-> |2	|Statistics changed.	|
-> |3	|Deferred compile.	|
-> |4	|SET option changed.	|
-> |5	|Temporary table changed.	|
-> |6	|Remote rowset changed.	|
-> |7	|`FOR BROWSE` permission changed.	|
-> |8	|Query notification environment changed.	|
-> |9	|Partitioned view changed.	|
-> |10	|Cursor options changed.	|
-> |11	|`OPTION (RECOMPILE)` requested	|
+> The *EventSubClass* column of SP:Recompile and SQL:StmtRecompile contains an integer code that indicates the reason for the recompilation. The codes are described [here](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
 
 > [!NOTE]
 > When the `AUTO_UPDATE_STATISTICS` database option is set to `ON`, queries are recompiled when they target tables or indexed views whose statistics have been updated or whose cardinalities have changed significantly since the last execution. 

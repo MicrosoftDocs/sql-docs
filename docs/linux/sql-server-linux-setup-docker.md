@@ -146,7 +146,7 @@ sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
 sqlcmd -S 10.3.2.4,1402 -U SA -P '<YourPassword>'
 ```
 
-## Docker and data persistence
+## Persist your data
 
 Your SQL Server configuration changes and database files are persisted in the container even if you restart the container with `docker stop` and `docker start`. However, if you remove the container with `docker rm`, everything in the container is deleted, including SQL Server and all of your databases. The following section explains how to use **data volumes** to persist your database files even if the associated containers are deleted.
 

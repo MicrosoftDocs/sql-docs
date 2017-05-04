@@ -2,7 +2,7 @@
 title: "SQL Server Machine Learning Tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/20/2017"
+ms.date: "05/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ ms.topic: "article"
 applies_to: 
   - "SQL Server 2016"
 dev_langs: 
-  - "R"
+  - "Python"
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
 caps.latest.revision: 31
 author: "jeannt"
@@ -28,7 +28,7 @@ Use these tutorials to learn about machine learning in SQL Server 2016 and SQL S
 + What are remote and local compute contexts? How to execute R or Python in a SQL Server compute context
 + Developing models in R and saving trained models in a SQL Server table
 + How to wrap R or code in a stored procedure
-+ Methods for optimizing R and SQL code for a production environment
++ Optimizing R and Python code for a SQL production environment
 + Real-world scenarios for embedding machine learning in applications
 
 ## Prerequisites
@@ -63,6 +63,10 @@ Create a machine learning model to predict demand for a ski rental business, and
 
 + [Build a predictive model with Python](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/python/getting-started/rental-prediction)
 
+NEW! Build a complete Python solution using T-SQL stored procedures; all Python code supplied included.
+
++ [In-Database Python Analytics for SQL Developers](sqldev-in-database-python-for-sql-developers.md)
+
 Learn how to deploy a Python model using the latest version of Microsoft Machine Learning Server.
 
 + [Deploy and Consume a Python Model](..\python\publish-consume-python-code.md)
@@ -88,7 +92,7 @@ Move data between R and SQL, and switch compute contexts to suit a particular ta
 
 ### <a name="bkmk_indb-analytics"></a>In-Database Advanced Analytics for the SQL Developer
 
-Learn to build and deploy a complete advanced analytics solution using [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Build and deploy a complete R solution, using only [!INCLUDE[tsql](../../includes/tsql-md.md)] tools.
 
 + [In-Database Advanced Analytics for SQL Developers &#40;Tutorial&#41;](../../advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md)
 

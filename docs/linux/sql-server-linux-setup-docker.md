@@ -6,7 +6,7 @@ description: Download and run the Docker image for SQL Server 2017.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/03/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -24,12 +24,12 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 
 ---
-# Run the SQL Server 2017 Docker image on Linux, Mac, or Windows
+# Run the SQL Server 2017 container image on Docker on Linux, Mac, or Windows
 
-This topic explains how to pull and run the [mssql-server Docker image](https://hub.docker.com/r/microsoft/mssql-server-linux/). This image consists of SQL Server running on Linux and can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. We are currently tracking all issues with the Docker image in our [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker).
+This topic explains how to pull and run the [mssql-server-linux container image](https://hub.docker.com/r/microsoft/mssql-server-linux/) using Docker. This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
 
 > [!NOTE]
-> This image is running SQL Server on an Ubuntu Linux base image. To run the SQL Server on Windows Containers Docker image, check out the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows/).
+> This topic specifically focuses on using the mssql-server-linux image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows/).
 
 ## <a id="requirements"></a> Requirements for Docker
 
@@ -38,26 +38,26 @@ This topic explains how to pull and run the [mssql-server Docker image](https://
 - Minimum of 4 GB of RAM
 
 > [!IMPORTANT]
-> The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you will need to change it to 4 GB. The following sections explain how.
+> The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you will need to change it to 4 GB.
+>
+> **Docker for Mac procedure**
+> 
+>     1. Click on the Docker logo on the top status bar.
+>     2. Select **Preferences**.
+>     3. Move the memory indicator to 4GB or more.
+>     4. Click the **restart** button at the button of the screen.
+>
+> **Docker for Windows procedure**
+>
+>     1. Right-click on the Docker icon from the task bar.
+>     2. Click **Settings** under that menu.
+>     3. Click on the **Advanced** Tab.
+>     4. Move the memory indicator to 4GB or more.
+>     5. Click the **Apply** button.
 
-### Docker for Mac
+## Pull and run the container image
 
-1. Click on the Docker logo on the top status bar.
-2. Select **Preferences**.
-3. Move the memory indicator to 4GB or more.
-4. Click the **restart** button at the button of the screen.
-
-### Docker for Windows:
-
-1. Right-click on the Docker icon from the task bar.
-2. Click **Settings** under that menu.
-3. Click on the **Advanced** Tab.
-4. Move the memory indicator to 4GB or more.
-5. Click the **Apply** button.
-
-## Pull and run the Docker image
-
-1. Pull the Docker image from Docker Hub.
+1. Pull the container image from Docker Hub.
 
     ```bash
     sudo docker pull microsoft/mssql-server-linux
@@ -66,7 +66,7 @@ This topic explains how to pull and run the [mssql-server Docker image](https://
     > [!TIP]
     > If you using Docker for Windows, remove the word **sudo** from the command-line. Do this for all occurences in this topic.
 
-2. To run the Docker image, you can use the following command. Specify your own strong password that is at least 8 characters and meets [SQL Server's password requirements](../relational-databases/security/password-policy.md).
+2. To run the container image with Docker, you can use the following command. Specify your own strong password that is at least 8 characters and meets [SQL Server's password requirements](../relational-databases/security/password-policy.md).
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
@@ -112,7 +112,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P '<YourPassword>'
 
 ### Run tools inside the container
 
-Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
+Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the container image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
 
 1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `e6` is the first two characters of the container ID that uniquely identifies the target container.
 
@@ -185,9 +185,9 @@ sudo docker volume ls
 
 If you then create a new container with the same volume name, the new container will use the same SQL Server data contained in the volume.
 
-## Upgrade the Docker image
+## Upgrade the container image
 
-To upgrade the Docker image, pull the latest version from the registry. Use the `docker pull` command:
+To upgrade the container image with Docker, pull the latest version from the registry. Use the `docker pull` command:
 
 ```bash
     sudo docker pull microsoft/mssql-server-linux:latest
@@ -230,4 +230,4 @@ Use the following troubleshooting suggestions if your SQL Server Docker containe
 
 ## Next steps
 
-After installing SQL Server on Linux, next see [how to connect to the server and run basic Transact-SQL queries](sql-server-linux-connect-and-query-sqlcmd.md). Also, check out the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources and feedback.
+After installing SQL Server on Linux, next see [how to connect to the server and run basic Transact-SQL queries](sql-server-linux-connect-and-query-sqlcmd.md). Also, check out the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues.

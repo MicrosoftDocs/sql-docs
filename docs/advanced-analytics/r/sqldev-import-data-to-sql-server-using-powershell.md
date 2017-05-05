@@ -48,7 +48,7 @@ Actions performed by the script include:
   
     -   The name or address of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] has been installed
   
-    -   The user name and password for an account on the instance. The account you use must have the ability to create databases, create tables and stored procedures, and upload data to tables.
+    -   The user name and password for an account on the instance. The account must have permissions to create databases, create tables and stored procedures, and upload data to tables. If you do not provide the user name and password, your Windows identity is used to sign in to SQL Server.
   
     -   The path and file name of the sample data file that you just downloaded. For example:
   

@@ -31,4 +31,4 @@ The following guides are available. They discuss general concepts and apply to a
 [Query Processing Architecture Guide](../relational-databases/query-processing-architecture-guide.md)  
 [SQL Server Transaction Locking and Row Versioning Guide](https://msdn.microsoft.com/library/jj856598)  
 [SQL Server Transaction Log Architecture and Management Guide](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
-[Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md)  
+[Thread and Task Architecture Guide](../relational-databases/thread-and-task-architecture-guide.md)

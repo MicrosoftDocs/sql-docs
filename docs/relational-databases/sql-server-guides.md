@@ -21,7 +21,7 @@ manager: "jhubbard"
 # SQL Server Guides
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-The following guides are available. They discuss general concepts and apply to all versions of SQL Server, unless stated otherwise in the respective guide.
+The following guides are available. They discuss general concepts and apply to all versions of SQL Server, unless stated otherwise in the respective guide. 
 
 [Always On Availability Groups Troubleshooting and Monitoring Guide](http://msdn.microsoft.com/library/dn135328)  
 [Index design Guide](../relational-databases/sql-server-index-design-guide.md)  

@@ -77,7 +77,7 @@ This guide assumes the reader has a general understanding of the index types ava
   
 -   Write queries that insert or modify as many rows as possible in a single statement, instead of using multiple queries to update the same rows. By using only one statement, optimized index maintenance could be exploited.  
   
--   Evaluate the query type and how columns are used in the query. For example, a column used in an exact-match query type would be a good candidate for a nonclustered or clustered index.  
+-   Evaluate the query type and how columns are used in the query. For example, a column used in an exact-match query type would be a good candidate for a nonclustered or clustered index.
   
 ### Column Considerations  
  When you design an index consider the following column guidelines:  

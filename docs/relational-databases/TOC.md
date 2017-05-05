@@ -14,7 +14,7 @@
 ## [Query Processing Architecture](query-processing-architecture-guide.md)
 ## [Thread and Task Architecture](thread-and-task-architecture-guide.md)
 ## [Transaction Log Architecture and Management](sql-server-transaction-log-architecture-and-management-guide.md) 
-## [Transaction Locking and Row Versioning Guide] 
+## [Transaction Locking and Row Versioning Guide]
 
 # [Backup and restore](backup-restore/index.md)
 # [Blob](blob/index.md)

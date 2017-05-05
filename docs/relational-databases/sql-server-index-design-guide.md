@@ -21,9 +21,9 @@ manager: "jhubbard"
 # SQL Server Index Design Guide
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks. Designing efficient indexes is paramount to achieving good database and application performance. This SQL Server index design guide contains information and best practices to help you design effective indexes to meet the needs of your application.  
+Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks. Designing efficient indexes is paramount to achieving good database and application performance. This SQL Server index design guide contains information and best practices to help you design effective indexes to meet the needs of your application.  
     
- This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](http://msdn.microsoft.com/library/ms175049.aspx).  
+This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](http://msdn.microsoft.com/library/ms175049.aspx).  
   
   
 ##  <a name="Basics"></a> Index Design Basics  

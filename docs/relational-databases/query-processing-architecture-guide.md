@@ -1029,4 +1029,4 @@ GO
 
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-[[Extended Events](../relational-databases/extended-events/extended-events.md)
+ [Extended Events](../relational-databases/extended-events/extended-events.md)

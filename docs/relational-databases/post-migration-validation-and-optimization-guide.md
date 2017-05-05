@@ -23,7 +23,7 @@ manager: ""
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload.
 
-# Common Performance Scenarios
+# Common Performance Scenarios 
 Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Platform and how to resolve them.
 
 ## <a name="Parameter Sniffing"></a> Sensitivity to parameter sniffing

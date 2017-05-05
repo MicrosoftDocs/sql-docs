@@ -42,34 +42,34 @@ This topic explains how to pull and run the [mssql-server-linux container image]
 >
 > **Docker for Mac procedure**
 > 
->     1. Click on the Docker logo on the top status bar.
->     2. Select **Preferences**.
->     3. Move the memory indicator to 4GB or more.
->     4. Click the **restart** button at the button of the screen.
+> 1. Click on the Docker logo on the top status bar.
+> 2. Select **Preferences**.
+> 3. Move the memory indicator to 4GB or more.
+> 4. Click the **restart** button at the button of the screen.
 >
 > **Docker for Windows procedure**
 >
->     1. Right-click on the Docker icon from the task bar.
->     2. Click **Settings** under that menu.
->     3. Click on the **Advanced** Tab.
->     4. Move the memory indicator to 4GB or more.
->     5. Click the **Apply** button.
+> 1. Right-click on the Docker icon from the task bar.
+> 2. Click **Settings** under that menu.
+> 3. Click on the **Advanced** Tab.
+> 4. Move the memory indicator to 4GB or more.
+> 5. Click the **Apply** button.
 
 ## Pull and run the container image
 
 1. Pull the container image from Docker Hub.
 
     ```bash
-    sudo docker pull microsoft/mssql-server-linux
+    docker pull microsoft/mssql-server-linux
     ```
 
     > [!TIP]
-    > If you using Docker for Windows, remove the word **sudo** from the command-line. Do this for all occurences in this topic.
+    > For Linux, depending on your system and user configuration, you might need to preface each `docker` command with `sudo`.
 
 2. To run the container image with Docker, you can use the following command. Specify your own strong password that is at least 8 characters and meets [SQL Server's password requirements](../relational-databases/security/password-policy.md).
 
     ```bash
-    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
+    docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
     ```
 
     > [!NOTE]
@@ -78,7 +78,7 @@ This topic explains how to pull and run the [mssql-server-linux container image]
 3. To view your Docker containers, use the `docker ps` command.
 
     ```bash
-    sudo docker ps -a
+    docker ps -a
     ```
 
     ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
@@ -117,7 +117,7 @@ Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-s
 1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `e6` is the first two characters of the container ID that uniquely identifies the target container.
 
     ```bash
-    sudo docker exec -it e6 "bash"
+    docker exec -it e6 "bash"
     ```
 
 2. Once insider the container, connect locally with sqlcmd. Note that sqlcmd is not in the path by default, so you have to specify the full path.
@@ -135,8 +135,8 @@ Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-s
 Docker provides a way to support multiple SQL Server instances on the same host machine. The following example creates two SQL Server Docker containers and maps them to ports **1401** and **1402** on the host machine.
 
 ```bash
-sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux
-sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 Now there are two instances of SQL Server running in separate containers. Clients can connect to each SQL Server instance by using the IP address of the Docker host and the port number for the container.
@@ -158,7 +158,7 @@ Your SQL Server configuration changes and database files are persisted in the co
 The first option is to mount a directory on your host as a data volume in your container. To do that, use the `docker run` command with the `-v \<host directory\>:/var/opt/mssql` flag. This allows the data to be restored between container executions.
 
 ```bash
-sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 This technique also enables you to share and view the files on the host outside of Docker.
@@ -171,7 +171,7 @@ This technique also enables you to share and view the files on the host outside 
 The second option is to use a data volume container. You can create a data volume container by specifying a volume name instead of a host directory with the `-v` parameter. The following example creates a shared data volume named **sqlvolume**.
 
 ```bash
-sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 > [!NOTE]
@@ -180,7 +180,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 143
 Even if you stop and remove this container, the data volume persists. You can view it with the `docker volume ls` command.
 
 ```bash
-sudo docker volume ls
+docker volume ls
 ```
 
 If you then create a new container with the same volume name, the new container will use the same SQL Server data contained in the volume.
@@ -190,26 +190,32 @@ If you then create a new container with the same volume name, the new container 
 To upgrade the container image with Docker, pull the latest version from the registry. Use the `docker pull` command:
 
 ```bash
-    sudo docker pull microsoft/mssql-server-linux:latest
+    docker pull microsoft/mssql-server-linux:latest
 ```
 
 You can now create new containers that will have the latest version of SQL Server in Linux on Docker.
 
 ## <a id="troubleshooting"></a> Troubleshooting
 
-Use the following troubleshooting suggestions if your SQL Server Docker container fails to run or if you can't connect to the SQL Server instance running in your container.
+On Linux, if you get the following error running Docker commands, try the same commands prefaced with `sudo`:
+
+```
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+```
+
+If the SQL Server container fails to run or if you can't connect to the SQL Server instance running in your container, try the following tests.
 
 - First, check to see if there are any error messages from container.
 
     ```bash
-    sudo docker logs e6
+    docker logs e6
     ```
 
 - Look at the SQL Server setup and error logs in **/var/opt/mssql/log**. If the container is not running, first start the container. Then use an interactive command-prompt to inspect the logs.
 
     ```bash
-    sudo docker start e6
-    sudo docker exec -it e6 "bash"
+    docker start e6
+    docker exec -it e6 "bash"
     ```
 
     From the bash session insider your container, run the following commands:

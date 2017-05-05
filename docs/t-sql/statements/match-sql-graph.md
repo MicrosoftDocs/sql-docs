@@ -114,7 +114,7 @@ AND Person1.name = 'Alice';
 
  ```
 
-#### C.  More `MATCH` patterns
+### C.  More `MATCH` patterns
  Following are some more ways in which a pattern can be specified inside MATCH.
 
  ```

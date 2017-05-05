@@ -31,7 +31,7 @@ Processing a single SQL statement is the most basic way that [!INCLUDE[ssNoVersi
 
 A `SELECT` statement is non-procedural; it does not state the exact steps that the database server should use to retrieve the requested data. This means that the database server must analyze the statement to determine the most efficient way to extract the requested data. This is referred to as optimizing the `SELECT` statement. The component that does this is called the Query Optimizer. The input to the Query Optimizer consists of the query, the database schema (table and index definitions), and the database statistics. The output of the Query Optimizer is a query execution plan, sometimes referred to as a query plan or just a plan. The contents of a query plan are described in more detail later in this topic.
 
-The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` statement are illustrated in the following diagram:  
+The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` statement are illustrated in the following diagram:
 ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 A `SELECT` statement defines only the following:  

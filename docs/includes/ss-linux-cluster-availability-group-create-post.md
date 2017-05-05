@@ -7,14 +7,7 @@ Ensure the database you are adding to the Availability group is in full recovery
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1] 
-   TO DISK = N'var/opt/mssql/data/demodb.bak' 
-   WITH NOFORMAT, 
-        NOINIT, 
-   NAME = 'db1-full', 
-   SKIP, 
-   NOREWIND, 
-   NOUNLOAD, 
-   STATS = 10 Done;
+   TO DISK = N'var/opt/mssql/data/db1.bak';
 ```
 
 On the primary SQL Server replica, run the following Transact-SQL to add a database called `db1` to an availability group called `ag1`.

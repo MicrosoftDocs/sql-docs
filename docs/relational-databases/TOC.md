@@ -13,7 +13,7 @@
 ## [Post-migration Validation and Optimization](post-migration-validation-and-optimization-guide.md)
 ## [Query Processing Architecture](query-processing-architecture-guide.md)
 ## [Thread and Task Architecture](thread-and-task-architecture-guide.md)
-## [Transaction Log Architecture and Management](sql-server-transaction-log-architecture-and-management-guide.md) 
+## [Transaction Log Architecture and Management](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [Transaction Locking and Row Versioning Guide]
 
 # [Backup and restore](backup-restore/index.md)

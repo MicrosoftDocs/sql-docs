@@ -1,4 +1,4 @@
-# [Overview](database-features.md)
+ # [Overview](database-features.md)
 ## [Database Engine Cross-Instance Features](database-engine-cross-instance-features.md)
 ## [Technical Reference](technical-reference-database-engine.md)  
 ## [Feature Reference](feature-reference-database-engine.md)   
@@ -14,7 +14,7 @@
 ## [Query Processing Architecture](query-processing-architecture-guide.md)
 ## [Thread and Task Architecture](thread-and-task-architecture-guide.md)
 ## [Transaction Log Architecture and Management](sql-server-transaction-log-architecture-and-management-guide.md) 
-## [Transaction Locking and Row Versioning Guide]
+## [Transaction Locking and Row Versioning Guide] 
 
 # [Backup and restore](backup-restore/index.md)
 # [Blob](blob/index.md)

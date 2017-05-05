@@ -191,9 +191,10 @@ This release sees significant enhancements in DirectQuery for tabular 1200 model
 -   Extra  control over defining sample datasets used for model design and testing.    
 -   Row level security (RLS) is now supported for tabular 1200 models in DirectQuery mode. Previously, the presence of RLS prevented deploying a tabular model in DirectQuery mode.    
 -   Calculated columns are now supported for tabular 1200 models in DirectQuery mode. Previously, the presence of calculated columns prevented deploying a tabular model in DirectQuery mode.    
--   Performance optimizations include redundant join elimination for VertiPaq and DirectQuery.    
+-   Performance optimizations include redundant join elimination for VertiPaq and DirectQuery. 
+
 ### New data sources for DirectQuery mode    
- Data sources supported for tabular 110x models in DirectQuery mode now include Oracle, Teradata and Microsoft Analytics Platform (formerly known as Parallel Data Warehouse).    
+ Data sources supported for tabular 1200 models in DirectQuery mode now include Oracle, Teradata and Microsoft Analytics Platform (formerly known as Parallel Data Warehouse).    
     
 To learn more, see [DirectQuery Mode &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 

@@ -21,7 +21,7 @@ manager: ""
 # Post-migration Validation and Optimization Guide
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload.
 
 # Common Performance Scenarios
 Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Platform and how to resolve them.

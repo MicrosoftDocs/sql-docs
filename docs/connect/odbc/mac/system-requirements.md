@@ -23,7 +23,9 @@ This topic lists the requirements to use the [!INCLUDE[msCoName](../../../includ
 
 ## System Requirements for Microsoft ODBC Driver 13 for SQL Server  
 
-The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on macOS resolves the driver's dependencies automatically when installed using the homebrew package management system, as described on [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/installing-the-microsoft-odbc-driver-for-sql-server-on-macos.md).
+* OS X 10.11 (El Capitan) or macOS 10.12 (Sierra)
+
+The installation package for the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on macOS resolves the driver's dependencies automatically when installed using the [homebrew](https://brew.sh) package management system, as described on [Installing the Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/installing-the-microsoft-odbc-driver-for-sql-server-on-macos.md).
 
 ## See Also  
 [Microsoft ODBC Driver for SQL Server on macOS](../../../connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac.md)  

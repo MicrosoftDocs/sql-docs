@@ -1,7 +1,7 @@
 ---
 title: "column_definition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/27/2016"
+ms.date: "05/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,24 +35,23 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
-      column_name <data_type>  
-    [ FILESTREAM ]  
-    [ COLLATE collation_name ]   
-    [ NULL | NOT NULL ]  
-    [   
-        [ CONSTRAINT constraint_name ] DEFAULT constant_expression [ WITH VALUES ]   
-      | IDENTITY [ ( seed , increment ) ] [ NOT FOR REPLICATION ]   
-    ]  
-    [ ROWGUIDCOL ]   
-    [ SPARSE ]   
-    [ ENCRYPTED WITH  
-      ( COLUMN_ENCRYPTION_KEY = key_name ,  
-          ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
-          ALGORITHM =  'AEAD_AES_256_CBC_HMAC_SHA_256'   
-      ) ]  
-    [ MASKED WITH ( FUNCTION = ' mask_function ') ]  
-    [ <column_constraint> [ ...n ] ]  
+column_name <data_type>  
+[ FILESTREAM ]  
+[ COLLATE collation_name ]   
+[ NULL | NOT NULL ]  
+[   
+    [ CONSTRAINT constraint_name ] DEFAULT constant_expression [ WITH VALUES ]   
+    | IDENTITY [ ( seed , increment ) ] [ NOT FOR REPLICATION ]   
+]  
+[ ROWGUIDCOL ]   
+[ SPARSE ]   
+[ ENCRYPTED WITH  
+  ( COLUMN_ENCRYPTION_KEY = key_name ,  
+      ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED } ,   
+      ALGORITHM =  'AEAD_AES_256_CBC_HMAC_SHA_256'   
+  ) ]  
+[ MASKED WITH ( FUNCTION = ' mask_function ') ]  
+[ <column_constraint> [ ...n ] ]  
   
 <data type> ::=   
 [ type_schema_name . ] type_name   
@@ -76,7 +75,6 @@ manager: "jhubbard"
         [ NOT FOR REPLICATION ]   
   | CHECK [ NOT FOR REPLICATION ] ( logical_expression )   
 }  
-  
 ```  
   
 ## Arguments  
@@ -102,29 +100,27 @@ manager: "jhubbard"
   
 -   The **dbo** schema in the current database.  
   
- *precision*  
+*precision*  
  Is the precision for the specified data type. For more information about valid precision values, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
- *scale*  
+*scale*  
  Is the scale for the specified data type. For more information about valid scale values, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
- **max**  
+**max**  
  Applies only to the **varchar**, **nvarchar**, and **varbinary** data types. These are used for storing 2^31 bytes of character and binary data, and 2^30 bytes of Unicode data.  
   
- **CONTENT**  
+**CONTENT**  
  Specifies that each instance of the **xml** data type in *column_name* can comprise multiple top-level elements. CONTENT applies only to the **xml** data type and can be specified only if *xml_schema_collection* is also specified. If this is not specified, CONTENT is the default behavior.  
   
- DOCUMENT  
+DOCUMENT  
  Specifies that each instance of the **xml** data type in *column_name* can comprise only one top-level element. DOCUMENT applies only to the **xml** data type and can be specified only if *xml_schema_collection* is also specified.  
   
  *xml_schema_collection*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies only to the **xml** data type for associating an XML schema collection with the type. Before typing an **xml** column to a schema, the schema must first be created in the database by using [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
- FILESTREAM  
+FILESTREAM  
  Optionally specifies the FILESTREAM storage attribute for column that has a *type_name* of **varbinary(max)**.  
   
  When FILESTREAM is specified for a column, the table must also have a column of the **uniqueidentifier** data type that has the ROWGUIDCOL attribute. This column must not allow null values and must have either a UNIQUE or PRIMARY KEY single-column constraint. The GUID value for the column must be supplied either by an application when data is being inserted, or by a DEFAULT constraint that uses the NEWID () function.  
@@ -135,7 +131,7 @@ manager: "jhubbard"
   
  For an example that shows how to use column definition, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
- COLLATE *collation_name*  
+COLLATE *collation_name*  
  Specifies the collation of the column. If not specified, the column is assigned the default collation of the database. Collation name can be either a Windows collation name or an SQL collation name. For a list and more information, see [Windows Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) and [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  The COLLATE clause can be used to specify the collations only of columns of the **char**, **varchar**, **nchar**, and **nvarchar** data types.  
@@ -145,19 +141,19 @@ manager: "jhubbard"
  NULL | NOT NULL  
  Determines whether null values are allowed in the column. NULL is not strictly a constraint but can be specified just like NOT NULL.  
   
- [ CONSTRAINT *constraint_name* ]  
+[ CONSTRAINT *constraint_name* ]  
  Specifies the start of a DEFAULT value definition. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT. *constraint_name* must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md), except that the name cannot start with a number sign (#). If *constraint_name* is not specified, a system-generated name is assigned to the DEFAULT definition.  
   
- DEFAULT  
+DEFAULT  
  Is a keyword that specifies the default value for the column. DEFAULT definitions can be used to provide values for a new column in the existing rows of data. DEFAULT definitions cannot be applied to **timestamp** columns, or columns with an IDENTITY property. If a default value is specified for a user-defined type column, the type must support an implicit conversion from *constant_expression* to the user-defined type.  
   
- *constant_expression*  
+*constant_expression*  
  Is a literal value, a NULL, or a system function used as the default column value. If used in conjunction with a column defined to be of a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] user-defined type, the implementation of the type must support an implicit conversion from the *constant_expression* to the user-defined type.  
   
- WITH VALUES  
+WITH VALUES  
  Specifies that the value given in DEFAULT *constant_expression* is stored in a new column added to existing rows. If the added column allows null values and WITH VALUES is specified, the default value is stored in the new column, added to existing rows. If WITH VALUES is not specified for columns that allow nulls, the value NULL is stored in the new column in existing rows. If the new column does not allow nulls, the default value is stored in new rows regardless of whether WITH VALUES is specified.  
   
- IDENTITY  
+IDENTITY  
  Specifies that the new column is an identity column. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides a unique, incremental value for the column. When you add identifier columns to existing tables, the identity numbers are added to the existing rows of the table with the seed and increment values. The order in which the rows are updated is not guaranteed. Identity numbers are also generated for any new rows that are added.  
   
  Identity columns are commonly used in conjunction with PRIMARY KEY constraints to serve as the unique row identifier for the table. The IDENTITY property can be assigned to a **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)**, or **numeric(p,0)** column. Only one identity column can be created per table. The DEFAULT keyword and bound defaults cannot be used with an identity column. Either both the seed and increment must be specified, or neither. If neither are specified, the default is (1,1).  
@@ -169,32 +165,28 @@ manager: "jhubbard"
   
  To disable the IDENTITY property of a column by allowing values to be explicitly inserted, use [SET IDENTITY_INSERT](../../t-sql/statements/set-identity-insert-transact-sql.md).  
   
- *seed*  
+*seed*  
  Is the value used for the first row loaded into the table.  
   
- *increment*  
+*increment*  
  Is the incremental value added to the identity value of the previous row that is loaded.  
   
- NOT FOR REPLICATION  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+NOT FOR REPLICATION  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Can be specified for the IDENTITY property. If this clause is specified for the IDENTITY property, values are not incremented in identity columns when replication agents perform insert operations.  
   
- ROWGUIDCOL  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ROWGUIDCOL  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies that the column is a row globally unique identifier column. ROWGUIDCOL can only be assigned to a **uniqueidentifier** column, and only one **uniqueidentifier** column per table can be designated as the ROWGUIDCOL column. ROWGUIDCOL cannot be assigned to columns of user-defined data types.  
   
  ROWGUIDCOL does not enforce uniqueness of the values stored in the column. Also, ROWGUIDCOL does not automatically generate values for new rows that are inserted into the table. To generate unique values for each column, either use the NEWID function on INSERT statements or specify the NEWID function as the default for the column. For more information, see [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)and [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
- SPARSE  
+SPARSE  
  Indicates that the column is a sparse column. The storage of sparse columns is optimized for null values. Sparse columns cannot be designated as NOT NULL. For additional restrictions and more information about sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
- <column_constraint>  
+\<column_constraint>  
  For the definitions of the column constraint arguments, see [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md).  
   
  ENCRYPTED WITH  
@@ -203,7 +195,7 @@ manager: "jhubbard"
  COLUMN_ENCRYPTION_KEY = *key_name*  
  Specifies the column encryption key. For more information, see [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
- ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
+ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  **Deterministic encryption** uses a method which always generates the same encrypted value for any given plain text value. Using deterministic encryption allows searching using equality comparison, grouping, and joining tables using equality joins based on encrypted values, but can also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column. Joining two tables on columns encrypted deterministically is only possible if both columns are encrypted using the same column encryption key. Deterministic encryption must use a column collation with a binary2 sort order for character columns.  
   
  **Randomized encryption** uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but prevents equality searches, grouping, and joining on encrypted columns. Columns using randomized encryption cannot be indexed.  
@@ -212,19 +204,15 @@ manager: "jhubbard"
   
  Columns must be of a qualifying data type.  
   
- ALGORITHM  
- Must be **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
+ALGORITHM  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+Must be **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
   
  For more information including feature constraints, see [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
-  
- ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+   
+ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies a dynamic data mask. *mask_function* is the name of the masking function with the appropriate parameters. The following functions are available:  
   
@@ -251,5 +239,3 @@ manager: "jhubbard"
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
-  
-

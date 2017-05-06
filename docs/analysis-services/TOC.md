@@ -120,6 +120,3 @@
 # Reference
 ## [PowerShell](powershell/index.md)
 ## [Server properties](server-properties/index.md)
-## [Troubleshooting Analysis Services](troubleshooting-analysis-services.md)  
-### [Troubleshoot process data](troubleshoot-process-data-ssas-tabular.md)  
-### [Troubleshoot a Power Pivot for SharePoint installation](troubleshoot-a-power-pivot-for-sharepoint-installation.md)  

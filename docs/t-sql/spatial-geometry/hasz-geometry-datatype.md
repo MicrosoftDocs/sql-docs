@@ -1,7 +1,7 @@
 ---
 title: "HasZ (geometry DataType) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ```  
   
-.HasZ()  
+.HasZ  
 ```  
   
 ## Return Types  

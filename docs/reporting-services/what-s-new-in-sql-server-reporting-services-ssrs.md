@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s new in Reporting Services (SSRS) | Microsoft Docs"
 ms.date: "03/16/2017"
-ms.prod: "sql-vnext"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,7 +23,7 @@ manager: "erikre"
 # What&#39;s new in SQL Server Reporting Services (SSRS)
 Learn about what's new in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This covers the major feature areas and is updated as new items are released.
   
-  For information on what's new in other areas of SQL Server, see [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md) or [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
+  For information on what's new in other areas of SQL Server, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) or [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
   
  **Download** ![download](../analysis-services/media/download.png "download")
  

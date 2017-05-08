@@ -1,6 +1,6 @@
 # [Overview](sql-server-integration-services.md)
 ## [What's New in Integration Services in SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md)
-## [What's New in Integration Services in SQL Server vNext](what-s-new-in-integration-services-in-sql-server-vnext.md)
+## [What's New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
 ## [Integration Services (SSIS) Development and Management Tools](integration-services-ssis-development-and-management-tools.md)
@@ -57,9 +57,12 @@
 # [Queries](integration-services-ssis-queries.md)
 
 # Scripting and programming
+## [Integration Services Programming Overview](integration-services-programming-overview.md)
+## [Understanding Synchronous and Asynchronous Transformations](understanding-synchronous-and-asynchronous-transformations.md)
+## [Working with Connection Managers Programmatically](working-with-connection-managers-programmatically.md)
+## [Extend packages with scripting](extending-packages-scripting/index.md)
+## [Extend packages with custom objects](extending-packages-custom-objects/index.md)
 ## [Build packages programmatically](building-packages-programmatically/index.md)
-## [Extend packages custom objects](extending-packages-custom-objects/index.md)
-## [Extend packages scripting](extending-packages-scripting/index.md)
 ## [Run and manage packages programmatically](run-manage-packages-programmatically/index.md)
 
 # [Security](security/index.md)

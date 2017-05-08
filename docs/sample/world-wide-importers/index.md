@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/sample/microsoft-sql-server-samples
+redirect_url: /sql/sample/world-wide-importers/overview
 ---

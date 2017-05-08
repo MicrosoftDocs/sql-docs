@@ -1,7 +1,7 @@
 ---
 title: "Database Features | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/26/2017"
+ms.date: "05/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Database Features  
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
   This section contains the features and tasks associated with databases, database objects, data types, and the mechanisms used to work with or manage data. This information is common to most versions of the [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. Individual topics may indicate that some features are limited to some platforms. For information on a specific platform, see the following links: 
   
@@ -26,4 +26,5 @@ manager: "jhubbard"
 - [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/)  
 - [Parallel Data Warehouse](https://www.microsoft.com/en-us/download/details.aspx?id=51610)  
 
+  
   

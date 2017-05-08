@@ -26,7 +26,7 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
 # Install SQL Server on Ubuntu
 
-This topic provides a walkthrough of how to install SQL Server vNext CTP 2.0 on Ubuntu 16.04 and 16.10.
+This topic provides a walkthrough of how to install SQL Server 2017 CTP 2.0 on Ubuntu 16.04 and 16.10.
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.

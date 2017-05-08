@@ -140,7 +140,7 @@ You get the **WorkerAgentId** value from the *[catalog].[worker_agents]* databas
 
 #### Example
 This example enables the Scale Out Worker on computerA.
-```sql
+```tsql
 SELECT WorkerAgentId, computerName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -198,8 +198,8 @@ Scale Out Worker service can be configured using the \<driver\>:\Program Files\M
 
 Configuration  |Description  |Default value  
 ---------|---------|---------
-DisplayName|The display name of the Scale Out Worker. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] vNext CTP1.**|Machine name         
-Description|The description of the Scale Out Worker. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] vNext CTP1.**|Empty         
+DisplayName|The display name of the Scale Out Worker. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2017 CTP1.**|Machine name         
+Description|The description of the Scale Out Worker. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2017 CTP1.**|Empty         
 MasterEndpoint|The endpoint to connect to Scale Out Master.|The endpoint set during the Scale Out Worker installation         
 MasterHttpsCertThumbprint|The thumbprint of the client SSL certificate used to authenticate Scale Out Master|The thumbprint of the client certificate specified during the Scale Out Worker installation.          
 WorkerHttpsCertThumbprint|The thumbprint of the certificate for Scale Out Master used to authenticate the Scale Out Worker.|The thumbprint of a certificate created and installed automatically during the Scale Out Worker installation          
@@ -208,8 +208,8 @@ StoreName|The store name that worker certificate is in.|My
 AgentHeartbeatInterval|The interval of the Scale Out Worker heartbeat.|00:01:00         
 TaskHeartbeatInterval|The interval of the Scale Out Worker reporting task state.|00:00:10         
 HeartbeatErrorTollerance|After this time period from last successful task heartbeat, the task is terminated if error response of heartbeat is received.|00:10:00      
-TaskRequestMaxCPU|The upper limit of CPU for Scale Out Worker to request tasks. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] vNext CTP1.**|70.0         
-TaskRequestMinMemory|The lower limit of memory in MB for Scale Out Worker to request tasks. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] vNext CTP1.**|100.0         
+TaskRequestMaxCPU|The upper limit of CPU for Scale Out Worker to request tasks. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2017 CTP1.**|70.0         
+TaskRequestMinMemory|The lower limit of memory in MB for Scale Out Worker to request tasks. **NOT in use in [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2017 CTP1.**|100.0         
 MaxTaskCount|The max number of tasks the Scale Out Worker can hold.|10         
 LeaseInternval|The lease interval of a task holding by the Scale Out Worker.|00:01:00         
 TasksRootFolder|The folder of task logs. The \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\Cluster\Tasks folder path is used if the value is empty. [account] is the account running Scale Out Worker service. By default, the account is SSISScaleOutWorker140.|Empty         

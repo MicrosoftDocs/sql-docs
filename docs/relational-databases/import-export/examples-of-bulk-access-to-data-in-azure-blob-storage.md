@@ -2,7 +2,7 @@
 title: "Examples of Bulk Access to Data in Azure Blob Storage | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2017"
-ms.prod: "sql-vnext"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

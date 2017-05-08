@@ -1,8 +1,8 @@
 ---
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: 
-ms.date: "04/19/2017"
-ms.prod: "sql-vnext"
+ms.date: "05/05/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -72,7 +72,7 @@ OR and NOT operators are not supported in the MATCH pattern.
 MATCH can be combined with other expressions using AND in the WHERE clause. However, combining it with other expressions using OR or NOT is not supported. 
 
 ## Examples  
-#### A.  Find a friend 
+### A.  Find a friend 
  The following example creates a Person node table and friends Edge table, inserts some data and then uses MATCH to find friends of Alice, a person in the graph.
 
  ```
@@ -103,18 +103,18 @@ AND Person1.name = 'Alice';
 
  ```
 
- #### B.  Find friend of a friend
+ ### B.  Find friend of a friend
  The following example tries to find friend of a friend of Alice. 
 
  ```
-SELECT Person3.name AS FriendName
+SELECT Person3.name AS FriendName 
 FROM Person Person1, friend, Person Person2, friend friend2, Person Person3
 WHERE MATCH(Person1-(friend)->Person2-(friend2)->Person3)
 AND Person1.name = 'Alice';
 
  ```
 
-#### C.  More `MATCH` patterns
+### C.  More `MATCH` patterns
  Following are some more ways in which a pattern can be specified inside MATCH.
 
  ```
@@ -146,4 +146,6 @@ AND Person1.name = 'Alice';
  
 
 ## See Also  
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  

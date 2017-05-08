@@ -1,8 +1,8 @@
 ---
 title: "INSERT (SQL Graph) | Microsoft Docs"
 description: INSERT syntax for SQL Graph node or edge tables. 
-ms.date: "04/19/2017"
-ms.prod: "sql-vnext"
+ms.date: "05/04/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -162,6 +162,6 @@ Before bulk inserting into an edge table, the node tables must be imported. Valu
   
 ## See Also  
  [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-  
+ [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

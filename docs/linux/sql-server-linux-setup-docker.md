@@ -206,6 +206,12 @@ To remove a data volume container, use the `docker volume rm` command.
 > [!WARNING]
 > If you delete the data volume container, any SQL Server data in the container is *permanently* deleted.
 
+### Backup and restore
+In addition to these container techniques, you can also use standard SQL Server backup and restore techniques. You can use backup files to protect your data or to move the data to another SQL Server instance. For more information, see [Backup and restore SQL Server databases on Linux](sql-server-linux-backup-and-restore-database.md).
+
+> [!WARNING]
+> If you do create backups, make sure to create or copy the backup files outside of the container. Otherwise, if the container is removed, the backup files are also deleted.
+
 ## Execute commands in a container
 
 If you have a running container, you can execute commands within the container from a host terminal.

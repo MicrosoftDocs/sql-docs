@@ -85,6 +85,8 @@ This topic explains how to pull and run the [mssql-server-linux container image]
     docker ps -a
     ```
 
+    You should see output similar to the following:
+
     ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
 4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column.

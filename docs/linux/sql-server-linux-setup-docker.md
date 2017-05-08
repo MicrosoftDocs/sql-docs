@@ -230,7 +230,7 @@ docker exec -ti <container ID> /bin/bash
 
 Now you can run commands as though you are running them at the terminal inside the container. When finished, type `exit`. This exits in the interactive command session, but your container continues to run.
 
-### Copy files from a container
+## Copy files from a container
 
 To copy a file out of the container, use the following command:
 

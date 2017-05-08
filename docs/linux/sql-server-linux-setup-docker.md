@@ -6,7 +6,7 @@ description: Download and run the Docker image for SQL Server 2017.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/05/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -271,6 +271,7 @@ This updates the SQL Server image for any new containers you create, but it does
 5. Optionally, remove the old container with `docker rm`.
 
 ## <a id="troubleshooting"></a> Troubleshooting
+
 The following sections provide troubleshooting suggestions for running SQL Server in containers.
 
 ### Docker command errors
@@ -286,15 +287,19 @@ Cannot connect to the Docker daemon. Is the docker daemon running on this host?
 If you get this error on Linux, try running the same commands prefaced with `sudo`. If that fails, verify the docker service is running, and start it if necessary.
 
 ```bash
-systemctl status docker
-systemctl start docker
+sudo systemctl status docker
+sudo systemctl start docker
 ```
 
 ### SQL Server container startup errors
 
 If the SQL Server container fails to run, try the following tests.
 
-- If you get an error such as `failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.`, then you are most likely trying to map the container port 1433 to a port that is already in use. This can happen if you're running SQL Server locally on the host machine. It can also happen if you start two SQL Server containers and try to map them both to the same host port. If this happens, use the `-p` parameter to map the container port 1433 to a different host port. For example: `docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux`.
+- If you get an error such as **'failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.'**, then you are attempting to map the container port 1433 to a port that is already in use. This can happen if you're running SQL Server locally on the host machine. It can also happen if you start two SQL Server containers and try to map them both to the same host port. If this happens, use the `-p` parameter to map the container port 1433 to a different host port. For example: 
+
+    ```bash
+    docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux`.
+    ```
 
 - Check to see if there are any error messages from container.
 
@@ -314,7 +319,11 @@ If you can't connect to the SQL Server instance running in your container, try t
 
 - Make sure that you're SQL Server container is running by looking at the **STATUS** column of the `docker ps -a` output.
 
-- If you mapped to a non-default host port (not 1433), make sure you are specifying the port in your connection string. You can see your port mapping in the **PORTS** column of the `docker ps -a` output.
+- If you mapped to a non-default host port (not 1433), make sure you are specifying the port in your connection string. You can see your port mapping in the **PORTS** column of the `docker ps -a` output. For example, the following command connects sqlcmd to a container listening on port 1401:
+
+    ```bash
+    sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
+    ```
 
 - If you used `docker run` with an existing mapped data volume or data volume container, SQL Server ignores the value of `SA_PASSWORD`. Instead, the pre-configured SA user password is used from the SQL Server data in the data volume or data volume container. Verify that you are using the SA password associated with the data you're attaching to.
 

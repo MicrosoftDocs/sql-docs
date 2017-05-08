@@ -94,8 +94,8 @@ This topic explains how to pull and run the [mssql-server-linux container image]
     > [!TIP]
     > If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting](#troubleshooting) section.
 
-> [!IMPORTANT]
-> After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, consider changing your SA password with the `ALTER LOGIN SA WITH Password="<YourNewStrong!Passw0rd>"` Transact-SQL statement.
+
+After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, consider changing your SA password with the `ALTER LOGIN SA WITH Password="<YourNewStrong!Passw0rd>"` Transact-SQL statement.
 
 ## Connect and query
 

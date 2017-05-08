@@ -210,14 +210,15 @@ If you have a running container, you can execute commands within the container f
 
 To get the container ID run:
 
-   ```bash
-   docker ps
-   ```
+```bash
+docker ps
+```
+
 To start a bash terminal in the container run:
 
-   ```bash
-   docker exec -ti <container ID> /bin/bash
-   ```
+```bash
+docker exec -ti <container ID> /bin/bash
+```
 
 Now you can run commands as though you are running them at the terminal inside the container. When finished, type `exit`. This exits in the interactive command session, but your container continues to run.
 
@@ -225,34 +226,34 @@ Now you can run commands as though you are running them at the terminal inside t
 
 To copy a file out of the container, use the following command:
 
-   ```bash
-   docker cp <container ID>:<container path> <host path>
-   ```
+```bash
+docker cp <container ID>:<container path> <host path>
+```
 
-Example:
+For example:
 
-   ```bash
-   docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
-   ```
+```bash
+docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
+```
 
 To copy a file into the container, use the following command:
 
-   ```bash
-   docker cp <host path> <container ID>:<container path>
-   ```
+```bash
+docker cp <host path> <container ID>:<container path>
+```
 
-Example:
+For example:
 
-   ```bash
-   docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
-   ```
+```bash
+docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
+```
 
 ## Upgrade SQL Server in containers
 
 To upgrade the container image with Docker, pull the latest version from the registry. Use the `docker pull` command:
 
 ```bash
-    docker pull microsoft/mssql-server-linux:latest
+docker pull microsoft/mssql-server-linux:latest
 ```
 
 This updates the SQL Server image for any new containers you create, but it does not update SQL Server in any running containers. To do this, you must create a new container with the latest SQL Server container image and migrate your data to that new container.
@@ -268,6 +269,7 @@ This updates the SQL Server image for any new containers you create, but it does
 5. Optionally, remove the old container with `docker rm`.
 
 ## <a id="troubleshooting"></a> Troubleshooting
+The following sections provide troubleshooting suggestions for running SQL Server in containers.
 
 ### Docker command errors
 
@@ -279,7 +281,12 @@ For example, on Linux, you might get the following error when running `docker` c
 Cannot connect to the Docker daemon. Is the docker daemon running on this host?
 ```
 
-If you get this error, try running the same commands prefaced with `sudo`. If that fails, make sure the docker service is running with `systemctl status docker`. If not, you can start the service with `systemctl start docker`.
+If you get this error on Linux, try running the same commands prefaced with `sudo`. If that fails, verify the docker service is running, and start it if necessary.
+
+```bash
+systemctl status docker
+systemctl start docker
+```
 
 ### SQL Server container startup errors
 
@@ -301,7 +308,7 @@ If the SQL Server container fails to run, try the following tests.
 
 ### SQL Server connection failures
 
-If you can't connect to the SQL Server instance running in your container, review the following suggestions.
+If you can't connect to the SQL Server instance running in your container, try the following tests.
 
 - Make sure that you're SQL Server container is running by looking at the **STATUS** column of the `docker ps -a` output.
 
@@ -323,21 +330,21 @@ If you are using Docker with SQL Server Availability Groups, there are two addit
 
 You can look at the SQL Server setup and error logs in **/var/opt/mssql/log**. If the container is not running, first start the container. Then use an interactive command-prompt to inspect the logs.
 
-    ```bash
-    docker start e69e056c702d
-    docker exec -it e69e056c702d "bash"
-    ```
+```bash
+docker start e69e056c702d
+docker exec -it e69e056c702d "bash"
+```
 
-    From the bash session inside your container, run the following commands:
+From the bash session inside your container, run the following commands:
 
-    ```bash
-    cd /var/opt/mssql/log
-    cat setup*.log
-    cat errorlog
-    ```
+```bash
+cd /var/opt/mssql/log
+cat setup*.log
+cat errorlog
+```
 
-    > [!TIP]
-    > If you mounted a host directory to **/var/opt/mssql** when you created your container, you can instead look in the **log** subdirectory on the mapped path on the host.
+> [!TIP]
+> If you mounted a host directory to **/var/opt/mssql** when you created your container, you can instead look in the **log** subdirectory on the mapped path on the host.
 
 ## Next steps
 

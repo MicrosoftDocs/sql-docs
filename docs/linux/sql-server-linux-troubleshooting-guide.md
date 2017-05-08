@@ -6,7 +6,7 @@ description: Provides troubleshooting tips for using SQL Server 2017 on Linux.
 author: annashres 
 ms.author: anshrest 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -86,64 +86,12 @@ You can get the status and container ID of the latest created SQL Server Docker 
 You can stop or restart the SQL Server service as needed using the following commands:
    
    ```bash
-   sudo docker stop <container ID> 
-   sudo docker restart <container ID> 
+   sudo docker stop <container ID>
+   sudo docker restart <container ID>
    ```
 
-You can run a new container by using the following command:
-
-   ```bash
-   sudo docker run –e 'ACCEPT_EULA=Y' –e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux 
-   ```
-
-## Execute commands in a Docker container
-
-If you have a running Docker container, you can execute commands within the container from a host terminal.
-
-To get the container ID run:
-   
-   ```bash
-   sudo docker ps
-   ```
-To start a bash terminal in the container run:
-
-   ```bash
-   sudo docker exec -ti <container ID> /bin/bash
-   ```
-
-Now you can run commands as though you are running them at the terminal inside the container.
-
-Example of how you could read the contents of the error log in the terminal window:
-
-   ```bash
-   sudo docker exec -ti d6b75213ef80 /bin/bash root@d6b75213ef80:/# cat /var/opt/mssql/log/errorlog
-   ```
-
-### Copy files from a Docker container
-
-To copy a file out of the container you could do something like this:
-
-   ```bash
-   sudo docker cp <container ID>:<container path> <host path>
-   ```
-
-Example:
-
-   ```bash
-   sudo docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
-   ```
-
-To copy a file in to the container you could do something like this:
-   
-   ```bash
-   sudo docker cp <host path> <container ID>:<container path>
-   ```
-
-Example:
-   
-   ```bash
-   sudo docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
-   ```
+> [!TIP]
+> For more troubleshooting tips for Docker, see [Troubleshooting SQL Server Docker containers](sql-server-linux-setup-docker.md#troubleshooting).
 
 ## Access the log files
    
@@ -185,15 +133,11 @@ For SQL dumps
 
    See the troubleshooting section of the topic, [Connect to SQL Server on Linux](#connection).
 
-2. Port 1433 conflicts when using the Docker image and SQL Server on Linux simultaneously.
-
-   When trying to run the SQL Server Docker image in parallel to SQL Server running on Ubuntu, check for the port number that it is running under. If it tries to run on the same port number, it will throw the following error: “failed to create endpoint <container name> on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.” This can also happen when running two Docker containers under the same port number.
-
-3. ERROR: Hostname must be 15 characters or less.
+2. ERROR: Hostname must be 15 characters or less.
 
    This is a known-issue that happens whenever the name of the machine that is trying to install the SQL Server Debian package is longer than 15 characters. There are currently no workarounds other than changing the name of the machine. One way to achieve this is by editing the hostname file and rebooting the machine. The following [website guide](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) explains this in detail.
 
-4. Resetting the system administration (SA) password.
+3. Resetting the system administration (SA) password.
 
    If you have forgotten the system administrator (SA) password or need to reset it for some other reason please follow these steps.
 
@@ -203,12 +147,11 @@ For SQL dumps
    Log into the host terminal, run the following commands and follow the prompts to reset the SA password:
 
    ```bash
-   sudo systemctl stop mssql-server.service
-   sudo /opt/mssql/bin/sqlservr-setup
-   sudo systemctl start mssql-server.service
+   sudo systemctl stop mssql-server
+   sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-5. Using special characters in password.
+4. Using special characters in password.
 
    If you use some characters in the SQL Server login password you may need to escape them when using them in the Linux terminal. You will need to escape the $ anytime using the backslash character you are using it in a terminal command/shell script:
 

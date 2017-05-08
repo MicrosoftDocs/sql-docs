@@ -127,15 +127,15 @@
       homepage: /sql/linux
     - name: Advanced analytics on SQL Server
       href: /sql/advanced-analytics/
-      homepage: /sql/advanced-analytics
+      homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services
     - name: R Services on SQL Server
-      href: /sql/advanced-analytics/r-services/
-      homepage: /sql/advanced-analytics/r-services/
+      href: /sql/advanced-analytics/r/
+      homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
     - name: SQL Server
       href: /sql/sql-server/
       homepage: /sql/sql-server/sql-server-technical-documentation
       items:
-      - name: Failover clusters
+      - name: Failover clusters 
         href: /sql/sql-server/failover-clusters/
         homepage: /sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring
       - name: Install
@@ -150,29 +150,29 @@
         items:
         - name: Data mining
           href: /sql/analysis-services/data-mining/
-          homepage: /sql/analysis-services/data-mining
+          homepage: /sql/analysis-services/data-mining/data-mining-ssas
         - name: Instances
           href: /sql/analysis-services/instances/
-          homepage: /sql/analysis-services/instances
+          homepage: /sql/analysis-services/instances/analysis-services-instance-management
         - name: Install on Windows
           href: /sql/analysis-services/instances/install-windows/
-          homepage: /sql/analysis-services/instances/install-windows
+          homepage: /sql/analysis-services/instances/install-windows/install-analysis-services
         - name: Scripting
           href: /sql/analysis-services/scripting/
-          homepage: /sql/analysis-services/scripting/
+          homepage: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla?toc=%2fsql%2fanalysis-services%2fscripting%2ftoc.json
           items:
           - name: Data type
             href: /sql/analysis-services/scripting/data-type/
-            homepage: /sql/analysis-services/scripting/data-type/
+            homepage: /sql/analysis-services/scripting/data-type/action-data-type-assl?toc=%2fsql%2fanalysis-services%2fscripting%2fdata-type%2ftoc.json
           - name: Objects
             href: /sql/analysis-services/scripting/objects/
-            homepage: /sql/analysis-services/scripting/objects/
+            homepage: /sql/analysis-services/scripting/objects/account-element-assl
           - name: Collections
             href: /sql/analysis-services/scripting/collections/
-            homepage: /sql/analysis-services/scripting/collections/
+            homepage: /sql/analysis-services/scripting/collections/accounts-element-assl
           - name: Properties
             href: /sql/analysis-services/scripting/properties/
-            homepage: /sql/analysis-services/scripting/properties/
+            homepage: /sql/analysis-services/scripting/properties/access-element-assl
         - name: Tabular models scripting language objects
           href: /sql/analysis-services/tabular-models-scripting-language-objects/
           homepage: /sql/analysis-services/tabular-models-scripting-language-objects/database-object-tmsl
@@ -188,56 +188,56 @@
             homepage: /sql/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data
           - name: OLAP logical
             href: /sql/analysis-services/multidimensional-models/olap-logical/
-            homepage: /sql/analysis-services/multidimensional-models/olap-logical
+            homepage: /sql/analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data
             items:
             - name: Dimension objects
               href: /sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/
-              homepage: /sql/analysis-services/multidimensional-models-olap-logical-dimension-objects
+              homepage: /sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships
             - name: Cube objects
               href: /sql/analysis-services/multidimensional-models-olap-logical-cube-objects/
-              homepage: /sql/analysis-services/multidimensional-models-olap-logical-cube-objects
+              homepage: /sql/analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs
           - name: OLAP physical
             href: /sql/analysis-services/multidimensional-models/olap-physical/
-            homepage: /sql/analysis-services/multidimensional-models/olap-physical
+            homepage: /sql/analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development
           - name: ADOMD .NET
             href: /sql/analysis-services/multidimensional-models/adomd-net/
-            homepage: /sql/analysis-services/multidimensional-models/adomd-net
+            homepage: /sql/analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net
             items:
             - name: Client
               href: /sql/analysis-services/multidimensional-models-adomd-net-client/
-              homepage: /sql/analysis-services/multidimensional-models-adomd-net-client
+              homepage: /sql/analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-functionality
             - name: Server
               href: /sql/analysis-services/multidimensional-models-adomd-net-server/
-              homepage: /sql/analysis-services/multidimensional-models-adomd-net-server
+              homepage: /sql/analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality
           - name: Analysis management objects
             href: /sql/analysis-services/multidimensional-models/analysis-management-objects/
-            homepage: /sql/analysis-services/multidimensional-models/analysis-management-objects
+            homepage: /sql/analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction
           - name: Scripting language ASSL
             href: /sql/analysis-services/multidimensional-models/scripting-language-assl/
-            homepage: /sql/analysis-services/multidimensional-models/scripting-language-assl
+            homepage: /sql/analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics
             items:
             - name: XMLA
               href: /sql/analysis-services/multidimensional-models-scripting-language-assl-xmla/
-              homepage: /sql/analysis-services/multidimensional-models-scripting-language-assl-xmla
+              homepage: /sql/analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla
           - name: Extending olap
             href: /sql/analysis-services/multidimensional-models/extending-olap/
-            homepage: /sql/analysis-services/multidimensional-models/extending-olap
+            homepage: /sql/analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions
             items:
             - name: Stored procedures
               href: /sql/analysis-services/multidimensional-models-extending-olap-stored-procedures/
-              homepage: /sql/analysis-services/multidimensional-models-extending-olap-stored-procedures
+              homepage: /sql/analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures
         - name: Power Pivot Sharepoint
           href: /sql/analysis-services/power-pivot-sharepoint/
-          homepage: /sql/analysis-services/power-pivot-sharepoint
+          homepage: /sql/analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas
         - name: PowerShell
           href: /sql/analysis-services/powershell/
-          homepage: /sql/analysis-services/powershell
+          homepage: /sql/analysis-services/powershell/technical-reference-ssas
         - name: Server properties
           href: /sql/analysis-services/server-properties/
-          homepage: /sql/analysis-services/server-properties
+          homepage: /sql/analysis-services/server-properties/server-properties-in-analysis-services
         - name: Tabular models
           href: /sql/analysis-services/tabular-models/
-          homepage: /sql/analysis-services/tabular-models
+          homepage: /sql/analysis-services/tabular-models/tabular-models-ssas
         - name: Trace events
           href: /sql/analysis-services/trace-events/
           homepage: /sql/analysis-services/trace-events

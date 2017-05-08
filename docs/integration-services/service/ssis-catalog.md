@@ -621,7 +621,12 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 >  Auto-failover of SSISDB database is not supported until you enable SSIS Support for Always On.  
   
  The newly added secondary replicas from the Always On availability group will be shown in the table. Click **Connect…** button for each replica in the list and enter authentication credentials to connect to the replica. The user account must be a member of sysadmin group on each replica to enable SSIS support for Always On. After you successfully connect to each replica, click **OK** to enable SSIS support for Always On.  
-  
+ 
+If the **Enable Always On support** option on the context menu appears to be disabled after you've completed the other prerequisites, try these things:
+1.  Refresh the context menu by clicking the **Refresh** option.
+2.  Make sure you are connecting to the primary node. You have to enable Always On support on the primary node.
+3.  Make sure the SQL Server version is 13.0 or higher. SSIS supports Always On only on SQL Server 2016 and later versions.
+
 ###  <a name="Upgrade"></a> Upgrading SSISDB in an availability group  
  If you're upgrading SQL Server from a previous version, and SSISDB is in an Always On availability group, your upgrade may be blocked by the “SSISDB in Always On Availability Group check” rule. This blocking occurs because upgrade runs in single-user mode, while an availability database must be a multi-user database. Therefore, during upgrade or patching, all availability databases including SSISDB are taken offline and are not upgraded or patched. To let upgrade continue, you have to to first remove SSISDB from the availability group, then upgrade or patch each node, then add SSISDB back to the availability group.  
   

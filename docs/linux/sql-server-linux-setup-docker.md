@@ -266,6 +266,14 @@ If you can't connect to the SQL Server instance running in your container, revie
 
 - Review the [SQL Server setup and error logs](#errorlogs).
 
+### SQL Server Availability Groups
+
+If you are using Docker with SQL Server Availability Groups, there are two additional requirements.
+
+- Map the port that is used for replica communication (default 5022). For example, specify `-p 5022:5022` as part of your `docker run` command.
+
+- Explicitly set the container host name with the `-h YOURHOSTNAME` parameter of the `docker run` command. This host name is used when you setup your Availability Group. If you don't specify it with `-h`, it defaults to the container ID.
+
 ### <a id="errorlogs"></a> SQL Server setup and error logs
 
 You can look at the SQL Server setup and error logs in **/var/opt/mssql/log**. If the container is not running, first start the container. Then use an interactive command-prompt to inspect the logs.

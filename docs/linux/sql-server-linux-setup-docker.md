@@ -66,14 +66,18 @@ This topic explains how to pull and run the [mssql-server-linux container image]
     > [!TIP]
     > For Linux, depending on your system and user configuration, you might need to preface each `docker` command with `sudo`.
 
-2. To run the container image with Docker, you can use the following command. Specify your own strong password that is at least 8 characters and meets [SQL Server's password requirements](../relational-databases/security/password-policy.md).
+2. To run the container image with Docker, you can use the following command.
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
     ```
 
-    > [!NOTE]
-    > The **ACCEPT_EULA** and **SA_PASSWORD** environment variables are required to run the image. Setting the **ACCEPT_EULA** variable to any value confirms your acceptance of the [End-User Licensing Agreement](http://go.microsoft.com/fwlink/?LinkId=746388).
+    | Parameter | Description |
+    |-----|-----|
+    | `-e 'ACCEPT_EULA=Y'` |  Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the [End-User Licensing Agreement](http://go.microsoft.com/fwlink/?LinkId=746388). Required setting for the SQL Server image. |
+    | `-e 'SA_PASSWORD=<YourStrong!Passw0rd>'` | Specify your own strong password that is at least 8 characters and meets [SQL Server's password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
+    | `-p 1433:1433` | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the same port, 1433, on the host. |
+    | `microsoft/mssql-server-linux` | The SQL Server Linux container image. Unless otherwise specified, this defaults to the **latest** image. |
 
 3. To view your Docker containers, use the `docker ps` command.
 
@@ -88,15 +92,20 @@ This topic explains how to pull and run the [mssql-server-linux container image]
     > [!TIP]
     > If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting](#troubleshooting) section.
 
+> [!IMPORTANT]
+> After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, consider changing your SA password with the `ALTER LOGIN SA WITH Password="<YourNewStrong!Passw0rd>"` Transact-SQL statement.
+
 ## Connect and query
 
-You can connect to the SQL Server instance on your Docker machine from any external Windows or Linux tool that supports SQL connections, such as:
+You can connect and query SQL Server in a container from either outside the container or from within the container. The following sections explain both scenarios. 
+
+### Tools outside the container
+
+You can connect to the SQL Server instance on your Docker machine from any external Linux, Windows, or macOS tool that supports SQL connections. Some common tools include:
 
 - [sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md)
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-develop-use-ssms.md)
-
-### Connect with sqlcmd
 
 The following example uses **sqlcmd** to connect to SQL Server running in a Docker container. The IP address in the connection string is the IP address of the host machine that is running the container.
 
@@ -110,20 +119,23 @@ If you mapped a host port that was not the default **1433**, add that port to th
 sqlcmd -S 10.3.2.4,1400 -U SA -P '<YourPassword>'
 ```
 
-### Run tools inside the container
+### Tools inside the container
 
 Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the container image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
 
-1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `e6` is the first two characters of the container ID that uniquely identifies the target container.
+1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `e69e056c702d` is the container ID.
 
     ```bash
-    docker exec -it e6 "bash"
+    docker exec -it e69e056c702d "bash"
     ```
 
-2. Once insider the container, connect locally with sqlcmd. Note that sqlcmd is not in the path by default, so you have to specify the full path.
+    > [!TIP]
+    > You don't always have to specify the entire container id. You only have specify enough characters to uniquely identify it. So in this example, it might be enough to use `e6` or `e69` rather than the full id.
+
+2. Once inside the container, connect locally with sqlcmd. Note that sqlcmd is not in the path by default, so you have to specify the full path.
 
     ```bash
-    /opt/mssql-tools/bin/sqlcmd -H localhost -U SA -P '<YourPassword>'
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourPassword>'
     ```
 
 3. When finished with sqlcmd, type `exit`.
@@ -132,7 +144,9 @@ Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-s
 
 ## Run multiple SQL Server containers
 
-Docker provides a way to support multiple SQL Server instances on the same host machine. The following example creates two SQL Server Docker containers and maps them to ports **1401** and **1402** on the host machine.
+Docker provides a way to run multiple SQL Server containers on the same host machine. This is the approach for scenarios which require multiple instances of SQL Server on the same host. Each container must expose itself on a different port.
+
+The following example creates two SQL Server containers and maps them to ports **1401** and **1402** on the host machine.
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux
@@ -146,7 +160,7 @@ sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
 sqlcmd -S 10.3.2.4,1402 -U SA -P '<YourPassword>'
 ```
 
-## Persist your data
+## <a id="persist"></a> Persist your data
 
 Your SQL Server configuration changes and database files are persisted in the container even if you restart the container with `docker stop` and `docker start`. However, if you remove the container with `docker rm`, everything in the container is deleted, including SQL Server and all of your databases. The following section explains how to use **data volumes** to persist your database files even if the associated containers are deleted.
 
@@ -155,7 +169,7 @@ Your SQL Server configuration changes and database files are persisted in the co
 
 ### Mount a host directory as data volume
 
-The first option is to mount a directory on your host as a data volume in your container. To do that, use the `docker run` command with the `-v \<host directory\>:/var/opt/mssql` flag. This allows the data to be restored between container executions.
+The first option is to mount a directory on your host as a data volume in your container. To do that, use the `docker run` command with the `-v <host directory>:/var/opt/mssql` flag. This allows the data to be restored between container executions.
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
@@ -164,7 +178,7 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:143
 This technique also enables you to share and view the files on the host outside of Docker.
 
 > [!IMPORTANT]
-> Host volume mapping for Docker on Mac with the SQL Server on Linux image is not supported at this time. Use data volume containers instead.
+> Host volume mapping for Docker on Mac with the SQL Server on Linux image is not supported at this time. Use data volume containers instead. This restriction is specific to the `/var/opt/msql` directory. Reading from a mounted directory works fine. For example, you can mount a host directory using –v on Mac and restore a backup from a .bak file that resides on the host.
 
 ### Use data volume containers
 
@@ -185,7 +199,12 @@ docker volume ls
 
 If you then create a new container with the same volume name, the new container will use the same SQL Server data contained in the volume.
 
-## Upgrade the container image
+To remove a data volume container, use the `docker volume rm` command.
+
+> [!WARNING]
+> If you delete the data volume container, any SQL Server data in the container is *permanently* deleted.
+
+## Upgrade SQL Server in containers
 
 To upgrade the container image with Docker, pull the latest version from the registry. Use the `docker pull` command:
 
@@ -193,46 +212,79 @@ To upgrade the container image with Docker, pull the latest version from the reg
     docker pull microsoft/mssql-server-linux:latest
 ```
 
-You can now create new containers that will have the latest version of SQL Server in Linux on Docker.
+This updates the SQL Server image for any new containers you create, but it does not update SQL Server in any running containers. To do this, you must create a new container with the latest SQL Server container image and migrate your data to that new container.
+
+1. First, make sure you are using one of the [data persistence techniques](#persist) for your existing SQL Server container.
+
+2. Stop the SQL Server container with the `docker stop` command.
+
+3. Create a new SQL Server container with `docker run` and specify either a mapped host directory or a data volume container. The new container now uses a new version of SQL Server with your existing SQL Server data.
+
+4. Verify your databases and data in the new container.
+
+5. Optionally, remove the old container with `docker rm`.
 
 ## <a id="troubleshooting"></a> Troubleshooting
 
-On Linux, if you get the following error running Docker commands, try the same commands prefaced with `sudo`:
+### Docker command errors
+
+If you get errors for any `docker` commands, make sure that the docker service is running, and try to run with elevated permissions.
+
+For example, on Linux, you might get the following error when running `docker` commands:
 
 ```
 Cannot connect to the Docker daemon. Is the docker daemon running on this host?
 ```
 
-If the SQL Server container fails to run or if you can't connect to the SQL Server instance running in your container, try the following tests.
+If you get this error, try running the same commands prefaced with `sudo`. If that fails, make sure the docker service is running with `systemctl status docker`. If not, you can start the service with `systemctl start docker`.
+
+### SQL Server container startup errors
+
+If the SQL Server container fails to run, try the following tests.
 
 - First, check to see if there are any error messages from container.
 
     ```bash
-    docker logs e6
+    docker logs e69e056c702d
     ```
 
-- Look at the SQL Server setup and error logs in **/var/opt/mssql/log**. If the container is not running, first start the container. Then use an interactive command-prompt to inspect the logs.
+- Make sure that you meet the minimum memory and disk requirements specified in the [Requirements](#requirements) section of this topic.
+
+- If you are using any container management software, make sure it supports container processes running as root. The sqlservr process in the container runs as root.
+
+- Review the [SQL Server setup and error logs](#errorlogs).
+
+### SQL Server connection failures
+
+If you can't connect to the SQL Server instance running in your container, review the following suggestions.
+
+- Make sure that you're SQL Server container is running by looking at the **STATUS** column of the `docker ps -a` output.
+
+- If you mapped to a non-default host port (not 1433), make sure you are specifying the port in your connection string. You can see your port mapping in the **PORTS** column of the `docker ps -a` output.
+
+- If you used `docker run` with an existing mapped data volume or data volume container, SQL Server ignores the value of `SA_PASSWORD`. Instead, the pre-configured SA user password is used from the SQL Server data in the data volume or data volume container. Verify that you are using the SA password associated with the data you're attaching to.
+
+- Review the [SQL Server setup and error logs](#errorlogs).
+
+### <a id="errorlogs"></a> SQL Server setup and error logs
+
+You can look at the SQL Server setup and error logs in **/var/opt/mssql/log**. If the container is not running, first start the container. Then use an interactive command-prompt to inspect the logs.
 
     ```bash
-    docker start e6
-    docker exec -it e6 "bash"
+    docker start e69e056c702d
+    docker exec -it e69e056c702d "bash"
     ```
 
-    From the bash session insider your container, run the following commands:
+    From the bash session inside your container, run the following commands:
 
     ```bash
     cd /var/opt/mssql/log
-    ls
     cat setup*.log
     cat errorlog
     ```
 
     > [!TIP]
     > If you mounted a host directory to **/var/opt/mssql** when you created your container, you can instead look in the **log** subdirectory on the mapped path on the host.
-
-- If you mapped to a non-default host port (not 1433), make sure you are specifying the port in your connection string.
-
-- Make sure that you meet the minimum memory and disk requirements specified in the [Requirements](#requirements) section of this topic.
 
 ## Next steps
 

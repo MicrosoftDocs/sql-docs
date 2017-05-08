@@ -38,21 +38,21 @@ This topic explains how to pull and run the [mssql-server-linux container image]
 - Minimum of 4 GB of RAM
 
 > [!IMPORTANT]
-> The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you will need to change it to 4 GB.
+> The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you must change it to 4 GB.
 >
 > **Docker for Mac procedure**
 > 
-> 1. Click on the Docker logo on the top status bar.
+> 1. Click the Docker logo on the top status bar.
 > 2. Select **Preferences**.
-> 3. Move the memory indicator to 4GB or more.
+> 3. Move the memory indicator to 4 GB or more.
 > 4. Click the **restart** button at the button of the screen.
 >
 > **Docker for Windows procedure**
 >
 > 1. Right-click on the Docker icon from the task bar.
 > 2. Click **Settings** under that menu.
-> 3. Click on the **Advanced** Tab.
-> 4. Move the memory indicator to 4GB or more.
+> 3. Click the **Advanced** Tab.
+> 4. Move the memory indicator to 4 GB or more.
 > 5. Click the **Apply** button.
 
 ## Pull and run the container image
@@ -66,7 +66,7 @@ This topic explains how to pull and run the [mssql-server-linux container image]
     > [!TIP]
     > For Linux, depending on your system and user configuration, you might need to preface each `docker` command with `sudo`.
 
-2. To run the container image with Docker, you can use the following command.
+2. To run the container image with Docker, you can use the following command:
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
@@ -85,7 +85,7 @@ This topic explains how to pull and run the [mssql-server-linux container image]
     docker ps -a
     ```
 
-    You should see output similar to the following:
+    You should see output similar to the following screenshot:
 
     ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
@@ -132,7 +132,7 @@ Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-s
     ```
 
     > [!TIP]
-    > You don't always have to specify the entire container id. You only have specify enough characters to uniquely identify it. So in this example, it might be enough to use `e6` or `e69` rather than the full id.
+    > You don't always have to specify the entire container id. You only have to specify enough characters to uniquely identify it. So in this example, it might be enough to use `e6` or `e69` rather than the full id.
 
 2. Once inside the container, connect locally with sqlcmd. Note that sqlcmd is not in the path by default, so you have to specify the full path.
 
@@ -146,7 +146,7 @@ Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-s
 
 ## Run multiple SQL Server containers
 
-Docker provides a way to run multiple SQL Server containers on the same host machine. This is the approach for scenarios which require multiple instances of SQL Server on the same host. Each container must expose itself on a different port.
+Docker provides a way to run multiple SQL Server containers on the same host machine. This is the approach for scenarios that require multiple instances of SQL Server on the same host. Each container must expose itself on a different port.
 
 The following example creates two SQL Server containers and maps them to ports **1401** and **1402** on the host machine.
 
@@ -164,7 +164,7 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P '<YourPassword>'
 
 ## <a id="persist"></a> Persist your data
 
-Your SQL Server configuration changes and database files are persisted in the container even if you restart the container with `docker stop` and `docker start`. However, if you remove the container with `docker rm`, everything in the container is deleted, including SQL Server and all of your databases. The following section explains how to use **data volumes** to persist your database files even if the associated containers are deleted.
+Your SQL Server configuration changes and database files are persisted in the container even if you restart the container with `docker stop` and `docker start`. However, if you remove the container with `docker rm`, everything in the container is deleted, including SQL Server and your databases. The following section explains how to use **data volumes** to persist your database files even if the associated containers are deleted.
 
 > [!IMPORTANT]
 > For SQL Server, it is critical that you understand data persistence in Docker. In addition to the discussion in this section, see Docker's documentation on [how to manage data in Docker containers](https://docs.docker.com/engine/tutorials/dockervolumes/).
@@ -191,7 +191,7 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:143
 ```
 
 > [!NOTE]
-> This technique for implicitly creating a new data volume in the run command does not work with older versions of Docker. In that case, use the explicit steps outlined in the Docker documentation, [Creating and mounting a data volume container](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container).
+> This technique for implicitly creating a data volume in the run command does not work with older versions of Docker. In that case, use the explicit steps outlined in the Docker documentation, [Creating and mounting a data volume container](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container).
 
 Even if you stop and remove this container, the data volume persists. You can view it with the `docker volume ls` command.
 
@@ -199,7 +199,7 @@ Even if you stop and remove this container, the data volume persists. You can vi
 docker volume ls
 ```
 
-If you then create a new container with the same volume name, the new container will use the same SQL Server data contained in the volume.
+If you then create another container with the same volume name, the new container uses the same SQL Server data contained in the volume.
 
 To remove a data volume container, use the `docker volume rm` command.
 
@@ -293,7 +293,7 @@ sudo systemctl start docker
 
 ### SQL Server container startup errors
 
-If the SQL Server container fails to run, try the following tests.
+If the SQL Server container fails to run, try the following tests:
 
 - If you get an error such as **'failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.'**, then you are attempting to map the container port 1433 to a port that is already in use. This can happen if you're running SQL Server locally on the host machine. It can also happen if you start two SQL Server containers and try to map them both to the same host port. If this happens, use the `-p` parameter to map the container port 1433 to a different host port. For example: 
 
@@ -315,7 +315,7 @@ If the SQL Server container fails to run, try the following tests.
 
 ### SQL Server connection failures
 
-If you can't connect to the SQL Server instance running in your container, try the following tests.
+If you can't connect to the SQL Server instance running in your container, try the following tests:
 
 - Make sure that you're SQL Server container is running by looking at the **STATUS** column of the `docker ps -a` output.
 
@@ -335,7 +335,7 @@ If you are using Docker with SQL Server Availability Groups, there are two addit
 
 - Map the port that is used for replica communication (default 5022). For example, specify `-p 5022:5022` as part of your `docker run` command.
 
-- Explicitly set the container host name with the `-h YOURHOSTNAME` parameter of the `docker run` command. This host name is used when you setup your Availability Group. If you don't specify it with `-h`, it defaults to the container ID.
+- Explicitly set the container host name with the `-h YOURHOSTNAME` parameter of the `docker run` command. This host name is used when you configure your Availability Group. If you don't specify it with `-h`, it defaults to the container ID.
 
 ### <a id="errorlogs"></a> SQL Server setup and error logs
 

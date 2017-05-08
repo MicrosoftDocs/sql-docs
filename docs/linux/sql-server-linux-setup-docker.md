@@ -204,6 +204,49 @@ To remove a data volume container, use the `docker volume rm` command.
 > [!WARNING]
 > If you delete the data volume container, any SQL Server data in the container is *permanently* deleted.
 
+## Execute commands in a container
+
+If you have a running container, you can execute commands within the container from a host terminal.
+
+To get the container ID run:
+
+   ```bash
+   docker ps
+   ```
+To start a bash terminal in the container run:
+
+   ```bash
+   docker exec -ti <container ID> /bin/bash
+   ```
+
+Now you can run commands as though you are running them at the terminal inside the container. When finished, type `exit`. This exits in the interactive command session, but your container continues to run.
+
+### Copy files from a container
+
+To copy a file out of the container, use the following command:
+
+   ```bash
+   docker cp <container ID>:<container path> <host path>
+   ```
+
+Example:
+
+   ```bash
+   docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
+   ```
+
+To copy a file into the container, use the following command:
+
+   ```bash
+   docker cp <host path> <container ID>:<container path>
+   ```
+
+Example:
+
+   ```bash
+   docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
+   ```
+
 ## Upgrade SQL Server in containers
 
 To upgrade the container image with Docker, pull the latest version from the registry. Use the `docker pull` command:
@@ -242,7 +285,9 @@ If you get this error, try running the same commands prefaced with `sudo`. If th
 
 If the SQL Server container fails to run, try the following tests.
 
-- First, check to see if there are any error messages from container.
+- If you get an error such as `failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.`, then you are most likely trying to map the container port 1433 to a port that is already in use. This can happen if you're running SQL Server locally on the host machine. It can also happen if you start two SQL Server containers and try to map them both to the same host port. If this happens, use the `-p` parameter to map the container port 1433 to a different host port. For example: `docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux`.
+
+- Check to see if there are any error messages from container.
 
     ```bash
     docker logs e69e056c702d

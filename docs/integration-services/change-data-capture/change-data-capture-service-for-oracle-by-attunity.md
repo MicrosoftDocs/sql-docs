@@ -43,8 +43,8 @@ manager: "jhubbard"
   
 ### Source Oracle Database  
   
--   Oracle Database 10g
--   Oracle Database 11g
+-   Oracle Database 10g Release 2
+-   Oracle Database 11g Release 1 and Release 2
 -   Oracle Database 12c in classic installation. (Multitenant installation is not supported.)  
   
 ### Target SQL Server Database  

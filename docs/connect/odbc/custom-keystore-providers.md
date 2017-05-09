@@ -93,6 +93,7 @@ void (*Free)();
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
 Placeholder name for a provider-defined initialization function. The driver calls this function once, after a provider has been loaded but before the first time it needs it to perform ECEK decryption or Read()/Write() requests.
+
 |Argument|Description|
 |:--|:--|
 |`ctx`|[Input] Opaque context pointer, to be passed to the error-handling function.|
@@ -117,6 +118,7 @@ Placeholder name for a provider-defined communication function. The driver calls
 int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len);
 ```
 Placeholder name for a provider-defined communication function. The driver calls this function when the application requests to write data to a provider using the SQL_COPT_SS_CEKEYSTOREDATA connection attribute.
+
 |Argument|Description|
 |:--|:--|
 |`ctx`|[Input] Opaque context pointer, to be passed to the error-handling function.|
@@ -129,6 +131,7 @@ Placeholder name for a provider-defined communication function. The driver calls
 int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *ecek, unsigned short ecekLen, unsigned char **cekOut, unsigned short *cekLen);
 ```
 Placeholder name for a provider-defined ECEK decryption function. The driver calls this function to decrypt an ECEK that has been identified as using this keystore provider.
+
 |Argument|Description|
 |:--|:--|
 |`ctx`|[Input] Opaque context pointer, to be passed to the error-handling function.|
@@ -147,6 +150,7 @@ Placeholder name for a provider-defined ECEK decryption function. The driver cal
 int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *cek,unsigned short cekLen, unsigned char **ecekOut, unsigned short *ecekLen);
 ```
 Placeholder name for a provider-defined CEK encryption function. It is provided to allow provider implementers to expose programmatic key management to application developers. App developers must use the CEKeyStoreProvider interface to access this functionality; the driver does not call this function nor expose its functionality through the ODBC interface.
+
 |Argument|Description|
 |:--|:--|
 |`ctx`|[Input] Opaque context pointer, to be passed to the error-handling function.|
@@ -173,6 +177,7 @@ This is a set of 3 opaque pointers which the driver uses to determine the contex
 `typedef void errFunc(CEKEYSTORECONTEXT *ctx, const wchar_t *msg, …);`
 
 A pointer to a function of this type is passed into provider-implemented functions and called by the provider to report when an error has occurred. The provider may call this function multiple times to post multiple error messages consecutively within one provider-function invocation.
+
 |Argument|Description|
 |:--|:--|
 |`ctx`|[Input] The context parameter which was passed into the provider-implemented function along with this function pointer.|
@@ -181,11 +186,11 @@ A pointer to a function of this type is passed into provider-implemented functio
 
 The `msg` parameter is ordinarily a wide-character string, but additional extensions are available:
 
-By using one of the special predefined values with the IDS_MSG macro, generic error messages already existing and in a localised form in the driver may be utilized. For example, a CEKeyStoreProvider may report a memory allocation failure using the `IDS_S1_001` "Memory allocation failure" message:;
+By using one of the special predefined values with the IDS_MSG macro, generic error messages already existing and in a localised form in the driver may be utilized. For example, a CEKeyStoreProvider may report a memory allocation failure using the `IDS_S1_001` "Memory allocation failure" message:
 
 `onError(ctx, IDS_MSG(IDS_S1_001));`
 
-For a keystore provider function encountering an error to be recognized by the driver, it shall call the error-callback function with the appropriate message and parameters as many times as necessary, then return failure. When this is performed in the context of an ODBC operation, the posted errors will become accessible on the connection or statement handle via the standard ODBC diagnostics mechanism (`SQLError/SQLGetDiagRec/SQLGetDiagField`).
+For a keystore provider function encountering an error to be recognized by the driver, it shall call the error-callback function with the appropriate message and parameters as many times as necessary, then return failure. When this is performed in the context of an ODBC operation, the posted errors will become accessible on the connection or statement handle via the standard ODBC diagnostics mechanism (`SQLError`, `SQLGetDiagRec`, and `SQLGetDiagField`).
 
 ### CEKeystoreProvider Context Association
 

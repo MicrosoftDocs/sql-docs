@@ -127,5 +127,7 @@ For more information about authenticating Linux or macOS computers with Active D
 
 ## See Also  
 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)
+
 [Release Notes](../../../connect/odbc/linux-mac/release-notes.md)
+
 [Using Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)

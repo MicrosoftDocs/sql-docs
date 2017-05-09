@@ -360,6 +360,8 @@ For more information about resolving connection failures, see:
   
 ## See Also
 
-[Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)  
+[Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
+
 [Release Notes](../../../connect/odbc/linux-mac/release-notes.md)
+
 [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)

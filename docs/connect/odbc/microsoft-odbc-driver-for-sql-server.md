@@ -35,7 +35,7 @@ ODBC is the primary native data access API for applications written in C and C++
 ### Linux and macOS
 
 * [Connecting with `bcp`](../../connect/odbc/linux-mac/connecting-with-bcp.md)
-* [Connecting with `sqlcmd](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
+* [Connecting with `sqlcmd`](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 * [Connection String Keywords and Data Source Names](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 * [Data Access Tracing](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 * [Frequently Asked Questions](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

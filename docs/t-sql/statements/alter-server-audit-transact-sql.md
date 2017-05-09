@@ -1,7 +1,7 @@
 ---
 title: "ALTER SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,7 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER SERVER AUDIT audit_name  
 {  
     [ TO { { FILE ( <file_options> [, ...n] ) } | APPLICATION_LOG | SECURITY_LOG } ]  
@@ -87,6 +86,7 @@ ALTER SERVER AUDIT audit_name
   
  MAX_FILES =*integer*  
  Specifies the maximum number of audit files that can be created. Does not rollover to the first file when the limit is reached. When the MAX_FILES limit is reached, any action that causes additional audit events to be generated will fail with an error.  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  This option pre-allocates the file on the disk to the MAXSIZE value. Only applies if MAXSIZE is not equal to UNLIMITED. The default value is OFF.  
@@ -105,6 +105,7 @@ ALTER SERVER AUDIT audit_name
   
  FAIL_OPERATION  
  Database actions fail if they cause audited events. Actions which do not cause audited events can continue, but no audited events can occur. The audit continues to attempt to log events and will resume if the failure condition is resolved. Use this option when maintaining a complete audit is more important than full access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
   
  STATE **=** { ON | OFF }  
  Enables or disables the audit from collecting records. Changing the state of a running audit (from ON to OFF) creates an audit entry that the audit was stopped, the principal that stopped the audit, and the time the audit was stopped.  
@@ -114,15 +115,19 @@ ALTER SERVER AUDIT audit_name
   
  predicate_expression  
  Specifies the predicate expression used to determine if an event should be processed or not. Predicate expressions are limited to 3000 characters, which limits string arguments.  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  event_field_name  
  Is the name of the event field that identifies the predicate source. Audit fields are described in [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). All fields can be audited except `file_name` and `audit_file_offset`.  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  number  
  Is any numeric type including **decimal**. Limitations are the lack of available physical memory or a number that is too large to be represented as a 64-bit integer.  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ' string '  
  Either an ANSI or Unicode string as required by the predicate compare. No implicit string type conversion is performed for the predicate compare functions. Passing the wrong type results in an error.  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## Remarks  
  You must specify at least one of the TO, WITH, or MODIFY NAME clauses when you call ALTER AUDIT.  

@@ -18,12 +18,12 @@ manager: "jhubbard"
 # Connection Resiliency in the Windows ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  To ensure that applications remain connected to a [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], the ODBC driver on Windows can restore idle connections.  
+  To ensure that applications remain connected to an [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], the ODBC driver on Windows can restore idle connections.  
   
 > [!IMPORTANT]  
 >  The connection resiliency feature is supported on Microsoft Azure SQL Databases and SQL Server 2014 (and later) server versions.  
   
- For additional information about idle connection resiliency, see [Technical Atricle – Idle Connection Resiliency](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ For additional information about idle connection resiliency, see [Technical Article – Idle Connection Resiliency](http://go.microsoft.com/fwlink/?LinkId=393996).  
   
  To control reconnect behavior, the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows has two options:  
   

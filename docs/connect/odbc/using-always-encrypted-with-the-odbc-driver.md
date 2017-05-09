@@ -1,4 +1,4 @@
----
+﻿---
 title: "Using Always Encrypted with the ODBC Driver 13.1 for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -16,9 +16,9 @@ manager: "jhubbard"
 author: "MightyPen"
 ---
 # Using Always Encrypted with the ODBC Driver 13.1 for SQL Server
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) and the [ODBC Driver 13.1 for SQL Server](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md).
+This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) and the [ODBC Driver 13.1 for SQL Server](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md).
 
 Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver 13.1 for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx).
 
@@ -54,7 +54,7 @@ Note that enabling Always Encrypted is not sufficient for encryption or decrypti
 Once you enable Always Encrypted for application queries, you can use standard ODBC APIs (see [ODBC sample code](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953) or [ODBC Programmer's Reference](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx)), to retrieve or modify data in encrypted database columns. Assuming your application has the required database permissions and can access the column master key, the ODBC Driver 13.1 for SQL Server will encrypt any query parameters that target encrypted columns, and will decrypt data retrieved from encrypted columns, returning plaintext values of ODBC types corresponding to the SQL Server data types set for the columns in the database schema.
 If Always Encrypted is not enabled, queries with parameters that target encrypted columns will fail. Queries can still retrieve data from encrypted columns, as long as the query has no parameters targeting encrypted columns. However, the driver will not attempt to decrypt any values retrieved from encrypted columns and the application will receive binary encrypted data (as byte arrays).
 
-The below table summarizes the behavior of queries, depending on whether Always Encrypted is enabled or not:
+The table below summarizes the behavior of queries, depending on whether Always Encrypted is enabled or not:
 
 |Query characteristic | Always Encrypted is enabled and application can access the keys and key metadata|Always Encrypted is enabled and application cannot access the keys or key metadata | Always Encrypted is disabled|
 |:---|:---|:---|:---|
@@ -373,7 +373,7 @@ The ODBC Driver 13.1 for SQL Server on Windows includes a built-in column master
 
 ### Using Custom Column Master Key stores with ODBC
 
-The ODBC Driver 13.1 for SQL Server also supports custom third-party keystore providers using the CEKeystoreProvider interface. This allows an application to load, query, and configure keystore providers so that they can be used by the driver to access encrypted columns. Applications may also directly interact with a keystore provider in order to encrypt CEKs for storage in SQL Server and perform tasks beyond accessing encrypted columns with ODBC; for more information, see [Custom Keystore Providers](../../../connect/odbc/custom-keystore-providers.md).
+The ODBC Driver 13.1 for SQL Server also supports custom third-party keystore providers using the CEKeystoreProvider interface. This allows an application to load, query, and configure keystore providers so that they can be used by the driver to access encrypted columns. Applications may also directly interact with a keystore provider in order to encrypt CEKs for storage in SQL Server and perform tasks beyond accessing encrypted columns with ODBC; for more information, see [Custom Keystore Providers](../../connect/odbc/custom-keystore-providers.md).
 
 From the ODBC client perspective, CEKeystoreProvider interactions occur using Set and Get operations on two connection attributes. The two connection attributes are:
 
@@ -472,7 +472,7 @@ NOTE: It is up to the provider to decide how to treat the CEKeystoreData. Two po
 1. CEKeystoreData is connection specific.
 2. CEKeystoreData is global.
 
-Because the caller of `SQLSetConnectAttr` provides a valid connection handle, the provider can use that information and associate the CEKeystoreData with the connection context. On the other hand, the provider can ignore it and make CEKeystoreData shared. See the Context Management section of [Custom Keystore Providers](../../../connect/odbc/linux/custom-keystore-providers.md) for more information.
+Because the caller of `SQLSetConnectAttr` provides a valid connection handle, the provider can use that information and associate the CEKeystoreData with the connection context. On the other hand, the provider can ignore it and make CEKeystoreData shared. See the Context Management section of [Custom Keystore Providers](../../connect/odbc/linux/custom-keystore-providers.md) for more information.
 
 **Getting data in a CEKeystoreProvider via ODBC**
 
@@ -489,11 +489,11 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`BufferLength`|[Input] SQL_IS_POINTER constant|
 |`StringLengthPtr`|[Output] A pointer to a buffer in which to return BufferLength. If *ValuePtr is a null pointer, no length is returned.|
 
-The caller must ensure that a buffer of sufficient length following the CEKEYSTOREDATA structure is allocated for the provider to write into. Upon return, its dataSize field is updated with the actual length of data read from the provider. Additional detailed error information may be obtained via SQLGetDiacRec. [See SQLGetDiagRec for more information](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx)
+The caller must ensure that a buffer of sufficient length following the CEKEYSTOREDATA structure is allocated for the provider to write into. Upon return, its dataSize field is updated with the actual length of data read from the provider. Additional detailed error information may be obtained via SQLGetDiacRec. See [SQLGetDiagRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx) for more information.
 
 The interface places no additional requirements on the format of data transferred between an application and a CEKeystoreProvider. Each provider is expected to define its own protocol per its needs.
 
-For an example of implementing your own keystore provider, see [Custom Keystore Providers](../../../connect/odbc/linux/custom-keystore-providers.md)
+For an example of implementing your own keystore provider, see [Custom Keystore Providers](../../connect/odbc/linux/custom-keystore-providers.md)
 
 ## Limitations of ODBC when using Always Encrypted
 
@@ -538,3 +538,4 @@ While the ODBC driver will allow the use of [asynchronous operations](https://ms
 
 - [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx)
 - [Always Encrypted blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+

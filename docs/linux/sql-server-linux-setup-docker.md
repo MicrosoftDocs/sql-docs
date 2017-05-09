@@ -91,7 +91,7 @@ This topic explains how to pull and run the [mssql-server-linux container image]
 
 4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting](#troubleshooting) section.
 
-> [!WARNING>
+> [!WARNING]
 > After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, consider changing your SA password. The following example runs **sqlcmd** in the container to change the password to a new value:
 >
 > ```bash

@@ -35,7 +35,7 @@ The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnover
 -   [Running Stored Procedures](http://msdn.microsoft.com/library/ms131440.aspx)
 -   [Sparse Columns Support (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL encryption](http://msdn.microsoft.com/library/ms131691.aspx)
--   [Table Valued Parameters](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
+-   [Table Valued Parameters](https://docs.microsoft.com/en-us/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 and UTF-16 for command and data API](http://msdn.microsoft.com/library/ff878241.aspx)
 -   [Using Catalog Functions](http://msdn.microsoft.com/library/ms131490.aspx)  
 
@@ -45,7 +45,7 @@ The following features have not been verified to work correctly in this release 
 
 -   Failover Cluster Connection
 -   [Transparent Network IP Resolution](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/using-transparent-network-ip-resolution)
--   [Advanced Driver Tracing](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
+-   [Advanced Driver Tracing](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 The following features are not available in this release of the ODBC driver on macOS and Linux: 
 
@@ -88,5 +88,7 @@ When UTF-8 multibyte characters or UTF-16 surrogates are split across SQLPutData
 
 ## See Also  
 [Frequently Asked Questions](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+
 [Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+
 [Release Notes](../../../connect/odbc/linux-mac/release-notes.md)

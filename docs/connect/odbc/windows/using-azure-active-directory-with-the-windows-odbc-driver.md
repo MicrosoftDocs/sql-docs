@@ -143,4 +143,4 @@ The following sample shows the code required to connect to SQL Server using Azur
 
 ## See Also
 [Token-based authentication support for Azure SQL DB using Azure AD auth](https://blogs.msdn.microsoft.com/sqlsecurity/2016/02/09/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/appliesto-ss2016-asdb-xxxx-xxx_md.md)]
+

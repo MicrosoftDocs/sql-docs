@@ -87,10 +87,7 @@ void func1() {
    SQLHSTMT hstmt;  
    SQLRETURN retcode;  
    SQLSMALLINT i = 21;  
-  
-   SQLCHAR * OutConnStr = (SQLCHAR * )malloc(255);  
-   SQLSMALLINT * OutConnStrLen = (SQLSMALLINT *)malloc(255);  
-  
+
    // Allocate environment handle  
    retcode = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
   
@@ -117,17 +114,17 @@ void func1() {
                // Process data  
                if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {  
                   SQLFreeHandle(SQL_HANDLE_STMT, hstmt);  
-                  }  
-  
-               SQLDisconnect(hdbc);  
                }  
   
-            SQLFreeHandle(SQL_HANDLE_DBC, hdbc);  
+               SQLDisconnect(hdbc);  
             }  
+  
+            SQLFreeHandle(SQL_HANDLE_DBC, hdbc);  
          }  
-      SQLFreeHandle(SQL_HANDLE_ENV, henv);  
       }  
+      SQLFreeHandle(SQL_HANDLE_ENV, henv);  
    }  
+}
   
 void func2() {  
    SQLHENV henv;  
@@ -138,12 +135,11 @@ void func2() {
   
 #define MAXBUFLEN 255  
   
-   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 11 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";  
-   SQLCHAR ConnStrOut[MAXBUFLEN];  
-  
-   // SQLSMALLINT OutConnStrLen;  
+   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 13 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
+   SQLCHAR ConnStrOut[MAXBUFLEN];
+
    SQLSMALLINT cbConnStrOut = 0;  
-  
+ 
    // Allocate environment handle  
    retcode = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
   
@@ -161,12 +157,12 @@ void func2() {
             // SQLSetConnectAttr(hdbc1, SQL_LOGIN_TIMEOUT, (SQLPOINTER)5, 0);  
   
             retcode = SQLDriverConnect(hdbc1, NULL, ConnStrIn, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
-            }  
+         }  
          retcode = SQLGetConnectAttr(hdbc1, SQL_COPT_SS_CONNECT_RETRY_COUNT, &i, SQL_IS_INTEGER, NULL);  
          retcode = SQLGetConnectAttr(hdbc1, SQL_COPT_SS_CONNECT_RETRY_INTERVAL, &i, SQL_IS_INTEGER, NULL);  
-         }  
       }  
    }  
+}  
   
 int main() {  
    func1();  

@@ -6,7 +6,7 @@ description: Download and run the Docker image for SQL Server 2017.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/08/2017
+ms.date: 05/09/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -89,13 +89,14 @@ This topic explains how to pull and run the [mssql-server-linux container image]
 
     ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column.
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting](#troubleshooting) section.
 
-    > [!TIP]
-    > If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting](#troubleshooting) section.
-
-
-After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, consider changing your SA password with the `ALTER LOGIN SA WITH Password="<YourNewStrong!Passw0rd>"` Transact-SQL statement.
+> [!WARNING>
+> After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, consider changing your SA password. The following example runs **sqlcmd** in the container to change the password to a new value:
+>
+> ```bash
+> docker exec -it <Container ID> /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<Old Password>' -Q 'ALTER LOGIN SA WITH PASSWORD="<New Password>";'
+> ```
 
 ## Connect and query
 

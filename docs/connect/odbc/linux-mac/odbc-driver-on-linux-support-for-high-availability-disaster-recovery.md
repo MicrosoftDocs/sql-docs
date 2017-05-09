@@ -117,5 +117,7 @@ An ODBC driver on Linux or macOS application that uses [!INCLUDE[ssHADR](../../.
 ## See Also  
 
 [Connection String Keywords and Data Source Names (DSNs)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
+
 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)
+
 [Release Notes](../../../connect/odbc/linux-mac/release-notes.md)  

@@ -3,34 +3,12 @@
 ## [What's New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
-## [Integration Services (SSIS) Development and Management Tools](integration-services-ssis-development-and-management-tools.md)
-## [Integration Services (SSIS) Projects and Solutions](integration-services-ssis-projects-and-solutions.md)
+# [Install or upgrade](install-windows/index.md)
 
-# [Install](install-windows/index.md)
+# [Development and management Tools](integration-services-ssis-development-and-management-tools.md)
+# [Projects and solutions](integration-services-ssis-projects-and-solutions.md)
 
-# [Catalog and Server](service/integration-services-ssis-server-and-catalog.md)  
-## [SSIS Catalog](service/ssis-catalog.md)  
-## [Integration Services (SSIS) Catalog Transact-SQL Reference](service/integration-services-ssis-catalog-transact-sql-reference.md)  
-## [View the List of Packages on the Integration Services Server](service/view-the-list-of-packages-on-the-integration-services-server.md)  
-## [Project Properties Dialog Box](service/project-properties-dialog-box.md)  
-## [Project Versions Dialog Box](service/project-versions-dialog-box.md)  
-## [Browse All Principals Dialog Box](service/browse-all-principals-dialog-box.md)  
-## [Package Properties Dialog Box](service/package-properties-dialog-box.md)  
-## [Validate Dialog Box](service/validate-dialog-box.md)  
-## [Configure Dialog Box](service/configure-dialog-box.md)  
-## [Set Parameter Value Dialog Box](service/set-parameter-value-dialog-box.md)  
-## [Folder Properties Dialog Box](service/folder-properties-dialog-box.md)  
-
-# [Change data capture](change-data-capture/index.md)
-# [Connections](connection-manager/index.md)
-# [Control flow](control-flow/index.md)
-# [Data flow](data-flow/index.md)
-
-# [Event Handlers](integration-services-ssis-event-handlers.md)
-# [Expressions](expressions/index.md)
-# [Import and export](import-export-data/index.md)
-
-# [User Interface](integration-services-user-interface.md)
+# [User interface](integration-services-user-interface.md)
 ## [SSIS Designer](ssis-designer.md)
 ## [Advanced Editor](advanced-editor.md)
 ## [Group or Ungroup Components](group-or-ungroup-components.md)
@@ -53,8 +31,45 @@
 ## [Package Upgrade Wizard F1 Help](ssis-package-upgrade-wizard-f1-help.md)
 ## [Package and Project Parameters](integration-services-ssis-package-and-project-parameters.md)
 
-# [Performance](performance/index.md)
+# [Connections](connection-manager/index.md)
+# [Control flow](control-flow/index.md)
+# [Data flow](data-flow/index.md)
+
+# [Variables](integration-services-ssis-variables.md)
+## [Variables Window](variables-window.md)
+## [System Variables](system-variables.md)
+# [Expressions](expressions/index.md)
+# [Event Handlers](integration-services-ssis-event-handlers.md)
 # [Queries](integration-services-ssis-queries.md)
+# [Transactions](integration-services-transactions.md)
+
+# [Catalog and Server](service/integration-services-ssis-server-and-catalog.md)  
+## [SSIS Catalog](service/ssis-catalog.md)  
+## [Integration Services (SSIS) Catalog Transact-SQL Reference](service/integration-services-ssis-catalog-transact-sql-reference.md)  
+## [View the List of Packages on the Integration Services Server](service/view-the-list-of-packages-on-the-integration-services-server.md)  
+## [Project Properties Dialog Box](service/project-properties-dialog-box.md)  
+## [Project Versions Dialog Box](service/project-versions-dialog-box.md)  
+## [Browse All Principals Dialog Box](service/browse-all-principals-dialog-box.md)  
+## [Package Properties Dialog Box](service/package-properties-dialog-box.md)  
+## [Validate Dialog Box](service/validate-dialog-box.md)  
+## [Configure Dialog Box](service/configure-dialog-box.md)  
+## [Set Parameter Value Dialog Box](service/set-parameter-value-dialog-box.md)  
+## [Folder Properties Dialog Box](service/folder-properties-dialog-box.md)  
+
+# [Scale Out](integration-services-ssis-scale-out.md)
+
+# [Service (legacy)](service/index.md)
+
+# [Security](security/index.md)
+# [Performance](performance/index.md)
+# [Troubleshooting](troubleshooting/index.md)
+
+# [System views](system-views/index.md)
+# [System stored procedures](system-stored-procedures/index.md)
+# [System function - dm_execution_performance_counters](functions-dm-execution-performance-counters.md)
+
+# [Errors and Events Reference](errors-and-events-reference-integration-services.md)
+## [Integration Services Error and Message Reference](integration-services-error-and-message-reference.md)
 
 # Scripting and programming
 ## [Integration Services Programming Overview](integration-services-programming-overview.md)
@@ -64,43 +79,25 @@
 ## [Extend packages with custom objects](extending-packages-custom-objects/index.md)
 ## [Build packages programmatically](building-packages-programmatically/index.md)
 ## [Run and manage packages programmatically](run-manage-packages-programmatically/index.md)
-
-# [Security](security/index.md)
-
-# [Service (legacy)](service/index.md)
-
-# [System function - dm_execution_performance_counters](functions-dm-execution-performance-counters.md)
-
-# [System stored procedures](system-stored-procedures/index.md)
-
-# [System views](system-views/index.md)
-
-# [Transactions](integration-services-transactions.md)
-
-# [Troubleshooting](troubleshooting/index.md)
-
-# [Variables](integration-services-ssis-variables.md)
-## [Variables Window](variables-window.md)
-## [System Variables](system-variables.md)
-
-# [Scale Out](integration-services-ssis-scale-out.md)
+# [Integration Services Language Reference](integration-services-language-reference.md)
 
 # [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)
 
 # [Hadoop and HDFS Support in Integration Services (SSIS)](hadoop-and-hdfs-support-in-integration-services-ssis.md)
+
+# [Import and export data](import-export-data/index.md)
+
+# [Change data capture](change-data-capture/index.md)
 
 # [Microsoft Connector for SAP BW](microsoft-connector-for-sap-bw.md)
 ## [Installing the Microsoft Connector for SAP BW](installing-the-microsoft-connector-for-sap-bw.md)
 ## [Microsoft Connector for SAP BW Components](microsoft-connector-for-sap-bw-components.md)
 ## [Microsoft Connector for SAP BW F1 Help](microsoft-connector-for-sap-bw-f1-help.md)
 ## [Certification by SAP](certification-by-sap.md)
-# [Errors and Events Reference](errors-and-events-reference-integration-services.md)
-## [Integration Services Error and Message Reference](integration-services-error-and-message-reference.md)
-# [Integration Services Language Reference](integration-services-language-reference.md)
  
 # [Tutorials](integration-services-tutorials.md)
 
-## [Create an ETL Package](ssis-how-to-create-an-etl-package.md)
+## [Create a Package](ssis-how-to-create-an-etl-package.md)
 
 ### [Lesson 1: Create a Project and Basic Package](lesson-1-create-a-project-and-basic-package-with-ssis.md)
 #### [Lesson 1-1 - Creating a New Integration Services Project](lesson-1-1-creating-a-new-integration-services-project.md)

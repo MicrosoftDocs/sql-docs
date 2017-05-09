@@ -225,7 +225,7 @@ docker ps
 To start a bash terminal in the container run:
 
 ```bash
-docker exec -ti <container ID> /bin/bash
+docker exec -ti <Container ID> /bin/bash
 ```
 
 Now you can run commands as though you are running them at the terminal inside the container. When finished, type `exit`. This exits in the interactive command session, but your container continues to run.
@@ -235,7 +235,7 @@ Now you can run commands as though you are running them at the terminal inside t
 To copy a file out of the container, use the following command:
 
 ```bash
-docker cp <container ID>:<container path> <host path>
+docker cp <Container ID>:<Container path> <host path>
 ```
 
 For example:
@@ -247,7 +247,7 @@ docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
 To copy a file into the container, use the following command:
 
 ```bash
-docker cp <host path> <container ID>:<container path>
+docker cp <Host path> <Container ID>:<Container path>
 ```
 
 For example:
@@ -323,7 +323,7 @@ If the SQL Server container fails to run, try the following tests:
 
 If you can't connect to the SQL Server instance running in your container, try the following tests:
 
-- Make sure that you're SQL Server container is running by looking at the **STATUS** column of the `docker ps -a` output.
+- Make sure that your SQL Server container is running by looking at the **STATUS** column of the `docker ps -a` output. If not, use `docker start <Container ID>` to start it.
 
 - If you mapped to a non-default host port (not 1433), make sure you are specifying the port in your connection string. You can see your port mapping in the **PORTS** column of the `docker ps -a` output. For example, the following command connects sqlcmd to a container listening on port 1401:
 

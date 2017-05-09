@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Using Always Encrypted with the ODBC Driver 13.1 for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -322,7 +322,7 @@ To reduce the number of calls to a column master key store to decrypt column enc
 
 ## Working with Column Master Key Stores
 
-To encrypt a parameter value or to decrypt data in query results, the driver needs to obtain a column encryption key that is configured for the target column. Column encryption keys are stored in encrypted form in the database metadata. Each column encryption key has a corresponding column master key that was used to encrypt it. The database metadata does not store the column master keys; it only contains the information about a keystore containing a particular column master key, and the location of the key in the keystore.
+To encrypt a parameter value or to decrypt data in query results, the driver needs to obtain a column encryption key that is configured for the target column. Column encryption keys are stored in encrypted form in the database metadata. Each column encryption key has a corresponding column master key that was used to encrypt it. The database metadata does not store the column master keys; it only contains the information about a keystore containing a particular column master key, and the location of the key in the keystore.
 
 To obtain the plaintext value of a column encryption key, the driver first obtains the metadata about both the column encryption key and its corresponding column master key, and then it uses the information in the metadata to contact the keystore containing the column master key and request it to decrypt the encrypted column encryption key. The driver communicates with a keystore using a keystore provider.
 

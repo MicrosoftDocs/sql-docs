@@ -70,6 +70,8 @@ The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame
   
 ## See Also
 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
+
 [Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)  
+
 [Release Notes](../../../connect/odbc/linux-mac/release-notes.md)  
 

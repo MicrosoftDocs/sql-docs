@@ -26,7 +26,7 @@ ms.custom: H1Hack27Feb2017
 ---
 # Choose the right tool to manage SQL Server on Linux
 
-There are several ways to manage SQL Server 2017 CTP 2.0 on Linux. The following section provide a quick overview of different management tools and techniques with pointers to more resources.
+There are several ways to manage SQL Server 2017 CTP 2.1 on Linux. The following section provide a quick overview of different management tools and techniques with pointers to more resources.
 
 ## mssql-conf 
 The **mssql-conf** tool configures SQL Server on Linux. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md).

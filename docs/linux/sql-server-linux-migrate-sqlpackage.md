@@ -25,7 +25,7 @@ ms.assetid: e239793b-e630-4110-81cc-19b1ef8bb8b0
 ---
 # Export and import a database on Linux with sqlpackage
 
-This topic shows how to the **sqlpackage** tool to export and import databases to SQL Server 2017 CTP 2.0 on Linux. 
+This topic shows how to the **sqlpackage** tool to export and import databases to SQL Server 2017 CTP 2.1 on Linux. 
 
 > [!NOTE]
 > If you are migrating a database from one SQL Server instance to another, the recommendation is to use [Backup and restore](sql-server-linux-migrate-restore-database.md).

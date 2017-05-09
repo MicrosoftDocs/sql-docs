@@ -6,7 +6,7 @@ description: This topic describes how to install SQL Server Full-Text Search on 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 05/15/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -53,6 +53,8 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
+For offline installation of the Full-Text Search package, use the same steps for offline installation in the topic [Install SQL Server on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md#offline).
+
 ## <a name="ubuntu">Install on Ubuntu</a>
 
 Use the following commands to install the **mssql-server-fts** on Ubuntu. 
@@ -69,6 +71,8 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
+For offline installation of the Full-Text Search package, use the same steps for offline installation in the topic [Install SQL Server on Ubuntu](sql-server-linux-setup-ubuntu.md#offline).
+
 ## <a name="SLES">Install on SLES</a>
 
 Use the following commands to install the **mssql-server-fts** on SUSE Linux Enterprise Server. 
@@ -83,6 +87,9 @@ If you already have **mssql-server-fts** installed, you can update to the latest
 sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
+
+For offline installation of the Full-Text Search package, use the same steps for offline installation in the topic [Install SQL Server on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md#offline).
+
 ## Supported languages
 
 Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms142509.aspx) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server 2017 CTP 2.1:

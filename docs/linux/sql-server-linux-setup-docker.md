@@ -123,7 +123,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P '<YourPassword>'
 
 ### Tools inside the container
 
-Starting with SQL Server 2017 CTP 2.1, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the container image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
+Starting with SQL Server 2017 CTP 2.0, the [SQL Server command-line tools](sql-server-linux-setup-tools.md) are included in the container image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
 
 1. Use the `docker exec -it` command to start an interactive bash shell inside your running container. In the following example `e69e056c702d` is the container ID.
 

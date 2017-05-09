@@ -1323,12 +1323,12 @@
         {
             "source_path": "docs/analysis-services/troubleshoot-process-data-ssas-tabular.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
-            "redirect_document_id": true
+            "redirect_document_id": false
         }
     ]
 }

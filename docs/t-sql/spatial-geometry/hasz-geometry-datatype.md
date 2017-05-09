@@ -24,10 +24,6 @@ manager: "jhubbard"
 
   Returns 1 (true) if a spatial object contains at least one Z value; otherwise, it returns 0 (false).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
 ## Syntax  
   
 ```  

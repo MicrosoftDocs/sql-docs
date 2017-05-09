@@ -26,6 +26,7 @@ The following are answers to questions about the ODBC Driver for [!INCLUDE[ssNoV
 You should be able to compile and run the ODBC applications that you have been compiling and running on Linux or macOS using other drivers. 
   
 **Which features of [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] does this version of the driver support?**
+
 The ODBC driver on Linux and macOS supports all server features in [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] except LocalDB. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supported features, see [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
 **Does the driver support Kerberos authentication?**  
@@ -35,9 +36,11 @@ Yes. If you have an existing Kerberos environment setup, you should be able to c
 UTF-8 for SQL_CHAR data and UTF-16 for SQL_WCHAR data.  
 
 **Are there ODBC samples that I can download and run with the driver to experiment with or evaluate it?**
+
 See [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) for a sample. This is also applicable to the macOS ODBC driver. 
 
 **Is the ODBC driver on Linux or macOS open source?**
+
 No, the ODBC drivers on Linux and macOS are not an open source product.  
 
 ## See Also

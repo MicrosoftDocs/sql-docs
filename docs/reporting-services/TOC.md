@@ -2,7 +2,6 @@
 ## [What's new in Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [Reporting Services Concepts (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services Features and Tasks](reporting-services-features-and-tasks-ssrs.md)   
-## [Release notes](reporting-services-release-notes.md)  
 ## [Backward Compatibility](reporting-services-backward-compatibility.md)  
 ### [Deprecated features](deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 ### [Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
@@ -29,9 +28,7 @@
 # [Report Server](report-server/index.md)
 # [Report Server (SharePoint)](report-server-sharepoint/index.md)
 
-
 # [Pin to Power BI](pin-reporting-services-items-to-power-bi-dashboards.md)  
-# [Power BI reports](power-bi-reports-in-reporting-services.md)  
 # [Report Builder](report-builder/index.md)
 # [Report Design](report-design/index.md)
 # [Working with reports](reports/index.md)

@@ -25,8 +25,6 @@ manager: "erikre"
   
  All models are deployed as databases that run on an Analysis Services instance, accessed by client tools using a single set of data providers, and visualized in interactive and static reports via Excel, Reporting Services, Power BI, and BI tools from other vendors.  
   
- Because of differences in memory architecture and metadata, none of the model types are interchangeable, although you can upgrade very easily from a Tabular 1050-1103 model to Tabular 1200, and you can import Power Pivot to create an entirely new model as Tabular project.  
-  
  Tabular and Multidimensional solutions are built using [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] and are intended for corporate BI projects that run on a standalone [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance on-premises or an [Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) server in the cloud. Both solutions yield high performance analytical databases that integrate easily with BI clients. Yet each solution differs in how they are created, used, and deployed. The bulk of this topic compares these two types so that you can identify the right approach for you.  
   
  For new development projects, we generally recommend Tabular. It will be faster to design, test, and deploy; and it will work better with the latest self-service BI applications and cloud services from Microsoft.  
@@ -35,7 +33,7 @@ manager: "erikre"
  New to Analysis Services? The following table enumerates the different models, summarizes the approach, and identifies the initial release vehicle.  
  
  > [!NOTE]  
->  Currently, **Azure Analysis Services** supports tabular models at the 1200 compatibility level. However, not all tabular modeling functionality described in this topic is supported in Azure Analysis Services. While creating and deploying tabular models to Azure Analysis Services is much the same as it is for on-premises SQL Server Analysis Services deployments, it' important to understand the differences. To learn more , see [What is Azure Analysis Services?](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview)
+>  Currently, **Azure Analysis Services** supports tabular models at the 1200 and higher compatibility levels. However, not all tabular modeling functionality described in this topic is supported in Azure Analysis Services. While creating and deploying tabular models to Azure Analysis Services is much the same as it is for on-premises SQL Server Analysis Services deployments, it' important to understand the differences. To learn more , see [What is Azure Analysis Services?](https://docs.microsoft.com/azure/analysis-services/analysis-services-overview)
   
 ||||  
 |-|-|-|  
@@ -67,7 +65,7 @@ manager: "erikre"
 |Hierarchies|Yes|Yes|Yes|  
 |KPIs|Yes|Yes|Yes|  
 |Linked objects|Yes|Yes (linked tables)|No|  
-|Many-to-many relationships|Yes|No (but there is [bi-directional cross filters](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) at 1200 compatibility level)|No|  
+|Many-to-many relationships|Yes|No (but there is [bi-directional cross filters](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) at 1200 and higher compatibility levels)|No|  
 |Named sets|Yes|No|No|  
 |Parent-child Hierarchies|Yes|Yes (via DAX)|Yes (via DAX)|  
 |Partitions|Yes|Yes|Yes|  
@@ -121,7 +119,7 @@ manager: "erikre"
   
 -   Power Pivot workbooks use DAX for calculations, and DAX or MDX for queries.  
   
--   Tabular model databases support DAX calculations, DAX queries, and MDX queries. This is true at all compatibilities levels. Script languages are ASSL (over XMLA) for compatibility levels 1050-1103, and TMSL (over XMLA) for compatibility level 1200.  
+-   Tabular model databases support DAX calculations, DAX queries, and MDX queries. This is true at all compatibilities levels. Script languages are ASSL (over XMLA) for compatibility levels 1050-1103, and TMSL (over XMLA) for compatibility level 1200 and higher.  
   
 -   Multidimensional model databases support MDX calculations, MDX queries, DAX queries, and ASSL. 
   
@@ -188,7 +186,7 @@ manager: "erikre"
   
  Tabular solutions only support one model.bim file per solution, which means that all work must be done in a single file. Development teams that are accustomed to working with multiple projects in a single solution might need to revise how they work when building a shared tabular solution.  
   
- Tabular solutions at compatibility level 1200 map to a new object model that uses tabular metadata. Older Tabular and all Multidimensional models use multidimensional metadata to as descriptors. We recommend upgrading older Tabular models to the 1200 compatibility level so that you can use the tabular namespaces in AMO for custom code and script.  
+ Tabular solutions at compatibility level 1200 and higher map to a new object model that uses tabular metadata. Older Tabular and all Multidimensional models use multidimensional metadata to as descriptors. We recommend upgrading older Tabular models to the 1200 or higher compatibility level so that you can use the tabular namespaces in AMO for custom code and script.  
   
  See [Analysis Services Developer Documentation](https://msdn.microsoft.com/library/bb500153.aspx) for more information.  
   

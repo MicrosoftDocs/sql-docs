@@ -24,6 +24,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create Linked Servers (SQL Server Database Engine)
+
+ > For content related to previous versions of SQL Server, see [Create Linked Servers (SQL Server Database Engine)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx).
+
   This topic shows how to create a linked server and access data from another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. By creating a linked server,  you can work with data from multiple sources. The linked server does not have to be another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but that is a common scenario.  
   
 ##  <a name="Background"></a> Background  

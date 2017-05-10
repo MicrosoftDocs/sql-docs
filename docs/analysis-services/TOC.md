@@ -96,7 +96,7 @@
 
 # Developer
 ## Tabular models
-### [Tabular Model Programming for Compatibility Level 1200](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+### [Tabular Model Programming for Compatibility Level 1200 and higher](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
 #### [Tabular Model Scripting Language (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
 #### [Tabular Model Scripting Language (TMSL) commands](tabular-models-scripting-language-commands/index.md)
 #### [Tabular Model Scripting Language (TMSL) objects](tabular-models-scripting-language-objects/index.md)

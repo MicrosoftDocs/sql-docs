@@ -16,7 +16,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using Azure Active Directory with the ODBC Driver
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## Purpose
 

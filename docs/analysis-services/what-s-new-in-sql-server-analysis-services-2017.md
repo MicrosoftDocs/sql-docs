@@ -18,7 +18,7 @@ manager: "erikre"
 # What&#39;s new in SQL Server Analysis Services 2017
 [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-## SQL Server Analysis Services on Windows CTP 2.0
+## SQL Server Analysis Services CTP 2.0
 This release see many new enhancements for tabular model, including:
 
 * Object-level security to secure the metadata of tabular models.

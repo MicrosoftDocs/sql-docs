@@ -35,7 +35,7 @@ For this release of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] O
 |`UID`|`WSID`|`ColumnEncryption`|`TransparentNetworkIPResolution`||  
 
 > [!IMPORTANT]  
-> When connecting to a database that uses database mirroring (has a failover partner), do not specify the database name in the connection string. Instead, send a **use***database_name* command to connect to the database before executing your queries.  
+> When connecting to a database that uses database mirroring (has a failover partner), do not specify the database name in the connection string. Instead, send a **use** *database_name* command to connect to the database before executing your queries.  
   
 For more information about these keywords, see the ODBC section of [Using Connection String Keywords with SQL Server Native Client](http://go.microsoft.com/fwlink/?LinkID=126696).  
   
@@ -45,7 +45,7 @@ The value passed to the **Driver** keyword can be one of the following:
 
 -   The path to the driver library, which was specified in the template .ini file used to install the driver.  
 
-To create a DSN, create (if necessary) and edit the file **~/.odbc.ini** (`odbc.ini` in your home directory) for a User DSN only accessible to the current user, or `/etc/odbc.ini` for a System DSN (administrative privileges required.) The following is a sample file that shows the minimal required entries for a DSN:  
+To create a DSN, create (if necessary) and edit the file **~/.odbc.ini** (`.odbc.ini` in your home directory) for a User DSN only accessible to the current user, or `/etc/odbc.ini` for a System DSN (administrative privileges required.) The following is a sample file that shows the minimal required entries for a DSN:  
 
 ```  
 [MSSQLTest]  
@@ -58,9 +58,9 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-You can optionally specify the protocol and port to connect to the server. For example, **Server = tcp:***servername***,12345**. Note that the only protocol supported by the Linux and macOS drivers is `tcp`.
+You can optionally specify the protocol and port to connect to the server. For example, **Server=tcp:***servername***,12345**. Note that the only protocol supported by the Linux and macOS drivers is `tcp`.
 
-To connect to a named instance on a static port, use **Server =** *servername***,***port_number*. Connecting to a dynamic port is not supported.  
+To connect to a named instance on a static port, use <b>Server=</b>*servername*,**port_number**. Connecting to a dynamic port is not supported.  
 
 Alternatively, you can add the DSN information to a template file, and execute the following command to add it to `~/.odbc.ini` :
  * **odbcinst -i -s -f** *template_file*  

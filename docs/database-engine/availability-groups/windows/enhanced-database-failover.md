@@ -1,5 +1,4 @@
 ---
-
 title: "Add Enhanced Database Failover to an Availability Group (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"

@@ -20,8 +20,6 @@ manager: "erikre"
   Deletes a database or an object in the current database.   
 It deletes the specified object and all child objects and collections. If the object does not exist, the command raises an error.  
   
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
-  
 ## Request  
  The object being deleted is specified by using the object path. For example, deleting a partition requires that you specify the table and database objects that precede it.  
   

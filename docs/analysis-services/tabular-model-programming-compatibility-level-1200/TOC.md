@@ -6,4 +6,4 @@
 # [Install, distribute, and reference the Tabular Object Model](install-distribute-and-reference-the-tabular-object-model.md)
 # [Introduction to the Tabular Object Model (TOM) in Analysis Services AMO](introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)
 # [List existing databases on a Tabular server (Analysis Services AMO-TOM)](list-existing-databases-on-a-tabular-server-analysis-services-amo-tom.md)
-# [Tabular Model Programming for Compatibility Level 1200](tabular-model-programming-for-compatibility-level-1200.md)
+# [Tabular Model Programming for Compatibility Level 1200 or higher](tabular-model-programming-for-compatibility-level-1200.md)

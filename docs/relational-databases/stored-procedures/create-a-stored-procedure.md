@@ -20,6 +20,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create a Stored Procedure
+
+ > For content related to previous versions of SQL Server, see [Create a Stored Procedure](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx).
+
   This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE statement.  
   
 ##  <a name="Top"></a>   

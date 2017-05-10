@@ -19,7 +19,6 @@ manager: "erikre"
 # Attach command (TMSL)
   Attaches an Analysis Services file to a server.  
   
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
   
 ## Request  
   

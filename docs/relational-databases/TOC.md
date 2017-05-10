@@ -3,15 +3,18 @@
 ## [Technical Reference](technical-reference-database-engine.md)  
 ## [Feature Reference](feature-reference-database-engine.md)   
 
-# [Architecture guides](sql-server-guides.md)  
-## [Index design](sql-server-index-design-guide.md)  
-## [Transaction log](sql-server-transaction-log-architecture-and-management-guide.md)  
-## [Memory management](memory-management-architecture-guide.md)  
+# [SQL Server Guides](sql-server-guides.md)
+## Always On Availability Groups Troubleshooting and Monitoring Guide
+## [Index design](sql-server-index-design-guide.md)
+## [Memory Management Architecture](memory-management-architecture-guide.md)
 ### [Reading pages](reading-pages.md)  
 ### [Writing pages](writing-pages.md)
-## [Pages and extents](pages-and-extents-architecture-guide.md)  
-## [Query processing](query-processing-architecture-guide.md)  
-## [Thread and task](thread-and-task-architecture-guide.md) 
+## [Pages and Extents Architecture](pages-and-extents-architecture-guide.md)
+## [Post-migration Validation and Optimization](post-migration-validation-and-optimization-guide.md)
+## [Query Processing Architecture](query-processing-architecture-guide.md)
+## [Thread and Task Architecture](thread-and-task-architecture-guide.md)
+## [Transaction Log Architecture and Management](sql-server-transaction-log-architecture-and-management-guide.md)
+## Transaction Locking and Row Versioning Guide
 
 # [Backup and restore](backup-restore/index.md)
 # [Blob](blob/index.md)

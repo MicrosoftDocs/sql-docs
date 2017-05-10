@@ -1,7 +1,7 @@
 ---
 title: "HasM (geometry DataType) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,15 +24,11 @@ manager: "jhubbard"
 
   Returns 1 (true) if a spatial object contains at least one M value; otherwise, it returns 0 (false).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
 ## Syntax  
   
 ```  
   
-.HasM()  
+.HasM  
 ```  
   
 ## Return Types  

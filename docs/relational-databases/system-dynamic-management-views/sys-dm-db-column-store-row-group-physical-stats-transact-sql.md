@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/27/2016"
+ms.date: "5/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -49,7 +49,9 @@ manager: "jhubbard"
 |**trim_reason**|**tinyint**|Reason that triggered the COMPRESSED row group to have less than the maximum number of rows.<br /><br /> 0 – UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1 - NO_TRIM<br /><br /> 2 - BULKLOAD<br /><br /> 3 – REORG<br /><br /> 4 – DICTIONARY_SIZE<br /><br /> 5 – MEMORY_LIMITATION<br /><br /> 6 – RESIDUAL_ROW_GROUP<br /><br /> 7  -  STATS_MISMATCH<br /><br /> 8 - SPILLOVER|  
 |**trim_reason_desc**|**nvarchar(60)**|Description of *trim_reason*.<br /><br /> 0 – UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION: Occurred when upgrading from the previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 - NO_TRIM: The row group was not trimmed. The row group was compressed with the maximum of 1,048,476 rows.  The number of rows could be less if a subsset of rows was deleted after delta rowgroup was closed<br /><br /> 2 – BULKLOAD: The bulk load batch size limited the number of rows.<br /><br /> 3 – REORG:  Forced compression as part of REORG command.<br /><br /> 4 – DICTIONARY_SIZE: Dictionary size grew too big to compress all of the rows together.<br /><br /> 5 – MEMORY_LIMITATION: Not enough available memory to compress all the rows together.<br /><br /> 6 – RESIDUAL_ROW_GROUP:  Closed as part of last row group with rows < 1 million during index build operation<br /><br /> STATS_MISMATCH: Only for columnstore on in-memory table. If stats incorrectly indicated >= 1 million qualified rows in the tail but we found fewer, the compressed rowgroup will have < 1 million rows<br /><br /> SPILLOVER: Only for columnstore on in-memory table. If tail has > 1 million qualified rows, the last batch remaining rows are compressed if the count is between 100k and 1 million|  
 |**has_vertipaq_optimization**|bit|Vertipaq optimization improves columnstore compression by rearranging the order of the rows in the rowgroup to achieve higher compression. This optimization occurs automatically in most cases. There are two cases Vertipaq optimization is not used:<br/>  a. when a delta rowgroup moves into the columnstore and there are one or more nonclustered indexes on the columnstore index - in this case Vertipaq optimization is skipped to minimizes changes to the mapping index;<br/> b. for columnstore indexes on memory-optimized tables. <br /><br /> 0 = No<br /><br /> 1 = Yes|  
-|**creation_time**|datetime2|Clock time for when this rowgroup was created.<br /><br /> NULL – for a columnstore index on an in-memory table.|  
+|**generation**|bigint|Row group generation associated with this row group.|  
+|**created_time**|datetime2|Clock time for when this rowgroup was created.<br /><br /> NULL – for a columnstore index on an in-memory table.|  
+|**closed_time**|datetime2|Clock time for when this rowgroup was closed.<br /><br /> NULL – for a columnstore index on an in-memory table.|  
   
 ## Results  
  Returns one row for each rowgroup in the current database.  
@@ -68,7 +70,7 @@ manager: "jhubbard"
   
  This example joins **sys.dm_db_column_store_row_group_physical_stats** with other system tables and then calculates the `Fragmentation` column as an estimate of the efficiency of each row group in the current database.     To find information on a single table remove the comment hyphens in front of the **WHERE** clause and provide a table name.  
   
-```  
+```tsql  
 SELECT i.object_id,   
     object_name(i.object_id) AS TableName,   
     i.name AS IndexName,   
@@ -94,6 +96,3 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
-  
-
-

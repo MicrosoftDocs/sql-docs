@@ -2,7 +2,7 @@
 title: "ALTER TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
+ms.date: "05/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -37,9 +37,9 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
-      -- SQL Server Syntax  
-Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
+-- SQL Server Syntax  
+-- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
+
 ALTER TRIGGER schema_name.trigger_name   
 ON  ( table | view )   
 [ WITH <dml_trigger_option> [ ,...n ] ]  
@@ -56,7 +56,9 @@ AS { sql_statement [ ; ] [ ...n ] | EXTERNAL NAME <method specifier>
 <method_specifier> ::=  
     assembly_name.class_name.method_name  
   
-Trigger on an INSERT, UPDATE, or DELETE statement to a table (DML Trigger on memory-optimized tables)  
+-- Trigger on an INSERT, UPDATE, or DELETE statement to a table 
+-- (DML Trigger on memory-optimized tables)  
+
 ALTER TRIGGER schema_name.trigger_name   
 ON  ( table  )   
 [ WITH <dml_trigger_option> [ ,...n ] ]  
@@ -69,7 +71,8 @@ AS { sql_statement [ ; ] [ ...n ] }
     [ SCHEMABINDING ]  
     [ <EXECUTE AS Clause> ]  
   
-Trigger on a CREATE, ALTER, DROP, GRANT, DENY, REVOKE, or UPDATE statement (DDL Trigger)  
+-- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, REVOKE, 
+-- or UPDATE statement (DDL Trigger)  
   
 ALTER TRIGGER trigger_name   
 ON { DATABASE | ALL SERVER }   
@@ -86,7 +89,8 @@ AS { sql_statement [ ; ] | EXTERNAL NAME <method specifier>
 <method_specifier> ::=  
     assembly_name.class_name.method_name  
   
-Trigger on a LOGON event (Logon Trigger)  
+-- Trigger on a LOGON event (Logon Trigger)  
+
 ALTER TRIGGER trigger_name   
 ON ALL SERVER   
 [ WITH <logon_trigger_option> [ ,...n ] ]  
@@ -103,9 +107,8 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >
 ```  
   
 ```  
-  
-      -- Windows Azure SQL Database Syntax   
-Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)   
+-- Windows Azure SQL Database Syntax   
+-- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)   
   
 ALTER TRIGGER schema_name. trigger_name   
 ON (table | view )   
@@ -117,7 +120,7 @@ AS { sql_statement [ ; ] [...n ] }
 <dml_trigger_option> ::=   
     [ <EXECUTE AS Clause> ]   
   
-Trigger on a CREATE, ALTER, DROP, GRANT, DENY, REVOKE, or UPDATE statement (DDL Trigger)   
+-- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, REVOKE, or UPDATE statement (DDL Trigger)   
   
 ALTER TRIGGER trigger_name   
 ON { DATABASE }   
@@ -129,7 +132,6 @@ AS { sql_statement
   
 <ddl_trigger_option> ::=   
     [ <EXECUTE AS Clause> ]  
-  
 ```  
   
 ## Arguments  
@@ -146,16 +148,12 @@ AS { sql_statement
  Applies the scope of a DDL trigger to the current database. If specified, the trigger fires whenever *event_type* or *event_group* occurs in the current database.  
   
  ALL SERVER  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies the scope of a DDL or logon trigger to the current server. If specified, the trigger fires whenever *event_type* or *event_group* occurs anywhere in the current server.  
   
  WITH ENCRYPTION  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Encrypts the sys.syscommentssys.sql_modules entries that contain the text of the ALTER TRIGGER statement. Using WITH ENCRYPTION prevents the trigger from being published as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. WITH ENCRYPTION cannot be specified for CLR triggers.  
   
@@ -203,9 +201,7 @@ AS { sql_statement
  Is the name of a predefined grouping of [!INCLUDE[tsql](../../includes/tsql-md.md)] language events. The DDL trigger fires after execution of any [!INCLUDE[tsql](../../includes/tsql-md.md)] language event that belongs to *event_group*. Valid event groups for DDL triggers are listed in [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md). After ALTER TRIGGER has finished running, *event_group* also acts as a macro by adding the event types it covers to the sys.trigger_events catalog view.  
   
  NOT FOR REPLICATION  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Indicates that the trigger should not be executed when a replication agent modifies the table involved in the trigger.  
   
@@ -214,10 +210,8 @@ AS { sql_statement
   
  For triggers on memory-optimized tables, the only *sql_statement* allowed at the top level is an ATOMIC block. The T-SQL allowed inside the ATOMIC block is limited by the T-SQL allowed inside native procs.  
   
- EXTERNAL NAME <method_specifier>  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ EXTERNAL NAME \<method_specifier>  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the method of an assembly to bind with the trigger. The method must take no arguments and return void. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly with assembly visibility. The class cannot be a nested class.  
   
@@ -250,29 +244,22 @@ AS { sql_statement
  To alter a DDL trigger defined with server scope (ON ALL SERVER) or a logon trigger requires CONTROL SERVER permission on the server. To alter a DDL trigger defined with database scope (ON DATABASE) requires ALTER ANY DATABASE DDL TRIGGER permission in the current database.  
   
 ## Examples  
- The following example creates a DML trigger that prints a user-defined message to the client when a user tries to add or change data in the `SalesPersonQuotaHistory` table. The trigger is then modified by using `ALTER TRIGGER` to apply the trigger only on `INSERT` activities. This trigger is helpful because it reminds the user that updates or inserts rows into this table to also notify the `Compensation` department.  
+ The following example creates a DML trigger in the AdventureWorks 2012 database, that prints a user-defined message to the client when a user tries to add or change data in the `SalesPersonQuotaHistory` table. The trigger is then modified by using `ALTER TRIGGER` to apply the trigger only on `INSERT` activities. This trigger is helpful because it reminds the user that updates or inserts rows into this table to also notify the `Compensation` department.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
-    DROP TRIGGER Sales.bonus_reminder;  
-GO  
 CREATE TRIGGER Sales.bonus_reminder  
 ON Sales.SalesPersonQuotaHistory  
 WITH ENCRYPTION  
 AFTER INSERT, UPDATE   
 AS RAISERROR ('Notify Compensation', 16, 10);  
 GO  
+
 -- Now, change the trigger.  
-USE AdventureWorks2012;  
-GO  
 ALTER TRIGGER Sales.bonus_reminder  
 ON Sales.SalesPersonQuotaHistory  
 AFTER INSERT  
 AS RAISERROR ('Notify Compensation', 16, 10);  
 GO  
-  
 ```  
   
 ## See Also  

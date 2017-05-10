@@ -8,236 +8,236 @@
     items:
     - name: ADO
       href: /sql/ado/
-      homepage: /sql/ado/
+      homepage: /sql/ado/microsoft-activex-data-objects-ado
       items:
       - name: ADO guides
         href: /sql/ado/guide/
-        homepage: /sql/ado/guide/
+        homepage: /sql/ado/guide/ado-programmer-s-guide
         items:
         - name: ADO appendixes
           href: /sql/ado/guide/appendixes/
-          homepage: /sql/ado/guide/appendixes/
+          homepage: /sql/ado/guide/ado-programmer-s-guide
         - name: ADO data
           href: /sql/ado/guide/data/
-          homepage: /sql/ado/guide/data/
+          homepage: /sql/ado/guide/data/ado-fundamentals
         - name: ADO extensions
           href: /sql/ado/guide/extensions/
-          homepage: /sql/ado/guide/extensions/
+          homepage: /sql/ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox
         - name: ADO multidimensional
           href: /sql/ado/guide/multidimensional/
-          homepage: /sql/ado/guide/multidimensional/
+          homepage: /sql/ado/guide/multidimensional/ado-md-fundamentals
         - name: ADO remote data service
           href: /sql/ado/guide/remote-data-service/
-          homepage: /sql/ado/guide/remote-data-service/
+          homepage: /sql/ado/guide/remote-data-service/remote-data-service-rds
       - name: ADO reference
         href: /sql/ado/reference/
-        homepage: /sql/ado/reference/
+        homepage: /sql/ado/reference/ado-glossary
         items:
         - name: API
           href: /sql/ado/reference/ado-api/
-          homepage: /sql/ado/reference/ado-api/
+          homepage: /sql/ado/reference/ado-api/ado-code-examples
         - name: MD API
           href: /sql/ado/reference/ado-md-api/
-          homepage: /sql/ado/reference/ado-md-api/
+          homepage: /sql/ado/reference/ado-md-api/ado-md-object-model
         - name: ADOX API
           href: /sql/ado/reference/adox-api/
-          homepage: /sql/ado/reference/adox-api/
+          homepage: /sql/ado/reference/adox-api/adox-object-model
         - name: ADO RDS API
           href: /sql/ado/reference/ado-rds-api/
-          homepage: /sql/ado/reference/ado-rds-api/
+          homepage: /sql/ado/reference/rds-api/rds-api-reference
     - name: Connect your client to SQL
       href: /sql/connect/
-      homepage: /sql/connect/
+      homepage: /sql/connect/sql-server-driver-documentation
       items:
       - name: ADO.NET
         href: /sql/connect/ado-net/
-        homepage: /sql/connect/ado-net/
+        homepage: /sql/connect/ado-net/microsoft-ado-net-for-sql-server
       - name: JDBC
         href: /sql/connect/jdbc/
-        homepage: /sql/connect/jdbc/
+        homepage: /sql/connect/jdbc/overview-of-the-jdbc-driver
         items:
         - name: Code samples
           href: /sql/connect/jdbc/code-samples/
-          homepage: /sql/connect/jdbc/code-samples/
+          homepage: /sql/connect/jdbc/code-samples/sample-jdbc-driver-applications
         - name: Reference
           href: /sql/connect/jdbc/reference/
-          homepage: /sql/connect/jdbc/reference/
+          homepage: /sql/connect/jdbc/reference/datetimeoffset-class
       - name: Node.js
         href: /sql/connect/node-js/
-        homepage: /sql/connect/node-js/
+        homepage: /sql/connect/node-js/node-js-driver-for-sql-server
       - name: ODBC
         href: /sql/connect/odbc/
-        homepage: /sql/connect/odbc/
+        homepage: /sql/connect/odbc/microsoft-odbc-driver-for-sql-server
         items:
         - name: Linux
           href: /sql/connect/odbc/linux/
-          homepage: /sql/connect/odbc/linux/
+          homepage: /sql/connect/odbc/linux/microsoft-odbc-driver-for-sql-server-on-linux
         - name: Mac
           href: /sql/connect/odbc/mac/
-          homepage: /sql/connect/odbc/mac/
+          homepage: /sql/connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac
         - name: Windows
           href: /sql/connect/odbc/windows/
-          homepage: /sql/connect/odbc/windows/
+          homepage: /sql/connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows
         - name: ODBC advanced
           href: /sql/odbc/
-          homepage: /sql/odbc/
+          homepage: /sql/odbc/microsoft-open-database-connectivity-odbc
           items:
           - name: Administration
             href: /sql/odbc/admin/
-            homepage: /sql/odbc/admin/
+            homepage: /sql/odbc/admin/odbc-data-source-administrator
           - name: Microsoft
             href    : /sql/odbc/microsoft/
-            homepage: /sql/odbc/microsoft/
+            homepage: /sql/odbc/microsoft/microsoft-supplied-odbc-drivers
           - name: Reference
             href    : /sql/odbc/reference/
-            homepage: /sql/odbc/reference/
+            homepage: /sql/odbc/reference/introduction-to-odbc
           - name: Appendixes
             href    : /sql/odbc/reference/appendixes/
-            homepage: /sql/odbc/reference/appendixes/
+            homepage: /sql/odbc/reference/appendixes/sqlgetdata-cursor-library
           - name: Develop an application
             href    : /sql/odbc/reference/develop-app/
-            homepage: /sql/odbc/reference/develop-app/
+            homepage: /sql/odbc/reference/develop-app/checking-feature-support-and-variability
           - name: Develop a driver
             href    : /sql/odbc/reference/develop-driver/
-            homepage: /sql/odbc/reference/develop-driver/
+            homepage: /sql/odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver
           - name: Install
             href    : /sql/odbc/reference/install/
-            homepage: /sql/odbc/reference/install/
+            homepage: /sql/odbc/reference/install/odbc-subkey
           - name: Syntax
             href    : /sql/odbc/reference/syntax/
-            homepage: /sql/odbc/reference/syntax/
+            homepage: /sql/odbc/reference/syntax/odbc-reference
       - name: PHP
         href: /sql/connect/php/
-        homepage: /sql/connect/php/
+        homepage: /sql/connect/php/microsoft-php-driver-for-sql-server
       - name: Python
         href: /sql/connect/python/
-        homepage: /sql/connect/python/
+        homepage: /sql/connect/python/python-driver-for-sql-server
         items:
         - name: PyMsSql
           href: /sql/connect/python/pymssql/
-          homepage: /sql/connect/python/pymssql/
+          homepage: /sql/connect/python/pymssql/python-sql-driver-pymssql
         - name: PyOdbc
           href: /sql/connect/python/pyodbc/
-          homepage: /sql/connect/python/pyodbc/
+          homepage: /sql/connect/python/pyodbc/python-sql-driver-pyodbc
       - name: Ruby
         href: /sql/connect/ruby/
-        homepage: /sql/connect/ruby/
+        homepage: /sql/connect/ruby/ruby-driver-for-sql-server
     - name: SQL Server on Linux
       href: /sql/linux/
       homepage: /sql/linux
     - name: Advanced analytics on SQL Server
       href: /sql/advanced-analytics/
-      homepage: /sql/advanced-analytics
+      homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services
     - name: R Services on SQL Server
-      href: /sql/advanced-analytics/r-services/
-      homepage: /sql/advanced-analytics/r-services/
+      href: /sql/advanced-analytics/r/
+      homepage: /sql/advanced-analytics/r/architecture-overview-sql-server-r
     - name: SQL Server
       href: /sql/sql-server/
-      homepage: /sql/sql-server
+      homepage: /sql/sql-server/sql-server-technical-documentation
       items:
-      - name: Failover clusters
+      - name: Failover clusters 
         href: /sql/sql-server/failover-clusters/
-        homepage: /sql/sql-server/failover-clusters
+        homepage: /sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring
       - name: Install
         href: /sql/sql-server/install/
-        homepage: /sql/sql-server/install
+        homepage: /sql/sql-server/install/planning-a-sql-server-installation
       - name: Stretch Database
         href: /sql/sql-server/stretch-database/
-        homepage: /sql/sql-server/stretch-database
+        homepage: /sql/sql-server/stretch-database/stretch-database
       - name: Analysis Services
         href: /sql/analysis-services/
-        homepage: /sql/analysis-services
+        homepage: /sql/analysis-services/analysis-services
         items:
         - name: Data mining
           href: /sql/analysis-services/data-mining/
-          homepage: /sql/analysis-services/data-mining
+          homepage: /sql/analysis-services/data-mining/data-mining-ssas
         - name: Instances
           href: /sql/analysis-services/instances/
-          homepage: /sql/analysis-services/instances
+          homepage: /sql/analysis-services/instances/analysis-services-instance-management
         - name: Install on Windows
           href: /sql/analysis-services/instances/install-windows/
-          homepage: /sql/analysis-services/instances/install-windows
+          homepage: /sql/analysis-services/instances/install-windows/install-analysis-services
         - name: Scripting
           href: /sql/analysis-services/scripting/
-          homepage: /sql/analysis-services/scripting/
+          homepage: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla?toc=%2fsql%2fanalysis-services%2fscripting%2ftoc.json
           items:
           - name: Data type
             href: /sql/analysis-services/scripting/data-type/
-            homepage: /sql/analysis-services/scripting/data-type/
+            homepage: /sql/analysis-services/scripting/data-type/action-data-type-assl?toc=%2fsql%2fanalysis-services%2fscripting%2fdata-type%2ftoc.json
           - name: Objects
             href: /sql/analysis-services/scripting/objects/
-            homepage: /sql/analysis-services/scripting/objects/
+            homepage: /sql/analysis-services/scripting/objects/account-element-assl
           - name: Collections
             href: /sql/analysis-services/scripting/collections/
-            homepage: /sql/analysis-services/scripting/collections/
+            homepage: /sql/analysis-services/scripting/collections/accounts-element-assl
           - name: Properties
             href: /sql/analysis-services/scripting/properties/
-            homepage: /sql/analysis-services/scripting/properties/
+            homepage: /sql/analysis-services/scripting/properties/access-element-assl
         - name: Tabular models scripting language objects
           href: /sql/analysis-services/tabular-models-scripting-language-objects/
-          homepage: /sql/analysis-services/tabular-models-scripting-language-objects/
+          homepage: /sql/analysis-services/tabular-models-scripting-language-objects/database-object-tmsl
         - name: Tabular models scripting language commands
           href: /sql/analysis-services/tabular-models-scripting-language-commands/
-          homepage: /sql/analysis-services/tabular-models-scripting-language-commands/
+          homepage: /sql/analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl
         - name: Multidimensional models
           href: /sql/analysis-services/multidimensional-models/
-          homepage: /sql/analysis-services/multidimensional-models
+          homepage: /sql/analysis-services/multidimensional-models/multidimensional-models-ssas
           items:
           - name: MDX
             href: /sql/analysis-services/multidimensional-models/mdx/
-            homepage: /sql/analysis-services/multidimensional-models/mdx
+            homepage: /sql/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data
           - name: OLAP logical
             href: /sql/analysis-services/multidimensional-models/olap-logical/
-            homepage: /sql/analysis-services/multidimensional-models/olap-logical
+            homepage: /sql/analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data
             items:
             - name: Dimension objects
               href: /sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/
-              homepage: /sql/analysis-services/multidimensional-models-olap-logical-dimension-objects
+              homepage: /sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships
             - name: Cube objects
               href: /sql/analysis-services/multidimensional-models-olap-logical-cube-objects/
-              homepage: /sql/analysis-services/multidimensional-models-olap-logical-cube-objects
+              homepage: /sql/analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs
           - name: OLAP physical
             href: /sql/analysis-services/multidimensional-models/olap-physical/
-            homepage: /sql/analysis-services/multidimensional-models/olap-physical
+            homepage: /sql/analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development
           - name: ADOMD .NET
             href: /sql/analysis-services/multidimensional-models/adomd-net/
-            homepage: /sql/analysis-services/multidimensional-models/adomd-net
+            homepage: /sql/analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net
             items:
             - name: Client
               href: /sql/analysis-services/multidimensional-models-adomd-net-client/
-              homepage: /sql/analysis-services/multidimensional-models-adomd-net-client
+              homepage: /sql/analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-functionality
             - name: Server
               href: /sql/analysis-services/multidimensional-models-adomd-net-server/
-              homepage: /sql/analysis-services/multidimensional-models-adomd-net-server
+              homepage: /sql/analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality
           - name: Analysis management objects
             href: /sql/analysis-services/multidimensional-models/analysis-management-objects/
-            homepage: /sql/analysis-services/multidimensional-models/analysis-management-objects
+            homepage: /sql/analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction
           - name: Scripting language ASSL
             href: /sql/analysis-services/multidimensional-models/scripting-language-assl/
-            homepage: /sql/analysis-services/multidimensional-models/scripting-language-assl
+            homepage: /sql/analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics
             items:
             - name: XMLA
               href: /sql/analysis-services/multidimensional-models-scripting-language-assl-xmla/
-              homepage: /sql/analysis-services/multidimensional-models-scripting-language-assl-xmla
+              homepage: /sql/analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla
           - name: Extending olap
             href: /sql/analysis-services/multidimensional-models/extending-olap/
-            homepage: /sql/analysis-services/multidimensional-models/extending-olap
+            homepage: /sql/analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions
             items:
             - name: Stored procedures
               href: /sql/analysis-services/multidimensional-models-extending-olap-stored-procedures/
-              homepage: /sql/analysis-services/multidimensional-models-extending-olap-stored-procedures
+              homepage: /sql/analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures
         - name: Power Pivot Sharepoint
           href: /sql/analysis-services/power-pivot-sharepoint/
-          homepage: /sql/analysis-services/power-pivot-sharepoint
+          homepage: /sql/analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas
         - name: PowerShell
           href: /sql/analysis-services/powershell/
-          homepage: /sql/analysis-services/powershell
+          homepage: /sql/analysis-services/powershell/technical-reference-ssas
         - name: Server properties
           href: /sql/analysis-services/server-properties/
-          homepage: /sql/analysis-services/server-properties
+          homepage: /sql/analysis-services/server-properties/server-properties-in-analysis-services
         - name: Tabular models
           href: /sql/analysis-services/tabular-models/
-          homepage: /sql/analysis-services/tabular-models
+          homepage: /sql/analysis-services/tabular-models/tabular-models-ssas
         - name: Trace events
           href: /sql/analysis-services/trace-events/
           homepage: /sql/analysis-services/trace-events

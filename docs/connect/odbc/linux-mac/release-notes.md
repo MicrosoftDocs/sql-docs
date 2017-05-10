@@ -24,7 +24,7 @@ OS X 10.11 and macOS 10.12 are supported in the first release of the ODBC Driver
 
 **unixODBC Driver Manager 2.3.1 Support Changes**: The ODBC driver no longer depends on custom packaging for the unixODBC driver manager (except on RedHat 6), and instead relies on the distribution package manager to resolve the UnixODBC dependency from the distribution's repositories.
 
-**BCP API Support**: The Linux ODBC driver now supports the use of the BCP API functions (`bcp_init`, etc.)
+**BCP API Support**: The Linux and macOS ODBC driver now supports the use of the [BCP API functions (`bcp_init`, etc.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
 ## What's New in the Microsoft ODBC Driver 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux  
 With Microsoft ODBC Driver 13.0 for SQL Server, SQL Server 2014 and SQL Server 2016 are now also supported.  

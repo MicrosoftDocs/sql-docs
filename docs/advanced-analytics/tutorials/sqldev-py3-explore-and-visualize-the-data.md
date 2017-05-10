@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Explore and Visualize the Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/28/2017"
+ms.date: "05/10/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -144,19 +144,44 @@ The stored procedure returns a serialized `figure` Python object as a stream of 
 	*0xFFD8FFE000104A4649...*
 
   
-2.  On the client machine, run the following Python code, providing the appropriate server name, database name, username, and credentials as arguments:
+2.  On the client machine, run the python code below, providing the appropriate server name, database name, and credentials.  
   
-    ```
-	import pyodbc
-	import pickle
-	cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSOWRD}')
-	cursor = cnxn.cursor()
-	cursor.execute("EXECUTE [nyctaxi1].[dbo].[SerializePlots]")
-	tables = cursor.fetchall()
-	for i in range(0, len(tables)):
-	    fig = pickle.loads(tables[i][0])
-	    fig.savefig(str(i)+'.png')
-    ```
+    For SQL server authentication:
+    
+        ```  
+        import pyodbc
+        import pickle
+        import os
+        cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSOWRD}')
+        cursor = cnxn.cursor()
+        cursor.execute("EXECUTE [dbo].[SerializePlots]")
+        tables = cursor.fetchall()
+        for i in range(0, len(tables)):
+            fig = pickle.loads(tables[i][0])
+            fig.savefig(str(i)+'.png')
+        print("The plots are saved in directory: ",os.getcwd())
+
+        ```  
+    For Windows authentication:
+
+        ```  
+        import pyodbc
+        import pickle
+        import os
+        cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+        cursor = cnxn.cursor()
+        cursor.execute("EXECUTE [dbo].[SerializePlots]")
+        tables = cursor.fetchall()
+        for i in range(0, len(tables)):
+            fig = pickle.loads(tables[i][0])
+            fig.savefig(str(i)+'.png')
+        print("The plots are saved in directory: ",os.getcwd())
+
+        ```  
+
+    > [!NOTE]  
+    > Make sure the Python version is the same on the client and the server. Also, make sure that the Python libraries you’re using on your client (such as matplotlib) are of the same or higher version relative to the libraries installed on the server. 
+
 
 3.  If the connection is successful, you will see the results below
   

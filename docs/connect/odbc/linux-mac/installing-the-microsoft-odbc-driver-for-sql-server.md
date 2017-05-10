@@ -227,12 +227,12 @@ If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)]
 * Red Hat: glibc, e2fsprogs, krb5-libs, openssl, unixODBC
 * SuSE: glibc, libuuid1, krb5, openssl, unixODBC
 
-Each of these packages in turn has their own dependencies which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [Suse](https://en.opensuse.org/Portal:Zypper)
+Each of these packages in turn has their own dependencies which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 It is also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 package.
 
 #### Redhat Linux Enterprise Server 7
-  * Download the latest msodbcsql rpm from here: http://packages.microsoft.com/rhel/7/prod/
+  * Download the latest msodbcsql .rpm from here: http://packages.microsoft.com/rhel/7/prod/
   * Install dependencies and the driver
   
 ```
@@ -241,7 +241,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### Ubuntu 16.04
-* Download the latest msodbcsql deb from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+* Download the latest msodbcsql .deb from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 * Install dependencies and the driver 
 
 ```
@@ -250,7 +250,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### SUSE Linux Enterprise Server 12
-* Download the latest msodbcsql rpm from here: http://packages.microsoft.com/sles/12/prod/
+* Download the latest msodbcsql .rpm from here: http://packages.microsoft.com/sles/12/prod/
 * Install the dependencies and the driver
 
 ```
@@ -276,9 +276,9 @@ To install the driver:
 
 1.  Make sure that you have root permission.  
 
-2.  Change to the directory where the download placed the file msodbcsql-11.0.2270.0.tar.gz. Make sure that you have the \*.tar.gz file that matches your version of Linux. To extract the files, execute the following command, **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
+2.  Change to the directory where the download placed the file `msodbcsql-11.0.2270.0.tar.gz`. Make sure that you have the \*.tar.gz file that matches your version of Linux. To extract the files, execute the following command, **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
   
-3.  Change to the msodbcsql-11.0.2270.0 directory and there you should see a file called install.sh.  
+3.  Change to the `msodbcsql-11.0.2270.0` directory and there you should see a file called **install.sh**.  
   
 4.  To see a list of the available installation options, execute the following command: **./install.sh**.  
   
@@ -290,7 +290,7 @@ To install the driver:
   
 8.  After reviewing the license agreement, type **YES** to continue with the installation.  
   
-Installation puts the driver in /opt/microsoft/msodbcsql/11.0.2270.0. The driver and its support files must be in /opt/microsoft/msodbcsql/11.0.2270.0.  
+Installation puts the driver in `/opt/microsoft/msodbcsql/11.0.2270.0`. The driver and its support files must be in `/opt/microsoft/msodbcsql/11.0.2270.0`.  
   
 To verify that the Microsoft ODBC driver on Linux was registered successfully, execute the following command: **odbcinst -q -d -n "ODBC Driver 11 for SQL Server"**.  
   
@@ -298,15 +298,15 @@ To verify that the Microsoft ODBC driver on Linux was registered successfully, e
   
 **Uninstalling**  
   
-You can uninstall the ODBC driver on Linux, by executing the following commands:  
+You can uninstall the ODBC driver 11 on Linux by executing the following commands:  
   
-1.  rm -f /usr/bin/sqlcmd  
+1.  `rm -f /usr/bin/sqlcmd`
   
-2.  rm -f /usr/bin/bcp  
+2.  `rm -f /usr/bin/bcp`  
   
-3.  rm -rf /opt/microsoft/msodbcsql  
+3.  `rm -rf /opt/microsoft/msodbcsql`  
   
-4.  odbcinst -u -d -n "ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]"  
+4.  `odbcinst -u -d -n "ODBC Driver 11 for SQL Server"`
   
 ## Troubleshooting Connection Problems  
 If you are unable to make a connection to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] using the ODBC driver, use the following information to identify the problem.  

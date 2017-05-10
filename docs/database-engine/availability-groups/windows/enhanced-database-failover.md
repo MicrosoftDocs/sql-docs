@@ -27,7 +27,7 @@ SQL Server 2016 introduces a new optional behavior named *enhanced database fail
 
 **Scenario 1**
 
-An availability group is configured between Instance A and Instance B, containing a single database named DB1. DB1's data file is on Drive E and its transaction log file is on Drive F. The availability mode is set to synchronous commit with automatic failover. The new enhanced database failover option is configured on the availability group. The two replicas are currently in a synchronized state. A problem causes Drive E to fail. This scenario will not cause an enhanced database failover, as Drive E does not contain the transaction log.
+An availability group is configured between Instance A and Instance B, containing a single database named DB1. DB1's data file is on Drive E and its transaction log file is on Drive F. The availability mode is set to synchronous commit with automatic failover. The new enhanced database failover option is configured on the availability group. The two replicas are currently in a synchronized state. A problem causes Drive E to fail. This scenario will not cause an enhanced database failover, as Drive E does not contain the transaction log.  
 
 **Scenario 2**
 

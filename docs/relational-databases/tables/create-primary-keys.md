@@ -20,6 +20,8 @@ manager: "jhubbard"
 # Create Primary Keys
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
+ > For content related to previous versions of SQL Server, see [Create Primary Keys](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx).
+
   You can define a primary key in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Creating a primary key automatically creates a corresponding unique, clustered or nonclustered index.  
   
  **In This Topic**  

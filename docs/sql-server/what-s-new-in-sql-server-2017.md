@@ -27,7 +27,9 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 
 **Try it out:**    
    -   [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[Download the SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
+## What's New in SQL Server 2017 CTP 2.1 (May 2017)
 
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## What's New in SQL Server 2017 CTP 2.0 (April 2017)
 ### SQL Server Database Engine
 - **Resumable online index rebuild**. Resumable online index rebuild allows you to resume an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space). You can also pause and later resume an online index rebuild operation. For example, you might need to temporarily free up systems resources in order to execute a high priority task or complete the index rebuild in another miniatous window if the available maintenance windows is too short for a large table. Finally, resumable online index rebuild does not require significant log space, which allows you to perform log truncation while the resumable rebuild operation is running. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md).

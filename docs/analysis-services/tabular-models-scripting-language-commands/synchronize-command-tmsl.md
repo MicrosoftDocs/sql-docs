@@ -19,8 +19,6 @@ manager: "erikre"
 # Synchronize command (TMSL)
   Synchronizes an Analysis Services database with another existing database.  
   
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
-  
 ## Request  
  The properties accepted by the JSON synchronize command are as follows.  
   

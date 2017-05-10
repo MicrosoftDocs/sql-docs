@@ -19,8 +19,6 @@ manager: "erikre"
 # Create command (TMSL)
   Creates the specified object and all of the descendant objects that are specified. If the object already exists, the command raises an error.  
   
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
-  
 ## Request  
  The structure of the request varies based on the object. An object that is a parent must include all of its children, although the full object definitions of siblings and parent(s) are not required.  
   

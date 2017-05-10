@@ -1329,6 +1329,17 @@
             "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-configure-kerberos-powerbi-reports/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/configure-report-manager-native-mode.md",
+            "redirect_url": "/sql/reporting-services/report-server/configure-web-portal",
+            "redirect_document_id": false
         }
+
     ]
 }

@@ -17,7 +17,6 @@ caps.latest.revision: 1
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-
 ---
 
 # Add Enhanced Database Failover to an Availability Group (SQL Server)

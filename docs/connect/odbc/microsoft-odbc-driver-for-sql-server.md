@@ -55,7 +55,6 @@ ODBC is the primary native data access API for applications written in C and C++
 * [Features and Behavior Changes](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
 * [Release Notes](../../connect/odbc/windows/release-notes.md)
 * [System Requirements, Installation, and Driver Files](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
-* [Using Azure Active Directory with the Windows ODBC Driver](../../connect/odbc/windows/using-azure-active-directory-with-the-windows-odbc-driver.md)
 
 ## Community  
 * [Microsoft ODBC Driver For SQL Server Team blog](http://blogs.msdn.com/sqlnativeclient/default.aspx)  

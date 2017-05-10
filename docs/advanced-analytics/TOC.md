@@ -135,7 +135,7 @@
 
 ## [Python: Create a Model using revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
 
-## [Python: In-Database Analytics for SQL Developers](/tutorials/sqldev-in-database-python-for-sql-developers.md)
+## [Python: In-Database Analytics for SQL Developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
 ### [Download Sample Data](tutorials/sqldev-py1-download-the-sample-data.md)
 ### [Import Data to SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
 ### [Explore and Visualize Data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)

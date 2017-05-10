@@ -32,7 +32,7 @@ manager: "erikre"
   
  Consider installing a local instance of Analysis Services. A local instance enables navigation of the object hierarchy via the **SQLAS** provider, even if you never use it to host a database.  
   
-1.  Go to  [Download SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/mt238290.aspx) to get the latest version of Management Studio. The latest release of Management Studio. includes an updated AMO that supports tabular metadata object definitions, for Tabular models created at compatibility level 1200.  
+1.  Go to  [Download SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/mt238290.aspx) to get the latest version. The latest release includes updated AMO that supports tabular metadata object definitions, for Tabular models created at compatibility level 1200 and higher.  
   
 2.  After installing Management Studio, open a PowerShell window. It doesn't have to be an admin window.  
   
@@ -102,12 +102,12 @@ manager: "erikre"
   
 -   Multidimensional databases and Tabular databases at 1050-1103 compatibility levels respond to script written in XMLA (using the ASSL extensions specific to Analysis Services object definitions).  
   
--   Tabular databases at the SQL Server 2016 (compatibility level 1200) respond to TMSL script.  
+-   Tabular databases at compatibility level 1200 and higher respond to TMSL script.  
   
  If you are working with mixed versions of Tabular models on the same SQL Server 2016 instance, remember to use the right script.  
   
 > [!NOTE]  
->  Scripts can be generated in SQL Server management Studio and then modified as needed. Tabular databases at 1200 compatibility level are scripted in TMSL. All others are scripted in XMLA/ASSL. A SQL Server 2016 instance in Tabular mode supports both scripting languages.  
+>  Scripts can be generated in SQL Server management Studio and then modified as needed. Tabular databases at 1200 compatibility level and higher are scripted in TMSL. All others are scripted in XMLA/ASSL. A SQL Server 2016 instance in Tabular mode supports both scripting languages.  
   
 ## Local and remote administration  
  Local administration of Analysis Services via PowerShell scripts and commands is easier for two reasons:  
@@ -132,7 +132,7 @@ manager: "erikre"
 |Context|PowerShell Feature Availability|  
 |-------------|-------------------------------------|  
 |Multidimensional instances and databases|Supported for local and remote administration.<br /><br /> Merge-partition requires a local connection.|  
-|Tabular instances and databases|Supported for local and remote administration, at all compatibility levels.<br /><br /> SQLAS cmdlets for Tabular models at the 1200 compatibility level using Tabular Model Scripting Language (TMSL) in JSON instead of XMLA.|  
+|Tabular instances and databases|Supported for local and remote administration, at all compatibility levels.<br /><br /> SQLAS cmdlets for Tabular models at the 1200 and higher compatibility level use Tabular Model Scripting Language (TMSL) in JSON instead of XMLA.|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint instances and databases|Limited support. You can use HTTP connections and the SQLAS provider to view instance and database information.<br /><br /> However, using the cmdlets is not supported. You can't use Analysis Services PowerShell to backup and restore an in-memory [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] database, nor should you add or remove roles, process data, or run arbitrary XMLA script.<br /><br /> For configuration purposes, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint has built-in PowerShell support that is provided separately. For more information, see [PowerShell Reference for Power Pivot for SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md).|  
 |Native connections to local cubes<br /><br /> “Data Source=c:\backup\test.cub”|Not supported.|  
 |HTTP connections to BI semantic model (.bism) connection files in SharePoint<br /><br /> `Data Source=http://server/shared_docs/name.bism`|Not supported.|  

@@ -19,8 +19,6 @@ manager: "erikre"
 # Backup command (TMSL)
   Backs up an Analysis Services database to an .abf backup file.  
   
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
-  
 ## Request  
   
 ```  

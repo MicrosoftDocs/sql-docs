@@ -26,7 +26,7 @@ Upgrading an existing Tabular solution is recommended but not required. Existing
  New Tabular models will require different code and script, summarized below.  
   
 ## Object Model Definitions as Tabular Metadata Constructs  
- The Tabular Object Model for 1200 models is exposed in JSON through the [Tabular Model Scripting Language](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) and through the AMO data definition language through a new namespace, [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)
+ The Tabular Object Model for 1200 or higher models is exposed in JSON through the [Tabular Model Scripting Language](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) and through the AMO data definition language through a new namespace, [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)
 
 ## Script for Tabular Models and Databases  
  TMSL is a JSON scripting language for Tabular models, with support for create, read, update, an delete operations. You can refresh data via TMSL and invoke database operations for attach, detatch, backup, restore, and synchronize.  
@@ -36,13 +36,13 @@ Upgrading an existing Tabular solution is recommended but not required. Existing
  See [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) and [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md) for more information.  
   
 ## Query Languages  
- DAX and MDX are supported for Tabular models at compatibility level 1200.  
+ DAX and MDX are supported for all Tabular models.  
   
 ## Expression Language  
  Filters and expressions used to create calculated objects, including measures and KPIs, are formulated in DAX. See [Understanding DAX in Tabular Models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) and [Data Analysis Expressions &#40;DAX&#41; in Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5).  
   
 ## Managed Code for Tabular Models and Databases  
- AMO includes a new namespace, Microsoft.AnalysisServices.Tabular, for working with Tabular 1200 models programmatically. See [Microsoft.AnalysisServices Namespace](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx) for more information.  
+ AMO includes a new namespace, Microsoft.AnalysisServices.Tabular, for working with Tabular 1200 or higher models programmatically. See [Microsoft.AnalysisServices Namespace](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx) for more information.  
   
 > [!NOTE]  
 >  Analysis Services Management Objects (AMO), ADOMD.NET, and Tabular Object Model (TOM) client libraries in SQL Server 2016 Analysis Services now target the .NET 4.0 runtime.   

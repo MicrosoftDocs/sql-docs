@@ -32,16 +32,16 @@ You can specify the availability group listener of a given availability group in
 
 The ODBC drivers on Linux and macOS iterate sequentially through all IP addresses associated with a DNS hostname if you are not connecting to an availability group listener, and multiple IP addresses are associated with the hostname.
 
-If the DNS server's first returned IP address is not connectable, these iterations can be time consuming. When connecting to an availability group listener, the ODBC drivers on Linux and macOS attempt to establish connections to all IP addresses in parallel. If a connection attempt succeeds, the driver discards any pending connection attempts.
+If the DNS server's first returned IP address is not connectable, these iterations can be time consuming. When connecting to an availability group listener, the driver attempts to establish connections to all IP addresses in parallel. If a connection attempt succeeds, the driver discards any pending connection attempts.
 
 > [!NOTE]  
 > Because a connection can fail due to an availability group failover, implement connection retry logic; retry a failed connection until it reconnects. Increasing connection timeout and implementing connection retry logic increases the chance of connecting to an availability group.
 
 ## Connecting With MultiSubnetFailover
 
-Always specify **MultiSubnetFailover=Yes** (or **=True**) when connecting to a [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] availability group listener or [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] Failover Cluster Instance. **MultiSubnetFailover** enables faster failover for all Availability Groups and failover cluster instance in [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** also significantly reduces failover time for single and multi-subnet AlwaysOn topologies. During a multisubnet failover, the client attempts connections in parallel. During a subnet failover, the ODBC drivers on Linux and macOS aggressively retry the TCP connection.
+Always specify **MultiSubnetFailover=Yes** (or **=True**) when connecting to a [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] availability group listener or [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] Failover Cluster Instance. **MultiSubnetFailover** enables faster failover for all Availability Groups and failover cluster instance in [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** also significantly reduces failover time for single and multi-subnet AlwaysOn topologies. During a multisubnet failover, the client attempts connections in parallel. During a subnet failover, the driver aggressively retries the TCP connection.
 
-The **MultiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance. The ODBC drivers on Linux or macOS try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instance by trying to connect to all the IP addresses. When connecting with **MultiSubnetFailover=Yes**, the client retries TCP connection attempts faster than the operating system's default TCP retransmit intervals. **MultiSubnetFailover=Yes** enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance. **MultiSubnetFailover=Yes** applies to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
+The **MultiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance. The driver tries to connect to the database on the primary [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instance by trying to connect to all the IP addresses. When connecting with **MultiSubnetFailover=Yes**, the client retries TCP connection attempts faster than the operating system's default TCP retransmit intervals. **MultiSubnetFailover=Yes** enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance. **MultiSubnetFailover=Yes** applies to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
 
 Use **MultiSubnetFailover=Yes** when connecting to an availability group listener or Failover Cluster Instance. Otherwise, your application's performance can be negatively affected.
 
@@ -107,7 +107,7 @@ The equivalent connection attributes are:
   
 For more information about ODBC connection attributes, see [SQLSetConnectAttr](http://msdn.microsoft.com/library/ms131709.aspx).  
   
-An ODBC driver on Linux or macOS application that uses [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] can use one of two functions to make the connection:  
+An ODBC application that uses [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] can use one of two functions to make the connection:  
   
 |Function|Description|  
 |------------|---------------|  

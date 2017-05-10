@@ -6,14 +6,14 @@ ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "dbe-high-availability"
+- "dbe-high-availability"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
-  - "Availability Groups [SQL Server], enhanced database failover"
-  - "Availability Groups [SQL Server], failover"
-ms.assetid:
-caps.latest.revision: 1
+- "Availability Groups [SQL Server], enhanced database failover"
+- "Availability Groups [SQL Server], failover"
+ms.assetid: 
+caps.latest.revision: 
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"

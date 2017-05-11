@@ -47,11 +47,11 @@ Enabling enhanced database failover is possible during the creation of an access
 
 *Manual Availability Group Creation*
 
-Use the instructions found in the topic [Use the New Availability Group Dialog Box (SQL Server Management Studio)](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio) to create the availability group. To enable enhanced database failover, select its checkbox next to *Database Level Health Detection*.
+Use the instructions found in the topic [Use the New Availability Group Dialog Box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) to create the availability group. To enable enhanced database failover, select its checkbox next to *Database Level Health Detection*.
 
 *Using the Availability Group Wizard*
 
-Use the instructions found in the topic [Use the Availability Group Wizard (SQL Server Management Studio)](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio). The option to enable enhanced database failover is found on the Specify Availability Group Name dialog. To enable it, check the box next to *Database Level Health Detection*.
+Use the instructions found in the topic [Use the Availability Group Wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md). The option to enable enhanced database failover is found on the Specify Availability Group Name dialog. To enable it, check the box next to *Database Level Health Detection*.
 
 ### Transact-SQL
 
@@ -71,3 +71,13 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### Dynamic Management View
 To see whether an availability group has enhanced database failover enabled, query the dynamic management view `sys.availablity_groups`. The column `db_failover` will have a zero if disabled or 1 if enabled. 
+
+### Next steps 
+
+- [Use the Availability Group Wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+
+-[Use the New Availability Group Dialog Box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
+ 
+- [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
+
+>This content written by [Allan Hirt](http://sqlha.com/)

@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "05/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,28 +25,43 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sys.dm_io_virtual_file_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Returns I/O statistics for data and log files. This dynamic management view replaces the [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) function.  
   
+> [!NOTE]  
+>  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_io_virtual_file_stats**. 
+
 ## Syntax  
   
 ```  
-  
+-- Syntax for SQL Server and Azure SQL Database
+
 sys.dm_io_virtual_file_stats (   
-{ database_id | NULL }  
-, { file_id | NULL }  
+    { database_id | NULL },  
+    { file_id | NULL }  
 )  
 ```  
+
+```  
+-- Syntax for Azure SQL Data Warehouse
+
+sys.dm_io_virtual_file_stats
+```
   
 ## Arguments  
- *database_id* | NULL  
- ID of the database. *database_id* is **int**, with no default. Valid inputs are the ID number of a database or NULL. When NULL is specified, all databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are returned.  
+
+
+ *database_id* | NULL
+ **APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database
+
+ ID of the database. *database_id* is int, with no default. Valid inputs are the ID number of a database or NULL. When NULL is specified, all databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are returned.  
   
  The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified.  
   
- *file_id* | NULL  
- ID of the file. *file_id* is **int**, with no default. Valid inputs are the ID number of a file or NULL. When NULL is specified, all files on the database are returned.  
+*file_id* | NULL  
+**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database 
+ID of the file. *file_id* is int, with no default. Valid inputs are the ID number of a file or NULL. When NULL is specified, all files on the database are returned.  
   
  The built-in function [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) can be specified, and refers to a file in the current database.  
   
@@ -54,6 +69,7 @@ sys.dm_io_virtual_file_stats (
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
+|**database_name**|**sysname**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br></br> Name of an internal database that stores one or more distributions, or the tempdb database or one of the internal the database of a distribution. This database is on the node identified by pdw_node_id.
 |**database_id**|**smallint**|ID of database.|  
 |**file_id**|**smallint**|ID of file.|  
 |**sample_ms**|**bigint**<br /><br /> Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **int**<br /><br /> Applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Number of milliseconds since the computer was started. This column can be used to compare different outputs from this function.|  
@@ -67,12 +83,17 @@ sys.dm_io_virtual_file_stats (
 |**size_on_disk_bytes**|**bigint**|Number of bytes used on the disk for this file. For sparse files, this number is the actual number of bytes on the disk that are used for database snapshots.|  
 |**file_handle**|**varbinary**|Windows file handle for this file.|  
 |**io_stall_queued_read_ms**|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for reads. Is not nullable. For more information, see [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for writes. Is not nullable.|  
+|**io_stall_queued_write_ms**|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for writes. Is not nullable.|
+|**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br></br>Identifier for the node for the distribution.
+ 
   
 ## Permissions  
  Requires VIEW SERVER STATE permission. For more information, see [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## Examples  
+
+### A. Return statistics for a log file
+**Applies to:** SQL Server (starting with 2008), Azure SQL Database
  The following example returns statistics for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```tsql  
@@ -80,6 +101,15 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
+### B. Return statistics for file in tempdb
+**Applies to:** Azure SQL Data Warehouse
+
+```tsql
+SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
+WHERE database_name = ‘tempdb’ AND file_id = 2;
+
+```
+
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I O Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   

@@ -1354,6 +1354,11 @@
             "source_path": "docs/reporting-services/reporting-services-release-notes.md",
             "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-release-notes/",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/security/grant-user-access-to-a-report-server-report-manager.md",
+            "redirect_url": "/sql/reporting-services/security/grant-user-access-to-a-report-server",
+            "redirect_document_id": false
         }
 
     ]

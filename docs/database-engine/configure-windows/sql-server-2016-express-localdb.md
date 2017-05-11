@@ -22,6 +22,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # SQL Server 2016 Express LocalDB
+
+ > For content related to previous versions of SQL Server, see [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
+
 Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) targeted to developers. It is available on SQL Server 2016 Express with Advanced Services.  
 
  **LocalDB** installation copies a minimal set of files necessary to start the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Once LocalDB is installed, you can initiate a connection using a special connection string. When connecting, the necessary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure is automatically created and started, enabling the application to use the database without complex configuration tasks. Developer Tools can provide developers with a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that lets them write and test [!INCLUDE[tsql](../../includes/tsql-md.md)] code without having to manage a full server instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 

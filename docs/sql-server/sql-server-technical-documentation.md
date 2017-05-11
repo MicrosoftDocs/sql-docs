@@ -27,6 +27,8 @@ manager: "jhubbard"
 # SQL Server Technical Documentation
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
+ > For content related to previous versions of SQL Server, see [Installation for SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
+
  Documentation to help you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] language topics, see [Language Reference](../t-sql/language-reference.md).
 
 **SQL Server 2017**

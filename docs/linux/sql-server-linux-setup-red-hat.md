@@ -5,7 +5,7 @@ description: Describes how to install SQL Server 2017 CTP 2.1 on Red Hat Enterpr
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/15/2017
+ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

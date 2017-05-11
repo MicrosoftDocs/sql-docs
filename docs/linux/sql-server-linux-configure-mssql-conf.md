@@ -6,7 +6,7 @@ description: This topic describes how to use the mssql-conf tool to  configure S
 author: luisbosquez 
 ms.author: lbosq 
 manager: jhubbard
-ms.date: 05/15/2017
+ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -34,6 +34,7 @@ ms.custom: H1Hack27Feb2017
 - [Default backup directory](#backupdir): Change the directory where SQL Server will send the backup files by default. 
 - [Mini and full dump preferences](#coredump): Specify whether to generate both mini dumps and full dumps.
 - [Core dump type](#coredump): Choose the type of dump memory dump file to collect.
+- [High Availability](#hadr): Enable Availability Groups.
 - [Set traceflags](#traceflags): Set the traceflags that the service is going to use.
 - [Set collation](#collation): Set a new collation for SQL Server on Linux.
 
@@ -195,6 +196,20 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
     | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from threads and stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Module Information</br> - VMM and VAD tree |
     | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
     | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. This is not controlled by **coredump.captureminiandfull** setting. |
+
+## <a id="hadr"></a> High Availability
+
+This option enables availability groups on your SQL Server instance. The following command enables availability groups by setting **hadr.hadrenabled** to 1. You must restart SQL Server for the setting to take effect.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
+sudo systemctl restart mssql-server
+```
+
+For information how this is used with availability groups, see the following two topics.
+
+- [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
+- [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
 
 ## <a id="traceflags"></a> Enable/Disable traceflags
 

@@ -6,7 +6,7 @@ description: This topic highlights what's new for the current release of SQL Ser
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/15/2017
+ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -22,7 +22,6 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
 # ms.custom: ""
-
 ---
 # What's new for SQL Server 2017 on Linux
 
@@ -32,7 +31,7 @@ This topic describes what's new for SQL Server 2017 running on Linux.
 
 The CTP 2.1 release contains the following improvements and fixes:
 
-- TBD.
+- Added [environment variables to configure the SQL Server service](sql-server-linux-configure-environment-variables.md).
 
 ## CTP 2.0
 

@@ -72,7 +72,7 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Name of an internal database that stores one or more distributions, or the tempdb database or one of the internal the database of a distribution. This database is on the node identified by pdw_node_id.
+|**database_name**|**sysname**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>The tempdb database, or the name of an internal database that stores one or more distributions. The database is on the node identified by pdw_node_id.
 |**database_id**|**smallint**|ID of database.|  
 |**file_id**|**smallint**|ID of file.|  
 |**sample_ms**|**bigint**<br /><br /> Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **int**<br /><br /> Applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Number of milliseconds since the computer was started. This column can be used to compare different outputs from this function.|  

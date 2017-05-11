@@ -22,6 +22,9 @@ manager: "jhubbard"
 # Add Columns to a Table (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
+ > For content related to previous versions of SQL Server, see [Add Columns to a Table (Database Engine)](https://msdn.microsoft.com/en-US/library/ms190238(SQL.120).aspx).
+
+
   This topic describes how to add new columns to a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
   ##  <a name="BeforeYouBegin"></a> Before You Begin  

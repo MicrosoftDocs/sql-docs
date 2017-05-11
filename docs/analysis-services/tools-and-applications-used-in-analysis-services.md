@@ -28,7 +28,7 @@ manager: "erikre"
   
  Models have a compatibility level setting that determines feature availability and which release of Analysis Services run the model.  Whether you can specify a given compatibility level is determined in-part by the model designer.  
   
- Tabular models using the latest functionality in SQL Server 2016, such as BIM files in tabular JSON format and bi-directional cross filtering, must be created at compatibility level 1200, in the version of SQL Server Data Tools for Visual Studio 2015 that ships concurrently with SQL Server 2016 (see below for the download link).  
+ Tabular models using the latest functionality in SQL Server 2016, such as BIM files in tabular JSON format and bi-directional cross filtering, must be created at compatibility level 1200, in the latest version of SQL Server Data Tools.  
   
  If you require a lower compatibility level, perhaps because you want to deploy a model on an earlier version of Analysis Services, you can still use the model designer in SSDT. Newer versions of the tool support creating any model type (tabular or multidimensional), at any compatibility level you require. There is no need to keep earlier tools around just to  build or edit an older model.    
 

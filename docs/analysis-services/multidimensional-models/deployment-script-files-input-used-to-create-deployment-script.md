@@ -30,7 +30,7 @@ manager: "erikre"
   
 |File|Description|  
 |---------------|-----------------|  
-|\<*project name*>.asdatabase|An XMLA file for Multidimensional or 1100/1103 Tabular model projects, or a JSON file for 1200 Tabular model projects. Contains the declarative definitions for all the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects in the project.|  
+|\<*project name*>.asdatabase|An XMLA file for Multidimensional or 1100/1103 Tabular model projects, or a JSON file for Tabular 1200 and higher model projects. Contains the declarative definitions for all the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects in the project.|  
 |\<*project name*>.deploymenttargets|Contains the name of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance and database in which the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects will be created.|  
 |\<*project name*>.configsettings|Contains environment specific settings, such as data source connection information and object storage locations. Settings in this file override settings in the \<*project name*>.asdatabase file.|  
 |\<*project name*>.deploymentoptions|Contains deployment options, such as whether deployment is transactional and whether deployed objects should be processed after deployment.|  

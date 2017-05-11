@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Collation Name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,13 +33,11 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 <SQL_collation_name> :: =   
 SQL_SortRules[_Pref]_CPCodepage_<ComparisonStyle>  
   
 <ComparisonStyle> ::=  
-_CaseSensitivity_AccentSensitivity  
-| _BIN  
+_CaseSensitivity_AccentSensitivity | _BIN  
 ```  
   
 ## Arguments  

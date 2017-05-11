@@ -27,13 +27,13 @@ manager: "erikre"
 |Cmdlet|Description|Equivalent AMO Methods|  
 |------------|-----------------|----------------------------|  
 |[Add-RoleMember cmdlet](../../analysis-services/powershell/add-rolemember-cmdlet.md)|Add a member to a database role.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
-|[Backup-ASDatabase cmdlet](../../analysis-services/powershell/backup-asdatabase-cmdlet.md)|Backup an Analysis Services database.|<xref:Microsoft.AnalysisServices.Database.Backup%2A>|  
+|[Backup-ASDatabase cmdlet](../../analysis-services/powershell/backup-asdatabase-cmdlet.md)|Backup an Analysis Services database.|Microsoft.AnalysisServices.Database.Backup|  
 |[Invoke-ASCmd cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)|Execute a query or script in XMLA or TSML (JSON) format.|<xref:Microsoft.AnalysisServices.Core.Server.Execute%2A>|  
 |[Invoke-ProcessASDatabase](../../analysis-services/powershell/invoke-processasdatabase.md)|Process a database.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessCube cmdlet](../../analysis-services/powershell/invoke-processcube-cmdlet.md)|Process a cube.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessDimension cmdlet](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)|Process a dimension.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessPartition cmdlet](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)|Process a partition.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Invoke-ProcessTable cmdlet](../../analysis-services/powershell/invoke-processtable-cmdlet.md)|Process a table in a Tabular model, compatibility model 1200 or later.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Invoke-ProcessTable cmdlet](../../analysis-services/powershell/invoke-processtable-cmdlet.md)|Process a table in a Tabular model, compatibility model 1200 or higher.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Merge-Partition cmdlet](../../analysis-services/powershell/merge-partition-cmdlet.md)|Merge a partition.|<xref:Microsoft.AnalysisServices.Partition.Merge%2A>|  
 |[New-RestoreFolder cmdlet](../../analysis-services/powershell/new-restorefolder-cmdlet.md)|Create a folder to contain a database backup.|<xref:Microsoft.AnalysisServices.RestoreFolder>|  
 |[New-RestoreLocation cmdlet](../../analysis-services/powershell/new-restorelocation-cmdlet.md)|Specify one or more remote servers on which to restore the database.|<xref:Microsoft.AnalysisServices.RestoreLocation>|  

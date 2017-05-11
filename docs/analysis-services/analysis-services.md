@@ -28,7 +28,7 @@ manager: "erikre"
  A typical workflow includes authoring a multidimensional or tabular data model, deploying the model as a database to an on-premises SQL Server Analysis Services or Azure Analysis Services server instance, setting up recurring data processing, and assigning permissions to allow data access by end-users. When it's ready to go, your semantic data model can be accessed by any client application supporting Analysis Services as a data source.  
  
 ## Analysis Services on-premises and in the cloud
-Analysis Services is now available in the cloud as an Azure service. Currently in preview, Azure Analysis Services supports tabular models at the 1200 compatibility level. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. To learn more and give it a try for free, see [Azure Analysis Services](https://azure.microsoft.com/en-us/services/analysis-services/). 
+Analysis Services is now available in the cloud as an Azure service. Azure Analysis Services supports tabular models at the 1200 and higher compatibility levels. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. To learn more and give it a try for free, see [Azure Analysis Services](https://azure.microsoft.com/en-us/services/analysis-services/). 
   
 ## Server mode  
  When installing Analysis Services by using SQL Server Setup, during configuration you specify a server mode for that instance.  Each mode includes different features unique to a particular  Analysis Services solution.   

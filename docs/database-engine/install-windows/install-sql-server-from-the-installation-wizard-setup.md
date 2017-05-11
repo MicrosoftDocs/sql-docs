@@ -20,6 +20,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
+
+ > For content related to previous versions of SQL Server, see [Install SQL Server 2014 from the Installation Wizard (Setup)](https://msdn.microsoft.com/en-US/library/ms143219(SQL.120).aspx).
+
   This topic provides a step-by-step procedure for installing a new instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup installation wizard. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for installation of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components so that you do not have to install them individually. For more information on various components that can be installed, see [Installation for SQL Server 2016](../../database-engine/install-windows/installation-for-sql-server-2016.md).  For more information about how to install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components individually, see [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).  
 
  These additional topics document other ways to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  

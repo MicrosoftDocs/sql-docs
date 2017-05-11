@@ -59,6 +59,17 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that RHEL does not provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
 
+## Set cluster property start-failure-is-fatal to false
+
+`Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will take care of demoting the replica to secondary and it will automatically rejoin the availability group. 
+To update the property value to false run:
+```bash
+pcs property set start-failure-is-fatal=false
+```
+If the property has the default value of `true`, if first attempt to start the resource fails, user intervention is required after an automatic failover to cleanup the resource failure count and reset the configuration using: `pcs resource cleanup <resourceName>` command.
+
+For more details on Pacemaker cluster properties see [Pacemaker Clusters Properties](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
+
 ## Create a SQL Server login for Pacemaker
 
 [!INCLUDE [SQL-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]

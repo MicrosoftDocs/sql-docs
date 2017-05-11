@@ -21,6 +21,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Start the SQL Server Import and Export Wizard
+
+ > For content related to previous versions of SQL Server, see [Run the SQL Server Import and Export Wizard](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
+
 You can start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in one of the following ways to import data from and export data to any supported data source. This topic briefly describes the steps for each method of starting the wizard.
 -   From the [Start menu](#startStart).
 -   From the [command prompt](#startCmd). 

@@ -19,6 +19,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Return Data from a Stored Procedure
+
+ > For content related to previous versions of SQL Server, see [Return Data from a Stored Procedure](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+
   There are two ways of returning result sets or data from a procedure to a calling program: output parameters and return codes. This topic provides information on both approaches.  
   
 ## Returning Data Using an Output Parameter  

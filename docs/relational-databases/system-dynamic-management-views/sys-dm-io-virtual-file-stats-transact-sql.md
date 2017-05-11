@@ -30,7 +30,7 @@ manager: "jhubbard"
   Returns I/O statistics for data and log files. This dynamic management view replaces the [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) function.  
   
 > [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_io_virtual_file_stats**. 
+>  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], use the name **sys.dm_pdw_nodes_io_virtual_file_stats**. 
 
 ## Syntax  
   
@@ -53,14 +53,17 @@ sys.dm_io_virtual_file_stats
 
 
  *database_id* | NULL
+
  **APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database
 
  ID of the database. *database_id* is int, with no default. Valid inputs are the ID number of a database or NULL. When NULL is specified, all databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are returned.  
   
  The built-in function [DB_ID](../../t-sql/functions/db-id-transact-sql.md) can be specified.  
   
-*file_id* | NULL  
-**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database 
+*file_id* | NULL
+
+**APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database
+ 
 ID of the file. *file_id* is int, with no default. Valid inputs are the ID number of a file or NULL. When NULL is specified, all files on the database are returned.  
   
  The built-in function [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) can be specified, and refers to a file in the current database.  
@@ -69,7 +72,7 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br></br> Name of an internal database that stores one or more distributions, or the tempdb database or one of the internal the database of a distribution. This database is on the node identified by pdw_node_id.
+|**database_name**|**sysname**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Name of an internal database that stores one or more distributions, or the tempdb database or one of the internal the database of a distribution. This database is on the node identified by pdw_node_id.
 |**database_id**|**smallint**|ID of database.|  
 |**file_id**|**smallint**|ID of file.|  
 |**sample_ms**|**bigint**<br /><br /> Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **int**<br /><br /> Applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Number of milliseconds since the computer was started. This column can be used to compare different outputs from this function.|  
@@ -84,7 +87,7 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
 |**file_handle**|**varbinary**|Windows file handle for this file.|  
 |**io_stall_queued_read_ms**|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for reads. Is not nullable. For more information, see [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
 |**io_stall_queued_write_ms**|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for writes. Is not nullable.|
-|**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]<br></br>Identifier for the node for the distribution.
+|**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identifier for the node for the distribution.
  
   
 ## Permissions  
@@ -93,7 +96,9 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
 ## Examples  
 
 ### A. Return statistics for a log file
+
 **Applies to:** SQL Server (starting with 2008), Azure SQL Database
+
  The following example returns statistics for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```tsql  
@@ -102,6 +107,7 @@ GO
 ```  
   
 ### B. Return statistics for file in tempdb
+
 **Applies to:** Azure SQL Data Warehouse
 
 ```tsql

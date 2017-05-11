@@ -37,7 +37,7 @@ manager: "erikre"
  **Import from Server (Tabular)**  
  This template can be used to create a new tabular model project by extracting the metadata from an existing tabular model in Analysis Services.  
   
- Older models have older compatibility levels. You can upgrade to 1200 by changing the Compatibility Level property after importing the model definition.  
+ Older models have older compatibility levels. You can upgrade by changing the Compatibility Level property after importing the model definition.  
   
  **Import from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**  
  This template is used for creating a new tabular model project by extracting the metadata and data from a [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] file.  
@@ -57,7 +57,7 @@ manager: "erikre"
  Most model authoring tasks can be performed in either view.  
   
 ### View Code Window  
- You can view the code behind a Model.bim file when you right-click select **View Code** on the file in Solution Explorer. For Tabular models at compatibility level 1200, the model definition is expressed in JSON.  
+ You can view the code behind a Model.bim file when you right-click select **View Code** on the file in Solution Explorer. For Tabular models at compatibility level 1200 and later, the model definition is expressed in JSON.  
   
  Note that you will need a full version of Visual Studio that provides the JSON editor. You can download and install the [free Visual Studio Community edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) if you do not require the additional features in commercial editions.  
   
@@ -69,13 +69,13 @@ manager: "erikre"
  To view Solution Explorer, click the **View** menu, and then click **Solution Explorer**.  
 
 ### Tabular Model Explorer
-  First available in the August 2016 release (14.0.60812.0) of [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), Tabular Model Explorer helps you navigate metadata objects in tabular 1200 models.
+  First available in the August 2016 release (14.0.60812.0) of [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), Tabular Model Explorer helps you navigate metadata objects in tabular models.
 
  To show Tabular Model Explorer, click **View** > **Other Windows**, and then click **Tabular Model Explorer**.
    
   ![Tabular Model Explorer](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- Tabular Model Explorer organizes metadata objects into a tree structure that closely resembles the schema of a tabular 1200 model. Data Sources, Perspectives, Relationships, Roles, Tables, and Translations correspond to top-level schema objects. There are some exceptions, specifically KPIs and Measures, which technically aren’t top-level objects, but child objects of the various tables in the model. However, having consolidated top-level containers for all KPIs and Measures makes it easier to work with these objects, especially if your model includes a very large number of tables. Measures are also listed under their corresponding parent tables, so you have a clear view of the actual parent-child relationships. If you select a measure in the top-level Measures container, the same measure is also selected in the child collection under its table, and vice-versa.  
+ Tabular Model Explorer organizes metadata objects into a tree structure that closely resembles the schema of a tabular model. Data Sources, Perspectives, Relationships, Roles, Tables, and Translations correspond to top-level schema objects. There are some exceptions, specifically KPIs and Measures, which technically aren’t top-level objects, but child objects of the various tables in the model. However, having consolidated top-level containers for all KPIs and Measures makes it easier to work with these objects, especially if your model includes a very large number of tables. Measures are also listed under their corresponding parent tables, so you have a clear view of the actual parent-child relationships. If you select a measure in the top-level Measures container, the same measure is also selected in the child collection under its table, and vice-versa.  
  
  Object nodes in Tabular Model Explorer are linked to appropriate menu options that until now were hiding under the Model, Table, and Column menus in Visual Studio. You can right-click an object to explore options for the object type. Not all object node types have a context menu yet, but additional options and improvements are coming in subsequent releases. 
 

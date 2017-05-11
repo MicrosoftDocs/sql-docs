@@ -61,7 +61,7 @@ manager: "erikre"
 |Accept wildcard characters?|false|  
   
 ### -RefreshType \<Microsoft.AnalysisServices.RefreshType>  
- Specifies the process type for a Tabular database at compatibility level 1200.  Valid values are  Full, ClearValues, Calculate, DataOnly,  Automatic, Add, and  Defragment. See [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) for descriptions and guidance.  
+ Specifies the process type for a Tabular database.  Valid values are  Full, ClearValues, Calculate, DataOnly,  Automatic, Add, and  Defragment. See [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) for descriptions and guidance.  
   
 |||  
 |-|-|  

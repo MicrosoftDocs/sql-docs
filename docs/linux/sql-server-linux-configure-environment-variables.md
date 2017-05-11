@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use environment variables to configure SQL Server on Linux | Microsoft Docs
+title: Configure SQL Server settings with environment variables | Microsoft Docs
 description: This topic describes how to use environment variables to configure specific SQL Server 2017 settings on Linux.
 author: rothja
 ms.author: jroth
@@ -23,6 +23,6 @@ ms.assetid:
 # ms.tgt_pltfrm: ""
 # ms.custom: ""
 ---
-# Use environment variables to configure SQL Server 2017 settings on Linux
+# Configure SQL Server settings with environment variables on Linux
 
-TBD 
+TBD

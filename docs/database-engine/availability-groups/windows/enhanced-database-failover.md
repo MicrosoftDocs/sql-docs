@@ -76,7 +76,7 @@ To see whether an availability group has enhanced database failover enabled, que
 
 - [Use the Availability Group Wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
--[Use the New Availability Group Dialog Box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
+- [Use the New Availability Group Dialog Box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
 

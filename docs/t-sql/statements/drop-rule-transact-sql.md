@@ -2,7 +2,7 @@
 title: "DROP RULE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.date: "05/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,15 +40,12 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]  
 ```  
   
 ## Arguments  
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the rule only if it already exists.  
   
@@ -69,18 +66,11 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  To execute DROP RULE, at a minimum, a user must have ALTER permission on the schema to which the rule belongs.  
   
 ## Examples  
- The following example unbinds and then drops the rule named `VendorID_rule`. (Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] you can use the DROP RULE IF EXISTS syntax.)  
+ The following example unbinds and then drops the rule named `VendorID_rule`. 
   
 ```  
-USE AdventureWorks2012;  
-GO  
-IF EXISTS (SELECT name FROM sysobjects  
-         WHERE name = 'VendorID_rule'  
-            AND type = 'R')  
-   BEGIN  
-      EXEC sp_unbindrule 'Production.ProductVendor.VendorID'  
-      DROP RULE VendorID_rule  
-   END;  
+sp_unbindrule 'Production.ProductVendor.VendorID'  
+DROP RULE VendorID_rule  
 GO  
 ```  
   
@@ -91,5 +81,4 @@ GO
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
-  
-  
+

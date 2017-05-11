@@ -21,6 +21,8 @@ manager: "jhubbard"
 # Editions and Supported Features for SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
+ > For content related to previous versions of SQL Server, see [Features Supported by the Editions of SQL Server 2014](https://msdn.microsoft.com/en-US/library/cc645993(SQL.120).aspx).
+
   This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  The SQL Server Evaluation edition is available for a 180-day trial period.  

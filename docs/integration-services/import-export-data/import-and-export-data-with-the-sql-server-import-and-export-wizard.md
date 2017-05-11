@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Import and Export Data with the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -29,6 +29,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Import and Export Data with the SQL Server Import and Export Wizard
+
+ > For content related to previous versions of SQL Server, see [Run the SQL Server Import and Export Wizard](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
+
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard is a simple way to copy data from a source to a destination. This overview describes the data sources that the wizard can use as sources and destinations, as well as the permissions you need to run the wizard.
 
 ## Get the wizard

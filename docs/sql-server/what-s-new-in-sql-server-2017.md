@@ -27,7 +27,12 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 
 **Try it out:**    
    -   [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[Download the SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
+
 ## What's New in SQL Server 2017 CTP 2.1 (May 2017)
+### SQL Server Database Engine
+- There are no new Database Engine features in this CTP.
+- This CTP contains bug fixes for the Database Engine.
+- For a detailed list of 2017 CTP enhancements in previous CTP releases, see [What's New in SQL Server 2017 (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## What's New in SQL Server 2017 CTP 2.0 (April 2017)

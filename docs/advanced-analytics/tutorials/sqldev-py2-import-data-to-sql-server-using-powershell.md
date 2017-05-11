@@ -1,7 +1,7 @@
 ---
 title: "Step 2: Import Data to SQL Server using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/28/2017"
+ms.date: "05/10/2017"
 ms.prod: "sql-server-vnext-ctp2"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,7 +44,7 @@ Among the downloaded files you should see a PowerShell script. To prepare the en
 
     You will be prompted to input the following information:
     - The name or address of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance where machine learning Services with Python has been installed
-    - The user name and password for an account on the instance. The account you use must have the ability to create databases, create tables and stored procedures, and upload data to tables.
+    - The user name and password for an account on the instance. The account you use must have the ability to create databases, create tables and stored procedures, and upload data to tables. If you do not provide the user name and password, your Windows identity is used to sign in to SQL Server.
     - The path and file name of the sample data file that you just downloaded. For example, `C:\tempRSQL\nyctaxi1pct.csv`
 
 2.  As part of this step, all the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts are also modified to replace placeholders with the database name and user name that you provide as script inputs.

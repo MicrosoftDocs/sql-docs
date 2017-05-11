@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Explore and Visualize the Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/19/2016"
+ms.date: "05/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -117,20 +117,19 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
     EXEC [dbo].[PlotHistogram]  
     ```  
   
-**Results**  
-  
-*plot*  
-*0xFFD8FFE000104A4649...*  
+    **Results**  
+    
+    *plot*  
+    *0xFFD8FFE000104A4649...*  
   
 2.  Open a PowerShell command prompt and run the following command, providing the appropriate instance name, database name, username, and credentials as arguments:  
   
-    ```  
-    bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  <database name>  -U <user name> -P <password>  
-  
-    ```  
-  
+     ``` 
+     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  <database name>  -U <user name> -P <password>
+     ```  
+
     > [!NOTE]  
-    > Command switches for **bcp** are case-sensitive.  
+    > Command switches for bcp are case-sensitive. 
   
 3.  If the connection is successful, you will be prompted to enter more information about the graphic file format. Press ENTER at each prompt to accept the defaults, except for these changes:  
   
@@ -149,15 +148,15 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
     ```  
   
-**Results**  
-  
-*Starting copy...*  
-*1 rows copied.*  
-*Network packet size (bytes): 4096*  
-*Clock Time (ms.) Total     : 3922   Average : (0.25 rows per sec.)*  
-   
-> [!TIP]  
- > If you save the format information to file (bcp.fmt), the **bcp** utility generates a format definition that you can apply to similar commands in future without being prompted for graphic file format options. To use the format file, add `-f bcp.fmt` to the end of any command line, after the password argument.  
+    **Results**  
+    
+    *Starting copy...*  
+    *1 rows copied.*  
+    *Network packet size (bytes): 4096*  
+    *Clock Time (ms.) Total     : 3922   Average : (0.25 rows per sec.)*  
+    
+    > [!TIP]  
+    > If you save the format information to file (bcp.fmt), the **bcp** utility generates a format definition that you can apply to similar commands in future without being prompted for graphic file format options. To use the format file, add `-f bcp.fmt` to the end of any command line, after the password argument.  
   
 4.  The output file will be created in the same directory where you ran the PowerShell command. To view the plot, just open the file plot.jpg.  
   
@@ -259,22 +258,22 @@ In this step, you'll create a new stored procedure, _PlotInOutputFiles_, that de
   
     ```  
   
-**Results**  
-  
-*STDOUT message(s) from external script:*  
-*[1] Creating output plot files:[1]* *C:\\\temp\\\plots\\\rHistogram_Tipped_18887f6265d4.jpg[1]* *C:\\\temp\\\plots\\\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]* *C:\\\temp\\\plots\\\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf*  
+    **Results**  
+    
+    *STDOUT message(s) from external script:*  
+    *[1] Creating output plot files:[1]* *C:\\\temp\\\plots\\\rHistogram_Tipped_18887f6265d4.jpg[1]* *C:\\\temp\\\plots\\\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]* *C:\\\temp\\\plots\\\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf*  
   
 2.  Open the destination folder and review the files that were created by the R code in the stored procedure. (The numbers in the file names are randomly generated.)  
   
-*  rHistogram_Tipped_*nnnn*.jpg: Shows the number of trips that got a tip (1) vs. the trips that got no tip (0). This histogram is much like the one you generated in the previous step.  
-  
-*  rHistograms_Tip_and_Fare_Amount_*nnnn*.pdf: Shows  the distribution of values in the tip_amount and fare_amount columns.  
-  
-        ![histogram showing tip_amount and fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogram showing tip_amount and fare_amount")  
-  
-*  rXYPlots_Tip_vs_Fare_Amount_*nnnn*.pdf: A scatterplot with the fare amount on the x-axis and the tip amount on the y-axis.  
-  
-        ![tip amount plotted over fare amount](media/rsql-devtut-tipamtbyfareamt.PNG "tip amount plotted over fare amount")  
+    *  rHistogram_Tipped_*nnnn*.jpg: Shows the number of trips that got a tip (1) vs. the trips that got no tip (0). This histogram is much like the one you generated in the previous step.  
+    
+    *  rHistograms_Tip_and_Fare_Amount_*nnnn*.pdf: Shows  the distribution of values in the tip_amount and fare_amount columns.  
+    
+            ![histogram showing tip_amount and fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogram showing tip_amount and fare_amount")  
+    
+    *  rXYPlots_Tip_vs_Fare_Amount_*nnnn*.pdf: A scatterplot with the fare amount on the x-axis and the tip amount on the y-axis.  
+    
+            ![tip amount plotted over fare amount](media/rsql-devtut-tipamtbyfareamt.PNG "tip amount plotted over fare amount")  
   
 3.  To output the files to a different folder, change the value of the `mainDir` variable in the R script embedded in the stored procedure.  
   

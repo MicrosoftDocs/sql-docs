@@ -2,7 +2,7 @@
 title: "DROP VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
+ms.date: "05/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -52,9 +52,7 @@ DROP VIEW [ schema_name . ] view_name
   
 ## Arguments  
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).|  
   
  Conditionally drops the view only if it already exists.  
   
@@ -85,21 +83,9 @@ DROP VIEW [ schema_name . ] view_name
 ### A. Drop a view  
  The following example removes the view `Reorder`.  
   
-```tsql  
-USE AdventureWorks2012 ;  
-GO  
-  
+```  
 DROP VIEW dbo.Reorder ;  
 GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### B. Drop a view  
- The following example removes the `Reorder` view from the local database.  
-  
-```  
-DROP VIEW Reorder;  
 ```  
   
 ## See Also  
@@ -110,7 +96,4 @@ DROP VIEW Reorder;
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
-  
-  
-
-
+ 

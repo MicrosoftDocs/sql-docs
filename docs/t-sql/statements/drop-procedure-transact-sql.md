@@ -2,7 +2,7 @@
 title: "DROP PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.date: "05/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -53,9 +53,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
   
 ## Arguments  
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the procedure only if it already exists.  
   
@@ -97,13 +95,6 @@ DROP PROCEDURE IF EXISTS dbo.uspMyProc;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example removes the `dbo.uspMyProc` stored procedure in the current database.  
-  
-```  
-DROP PROCEDURE dbo.uspMyProc;  
-GO  
-```  
   
 ## See Also  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   

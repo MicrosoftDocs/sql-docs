@@ -46,7 +46,7 @@ sys.dm_io_virtual_file_stats (
 ```  
 -- Syntax for Azure SQL Data Warehouse
 
-sys.dm_io_virtual_file_stats
+sys.dm_pdw_nodes_io_virtual_file_stats
 ```
   
 ## Arguments  
@@ -72,10 +72,10 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Name of the database stored on the node which is identified by pdw_node_id. Each node has one tempdb database that has 13 files. Each node also has one database per distribution, and each distribution database has 5 files. For example, if each node contains 4 distributions, the results show 20 distribution database files per pdw_node_id. 
+|**database_name**|**sysname**|Database name.</br></br>For SQL Data Warehouse, this is the name of the database stored on the node which is identified by pdw_node_id. Each node has one tempdb database that has 13 files. Each node also has one database per distribution, and each distribution database has 5 files. For example, if each node contains 4 distributions, the results show 20 distribution database files per pdw_node_id. 
 |**database_id**|**smallint**|ID of database.|  
 |**file_id**|**smallint**|ID of file.|  
-|**sample_ms**|**bigint**<br /><br /> Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **int**<br /><br /> Applies to: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Number of milliseconds since the computer was started. This column can be used to compare different outputs from this function.|  
+|**sample_ms**|**bigint**|Number of milliseconds since the computer was started. This column can be used to compare different outputs from this function.</br></br>The data type is **int** for [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Number of reads issued on the file.|  
 |**num_of_bytes_read**|**bigint**|Total number of bytes read on this file.|  
 |**io_stall_read_ms**|**bigint**|Total time, in milliseconds, that the users waited for reads issued on the file.|  
@@ -85,9 +85,9 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
 |**io_stall**|**bigint**|Total time, in milliseconds, that users waited for I/O to be completed on the file.|  
 |**size_on_disk_bytes**|**bigint**|Number of bytes used on the disk for this file. For sparse files, this number is the actual number of bytes on the disk that are used for database snapshots.|  
 |**file_handle**|**varbinary**|Windows file handle for this file.|  
-|**io_stall_queued_read_ms**|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for reads. Is not nullable. For more information, see [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for writes. Is not nullable.|
-|**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identifier for the node for the distribution.
+|**io_stall_queued_read_ms**|**bigint**|**Does not apply to:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql12-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for reads. Is not nullable. For more information, see [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**bigint**|**Does not apply to:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql12-md.md)].<br /><br />  Total IO latency introduced by IO resource governance for writes. Is not nullable.|
+|**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identifier of the node for the distribution.
  
   
 ## Permissions  

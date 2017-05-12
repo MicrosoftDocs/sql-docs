@@ -22,7 +22,7 @@ manager: "erikre"
 There are no new features in this release. Improvements include bug fixes and performance.
 
 ## SQL Server Analysis Services CTP 2.0
-This release see many new enhancements for tabular model, including:
+This release has many new enhancements for tabular model, including:
 
 * Object-level security to secure the metadata of tabular models.
 * Transaction-performance improvements for a more responsive developer experience.

@@ -35,8 +35,10 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 - For a detailed list of 2017 CTP enhancements in previous CTP releases, see [What's New in SQL Server 2017 (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
 
 ### SQL Server Reporting Services (SSRS)
-- There are no new SSRS features in this CTP.
+- SQL Server Reporting Services is no longer available to install through SQL Server's setup as of CTP 2.1.
+- Comments are now available for reports. Comments allow you to add perspective to what is in a report and collaborate with others in your organization. You can also include attachments with your comment.
 - For more detailed SSRS what's new information, including details from previous releases, see [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md). 
+- For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/)
 
 ### SQL Server Machine Learning Services
 - There are no new Machine Learning Services features in this CTP.

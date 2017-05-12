@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/12/2017"
+ms.date: "05/16/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,6 +29,32 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
 ### Documentation (CTP 2.1)
 - **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] will be noted with **Applies To**. 
 - **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
+
+### SQL Server Reporting Services (CTP 2.1)
+
+- **Issue and customer impact:** If you have both SQL Server Reporting Services and Power BI Report Server on the same machine and uninstall one of them, you will no longer be able to connect to the remaining report server with Report Server Configuration Manager.
+- **Workaround** To work around this issue, you must perform the following operations after uninstalling one of the servers.
+
+    1. Launch a command prompt in Administrator mode.
+    2. Go to the directory where the remaining report server is installed.
+
+        *Default location for Power BI Report Server: C:\Program Files\Microsoft Power BI Report Server*
+
+        *Default location for SQL Server Reporting Services: C:\Program Files\Microsoft SQL Server Reporting Services*
+
+    3. Then go to the next folder. This will either be *SSRS* or *PBIRS* depending on what is remaining.
+    4. Go to the WMI folder.
+    5. Run the following command:
+
+        ```
+        regsvr32 /i ReportingServicesWMIProvider.dll
+        ```
+
+        You can ignore the following error, if you see it.
+
+        ```
+        The module "ReportingServicesWMIProvider.dll" was loaded but the entry-point DLLInstall was not found. Make sure that "ReportingServicesWMIProvider.dll" is a valid DLL or OCX file and then try again.
+        ```
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.0 (April  2017)

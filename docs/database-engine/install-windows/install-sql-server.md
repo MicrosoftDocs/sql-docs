@@ -21,6 +21,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server
+
+ > For content related to previous versions of SQL Server, see [Install SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500395(SQL.120).aspx).
+
   SQL Server 2016 is a 64-bit application. Here are important details about how to get SQL Server and how to install it.
 
 ## Installation details

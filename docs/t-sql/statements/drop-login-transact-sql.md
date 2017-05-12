@@ -1,7 +1,7 @@
 ---
 title: "DROP LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2015"
+ms.date: "05/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DROP LOGIN login_name  
 ```  
   
@@ -62,23 +60,12 @@ DROP LOGIN login_name
   
 ```  
 DROP LOGIN WilliJo;  
-GO    
+GO 
 ```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### B. Dropping a login  
- The following example removes database login `login7` from the appliance.  
-  
-```  
-DROP LOGIN login7;  
-```  
+ 
   
 ## See Also  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
-  
-
 

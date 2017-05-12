@@ -40,6 +40,21 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 - For more detailed SSRS what's new information, including details from previous releases, see [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md). 
 - For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/)
 
+### SQL Server Machine Learning Services
+- There are no new Machine Learning Services features in this CTP.
+- For more detailed Machine Learning Services what's new information, including details from previous CTPs, see [What's New in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).  
+
+### SQL Server Analysis Services (SSAS)
+- There are no new SSAS features in this CTP.  
+- For more details, including what's new for Analysis Services in the latest preview releases of SSDT and SSMS, see [What's New in Analysis Services 2017](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
+
+### SQL Server Integration Services (SSIS)
+- There are no new SSIS features in this CTP.
+- For more detailed SSIS what's new information, including details from previous CTPs, see [What's New in Integration Services 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).  
+
+### Master Data Services (MDS)
+- There are no new Master Data Services features in this CTP.
+
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## What's New in SQL Server 2017 CTP 2.0 (April 2017)
 ### SQL Server Database Engine

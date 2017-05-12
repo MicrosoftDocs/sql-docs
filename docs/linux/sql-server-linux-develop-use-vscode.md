@@ -241,7 +241,7 @@ The following steps show how to connect to SQL Server with VS Code.
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png" alt="Context menu" style="width: 500px;" />
 
-4. Select **Save All**.
+4. Select **Select All**.
 
 5. Open the grid context menu and select **Save as JSON** to save the result to a .json file.
 

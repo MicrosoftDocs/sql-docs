@@ -2,7 +2,7 @@
 title: "DROP TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.date: "05/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -73,9 +73,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
  Windows Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #. Windows Azure SQL Database does not support four-part names.  
   
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the table only if it already exists.  
   
@@ -141,9 +139,7 @@ SELECT * FROM #temptable;
   
 ### D. Dropping a table using IF EXISTS  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  The following example creates a table named T1. Then the second statement drops the table. The third statement performs no action because the table is already deleted, however it does not cause an error.  
   
@@ -155,29 +151,6 @@ GO
 DROP TABLE IF EXISTS T1;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### E. Using basic syntax  
-  
-```  
-DROP TABLE SalesPerson;  
-DROP TABLE dbo.SalesPerson;  
-DROP TABLE EasternDivision.dbo.SalesPerson;  
-```  
-  
-### F. Dropping a table from the current database  
- The following example removes the `ProductVendor1` table, its data, indexes, and any dependent views from the current database.  
-  
-```  
-DROP TABLE ProductVendor1;  
-```  
-  
-### G. Dropping a table from another database  
- The following example drops the `SalesPerson` table in the `EasternDivision` database.  
-  
-```  
-DROP TABLE EasternDivision.dbo.SalesPerson;  
-```  
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
@@ -191,6 +164,3 @@ DROP TABLE EasternDivision.dbo.SalesPerson;
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
-  
-
-

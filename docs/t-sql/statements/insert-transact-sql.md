@@ -634,7 +634,8 @@ CREATE TABLE dbo.EmployeeSales
  );  
 GO  
 INSERT TOP(5)INTO dbo.EmployeeSales  
-    OUTPUT inserted.EmployeeID, inserted.FirstName, inserted.LastName, inserted.YearlySales  
+    OUTPUT inserted.EmployeeID, inserted.FirstName, 
+        inserted.LastName, inserted.YearlySales  
     SELECT sp.BusinessEntityID, c.LastName, c.FirstName, sp.SalesYTD   
     FROM Sales.SalesPerson AS sp  
     INNER JOIN Person.Person AS c  
@@ -647,7 +648,8 @@ INSERT TOP(5)INTO dbo.EmployeeSales
   
 ```  
 INSERT INTO dbo.EmployeeSales  
-    OUTPUT inserted.EmployeeID, inserted.FirstName, inserted.LastName, inserted.YearlySales  
+    OUTPUT inserted.EmployeeID, inserted.FirstName, 
+        inserted.LastName, inserted.YearlySales  
     SELECT TOP (5) sp.BusinessEntityID, c.LastName, c.FirstName, sp.SalesYTD   
     FROM Sales.SalesPerson AS sp  
     INNER JOIN Person.Person AS c  
@@ -693,7 +695,8 @@ DECLARE @MyTableVar table(
   
 -- Insert values into the table variable.  
 INSERT INTO @MyTableVar (LocationID, CostRate, ModifiedDate)  
-    SELECT LocationID, CostRate, GETDATE() FROM Production.Location  
+    SELECT LocationID, CostRate, GETDATE() 
+    FROM Production.Location  
     WHERE CostRate > 0;  
   
 -- View the table variable result set.  
@@ -713,7 +716,8 @@ GO
 USE master;  
 GO  
 -- Create a link to the remote data source.   
--- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
+-- Specify a valid server name for @datasrc as 'server_name' 
+-- or 'server_nameinstance_name'.  
   
 EXEC sp_addlinkedserver @server = N'MyLinkServer',  
     @srvproduct = N' ',  
@@ -783,7 +787,9 @@ WITH (
         REJECT_VALUE = 0  
 );  
   
--- Export data: Move old data to Hadoop while keeping it query-able via external table.  
+-- Export data: Move old data to Hadoop while keeping 
+-- it query-able via external table.  
+
 INSERT INTO dbo.FastCustomer2009  
 SELECT T.* FROM Insured_Customers T1 JOIN CarSensor_Data T2  
 ON (T1.CustomerKey = T2.CustomerKey)  
@@ -956,7 +962,7 @@ GO
 SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
 ```  
 
-### W. Inserting data using the SELECT option  
+#### W. Inserting data using the SELECT option  
  The following example shows how to insert multiple rows of data using an INSERT statement with a SELECT option. The first `INSERT` statement uses a `SELECT` statement directly to retrieve data from the source table, and then to store the result set in the `EmployeeTitles` table.  
   
 ```  
@@ -971,7 +977,7 @@ INSERT INTO EmployeeTitles
     WHERE EndDate IS NULL;  
 ```  
   
-### X. Specifying a label with the INSERT statement  
+#### X. Specifying a label with the INSERT statement  
  The following example shows the use of a label with an INSERT statement.  
   
 ```  
@@ -982,7 +988,7 @@ VALUES (500, N'C1', N'Currency1')
 OPTION ( LABEL = N'label1' );  
 ```  
   
-### Y. Using a label and a query hint with the INSERT statement  
+#### Y. Using a label and a query hint with the INSERT statement  
  This query shows the basic syntax for using a label and a query join hint with the INSERT statement. After the query is submitted to the Control node, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], running on the Compute nodes, will apply the hash join strategy when it generates the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query plan. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
 ```  

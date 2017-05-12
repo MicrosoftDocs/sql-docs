@@ -2,7 +2,7 @@
 title: "Reporting Services (SSRS) | Microsoft Docs"
 description: "Learn about tools and services for mobile and paginated Reporting Services reports and Power BI reports on premises."
 ms.custom: ""
-ms.date: "05/10/2017"
+ms.date: "05/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,7 +23,10 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # What is SQL Server Reporting Services (SSRS)?
+
+> For content related to previous versions of SQL Server, see [Reporting Services (SSRS)](https://msdn.microsoft.com/en-US/library/ms159106(SQL.120).aspx).
 
 Create, deploy, and manage mobile and paginated Reporting Services reports and Power BI reports on premises with the range of ready-to-use tools and services that SQL Server Reporting Services (SSRS) and Power BI provide.
 

@@ -85,8 +85,8 @@ ID of the file. *file_id* is int, with no default. Valid inputs are the ID numbe
 |**io_stall**|**bigint**|Total time, in milliseconds, that users waited for I/O to be completed on the file.|  
 |**size_on_disk_bytes**|**bigint**|Number of bytes used on the disk for this file. For sparse files, this number is the actual number of bytes on the disk that are used for database snapshots.|  
 |**file_handle**|**varbinary**|Windows file handle for this file.|  
-|**io_stall_queued_read_ms**|**bigint**|**Does not apply to:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql12-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for reads. Is not nullable. For more information, see [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Does not apply to:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql12-md.md)].<br /><br />  Total IO latency introduced by IO resource governance for writes. Is not nullable.|
+|**io_stall_queued_read_ms**|**bigint**|**Does not apply to:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Total IO latency introduced by IO resource governance for reads. Is not nullable. For more information, see [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**bigint**|**Does not apply to:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Total IO latency introduced by IO resource governance for writes. Is not nullable.|
 |**pdw_node_id**|**int**|**Applies to:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identifier of the node for the distribution.
  
   

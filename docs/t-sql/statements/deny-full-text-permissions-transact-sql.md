@@ -96,7 +96,6 @@ DENY permission [ ,...n ] ON
   
 -   database user not mapped to a server principal.  
   
-## Remarks  
   
 ## FULLTEXT CATALOG Permissions  
  A full-text catalog is a database-level securable contained by the database that is its parent in the permissions hierarchy. The most specific and limited permissions that can be denied on a full-text catalog are listed in the following table, together with the more general permissions that include them by implication.  

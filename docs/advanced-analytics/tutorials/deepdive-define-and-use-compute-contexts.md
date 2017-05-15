@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Lesson 1-3 - Define and Use Compute Contexts
 Suppose that you want to perform some of the more complex calculations on the server, rather than your local computer. To do this, you can create a compute context, which  lets R code run on the server.  
   
-The [RxInSqlServer](https://msdn.microsoft.com/microsoft-r/scaler/rxinsqlserver) function is one of the enhanced R functions provided in the [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler) package. The function handles the tasks of creating the database connection and passing objects between the local computer and the remote execution context.  
+The [RxInSqlServer](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxinsqlserver-class) function is one of the enhanced R functions provided in the [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler) package. The function handles the tasks of creating the database connection and passing objects between the local computer and the remote execution context.  
   
 In this step, you'll learn how to use the *RxInSqlServer* function to define a compute context in your R code.  
 
@@ -72,7 +72,7 @@ To create a compute context requires the following basic information about the [
     ## Add this line to create directory if it does not exist
     dir.create(sqlShareDir, recursive = TRUE) 
     ```  
-    We recommend that you use the default, rather than manually specifying a folder for this argument. For more information, see the [ScaleR reference](https://msdn.microsoft.com/microsoft-r/scaler/rxinsqlserver).
+    We recommend that you use the default, rather than manually specifying a folder for this argument. For more information, see the [ScaleR reference](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxinsqlserver).
     
     If you just want to know which folder is being used, you can run `rxGetComputeContext` to view details about the current compute context. 
   

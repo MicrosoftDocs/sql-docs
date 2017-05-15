@@ -1,5 +1,5 @@
-# [Create program +](../../relational-databases/server-management-objects-smo/create-program/index.md?toc=%2fsql%2frelational-databases%2fserver-management-objects-smo%2fcreate-program%2ftoc.json)
-# [Tasks +](../../relational-databases/server-management-objects-smo/tasks/index.md?toc=%2fsql%2frelational-databases%2fserver-management-objects-smo%2ftasks%2ftoc.json)
+# [Create program +](../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)
+# [Tasks +](../../relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md)
 # [Backward Compatibility in SMO](backward-compatibility-in-smo.md)
 # [Files and Version Numbers](files-and-version-numbers.md)
 # [Getting Started in SMO](getting-started-in-smo.md)

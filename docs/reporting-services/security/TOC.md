@@ -6,7 +6,7 @@
 ## [Configure Custom or Forms Authentication on the Report Server](configure-custom-or-forms-authentication-on-the-report-server.md)  
 ## [Configure the Web Portal to Pass Custom Authentication Cookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
 # [Roles and Permissions](roles-and-permissions-reporting-services.md)  
-## [Grant User Access to a Report Server](grant-user-access-to-a-report-server-report-manager.md)  
+## [Grant User Access to a Report Server](grant-user-access-to-a-report-server.md)  
 ## [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)  
 ### [Securable Items](securable-items.md)  
 ### [Tasks and Permissions](tasks-and-permissions.md)  

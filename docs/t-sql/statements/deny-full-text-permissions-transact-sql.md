@@ -1,7 +1,7 @@
 ---
 title: "DENY Full-Text Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,16 +28,12 @@ manager: "jhubbard"
 
   Denies permissions on a full-text catalog and full-text stoplists.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
-  
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 DENY permission [ ,...n ] ON  
     FULLTEXT   
         {  
@@ -100,7 +96,6 @@ DENY permission [ ,...n ] ON
   
 -   database user not mapped to a server principal.  
   
-## Remarks  
   
 ## FULLTEXT CATALOG Permissions  
  A full-text catalog is a database-level securable contained by the database that is its parent in the permissions hierarchy. The most specific and limited permissions that can be denied on a full-text catalog are listed in the following table, together with the more general permissions that include them by implication.  

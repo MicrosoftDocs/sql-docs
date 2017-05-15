@@ -31,7 +31,7 @@
 # Develop Clients
 ## [CLR integration](../relational-databases/clr-integration/assemblies-database-engine.md)
 ## [Extended stored procedures programming](../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)
-## [Extended stored procedures reference](../relational-databases/extended-stored-procedures-reference/odbc-api-implementation-details.md)
+## [Extended stored procedures reference](../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)
 ## [Express Localdb error messages](../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)
 ## [Express Localdb instance APIs](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)
 ## [Native client](../relational-databases/native-client/finding-more-sql-server-native-client-information.md)

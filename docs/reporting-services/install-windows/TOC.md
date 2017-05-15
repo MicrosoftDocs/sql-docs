@@ -1,5 +1,4 @@
 # [Install Reporting Services](install-reporting-services.md)  
-## [Install the Technical Preview](install-january-2017-technical-preview-power-bi-reports.md)  
 ## [Install Reporting Services in native mode](install-reporting-services-native-mode-report-server.md)  
 ### [Perform a Files-Only Installation of Reporting Services](files-only-installation-reporting-services.md)  
 ### [Install Reporting Services and Internet Information Services Side-by-Side (SSRS Native Mode)](install-reporting-and-internet-information-services-side-by-side.md)  

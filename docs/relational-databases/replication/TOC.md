@@ -73,7 +73,7 @@
 ### [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)  
 ## [Scripting Replication](scripting-replication.md)  
 
-# [Developer Concepts](concepts/index.md)
+# [Developer Concepts](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [Technical Reference](technical-reference-replication.md)  
 ## [Properties Reference](properties-reference-replication.md)  

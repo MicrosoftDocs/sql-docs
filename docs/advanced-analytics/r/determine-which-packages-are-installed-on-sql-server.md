@@ -29,8 +29,8 @@ For information about how to determine the default library location for an insta
 +   Many R development tools provide an object browser or a list of packages that are installed or that are loaded in the current R workspace.  
 
 + We recommend the following functions from the RevoScaleR package that are provided specifically for package management in compute contexts:
-  - [rxFindPackage](https://msdn.microsoft.com/microsoft-r/scaler/rxfindpackage)
-  - [rxInstalledPackages](https://msdn.microsoft.com/microsoft-r/scaler/rxInstalledPackages)   
+  - [rxFindPackage](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxfindpackage)
+  - [rxInstalledPackages](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxinstalledpackages)   
   
 +   You can use an R function, such as `installed.packages()`, which is included in the installed `utils` package. The function scans the DESCRIPTION files of each package that was  found in the specified library and returns a matrix of package names, library paths, and version numbers.  
  

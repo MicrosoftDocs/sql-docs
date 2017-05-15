@@ -1,7 +1,7 @@
 ---
 title: "DENY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "05/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,10 +44,18 @@ manager: "jhubbard"
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Simplified syntax for DENY  
-DENY { ALL [ PRIVILEGES ] }  
-      | permission [ ( column [ ,...n ] ) ] [ ,...n ]  
-      [ ON [ class :: ] securable ] TO principal [ ,...n ]   
-      [ CASCADE] [ AS principal ]  
+DENY   { ALL [ PRIVILEGES ] } 
+     | <permission>  [ ( column [ ,...n ] ) ] [ ,...n ]  
+    [ ON [ <class> :: ] securable ] 
+    TO principal [ ,...n ]   
+    [ CASCADE] [ AS principal ]  
+[;]
+
+<permission> ::=  
+{ see the tables below }  
+  
+<class> ::=  
+{ see the tables below }  
 ```  
   
 ```  
@@ -55,7 +63,7 @@ DENY { ALL [ PRIVILEGES ] }
   
 DENY   
     <permission> [ ,...n ]  
-    [ ON [ <class_type> :: ] securable ]   
+    [ ON [ <class_> :: ] securable ]   
     TO principal [ ,...n ]  
     [ CASCADE ]  
 [;]  
@@ -63,7 +71,7 @@ DENY
 <permission> ::=  
 { see the tables below }  
   
-<class_type> ::=  
+<class> ::=  
 {  
       LOGIN  
     | DATABASE  

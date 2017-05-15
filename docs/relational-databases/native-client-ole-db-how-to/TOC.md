@@ -1,5 +1,5 @@
-# [Results +](../../relational-databases/native-client-ole-db-how-to/results/index.md?toc=%2fsql%2frelational-databases%2fnative-client-ole-db-how-to%2fresults%2ftoc.json)
-# [Filestream +](../../relational-databases/native-client-ole-db-how-to/filestream/index.md?toc=%2fsql%2frelational-databases%2fnative-client-ole-db-how-to%2ffilestream%2ftoc.json)
+# [Results +](../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)
+# [Filestream +](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)
 # [Bulk Copy Data Using IRowsetFastLoad (OLE DB)](bulk-copy-data-using-irowsetfastload-ole-db.md)
 # [Change a SQL Server Authentication User Password (OLE DB)](change-a-sql-server-authentication-user-password-ole-db.md)
 # [Display Column and Catalog Metadata for Sparse Columns (OLE DB)](display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)

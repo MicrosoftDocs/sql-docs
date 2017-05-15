@@ -28,23 +28,23 @@ The following functions let you define a [!INCLUDE[ssNoVersion_md](../../include
 In addition to defining a data source, you can execute DDL statements from R, if you have the necessary permissions on the instance and database. 
 + [RxSqlServerData](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/RxSqlServerData) - Define a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] data source object
 + [rxSqlServerDropTable](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxSqlServerDropTable) - Drop a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] table
-+ [rxSqlServerTableExists](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxSqlServerTableExists) - Check for the existence of a database table or object
++ [rxSqlServerTableExists](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxSqlServerDropTable) - Check for the existence of a database table or object
 + [rxExecuteSQLDDL](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxExecuteSQLDDL) - Execute a command to define, manipulate, or control SQL data, but not return data  
 
 ## Functions for Defining or Managing a Compute Context
 The following functions let you define a new compute context, switch compute contexts, or identify the current compute context.
 + [RxComputeContext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/RxComputeContext) - Create a compute context. 
 + [rxInSqlServer](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxInSqlServer) - Generate a SQL Server compute context that lets **ScaleR** functions run in SQL Server R Services. This compute context is currently supported only for SQL Server instances on Windows.
-+ [rxGetComputeContext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxGetComputeContext) - Get the current compute context. 
++ [rxGetComputeContext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxSetComputeContext) - Get the current compute context. 
 + [rxSetComputeContext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxSetComputeContext) - Specify which compute context to use. 
 
 ## Functions for Using a Data Source
 After you have created a data source object, you can open it to get data, or write new data to it. Depending on the size of the data in the source, you can also define the batch size as part of the data source and move data in chunks. 
-+ [rxIsOpen](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxIsOpen) - Check whether a data source is available
-+ [rxOpen](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxOpen) - Open a data source for reading
-+ [rxReadNext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxReadNext) - Read data from a source
-+ [rxWriteNext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxWriteNext) - Write data to the target
-+ [rxClose](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxclose) - Close a data source
++ [rxIsOpen](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Check whether a data source is available
++ [rxOpen](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Open a data source for reading
++ [rxReadNext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Read data from a source
++ [rxWriteNext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Write data to the target
++ [rxClose](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Close a data source
 
 For more information about working with these ScaleR functions, which can work with data sources other than [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], see [ Microsoft R Server - Getting Started](https://msdn.microsoft.com/microsoft-r/rserver).
 

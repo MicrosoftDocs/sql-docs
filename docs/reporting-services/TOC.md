@@ -14,7 +14,7 @@
 ## [Plan for report design and report deployment | Reporting Services](plan-for-report-design-and-report-deployment-reporting-services.md)  
 ## [Reporting Services Features Supported by the Editions of SQL Server 2016](reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-# [Install](install-windows/index.md)
+# [Install](../reporting-services/install-windows/install-reporting-services.md)
   
 # [Web portal](web-portal-ssrs-native-mode.md)  
 ## [Branding the web portal](branding-the-web-portal.md)  
@@ -25,18 +25,18 @@
 ## [Working with KPIs in Reporting Services](working-with-kpis-in-reporting-services.md)  
 ## [My Settings for Power BI Integration (web portal)](my-settings-for-power-bi-integration-web-portal.md)
 
-# [Report Server](report-server/index.md)
-# [Report Server (SharePoint)](report-server-sharepoint/index.md)
+# [Report Server](../reporting-services/report-server/reporting-services-report-server-native-mode.md)
+# [Report Server (SharePoint)](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
 
 # [Pin to Power BI](pin-reporting-services-items-to-power-bi-dashboards.md)  
-# [Report Builder](report-builder/index.md)
-# [Report Design](report-design/index.md)
-# [Working with reports](reports/index.md)
-# [Mobile reports](mobile-reports/index.md)
+# [Report Builder](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
+# [Report Design](../reporting-services/report-design/planning-a-report-report-builder.md)
+# [Working with reports](../reporting-services/reports/reporting-services-reports-ssrs.md)
+# [Mobile reports](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
 
-# [Security and protection](security/index.md)
-# [Subscriptions and delivery](subscriptions/index.md)
-# [Tools +](tools/index.md)
+# [Security and protection](../reporting-services/security/reporting-services-security-and-protection.md)
+# [Subscriptions and delivery](../reporting-services/subscriptions/schedules.md)
+# [Tools +](../reporting-services/tools/reporting-services-tools.md)
 
 # [Data Alerts (SharePoint)](reporting-services-data-alerts.md)  
 ## [Data Alert Designer](data-alert-designer.md)  
@@ -62,16 +62,16 @@
 ## [Search a Report Using URL Access](search-a-report-using-url-access.md)  
 ## [Render a Report History Snapshot Using URL Access](render-a-report-history-snapshot-using-url-access.md)  
 
-# [WMI provider](wmi-provider-library-reference/index.md)
-# [Troubleshooting +](troubleshooting/index.md)
+# [WMI provider](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)
+# [Troubleshooting +](../reporting-services/troubleshooting/troubleshoot-reporting-services.md)
 
 
 # Developer
-## [Application integration](application-integration/index.md)
-## [Report server web service](report-server-web-service/index.md)
-## [Extensions](extensions/index.md)
-## [Custom report items](custom-report-items/index.md)
-## [Custom assemblies](custom-assemblies/index.md)
+## [Application integration](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
+## [Report server web service](../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+## [Extensions](../reporting-services/extensions/reporting-services-extension-library.md)
+## [Custom report items](../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
+## [Custom assemblies](../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)
 
 
 # [Technical Reference](technical-reference-ssrs.md)  

@@ -3,7 +3,7 @@
 ## [What's New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
-# [Install or upgrade](install-windows/index.md)
+# [Install or upgrade](../integration-services/install-windows/upgrade-integration-services.md)
 
 # [Development and management Tools](integration-services-ssis-development-and-management-tools.md)
 # [Projects and solutions](integration-services-ssis-projects-and-solutions.md)
@@ -31,14 +31,14 @@
 ## [Package Upgrade Wizard F1 Help](ssis-package-upgrade-wizard-f1-help.md)
 ## [Package and Project Parameters](integration-services-ssis-package-and-project-parameters.md)
 
-# [Connections](connection-manager/index.md)
-# [Control flow](control-flow/index.md)
-# [Data flow](data-flow/index.md)
+# [Connections](../integration-services/connection-manager/integration-services-ssis-connections.md)
+# [Control flow](../integration-services/control-flow/control-flow.md)
+# [Data flow](../integration-services/data-flow/data-flow.md)
 
 # [Variables](integration-services-ssis-variables.md)
 ## [Variables Window](variables-window.md)
 ## [System Variables](system-variables.md)
-# [Expressions](expressions/index.md)
+# [Expressions](../integration-services/expressions/integration-services-ssis-expressions.md)
 # [Event Handlers](integration-services-ssis-event-handlers.md)
 # [Queries](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
@@ -58,14 +58,14 @@
 
 # [Scale Out](integration-services-ssis-scale-out.md)
 
-# [Service (legacy)](service/index.md)
+# [Service (legacy)](../integration-services/service/integration-services-service-ssis-service.md)
 
-# [Security](security/index.md)
-# [Performance](performance/index.md)
-# [Troubleshooting](troubleshooting/index.md)
+# [Security](../integration-services/security/security-overview-integration-services.md)
+# [Performance](../integration-services/performance/monitor-running-packages-and-other-operations.md)
+# [Troubleshooting](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
 
-# [System views](system-views/index.md)
-# [System stored procedures](system-stored-procedures/index.md)
+# [System views](../integration-services/system-views/views-integration-services-catalog.md)
+# [System stored procedures](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)
 # [System function - dm_execution_performance_counters](functions-dm-execution-performance-counters.md)
 
 # [Errors and Events Reference](errors-and-events-reference-integration-services.md)
@@ -75,19 +75,19 @@
 ## [Integration Services Programming Overview](integration-services-programming-overview.md)
 ## [Understanding Synchronous and Asynchronous Transformations](understanding-synchronous-and-asynchronous-transformations.md)
 ## [Working with Connection Managers Programmatically](working-with-connection-managers-programmatically.md)
-## [Extend packages with scripting](extending-packages-scripting/index.md)
-## [Extend packages with custom objects](extending-packages-custom-objects/index.md)
-## [Build packages programmatically](building-packages-programmatically/index.md)
-## [Run and manage packages programmatically](run-manage-packages-programmatically/index.md)
+## [Extend packages with scripting](../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)
+## [Extend packages with custom objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)
+## [Build packages programmatically](../integration-services/building-packages-programmatically/adding-connections-programmatically.md)
+## [Run and manage packages programmatically](../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)
 # [Integration Services Language Reference](integration-services-language-reference.md)
 
 # [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)
 
 # [Hadoop and HDFS Support in Integration Services (SSIS)](hadoop-and-hdfs-support-in-integration-services-ssis.md)
 
-# [Import and export data](import-export-data/index.md)
+# [Import and export data](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [Change data capture](change-data-capture/index.md)
+# [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Microsoft Connector for SAP BW](microsoft-connector-for-sap-bw.md)
 ## [Installing the Microsoft Connector for SAP BW](installing-the-microsoft-connector-for-sap-bw.md)

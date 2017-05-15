@@ -188,7 +188,7 @@ A preview of **sqlcmd** and **bcp** is now available on macOS. For more informat
 To install the tools for Mac El Capitan and Sierra, use the following commands:
 
 ```
-/usr/bin/ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-preview https://github.com/Microsoft/homebrew-mssql-preview
 brew update
 brew install mssql-tools

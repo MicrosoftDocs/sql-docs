@@ -62,7 +62,7 @@ With Machine Learning Services in SQL Server, there is no need to change this pr
 
 **Resources**
 
-+ Install [R Tools for Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx) or RStudio.  
++ Install [R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation) or RStudio.  
 
 ## Step 3. Optimize
 

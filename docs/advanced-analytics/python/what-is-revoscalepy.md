@@ -92,7 +92,7 @@ If you are new to the idea of remote compute contexts, we recommend that you sta
 
   If you use Python Tools for Visual Studio, you can use Intellisense to get syntax and argument help.
 
-  For more information, see [Installing Python Support in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions. If you need to use both R and Python, note that currently [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) requires Visual Studio 2015.
+  For more information, see [Installing Python Support in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions. 
 
 
 ## Examples

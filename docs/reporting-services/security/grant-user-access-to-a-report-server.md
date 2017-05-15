@@ -1,7 +1,7 @@
 ---
 title: "Grant user access to a report server | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/10/2017"
+ms.date: "05/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,7 +24,7 @@ manager: "erikre"
 ---
 # Grant user access to a report server
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses role-based security to grant user access to a report server. On a new report server installation, only users who are members of the local Administrators group have permissions to report server content and operations. To make the report server available to other users, you must create role assignments that map  user or group accounts to a predefined role that specifies a collection of tasks.
 

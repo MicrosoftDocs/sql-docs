@@ -1,5 +1,5 @@
 # [Instance Management](analysis-services-instance-management.md)  
-# [Install](install-windows/index.md)
+# [Install](../../analysis-services/instances/install-windows/install-analysis-services.md)
 # [Post-install Configuration](post-install-configuration-analysis-services.md)  
 ## [Configure the Windows Firewall](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 ## [Configure the service account](configure-service-accounts-analysis-services.md)  

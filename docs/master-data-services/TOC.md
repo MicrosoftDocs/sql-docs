@@ -9,7 +9,7 @@
 ## [Discontinued Master Data Services Features](discontinued-master-data-services-features.md)  
 
 # [Install and configure](master-data-services-installation-and-configuration.md)
-## [Install-windows](install-windows/index.md) 
+## [Install-windows](../master-data-services/install-windows/install-master-data-services.md)
 ## [Master Data Services Server Configuration Page](server-configuration-mds-configuration-manager.md)  
 ## [Database Configuration Page](database-configuration-page-master-data-services-configuration-manager.md)  
 
@@ -23,7 +23,7 @@
 ## [Create Website Dialog Box](create-website-dialog-box-master-data-services-configuration-manager.md)  
 ## [Web Configuration Reference](web-configuration-reference-master-data-services.md)  
 
-## [Add-in for Microsoft Excel](microsoft-excel-add-in/index.md)
+## [Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)
 
 ## [Models](models-master-data-services.md)  
 ### [Create a Model](create-a-model-master-data-services.md)  
@@ -215,5 +215,5 @@
 ## [Tracing](tracing-master-data-services.md)  
 
 
-# [Developer articles for MDS](develop/index.md)
+# [Developer articles for MDS](../master-data-services/develop/categorized-web-service-operations-master-data-services.md)
 

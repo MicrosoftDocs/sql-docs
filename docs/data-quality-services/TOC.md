@@ -2,7 +2,7 @@
 ## [Introduction to Data Quality Services](introduction-to-data-quality-services.md)  
 ## [Data Quality Services Concepts](data-quality-services-concepts.md)  
 ## [Data Quality Services Features and Tasks](data-quality-services-features-and-tasks.md)  
-# [Install](install-windows/index.md)
+# [Install](../data-quality-services/install-windows/install-data-quality-services.md)
 # [Data Quality Client Application](data-quality-client-application.md)  
 ## [Run the Data Quality Client Application](run-the-data-quality-client-application.md)  
 ## [Data Quality Client Home Screen](data-quality-client-home-screen.md)  

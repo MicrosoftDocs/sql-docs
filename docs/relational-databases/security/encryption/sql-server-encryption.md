@@ -30,7 +30,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The latest information about Transport Level Security (TSL1.2) is available at [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
 
-You can use encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for connections, data, and stored procedures. The following topics contains more information about encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+You can use encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for connections, data, and stored procedures. The following topics contain more information about encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
  [Encryption Hierarchy](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  Information about the encryption hierarchy in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

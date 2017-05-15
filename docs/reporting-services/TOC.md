@@ -29,8 +29,6 @@
 # [Report Server (SharePoint)](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)
 
 # [Pin to Power BI](pin-reporting-services-items-to-power-bi-dashboards.md)  
-
-# [Power BI reports](power-bi-reports-in-reporting-services.md)  
 # [Report Builder](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
 # [Report Design](../reporting-services/report-design/planning-a-report-report-builder.md)
 # [Working with reports](../reporting-services/reports/reporting-services-reports-ssrs.md)

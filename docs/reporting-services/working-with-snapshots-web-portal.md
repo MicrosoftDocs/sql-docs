@@ -1,7 +1,7 @@
 ---
 title: "Working with snapshots (web portal) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/11/2017"
+ms.date: "05/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

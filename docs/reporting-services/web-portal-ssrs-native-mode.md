@@ -2,7 +2,7 @@
 title: "Web portal (SSRS Native Mode) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/11/2017"
+ms.date: "05/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

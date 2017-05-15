@@ -1,6 +1,6 @@
 ---
 title: "Working with KPIs in Reporting Services | Microsoft Docs"
-ms.date: "05/11/2017"
+ms.date: "05/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

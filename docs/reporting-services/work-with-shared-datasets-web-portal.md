@@ -1,7 +1,7 @@
 ---
 title: "Working with shared datasets (web portal) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/11/2017"
+ms.date: "05/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,9 +19,9 @@ manager: "erikre"
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
 
-With a shared dataset, you can manage the settings for a dataset separately from reports and other catalog items that use it. Shared datasets can be used with paginated and mobile reports, along with KPIs.  
-  
-You can view and manage the properties of a shared dataset within the web portal. The web portal can launch you into Report Builder to create or edit shared datasets.  
+With a shared dataset, you can manage the settings for a dataset separately from reports and other catalog items that use it. Shared datasets can be used with paginated and mobile reports, along with KPIs.
+
+You can view and manage the properties of a shared dataset within the web portal. The web portal can launch you into Report Builder to create or edit shared datasets.
 
 ## Create a shared dataset
   

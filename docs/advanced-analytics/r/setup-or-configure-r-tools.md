@@ -50,35 +50,7 @@ You can also use the tools provided in R Client, such as RGui and RTerm, to run 
 
  For convenience in working with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, consider using [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] as your development environment. [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] is a free add-in for Visual Studio that works in all editions of Visual Studio. Visual Studio also provides support for Python and F# integration.  
 
-### Install R Tools to an Existing Visual Studio edition
-
-To download the tools and view related documentation and samples, see [Install R Tools for Visual Studio](http://microsoft.github.io/RTVS-docs/installation.html).
-
-> [!NOTE]
-> Requires Visual Studio 2015 Community, Professional or Enterprise, Visual Studio 2015 Update 3, and an R interpreter, such as Microsoft R Open
- 
-  
-### Install Visual Studio  
-
-If you do not have Visual Studio, we recommend that you install the free Community Edition of Visual Studio.   
-
-1.  Download the free Community edition of Visual Studio from this page: [Visual Studio Community](http://visualstudio.com/products/visual-studio-community-vs.aspx)  
-  
-2.  When the download completes, click **Run** and select the components to install.  
-  
-     Important: If you do a custom setup, note that the Microsoft Web Developer components are required.  
-  
-3.  Choose the **General** setting if you don't have other preferences. When you install [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)], you'll have the option to change to a layout customized for R development.  
-
-#### Add the R Tools
-
-After Visual Studio is installed, extensions are available for R, Python, and many other languages through the **Options** menu.
-
-1. Click **Tools**, and select **Extensions and Updates**. 
-2. Click **Online**, click **Visual Studio Gallery**, and then click **Tools**.
-3. Select **Programming Languages** and locate **R Tools for Visual Studio** in the list.
-4. Near the end of installation, R Tools will detect the versions of the R runtime that are available on the computer, and ask if you want to change your development environment to use the R runtime for Microsoft R Server or the R runtime for Microsoft R Client.
-5. If R Tools setup does not detect the R Server runtime you want to use, you can change it manually at any time by using the **Options** menu in Visual Studio. For  more information, see [Configure Your IDE](https://msdn.microsoft.com/microsoft-r/r-client-get-started#step-2-configure-your-ide).
+ For installation instructions, see [How to install R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation).
 
 > [!TIP]
 > Before you install any new packages, check which R runtime is being used by default. Otherwise it can be very easy to install new R packages to a default library location and then not be able to find them from R Server!

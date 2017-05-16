@@ -30,6 +30,28 @@ You can configure an Always On availability group for SQL Server on Linux. There
 
 You can also create a *read-scale* availability group without a cluster manager. This architecture only provides read-only scalability. It does not provide HA. To create a read-scale availability group, see [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 
+## Roadmap
+
+The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+
+1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
+
+2. Create the availability group. This step is covered in this current article. 
+
+3. Configure a cluster resource manager, like Pacemaker.
+   
+   The way to configure a cluster resource manager depends on the specific Linux distribution. 
+
+   >[!IMPORTANT]
+   >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
+   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) for more information.
+   >For SLES, see [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
+
+5. Add the availability group as a resource in the cluster.  
+
+   >The way to add the availability group as a resource in the cluster depends on the Linux distribution. 
+
+
 [!INCLUDE [Create Prereq](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## Create the availability group

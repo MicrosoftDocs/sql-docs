@@ -20,6 +20,7 @@
 ## [Use SSDT](sql-server-linux-develop-use-ssdt.md)
 # [Manage](sql-server-linux-management-overview.md)
 ## [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
+## [Configure with environment variables](sql-server-linux-configure-environment-variables.md)
 ## [Use SSMS to manage](sql-server-linux-manage-ssms.md)
 ## [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
 ## [Create and run jobs](sql-server-linux-run-sql-server-agent-job.md)

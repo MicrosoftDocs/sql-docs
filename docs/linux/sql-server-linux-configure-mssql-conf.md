@@ -28,7 +28,7 @@ ms.custom: H1Hack27Feb2017
 **mssql-conf** is a configuration script that installs with SQL Server 2017 CTP 2.1 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 - [TCP port](#tcpport): Change the port where SQL Server will listen for connections.
-- [Default data directory](#datadir): Change the directory where the new SQL Server database data files (.mdf).
+- [Default data directory](#datadir): Change the directory where the new SQL Server database data files (.mdf) are created.
 - [Default log directory](#datadir): Changes the directory where the new SQL Server database log (.ldf) files are created.
 - [Default dump directory](#dumpdir): Change the directory where SQL Server will deposit the memory dumps and other troubleshooting files by default.
 - [Default backup directory](#backupdir): Change the directory where SQL Server will send the backup files by default. 
@@ -42,6 +42,9 @@ The following sections show examples of how to use mssql-conf for each of these 
 
 > [!TIP]
 > These examples run mssql-conf by specify the full path: `/opt/mssql/bin/mssql-conf`. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: `./mssql-conf`.
+
+> [!NOTE]
+> Some of these settings can also be configure with environment variables. For more information, see [Configure SQL Server settings with environment variables](sql-server-linux-configure-environment-variables.md).
 
 ## <a id="tcpport"></a> Change the TCP port
 
@@ -265,5 +268,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Note that any settings not shown in this file are using their default values.
 
 ## Next steps
+
+To instead use environment variables to make some of these configuration changes, see [Configure SQL Server settings with environment variables](sql-server-linux-configure-environment-variables.md).
 
 For other management tools and scenarios, see [Manage SQL Server on Linux](sql-server-linux-management-overview.md).

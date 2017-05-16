@@ -111,6 +111,27 @@ Use `REQUIRED_COPIES_TO_COMMIT` with `CREATE AVAILABILITY GROUP` or `ALTER AVAIL
 
 Create an availability group without a cluster to support read-scale workloads. See [Read-scale availability groups](../database-engine/availability-groups/windows/read-scale-availability-groups.md).
 
+## Create availability group on Linux (Overview)
+
+The steps to create an availability group on Linux servers is different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+
+1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
+
+2. [Create the availability group](sql-server-linux-availability-group-configure-ha.md).
+
+3. Configure a cluster resource manager, like Pacemaker.
+   
+   >The way to configure a cluster resource manager depends on the specific Linux distribution. See the links in the next steps.
+
+4. Configure fencing agent, like STONITH.
+
+   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) for more information.
+
+5. Add the availability group as a resource in the cluster.  
+
+   >The way to add the availability group as a resource in the cluster depends on the Linux distribution. 
+
+
 ## Next steps
 
 [Configure availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)

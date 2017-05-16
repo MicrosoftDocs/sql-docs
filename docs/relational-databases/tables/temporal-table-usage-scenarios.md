@@ -22,15 +22,15 @@ manager: "jhubbard"
   Temporal Tables are generally useful in scenarios that require tracking history of data changes.    
 We recommend you to consider Temporal Tables in the following use cases, because of huge productivity benefits:  
   
--   [Data Audit](## Data Audit)  
+-   Data Audit  
   
--   [Point in Time Analysis (Time Travel)](## Point in Time Analysis (Time Travel))  
+-   Point in Time Analysis (Time Travel)
   
--   [Anomaly Detection](##Anomaly Detection)  
+-   Anomaly Detection  
   
--   [Slowly-Changing Dimensions](## Slowly-Changing Dimensions)  
+-   Slowly-Changing Dimensions
   
--   [Repairing Row-Level Data Corruption](## Repairing Row-Level Data Corruption)  
+-   Repairing Row-Level Data Corruption
   
 ## Data Audit  
  Use temporal system-versioning on tables that store critical information for which you need to keep track of what has changed and when, and to perform data forensics at any point in time.    

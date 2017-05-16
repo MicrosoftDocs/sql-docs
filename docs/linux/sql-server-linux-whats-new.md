@@ -33,8 +33,8 @@ The CTP 2.1 release contains the following improvements and fixes:
 
 - Added [environment variables to configure the SQL Server service](sql-server-linux-configure-environment-variables.md).
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md) now requires two-part naming convention for settings.
-- The [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli) tool tool enables developers, DBAs, and sysadmins to generate `CREATE` and `INSERT` Transact-SQL scripts for database objects in SQL Server, Azure SQL DB, and Azure SQL DW from the command line.
-- The [DBFS tool](https://github.com/Microsoft/dbfs) enables DBAs and sysadmins to monitor SQL Server more easily by exposing live data from SQL Server Dynamic Management Views (DMVs) as virtual files in a virtual directory on Linux operating systems.
+- The [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli) tool. This utility enables developers, DBAs, and sysadmins to generate `CREATE` and `INSERT` Transact-SQL scripts from database objects in SQL Server, Azure SQL DB, and Azure SQL DW databases from the command line.
+- The [DBFS tool](https://github.com/Microsoft/dbfs). This is an open-source tool that enables DBAs and sysadmins to monitor SQL Server more easily by exposing live data from SQL Server Dynamic Management Views (DMVs) as virtual files in a virtual directory on Linux operating systems.
 
 ## CTP 2.0
 

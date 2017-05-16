@@ -26,7 +26,7 @@ ms.custom: H1Hack27Feb2017
 ---
 # Migrate databases and structured data to SQL Server on Linux 
 
-You can migrate your databases and data to SQL Server 2017 CTP 2.0 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
+You can migrate your databases and data to SQL Server 2017 CTP 2.1 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
 
 ## Migrate from SQL Server on Windows
 If you want to migrate SQL Server databases on Windows to SQL Server 2017 on Linux, the recommended technique is to use SQL Server backup and restore.

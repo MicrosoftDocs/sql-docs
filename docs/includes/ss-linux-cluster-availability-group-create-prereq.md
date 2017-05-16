@@ -66,7 +66,7 @@ Install SQL Server. The following links point to SQL Server installation instruc
 Enable Always On availability groups on each node hosting SQL Server service, then restart `mssql-server`.  Run the following script:
 
 ```bash
-sudo /opt/mssql/bin/mssql-conf set hadrenabled 1
+sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 

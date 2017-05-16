@@ -6,7 +6,7 @@ description: This topic describes how SQL Server runs on Linux and provides info
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/15/2017
+ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,7 +26,7 @@ ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ---
 # SQL Server on Linux
 
-SQL Server now runs on Linux! This latest release, SQL Server 2017 CTP 2.0, runs on Linux and is in
+SQL Server now runs on Linux! This latest release, SQL Server 2017 CTP 2.1, runs on Linux and is in
 many ways simply SQL Server. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
 
 - [Install SQL Server on Linux](sql-server-linux-setup.md).

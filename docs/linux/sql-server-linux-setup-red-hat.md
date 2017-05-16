@@ -113,7 +113,7 @@ To manually install the SQL Server database engine package for Red Hat Enterpris
 
 1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** commmand.
 
-1. **Install the database engine package**. Use the **yum** command with the **localinstall** option.
+1. **Install the database engine package**. Use the **yum** command with the **localinstall** option. Replace `versionnumber` with your package version number.
 
     ```bash
     sudo yum localinstall mssql-server_versionnumber.x86_64.rpm

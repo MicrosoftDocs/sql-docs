@@ -49,8 +49,9 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 - For more details about improvements and bug fixes in this release, see [What's New in SQL Server 2017 Analysis Services](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
 
 ### SQL Server Integration Services (SSIS)
-- There are no new SSIS features in this CTP.
-- For more detailed SSIS what's new information, including details from previous CTPs, see [What's New in Integration Services 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).  
+-   You can now use the **Use32BitRuntime** parameter.
+-   The performance of logging has been improved.
+- For more detailed SSIS what's new information, including details from previous CTPs, see [What's New in SQL Server 2017 Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).  
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## What's New in SQL Server 2017 CTP 2.0 (April 2017)

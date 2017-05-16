@@ -38,6 +38,29 @@ For more details on cluster configuration, resource agents options, and manageme
 
 The following sections walk through the steps to set up a Pacemaker cluster and add an availability group as resource in the cluster for high availability.
 
+## Roadmap
+
+The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+
+1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
+
+2. [Create the availability group](sql-server-linux-availability-group-failover-ha.md). 
+
+3. Configure a cluster resource manager, like Pacemaker. These instructions are in this document.
+   
+   The way to configure a cluster resource manager depends on the specific Linux distribution. 
+
+   >[!IMPORTANT]
+   >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
+   
+   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) for more information.
+   
+   >For SLES, see [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
+
+5. Add the availability group as a resource in the cluster.  
+
+   The way to add the availability group as a resource in the cluster depends on the Linux distribution. 
+
 ## Configure Pacemaker for RHEL
 
 [!INCLUDE [RHEL-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]

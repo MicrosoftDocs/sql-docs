@@ -56,7 +56,11 @@ fn_get_audit_file ( file_pattern,
   
  - **Azure SQL Database**:
  
-    This argument must include a storage path that includes a blob name. While it cannot include a wildcard, you can specify a blob name prefix (instead of the full blob file name) to collect multiple files that begin with this prefix.    
+    This argument must include a storage path that includes a blob name. While it does not support an asterisk wildcard, you can specify a partial blob name prefix (instead of the full blob file name) to collect multiple files that begin with this prefix. For example:
+ 
+      - **\<Storage\>/\<Container\>/\<Server\>/\<DatabaseName\>/** - collects all audit files for the specific database.    
+      
+      - **\<Storage\>/\<Container\>/\<Server\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<filename\>.xel** - collects a specific audit file.
   
 > [!NOTE]  
 >  Passing a path without a file name pattern will generate an error.  
@@ -127,15 +131,36 @@ fn_get_audit_file ( file_pattern,
     - Server admins can access audit logs of all databases on the server.
     - The function will only return logs from blobs that you can access, blobs that do not meet the above criteria will be skipped (a list of skipped blobs will be displayed in the query output message).  
   
-## Examples  
- This example reads from a file that is named `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+## Examples
+
+- **SQL Server**
+
+  This example reads from a file that is named `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
   
-```  
-SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
-GO  
-```  
+  ```  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  GO  
+  ```  
+
+- **Azure SQL Database**
+
+  This example reads from a file that is named `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`.  
   
- For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  ```  
+  SELECT * FROM sys.fn_get_audit_file sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
+  GO  
+  ```  
+
+  This example reads all audit logs from servers that begin with `Sh`.  
+  
+  ```  
+  SELECT * FROM sys.fn_get_audit_file sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);
+  GO  
+  ```
+
+For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
+
+For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing).
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

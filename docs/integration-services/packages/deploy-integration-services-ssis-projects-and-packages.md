@@ -63,7 +63,28 @@ For more information about the legacy package deployment model, see [Legacy Pack
   
 ## Project Deployment  
  At the center of the project deployment model is the project deployment file (.ispac extension). The project deployment file is a self-contained unit of deployment that includes only the essential information about the packages and parameters in the project. The project deployment file does not capture all of the information contained in the Integration Services project file (.dtproj extension). For example, additional text files that you use for writing notes are not stored in the project deployment file and thus are not deployed to the catalog.  
-  
+
+## Permissions Required to Deploy SSIS Projects and Packages
+
+If you change the SSIS service account from the default, you may have to give additional permissions to the non-default service account before you can deploy packages successfully. If the non-default service account doesn't have the required permissions, you may see the following error message.
+
+*A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
+System.ComponentModel.Win32Exception: A required privilege is not held by the client.*
+
+This error is typically the result of missing DCOM permissions. To fix the error, do the following things.
+
+1.  Open the **Component Services** console (or run Dcomcnfg.exe).
+2.  In the **Component Services** console, expand **Component Services** > **Computers** > **My Computer** > **DCOM Config**.
+3.  In the list, locate **Microsoft SQL Server Integration Services xx.0** for the version of SQL Server that you're using. For example, SQL Server 2016 is version 13.
+4.  Right-click and select **Properties**.
+5.  In the **Microsoft SQL Server Integration Services 13.0 Properties** dialog box, select the **Security** tab.
+6.  For each of the three sets of permissions - Launch and Activation, Access, and Configuration - select **Customize**, then select **Edit** to open the **Permission** dialog box.
+7.  In the **Permission** dialog box, add the non-default service account and grant **Allow** permissions as required. Typically, an account has **Local Launch** and **Local Activation** permissions.
+8.  Click **OK** twice, then close the **Component Services** console.
+
+For more info about the error described in this section and about the permissions required by the SSIS service account, see the following blog post.  
+[System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+
 ## Deploy Projects to Integration Services Server
   In the current release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server enables you to manage packages, run packages, and configure runtime values for packages by using environments.  
   

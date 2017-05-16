@@ -56,6 +56,20 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
         The module "ReportingServicesWMIProvider.dll" was loaded but the entry-point DLLInstall was not found. Make sure that "ReportingServicesWMIProvider.dll" is a valid DLL or OCX file and then try again.
         ```
 
+### TSqlLanguageService.msi
+
+- **Issue and customer impact:** After installing on a machine that has a 2016 version of *TSqlLanguageService.msi* installed (either through SQL Setup or as a standalone redistributable) the v13.* (SQL 2016) versions of *Microsoft.SqlServer.Management.SqlParser.dll* and *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* are removed. Any applications that have a dependency on the 2016 versions of those assemblies will then cease to function, giving an error similar to: *error : Could not load file or assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.*
+
+In addition, attempts to reinstall a 2016 version of TSqlLanguageService.msi will fail with the message: *Installation of Microsoft SQL Server 2016 T-SQL Language Service failed because a higher version already exists on the machine*.
+
+- **Workaround** To work around this issue and fix an application that depends on the v13 version of the assemblies follow these steps:
+
+   1. Go to **Add/Remove Programs**
+   1. Find *Microsoft SQL Server vNext T-SQL Language Service CTP2.1*, right-click it, and select **Uninstall**.
+   1. After the component is removed, repair the application that is broken (or reinstall the appropriate version of *TSqlLanguageService.MSI*)
+
+Note that this will remove the v14 version of those assemblies - any applications that depend on the v14 versions will no longer function. If those assemblies are needed, then a separate installation without any side-by-side 2016 installs is required.
+
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.0 (April  2017)
 ### Documentation (CTP 2.0)

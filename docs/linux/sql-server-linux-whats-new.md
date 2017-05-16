@@ -32,6 +32,7 @@ This topic describes what's new for SQL Server 2017 running on Linux.
 The CTP 2.1 release contains the following improvements and fixes:
 
 - Added [environment variables to configure the SQL Server service](sql-server-linux-configure-environment-variables.md).
+- [mssql-conf](sql-server-linux-configure-mssql-conf.md) now requires two-part naming convention for settings. 
 
 ## CTP 2.0
 

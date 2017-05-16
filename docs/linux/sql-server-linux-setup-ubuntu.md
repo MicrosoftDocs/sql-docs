@@ -109,7 +109,7 @@ To manually install the SQL Server database engine package for Ubuntu, use the f
 
 1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** commmand.
 
-1. **Install the database engine package**. Use the **dpkg** command.
+1. **Install the database engine package**. Use the **dpkg** command. Replace `versionnumber` with your package version number.
 
     ```bash
     sudo dpkg -i mssql-server_versionnumber_amd64.deb

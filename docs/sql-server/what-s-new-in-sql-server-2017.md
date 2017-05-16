@@ -46,7 +46,7 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 
 ### SQL Server Analysis Services (SSAS)
 - There are no new SSAS features in this CTP.  
-- For more details, including what's new for Analysis Services in the latest preview releases of SSDT and SSMS, see [What's New in Analysis Services 2017](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
+- For more details about improvements and bug fixes in this release, see [What's New in SQL Server 2017 Analysis Services](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
 
 ### SQL Server Integration Services (SSIS)
 - There are no new SSIS features in this CTP.

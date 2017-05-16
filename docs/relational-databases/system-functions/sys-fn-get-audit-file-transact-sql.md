@@ -1,7 +1,7 @@
 ---
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/20/2017"
+ms.date: "05/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -56,11 +56,11 @@ fn_get_audit_file ( file_pattern,
   
  - **Azure SQL Database**:
  
-    This argument must include a storage path that includes a blob name. While it does not support an asterisk wildcard, you can specify a partial blob name prefix (instead of the full blob file name) to collect multiple files that begin with this prefix. For example:
+    This argument is used to specify a blob URL (including the storage endpoint and container). While it does not support an asterisk wildcard, you can use a partial file (blob) name prefix (instead of the full blob name) to collect multiple files (blobs) that begin with this prefix. For example:
  
-      - **\<Storage\>/\<Container\>/\<Server\>/\<DatabaseName\>/** - collects all audit files for the specific database.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** - collects all audit files (blobs) for the specific database.    
       
-      - **\<Storage\>/\<Container\>/\<Server\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<filename\>.xel** - collects a specific audit file.
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<FileName\>.xel** - collects a specific audit file (blob).
   
 > [!NOTE]  
 >  Passing a path without a file name pattern will generate an error.  
@@ -126,10 +126,10 @@ fn_get_audit_file ( file_pattern,
   
 ## Permissions  
  - **SQL Server**: Requires the **CONTROL SERVER** permission.  
- - **Azure SQL DB**: Requires the **CONTROL DATABASE** permission. 
-    - Only audit logs from current database are accessible. 
+ - **Azure SQL DB**: Requires the **CONTROL DATABASE** permission.     
     - Server admins can access audit logs of all databases on the server.
-    - The function will only return logs from blobs that you can access, blobs that do not meet the above criteria will be skipped (a list of skipped blobs will be displayed in the query output message).  
+    - Non server admins can only access audit logs from the current database.
+    - Blobs that do not meet the above criteria will be skipped (a list of skipped blobs will be displayed in the query output message), and the function will return logs only from blobs for which access is allowed.  
   
 ## Examples
 

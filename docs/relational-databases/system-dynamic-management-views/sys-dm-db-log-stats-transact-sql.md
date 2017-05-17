@@ -17,7 +17,7 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "sys.dm_db_log_stats dynamic management view"
+  - "sys.dm_db_log_stats dynamic management function"
 ms.assetid: 
 caps.latest.revision: 
 author: "BYHAM"

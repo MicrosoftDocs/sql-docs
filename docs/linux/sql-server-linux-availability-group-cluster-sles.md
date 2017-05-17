@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -33,6 +33,25 @@ For more details on cluster configuration, resource agent options, management, b
 >[!NOTE]
 >At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server service on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources as if SQL Server were a standalone instance. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. On Linux, Always On Availability Group Dynamic Management Views (DMVs) will return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
 
+
+## Roadmap
+
+The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+
+1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
+
+2. [Create the availability group](sql-server-linux-availability-group-failover-ha.md). 
+
+3. Configure a cluster resource manager, like Pacemaker. These instructions are in this document.
+   
+   The way to configure a cluster resource manager depends on the specific Linux distribution. 
+
+   >[!IMPORTANT]
+   >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
+   
+   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
+
+5. [Add the availability group as a resource in the cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
 ## Prerequisites
 

@@ -85,6 +85,8 @@
 
 # [Hadoop and HDFS Support in Integration Services (SSIS)](hadoop-and-hdfs-support-in-integration-services-ssis.md)
 
+# [Microsoft Connectors for Oracle and Teradata by Attunity](attunity-connectors.md)
+
 # [Import and export data](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
 # [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)

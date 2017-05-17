@@ -1,7 +1,7 @@
 ---
 title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/13/2016"
+ms.date: "05/17/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,9 +34,9 @@ manager: "jhubbard"
  > For content related to previous versions of SQL Server, see [Configure the Windows Firewall to Allow SQL Server Access](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
 
 
-  Firewall systems help prevent unauthorized access to computer resources. If a firewall is turned on but not correctly configured, attempts to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might be blocked.  
+Firewall systems help prevent unauthorized access to computer resources. If a firewall is turned on but not correctly configured, attempts to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might be blocked.  
   
- To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through a firewall, you must configure the firewall on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to allow access. The firewall is a component of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. You can also install a firewall from another company. This topic discusses how to configure the Windows firewall, but the basic principles apply to other firewall programs.  
+To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through a firewall, you must configure the firewall on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The firewall is a component of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. You can also install a firewall from another company. This topic discusses how to configure the Windows firewall, but the basic principles apply to other firewall programs.  
   
 > [!NOTE]  
 >  This topic provides an overview of firewall configuration and summarizes information of interest to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. For more information about the firewall and for authoritative firewall information, see the firewall documentation, such as [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
@@ -48,35 +48,6 @@ manager: "jhubbard"
 -   [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
-  
-## In this Topic  
- This topic has the following sections:  
-  
- [Basic Firewall Information](#BKMK_basic)  
-  
- [Default Firewall Settings](#BKMK_default)  
-  
- [Programs to Configure the Firewall](#BKMK_programs)  
-  
- [Ports Used by the Database Engine](#BKMK_ssde)  
-  
- [Ports Used By Analysis Services](#BKMK_ssas)  
-  
- [Ports Used By Reporting Services](#BKMK_ssrs)  
-  
- [Ports Used By Integration Services](#BKMK_ssis)  
-  
- [Additional Ports and Services](#BKMK_additional_ports)  
-  
- [Interaction with Other Firewall Rules](#BKMK_other_rules)  
-  
- [Overview of Firewall Profiles](#BKMK_profiles)  
-  
- [Additional Firewall Settings Using the Windows Firewall Item in Control Panel](#BKMK_additional_settings)  
-  
- [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc)  
-  
- [Troubleshooting Firewall Settings](#BKMK_troubleshooting)  
   
 ##  <a name="BKMK_basic"></a> Basic Firewall Information  
  Firewalls work by inspecting incoming packets, and comparing them against a set of rules. If the rules allow the packet, the firewall passes the packet to the TCP/IP protocol for additional processing. If the rules do not allow the packet, the firewall discards the packet and, if logging is enabled, creates an entry in the firewall logging file.  

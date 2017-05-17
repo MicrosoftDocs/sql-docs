@@ -132,7 +132,17 @@
 # [Tutorials](tutorials/machine-learning-services-tutorials.md)
 
 ## [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
+
 ## [Python: Create a Model using revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+
+## [Python: In-Database Analytics for SQL Developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
+### [Download Sample Data](tutorials/sqldev-py1-download-the-sample-data.md)
+### [Import Data to SQL Server](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
+### [Explore and Visualize Data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
+### [Create Data Features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
+### [Train and Save Model](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
+### [Operationalize the Model](tutorials/sqldev-py6-operationalize-the-model.md)
+
 ## [Python: Deploy and Consume Models](../advanced-analytics/python/publish-consume-python-code.md)
 
 ## [R: Use R Code in Transact-SQL](tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
@@ -173,7 +183,7 @@
 
 ### [Lesson 5: Create a Simple Simulation](tutorials/deepdive-create-a-simple-simulation.md)
 
-## [R: In-Database Analytics for SQL Developers](tutorials/sqldev-in-database-advanced-analytics-for-sql-developers.md)
+## [R: In-Database Analytics for SQL Developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
 ### [Step 1: Download the Sample Data](tutorials/sqldev-download-the-sample-data.md)
 ### [Step 2: Import Data to SQL Server using PowerShell](r/sqldev-import-data-to-sql-server-using-powershell.md)
 ### [Step 3: Explore and Visualize the Data](tutorials/sqldev-explore-and-visualize-the-data.md)

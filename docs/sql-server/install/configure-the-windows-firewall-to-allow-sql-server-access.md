@@ -1,7 +1,7 @@
 ---
 title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
+ms.date: "05/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

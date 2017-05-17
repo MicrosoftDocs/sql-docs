@@ -57,9 +57,7 @@ The steps to create an availability group on Linux servers for high availability
    
    >For SLES, see [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
-5. Add the availability group as a resource in the cluster.  
-
-   The way to add the availability group as a resource in the cluster depends on the Linux distribution. 
+5. [Add the availability group as a resource in the cluster](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
 
 ## Configure Pacemaker for RHEL
 

@@ -40,7 +40,11 @@ The steps to create an availability group on Linux servers for high availability
 
 3. Configure a cluster resource manager, like Pacemaker.
    
-   The way to configure a cluster resource manager depends on the specific Linux distribution. 
+   The way to configure a cluster resource manager depends on the specific Linux distribution. Follow the distribution specific links below: 
+
+   * [RHEL](sql-server-linux-availability-group-cluster-rhel.md)
+   * [SUSE](sql-server-linux-availability-group-cluster-sles.md)
+   * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
    >[!IMPORTANT]
    >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
@@ -53,6 +57,11 @@ The steps to create an availability group on Linux servers for high availability
 
    The way to add the availability group as a resource in the cluster depends on the Linux distribution. 
 
+   Follow the distribution specific links below: 
+
+   * [RHEL](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)
+   * [SLES](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)
+   * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)
 
 [!INCLUDE [Create Prereq](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 

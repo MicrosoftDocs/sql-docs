@@ -1,12 +1,13 @@
+
 ---
 # required metadata
 
-title: What's New for SQL Server 2017 CTP 2.0 on Linux | Microsoft Docs
+title: What's New for SQL Server 2017 CTP 2.1 on Linux | Microsoft Docs
 description: This topic highlights what's new for the current release of SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 04/19/2017
+ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -22,13 +23,23 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 # ms.suite: ""
 # ms.tgt_pltfrm: ""
 # ms.custom: ""
-
 ---
 # What's new for SQL Server 2017 on Linux
 
 This topic describes what's new for SQL Server 2017 running on Linux.
 
+## CTP 2.1
+
+The CTP 2.1 release contains the following improvements and fixes:
+
+- Added [environment variables to configure the SQL Server service](sql-server-linux-configure-environment-variables.md).
+- [mssql-conf](sql-server-linux-configure-mssql-conf.md) now requires two-part naming convention for settings.
+- The [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli) tool. This utility enables developers, DBAs, and sysadmins to generate `CREATE` and `INSERT` Transact-SQL scripts from database objects in SQL Server, Azure SQL DB, and Azure SQL DW databases from the command line.
+- The [DBFS tool](https://github.com/Microsoft/dbfs). This is an open-source tool that enables DBAs and sysadmins to monitor SQL Server more easily by exposing live data from SQL Server Dynamic Management Views (DMVs) as virtual files in a virtual directory on Linux operating systems.
+- SQL Server Integration Services (SSIS) now supports SQL Server on Linux. In addition, there is a new package that enables you to run SSIS packages on Linux from the command-line. For more information, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
+
 ## CTP 2.0
+
 The CTP 2.0 release contains the following improvements and fixes:
 
 - Added **Log Shipping** functionality for SQL Server Agent.
@@ -47,41 +58,45 @@ The CTP 2.0 release contains the following improvements and fixes:
 - Production support for Early Adoption Program (EAP) customers. Sign up [here](http://aka.ms/eapsignup).
 
 ## CTP 1.4
+
 The CTP 1.4 release contains the following improvements and fixes:
 
 - Enabled the [SQL Server Agent](sql-server-linux-setup-sql-agent.md).
-    - Enabled T-SQL Jobs functionality.
+  - Enabled T-SQL Jobs functionality.
 - Fixed timezone bugs:
-    - Timezone support for Asia/Kolkata.
-    - Fixed GETDATE() function.
+  - Timezone support for Asia/Kolkata.
+  - Fixed GETDATE() function.
 - Network Async I/0 Improvements:
-    - Significant improvements to In-Memory OLTP workload performance.
+  - Significant improvements to In-Memory OLTP workload performance.
 - Docker image now includes SQL Server command-line utilities. (sqlcmd/bcp).
 - Enabled Virtual Device Interface (VDI) support for backups.
 - Location of TempDB can now be modified after installation using `ALTER DATABASE`.
 
 ## CTP 1.3
+
 The CTP 1.3 release contains the following improvements and fixes:
 
 - Enabled [Full-text Search](sql-server-linux-setup-full-text-search.md) feature.
 - Enabled Always On [Availability Groups functionality](sql-server-linux-availability-group-overview.md) for High Availability.
 - Additional functionality in **mssql-conf**:
-    - First time set-up using **mssql-conf**. See the use of mssql-conf in the [installation guides](sql-server-linux-setup.md#platforms).
-    - Enabling Availability Groups. See the [Availability Groups topic](sql-server-linux-availability-group-overview.md).
+  - First time set-up using **mssql-conf**. See the use of mssql-conf in the [installation guides](sql-server-linux-setup.md#platforms).
+  - Enabling Availability Groups. See the [Availability Groups topic](sql-server-linux-availability-group-overview.md).
 - Fixed native Linux path support for In-memory OLTP filegroups.
 - Enabled dm_os_host_info DMV functionality.
 
 ## CTP 1.2
+
 The CTP 1.2 release contains the following improvements and fixes:
 
 - Support for [SUSE Linux Enterprise Server v12 SP2](sql-server-linux-setup-suse-linux-enterprise-server.md).
 - Bug fixes for core engine and stability improvements.
 - Docker image: 
-    - Fixed [issue #1](https://github.com/Microsoft/mssql-docker/issues/1) by adding Python to the image.
-    - Removed `/opt/mssql/data` as the default volume.
+  - Fixed [issue #1](https://github.com/Microsoft/mssql-docker/issues/1) by adding Python to the image.
+  - Removed `/opt/mssql/data` as the default volume.
 - Updated to .NET 4.6.2.
 
 ## CTP 1.1
+
 The CTP 1.1 release contains the following improvements and fixes:
 
 - Support for Red Hat Enterprise Linux version 7.3.
@@ -90,12 +105,12 @@ The CTP 1.1 release contains the following improvements and fixes:
 - Fixed telemetry issues in Docker image.
 - Fixed SQL Server Setup script related bugs.
 - Enhanced performance for natively compiled T-SQL modules, including:
-    - **OPENJSON**, **FOR JSON**, **JSON** built-ins.
-    - Computed Columns (Only indexes are allowed on persisted computed columns, but not on non-persisted computed columns for in-memory tables).
-    - **CROSS APPLY** operations.
+  - **OPENJSON**, **FOR JSON**, **JSON** built-ins.
+  - Computed Columns (Only indexes are allowed on persisted computed columns, but not on non-persisted computed columns for in-memory tables).
+  - **CROSS APPLY** operations.
 - New language features:
-    - String functions: **TRIM**, **CONCAT_WS**, **TRANSLATE** and **STRING_AGG** with support for **WITHIN GROUP (ORDER BY)**.
-    - **BULK IMPORT** now supports CSV format and Azure Blob Storage as File Source.
+  - String functions: **TRIM**, **CONCAT_WS**, **TRANSLATE** and **STRING_AGG** with support for **WITHIN GROUP (ORDER BY)**.
+  - **BULK IMPORT** now supports CSV format and Azure Blob Storage as File Source.
 
 Under compatibility mode 140:
 

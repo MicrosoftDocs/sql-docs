@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server 2017 (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/24/2017"
+ms.date: "05/15/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,6 +19,11 @@ manager: "jhubbard"
 [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 **Note:** SQL Server 2017 also includes the features added in SQL Server 2016 service packs. For those items, see [What's New in SQL Server 2016 (Database Engine)](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
+
+
+## SQL Server Database Engine (CTP 2.1)  
+- A new, DMF sys.dm_db_log_stats(database_id), is introduced to expose summary level attributes and information on transaction log files; useful for monitoring the health of the transaction log.
+
 
 ## SQL Server Database Engine (CTP 2.0)  
 - **Resumable online index rebuild**. Resumable online index rebuild allows you to resume an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space). You can also pause and later resume an online index rebuild operation. For example, you might need to temporarily free up systems resources in order to execute a high priority task or complete the index rebuild in another miniatous window if the available maintenance windows is too short for a large table. Finally, resumable online index rebuild does not require significant log space, which allows you to perform log truncation while the resumable rebuild operation is running. See [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md).

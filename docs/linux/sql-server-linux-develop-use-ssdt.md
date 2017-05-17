@@ -42,7 +42,7 @@ SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and
 
 ## Upgrade SQL Server Data Tools to SSDT 17.0 RC release
 
-SQL Server 2017 CTP 2.0 on Linux is supported by SSDT version 17.0 RC or later.
+SQL Server 2017 CTP 2.1 on Linux is supported by SSDT version 17.0 RC or later.
 
 1. [Download and Install SSDT 17.0 RC1].
 

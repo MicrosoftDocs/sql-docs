@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/19/2017"
+ms.date: "05/16/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ manager: "jhubbard"
 # What&#39;s New in SQL Server 2017
 SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises and in the cloud, and across operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows.
 
-This topic is a summary of what is new in the most recent Community Technical Preview (CTP) release, links to more detailed what's new information for specific feature areas.
+This topic is a summary of what is new in the most recent Community Technical Preview (CTP) release and links to more detailed what's new information for specific feature areas.
 
 ![info_tip](../sql-server/media/info-tip.png) Run SQL Server on Linux! For more information, see:
 -  [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)
@@ -28,21 +28,47 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 **Try it out:**    
    -   [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[Download the SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
+## What's New in SQL Server 2017 CTP 2.1 (May 2017)
+### SQL Server Database Engine  
+- A new DMF, sys.dm_db_log_stats(database_id), is introduced to expose summary level attributes and information on transaction log files; useful for monitoring the health of the transaction log.  
+- This CTP contains bug fixes and performance improvements for the Database Engine.
+- For a detailed list of 2017 CTP enhancements in previous CTP releases, see [What's New in SQL Server 2017 (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
+
+### SQL Server Reporting Services (SSRS)
+- SQL Server Reporting Services is no longer available to install through SQL Server's setup as of CTP 2.1.
+- Comments are now available for reports. Comments allow you to add perspective to what is in a report and collaborate with others in your organization. You can also include attachments with your comment.
+- For more detailed SSRS what's new information, including details from previous releases, see [What's new in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md). 
+- For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+
+### SQL Server Machine Learning Services
+- There are no new Machine Learning Services features in this CTP.
+- For more detailed Machine Learning Services what's new information, including details from previous CTPs, see [What's New in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).  
+
+### SQL Server Analysis Services (SSAS)
+- There are no new SSAS features in this CTP.  
+- For more details about improvements and bug fixes in this release, see [What's New in SQL Server 2017 Analysis Services](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
+
+### SQL Server Integration Services (SSIS)
+-   You can now use the **Use32BitRuntime** parameter.
+-   The performance of logging has been improved.
+- For more detailed SSIS what's new information, including details from previous CTPs, see [What's New in SQL Server 2017 Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).  
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## What's New in SQL Server 2017 CTP 2.0 (April 2017)
 ### SQL Server Database Engine
-- **Resumable online index rebuild**. Resumable online index rebuild allows you to resume an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space). You can also pause and later resume an online index rebuild operation. For example, you might need to temporarily free up systems resources in order to execute a high priority task or complete the index rebuild in another miniatous window if the available maintenance windows is too short for a large table. Finally, resumable online index rebuild does not require significant log space, which allows you to perform log truncation while the resumable rebuild operation is running. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md).
-- **IDENTITY_CACHE option for ALTER DATABASE SCOPED CONFIGURATION**. A new option IDENTITY_CACHE was added to ALTER DATABASE SCOPED CONFIGURATION T-SQL statement. When this option is set to OFF it allows to avoid gaps in the values of identity columns in case a server restarts unexpectedly or fails over to a secondary server. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
-- CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](../database-engine/configure-windows/clr-strict-security.md).  
+- **Resumable online index rebuild**. Resumable online index rebuild allows you to resume an online index rebuild operation from where it stopped after a failure. For example, a failover to a replica or insufficient disk space situation. You can also pause and later resume an online index rebuild operation. For example, you might need to temporarily free up systems resources in order to execute a high priority task or complete the index rebuild in another miniatous window if the available maintenance windows is too short for a large table. Finally, resumable online index rebuild does not require significant log space, which allows you to perform log truncation while the resumable rebuild operation is running. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md).
+- **IDENTITY_CACHE option for ALTER DATABASE SCOPED CONFIGURATION**. A new option IDENTITY_CACHE was added to ALTER DATABASE SCOPED CONFIGURATION T-SQL statement. When this option is set to OFF, gaps can be avoided in the values of identity columns in case a server restarts unexpectedly or fails over to a secondary server. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
+- CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but is not recommended. Microsoft recommends all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](../database-engine/configure-windows/clr-strict-security.md).  
 - Graph database capabilities to model many-to-many relationships. This includes new [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) syntax for creating node and edge tables, and the keyword [MATCH](../t-sql/statements/match-sql-graph.md) for queries. For more information, see [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md).   
-- Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems. Automatic tuning in [!INCLUDE[ssnoversion](../includes/ssnoversion.md)], notifies you whenever a potential performance issue is detected, and lets you apply corrective actions, or lets the [!INCLUDE[ssde](../includes/ssde-md.md)] automatically fix performance problems. For more information, see [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md).  
+- Automatic tuning is a database feature that provides insight into potential query performance problems, it can recommend solutions, and automatically fix identified problems. Automatic tuning in [!INCLUDE[ssnoversion](../includes/ssnoversion.md)], notifies you whenever a potential performance issue is detected, and lets you apply corrective actions, or lets the [!INCLUDE[ssde](../includes/ssde-md.md)] automatically fix performance problems. For more information, see [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md).  
 -	Batch Mode Adaptive Join to improve plan quality (under db compatability 140).
 -	Interleaved Execution for multi-statement T-SQL TVFs to improve plan quality (under db compatability 140).
 - Query Store now also tracks wait stats summary information.
 - DTC support for Always On Availability Groups for all cross database transactions among databases that are part of the availability group, including for databases that are part of same instance. For more information, see [Transactions - Always On Availability Groups and Database Mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - A new column **modified_extent_page_count** is introduced in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) to track differential changes in each database file of the database.
 - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) now supports loading a table into a filegroup other than a default filegroup of the user using the **ON** keyword.
-- The setup allows specifying initial tempdb file size up to **256 GB (262,144 MB)** per file with a warning if the file size is set to value greater than 1GB and if IFI is not enabled.
-- A new dmv [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) is introduced to track version store usage per database.
+- SQL Server setup supports specifying initial tempdb file size up to **256 GB (262,144 MB)** per file with a warning if the file size is set to value greater than **1 GB** and if IFI is not enabled.
+- A new Dynamic Management View (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) is introduced to track version store usage per database.
 - A new DMV [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) is introduced to expose the VLF information similar to DBCC LOGINFO.
 - DBCC CLONEDATABASE will flush runtime statistics while cloning to avoid missing query store runtime statistics in database clone. In addition to this, DBCC CLONEDATABASE is further enhanced to support and clone fulltext indexes.
 - This CTP contains bug fixes for the Database Engine.
@@ -73,14 +99,11 @@ Or, install Microsoft Machine Learning Server (Standalone) to deploy and consume
 
 ### SQL Server Analysis Services (SSAS)
 - There are no new SSAS features in this CTP.  
-- For more details, including what's new for Analysis Services in the latest preview releases of SSDT and SSMS, see [What's New in Analysis Services 2017](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
+- For details, including what's new for Analysis Services in the latest preview releases of SSDT and SSMS, see [What's New in Analysis Services 2017](../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
 
 ### SQL Server Integration Services (SSIS)
 - There are no new SSIS features in this CTP.
 - For more detailed SSIS what's new information, including details from previous CTPs, see [What's New in Integration Services 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).  
-
-### Master Data Services (MDS)
-- There are no new Master Data Services features in this CTP.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 
@@ -109,13 +132,10 @@ Or, install Microsoft Machine Learning Server (Standalone) to deploy and consume
 - [Reddit - general discussion about R](https://www.reddit.com/r/SQLServer/)
 
 ## See also    
- + [![Release Notes](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)] [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). 
-+ [Features supported by Edition](https://msdn.microsoft.com/library/cc645993.aspx)
- + [Installation hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
- + [Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
- 
- + [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- ![Release Notes](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). 
+- [Features supported by Edition](https://msdn.microsoft.com/library/cc645993.aspx)
+- [Installation hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+- [SQL Server Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+- [Install SQL Server Servicing Updates](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
  
  ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)
-
-

@@ -26,13 +26,13 @@ ms.custom: H1Hack27Feb2017
 ---
 # Find resources for installing and using SQL Server on Linux
 
-Get started using SQL Server 2017 CTP 2.0 on Linux. Here are basic steps with links to how-to information.
+Get started using SQL Server 2017 CTP 2.1 on Linux. Here are basic steps with links to how-to information.
 
 ## 1: Install Linux
 If you do not already have a Linux machine, install Linux on a physical server or a virtual machine (VM). Review the [Release notes](sql-server-linux-release-notes.md) on supported platforms and requirements.
 
 > [!NOTE]
-> One option is to create use a pre-configured Linux VM in Azure. In addition to OS-only VMs, there is also a VM image with SQL Server 2017 CTP 2.0 already installed. For more information, see [Provision a Linux VM in Azure for SQL Server](sql-server-linux-azure-virtual-machine.md). 
+> One option is to create use a pre-configured Linux VM in Azure. In addition to OS-only VMs, there is also a VM image with SQL Server 2017 CTP 2.1 already installed. For more information, see [Provision a Linux VM in Azure for SQL Server](sql-server-linux-azure-virtual-machine.md). 
 
 ## 2: Install SQL Server
 Next, set up SQL Server 2017 on your Linux machine, or run the Docker image, using one of the following guides:

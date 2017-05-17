@@ -25,7 +25,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
 Returns summary level attributes and information on transaction log files of databases. Use this information for monitoring and diagnostics of transaction log health.   
   
@@ -59,7 +59,7 @@ The built-in function `DB_ID` can be specified. When using `DB_ID` without speci
 |total_log_size_mb	|**float**	|	Total transaction log size in MB. |  
 |active_vlf_count	|**bigint**	|	Total number of active VLFs in the transaction log. |  
 |active_log_size_mb	|**float**	|	Total active transaction log size in MB. |  
-|log_truncation_holdup_reason	|**nvarchar(60)**	|	Log truncation holdup reason. The value is same as  `log_reuse_wait_desc` column of `sys.databases`.  (For more detailed explanations of these values, see [The Transaction Log](../../relational-databases/logs/the-transaction-log-sql-server)). <br />Possible values include: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />OTHER TRANSIENT |  
+|log_truncation_holdup_reason	|**nvarchar(60)**	|	Log truncation holdup reason. The value is same as  `log_reuse_wait_desc` column of `sys.databases`.  (For more detailed explanations of these values, see [The Transaction Log](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Possible values include: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />OTHER TRANSIENT |  
 |log_backup_time	|**datetime**	|	Last transaction log backup time. |   
 |log_backup_lsn	|**nvarchar(24)**	|	Last transaction log backup LSN. |   
 |log_since_last_log_backup_mb	|**float**	|	Log size in MB since last transaction log backup LSN. |  

@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2016"
+ms.date: "05/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,17 +20,16 @@ manager: "jhubbard"
 
 The SqlServer PowerShell module provides cmdlets for configuring [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in both Azure SQL Database and SQL Server 2016.
 
-Most of the cmdlets for Always Encrypted in the SqlServer module work with Always Encrypted keys or sensitive data stored in encrypted columns so it is important that you run the cmdlets on a secure computer. When managing Always Encrypted execute the cmdlets from a different computer than the computer hosting your SQL Server instance. 
+Always Encrypted cmdlets in the SqlServer module work with keys or sensitive data, so it is important that you run the cmdlets on a secure computer. When managing Always Encrypted, execute the cmdlets from a different computer than the computer hosting your SQL Server instance.
 
-Because the primary goal of Always Encrypted is to ensure encrypted sensitive data is safe even if the database system gets compromised, executing a PowerShell script that processes keys or sensitive data on the SQL Server computer can reduce or defeat the benefits of the feature. For additional security-related recommendations, see [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
+Because the primary goal of Always Encrypted is to ensure encrypted sensitive data is safe, even if the database system gets compromised, executing a PowerShell script that processes keys or sensitive data on the SQL Server computer can reduce or defeat the benefits of the feature. For additional security-related recommendations, see [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
 
 Links to the individual cmdlet articles are at the [bottom of this page](#aecmdletreference).
 
 ## Prerequisites
 
-Install the [SqlServer module](https://msdn.microsoft.com/library/mt740629.aspx) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](../../../ssms/download-sql-server-ps-module.md) instructions for more details.
+Install the [SqlServer module](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](../../../ssms/download-sql-server-ps-module.md) instructions for more details.
 
-Note: The *SqlServer* module is different from the *sqlps* module, which does not support Always Encrypted. For details, see the team's [SQL PowerShell - July 2016 Update](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) blog post.
 
 ## <a name="importsqlservermodule"></a> Importing the SqlServer Module 
 
@@ -56,7 +55,7 @@ Some of the Always Encrypted cmdlets work with data or metadata in the database 
 
 This method works only for SQL Server (it is not supported in Azure SQL Database).
 
-With SQL Server PowerShell, you can navigate the paths using Windows PowerShell aliases similar to the commands you typically use to navigate file system paths. Once you have navigated to the target instance and the database, the subsequent cmdlets will target that database as shown in the following example:
+With SQL Server PowerShell, you can navigate the paths using Windows PowerShell aliases similar to the commands you typically use to navigate file system paths. Once you navigate to the target instance and the database, the subsequent cmdlets target that database, as shown in the following example:
 
 ```
 # Import the SqlServer module.
@@ -123,24 +122,24 @@ The following PowerShell cmdlets are available for Always Encrypted:
 
 |CMDLET	|Description
 |:---|:---
-|**[Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)**	|Performs authentication to Azure and acquires an authentication token.
-|**[Add-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759817.aspx)**	|Adds a new encrypted value for an existing column encryption key object in the database.
-|**[Complete-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759791.aspx)**	|Completes the rotation of a column master key
-|**[Get-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759814.aspx)**	|Returns all column encryption key objects defined in the database, or returns one column encryption key object with the specified name.
-|**[Get-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759782.aspx)**	|Returns the column master key objects defined in the database, or returns one column master key object with the specified name.
-|**[Invoke-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759810.aspx)**	|Initiates the rotation of a column master key.
-|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)**	|Creates a SqlColumnMasterKeySettings object describing an asymmetric key stored in Azure Key Vault.
-|**[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)**	|Creates a SqlColumnMasterKeySettings object describing an asymmetric key stored in a key store supporting the Cryptography Next Generation (CNG) API.
-|**[New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)**	|Creates a new column encryption key object in the database.
-|**[New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)**	|Produces an encrypted value of a column encryption key.
-|**[New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx)**	|Creates a new SqlColumnEncryptionSettings object that encapsulates information about a single column’s encryption, including CEK and encryption type.
-|**[New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)**	|Creates a new column master key object in the database.
-|**New-SqlColumnMasterKeySettings**|Creates a SqlColumnMasterKeySettings object for a column master key with the specified provider and key path.
-|**[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)**	|Creates a SqlColumnMasterKeySettings object describing an asymmetric key stored in a key store with a Cryptography Service Provider (CSP) supporting Cryptography API (CAPI).
-|**[Remove-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759786.aspx)**	|Removes the column encryption key object from the database.
-|**[Remove-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759783.aspx)**	|Removes an encrypted value from an existing column encryption key object in the database.
-|**[Remove-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759800.aspx)**	|Removes the column master key object from the database.
-|**[Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)**	|Encrypts, decrypts, or re-encrypts specified columns in the database.
+|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**	|Performs authentication to Azure and acquires an authentication token.
+|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**	|Adds a new encrypted value for an existing column encryption key object in the database.
+|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**	|Completes the rotation of a column master key
+|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)**	|Returns all column encryption key objects defined in the database, or returns one column encryption key object with the specified name.
+|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)**	|Returns the column master key objects defined in the database, or returns one column master key object with the specified name.
+|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**	|Initiates the rotation of a column master key.
+|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**	|Creates a SqlColumnMasterKeySettings object describing an asymmetric key stored in Azure Key Vault.
+|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**	|Creates a SqlColumnMasterKeySettings object describing an asymmetric key stored in a key store supporting the Cryptography Next Generation (CNG) API.
+|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)**	|Creates a column encryption key object in the database.
+|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)**	|Produces an encrypted value of a column encryption key.
+|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**	|Creates a SqlColumnEncryptionSettings object that encapsulates information about a single column’s encryption, including CEK and encryption type.
+|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)**	|Creates a column master key object in the database.
+|**[New-SqlColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkeysettings)**|Creates a SqlColumnMasterKeySettings object for a column master key with the specified provider and key path.
+|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**	|Creates a SqlColumnMasterKeySettings object describing an asymmetric key stored in a key store with a Cryptography Service Provider (CSP) supporting Cryptography API (CAPI).
+|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**	|Removes the column encryption key object from the database.
+|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)**	|Removes an encrypted value from an existing column encryption key object in the database.
+|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**	|Removes the column master key object from the database.
+|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**	|Encrypts, decrypts, or re-encrypts specified columns in the database.
 
 
 

@@ -74,12 +74,9 @@ Package details and download locations for the RPM and Debian packages are liste
 
 | Tool | Minimum version |
 |-----|-----|
-| [SQL Server Management Studio (SSMS) for Windows - Release Candidate 2](https://go.microsoft.com/fwlink/?linkid=840957) | 17.0 |
-| [SQL Server Data Tools for Visual Studio - Release Candidate 2](https://go.microsoft.com/fwlink/?linkid=837939) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (0.2.1) |
-
-> [!NOTE] 
-> The SQL Server Management Studio and SQL Server Data Tools versions specified above are Release Candidates, hence not recommended for use in production.
+| [SQL Server Management Studio (SSMS) for Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
+| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
+| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (1.12) |
 
 ### Unsupported features and services
 The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.
@@ -103,7 +100,6 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
-| &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
 

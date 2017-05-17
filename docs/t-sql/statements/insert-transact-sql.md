@@ -1,7 +1,7 @@
 ---
 title: "INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/12/2017"
+ms.date: "05/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -291,7 +291,10 @@ OUTPUT Clause
   
 >  [!NOTE]
 >  A syntax error is raised if a column list is not provided.  
-  
+
+## Remarks  
+For information specific to inserting data into SQL graph tables, see [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md). 
+
 ## Best Practices  
  Use the @@ROWCOUNT function to return the number of inserted rows to the client application. For more information, see [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   

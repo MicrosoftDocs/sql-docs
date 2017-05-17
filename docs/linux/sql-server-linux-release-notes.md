@@ -74,8 +74,8 @@ Package details and download locations for the RPM and Debian packages are liste
 
 | Tool | Minimum version |
 |-----|-----|
-| [SQL Server Management Studio (SSMS) for Windows](https://go.microsoft.com/fwlink/?linkid=840957) | 17.0 |
-| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=837939) | 17.0 |
+| [SQL Server Management Studio (SSMS) for Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
+| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (1.12) |
 
 ### Unsupported features and services

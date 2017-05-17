@@ -28,9 +28,8 @@ Links to the individual cmdlet articles are at the [bottom of this page](#aecmdl
 
 ## Prerequisites
 
-Install the [SqlServer module](https://msdn.microsoft.com/library/mt740629.aspx) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](../../../ssms/download-sql-server-ps-module.md) instructions for more details.
+Install the [SqlServer module](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) on a secure computer that is NOT a computer hosting your SQL Server instance. The module can be installed directly from the PowerShell gallery.  See the [download](../../../ssms/download-sql-server-ps-module.md) instructions for more details.
 
-Note: The *SqlServer* module is different from the *sqlps* module, which does not support Always Encrypted. For details, see the team's [SQL PowerShell - July 2016 Update](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) blog post.
 
 ## <a name="importsqlservermodule"></a> Importing the SqlServer Module 
 

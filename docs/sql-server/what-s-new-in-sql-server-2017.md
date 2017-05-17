@@ -18,7 +18,7 @@ manager: "jhubbard"
 # What&#39;s New in SQL Server 2017
 SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises and in the cloud, and across operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows.
 
-This topic is a summary of what is new in the most recent Community Technical Preview (CTP) release, links to more detailed what's new information for specific feature areas.
+This topic is a summary of what is new in the most recent Community Technical Preview (CTP) release and links to more detailed what's new information for specific feature areas.
 
 ![info_tip](../sql-server/media/info-tip.png) Run SQL Server on Linux! For more information, see:
 -  [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)
@@ -132,11 +132,10 @@ Or, install Microsoft Machine Learning Server (Standalone) to deploy and consume
 - [Reddit - general discussion about R](https://www.reddit.com/r/SQLServer/)
 
 ## See also    
- + [![Release Notes](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)] [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). 
-+ [Features supported by Edition](https://msdn.microsoft.com/library/cc645993.aspx)
- + [Installation hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
- + [Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
- 
- + [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- ![Release Notes](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md). 
+- [Features supported by Edition](https://msdn.microsoft.com/library/cc645993.aspx)
+- [Installation hardware and software requirements](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
+- [SQL Server Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+- [Install SQL Server Servicing Updates](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
  
  ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

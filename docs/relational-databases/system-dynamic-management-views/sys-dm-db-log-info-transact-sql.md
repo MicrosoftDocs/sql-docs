@@ -49,11 +49,11 @@ sys.dm_db_log_info ( database_id )
 |database_id|**int**|Database ID.|
 |file_id|**smallint**|File id of the transaction log.|  
 |vlf_begin_offset|**bigint** |Offset location of the VLF from the beginning of the transaction log file.|
-|vlf_size_mb |**float** |Size of VLF in megabytes rounded to 2 decimal places.|     
-|vlf_sequence_number|**bigint** |Sequence number of VLF in the order of its creation. It can be used to uniquely identify vlfs in log file.|
-|vlf_active|**bit** |Indicates whether VLF is unused, inactive or active. <br />0 - vlf is either unused or inactive.<br />1 - vlf is active.|
+|vlf_size_mb |**float** |VLF size in MB rounded to 2 decimal places.|     
+|vlf_sequence_number|**bigint** |VLF sequence number in the created order. Used to uniquely identify vlfs in log file.|
+|vlf_active|**bit** |Indicates whether VLF is in use or not. <br />0 - vlf is not in use.<br />1 - vlf is active.|
 |vlf_status|**int** |Status of the VLF. Possible values include <br />0 - vlf is inactive <br />1 - vlf is initialized but unused <br /> 2 - vlf is active.|
-|vlf_parity|**tinyint** |Parity of VLF.|
+|vlf_parity|**tinyint** |Parity of VLF.Used internally to determine the end of log within a VLF.|
 |vlf_first_lsn|**nvarchar(48)** |LSN of the first log record in the VLF.|
 |vlf_create_lsn|**nvarchar(48)** |LSN of the log record that created the VLF.|
 

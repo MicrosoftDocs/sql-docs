@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server 2017 (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/15/2017"
+ms.date: "05/18/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ manager: "jhubbard"
 
 
 ## SQL Server Database Engine (CTP 2.1)  
-- A new, DMF sys.dm_db_log_stats(database_id), is introduced to expose summary level attributes and information on transaction log files; useful for monitoring the health of the transaction log.
+- A new, DMF [sys.dm_db_log_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), is introduced to expose summary level attributes and information on transaction log files; useful for monitoring the health of the transaction log.
 
 
 ## SQL Server Database Engine (CTP 2.0)  

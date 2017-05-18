@@ -32,6 +32,7 @@
 # [Report Builder](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)
 # [Report Design](../reporting-services/report-design/planning-a-report-report-builder.md)
 # [Working with reports](../reporting-services/reports/reporting-services-reports-ssrs.md)
+# [Report Data](../reporting-services/report-data/report-data-ssrs.md)
 # [Mobile reports](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
 
 # [Security and protection](../reporting-services/security/reporting-services-security-and-protection.md)

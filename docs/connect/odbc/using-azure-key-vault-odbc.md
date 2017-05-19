@@ -16,7 +16,7 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Using Always Key Vault with the ODBC Driver
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 This article provides information on how to use the Azure Key Vault to store column master keys for
 [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) and use them with
@@ -390,4 +390,4 @@ While the ODBC driver will allow the use of [asynchronous connections](https://m
 
 - [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx)
 - [Always Encrypted blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/appliesto-ss2016-asdb-xxxx-xxx_md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/appliesto-ss2016-asdb-xxxx-xxx_md.md)]

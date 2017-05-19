@@ -48,7 +48,7 @@ Connection Attribute|	Size/Type|	Default| Value|	Description
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` or `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Enables or disables TNIR.
 
-For more information about MultiSubnetFailover, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery)
+For more information about MultiSubnetFailover, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 --------------------------------------------------
 ## See Also  
 * [Microsoft ODBC Driver for SQL Server on Windows](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

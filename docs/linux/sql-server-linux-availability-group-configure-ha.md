@@ -39,7 +39,7 @@ The steps to create an availability group on Linux servers for high availability
 
 1. [Configure SQL Server on three cluster servers](sql-server-linux-setup.md).
 
-   >[IMPORTANT]
+   >[!IMPORTANT]
    >All three servers in the availability group need to be on the same platform - i.e. physical or virtual. This is because the Linux high availability uses fencing agents to isolate resources on servers. The fencing agents are specific for each platform.
 
 2. Create the availability group. This step is covered in this current article. 

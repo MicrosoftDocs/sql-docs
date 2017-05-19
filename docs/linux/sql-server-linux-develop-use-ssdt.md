@@ -42,7 +42,7 @@ SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and
 
 ## Upgrade SQL Server Data Tools to SSDT 17.0 RC release
 
-SQL Server vNext CTP 1.4 on Linux is supported by SSDT version 17.0 RC or later.
+SQL Server 2017 CTP 2.1 on Linux is supported by SSDT version 17.0 RC or later.
 
 1. [Download and Install SSDT 17.0 RC1].
 
@@ -82,13 +82,13 @@ SQL Server vNext CTP 1.4 on Linux is supported by SSDT version 17.0 RC or later.
 
 ## Build and validate the database
 
-1. Open the database project menu on **TutorialDB** and select **Build**. SSDT compiles .sql source code files in your project and builds a Data-tier Application package (dacpac) file. This can be used to publish a database to your SQL Server vNext instance on Linux. 
+1. Open the database project menu on **TutorialDB** and select **Build**. SSDT compiles .sql source code files in your project and builds a Data-tier Application package (dacpac) file. This can be used to publish a database to your SQL Server 2017 instance on Linux. 
 
     <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. Check the build success message in **Output** window in Visual Studio. 
 
-## Publish the database to SQL Server vNext instance on Linux
+## Publish the database to SQL Server 2017 instance on Linux
 
 1. Open the database project menu on **TutorialDB** and select **Publish**.
 

@@ -20,9 +20,11 @@
 ## [Distributed availability groups](distributed-availability-groups-always-on-availability-groups.md)  
 ## [Availability modes](availability-modes-always-on-availability-groups.md)  
 ## [Failover and failover modes](failover-and-failover-modes-always-on-availability-groups.md)  
+## [Read-scale only](read-scale-availability-groups.md)  
 ## [Flexible failover policy for automatic failover](flexible-automatic-failover-policy-availability-group.md)  
 ## [Possible failures during sessions between replicas](possible-failures-during-sessions-between-availability-replicas-sql-server.md)  
-## [Database health detection](sql-server-always-on-database-health-detection-failover-option.md)  
+## [Enhanced Database Failover ](enhanced-database-failover.md)
+### [Database health detection](sql-server-always-on-database-health-detection-failover-option.md)  
 ## [Backup on secondary](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
 ## [Readable secondary](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
 ## [Client connection](about-client-connection-access-to-availability-replicas-sql-server.md)  
@@ -103,7 +105,9 @@
 # Resources
 ## Dialogs and Wizards
 ### [Add IP Address Dialog Box](add-ip-address-dialog-box-sql-server-management-studio.md)  
-### [Specify Availability Group Name Page (New Availability Group Wizard/Add Database Wizard)](specify-availability-group-name-page.md)  
+### [Configure Read-Only Routing for an Availability Group](configure-read-only-routing-for-an-availability-group-sql-server.md)  
+### [Remove Availability Group Listener](remove-an-availability-group-listener-sql-server.md)  
+### [Specify Availability Group Options Page (New Availability Group Wizard/Add Database Wizard)](specify-availability-group-name-page.md)  
 ### [Select Databases Page (New Availability Group Wizard and Add Database Wizard)](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)  
 ### [Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)  
 ### [Enter Passwords Page (Add Replica Wizard)](enter-passwords-page-add-replica-wizard.md)  

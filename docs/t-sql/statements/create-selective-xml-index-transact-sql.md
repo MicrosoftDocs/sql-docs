@@ -18,7 +18,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # CREATE SELECTIVE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Creates a new selective XML index on the specified table and XML column. Selective XML indexes improve the performance of XML indexing and querying by indexing only the subset of nodes that you typically query. You can also create secondary selective XML indexes. For information, see [Create, Alter, and Drop Secondary Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
@@ -138,12 +138,14 @@ identifier
  The following example shows the syntax for creating a selective XML index. It also shows several variations of the syntax for describing the paths to be indexed, with optional optimization hints.  
   
 ```  
+CREATE TABLE Tbl ( id INT PRIMARY KEY, xmlcol XML );  
+GO  
 CREATE SELECTIVE XML INDEX sxi_index  
 ON Tbl(xmlcol)  
 FOR(  
-    pathab   = '/a/b' as XQUERY 'node()'  
+    pathab   = '/a/b' as XQUERY 'node()',  
     pathabc  = '/a/b/c' as XQUERY 'xs:double',   
-    pathdtext = '/a/b/d/text()' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
+    pathdtext = '/a/b/d/text()' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON,  
     pathabe = '/a/b/e' as SQL NVARCHAR(100)  
 );  
 ```  

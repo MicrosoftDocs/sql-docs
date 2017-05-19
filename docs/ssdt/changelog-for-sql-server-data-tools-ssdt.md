@@ -16,11 +16,116 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
-This change log is for [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx), co-released with [SQL Server 2016](https://msdn.microsoft.com/library/ms130214.aspx).  
+This change log is for [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-For detailed posts about what’s new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).  
+For detailed posts about what’s new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
-## SSDT 16.5 (for SQL Server 2016)
+## DacFx 17.0.1 
+- Fix for issue with databases with an asymmetric key by an HSM with an EKM provider [Connect item](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
+
+## SSDT 17.0 (supports up to SQL Server 2017)
+Build number: 14.0.61704.140
+
+### What's New?
+**Database projects:**
+- Amending a clustered index on a view will no longer block deployment
+- Schema comparison strings relating to column encryption will use the proper name rather than the instance name.   
+- Added a new command line option to SqlPackage: ModelFilePath.  This provides an option for advanced users to specify an external model.xml file for import, publishing and scripting operations   
+- The DacFx API was extended to support  Azure AD Universal Authentication and Multi-factor authentication (MFA)
+
+**IS projects:**
+- The SSIS OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online.
+- SSIS project now supports target server version of "SQL Server 2017" 
+- Support for CDC Control Task, CDC Splitter and CDC Source when targeting SQL Server 2017. 
+
+**AS projects:**
+- Analysis Services PowerQuery Integration (1400 compat-level tabular models):
+    - DirectQuery is available for SQL Oracle, And Teradata if user has installed 3rd Party drivers
+    - Add columns by example in PowerQuery
+    - Data access options in 1400 models (model-level properties used by M engine)
+        - Enable fast combine (default is false - when set to true, the mashup engine will ignore data source privacy levels when combining data)
+        - Enable Legacy Redirects (default is false – when set to true, the mashup engine will follow HTTP redirects that are potentially insecure.  For example, a redirect from an HTTPS to an HTTP URI)  
+        - Return Error Values as Null (default is false – when set to true, cell level errors will be returned as null. When false, an exception will be raised is a cell contains an error)  
+    - Additional data sources (file data sources) using PowerQuery
+        - Excel 
+		- Text/CSV 
+		- Xml 
+		- Json 
+		- Folder 
+		- Access Database 
+		- Azure Blob Storage 
+    - Localized PowerQuery user interface
+- DAX Editor Tool Window
+    - Improved DAX editing experience for measures, calculated columns, and detail-rows expressions, available via the View, Other Windows menu in SSDT
+	- Improvements to DAX parser\Intellisense
+
+
+**RS projects:**
+- Embeddable RVC Control is now available supporting SSRS 2016
+
+### Bug fixes
+**AS projects:**
+- Fixed the template priority for BI Projects so they don’t show up at the top of the New Projects categories in VS
+- Fixed a VS crash that may occur in rare circumstances when SSIS, SSAS or SSRS solution opened
+- Tabular: A variety of enhancements and performance fixes for DAX parsing and the formula bar.
+- Tabular: Tabular Model Explorer will no longer be visible if no SSAS Tabular projects are open.
+- Multi-dimensional: Fixed an issue where the processing dialog was unusable on High-DPI machines.
+- Tabular: Fixed an issue where SSDT faults when opening any BI project when SSMS is already open.[Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabular: Fixed an issue where hierarchies were not being properly saved to the bim file in an 1103 model.[Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- Tabular: Fixed an issue where Integrated Workspace mode was allowed on 32-bit machines even though it is not supported.
+- Tabular: Fixed an issue where clicking on anything while in semi-select mode (typing a DAX expression but clicking a measure, for example) could cause crashes.
+- Tabular: Fixed an issue where Deployment Wizard would reset the model's .Name property back to "Model". [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Tabular: Fixed an issue where selecting a heirarchy in TME should display properties even if Diagram View is not selected.
+- Tabular: Fixed an issue where pasting into the DAX Formula bar would paste images or other content instead of text when pasting from certain applications.
+- Tabular: Fixed an issue where some old models in the 1103 couldn't be opened due to presence of measures with a specific definition.
+- Tabular: Fixed an issue where XEvent Sessions could not be deleted.
+- Fixed an issue with attempting to build AS “smproj” files with devenv.com would fail
+- Fixed an issue that was finalizing text changes too frequently when using the Korean IME in AS tabular model sheet tab titles
+- Fixed an issue where the intellisense for DAX Related() function was not working correctly to show columns from other tables
+- Improved AS Tabular project import from database dialog by sorting the list of AS databases
+- Fixed an issue when creating calculated tables in AS tabular model where Tables weren’t listed as suggested objects in the expression
+- Fixed an issue in preview 1400 AS models trying to open using Integrated Workspace server after viewing code
+- Fixed an issue that was preventing some data sources (with no support for initial catalog) from working correctly in certain circumstances 
+- Deployment Wizard should apply changes to calculated table partitions even when the option to keep partitions is enabled
+- Fixed an issue where Advanced Properties dialog to existing AS Connection didn’t show full list until reselected
+- Fixed a few issues with clipped UI strings that appeared in some localized builds
+- Fixed a number of issues with PowerQuery integration in 1400 compat-level AS tabular models
+- Fixed an issue with Report Wizard style templates not showing up correctly
+- Fixed an issue with the Report Wizard that could lead to incorrect data source settings when changing from SQL to AS
+- Fixed an issue causing Analysis Services (Tabular) project build failure from command line (devenv.com\exe)
+- Fixed an issue with the DAX measure parser to show highlighted and correct text color when starting with letters before :=
+- Fixed an issue triggering an ObjectRefException if paths got too long attempting to Show All Files for Tabular project in integrated workspace mode
+- Fixed an issue with the Data Source Designer for Compact 4.0 Client Data Provider where it appeared unavailable
+- Fixed an issue that caused an error trying to browse AS mining model in VS2017
+- Fixed an issue in AS multi-dimensional model in VS2017 where DSV diagram stops rendering after changing views and then hits an exception
+- Fixed an issue previewing reports with an AS connection failed in VS2017
+ 
+
+**RS projects:**
+- Fixed an issue when designing reports in SSDT the tree view of parameters, data sources and datasets would collapse when most changes made 
+- Fixed an issue where Save should save the version of RDL, not the latest version.
+- Fixed an issue where SSDT RS is backing up files when backup is turned off and several other issues.
+- Fixed an issue in Report Builder where an error would be shown when clicking "Split Cells". [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- Fixed an issue where caching could cause incorrect data in a report. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+
+**IS projects:**
+- Fixed an issue that run64bitruntime setting doesn't stick.
+- Fixed an issue that DataViewer doesn't save displayed columns.
+- Fixed an issue that Package Parts hides annotations. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
+- Fixed an issue that Pacakage Parts discards Data Flow layouts and annotations. [Connect Item](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
+- Fixed an issue that SSDT crashes when importing project from sql server.
+- Fixed an issue with Hadoop File System Task TimeoutInMinutes default to 10 after opening saved SSIS package and at runtime.
+
+**Database projects:**
+- SSDT DACPAC deploy add setting back in for IgnoreColumnOrder [Connect item](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
+- SSDT failing to compile if STRING_SPLIT is used [Connect item](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- Fix issue where DeploymentContributors have access to the public model but the backing schema has not been initialized [Github issue](https://github.com/Microsoft/DACExtensions/issues/8)
+- DacFx temporal fix for FILEGROUP placement
+- Fix for "Unresolved Reference" error for external synonyms. 
+- Always Encrypted: Online encryption does not disable change tracking on cancellation and does not work properly if change tracking has not been cleaned prior to start encryption
+
+
+## SSDT 16.5 (supports up to SQL Server 2016)
 Released: October 20, 2016
 
 Build number: 14.0.61021.0

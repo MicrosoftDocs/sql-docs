@@ -47,6 +47,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Start, Stop, Pause, Resume, Restart SQL Server Services
+
+ > For content related to previous versions of SQL Server, see [Start  Stop  Pause  Resume  Restart the Database Engine  SQL Server Agent  or SQL Server Browser Service](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx).
+
   This topic describes how to start, stop, pause, resume, or restart the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager,  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** commands from a command prompt, [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
   
 -   **Before you begin:**  

@@ -138,10 +138,10 @@ WHERE ProductModelID=7;
 |xsi|http://www.w3.org/2001/XMLSchema-instance|  
 |xdt|http://www.w3.org/2004/07/xpath-datatypes|  
 |fn|http://www.w3.org/2004/07/xpath-functions|  
-|(no prefix)|urn:schemas-microsoft-com:xml-sql|  
+|(no prefix)|`urn:schemas-microsoft-com:xml-sql`|  
 |sqltypes|http://schemas.microsoft.com/sqlserver/2004/sqltypes|  
-|xml|http://www.w3.org/XML/1998/namespace|  
-|(no prefix)|http://schemas.microsoft.com/sqlserver/2004/SOAP|  
+|xml|`http://www.w3.org/XML/1998/namespace`|  
+|(no prefix)|`http://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
  Every database you create has the **sys** XML schema collection. It reserves these schemas so they can be accessed from any user-created XML schema collection.  
   

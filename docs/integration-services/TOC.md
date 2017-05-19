@@ -1,28 +1,14 @@
 # [Overview](sql-server-integration-services.md)
 ## [What's New in Integration Services in SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md)
-## [What's New in Integration Services in SQL Server vNext](what-s-new-in-integration-services-in-sql-server-vnext.md)
+## [What's New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
-## [Integration Services (SSIS) Development and Management Tools](integration-services-ssis-development-and-management-tools.md)
-## [Integration Services (SSIS) Projects and Solutions](integration-services-ssis-projects-and-solutions.md)
+# [Install or upgrade](../integration-services/install-windows/upgrade-integration-services.md)
 
-# [Install](install-windows/index.md)
-# [Change data capture](change-data-capture/index.md)
-# [Connection Manager](connection-manager/index.md)
-# [Control flow](control-flow/index.md)
-# [Data flow](data-flow/index.md)
+# [Development and management Tools](integration-services-ssis-development-and-management-tools.md)
+# [Projects and solutions](integration-services-ssis-projects-and-solutions.md)
 
-# Develop Packages for Integration
-## [Build packages programmatically](building-packages-programmatically/index.md)
-## [Extend packages custom objects](extending-packages-custom-objects/index.md)
-## [Extend packages scripting](extending-packages-scripting/index.md)
-## [Run and manage packages programmatically](run-manage-packages-programmatically/index.md)
-
-# [Event Handlers](integration-services-ssis-event-handlers.md)
-# [Expressions](expressions/index.md)
-# [Import and export](import-export-data/index.md)
-
-# [User Interface](integration-services-user-interface.md)
+# [User interface](integration-services-user-interface.md)
 ## [SSIS Designer](ssis-designer.md)
 ## [Advanced Editor](advanced-editor.md)
 ## [Group or Ungroup Components](group-or-ungroup-components.md)
@@ -45,48 +31,75 @@
 ## [Package Upgrade Wizard F1 Help](ssis-package-upgrade-wizard-f1-help.md)
 ## [Package and Project Parameters](integration-services-ssis-package-and-project-parameters.md)
 
-# [Performance](performance/index.md)
-# [Queries](integration-services-ssis-queries.md)
-
-# [Security](security/index.md)
-
-# [Service](service/index.md)
-
-# [System stored procedures](system-stored-procedures/index.md)
-
-# [System views](system-views/index.md)
-
-# [Transactions](integration-services-transactions.md)
-
-# [Troubleshooting](troubleshooting/index.md)
+# [Connections](../integration-services/connection-manager/integration-services-ssis-connections.md)
+# [Control flow](../integration-services/control-flow/control-flow.md)
+# [Data flow](../integration-services/data-flow/data-flow.md)
 
 # [Variables](integration-services-ssis-variables.md)
 ## [Variables Window](variables-window.md)
 ## [System Variables](system-variables.md)
+# [Expressions](../integration-services/expressions/integration-services-ssis-expressions.md)
+# [Event Handlers](integration-services-ssis-event-handlers.md)
+# [Queries](integration-services-ssis-queries.md)
+# [Transactions](integration-services-transactions.md)
+
+# [Catalog and Server](service/integration-services-ssis-server-and-catalog.md)  
+## [SSIS Catalog](service/ssis-catalog.md)  
+## [Integration Services (SSIS) Catalog Transact-SQL Reference](service/integration-services-ssis-catalog-transact-sql-reference.md)  
+## [View the List of Packages on the Integration Services Server](service/view-the-list-of-packages-on-the-integration-services-server.md)  
+## [Project Properties Dialog Box](service/project-properties-dialog-box.md)  
+## [Project Versions Dialog Box](service/project-versions-dialog-box.md)  
+## [Browse All Principals Dialog Box](service/browse-all-principals-dialog-box.md)  
+## [Package Properties Dialog Box](service/package-properties-dialog-box.md)  
+## [Validate Dialog Box](service/validate-dialog-box.md)  
+## [Configure Dialog Box](service/configure-dialog-box.md)  
+## [Set Parameter Value Dialog Box](service/set-parameter-value-dialog-box.md)  
+## [Folder Properties Dialog Box](service/folder-properties-dialog-box.md)  
 
 # [Scale Out](integration-services-ssis-scale-out.md)
-## [Walkthrough: Set Up Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)
-## [Run Packages in Integration Services (SSIS) Scale Out](run-packages-in-integration-services-ssis-scale-out.md)
-## [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
-## [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)
+
+# [Service (legacy)](../integration-services/service/integration-services-service-ssis-service.md)
+
+# [Security](../integration-services/security/security-overview-integration-services.md)
+# [Performance](../integration-services/performance/monitor-running-packages-and-other-operations.md)
+# [Troubleshooting](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
+
+# [System views](../integration-services/system-views/views-integration-services-catalog.md)
+# [System stored procedures](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)
+# [System function - dm_execution_performance_counters](functions-dm-execution-performance-counters.md)
+
+# [Errors and Events Reference](errors-and-events-reference-integration-services.md)
+## [Integration Services Error and Message Reference](integration-services-error-and-message-reference.md)
+
+# Scripting and programming
+## [Integration Services Programming Overview](integration-services-programming-overview.md)
+## [Understanding Synchronous and Asynchronous Transformations](understanding-synchronous-and-asynchronous-transformations.md)
+## [Working with Connection Managers Programmatically](working-with-connection-managers-programmatically.md)
+## [Extend packages with scripting](../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)
+## [Extend packages with custom objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)
+## [Build packages programmatically](../integration-services/building-packages-programmatically/adding-connections-programmatically.md)
+## [Run and manage packages programmatically](../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)
+# [Integration Services Language Reference](integration-services-language-reference.md)
 
 # [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)
 
 # [Hadoop and HDFS Support in Integration Services (SSIS)](hadoop-and-hdfs-support-in-integration-services-ssis.md)
+
+# [Microsoft Connectors for Oracle and Teradata by Attunity](attunity-connectors.md)
+
+# [Import and export data](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+
+# [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Microsoft Connector for SAP BW](microsoft-connector-for-sap-bw.md)
 ## [Installing the Microsoft Connector for SAP BW](installing-the-microsoft-connector-for-sap-bw.md)
 ## [Microsoft Connector for SAP BW Components](microsoft-connector-for-sap-bw-components.md)
 ## [Microsoft Connector for SAP BW F1 Help](microsoft-connector-for-sap-bw-f1-help.md)
 ## [Certification by SAP](certification-by-sap.md)
-# [Errors and Events Reference](errors-and-events-reference-integration-services.md)
-## [Integration Services Error and Message Reference](integration-services-error-and-message-reference.md)
-# [Integration Services Language Reference](integration-services-language-reference.md)
-# [Functions - dm_execution_performance_counters](functions-dm-execution-performance-counters.md)
  
 # [Tutorials](integration-services-tutorials.md)
 
-## [Create an ETL Package](ssis-how-to-create-an-etl-package.md)
+## [Create a Package](ssis-how-to-create-an-etl-package.md)
 
 ### [Lesson 1: Create a Project and Basic Package](lesson-1-create-a-project-and-basic-package-with-ssis.md)
 #### [Lesson 1-1 - Creating a New Integration Services Project](lesson-1-1-creating-a-new-integration-services-project.md)

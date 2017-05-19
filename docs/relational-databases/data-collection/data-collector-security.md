@@ -90,7 +90,7 @@ manager: "jhubbard"
   
 -   **db_ssisoperator**  
   
- For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ### dc_proxy Role  
  Members of the **dc_proxy** role have Read access to data collector collection sets and collector-level properties. Members of this role can also execute jobs that they own and create job steps that run as an existing proxy account.  
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
 -   **db_ssisoperator**  
   
- For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/service/integration-services-roles-ssis-service.md).  
+ For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
 ## Permissions for Configuring and Using the Management Data Warehouse  
  Depending on the task, users must be members of one or more of the fixed database roles provided for accessing the management data warehouse. In order of most-privileged to least-privileged access, the roles are as follows:  

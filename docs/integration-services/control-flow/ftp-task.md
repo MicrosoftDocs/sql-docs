@@ -58,7 +58,7 @@ manager: "jhubbard"
 |Delete remote files|Deletes a file on the FTP server.|  
   
 ## Custom Log Entries Available on the FTP Task  
- The following table lists the custom log entries for the FTP task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries for the FTP task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

@@ -63,7 +63,7 @@ manager: "jhubbard"
   
 -   **Test with only a subset of your data**. If you want to troubleshoot the data flow in a package by using only a sample of the dataset, you can include a Percentage Sampling or Row Sampling transformation to create an in-line data sample at run time. For more information, see [Percentage Sampling Transformation](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md) and [Row Sampling Transformation](../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
   
--   **Use data viewers to monitor data as it moves through the data flow**. Data viewers display data values as the data moves between sources, transformations, and destinations. A data viewer can display data in a grid. You can copy the data from a data viewer to the Clipboard, and then paste the data into a file or Excel spreadsheet. For more information, see [Add a Data Viewer to a Data Flow](../../integration-services/troubleshooting/add-a-data-viewer-to-a-data-flow.md).  
+-   **Use data viewers to monitor data as it moves through the data flow**. Data viewers display data values as the data moves between sources, transformations, and destinations. A data viewer can display data in a grid. You can copy the data from a data viewer to the Clipboard, and then paste the data into a file or Excel spreadsheet. For more information, see [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md) .  
   
 -   **Configure error outputs on data flow components that support them**. Many data flow sources, transformations, and destinations also support error outputs. By configuring the error output of a data flow component, you can direct data that contains errors to a different destination. For example, you can capture the data that failed or was truncated in a separate text file. You can also attach data viewers to error outputs and examine only the erroneous data. At design time, error outputs capture troublesome data values to help you develop packages that deal effectively with real-world data. However, while other troubleshooting tools and features are useful only at design time, error outputs retain their usefulness in the production environment. For more information, see [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).  
   
@@ -85,10 +85,6 @@ manager: "jhubbard"
   
 ## Troubleshooting Errors without a Description  
  If you encounter an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error number without an accompanying description during package development, you can locate the description in [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md). The list does not include troubleshooting information at this time.  
-  
-||  
-|-|  
-|![Integration Services icon (small)](../../integration-services/building-packages-programmatically/media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> -   [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.|  
   
 ## See Also  
  [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)   

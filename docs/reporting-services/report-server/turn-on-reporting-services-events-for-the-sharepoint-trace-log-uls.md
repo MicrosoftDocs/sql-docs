@@ -1,4 +1,4 @@
----
+﻿---
 title: "Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -108,7 +108,7 @@ Get-SPDiagnosticConfig
 |Report Server Catalog||  
 |Report Server Chunk||  
 |Report Server Cleanup||  
-|Report Server Configuration Manager|Sample entries:<br /><br /> MediumUsing report server internal url http://localhost:80/ReportServer.<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
+|Report Server Configuration Manager|Sample entries:<br /><br /> MediumUsing report server internal url `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
 |Report Server Crypto||  
 |Report Server Data Extension||  
 |Report Server DB Polling||  

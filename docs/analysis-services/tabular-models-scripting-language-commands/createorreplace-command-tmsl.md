@@ -21,8 +21,6 @@ manager: "erikre"
   
  Whenever you specify a read-write property, make sure to include them all. Omission of  a read-write object is considered a deletion.  
   
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
-  
 ## Request  
  The structure of the request varies based on the object. An object that is a parent must include all of its children, although the full object definitions of siblings and parent(s) are not required.  
   

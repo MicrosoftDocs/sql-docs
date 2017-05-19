@@ -1,5 +1,5 @@
-# [SQLXML annotated XSD schemas using +](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/index.md?toc=%2fsql%2frelational-databases%2fsqlxml-annotated-xsd-schemas-using%2ftoc.json)
-# [Annotated XSD schemas XPath queries +](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/index.md?toc=%2fsql%2frelational-databases%2fsqlxml-annotated-xsd-schemas-xpath-queries%2ftoc.json)
+# [SQLXML annotated XSD schemas using +](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)
+# [Annotated XSD schemas XPath queries +](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md)
 # [Annotated XDR Schemas (Deprecated in SQLXML 4.0)](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)
 # [Annotated XSD Schemas in SQLXML 4.0](annotated-xsd-schemas-in-sqlxml-4-0.md)
 # [Converting Annotated XDR Schemas to Equivalent XSD Schemas (SQLXML 4.0)](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)

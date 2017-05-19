@@ -61,11 +61,11 @@ After you have made these modifications to the package, when the package is run,
   
     This sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=275027). 
   
     2.  Click the **DOWNLOADS** tab.  
   
-    3.  Click the  HYPERLINK "http://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip file.  
+    3.  Click the link for the [SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip](http://msftisprodsamples.codeplex.com/downloads/get/596031) file.  
   
 6.  In the **Files** box, type **Currency_\*.txt**.  
   

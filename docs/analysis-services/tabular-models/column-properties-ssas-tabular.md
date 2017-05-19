@@ -48,7 +48,7 @@ manager: "erikre"
 |--------------|---------------------|-----------------|  
 |Default Image|False|Specifies which column provides an image that represents the row data (for example, a photo ID in an employee record).|  
 |Default Label|False|Specifies which column provides a display name to represent row data (for example, employee name in an employee record).|  
-|Image URL/Data Category (SP1)|False|Specifies the value in this column as a hyperlink to an image on a server. For example: http://localhost/images/image1.jpg.|  
+|Image URL/Data Category (SP1)|False|Specifies the value in this column as a hyperlink to an image on a server. For example: `http://localhost/images/image1.jpg`.|  
 |Keep Unique Rows|False|Specifies which columns provide values that should be treated as unique even if they are duplicates (for example, employee first name and last name, for cases where two or more employees share the same name).|  
 |Row Identifier|False|Specifies a column that contains only unique values, allowing that column to be used as an internal grouping key.|  
 |Summarize By|Default|Specifies reporting client tools apply the aggregate function SUM for column calculations when this column is added to a Field list. To change the default calculation, select it from the dropdown list. This property applies only to columns of type that can be aggregated.|  

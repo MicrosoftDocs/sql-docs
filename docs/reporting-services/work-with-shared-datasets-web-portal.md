@@ -1,7 +1,7 @@
 ---
 title: "Working with shared datasets (web portal) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/21/2016"
+ms.date: "05/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,22 +16,14 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Work with shared datasets - web portal
-With a shared dataset, you can manage the settings for a dataset separately from reports and other catalog items that use it. Shared datasets can be used with paginated and mobile reports, along with KPIs.  
-  
-You can view and manage the properties of a shared dataset within the web portal. The web portal can launch you into Report Builder to create or edit shared datasets.  
-  
-In this topic:  
-  
-- [Create a shared dataset](#create)  
-  
-- [Manage an existing shared dataset](#manage)  
-  
-- [Properties](#properties)  
-  
-- [Caching](#caching)  
-  
-<a name="create">  
-## Create a shared dataset  
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
+With a shared dataset, you can manage the settings for a dataset separately from reports and other catalog items that use it. Shared datasets can be used with paginated and mobile reports, along with KPIs.
+
+You can view and manage the properties of a shared dataset within the web portal. The web portal can launch you into Report Builder to create or edit shared datasets.
+
+## Create a shared dataset
   
 To create a new shared dataset, you can do the following.  
   
@@ -49,15 +41,14 @@ To create a new shared dataset, you can do the following.
   
 6.  Build your dataset and then select the **save** icon in the upper left to save the dataset back to the report server.  
   
-<a name="manage">  
-## Manage an existing shared dataset  
+## Manage an existing shared dataset
   
 To manage an existing shared dataset, you can do the following.  
   
 > [!NOTE]
 > If you don’t see the shared dataset in the folder, make sure you are viewing datasets. You can select **View** from the menu bar in the upper right of the web portal. Make sure **Datasets** is checked.  
   
-1.  Select the **ellipse (…)** for the dataset you want to manage.  
+1.  Select the **ellipsis (…)** for the dataset you want to manage.  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
@@ -65,15 +56,13 @@ To manage an existing shared dataset, you can do the following.
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-<a name="properties">  
-## Properties  
+## Properties
   
 On the properties screen, you can change the **name** and **description** for the dataset. You can also **Delete**, **Move**, **Edit in Report Builder**, **Download** or **Replace**.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-<a name="caching">  
-## Caching  
+## Caching
   
 You have options when it comes to caching data for a dataset. You will start off with a simple selection.  
   
@@ -114,8 +103,5 @@ Once you are done, you can select **Create Cache Refresh Plan**.
 > SQL Server Agent needs to be running to create a cache refresh plan.  
   
 You can then **Edit** or **Delete** plans that are listed. The **New From Existing** option is enabled when one, and only one, cache refresh plan is selected. This option will create a new refresh plan which is copied from the original plan. The cache refresh plan page opens pre-populated with details from the plan that was selected. You can then modify the refresh plan options and save the plan with a new description.  
-  
-  
-  
-  
 
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

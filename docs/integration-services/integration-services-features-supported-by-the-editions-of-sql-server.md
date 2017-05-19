@@ -23,7 +23,7 @@ For features supported by Evaluation and Developer editions see SQL Server Enter
 For the latest release notes and what's new information, see the following:
 -   [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
 -   [What's New in Integration Services in SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [What's New in Integration Services in SQL Server vNext](../integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md)
+-   [What's New in Integration Services in SQL Server 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
 **Try SQL Server 2016!**    
 
@@ -31,7 +31,7 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
     
 > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-##  <a name="IS"></a>New Integration Services Features in SQL Server vNext
+##  <a name="IS"></a>New Integration Services Features in SQL Server 2017
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  

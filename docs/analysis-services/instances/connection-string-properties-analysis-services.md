@@ -1,4 +1,4 @@
----
+﻿---
 title: "Connection String Properties (Analysis Services) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
@@ -168,11 +168,11 @@ manager: "erikre"
   
  **Http(s) connections to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks (.xlsx, .xlsb or .xlsm files)**  
   
- `Data Source=<URL>`, where the URL is the SharePoint path to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that has been published to a SharePoint library. For example, “Data Source=http://localhost/Shared Documents/Sales.xlsx”.  
+ `Data Source=<URL>`, where the URL is the SharePoint path to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that has been published to a SharePoint library. For example, `Data Source=http://localhost/Shared Documents/Sales.xlsx`.  
   
  **Http(s) connections to BI Semantic Model Connection files**  
   
- `Data Source=<URL>` where the URL is the SharePoint path to the .bism file. For example, “Data Source=http://localhost/Shared Documents/Sales.bism”.  
+ `Data Source=<URL>` where the URL is the SharePoint path to the .bism file. For example, `Data Source=http://localhost/Shared Documents/Sales.bism`.  
   
  **Embedded [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] connections**  
   

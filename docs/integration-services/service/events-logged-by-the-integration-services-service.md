@@ -94,4 +94,4 @@ manager: "jhubbard"
 9. On the **File** menu, click **Exit** to close the **Event Viewer** dialog box.  
  
 ## Related Tasks  
- For information about how to view log entries, see [View Log Entries in the Log Events Window](../../integration-services/performance/view-log-entries-in-the-log-events-window.md)  
+ For information about how to view log entries, see [Events Logged by an Integration Services Package](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

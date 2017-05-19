@@ -39,7 +39,7 @@ manager: "jhubbard"
 -   An understanding of how to manage PolyBase objects in SQL Server Management Studio (SSMS)  
   
 -   Examples of queries using PolyBase objects  
-  
+6  
 ## Prerequisites  
  An instance of  [SQL Server (64-bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
   
@@ -49,8 +49,7 @@ manager: "jhubbard"
   
 -   Minimum memory: 4GB  
   
--   Minimum hard disk space: 2GB  
-  
+-   Minimum hard disk space: 2GB    
 -   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
   
  An external data source, one of the following:  
@@ -79,13 +78,13 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Hortonworks HDP 1.3 on Linux/Windows Server  
   
--   Hortonworks HDP 2.1 – 2.5 on Linux
+-   Hortonworks HDP 2.1 – 2.6 on Linux
 
 -   Hortonworks HDP 2.1 - 2.3 on Windows Server  
   
 -   Cloudera CDH 4.3 on Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9, 5.10 on Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.11 on Linux  
   
 -   Azure Blob Storage  
   

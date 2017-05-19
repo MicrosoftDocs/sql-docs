@@ -1,7 +1,7 @@
 # Overview
 ## [What is Analysis Services?](analysis-services.md)  
 ## [What's new in SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  
-## [What's new in SQL Server Analysis Services vNext](what-s-new-in-sql-server-analysis-services-vnext.md) 
+## [What's new in SQL Server Analysis Services 2017](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [Tools and applications](tools-and-applications-used-in-analysis-services.md)   
 ## [Comparing Tabular and Multidimensional solutions](comparing-tabular-and-multidimensional-solutions-ssas.md)  
 ## [Analysis Services features supported by SQL Server 2016 edition](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
@@ -87,25 +87,36 @@
 ## [Data Mining](data-mining-tutorials-analysis-services.md)  
 
 # How-to
-## [Tabular modeling](tabular-models/index.md)
-## [Multidimensional modeling](multidimensional-models/index.md)
-## [Data mining](data-mining/index.md)
-## [Power Pivot for Sharepoint](power-pivot-sharepoint/index.md)
-## [Instance management](instances/index.md)
-## [Trace-events](trace-events/index.md)
+## [Tabular modeling](../analysis-services/tabular-models/tabular-models-ssas.md)
+## [Multidimensional modeling](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+## [Data mining](../analysis-services/data-mining/data-mining-ssas.md)
+## [Power Pivot for Sharepoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
+## [Manage servers](../analysis-services/instances/analysis-services-instance-management.md)
+## [Trace-events](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # Developer
-## [Scripting](scripting/index.md)
-## [Tabular model programming compatibility level 1200](tabular-model-programming-compatibility-level-1200/index.md)
-## [Tabular model programming compatibility level 1050 to 1103](tabular-model-programming-compatibility-levels-1050-1103/index.md)
-## [Tabular models scripting language commands](tabular-models-scripting-language-commands/index.md)
-## [Tabular models scripting language objects](tabular-models-scripting-language-objects/index.md)
-## [Schema rowsets](schema-rowsets/index.md)
-## [XMLA](xmla/index.md)
+## Tabular models
+### [Tabular Model Programming for Compatibility Level 1200 and higher](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+#### [Tabular Model Scripting Language (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
+#### [Tabular Model Scripting Language (TMSL) commands](../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)
+#### [Tabular Model Scripting Language (TMSL) objects](../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)
+#### [Tabular Object Model (TOM)](../analysis-services/tabular-model-programming-compatibility-level-1200/add-a-data-source-to-tabular-model-analysis-services-amo-tom.md)
+### [Tabular Model Programming for Compatibility Levels 1050 and 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
+#### [Analysis Services Scripting Language (ASSL)](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+#### [CSDLBI](../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)
+
+## Multimdimensional models
+### [Analysis Services Scripting Language (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+### [Analysis management objects +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+### [OLAP logical +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+### [OLAP physical +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+### [Extending OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
+
+## [Schema rowsets](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
+## [XML for Analysis (XMLA)](../analysis-services/xmla/xml-elements-methods-discover.md)
+
 
 # Reference
-## [PowerShell](powershell/index.md)
-## [Server properties](server-properties/index.md)
-## [Troubleshooting Analysis Services](troubleshooting-analysis-services.md)  
-### [Troubleshoot process data](troubleshoot-process-data-ssas-tabular.md)  
-### [Troubleshoot a Power Pivot for SharePoint installation](troubleshoot-a-power-pivot-for-sharepoint-installation.md)  
+## [PowerShell](../analysis-services/powershell/technical-reference-ssas.md)
+## [Server properties](../analysis-services/server-properties/server-properties-in-analysis-services.md)

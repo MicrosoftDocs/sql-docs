@@ -49,9 +49,9 @@ manager: "jhubbard"
   
 -   [View the List of Packages on the Integration Services Server](../../integration-services/service/view-the-list-of-packages-on-the-integration-services-server.md)  
   
--   [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md)  
+-   [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
--   [Run a Package on the SSIS Server Using SQL Server Management Studio](../../integration-services/packages/run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
+-   [Run Integration Services (SSIS) Packages](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## Related Content  
  Blog entry, [SSIS with Always On](http://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  

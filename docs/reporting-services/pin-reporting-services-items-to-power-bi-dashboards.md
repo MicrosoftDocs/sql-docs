@@ -35,7 +35,7 @@ manager: "erikre"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   You pin from the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report viewer in t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]he , for example http://myserver/Reports.  You cannot pin from [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], from report designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or from a report server url.  For example  http://myserver/Report`Server`.  
+-   You pin from the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report viewer in t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]he , for example `http://myserver/Reports`.  You cannot pin from [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], from report designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], or from a report server url.  For example  `http://myserver/ReportServer`.  
   
 -   Your browser needs to be configured to allow pop-ups from your report server site.  
   

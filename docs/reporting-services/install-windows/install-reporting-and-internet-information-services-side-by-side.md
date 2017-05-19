@@ -1,7 +1,7 @@
 ---
 title: "Install Reporting and Internet Information Services Side-by-Side | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "05/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,11 +40,11 @@ manager: "erikre"
   
 |Example|Request|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|Receives all requests that are sent to http://123.234.345.456/reports or http://\<computername>/reports if a domain name service can resolve the IP address to that host name.|  
-|http://+:80/reports|Receives any requests that are sent to any IP address or host name that is valid for that computer as long as the URL contains the "reports" virtual directory name.|  
-|http://123.234.345.456:80|Receives any request that specifies http://123.234.345.456 or http://\<computername> if a domain name service can resolve the IP address to that host name.|  
-|http://+:80|Receives requests that are not already received by other applications, for any application endpoints that are mapped to **All Assigned**.|  
-|http://*:80|Receives requests that are not already received by other applications, for application endpoints that are mapped to **All Unassigned**.|  
+|`http://123.234.345.456:80/reports`|Receives all requests that are sent to `http://123.234.345.456/reports` or `http://\<computername>/reports` if a domain name service can resolve the IP address to that host name.|  
+|`http://+:80/reports`|Receives any requests that are sent to any IP address or host name that is valid for that computer as long as the URL contains the "reports" virtual directory name.|  
+|`http://123.234.345.456:80`|Receives any request that specifies `http://123.234.345.456` or `http://\<computername>` if a domain name service can resolve the IP address to that host name.|  
+|`http://+:80`|Receives requests that are not already received by other applications, for any application endpoints that are mapped to **All Assigned**.|  
+|`http://*:80`|Receives requests that are not already received by other applications, for application endpoints that are mapped to **All Unassigned**.|  
   
  One indication of a port conflict is that you will see the following error message: 'System.IO.FileLoadException: The process cannot access the file because it is being used by another process. (Exception from HRESULT: 0x80070020).'  
   
@@ -53,9 +53,9 @@ manager: "erikre"
   
 |Application|URL reservation|Description|Request receipt|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Report Server|http://+:80/ReportServer|Strong wildcard on port 80, with report server virtual directory.|Receives all requests on port 80 that specify the report server virtual directory. The Report Server Web service receives all requests to http://\<computername>/reportserver.|  
-|Web portal|http://+:80/Reports|Strong wildcard on port 80, with Reports virtual directory.|Receives all requests on port 80 that specify the reports virtual directory. The [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] receives all requests to http://\<computername>/reports.|  
-|IIS|http://*:80/|Weak wildcard on port 80.|Receives any remaining requests on port 80 that are not received by another application.|  
+|Report Server|`http://+:80/ReportServer`|Strong wildcard on port 80, with report server virtual directory.|Receives all requests on port 80 that specify the report server virtual directory. The Report Server Web service receives all requests to http://\<computername>/reportserver.|  
+|Web portal|`http://+:80/Reports`|Strong wildcard on port 80, with Reports virtual directory.|Receives all requests on port 80 that specify the reports virtual directory. The [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] receives all requests to http://\<computername>/reports.|  
+|IIS|`http://*:80/`|Weak wildcard on port 80.|Receives any remaining requests on port 80 that are not received by another application.|  
   
 ## Side-by-Side Deployments of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and SQL Server 2016 Reporting Services on IIS 8.0, 8.5  
  Interoperability issues between IIS and Reporting Services occur when IIS Web sites have virtual directory names that are identical to those used by Reporting Services. For example, suppose you have the following configuration:  
@@ -76,7 +76,8 @@ manager: "erikre"
   
 ## See Also
 
-[Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-[Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+[Configure Report Server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Install Reporting Services Native Mode Report Server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

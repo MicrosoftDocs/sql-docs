@@ -1,7 +1,7 @@
 ---
 title: "Transact-SQL Constructs Not Supported by In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "04/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -64,7 +64,7 @@ manager: "jhubbard"
 |Operation|Update of primary key columns|Primary key columns in memory-optimized tables and table types cannot be updated. If the primary key needs to be updated, delete the old row and insert the new row with the updated primary key.|  
 |Operation|CREATE INDEX|Indexes on memory-optimized tables must be specified inline with the **CREATE TABLE** statement, or with the **ALTER TABLE** statement.|  
 |Operation|CREATE FULLTEXT INDEX|Fulltext indexes are not supported for memory-optimized tables.|  
-|Operation|schema change|Memory-optimized tables and natively compiled stored procedures do not support schema changes, for example, **sp_rename**.<br /><br /> Attempting to make certain schema changes will generate error 12320. Operations that require a change to the schema version, for example renaming, are not supported with memory-optimized tables.<br /><br /> Certain schema changes using ALTER TABLE and ALTER PROCEDURE are allowed.|  
+|Operation|schema change|Memory-optimized tables and natively compiled stored procedures do not support schema changes, for example, **sp_rename**.<br /><br /> Attempting to make certain schema changes will generate error 12320. Operations that require a change to the schema version, for example renaming, are not supported with memory-optimized tables.<br /><br /> Certain schema changes using ALTER TABLE and ALTER PROCEDURE are allowed.<br/><br/>**Applies to:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].<br/>Beginning with [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename is supported.| 
 |Operation|TRUNCATE TABLE|The TRUNCATE operation is not supported for memory-optimized tables. To remove all rows from a table, delete all rows using **DELETE FROM***table* or drop and recreate the table.|  
 |Operation|ALTER AUTHORIZATION|Changing the owner of an existing memory-optimized table or natively compiled stored procedure is not supported. Drop and recreate the table or procedure to change ownership.|  
 |Operation|ALTER SCHEMA|Transferring a securable between schemas.|  

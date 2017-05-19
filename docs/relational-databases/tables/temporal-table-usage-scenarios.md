@@ -2,7 +2,7 @@
 title: "Temporal Table Usage Scenarios | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
+ms.date: "05/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,17 +20,7 @@ manager: "jhubbard"
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Temporal Tables are generally useful in scenarios that require tracking history of data changes.    
-We recommend you to consider Temporal Tables in the following use cases, because of huge productivity benefits:  
-  
--   [Data Audit](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [Point in Time Analysis (Time Travel)](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [Anomaly Detection](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [Slowly-Changing Dimensions](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [Repairing Row-Level Data Corruption](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+We recommend you to consider Temporal Tables in the following use cases for major productivity benefits.  
   
 ## Data Audit  
  Use temporal system-versioning on tables that store critical information for which you need to keep track of what has changed and when, and to perform data forensics at any point in time.    

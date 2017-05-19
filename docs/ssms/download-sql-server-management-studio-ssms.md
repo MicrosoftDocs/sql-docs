@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/03/2017"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,80 +29,71 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Download SQL Server Management Studio (SSMS)
-SQL Server Management Studio (SSMS) is an integrated environment for accessing, configuring, managing, administering, and developing all components of SQL Server. SSMS combines a broad group of graphical tools with a number of rich script editors to provide developers and administrators of all skill levels access to SQL Server. This release features improved compatibility with previous versions of SQL Server, a stand-alone web installer, and toast notifications within SSMS when new releases become available.  
+SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL from wherever you deploy it. SSMS provides tools to deploy, monitor, and upgrade the data-tier components, such as databases and data warehouses used by your applications, and to build queries and scripts. 
 
+This release features improved compatibility with previous versions of SQL Server, a stand-alone web installer, and toast notifications within SSMS when new releases become available.  
+
+SSMS is free! Download it below!
     
-| ![download](../ssdt/media/download.png) Download SQL Server Management Studio (SSMS)  |  |
-|:---|:---|
-|**[Download SQL Server Management Studio (16.5.3)](https://go.microsoft.com/fwlink/?LinkID=840946)**|Current release for production use.|
-|**[Download SQL Server Management Studio - Release Candidate (17.0 RC3)](../ssms/sql-server-management-studio-ssms-release-candidate.md)**|Includes support for SQL Server vNext CTP1.3, and works side-by-side with 16.x, but not recommended for production use.| 
-
+![download](../ssdt/media/download.png) **[Download SQL Server Management Studio - 17.0](https://go.microsoft.com/fwlink/?linkid=847722)**
 
 > [!NOTE]
-> SSMS releases are now branded numerically, not by months. SSMS is free! It does not require a license to install and use.  
+> SSMS 17.X is the latest generation of SQL Server Management Studio and provides support for SQL Server 2017. 
+
+> [!NOTE]
+> The SQL Server PowerShell module is now a separate install through the PowerShell Gallery.  Please see the [download instructions](download-sql-server-ps-module.md) for more information.
 
 
 ## SQL Server Management Studio   
 **Version Information**  
   
-The release number: 16.5.3  
-The build number for this release: 13.0.16106.4
+The release number: 17.0  
+The build number for this release: 14.0.17099.0
   
-**Supported SQL Server versions**  
+**Supported SQL offerings**  
   
-* This version of SSMS works with all [supported versions of SQL Server (SQL Server 2008 - SQL Server 2016),](https://support.microsoft.com/en-us/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database, and Azure SQL Data Warehouse.  
+* All [supported versions of SQL Server (SQL Server 2008 - SQL Server 2017),](https://support.microsoft.com/en-us/lifecycle?C2=1044).
+* Azure SQL Database.
+* Azure SQL Data Warehouse.  
 * There is no explicit block for SQL Server 2000 or SQL Server 2005, but some features may not work properly.  
-* Additionally, one SSMS 16.x release or SSMS 2016 can be installed side by side with previous versions of SSMS 2014 and earlier. 
+* Additionally, SSMS 17.x can be installed side-by-side with SSMS 16.X or SQL Server 2014 SSMS and earlier. 
   
 **Supported Operating systems**  
   
 This release of SSMS supports the following platforms when used with the latest available service pack:   
- Windows 10, Windows 8, Windows 8.1, Windows 7 (SP1), Windows Server 2012 (64-bit), Windows Server 2012 R2 (64-bit), Windows Server 2008 R2 (64-bit)  
-   
+Windows 10, Windows 8, Windows 8.1, Windows 7 (SP1), Windows Server 2016, Windows Server 2012 (64-bit), Windows Server 2012 R2 (64-bit), Windows Server 2008 R2 (64-bit)  
+
+>[!NOTE]
+>SSMS 17.0 is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility very seriously and ensures that already-shipped applications continue to run on the latest Windows releases. Because of this, we do not anticipate that SSMS with all latest updates applied) will encounter issues when running on Windows Server 2016. Customers are advised to contact support, should they encounter any issues with SSMS on Windows Server 2016. Support will then work with customers to determine if the issue is with SSMS or Visual Studio or with Windows compatibility, and route the issue appropriately.
+
  **Available Languages**  
 > [!NOTE]  
 > Non-English localized releases of SSMS require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2. 
   
  This release of SSMS can be installed in the following languages:  
-[Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)  
-[German](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)  
+[Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c)  
+[German](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)  
 
  
-## Changelog  
+## New in this Release  
 
-16.5.3
+SSMS 17.0 is the latest generation of SSMS.  This release of SSMS provides support SQL Server 2017 (running on Windows or Linux) and SQL Analysis Service PaaS.
+Additionally, 17.0 introduces numerous improvements across many existing feature areas:
 
-The following issues were fixed this release:
-
-* Fixed an issue introduced in SSMS 16.5.2 which was causing the expansion of the 'Table' node when the table had more than one sparse column.
-
-* Users can deploy SSIS packages containing OData Connection Manager which connect to a Microsoft Dynamics AX/CRM Online resource to SSIS catalog. For more information, see [OData Connection Manager](https://msdn.microsoft.com/library/dn584133.aspx).
-
-* Configuring Always Encrypted on an existing table fails with errors on unrelated objects. [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
-
-* Configuring Always Encrypted for an existing database with multiple schemas doesn't work. [Connect ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
-
-* The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
-
-* When encrypting using Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
-
-* *Open recent* menu doesn't show recently saved files. [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
-
-* SSMS is slow when right-clicking an index for a table (over a remote (Internet) connection). [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
- 
-* Fixed an issue with the SQL Designer scrollbar. [Connect ID 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
-
-* Context menu for tables momentarily hangs 
- 
-* SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
-
-* SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
+* Over 100 connect issues fixed 
+* SQL Server PowerShell module moved out of SSMS and into the PowerShell gallery
+* Icons updated to support high-DPI display modes
+* Numerous performance improvements in Object Explorer
+* WSUS support for upgrading to future 17.X versions
+* Improved Multi-factor authentication support
+* Enhancements to Availability Group functionality (Support for SQL Server on Linux, direct seeding, endpoint URL handling, and more)
+* Showplan enhancements including new feature to analyze actual existing showplan to help diagnose issues
+* SQL Server Analysis Server 1400 support
+* New DAX Query Windows
+* Numerous other enhancements for Power Query support
 
 
-
-
-
-For the full list of features, see   
+For the full list of changes, see   
                 [SQL Server Management Studio - Changelog (SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md)  
   
 To see the list of known issues and work arounds, see   

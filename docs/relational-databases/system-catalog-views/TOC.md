@@ -154,6 +154,7 @@
 ## [sys.identity_columns](sys-identity-columns-transact-sql.md)  
 ## [sys.indexes](sys-indexes-transact-sql.md)  
 ## [sys.index_columns](sys-index-columns-transact-sql.md)  
+## [sys.index_resumable_operations](sys-index-resumable-operations.md)
 ## [sys.internal_partitions](sys-internal-partitions-transact-sql.md)  
 ## [sys.internal_tables](sys-internal-tables-transact-sql.md)  
 ## [sys.key_constraints](sys-key-constraints-transact-sql.md)  
@@ -220,6 +221,7 @@
 ## [sys.query_store_query](sys-query-store-query-transact-sql.md)  
 ## [sys.query_store_query_text](sys-query-store-query-text-transact-sql.md)  
 ## [sys.query_store_runtime_stats](sys-query-store-runtime-stats-transact-sql.md)  
+## [sys.query_store_wait_stats](sys-query-store-wait-stats-transact-sql.md) 
 ## [sys.query_store_runtime_stats_interval](sys-query-store-runtime-stats-interval-transact-sql.md)  
 
 # [Scalar Types](scalar-types-catalog-views-transact-sql.md)  
@@ -326,6 +328,7 @@
 ## [sys.remote_data_archive_databases](stretch-database-catalog-views-sys-remote-data-archive-databases.md)  
 ## [sys.remote_data_archive_tables](stretch-database-catalog-views-sys-remote-data-archive-tables.md)
 
+
 # [XML Schemas (XML Type System)](xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
 ## [sys.column_xml_schema_collection_usages](sys-column-xml-schema-collection-usages-transact-sql.md)  
 ## [sys.parameter_xml_schema_collection_usages](sys-parameter-xml-schema-collection-usages-transact-sql.md)  
@@ -342,4 +345,3 @@
 ## [sys.xml_schema_types](sys-xml-schema-types-transact-sql.md)  
 ## [sys.xml_schema_wildcard_namespaces](sys-xml-schema-wildcard-namespaces-transact-sql.md)  
 ## [sys.xml_schema_wildcards](sys-xml-schema-wildcards-transact-sql.md)  
-

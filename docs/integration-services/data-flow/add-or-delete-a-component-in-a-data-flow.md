@@ -51,7 +51,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Connect Components in a Data Flow](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
- [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)   
+ [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   
   

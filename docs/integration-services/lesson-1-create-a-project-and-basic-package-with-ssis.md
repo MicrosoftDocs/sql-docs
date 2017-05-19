@@ -18,6 +18,9 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Lesson 1: Create a Project and Basic Package with SSIS
+
+ > For content related to previous versions of SQL Server, see [Lesson 1: Creating the Project and Basic Package](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
+
 In this lesson, you will create a simple ETL package that extracts data from a single flat file source, transforms the data using two lookup transformation components, and writes that data to the **FactCurrency** fact table in **AdventureWorksDW2012**. As part of this lesson, you will learn how to create new packages, add and configure data source and destination connections, and work with new control flow and data flow components.  
   
 > [!IMPORTANT]  

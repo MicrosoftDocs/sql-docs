@@ -1,7 +1,7 @@
 ---
 title: "Supported Features for Natively Compiled T-SQL Modules | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "04/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -45,19 +45,29 @@ manager: "jhubbard"
 
 The following query constructs are supported:  
 
+CASE expression: CASE can be used in any statement or clause that allows a valid expression.
+   - **Applies to:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+    Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], CASE statements are now supported for natively compiled T-SQL modules.
+
 SELECT clause:  
 
 -   Columns and  name aliases (using either AS or = syntax).  
 
--   Scalar subqueries  
+-   Scalar subqueries
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], scalar subqueries are now supported in natively compiled modules.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the DISTINCT operator is supported in natively compiled modules.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION and UNION ALL
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], UNION and UNION ALL operators are now supported in natively compiled modules.
 
 -   Variable assignments  
 
@@ -67,15 +77,22 @@ FROM clause:
 
 -   FROM \<natively compiled inline TVF>  
 
--   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN and INNER JOIN.  
+-   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN and INNER JOIN.
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], JOINS are now supported in natively compiled modules.
 
--   Subqueries `[AS] table_alias`. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
+-   Subqueries `[AS] table_alias`. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], Subqueries are now supported in natively compiled modules.
 
 WHERE clause:  
 
 -   Filter predicate IS [NOT] NULL  
 
--   AND, OR, NOT, IN, EXISTS, BETWEEN  
+-   AND, BETWEEN  
+-   OR, NOT, IN, EXISTS
+    - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+      Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], OR/NOT/IN/EXISTS operators are now supported in natively compiled modules.
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause:

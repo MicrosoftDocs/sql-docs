@@ -50,7 +50,7 @@ The default parameters are good for a quick start but you should monitor how Que
   
  The default value (100 MB) may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Keep track of current space usage and increase the Max Size (MB) to prevent Query Store from transitioning to read-only mode.  Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
   
-```  
+```tsql 
 USE [QueryStoreDB];  
 GO  
   
@@ -61,14 +61,14 @@ FROM sys.database_query_store_options;
   
  The following script sets a new Max Size (MB):  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Statistics Collection Interval:** Defines level of granularity for the collected runtime statistic (the default is 1 hour). Consider using lower value if you require finer granularity or less time to detect and mitigate issues but keep in mind that it will directly affect the size of Query Store data. Use SSMS or Transact-SQL to set different value for Statistics Collection Interval:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
 ```  
   
@@ -77,7 +77,7 @@ By default, Query Store is configured to keep the data for 30 days which may be 
   
  Avoid keeping historical data that you do not plan to use. This will reduce changes to read-only status. The size of Query Store data as well as the time to detect and mitigate the issue will be more predictable. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or the following script to configure time-based cleanup policy:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
 ```  
@@ -86,7 +86,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));
   
  It is strongly recommended to activate size-based cleanup to makes sure that Query Store always runs in read-write mode and collects the latest data.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -101,7 +101,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  The following script sets the Query Capture mode to Auto:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -113,7 +113,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Enable Query Store by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] as described in the previous section, or execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
-```  
+```tsql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -134,19 +134,30 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
 |SSMS view|Scenario|  
 |---------------|--------------|  
 |Regressed Queries|Pinpoint queries for which execution metrics have recently regressed (i.e. changed to worse). <br />Use this view to correlate observed performance problems in your application with the actual queries that needs to be fixed or improved.|  
-|Top Resource Consuming Queries|Choose an execution metric of interest and identify queries that had the most extreme values for a provided time interval. <br />Use this view to focus your attention on the most relevant queries which have the biggest impact to database resource consumption.|  
-|Tracked Queries|Track the execution of the most important queries in real-time. Typically, you use this view when you have queries with forced plans and you want to make sure that query performance is stable.|  
 |Overall Resource Consumption|Analyze the total resource consumption for the database for any of the execution metrics.<br />Use this view to identify resource patterns (daily vs. nightly workloads) and optimize overall consumption for your database.|  
+|Top Resource Consuming Queries|Choose an execution metric of interest and identify queries that had the most extreme values for a provided time interval. <br />Use this view to focus your attention on the most relevant queries which have the biggest impact to database resource consumption.|  
+|Queries With Forced Plans|Lists previously forced plans using Query Store. <br />Use this view to quickly access all currently forced plans.|  
+|Queries With High Variation|Analyze queries with high execution variation as it relates to any of the available dimensions, such as Duration, CPU time, IO, and Memory usage in the desired time interval.<br />Use this view to identify queries with widely variant performance that can be impacting user experience accross your applications.|  
+|Tracked Queries|Track the execution of the most important queries in real-time. Typically, you use this view when you have queries with forced plans and you want to make sure that query performance is stable.|
   
 > [!TIP]  
 >  For a detailed description how to use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to identify the top resource consuming queries and fix those that regressed due to the change of a plan choice, see [Query Store @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
- When you identify a query with sub-optimal performance, your action depends on the nature of the  problem.  
+ When you identify a query with sub-optimal performance, your action depends on the nature of the problem.  
   
 -   If the query was executed with multiple plans and the last plan is significantly worse than previous plan, you can use the plan forcing mechanism to force [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to always use the optimal plan for future executions.  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
-  
+
+> [!NOTE]  
+> The above graphic may feature different shapes for specific query plans, with the following meanings for each possible status:<br />  
+> |Shape|Meaning|  
+> |-------------------|-------------|
+> |Circle|Query Completed (Regular Execution successfully finished)|
+> |Square|Cancelled (Client initiated aborted execution)|
+> |Triangle|Failed (Exception aborted execution)|
+> Also, the size of the shape reflects query execution count within the specified time interval, increasing in size with a higher number of executions.  
+
 -   You may conclude that your query is missing an index for optimal execution. This information is surfaced within the query execution plan. Create the missing index and check the query performance using the Query Store.  
   
      ![query-store-show-plan](../../relational-databases/performance/media/query-store-show-plan.png "query-store-show-plan")  
@@ -160,7 +171,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
 ##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  Query Store can silently change operations mode. You should regularly monitor the state of the Query Store to ensure that the Query Store is operating, and to take action to avoid failures due to preventable causes. Execute the following query to determine the operation mode and view the most relevant parameters:  
   
-```  
+```tsql
 USE [QueryStoreDB];  
 GO  
   
@@ -181,13 +192,13 @@ FROM sys.database_query_store_options;
   
 -   Clean up Query Store data by using the following statement:  
   
-    ```  
+    ```tsql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
  You can apply one or both of these steps by the executing the following statement that explicitly changes operation mode back to read-write:  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -203,7 +214,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### Error State  
  To recover Query Store try explicitly setting the read-write mode and check actual state again.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -217,7 +228,7 @@ FROM sys.database_query_store_options;
   
  If  the problem persists, it indicates corruption of the Query Store data is persisted on the disk,. You need to clear Query Store before requesting read-write mode.  
   
-```  
+```tsql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -279,7 +290,7 @@ As a result, performance of your workload will be sub-optimal and Query Store mi
 ##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. However, as with plan hints and plan guides, forcing a plan is not a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing will start failing. In that case [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). The following query returns information about forced plans:  
   
-```  
+```tsql  
 USE [QueryStoreDB];  
 GO  
   
@@ -301,5 +312,4 @@ If you rename a database, plan forcing will fail which will cause recompilation 
  [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
   

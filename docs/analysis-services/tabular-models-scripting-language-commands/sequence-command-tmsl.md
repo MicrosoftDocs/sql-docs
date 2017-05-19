@@ -39,8 +39,6 @@ manager: "erikre"
   
 -   [Detach command &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)  
   
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
-  
 ## Request  
  **maxParallelism** is an optional property that determines whether **Refresh** operations run sequentially or in parallel.  
   

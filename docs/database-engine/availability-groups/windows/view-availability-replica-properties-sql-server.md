@@ -38,6 +38,9 @@ manager: "jhubbard"
 4.  Right-click the availability replica whose properties you want to view, and select the **Properties** command.  
   
 5.  In the **Availability Replica Properties** dialog box, use the **General** page to view the properties of this replica. If you are connected to the primary replica, you can change the following properties: availability mode, failover mode, connection access for the primary role, read-access for the secondary role (readable-secondary), and the session-timeout value. For more information, see [Availability Replica Properties &#40;General Page&#41;](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md).  
+
+   [!NOTE]
+   >If the cluster type is none, you cannot change the failover mode.
   
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  

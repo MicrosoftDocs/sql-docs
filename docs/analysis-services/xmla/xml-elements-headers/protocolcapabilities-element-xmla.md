@@ -32,7 +32,7 @@ manager: "erikre"
 # ProtocolCapabilities Element (XMLA)
   Uses the SOAP header in a SOAP request message to identify protocol capabilities between an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and a client application.  
   
- **Namespace** http://schemas.microsoft.com/analysisservices/2003/engine  
+ **Namespace** `http://schemas.microsoft.com/analysisservices/2003/engine`  
   
 ## Syntax  
   

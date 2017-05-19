@@ -59,7 +59,7 @@ manager: "jhubbard"
   
     -   Any namespaces defined using WITH XMLNAMESPACES. For more information, see [Add Namespaces to Queries with WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   Any namespaces defined in the query prolog. Note that the namespace declarations in the prolog may override the namespace declaration in the WITH XMLNAMESPACES. For example, in the following query, WITH XMLNAMESPACES declares a prefix (pd) that binds it to namespace (http://someURI). However, in the WHERE clause, the query prolog overrides the binding.  
+    -   Any namespaces defined in the query prolog. Note that the namespace declarations in the prolog may override the namespace declaration in the WITH XMLNAMESPACES. For example, in the following query, WITH XMLNAMESPACES declares a prefix (pd) that binds it to namespace (`http://someURI`). However, in the WHERE clause, the query prolog overrides the binding.  
   
         ```  
         WITH XMLNAMESPACES ('http://someURI' AS pd)  

@@ -116,7 +116,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
 
 -- Bulk operations only: Azure Storage Blob as data source   
--- (on SQL Server vNext and Azure SQL Database).
+-- (on SQL Server 2017 and Azure SQL Database).
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = BLOB_STORAGE,  

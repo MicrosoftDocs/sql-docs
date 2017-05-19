@@ -23,8 +23,6 @@ manager: "erikre"
   
  For objects having read-write properties, if you specify one read-write property, you will need to specify all of them, using new or existing values. You can use AMO PowerShell to get a property list. See [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md).  
   
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
-  
 ## Request  
  **Alter** does not have any attributes. Inputs include the object to be altered, followed by the modified object definition.  
   

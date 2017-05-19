@@ -22,7 +22,7 @@ manager: "jhubbard"
   Viewing and analyzing the data profiles is the next step in the data profiling process. You can view these profiles after you have run the Data Profiling task inside an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package and computed the data profiles. For more information about how to set up and run the Data Profiling tasks, see [Setup of the Data Profiling Task](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
   
 > [!IMPORTANT]  
->  The output file might contain sensitive data about your database and the data that database contains. For suggestions on how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md).  
+>  The output file might contain sensitive data about your database and the data that database contains. For suggestions on how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
 ## Data Profiles  
  To view the data profiles, you configure the Data Profiling task to send its output to a file, and then you use the stand-alone Data Profile Viewer. To open the Data Profile Viewer, do one of the following.  

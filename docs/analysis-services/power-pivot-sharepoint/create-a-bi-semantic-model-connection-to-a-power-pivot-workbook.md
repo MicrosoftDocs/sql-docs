@@ -39,7 +39,7 @@ manager: "erikre"
   
  You must have a library that supports the BI semantic model connection content type. For more information, see [Add a BI Semantic Model Connection Content Type to a Library &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md).  
   
- You must know the URL of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook for which you are setting up a BI semantic model connection (for example, http://adventure-works/shared documents/myworkbook.xlsx). The workbook must be in the same farm.  
+ You must know the URL of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook for which you are setting up a BI semantic model connection (for example, `http://adventure-works/shared documents/myworkbook.xlsx`). The workbook must be in the same farm.  
   
  All computers and users that participate in the connection sequence must be in the same domain or trusted domain (two-way trust).  
   
@@ -49,7 +49,7 @@ manager: "erikre"
   
      ![New Document submenu in a SharePoint library](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "New Document submenu in a SharePoint library")  
   
-2.  Set the **Server** property to the SharePoint URL of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook (for example, **http://mysharepoint/shared documents/myWorkbook.xlsx**. In a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint deployment, data can be loaded on any server in the farm. For this reason, data source connections to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data specify just the path to the workbook. The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service determines which server loads the data.  
+2.  Set the **Server** property to the SharePoint URL of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook (for example, `http://mysharepoint/shared documents/myWorkbook.xlsx`. In a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint deployment, data can be loaded on any server in the farm. For this reason, data source connections to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data specify just the path to the workbook. The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service determines which server loads the data.  
   
      Do not use the **Database** property; it is not used when specifying the location of a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook.  
   

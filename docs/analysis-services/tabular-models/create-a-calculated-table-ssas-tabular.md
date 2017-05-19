@@ -28,7 +28,7 @@ There is one CalculatedTableColumn for each column returned by the expression, w
   
 ## How to create a calculated table  
   
-1.  First, verify the tabular model has a compatibility level of 1200. You can check the **Compatibility Level** property on the model in SSDT.  
+1.  First, verify the tabular model has a compatibility level of 1200 or higher. You can check the **Compatibility Level** property on the model in SSDT.  
   
 2.  Switch to the Data View. You can't create a calculated table in Diagram View.  
   

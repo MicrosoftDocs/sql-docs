@@ -1,7 +1,7 @@
 ---
 title: "Guidelines for Online Index Operations | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/09/2017"
+ms.date: "04/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -32,6 +32,7 @@ manager: "jhubbard"
 -   Nonunique nonclustered indexes can be created online when the table contains LOB data types but none of these columns are used in the index definition as either key or nonkey (included) columns.  
   
 -   Indexes on local temp tables cannot be created, rebuilt, or dropped online. This restriction does not apply to indexes on global temp tables.
+- Indexes can be resumed from where it stopped after an unexpected failure, database failover, or a **PAUSE** command. See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). This feature is in public preview for SQL Server 2017.
 
 > [!NOTE]  
 >  Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features supported by editions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -83,6 +84,30 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 ## Transaction Log Considerations  
  Large-scale index operations, performed offline or online, can generate large data loads that can cause the transaction log to quickly fill. To make sure that the index operation can be rolled back, the transaction log cannot be truncated until the index operation has been completed; however, the log can be backed up during the index operation. Therefore, the transaction log must have sufficient space to store both the index operation transactions and any concurrent user transactions for the duration of the index operation. For more information, see [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md).  
 
+## Resumable Index Rebuild Considerations
+
+> [!NOTE]
+> See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). This feature is in public preview for SQL Server 2017.
+>
+
+When you perform resumable online index rebuild the following guidelines apply:
+-	Managing, planning and extending of index maintenance windows. You can pause and restart an index rebuild operation multiple times to fit your maintenance windows.
+- Recovering from index rebuild failures (such as database failovers or running out of disk space).
+- When an index operation is paused, both the original index and the the newly created one require disk space and need to be updated during DML operations.
+
+- Enables truncation of truncation logs during an index rebuild operation (this operation cannot be performed for a regular online index operation).
+- SORT_IN_TEMPDB=ON option is not supported
+
+> [!IMPORTANT]
+> Resumable rebuild does not require you to keep open a long running truncation, allowing log truncation during this operation and a better log space management. With the new design, we managed to keep necessary data in a database together with all references required to restart the resumable operation.
+>
+
+Generally, there is no performance difference between resumable and non-resumable online index rebuild. When you update a resumable index while an index rebuild operation is paused:
+- For read-mostly workloads, the performance impact is insignificant. 
+- For update-heavy workloads, you may experience some throughput degradation (our testing shows less than 10% degradation).
+
+Generally, there is no difference in defragmentation quality between resumable and non-resumable online index rebuild.
+ 
 ## Related Content  
  [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)  
   

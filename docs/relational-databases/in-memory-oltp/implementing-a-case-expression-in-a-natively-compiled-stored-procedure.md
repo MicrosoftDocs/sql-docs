@@ -2,7 +2,7 @@
 title: "Implementing a CASE Expression in a Natively Compiled Stored Procedure | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
+ms.date: "04/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,31 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Implementing a CASE Expression in a Natively Compiled Stored Procedure
+[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+
+  CASE expressions are supported in natively compiled stored procedures. The following example demonstrates a way to use
+the CASE expression in a query. The workaround described for CASE expressions in natively compiled modules would be no longer needed.
+
+``` 
+-- Query using a CASE expression in a natively compiled stored procedure.
+CREATE PROCEDURE dbo.usp_SOHOnlineOrderResult  
+   WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
+   AS BEGIN ATOMIC WITH  (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE=N'us_english')  
+   SELECT   
+      SalesOrderID,   
+      CASE (OnlineOrderFlag)   
+      WHEN 1 THEN N'Order placed online by customer'  
+      ELSE N'Order placed by sales person'  
+      END  
+   FROM Sales.SalesOrderHeader_inmem
+END  
+GO  
+  
+EXEC dbo.usp_SOHOnlineOrderResult  
+GO  
+```  
+
+
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   CASE expressions are *not* supported in natively compiled stored procedures. The following sample shows a way to implement the functionality of a CASE expression in a natively compiled stored procedure.  

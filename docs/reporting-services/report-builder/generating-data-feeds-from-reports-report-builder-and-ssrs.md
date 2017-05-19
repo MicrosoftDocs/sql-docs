@@ -111,7 +111,7 @@ manager: "erikre"
   
  The data rows for nested data regions are typically wide, especially if the nested tables and matrices include groups and totals. You might find it useful to export the report to a data feed and view the data feed to verify that the data generated is what you expected.  
   
- When the Atom rendering extension creates the Atom service document, a unique identifier is created for the data feed and you use the identifier in the URL to view the content of the data feed. The sample Atom service document, shown above, includes the URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1". The URL identifies the report (Product Sales Summary), the Atom rendering format (ATOM), and the name of the data feed (xAx0x1).  
+ When the Atom rendering extension creates the Atom service document, a unique identifier is created for the data feed and you use the identifier in the URL to view the content of the data feed. The sample Atom service document, shown above, includes the URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. The URL identifies the report (Product Sales Summary), the Atom rendering format (ATOM), and the name of the data feed (xAx0x1).  
   
  Report item names default to the report definition language (RDL) element names of the report items and often they are not intuitive or easy to remember. For example, the default name of the first matrix placed in a report is Tablix 1. The data feeds use these names.  
   

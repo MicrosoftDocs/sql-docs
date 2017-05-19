@@ -194,10 +194,3 @@
 
 # [Assemblies Management](multidimensional-model-assemblies-management.md)  
 
-# Developer
-## [OLAP logical +](../../analysis-services/multidimensional-models/olap-logical/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2folap-logical%2ftoc.json)
-## [OLAP physical +](../../analysis-services/multidimensional-models/olap-physical/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2folap-physical%2ftoc.json)
-## [ADOMD.NET +](../../analysis-services/multidimensional-models/adomd-net/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fadomd-net%2ftoc.json)
-## [Analysis management objects +](../../analysis-services/multidimensional-models/analysis-management-objects/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fanalysis-management-objects%2ftoc.json)
-## [Scripting language ASSL +](../../analysis-services/multidimensional-models/scripting-language-assl/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fscripting-language-assl%2ftoc.json)
-## [Extending OLAP +](../../analysis-services/multidimensional-models/extending-olap/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fextending-olap%2ftoc.json)

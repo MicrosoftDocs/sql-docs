@@ -19,30 +19,64 @@ manager: "jhubbard"
 ---
 # Download SQL Server Data Tools (SSDT)
 
-**[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. This release supports SQL Server 2016 through SQL Server 2005, and provides the design environment for adding features that are new in SQL Server 2016.  
+**[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. This release supports SQL Server 2017 through SQL Server 2005, and provides the design environment for adding features that are new in SQL Server 2016.  
     
     
-| ![download](../ssdt/media/download.png) Download SQL Server Data Tools for Visual Studio 2015  | Download Data-Tier Application Framework (DacFx) ||
-|:---|:---|:---|
-|**[Download SQL Server Data Tools (16.5)](https://msdn.microsoft.com/mt186501)**|[**Download DacFx and SqlPackage.exe (16.5)**](https://www.microsoft.com/download/details.aspx?id=54106) |Current GA release for production use.|
-|[**Download SQL Server Data Tools - Release Candidate**](../ssdt/sql-server-data-tools-ssdt-release-candidate.md)| [**Download DacFx and SqlPackage.exe - Release Candidate**](../ssdt/sql-server-data-tools-ssdt-release-candidate.md) |Includes support for SQL Server vNext.|
+![download](../ssdt/media/download.png) [Download SQL Server Data Tools 17.0 for Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=846626)
 
+![download](../ssdt/media/download.png) [Download Data-Tier Application Framework (DacFx) 17.0.1](https://www.microsoft.com/download/details.aspx?id=55114)
 
+## SQL Server Data Tools   
+**Version Information**  
+  
+The release number: 17.0  
+The build number for this release: 14.0.61704.140
+  
+ **What's New**
+ - Support for SQL Server 2017 for database projects, IS projects and BI projects
+ - Support for Azure Analysis Services
+ - Ignore column order in database projects
+ - PowerQuery integration and support for 1400 level models
+ - IS package support ofr Microsoft Dynamics AX and CRM online through OData
+
+ Complete list of changes available in the [changelog](changelog-for-sql-server-data-tools-ssdt.md)
+
+ > To use SQL Server Data Tools in Visual Studio 2017 see [this](#use-ssdt-in-visual-studio-2017) section below
+
+ **Available Languages**  
+  
+ This release of SSDT can be installed in the following languages:  
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x804) | 
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x404) | 
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x409) | 
+[French]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x407) | 
+[Italian]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x410) | 
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x411) | 
+[Korean]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x412) | 
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x416) | 
+[Russian]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x419) | 
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=846626&clcid=0x40a)  
+
+**ISO Images**
+
+An ISO image of SSDT can be used as an alternative way to install SSDT or to set up an Administrative Installation point. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive or burned to a DVD.
+
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x804) |
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x404) |
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x409) |
+[French]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x407) |
+[Italian]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x410) |
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x411) |
+[Korean]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x412) |
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x416) |
+[Russian]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x419) |
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=846628&clcid=0x40a)
 
 ## Download Visual Studio
 
 * [**Download Visual Studio Community 2015**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
-
-### Use SSDT in Visual Studio 2017
-
-* [**Download Visual Studio 2017**](https://www.visualstudio.com/) ([compare Visual Studio 2017 features by edition](https://www.visualstudio.com/vs/compare/))
-
-To use relational database projects, we recommend checking the **Data Storage and Processing** workload during installation. SSDT database project support is also included in a number of other workloads including *Azure*, *ASP.Net and Web Development*, and *.Net Core Cross Platform Development*.
-
-If you are using SSDT with Visual Studio 2017, install the AS and RS components:
-* [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
-* [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
-
 
 ## Installing SSDT without Visual Studio pre-installed
 
@@ -54,9 +88,9 @@ If you do have [Visual Studio 2015 Community Edition (or above)](https://www.vis
   
 |Project Templates|SQL Platforms Supported|  
 |-------------------|--------------------|  
-Relational databases|  SQL Server 2005* - SQL Server 2016 <br /><br />Azure SQL Database<br /><br />Azure SQL Data Warehouse (supports queries only; database projects are not yet supported)<br /><br />  * SQL Server 2005 support is deprecated,<br /><br /> please move to an officially supported SQL version|
-  |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2008 – SQL Server 2016|
-  |Integration Services packages| SQL Server 2012 – SQL Server 2016    |
+Relational databases|  SQL Server 2005* - SQL Server 2017 <br /><br />Azure SQL Database<br /><br />Azure SQL Data Warehouse (supports queries only; database projects are not yet supported)<br /><br />  * SQL Server 2005 support is deprecated,<br /><br /> please move to an officially supported SQL version|
+  |Analysis Services models<br /><br />Reporting Services reports | SQL Server 2008 – SQL Server 2017|
+  |Integration Services packages| SQL Server 2012 – SQL Server 2017    |
   
 ## Next steps  
 After installing SSDT, work through these tutorials to learn how to create databases, packages, data models, and reports using SSDT:  
@@ -69,6 +103,20 @@ After installing SSDT, work through these tutorials to learn how to create datab
   
 -   [Create a Basic Table Report (SSRS Tutorial)](https://msdn.microsoft.com/library/ms167305.aspx)  
   
+## Use SSDT in Visual Studio 2017 
+
+* [**Download Visual Studio 2017**](https://www.visualstudio.com/) ([compare Visual Studio 2017 features by edition](https://www.visualstudio.com/vs/compare/))
+
+To use relational database projects, we recommend checking the **Data Storage and Processing** workload during installation. SSDT database project support is also included in a number of other workloads including *Azure*, *ASP.Net and Web Development*, and *.Net Core Cross Platform Development*.
+
+> [!NOTE]
+> SSDT database projects in Visual Studio 2017 currently support up to SQL Server 2016.  Support for SQL Server 2017 will be coming soon in a Visual Studio 2017 update.
+
+If you are using SSDT with Visual Studio 2017, install the AS and RS components:
+* [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
+* [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
+
+
 ## See Also  
 [SQL Server Data Tools in Visual Studio](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  

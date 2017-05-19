@@ -1,463 +1,1365 @@
 {
- "redirections":
- [
+    "redirections": [
+        {
+            "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
+            "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/guide/appendixes/using-ado-with-microsoft-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/guide/data/ado-event-instantiation-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/guide/data/handline-errors-in-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/guide/remote-data-service/rds-tutorial-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/ado-code-examples-in-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/rds-api/rds-code-examples-in-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/activecommand-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/actualsize-and-definedsize-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/addnew-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/append-and-createparameter-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/attributes-and-name-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/cachesize-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/cancel-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/clone-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/comparebookmarks-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/count-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/delete-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/execute-requery-and-clear-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/filter-and-recordcount-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/find-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/getrows-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/getstring-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/handler-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/internettimeout-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/isolationlevel-and-mode-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/item-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/marshaloptions-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/maxrecords-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/move-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/nextrecordset-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/numericscale-and-precision-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/open-and-close-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/openschema-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/optimize-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/prepared-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/refresh-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/resync-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/save-and-open-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/sort-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/source-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/state-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/status-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/stayinsync-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/supports-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/type-property-example-field-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/type-property-example-property-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/update-and-cancelupdate-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/value-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/version-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/operationalization-with-mrsdeploy.md",
+            "redirect_url": "/sql/advanced-analytics/operationalization-with-mrsdeploy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/architecture-overview-sql-server-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/architecture-overview-sql-server-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/configuration-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/configuration-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/configure-and-manage-advanced-analytics-extensions.md",
+            "redirect_url": "/sql/advanced-analytics/r/configure-and-manage-advanced-analytics-extensions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/converting-r-code-for-use-in-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/converting-r-code-for-use-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md",
+            "redirect_url": "/sql/advanced-analytics/r/create-a-local-package-repository-using-minicran",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/create-a-standalone-r-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/create-a-standalone-r-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/creating-workflows-that-use-r-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/creating-workflows-that-use-r-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/data-exploration-and-predictive-modeling-with-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/data-exploration-and-predictive-modeling-with-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/data-science-scenarios-and-solution-templates.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/data-science-scenarios-and-solution-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/determine-which-packages-are-installed-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/differences-in-r-features-between-editions-of-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/dmvs-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/dmvs-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/extended-events-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/extended-events-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md",
+            "redirect_url": "/sql/advanced-analytics/r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/getting-started-with-microsoft-r-server-standalone.md",
+            "redirect_url": "/sql/advanced-analytics/r/getting-started-with-microsoft-r-server-standalone",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/getting-started-with-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/getting-started-with-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/how-to-create-a-resource-pool-for-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/how-to-create-a-stored-procedure-using-sqlrutils.md",
+            "redirect_url": "/sql/advanced-analytics/r/how-to-create-a-stored-procedure-using-sqlrutils",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/how-to-create-mdx-queries-using-olapr.md",
+            "redirect_url": "/sql/advanced-analytics/r/how-to-create-mdx-queries-using-olapr",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/index.md",
+            "redirect_url": "/sql/advanced-analytics/r/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/install-microsoft-r-server-from-the-command-line.md",
+            "redirect_url": "/sql/advanced-analytics/r/install-microsoft-r-server-from-the-command-line",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/installing-and-managing-r-packages.md",
+            "redirect_url": "/sql/advanced-analytics/r/installing-and-managing-r-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/installing-ml-components-without-internet-access.md",
+            "redirect_url": "/sql/advanced-analytics/r/installing-ml-components-without-internet-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/installing-sql-server-r-services-on-an-azure-virtual-machine.md",
+            "redirect_url": "/sql/advanced-analytics/r/installing-sql-server-r-services-on-an-azure-virtual-machine",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/known-issues-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/known-issues-for-sql-server-machine-learning-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/data-science-deep-dive-using-the-revoscaler-packages.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-1-work-with-sql-server-data-using-r-data-science-deep-dive.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-1-1-create-sql-server-data-objects-using-rxsqlserverdata.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-1-2-query-and-modify-the-sql-server-data.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-1-3-define-and-use-compute-contexts.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-create-and-run-r-scripts-data-science-deep-dive.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-create-and-run-r-scripts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-1-visualize-sql-server-data-using-r.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-2-create-models.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-create-models",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-3-score-new-data.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-score-new-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-3-transform-data-using-r-data-science-deep-dive.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-transform-data-using-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-3-1-load-data-into-memory-using-rximport.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-3-2-create-new-sql-server-table-using-rxdatastep.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-3-3-perform-chunking-analysis-using-rxdatastep.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-4-analyze-data-in-local-compute-context-data-science-deep-dive.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-4-1-move-data-between-sql-server-and-xdf-file.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-5-create-a-simple-simulation-data-science-deep-dive.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-create-a-simple-simulation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/prerequisites-for-data-science-walkthroughs-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-1-prepare-the-data-data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-prepare-the-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-view-and-explore-the-data-data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-view-and-explore-the-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-1-view-and-summarize-data-using-r.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-2-create-graphs-and-plots-using-r.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-3-create-data-features-data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-create-data-features",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-4-build-and-save-the-model-data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-build-and-save-the-model",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-5-deploy-and-use-the-model-data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/managing-and-monitoring-r-solutions.md",
+            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md",
+            "redirect_url": "/sql/advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/monitoring-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/monitoring-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/new-components-in-sql-server-to-support-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/operationalizing-your-r-code.md",
+            "redirect_url": "/sql/advanced-analytics/r/operationalizing-your-r-code",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/packages-installed-in-user-libraries.md",
+            "redirect_url": "/sql/advanced-analytics/r/packages-installed-in-user-libraries",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/performance-case-study-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/performance-case-study-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/using-r-code-in-transact-sql-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/working-with-inputs-and-outputs-r-in-t-sql-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-working-with-inputs-and-outputs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-and-sql-data-types-and-data-objects-r-in-t-sql-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-r-and-sql-data-types-and-data-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/using-r-functions-with-sql-server-data-r-in-t-sql-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/create-a-predictive-model-r-in-t-sql-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-create-a-predictive-model-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/predict-and-plot-from-model-r-in-t-sql-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-predict-and-plot-from-model",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md",
+            "redirect_url": "/sql/advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-and-data-optimization-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-and-data-optimization-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-interoperability-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-interoperability-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-package-how-to-enable-or-disable.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-package-how-to-enable-or-disable",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-package-management-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-server-standalone.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-server-standalone",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/resource-governance-for-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/resource-governance-for-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/save-and-load-r-objects-from-sql-server-using-odbc.md",
+            "redirect_url": "/sql/advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/scaler-functions-for-working-with-sql-server-data.md",
+            "redirect_url": "/sql/advanced-analytics/r/scaler-functions-for-working-with-sql-server-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/security-considerations-for-the-r-runtime-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/security-considerations-for-the-r-runtime-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/security-overview-sql-server-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/security-overview-sql-server-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/set-up-a-data-science-client.md",
+            "redirect_url": "/sql/advanced-analytics/r/set-up-a-data-science-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md",
+            "redirect_url": "/sql/advanced-analytics/r/set-up-sql-server-r-services-in-database",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/setup-or-configure-r-tools.md",
+            "redirect_url": "/sql/advanced-analytics/r/setup-or-configure-r-tools",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/sql-server-configuration-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/sql-server-configuration-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-features-and-tasks.md",
+            "redirect_url": "/sql/advanced-analytics/r/sql-server-r-services-features-and-tasks",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-performance-tuning.md",
+            "redirect_url": "/sql/advanced-analytics/r/sql-server-r-services-performance-tuning",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-tutorials.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/machine learning-services-tutorials",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-in-database-advanced-analytics-for-sql-developers",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-1-download-the-sample-data-in-database-advanced-analytics-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-download-the-sample-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-2-import-data-to-sql-server-using-powershell.md",
+            "redirect_url": "/sql/advanced-analytics/r/sqldev-import-data-to-sql-server-using-powershell",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-3-explore-and-visualize-the-data-in-database-advanced-analytics-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-4-create-data-features-using-t-sql-in-database-advanced-analytics-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-5-train-and-save-a-model-using-t-sql.md",
+            "redirect_url": "/sql/advanced-analytics/r/sqldev-train-and-save-a-model-using-t-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-6-operationalize-the-model-in-database-advanced-analytics-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-operationalize-the-model",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/unattended-installs-of-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/unattended-installs-of-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/using-data-from-olap-cubes-in-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/using-data-from-olap-cubes-in-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/using-r-code-profiling-functions.md",
+            "redirect_url": "/sql/advanced-analytics/r/using-r-code-profiling-functions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/using-the-microsoftml-package-with-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/using-the-microsoftml-package",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/working-with-r-data-types.md",
+            "redirect_url": "/sql/advanced-analytics/r/working-with-r-data-types",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/alter-statements-transact-sql.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/backup-and-restore-statements-transact-sql.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/create-statements-transact-sql.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/drop-statements-transact-sql.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/security-statements.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/service-broker-statements.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/transact-sql-reference-database-engine.md",
+            "redirect_url": "/sql/t-sql/language-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/variable-grid-options.md",
+            "redirect_url": "/sql/integration-services/variables-window",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/service/configure-the-integration-services-service-as-a-cluster-resource.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-ssis-in-a-cluster",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/service/service/view-events-for-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/service/events-logged-by-the-integration-services-service",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/service/service/import-and-export-packages-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/service/package-management-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/import-package-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/export-package-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/package-backup-and-restore-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/view-integration-services-packages-in-sql-server-management-studio-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/manage-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/set-the-properties-of-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/grant-permissions-to-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/configuring-the-integration-services-service-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/connect-to-integration-services.md",
+            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/connect-to-a-remote-integration-services-server-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/create-the-ssis-catalog.md",
+            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/catalog-properties-dialog-box.md",
+            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/backup-restore-and-move-the-ssis-catalog.md",
+            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/upgrade-the-ssis-catalog-ssisdb.md",
+            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/service/always-on-for-ssis-catalog-ssisdb.md",
+            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/package-configurations.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/create-package-configurations.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/package-configurations-organizer.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/package-configuration-wizard-ui-reference.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/create-a-deployment-utility.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/deploy-packages-by-using-the-deployment-utility.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/redeployment-of-packages.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/package-installation-wizard-ui-reference.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/deploy-projects-to-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/deploy-packages-to-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/convert-to-package-deployment-model-dialog-box.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/integration-services-deployment-wizard.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/create-and-map-a-server-environment.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/deploy-and-execute-ssis-packages-using-stored-procedures.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/integration-services-project-conversion-wizard.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/run-a-package-in-sql-server-data-tools.md",
+            "redirect_url": "/sql/integration-services/packages/run-integration-services-ssis-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/run-a-package-on-the-ssis-server-using-sql-server-management-studio.md",
+            "redirect_url": "/sql/integration-services/packages/run-integration-services-ssis-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/execute-package-dialog-box.md",
+            "redirect_url": "/sql/integration-services/packages/run-integration-services-ssis-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/configure-checkpoints-for-restarting-a-failed-package.md",
+            "redirect_url": "/sql/integration-services/packages/restart-packages-by-using-checkpoints",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/packages/schedule-a-package-by-using-sql-server-agent.md",
+            "redirect_url": "/sql/integration-services/packages/sql-server-agent-jobs-for-packages",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/packages/implementation-of-child-packages.md",
+            "redirect_url": "/sql/integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/implementation-of-the-parent-package.md",
+            "redirect_url": "/sql/integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/logging-for-load-balanced-packages-on-remote-servers.md",
+            "redirect_url": "/sql/integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/walkthrough-set-up-integration-services-scale-out.md",
+            "redirect_url": "/sql/integration-services/integration-services-ssis-scale-out",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/integration-services-ssis-scale-out-master.md",
+            "redirect_url": "/sql/integration-services/integration-services-ssis-scale-out",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/integration-services-ssis-scale-out-worker.md",
+            "redirect_url": "/sql/integration-services/integration-services-ssis-scale-out",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/run-packages-in-integration-services-ssis-scale-out.md",
+            "redirect_url": "/sql/integration-services/integration-services-ssis-scale-out",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/troubleshooting/debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-control-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/troubleshooting/set-breakpoints.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-control-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/analysis-of-data-flow.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-data-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-data-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/troubleshooting/add-a-data-viewer-to-a-data-flow.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-data-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/data-flow-taps.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-data-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/add-a-log-for-data-flow-performance-counters.md",
+            "redirect_url": "/sql/integration-services/performance/performance-counters",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/performance/view-log-entries-in-the-log-events-window.md",
+            "redirect_url": "/sql/integration-services/performance/events-logged-by-an-integration-services-package",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/performance/active-operations-dialog-box.md",
+            "redirect_url": "/sql/integration-services/performance/monitor-running-packages-and-other-operations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/viewing-and-stopping-packages-running-on-the-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/performance/monitor-running-packages-and-other-operations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/reports-for-the-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/performance/monitor-running-packages-and-other-operations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/view-reports-for-the-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/performance/monitor-running-packages-and-other-operations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/enable-package-logging-in-sql-server-data-tools.md",
+            "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/configure-ssis-logs-dialog-box.md",
+            "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/configure-logging-by-using-a-saved-configuration-file.md",
+            "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md",
+            "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/custom-messages-for-logging.md",
+            "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssdt/sql-server-data-tools-ssdt-release-candidate.md",
+            "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/sql-server-management-studio-ssms-release-candidate.md",
+            "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/threat-and-vulnerability-mitigation-integration-services.md",
+            "redirect_url": "/sql/integration-services/security/security-overview-integration-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/access-to-files-used-by-packages.md",
+            "redirect_url": "/sql/integration-services/security/security-overview-integration-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/access-to-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/security/security-overview-integration-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/access-control-for-sensitive-data-in-packages.md",
+            "redirect_url": "/sql/integration-services/security/access-control-for-sensitive-data-in-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/set-or-change-the-protection-level-of-packages.md",
+            "redirect_url": "/sql/integration-services/security/access-control-for-sensitive-data-in-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/package-and-project-protection-level-dialog-box.md",
+            "redirect_url": "/sql/integration-services/security/access-control-for-sensitive-data-in-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/package-and-project-password.md",
+            "redirect_url": "/sql/integration-services/security/access-control-for-sensitive-data-in-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md",
+            "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md",
+            "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/sign-a-package-by-using-a-digital-certificate.md",
+            "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/digital-signing-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/integration-services-roles-ssis-service.md",
+            "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/assign-a-reader-and-writer-role-to-a-package.md",
+            "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/create-a-user-defined-role.md",
+            "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/package-roles-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path" : "docs/ado/guide/appendixes/ado-appendixes.md",
+            "redirect_url": "/sql/ado/guide/appendixes/appendix-a-providers",
+            "redirect_document_id": true
+        },
+        {
+            "source_path" : "docs/ado/guide/data/activex-data-objects-ado.md",
+            "redirect_url": "/sql/ado/guide/data/ado-fundamentals",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/reference/ado-md-api/ado-md-api-reference.md",
+            "redirect_url": "/sql/ado/reference/ado-md-api/ado-md-object-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/reference/adox-api/adox-api-reference.md",
+            "redirect_url": "/sql/ado/reference/adox-api/adox-object-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md",
+            "redirect_url": "/sql/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/sql-server/sql-server-vnext-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2017-release-notes",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/sql-server/what-s-new-in-sql-server-vnext.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md",
+            "redirect_url": "/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/what-s-new-in-sql-server-analysis-services-vnext.md",
+            "redirect_url": "/sql/analysis-services/what-s-new-in-sql-server-analysis-services-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/whitepapers/introducing-microsoft-technologies-for-data-storage-movement-and-transformation.md",
+            "redirect_url": "sql/whitepapers/microsoft-white-papers",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshooting-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshoot-process-data-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-configure-kerberos-powerbi-reports/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/configure-report-manager-native-mode.md",
+            "redirect_url": "/sql/reporting-services/report-server/configure-web-portal",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/install-windows/install-january-2017-technical-preview-power-bi-reports.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-install-report-server/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/power-bi-reports-in-reporting-services.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-quickstart-powerbi-report/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/reporting-services-release-notes.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-release-notes/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/security/grant-user-access-to-a-report-server-report-manager.md",
+            "redirect_url": "/sql/reporting-services/security/grant-user-access-to-a-report-server",
+            "redirect_document_id": false
+        }
 
-  {
-   "source_path" : "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
-   "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate",
-   "redirect_document_id": true
-  },
-
-
-  {
-   "source_path" : "docs/ado/guide/appendixes/using-ado-with-microsoft-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
-  },
-  {
-   "source_path" : "docs/ado/guide/data/ado-event-instantiation-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/guide/data/handline-errors-in-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/guide/remote-data-service/rds-tutorial-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/ado-code-examples-in-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/rds-api/rds-code-examples-in-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-
-
-  {
-   "source_path" : "docs/ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/activecommand-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/actualsize-and-definedsize-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/addnew-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/append-and-createparameter-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/attributes-and-name-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/cachesize-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/cancel-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/clone-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/comparebookmarks-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/count-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/delete-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/execute-requery-and-clear-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/filter-and-recordcount-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/find-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/getrows-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/getstring-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/handler-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/internettimeout-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/isolationlevel-and-mode-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/item-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/marshaloptions-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/maxrecords-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/move-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/nextrecordset-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/numericscale-and-precision-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/open-and-close-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/openschema-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/optimize-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/prepared-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/refresh-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/resync-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/save-and-open-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/sort-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/source-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/state-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/status-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/stayinsync-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/supports-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/type-property-example-field-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/type-property-example-property-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/update-and-cancelupdate-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/value-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/version-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-
-
-  {
-   "source_path" : "docs/t-sql/statements/alter-statements-transact-sql.md",
-   "redirect_url": "/sql/t-sql/statements/statements",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/t-sql/statements/backup-and-restore-statements-transact-sql.md",
-   "redirect_url": "/sql/t-sql/statements/statements",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/t-sql/statements/create-statements-transact-sql.md",
-   "redirect_url": "/sql/t-sql/statements/statements",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/t-sql/statements/drop-statements-transact-sql.md",
-   "redirect_url": "/sql/t-sql/statements/statements",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/t-sql/statements/security-statements.md",
-   "redirect_url": "/sql/t-sql/statements/statements",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/t-sql/statements/service-broker-statements.md",
-   "redirect_url": "/sql/t-sql/statements/statements",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/t-sql/transact-sql-reference-database-engine.md",
-   "redirect_url": "/sql/t-sql/language-reference",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/variable-grid-options.md",
-   "redirect_url": "/sql/integration-services/variables-window",
-   "redirect_document_id": true
-  },
-  {
-   "source_path" : "docs/integration-services/service/configure-the-integration-services-service-as-a-cluster-resource.md",
-   "redirect_url": "/sql/integration-services/service/integration-services-ssis-in-a-cluster",
-   "redirect_document_id": true
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/view-events-for-the-integration-services-service.md",
-   "redirect_url": "/sql/integration-services/service/service/events-logged-by-the-integration-services-service",
-   "redirect_document_id": true
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/import-and-export-packages-ssis-service.md",
-   "redirect_url": "/sql/integration-services/service/service/package-management-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/import-package-dialog-box-ui-reference.md",
-   "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/export-package-dialog-box-ui-reference.md",
-   "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/package-backup-and-restore-ssis-service.md",
-   "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/view-integration-services-packages-in-sql-server-management-studio-ssis-service.md",
-   "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/manage-the-integration-services-service.md",
-   "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/set-the-properties-of-the-integration-services-service.md",
-   "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/grant-permissions-to-integration-services-service.md",
-   "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/configuring-the-integration-services-service-ssis-service.md",
-   "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/connect-to-integration-services.md",
-   "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/connect-to-a-remote-integration-services-server-ssis-service.md",
-   "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md",
-   "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/create-the-ssis-catalog.md",
-   "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/catalog-properties-dialog-box.md",
-   "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/backup-restore-and-move-the-ssis-catalog.md",
-   "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/upgrade-the-ssis-catalog-ssisdb.md",
-   "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/integration-services/service/service/always-on-for-ssis-catalog-ssisdb.md",
-   "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
-   "redirect_document_id": false
-  }
-
- ]
+    ]
 }

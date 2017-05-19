@@ -53,7 +53,7 @@ manager: "jhubbard"
  Select **Project Reference** for child packages that are in the project. Select **External Reference** for child packages that are located outside the package  
   
 > [!NOTE]  
->  The **ReferenceType** option is ready-only and set to **External Reference** if the project that contains the package has not been converted to the project deployment model. For more information about conversion, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+>  The **ReferenceType** option is ready-only and set to **External Reference** if the project that contains the package has not been converted to the project deployment model. [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Password**  
  If the child package is password protected, provide the password for the child package, or click the ellipsis button (…) and create a new password for the child package.  
@@ -105,7 +105,7 @@ manager: "jhubbard"
 ##  <a name="parameter"></a> Set the Options on the Parameter Bindings Page  
  You can pass values from the parent package or the project, to the child package. The project must use the project deployment model and the child package must be contained in the same project that contains the parent package.  
   
- For information about converting projects to the project deployment model, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ For information about converting projects to the project deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Child package parameter**  
  Enter or select a name for the child package parameter.  

@@ -44,4 +44,4 @@ See [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blo
 No, the ODBC drivers on Linux and macOS are not an open source product.  
 
 ## See Also
-[Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](../../../connect/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+[Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)

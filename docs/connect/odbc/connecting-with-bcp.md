@@ -53,7 +53,7 @@ In the current release, the following syntax and options are available:
 
 * -d *database_name*  Specifies the database to connect to.
 
-* -D  Causes the value passed to the bcp -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](../../connect/odbc/connecting-with-sqlcmd.md).
+* -D  Causes the value passed to the bcp -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
 
 * -e *error_file*  Specifies the full path of an error file used to store any rows that the bcp utility cannot transfer from the file to the database.
 

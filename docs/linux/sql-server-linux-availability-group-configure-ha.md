@@ -30,8 +30,11 @@ This article describes how to create a SQL Server Always on availability group w
 
 You can also create a *read-scale* availability group without a cluster manager. This architecture only provides read-only scalability. It does not provide HA. To create a read-scale availability group, see [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 
->[!NOTE]
->For high availability on Linux servers, a SQL Server availability group requires three replicas. Each replica must be on a different server. All of the servers must be on the same physical or virtual platform because the fence agents are platform specific. Learn more about fencing and fence agents at [Pacemaker](http://clusterlabs.org/)
+High availability on Linux servers for SQL Server availability groups requires the following items:
+
+* The availability group must include at least three replicas.  
+
+* All servers must be either physical or virtual, and virtual servers must be on the same virtualization platform. This is because the fencing agents are platform specific. See [Policies for Guest Clusters](https://access.redhat.com/articles/29440#guest_policies).
 
 ## Roadmap
 

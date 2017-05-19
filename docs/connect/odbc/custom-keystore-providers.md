@@ -16,7 +16,7 @@ manager: "jhubbard"
 author: "MightyPen"
 ---
 # Custom Keystore Providers
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## Overview
 

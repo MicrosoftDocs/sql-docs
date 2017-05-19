@@ -6,7 +6,7 @@ description: This topic describes how to use environment variables to configure 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -73,7 +73,7 @@ sudo systemctl restart mssql-server
 The following docker run command also uses **MSSQL_TCP_PORT** to set the TCP port that SQL Server listens on. In this case, the host port mapping must that this new port into consideration. Instead of mapping port 1433 (default) to a host port, the custom TCP port must be mapped (1234 in this example).
 
 ```bash
-docker run ACCEPT_EULA=Y SA_PASSWORD=<YourStrong!Passw0rd> MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
 ```
 
 ## Next steps

@@ -124,7 +124,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->After you create the availability group, you must configure integration with a cluster technology like Pacemaker for HA. In the case of a read-only scale-out architecture using availability groups, starting with [SQL Server version](..\includes\sssqlv14-md.md), setting up a cluster is not required.
+>After you create the availability group, you must configure integration with a cluster technology like Pacemaker for HA. In the case of a read-only scale-out architecture using availability groups, starting with [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], setting up a cluster is not required.
 If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. While this is a valid configuration in read-scale/load balancing scenarios, it is not complete for high availability. To achieve high availability, you need to add the availability group as a cluster resource. See [Next steps](#next-steps) for instructions. 
 
 ## Notes

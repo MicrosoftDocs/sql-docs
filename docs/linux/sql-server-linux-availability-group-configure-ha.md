@@ -30,11 +30,9 @@ This article describes how to create a SQL Server Always on availability group w
 
 You can also create a *read-scale* availability group without a cluster manager. This architecture only provides read-only scalability. It does not provide HA. To create a read-scale availability group, see [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 
-High availability on Linux servers for SQL Server availability groups requires the following items:
+For a configuration that will guarantee high availability and data protection, the availability group must include at least three synchronous commit replicas. For details see [Balancing high availability and data protection](sql-server-linux-availability-group-cluster-rhel.md#balancing-high-availability-and-data-protection). 
 
-* The availability group must include at least three replicas.  
-
-* All servers must be either physical or virtual, and virtual servers must be on the same virtualization platform. This is because the fencing agents are platform specific. See [Policies for Guest Clusters](https://access.redhat.com/articles/29440#guest_policies).
+All servers must be either physical or virtual, and virtual servers must be on the same virtualization platform. This is because the fencing agents are platform specific. See [Policies for Guest Clusters](https://access.redhat.com/articles/29440#guest_policies).
 
 ## Roadmap
 
@@ -100,7 +98,8 @@ CREATE AVAILABILITY GROUP [ag1]
 		    FAILOVER_MODE = EXTERNAL,
 		    SEEDING_MODE = AUTOMATIC
 		    ),
-		WITH ( 
+		N'**<node3>**'
+        WITH( 
 		    ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
 		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
 		    FAILOVER_MODE = EXTERNAL,

@@ -54,7 +54,7 @@ The tables below describes the outcome of an outage for primary or secondary rep
 | |Primary outage |One secondary replica outage
 |:---|:--- |:--- |
 |`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER. <br>Might have data loss.<br> New primary is R/W |Primary is R/W, running exposed to data loss
-|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER <br>No data loss. <br> New primary is RO until former primary recovers and joins availability group as secondary |Primary is RO until secondary recovers
+|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER <br>No data loss. <br> New primary will reject all connections until former primary recovers and joins availability group as secondary. |Primary will reject all connections until secondary recovers.
 
 \* SQL Server resource agent for Pacemaker default behavior.
 
@@ -63,6 +63,6 @@ The tables below describes the outcome of an outage for primary or secondary rep
 | |Primary outage |One secondary replica outage
 |:---|:--- |:--- |
 |`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER. <br>Might have data loss. <br>New primary is R/W |Primary is R/W
-|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER. <br>No data loss. <br>New primary is RW |Primary is R/W secondary is RO
+|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER. <br>No data loss. <br>New primary is RW |Primary is R/W 
 
 \* SQL Server resource agent for Pacemaker default behavior.

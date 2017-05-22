@@ -1,7 +1,7 @@
 ---
 title: "Import from a Data Feed (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# SSAS Import Data - Data Feed
+# Import Data - Data Feed
   Data feeds are one or more XML data streams that are generated from an online data source and streamed to a destination document or application. You can import data from a data feed into your model by using the Table Import Wizard.  
   
  This topic contains the following sections:  

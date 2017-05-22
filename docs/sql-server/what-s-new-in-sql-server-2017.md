@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/18/2017"
+ms.date: "05/19/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -113,7 +113,7 @@ Or, install Microsoft Machine Learning Server (Standalone) to deploy and consume
 - Cluster-less Availability Groups support added.
 - Minimum Replica Commit Availability Groups setting added.
 - Availability Groups can now work across Windows-Linux to enable cross-OS migrations and testing.
-- Temporal Tables Retention Policy support added,
+- Temporal Tables Retention Policy support added. For more information, see [Manage Retention of Historical Data in System-Versioned Temporal Tables](../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md#using-temporal-history-retention-policy-approach).
 - New DMV SYS.DM_DB_STATS_HISTOGRAM
 - Online non-clustered columnstore index build and rebuild support added
 - 5 new dynamic management views to return information about Linux process. For more information, see [Linux Process Dynamic Management Views](../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md).   

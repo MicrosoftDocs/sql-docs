@@ -55,6 +55,7 @@ To use the following examples you must have a database master key. If your datab
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
+Always backup your database master key. For more information on database master keys, see [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
 #### To encrypt a column of data using a simple symmetric encryption  
   

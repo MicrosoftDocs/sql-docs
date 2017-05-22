@@ -1,7 +1,7 @@
 ---
 title: "Encrypt a Column of Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/18/2016"
+ms.date: "05/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -49,7 +49,13 @@ manager: "jhubbard"
 -   Some permission on the key and must not have been denied VIEW DEFINITION permission.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
-  
+
+To use the following examples you must have a database master key. If your database does not already have a database master key, create one by executing the following statement providing your password:   
+```  
+CREATE MASTER KEY ENCRYPTION BY   
+PASSWORD = '<some strong password>';  
+```  
+
 #### To encrypt a column of data using a simple symmetric encryption  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -60,11 +66,7 @@ manager: "jhubbard"
   
     ```  
     USE AdventureWorks2012;  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL95QYV4369#ghf0%lekjg5k3fd117r$$#1946kcj$n44ncjhdlj'  
+    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -123,13 +125,6 @@ manager: "jhubbard"
   
     ```  
     USE AdventureWorks2012;  
-    GO  
-  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL969#ghf0%94467GRkjg5k3fd117r$$#1946kcj$n44nhdlj'  
     GO  
   
     CREATE CERTIFICATE HumanResources037  

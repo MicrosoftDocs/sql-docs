@@ -17,7 +17,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Manage Deployed Tabular Models
+# Manage Deployed Tabular Model Databases
   A tabular model database is an Analysis Services database that you create in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] using the Analysis Services Tabular model project template, where tables and relationships are the primary structures for representing data.  
   
 ## In This Section  

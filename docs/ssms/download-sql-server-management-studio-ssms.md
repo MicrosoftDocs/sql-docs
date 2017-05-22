@@ -32,7 +32,9 @@ manager: "jhubbard"
 SQL Server Management Studio (SSMS) is an integrated environment for accessing, configuring, managing, administering, and developing all components of SQL Server. SSMS combines a broad group of graphical tools with a number of rich script editors to provide developers and administrators of all skill levels access to SQL Server. This release features improved compatibility with previous versions of SQL Server, a stand-alone web installer, and toast notifications within SSMS when new releases become available.  
 
     
-![download](../ssdt/media/download.png) **[Download SQL Server Management Studio - 17.0](https://go.microsoft.com/fwlink/?linkid=847722)**
+![download](../ssdt/media/download.png) **[Download SQL Server Management Studio - 17.1](https://go.microsoft.com/fwlink/?linkid=849819)** 
+
+![download](../ssdt/media/download.png) **[Download SQL Server Management Studio - 17.1 Upgrade Package](https://go.microsoft.com/fwlink/?linkid=849821)**
 
 > [!NOTE]
 > SSMS 17.X is the latest generation of SQL Server Management Studio and provides support for SQL Server 2017.  SSMS is free! It does not require a license to install and use.  
@@ -44,8 +46,8 @@ SQL Server Management Studio (SSMS) is an integrated environment for accessing, 
 ## SQL Server Management Studio   
 **Version Information**  
   
-The release number: 17.0  
-The build number for this release: 14.0.17099.0
+The release number: 17.1  
+The build number for this release: 14.0.17119.0
   
 **Supported SQL Server versions**  
   
@@ -66,26 +68,18 @@ Windows 10, Windows 8, Windows 8.1, Windows 7 (SP1), Windows Server 2016, Window
 > Non-English localized releases of SSMS require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2. 
   
  This release of SSMS can be installed in the following languages:  
-[Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c)  
-[German](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)  
+[Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c)  
+[German](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)  
 
  
 ## New in this Release  
 
-SSMS 17.0 is the latest generation of SSMS.  This release of SSMS provides support SQL Server 2017 (running on Windows or Linux) and SQL Analysis Service PaaS.
-Additionally, 17.0 introduces numerous improvements across many existing feature areas:
+SSMS 17.1 is first update to the 17.X generation of SQL Server Management Studio.  The 17.X generation provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017.  Version 17.X is also the generation of SSMS the supports  SQL Analysis Service PaaS.
 
-* Over 100 connect issues fixed 
-* SQL Server PowerShell module moved out of SSMS and into the PowerShell gallery
-* Icons updated to support high-DPI display modes
-* Numerous performance improvements in Object Explorer
-* WSUS support for upgrading to future 17.X versions
-* Improved Multi-factor authentication support
-* Enhancements to Availability Group functionality (Support for SQL Server on Linux, direct seeding, endpoint URL handling, and more)
-* Showplan enhancements including new feature to analyze actual existing showplan to help diagnose issues
-* SQL Server Analysis Server 1400 support
-* New DAX Query Windows
-* Numerous other enhancements for Power Query support
+Version 17.1 includes the following:
+
+* Fixes for several connect reported issues SQL Engine and Analysis Services users
+* A new Integration Services scale-out management tool
 
 
 For the full list of changes, see   

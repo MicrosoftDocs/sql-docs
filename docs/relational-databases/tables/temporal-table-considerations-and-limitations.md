@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   **ON DELETE CASCADE** and **ON UPDATE CASCADE** are not permitted on the current table. In other words, when temporal table is referencing table in the foreign key relationship (corresponding to *parent_object_id* in sys.foreign_keys) CASCADE options are not allowed. To work around this limitation, use application logic or after triggers to maintain consistency on delete in primary key table (corresponding to  *referenced_object_id* in sys.foreign_keys). If primary key table is temporal and referencing table is non-temporal, there’s no such  limitation. 
 
-  **NOTE:** This limitation applies to SQL Server 2016 only. CASCADE operations are supported in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and SQL Server 2017 starting from CTP 2.0.  
+    **NOTE:** This limitation applies to SQL Server 2016 only. CASCADE operations are supported in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and SQL Server 2017 starting from CTP 2.0.  
   
 -   **INSTEAD OF** triggers are not permitted on either the current or the history table to avoid invalidating the DML logic. **AFTER** triggers are permitted only on the current table. They are blocked on the history table to avoid invalidating the DML logic.  
   

@@ -6,7 +6,7 @@ description: This topic describes how to use environment variables to configure 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 05/19/2017
+ms.date: 05/22/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -28,7 +28,7 @@ ms.assetid:
 You can use several different environment variables to configure SQL Server 2017 CTP 2.1 on Linux. This topic provides a list of the settings that are configurable using environment variables.
 
 > [!IMPORTANT]
-> At this time, the environment variables only configure SQL Server running in Docker. To configure the SQL Server service outside of a Docker scenario, see [Run the SQL Server 2017 container image on Docker on Linux, Mac, or Windows](sql-server-linux-setup-docker.md).
+> At this time, the environment variables only configure [SQL Server running in Docker](sql-server-linux-setup-docker.md). To configure the SQL Server service outside of a Docker scenario, see [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
 
 ## Environment variables
 

@@ -1,7 +1,9 @@
 # [Overview](database-features.md)
 ## [Database Engine Cross-Instance Features](database-engine-cross-instance-features.md)
 ## [Technical Reference](technical-reference-database-engine.md)  
-## [Feature Reference](feature-reference-database-engine.md)   
+## [Feature Reference](feature-reference-database-engine.md)
+
+# [Recently Updated Articles about Relational Databases](relational-databases-new-updated-sql-docs-pr.md)
 
 # [SQL Server Guides](sql-server-guides.md)
 ## Always On Availability Groups Troubleshooting and Monitoring Guide

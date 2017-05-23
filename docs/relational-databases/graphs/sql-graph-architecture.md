@@ -162,6 +162,7 @@ There are certain limitations on node and edge tables in this release:
 * Node and edge tables cannot be created as system-versioned temporal tables.   
 * Node and edge tables cannot be memory optimized tables.  
 * Users cannot update the $from_id and $to_id columns of an edge using UPDATE statement. To update the nodes that an edge connects, users will have to insert the new edge pointing to new nodes and delete the previous one.
+* Cross database queries on graph objects are not supported. 
 
 
 ## Next Steps

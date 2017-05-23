@@ -9,8 +9,6 @@
 ## [Compute Capacity Limits by Edition of SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Customer Experience Improvement Program](customer-experience-improvement-program-for-sql-server-data-tools.md)
 
-# [Recently Updated Articles for SQL Server](sql-server-new-updated-sql-docs-pr.md)
-
 # Release Notes
 
 ## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)

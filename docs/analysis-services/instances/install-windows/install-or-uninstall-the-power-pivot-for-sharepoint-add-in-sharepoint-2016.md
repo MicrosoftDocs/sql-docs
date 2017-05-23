@@ -77,7 +77,7 @@ manager: "erikre"
   
 -   **spPowerPivot16.msi** is 64-bit only, in accordance with the requirements of SharePoint products and technologies.  
   
--   An [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode. Office Online Server will use the SQL Server Analysis Services instance as a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] server. Analysis Services can run on the local SharePoint server or a remote computer. It cannot be installed on the Office Online Server.  
+-   A server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode. Office Online Server will use the SQL Server Analysis Services instance as a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] server. Analysis Services can run on the local SharePoint server or a remote computer. It cannot be installed on the Office Online Server.  
   
 -   **Permissions:** To install [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)], the current user is required to be an administrator on the computer and in the SharePoint Farm Administrators group.  
   

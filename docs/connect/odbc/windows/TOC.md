@@ -5,6 +5,4 @@
 # [Microsoft ODBC Driver for SQL Server on Windows](microsoft-odbc-driver-for-sql-server-on-windows.md)
 # [Release Notes](release-notes.md)
 # [System Requirements, Installation, and Driver Files](system-requirements-installation-and-driver-files.md)
-# [Using Always Encrypted with the Windows ODBC Driver](using-always-encrypted-with-the-windows-odbc-driver.md)
-# [Using Azure Active Directory with the Windows ODBC Driver](using-azure-active-directory-with-the-windows-odbc-driver.md)
 # [Welcome to the Microsoft ODBC Driver 13 for SQL Server on Windows](welcome-to-the-microsoft-odbc-driver-13-for-sql-server-on-windows.md)

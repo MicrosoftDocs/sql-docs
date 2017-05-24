@@ -23,9 +23,9 @@ manager: "jhubbard"
 
 The ODBC Driver 13.1 for SQL Server contains all the functionality of the previous version (11) and adds support for Always Encrypted and Azure Active Directory authentication when used in conjunction with Microsoft SQL Server 2016.  
   
-Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to SQL Server. An Always Encrypted enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the SQL Server client application. The driver encrypts the data in sensitive columns before passing the data to SQL Server, and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data stored in encrypted database columns that are contained in query results. For more information, see [Using Always Encrypted with the Windows ODBC Driver](../../../connect/odbc/windows/using-always-encrypted-with-the-windows-odbc-driver.md).
+Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to SQL Server. An Always Encrypted enabled driver installed on the client computer achieves this by automatically encrypting and decrypting sensitive data in the SQL Server client application. The driver encrypts the data in sensitive columns before passing the data to SQL Server, and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data stored in encrypted database columns that are contained in query results. For more information, see [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
  
-Azure Active Directory allows users, DBA's, and application programmers to use Azure Active Directory authentication as a mechanism of connecting to Microsoft Azure SQL Database and Microsoft SQL Server 2016 by using identities in Azure Active Directory (Azure AD). For more information, see [Using Azure Active Directory with the Windows ODBC Driver](../../../connect/odbc/windows/using-azure-active-directory-with-the-windows-odbc-driver.md), and [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/en-us/documentation/articles/sql-database-aad-authentication/).   
+Azure Active Directory allows users, DBA's, and application programmers to use Azure Active Directory authentication as a mechanism of connecting to Microsoft Azure SQL Database and Microsoft SQL Server 2016 by using identities in Azure Active Directory (Azure AD). For more information, see [Using Azure Active Directory with the ODBC Driver](../../../connect/odbc/using-azure-active-directory.md), and [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/en-us/documentation/articles/sql-database-aad-authentication/).   
   
 ## Microsoft ODBC Driver 11 for SQL Server on Windows  
 
@@ -33,7 +33,7 @@ The ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
   
 This release of the ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] contains the following new features:  
   
-### `bcp.exe` –l option for specifying a login timeout
+### bcp.exe –l option for specifying a login timeout
  
 The –l option specifies the number of seconds before a `bcp.exe` login to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, `bcp.exe` generates an error message. A value of 0 specifies an infinite timeout. A login timeout of less than (approximately) 10 seconds is not reliable.  
   

@@ -54,7 +54,7 @@ manager: "erikre"
 ## Remarks  
  This data type has no restrictions and can be used under any deployment mode: 0-Multidimensional and Data Mining, 1-SharePoint, and 2-Tabular.  
   
- In [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)], the *Enabled* property cannot be set to **False** for *CubeHierarchy*.  
+ In SQL Server 2016 Analysis Services and later, the *Enabled* property cannot be set to **False** for *CubeHierarchy*.  
   
  The corresponding element in the Analysis Management Objects (AMO) object model is <xref:Microsoft.AnalysisServices.CubeHierarchy>.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/01/2017"
+ms.date: "05/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,7 +35,9 @@ This release features improved compatibility with previous versions of SQL Serve
 
 SSMS is free! Download it below!
     
-![download](../ssdt/media/download.png) **[Download SQL Server Management Studio - 17.0](https://go.microsoft.com/fwlink/?linkid=847722)**
+![download](../ssdt/media/download.png) **[Download SQL Server Management Studio 17.1](https://go.microsoft.com/fwlink/?linkid=849819)** 
+
+![download](../ssdt/media/download.png) **[Download SQL Server Management Studio 17.1 Upgrade Package (upgrades 17.0 to 17.1)](https://go.microsoft.com/fwlink/?linkid=849821)**
 
 > [!NOTE]
 > SSMS 17.X is the latest generation of SQL Server Management Studio and provides support for SQL Server 2017. 
@@ -47,16 +49,14 @@ SSMS is free! Download it below!
 ## SQL Server Management Studio   
 **Version Information**  
   
-The release number: 17.0  
-The build number for this release: 14.0.17099.0
+The release number: 17.1  
+The build number for this release: 14.0.17119.0
   
 **Supported SQL offerings**  
   
-* All [supported versions of SQL Server (SQL Server 2008 - SQL Server 2017),](https://support.microsoft.com/en-us/lifecycle?C2=1044).
-* Azure SQL Database.
-* Azure SQL Data Warehouse.  
+* This version of SSMS works with all [supported versions of SQL Server (SQL Server 2008 - SQL Server 2017)](https://support.microsoft.com/en-us/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database, and Azure SQL Data Warehouse.  
 * There is no explicit block for SQL Server 2000 or SQL Server 2005, but some features may not work properly.  
-* Additionally, SSMS 17.x can be installed side-by-side with SSMS 16.X or SQL Server 2014 SSMS and earlier. 
+* Additionally, SSMS 17.X can be installed side-by-side with SSMS 16.X or SQL Server 2014 SSMS and earlier. 
   
 **Supported Operating systems**  
   
@@ -64,33 +64,25 @@ This release of SSMS supports the following platforms when used with the latest 
 Windows 10, Windows 8, Windows 8.1, Windows 7 (SP1), Windows Server 2016, Windows Server 2012 (64-bit), Windows Server 2012 R2 (64-bit), Windows Server 2008 R2 (64-bit)  
 
 >[!NOTE]
->SSMS 17.0 is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility very seriously and ensures that already-shipped applications continue to run on the latest Windows releases. Because of this, we do not anticipate that SSMS with all latest updates applied) will encounter issues when running on Windows Server 2016. Customers are advised to contact support, should they encounter any issues with SSMS on Windows Server 2016. Support will then work with customers to determine if the issue is with SSMS or Visual Studio or with Windows compatibility, and route the issue appropriately.
+>SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility very seriously and ensures that already-shipped applications continue to run on the latest Windows releases. Because of this, we do not anticipate that SSMS with all latest updates applied) will encounter issues when running on Windows Server 2016. Customers are advised to contact support, should they encounter any issues with SSMS on Windows Server 2016. Support will then work with customers to determine if the issue is with SSMS or Visual Studio or with Windows compatibility, and route the issue appropriately.
 
  **Available Languages**  
 > [!NOTE]  
 > Non-English localized releases of SSMS require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2. 
   
  This release of SSMS can be installed in the following languages:  
-[Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c)  
-[German](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)  
+[Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c)  
+[German](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)  
 
  
 ## New in this Release  
 
-SSMS 17.0 is the latest generation of SSMS.  This release of SSMS provides support SQL Server 2017 (running on Windows or Linux) and SQL Analysis Service PaaS.
-Additionally, 17.0 introduces numerous improvements across many existing feature areas:
+SSMS 17.1 is first update to the 17.X generation of SQL Server Management Studio.  The 17.X generation provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017.  Version 17.X is also the generation of SSMS that supports SQL Analysis Service PaaS.
 
-* Over 100 connect issues fixed 
-* SQL Server PowerShell module moved out of SSMS and into the PowerShell gallery
-* Icons updated to support high-DPI display modes
-* Numerous performance improvements in Object Explorer
-* WSUS support for upgrading to future 17.X versions
-* Improved Multi-factor authentication support
-* Enhancements to Availability Group functionality (Support for SQL Server on Linux, direct seeding, endpoint URL handling, and more)
-* Showplan enhancements including new feature to analyze actual existing showplan to help diagnose issues
-* SQL Server Analysis Server 1400 support
-* New DAX Query Windows
-* Numerous other enhancements for Power Query support
+Version 17.1 includes:
+
+* Fixes for several user reported issues 
+* A new Integration Services scale-out management tool
 
 
 For the full list of changes, see   
@@ -100,14 +92,14 @@ To see the list of known issues and work arounds, see
                 [SQL Server Management Studio -  Release Notes](../ssms/sql-server-management-studio-release-notes.md)  
   
 For information about user data collection, see   
-                [SQL Server Privacy Statement](http://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
+                [SQL Server Privacy Statement](http://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)  
   
 ## Previous releases  
 [Previous SQL Server Management Studio Releases](../ssms/previous-sql-server-management-studio-releases.md)  
   
 ## Feedback  
   
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Log an issue or suggestion at Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback).  
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Log an issue or suggestion at Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
   
 ## See Also  
 [Tutorial: SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  

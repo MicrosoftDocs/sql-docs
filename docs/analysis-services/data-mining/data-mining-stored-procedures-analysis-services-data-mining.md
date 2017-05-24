@@ -22,7 +22,7 @@ manager: "erikre"
   
  For more information about calling [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stored procedures, see [Calling Stored Procedures](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md).  
   
- For general information about the programmability of [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], see [Data Mining Programming](../../analysis-services/data-mining-programming.md).  
+ For general information about programmability, see [Data Mining Programming](../../analysis-services/data-mining-programming.md).  
   
  For additional information about how to program data mining objects, see the article, "[SQL Server Data Mining Programmability](http://go.microsoft.com/fwlink/?LinkId=93735)", in the MSDN library.  
   

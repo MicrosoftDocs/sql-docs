@@ -32,9 +32,9 @@ manager: "jhubbard"
 SQL Server Management Studio (SSMS) is an integrated environment for accessing, configuring, managing, administering, and developing all components of SQL Server. SSMS combines a broad group of graphical tools with a number of rich script editors to provide developers and administrators of all skill levels access to SQL Server. This release features improved compatibility with previous versions of SQL Server, a stand-alone web installer, and toast notifications within SSMS when new releases become available.  
 
     
-![download](../ssdt/media/download.png) **[Download SQL Server Management Studio - 17.1](https://go.microsoft.com/fwlink/?linkid=849819)** 
+![download](../ssdt/media/download.png) **[Download SQL Server Management Studio 17.1](https://go.microsoft.com/fwlink/?linkid=849819)** 
 
-![download](../ssdt/media/download.png) **[Download SQL Server Management Studio - 17.1 Upgrade Package](https://go.microsoft.com/fwlink/?linkid=849821)**
+![download](../ssdt/media/download.png) **[Download SQL Server Management Studio 17.1 Upgrade Package (upgrades 17.0 to 17.1)](https://go.microsoft.com/fwlink/?linkid=849821)**
 
 > [!NOTE]
 > SSMS 17.X is the latest generation of SQL Server Management Studio and provides support for SQL Server 2017.  SSMS is free! It does not require a license to install and use.  
@@ -51,7 +51,7 @@ The build number for this release: 14.0.17119.0
   
 **Supported SQL Server versions**  
   
-* This version of SSMS works with all [supported versions of SQL Server (SQL Server 2008 - SQL Server 2017),](https://support.microsoft.com/en-us/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database, and Azure SQL Data Warehouse.  
+* This version of SSMS works with all [supported versions of SQL Server (SQL Server 2008 - SQL Server 2017)](https://support.microsoft.com/en-us/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database, and Azure SQL Data Warehouse.  
 * There is no explicit block for SQL Server 2000 or SQL Server 2005, but some features may not work properly.  
 * Additionally, SSMS 17.x can be installed side-by-side with SSMS 16.X or SQL Server 2014 SSMS and earlier. 
   
@@ -74,11 +74,11 @@ Windows 10, Windows 8, Windows 8.1, Windows 7 (SP1), Windows Server 2016, Window
  
 ## New in this Release  
 
-SSMS 17.1 is first update to the 17.X generation of SQL Server Management Studio.  The 17.X generation provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017.  Version 17.X is also the generation of SSMS the supports  SQL Analysis Service PaaS.
+SSMS 17.1 is first update to the 17.X generation of SQL Server Management Studio.  The 17.X generation provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017.  Version 17.X is also the generation of SSMS that supports SQL Analysis Service PaaS.
 
-Version 17.1 includes the following:
+Version 17.1 includes:
 
-* Fixes for several connect reported issues SQL Engine and Analysis Services users
+* Fixes for several user reported issues 
 * A new Integration Services scale-out management tool
 
 

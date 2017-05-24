@@ -50,10 +50,10 @@ Installation requirements vary based on your application needs. The different ed
 The SQL Server Evaluation edition is available for a 180-day trial period.  
   
 For the latest release notes and what's new information, see the following:
-- [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
 - [SQL Server 2017 release notes](../sql-server/sql-server-2017-release-notes.md)
-- [What's new in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+- [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
 - [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [What's new in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
 
  **Try SQL Server!**    
     

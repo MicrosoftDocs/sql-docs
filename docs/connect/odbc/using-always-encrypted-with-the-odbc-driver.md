@@ -472,7 +472,7 @@ NOTE: It is up to the provider to decide how to treat the CEKeystoreData. Two po
 1. CEKeystoreData is connection specific.
 2. CEKeystoreData is global.
 
-Because the caller of `SQLSetConnectAttr` provides a valid connection handle, the provider can use that information and associate the CEKeystoreData with the connection context. On the other hand, the provider can ignore it and make CEKeystoreData shared. See the Context Management section of [Custom Keystore Providers](../../connect/odbc/linux/custom-keystore-providers.md) for more information.
+Because the caller of `SQLSetConnectAttr` provides a valid connection handle, the provider can use that information and associate the CEKeystoreData with the connection context. On the other hand, the provider can ignore it and make CEKeystoreData shared. See the Context Management section of [Custom Keystore Providers](../../connect/odbc/custom-keystore-providers.md) for more information.
 
 **Getting data in a CEKeystoreProvider via ODBC**
 
@@ -493,7 +493,7 @@ The caller must ensure that a buffer of sufficient length following the CEKEYSTO
 
 The interface places no additional requirements on the format of data transferred between an application and a CEKeystoreProvider. Each provider is expected to define its own protocol per its needs.
 
-For an example of implementing your own keystore provider, see [Custom Keystore Providers](../../connect/odbc/linux/custom-keystore-providers.md)
+For an example of implementing your own keystore provider, see [Custom Keystore Providers](../../connect/odbc/custom-keystore-providers.md)
 
 ## Limitations of ODBC when using Always Encrypted
 

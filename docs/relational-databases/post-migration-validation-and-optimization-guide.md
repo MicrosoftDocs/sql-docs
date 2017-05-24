@@ -24,9 +24,14 @@ manager: ""
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload.
 
 # Common Performance Scenarios 
-Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Platform and how to resolve them.
+Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Platform and how to resolve them. These include scenarios that are specifdic to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration (older versions to newer versions), as well as foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
 ## <a name="Parameter Sniffing"></a> Sensitivity to parameter sniffing
+
+**Applies to:** Foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
+
+> [!NOTE]
+> For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrations, if this issue existed in the source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrating to a newer version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as-is will not address this scenario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compiles query plans on stored procedures by using sniffing the input parameters at the first compile, generating a parameterized and reusable plan, optimized for that input data distribution. Even if not stored procedures, most statements generating trivial plans will be parameterized. After a plan is first cached, any future execution maps to a previously cached plan.
 A potential problem arises when that first compilation may not have used the most common sets of parameters for the usual workload. For different parameters, the same execution plan becomes inefficient.
@@ -44,7 +49,9 @@ A potential problem arises when that first compilation may not have used the mos
 
 ## <a name="Missing indexes"></a> Missing indexes
 
-Incorrect or missing indexes causes extra I/O that leads to extra memory and CPU being wasted. Evidence of a poor indexing strategy or changes in workload profile include:
+**Applies to:** Foreign platform (such as Oracle, DB2, MySQL and Sybase) and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
+
+Incorrect or missing indexes causes extra I/O that leads to extra memory and CPU being wasted. This maybe because workload profile has changed such as using different predicates, invalidating existing index design. Evidence of a poor indexing strategy or changes in workload profile include:
 -   Look for duplicate, redundant, rarely used and completely unused indexes.
 -   Special care with unused indexes with updates.
 
@@ -59,6 +66,11 @@ Incorrect or missing indexes causes extra I/O that leads to extra memory and CPU
 > Examples of such pre-existing scripts include [Index Creation](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) and [Index Information](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
 
 ## <a name="Inability to use predicates"></a> Inability to use predicates to filter data
+
+**Applies to:** Foreign platform (such as Oracle, DB2, MySQL and Sybase) and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
+
+> [!NOTE]
+> For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrations, if this issue existed in the source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrating to a newer version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as-is will not address this scenario.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer can only account for information that is known at compile time. If a workload relies on predicates that can only be known at execution time, then the potential for a poor plan choice increases. For a better-quality plan, predicates must be **SARGable**, or **S**earch **Arg**ument**able**.
 
@@ -82,6 +94,11 @@ Some examples of non-SARGable predicates:
 > All of the above can be done programmaticaly.
 
 ## <a name="Table Valued Functions"></a> Use of Table Valued Functions (Multi-Statement vs Inline)
+
+**Applies to:** Foreign platform (such as Oracle, DB2, MySQL and Sybase) and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
+
+> [!NOTE]
+> For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrations, if this issue existed in the source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrating to a newer version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as-is will not address this scenario.
 
 Table Valued Functions return a table data type that can be an alternative to views. While views are limited to a single `SELECT` statement, user-defined functions can contain additional statements that allow more logic than is possible in views.
 

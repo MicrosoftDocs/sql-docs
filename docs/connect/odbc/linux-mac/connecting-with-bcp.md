@@ -17,7 +17,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
 ---
-# Connecting with `bcp`
+# Connecting with bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 The [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
@@ -59,7 +59,7 @@ Uses a character data type.
 Specifies the database to connect to.  
   
 * -D  
-Causes the value passed to the `bcp` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](../../../connect/odbc/linux/connecting-with-sqlcmd.md).  
+Causes the value passed to the `bcp` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
   
 * -e *error_file*
 Specifies the full path of an error file used to store any rows that the `bcp` utility cannot transfer from the file to the database.  

@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/01/2017"
+ms.date: "05/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -56,7 +56,7 @@ The build number for this release: 14.0.17119.0
   
 * This version of SSMS works with all [supported versions of SQL Server (SQL Server 2008 - SQL Server 2017)](https://support.microsoft.com/en-us/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database, and Azure SQL Data Warehouse.  
 * There is no explicit block for SQL Server 2000 or SQL Server 2005, but some features may not work properly.  
-* Additionally, SSMS 17.x can be installed side-by-side with SSMS 16.X or SQL Server 2014 SSMS and earlier. 
+* Additionally, SSMS 17.X can be installed side-by-side with SSMS 16.X or SQL Server 2014 SSMS and earlier. 
   
 **Supported Operating systems**  
   
@@ -64,7 +64,7 @@ This release of SSMS supports the following platforms when used with the latest 
 Windows 10, Windows 8, Windows 8.1, Windows 7 (SP1), Windows Server 2016, Windows Server 2012 (64-bit), Windows Server 2012 R2 (64-bit), Windows Server 2008 R2 (64-bit)  
 
 >[!NOTE]
->SSMS 17.0 is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility very seriously and ensures that already-shipped applications continue to run on the latest Windows releases. Because of this, we do not anticipate that SSMS with all latest updates applied) will encounter issues when running on Windows Server 2016. Customers are advised to contact support, should they encounter any issues with SSMS on Windows Server 2016. Support will then work with customers to determine if the issue is with SSMS or Visual Studio or with Windows compatibility, and route the issue appropriately.
+>SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility very seriously and ensures that already-shipped applications continue to run on the latest Windows releases. Because of this, we do not anticipate that SSMS with all latest updates applied) will encounter issues when running on Windows Server 2016. Customers are advised to contact support, should they encounter any issues with SSMS on Windows Server 2016. Support will then work with customers to determine if the issue is with SSMS or Visual Studio or with Windows compatibility, and route the issue appropriately.
 
  **Available Languages**  
 > [!NOTE]  
@@ -92,14 +92,14 @@ To see the list of known issues and work arounds, see
                 [SQL Server Management Studio -  Release Notes](../ssms/sql-server-management-studio-release-notes.md)  
   
 For information about user data collection, see   
-                [SQL Server Privacy Statement](http://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
+                [SQL Server Privacy Statement](http://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx)  
   
 ## Previous releases  
 [Previous SQL Server Management Studio Releases](../ssms/previous-sql-server-management-studio-releases.md)  
   
 ## Feedback  
   
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Log an issue or suggestion at Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback).  
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Log an issue or suggestion at Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
   
 ## See Also  
 [Tutorial: SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  

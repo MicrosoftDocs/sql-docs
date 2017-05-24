@@ -82,10 +82,10 @@ Some examples of non-SARGable predicates:
 
 ### Steps to resolve
 
-1.	Always declare variables/parameters as the intended target [data type](../t-sql/data-types/data-types-transact-sql.md). 
+1. Always declare variables/parameters as the intended target [data type](../t-sql/data-types/data-types-transact-sql.md). 
 -   This may involve comparing any user-defined code construct that is stored in the database (such as stored procedures, user-defined functions or views) with system tables that hold information on data types used in underlying tables (such as [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
-2.	If unable to traverse all code to the previous point, then for the same purpose, change the data type on the table to match any variable/parameter declaration.
-3.	Reason out the usefulness of the following constructs:
+2. If unable to traverse all code to the previous point, then for the same purpose, change the data type on the table to match any variable/parameter declaration.
+3. Reason out the usefulness of the following constructs:
 -   Functions being used as predicates;
 -   Wildcard searches;
 -   Complex expressions based on columnar data – evaluate the need to instead create persisted computed columns, which can be indexed;

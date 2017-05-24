@@ -67,7 +67,7 @@ When an application uses the driver, the application should indicate that it dep
 msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }  
 ```  
 
-## Command-Line Tools: `sqlcmd.exe` and `bcp.exe`
+## Command-Line Tools: sqlcmd.exe and bcp.exe
 
 The `bcp.exe` and `sqlcmd.exe` tools for use with the driver can be downloaded at [Microsoft Command Line Utilities 11 for SQL Server](http://www.microsoft.com/download/details.aspx?id=36433), [Microsoft Command Line Utilities 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), or [Microsoft Command Line Utilities 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). The driver is a prerequisite to install `sqlcmd.exe` and `bcp.exe`.
   

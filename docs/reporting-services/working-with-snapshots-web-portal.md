@@ -1,7 +1,7 @@
 ---
 title: "Working with snapshots (web portal) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,10 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Working with snapshots (web portal)
-You can control if snapshots are created for a report by selecting the **ellipse (…)** of a report, selecting **Manage** and selecting **Caching** or **History Snapshots**.  
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)]
+
+You can control if snapshots are created for a report by selecting the **ellipsis (…)** of a report, selecting **Manage** and selecting **Caching** or **History Snapshots**.  
   
 > [!NOTE]
 > The SQL Server Agent service needs to be started.  
@@ -65,7 +68,12 @@ You can also define how you want to retain snapshots.
   
 **Save cache snapshots in report history as well**  
   
-Selecting this will copy a report snapshot that you generate based on report execution properties to report history. You can set report execution properties to run a report from a generated snapshot. By setting this report history property, you can keep a record of all reports snapshots that are generated over time by placing copies of them in report history.  
-  
-  
-  
+Selecting this will copy a report snapshot that you generate based on report execution properties to report history. You can set report execution properties to run a report from a generated snapshot. By setting this report history property, you can keep a record of all reports snapshots that are generated over time by placing copies of them in report history.
+
+## Next steps
+
+[Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Working with paginated reports](working-with-paginated-reports-web-portal.md)  
+[Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

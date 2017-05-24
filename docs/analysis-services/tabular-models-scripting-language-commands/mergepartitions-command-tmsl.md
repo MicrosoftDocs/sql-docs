@@ -19,8 +19,6 @@ manager: "erikre"
 # MergePartitions command (TMSL)
   Merges the data of one or more source partitions into a target partition, and then deletes the source partition. The SQL Query of the target partition will not be updated as part of the merge. To ensure that subsequent processing of the partition retrieves all of the data, you should revise the query so that it selects all of the data in the merged partition.  
   
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
-  
 ## Request  
  You must specify the database, table, and source and target partitions. You can only merge partitions from the same table.  
   

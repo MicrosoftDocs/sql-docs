@@ -25,6 +25,9 @@ caps.latest.revision: 44
 manager: "jhubbard"
 ---
 # Installing SQL Server Native Client
+
+ > For content related to previous versions of SQL Server, see [Installing SQL Server Native Client](https://msdn.microsoft.com/en-US/library/ms131321(SQL.120).aspx).
+
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 is installed when you install [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]. 

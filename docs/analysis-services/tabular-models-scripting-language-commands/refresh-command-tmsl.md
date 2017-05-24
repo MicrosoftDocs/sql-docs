@@ -30,8 +30,7 @@ manager: "erikre"
   
 > [!NOTE]  
 >  Unlike multidimensional processing, there is no special handling of processing errors for Tabular processing.  
-  
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
+
   
 ## Request  
  **Refresh** takes a type parameter and object definition.  

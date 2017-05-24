@@ -1,7 +1,7 @@
 ---
 title: "Import from a Multidimensional Data Source (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# SSAS Import Data - Multidimensional Data Source
+# Import Data - Multidimensional Data Source
   You can use an Analysis Services cube database as a data source for a tabular model. In order to import data from an Analysis Services cube, you must define an MDX Query to select data to import.  
   
  Any data that is contained in a SQL Server Analysis Services database can be imported into a model. You can extract all or part of a dimension, or get slices and aggregates from the cube, such as the sum of sales, month by month, for the current year, etc. However, you should keep in mind all data that you import from a cube is flattened. Therefore, if you define a query that retrieves measures along multiple dimensions, the data will be imported with each dimension in a separate column.  

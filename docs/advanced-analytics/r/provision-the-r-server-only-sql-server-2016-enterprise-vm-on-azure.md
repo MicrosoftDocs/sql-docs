@@ -51,9 +51,8 @@ If you are new to using Azure VMs, we recommend that you see these articles for 
 
 By default, Microsoft R Server includes all the R tools installed with a base installation of R, including RTerm and RGui. A shortcut to RGui has been added to the desktop, if you want to get started using R right away.
 
-However, you might wish to install additional R tools, such as RStudio, the R Tools for Visual Studio (RTVS) add-in to Visual Studio 2015, or Microsoft R Client. See the following links for download locations and instructions:
-+ [Visual Studio 2015](https://www.visualstudio.com/downloads/)
- and [R Tools for Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx)
+However, you might wish to install additional R tools, such as RStudio, the R Tools for Visual Studio (RTVS), or Microsoft R Client. See the following links for download locations and instructions:
++ [R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation)
 + [Microsoft R Client](https://msdn.microsoft.com/microsoft-r/install-r-client-windows)
 + [RStudio for Windows](https://www.rstudio.com/products/rstudio/download/)
 

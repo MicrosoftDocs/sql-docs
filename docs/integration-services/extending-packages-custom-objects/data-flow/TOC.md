@@ -1,5 +1,5 @@
 # Subcategories of Articles
-## [Data flow types](../../../integration-services/extending-packages-custom-objects-data-flow-types/index.md?toc=%2fsql%2fintegration-services%2fextending-packages-custom-objects-data-flow-types%2ftoc.json)
+## [Data flow types](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)
 
 # [Developing a Custom Data Flow Component](developing-a-custom-data-flow-component.md)
 # [Creating a Custom Data Flow Component](creating-a-custom-data-flow-component.md)

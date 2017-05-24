@@ -1323,12 +1323,43 @@
         {
             "source_path": "docs/analysis-services/troubleshoot-process-data-ssas-tabular.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
-            "redirect_document_id": true
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-configure-kerberos-powerbi-reports/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/configure-report-manager-native-mode.md",
+            "redirect_url": "/sql/reporting-services/report-server/configure-web-portal",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/install-windows/install-january-2017-technical-preview-power-bi-reports.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-install-report-server/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/power-bi-reports-in-reporting-services.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-quickstart-powerbi-report/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/reporting-services-release-notes.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-release-notes/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/security/grant-user-access-to-a-report-server-report-manager.md",
+            "redirect_url": "/sql/reporting-services/security/grant-user-access-to-a-report-server",
+            "redirect_document_id": false
         }
+
     ]
 }

@@ -6,7 +6,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -104,7 +104,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Master Data Services |
 
 ### Known issues
-The following sections describe known issues with this release of SQL Server 2017 CTP 2.0 on Linux.
+The following sections describe known issues with this release of SQL Server 2017 CTP 2.1 on Linux.
 
 #### General
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 

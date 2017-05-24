@@ -1,7 +1,7 @@
 ---
 title: "Compatibility Level for Tabular models in Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/09/2017"
+ms.date: "05/23/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,12 +24,21 @@ manager: "erikre"
 
   **The latest compatibility level is 1400** 
   
+Major features in the 1400 compatibility level include:
+
+*  New infrastructure for data connectivity and ingestion into tabular models with support for TOM APIs and TMSL scripting. This enables support for additional data sources such as Azure Blob storage. Additional data sources will be included in future updates.
+*  Data transformation and data mashup capabilities by using Get Data and M expressions.
+*  Measures now support a Detail Rows property with a DAX expression, enabling BI tools such as Microsoft Excel drill-down to detailed data from an aggregated report. For example, when end-users view total sales for a region and month, they can view the associated order details. 
+*  Object-level security for table and column names, in addition to the data within them.
+*  Enhanced support for ragged hierarchies.
+*  Performance and monitoring improvements.
+  
 ## Supported compatibility levels by version
   
 |||  
 |-|-|- 
 |**Compatibility level**|**Server version**| 
-|1400|Azure Analysis Services, SQL Server 2017 |  
+|1400|Azure Analysis Services (Preview), SQL Server 2017 |  
 |1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
 |1103|SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 

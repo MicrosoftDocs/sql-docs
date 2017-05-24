@@ -25,7 +25,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Technical Documentation
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  > For content related to previous versions of SQL Server, see [Installation for SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
 
@@ -33,15 +33,18 @@ manager: "jhubbard"
 
 **SQL Server 2017**
 
-- For the latest release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
-- For the latest information on what is new, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
+- [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [Download
  
 **SQL Server 2016:**
  
 - [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
 - [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
-**Content for previous versions of SQL Server:**
+**SQL Server 2014:**
+
+- [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md) 
 - [!INCLUDE[previous-content-versions](../includes/previous-content-versions.md)]
  
  **Try SQL Server!**    

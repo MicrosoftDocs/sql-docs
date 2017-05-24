@@ -381,7 +381,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> Additional resources  
  The [Tabular Modeling &#40;Adventure Works Tutorial&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md) provides step-by-step instructions on how to create a tabular model that includes many calculations in calculated columns, measures, and row filters. For most formulas, a description about what the formula is meant to do is provided.  
   
- The [Analysis Services Team Blog](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) provides information, tips, news and announcements about [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] and Power Pivot in Excel.  
+ The [Analysis Services Team Blog](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) provides the latest information, tips, news and announcements. 
   
  The [DAX Resource Center](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) provides both internal and external information on DAX, including numerous DAX solutions submitted by leading Business Intelligence professionals.  
   

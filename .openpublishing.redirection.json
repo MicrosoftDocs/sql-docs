@@ -1359,7 +1359,11 @@
             "source_path": "docs/reporting-services/security/grant-user-access-to-a-report-server-report-manager.md",
             "redirect_url": "/sql/reporting-services/security/grant-user-access-to-a-report-server",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/release-notes/microsoft-sql-server.md",
+            "redirect_url": "/sql/sql-server/sql-server-technical-documentation",
+            "redirect_document_id": false
         }
-
     ]
 }

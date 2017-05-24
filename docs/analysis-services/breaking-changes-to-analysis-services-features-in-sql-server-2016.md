@@ -26,10 +26,10 @@ manager: "erikre"
 >  In contrast, a *behavior change* is characterized as a code change that doesn't break a model or application, but does introduce a different behavior from a previous release.  Examples of behavior changes might include changing a default value, or disallowing a configuration of properties or options that was previously allowed. To learn more about behavior changes in this release, see [Behavior Changes to Analysis Services Features in SQL Server 2016](../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md).  
   
 ## .NET 4.0 version upgrade  
- Analysis Services Management Objects (AMO), ADOMD.NET, and Tabular Object Model (TOM) client libraries in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] now target the .NET 4.0 runtime. This can be a breaking change for applications that target .NET 3.5. Applications using newer versions of these assemblies must now target .NET 4.0 or later.  
+ Analysis Services Management Objects (AMO), ADOMD.NET, and Tabular Object Model (TOM) client libraries now target the .NET 4.0 runtime. This can be a breaking change for applications that target .NET 3.5. Applications using newer versions of these assemblies must now target .NET 4.0 or later.  
   
 ## AMO version upgrade  
- [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] is a version upgrade for [Analysis Services Management Objects &#40;AMO&#41;](https://msdn.microsoft.com/library/mt436122.aspx) and is  a breaking change under certain circumstances.  Existing code and scripts that call into AMO will continue to run as before if you upgrade from a previous version. However, if you need to *recompile* your application and you are targeting a [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] instance, you must add the following namespace to make your code or script operational:  
+ This release is a version upgrade for [Analysis Services Management Objects &#40;AMO&#41;](https://msdn.microsoft.com/library/mt436122.aspx) and is  a breaking change under certain circumstances.  Existing code and scripts that call into AMO will continue to run as before if you upgrade from a previous version. However, if you need to *recompile* your application and you are targeting a SQL Server 2016 Analysis Services instance, you must add the following namespace to make your code or script operational:  
   
 ```  
   

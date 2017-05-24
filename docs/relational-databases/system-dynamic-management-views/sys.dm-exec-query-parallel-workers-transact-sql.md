@@ -35,7 +35,7 @@ manager: "ajayj"
 |**scheduler_count**|**int**|Number of schedulers on this node.|  
 |**max_worker_count**|**int**|Maximum number of workers for parallel queries.|  
 |**reserved_worker_count**|**int**|Number of workers reserved by parallel queries, plus number of main workers used by all requests.| 
-|**free_worker_count**|**int**|Number of workers available for tasks. **Note:** every incoming request consumes at least 1 worker, which is subtracted from the free worker count.  It is possible that the free worker count can be a negative number on a heavily loaded server.| 
+|**free_worker_count**|**int**|Number of workers available for tasks.<br /><br />**Note:** every incoming request consumes at least 1 worker, which is subtracted from the free worker count.  It is possible that the free worker count can be a negative number on a heavily loaded server.| 
 |**used_worker_count**|**int**|Number of workers used by parallel queries.|  
   
 ## Permissions  

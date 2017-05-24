@@ -43,7 +43,7 @@ $ ODBCSYSINI=/home/myappuser myapp
   
 In this case, you can add `Trace=Yes` to the `[ODBC Driver 13 for SQL Server]` section of `/home/myappuser/odbcinst.ini`.
 
-## Determining which `odbc.ini` File the Driver is Using
+## Determining which odbc.ini File the Driver is Using
 
 The Linux and macOS ODBC drivers do not know which `odbc.ini` is in use, or the path to the `odbc.ini` file. However, information about which `odbc.ini` file is in use is available from the unixODBC tools `odbc_config` and `odbcinst`, and from the unixODBC Driver Manager documentation.  
   

@@ -26,7 +26,7 @@ manager: "erikre"
   
 -   **XMLA**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] supports XML for Analysis (XMLA) as a protocol for communication with client applications. Additional commands are supported by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that extend the XML for Analysis specification.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports XML for Analysis (XMLA) as a protocol for communication with client applications. Additional commands are supported by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that extend the XML for Analysis specification.  
   
      Because [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses XMLA for data definition, data manipulation, and data control support, you can create mining structures and mining models by using the visual tools provided by [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], and then extend the data mining objects that you have created by using Data Mining Extensions (DMX) and Analysis Services Scripting Language (ASSL) scripts.  
   

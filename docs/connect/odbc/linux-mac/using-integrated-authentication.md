@@ -84,10 +84,10 @@ Developers can deploy an application that uses a linked server or distributed qu
   
 After integrated authentication is configured, credentials will be passed to the linked server.  
   
-## Integrated Authentication and `sqlcmd`
+## Integrated Authentication and sqlcmd
 To access [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] using integrated authentication, use the `-E` option of `sqlcmd`. Ensure that the account which runs `sqlcmd` is associated with the default Kerberos client principal.
 
-## Integrated Authentication and `bcp`
+## Integrated Authentication and bcp
 To access [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] using integrated authentication, use the `-T` option of `bcp`. Ensure that the account which runs `bcp` is associated with the default Kerberos client principal. 
   
 It is an error to use `-T` with the `-U` or `-P` option.

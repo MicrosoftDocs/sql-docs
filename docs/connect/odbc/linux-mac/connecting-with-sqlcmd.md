@@ -17,7 +17,7 @@ author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
 ---
-# Connecting with `sqlcmd`
+# Connecting with sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 The [sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Linux and macOS.
@@ -72,7 +72,7 @@ Declares the application workload type when connecting to a server. The only cur
 * -m *error_level* Control which error messages are sent to stdout.  
   
 * **-M***multisubnet_failover*  
-Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **–M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **–M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** is not supported in the CTP for SUSE Linux. You can, however, specify the **MultiSubnetFailover=Yes** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
@@ -197,7 +197,7 @@ In the current release, the following commands are not available:
   
 -   :XML  
   
-## DSN Support in `sqlcmd` and `bcp`
+## DSN Support in sqlcmd and bcp
 
 You can specify a data source name (DSN) instead of a server name in the **sqlcmd** or **bcp** `-S` option (or **sqlcmd** :Connect command) if you specify -D. -D causes **sqlcmd** or **bcp** to connect to the server specified in the DSN by the -S option.  
   

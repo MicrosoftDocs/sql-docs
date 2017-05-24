@@ -42,7 +42,7 @@ If you migrate your working database to a new server, you can use the package sy
 ### Supported Versions 
 
 - The R functions for package management are provided beginning with Microsoft R Server 9.0.1. 
-- These packages are included by default in SQL Server vNext.
+- These packages are included by default in SQL Server 2017.
 - You can add the packages to an instance of SQL Server 2016 if you upgrade the instance to use at least Microsoft R 9.0.1. For more information, see [Using SqlBindR.exe to Upgrade R](../r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md).	
 
 ## Database roles and database scoping
@@ -77,7 +77,7 @@ The following new database roles support secure installation and R package manag
 
 ## R Package Synchronization
 
-The CTP 2.0 release of SQ Server vNext (and the April 2017 release of Microsoft R Server) includes new R functions for *synchronizing packages*.   
+The CTP 2.0 release of SQ Server 2017 (and the April 2017 release of Microsoft R Server) includes new R functions for *synchronizing packages*.   
 
 Package synchronization means that the database engine tracks the packages that are used by a specific owner and group, and can write those packages to the file system if needed. You can use package synchronization in these scenarios:
 

@@ -31,7 +31,7 @@ This topic describes the setup steps in SQL Server setup for Microsoft R Server 
 ## Which Should I Install?
 
 **Microsoft R Server** was first offered as a part of SQL Server 2016 and supports the R language. The last version of Microsoft R Server was 9.0.1.
-In SQL Server vNext, R Server has been renamed **Microsoft Machine Learning Server**, with added support for Python. The latest version of Microsoft Machine Learning Server is 9.1.0.
+In SQL Server 2017, R Server has been renamed **Microsoft Machine Learning Server**, with added support for Python. The latest version of Microsoft Machine Learning Server is 9.1.0.
 
 Both Microsoft R Server and Microsoft Machine Learning Server require Enterprise Edition.
 
@@ -42,13 +42,13 @@ Both Microsoft R Server and Microsoft Machine Learning Server require Enterprise
 
 + [Install R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
 
-  With this option, R Server is installed using the Modern Lifecycle support policy. You can also run this installer after setup to upgrade an instance of SQL Server 2016. Currently, you _cannot_ install Python support using this option. To get Python, you must install Machine Learning Server using SQL Server vNext setup.
+  With this option, R Server is installed using the Modern Lifecycle support policy. You can also run this installer after setup to upgrade an instance of SQL Server 2016. Currently, you _cannot_ install Python support using this option. To get Python, you must install Machine Learning Server using SQL Server 2017 setup.
 
 ##  <a name="bkmk_installRServer"></a> How to Install Microsoft Machine Learning Server (Standalone)
   
 1. If you have installed a previous version of Microsoft R Server, we recommend that you uninstall it first.
 
-2. Run SQL Server vNext setup.
+2. Run SQL Server 2017 setup.
   
 3. Click the **Installation** tab, and select **New Machine Learning Server (Standalone) installation**.
 

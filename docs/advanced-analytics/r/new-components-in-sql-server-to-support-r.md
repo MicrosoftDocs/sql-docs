@@ -17,7 +17,7 @@ manager: "jhubbard"
 ---
 # Components in SQL Server to Support R
 
- In SQL Server 2016 and vNext, the database engine includes optional components that support extensibility for external script languages, including R and Python. Support for the R language was added in SQL Server 2016; support for Python was added in SQL Server vNext Machine Learning Services
+ In SQL Server 2016 and 2017, the database engine includes optional components that support extensibility for external script languages, including R and Python. Support for the R language was added in SQL Server 2016; support for Python was added in SQL Server 2017 Machine Learning Services
 
 This topic describes the new components that work specifically with the R language. 
 For a discussion of how these components work with open source R, see [R Interoperability](r-interoperability-in-sql-server.md)

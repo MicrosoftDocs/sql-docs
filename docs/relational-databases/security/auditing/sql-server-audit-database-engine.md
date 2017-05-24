@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Audit (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/26/2017"
+ms.date: "11/21/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  You can record server audit action groups per-instance, and either database audit action groups or database audit actions per database. The audit event will occur every time that the auditable action is encountered.  
   
- All editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support server level audits. ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 limited audit to Enterprise Edition.) All editions support database level audits beginning with [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Prior to that, database level auditing was limited to Enterprise, Developer, and Evaluation editions. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ All editions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] support server level audits. All editions support database level audits beginning with [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1. Prior to that, database level auditing was limited to Enterprise, Developer, and Evaluation editions. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!NOTE]  
 >  This     topic applies to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  For [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], see [Get started with SQL database auditing](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/).  

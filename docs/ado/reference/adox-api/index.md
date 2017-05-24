@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/ado/reference/adox-api/datemodified-property-adox
+redirect_url: /sql/ado/reference/adox-api/adox-object-model
 ---

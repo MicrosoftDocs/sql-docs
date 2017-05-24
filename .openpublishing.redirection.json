@@ -1226,6 +1226,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md",
+            "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md",
             "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
             "redirect_document_id": false
@@ -1238,6 +1243,11 @@
         {
             "source_path": "docs/integration-services/packages/digital-signing-dialog-box-ui-reference.md",
             "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/integration-services-roles-ssis-service.md",
+            "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
             "redirect_document_id": false
         },
         {
@@ -1254,6 +1264,102 @@
             "source_path": "docs/integration-services/packages/package-roles-dialog-box-ui-reference.md",
             "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
             "redirect_document_id": false
+        },
+        {
+            "source_path" : "docs/ado/guide/appendixes/ado-appendixes.md",
+            "redirect_url": "/sql/ado/guide/appendixes/appendix-a-providers",
+            "redirect_document_id": true
+        },
+        {
+            "source_path" : "docs/ado/guide/data/activex-data-objects-ado.md",
+            "redirect_url": "/sql/ado/guide/data/ado-fundamentals",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/reference/ado-md-api/ado-md-api-reference.md",
+            "redirect_url": "/sql/ado/reference/ado-md-api/ado-md-object-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/reference/adox-api/adox-api-reference.md",
+            "redirect_url": "/sql/ado/reference/adox-api/adox-object-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md",
+            "redirect_url": "/sql/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/sql-server/sql-server-vnext-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2017-release-notes",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/sql-server/what-s-new-in-sql-server-vnext.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md",
+            "redirect_url": "/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/what-s-new-in-sql-server-analysis-services-vnext.md",
+            "redirect_url": "/sql/analysis-services/what-s-new-in-sql-server-analysis-services-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/whitepapers/introducing-microsoft-technologies-for-data-storage-movement-and-transformation.md",
+            "redirect_url": "sql/whitepapers/microsoft-white-papers",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshooting-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshoot-process-data-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-configure-kerberos-powerbi-reports/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/configure-report-manager-native-mode.md",
+            "redirect_url": "/sql/reporting-services/report-server/configure-web-portal",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/install-windows/install-january-2017-technical-preview-power-bi-reports.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-install-report-server/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/power-bi-reports-in-reporting-services.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-quickstart-powerbi-report/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/reporting-services-release-notes.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-release-notes/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/security/grant-user-access-to-a-report-server-report-manager.md",
+            "redirect_url": "/sql/reporting-services/security/grant-user-access-to-a-report-server",
+            "redirect_document_id": false
         }
+
     ]
 }

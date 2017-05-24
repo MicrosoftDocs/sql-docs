@@ -28,9 +28,9 @@ This article provides links to resoures for each product in the Microsoft Machin
 
 SQL Server 2016 supports running R code in SQL Server, or using the SQL Server as the remote compute context for R jobs. This features provides security for your data and lets you manage and balance resources used by R.
 
-**SQL Server vNext**
+**SQL Server 2017**
 
-In SQL Server vNext CTP 2.0, support for Python was added, and the name was changed to Machine Learning Services (In-Database).
+In SQL Server 2017 CTP 2.0, support for Python was added, and the name was changed to Machine Learning Services (In-Database).
 
 + [Set up SQL Server R Services or Machine Learning Services](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
@@ -41,7 +41,7 @@ If you don't need to use SQL Server data, install Microsoft R Server to enjoy di
 
 **Microsoft Machine Learning Server**
 
-If you want to try out Python integration, be sure to install the latest version, **Machine Learning Server**, which is available only through SQL Server vNext setup: [Set up Microsoft R Server or Machine Learning Server](../advanced-analytics/r/create-a-standalone-r-server.md)
+If you want to try out Python integration, be sure to install the latest version, **Machine Learning Server**, which is available only through SQL Server 2017 setup: [Set up Microsoft R Server or Machine Learning Server](../advanced-analytics/r/create-a-standalone-r-server.md)
 
 ### Related Products
 

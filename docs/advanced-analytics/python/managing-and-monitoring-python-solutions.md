@@ -17,9 +17,9 @@ manager: "jhubbard"
 
 
 > [!NOTE]
-> Python support is a new feature in SQL Server vNext and is in prerelease.
+> Python support is a new feature in SQL Server 2017 and is in prerelease.
 
-Support for Python is a new feature in SQL Server, available in SQL Server vNext CTP 2.0.
+Support for Python is a new feature in SQL Server, available in SQL Server 2017 CTP 2.0.
 
 However, the overall framework for external script execution and data security is the same as for R. You can monitor any external script, including one that runs Python, using the same framework that was provided for R script execution in SQL Server 2016. For more information, see [Monitoring R Solutions](../r/managing-and-monitoring-r-solutions.md).
 

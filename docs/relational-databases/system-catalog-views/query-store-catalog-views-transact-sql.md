@@ -21,7 +21,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Query Store Catalog Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   This section contains the following catalog views.  
   

@@ -1,7 +1,7 @@
 ---
 title: "DENY Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "05/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DENY Endpoint Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Denies permissions on an endpoint.  
 
@@ -33,7 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name  
     TO < server_principal >  [ ,...n ]  
     [ CASCADE ]  
@@ -53,7 +52,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  ON ENDPOINT **::***endpoint_name*  
  Specifies the endpoint on which the permission is being denied. The scope qualifier (**::**) is required.  
   
- TO <server_principal>  
+ TO \<server_principal>  
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to which the permission is being denied.  
   
  *SQL_Server_login*  

@@ -1,5 +1,5 @@
-# [Representation +](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/index.md?toc=%2fsql%2fanalysis-services%2ftabular-model-programming-compatibility-levels-1050-1103%2frepresentation%2ftoc.json)
-# [Conceptual schema definition language (CSDL) +](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/index.md?toc=%2fsql%2fanalysis-services%2ftabular-model-programming-compatibility-levels-1050-1103%2fconceptual-schema-definition-language-csdl%2ftoc.json)
+# [Representation +](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md)
+# [Conceptual schema definition language (CSDL) +](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)
 # [CSDL Annotations for Business Intelligence (CSDLBI)](csdl-annotations-for-business-intelligence-csdlbi.md)
 # [CSDLBI Attributes for Report Design](csdlbi-attributes-for-report-design.md)
 # [CSDLBI Concepts](csdlbi-concepts.md)

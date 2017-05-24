@@ -27,7 +27,7 @@ You should be able to compile and run the ODBC applications that you have been c
 The ODBC driver on macOS supports all server features in [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] except LocalDB. For more information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supported features, see [Programming Guidelines](../../../connect/odbc/mac/programming-guidelines.md).  
 
 **Does the driver support Kerberos authentication?**
-Not at this time.  
+Yes. If you have an existing Kerberos environment setup, you should be able to connect to servers using the `Trusted_Connection=Yes` DSN or connection string option.
 
 **Which Unicode encoding should an application use?**  
 UTF-8 for SQL_CHAR data and UTF-16 for SQL_WCHAR data.  

@@ -1,7 +1,7 @@
 ---
 title: "Select an Account for the SQL Server Agent Service | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "05/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -54,7 +54,7 @@ For improved security, select **This account**, which specifies a Windows domain
   
     -   Permission to adjust memory quotas for a process (SeIncreaseQuotaPrivilege)  
   
-    -   Permission to log on using the batch logon type (SeBatchLogonRight)  
+    -   Permission to access this computer from the network (SeNetworkLogonRight)  
   
 > [!NOTE]  
 > If the account does not have the permissions required to support proxies, only members of the **sysadmin** fixed server role can create jobs.  

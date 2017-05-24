@@ -1,7 +1,7 @@
 ---
 title: "Copy and Paste Data (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# SSAS Import Data - Copy and Paste Data
+# Import Data - Copy and Paste Data
   You can copy table data from external applications and paste it into a new or existing table in the model designer. The data that you paste from the Clipboard must be in HTML format, for example, data that is copied from Excel or Word. The model designer will automatically detect and apply data types to the pasted data. You can also manually modify the data type or display formatting of a column.  
   
  Unlike tables with a data source connection, pasted tables do not have a Connection Name or Source Data property. Pasted data is persisted in the Model.bim file. When the project or Model.bim file is saved, the pasted data is also saved.  

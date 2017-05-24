@@ -2,7 +2,7 @@
 title: "SELECT (SQL Graph) | Microsoft Docs"
 ms.custom: 
 ms.date: "04/19/2017"
-ms.prod: "sql-vnext"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

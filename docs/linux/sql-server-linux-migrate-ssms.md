@@ -25,7 +25,7 @@ ms.custom: H1Hack27Feb2017
 ---
 # Export and import a database on Linux with SQL Server Management Studio on Windows
 
-This topic shows how to use [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) to export and import a database on SQL Server vNext CTP 2.0 on Linux. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
+This topic shows how to use [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) to export and import a database on SQL Server 2017 CTP 2.1 on Linux. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
 
 You should always install and use the most recent version of SQL Server Management Studio (SSMS) as described in [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md)
 

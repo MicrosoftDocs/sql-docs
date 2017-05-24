@@ -26,9 +26,9 @@ The client applications running analytics or reporting workloads can directly co
 
 ## Read-scale availability groups without cluster
 
-In [!INCLUDE[sssql15-md](..\..\..\includes\sssql15-md.md)] and before, all availability groups required a cluster. The cluster provided business continuity - high availability and disaster recovery (HADR). In addition, secondary replicas could be configured for read operations. Configuring and operating a cluster implied a lot of operational overhead, if HA was not the goal. SQL Server vNext introduces read-scale availability groups without a cluster. 
+In [!INCLUDE[sssql15-md](..\..\..\includes\sssql15-md.md)] and before, all availability groups required a cluster. The cluster provided business continuity - high availability and disaster recovery (HADR). In addition, secondary replicas could be configured for read operations. Configuring and operating a cluster implied a lot of operational overhead, if HA was not the goal. SQL Server 2017 introduces read-scale availability groups without a cluster. 
 
-If the business requirement is to conserve resources for mission-critical workloads running on the primary, users can now use read-only routing or directly connect to readable secondary replicas, without depending on integration with any clustering technology. These new capabilities are available for SQL Server vNext running on both Windows and Linux platforms.
+If the business requirement is to conserve resources for mission-critical workloads running on the primary, users can now use read-only routing or directly connect to readable secondary replicas, without depending on integration with any clustering technology. These new capabilities are available for SQL Server 2017 running on both Windows and Linux platforms.
 
 >[!IMPORTANT]
 >This is not a high-availability setup. There is no infrastructure to monitor and coordinate failure detection and automatic failover. For users who need HADR capabilities, use a cluster manager (WSFC on Windows or Pacemaker on Linux). 

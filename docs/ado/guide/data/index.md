@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/ado/guide/data/xml-security-considerations
+redirect_url: /sql/ado/guide/data/ado-fundamentals
 ---

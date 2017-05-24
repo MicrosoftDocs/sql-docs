@@ -25,21 +25,22 @@ manager: "jhubbard"
 
 Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], notifies you whenever a potential performance issue is detected, and lets you apply corrective actions,
 or lets the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically fix performance problems.
+Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] enables you to identify and fix performance issues caused by **SQL plan choice regressions**.
 
-## Forcing last good plan
+## What is plan choice regression?
 
 [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] may use different SQL plans to execute the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries. Query plans
-depend on the statistics, indexes, and other factors, so the optimal plan that should be used to execute some [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query might be changed
-over time. In some cases, new plan might not be better than the previous one, and this might cause a performance regression.
+depend on the statistics, indexes, and other factors. The optimal plan that should be used to execute some [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query might be changed
+over time. In some cases, the new plan might not be better than the previous one, and this might cause a performance regression.
 
  ![SQL plan choice regression](media/plan-choice-regression.png "SQL plan choice regression") 
 
 In order to prevent unexpected performance issues, users must periodically monitor system and look for the queries that regressed. If any plan regressed, user should find some
-previous good plan and force it instead of the current one. The best practice would be to force last known good plan because older plans might be invalid due to statistic or index changes.
+previous good plan and force it instead of the current one using `sp_query_store_force_plan` procedure. The best practice would be to force last known good plan because older plans might be invalid due to statistic or index changes.
 When user forces last known good plan, he should monitor performance of the query that is executed using the forced plan and verify that forced plan works as expected. Depending on
 the results of monitoring and analysis, plan should be forced or user should find some other way to optimize the query.
 Manually forced plans should not be forced forever, because the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] should be able to apply optimal plans. The user or DBA should eventually
-unforce the plan and let the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] find the optimal plan.
+unforce the plan using `sp_query_store_unforce_plan` procedure, and let the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] find the optimal plan.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides all necessary views and procedures required to monitor performance and fix problems in Query Store. However, continuous
 monitoring and fixing performance issues might be a tedious process.
@@ -48,7 +49,7 @@ monitoring and fixing performance issues might be a tedious process.
 Additionally, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] enables you to fully automate this process and let [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fix any problem found related 
 to the plan changes.
 
-## Automatic plan change regression detection
+## How to detect plan choice regression?
 
 In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects and shows potential plan choice regressions and the recommended
 actions that should be applied in the [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)
@@ -134,6 +135,8 @@ gives information about the current state of automatic tuning option, and column
 ## See Also  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
- [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)      
+ [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)    
+ [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
+ [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON functions](../../relational-databases/json/index.md)

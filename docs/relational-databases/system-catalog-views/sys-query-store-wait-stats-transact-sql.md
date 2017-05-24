@@ -2,8 +2,8 @@
 title: "sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/21/2016"
-ms.prod: "sql-non-specified"
+ms.date: "04/21/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "sys.query_store_wait_stats catalog view"
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 caps.latest.revision: 18
-author: "anant"
-ms.author: "anant"
+author: "AndrejsAnt"
+ms.author: "AndrejsAnt"
 manager: "jhubbard"
 ---
 # sys.query_store_wait_stats (Transact-SQL)

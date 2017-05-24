@@ -18,7 +18,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Using the MicrosoftML Package with SQL Server R Services
-The [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package that is provided with Microsoft R Server and SQL Server vNext CTP 1.0 includes multiple machine learning algorithms developed by Microsoft that support multicore processing and fast data streaming. The package also includes transformations for text processing and featurization.
+The [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package that is provided with Microsoft R Server and SQL Server 2017 CTP 1.0 includes multiple machine learning algorithms developed by Microsoft that support multicore processing and fast data streaming. The package also includes transformations for text processing and featurization.
 
 ### New machine learning algorithms
 

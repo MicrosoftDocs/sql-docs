@@ -29,14 +29,14 @@ This is the landing page for the [!INCLUDE[ssNoVersion_md](../includes/ssnoversi
 - [SQL Server Management Studio (SSMS)](http://go.microsoft.com/fwlink/?linkid=832812)
 - [SQL Server Data Tools (SSDT) ](https://msdn.microsoft.com/mt186501)
 - [Visual Studio Community and Code](https://www.visualstudio.com/downloads/)
-- [SQL Server vNext Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)
 
 ## Technical documentation 
 -  [Transact SQL Language Reference](https://msdn.microsoft.com/library/dn198336.aspx) T-SQL reference documentation for all SQL offerings 
 -  [SQL Server Drivers](https://msdn.microsoft.com/library/mt654049(v=sql.1).aspx)
 -  [SQL Server Tools](https://msdn.microsoft.com/library/mt238365.aspx), including [SSMS](https://msdn.microsoft.com/library/hh213248.aspx)
  - [SQL Server Technical documentation](https://msdn.microsoft.com/library/ms130214.aspx)
- - [SQL Server vNext on Linux!](https://docs.microsoft.com/en-us/sql/linux/)
+ - [SQL Server 2017 on Linux!](https://docs.microsoft.com/en-us/sql/linux/)
   
 Documentation for the current version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includes documentation that applies to  [SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/) and  [SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/) Azure services.  
   

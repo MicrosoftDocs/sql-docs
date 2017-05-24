@@ -1,11 +1,11 @@
 # [Overview](language-reference.md)  
 
-# [Data types](data-types/index.md)
-# [Database Console Commands](database-console-commands/index.md)
-# [Functions](functions/index.md)
-# [Language elements](language-elements/index.md)
-# [Queries](queries/index.md)
-# [Statements](statements/index.md)
+# [Data types](../t-sql/data-types/data-types-transact-sql.md)
+# [Database Console Commands](../t-sql/database-console-commands/database-console-commands.md)
+# [Functions](../t-sql/functions/functions.md)
+# [Language elements](../t-sql/language-elements/language-elements-transact-sql.md)
+# [Queries](../t-sql/queries/queries.md)
+# [Statements](../t-sql/statements/statements.md)
 
 
 

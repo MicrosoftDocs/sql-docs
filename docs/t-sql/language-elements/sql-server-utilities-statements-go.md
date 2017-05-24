@@ -1,7 +1,7 @@
 ---
 title: "GO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/26/2017"
+ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,19 +27,22 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Utilities Statements - GO
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides commands that are not [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, but are recognized by the **sqlcmd** and **osql** utilities and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code Editor. These commands can be used to facilitate the readability and execution of batches and scripts.  
   
   GO signals the end of a batch of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilities.  
   
-
+||  
+|-|  
+|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
+  
 GO [count]  
 ```  
   
@@ -54,17 +57,11 @@ GO [count]
   
  A [!INCLUDE[tsql](../../includes/tsql-md.md)] statement cannot occupy the same line as a GO command. However, the line can contain comments.  
   
- Users must follow the rules for batches. For example, any execution of a stored procedure after the first statement in a batch must include the EXECUTE keyword. 
+ Users must follow the rules for batches. For example, any execution of a stored procedure after the first statement in a batch must include the EXECUTE keyword. The scope of local (user-defined) variables is limited to a batch, and cannot be referenced after a GO command.  
   
 ```  
-SELECT @@VERSION;  
-sp_who  
+USE AdventureWorks2012;  
 GO  
-```   
- 
- The scope of local (user-defined) variables is limited to a batch, and cannot be referenced after a `GO` command.  
-  
-```  
 DECLARE @MyMsg VARCHAR(50)  
 SELECT @MyMsg = 'Hello, World.'  
 GO -- @MyMsg is not valid after this GO ends the batch.  
@@ -72,9 +69,13 @@ GO -- @MyMsg is not valid after this GO ends the batch.
 -- Yields an error because @MyMsg not declared in this batch.  
 PRINT @MyMsg  
 GO  
-```   
-
-
+  
+SELECT @@VERSION;  
+-- Yields an error: Must be EXEC sp_who if not first statement in   
+-- batch.  
+sp_who  
+GO  
+```  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications can send multiple [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for execution as a batch. The statements in the batch are then compiled into a single execution plan. Programmers executing ad hoc statements in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilities, or building scripts of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to run through the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilities, use GO to signal the end of a batch.  
   

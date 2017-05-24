@@ -2,7 +2,7 @@
 title: "Breaking Changes to Database Engine Features in SQL Server 2017 | Microsoft Docs"
 description: "Breaking changes to Database Engine Features in SQL Server 2017"
 ms.date: "04/19/2017"
-ms.prod: "sql-vnext"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

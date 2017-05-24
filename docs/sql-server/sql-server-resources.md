@@ -25,7 +25,7 @@ manager: "jhubbard"
   
  Learn about  new features in SQL Server
  - [What's new in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
- - [What's new in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md)  
+ - [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)  
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] is the biggest leap forward in Microsoft's data platform history with real-time operational analytics, rich visualizations on mobile devices, built-in advanced analytics, new advanced security technology, and new hybrid cloud scenarios. Other benefits include enhanced in-memory performance, stretching OLTP data to Microsoft Azure, and simplified management of relational and non-relational data.  
   

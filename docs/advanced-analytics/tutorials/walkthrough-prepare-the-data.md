@@ -20,7 +20,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Lesson 1: Prepare the Data (Data Science End-to-End Walkthrough)
-If you have a clean installation of SQL Server 2016 or vNext with R Services, you're ready to get started. In this lesson, you'll get the data and R packages needed for the scenario. 
+If you have a clean installation of SQL Server 2016 or 2017 with R Services, you're ready to get started. In this lesson, you'll get the data and R packages needed for the scenario. 
 
 1. Download the data and all R scripts from Github. A PowerShell script is provided for convenience.  
 

@@ -121,7 +121,10 @@ JOIN sys.query_store_query_text AS Txt
   
  MAX_PLANS_PER_QUERY  
  An integer representing the maximum number of plans maintained for each query. The default value is 200.  
-  
+ 
+ WAIT_STATS_CAPTURE_MODE  
+ Controls if Query Store captures wait statistics information. Can be OFF = 0 or ON = 1 (default)  
+ 
  Query the **sys.database_query_store_options** view to determine the current options of the query store. For more information about the values, see [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).  
   
  For more information about setting options by using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, see [Option Management](#OptionMgmt).  
@@ -146,7 +149,9 @@ JOIN sys.query_store_query_text AS Txt
 -   [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)  
   
 -   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)  
-  
+
+-   [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md) 
+
 -   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
   
 ### Query Store Stored Procedures  

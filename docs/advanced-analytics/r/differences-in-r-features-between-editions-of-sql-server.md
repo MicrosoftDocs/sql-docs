@@ -16,7 +16,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Differences in R Features between Editions of SQL Server
-  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is available in the following editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and SQL Server vNext:  
+  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is available in the following editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and SQL Server 2017:  
   
 -   **Enterprise Edition**  
     

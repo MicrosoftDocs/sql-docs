@@ -1,7 +1,7 @@
 ---
-title: "What is revoscalepy | Microsoft Docs"
+title: "Introducing revoscalepy | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/16/2017"
+ms.date: "04/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# What is revoscalepy
+# Introducing revoscalepy
 
 **revoscalepy** is a new library provided by Microsoft to support distributed computing, remote compute contexts, and high-performance algorithms for Python.
 
@@ -28,14 +28,14 @@ It is based on the **RevoScaleR** package for R, which was provided in Microsoft
 > 
 > Python support is a new feature in SQL Server 2017 and is supported for preview only.
 > 
-> The **revoscalepy** module contains only a subset of the functionality provided in the corresponding **RevoScaler** package for R.
+> The **revoscalepy** module contains only a subset of the functionality provided in the corresponding **RevoScaleR** package for R.
 
 ## Versions and Supported Platforms
 
 The **revoscalepy** module is available only when you install one of the following Microsoft products:
 
-+ Machine Learning Services, in SQL Server vNext CTP 2.0
-+ Microsoft Machine Learning Server 9.1.0, using SQL Server vNext CTP 2.0 setup
++ Machine Learning Services, in SQL Server 2017 CTP 2.0
++ Microsoft Machine Learning Server 9.1.0, using SQL Server 2017 CTP 2.0 setup
 
 ## Supported Functions and Data Types
 
@@ -49,13 +49,13 @@ For a list of mappings between SQL and Python data types, see [Python Libraries 
 
 You can get data from any ODBC database, SQL Server, or  XDF file, using the data soure functions listed in the following table.
 
-Remote compute contexts supported for this release: local, or in SQL Server 2017.
+Remote compute contexts supported for this release are local, or in SQL Server 2017.
 
 ### Functions
 
 The following functions are included in SQL Server 2017 CTP 2.0.
 
-| Function name | Category| 
+| Function name | Category|
 | ------ | ------ |
 |`rx_btrees_ex` | analytic|
 |`rx_dforest_ex` | analytic |
@@ -82,8 +82,8 @@ If you are new to the idea of remote compute contexts, we recommend that you sta
   Locate the corresponding function in R help or in the MSDN library for [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
 
   > [!NOTE]
-  > All functions are pre-release versions. Some functions have not been fully tested, and some functions do not have the same level of functionality as the corresponding function in RevoScaleR.+ Using Python help
-
+  > All functions are pre-release versions. Some functions have not been fully tested, and some functions do not have the same level of functionality as the corresponding function in RevoScaleR.
+  
 + Use Python help features
 
   You can get help on any Python function by importing the module, and then calling `help()`. For example, running `help(revoscalepy)` from your Python IDE returns a list of all included functions with their signatures.
@@ -92,7 +92,7 @@ If you are new to the idea of remote compute contexts, we recommend that you sta
 
   If you use Python Tools for Visual Studio, you can use Intellisense to get syntax and argument help.
 
-  For more information, see [Installing Python Support in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions. If you need to use both R and Python, note that currently [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) requires Visual Studio 2015.
+  For more information, see [Installing Python Support in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions. 
 
 
 ## Examples
@@ -102,10 +102,10 @@ You can run code that includes **revoscalepy** functions in two scenarios:
 + Execute a Python script from the command line, or from a Python development environment, and call a remote compute context.
 + Embed Python code in the stored procedure, [sp_execute_external_script].(https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), and call the stored procedure from any client that supports T-SQL.
 
-[!NOTE]
-> To run Python code in SQL Server, you must have installed SQL Server 2017 and enabled the feature **Machine Learning Services** with Python. Other versions of SQL Server do not support Python integration.
+> [!NOTE]
+> To run Python code in SQL Server, you must have installed SQL Server 2017 together with the feature **Machine Learning Services**, and enabled the Python language. Other versions of SQL Server do not support Python integration.
 >
-> Open source distributions of Python do not support SQL Server integration. However, you can install Microsoft Machine Learning Server to publish and consume Python applications from Windows without installing SQL Server. For more information, see [Create a Standalone R Server](../r/create-a-standalone-r-server.md)
+> Open source distributions of Python do not support SQL Server compute contexts. However, you can install Microsoft Machine Learning Server to publish and consume Python applications from Windows without installing SQL Server. For more information, see [Create a Standalone R Server](../r/create-a-standalone-r-server.md)
 
 ### Using remote compute contexts
 

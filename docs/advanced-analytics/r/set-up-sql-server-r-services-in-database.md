@@ -68,7 +68,7 @@ To add machine learning requires that you install SQL Server 2016 or later.
     - Select **Database Engine Services** 
     - Select **R Services (In-Database)** 
 
-    **SQL Server vNext**
+    **SQL Server 2017**
     
     - Select **Database Engine Services** 
     - Select **Machine Learning Services (In-Database)** 
@@ -91,7 +91,7 @@ To add machine learning requires that you install SQL Server 2016 or later.
      - Database Engine Services  
      - R Services (In-Database)
 
-     **SQL Server vNext**  
+     **SQL Server 2017**  
      - Database Engine Services
      - Machine Learning Services (In-Database)
      - R or Python, or both

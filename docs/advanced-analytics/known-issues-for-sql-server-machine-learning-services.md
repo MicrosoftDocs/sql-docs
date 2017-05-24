@@ -18,14 +18,14 @@ manager: "jhubbard"
 ---
 # Known Issues for Machine Learning Services
 
-This topic describes limitations and known issues with the following machine learning components that are provided as an option in SQL Server 2016 and SQL Server vNext.
+This topic describes limitations and known issues with the following machine learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
 
 + SQL Server 2016
 
   - R Services (In-Database)
   - Microsoft R Server (Standalone)
 
-+ SQL Server vNext
++ SQL Server 2017
 
   - Machine Learning Services for R (In-Database)
   - Machine Learning Services for Python (In-Database)
@@ -39,7 +39,7 @@ The articles contains details on how to upgrade from previous versions, includin
 
 ### License agreement for machine learning components required for unattended installs
 
- If you use the command line to install an instance of SQL Server 2016 or SQL Server vNext, and add the feature that supports use of external languages such as R or Python, you must add a separate licensing agreement parameter to the command line arguments for each language that you install.
+ If you use the command line to install an instance of SQL Server 2016 or SQL Server 2017, and add the feature that supports use of external languages such as R or Python, you must add a separate licensing agreement parameter to the command line arguments for each language that you install.
 
 + For R: */IACCEPTROPENLICENSEAGREEMENT*
 + For Python: */IACCEPTPYTHONLICENSEAGREEMENT*
@@ -66,7 +66,7 @@ If you installed Microsoft R Server on a client computer using the setup wizard 
 
 *You are running version 9.0.0 of Microsoft R Client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
 
-The **SqlBindR.exe** tool is provided in the Microsoft R Server 9.0 release to support upgrade of SQL Server instances to a compatible 9.0 version. Support for upgrade of R Services instances to 9.0 will be added in SQL Server as part of an upcoming service release. Versions that are candidates for future upgrade include SQL Server 2016 RTM CU3+ and SP1+, and SQL Server vNext CTP 1.1.
+The **SqlBindR.exe** tool is provided in the Microsoft R Server 9.0 release to support upgrade of SQL Server instances to a compatible 9.0 version. Support for upgrade of R Services instances to 9.0 will be added in SQL Server as part of an upcoming service release. Versions that are candidates for future upgrade include SQL Server 2016 RTM CU3+ and SP1+, and SQL Server 2017 CTP 1.1.
 
 ### Setup for SQL Server 2016 service releases might fail to install newer versions of R components
 
@@ -151,7 +151,7 @@ If you install both features (In-Database and Standalone) on the SQL Server comp
     + R Services, named instance:  `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`
     + R Server Standalone: `C:\Program Files\Microsoft SQL Server\130\R_SERVER`
 
--   **SQL Server vNext:**
+-   **SQL Server 2017:**
     + Machine Learning Services, default instance: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES`
     + Machine Learning Services, named instance:  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`
     + Machine Learning Server Standalone: `C:\Program Files\Microsoft SQL Server\140\R_SERVER`

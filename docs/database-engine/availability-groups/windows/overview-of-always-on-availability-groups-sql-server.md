@@ -24,6 +24,8 @@ manager: "jhubbard"
 # Overview of Always On Availability Groups (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
+ > For content related to previous versions of SQL Server, see [Overview of AlwaysOn Availability Groups (SQL Server)](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx).
+
  This topic introduces the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] concepts that are central for configuring and managing one or more availability groups in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. For a summary of the benefits offered by availability groups and an overview of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] terminology, see [Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  An *availability group* supports a replicated environment for a discrete set of user databases, known as *availability databases*. You can create an availability group for high availability (HA) or for read-scale. An HA availability group is a group of databases that fail over together. A read-scale availability group is a group of databases that are copied to other instances of SQL Server for read-only workload. An availability group supports one set of primary databases and one to eight sets of corresponding secondary databases. Secondary databases are *not* backups. Continue to back up your databases and their transaction logs on a regular basis.  
@@ -37,7 +39,7 @@ manager: "jhubbard"
   
  Optionally, you can configure one or more secondary replicas to support read-only access to secondary databases, and you can configure any secondary replica to permit backups on secondary databases.  
 
- SQL Server vNext introduces two different architectures for availability groups. *Always On availability groups* provide high availability, disaster recovery, and read-scale balancing. These availability groups require a cluster manager. In Windows, failover clustering provides the cluster manager. In Linux, you can use Pacemaker. The other architecture is a *read-scale availability group*. A read scale availability group provides replicas for read-only workloads but not high availability. In a read-scale availability group there is no cluster manager. 
+ SQL Server 2017 introduces two different architectures for availability groups. *Always On availability groups* provide high availability, disaster recovery, and read-scale balancing. These availability groups require a cluster manager. In Windows, failover clustering provides the cluster manager. In Linux, you can use Pacemaker. The other architecture is a *read-scale availability group*. A read scale availability group provides replicas for read-only workloads but not high availability. In a read-scale availability group there is no cluster manager. 
  
  Deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] for HA on Windows requires a Windows Server Failover Cluster(WSFC). Each availability replica of a given availability group must reside on a different node of the same WSFC. The only exception is that while being migrated to another WSFC cluster, an availability group can temporarily straddle two clusters. 
 

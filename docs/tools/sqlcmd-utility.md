@@ -34,6 +34,9 @@ manager: "jhubbard"
 # sqlcmd Utility
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
+ > For content related to previous versions of SQL Server, see [sqlcmd Utility](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
+
+
   The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt, in **Query Editor** in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a  SQL Server  Agent job. This utility uses ODBC to execute Transact-SQL batches. 
   
 > [!NOTE]

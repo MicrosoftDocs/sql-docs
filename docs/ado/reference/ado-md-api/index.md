@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/ado/reference/ado-md-api/levels-collection-ado-md
+redirect_url: /sql/ado/reference/ado-md-api/ado-md-object-model
 ---

@@ -1,8 +1,8 @@
 ---
 title: "CREATE TABLE (SQL Graph) | Microsoft Docs"
 ms.custom: 
-ms.date: "04/19/2017"
-ms.prod: "sql-vnext"
+ms.date: "05/04/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -119,5 +119,6 @@ The following examples show how to create `EDGE` tables
 
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)
 

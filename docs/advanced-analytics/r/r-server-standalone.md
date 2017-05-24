@@ -22,7 +22,7 @@ manager: "jhubbard"
  
 In SQL Server 2016, Microsoft released **R Server (Standalone)**, as part of its platform for supporting enterprise-class analytics.  Microsoft R Server provided scalability and security to the R language, and addressed the in-memory limitations of open source R. Like SQL Server R Services, Microsoft R Server (Standalone) provides parallel and chunked processing of data, enabling R users to use data much bigger than can fit in memory.
 
-In SQL Server vNext, support has been added for the Python language, which is another popular choice for advanced machine learning and text processing tasks.  To reflect support for this broader set of languages, we've also renamed it to **Microsoft Machine Learning Server (Standalone)**.
+In SQL Server 2017, support has been added for the Python language, which is another popular choice for advanced machine learning and text processing tasks.  To reflect support for this broader set of languages, we've also renamed it to **Microsoft Machine Learning Server (Standalone)**.
 
 ## What's Included in Microsoft R Server
  
@@ -35,9 +35,9 @@ You can also install Microsoft R Server to use as a development client, to get t
   
 ## What's New in Microsoft Machine Learning Server
 
-If you install Machine Learning Services (Standalone) using SQL Server vNext setup, you now have the option to add the Python language. Naturally, the R language is still a supported option, and you can even install both languages if desired.
+If you install Machine Learning Services (Standalone) using SQL Server 2017 setup, you now have the option to add the Python language. Naturally, the R language is still a supported option, and you can even install both languages if desired.
  
-In SQL Server vNext CTP 2.0, the server installation also includes the mrsdeploy package and other utilities used for operationalizing models. For more information, see [Operationalization with mrsdeploy](../../advanced-analytics/operationalization-with-mrsdeploy.md).
+In SQL Server 2017 CTP 2.0, the server installation also includes the mrsdeploy package and other utilities used for operationalizing models. For more information, see [Operationalization with mrsdeploy](../../advanced-analytics/operationalization-with-mrsdeploy.md).
 
 ## How to Get Microsoft R Server or Machine Learning Server (Standalone) 
  
@@ -48,7 +48,7 @@ In SQL Server vNext CTP 2.0, the server installation also includes the mrsdeploy
 [Create a Standalone R Server](../r/create-a-standalone-r-server.md)
 
 + Run SQL Server 2016 setup to install **Microsoft R Server (Standalone)**. The R language is added by default.
-+ Run SQL Server vNext setup to install **Machine Learning Server (Standalone)** and select either R or Python, or both.
++ Run SQL Server 2017 setup to install **Machine Learning Server (Standalone)** and select either R or Python, or both.
 
 > [!IMPORTANT]
 > The option to install the server is in the **Shared Features** section of setup. Do not install any other commponents.

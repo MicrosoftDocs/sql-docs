@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 04/17/2017
+ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -34,7 +34,7 @@ This document explains how to create a *read-scale* availability group without a
 
 ## Create the availability group
 
-Create the availability group. In order to create the availability group for read-scale on Linux, set `CLUSTER_TYPE = NONE`. Same configuration is available on SQL Server 2017 running on Windows. In addition, set each replica with `FAILOVER_MODE = NONE`. In this configuration the availability group does not provide HA, but it does provide read-scale. The client applications running analytics or reporting workloads can directly connect to the secondary databases. Or the customer can setup a read only routing list and connect to the primary that will forward the connection request to each of the secondary replicas from the routing list in a round robin fashion.
+Create the availability group. In order to create the availability group for read-scale on Linux, set `CLUSTER_TYPE = NONE`. In addition, set each replica with `FAILOVER_MODE = NONE`. In this configuration the availability group does not provide HA, but it does provide read-scale. The client applications running analytics or reporting workloads can directly connect to the secondary databases. Or the customer can setup a read only routing list and connect to the primary that will forward the connection request to each of the secondary replicas from the routing list in a round robin fashion.
 
 The following Transact-SQL script creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Update the following script for your environment. Replace the  `**<node1>**` and `**<node2>**` values with the names of the SQL Server instances that will host the replicas. Replace the `**<5022>**` with the port you set for the endpoint. Run the following Transact-SQL on the primary SQL Server replica to create the availability group.
 
@@ -59,6 +59,8 @@ CREATE AVAILABILITY GROUP [ag1]
 		
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
+   > [!NOTE] 
+   > Running the CREATE AVAILABILITY GROUP command will complete with a warning: "Attempt to access non-existent or uninitialized availability group with ID . This is usually an internal condition, such as the availability group is being dropped or the local WSFC node has lost quorum. In such cases, and no user action is required.". This is a known issue and product team is working on a fix. Meanwhile, users should assume command completed successfully.
 
 ### Join secondary SQL Servers to the availability group
 

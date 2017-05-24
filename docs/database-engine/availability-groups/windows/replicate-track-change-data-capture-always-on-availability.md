@@ -1,7 +1,7 @@
 ---
 title: "Replication, Change Tracking, & Change Data Capture - Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/18/2017"
+ms.date: "05/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

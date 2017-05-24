@@ -3,7 +3,7 @@ title: "CLR strict security | Microsoft Docs"
 description: How to configure CLR strict security in SQL Server
 ms.custom: ""
 ms.date: "04/19/2017"
-ms.prod: "sql-vnext"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

@@ -2,7 +2,7 @@
 
 Before the CTP 1.4 release, the Pacemaker resource agent for availability groups could not know if a replica marked as `SYNCHRONOUS_COMMIT` was really up-to-date or not. It was possible that the replica had stopped synchronizing with the primary but was not aware. Thus the agent could promote an out-of-date replica to primary - which, if successful, would cause data loss. 
 
-SQL Server vNext CTP 1.4 added `sequence_number` to `sys.availability_groups` to solve this issue. `sequence_number` is a monotonically increasing BIGINT that represents how up-to-date the local availability group replica is with respect to the rest of the replicas in the availability group. Performing failovers, adding or removing replicas, and other availability group operations update this number. The number is updated on the primary, then pushed to secondary replicas. Thus a secondary replica that is up-to-date will have the same sequence_number as the primary. 
+SQL Server 2017 CTP 1.4 added `sequence_number` to `sys.availability_groups` to solve this issue. `sequence_number` is a monotonically increasing BIGINT that represents how up-to-date the local availability group replica is with respect to the rest of the replicas in the availability group. Performing failovers, adding or removing replicas, and other availability group operations update this number. The number is updated on the primary, then pushed to secondary replicas. Thus a secondary replica that is up-to-date will have the same sequence_number as the primary. 
 
 When Pacemaker decides to promote a replica to primary, it first sends a notification to all replicas to extract the sequence number and store it (we call this the pre-promote notification). Next, when Pacemaker actually tries to promote a replica to primary, the replica only promotes itself if its sequence number is the highest of all the sequence numbers from all replicas and rejects the promote operation otherwise. In this way only the replica with the highest sequence number can be promoted to primary, ensuring no data loss. 
 
@@ -54,7 +54,7 @@ The tables below describes the outcome of an outage for primary or secondary rep
 | |Primary outage |One secondary replica outage
 |:---|:--- |:--- |
 |`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER. <br>Might have data loss.<br> New primary is R/W |Primary is R/W, running exposed to data loss
-|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER <br>No data loss. <br> New primary is RO until former primary recovers and joins availability group as secondary |Primary is RO until secondary recovers
+|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER <br>No data loss. <br> New primary will reject all connections until former primary recovers and joins availability group as secondary. |Primary will reject all connections until secondary recovers.
 
 \* SQL Server resource agent for Pacemaker default behavior.
 
@@ -63,6 +63,6 @@ The tables below describes the outcome of an outage for primary or secondary rep
 | |Primary outage |One secondary replica outage
 |:---|:--- |:--- |
 |`REQUIRED_COPIES_TO_COMMIT=0`|User has to issue a manual FAILOVER. <br>Might have data loss. <br>New primary is R/W |Primary is R/W
-|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER. <br>No data loss. <br>New primary is RW |Primary is R/W secondary is RO
+|`REQUIRED_COPIES_TO_COMMIT=1` * |Cluster will automatically issue FAILOVER. <br>No data loss. <br>New primary is RW |Primary is R/W 
 
 \* SQL Server resource agent for Pacemaker default behavior.

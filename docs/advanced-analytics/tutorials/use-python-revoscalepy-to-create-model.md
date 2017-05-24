@@ -26,7 +26,7 @@ For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.m
 ## Prerequisites
 
 > [!IMPORTANT]
-> To run Python code in SQL Server, you must have installed SQL Server vNext CTP 2.0, with the feature, **Machine Learning Services** with Python. Other versions of SQL Server do not support Python integration.
+> To run Python code in SQL Server, you must have installed SQL Server 2017 CTP 2.0, with the feature, **Machine Learning Services** with Python. Other versions of SQL Server do not support Python integration.
 
 To run this code, execute the sample as a Python script from the command line, or by using a Python development environment that includes the Python integration components provide in this release.
 

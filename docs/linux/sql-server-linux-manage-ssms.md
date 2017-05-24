@@ -42,18 +42,18 @@ See [Use SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/
 
 ## Install the newest version of SQL Server Management Studio (SSMS)
 
-When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server vNext on Linux. To download and install the latest version, see [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
+When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
 
 ## Before you begin
 - See [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) for how to Connect and Query using SSMS
-- Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server vNext CTP 2.0 on Linux
+- Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server 2017 CTP 2.1 on Linux
 
 ## Create and manage databases
-While connected to the *master* database, you can create databases on the server and modify or drop existing databases. The following steps describe how to accomplish several common database management tasks through Management Studio. To perform these tasks, make sure you are connected to the *master* database with the server-level principal login that you created when you set up SQL Server vNext CTP 2.0 on Linux.
+While connected to the *master* database, you can create databases on the server and modify or drop existing databases. The following steps describe how to accomplish several common database management tasks through Management Studio. To perform these tasks, make sure you are connected to the *master* database with the server-level principal login that you created when you set up SQL Server 2017 CTP 2.1 on Linux.
 
 ### Create a new database
 
-1. Start SSMS and connect to your server in SQL Server vNext CTP 2.0 on Linux
+1. Start SSMS and connect to your server in SQL Server 2017 CTP 2.1 on Linux
 
 2. In Object Explorer, right-click on the *Databases* folder, and then click *New Database..."
 
@@ -63,7 +63,7 @@ The new database is successfully created in your server. If you prefer to create
 
 ### Drop a database
 
-1. Start SSMS and connect to your server in SQL Server vNext CTP 2.0 on Linux
+1. Start SSMS and connect to your server in SQL Server 2017 CTP 2.1 on Linux
 
 2. In Object Explorer, expand the *Databases* folder to see a list of all the database on the server.
 
@@ -77,7 +77,7 @@ The database is successfully dropped from your server. If you prefer to drop a d
 
 The [Activity Monitor](https://msdn.microsoft.com/en-us/library/hh212951.aspx) tool is built-in into SQL Server Management Studio (SSMS) and displays information about SQL Server processes and how these processes affect the current instance of SQL Server.
 
-1. Start SSMS and connect to your server in SQL Server vNext CTP 2.0 on Linux
+1. Start SSMS and connect to your server in SQL Server 2017 CTP 2.1 on Linux
 
 2. In Object Explorer, right-click the *server* node, and then click *Activity Monitor*
 

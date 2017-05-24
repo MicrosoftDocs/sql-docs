@@ -22,7 +22,7 @@ Microsoft R Server includes an operationalization feature that make it easier to
 + Publish and manage R and Python models and code in the form of web services
 + Consume these services within client applications to affect business results
 
-SQL Server vNext CP 2.0 now includes this feature as an option, although it was not installed in previous versions of SQL Server R Services. This topic provides information about how to enable and configure the feature.
+SQL Server 2017 CP 2.0 now includes this feature as an option, although it was not installed in previous versions of SQL Server R Services. This topic provides information about how to enable and configure the feature.
 This topic provides information about how to enable and configure the feature.
 
 ## What's New in This Feature

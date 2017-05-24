@@ -1,4 +1,4 @@
-# [Executing statements +](../../relational-databases/native-client-odbc-queries/executing-statements/index.md?toc=%2fsql%2frelational-databases%2fnative-client-odbc-queries%2fexecuting-statements%2ftoc.json)
+# [Executing statements +](../../relational-databases/native-client-odbc-queries/executing-statements/batches-of-statements.md)
 # [Allocating a Statement Handle](allocating-a-statement-handle.md)
 # [Constructing an SQL Statement (ODBC)](constructing-an-sql-statement-odbc.md)
 # [Constructing SQL Statements for Cursors](constructing-sql-statements-for-cursors.md)

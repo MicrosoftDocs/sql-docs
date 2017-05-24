@@ -1,7 +1,7 @@
 ---
 title: "ALTER INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,7 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER INDEX index_name  
     ON <table_object>   
     [WITH XMLNAMESPACES ( <xmlnamespace_list> )]  
@@ -112,7 +111,7 @@ identifier
  *index_name*  
  Is the name of the existing index to alter.  
   
- *<table_object>*  
+ *\<table_object>*  
  Is the table that contains the XML column to index. Use one of the following formats:  
   
 -   `database_name.schema_name.table_name`  
@@ -123,18 +122,18 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** <xmlnamespace_list> **)**]  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
  Is the list of namespaces used by the paths to index. For information about the syntax of the WITH XMLNAMESPACES clause, see [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- FOR **(** <promoted_node_path_action_list> **)**  
+ FOR **(** \<promoted_node_path_action_list> **)**  
  Is the list of indexed paths to add or remove.  
   
 -   **ADD a path.** When you ADD a path, you use the same syntax that is used to create paths with the CREATE SELECTIVE XML INDEX statement. For information about the paths that you can specify in the CREATE or ALTER statement, see [Specify Paths and Optimization Hints for Selective XML Indexes](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
 -   **REMOVE a path.** When you REMOVE a path, you provide the name that was given to the path when it was created.  
   
- [WITH **(** <index_options> **)**]  
- You can only specify <index_options> when you use ALTER INDEX without the FOR clause. When you use ALTER INDEX to add or remove paths in the index, the index options are not valid arguments. For information about the index options, see [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ [WITH **(** \<index_options> **)**]  
+ You can only specify \<index_options> when you use ALTER INDEX without the FOR clause. When you use ALTER INDEX to add or remove paths in the index, the index options are not valid arguments. For information about the index options, see [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## Remarks  
   

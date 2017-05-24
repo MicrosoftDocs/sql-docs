@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -51,7 +51,7 @@ SQL Server availability groups were first introduced in SQL Server 2012 and have
 - **Disaster recovery configurations**
    With distributed availability groups or multi-subnet availability group setup. 
 - **Read-scale capabilities**
-   In SQL Server vNext you can create an availability group with or without HA for scale-out read-only operations. 
+   In SQL Server 2017 you can create an availability group with or without HA for scale-out read-only operations. 
 
 
 For details about SQL Server availability groups, see [SQL Server Always On availability groups](http://msdn.microsoft.com/library/hh510230.aspx).
@@ -87,9 +87,9 @@ The following terms describe the main parts of a SQL Server availability group s
  A server name to which clients can connect in order to access a database in a primary or secondary replica of an availability group. Availability group listeners direct incoming connections to the primary replica or to a read-only secondary replica.  
 
 
-## New in SQL Server vNext for availability groups
+## New in SQL Server 2017 for availability groups
 
-SQL Server vNext introduces new features for availability groups.
+SQL Server 2017 introduces new features for availability groups.
 
 **CLUSTER_TYPE**
 Use with `CREATE AVAILABILITY GROUP`. Identifies the type of server cluster manager that manages an availability group. Can be one of the following types:
@@ -105,7 +105,7 @@ For more information about these options, see [CREATE AVAILABILITY GROUP](http:/
 
 **Guarantee commits on synchronous secondary replicas**
 
-Use `REQUIRED_COPIES_TO_COMMIT` with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set to a value higher than 0, transactions at the primary replica databases will wait until the transaction is committed on the specified number of **synchronous secondary** replica database transaction logs. If enough synchronous secondary replicas are not online, write transactions to primary replica will stop until communication with sufficient secondary replicas resume.
+Use `REQUIRED_COPIES_TO_COMMIT` with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set to a value higher than 0, transactions at the primary replica databases will wait until the transaction is committed on the specified number of **synchronous secondary** replica database transaction logs. If enough synchronous secondary replicas are not online, all connections to primary replica will be rejected until communication with sufficient secondary replicas resume.
 
 **Read-scale availability groups**
 

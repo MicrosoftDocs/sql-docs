@@ -24,7 +24,7 @@ This topic describes the overall security architecture that is used to connect t
 
 ## Security Overview
 
-A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] login or Windows user account is required to run R scripts that use SQL Server data or that run with SQL Server as the compute context. This requirement applies to both [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] and SQL Server vNext Machine Learning Services. 
+A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] login or Windows user account is required to run R scripts that use SQL Server data or that run with SQL Server as the compute context. This requirement applies to both [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] and SQL Server 2017 Machine Learning Services. 
 
 The login or user account identifies the *security principal*, who might need multiple levels of access, depending on the R script requirements:
 + Permission to access the database where R is enabled

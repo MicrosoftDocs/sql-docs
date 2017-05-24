@@ -22,20 +22,20 @@ Machine Learning Services in SQL Server is designed to support data science task
 
 + In SQL Server 2016, you can work with your favorite R tools, but scale your analysis to billions of records while boosting performance. Integrating machine learning with SQL Server also means that you can put R code into production without having to re-code.
 
-+ SQL Server vNext adds support for Python code, using the same extensibility framework.
++ SQL Server 2017 adds support for Python code, using the same extensibility framework.
 
 This topic describes the key scenarios for using R or Python in-database, and provides resources to help you get started with your own solutions.
 
-Applies to: SQL Server 2016 R Services, SQL Server vNext Machine Learning Services (In-Database)
+Applies to: SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
 
 > [!NOTE]
-> SQL Server 2016 includes support only for the R language. Support for Python language requires SQL Server vNext CTP 2.0.
+> SQL Server 2016 includes support only for the R language. Support for Python language requires SQL Server 2017 CTP 2.0.
 
 ## Step 1. Set Up SQL Server Machine Learning Services
 
 1. Run SQL Server setup and install at least one instance of the SQL Server database engine.
 2. Add the feature that supports execution of external runtimes.
-3. In SQL Server 2016, R is added by default. In SQL Server vNext, you must select a language to add. You can select either R or Python, or enable both.
+3. In SQL Server 2016, R is added by default. In SQL Server 2017, you must select a language to add. You can select either R or Python, or enable both.
 4. When setup is done, perform some additional steps to enable external script execution, and restart the server.
 
 **Resources**
@@ -53,16 +53,16 @@ With Machine Learning Services in SQL Server, there is no need to change this pr
 
 ![rsql_keyscenario2](media/rsql-keyscenario2.png) 
 
-+ **Use the R or Python IDE you prefer**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] client components provide the data scientist with all the tools needed to experiment and develop. These tools include the R runtime, the Intel math kernel library to boost the performance of standard R operations, and a set of enhanced R packages that support executing R code in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
++ **Use the IDE you prefer**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] client components provide the data scientist with all the tools needed to experiment and develop. These tools include the R runtime, the Intel math kernel library to boost the performance of standard R operations, and a set of enhanced R packages that support executing R code in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 + **Work remotely or locally**. Data scientists can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and bring the data to the client for local analysis, as usual. However, a better solution is to use the **ScaleR** APIs to push computations to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, avoiding costly and insecure data movement.
 
-+ **Embedd R or Python scripts in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures**. When your code is fully optimized, wrap it in a stored procedure to avoid unnecessary data movement and optimize data processing tasks.
++ **Embed R or Python scripts in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures**. When your code is fully optimized, wrap it in a stored procedure to avoid unnecessary data movement and optimize data processing tasks.
 
 
 **Resources**
 
-+ Install [R Tools for Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx) or RStudio.  
++ Install [R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation) or RStudio.  
 
 ## Step 3. Optimize
 
@@ -76,7 +76,7 @@ Traditionally data scientists using R have had problems with both performance an
 
 + **RevoScaleR**.: This R package contains implementations of some of the most popular R functions, redesigned to provide parallelism and scale. The package also includes functions that further boost  performance and scale by pushing computations to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, which typically has far greater memory and computational power.
 
-+ **revoscalepy**. This Python library, new and available only in SQL Server vNext CTP 2.0, implements the most popular functions in RevoScaleR, such as remote compute contexts, and many algorithms that support distributed processing.
++ **revoscalepy**. This Python library, new and available only in SQL Server 2017 CTP 2.0, implements the most popular functions in RevoScaleR, such as remote compute contexts, and many algorithms that support distributed processing.
 
 + Choose the best language for the task.  R is best for statistical computations that are difficult to implement using SQL. For set-based operations over data, leverage the power of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to achieve maximum performance. Use the in-memory database engine for very fast computations over columns.
 
@@ -119,7 +119,7 @@ Learn how to use the RevoScaleR package for scalable and high performance analys
 
 Especially for the data developer -- all R code provided! Learn how to embed R in SQL stored procedures to create or train models, and get predictions from a stored model.
 
-+ [In-Database Advanced Analytics for SQL Developers](../tutorials/sqldev-in-database-advanced-analytics-for-sql-developers.md)
++ [In-Database Advanced Analytics for SQL Developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Learn the syntax for calling R from a stored procedure.
 

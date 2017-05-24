@@ -18,8 +18,6 @@ manager: "erikre"
 # Invoke-ProcessTable cmdlet
   Conducts the **Process** operation on a **Table** with a specific **RefreshType**.  
   
- This cmdlet applies only to   Tabular models at SQL Server 2016 compatibility level 1200.  
-  
 ## Syntax  
  `Invoke-ProcessTable [-DatabaseName] <string> [-TableName] <string> [-RefreshType] <RefreshType> {Full |     ClearValues | Calculate | DataOnly | Automatic | Add | Defragment} [-Server <string>] [-Credential <pscredential>     [-WhatIf] [-Confirm]  [<CommonParameters>]`  
   
@@ -61,7 +59,7 @@ manager: "erikre"
 |Accept wildcard characters?|false|  
   
 ### -RefreshType \<Microsoft.AnalysisServices.RefreshType>  
- Specifies the process type for a Tabular database at compatibility level 1200.  Valid values are  Full, ClearValues, Calculate, DataOnly,  Automatic, Add, and  Defragment. See [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) for descriptions and guidance.  
+ Specifies the process type for a Tabular database.  Valid values are  Full, ClearValues, Calculate, DataOnly,  Automatic, Add, and  Defragment. See [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) for descriptions and guidance.  
   
 |||  
 |-|-|  

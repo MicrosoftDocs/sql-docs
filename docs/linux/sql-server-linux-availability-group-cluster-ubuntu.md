@@ -34,6 +34,25 @@ This document explains how to create a two-node cluster on Ubuntu and add a prev
 
 The following sections walk through the steps to set up a failover cluster solution. 
 
+## Roadmap
+
+The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+
+1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
+
+2. [Create the availability group](sql-server-linux-availability-group-failover-ha.md). 
+
+3. Configure a cluster resource manager, like Pacemaker. These instructions are in this document.
+   
+   The way to configure a cluster resource manager depends on the specific Linux distribution. 
+
+   >[!IMPORTANT]
+   >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
+   
+   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) for more information.
+
+5.  [Add the availability group as a resource in the cluster](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource). 
+
 ## Install and configure Pacemaker on each cluster node
 
 1. On all nodes open the firewall ports. Open the port for the Pacemaker high-availability service, SQL Server instance, and the availability group endpoint. The default TCP port for server running SQL Server is 1433.  
@@ -117,13 +136,6 @@ The following command creates a two node cluster. Before you run the script, rep
    >[!NOTE]
    >If you previously configured a cluster on the same nodes, you need to use '--force' option when running 'pcs cluster setup'. Note this is equivalent to running 'pcs cluster destroy' and pacemaker service needs to be reenabled using 'sudo systemctl enable pacemaker'.
 
-## Install SQL Server resource agent for integration with Pacemaker
-
-Run the following commands on all nodes. 
-
-```bash
-sudo apt-get install mssql-server-ha
-```
 
 ## Configure fencing (STONITH)
 Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again. 
@@ -139,6 +151,24 @@ sudo pcs property set stonith-enabled=false
 
 >[!IMPORTANT]
 >Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that at this point there are no fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
+
+## Set cluster property start-failure-is-fatal to false
+
+`Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will take care of demoting the replica to secondary and it will automatically rejoin the availability group. 
+To update the property value to `false` run:
+
+```bash
+pcs property set start-failure-is-fatal=false
+```
+If the property has the default value of `true`, if first attempt to start the resource fails, user intervention is required after an automatic failover to cleanup the resource failure count and reset the configuration using: `pcs resource cleanup <resourceName>` command.
+
+## Install SQL Server resource agent for integration with Pacemaker
+
+Run the following commands on all nodes. 
+
+```bash
+sudo apt-get install mssql-server-ha
+```
 
 ## Create a SQL Server login for Pacemaker
 

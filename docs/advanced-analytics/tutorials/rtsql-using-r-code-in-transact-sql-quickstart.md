@@ -36,7 +36,7 @@ This tutorial walks you through the basic mechanics of calling an R script from 
 
 ## Prerequisites
 
-You must have access to an instance of SQL Server where R Services is already installed. The instance can be in an Azure virtual machine or on-premises. YOu can use either SQL Server 2016 or SQL Server vNext.
+You must have access to an instance of SQL Server where R Services is already installed. The instance can be in an Azure virtual machine or on-premises. YOu can use either SQL Server 2016 or SQL Server 2017.
 
 
 To run SQL queries that include R script, use SQL Server Management Studio (SSMS), Visual Studio, or any other application that can connect to a database and run ad hoc T-SQL code. To demonstrate how easy it is to run R inside SQL Server, we'll use the new **mssql extension for Visual Studio Code**, a free development environment that can run on Linux, macOS, or Windows. To install it, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).

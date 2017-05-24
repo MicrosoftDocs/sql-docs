@@ -1,7 +1,7 @@
 ---
 title: "(Backslash) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/26/2017"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,7 +42,8 @@ manager: "jhubbard"
   
 \  breaks a long string constant into two or more lines for readability.  
   
-
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -75,11 +76,11 @@ def' AS ColumnResult;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `ColumnResult`  
-  
- `------------`  
-  
- `abcdef`  
+ ```  
+ ColumnResult  
+ ------------  
+ abcdef
+ ```    
   
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

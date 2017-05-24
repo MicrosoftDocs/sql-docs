@@ -1,8 +1,8 @@
 ---
 title: "INSERT (SQL Graph) | Microsoft Docs"
 description: INSERT syntax for SQL Graph node or edge tables. 
-ms.date: "04/19/2017"
-ms.prod: "sql-vnext"
+ms.date: "05/12/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,7 +24,7 @@ manager: "jhubbard"
 # INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
-  Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#Examples).  
+  Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]   
 >  For standard Transact-SQL statements, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
@@ -162,6 +162,6 @@ Before bulk inserting into an edge table, the node tables must be imported. Valu
   
 ## See Also  
  [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-  
+ [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

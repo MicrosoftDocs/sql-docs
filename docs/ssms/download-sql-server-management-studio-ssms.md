@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/03/2017"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,15 +29,18 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # Download SQL Server Management Studio (SSMS)
-SQL Server Management Studio (SSMS) is an integrated environment for accessing, configuring, managing, administering, and developing all components of SQL Server. SSMS combines a broad group of graphical tools with a number of rich script editors to provide developers and administrators of all skill levels access to SQL Server. This release features improved compatibility with previous versions of SQL Server, a stand-alone web installer, and toast notifications within SSMS when new releases become available.  
+SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL from wherever you deploy it. SSMS provides tools to deploy, monitor, and upgrade the data-tier components, such as databases and data warehouses used by your applications, and to build queries and scripts. 
 
+This release features improved compatibility with previous versions of SQL Server, a stand-alone web installer, and toast notifications within SSMS when new releases become available.  
+
+SSMS is free! Download it below!
     
 ![download](../ssdt/media/download.png) **[Download SQL Server Management Studio 17.1](https://go.microsoft.com/fwlink/?linkid=849819)** 
 
 ![download](../ssdt/media/download.png) **[Download SQL Server Management Studio 17.1 Upgrade Package (upgrades 17.0 to 17.1)](https://go.microsoft.com/fwlink/?linkid=849821)**
 
 > [!NOTE]
-> SSMS 17.X is the latest generation of SQL Server Management Studio and provides support for SQL Server 2017.  SSMS is free! It does not require a license to install and use.  
+> SSMS 17.X is the latest generation of SQL Server Management Studio and provides support for SQL Server 2017. 
 
 > [!NOTE]
 > The SQL Server PowerShell module is now a separate install through the PowerShell Gallery.  Please see the [download instructions](download-sql-server-ps-module.md) for more information.
@@ -49,7 +52,7 @@ SQL Server Management Studio (SSMS) is an integrated environment for accessing, 
 The release number: 17.1  
 The build number for this release: 14.0.17119.0
   
-**Supported SQL Server versions**  
+**Supported SQL offerings**  
   
 * This version of SSMS works with all [supported versions of SQL Server (SQL Server 2008 - SQL Server 2017)](https://support.microsoft.com/en-us/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database, and Azure SQL Data Warehouse.  
 * There is no explicit block for SQL Server 2000 or SQL Server 2005, but some features may not work properly.  

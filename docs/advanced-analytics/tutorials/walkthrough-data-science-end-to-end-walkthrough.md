@@ -35,7 +35,7 @@ This walkthrough is intended for R or SQL developers. It provides an introductio
   
 **Prerequisites**  
   
-+ You must have access to an instance of SQL Server 2016, or an evaluation version of SQL Server vNext. 
++ You must have access to an instance of SQL Server 2016, or an evaluation version of SQL Server 2017. 
 + At least one instance on the SQL Server computer must have [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] installed. 
 + To run R commands, you'll need a separate computer that has an R IDE and the Microsoft R Open libraries. It can be a laptop or other networked computer, but it must be able to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
@@ -56,7 +56,7 @@ Note that the estimated times do not include setup.
 ### Notes
 
 + The walkthrough is designed to introduce R developers to [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], so R is used whever possible. This does not mean that R is necessarily the best tool for each task. In many cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might provide better performance, particularly for tasks such as data aggregation and feature engineering.  Such tasks can particularly benefit from new features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], such as memory optimized columnstore indexes. We'll point out possible optimizations along the way. 
-+ The walkthrough was originally developed for and tested on SQL Server 2016. However, screenshots and procedures have been updated to use the latest version of SQL Server Management Studio, which works with SQL Server vNext.
++ The walkthrough was originally developed for and tested on SQL Server 2016. However, screenshots and procedures have been updated to use the latest version of SQL Server Management Studio, which works with SQL Server 2017.
   
 ## Next Step  
 [Lesson 1: Prepare the Data &#40;Data Science End-to-End Walkthrough&#41;](../../advanced-analytics/r-services/lesson-1-prepare-the-data-data-science-end-to-end-walkthrough.md)  

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Get started with SQL Server on Linux | Microsoft Docs
-description: This topic provides a learning path for getting started with SQL Server vNext on Linux. It also includes links to other resources for each step.
+description: This topic provides a learning path for getting started with SQL Server 2017 on Linux. It also includes links to other resources for each step.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -26,16 +26,16 @@ ms.custom: H1Hack27Feb2017
 ---
 # Find resources for installing and using SQL Server on Linux
 
-Get started using SQL Server vNext CTP 2.0 on Linux. Here are basic steps with links to how-to information.
+Get started using SQL Server 2017 CTP 2.1 on Linux. Here are basic steps with links to how-to information.
 
 ## 1: Install Linux
 If you do not already have a Linux machine, install Linux on a physical server or a virtual machine (VM). Review the [Release notes](sql-server-linux-release-notes.md) on supported platforms and requirements.
 
 > [!NOTE]
-> One option is to create use a pre-configured Linux VM in Azure. In addition to OS-only VMs, there is also a VM image with SQL Server vNext CTP 2.0 already installed. For more information, see [Provision a Linux VM in Azure for SQL Server](sql-server-linux-azure-virtual-machine.md). 
+> One option is to create use a pre-configured Linux VM in Azure. In addition to OS-only VMs, there is also a VM image with SQL Server 2017 CTP 2.1 already installed. For more information, see [Provision a Linux VM in Azure for SQL Server](sql-server-linux-azure-virtual-machine.md). 
 
 ## 2: Install SQL Server
-Next, set up SQL Server vNext on your Linux machine, or run the Docker image, using one of the following guides:
+Next, set up SQL Server 2017 on your Linux machine, or run the Docker image, using one of the following guides:
 
 | Platform | Installation |
 |-----|-----|
@@ -61,7 +61,7 @@ After installation, connect to the running SQL Server instance on your Linux mac
 | SQL Server Data Tools (SSDT) | [Use SSDT with SQL Server on Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## 4: Explore SQL Server capabilities on Linux
-SQL Server vNext has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux.
+SQL Server 2017 has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux.
 
 If you are already familiar with SQL Server, you'll want to review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release.
 

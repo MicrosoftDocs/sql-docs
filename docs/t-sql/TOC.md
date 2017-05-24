@@ -1,5 +1,7 @@
 # [Overview](language-reference.md)  
 
+# [Recently Updated Articles for Transact-SQL](t-sql-new-updated-sql-docs-pr.md)
+
 # [Data types](../t-sql/data-types/data-types-transact-sql.md)
 # [Database Console Commands](../t-sql/database-console-commands/database-console-commands.md)
 # [Functions](../t-sql/functions/functions.md)

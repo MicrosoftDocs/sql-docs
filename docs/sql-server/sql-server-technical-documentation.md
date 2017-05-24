@@ -35,7 +35,6 @@ manager: "jhubbard"
 
 - [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-- [Download
  
 **SQL Server 2016:**
  

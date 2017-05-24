@@ -65,7 +65,7 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 <!-- git diff --ignore-all-space --unified=0 ff467bf5fcf13592c796836def36e16e34f8cc31 99fcf0399006de16d0ac7cc9057564d307cb981b -->
 
 
-
+```
 INSERT INTO Person VALUES (1,'John');
 INSERT INTO Person VALUES (2,'Mary');
 INSERT INTO Person VALUES (3,'Alice');
@@ -106,7 +106,7 @@ INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 5),
 
 INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 1),
       (SELECT $node_id FROM City WHERE id =1));
-
+```
 
 
 

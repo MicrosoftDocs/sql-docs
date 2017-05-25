@@ -33,23 +33,23 @@ The Microsoft ODBC Driver for SQL Server can be used to create new applications.
 ## Documentation  
 This documentation for the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] includes:  
   
-*   [Release Notes](../../../connect/odbc/windows/release-notes.md)  
-*   [Features of the Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
-*   [System Requirements, Installation, and Driver Files](../../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)  
-*   [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
-*   [Asynchronous Execution &#40;Notification Method&#41; Sample](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
-*   [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
-*   [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
-*   [Using Azure Active Directory with the ODBC Driver](../../../connect/odbc/using-azure-active-directory.md) 
-*   [Using Transparent Network IP Resolution](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
+-   [Release Notes](../../../connect/odbc/windows/release-notes.md)  
+-   [Features of the Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
+-   [System Requirements, Installation, and Driver Files](../../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)  
+-   [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
+-   [Asynchronous Execution &#40;Notification Method&#41; Sample](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
+-   [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
+-   [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+-   [Using Azure Active Directory with the ODBC Driver](../../../connect/odbc/using-azure-active-directory.md) 
+-   [Using Transparent Network IP Resolution](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
   
 ## Community  
-* [Microsoft ODBC Driver For SQL Server Team blog](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
-* [SQL Server Data Access Forum](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [Microsoft ODBC Driver For SQL Server Team blog](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server Data Access Forum](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
 ## See Also  
-* [About SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-* [Building Applications with SQL Server Native Client](https://msdn.microsoft.com/library/ms130904.aspx)   
-* [SQL Server Native Client FAQ](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
-* [ODBC Programmer's Reference](../../../odbc/reference/odbc-programmer-s-reference.md)   
-* [SQL Server Native Client (ODBC)](https://msdn.microsoft.com/library/ms131415.aspx)  
+- [About SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
+- [Building Applications with SQL Server Native Client](https://msdn.microsoft.com/library/ms130904.aspx)   
+- [SQL Server Native Client FAQ](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
+- [ODBC Programmer's Reference](../../../odbc/reference/odbc-programmer-s-reference.md)   
+- [SQL Server Native Client (ODBC)](https://msdn.microsoft.com/library/ms131415.aspx)  

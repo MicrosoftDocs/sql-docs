@@ -142,13 +142,13 @@ sudo apt-get install unixodbc-dev
 
 ### OS X 10.11 (El Capitan) and macOS 10.12 (Sierra)
 1. Install [homebrew](https://brew.sh):
-    * `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+    - `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 3. Add msodbcsql tap:
-    * `brew tap microsoft/msodbcsql https://github.com/Microsoft/homebrew-msodbcsql`
+    - `brew tap microsoft/msodbcsql https://github.com/Microsoft/homebrew-msodbcsql`
 4. Update homebrew:
-    * `brew update`
+    - `brew update`
 5. Install msodbcsql package:
-    * `brew install msodbcsql`
+    - `brew install msodbcsql`
 
 ## Microsoft ODBC Driver 13 for SQL Server
 
@@ -223,17 +223,17 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 
 ### Offline installation
 If you prefer/require the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 to be installed on a computer with no internet connection, you will need to resolve package dependencies manually. The [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 has the following direct dependencies:
-* Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
-* Red Hat: glibc, e2fsprogs, krb5-libs, openssl, unixODBC
-* SuSE: glibc, libuuid1, krb5, openssl, unixODBC
+- Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
+- Red Hat: glibc, e2fsprogs, krb5-libs, openssl, unixODBC
+- SuSE: glibc, libuuid1, krb5, openssl, unixODBC
 
 Each of these packages in turn has their own dependencies which may or may not be present on the system. For a general solution to this issue, refer to your distribution's package manager documentation: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), and [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 It is also common to manually download all the dependent packages and place them together on the installation computer, then manually install each package in turn, finishing with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 package.
 
 #### Redhat Linux Enterprise Server 7
-  * Download the latest msodbcsql .rpm from here: http://packages.microsoft.com/rhel/7/prod/
-  * Install dependencies and the driver
+  - Download the latest msodbcsql .rpm from here: http://packages.microsoft.com/rhel/7/prod/
+  - Install dependencies and the driver
   
 ```
 yum install glibc e2fsprogs krb5-libs openssl unixODBC unixODBC-devel #install dependencies
@@ -241,8 +241,8 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### Ubuntu 16.04
-* Download the latest msodbcsql .deb from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
-* Install dependencies and the driver 
+- Download the latest msodbcsql .deb from here: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Install dependencies and the driver 
 
 ```
 sudo apt-get install libc6 libstdc++6 libkrb5-3 libcurl3 openssl debconf unixodbc unixodbc-dev #install dependencies
@@ -250,8 +250,8 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### SUSE Linux Enterprise Server 12
-* Download the latest msodbcsql .rpm from here: http://packages.microsoft.com/sles/12/prod/
-* Install the dependencies and the driver
+- Download the latest msodbcsql .rpm from here: http://packages.microsoft.com/sles/12/prod/
+- Install the dependencies and the driver
 
 ```
 zypper install glibc, libuuid1, krb5, openssl, unixODBC unixODBC-devel #install dependencies

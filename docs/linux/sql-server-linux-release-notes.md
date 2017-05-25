@@ -154,7 +154,9 @@ The following sections describe known issues with this release of SQL Server 201
 
 - SqlPackage shows the location of files with a "C:\\" prefix.
 
-    
+#### SQL Server Integration Services (SSIS)
+SQL Server Integration Services (SSIS) has the following limitations on Linux. For more information, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
+
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
 

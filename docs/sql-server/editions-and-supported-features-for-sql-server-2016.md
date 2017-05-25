@@ -1,3 +1,3 @@
 --- 
-redirect_url: editions-and-components-of-sql-server-2016.md
+redirect_url: editions-and-components-of-sql-server-2016
 --- 

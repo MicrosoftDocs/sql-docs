@@ -1,7 +1,7 @@
 ---
 title: "Claims to Windows Token Service (c2WTS) and Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/03/2016"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,6 +21,9 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Claims to Windows Token Service (c2WTS) and Reporting Services
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
   The SharePoint Claims to Windows Token Service (c2WTS) is required with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode if you want to use Windows Authentication for data sources that are outside the SharePoint farm. This is true even if the user accesses the data sources with Windows Authentication because the communication between the web front-end (WFE) and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service will always be Claims Authentication.  
   
  c2WTS is needed even if your data source(s) are on the same computer as the shared service. However in this scenario, constrained delegation is not needed.  
@@ -29,16 +32,12 @@ manager: "erikre"
   
  If your environment will use Kerberos constrained delegation, then the SharePoint Server service and external data sources need to reside in the same Windows domain. Any service that relies on the Claims to Windows token service (c2WTS) must use Kerberos **constrained** delegation to allow c2WTS to use Kerberos protocol transition to translate claims into Windows credentials. These requirements are true for all SharePoint Shared Services. For more information, see [Plan for Kerberos authentication in SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx).  
   
- The procedure is summarized in this topic.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2016 &#124; SharePoint 2013|  
-  
-## Prerequisites  
-  
-> [!NOTE]  
->  Note: Some of the configuration steps may change, or may not work in certain farm topologies. For instance, a single server install does not support the Windows Identity Foundation c2WTS services so claims to windows token delegation scenarios are not possible with this farm configuration. 
+ The procedure is summarized in this topic.
+
+## Prerequisites
+
+> [!NOTE]
+>  Note: Some of the configuration steps may change, or may not work in certain farm topologies. For instance, a single server install does not support the Windows Identity Foundation c2WTS services so claims to windows token delegation scenarios are not possible with this farm configuration.
 
 > [!IMPORTANT]
 > If you are using Power View to work against Power Pivot workbooks, you will need to do additional configuration for [Office Online Server overview](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx). For more information, see the following white papers. 
@@ -106,10 +105,11 @@ manager: "erikre"
       </windowsTokenService>  
     </configuration>  
     ```    
-4.  Start the SharePoint ‘Claims to Windows Token Service’: Start the Claims to Windows Token Service through SharePoint Central Administration on the **Manage Services on Server** page. The service should be started on the server that will be performing the action. For example if you have a server that is a WFE and another server that is an Application Server that has the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service running, you only need to start c2WTS on the Application Server. c2WTS is not needed on the WFE.  
-  
-## See Also  
- [Claims to Windows Token Service (c2WTS) Overview](http://msdn.microsoft.com/library/ee517278.aspx)   
- [Plan for Kerberos authentication in SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx)  
-  
-  
+4.  Start the SharePoint ‘Claims to Windows Token Service’: Start the Claims to Windows Token Service through SharePoint Central Administration on the **Manage Services on Server** page. The service should be started on the server that will be performing the action. For example if you have a server that is a WFE and another server that is an Application Server that has the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service running, you only need to start c2WTS on the Application Server. c2WTS is not needed on the WFE.
+
+## Next steps
+
+[Claims to Windows Token Service (c2WTS) Overview](http://msdn.microsoft.com/library/ee517278.aspx)   
+[Plan for Kerberos authentication in SharePoint 2013](http://technet.microsoft.com/library/ee806870.aspx)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

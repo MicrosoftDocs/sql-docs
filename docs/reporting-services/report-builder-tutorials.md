@@ -1,7 +1,7 @@
 ---
 title: "Report Builder Tutorials | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/15/2016"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,6 +18,9 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Report Builder Tutorials
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Use the following Report Builder tutorials to learn how to create basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports.  
   
 [Prerequisites for Tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)  

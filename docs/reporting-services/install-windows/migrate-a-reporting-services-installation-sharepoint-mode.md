@@ -1,7 +1,7 @@
 ---
 title: "Migrate a Reporting Services Installation (SharePoint Mode) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2016"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,14 +16,14 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Migrate a Reporting Services Installation (SharePoint Mode)
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
   This topic is an overview of the steps needed to migrate a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment from one SharePoint environment to another. The specific steps can be different depending on the version you are migrating from. For more information on Upgrade and Migration scenarios for SharePoint mode, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md). If you only want to copy the report items from one server to another, see [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode deployment, see [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 and SharePoint 2016|  
   
  A common reason you complete a migration is when you want to upgrade your SharePoint 2010 deployment to SharePoint 2013/2016. SharePoint 2013/2016 does not support in-place upgrade from SharePoint 2010 and you must complete the procedure of **database-attach upgrade** or a content only migration.  
   
@@ -126,8 +126,9 @@ manager: "erikre"
   
 -   [Overview of the upgrade process to SharePoint 2013 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx).  
   
-## See Also  
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
-  
-  
+## Next steps
+
+[Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Migrate a Reporting Services Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

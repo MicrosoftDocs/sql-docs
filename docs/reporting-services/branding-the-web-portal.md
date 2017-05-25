@@ -1,7 +1,7 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/18/2017"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,7 +15,11 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Branding the web portal
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package has been designed so you don’t need deep cascading style sheet (CSS) knowledge to create it.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
@@ -238,4 +242,4 @@ You can also **Download** or **Remove** the package. Removing the package will r
         }  
     }  
 
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

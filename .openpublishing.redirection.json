@@ -836,11 +836,6 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/connect/odbc/linux/TOC.md",
-            "redirect_url": "/sql/connect/odbc/linux-mac/TOC",
-            "redirect_document_id": true
-        },
-        {
             "source_path": "docs/connect/odbc/linux/connecting-with-bcp.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-bcp",
             "redirect_document_id": true
@@ -928,11 +923,6 @@
         {
             "source_path": "docs/connect/odbc/linux/using-transparent-network-ip-resolution.md",
             "redirect_url": "/sql/connect/odbc/using-transparent-network-ip-resolution",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/connect/odbc/mac/TOC.md",
-            "redirect_url": "/sql/connect/odbc/linux-mac/TOC",
             "redirect_document_id": false
         },
         {

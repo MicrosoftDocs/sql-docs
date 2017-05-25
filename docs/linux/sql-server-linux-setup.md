@@ -49,8 +49,8 @@ SQL Server 2017 has the following system requirements for Linux:
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |
 | **Disk space** | Minimum 1 GB |
 | **Processor speed** | Minimum 1.4 Ghz |
-| **Processor cores** | 2 |
-| **Processor type** | x86-64-compatible only |
+| **Processor cores** | Minimum 2 |
+| **Processor type** | x64-compatible only |
 
 > [!NOTE]
 > SQL Server Engine has been tested up to 1 TB of memory at this time.

@@ -32,7 +32,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 When connecting with a DSN, you can also add **Trusted_Connection=yes** to the DSN entry in `odbc.ini`.
   
-The `-E` option of `sqlcmd` and the `-T` option of `bcp` can also be used to specify integrated authentication; see [Connecting with `sqlcmd`](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) and [Connecting with `bcp`](../../../connect/odbc/linux-mac/connecting-with-bcp.md) for more information.
+The `-E` option of `sqlcmd` and the `-T` option of `bcp` can also be used to specify integrated authentication; see [Connecting with **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) and [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md) for more information.
 
 Ensure that the client principal which is going to connect to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] is already authenticated with the Kerberos KDC.
   

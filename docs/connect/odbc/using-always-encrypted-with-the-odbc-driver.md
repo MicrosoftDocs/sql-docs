@@ -377,9 +377,9 @@ The ODBC Driver 13.1 for SQL Server also supports custom third-party keystore pr
 
 From the ODBC client perspective, CEKeystoreProvider interactions occur using Set and Get operations on two connection attributes. The two connection attributes are:
 
-* `SQL_COPT_SS_CEKEYSTOREPROVIDER`
+- `SQL_COPT_SS_CEKEYSTOREPROVIDER`
 
-* `SQL_COPT_SS_CEKEYSTOREDATA`
+- `SQL_COPT_SS_CEKEYSTOREDATA`
 
 The former is used to load and query loaded keystore providers, while the latter enables application-provider communications. These connection attributes may be used at any time, before or after establishing a connection, since application-provider interaction does not involve communication with SQL Server. However, because the driver has not been loaded yet, setting and getting these attributes before connecting will cause them to be processed by the Driver Manager and may not yield the expected results.
 
@@ -427,7 +427,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`Attribute`|[Input] Attribute to retrieve: the `SQL_COPT_SS_CEKEYSTOREPROVIDER` constant.|
 |`ValuePtr`|[Output] A pointer to memory in which to return the next loaded CEKeyStoreProvider name.|
 |`BufferLength`|[Input] The length of the buffer ValuePtr.|
-|`StringLengthPtr`|[Output] A pointer to a buffer in which to return the total number of bytes (excluding the null-termination character) available to return in *ValuePtr. If *ValuePtr is a null pointer, no length is returned. If the attribute value is a character string and the number of bytes available to return is greater than BufferLength minus the length of the null-termination character, the data in *ValuePtr is truncated to BufferLength minus the length of the null-termination character and is null-terminated by the driver.|
+|`StringLengthPtr`|[Output] A pointer to a buffer in which to return the total number of bytes (excluding the null-termination character) available to return in \*ValuePtr. If ValuePtr is a null pointer, no length is returned. If the attribute value is a character string and the number of bytes available to return is greater than BufferLength minus the length of the null-termination character, the data in \*ValuePtr is truncated to BufferLength minus the length of the null-termination character and is null-terminated by the driver.|
 
 To enable enumeration of multiple CEKeyStoreProviders, every Get operation returns the current CEKeyStoreProvider's name, and increments an internal counter to the next one. Once this counter reaches the end of the list, an empty string "" is returned, and the next Get operation will then retrieve the first CEKeyStoreProvider in the list, the one after that the next, etc.
 

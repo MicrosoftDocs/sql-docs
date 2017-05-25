@@ -30,8 +30,6 @@ Microsoft SQL-based technologies offer many built-in security capabilities that 
   
 **Published:** May, 2017  
   
-**Published:** June, 2016  
-  
 **Applies to:** SQL Server (all versions), Azure SQL Database, Azure SQL Data Warehouse, Analytics Platform System 
   
 To review the document, please download the [Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform](http://download.microsoft.com/download/4/9/4/4948194B-A613-49ED-90A5-5144313549AB/microsoft-sql-and-the-gdpr.pdf) document.   

@@ -6,7 +6,7 @@ description: SQL Server 2017 CTP 2.1 now runs on Linux. This topic provides an o
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -39,14 +39,21 @@ SQL Server 2017 CTP 2.1 is supported on the following platforms:
 | **Ubuntu** | 16.04 and 16.10| [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)
 
-## Prerequisites 
+## <a id="system"></a> System requirements
 
-- You need at least 3.25GB of memory to run SQL Server on Linux.
+SQL Server 2017 has the following system requirements for Linux:
 
-    > [!NOTE] 
-    > SQL Server Engine has been tested up to 1 TB of memory at this time.
+|||
+|-----|-----|
+| **Memory** | Minimum 3.25 GB |
+| **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |
+| **Disk space** | Minimum 1 GB |
+| **Processor speed** | Minimum 1.4 Ghz |
+| **Processor cores** | 2 |
+| **Processor type** | x86-64-compatible only |
 
-- The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported. 
+> [!NOTE]
+> SQL Server Engine has been tested up to 1 TB of memory at this time.
 
 ## <a id="platforms"></a> Install SQL Server
 

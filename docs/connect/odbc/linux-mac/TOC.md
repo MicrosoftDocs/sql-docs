@@ -1,5 +1,5 @@
-# [Connecting with `bcp`](connecting-with-bcp.md)
-# [Connecting with `sqlcmd`](connecting-with-sqlcmd.md)
+# [Connecting with **bcp**](connecting-with-bcp.md)
+# [Connecting with **sqlcmd**](connecting-with-sqlcmd.md)
 # [Connection String Keywords and Data Source Names (DSNs)](connection-string-keywords-and-data-source-names-dsns.md)
 # [Data Access Tracing with the ODBC Driver on Linux and macOS](data-access-tracing-with-the-odbc-driver-on-linux.md)
 # [Frequently Asked Questions (FAQ) for ODBC Linux and macOS](frequently-asked-questions-faq-for-odbc-linux.md)

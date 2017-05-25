@@ -36,6 +36,7 @@ This topic explains how to pull and run the [mssql-server-linux container image]
 - Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows.
 - Minimum of 4 GB of disk space
 - Minimum of 4 GB of RAM
+- [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 > [!IMPORTANT]
 > The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you must change it to 4 GB.

@@ -39,7 +39,7 @@ SQL Server 2017 CTP 2.1 is supported on the following platforms:
 | **Ubuntu** | 16.04 and 16.10| [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)
 
-## System Requirements
+## <a id="system"></a> System Requirements
 
 SQL Server 2017 has the following system requirements for Linux:
 

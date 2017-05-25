@@ -63,10 +63,10 @@ You can optionally specify the protocol and port to connect to the server. For e
 To connect to a named instance on a static port, use <b>Server=</b>*servername*,**port_number**. Connecting to a dynamic port is not supported.  
 
 Alternatively, you can add the DSN information to a template file, and execute the following command to add it to `~/.odbc.ini` :
- * **odbcinst -i -s -f** *template_file*  
+ - **odbcinst -i -s -f** *template_file*  
  
 You can verify that your driver is working by using `isql` to test the connection, or you can use this command:
- * **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
+ - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## Using Secure Sockets Layer (SSL)  
 You can use Secure Sockets Layer (SSL) to encrypt connections to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. SSL protects [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] user names and passwords over the network. SSL also verifies the identity of the server to protect against man-in-the-middle (MITM) attacks.  

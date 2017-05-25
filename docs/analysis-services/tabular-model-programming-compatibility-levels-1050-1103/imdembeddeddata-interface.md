@@ -20,7 +20,7 @@ manager: "erikre"
 ---
 # IMDEmbeddedData Interface
 
-[!INCLUDE[ssas-appliesto-sql2016-later](../../includes/ssas-appliesto-sql2016-later.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   The IMDEmbeddedData interface is a public interface used to manage an embedded [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] database or a tabular model database. The interface inherits from the **IPersistStream** interface. The interface allows for the following operations:  
   

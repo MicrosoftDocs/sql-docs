@@ -33,90 +33,90 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 In the current release, the following options are available:  
   
-* -? Display `sqlcmd` usage.  
+- -? Display `sqlcmd` usage.  
   
-* -a Request a packet size.  
+- -a Request a packet size.  
   
-* -b Terminate batch job if there is an error.  
+- -b Terminate batch job if there is an error.  
   
-* -c *batch_terminator* Specify the batch terminator.  
+- -c *batch_terminator* Specify the batch terminator.  
   
-* -C Trust server certificate.  
+- -C Trust server certificate.  
 
-* -d *database_name*  Issue a `USE `*database_name* statement when you start `sqlcmd`.  
+- -d *database_name*  Issue a `USE `*database_name* statement when you start `sqlcmd`.  
 
-* -D Causes the value passed to the `sqlcmd` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
+- -D Causes the value passed to the `sqlcmd` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
   
-* -e Write input scripts to the standard output device (stdout).
+- -e Write input scripts to the standard output device (stdout).
 
-* -E Use trusted connection (integrated authentication.) For more information about making trusted connections that use integrated authentication from a Linux or macOS client, see [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+- -E Use trusted connection (integrated authentication.) For more information about making trusted connections that use integrated authentication from a Linux or macOS client, see [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
 
-* -h *number_of_rows*  Specify the number of rows to print between the column headings.  
+- -h *number_of_rows*  Specify the number of rows to print between the column headings.  
   
-* -H Specify a workstation name.  
+- -H Specify a workstation name.  
   
-* -i *input_file*[,*input_file*[,…]] Identify the file that contains a batch of SQL statements or stored procedures.  
+- -i *input_file*[,*input_file*[,…]] Identify the file that contains a batch of SQL statements or stored procedures.  
   
-* -I  Set the `SET QUOTED_IDENTIFIER` connection option to ON.  
+- -I  Set the `SET QUOTED_IDENTIFIER` connection option to ON.  
   
-* -k  Remove or replace control characters.  
+- -k  Remove or replace control characters.  
   
-* **-K***application_intent*  
+- **-K***application_intent*  
 Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, `sqlcmd` does not support connectivity to a secondary replica in an AlwaysOn availability group. For more information, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-K** is not supported in the CTP for SUSE Linux. You can, however, specify the **ApplicationIntent=ReadOnly** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
   
-* -l *timeout* Specify the number of seconds before a `sqlcmd` login times out when you try to connect to a server.
+- -l *timeout* Specify the number of seconds before a `sqlcmd` login times out when you try to connect to a server.
 
-* -m *error_level* Control which error messages are sent to stdout.  
+- -m *error_level* Control which error messages are sent to stdout.  
   
-* **-M***multisubnet_failover*  
+- **-M***multisubnet_failover*  
 Always specify **-M** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] availability group or a [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] Failover Cluster Instance. **-M** provides for faster detection of failovers and connection to the (currently) active server. If **–M** is not specified, **-M** is off. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** is not supported in the CTP for SUSE Linux. You can, however, specify the **MultiSubnetFailover=Yes** keyword in a DSN file passed to `sqlcmd`. For more information, see "DSN Support in `sqlcmd` and `bcp`" at the end of this topic.  
   
-* -N Encrypt connection.  
+- -N Encrypt connection.  
   
-* -o *output_file* Identify the file that receives output from `sqlcmd`.  
+- -o *output_file* Identify the file that receives output from `sqlcmd`.  
   
-* -p  Print performance statistics for every result set.  
+- -p  Print performance statistics for every result set.  
   
-* -P  Specify a user password.  
+- -P  Specify a user password.  
   
-* -q *commandline_query*  Execute a query when `sqlcmd` starts, but does not exit when the query has finished running.  
+- -q *commandline_query*  Execute a query when `sqlcmd` starts, but does not exit when the query has finished running.  
 
-* -Q *commandline_query*  Execute a query when `sqlcmd` starts. `sqlcmd` will exit when the query finishes.  
+- -Q *commandline_query*  Execute a query when `sqlcmd` starts. `sqlcmd` will exit when the query finishes.  
 
-* -r Redirects error messages to stderr.
+- -r Redirects error messages to stderr.
 
-* -R Causes the driver to use client regional settings to convert currency and date and time data to character data. Currently only uses en_US (US English) formatting.
+- -R Causes the driver to use client regional settings to convert currency and date and time data to character data. Currently only uses en_US (US English) formatting.
   
-* -s *column_separator_char*  Specify the column-separator character.  
+- -s *column_separator_char*  Specify the column-separator character.  
 
-* -S [*protocol*:] *server*[**,***port*]  
+- -S [*protocol*:] *server*[**,***port*]  
 Specify the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] to connect to, or if -D is used, a DSN. The ODBC driver on Linux and macOS requires -S. Note that **tcp** is the only valid protocol.  
   
-* -t *query_timeout* Specify the number of seconds before a command (or SQL statement) times out.  
+- -t *query_timeout* Specify the number of seconds before a command (or SQL statement) times out.  
   
-* -u Specify that output_file is stored in Unicode format, regardless of the format of input_file.  
+- -u Specify that output_file is stored in Unicode format, regardless of the format of input_file.  
   
-* -U *login_id* Specify a user login ID.  
+- -U *login_id* Specify a user login ID.  
   
-* -V *error_severity_level* Control the severity level that is used to set the ERRORLEVEL variable.  
+- -V *error_severity_level* Control the severity level that is used to set the ERRORLEVEL variable.  
   
-* -w *column_width* Specify the screen width for output.  
+- -w *column_width* Specify the screen width for output.  
   
-* -W Remove trailing spaces from a column.  
+- -W Remove trailing spaces from a column.  
   
-* -x Disable variable substitution.  
+- -x Disable variable substitution.  
   
-* -X Disable commands, startup script, and environment variables.  
+- -X Disable commands, startup script, and environment variables.  
   
-* -y *variable_length_type_display_width* Set the `sqlcmd` scripting variable `SQLCMDMAXFIXEDTYPEWIDTH`.
+- -y *variable_length_type_display_width* Set the `sqlcmd` scripting variable `SQLCMDMAXFIXEDTYPEWIDTH`.
   
-* -Y *fixed_length_type_display_width* Set the `sqlcmd` scripting variable `SQLCMDMAXVARTYPEWIDTH`.
+- -Y *fixed_length_type_display_width* Set the `sqlcmd` scripting variable `SQLCMDMAXVARTYPEWIDTH`.
 
 
 ## Available Commands
@@ -156,13 +156,13 @@ In the current release, the following commands are available:
 ## Unavailable Options
 In the current release, the following options are not available:  
 
-* -A  Log in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] with a Dedicated Administrator Connection (DAC). For information on how to make a dedicated administrator connection (DAC), see [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+- -A  Log in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] with a Dedicated Administrator Connection (DAC). For information on how to make a dedicated administrator connection (DAC), see [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
-* -f *code_page* Specify the input and output code pages.  
+- -f *code_page* Specify the input and output code pages.  
   
-* -L  List the locally configured server computers, and the names of the server computers that are broadcasting on the network.  
+- -L  List the locally configured server computers, and the names of the server computers that are broadcasting on the network.  
   
-* -v  Create a `sqlcmd` scripting variable that can be used in a `sqlcmd` script.  
+- -v  Create a `sqlcmd` scripting variable that can be used in a `sqlcmd` script.  
   
 You can use the following alternative method: Put the parameters inside one file, which you can then append to another file. This will help you use a parameter file to replace the values. For example, create a file called `a.sql` (the parameter file) with the following content:
   
@@ -183,9 +183,9 @@ Run `sqlcmd` and use `c.sql` as input file:
   
     slqcmd -S<…> -P<..> –U<..> -I c.sql  
 
-* -z *password* Change password.  
+- -z *password* Change password.  
   
-* -Z *password* Change password and exit.  
+- -Z *password* Change password and exit.  
 
 ## Unavailable Commands
 
@@ -224,5 +224,5 @@ If the same option is specified in both the DSN and the `sqlcmd` or `bcp` comman
 Existing scripts that invoke `isql` can be modified to use `sqlcmd` by defining the following alias: `alias isql="sqlcmd –D"`.  
 
 ## See Also  
-[Connecting with `bcp`](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
  

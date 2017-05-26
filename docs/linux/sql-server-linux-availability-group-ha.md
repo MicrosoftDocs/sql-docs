@@ -117,7 +117,6 @@ The following table describes the data protection behavior according to the poss
 
 The two synchronous replicas architecture may be the most economical because it only requires two instances of SQL Server on two servers.
 
-<a name="pacemakerNotify"></a>
 
 <a name="WitnessReplica"></a>
 
@@ -163,6 +162,8 @@ To create an availability group with a witness replica:
           AVAILABILITY_MODE = WITNESS_COMMIT
       )
    ```
+
+<a name="pacemakerNotify"></a>
 
 ## Understand SQL Server resource agent for pacemaker
 

@@ -157,7 +157,7 @@ The following sections describe known issues with this release of SQL Server 201
 #### SQL Server Integration Services (SSIS)
 SSIS packages can be run on Linux. For more information, see [the blog post announcing SSIS support for SQL Server on Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
 
-- The **mssql-server-is** is only supported on Ubuntu at this time.
+- The **mssql-server-is** package is only supported on Ubuntu at this time.
 
 - The following features are not supported when running SSIS packages on Linux:
   - SSIS Catalog DB

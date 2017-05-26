@@ -27,12 +27,8 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 
 This topic provides a walkthrough of how to install SQL Server 2017 CTP 2.1 on SUSE Linux Enterprise Server (SLES) v12 SP2.
 
-> [!NOTE] 
-> You need at least 3.25GB of memory to run SQL Server on Linux.
-> SQL Server Engine has been tested up to 1 TB of memory at this time.
-
 > [!NOTE]
-> The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
+> You need at least 3.25GB of memory to run SQL Server on Linux. Also, the file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported. For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## Install SQL Server
 To install the **mssql-server** package on SLES, follow these steps:

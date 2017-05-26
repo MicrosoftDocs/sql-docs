@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Tabular Model Programming for Compatibility Levels 1050 through 1103
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   Tabular models use relational constructs to model the Analysis Services data used by analytical and reporting applications. These models run on an Analysis Service instance that is configured for tabular mode, using an in-memory analytics engine for storage and fast table scans that aggregate and calculate data as it is requested.  
   
  If the requirements of your custom BI solution are best met by a tabular model database, you can use any of the Analysis Services client libraries and programming interfaces to integrate your application with tabular models on an Analysis Services instance. To query and calculate tabular model data, you can use either embedded MDX or DAX in your code.  

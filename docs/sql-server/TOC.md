@@ -34,7 +34,7 @@
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
-# [Tutorials for SQL Server 2016](tutorials-for-sql-server-2016.md)
+# [Tutorials for SQL Server](tutorials-for-sql-server-2016.md)
 
 # About the documentation
 ## [SQL Server Resources](sql-server-resources.md)

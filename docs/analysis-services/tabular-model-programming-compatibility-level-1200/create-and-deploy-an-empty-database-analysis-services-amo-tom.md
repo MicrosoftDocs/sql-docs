@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Create and deploy an empty database (Analysis Services AMO-TOM)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 A common programming scenario for AMO-TOM is to generate databases and models on the fly. This article walks you through the steps of creating a database. 
 
 For Tabular solutions, there is a one-to-one correspondence between a database and model, with one model per database. You can typically specify one or the other, and the engine will infer the missing object. 

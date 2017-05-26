@@ -103,13 +103,14 @@ The two synchronous replicas configuration is optimized for data protection and 
 The following table describes the data protection behavior according to the possible values for two synchronous replicas availability group. 
 
 |`REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT`|1 \*|0 
-| --- |:---:|:---:
+| --- |:---|:---
 |Automatic failover |✔| | 
 |Data protection |✔| |
-|Automatic failover after primary replica outage|✔\*\*| | 
+|Automatic failover after primary replica outage|✔ \*\*| | 
 |Primary replica available after secondary replica outage| |✔|
 
 \* Default setting when availability group is added as a resource in a cluster.
+
 \*\* In this configuration, after the primary replica outage occurs the availability group automatic fails over. Applications cannot connect to the availability group until the primary replica is back on line - now as a secondary replica. 
 
 The two synchronous replicas configuration may be the most economical because it only requires two instances of SQL Server on two servers.

@@ -1517,7 +1517,7 @@
         },
         {
             "source_path": "docs/sql-server/editions-and-supported-features-for-sql-server-2016.md ",
-            "redirect_url": "editions-and-components-of-sql-server-2016",
+            "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2016",
             "redirect_document_id": false
         }
     ]

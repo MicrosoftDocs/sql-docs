@@ -203,10 +203,7 @@ To create an availability group with a witness replica:
       )
    ```
 
->[!NOTE]
->
-
 <!--Image references-->
-[1]: ./media/sql-server-linux-availability-group-ha/1-read scale-out-out.png
+[1]: ./media/sql-server-linux-availability-group-ha/1-read scale-out-out.pn
 [2]: ./media/sql-server-linux-availability-group-ha/2-witness.png
 [3]: ./media/sql-server-linux-availability-group-ha/3-three-replica.png

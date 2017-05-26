@@ -16,23 +16,23 @@ manager: "jhubbard"
 
 ---
 
-# High availability and data protection for availability group deployment architectures
+# High availability and data protection for availability group configurations
 
-This article presents supported deployment architectures for SQL Server Always On availability groups on Linux servers. An availability group supports high availability and data protection. Automatic failure detection, automatic failover, and transparent reconnection after failover provide high availability. Synchronized replicas provide data protection. 
+This article presents supported deployment configurations for SQL Server Always On availability groups on Linux servers. An availability group supports high availability and data protection. Automatic failure detection, automatic failover, and transparent reconnection after failover provide high availability. Synchronized replicas provide data protection. 
 
 >[!NOTE]
 >In addition to high availability and data protection, an availability group can also provide disaster recovery, cross platform migration, and read scale-out. This article primarily discusses implementations for high availability and data protection. 
 
-With Windows Server failover clustering a common architecture for high availability uses two synchronous replicas and a [file-share witness](http://technet.microsoft.com/library/cc731739.aspx). The file-share witness validates the availability group configuration - status of synchronization, and the role of the replica, for example. This ensures that the secondary replica chosen as the failover target has the latest data and availability group configuration changes. 
+With Windows Server failover clustering a common configuration for high availability uses two synchronous replicas and a [file-share witness](http://technet.microsoft.com/library/cc731739.aspx). The file-share witness validates the availability group configuration - status of synchronization, and the role of the replica, for example. This ensures that the secondary replica chosen as the failover target has the latest data and availability group configuration changes. 
 
 The current high availability solutions for Linux do not accommodate an external witness like the file share witness in a Windows Server failover cluster. When there is no Windows Server failover cluster, the availability group configuration is stored in the SQL Server instances, hence the availability group requires at least three synchronous replicas for high availability and data protection. After you create an availability group on Linux servers you create a cluster resource. The cluster resource settings determine the configuration for high availability.
 
 Choose an availability group design to meet specific business requirements for high availability, data protection, and read scale-out.
 
 >[!IMPORTANT]
->The following architectures describe three availability group design patterns and the capabilities of each pattern. These design patterns apply to availability groups with `CLUSTER_TYPE = EXTERNAL` for high availability solutions. 
+>The following configurations describe three availability group design patterns and the capabilities of each pattern. These design patterns apply to availability groups with `CLUSTER_TYPE = EXTERNAL` for high availability solutions. 
 
-The architectures include:
+The design patters are three availability group configuarations. The configurations include:
 
 - **Three synchronous replicas**
 
@@ -40,19 +40,17 @@ The architectures include:
 
 - **Two synchronous replicas availability group**
 
-The architectures allow you to balance costs with business requirements. 
+## How the configuration affects default settings
 
-## How the architecture affects default settings
+The cluster resource setting `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` guarantees that each transaction is written to a minimum number of secondary replica logs before committing the transaction on the primary replica. This setting can affect both high availability and data protection, depending on the configuration. When you install the SQL Server resource agent - `mssql-sserver-ha` - and create the availability group resource, the cluster manager detects the availability group configuration and sets `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` accordingly. 
 
-The cluster resource setting `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` guarantees that each transaction is written to a minimum number of secondary replica logs before committing the transaction on the primary replica. This setting can affect both high availability and data protection, depending on the architecture. When you install the SQL Server resource agent - `mssql-sserver-ha` - and create the availability group resource, the cluster manager detects the availability group architecture and sets `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` accordingly. 
-
-If supported by the architecture, the resource agent parameter `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to the value that provides high availability and data protection.  If the architecture cannot support both, the default is set for high availability. If the architecture cannot support high availability, the default is set for data protection. For more information, see [Understand SQL Server resource agent for pacemaker](#pacemakerNotify).
+If supported by the configuration, the resource agent parameter `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to the value that provides high availability and data protection.  If the configuration cannot support both the default is set for data protection. For more information, see [Understand SQL Server resource agent for pacemaker](#pacemakerNotify).
 
 The following sections explain the default behavior for the cluster resource. 
 
 ## Three synchronous replicas
 
-This architecture consists of three synchronous replicas. By default, it provides high availability and data protection. It can also provide read scale-out.
+This configuration consists of three synchronous replicas. By default, it provides high availability and data protection. It can also provide read scale-out.
 
 ![Three replicas][3]
 
@@ -65,26 +63,25 @@ The following table describes the high availability and data protection behavior
 |High availability| |✔| 
 |Data protection | |✔|✔|
 |Automatic failover after primary replica outage| |✔| 
-|Primary replica available after one secondary replica outage| |✔| 
-|Primary replica available after two secondary replica outages|✔| |  
+|Primary replica available after one secondary replica outage|✔|✔| 
+|Primary replica available after two secondary replica outages|✔| |
+|Manual failover after primary replica outage - possible data loss|✔| | 
 \* Default setting when availability group is added as a resource in a cluster.
 
 ## Two synchronous replicas and a witness replica
 
-This architecture has two synchronous replicas and a witness replica to enable high availability. The witness replica is introduced in SQL Server 2017 CTP 2.4. In this architecture, the servers have the roles of primary replica, secondary replica, or witness replica. The witness replica contains configuration data about the availability group, but not a copy of the availability group user databases. The witness replica requires a SQL Server instance with SQL Server Express edition or higher. 
+This configuration has two synchronous replicas and a witness replica to enable high availability. The witness replica is introduced in SQL Server 2017 CTP 2.4. In this configuration, the servers have the roles of primary replica, secondary replica, or witness replica. The witness replica contains configuration data about the availability group, but not a copy of the availability group user databases. The witness replica requires a SQL Server instance with SQL Server Express edition or higher. 
 
 By default, it provides high availability but not data protection.
 
 ![Witness replica availability group][2]
-
-The Two synchronous replicas and a witness replica availability group may reduce licensing costs because the witness replica can be SQL Server Express Edition. 
 
 The following table describes the high availability and data protection behavior according to the possible values for an availability group with two synchronous replicas and a witness replica. 
 
 |`REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT`|1|0 \*
 | --- |:---:|:---:
 |High availability | |✔| 
-|Data protection |✔| |
+|Data protection |✔|✔|
 |Automatic failover after primary replica outage| |✔| 
 |Primary replica available after secondary replica outage| |✔|
 |Primary replica available after witness replica outage|✔| |
@@ -95,38 +92,38 @@ For additional information, see [More about a witness replica](#WitnessReplica).
 
 ## Two synchronous replicas availability group
 
-A two synchronous replicas availability group enables data protection. Like the other availability group architectures it can enable read scale-out. Two synchronous replicas does not provide high availability. 
+A two synchronous replicas availability group enables data protection. Like the other availability group configurations it can enable read scale-out. Two synchronous replicas does not provide high availability. 
 
 ![Two synchronous replicas][1]
 
-This architecture requires two servers. These servers fill the role of primary replica and secondary replica.
+This configuration requires two servers. These servers fill the role of primary replica and secondary replica.
 
-The two synchronous replicas architecture is optimized for data protection and distributing the read workload for databases. By default, resource is configured for data protection. This architecture does not provide high availability because if either instance of SQL Server fails, either the database will not be fully available or there is risk of data loss. You can configure the two synchronous replicas architecture with or without data protection.
+The two synchronous replicas configuration is optimized for data protection and distributing the read workload for databases. By default, resource is configured for data protection. This configuration does not provide high availability because if either instance of SQL Server fails, either the database will not be fully available or there is risk of data loss. 
 
 The following table describes the data protection behavior according to the possible values for two synchronous replicas availability group. 
 
 |`REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT`|1 \*|0 
 | --- |:---:|:---:
-|Automatic failover | | | 
+|Automatic failover |✔| | 
 |Data protection |✔| |
 |Automatic failover after primary replica outage|✔\*\*| | 
 |Primary replica available after secondary replica outage| |✔|
 
 \* Default setting when availability group is added as a resource in a cluster.
-\*\* In this architecture, after the primary replica outage occurs the availability group automatic fails over. Applications cannot connect to the availability group until the primary replica is back on line - now as a secondary replica. 
+\*\* In this configuration, after the primary replica outage occurs the availability group automatic fails over. Applications cannot connect to the availability group until the primary replica is back on line - now as a secondary replica. 
 
-The two synchronous replicas architecture may be the most economical because it only requires two instances of SQL Server on two servers.
+The two synchronous replicas configuration may be the most economical because it only requires two instances of SQL Server on two servers.
 
 
 <a name="WitnessReplica"></a>
 
 ## More about a witness replica
 
-A witness replica in a SQL Server Always On availability group enables an architecture with high availability and data protection without using a third synchronous secondary replica. Because any edition of SQL Server can host a witness replica, it can save some licensing costs over other availability group architectures. A witness replica contains availability group configuration data like availability group roles, and synchronization status data; it does not include replicated user databases.The witness replica uses the `WITNESS-COMMIT` availability mode. It is never the primary replica.
+A witness replica in a SQL Server Always On availability group enables an configuration with high availability and data protection without using a third synchronous secondary replica. Because any edition of SQL Server can host a witness replica, it can save some licensing costs over other availability group configurations. A witness replica contains availability group configuration data like availability group roles, and synchronization status data; it does not include replicated user databases.The witness replica uses the `WITNESS-COMMIT` availability mode. It is never the primary replica.
 
 Use a witness replica in an availability group with two synchronous replicas - one primary replica and one secondary replica. If an availability group does not include two synchronous replicas, you cannot use a witness replica. You can also include additional asynchronous replicas. The DDL `CREATE AVAILABILITY GROUP` will fail if the group does not include two synchronous replicas. Likewise, you cannot create an availability group with only one primary replica and a witness replica. An availability group cannot include more than one witness replica.
 
-You can use any edition of SQL Server 2017 to host a witness replica. This includes SQL Server Enterprise Edition, Standard Edition, or Express Edition. SQL Server Express edition is available for free. For SQL Server Enterprise Edition, or Standard Edition, if the instance of SQL Server is used exclusively for availability group witness replica, licensing fees are not charged.
+You can use any edition of SQL Server 2017 to host a witness replica. This includes SQL Server Enterprise Edition, Standard Edition, or Express Edition. 
 
 On a witness replica you cannot do the following things:
 
@@ -179,7 +176,7 @@ For example, let's consider the case of an availability group with three synchro
 
 - The required number of replicas to respond to pre-promote action is 3 - 1 = 2. So 2 replicas have to be up for the failover to be triggered. This means that, in the case of primary outage, if one of the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
 
-A user can choose to override the default behavior, and configure the availability group resource to not set `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` automatically as above.
+A user can choose to override the default behavior, and prevent the availability group resource from setting `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` automatically as above.
 
 >[!IMPORTANT]
 >When `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0 there is risk of data loss. In the case of an outage of the primary, the resource agent will not automatically trigger a failover. The user has to decide if they want to wait for primary to recover or manually fail over.

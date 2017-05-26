@@ -30,6 +30,11 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 
 ## What's New in SQL Server 2017 CTP 2.1 (May 2017)
 ### SQL Server Database Engine  
+
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
+## What's New in SQL Server 2017 CTP 2.1 (May 2017)
+### SQL Server Database Engine  
 - A new DMF, [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), is introduced to expose summary level attributes and information on transaction log files; useful for monitoring the health of the transaction log.  
 - This CTP contains bug fixes and performance improvements for the Database Engine.
 - For a detailed list of 2017 CTP enhancements in previous CTP releases, see [What's New in SQL Server 2017 (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).

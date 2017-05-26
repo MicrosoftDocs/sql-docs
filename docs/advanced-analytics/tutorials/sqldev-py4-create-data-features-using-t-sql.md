@@ -1,7 +1,7 @@
 ---
 title: "Step 4: Create Data Features using T-SQL  | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/28/2017"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,7 +15,7 @@ dev_langs:
   - "Python"
   - "TSQL"
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
@@ -39,7 +39,7 @@ You'll use one custom T-SQL function, _fnCalculateDistance_, to compute the dist
     In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expand **Programmability**, expand **Functions** and then **Scalar-valued functions**.
     Right-click _fnCalculateDistance_, and select **Modify** to open the [!INCLUDE[tsql](../../includes/tsql-md.md)] script in a new query window.
   
-    ```  
+    ```SQL
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function that calculates the direct distance between two geographical coordinates
     RETURNS float
@@ -110,7 +110,7 @@ To add the computed value to a table that can be used for training the model, yo
     ```
   
     As you can see, the distance reported by the meter doesn't always correspond to geographical distance. This is why feature engineering is important.
-  
+
 In the next step, you'll learn how to use these data features to create and train a machine learning model using Python.
 
 ## Next Step

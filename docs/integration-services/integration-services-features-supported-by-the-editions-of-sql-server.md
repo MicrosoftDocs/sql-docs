@@ -35,21 +35,21 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Scale Out|Yes|TBD|TBD|TBD|TBD|
+|Scale Out Master|Yes|TBD||||
+|Scale Out Worker|Yes|Yes||||
 |Support for Microsoft Dynamics AX and Microsoft Dynamics CRM in OData components <sup>1</sup>|Yes|Yes||||
 
 <sup>1</sup> This feature is also supported in SQL Server 2016 with Service Pack 1.
-C
+
 ##  <a name="IS"></a> Integration Services  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Built-in data source connectors|Yes|Yes|Yes|Yes|Yes| 
-|Azure data source connectors and tasks|Yes|Yes|Yes|Yes|Yes|  
 |SQL Server Import and Export Wizard|Yes|Yes|Yes|Yes|Yes|  
-|Hadoop / HDFS connectors and tasks|Yes|Yes|Yes|||  
-|SSIS Designer and runtime|Yes|Yes||||  
+|Built-in data source connectors|Yes|Yes|||| 
 |Built in tasks and transformations|Yes|Yes||||  
+|Azure data source connectors and tasks|Yes|Yes||||  
+|Hadoop/HDFS connectors and tasks|Yes|Yes||||  
 |Basic data profiling tools|Yes|Yes|||| 
 |Change Data Capture Service for Oracle by Attunity|Yes|||||  
 |Change Data Capture Designer for Oracle by Attunity|Yes||||| 
@@ -75,4 +75,3 @@ C
 |Data mining query transformation|Yes|||||  
 |Fuzzy grouping and lookup transformations|Yes|||||  
 |Term extractions and lookup transformations|Yes|||||  
-  

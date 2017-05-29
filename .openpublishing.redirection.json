@@ -821,6 +821,156 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/connect/odbc/using-azure-key-vault-odbc.md",
+            "redirect_url": "/sql/connect/odbc/using-always-encrypted-with-the-odbc-driver",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/connecting-with-bcp.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-bcp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
+            "redirect_url": "/sql/connect/odbc/using-transparent-network-ip-resolution",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/connecting-with-bcp.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-bcp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/connecting-with-sqlcmd.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-sqlcmd",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/connection-string-keywords-and-data-source-names-dsns.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/custom-keystore-providers.md",
+            "redirect_url": "/sql/connect/odbc/custom-keystore-providers",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/data-access-tracing-with-the-odbc-driver-on-linux.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/frequently-asked-questions-faq-for-odbc-linux.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/index.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/installing-the-driver-manager.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/installing-the-driver-manager",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/installing-the-microsoft-odbc-driver-for-sql-server-on-linux.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/known-issues-in-this-version-of-the-driver.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/microsoft-odbc-driver-for-sql-server-on-linux.md",
+            "redirect_url": "/sql/connect/odbc/microsoft-odbc-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/programming-guidelines.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/programming-guidelines",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/system-requirements.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/system-requirements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/using-always-encrypted-with-the-linux-odbc-driver.md",
+            "redirect_url": "/sql/connect/odbc/using-always-encrypted-with-the-odbc-driver",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/using-integrated-authentication.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/using-integrated-authentication",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/using-transparent-network-ip-resolution.md",
+            "redirect_url": "/sql/connect/odbc/using-transparent-network-ip-resolution",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/connection-string-keywords-and-data-source-names-dsns.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/frequently-asked-questions-for-odbc-macos.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/index.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/installing-the-microsoft-odbc-driver-for-sql-server-on-macos.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/known-issues-in-this-version-of-the-driver.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac.md",
+            "redirect_url": "/sql/connect/odbc/microsoft-odbc-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/programming-guidelines.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/programming-guidelines",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/release-notes.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/system-requirements.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/system-requirements",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/t-sql/statements/alter-statements-transact-sql.md",
             "redirect_url": "/sql/t-sql/statements/statements",
             "redirect_document_id": false

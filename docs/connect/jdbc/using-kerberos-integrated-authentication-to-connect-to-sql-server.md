@@ -74,15 +74,20 @@ manager: "jhubbard"
 -   [How to use Kerberos authentication in SQL Server](http://support.microsoft.com/kb/319723)  
   
 -   [Using Kerberos with SQL Server](http://go.microsoft.com/fwlink/?LinkId=207814)  
+
+> [!NOTE]  
+> Before 6.2.0 release of JDBC driver, for proper use of Cross Realm Kerberos, you would need to explicitly set the **serverSpn**.
+>
+> As of the 6.2.0 release, the driver will be able to build the **serverSpn** by default, even when using Cross Realm Kerberos. Although one can use **serverSpn** explicitly too. 
   
 ## Creating a Login Module Configuration File  
  You can optionally specify a Kerberos configuration file. If a configuration file is not specified, the following settings are in effect:  
   
  Sun JVM  
- com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true doNotPrompt=true;  
+ com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true;  
   
  IBM JVM  
- com.ibm.security.auth.module.Krb5LoginModule required useDefaultCcache = true moduleBanner = false;  
+ com.ibm.security.auth.module.Krb5LoginModule required useDefaultCcache = true;  
   
  If you decide to create a login module configuration file, the file must follow this format:  
   
@@ -97,7 +102,7 @@ manager: "jhubbard"
   
 ```  
 SQLJDBCDriver {  
-   com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true doNotPrompt=true;  
+   com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true;  
 };  
 ```  
   
@@ -108,7 +113,9 @@ SQLJDBCDriver {
  The driver will attempt to use existing credentials if they are available, before attempting to login using the specified login module. Thus, when using the Subject.doAs method for executing code under a specific context, a connection will be created with the credentials passed to the Subject.doAs call.  
   
  For more information, see [JAAS Login Configuration File](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html) and [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).  
-  
+
+ Beginning in Microsoft JDBC Driver 6.2, name of login module configuration file can optionally be passed using connection property jaasConfigurationName, this allows each connection to have its own login configuration.
+ 
 ## Creating a Kerberos Configuration File  
  For more information about Kerberos configuration files, see [Kerberos Requirements](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/KerberosReq.html).  
   
@@ -155,7 +162,26 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
  **select auth_scheme from sys.dm_exec_connections where session_id=@@spid**  
   
  Make sure that you have the necessary permission to run this query.  
-  
+
+## Constrained Delegation
+Beginning in Microsoft JDBC Driver 6.2, the driver supports Kerberos Constrained Delegation. The delegated credential can be passed in as org.ietf.jgss.GSSCredential object, these credentials are used by driver to establish connection. 
+
+```
+Properties driverProperties = new Properties();
+GSSCredential impersonatedUserCredential = [userCredential]
+driverProperties.setProperty("integratedSecurity", "true");
+driverProperties.setProperty("authenticationScheme", "JavaKerberos");
+driverProperties.put("gsscredential", impersonatedUserCredential);
+Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
+```
+
+## Kerberos Connection using Principal Names and Password
+Beginning in Microsoft JDBC Driver 6.2, the driver can establish Kerberos connection using the Principal Name and Password passed in connection string. 
+```
+jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user@REALM;password=****
+```
+The username property does not require REALM if user belongs to the default_realm set in krb5.conf file. When `userName` and `password` is set along with `integratedSecurity=true;` and `authenticationScheme=JavaKerberos;` property, the connection is established with value of userName as Kerberos Principal along with the password supplied.
+ 
 ## See Also  
  [Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

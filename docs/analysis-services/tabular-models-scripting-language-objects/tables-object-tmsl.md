@@ -18,7 +18,7 @@ manager: "erikre"
 ---
 # Tables object (TMSL)
 
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
   Defines the tables contained in a model. Tables in a model are either bound to tables in an external database from which data is imported or queried, or a calculated table constructed from a DAX expression. Within a table, one or more **Partition** objects describe the source of the data.  Between tables, a **Relationship** object specifies the cardinality, filter direction, and other properties of the relationship.  
   

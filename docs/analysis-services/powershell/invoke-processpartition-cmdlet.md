@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Invoke-ProcessPartition cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Process a partition using a specific processing type variable.  
   

@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Remove-PowerPivotServiceApplication cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Deletes a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application.  
   

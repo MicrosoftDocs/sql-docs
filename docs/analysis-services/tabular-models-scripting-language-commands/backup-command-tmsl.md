@@ -18,7 +18,7 @@ manager: "erikre"
 ---
 # Backup command (TMSL)
 
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
   Backs up an Analysis Services database to an .abf backup file.  
   

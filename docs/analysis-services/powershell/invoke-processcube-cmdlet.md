@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Invoke-ProcessCube cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Process a cube using a specific processing type variable.  
   

@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # New-RestoreLocation cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Specifies information used to restore a database.  
   

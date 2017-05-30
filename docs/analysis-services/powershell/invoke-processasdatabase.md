@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Invoke-ProcessASDatabase
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Conducts the **Process** operation on a specified **Database** with a specific **ProcessType** or **RefreshType** depending on the underlying metadata type.  
   

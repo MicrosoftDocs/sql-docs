@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # New-PowerPivotSystemServiceInstance cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Adds a new instance of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service to an application server.  
   

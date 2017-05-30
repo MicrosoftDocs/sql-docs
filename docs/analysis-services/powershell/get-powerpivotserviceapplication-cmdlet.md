@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Get-PowerPivotServiceApplication cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Returns one or more [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service applications.  
   

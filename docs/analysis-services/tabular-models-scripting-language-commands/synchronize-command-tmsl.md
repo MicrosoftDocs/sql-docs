@@ -18,7 +18,7 @@ manager: "erikre"
 ---
 # Synchronize command (TMSL)
 
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
   Synchronizes an Analysis Services database with another existing database.  
   

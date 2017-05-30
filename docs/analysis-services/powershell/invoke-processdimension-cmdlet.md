@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Invoke-ProcessDimension cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Process a dimension using a specific processing type variable.  
   

@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # AMO PowerShell Example
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Below is an example PowerShell script that calls Analysis Services Management Object (AMO) types to create a Tabular database (compatibility level 1200 or higher) based on a SQL Server relational database.  
   

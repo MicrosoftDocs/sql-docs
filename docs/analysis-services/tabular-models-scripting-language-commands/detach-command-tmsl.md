@@ -18,7 +18,7 @@ manager: "erikre"
 ---
 # Detach command (TMSL)
 
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
   Detaches an Analysis Services database from a server.  
   

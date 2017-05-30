@@ -18,7 +18,7 @@ manager: "erikre"
 ---
 # Refresh command (TMSL)
 
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
   Processes objects in the current database.   
 **Refresh** always runs in parallel unless you throttle it with [Sequence command &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  

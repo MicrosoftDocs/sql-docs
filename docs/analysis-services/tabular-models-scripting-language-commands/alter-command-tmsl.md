@@ -18,7 +18,7 @@ manager: "erikre"
 ---
 # Alter command (TMSL)
 
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
   Alters an existing object, but not its children, on an Analysis Services instance in Tabular mode.  If the object does not exist, the command raises an error.  
   

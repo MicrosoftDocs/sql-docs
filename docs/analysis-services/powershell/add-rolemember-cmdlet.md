@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Add-RoleMember cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Add a member to the specified role of an Analysis Services tabular or multidimensional database.  
   

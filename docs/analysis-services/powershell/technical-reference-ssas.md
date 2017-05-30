@@ -22,7 +22,7 @@ manager: "erikre"
 ---
 # Technical Reference (SSAS)
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
 To find a topic in this section, use the contents pane on the left side of your browser..  
   

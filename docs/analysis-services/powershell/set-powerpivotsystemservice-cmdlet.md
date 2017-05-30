@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Set-PowerPivotSystemService cmdlet
   
-  [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+  [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
   
   Sets the global properties of the PowerPivotSystemService object at the farm-level.  
   

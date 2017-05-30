@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Get-PowerPivotSystemService cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Returns the global properties of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service object in a farm.  
   

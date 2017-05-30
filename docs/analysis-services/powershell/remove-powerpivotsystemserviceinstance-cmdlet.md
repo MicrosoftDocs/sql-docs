@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Remove-PowerPivotSystemServiceInstance cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Removes a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service instance from the farm.  
   

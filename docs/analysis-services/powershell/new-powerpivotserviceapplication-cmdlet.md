@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # New-PowerPivotServiceApplication cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Creates a new [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application.  
   

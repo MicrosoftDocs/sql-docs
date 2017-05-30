@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # New-RestoreFolder cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Restores an original folder to a new folder.  
   

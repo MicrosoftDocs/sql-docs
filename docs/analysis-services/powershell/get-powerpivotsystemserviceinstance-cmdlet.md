@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Get-PowerPivotSystemServiceInstance cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Returns one or more instances of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service running on application servers in the farm.  
   

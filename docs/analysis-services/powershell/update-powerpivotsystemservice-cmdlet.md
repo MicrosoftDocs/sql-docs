@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Update-PowerPivotSystemService cmdlet
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Upgrades the parent object of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service in the farm.  
   

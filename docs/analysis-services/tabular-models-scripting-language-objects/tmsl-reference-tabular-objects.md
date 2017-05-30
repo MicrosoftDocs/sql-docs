@@ -19,7 +19,7 @@ manager: "erikre"
 ---
 # TMSL Reference - Tabular Objects
 
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
   Applications that create, consume, or administer Tabular databases or that connect to a SQL Sever 2016 Analysis Services instance in tabular mode, can use the Tabular Model Scripting Language (TMSL) for commands and object representations in JSON format.  
   

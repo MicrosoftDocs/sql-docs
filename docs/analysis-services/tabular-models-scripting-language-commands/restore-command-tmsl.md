@@ -18,7 +18,7 @@ manager: "erikre"
 ---
 # Restore command (TMSL)
 
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
   Restores an Analysis Services database from a backup file.  
   

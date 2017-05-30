@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Reports | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,6 +26,9 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Upgrade Reports
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+
   Report definition (.rdl) files are automatically upgraded in the following ways:  
   
 -   When you open a report in Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the report definition is upgraded to the currently supported RDL schema. When you specify a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] report server in the project properties, the report definition is saved in a schema that is compatible with the target server.  
@@ -150,12 +153,13 @@ manager: "erikre"
   
  For reports that you upload instead of publish to a report server, the report processor determines whether the report can be upgraded on first use. Reports that cannot be upgraded are processed in backward-compatibility mode, and continue to display as they did in the earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## See Also  
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
- [Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
- [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016]](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
- [Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)   
- [Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
-  
-  
+## Next steps
+
+[Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016]](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+[Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)   
+[Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

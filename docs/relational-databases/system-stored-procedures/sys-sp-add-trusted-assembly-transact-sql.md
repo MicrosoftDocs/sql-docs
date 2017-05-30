@@ -69,7 +69,7 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
   **Need to add sp_add_trusted_assembly**
   **Need to add sys.trusted_assemblies**  
   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
-  [CLR strict security](../../sql/database-engine/configure-windows/clr-strict-security.md)  
+  [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
-  [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transac.md)  
+  [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

@@ -25,7 +25,7 @@ ms.author: "thmullan;rickbyh"
 manager: "jhubbard"
 ---
 # sys.sp_add_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx-md.md)]
 
 Adds an assembly to the list of trusted assemblies for the server.
 

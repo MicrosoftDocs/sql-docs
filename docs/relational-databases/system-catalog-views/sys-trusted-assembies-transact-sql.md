@@ -25,7 +25,7 @@ ms.author: "thmullan;rickbyh"
 manager: "jhubbard"
 ---
 # sys.trusted_assemblies (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-sslinx-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-sslinx-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 Contains a row for each trusted assembly for the server.
 
@@ -49,6 +49,6 @@ Use **Need to add sp_add_trusted_assembly** and **Need to add sys.trusted_assemb
   **Need to add sp_add_trusted_assembly**  
   **Need to add sys.trusted_assemblies**  
   [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
-  [sys.assemblies](../../sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
-  [sys.dm_clr_loaded_assemblies](../../sql/relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
+  [sys.assemblies](system-catalog-views/sys-assemblies-transact-sql.md)  
+  [sys.dm_clr_loaded_assemblies](sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

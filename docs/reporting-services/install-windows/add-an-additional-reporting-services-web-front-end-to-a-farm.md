@@ -1,7 +1,7 @@
 ---
 title: "Add an Additional Reporting Services Web Front-end to a Farm | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/03/2016"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -48,12 +48,13 @@ manager: "erikre"
 |Step|Description and Link|  
 |----------|--------------------------|  
 |Add a SharePoint server to a farm.|You will need to intall SharePoint to deploy another Reporting Services application.<br/><br/>For SharePoint 2013, see [Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>For SharePoint 2016, see [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
-|Install the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint 2016 products.|There are several methods for installing the add-in. The following steps use the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] setup wizard. For more information on installing the add-in, see [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1) Run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation.<br /><br /> 2) On the **Setup Role** page, select **SQL Server Feature Installation**<br /><br /> 3) On the **Feature Selection** page, select **Reporting Services add-in for SharePoint products**<br /><br /> 4) Click **Next** on the next several pages to complete the setup options.<br /><br/>For more information on installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)|  
+|Install the SQL Server Reporting Services add-in for SharePoint 2016 products.|There are several methods for installing the add-in. The following steps use the SQL Server setup wizard. For more information on installing the add-in, see [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1) Run SQL Server installation.<br /><br /> 2) On the **Setup Role** page, select **SQL Server Feature Installation**<br /><br /> 3) On the **Feature Selection** page, select **Reporting Services add-in for SharePoint products**<br /><br /> 4) Click **Next** on the next several pages to complete the setup options.<br /><br/>For more information on installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)|  
 |Verify the new server is operational.|1) In SharePoint Central Administration, click **Manage servers in this farm** in the **System Settings** group.<br /><br /> 2) Verify the new server is in the list.|  
 |Update your NLB solution.|If appropriate, update your hardware or software NLB environment to include the new server.|  
-  
-## See Also  
+
+## Next steps
+
 [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
-  
-  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,0 +1,7 @@
+### YamlMime:XRefMap
+references:
+- uid: Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.Item
+  commentId: Overload:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.Item
+  href: https://msdn.microsoft.com/en-us/library/ms131793(v=sql.130).aspx
+  name: Item
+  fullName: AdomdDataReader.Item

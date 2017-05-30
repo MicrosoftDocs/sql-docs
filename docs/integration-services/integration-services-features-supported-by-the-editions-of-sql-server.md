@@ -41,11 +41,16 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 
 <sup>1</sup> This feature is also supported in SQL Server 2016 with Service Pack 1.
 
+## <a name="IEWiz"></a> SQL Server Import and Export Wizard
+
+|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|SQL Server Import and Export Wizard|Yes|Yes|Yes|Yes|Yes|  
+
 ##  <a name="IS"></a> Integration Services  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server Import and Export Wizard|Yes|Yes|Yes|Yes|Yes|  
 |Built-in data source connectors|Yes|Yes|||| 
 |Built in tasks and transformations|Yes|Yes||||  
 |Azure data source connectors and tasks|Yes|Yes||||  

@@ -35,8 +35,8 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Scale Out Master|Yes|TBD||||
-|Scale Out Worker|Yes|Yes||||
+|Scale Out Master|Yes|||||
+|Scale Out Worker|Yes|Yes|TBD|TBD|TBD|
 |Support for Microsoft Dynamics AX and Microsoft Dynamics CRM in OData components <sup>1</sup>|Yes|Yes||||
 
 <sup>1</sup> This feature is also supported in SQL Server 2016 with Service Pack 1.

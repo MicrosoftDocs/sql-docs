@@ -25,7 +25,7 @@ ms.author: "thmullan;rickbyh"
 manager: "jhubbard"
 ---
 # sys.sp_drop_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 Adds an assembly to the list of trusted assemblies for the server.
 
@@ -65,5 +65,5 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
   **Need to add sys.trusted_assemblies**
   [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
-  [sys.dm_clr_loaded_assemblies](../../sql/relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
+  [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

@@ -43,7 +43,7 @@ manager: "jhubbard"
 |**query_parameterization_type_desc**|**nvarchar(60)**|Textual description for the parameterization type.|  
 |**initial_compile_start_time**|**datetimeoffset**|Compile start time.|  
 |**last_compile_start_time**|**datetimeoffset**|Compile start time.|  
-|**last_execution_time**|**datetimeoffset**|Execution time.|  
+|**last_execution_time**|**datetimeoffset**|Last execution time refers to the last end time of the query/plan.|  
 |**last_compile_batch_sql_handle**|**varbinary(64)**|Handle of the last SQL batch in which query was used last time. It can be provided as input to [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) to get the full text of the batch.|  
 |**last_compile_batch_offset_start**|**bigint**|Information that can be provided to sys.dm_exec_sql_text along with last_compile_batch_sql_handle.|  
 |**last_compile_batch_offset_end**|**bigint**|Information that can be provided to sys.dm_exec_sql_text along with last_compile_batch_sql_handle.|  

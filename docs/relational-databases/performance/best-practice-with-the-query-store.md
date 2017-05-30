@@ -226,7 +226,11 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- If  the problem persists, it indicates corruption of the Query Store data is persisted on the disk,. You need to clear Query Store before requesting read-write mode.  
+ If  the problem persists, it indicates corruption of the Query Store data is persisted on the disk.
+ 
+ Query Store could be recovered by executing **sp_query_store_consistency_check** stored procedure within the affected database.
+ 
+ If that didn't help, you can try to clear Query Store before requesting read-write mode.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   

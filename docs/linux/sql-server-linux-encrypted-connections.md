@@ -20,9 +20,9 @@ helpviewer_keywords:
 # ms.custom: ""
 ---
 # Encrypting Connections to SQL Server on Linux   
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-sslinx-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-sslinx-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux can use Transport Layer Security (TLS) to encrypt data that is transmitted across a network between a client application and an instance of SQL Server. SQL Server supports the same TLS protocols on both Windows and Linux: TLS 1.2, 1.1, and 1.0. However, the steps to configure TLS are specific to the operating system on which SQL Server is running.  
+[!INCLUDE[ssNoVersion](../docs/includes/ssnoversion-md.md)] on Linux can use Transport Layer Security (TLS) to encrypt data that is transmitted across a network between a client application and an instance of SQL Server. SQL Server supports the same TLS protocols on both Windows and Linux: TLS 1.2, 1.1, and 1.0. However, the steps to configure TLS are specific to the operating system on which SQL Server is running.  
  
 ## Typical Scenario 
 TLS is used to encrypt connections from a client application to SQL Server. When configured correctly, TLS provides both privacy and data integrity for communications between the client and the server.  

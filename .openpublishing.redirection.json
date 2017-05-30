@@ -1016,93 +1016,93 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/integration-services/service/service/view-events-for-the-integration-services-service.md",
-            "redirect_url": "/sql/integration-services/service/service/events-logged-by-the-integration-services-service",
+            "source_path": "docs/integration-services/service/view-events-for-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/events-logged-by-the-integration-services-service",
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/integration-services/service/service/import-and-export-packages-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/package-management-ssis-service",
+            "source_path": "docs/integration-services/service/import-and-export-packages-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/import-package-dialog-box-ui-reference.md",
-            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "source_path": "docs/integration-services/service/import-package-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/export-package-dialog-box-ui-reference.md",
-            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "source_path": "docs/integration-services/service/export-package-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/package-backup-and-restore-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "source_path": "docs/integration-services/service/package-backup-and-restore-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/view-integration-services-packages-in-sql-server-management-studio-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "source_path": "docs/integration-services/service/view-integration-services-packages-in-sql-server-management-studio-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/manage-the-integration-services-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/manage-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/set-the-properties-of-the-integration-services-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/set-the-properties-of-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/grant-permissions-to-integration-services-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/grant-permissions-to-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/configuring-the-integration-services-service-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/configuring-the-integration-services-service-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/connect-to-integration-services.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/connect-to-integration-services.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/connect-to-a-remote-integration-services-server-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/connect-to-a-remote-integration-services-server-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/create-the-ssis-catalog.md",
-            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "source_path": "docs/integration-services/service/create-the-ssis-catalog.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/catalog-properties-dialog-box.md",
-            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "source_path": "docs/integration-services/service/catalog-properties-dialog-box.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/backup-restore-and-move-the-ssis-catalog.md",
-            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "source_path": "docs/integration-services/service/backup-restore-and-move-the-ssis-catalog.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/upgrade-the-ssis-catalog-ssisdb.md",
-            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "source_path": "docs/integration-services/service/upgrade-the-ssis-catalog-ssisdb.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/always-on-for-ssis-catalog-ssisdb.md",
-            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "source_path": "docs/integration-services/service/always-on-for-ssis-catalog-ssisdb.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
             "redirect_document_id": false
         },
         {

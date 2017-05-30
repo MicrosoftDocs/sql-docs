@@ -51,7 +51,7 @@ manager: "jhubbard"
 |**count_compiles**|**bigint**|Plan compilation statistics.|  
 |**initial_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|  
 |**last_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|  
-|**last_execution_time**|**datetimeoffset**|Last execution time.|  
+|**last_execution_time**|**datetimeoffset**|Last execution time refers to the last end time of the query/plan.|  
 |**avg_compile_duration**|**float**|Plan compilation statistics.|  
 |**last_compile_duration**|**bigint**|Plan compilation statistics.|  
   

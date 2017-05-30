@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Update-PowerPivotSystemService cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   Upgrades the parent object of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service in the farm.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  

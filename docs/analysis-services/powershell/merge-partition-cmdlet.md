@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Merge-Partition cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Merges the data of one or more source partitions into a target partition and then deletes the source partitions.  
   
 ## Syntax  

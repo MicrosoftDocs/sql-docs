@@ -17,7 +17,11 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Analysis Services PowerShell Reference
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes a PowerShell provider (SQLAS) and cmdlets (SQLASCMDLETS) so that you can use Windows PowerShell to navigate, administer, and query [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. For more information about loading and using the provider and cmdlets, see [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md). For an example of how to use AMO types in PowerShell to create a Tabular database, see [AMO PowerShell Example](../../analysis-services/powershell/amo-powershell-example.md).  
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes a PowerShell provider (SQLAS) and cmdlets (SQLASCMDLETS) you can use with Windows PowerShell to navigate, administer, and query [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. For more information about loading and using the provider and cmdlets, see [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md). For an example of how to use AMO types in PowerShell to create a Tabular database, see [AMO PowerShell Example](../../analysis-services/powershell/amo-powershell-example.md).  
   
 ##  <a name="bkmk_cmdlets"></a> Analysis Services Cmdlets  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides cmdlets correspond to methods in the **Microsoft.AnalysisServices** namespace. The following table describes each cmdlet and provides a link to the corresponding AMO method.  

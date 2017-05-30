@@ -63,12 +63,10 @@ manager: "erikre"
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
  For more information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the following:  
-  
-||  
-|-|  
-|[Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)|  
-|[Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
-|[Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|  
+
+* [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
+* [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+* [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
   
   
 ##  <a name="bkmk_upgrade_checklist"></a> Pre-Upgrade Checklist  

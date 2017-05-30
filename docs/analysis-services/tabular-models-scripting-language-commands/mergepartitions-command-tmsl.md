@@ -1,7 +1,7 @@
 ---
 title: "MergePartitions command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # MergePartitions command (TMSL)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
   Merges the data of one or more source partitions into a target partition, and then deletes the source partition. The SQL Query of the target partition will not be updated as part of the merge. To ensure that subsequent processing of the partition retrieves all of the data, you should revise the query so that it selects all of the data in the merged partition.  
   
 ## Request  

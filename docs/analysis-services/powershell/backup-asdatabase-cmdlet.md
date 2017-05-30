@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Backup-ASDatabase cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Backup an Analysis Services multidimensional or tabular database to an Analysis Services backup (.abf) file.  
   
 ## Syntax  

@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Invoke-ProcessASDatabase
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Conducts the **Process** operation on a specified **Database** with a specific **ProcessType** or **RefreshType** depending on the underlying metadata type.  
   
  Use **ProcessType** for database with Multidimensional metadata (this includes tabular databases with compatibility level 1050, 1100, or 1103).  

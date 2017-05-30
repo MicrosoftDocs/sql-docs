@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Restore-ASDatabase cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Restores a Multidimensional or Tabular database backup (.abf) file to an Analysis Services instance.  
   
 ## Syntax  

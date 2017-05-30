@@ -1,7 +1,7 @@
 ---
 title: "Relationships object (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

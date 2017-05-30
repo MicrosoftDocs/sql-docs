@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Set-PowerPivotSystemService cmdlet
+  
+  [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+  
   Sets the global properties of the PowerPivotSystemService object at the farm-level.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  

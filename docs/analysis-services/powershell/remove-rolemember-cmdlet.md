@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Remove-RoleMember cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Remove a member from the specified role of an Analysis Services database.  
   
 ## Syntax  

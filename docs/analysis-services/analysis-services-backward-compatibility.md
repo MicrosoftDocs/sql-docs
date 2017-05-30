@@ -25,6 +25,8 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Analysis Services Backward Compatibility
+[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+
   The topics in this section describe the changes in behavior between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## In This Section  

@@ -18,6 +18,8 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Analysis Services samples
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Use the information here to find sample databases and projects to help you learn about and test your Analysis Services solutions.
   
 ## Sample solutions and databases  

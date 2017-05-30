@@ -1,7 +1,7 @@
 ---
 title: "DataSources object (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DataSources object (TMSL)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
   Defines a connection to a data source used by the model either during import to add data to the model, or in pass through queries via DirectQuery mode.  Models in DirectQuery mode can only have one **DataSource** object.  
   
  Unless you are creating, replacing, or altering the  data source object itself, any data source referenced in your script (such as in partition script) must be an existing **DataSource** object in your model.  

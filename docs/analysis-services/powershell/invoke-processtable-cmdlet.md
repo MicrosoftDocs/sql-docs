@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Invoke-ProcessTable cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Conducts the **Process** operation on a **Table** with a specific **RefreshType**.  
   
 ## Syntax  

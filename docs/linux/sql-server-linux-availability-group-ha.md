@@ -25,7 +25,7 @@ This article presents supported deployment configurations for SQL Server Always 
 
 With Windows Server failover clustering a common configuration for high availability uses two synchronous replicas and a [file-share witness](http://technet.microsoft.com/library/cc731739.aspx). The file-share witness validates the availability group configuration - status of synchronization, and the role of the replica, for example. This ensures that the secondary replica chosen as the failover target has the latest data and availability group configuration changes. 
 
-The current high availability solutions for Linux do not accommodate an external witness like the file share witness in a Windows Server failover cluster. When there is no Windows Server failover cluster, the availability group configuration is stored in the SQL Server instances, hence the availability group requires at least three synchronous replicas for high availability and data protection. After you create an availability group on Linux servers you create a cluster resource. The cluster resource settings determine the configuration for high availability.
+The current high availability solutions for Linux do not accommodate an external witness like the file share witness in a Windows Server failover cluster. When there is no Windows Server failover cluster the availability group configuration is stored in the master database on participating SQL Server instances. Therefore, the availability group requires at least three synchronous replicas for high availability and data protection. After you create an availability group on Linux servers you create a cluster resource. The cluster resource settings determine the configuration for high availability.
 
 Choose an availability group design to meet specific business requirements for high availability, data protection, and read scale-out.
 
@@ -54,8 +54,6 @@ This configuration consists of three synchronous replicas. By default, it provid
 
 ![Three replicas][3]
 
-Each instance of SQL Server requires an appropriate license. 
-
 The following table describes the high availability and data protection behavior based on the settings for three synchronous replicas. 
 
 |`REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT`|0 |1 \*|2
@@ -66,6 +64,7 @@ The following table describes the high availability and data protection behavior
 |Primary replica available after one secondary replica outage|✔|✔| 
 |Primary replica available after two secondary replica outages|✔| |
 |Manual failover after primary replica outage - possible data loss|✔| | 
+
 \* Default setting when availability group is added as a resource in a cluster.
 
 ## Two synchronous replicas and a witness replica
@@ -78,9 +77,9 @@ By default, it provides high availability but not data protection.
 
 The following table describes the high availability and data protection behavior according to the possible values for an availability group with two synchronous replicas and a witness replica. 
 
-|`REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT`|1|0 \*
+|`REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT`|0 \*|1
 | --- |:---:|:---:
-|High availability | |✔| 
+|High availability |✔| | 
 |Data protection |✔|✔|
 |Automatic failover after primary replica outage| |✔| 
 |Primary replica available after secondary replica outage| |✔|

@@ -69,7 +69,7 @@ The following table describes the high availability and data protection behavior
 
 ## Two synchronous replicas and a witness replica
 
-This configuration has two synchronous replicas and a witness replica to enable high availability and data protection. The witness replica is introduced in SQL Server 2017 CTP 2.4. In this configuration, the servers have the roles of primary replica, secondary replica, or witness replica. The witness replica contains configuration data about the availability group, but not a copy of the availability group user databases. The witness replica requires a SQL Server instance with SQL Server Express edition or higher. 
+This configuration has two synchronous replicas and a witness replica to enable high availability and data protection. The witness replica is introduced in SQL Server 2017 CTP 2.2. In this configuration, the servers have the roles of primary replica, secondary replica, or witness replica. The witness replica contains configuration data about the availability group, but not a copy of the availability group user databases. The witness replica requires a SQL Server instance with SQL Server Express edition or higher. 
 
 By default, it provides high availability but not data protection.
 

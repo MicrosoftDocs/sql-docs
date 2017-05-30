@@ -57,13 +57,11 @@ manager: "jhubbard"
   
 -   Hadoop cluster. For supported versions see [Configure PolyBase](#supported).  
 
--   Azure Blob storage. 
+-   Azure Blob storage
+
 > [!NOTE]
 >   If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail. 
 
-> [!NOTE]
-> HDInsight clusters use Azure Blob storage as the file system for their permanent storage. You can use PolyBase to query the files managed by an HDInsight cluster. To do this, create an external data source to reference the blob that is configured as storage for the HDInsight cluster. 
-  
 ## Install PolyBase  
  If you haven't installed PolyBase, see  [PolyBase installation](../../relational-databases/polybase/polybase-installation.md).  
   

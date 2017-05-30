@@ -25,7 +25,7 @@ ms.author: "thmullan;rickbyh"
 manager: "jhubbard"
 ---
 # sys.sp_add_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 Adds an assembly to the list of trusted assemblies for the server.
 
@@ -57,7 +57,7 @@ Requires membership in the `sysadmin` fixed server role or `CONTROL SERVER` perm
 
 ## Examples  
 
-The following example adds an assembly named `pointudt` to the list of trusted assemblies for the server. These values are available from  [sys.assemblies](../../t-sql/statements/sys-assemblies-transact-sql.md).     
+The following example adds an assembly named `pointudt` to the list of trusted assemblies for the server. These values are available from  [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
 
 ```  
 EXEC sp_add_trusted_assembly 
@@ -70,6 +70,6 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
   **Need to add sys.trusted_assemblies**  
   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   [CLR strict security](../../sql/database-engine/configure-windows/clr-strict-security.md)  
-  [sys.assemblies](../../t-sql/statements/sys-assemblies-transact-sql.md)  
-  [sys.dm_clr_loaded_assemblies](../../sql/relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transac.md)  
+  [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
+  [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transac.md)  
 

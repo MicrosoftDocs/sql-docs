@@ -1,7 +1,7 @@
 ---
 title: "Refresh command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Refresh command (TMSL)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
   Processes objects in the current database.   
 **Refresh** always runs in parallel unless you throttle it with [Sequence command &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  
   

@@ -1,7 +1,7 @@
 ---
 title: "Create command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Create command (TMSL)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
   Creates the specified object and all of the descendant objects that are specified. If the object already exists, the command raises an error.  
   
 ## Request  

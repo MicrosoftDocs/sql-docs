@@ -1,7 +1,7 @@
 ---
 title: "Create a Basic Table Report (SSRS Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/15/2016"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,7 +21,9 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Create a Basic Table Report (SSRS Tutorial)
+
 In this tutorial, you use Report Designer in SQL Server Data Tools to create a basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a table, based on the **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** database. You can also create [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports with Report Builder. 
 
 As you go through this tutorial, you will create a report project, set up connection information, define a query, add a Table data region, group and total some fields, and preview the report.  
@@ -29,7 +31,7 @@ As you go through this tutorial, you will create a report project, set up connec
 ## Requirements  
 Your system must have the following installed to use this tutorial:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database engine.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server database engine.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] in native mode.  
   
@@ -53,10 +55,9 @@ You must also have read-only permissions to retrieve data from the [!INCLUDE[ssS
 [Lesson 5: Formatting a Report &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)  
   
 [Lesson 6: Adding Grouping and Totals &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)  
-  
-## See Also  
-[Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  
-  
-  
-  
 
+## Next steps
+
+[Reporting Services Tutorials](../reporting-services/reporting-services-tutorials-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Create a Quick Chart Report Offline (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,7 +20,9 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)
+
   In this tutorial, you use a wizard to create a pie chart in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Then you add percentages and modify the pie chart a little. 
   
 You can do this tutorial two different ways. Both methods have the same outcomeâ€”a pie chart like the one in this illustration:  
@@ -28,7 +30,7 @@ You can do this tutorial two different ways. Both methods have the same outcomeâ
  ![Report Builder quick pie chart](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Report Builder quick pie chart")  
   
 ## Prerequisites  
- Whether you use XML data or a [!INCLUDE[tsql](../../includes/tsql-md.md)] query, you need to have access to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. You can start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] from  a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or in SharePoint integrated mode, or you can download [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] from the Microsoft Download Center. For more information, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
+ Whether you use XML data or a [!INCLUDE[tsql](../../includes/tsql-md.md)] query, you need to have access to Report Builder. You can start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] from  a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or in SharePoint integrated mode, or you can download [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] from the Microsoft Download Center. For more information, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Two Ways To Do This Tutorial  
   
@@ -37,12 +39,12 @@ You can do this tutorial two different ways. Both methods have the same outcomeâ
 -   [Create the pie chart with a Transact-SQL query that contains data](#CreatePieQueryData)  
   
 ### Using XML data for this tutorial  
- You can use XML data that you copy from this topic and paste into the wizard. You don't need to be connected to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or in SharePoint integrated mode, and you don't need access to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ You can use XML data that you copy from this topic and paste into the wizard. You don't need to be connected to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or in SharePoint integrated mode, and you don't need access to an instance of SQL Server.  
   
  [Create the pie chart with XML data](#CreatePieChartXML)  
   
 ### Using a [!INCLUDE[tsql](../../includes/tsql-md.md)] query that contains data for this tutorial  
- You can copy a query with data included in it from this topic and paste it into the wizard. You will need the name of an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and credentials sufficient for read-only access to any database. The dataset query in the tutorial uses literal data, but the query must be processed by an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to return the metadata that is required for a report dataset.  
+ You can copy a query with data included in it from this topic and paste it into the wizard. You will need the name of an instance of SQL Server and credentials sufficient for read-only access to any database. The dataset query in the tutorial uses literal data, but the query must be processed by an instance of SQL Server to return the metadata that is required for a report dataset.  
   
  The advantage of using the [!INCLUDE[tsql](../../includes/tsql-md.md)] query is that all the other [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] tutorials use the same method, so when you do the other tutorials, you will already know what to do.  
   
@@ -222,14 +224,15 @@ Notice the design surface gets larger as you drag.
 ##  <a name="WhatsNext"></a> What's Next?  
  Now that you have created your first report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], you are ready to try the other tutorials and to start creating reports from your own data. To run [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], you need permission to access your data sources, such as databases, with a *connection string*, which actually connects you to the data source. Your system administrator will have this information and can set you up.  
   
- To work through the other tutorials, you need the name of an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and credentials sufficient for read-only access to any database. Your system administrator can also set that up for you.  
+ To work through the other tutorials, you need the name of an instance of SQL Server and credentials sufficient for read-only access to any database. Your system administrator can also set that up for you.  
   
  Finally, to save your reports to a report server or a SharePoint site that is integrated with a report server, you need the URL and permissions. You can run any report you create directly from your computer, but reports have more functionality when run from the report server or SharePoint site. You need permissions to run your reports or others from the report server or SharePoint site where they are published. Talk to your system administrator to obtain access.  
   
  It may help to read about some of the concepts and terms before you get started. See [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Also, spend some time planning, before you create your first report. It will be time well spent. See [Planning a Report &#40;Report Builder&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
-   
-## See Also  
- [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)   
- [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
-  
+
+## Next steps
+
+[Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)   
+[Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
 title: "Sequence command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Sequence command (TMSL)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
   Use the **Sequence** command to run a consecutive set of operations in batch mode on an instance of Analysis Services.  The entire command and all of its component parts must complete in order for the transaction to succeed.  
   
  The following commands can be run sequentially, except for the **Refresh** command which runs in parallel to process multiple objects concurrently.  

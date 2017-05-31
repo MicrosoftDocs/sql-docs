@@ -1,7 +1,7 @@
 ---
 title: "Native to SharePoint Migration (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,9 +17,10 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Native to SharePoint Migration (SSRS)
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
   You cannot upgrade or convert from one [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server mode to another. For example, you cannot upgrade or convert a Native mode report server to SharePoint mode. You cannot copy the report server databases between modes because they use different database schemas. You can migrate the content from one report server to another. The tools you use depend on the type of report server mode that is configured for the source and destination servers.  
-  
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
   
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services Migration tool  
  The tool supports content migration from a native mode Deployment to a SharePoint mode deployment. The tool does not support migration from SharePoint mode to SharePoint mode or from SharePoint mode to Native mode.  
@@ -50,6 +51,6 @@ manager: "erikre"
 |Report Parts||Following migration, verify or update the path to the report parts.|  
 |Schedules|Yes|See the ListSchedules method [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|  
 |Subscriptions|yes|See the List Subscriptions method [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) and the <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> method.|  
-|Snapshots|||  
-  
-  
+|Snapshots|||
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

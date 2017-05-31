@@ -2,7 +2,7 @@
 title: "Install The First Report Server in SharePoint Mode | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/10/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -258,9 +258,10 @@ manager: "erikre"
 -   See the following section [Windows PowerShell script for Steps 1–4](#bkmk_full_script).  
   
 -   Topic [To create a Reporting Services Service Application using PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
-  
-##  <a name="bkmk_powerview"></a> Step 4: Activate the Power View Site Collection Feature.  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], a feature of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint Products, is a site collection feature. The feature is activated automatically for root site collections and site collections created after the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in is installed. If you plan to use [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], verify that the feature is activated.  
+
+##  <a name="bkmk_powerview"></a> Step 4: Activate the Power View Site Collection Feature.
+
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], a feature of SQL Server 2016 Reporting Services Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint Products, is a site collection feature. The feature is activated automatically for root site collections and site collections created after the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in is installed. If you plan to use [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], verify that the feature is activated.  
   
  If you install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint Products after the installation of the SharePoint Server, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, manually activate the features.  
   
@@ -422,7 +423,7 @@ Also, the application pool security account used by the [!INCLUDE[ssRSnoversion]
   
      Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder (Report Builder)](http://technet.microsoft.com/library/ms159221.aspx).  
   
-## See Also
+## Next steps
 
 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

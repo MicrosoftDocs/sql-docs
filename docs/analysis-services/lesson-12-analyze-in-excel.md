@@ -18,6 +18,8 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 12: Analyze in Excel
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 In this lesson, you will use the Analyze in Excel feature in SSDT to open Microsoft Excel, automatically create a data source connection to the model workspace, and automatically add a PivotTable to the worksheet. The Analyze in Excel feature is meant to provide a quick and easy way to test the efficacy of your model design prior to deploying your model. You will not perform any data analysis in this lesson. The purpose of this lesson is to familiarize you, the model author, with the tools you can use to test your model design. Unlike using the Analyze in Excel feature, which is meant for model authors, end-users will use client reporting applications like Excel or Power BI to connect to and browse deployed model data.  
   
 In order to complete this lesson, Excel must be installed on the same computer as SSDT. To learn more, see [Analyze in Excel](../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  

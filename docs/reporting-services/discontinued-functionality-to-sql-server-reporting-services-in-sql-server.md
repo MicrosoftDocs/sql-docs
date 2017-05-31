@@ -1,6 +1,6 @@
 ---
 title: "Discontinued functionality to SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
-ms.date: "09/12/2016"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,8 +20,10 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Discontinued functionality to SQL Server Reporting Services in SQL Server 
-  This topic describes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. It does not include announcements about discontinued support for specific versions of the operating system or [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+
+  This topic describes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features that are no longer available in SQL Server 2016. It does not include announcements about discontinued support for specific versions of the operating system or [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 A *discontinued feature* is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued.  
   
@@ -29,12 +31,11 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 |-|-|
 |Upload report models through the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]|This can still be done through the SOAP API.|  
 |Manage report models through the [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]|This can still be done through the SOAP API.|  
-  
-## See Also  
- [What's New in Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
- 
- [Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)
- 
- [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
-  
-  
+
+## Next steps
+
+[What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+[Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+[Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

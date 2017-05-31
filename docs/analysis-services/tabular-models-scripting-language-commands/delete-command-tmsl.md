@@ -1,7 +1,7 @@
 ---
 title: "Delete command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Delete command (TMSL)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
   Deletes a database or an object in the current database.   
 It deletes the specified object and all child objects and collections. If the object does not exist, the command raises an error.  
   

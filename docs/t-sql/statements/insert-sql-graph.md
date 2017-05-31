@@ -106,7 +106,7 @@ INSERT
  Is an optional keyword that can be used between `INSERT` and the target table.  
   
  *search_condition_with_match*   
- `MATCH` clause can be used in a subquery while inserting into a node or edge table. For `MATCH` statement syntax, see [GRAPH MATCH (Transact-SQL)](../../t-sql/statements/match-sql-graph.md)
+ `MATCH` clause can be used in a subquery while inserting into a node or edge table. For `MATCH` statement syntax, see [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
 
  *graph_search_pattern*   
  Search pattern provided to `MATCH` clause as part of the graph predicate.

@@ -90,7 +90,7 @@ Now set the ServicePrincipalName (SPN) for this account using the `setspn.exe` t
 ```PowerShell   
 setspn -A MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>** mssql
 ```   
-For more information, see [Register a Service Principal Name for Kerberos Connections](../docs/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+For more information, see [Register a Service Principal Name for Kerberos Connections](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
 
 ## Step 3: Configure [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] service keytab  
 On the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine, create a keytab file for the AD user you just created. The `addent` command prompts you for a password. Enter the same password you used to create the AD user for [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)].   
@@ -124,7 +124,7 @@ CREATE LOGIN [user@contoso.com] FROM EXTERNAL PROVIDER;
 
 >  [!NOTE]  
 >  Starting with [!INCLUDE[sssqlv14-md](../../docs/includes/sssqlv14-md.md)], the userPrincipalName (UPN) `login_name@DomainName` is the preferred format for creating AD-based logins. However, the pre-Windows 2000 user logon name format is also supported for compatibility: `CREATE LOGIN [CONTOSO\user] FROM WINDOWS;`  
-Verify that the login is now listed in the [sys.server_principals](../docs/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql.mc) system catalog view:  
+Verify that the login is now listed in the [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql.mc) system catalog view:  
 ```Transact-SQL  
 SELECT name FROM sys.server_principals;
 ```  

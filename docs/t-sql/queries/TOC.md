@@ -11,7 +11,7 @@
 # [FROM](from-transact-sql.md)  
 ## [FROM - Using PIVOT and UNPIVOT](from-using-pivot-and-unpivot.md)  
 # [WHERE](where-transact-sql.md)  
-## [match](match-transact-sql.md)  
+## [match](match-sql-graph.md)  
 # [Hints](hints-transact-sql.md)  
 ## [Hints - Join](hints-transact-sql-join.md)  
 ## [Hints - Query](hints-transact-sql-query.md)  

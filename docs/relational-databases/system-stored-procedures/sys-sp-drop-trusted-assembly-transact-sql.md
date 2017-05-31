@@ -45,7 +45,7 @@ Canonical name that encodes the simple name, version number, culture, public key
 
 ## Remarks  
 
-This procedure removes an assembly from **Need to add sys.trusted_assemblies**.
+This procedure removes an assembly from [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assembies-transact-sql.md).
 
 ## Permissions
 
@@ -61,8 +61,8 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
 ```  
 
 ## See Also  
-  **Need to add sp_add_trusted_assembly**
-  **Need to add sys.trusted_assemblies**
+  [sys.sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md)
+  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assembies-transact-sql.md) 
   [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  

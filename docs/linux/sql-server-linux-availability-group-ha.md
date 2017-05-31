@@ -89,7 +89,7 @@ The following table describes the high availability and data protection behavior
 
 For additional information, see [More about a witness replica](#WitnessReplica).
 
-## Two synchronous replicas availability group
+## Two synchronous replicas
 
 A two synchronous replicas availability group enables data protection. Like the other availability group configurations it can enable read scale-out. Two synchronous replicas does not provide high availability. 
 
@@ -97,7 +97,7 @@ A two synchronous replicas availability group enables data protection. Like the 
 
 This configuration requires two servers. These servers fill the role of primary replica and secondary replica.
 
-The two synchronous replicas configuration is optimized for data protection and distributing the read workload for databases. By default, resource is configured for data protection. This configuration does not provide high availability because if either instance of SQL Server fails, either the database will not be fully available or there is risk of data loss. 
+The two synchronous replicas configuration is optimized for data protection and distributing the read workload for databases. By default, the resource is configured for data protection. This configuration does not provide high availability because if either instance of SQL Server fails, either the database will not be fully available or there is risk of data loss. 
 
 The following table describes the data protection behavior according to the possible values for two synchronous replicas availability group. 
 
@@ -119,7 +119,7 @@ The two synchronous replicas configuration may be the most economical because it
 
 ## More about a witness replica
 
-A witness replica in a SQL Server Always On availability group enables an configuration with high availability and data protection without using a third synchronous secondary replica. Because any edition of SQL Server can host a witness replica, it can save some licensing costs over other availability group configurations. A witness replica contains availability group configuration data like availability group roles, and synchronization status data; it does not include replicated user databases.The witness replica uses the `WITNESS-COMMIT` availability mode. It is never the primary replica.
+A witness replica in a SQL Server Always On availability group enables a configuration with high availability and data protection without using a third replica - a *witness replica*. Any edition of SQL Server can host a witness replica. A witness replica contains availability group configuration data like availability group roles, and synchronization status data in the `master` database. It does not include replicated user databases. The witness replica uses the `WITNESS-COMMIT` availability mode. It is never the primary replica.
 
 Use a witness replica in an availability group with two synchronous replicas - one primary replica and one secondary replica. If an availability group does not include two synchronous replicas, you cannot use a witness replica. You can also include additional asynchronous replicas. The DDL `CREATE AVAILABILITY GROUP` will fail if the group does not include two synchronous replicas. Likewise, you cannot create an availability group with only one primary replica and a witness replica. An availability group cannot include more than one witness replica.
 

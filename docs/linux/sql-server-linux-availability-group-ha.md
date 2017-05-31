@@ -40,9 +40,9 @@ The design patters are three availability group configuarations. The configurati
 
 - **Two synchronous replicas availability group**
 
-## How the configuration affects default settings
+## How the configuration affects default resource settings
 
-The cluster resource setting `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` guarantees that each transaction is written to a minimum number of secondary replica logs before committing the transaction on the primary replica. This setting can affect both high availability and data protection, depending on the configuration. When you install the SQL Server resource agent - `mssql-sserver-ha` - and create the availability group resource, the cluster manager detects the availability group configuration and sets `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` accordingly. 
+The cluster resource setting `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` guarantees that each transaction is written to a minimum number of secondary replica logs before committing the transaction on the primary replica. This setting can affect both high availability and data protection, depending on the configuration. When you install the SQL Server resource agent - `mssql-sserver-ha` - and create a cluster resource for the availability group, the cluster manager detects the availability group configuration and sets `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` accordingly. 
 
 If supported by the configuration, the resource agent parameter `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to the value that provides high availability and data protection.  If the configuration cannot support both the default is set for data protection. For more information, see [Understand SQL Server resource agent for pacemaker](#pacemakerNotify).
 
@@ -184,17 +184,17 @@ A user can choose to override the default behavior, and prevent the availability
 To set `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 0, run:
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=0
+sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0
 ```
 
-To revert to default computed value, run:
+To revert to default value, based on the availability group configuration run:
 
 ```bash
-sudo pcs resource update <**ag1**> required_copies_to_commit=
+sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
 >[!NOTE]
->Updating resource properties causes all replicas to stop and restart. This means primary will temporarily be demoted to secondary, then promoted again which will casue temporary write unavailability. The new value for REQUIRED_COPIES_TO_COMMIT will only be set once replicas are restarted, so it won't be instantaneous with running the pcs command.
+>Updating resource properties causes all replicas to stop and restart. This means primary will temporarily be demoted to secondary, then promoted again which will cause temporary write unavailability. The new value for`REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT` will only be set once replicas are restarted, so it won't be instantaneous with running the pcs command.
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-availability-group-ha/1-read-scale-out.png

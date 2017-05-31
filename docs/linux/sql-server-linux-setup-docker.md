@@ -281,7 +281,7 @@ To copy a file out of the container, use the following command:
 docker cp <Container ID>:<Container path> <host path>
 ```
 
-For example:
+**Example:**
 
 ```bash
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
@@ -297,7 +297,7 @@ To copy a file into the container, use the following command:
 docker cp <Host path> <Container ID>:<Container path>
 ```
 
-For example:
+**Example:**
 
 ```bash
 docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data

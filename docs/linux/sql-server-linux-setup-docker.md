@@ -109,10 +109,6 @@ This topic explains how to pull and run the [mssql-server-linux container image]
 > ```bash
 > docker exec -it <Container ID> /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<Old Password>' -Q 'ALTER LOGIN SA WITH PASSWORD="<New Password>";'
 > ```
->
-> ```PowerShell
-> docker exec -it <Container ID> /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<Old Password>" -Q "ALTER LOGIN SA WITH PASSWORD='<New Password>';"
-> ```
 
 ## Connect and query
 

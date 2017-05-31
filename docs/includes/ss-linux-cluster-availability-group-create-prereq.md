@@ -41,14 +41,15 @@ Before you create the availability group, you need to:
    sudo vi /etc/hosts
    ```
 
-   The following example shows `/etc/hosts` on **node1** with additions for **node1** and **node2**. In this document **node1** refers to the primary SQL Server replica. **node2** refers to the secondary SQL Server.;
+   The following example shows `/etc/hosts` on **node1** with additions for **node1**, **node2**, and **node3**. In this document **node1** refers to the server hosting the primary replica. **node2**, and **node3** refer to servers hosting secondary replicas.
 
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
    ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.128 node1
+   10.128.18.12 node1
    10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
 ### Install SQL Server
@@ -63,7 +64,7 @@ Install SQL Server. The following links point to SQL Server installation instruc
 
 ## Enable Always On availability groups and restart sqlserver
 
-Enable Always On availability groups on each node hosting SQL Server service, then restart `mssql-server`.  Run the following script:
+Enable Always On availability groups on each node hosting a SQL Server instance, then restart `mssql-server`.  Run the following script:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -72,7 +73,7 @@ sudo systemctl restart mssql-server
 
 ##	Enable AlwaysOn_health event session 
 
-You can optionaly enable Always On Availability Groups specific extended events to help with root-cause diagnosis when you troubleshoot an availability group.
+You can optionally enable Always On availability groups extended events to help with root-cause diagnosis when you troubleshoot an availability group. Run the following command on each each instance of SQL Server. 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -83,7 +84,7 @@ For more information about this XE session, see [Always On Extended Events](http
 
 ## Create db mirroring endpoint user
 
-The following Transact-SQL script creates a login named `dbm_login`, and a user named `dbm_user`. Update the script with a strong password. Run the following command on all SQL Servers to create the database mirroring endpoint user.
+The following Transact-SQL script creates a login named `dbm_login`, and a user named `dbm_user`. Update the script with a strong password. Run the following command on all SQL Server instances to create the database mirroring endpoint user.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -92,9 +93,9 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 ## Create a certificate
 
-SQL Server service on Linux uses certificates to authenticate communication between the mirroring endpoints. 
+The SQL Server service on Linux uses certificates to authenticate communication between the mirroring endpoints. 
 
-The following Transact-SQL script creates a master key and certificate. It then backs the certificate up and secures the file with a private key. Update the script with strong passwords. Connect to the primary SQL Server and run the following Transact-SQL to create the certificate:
+The following Transact-SQL script creates a master key and certificate. It then backs the certificate up and secures the file with a private key. Update the script with strong passwords. Connect to the primary SQL Server instance and run the following Transact-SQL to create the certificate:
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -116,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-On the target server, give permission to mssql user to access the certificate.
+On each target server, give permission to mssql user to access the certificate.
 
 ```bash
 cd /var/opt/mssql/data
@@ -144,15 +145,11 @@ Database mirroring endpoints use Transmission Control Protocol (TCP) to send and
 
 The following Transact-SQL creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint, and gives connect permission to the user that you created. Before you run the script, replace the values between `**< ... >**`.
 
-
->[!NOTE]
->For this release, do not use a different IP address for the listener IP. We are working on a fix for this issue, but the only acceptable value for now is '0.0.0.0'.
-
 Update the following Transact-SQL for your environment  on all SQL Server instances: 
 
 ```Transact-SQL
 CREATE ENDPOINT [Hadr_endpoint]
-    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    AS TCP (LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
 	    ROLE = ALL,
 	    AUTHENTICATION = CERTIFICATE dbm_certificate,

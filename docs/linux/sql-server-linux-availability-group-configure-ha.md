@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 05/19/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -76,7 +76,7 @@ The steps to create an availability group on Linux servers for high availability
 
 Create the availability group. In order to create the availability group for HA on Linux, use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) Transact-SQL DDL with `CLUSTER_TYPE = EXTERNAL`. 
 
-The `EXTERNAL` value for `CLUSTER_TYPE` option specifies that the an external cluster entity manages the availability group. Pacemaker is an example of an external cluster entity. When the availability group `CLUSTER_TYPE = EXTERNAL`, set each replica `FAILOVER_MODE = EXTERNAL`. After you create the availability group, configure the cluster resource for the availability group using the cluster management tools - for example with Pacemaker use `pcs` (on RHEL, Ubuntu) or `crm` (on SLES). See the Linux distribution specific cluster configuration section for an end-to-end example.
+The `EXTERNAL` value for `CLUSTER_TYPE` option specifies that the an external cluster entity manages the availability group. Pacemaker is an example of an external cluster entity. When the availability group `CLUSTER_TYPE = EXTERNAL`, set primary and secondary replica `FAILOVER_MODE = EXTERNAL`. After you create the availability group, configure the cluster resource for the availability group using the cluster management tools - for example with Pacemaker use `pcs` (on RHEL, Ubuntu) or `crm` (on SLES). See the Linux distribution specific cluster configuration section for an end-to-end example.
 
 The following Transact-SQL script creates an availability group for HA named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, `**<node2>**`, and `**<node3>**` values with the names of the SQL Server instances that will host the replicas. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. Run the following Transact-SQL on the SQL Server instance that will host the primary replica to create the availability group.
 
@@ -107,6 +107,7 @@ CREATE AVAILABILITY GROUP [ag1]
 		    );
 		
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
+
 ```
 >[!NOTE]
 >Running the CREATE AVAILABILITY GROUP command will complete with a warning: "Attempt to access non-existent or uninitialized availability group with ID . This is usually an internal condition, such as the availability group is being dropped or the local WSFC node has lost quorum. In such cases, and no user action is required.". This is a known issue and product team is working on a fix. Meanwhile, users should assume command completed successfully. 
@@ -127,6 +128,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 >[!IMPORTANT]
 >After you create the availability group, you must configure integration with a cluster technology like Pacemaker for HA. In the case of a read-only scale-out architecture using availability groups, starting with [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], setting up a cluster is not required.
+
 If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. While this is a valid configuration in read-scale/load balancing scenarios, it is not complete for high availability. To achieve high availability, you need to add the availability group as a cluster resource. See [Next steps](#next-steps) for instructions. 
 
 ## Notes

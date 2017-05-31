@@ -1,7 +1,7 @@
 ---
 title: "CREATE AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -59,14 +59,14 @@ CREATE AVAILABILITY GROUP group_name
   | DTC_SUPPORT  = { PER_DB | NONE }  
   | BASIC  
   | DISTRIBUTED
-  | REQUIRED_COPIES_TO_COMMIT = { integer }
-  | CLUSTER_TYPE = { WSFC | NONE } 
+  | REQUIRED_SYNCHRONOUS_SECONDARIES_TO_COMMIT = { integer }
+  | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
   
 <add_replica_spec>::=  
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | WITNESS_COMMIT },  
        FAILOVER_MODE = { AUTOMATIC | MANUAL }  
        [ , <add_replica_option> [ ,...n ] ]  
     )   
@@ -180,11 +180,11 @@ CREATE AVAILABILITY GROUP group_name
  DISTRIBUTED  
  Used to create a distributed availability group. This option is used with the AVAILABILITY GROUP ON parameter to connect two availability groups in separate Windows Server Failover Clusters.  For more information, see [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Distributed availability groups are supported beginning in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
 
- REQUIRED_COPIES_TO_COMMIT   
- Introduced in SQL Server 2017 CTP 1.3. Used to set a minimum number of secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transactions will wait until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica will mark that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it will be in a "not synced" state and the replica will be marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica will not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary will fail.
+ REQUIRED_SYNCHRONOUS_SECONDARIES_TO_COMMIT   
+ Introduced in SQL Server 2017 CTP 2.2. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transactions will wait until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica will mark that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it will be in a "not synced" state and the replica will be marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica will not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary will fail. This setting applies to availability groups with cluster type `WSFC` and `EXTERNAL`. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
 
  CLUSTER_TYPE  
- Introduced in SQL Server 2017 CTP 1.3. Used to identify if the availability group is on a Windows Server Failover Cluster (WSFC).  Set to WSFC when availability group is on servers that belong WSFC. Set to NONE when availability group not using WSFC for cluster coordination. For example, when an availability group includes Linux servers. 
+ Introduced in SQL Server 2017 CTP 2.2. Used to identify if the availability group is on a Windows Server Failover Cluster (WSFC).  Set to WSFC when availability group is on a failover cluster instance on a Windows Server failover cluster. Set to EXTERNAL when the cluster is managed by a cluster manager that is not a Windows Server failover cluster, like Linux Pacemaker. Set to NONE when availability group not using WSFC for cluster coordination. For example, when an availability group includes Linux servers. 
 
  DATABASE *database_name*  
  Specifies a list of one or more user databases on the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (that is, the server instance on which you are creating the availability group). You can specify multiple databases for an availability group, but each database can belong to only one availability group. For information about the type of databases that an availability group can support, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). To find out which local databases already belong to an availability group, see the **replica_id** column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
@@ -239,8 +239,8 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  Is a port number that is associated with the mirroring endpoint of the partner server instance (for the ENDPOINT_URL option) or the port number used by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] of the server instance (for the READ_ONLY_ROUTING_URL option).  
   
- AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
- Specifies whether the primary replica has to wait for the secondary replica to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database. The transactions on different databases on the same primary replica can commit independently.  
+ AVAILABILITY_MODE **=** { {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT } | WITNESS_COMMMIT }  
+ SYNCHRONOUS_COMMIT or ASYNCHRONOUS_COMMIT specifies whether the primary replica has to wait for the secondary replica to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database. The transactions on different databases on the same primary replica can commit independently. WITNESS_COMMIT designates a replica as a witness replica. See [More about a witness replica](../../linux/sql-server-linux-availability-group-ha.md#WitnessReplica).
   
  SYNCHRONOUS_COMMIT  
  Specifies that the primary replica will wait to commit transactions until they have been hardened on this secondary replica (synchronous-commit mode). You can specify SYNCHRONOUS_COMMIT for up to three replicas, including the primary replica.  

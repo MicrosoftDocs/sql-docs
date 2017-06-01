@@ -46,7 +46,7 @@
    >[!NOTE]
    >If you previously configured a cluster on the same nodes, you need to use `--force` option when running `pcs cluster setup`. Note this is equivalent to running `pcs cluster destroy` and pacemaker service needs to be re-enabled using `sudo systemctl enable pacemaker`.
 
-5. Install SQL Server resource agent for SQL Server. Run the following commands on both nodes. 
+5. Install SQL Server resource agent for SQL Server. Run the following commands on all nodes. 
 
    ```bash
    sudo yum install mssql-server-ha

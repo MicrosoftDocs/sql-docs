@@ -2,7 +2,7 @@
 title: "Microsoft Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/18/2017"
+ms.date: "06/01/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,14 +31,14 @@ Key concepts include:
 
 ## Roadmap
 
-In SQL Server 2016, Microsoft laucnhed two server platforms for integrating the popular open source R language with business applications:
+In SQL Server 2016, Microsoft launched two server platforms for integrating the popular open source R language with business applications:
 
 + **SQL Server R Services (In-Database)**, for integration with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, for enterprise-level R deployments on Windows and Linux servers
 
 In SQL Server 2017 CTP 2.0, the name has been changed to reflect support for the popular Python language.
 
-+ **SQL Server Machine Learning Services (In-Database)** supports both R and Python, and offers additional.
++ **SQL Server Machine Learning Services (In-Database)** supports both R and Python.
 version-md.md)]
 + **Microsoft Machine Learning Server** supports R and Python deployments on Windows servers, with expansion to other supported platforms planned for late 2017.
 
@@ -67,7 +67,7 @@ For more information, see [Microsoft R Server (MSDN)](https://msdn.microsoft.com
 
 If you don't need to integrate with SQL Server, you can install R Server to enable rapid development, deployment, and operationalization of machine learning solutions.
 
-Moreover, if you install Microsoft Machine Learning Server using SQL Server 2017 setup, you can also deploy and consume Python applications.
+If you install Microsoft Machine Learning Server using SQL Server 2017 setup, you can also deploy and consume Python applications.
 
 ## Related Technologies
 
@@ -86,11 +86,11 @@ For more information, see:
 
 ### Azure Machine Learning
 
-When you create your own workspace in Azure Machine Learning Studio, you'll have access to over 400 preloaded R packages. YOu can also choose when you create an experiment that uses R, to deploy R using either a standard CRAN R distribution, or Microsoft R Open. You can even create your own R packages and upload them to Azure to run as custom modules.
+When you create your own workspace in Azure Machine Learning Studio, you'll have access to over 400 preloaded R packages. You can also choose when you create an experiment that uses R, to deploy R using either a standard CRAN R distribution, or Microsoft R Open. You can even create your own R packages and upload them to Azure to run as custom modules.
 
 For more information, see:
 + [Extend your experiment with R](https://docs.microsoft.com/azure/machine-learning/machine-learning-extend-your-experiment-with-r)
-+ [Author custom R modules in Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/machine-learning-custom-r-module
++ [Author custom R modules in Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/machine-learning-custom-r-module)
 
 Many of the algorithms provided in Azure ML are now included in Microsoft Machine Learning Services, as part of the MicrosoftML package. For more information, see [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml) on MSDN.
 

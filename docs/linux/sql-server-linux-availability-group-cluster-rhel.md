@@ -80,14 +80,16 @@ sudo pcs property set stonith-enabled=false
 
 ## Set cluster property start-failure-is-fatal to false
 
-`start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will take care of demoting the replica to secondary and it will automatically rejoin the availability group. 
-To update the property value to false run:
+`start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. After failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will demote the replica to secondary and it will automatically rejoin the availability group. 
+
+To update the property value to `false` run:
 
 ```bash
 pcs property set start-failure-is-fatal=false
 ```
 
-If the property has the default value of `true`, if first attempt to start the resource fails, user intervention is required after an automatic failover to cleanup the resource failure count and reset the configuration using: `pcs resource cleanup <resourceName>` command.
+>[!WARNING]
+>After an automatic failover, when `start-failure-is-fatal = true` the resource manager will attempt to start the resource. If it fails on the first attempt you have to manually run `pcs resource cleanup <resourceName>` to cleanup the resource failure count and reset the configuration.
 
 For more details on Pacemaker cluster properties see [Pacemaker Clusters Properties](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
@@ -104,7 +106,7 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 ```
 
 >[!NOTE]
->When you create the resource, the SQL Server resource agent sets `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT`. The default setting is calculated, depending on the availability group configuration. This affects both automatic failover and data protection. If you are using three nodes one primary and two synchronous replicas the value is set to `1`. For details and additional configuration options, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). 
+>When you create the resource, the SQL Server resource agent sets `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT`. The default setting is calculated, depending on the availability group configuration. This affects both automatic failover and data protection. If you are using three nodes - one primary and two synchronous replicas - the value is set to `1`. For details and additional configuration options, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). 
 
 ## Create virtual IP resource
 

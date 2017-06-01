@@ -6,7 +6,7 @@ description: Download and run the Docker image for SQL Server 2017.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/09/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -67,11 +67,22 @@ This topic explains how to pull and run the [mssql-server-linux container image]
     > [!TIP]
     > For Linux, depending on your system and user configuration, you might need to preface each `docker` command with `sudo`.
 
-2. To run the container image with Docker, you can use the following command:
+2. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS):
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -d microsoft/mssql-server-linux
     ```
+
+    If you are using Docker for Windows, use the following command from an elevated PowerShell command-prompt:
+
+    ```PowerShell
+    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -d microsoft/mssql-server-linux
+    ```
+
+    > [!NOTE]
+    > The only difference between the bash (Linux/macOS) example and the PowerShell (Windows) example is single quotes versus double-quotes around the environment variables. The docker run command fails if you use the wrong one. Throughout the remainder of this topic, bash and PowerShell code blocks are provided for convenience. If there is only one example, it works on all platforms, including Windows.
+
+    The following table provides a description of the parameters in the previous `docker run` example:
 
     | Parameter | Description |
     |-----|-----|
@@ -117,10 +128,18 @@ The following example uses **sqlcmd** to connect to SQL Server running in a Dock
 sqlcmd -S 10.3.2.4 -U SA -P '<YourPassword>'
 ```
 
+```PowerShell
+sqlcmd -S 10.3.2.4 -U SA -P "<YourPassword>"
+```
+
 If you mapped a host port that was not the default **1433**, add that port to the connection string. For example, if you specified `-p 1400:1433` in your `docker run` command, then connect by explicitly specify port 1400.
 
 ```bash
 sqlcmd -S 10.3.2.4,1400 -U SA -P '<YourPassword>'
+```
+
+```PowerShell
+sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 ```
 
 ### Tools inside the container
@@ -157,11 +176,21 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:143
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
+```PowerShell
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d microsoft/mssql-server-linux
+```
+
 Now there are two instances of SQL Server running in separate containers. Clients can connect to each SQL Server instance by using the IP address of the Docker host and the port number for the container.
 
 ```bash
 sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
 sqlcmd -S 10.3.2.4,1402 -U SA -P '<YourPassword>'
+```
+
+```PowerShell
+sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
+sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 ```
 
 ## <a id="persist"></a> Persist your data
@@ -179,6 +208,10 @@ The first option is to mount a directory on your host as a data volume in your c
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
+```PowerShell
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+```
+
 This technique also enables you to share and view the files on the host outside of Docker.
 
 > [!IMPORTANT]
@@ -190,6 +223,10 @@ The second option is to use a data volume container. You can create a data volum
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+```
+
+```PowerShell
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 > [!NOTE]
@@ -240,10 +277,14 @@ To copy a file out of the container, use the following command:
 docker cp <Container ID>:<Container path> <host path>
 ```
 
-For example:
+**Example:**
 
 ```bash
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
+```
+
+```PowerShell
+docker cp d6b75213ef80:/var/opt/mssql/log/errorlog C:\Temp\errorlog
 ```
 
 To copy a file into the container, use the following command:
@@ -252,10 +293,14 @@ To copy a file into the container, use the following command:
 docker cp <Host path> <Container ID>:<Container path>
 ```
 
-For example:
+**Example:**
 
 ```bash
 docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
+```
+
+```PowerShell
+docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 
 ## Upgrade SQL Server in containers
@@ -299,6 +344,8 @@ sudo systemctl status docker
 sudo systemctl start docker
 ```
 
+On Windows, verify that you are launching PowerShell or your command-prompt as an Administrator.
+
 ### SQL Server container startup errors
 
 If the SQL Server container fails to run, try the following tests:
@@ -307,6 +354,10 @@ If the SQL Server container fails to run, try the following tests:
 
     ```bash
     docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux`.
+    ```
+
+    ```PowerShell
+    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
 - Check to see if there are any error messages from container.
@@ -331,6 +382,10 @@ If you can't connect to the SQL Server instance running in your container, try t
 
     ```bash
     sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
+    ```
+
+    ```PowerShell
+    sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
     ```
 
 - If you used `docker run` with an existing mapped data volume or data volume container, SQL Server ignores the value of `SA_PASSWORD`. Instead, the pre-configured SA user password is used from the SQL Server data in the data volume or data volume container. Verify that you are using the SA password associated with the data you're attaching to.

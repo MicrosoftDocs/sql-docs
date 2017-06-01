@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/24/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -70,9 +70,14 @@ Windows 10, Windows 8, Windows 8.1, Windows 7 (SP1), Windows Server 2016, Window
 > [!NOTE]  
 > Non-English localized releases of SSMS require the [KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2. 
   
- This release of SSMS can be installed in the following languages:  
-[Chinese (People's Republic of China)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinese (Taiwan)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [English (United States)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [French](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c)  
-[German](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italian](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japanese](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Korean](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Portuguese (Brazil)](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russian](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Spanish](http://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)  
+This release of SSMS can be installed in the following languages:
+
+SQL Server Management Studio 17.1:<br>
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
+
+
+SQL Server Management Studio 17.1 Upgrade Package (upgrades 17.0 to 17.1):<br>
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40a)
 
  
 ## New in this Release  

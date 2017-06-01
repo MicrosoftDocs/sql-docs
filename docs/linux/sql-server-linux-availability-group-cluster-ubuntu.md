@@ -27,7 +27,8 @@ ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 
 # Configure Ubuntu Cluster and Availability Group Resource
 
-This document explains how to create a two-node cluster on Ubuntu and add a previously created availability group as a resource in the cluster. 
+This document explains how to create a three-node cluster on Ubuntu and add a previously created availability group as a resource in the cluster. 
+For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
 > At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. Always On dynamic management views that query cluster information will return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).

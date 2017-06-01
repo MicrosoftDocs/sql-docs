@@ -26,7 +26,7 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 
 # Configure RHEL Cluster for SQL Server Availability Group
 
-This document explains how to create a two-node availability group cluster for SQL Server on Red Hat Enterprise Linux. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). 
+This document explains how to create a three-node availability group cluster for SQL Server on Red Hat Enterprise Linux. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). 
 
 > [!NOTE] 
 > Access to Red Hat full documentation requires a valid subscription. 
@@ -80,11 +80,13 @@ sudo pcs property set stonith-enabled=false
 
 ## Set cluster property start-failure-is-fatal to false
 
-`Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will take care of demoting the replica to secondary and it will automatically rejoin the availability group. 
+`start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will take care of demoting the replica to secondary and it will automatically rejoin the availability group. 
 To update the property value to false run:
+
 ```bash
 pcs property set start-failure-is-fatal=false
 ```
+
 If the property has the default value of `true`, if first attempt to start the resource fails, user intervention is required after an automatic failover to cleanup the resource failure count and reset the configuration using: `pcs resource cleanup <resourceName>` command.
 
 For more details on Pacemaker cluster properties see [Pacemaker Clusters Properties](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
@@ -100,6 +102,9 @@ To create the availability group resource, use `pcs resource create` command and
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
 ```
+
+>[!NOTE]
+>When you create the resource, the SQL Server resource agent sets `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT`. The default setting is calculated, depending on the availability group configuration. This affects both automatic failover and data protection. If you are using three nodes one primary and two synchronous replicas the value is set to `1`. For details and additional configuration options, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). 
 
 ## Create virtual IP resource
 

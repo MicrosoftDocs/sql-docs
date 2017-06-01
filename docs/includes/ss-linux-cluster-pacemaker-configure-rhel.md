@@ -1,5 +1,5 @@
 
-3. On both cluster nodes, open the Pacemaker firewall ports. To open these ports with `firewalld`, run the following command:
+3. On all cluster nodes, open the Pacemaker firewall ports. To open these ports with `firewalld`, run the following command:
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -11,7 +11,7 @@
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405
 
-1. Install Pacemaker packages on each node.
+1. Install Pacemaker packages on all nodes.
 
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
@@ -19,7 +19,7 @@
 
    ​
 
-2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on both nodes. 
+2. Set the password for for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes. 
 
    ```bash
    sudo passwd hacluster
@@ -27,7 +27,7 @@
 
    ​
 
-3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on both nodes.
+3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on all nodes.
 
    ```bash
    sudo systemctl enable pcsd

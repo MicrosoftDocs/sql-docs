@@ -39,11 +39,11 @@ Use `mssql-conf` to configure TLS for an instance of [!INCLUDE[ssNoVersion](../.
 
 |Option |Description |
 |--- |--- |
-|`network.forceencryption` |If yes, then [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] forces all connections to be encrypted. By default, this option is no. |  
+|`network.forceencryption` |If 1, then [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] forces all connections to be encrypted. By default, this option is 0. |  
 |`network.tlscert` |The absolute path to the certificate file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:   `/etc/ssl/certs/mssql.pem`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 600 <file>`. |  
 |`network.tlskey` |The absolute path to the private key file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:  `/etc/ssl/private/mssql.key`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 600 <file>`. | 
-|`tlsprotocols` |A comma-separated list of which TLS protocols are allowed by SQL Server. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client does not support any allowed protocol, [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] rejects the connection attempt.  For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0).  If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |  
-|`network.tlsciphers` |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] for TLS. This string must be formatted per OpenSSL's cipher list format. In general, you should not need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |   
+|`network.tlsprotocols` |A comma-separated list of which TLS protocols are allowed by SQL Server. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client does not support any allowed protocol, [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] rejects the connection attempt.  For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0).  If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |  
+|`network.tlsciphers` |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In general, you should not need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |   
 | | |
  
 ## Example 
@@ -76,7 +76,7 @@ Use `mssql-conf` to configure [!INCLUDE[ssNoVersion](../../docs/includes/ssnover
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-sudo /opt/mssql/bin/mssql-conf set network.forceencryption yes 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
 ```
  
 ### Step 3: Restart [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] 

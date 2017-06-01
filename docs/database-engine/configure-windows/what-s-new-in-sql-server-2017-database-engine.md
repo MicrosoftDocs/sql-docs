@@ -21,6 +21,9 @@ manager: "jhubbard"
 **Note:** SQL Server 2017 also includes the features added in SQL Server 2016 service packs. For those items, see [What's New in SQL Server 2016 (Database Engine)](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 
 
+## SQL Server Database Engine (CTP 2.2)  
+- CLR assemblies can now be added to a whitelist, as a work around for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies.
+
 ## SQL Server Database Engine (CTP 2.1)  
 - A new, DMF [sys.dm_db_log_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), is introduced to expose summary level attributes and information on transaction log files; useful for monitoring the health of the transaction log.
 

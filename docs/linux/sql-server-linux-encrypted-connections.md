@@ -44,7 +44,7 @@ Use `mssql-conf` to configure TLS for an instance of [!INCLUDE[ssNoVersion](../.
 |`network.tlskey` |The absolute path to the private key file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:  `/etc/ssl/private/mssql.key`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 600 <file>`. | 
 |`tlsprotocols` |A comma-separated list of which TLS protocols are allowed by SQL Server. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client does not support any allowed protocol, [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] rejects the connection attempt.  For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0).  If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |  
 |`network.tlsciphers` |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] for TLS. This string must be formatted per OpenSSL's cipher list format. In general, you should not need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |   
-|--- |--- |
+| | |
  
 ## Example 
 This example uses a self-signed certificate. In normal production scenarios, the certificate would be signed by a CA that is trusted by all clients.  
@@ -52,12 +52,12 @@ This example uses a self-signed certificate. In normal production scenarios, the
 ### Step 1: Generate private key and certificate 
 Open a command terminal on the Linux machine where [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] is running. Run the following commands:  
 
-- Generate a self-signed certificate. Make sure the /CN matches your SQL Server host fully-qualified domain name. You may optionally use wildcards, e.g. '/CN=*.contoso.com'.    
+- Generate a self-signed certificate. Make sure the /CN matches your SQL Server host fully-qualified domain name. You may optionally use wildcards, for example `'/CN=*.contoso.com'`.    
    ```  
    openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
    ```  
 
-- Restrict access to mssql  
+- Restrict access to `mssql`  
    ```  
    sudo chown mssql:mssql mssql.pem mssql.key 
    sudo chmod 600 mssql.pem mssql.key 
@@ -93,7 +93,7 @@ sqlcmd
 `sqlcmd -N -C -S mssql.contoso.com -U sa -P '<YourPassword>'`  
 
 [!INCLUDE[ssmanstudiofull-md](../../docs/includes/ssmanstudiofull-md.md)]   
-<graphic>  
+Dialog box graphic to be added.  
   
 ADO.NET  
 `"Encrypt=true; TrustServerCertificate=true;"`  
@@ -112,5 +112,5 @@ JDBC
 |The certificate chain was issued by an authority that is not trusted.  |This error occurs when clients are unable to verify the signature on the certificate presented by SQL Server during the TLS handshake. Make sure the client trusts either the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] certificate directly, or the CA which signed the SQL Server certificate. |
 |The target principal name is incorrect.  |Make sure that Common Name field on SQL Server's certificate matches the server name specified in the client's connection string. |  
 |An existing connection was forcibly closed by the remote host. |This error can occur when the client doesn't support the TLS protocol version required by SQL Server. For example, if [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] is configured to require TLS 1.2, make sure your clients also support the TLS 1.2 protocol. |
-|--- |--- |   
+| | |   
 

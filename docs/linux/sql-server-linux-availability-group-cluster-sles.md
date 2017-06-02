@@ -273,8 +273,4 @@ For additional details see:
 
 ## Next steps
 
-[Configure availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
-
-[Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
-
-
+[Operate HA availability group](sql-server-linux-availability-group-failover-ha.md)

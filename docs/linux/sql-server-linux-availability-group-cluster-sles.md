@@ -55,7 +55,7 @@ The steps to create an availability group on Linux servers for high availability
 
 ## Prerequisites
 
-To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster. The steps below outline how to configure these servers.
+To complete the end-to-end scenario below you need three servers to deploy a three-node cluster. The steps below outline how to configure these servers.
 
 ## Setup and configure the operating system on each cluster node 
 
@@ -63,18 +63,19 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ### Install and configure SQL Server service on each cluster node
 
-1. Install and setup SQL Server service on both nodes. For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
+1. Install and setup SQL Server service on each node. For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
-1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms throughout this guide.
+1. Designate one node as primary and the others as secondary, for purposes of configuration. Use these terms throughout this guide.
 
 1. Make sure nodes that are going to be part of the cluster can communicate to each other.
 
-   The following example shows `/etc/hosts` with additions for two nodes named SLES1 and SLES2.
+   The following example shows `/etc/hosts` with additions for trhee nodes named node1, node2 and node3.
 
    ```
    127.0.0.1   localhost
-   10.128.18.128 SLES1
-   10.128.16.77 SLES2
+   10.128.18.12 node1
+   10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
    All cluster nodes must be able to access each other via SSH. Tools like `hb_report` or `crm_report` (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes, otherwise they can only collect data from the current node. In case you use a non-standard SSH port, use the -X option (see `man` page). For example, if your SSH port is 3479, invoke a `crm_report` with:
@@ -175,15 +176,18 @@ After logging in to the specified node, the script will copy the Corosync config
    
    2 nodes configured
    1 resource configured
-   Online: [ SLES1 SLES2 ]
+   Online: [ node1 node2 ]
    Full list of resources:   
-   admin_addr     (ocf::heartbeat:IPaddr2):       Started SLES1
+   admin_addr     (ocf::heartbeat:IPaddr2):       Started node1
    ```
 
    >[!NOTE]
    >`admin_addr` is the virtual IP cluster resource which is configured during initial one-node cluster setup.
 
 After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information, refer to Section 4.1.2, Option no-quorum-policy. 
+
+>[!NOTE]
+>High availability solutions require three nodes. See [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
 ## Configure the cluster resources for SQL Server
 
@@ -236,6 +240,7 @@ commit
 
 ### Add ordering constraint
 The colocation constraint has an implicit ordering constraint. It moves the virtual IP resource before it moves the availability group resource. By default the sequence of events is: 
+
 1. User issues resource migrate to the availability group master from node1 to node2.
 2. The virtual IP resource stops on node 1.
 3. The virtual IP resource starts on node 2. At this point, the IP address temporarily points to node 2 while node 2 is still a pre-failover secondary. 

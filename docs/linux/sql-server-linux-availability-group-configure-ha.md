@@ -74,6 +74,16 @@ The steps to create an availability group on Linux servers for high availability
 
 ## Create the availability group
 
+There are three availability group configurations.
+
+- [Three synchronous replicas](sql-server-linux-availability-group-failover-ha.md#threeSynch)
+
+- [Two synchronous replicas and a witness replica](sql-server-linux-availability-group-failover-ha.md#witness)
+
+- [Two synchronous replicas availability group](sql-server-linux-availability-group-failover-ha.md#twoSynch)
+
+This article configures the availability group with three synchronous replicas. For information about all three configurations, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-failover-ha.md).
+
 Create the availability group. In order to create the availability group for HA on Linux, use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) Transact-SQL DDL with `CLUSTER_TYPE = EXTERNAL`. 
 
 The `EXTERNAL` value for `CLUSTER_TYPE` option specifies that the an external cluster entity manages the availability group. Pacemaker is an example of an external cluster entity. When the availability group `CLUSTER_TYPE = EXTERNAL`, set primary and secondary replica `FAILOVER_MODE = EXTERNAL`. After you create the availability group, configure the cluster resource for the availability group using the cluster management tools - for example with Pacemaker use `pcs` (on RHEL, Ubuntu) or `crm` (on SLES). See the Linux distribution specific cluster configuration section for an end-to-end example.
@@ -109,6 +119,7 @@ CREATE AVAILABILITY GROUP [ag1]
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ```
+
 >[!NOTE]
 >Running the CREATE AVAILABILITY GROUP command will complete with a warning: "Attempt to access non-existent or uninitialized availability group with ID . This is usually an internal condition, such as the availability group is being dropped or the local WSFC node has lost quorum. In such cases, and no user action is required.". This is a known issue and product team is working on a fix. Meanwhile, users should assume command completed successfully. 
 

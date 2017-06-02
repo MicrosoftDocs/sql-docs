@@ -48,6 +48,8 @@ If supported by the configuration, the resource agent parameter `REQUIRED_ SYNCH
 
 The following sections explain the default behavior for the cluster resource. 
 
+<a name="threeSynch"></a>
+
 ## Three synchronous replicas
 
 This configuration consists of three synchronous replicas. By default, it provides high availability and data protection. It can also provide read scale-out.
@@ -66,6 +68,8 @@ The following table describes the high availability and data protection behavior
 |Manual failover after primary replica outage - possible data loss|✔| | 
 
 \* Default setting when availability group is added as a resource in a cluster.
+
+<a name="witness"></a>
 
 ## Two synchronous replicas and a witness replica
 
@@ -88,6 +92,8 @@ The following table describes the high availability and data protection behavior
 \* Default setting when availability group is added as a resource in a cluster.
 
 For additional information, see [More about a witness replica](#WitnessReplica).
+
+<a name="twoSynch"></a>
 
 ## Two synchronous replicas
 

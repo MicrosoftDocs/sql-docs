@@ -41,7 +41,7 @@ The steps to create an availability group on Linux servers for high availability
 
 1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
 
-2. [Create the availability group](sql-server-linux-availability-group-failover-ha.md). 
+2. [Create the availability group](sql-server-linux-availability-group-configure-ha.md). 
 
 3. Configure a cluster resource manager, like Pacemaker. These instructions are in this document.
    

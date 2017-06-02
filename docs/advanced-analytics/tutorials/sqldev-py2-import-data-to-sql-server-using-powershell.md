@@ -1,7 +1,7 @@
 ---
 title: "Step 2: Import Data to SQL Server using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/10/2017"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-vnext-ctp2"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,26 +15,26 @@ dev_langs:
   - "Python"
   - "TSQL"
 ms.assetid:
-caps.latest.revision: 1
+caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Step 2: Import Data to SQL Server using PowerShell
 
-In this step, you'll run one of the downloaded scripts, to create the database objects required for the walkthrough. The script also creates most of the stored procedures you'll use, and uploads the sample data to a table in the database you specified.
+In this step, you'll run one of the downloaded scripts to create the database objects required for the walkthrough. The script also creates most of the stored procedures you'll use, and uploads the sample data to a table in the database you specified.
 
 ## Create SQL Objects and Data
 
-Among the downloaded files you should see a PowerShell script. To prepare the environment for the walkthrough, you'll run this script.  The script performs these actions:
+Among the downloaded files you should see a PowerShell script. You must run this script to prepare the environment for the walkthrough.  The script performs these actions:
 
 - Installs the SQL Native Client and SQL command-line utilities, if not already installed. These utilities are required for bulk-loading the data to the database using **bcp**.
 
-- Creates a database and a table on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and bulk-inserts data into the table.
+- Creates a database and a table on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and bulk-inserts data into the table
 
-- Creates multiple SQL functions and stored procedures.
+- Creates multiple SQL functions and stored procedures
 
-### Run the script
+### To run the script
 
 1. Open a PowerShell command prompt as administrator and run the following command.
   
@@ -44,13 +44,16 @@ Among the downloaded files you should see a PowerShell script. To prepare the en
 
     You will be prompted to input the following information:
     - The name or address of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance where machine learning Services with Python has been installed
-    - The user name and password for an account on the instance. The account you use must have the ability to create databases, create tables and stored procedures, and upload data to tables. If you do not provide the user name and password, your Windows identity is used to sign in to SQL Server.
-    - The path and file name of the sample data file that you just downloaded. For example, `C:\tempRSQL\nyctaxi1pct.csv`
+    - The user name and password for an account on the instance. The account you use must have the ability to create databases, create tables and stored procedures, and upload data to tables. If you do not provide the user name and password, your Windows identity will be used to sign in to SQL Server.
+    - The path and file name of the sample data file that you just downloaded. For example, `C:\tempPythonSQL\nyctaxi1pct.csv`
+
+  > [!NOTE]
+  > This operation requires that `xmlrw.dll` and `bcp.exe` be in the same folder. If not, make a copy of `xmlrw.dll`.
 
 2.  As part of this step, all the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts are also modified to replace placeholders with the database name and user name that you provide as script inputs.
   
-    Take a minute to review the stored procedures and functions created by the script.
-  
+    The following table lists the stored procedures and functions created by the script.
+
     |||
     |-|-|
     |**SQL script file name**|**Function**|
@@ -75,6 +78,8 @@ Among the downloaded files you should see a PowerShell script. To prepare the en
 
     > [!NOTE]
     > If the database objects already exist, they cannot be created again. If the table already exists, the data will be appended, not overwritten. Therefore, be sure to drop any existing objects before running the script.
+
+4. At this point, you have run only PowerShell and T-SQL commands. Before going any further, you might wish to check that external scripting languages are supported on the SQL Server instance. After installing the Python machine learning feature, it is not enabled by default, so you might need to enable the feature, create a firewall rule, add the Python worker group to SQL Server security, or set up database permissions. See [these instructions](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-sql-server-r-services-in-database#bkmk_enableFeature). 
 
 ## Next Step
 

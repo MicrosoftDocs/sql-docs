@@ -126,7 +126,7 @@ Run **only one** of the following scripts.
    ```
 
    >[!IMPORTANT]
-   >After you run the proceeding script to create an availability group with three synchronous replicas, do not run the following script.
+   >After you run the preceding script to create an availability group with three synchronous replicas, do not run the following script.
 
 <a name="witnessScript"></a>
 
@@ -135,7 +135,7 @@ Run **only one** of the following scripts.
    Include two replicas with synchronous availability mode, and a witness replica. For example, the following script creates an availability group called `ag1`. `node1` and `node2` host replicas in synchronous mode, with automatic seeding and automatic failover. `node3` is a witness replica. The script defines only the SQL Server instance name `node3`, the endpoint, and the availability mode.
 
    >[!IMPORTANT]
-   >Only run the following script to create an availability group with two synchronous replicas and a witness replica. Do not run the following script if you ran the proceeding script. 
+   >Only run the following script to create an availability group with two synchronous replicas and a witness replica. Do not run the following script if you ran the preceding script. 
 
    ```Transact-SQL
    CREATE AVAILABILITY GROUP [ag1]

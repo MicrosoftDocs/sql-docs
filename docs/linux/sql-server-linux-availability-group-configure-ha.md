@@ -76,13 +76,13 @@ The steps to create an availability group on Linux servers for high availability
 
 There are three availability group configurations.
 
-- [Three synchronous replicas](sql-server-linux-availability-group-failover-ha.md#threeSynch)
+- [Three synchronous replicas](sql-server-linux-availability-group-ha.md#threeSynch)
 
-- [Two synchronous replicas and a witness replica](sql-server-linux-availability-group-failover-ha.md#witness)
+- [Two synchronous replicas and a witness replica](sql-server-linux-availability-group-ha.md#witness)
 
-- [Two synchronous replicas availability group](sql-server-linux-availability-group-failover-ha.md#twoSynch)
+- [Two synchronous replicas availability group](sql-server-linux-availability-group-ha.md#twoSynch)
 
-This article configures the availability group with three synchronous replicas. For information about all three configurations, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-failover-ha.md).
+This article configures the availability group with three synchronous replicas. For information about all three configurations, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
 Create the availability group. In order to create the availability group for HA on Linux, use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) Transact-SQL DDL with `CLUSTER_TYPE = EXTERNAL`. 
 

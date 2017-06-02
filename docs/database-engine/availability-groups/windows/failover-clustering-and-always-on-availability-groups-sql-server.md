@@ -1,7 +1,7 @@
 ---
 title: "Failover Clustering and Always On Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,9 +23,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Failover Clustering and Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the high availability and disaster recovery solution introduced in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], requires Windows Server Failover Clustering (WSFC). Also, though [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is not dependent upon [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Clustering, you can use a failover clustering instance (FCI) to host an availability replica for an availability group. It is important to know the role of each clustering technology, and to know what considerations are necessary as you design your [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] environment.  
+   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the high availability and disaster recovery solution introduced in [!INCLUDE[sssql11](../../../includes/sssql11_md.md)], requires Windows Server Failover Clustering (WSFC). Also, though [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is not dependent upon [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Clustering, you can use a failover clustering instance (FCI) to host an availability replica for an availability group. It is important to know the role of each clustering technology, and to know what considerations are necessary as you design your [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] environment.  
   
 > [!NOTE]  
 >  For information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] concepts, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

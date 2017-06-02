@@ -93,7 +93,7 @@ sqlcmd
 `sqlcmd -N -C -S mssql.contoso.com -U sa -P '<YourPassword>'`  
 
 [!INCLUDE[ssmanstudiofull-md](../../docs/includes/ssmanstudiofull-md.md)]   
-  ![SSMS connection dialog](media/ssms-encrypt-connection.png "SSMS connection dialog")  
+  ![SSMS connection dialog](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "SSMS connection dialog")  
   
 ADO.NET  
 `"Encrypt=true; TrustServerCertificate=true;"`  

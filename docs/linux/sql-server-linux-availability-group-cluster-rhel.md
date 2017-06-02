@@ -105,8 +105,7 @@ To create the availability group resource, use `pcs resource create` command and
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notify=true
 ```
 
->[!NOTE]
->When you create the resource, the SQL Server resource agent sets `REQUIRED_ SYNCHRONIZED_SECONDARIES_TO_COMMIT`. The default setting is calculated, depending on the availability group configuration. This affects both automatic failover and data protection. If you are using three nodes - one primary and two synchronous replicas - the value is set to `1`. For details and additional configuration options, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). 
+[!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
 ## Create virtual IP resource
 

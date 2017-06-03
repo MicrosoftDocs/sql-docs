@@ -2,7 +2,7 @@
 title: "Install Master Data Services in an AlwaysOn Environment | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/02/2017"
+ms.date: "06/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

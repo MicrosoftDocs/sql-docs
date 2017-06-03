@@ -2,7 +2,7 @@
 title: "Install Master Data Services in an AlwaysOn Environment | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/01/2017"
+ms.date: "06/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -167,7 +167,8 @@ improved.  
 The Windows Server operating system is installed on all instances, and
 all updates are patched.
 
->[!NOTE] It is **highly recommended** that you install the same Windows
+>[!NOTE] 
+>It is **highly recommended** that you install the same Windows
 >version and the same feature set on all the instances to avoid any
 >potential incompatibility issues.
 
@@ -185,16 +186,16 @@ the WSFC feature on each instance. You need administrator permissions.
 3.  Select the **Failover Clustering** checkbox, and then click **Next**
     to finish the installation. See Figure 2.
 
-If you’re asked for confirmation to **Add features that are required
+    If you’re asked for confirmation to **Add features that are required
 for Failover clustering**, click **Add Features**. See Figure 3.
 
-![Add Roles and Features Wizard, Failover Clustering](media/Fig2_SelectFeatures.png)
+    ![Add Roles and Features Wizard, Failover Clustering](media/Fig2_SelectFeatures.png)
 
-Figure 2
+    Figure 2
 
-![Add Roles and Features Wizard, required for failover cluster](media/Fig3_RequiredFeaturesFailover.png)
+    ![Add Roles and Features Wizard, required for failover cluster](media/Fig3_RequiredFeaturesFailover.png)
 
-Figure 3
+    Figure 3
 
 4.  On the **Confirmation** page, click **Install** to install the
     failover clustering feature.
@@ -214,10 +215,9 @@ WSFC. You should only need to do this on one node.
 2.  In **Failover Cluster Manager**, click **Validate Configuration** in
     the right pane. See Figure 4.
 
-![Failover Cluster Manager, Validate Configuration](media/Fig4_ValidateConfig.png)
+    ![Failover Cluster Manager, Validate Configuration](media/Fig4_ValidateConfig.png)
 
-Figure 4
- 
+    Figure 4
 
 3.  In the **Validate a Configuration** **Wizard**, click **Next**.
 
@@ -225,39 +225,37 @@ Figure 4
     names that will host SQL Server, and then click **Next**. See
     Figure 5.
 
-In this example we added two instances, MDS-HA1 and MDS-HA2.
- 
+    In this example we added two instances, MDS-HA1 and MDS-HA2.
 
-![Validate a Configuration Wizard, Select Servers or a Cluster page](media/Fig5_AddServer.png)
+    ![Validate a Configuration Wizard, Select Servers or a Cluster page](media/Fig5_AddServer.png)
 
-Figure 5
+    Figure 5
 
 5.  On the **Testing Options** page, click **Run all tests**, and then
     click **Next**.
 
 6.  Click **Next** to finish the validation.
 
-The **Validating** page shows you the progress, and the **Summary**
+    The **Validating** page shows you the progress, and the **Summary**
 page shows you the validation summary. See Figures 6 and 7.
 
 7.  On the **Summary** page, check for any warning or error messages.
 
-Errors must be fixed. However, warnings may not be an issue. A warning
+    Errors must be fixed. However, warnings may not be an issue. A warning
 message means that “the tested item might meet the requirement, but
 there is something you should check”. For example, figure 7 shows a
 “validate disk access latency” warning, that may be due to the disk
 being busy on other tasks temporarily, and you may ignore it. You
 should check the online document for each warning and error message
 for more details. See Figure 7.
-
  
-![Validate Configuration Wizard, Validating page](media/Fig6_ValidationTests.png)
+    ![Validate Configuration Wizard, Validating page](media/Fig6_ValidationTests.png)
 
-Figure 6
+    Figure 6
 
-![Validate a Configuration Wizard, Summary page](media/Fig7_ValidationSummary.png)
+    ![Validate a Configuration Wizard, Summary page](media/Fig7_ValidationSummary.png)
 
-Figure 7
+    Figure 7
 
 8.  On the **Summary** page, confirm that the **Create the cluster now
     using the validated nodes** checkbox is selected, and then click
@@ -269,19 +267,19 @@ Figure 7
    the WSFC cluster name, and then click **Next**. In this example,
    we use "MDS-HA" as the cluster name. See Figure 8.
 
-![Enter the Cluster name](media/Fig8_EnterClusterName.png)
+    ![Enter the Cluster name](media/Fig8_EnterClusterName.png)
 
-Figure 8
+    Figure 8
 
 11. Continue to click **Next** to finish creating the cluster. The
    **Summary of Cluster MDS-HA** section displays the cluster
    information. See Figure 9.
 
-![View summary information for the Cluster](media/Fig9_ClusterSummary.png)
+    ![View summary information for the Cluster](media/Fig9_ClusterSummary.png)
 
-Figure 9
+    Figure 9
 
-If you need to add a node later, click **Add Node** action in the right
+    If you need to add a node later, click **Add Node** action in the right
 pane in **Failover Cluster Manager**.
 
 Notes:
@@ -354,9 +352,9 @@ cluster.
     service** in the left pane, right-click **SQL Server** in the
     right pane, and then click **Properties**. See Figure 10.
 
-![SQL Server Properties window](media/Fig10_SQLServerProperties.png)
+    ![SQL Server Properties window](media/Fig10_SQLServerProperties.png)
 
-Figure 10
+    Figure 10
 
 2.  In the **SQL Server (MSSQLSERVER)** **Properties** dialog box, click
     the **AlwaysOn High Availability** tab, and then select the
@@ -364,24 +362,25 @@ Figure 10
     displays in the **Windows failover cluster name** text box, click
     **OK** to continue. See Figure 11.
 
-![Enable AlwaysOn Availability Groups option](media/Fig11_EnableAlwaysOn.png)
+    ![Enable AlwaysOn Availability Groups option](media/Fig11_EnableAlwaysOn.png)
 
-Figure 11
+    Figure 11
 
 3.  When a warning page displays, click **OK** to continue. See
     Figure 12.
 
-![Confirm to stop and restart service](media/Fig12_WarningServiceStopStart.png)
+    ![Confirm to stop and restart service](media/Fig12_WarningServiceStopStart.png)
 
-Figure 12
+    Figure 12
 
 4.  Click **Restart**, to restart the **SQL Server** service and make
     this change effective. See Figure 10.
 
-> [!NOTE] You can change the service account running the SQL Server service
-using the **SQL Server Configuration Manager**. Click the **Log On** tab
-in the **SQL Server (MSSQLSERVER)** **Properties** dialog box. See
-Figure 11.
+>[!NOTE] 
+>You can change the service account running the SQL Server service
+>using the **SQL Server Configuration Manager**. Click the **Log On** tab
+>in the **SQL Server (MSSQLSERVER)** **Properties** dialog box. See
+>Figure 11.
 
 ### Create an Availability Group
 
@@ -401,39 +400,39 @@ create an AG on this MDS database.
     create an empty database. Replace C:\\temp with the location you
     want to use to perform a full backup.
 
-```
-CREATE DATABASE MDS\_Sample
-GO
-BACKUP DATABASE MDS\_Sample TO DISK='C:\\temp'
-GO
-```
+    ```
+    CREATE DATABASE MDS\_Sample
+    GO
+    BACKUP DATABASE MDS\_Sample TO DISK='C:\\temp'
+    GO
+    ```
 
-> [!NOTE] A full database backup is necessary for creating the AG on this
-database.
+    >[!NOTE] 
+    >A full database backup is necessary for creating the AG on this
+    >database.
 
 3.  In the **Object Explorer**, expand the **AlwaysOn High
     Availability** folder and click **New Availability Group Wizard**
     to launch the **New Availability Group Wizard**. See Figure 13.
 
-![Launch New Availability Group wizard](media/Fig13_AvailabilityGroupsFolder.png)
+    ![Launch New Availability Group wizard](media/Fig13_AvailabilityGroupsFolder.png)
 
-Figure 13
-
+    Figure 13
 
 4.  In the **New Availability Group** wizard, click **Next** to display
     the **Specify Name** page. Type a name for the AG, and then click
     **Next**. See Figure 14.
 
-![Enter the name of the Availability Group](media/Fig14_AvailabilityGroupName.png)
+    ![Enter the name of the Availability Group](media/Fig14_AvailabilityGroupName.png)
 
-Figure 14
+    Figure 14
 
 5.  Click the database you just created on the **Select Database** page,
     and then click **Next**. See Figure 15.
 
-![Select the database](media/Fig15_AvailabilityGroupSelectDatabase.png)
+    ![Select the database](media/Fig15_AvailabilityGroupSelectDatabase.png)
 
-Figure 15
+    Figure 15
 
 6.  On the **Specify Replicas** page, add another replica by clicking
     **Add Replica**. This page already lists the current, local SQL
@@ -442,42 +441,41 @@ Figure 15
 7.  In the **Connect to Server** dialog box, add the appropriate
     credentials and click **Connect**.
 
-![Connect to a SQL Server instance](media/Fig16_AddReplicaConnectServer.png)
+    ![Connect to a SQL Server instance](media/Fig16_AddReplicaConnectServer.png)
 
-Figure 16
+    Figure 16
 
-Now you should see two replicas in the list. Repeat this step to add
+    Now you should see two replicas in the list. Repeat this step to add
 other nodes as replicas. See Figure 17.
 
-![View list of replicas](media/Fig17_AvailabilityGroupSQLReplicas.png)
+    ![View list of replicas](media/Fig17_AvailabilityGroupSQLReplicas.png)
 
-Figure 17
+    Figure 17
 
-For each replica, configure the following **Synchronous Commit**,
+    For each replica, configure the following **Synchronous Commit**,
 **Automatic Failover**, and **Readable Secondary** settings. See Figure
 17.
 
-**Synchronous Commit**: This guarantees that if a transaction is
+    **Synchronous Commit**: This guarantees that if a transaction is
 committed on the primary replica of a database, then the transaction
 is also committed on all other synchronous replicas. Asynchronous
 commit does not guarantee this, and it may lag behind the primary
 replica.
 
-You should usually enable synchronous commit only when the two nodes
+    You should usually enable synchronous commit only when the two nodes
 are in the same data center. If they are in different data centers,
 synchronous commit may slow down the database performance.
 
-If this checkbox is not selected, then asynchronous commit is used.
+    If this checkbox is not selected, then asynchronous commit is used.
 
-**Automatic Failover:** When the primary replica is down, the AG will
+    **Automatic Failover:** When the primary replica is down, the AG will
 automatically failover to its secondary replica when automatic
 failover is selected. This can only be enabled on the replicas with
 synchronous commits.
 
-**Readable Secondary:** By default, users cannot connect to any
+    **Readable Secondary:** By default, users cannot connect to any
 secondary replicas. This will enable users to connect to the secondary
 replica with read-only access.
-
 
 8.  On the **Specify Replicas** page, click the **Listener** tab and do
     the following. See Figure 18.
@@ -489,31 +487,29 @@ replica with read-only access.
 
     c.  Enter the default SQL port,1433, in the **Port** text box.
 
-    d.  Enter DHCP in the **Network Mode** text box, and then click
-        **Next** to continue.
+    d.  Enter DHCP in the **Network Mode** text box, and then click **Next** to continue.
 
- 
+    >[!NOTE] 
+    >Optionally, you can choose “Static IP” as the **Network Mode**
+    >and enter a static IP. You can also enter a port other than 1433. 
 
-> [!NOTE] Optionally, you can choose “Static IP” as the **Network Mode**
-and enter a static IP. You can also enter a port other than 1433. 
+    ![Configure the Listener](media/Fig18_AvailabilityGroupCreateListener.png)
 
-![Configure the Listener](media/Fig18_AvailabilityGroupCreateListener.png)
-
-Figure 18
+    Figure 18
 
 9.  On the **Select Data Synchronization** page, click **Full**, and
     specify a network share that every node can access. Click **Next**
     to continue. See Figure 19.
 
-This network share will be used to store the database backup to create
+    This network share will be used to store the database backup to create
 secondary replicas. If this is not available for your organization,
 choose another data synchronization preference. Refer to [SQL Server
 2016 AlwaysOn Availability Group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) on how to use other options to create secondary replicas. The figure 17 also
 lists other options.
 
-![Configure data synchronization](media/Fig19_AvailabilityGroupDataSync.png)
+    ![Configure data synchronization](media/Fig19_AvailabilityGroupDataSync.png)
 
-Figure 19 
+    Figure 19 
 
 10. On the **Validation** page, make sure all validations pass
     successfully, and correct any errors. Click **Next** to continue.
@@ -537,9 +533,9 @@ Figure 19 
     then click **Show Dashboard**. See Figure 20. The status of the
     new AG and its replicas appears.
 
-![View the dashboard](media/Fig20_ShowDashboard.png)
+    ![View the dashboard](media/Fig20_ShowDashboard.png)
 
-Figure 20 
+    Figure 20 
 
 3.  Click **Failover** to do a failover to a synchronous replica and an
     asynchronous replica. This is to verify that failover happens
@@ -565,18 +561,18 @@ outside WSFC, as long as MDS can connect to the AG.
     the **SQL Server instance** text box, click **Test Connection**,
     and then click **Next**. See Figure 21.
 
-![Configure database server with AG listener](media/Fig21_MDSDatabaseServerListener.png)
+    ![Configure database server with AG listener](media/Fig21_MDSDatabaseServerListener.png)
 
-Figure 21
+    Figure 21
 
 3.  On the **Database** page, type the name of the database that you
     created in the [Create an Availability
     Group](#create-an-availability-group) section, and then click
     **Next**. See Figure 22.
 
-![Create and configure the database](media/Fig22_MDSCreateDatabase.png)
+    ![Create and configure the database](media/Fig22_MDSCreateDatabase.png)
 
-Figure 22
+    Figure 22
 
 4.  Complete the **Create Database** **Wizard**. For more information,
     see [Master Data Services Installation and Configuration](https://docs.microsoft.com/sql/master-data-services/master-data-services-installation-and-configuration).
@@ -586,11 +582,11 @@ Figure 22
     **Apply** to apply the settings to MDS. See Figure 23. For more
     information, see [Master Data Services Installation and Configuration](https://docs.microsoft.com/sql/master-data-services/master-data-services-installation-and-configuration).
 
-![Configure the Web application](media/Fig23_MDSWebApplication.png)
+    ![Configure the Web application](media/Fig23_MDSWebApplication.png)
 
-Figure 23
+    Figure 23
 
-The MDS setup is completed. You can repeat the above steps to set up
+    The MDS setup is completed. You can repeat the above steps to set up
 MDS to run on all nodes. The backend database is the same on the same
 AG.
 
@@ -598,7 +594,7 @@ AG.
     Availability Group](#create-an-availability-group) section) to
     create AlwaysOn AG, then you should drop the temporary database
 
-For more information about Master Data Service, refer to [Master Data
+    For more information about Master Data Service, refer to [Master Data
 Services](https://docs.microsoft.com/sql/master-data-services/master-data-services-overview-mds).
 
 ## Conclusion

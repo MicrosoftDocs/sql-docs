@@ -15,13 +15,8 @@ author: "sabotta"
 ms.author: "carlasab"
 manager: "jhubbard"
 ---
-# Microsoft White Papers
-
-[Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform](microsoft-sql-and-the-gdpr-requirements.md)
-
-[Installing Master Data Services in an AlwaysOn Environment](installing-master-data-services-in-an-alwayson-environment.md)  
-
-[SQL Server In-Memory OLTP Internals for SQL Server 2016](sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
+# Microsoft White Papers 
+[SQL Server In-Memory OLTP Internals for SQL Server 2016](https://msdn.microsoft.com/library/mt764316.aspx)
   
   
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)  

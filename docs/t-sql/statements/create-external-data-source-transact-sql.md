@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2017"
+ms.date: "06/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -168,7 +168,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
   CREDENTIAL = ElasticDBQueryCred,
   SHARD_MAP_NAME = 'CustomerIDShardMap'
 ) ;
-```
+1```
 
 For a step-by-step tutorial, see [Getting started with elastic queries for sharding (horizontal partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
@@ -188,7 +188,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
     DATABASE_NAME = 'Customers',   
     CREDENTIAL = SQL_Credential   
 ) ;   
-```  
+``  
   
 For a step-by-step tutorial on RDBMS, see [Getting started with cross-database queries (vertical partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
@@ -246,7 +246,7 @@ For a complete list of Hadoop distributions and versions supported by each conne
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8021'  
     ```  
   
--   Cloudera 5.1 - 5.5 on Linux:   
+-   Cloudera 5.1 - 5.11 on Linux:   
     ```  
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
     ```  
@@ -272,10 +272,10 @@ For a complete list of supported external data sources, see [PolyBase Connectivi
 -   An external table that references the external data source and external file format.  
   
 ## Permissions  
- Requires ALTER ANY EXTERNAL DATA SOURCE permission.
+ Requires CONTROL permission on database in SQL DW, SQL Server, APS 2016, and SQL DB.
 
 > [!IMPORTANT]  
->  The ALTER ANY EXTERNAL DATA SOURCE  permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
+>  In previous releases of PDW, create external data source required ALTER ANY EXTERNAL DATA SOURCE permissions.
   
   
 ## Error Handling  

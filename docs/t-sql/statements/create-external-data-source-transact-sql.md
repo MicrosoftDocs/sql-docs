@@ -126,8 +126,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ```  
   
 ## Arguments  
- *data_source_name*  
- Specifies the user-defined name for the data source. The name must be unique within the database in SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. The name must be unique within the server in Parallel Data Warehouse.
+ *data_source_name*   Specifies the user-defined name for the data source. The name must be unique within the database in SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. The name must be unique within the server in Parallel Data Warehouse.
   
  TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
  Specifies the data source type. Use HADOOP when the external data source is Hadoop or Azure Storage blob for Hadoop. Use SHARD_MAP_MANAGER when creating an external data source for Elastic Database query for sharding on Azure SQL Database. Use RDBMS with external data sources for cross-database queries with Elastic Database query on Azure SQL Database.  Use BLOB_STORAGE when performing bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 or later.
@@ -168,7 +167,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
   CREDENTIAL = ElasticDBQueryCred,
   SHARD_MAP_NAME = 'CustomerIDShardMap'
 ) ;
-1```
+```
 
 For a step-by-step tutorial, see [Getting started with elastic queries for sharding (horizontal partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
@@ -188,7 +187,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
     DATABASE_NAME = 'Customers',   
     CREDENTIAL = SQL_Credential   
 ) ;   
-``  
+```  
   
 For a step-by-step tutorial on RDBMS, see [Getting started with cross-database queries (vertical partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 

@@ -82,48 +82,87 @@ There are three availability group configurations.
 
 - [Two synchronous replicas availability group](sql-server-linux-availability-group-ha.md#twoSynch)
 
-This article configures the availability group with three synchronous replicas. For information about all three configurations, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
+For high availability, use either three synchronous replicas, or two synchronous replicas and a witness replica. 
+
+For information about all three configurations, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
 Create the availability group. In order to create the availability group for HA on Linux, use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) Transact-SQL DDL with `CLUSTER_TYPE = EXTERNAL`. 
 
 The `EXTERNAL` value for `CLUSTER_TYPE` option specifies that the an external cluster entity manages the availability group. Pacemaker is an example of an external cluster entity. When the availability group `CLUSTER_TYPE = EXTERNAL`, set primary and secondary replica `FAILOVER_MODE = EXTERNAL`. After you create the availability group, configure the cluster resource for the availability group using the cluster management tools - for example with Pacemaker use `pcs` (on RHEL, Ubuntu) or `crm` (on SLES). See the Linux distribution specific cluster configuration section for an end-to-end example.
 
-The following Transact-SQL script creates an availability group for HA named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, `**<node2>**`, and `**<node3>**` values with the names of the SQL Server instances that will host the replicas. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. Run the following Transact-SQL on the SQL Server instance that will host the primary replica to create the availability group.
+The following Transact-SQL scripts creates an availability group for HA named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, `**<node2>**`, and `**<node3>**` values with the names of the SQL Server instances that will host the replicas. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. Run the following Transact-SQL on the SQL Server instance that will host the primary replica to create the availability group.
 
-```Transact-SQL
-CREATE AVAILABILITY GROUP [ag1]
-    WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
-    FOR REPLICA ON
-        N'**<node1>**' 
-		WITH (
-		    ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
-		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-		    FAILOVER_MODE = EXTERNAL,
-		    SEEDING_MODE = AUTOMATIC
-		    ),
-        N'**<node2>**' 
-		WITH ( 
-		    ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
-		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-		    FAILOVER_MODE = EXTERNAL,
-		    SEEDING_MODE = AUTOMATIC
-		    ),
-		N'**<node3>**'
-        WITH( 
-		    ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
-		    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-		    FAILOVER_MODE = EXTERNAL,
-		    SEEDING_MODE = AUTOMATIC
-		    );
-		
-ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
+Run **only one** of the following scripts. 
 
-```
+- Create availability group with three synchronous replicas
+
+   ```Transact-SQL
+   CREATE AVAILABILITY GROUP [ag1]
+       WITH (DB_FAILOVER = ON, CLUSTER_TYPE = EXTERNAL)
+       FOR REPLICA ON
+           N'**<node1>**' 
+   	      	WITH (
+		       ENDPOINT_URL = N'tcp://**<node1>:**<5022>**',
+		       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+		       FAILOVER_MODE = EXTERNAL,
+		       SEEDING_MODE = AUTOMATIC
+		       ),
+           N'**<node2>**' 
+		    WITH ( 
+		       ENDPOINT_URL = N'tcp://**<node2>**:**<5022>**', 
+		       AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+		       FAILOVER_MODE = EXTERNAL,
+		       SEEDING_MODE = AUTOMATIC
+		       ),
+		   N'**<node3>**'
+           WITH( 
+		      ENDPOINT_URL = N'tcp://**<node3>**:**<5022>**', 
+		      AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+		      FAILOVER_MODE = EXTERNAL,
+		      SEEDING_MODE = AUTOMATIC
+		      );
+   		
+   ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
+   ```
+
+   >[!IMPORTANT]
+   >After you run the preceding script to create an availability group with three synchronous replicas, do not run the following script.
+
+<a name="witnessScript"></a>
+
+- Create availability group with two synchronous replicas and a witness replica
+
+   Include two replicas with synchronous availability mode, and a witness replica. For example, the following script creates an availability group called `ag1`. `node1` and `node2` host replicas in synchronous mode, with automatic seeding and automatic failover. `node3` is a witness replica. The script defines only the SQL Server instance name `node3`, the endpoint, and the availability mode.
+
+   >[!IMPORTANT]
+   >Only run the following script to create an availability group with two synchronous replicas and a witness replica. Do not run the following script if you ran the preceding script. 
+
+   ```Transact-SQL
+   CREATE AVAILABILITY GROUP [ag1]
+      WITH (CLUSTER_TYPE = EXTERNAL)
+      FOR REPLICA ON
+      N'node1' WITH (
+          ENDPOINT_URL = N'tcp://node1:5022',
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+          FAILOVER_MODE = EXTERNAL,
+          SEEDING_MODE = AUTOMATIC
+      ),
+      N'node2' WITH ( 
+          ENDPOINT_URL = N'tcp://node2:5022', 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+          FAILOVER_MODE = EXTERNAL,
+          SEEDING_MODE = AUTOMATIC
+      ),
+      N'node3' WITH (
+          ENDPOINT_URL = N'tcp://node3:5022',
+          AVAILABILITY_MODE = WITNESS_COMMIT
+      )
+   ```
 
 >[!NOTE]
->Running the CREATE AVAILABILITY GROUP command will complete with a warning: "Attempt to access non-existent or uninitialized availability group with ID . This is usually an internal condition, such as the availability group is being dropped or the local WSFC node has lost quorum. In such cases, and no user action is required.". This is a known issue and product team is working on a fix. Meanwhile, users should assume command completed successfully. 
+>Running the `CREATE AVAILABILITY GROUP` command will complete with a warning: "Attempt to access non-existent or uninitialized availability group with ID . This is usually an internal condition, such as the availability group is being dropped or the local WSFC node has lost quorum. In such cases, and no user action is required." This is a known issue and Microsoft is working on a resolution. Meanwhile, users should assume command completed successfully. 
 
-You can also configure an availability group with CLUSTER_TYPE=EXTERNAL using SQL Server Management Studio or PowerShell. 
+You can also configure an availability group with `CLUSTER_TYPE=EXTERNAL` using SQL Server Management Studio or PowerShell. 
 
 ### Join secondary replicas to the availability group
 

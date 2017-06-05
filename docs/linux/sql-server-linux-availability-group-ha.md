@@ -138,33 +138,7 @@ On a witness replica you cannot do the following things:
 
 A witness replica availability mode `WITNESS_COMMIT`. In this mode, configuration information is synchronously committed to the witness replica. You cannot modify the availability mode of a witness replica. To change the availability mode of a witness replica, remove the replica and recreate it as a secondary replica with an appropriate availability mode.
 
-To create an availability group with a witness replica:
-
-1. Install and configure SQL Server on three servers.
-
-2. Create the availability group. Include two replicas with synchronous availability mode, and a witness replica. For example, the following script creates an availability group called `ag1`. `node1` and `node2` host replicas in synchronous mode, with automatic seeding and automatic failover. `node3` is a witness replica. The script defines only the SQL Server instance name `node3`, the endpoint, and the availability mode.
-
-   ```Transact-SQL
-   CREATE AVAILABILITY GROUP [ag1]
-      WITH (CLUSTER_TYPE = EXTERNAL)
-      FOR REPLICA ON
-      N'node1' WITH (
-          ENDPOINT_URL = N'tcp://node1:5022',
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-          FAILOVER_MODE = EXTERNAL,
-          SEEDING_MODE = AUTOMATIC
-      ),
-      N'node2' WITH ( 
-          ENDPOINT_URL = N'tcp://node2:5022', 
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-          FAILOVER_MODE = EXTERNAL,
-          SEEDING_MODE = AUTOMATIC
-      ),
-      N'node3' WITH (
-          ENDPOINT_URL = N'tcp://node3:5022',
-          AVAILABILITY_MODE = WITNESS_COMMIT
-      )
-   ```
+To create an availabiltiy group with two synchronous replicas and a witness replica, see [Create availability group with two synchronous replicas and a witness replica](sql-server-linux-availability-group-configure-ha.md#witnessScript).
 
 <a name="pacemakerNotify"></a>
 

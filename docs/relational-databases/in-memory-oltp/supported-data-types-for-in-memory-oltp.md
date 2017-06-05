@@ -80,7 +80,7 @@ SELECT
 
 |Other Types|For more information|  
 |-----------------|--------------------------|  
-|table types|[Memory-Optimized Table Variables](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|  
+|table types|[Memory-Optimized Table Variables](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
 ## See Also  
  [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   

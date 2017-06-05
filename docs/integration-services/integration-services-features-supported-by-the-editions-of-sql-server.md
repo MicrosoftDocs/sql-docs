@@ -59,24 +59,23 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |Change Data Capture Service for Oracle by Attunity|Yes|||||  
 |Change Data Capture Designer for Oracle by Attunity|Yes||||| 
 
-##  <a name="ISAA"></a> Integration Services - Advanced Adapters  
+##  <a name="ISAA"></a> Integration Services - Advanced sources and destinations  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |High performance Oracle destination|Yes|||||  
 |High performance Teradata Destination|Yes|||||  
 |SAP BW source and destination|Yes|||||  
-|Data mining model training destination adapter|Yes|||||  
-|Dimension processing destination adapter|Yes|||||  
-|Partition processing destination adapter|Yes|||||  
-|Change Data Capture components by Attunity|Yes|||||  
+|Data mining model training destination|Yes|||||  
+|Dimension processing destination|Yes|||||  
+|Partition processing destination|Yes|||||  
 |Connector for Open Database Connectivity (ODBC) by Attunity|Yes|||||  
   
-##  <a name="ISAT"></a> Integration Services - Advanced Transforms  
+##  <a name="ISAT"></a> Integration Services - Advanced transformations  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Persistent (high performance) lookups|Yes|||||  
 |Data mining query transformation|Yes|||||  
-|Fuzzy grouping and lookup transformations|Yes|||||  
-|Term extractions and lookup transformations|Yes|||||  
+|Fuzzy grouping and fuzzy lookup transformations|Yes|||||  
+|Term extraction and term lookup transformations|Yes|||||  

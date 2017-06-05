@@ -52,10 +52,10 @@ Among the downloaded files you should see a PowerShell script. To prepare the en
 
 2.  As part of this step, all the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts are also modified to replace placeholders with the database name and user name that you provide as script inputs.
   
-    Take a minute to review the stored procedures and functions created by the script.
-  
+3. Take a minute to review the stored procedures and functions created by the script.
+     
     |**SQL script file name**|**Function**|
-    |-|-|
+    |------|------|
     |create-db-tb-upload-data.sql|Creates a database and two tables:<br /><br />nyctaxi_sample: Contains the main NYC Taxi dataset. A clustered columnstore index is added to the table to improve storage and query performance. The 1% sample of the NYC Taxi dataset will be inserted into this table.<br /><br />nyc_taxi_models: Used to persist the trained advanced analytics model.|
     |fnCalculateDistance.sql|Creates a scalar-valued function that calculates the direct distance between pickup and dropoff locations|
     |fnEngineerFeatures.sql|Creates a table-valued function that creates new data features for model training|
@@ -65,11 +65,10 @@ Among the downloaded files you should see a PowerShell script. To prepare the en
     |PredictTipSingleModeSciKitPy.sql|Creates a stored procedure that calls the trained model (scikit-learn) to create predictions using the model. This stored procedure accepts a new observation as input, with individual feature values passed as in-line parameters, and returns a value that predicts the outcome for the new observation.|
     |PredictTipSingleModeRxPy.sql|Creates a stored procedure that calls the trained model (revoscalepy) to create predictions using the model. This stored procedure accepts a new observation as input, with individual feature values passed as in-line parameters, and returns a value that predicts the outcome for the new observation.|
   
-    You'll create some additional stored procedures in the latter part of this walkthrough:
-  
-  
+4. You'll create some additional stored procedures in the latter part of this walkthrough:
+    
     |**SQL script file name**|**Function**|
-    |-|-|
+    |------|------|
     |SerializePlots.sql|Creates a stored procedure for data exploration. This stored procedure creates a graphic using Python and then serialize the graph objects.|
     |TrainTipPredictionModelSciKitPy.sql|Creates a stored procedure that trains a logistic regression model (scikit-learn). The model predicts the value of the  tipped column, and is trained using a randomly selected 60% of the data. The output of the stored procedure is the trained model, which is saved in the table nyc_taxi_models.|
     |TrainTipPredictionModelRxPy.sql|Creates a stored procedure that trains a logistic regression model (revoscalepy). The model predicts the value of the  tipped column, and is trained using a randomly selected 60% of the data. The output of the stored procedure is the trained model, which is saved in the table nyc_taxi_models.|

@@ -46,9 +46,8 @@ manager: "ajayj"
 ## Examples  
   
 ### A. Viewing current parallel worker availability  
- What are the current optimizer execution statistics for this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]?  
-  
-```  
+
+``` tsql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  
 ```  
   

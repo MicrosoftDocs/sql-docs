@@ -39,7 +39,10 @@ manager: "jhubbard"
   
 -   The primary and secondary availability groups must have the same configuration of databases.  
   
--   Automatic failover to the secondary availability group is not supported.  
+-   Automatic failover to the secondary availability group is not supported.
+
+> [!NOTE]  
+>  Creating a distributed availability group where either primary or secondary is a basic availability group is not supported.
   
 ## Create a distributed availability group  
  To create a distributed availability group, you must create an availability group and listener on each WSFC. You then combine these into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example does not cover all of the details of creating availability groups and listeners; instead, it focusses on highlighting the key requirements.  

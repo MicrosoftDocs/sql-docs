@@ -251,7 +251,6 @@
 # [ENABLE TRIGGER](enable-trigger-transact-sql.md)
 # [INSERT](insert-transact-sql.md) 
 # [INSERT (SQL Graph)](insert-sql-graph.md) 
-# [MATCH (SQL Graph)](match-sql-graph.md) 
 # [MERGE](merge-transact-sql.md) 
 # [RENAME](rename-transact-sql.md)  
 

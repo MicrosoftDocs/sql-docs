@@ -3,7 +3,7 @@ title: "sys.dm_operation_status (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "06/10/2016"
+ms.date: "06/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -43,7 +43,7 @@ manager: "jhubbard"
 |operation|**nvarchar(60)**|Operation performed on a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], such as CREATE or ALTER.|  
 |state|**tinyint**|The state of the operation.<br /><br /> 0 = Pending<br />1 = In progress<br />2 = Completed<br />3 = Failed<br />4 = Cancelled|  
 |state_desc|**nvarchar(120)**|PENDING = operation is waiting for resource or quota availability.<br /><br /> IN_PROGRESS = operation has started and is in progress.<br /><br /> COMPLETED = operation completed successfully.<br /><br /> FAILED = operation failed. See the **error_desc** column for details.<br /><br /> CANCELLED = operation stopped at the request of the user.|  
-|percent_complete|**int**|Percentage of operation that has completed. Values range from 0 to 100. Not null.|  
+|percent_complete|**int**|Percentage of operation that has completed. Values are 0, 50, or 100. Not null.<br/<br/>0 = operation not started<br/><br/>50 = operation in progress<br/><br/>100 = operation complete|  
 |error_code|**int**|Code indicating the error that occurred during a failed operation. If the value is 0, it indicates that the operation completed successfully.|  
 |error_desc|**nvarchar(2048)**|Description of the error that occurred during a failed operation.|  
 |error_severity|**int**|Severity level of the error that occurred during a failed operation. For more information about error severities, see [Database Engine Error Severities](http://go.microsoft.com/fwlink/?LinkId=251052).|  

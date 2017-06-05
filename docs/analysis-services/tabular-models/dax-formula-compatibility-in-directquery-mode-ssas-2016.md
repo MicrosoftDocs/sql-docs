@@ -16,8 +16,8 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# DAX Formula Compatibility in DirectQuery Mode (SSAS 2016)
-Some of the most significant enhancements in [!INCLUDE[ssASCurrent_md](../../includes/ssascurrent-md.md)] are to DirectQuery mode functionality for tabular 1200 and higher models. Many functional limitations in earlier versions no longer apply. For DAX formulas in-particular:
+# DAX Formula Compatibility in DirectQuery Mode 
+For tabular 1200 and higher models, many functional limitations in earlier versions no longer apply. For DAX formulas in-particular:
 
 - DirectQuery now generates simpler queries, providing improved performance.
 - Row level security (RLS) is now supported in DirectQuery mode.

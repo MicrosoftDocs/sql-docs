@@ -18,9 +18,9 @@ manager: "jhubbard"
 # Asynchronous Execution (Notification Method) Sample
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  The code samples in this topic demonstrates how to use [Asynchronous Execution (Notification Method)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  The code samples in this topic demonstrate how to use the [Asynchronous Execution (Notification Method)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
   
- This function uses asynchronous notification to open five connections and executes one query on statement of each connection.  
+ This function uses asynchronous notification to open five connections, and executes one query on a statement of each connection.  
   
 ```  
   
@@ -93,7 +93,7 @@ int AsyncNotificationSample(void)
         SQLCompleteAsync(SQL_HANDLE_DBC, arhDbc[i], & arrcDBC[i]);  
     }  
   
-    BOOL fFail = FALSE; // Whether some connection openning fails.  
+    BOOL fFail = FALSE; // Whether some connection opening fails.  
   
     for (int i=0; i<NUMBER_OPERATIONS; i++)  
     {  
@@ -268,84 +268,84 @@ SQLHENV g_hEnv = NULL;
 SQLHDBC g_hDbcs[g_nConnection];  
 HANDLE g_hevents[g_nConnection];  
   
-LONG volatile g_JobDoneNuber;  
+LONG volatile g_JobDoneNumber;  
   
 struct  
 {  
-char szOutConnectionString[500];  
-SQLSMALLINT iLen;  
+    char szOutConnectionString[500];  
+    SQLSMALLINT iLen;  
 } g_connOut[g_nConnection];  
   
 void CALLBACK WaitCallBack(PTP_CALLBACK_INSTANCE Inst, PVOID Context, PTP_WAIT Wait, TP_WAIT_RESULT WaitResult)  
 {  
-UINT_PTR i = reinterpret_cast<UINT_PTR>(Context);  
-SQLRETURN rc ;  
-SQLCompleteAsync(SQL_HANDLE_DBC, g_hDbcs[(int)i], &rc);  
-printf("Connection %d done: RC: %d, threadid:%u \n", (int)i, rc, GetCurrentThreadId());  
-InterlockedIncrement(&g_JobDoneNuber);  
+    UINT_PTR i = reinterpret_cast<UINT_PTR>(Context);  
+    SQLRETURN rc ;  
+    SQLCompleteAsync(SQL_HANDLE_DBC, g_hDbcs[(int)i], &rc);  
+    printf("Connection %d done: RC: %d, threadid:%u \n", (int)i, rc, GetCurrentThreadId());  
+    InterlockedIncrement(&g_JobDoneNumber);  
 }  
   
-int _tmain(int argc, _TCHAR* argv[])  
-{  
-for(int i = 0; i< g_nConnection; i++)  
-g_hevents[i] = CreateEvent(NULL, FALSE, FALSE, NULL);  
+int _tmain(int argc, _TCHAR* argv[])
+{
+    for(int i = 0; i< g_nConnection; i++)
+        g_hevents[i] = CreateEvent(NULL, FALSE, FALSE, NULL);
   
-PTP_WAIT waits[g_nConnection];  
-for(int i = 0; i < g_nConnection; i++)  
-{  
-waits[i] = CreateThreadpoolWait(&WaitCallBack, reinterpret_cast<PVOID>((UINT_PTR)i), NULL);  
-SetThreadpoolWait(waits[i], g_hevents[i], NULL);  
-}  
+    PTP_WAIT waits[g_nConnection];
+    for(int i = 0; i < g_nConnection; i++)
+    {  
+        waits[i] = CreateThreadpoolWait(&WaitCallBack, reinterpret_cast<PVOID>((UINT_PTR)i), NULL);
+        SetThreadpoolWait(waits[i], g_hevents[i], NULL);
+    }
+
+    SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE,&g_hEnv);
+    SQLSetEnvAttr(g_hEnv,SQL_ATTR_ODBC_VERSION, (SQLPOINTER)SQL_OV_ODBC3_80, SQL_IS_UINTEGER);
+    for(int i = 0; i < g_nConnection; i++)
+    {  
+        SQLAllocHandle( SQL_HANDLE_DBC, g_hEnv , &g_hDbcs[i]);
+        SQLSetConnectAttr(
+            g_hDbcs[i],  
+            SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE,  
+            (SQLPOINTER)SQL_ASYNC_ENABLE_ON,  
+            SQL_IS_INTEGER);  
+        SQLSetConnectAttr(g_hDbcs[i], SQL_ATTR_ASYNC_DBC_EVENT, g_hevents[i], SQL_IS_POINTER);
+    }
   
-SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE,&g_hEnv);  
-SQLSetEnvAttr(g_hEnv,SQL_ATTR_ODBC_VERSION, (SQLPOINTER)SQL_OV_ODBC3_80, SQL_IS_UINTEGER);  
-for(int i = 0; i < g_nConnection; i++)  
-{  
-SQLAllocHandle( SQL_HANDLE_DBC, g_hEnv , &g_hDbcs[i]);  
-SQLSetConnectAttr(  
-                g_hDbcs[i],  
-                SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE,  
-                (SQLPOINTER)SQL_ASYNC_ENABLE_ON,  
-                SQL_IS_INTEGER);  
-SQLSetConnectAttr(g_hDbcs[i], SQL_ATTR_ASYNC_DBC_EVENT, g_hevents[i], SQL_IS_POINTER);  
-}  
-  
-// make connections  
-g_JobDoneNuber = 0;  
-for(int i = 0; i < g_nConnection; i++)  
-{  
-SQLDriverConnect(g_hDbcs[i],NULL, (SQLCHAR*)"DRIVER={ODBC Driver 11 for SQL Server};Server=your_server;database=your_database;uid=usr;pwd=your_password",  
-SQL_NTS, (SQLCHAR*)g_connOut[i].szOutConnectionString, 500, &g_connOut[i].iLen, SQL_DRIVER_NOPROMPT);  
-}  
-  
-printf("connect wait..\n");  
-while(g_JobDoneNuber < g_nConnection)  
-SleepEx(50, false);  
-  
-// disconnect  
-for(int i = 0; i < g_nConnection; i++)  
-  
-SetThreadpoolWait(waits[i], g_hevents[i], NULL);  
-  
-printf("disconnect wait..\n");  
-g_JobDoneNuber = 0;  
-for(int i = 0; i < g_nConnection; i++)  
-SQLDisconnect(g_hDbcs[i]);  
-  
-while(g_JobDoneNuber < g_nConnection)  
-SleepEx(50, false);  
-  
-for(int i = 0; i < g_nConnection; i++)  
-CloseThreadpoolWait(waits[i]);  
-  
-for(int i = 0; i < g_nConnection; i++)  
-{  
-CloseHandle(g_hevents[i]);  
-SQLFreeHandle(SQL_HANDLE_DBC, g_hDbcs[i]);  
-}  
-SQLFreeHandle(SQL_HANDLE_ENV, g_hEnv);  
-return 0;  
-}  
+    // make connections  
+    g_JobDoneNumber = 0;  
+    for(int i = 0; i < g_nConnection; i++)  
+    {  
+        SQLDriverConnect(g_hDbcs[i],NULL,
+            (SQLCHAR*)"DRIVER={ODBC Driver 13 for SQL Server};Server=your_server;database=your_database;uid=usr;pwd=your_password",
+            SQL_NTS, (SQLCHAR*)g_connOut[i].szOutConnectionString, 500, &g_connOut[i].iLen, SQL_DRIVER_NOPROMPT);  
+    }
+
+    printf("connect wait..\n");
+    while(g_JobDoneNumber < g_nConnection)
+        SleepEx(50, false);
+
+    // disconnect  
+    for(int i = 0; i < g_nConnection; i++)  
+      SetThreadpoolWait(waits[i], g_hevents[i], NULL);
+
+    printf("disconnect wait..\n");
+    g_JobDoneNumber = 0;
+    for(int i = 0; i < g_nConnection; i++)
+        SQLDisconnect(g_hDbcs[i]);
+
+    while(g_JobDoneNumber < g_nConnection)  
+    SleepEx(50, false);
+
+    for(int i = 0; i < g_nConnection; i++)  
+        CloseThreadpoolWait(waits[i]);  
+
+    for(int i = 0; i < g_nConnection; i++)
+    {  
+        CloseHandle(g_hevents[i]);
+        SQLFreeHandle(SQL_HANDLE_DBC, g_hDbcs[i]);
+    }
+    SQLFreeHandle(SQL_HANDLE_ENV, g_hEnv);
+    return 0;
+}
 ```  
   
 ## See Also  

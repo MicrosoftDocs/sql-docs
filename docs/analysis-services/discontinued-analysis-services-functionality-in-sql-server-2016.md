@@ -23,7 +23,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Discontinued Analysis Services Functionality in SQL Server 2016
-  A *discontinued feature* is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)].  
+  A *discontinued feature* is one that is no longer supported. It might also be physically removed from the product. The following features are discontinued SQL Server 2016 Analysis Services.  
   
 |||  
 |-|-|  

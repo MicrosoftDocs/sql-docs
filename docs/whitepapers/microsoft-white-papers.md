@@ -15,8 +15,7 @@ author: "sabotta"
 ms.author: "carlasab"
 manager: "jhubbard"
 ---
-# Microsoft White Papers
-[Installing Master Data Services in an AlwaysOn Environment](https://msdn.microsoft.com/library/mt761778.aspx)  
+# Microsoft White Papers 
 [SQL Server In-Memory OLTP Internals for SQL Server 2016](https://msdn.microsoft.com/library/mt764316.aspx)
   
   

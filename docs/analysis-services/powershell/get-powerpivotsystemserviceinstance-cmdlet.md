@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Get-PowerPivotSystemServiceInstance cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   Returns one or more instances of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service running on application servers in the farm.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  

@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 -   **Express And Web Editions**  
   
-     Only the Express Edition with Advanced Services and Web edition include R Services (or Machine Learning Services). The performance limitations are similar to Standard Edition.  
+     Only the Express Edition with Advanced Services includes R Services (or Machine Learning Services). The performance limitations are similar to Standard Edition.  Web Edition incudes R Services with limited functionality, similar to Standard Edition.
   
  For more information about other product features, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
  

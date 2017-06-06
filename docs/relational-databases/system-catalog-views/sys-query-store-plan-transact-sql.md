@@ -55,6 +55,28 @@ manager: "jhubbard"
 |**avg_compile_duration**|**float**|Plan compilation statistics.|  
 |**last_compile_duration**|**bigint**|Plan compilation statistics.|  
   
+## Plan forcing limitations
+Query Store has a mechanism to enforce Query Optimizer to use certain execution plan. 
+However, there are some limitations that can prevent a plan to be enforced. 
+
+First, if the plan contains following constructions:
+* Insert bulk statement.
+* Insert bulk statement.
+* Reference to an external table
+* Distributed query or full-text operations
+* Use of Global queries 
+* Cursors
+* Invalid star join specification 
+
+Second, when objects that plan relies on, are no longer available:
+* Database (if Database, where plan originated, does not exist anymore)
+* Index (no longer there or disabled)
+
+Finally, problems with the plan itself:
+* Not legal for query
+* Query Optimizer exceeded number of allowed operations
+* Incorrectly formed plan XML
+
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  
   

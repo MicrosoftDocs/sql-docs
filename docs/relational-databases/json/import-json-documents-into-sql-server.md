@@ -18,23 +18,23 @@ manager: "jhubbard"
 # Import JSON documents into SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-This topic describes how to import JSON files in SQL Server. Currently you can find many JSON documents stored in files. Sensors generate information that's stored in JSON files, applications log information in JSON files, and so forth. It's important to be able to read the JSON data stored in files, load the data into SQL Server, and analyze it.
+This topic describes how to import JSON files into SQL Server. Currently there are lots of JSON documents stored in files. Applications log information in JSON files, sensors generate information that's stored in JSON files, and so forth. It's important to be able to read the JSON data stored in files, load the data into SQL Server, and analyze it.
 
 ## Import a JSON document into a single column
 **OPENROWSET(BULK)** is a table-valued function that can read data from any file on the local drive or network, if SQL Server has read access to that location. It returns a table with a single column that contains the contents of the file. There are various options that you can use with the OPENROWSET(BULK) function, such as separators. But in the simplest case, you can just load the entire contents of a file as a text value. Then you can load the contents of that value into a variable or a table. (This single large value is known as a single character large object, or SINGLE_CLOB.) 
 
 Here's an example of the **OPENROWSET(BULK)** function that reads the contents of a JSON file and returns it to the user as a single value:
 
-```tsql
+```sql
 SELECT BulkColumn
  FROM OPENROWSET (BULK 'C:\JSON\Books\book.json', SINGLE_CLOB) as j
- ```
+```
 
 OPENJSON(BULK) reads the content of the file and returns it in `BulkColumn`.
 
-You can also load the content of the file into a local variable or into a table, as shown in the following example:
+You can also load the contents of the file into a local variable or into a table, as shown in the following example:
 
-```tsql
+```sql
 -- Load file contents into a variable
 SELECT @json = BulkColumn
  FROM OPENROWSET (BULK 'C:\JSON\Books\book.json', SINGLE_CLOB) as j
@@ -46,9 +46,9 @@ SELECT BulkColumn
 ```
 
 ## Import multiple JSON documents
-You can use the same approach to load a set of JSON files from the file system into local variables. Assume that the files are named `book<index>.json`.
+You can use the same approach to load a set of JSON files from the file system into a local variable one at a time. Assume that the files are named `book<index>.json`.
   
-```tsql
+```sql
 declare @i int = 1
 declare @json AS nvarchar(MAX)
 
@@ -66,7 +66,7 @@ You can use the same approach described above to read JSON files from file locat
 1.  Create a file storage account (for example, `mystorage`), a file share (for example, `sharejson`), and a folder in Azure File Storage by using the Azure portal or Azure PowerShell.
 2.  Upload some JSON files to the file storage share.
 3.  Create an outbound firewall rule in Windows Firewall on your computer that allows port 445. Note that your Internet service provider may block this port. If you get a DNS error (error 53) in the following step, then you have not opened port 445, or your ISP is blocking it.
-4.  Mount the Azure File Storage share as a local drive (for example `T:`) with the following command:
+4. Mount the Azure File Storage share as a local drive (for example `T:`) with the following command:
 
     ```
     net use [drive letter] \\[storage name].file.core.windows.net\[share name] /u:[storage account name] [storage account access key]
@@ -80,10 +80,9 @@ You can use the same approach described above to read JSON files from file locat
 
     You can find the storage account key and the primary or secondary storage account access key in the Keys section of Settings in the Azure portal.
 
-
 5.  Now you can access your JSON files by using the  share name, as shown in the following example:
 
-    ```tsql
+    ```sql
     SELECT book.* FROM
      OPENROWSET(BULK N't:\books\books.json', SINGLE_CLOB) AS json
      CROSS APPLY OPENJSON(BulkColumn)
@@ -99,7 +98,7 @@ You can load files directly into Azure SQL Database from Azure Blob Storage with
 
 First, create the external data source, as shown in the following example.
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
  WITH ( TYPE = BLOB_STORAGE,
         LOCATION = 'https://myazureblobstorage.blob.core.windows.net',
@@ -108,7 +107,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 
 Next, run a BULK INSERT command with the DATA_SOURCE option.
 
-```tsql
+```sql
 BULK INSERT Product
 FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
@@ -117,11 +116,11 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 For more info and an OPENROWSET example, see [Loading files from Azure Blob Storage into Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/).
 
 ## Parse JSON documents into rows and columns
-Instead of reading an entire JSON file as a single value, I may want to parse it and return the books in the file and their properties in rows and columns. This example uses a JSON file containing a list of books taken from [this site](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json).
+Instead of reading an entire JSON file as a single value, you may want to parse it and return the books in the file and their properties in rows and columns. This example uses a JSON file containing a list of books taken from [this site](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json).
 
 In the simplest example, you can just load the entire list from the file. 
 
-```tsql
+```sql
 SELECT value
  FROM OPENROWSET (BULK 'C:\JSON\Books\books.json', SINGLE_CLOB) as j
  CROSS APPLY OPENJSON(BulkColumn)
@@ -138,7 +137,7 @@ OPENROWSET reads a single text value from the file, returns it as a BulkColumn, 
 
 The OPENJSON function can parse the JSON content and transform it into a table or a result set. The following example loads the content, parses the loaded JSON, and returns the five fields as columns:
 
-```tsql
+```sql
 SELECT book.*
  FROM OPENROWSET (BULK 'C:\JSON\Books\books.json', SINGLE_CLOB) as j
  CROSS APPLY OPENJSON(BulkColumn)

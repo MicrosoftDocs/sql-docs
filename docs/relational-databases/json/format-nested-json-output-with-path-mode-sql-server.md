@@ -36,7 +36,7 @@ The FOR JSON PATH clause uses the column alias or column name to determine the k
 
  **Query**  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
@@ -87,7 +87,7 @@ SELECT TOP 5
   
  **Query**  
   
-```tsql  
+```sql  
 SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
         OrderDate AS 'Order.Date',  
         UnitPrice AS 'Product.Price',  

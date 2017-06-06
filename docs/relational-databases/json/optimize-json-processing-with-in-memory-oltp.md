@@ -23,7 +23,7 @@ SQL Server and Azure SQL Database let you work with text formatted as JSON. In o
 ## Store JSON in memory-optimized tables
 The following example shows a memory-optimized `Product` table with two JSON columns, `Tags` and `Data`:
 
-```tsql
+```sql
 CREATE SCHEMA xtp;
 GO
 CREATE TABLE xtp.Product(
@@ -48,7 +48,7 @@ New features that are available in SQL Server and Azure SQL Database let you ful
 ## Validate JSON columns
 SQL Server and Azure SQL Database let you add natively compiled CHECK constraints that validate the content of JSON documents stored in a string column, as shown in the following example.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -66,7 +66,7 @@ CREATE TABLE xtp.Product(
 
 The natively compiled CHECK constraint can be added on existing tables that contain JSON columns:
 
-```tsql
+```sql
 ALTER TABLE xtp.Product
     ADD CONSTRAINT [Data should be JSON]
         CHECK (ISJSON(Data)=1)
@@ -81,7 +81,7 @@ The following example shows how to expose the following two values from the JSON
 -   The country where a product is made.
 -   The product manufacturing cost.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -102,7 +102,7 @@ The computed columns `MadeIn` and `Cost` are updated every time the JSON documen
 ## Index values in JSON columns
 SQL Server and Azure SQL Database let you index values in JSON columns using memory optimized indexes. JSON values that are indexed must be exposed and strongly typed using computed columns, as shown in the following example.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -130,7 +130,7 @@ Values in JSON columns can be indexed using both standard NONCLUSTERED and HASH 
 ## Native compilation of JSON queries
 Finally, native compilation of Transact-SQL procedures, functions, and triggers that contain queries with JSON functions increases performance of queries and reduces CPU cycles required to execute the procedures. The following example shows a natively compiled procedure that uses several JSON functions - JSON_VALUE, OPENJSON, and JSON_MODIFY.
 
-```tsql
+```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
 AS BEGIN

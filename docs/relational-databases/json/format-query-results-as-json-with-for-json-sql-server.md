@@ -54,7 +54,7 @@ Here's a sample query that uses **AUTO** mode with the **FOR JSON** clause.
  
 **Query:**  
   
-```tsql  
+```sql  
 SELECT name, surname  
 FROM emp  
 FOR JSON AUTO  
@@ -87,23 +87,28 @@ For syntax and usage, see [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/querie
 ## Output of the FOR JSON clause  
  The output of the **FOR JSON** clause has the following characteristics.  
   
-1.  The result set contains a single column. A small result set may contain a single row. A large result set contains multiple rows.  
+1.  The result set contains a single column.
+    -   A small result set may contain a single row.
+    -   A large result set splits the long JSON string across multiple rows.
+        -   By default, SQL Server Management Studio (SSMS) concatenates the results into a single row when the output setting is **Results to Grid**. The SSMS status bar displays the actual row count.
+        -   Other client applications may require code to concatenate lengthy results by combining the contents of multiple rows. For an example of this code in a C# application, see [Use FOR JSON output in a C# client app](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
   
      ![Example of FOR JSON output](../../relational-databases/json/media/forjson-example2.png "Example of FOR JSON output")  
   
 2.  The results are formatted as an array of JSON objects.  
   
-    -   The number of elements in the array is equal to the number of rows in the results.  
+    -   The number of elements in the JSON array is equal to the number of rows in the results of the SELECT statement (before the FOR JSON clause is applied). 
   
-    -   Each row in the result set becomes a separate JSON object in the array.  
+    -   Each row in the results of the SELECT statement (before the FOR JSON clause is applied) becomes a separate JSON object in the array.  
   
-    -   Each column in the result set becomes a property of the JSON object.  
+    -   Each column in the results of the SELECT statement (before the FOR JSON clause is applied) becomes a property of the JSON object.  
   
 3.  Both the names of columns and their values are escaped according to JSON syntax. For more info, see [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
   
- Here's an example that demonstrates the formatting of the JSON output.  
+### Example
+Here's an example that demonstrates how the **FOR JSON** clause formats the JSON output.  
   
- **Query results**  
+**Query results**  
   
 |||||  
 |-|-|-|-|  

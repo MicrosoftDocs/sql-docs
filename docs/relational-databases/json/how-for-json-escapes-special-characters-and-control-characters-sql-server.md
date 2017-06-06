@@ -55,7 +55,7 @@ If the source data contains control characters, the **FOR JSON** clause encodes 
   
  Query:  
   
-```tsql  
+```sql  
 SELECT  
   'VALUE\    /  
   "' as [KEY\/"],  

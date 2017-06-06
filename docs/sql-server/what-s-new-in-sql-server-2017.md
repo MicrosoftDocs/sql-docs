@@ -96,5 +96,5 @@ SQL Server R Services is now renamed **SQL Server Machine Learning Services**, t
 For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## Next steps
-See the [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md).
-Find out [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md).
+- See the [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md).
+- Find out [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md).

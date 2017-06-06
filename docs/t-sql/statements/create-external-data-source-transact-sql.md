@@ -445,7 +445,7 @@ CREATE MASTER KEY
 
 -- These values come from your Azure Active Directory Application used to authenticate to ADLS
 CREATE DATABASE SCOPED CREDENTIAL ADLUser 
-WITH IDENTITY = '<clientID>@\<OAuth2.0TokenEndPoint>',
+WITH IDENTITY = '<clientID>@<OAuth2.0TokenEndPoint>',
 SECRET = '<KEY>' ;
 
 

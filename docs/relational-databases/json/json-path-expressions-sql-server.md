@@ -22,7 +22,7 @@ manager: "jhubbard"
 # JSON Path Expressions (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Use JSON paths to reference the properties of JSON objects. JSON paths use a syntax similar to Javascript.  
+ Use JSON path expressions to reference the properties of JSON objects.  
   
  You have to provide a path expression when you call the following functions.  
   
@@ -37,16 +37,25 @@ manager: "jhubbard"
 ## Parts of a path expression
  A path expression has two components.  
   
-1.  The optional [path mode](#PATHMODE), **lax** or **strict**.  
+1.  The optional [path mode](#PATHMODE), with a value of **lax** or **strict**.  
   
 2.  The [path](#PATH) itself.  
-  
+
 ##  <a name="PATHMODE"></a> Path mode  
  At the beginning of the path expression, optionally declare the path mode by specifying the keyword **lax** or **strict**. The default is **lax**.  
   
--   In **lax** mode, the functions return empty values if the path expression contains an error. For example, if you request the value **$.name**, and the JSON text doesn't contain a **name** key, the function returns null.  
+-   In **lax** mode, the function returns empty values if the path expression contains an error. For example, if you request the value **$.name**, and the JSON text doesn't contain a **name** key, the function returns null, but does not raise an error.  
   
--   In **strict** mode, the functions raise errors if the path expression contains an error.  
+-   In **strict** mode, the function raises an error if the path expression contains an error.  
+
+The following query explicitly specifies `lax` mode in the path expression.
+
+```sql  
+DECLARE @json NVARCHAR(MAX)
+SET @json=N'{ ... }'
+
+SELECT * FROM OPENJSON(@json, N'lax $.info')
+```  
   
 ##  <a name="PATH"></a> Path  
  After the optional path mode declaration, specify the path itself.  
@@ -59,7 +68,7 @@ manager: "jhubbard"
   
     -   Array elements. For example, `$.product[3]`. Arrays are zero-based.  
   
-    -   The dot operator (`.`) indicates a member of an object.  
+    -   The dot operator (`.`) indicates a member of an object. For example, in `$.people[1].surname`, `surname` is a child of `people`.
   
 ## Examples  
  The examples in this section reference the following JSON text.  
@@ -87,9 +96,9 @@ manager: "jhubbard"
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## How built-in functions handle duplicate paths  
- If the JSON text contains duplicate properties - for example, two keys with the same name on the same level - the JSON_VALUE and JSON_QUERY functions return the first value that matches the path. To parse a JSON object that contains duplicate keys, use OPENJSON, as shown in the following example.  
+ If the JSON text contains duplicate properties - for example, two keys with the same name on the same level - the **JSON_VALUE** and **JSON_QUERY** functions return only the first value that matches the path. To parse a JSON object that contains duplicate keys and return all values, use **OPENJSON**, as shown in the following example.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
 

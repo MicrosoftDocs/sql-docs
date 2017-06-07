@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  **Query**  
   
-```tsql  
+```sql  
 SELECT name, surname  
 FROM emp  
 FOR JSON AUTO, INCLUDE_NULL_VALUES    

@@ -1,3 +1,5 @@
+# [Download SSMS](download-sql-server-management-studio-ssms.md)
+
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
 # [F1 Help +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
 # [Menu Help +](../ssms/menu-help/sql-server-management-studio-menu-help.md)
@@ -7,7 +9,6 @@
 # [Visual Database Tools +](../ssms/visual-db-tools/visual-database-tools.md)
 
 # [What is SSMS?](sql-server-management-studio-ssms.md)
-# [Download SSMS](download-sql-server-management-studio-ssms.md)
 # [SSMS Changelog](sql-server-management-studio-changelog-ssms.md)
 # [Release notes](sql-server-management-studio-release-notes.md)
 # [Previous SQL Server Management Studio Releases](previous-sql-server-management-studio-releases.md)

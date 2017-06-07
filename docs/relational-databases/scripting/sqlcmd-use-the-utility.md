@@ -1,7 +1,7 @@
 ---
 title: "Use the sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/05/2016"
+ms.date: "06/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,12 +22,12 @@ author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
 ---
-# sqlcmd - Use the Utility
+# sqlcmd - Use the utility
   The **sqlcmd** utility is a command-line utility for ad hoc, interactive execution of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and scripts and for automating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripting tasks. To use **sqlcmd** interactively, or to build script files to be run using **sqlcmd**, users must understand [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **sqlcmd** utility is typically used in the following ways:  
   
--   Users interactively enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, click **Start**, click **All Programs**, point to **Accessories**, and then click **Command Prompt**. At the command prompt, type **sqlcmd** followed by a list of options that you want. For a complete list of the options that are supported by **sqlcmd**, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
+-   Users enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, enter "cmd" in the Windows search box and click **Command Prompt** to open. At the command prompt, type **sqlcmd** followed by a list of options that you want. For a complete list of the options that are supported by **sqlcmd**, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).  
   
--   Users submit a **sqlcmd** job either by specifying a single [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to execute, or by pointing the utility to a text file that contains [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to execute. The output is usually directed to a text file, but it can also be displayed at the command prompt.  
+-   Users submit a **sqlcmd** job either by specifying a single [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to execute, or by pointing the utility to a text file that contains [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to execute. The output is usually directed to a text file, but can also be displayed at the command prompt.  
   
 -   [SQLCMD mode](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor.  
   
@@ -35,21 +35,17 @@ manager: "jhubbard"
   
 -   SQL Server Agent CmdExec jobs.  
   
-## Typically Used sqlcmd Options  
- The following options are used most frequently:  
+## Typically used sqlcmd options  
   
--   The server option (**-S**) that identifies the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which **sqlcmd** connects.  
+-   Server option (**-S**) identifies the instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which **sqlcmd** connects.  
   
--   Authentication options (**-E**, **-U**, and **-P**) that specify the credentials that **sqlcmd** uses to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Authentication options (**-E**, **-U**, and **-P**) specify the credentials that **sqlcmd** uses to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **NOTE:** The option **-E** is the default and does not need to be specified.  
   
-    > **NOTE:** The **-E** option is the default and does not have to be specified.  
+-   Input options (**-Q**, **-q**, and **-i**) identify the location of the input to **sqlcmd**.  
   
--   Input options (**-Q**, **-q**, and **-i**) that identify the location of the input to **sqlcmd**.  
+-   The output option (**-o**) specifies the file in which **sqlcmd** is to put its output.  
   
--   The output option (**-o**) that specifies the file in which **sqlcmd** is to put its output.  
-  
-## Connecting to the sqlcmd Utility  
- The following are common uses of the **sqlcmd** utility:  
+## Connect to the sqlcmd utility  
   
 -   Connecting to a default instance by using Windows Authentication to interactively run [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
@@ -97,7 +93,7 @@ manager: "jhubbard"
   
     > **HINT!!** To see a list of the options that are supported by the **sqlcmd** utility run: `sqlcmd -?`.  
   
-## Running Transact-SQL Statements Interactively by Using sqlcmd  
+## Run Transact-SQL statements interactively by using sqlcmd  
  You can use the **sqlcmd** utility interactively to execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a Command Prompt window. To interactively execute [!INCLUDE[tsql](../../includes/tsql-md.md)] statements by using **sqlcmd**, run the utility without using the **-Q**, **-q**, **-Z**, or **-i** options to specify any input files or queries. For example:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
@@ -110,7 +106,7 @@ manager: "jhubbard"
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are entered in an interactive session can edited by entering the **:ED** command and the **sqlcmd** prompt. The editor will open and, after editing the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and closing the editor, the revised [!INCLUDE[tsql](../../includes/tsql-md.md)] statement will appear in the command window. Enter **GO** to run therevised [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   
-## Quoted Strings  
+## Quoted strings  
  Characters that are enclosed in quotation marks are used without any additional preprocessing, except that quotations marks can be inserted into a string by entering two consecutive quotation marks. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] treats this character sequence as one quotation mark. (However, the translation occurs in the server.) Scripting variables will not be expanded when they appear within a string.  
   
  For example:  
@@ -125,7 +121,7 @@ manager: "jhubbard"
   
  `Length: 5" 7'`  
   
-## Strings That Span Multiple Lines  
+## Strings that span multiple lines  
  **sqlcmd** supports scripts that have strings that span multiple lines. For example, the following `SELECT` statement spans multiple lines but is a single string executed when you press the ENTER key after typing `GO`.  
   
  `SELECT First line`  
@@ -136,7 +132,7 @@ manager: "jhubbard"
   
  `GO`  
   
-## Interactive sqlcmd Example  
+## Interactive sqlcmd example  
  This is an example of what you see when you run **sqlcmd** interactively.  
   
  When you open a Command Prompt window, there is one line similar to:  
@@ -201,7 +197,7 @@ manager: "jhubbard"
   
  The lines after line `3> GO` are the output of a `SELECT` statement. After you generate output, `sqlcmd` resets the `sqlcmd` prompt and displays `1>`. After entering `EXIT` at line `1>`, the Command Prompt window displays the same line it did when you first opened it. This indicates that `sqlcmd` has exited its session. You can now close the Command Prompt window by typing another `EXIT` command.  
   
-## Running Transact-SQL Script Files by Using sqlcmd  
+## Running Transact-SQL script files using sqlcmd  
  You can use **sqlcmd** to execute database script files. Script files are text files that contain a mix of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, **sqlcmd** commands, and scripting variables. For more information about how to script variables, see [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). **sqlcmd** works with the statements, commands, and scripting variables in a script file in a manner similar to how it works with statements and commands that are entered interactively. The main difference is that **sqlcmd** reads through the input file without pause instead of waiting for a user to enter the statements, commands, and scripting variables.  
   
  There are different ways to create database script files:  
@@ -555,7 +551,7 @@ SQLCMD –E –N –C
   
  If the provider specifies `ForceProtocolEncryption = True` then encryption is enabled even if `Encrypt=No` in the connection string.  
   
-## See also  
+## More about sqlcmd  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [Use sqlcmd with Scripting Variables](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Edit SQLCMD Scripts with Query Editor](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   

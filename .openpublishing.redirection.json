@@ -1525,6 +1525,11 @@
             "redirect_url": "/sql/connect/sql-server-drivers",
             "redirect_document_id": false
         },
-	
+
+        {
+            "source_path": "docs/whitepapers/microsoft-sql-and-the-gdpr-requirements.md",
+            "redirect_url": "/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements.md",
+            "redirect_document_id": false
+        }
     ]
 }

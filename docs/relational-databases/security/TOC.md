@@ -1,4 +1,5 @@
 # [Overview](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# Privacy and GDPR requirements whitepaper (../../whitepapers/microsoft-sql-and-the-gdpr-requirements.md) 
 # [Auditing](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)
 # [Authentication-access](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 # [Encryption](../../relational-databases/security/encryption/sql-server-encryption.md)

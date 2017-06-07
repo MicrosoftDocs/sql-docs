@@ -78,11 +78,11 @@ There are three availability group configurations.
 
 - [Three synchronous replicas](sql-server-linux-availability-group-ha.md#threeSynch)
 
-- [Two synchronous replicas and a witness replica](sql-server-linux-availability-group-ha.md#witness)
+- [Two synchronous replicas and a witness](sql-server-linux-availability-group-ha.md#witness)
 
 - [Two synchronous replicas availability group](sql-server-linux-availability-group-ha.md#twoSynch)
 
-For high availability, use either three synchronous replicas, or two synchronous replicas and a witness replica. 
+For high availability, use either three synchronous replicas, or two synchronous replicas and a witness. 
 
 For information about all three configurations, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
@@ -130,12 +130,12 @@ Run **only one** of the following scripts.
 
 <a name="witnessScript"></a>
 
-- Create availability group with two synchronous replicas and a witness replica
+- Create availability group with two synchronous replicas and a witness
 
-   Include two replicas with synchronous availability mode, and a witness replica. For example, the following script creates an availability group called `ag1`. `node1` and `node2` host replicas in synchronous mode, with automatic seeding and automatic failover. `node3` is a witness replica. The script defines only the SQL Server instance name `node3`, the endpoint, and the availability mode.
+   Include two replicas with synchronous availability mode, and a witness. For example, the following script creates an availability group called `ag1`. `node1` and `node2` host replicas in synchronous mode, with automatic seeding and automatic failover. `node3` is a witness. The script defines only the SQL Server instance name `node3`, the endpoint, and the availability mode.
 
    >[!IMPORTANT]
-   >Only run the following script to create an availability group with two synchronous replicas and a witness replica. Do not run the following script if you ran the preceding script. 
+   >Only run the following script to create an availability group with two synchronous replicas and a witness. Do not run the following script if you ran the preceding script. 
 
    ```Transact-SQL
    CREATE AVAILABILITY GROUP [ag1]

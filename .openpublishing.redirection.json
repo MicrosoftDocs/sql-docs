@@ -1525,6 +1525,11 @@
             "redirect_url": "/sql/connect/sql-server-drivers",
             "redirect_document_id": false
         },
+        {
+            "source_path": "docs/whitepapers/sql-server-in-memory-oltp-internals-for-sql-server-2016.md",
+            "redirect_url": "/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md",
+            "redirect_document_id": false
+        },
 	
     ]
 }

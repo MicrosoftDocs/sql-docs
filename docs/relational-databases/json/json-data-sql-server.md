@@ -64,15 +64,15 @@ If you have JSON text that's stored in database tables, you can use built-in fun
 
 **Example**
   
- In the following example, the query uses both relational and JSON data (stored in the jsonCol column) from a table:  
+ In the following example, the query uses both relational and JSON data (stored in a column named `jsonCol`) from a table:  
   
-```tsql  
+```sql  
 SELECT Name,Surname,
  JSON_VALUE(jsonCol,'$.info.address.PostCode') AS PostCode,
  JSON_VALUE(jsonCol,'$.info.address."Address Line 1"')+' '
   +JSON_VALUE(jsonCol,'$.info.address."Address Line 2"') AS Address,
  JSON_QUERY(jsonCol,'$.info.skills') AS Skills
-FROM PeopleCollection
+FROM People
 WHERE ISJSON(jsonCol)>0
  AND JSON_VALUE(jsonCol,'$.info.address.Town')='Belgrade'
  AND Status='Active'
@@ -86,7 +86,7 @@ For more info, see [Validate, Query, and Change JSON Data with Built-in Function
 ### Change JSON values
 If you have to modify parts of JSON text, you can use the **JSON_MODIFY** function to update the value of a property in a JSON string and return the updated JSON string. The following example updates the value of a property in a variable that contains JSON.  
   
-```tsql  
+```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
 
 SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London') 
@@ -97,7 +97,7 @@ You don't need a custom query language to query JSON in SQL Server. To query JSO
   
  The following example calls **OPENJSON** and transforms the array of objects stored in the `@json` variable to a rowset that can be queried with a standard SQL **SELECT** statement:  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =  
 N'[  
@@ -134,7 +134,7 @@ Format SQL Server data or the results of SQL queries as JSON by adding the **FOR
   
  The following example uses PATH mode with the FOR JSON clause.  
   
-```tsql  
+```sql  
 SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth as dob  
 FROM People  
 FOR JSON PATH  
@@ -184,7 +184,7 @@ If you have pure JSON workloads where you want to use a query language that's cu
   
  This OData URL represents a request for the ProductID and ProductName columns for the product with id 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
   
-```tsql  
+```sql  
 SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
@@ -198,7 +198,7 @@ The output of this query is JSON text that's fully compliant with OData spec. Fo
 ## Analyze JSON data with SQL queries  
  If you have to filter or aggregate JSON data for reporting purposes, you can use **OPENJSON** to transform JSON to relational format. Then use standard [!INCLUDE[tsql](../../includes/tsql-md.md)] and built-in functions to prepare the reports.  
   
-```tsql  
+```sql  
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
 FROM   SalesOrderRecord AS Tab  
           CROSS APPLY  
@@ -219,7 +219,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 ## Import JSON data into SQL Server tables  
  If you have to load JSON data from an external service into SQL Server, you can use **OPENJSON** to import the data into SQL Server instead of parsing the data in the application layer.  
   
-```tsql  
+```sql  
 DECLARE @jsonVariable NVARCHAR(MAX)
 
 SET @jsonVariable = N'[  

@@ -16,7 +16,7 @@ ms.author: "jodebrui"
 manager: "jhubbard"
 ---
 # SQL Server In-Memory OLTP Internals for SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 **Summary:** In-memory OLTP, frequently referred to by its codename “Hekaton”, was introduced in SQL Server 2014.
 This powerful technology allows you to take advantage of large amounts of memory and many dozens of

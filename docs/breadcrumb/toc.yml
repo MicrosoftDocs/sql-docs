@@ -654,7 +654,7 @@
         - name: Authentication and access
           href: /sql/relational-databases/security/authentication-access/
           homepage: /sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions
-        - name: Encryption/
+        - name: Encryption
           href: /sql/relational-databases/security/
           homepage: /sql/relational-databases/security/encryption/sql-server-encryption
       - name: Sequence numbers

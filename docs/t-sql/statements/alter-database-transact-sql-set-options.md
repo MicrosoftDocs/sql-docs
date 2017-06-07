@@ -194,7 +194,8 @@ SET
     | INTERVAL_LENGTH_MINUTES = number   
     | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]  
     | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]  
-    | MAX_PLANS_PER_QUERY = number  
+    | MAX_PLANS_PER_QUERY = number
+    | WAIT_STATS_CAPTURE_MODE = [ ON | OFF ]
 }  
   
 <recovery_option> ::=   

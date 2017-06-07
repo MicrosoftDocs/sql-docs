@@ -1,7 +1,7 @@
 ---
 title: "Define and Use Compute Contexts (Data Science Deep Dive) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/18/2017"
+ms.date: "05/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -67,20 +67,14 @@ To create a compute context requires the following basic information about the [
     ```R
     sqlShareDir <- paste("c:\\AllShare\\", Sys.getenv("USERNAME"), sep="")
     ```
-
-        
-    Add this line to create the directory if it does not exist.
+    
+4. If you want to manually create a specific directory for sharing, you can add a line like the following. To determine which folder is currently being used for sharing, run `rxGetComputeContext`, which returns details about the current compute context. For more information, see the [ScaleR reference](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxinsqlserver).
 
     ```
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-    We recommend that you use the default, rather than manually specifying a folder for this argument. For more information, see the [ScaleR reference](https://msdn.microsoft.com/microsoft-r/scaler/rxinsqlserver).
-    
-    > [!TIP]
-    > To determine which folder is being used for sharing, run `rxGetComputeContext`, which returns details about the current compute context.
-
-4. Having prepared all the variables, provide them as arguments to the RxInSqlServer constructor to create the *compute context object*.
+4. Having prepared all the variables, provide them as arguments to the RxInSqlServer constructor         to create the *compute context object*.
 
     ```R
     sqlCompute <- RxInSqlServer(  
@@ -88,13 +82,13 @@ To create a compute context requires the following basic information about the [
          wait = sqlWait,
          consoleOutput = sqlConsoleOutput)
     ```
-  
+    
     You might observe that the syntax for RxInSqlServer* is almost identical to that of the RxSqlServerData function that you used earlier to define the data source. However, there are some important differences.
-  
+      
     - The data source object, defined by using the function RxSqlServerData, specifies where the data is stored.
-  
+    
     - In contrast, the compute context (defined by using the function RxInSqlServer) indicates where aggregations and other computations are to take place.
-  
+    
     Defining a compute context does not affect any other generic R computations that you might perform on your workstation, and does not change the source of the data. For example, you could define a local text file as the data source but change the compute context to SQL Server and do all your reading and summaries on the data on the SQL Server computer.
 
 ## Enable Tracing on the Compute Context

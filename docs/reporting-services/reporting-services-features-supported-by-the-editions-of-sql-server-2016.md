@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Features Supported by the Editions of SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/02/2016"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,8 +16,10 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Reporting Services Features Supported by the Editions of SQL Server 2016
-This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+
+This topic provides details of features supported by the different editions of SQL Server 2016.  
   
  SQL Server Evaluation edition is available for a 180-day trial period.  
   
@@ -98,9 +100,10 @@ To navigate the table for a SQL Server technology, click on its link:
 > 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] is the single point for creation of mobile reports. Connect to  a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server to access data sources and create reports. Then publish them to the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server for others in the organization to access, either on the server or on mobile devices. You can also use [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] stand alone with local data sources  
 > 3.  Whether you are using  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] on-premises, [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] in the cloud, or both as your report delivery solution you only need one mobile app to access dashboards and mobile reports on mobile devices. The [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] apps are available for download from the Windows, iOS, or Android app stores.  
 
-## See Also  
- [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
- [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Installation for SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+## Next steps
 
+[Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+[Product Specifications for SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+[Installation for SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

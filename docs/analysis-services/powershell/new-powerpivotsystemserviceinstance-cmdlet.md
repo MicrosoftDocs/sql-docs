@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # New-PowerPivotSystemServiceInstance cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   Adds a new instance of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service to an application server.  
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  

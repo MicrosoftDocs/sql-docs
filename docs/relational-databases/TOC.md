@@ -5,6 +5,8 @@
 
 # [Recently Updated Articles about Relational Databases](relational-databases-new-updated-sql-docs-pr.md)
 
+# [Recently Updated Articles about Relational Databases](relational-databases-new-updated-sql-docs-pr.md)
+
 # [SQL Server Guides](sql-server-guides.md)
 ## Always On Availability Groups Troubleshooting and Monitoring Guide
 ## [Index design](sql-server-index-design-guide.md)

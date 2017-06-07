@@ -41,7 +41,7 @@ sp_add_trusted_assembly
 
 ## Remarks  
 
-This procedure adds an assembly to  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assembies-transact-sql.md).
+This procedure adds an assembly to  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## Arguments
 
@@ -67,7 +67,7 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
 
 ## See Also  
   [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
-  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assembies-transact-sql.md)  
+  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  

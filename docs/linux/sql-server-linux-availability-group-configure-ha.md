@@ -132,7 +132,7 @@ Run **only one** of the following scripts.
 
 - Create availability group with two synchronous replicas and a witness
 
-   Include two replicas with synchronous availability mode, and a witness. For example, the following script creates an availability group called `ag1`. `node1` and `node2` host replicas in synchronous mode, with automatic seeding and automatic failover. `node3` is a witness. The script defines only the SQL Server instance name `node3`, the endpoint, and the availability mode.
+   Include two replicas with synchronous availability mode and a witness. For example, the following script creates an availability group called `ag1`. `node1` and `node2` host replicas in synchronous mode, with automatic seeding and automatic failover. `node3` is a witness. The script defines only the SQL Server instance name `node3`, the endpoint, and the availability mode.
 
    >[!IMPORTANT]
    >Only run the following script to create an availability group with two synchronous replicas and a witness. Do not run the following script if you ran the preceding script. 
@@ -156,7 +156,9 @@ Run **only one** of the following scripts.
       N'node3' WITH (
           ENDPOINT_URL = N'tcp://node3:5022',
           AVAILABILITY_MODE = WITNESS_COMMIT
-      )
+      );
+   		
+   ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
    ```
 
 >[!NOTE]

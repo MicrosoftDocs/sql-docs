@@ -215,7 +215,7 @@ WITH (
 ## Return Value  
 The columns that the OPENJSON function returns depend on the WITH option.  
   
-1. When you call OPENJSON with the default schema - that is, when you don't specify an explicit schema in the WITH clause - the function returns a table with the following columns.  
+1. When you call OPENJSON with the default schema - that is, when you don't specify an explicit schema in the WITH clause - the function returns a table with the following columns:  
     1.  **Key**. An nvarchar(4000) value that contains the name of the specified property or the index of the element in the specified array. The key column has a BIN2 collation.  
     2.  **Value**. An nvarchar(max) value that contains the value of the property. The value column inherits its collation from *jsonExpression*.
     3.  **Type**. An int value that contains the type of the value. The **Type** column is returned only when you use OPENJSON with the default schema. The type column has one of the following values:  

@@ -73,7 +73,7 @@ The topic lists the minimum hardware and software requirements to install and ru
   
 -   Installation fails if you launch setup through Remote Desktop Connection with the media on a local resource in the RDC client. To install remotely the media must be on a network share or local to the physical or virtual machine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media may be either on a network share, a mapped drive, a local drive, or presented as an ISO to a virtual machine.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installation requires installing  .NET 4.6.1 as a pre-requisite. .NET 4.6.1 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is selected.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installation requires installing  .NET 4.6.1 as a prerequisite. .NET 4.6.1 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is selected.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs the following software components required by the product:  
   

@@ -38,6 +38,8 @@ Download .NET Framework from the [Mono Project][linkid-mono-project]
 
 ## Azure SQL Database
 
-If you want Azure SQL Database cloud database to be reached by your client program that uses ADO.NET, see [Azure SQL Database: Use .NET (C&#x23;) to connect and query data](/azure/sql-database/sql-database-connect-query-dotnet-nosuch-testing).
+If you want Azure SQL Database cloud database to be reached by your client program that uses ADO.NET, see [Azure SQL Database: Use .NET (C&#x23;) to connect and query data][LINK-ID-2 Azure SQL Database: Use .NET (C&#x23;) to connect and query data].
+
+[LINK-ID-2 Azure SQL Database: Use .NET (C&#x23;) to connect and query data]: ../../../azure/sql-database/sql-database-connect-query-dotnet.md
 
 [linkid-mono-project]: http://www.mono-project.com/

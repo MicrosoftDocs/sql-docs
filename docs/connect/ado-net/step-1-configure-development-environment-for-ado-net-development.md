@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Configure development environment for ADO.NET development | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "06/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,8 +36,8 @@ Download .NET Framework from the [Mono Project][linkid-mono-project]
   
 Download .NET Framework from the [Mono Project][linkid-mono-project]
 
+## Azure SQL Database
 
-\<!-- Repeatable link IDs. 
--->
+If you want Azure SQL Database cloud database to be reached by your client program that uses ADO.NET, see [Azure SQL Database: Use .NET (C&hash;) to connect and query data](/azure/sql-database/sql-database-connect-query-dotnet).
 
 [linkid-mono-project]: http://www.mono-project.com/

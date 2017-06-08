@@ -44,7 +44,6 @@ Use OPENJSON to import JSON data into [!INCLUDE[ssNoVersion](../../includes/ssno
 ## Syntax  
   
 ```  
-
 OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 <with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
@@ -54,13 +53,13 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 The **OPENJSON** table-valued function parses the *jsonExpression* provided as the first argument and returns one or more rows containing data from the JSON objects in this expression. *jsonExpression* can contain nested sub-objects. If you want to parse a sub-object from within *jsonExpression*, you can specify a second **path** parameter for the JSON sub-object.
 
-openjson
+### openjson
 
 ![Syntax for OPENJSON TVF](../../relational-databases/json/media/openjson-syntax.png "OPENJSON syntax")  
 
 By default, the **OPENJSON** table-valued function returns three columns, which contain the key name, value, and type of each {key:value} pair found in *jsonExpression*. As an alternative, you can explicitly specify the schema of the result set **OPENJSON** returns by using *with_clause*:
   
-with_clause
+### with_clause
   
 ![Syntax for WITH clause in OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH syntax")
 

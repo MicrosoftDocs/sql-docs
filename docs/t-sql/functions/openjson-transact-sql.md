@@ -28,16 +28,16 @@ manager: "jhubbard"
 
 **OPENJSON** is a table-valued function that parses JSON text and returns objects and properties from the JSON input as rows and columns.
 
-**OPENJSON** provides a rowset view over a JSON document. You can explicitly specify the columns in the rowset and the property paths to used to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** in the `FROM` clause of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements like any other table, view, or table-valued function.  
+**OPENJSON** provides a rowset view over a JSON document. You can explicitly specify the columns in the rowset and the property paths to use to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** in the `FROM` clause of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements like any other table, view, or table-valued function.  
   
 Use OPENJSON to import JSON data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to convert JSON data to relational format for an app or service that can't consume JSON directly.  
   
 > [!NOTE]  
->  The **OPENJSON** function is available only under compatibility level 130 (or higher). If your database compatibility level is lower than 130, SQL Server will not be able to find and execute OPENJSON function. Other JSON functions are available at all compatibility levels. You can check compatibility level in the `sys.databases` view or in database properties. You can change the compatibility level of a database with the following command:  
+>  The **OPENJSON** function is available only under compatibility level 130 (or higher). If your database compatibility level is lower than 130, SQL Server can't find and run the OPENJSON function. Other JSON functions are available at all compatibility levels. You can check compatibility level in the `sys.databases` view or in database properties. You can change the compatibility level of a database with the following command:  
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130  `
 >   
->  Note that compatibility level 120 might be the default even in a new Azure SQL Database.  
+> Compatibility level 120 might be the default even in a new Azure SQL Database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ openjson
 
 ![Syntax for OPENJSON TVF](../../relational-databases/json/media/openjson-syntax.png "OPENJSON syntax")  
 
-By default, the **OPENJSON** table-valued function returns three columns which contain the key name, value, and type of each {key:value} pair found in *jsonExpression*. As an alternative, you can explicitly specify the schema of the result set **OPENJSON** returns by using *with_clause*:
+By default, the **OPENJSON** table-valued function returns three columns, which contain the key name, value, and type of each {key:value} pair found in *jsonExpression*. As an alternative, you can explicitly specify the schema of the result set **OPENJSON** returns by using *with_clause*:
   
 with_clause
   
@@ -156,16 +156,16 @@ The comparison used to match path steps with the properties of the JSON expressi
 *AS JSON*  
 Use the AS JSON option in a column definition to specify that the referenced property contains an inner object or array.
 
--   If you don't specify AS JSON for a column, the function returns a scalar value (for example, int, string, true, false) from the specified JSON property on the specified path. If the path represents an object or an array, the function returns null in lax mode or returns an error in strict mode, indicating that the property can't be found at the specified path. This behavior is similar to the behavior of the JSON_VALUE function.  
+-   If you don't specify AS JSON for a column, the function returns a scalar value (for example, int, string, true, false) from the specified JSON property on the specified path. If the path represents an object or an array, and the property can't be found at the specified path, the function returns null in lax mode or returns an error in strict mode. This behavior is similar to the behavior of the JSON_VALUE function.  
   
--   If you specify AS JSON for a column, the function returns a JSON fragment from the specified JSON property on the specified path. If the path represents a scalar value, the function returns null in lax mode or returns an error in strict mode, indicating that the property can't be found at the specified path. This behavior is similar to the behavior of the JSON_QUERY function.  
+-   If you specify AS JSON for a column, the function returns a JSON fragment from the specified JSON property on the specified path. If the path represents a scalar value, and the property can't be found at the specified path, the function returns null in lax mode or returns an error in strict mode. This behavior is similar to the behavior of the JSON_QUERY function.  
   
 > [!NOTE]  
-> If you want to return a nested JSON fragment from a JSON property, you have to provide the **AS JSON** flag. Without this option, OPENJSON returns a NULL value instead of the referenced JSON object or array, or it returns a run-time error in strict mode if the property can't be found.  
+> If you want to return a nested JSON fragment from a JSON property, you have to provide the **AS JSON** flag. Without this option, if the property can't be found, OPENJSON returns a NULL value instead of the referenced JSON object or array, or it returns a run-time error in strict mode .  
 >   
 > If you specify the AS JSON option, the type of the column must be NVARCHAR(MAX).  
   
-For example, the following query returns and formats the elements of an array.  
+For example, the following query returns and formats the elements of an array:  
   
 ```sql  
 DECLARE @json NVARCHAR(MAX) = N'[  
@@ -218,7 +218,7 @@ The columns that the OPENJSON function returns depend on the WITH option.
 1. When you call OPENJSON with the default schema - that is, when you don't specify an explicit schema in the WITH clause - the function returns a table with the following columns.  
     1.  **Key**. An nvarchar(4000) value that contains the name of the specified property or the index of the element in the specified array. The key column has a BIN2 collation.  
     2.  **Value**. An nvarchar(max) value that contains the value of the property. The value column inherits its collation from *jsonExpression*.
-    3.  **Type**. An int value that contains the type of the value. The **Type** column is returned only when you use OPENJSON with the default schema. The type column has one of the following values.  
+    3.  **Type**. An int value that contains the type of the value. The **Type** column is returned only when you use OPENJSON with the default schema. The type column has one of the following values:  
   
         |Value of the Type column|JSON data type|  
         |------------------------------|--------------------|  
@@ -237,10 +237,10 @@ The columns that the OPENJSON function returns depend on the WITH option.
 
 *json_path* used in the second argument of **OPENJSON** or in *with_clause* can start with the **lax** or **strict** keyword.
 
--   In **lax** mode **OPENJSON** doesn't raise an error if the object or value on the specified path is not found. **OPENJSON** returns either an empty result set or a NULL value if the path can't be found.
--   In **strict** mode **OPENJSON** returns an error if the path can't be found.
+-   In **lax** mode, **OPENJSON** doesn't raise an error if the object or value on the specified path can't be found. If the path can't be found, **OPENJSON** returns either an empty result set or a NULL value.
+-   In **strict**, mode **OPENJSON** returns an error if the path can't be found.
 
-Some of the examples on this page explicitly specify the path mode, lax or strict. This is optional. If you don't explicitly specify a path mode, lax mode is the default. For more info about path mode and path expressions, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).    
+Some of the examples on this page explicitly specify the path mode, lax or strict. The path mode is optional. If you don't explicitly specify a path mode, lax mode is the default. For more info about path mode and path expressions, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).    
 
 Column names in *with_clause* are matched with keys in the JSON text. If you specify the column name `[Address.Country]`, it's matched with the key `Address.Country`. If you want to reference a nested key `Country` within the object `Address`, you have to specify the path `$.Address.Country` in column path.
 
@@ -316,7 +316,7 @@ FROM Sales.SalesOrderHeader
      CROSS APPLY OPENJSON (SalesReasons) WITH (value nvarchar(100) '$')
 ```  
   
-In this example, '$' path references each element in arrays. You can use this type of query if you want to explicitly cast returned value.  
+In this example, the `$` path references each element in arrays. If you want to explicitly cast the returned value, you can use this type of query.  
   
 ### Example 4 - Combine relational rows and JSON elements with CROSS APPLY  
 The following query combines relational rows and JSON elements into the results shown in the following table.  

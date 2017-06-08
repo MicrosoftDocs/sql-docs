@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server 2017 (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/18/2017"
+ms.date: "06//2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,7 +21,7 @@ manager: "jhubbard"
 **Note:** SQL Server 2017 also includes the features added in SQL Server 2016 service packs. For those items, see [What's New in SQL Server 2016 (Database Engine)](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 
 
-## SQL Server Database Engine (CTP 2.2)  
+## SQL Server Database Engine (CTP 3.0)  
 - CLR assemblies can now be added to a whitelist, as a work around for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies.
 
 ## SQL Server Database Engine (CTP 2.1)  

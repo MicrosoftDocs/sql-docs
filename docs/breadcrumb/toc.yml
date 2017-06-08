@@ -4,7 +4,7 @@
   items:
   - name: SQL
     href: /sql/
-    homepage: /sql/microsoft-sql-documentation-table-of-contents
+    homepage: /sql/index
     items:
     - name: ADO
       href: /sql/ado/

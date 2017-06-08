@@ -55,7 +55,7 @@ manager: "jhubbard"
 
 The topic lists the minimum hardware and software requirements to install and run [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on the Windows operating system. 
 
-[!INCLUDE[sssql16](../includes/sssql16-md.md)] introduces support for [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on Linux. For information, see [[!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on Linux](../../linux/sql-server-linux-overview.md). 
+[!INCLUDE[sssql16](../../includes/sssql15-md.md)] introduces support for [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on Linux. For information, see [[!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on Linux](../../linux/sql-server-linux-overview.md). 
 
 > This topic applies to [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later. For content related to previous versions of SQL Server, see [Hardware and Software Requirements for Installing SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
   

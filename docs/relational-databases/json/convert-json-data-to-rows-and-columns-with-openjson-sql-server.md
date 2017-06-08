@@ -42,7 +42,7 @@ Each property of the JSON object, or each element of the array, is returned as a
 Here's a quick example that uses **OPENJSON** with the default schema and returns one row for each property of the JSON object.  
  
 **Example**
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -74,7 +74,7 @@ Here's a quick example that uses **OPENJSON** with a schema for the results that
   
 **Example**
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =   
   N'[  

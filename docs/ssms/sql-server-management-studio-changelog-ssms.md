@@ -170,29 +170,29 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Generate Tasks script doesn't generate Create Database scripts for an Azure SQL DB.
 - Scrollbar in View Designer appears disabled.
 - Always Encrypted AVK key paths do not include version ids.
-- Reduced number of engine edition queries in the query window. [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3113387)
+- Reduced number of engine edition queries in the query window. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3113387)
 - Always Encrypted errors from refreshing modules after encryption are incorrectly handled.
 - Changed default connection timeout for OLTP and OLAP from 15 to 30 seconds to fix a class of ignored connection failures. 
-- Fixed a crash in SSMS when custom report is launched. [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3118856)
+- Fixed a crash in SSMS when custom report is launched. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
 - Fixed an issue where "Generate Script…" fails for Azure SQL databases.
-- Fix "Script As" and "Generate Script Wizard" to not add extra newlines when scripting objects such as stored procedures. [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3115850)
-- SQLAS PowerShell Provider: Add LastProcessed property to Dimension and MeasureGroup folders. [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3111879)
-- Live Query Statistics: fixed issue where it was only showing the first query in a batch. [Connect Item] (https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3114221)  
+- Fix "Script As" and "Generate Script Wizard" to not add extra newlines when scripting objects such as stored procedures. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
+- SQLAS PowerShell Provider: Add LastProcessed property to Dimension and MeasureGroup folders. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
+- Live Query Statistics: fixed issue where it was only showing the first query in a batch. [Connect Item] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - Showplan: show max instead of sum across the threads in properties window.
 - Query Store: add new report on queries with high execution variation.
-- Object explorer performance issues: [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3114074)
+- Object explorer performance issues: [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3114074)
 	- Context menu for tables momentarily hangs
 	- SSMS is slow when right-clicking an index for a table (over a remote (Internet) connection). 
 	- Avoid issuing table queries that sort on the server
 - Removed Azure Deployment Wizard (Deploy Database to Azure VM) from SSMS
-- Fixed issue where missing indexes were not shown in execution plans in SSMS [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3114194)
+- Fixed issue where missing indexes were not shown in execution plans in SSMS [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
 - Fixed common crash-on-shutdown issue in SSMS
-- Fixed issue in Object Explorer where an error occurred when bringing up the context menu on the Polybase|Scale-Out Group nodes [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3115128)
+- Fixed issue in Object Explorer where an error occurred when bringing up the context menu on the Polybase|Scale-Out Group nodes [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
 - Fixed an issue where SSMS may crash when trying to display the permissions on a database
 - Query Store: general enhancements in context menu items for result grids of query store report
-- Configuring Always Encrypted for an existing table fails with errors on unrelated objects. [Connect Item](https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3103181)
-- Configuring Always Encrypted for an existing database with multiple schemas doesn't work. [Connect Item] (https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3109591)
-- The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect Item] (https://connectadmin/Feedback/ConnectTab.aspx?FeedbackID=3111925)
+- Configuring Always Encrypted for an existing table fails with errors on unrelated objects. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
+- Configuring Always Encrypted for an existing database with multiple schemas doesn't work. [Connect Item] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect Item] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - When encrypting using Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
 - Fixed UI truncation issue on "New Server Registration" dialog
 - Fix DMF Condition UI incorrectly updating expressions that contain string constant values with quotes in them

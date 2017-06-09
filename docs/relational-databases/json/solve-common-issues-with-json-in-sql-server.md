@@ -142,3 +142,5 @@ WHERE [key] = 'color'
   
  **Answer.** You have to surround them with quotes in JSON paths. For example, `JSON_VALUE(@json, '$."$info"."First Name".value')`.
  
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.

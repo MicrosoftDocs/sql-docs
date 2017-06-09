@@ -44,7 +44,7 @@ The design patters are three availability group configuarations. The configurati
 
 The cluster resource setting `required_synchronized_secondaries_to_commit` guarantees that each transaction is written to a minimum number of secondary replica logs before committing the transaction on the primary replica. This setting can affect both high availability and data protection, depending on the configuration. When you install the SQL Server resource agent - `mssql-server-ha` - and create a cluster resource for the availability group, the cluster manager detects the availability group configuration and sets `required_synchronized_secondaries_to_commit` accordingly. 
 
-If supported by the configuration, the resource agent parameter `required_synchronized_secondaries_to_commit` is set to the value that provides high availability and data protection.  If the configuration cannot support both the default is set for data protection. For more information, see [Understand SQL Server resource agent for pacemaker](#pacemakerNotify).
+If supported by the configuration, the resource agent parameter `required_synchronized_secondaries_to_commit` is set to the value that provides high availability and data protection. For more information, see [Understand SQL Server resource agent for pacemaker](#pacemakerNotify).
 
 The following sections explain the default behavior for the cluster resource. 
 
@@ -60,8 +60,6 @@ The following table describes the high availability and data protection behavior
 
 |`required_synchronized_secondaries_to_commit`|0 |1 \*|2
 | --- |:---:|:---:|:---:
-|High availability| |✔| 
-|Data protection | |✔|✔|
 |Automatic failover after primary replica outage| |✔| 
 |Primary replica available after one secondary replica outage|✔|✔| 
 |Primary replica available after two secondary replica outages|✔| |
@@ -83,8 +81,6 @@ The following table describes the high availability and data protection behavior
 
 |`required_synchronized_secondaries_to_commit`|0 \*|1
 | --- |:---:|:---:
-|High availability |✔| | 
-|Data protection |✔|✔|
 |Automatic failover after primary replica outage| |✔| 
 |Primary replica available after secondary replica outage| |✔|
 |Primary replica available after witness outage|✔| |
@@ -107,10 +103,8 @@ The two synchronous replicas configuration is optimized for data protection and 
 
 The following table describes the data protection behavior according to the possible values for two synchronous replicas availability group. 
 
-|`required_synchronized_secondaries_to_commit`|0 |1 \* 
+|`required_synchronized_secondaries_to_commit`|0 \*|1 
 | --- |:---|:---
-|Automatic failover | |✔| 
-|Data protection | |✔|
 |Automatic failover after primary replica outage| |✔ \*\* | 
 |Primary replica available after secondary replica outage|✔| |
 
@@ -125,20 +119,22 @@ The two synchronous replicas configuration may be the most economical because it
 
 ## More about a witness
 
-A witness in a SQL Server Always On availability group enables a configuration with high availability and data protection without using a third replica - a *witness*. Any edition of SQL Server can host a witness. A witness contains availability group configuration data like availability group roles, and synchronization status data in the `master` database. It does not include replicated user databases. The witness uses the `WITNESS-COMMIT` availability mode. It is never the primary replica.
+A witness in a SQL Server Always On availability group enables a configuration with high availability and data protection without using a third replica - a *witness*. Any edition of SQL Server can host a witness. A witness contains availability group configuration data like availability group roles, and synchronization status data in the `master` database. It does not include replicated user databases. The witness uses the `WITNESS_COMMIT` availability mode. It is never the primary replica.
 
 Use a witness in an availability group with two synchronous replicas - one primary replica and one secondary replica. If an availability group does not include two synchronous replicas, you cannot use a witness. You can also include additional asynchronous replicas. The DDL `CREATE AVAILABILITY GROUP` will fail if the group does not include two synchronous replicas. Likewise, you cannot create an availability group with only one primary replica and a witness. An availability group cannot include more than one witness.
 
+An availability group with a witness requires two synchronous replicas and can have additional asynchronous replicas. An availability group cannot have more than one witness. 
+
 You can use any edition of SQL Server 2017 to host a witness. This includes SQL Server Enterprise Edition, Standard Edition, or Express Edition. 
 
-On a witness you cannot do the following things:
+A witness availability mode is `WITNESS_COMMIT`. In this mode, configuration information is synchronously committed to the witness. You cannot modify the availability mode of a witness. 
 
-- Create an availability group - you can include the witness in an availability group, or join it to an existing availability group.
+On a witness you cannot:
+
 - Failover an availability group to a witness.
+- Change the availability mode.
 
-A witness availability mode `WITNESS_COMMIT`. In this mode, configuration information is synchronously committed to the witness. You cannot modify the availability mode of a witness. To change the availability mode of a witness, remove the replica and recreate it as a secondary replica with an appropriate availability mode.
-
-To create an availabiltiy group with two synchronous replicas and a witness, see [Create availability group with two synchronous replicas and a witness](sql-server-linux-availability-group-configure-ha.md#witnessScript).
+To create an availability group with two synchronous replicas and a witness, see [Create availability group with two synchronous replicas and a witness](sql-server-linux-availability-group-configure-ha.md#witnessScript).
 
 <a name="pacemakerNotify"></a>
 
@@ -146,7 +142,7 @@ To create an availabiltiy group with two synchronous replicas and a witness, see
 
 SQL Server 2017 CTP 1.4 added `sequence_number` to `sys.availability_groups` to solve this issue. `sequence_number` is a monotonically increasing BIGINT that represents how up-to-date the local availability group replica is with respect to the rest of the replicas in the availability group. Performing failovers, adding or removing replicas, and other availability group configuration changes update this number. The number is updated on the primary, then replicated to secondary replicas. Thus a secondary replica that has up-to-date configuration has the same sequence number as the primary. 
 
-When Pacemaker decides to promote a replica to primary, it first sends a notification to all replicas to extract the sequence number and store it (we call this the pre-promote notification). Next, when Pacemaker actually tries to promote a replica to primary, the replica only promotes itself if its sequence number is the highest of all the sequence numbers from all replicas and rejects the promote operation otherwise. In this way only the replica with the highest sequence number can be promoted to primary, ensuring no data loss. 
+When Pacemaker decides to promote a replica to primary, it first sends a *pre-promote* notification to all replicas to extract the sequence number and store it. Next, when Pacemaker actually tries to promote a replica to primary, the replica only promotes itself if its sequence number is the highest of all the sequence numbers from all replicas and rejects the promote operation otherwise. In this way only the replica with the highest sequence number can be promoted to primary, ensuring no data loss. 
 
 Note that this is only guaranteed to work as long as at least one replica available for promotion has the same sequence number as the previous primary. To ensure this, the default behavior is for the Pacemaker resource agent to automatically set `required_synchronized_secondaries_to_commit` such that at least one synchronous secondary replica is up to date and available to be the target of an automatic failover. With each monitoring action, the value of `required_synchronized_secondaries_to_commit` is computed (and updated if necessary)  as ('number of synchronous replicas' / 2). Then, at failover time, the resource agent will require (`total number of replicas` - `required_synchronized_secondaries_to_commit` replicas) to respond to the pre-promote notification to be able to promote one of them to primary. The replica with the highest `sequence_number` will be promoted to primary. 
 
@@ -161,7 +157,7 @@ A user can choose to override the default behavior, and prevent the availability
 >[!IMPORTANT]
 >When `required_synchronized_secondaries_to_commit` is 0 there is risk of data loss. In the case of an outage of the primary, the resource agent will not automatically trigger a failover. The user has to decide if they want to wait for primary to recover or manually fail over.
 
-To set `required_synchronized_secondaries_to_commit` to 0, run:
+The following script sets `required_synchronized_secondaries_to_commit` to 0 on an availability group named `<**ag1**>`. Before you run replace `<**ag1**>` with the name of your availability group.
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

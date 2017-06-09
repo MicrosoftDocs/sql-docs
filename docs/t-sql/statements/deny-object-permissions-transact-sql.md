@@ -31,7 +31,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DENY <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
         TO <database_principal> [ ,...n ]   
@@ -65,10 +64,10 @@ DENY <permission> [ ,...n ] ON
  - Table permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
  - View permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- PRIVILEGES  
+PRIVILEGES  
  Included for ANSI-92 compliance. Does not change the behavior of ALL.  
   
- *column*  
+*column*  
  Specifies the name of a column in a table, view, or table-valued function on which the permission is being denied. The parentheses **( )** are required. Only SELECT, REFERENCES, and UPDATE permissions can be denied on a column. *column* can be specified in the permissions clause or after the securable name.  
   
 > [!CAUTION]  

@@ -42,7 +42,7 @@ The design patters are three availability group configuarations. The configurati
 
 ## How the configuration affects default resource settings
 
-The cluster resource setting `required_synchronized_secondaries_to_commit` guarantees that each transaction is written to a minimum number of secondary replica logs before committing the transaction on the primary replica. This setting can affect both high availability and data protection, depending on the configuration. When you install the SQL Server resource agent - `mssql-sserver-ha` - and create a cluster resource for the availability group, the cluster manager detects the availability group configuration and sets `required_synchronized_secondaries_to_commit` accordingly. 
+The cluster resource setting `required_synchronized_secondaries_to_commit` guarantees that each transaction is written to a minimum number of secondary replica logs before committing the transaction on the primary replica. This setting can affect both high availability and data protection, depending on the configuration. When you install the SQL Server resource agent - `mssql-server-ha` - and create a cluster resource for the availability group, the cluster manager detects the availability group configuration and sets `required_synchronized_secondaries_to_commit` accordingly. 
 
 If supported by the configuration, the resource agent parameter `required_synchronized_secondaries_to_commit` is set to the value that provides high availability and data protection.  If the configuration cannot support both the default is set for data protection. For more information, see [Understand SQL Server resource agent for pacemaker](#pacemakerNotify).
 

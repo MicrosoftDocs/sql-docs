@@ -61,6 +61,7 @@ Try out the complete machine learning solution on this virtual machine, which in
 These demos illustrate how a ski rental business might use machine learning to predict future rentals and schedule staff to meet demand.
 
 + [Build an intelligent app with SQL Server and R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
+
 + [Build an intelligent app with SQL Server and Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 
 See this page for links to tutorials and end-to-end solutions for using R in SQL Server.

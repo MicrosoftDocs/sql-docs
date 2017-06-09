@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_tran_database_transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "06/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,7 +51,7 @@ manager: "jhubbard"
 |database_transaction_last_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN of the most recently logged record for the transaction in the database log.|  
 |database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN of the most recent savepoint for the transaction in the database log.|  
 |database_transaction_commit_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN of the commit log record for the transaction in the database log.|  
-|database_transaction_last_rollback_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN that was most recently rolled back to. If no rollback has taken place, the value will be MaxLSN (-1:-1:-1).|  
+|database_transaction_last_rollback_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN that was most recently rolled back to. If no rollback has taken place, the value will be MaxLSN.|  
 |database_transaction_next_undo_lsn|**numeric(25,0)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LSN of the next record to undo.|  
 |pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   

@@ -93,9 +93,9 @@ DENY permission [ ,...n ] }
 ## Remarks  
  Permissions at the server scope can be denied only when the current database is master.  
   
- Information about server permissions can be viewed in the [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) catalog view. Information about server principals can viewed in the [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) catalog view.  
+ Information about server permissions is available in the [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) catalog view. Information about server principals is available in the [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) catalog view.  
   
- The DENY statement will fail if CASCADE is not specified when you are denying a permission to a principal that was granted that permission with GRANT OPTION.  
+ The DENY statement fails if CASCADE is not specified when you are denying a permission to a principal that was granted that permission with GRANT OPTION.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins and server roles are server-level securables. The most specific and limited permissions that can be denied on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or server role are listed in the following table, together with the more general permissions that include them by implication.  
   

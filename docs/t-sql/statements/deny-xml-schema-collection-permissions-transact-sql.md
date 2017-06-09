@@ -59,7 +59,7 @@ DENY permission  [ ,...n ] ON
  Specifies a permission that can be denied on an XML schema collection. For a list of the permissions, see the Remarks section later in this topic.  
   
  ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
- Specifies the XML schema collection on which the permission is being denied. The scope qualifier (::) is required. If *schema_name* is not specified, the default schema will be used. If *schema_name* is specified, the schema scope qualifier (.) is required.  
+ Specifies the XML schema collection on which the permission is being denied. The scope qualifier (::) is required. If *schema_name* is not specified, the default schema is used. If *schema_name* is specified, the schema scope qualifier (.) is required.  
   
  TO \<database_principal>  
  Specifies the principal to which the permission is being denied.  

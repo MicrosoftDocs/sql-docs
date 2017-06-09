@@ -34,21 +34,18 @@ manager: "jhubbard"
   
 -   **Developer Edition**  
 
-    Same capabilities as Enterprise Edition; however, Developer Edition cannot be used in production environments.  
+     Same capabilities as Enterprise Edition; however, Developer Edition cannot be used in production environments.  
 
   
 -   **Standard Edition**  
-  
 
      Has all the capabilities of in-database analytics included with Enterprise Edition, except for resource governance. Performance and scale is also limited: the data that can be processed must fit in server memory, and processing is limited to a single compute thread, even when using the **RevoScaleR** functions.
-
-
   
 -   **Express And Web Editions**  
   
      Only Express Edition with Advanced Services includes the machine learning features. The performance limitations are similar to Standard Edition.  
 
-For all editions, the following machine learning languages are supported:
+The following machine learning languages are supported:
 
 + SQL Server 2016: R 
 + SQL Server 2017: R and Python
@@ -62,10 +59,9 @@ Microsoft R Client can work with all editions.
 
 Performance of machine learning solutions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is expected to generally be better than any conventional implementation using R, given the same hardware. That is because, in SQL Server, R solutions can be run using server resources and sometimes distributed to multiple processes using the **RevoScaleR** functions. Performance has not been assessed for Python solutions, as the feature is still under development, but some of the same benefits are expected to apply.  
 
+Users can also expect to see considerable differences in performance and scalability for the same machine learning solution if run in Enterprise Edition vs. Standard Edition. Reasons include support for parallel processing, streaming, and increased threads available for R worker processing.  
   
- Users can also expect to see considerable differences in performance and scalability for the same machine learning solution if run in Enterprise Edition vs. Standard Edition. Reasons include support for parallel processing, streaming, and increased threads available for R worker processing.  
-  
- However, performance even on identical hardware can be affected by many factors outside the R or Python code. These factors  include competing demands on server resources, the type of query plan that is created, schema changes, the need to update statistics or create a new query plan, fragmentation, and more. It is possible that a stored procedure containing R or Python code might run in seconds under one workload, but take minutes when there are other services running.  Therefore, we recommend that you monitor multiple aspects of server performance, including networking for remote compute contexts, when measuring machine learning performance.  
+However, performance even on identical hardware can be affected by many factors outside the R or Python code. These factors  include competing demands on server resources, the type of query plan that is created, schema changes, the need to update statistics or create a new query plan, fragmentation, and more. It is possible that a stored procedure containing R or Python code might run in seconds under one workload, but take minutes when there are other services running.  Therefore, we recommend that you monitor multiple aspects of server performance, including networking for remote compute contexts, when measuring machine learning performance.  
 
 We also recommend that you configure [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) (available in Enterprise Edition) to customize the way that external script jobs are prioritized or handled under heavy server workloads. You can define classifier functions to specify the source of the external script job and prioritize certain workloads, limit the amount of memory used by SQL queries,  and control the number of parallel processes used on a workload basis.  
   

@@ -1,7 +1,7 @@
 ---
 title: "DENY Server Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,16 +31,12 @@ manager: "jhubbard"
 
   Denies permissions granted on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 DENY permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -67,7 +63,7 @@ DENY permission [ ,...n ] }
  SERVER ROLE **::** *server_role*  
  Specifies the server role on which the permission is being denied. The scope qualifier (**::**) is required.  
   
- TO <server_principal>  
+ TO \<server_principal>  
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or server role to which the permission is being granted.  
   
  TO *SQL_Server_login*  

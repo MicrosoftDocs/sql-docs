@@ -17,16 +17,16 @@ manager: "jhubbard"
 
 Microsoft provides an integrated, scalable set of machine learning solutions for both on-premises and the cloud:
 
-+ **Integrated**, because you can run R or Python in SQL Server, easily merging enterprise work flows for ETL and reporting with data science tasks such as feature engineering, model creation, and scoring.
-+ **Scalable**, because the data scientist can develop and test a solution on a laptop, and then deploy it to multiple platforms, including SQL Server, Hadoop, or Spark, for distributed or parallel processing of key operations such as model training and scoring.
++ **Integrated**, because you can run R or Python in SQL Server. This lets you easily merge enterprise work flows for ETL and reporting with data science tasks such as feature engineering, model creation, and scoring.
++ **Scalable**, because the data scientist can develop and test a solution on a laptop, and then deploy it to multiple platforms for distributed or parallel processing of key operations such as model training and scoring. Supported platforms include SQL Server on Windows, Hadoop, and Spark. 
 
-This article provides links to resoures for each product in the Microsoft Machine Learning platform.
+This article provides links to resources for each product in the Microsoft Machine Learning platform.
 
 ## Products and Platforms
 
 **SQL Server 2016**
 
-SQL Server 2016 supports running R code in SQL Server, or using the SQL Server as the remote compute context for R jobs. This features provides security for your data and lets you manage and balance resources used by R.
+SQL Server 2016 supports running R code in SQL Server, or using the SQL Server as the remote compute context for R jobs. This  provides security for your data and lets you manage and balance resources used by R.
 
 **SQL Server 2017**
 
@@ -36,7 +36,7 @@ In SQL Server 2017 CTP 2.0, support for Python was added, and the name was chang
 
 **Microsoft R Server**
 
-If you don't need to use SQL Server data, install Microsoft R Server to enjoy distributed, scalable R processing. You can install R Server either through [platorm-specific installers](), or through SQL Server setup.
+If you don't need to use SQL Server data, install Microsoft R Server to enjoy distributed, scalable R processing. You can install R Server either through [platform-specific installers](), or through SQL Server setup.
 + [Introducing Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
 
 **Microsoft Machine Learning Server**
@@ -48,11 +48,11 @@ If you want to try out Python integration, be sure to install the latest version
 Use this standalone installer if you want to set up a server for machine learning but don't need SQL Server
 + [Microsoft R Server](https://msdn.microsoft.com/library/mt674874.aspx)
 
-If you already installed one of the machine learning server products, this page article provides information about how to set up a separate computer for development and testing of solutions, including tools and required libraries. 
+If you already installed one of the machine learning server products, this article provides information about how to set up a separate computer for development and testing of solutions, including tools and required libraries. 
 
 + [Set Up a Data Science Client](../advanced-analytics/r/set-up-a-data-science-client.md)
 
-Try out the complete machine learning solution on this virtual machine that includes the server and all developments tools, including Pyton Anaconda distribution, Jupyter notebooks, and the latest version of Microsoft R.
+Try out the complete machine learning solution on this virtual machine, which includes the server and all development tools, a Python Anaconda distribution, Jupyter notebooks, and the latest version of Microsoft R.
 
 + [Data Science Virtual Machine](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 

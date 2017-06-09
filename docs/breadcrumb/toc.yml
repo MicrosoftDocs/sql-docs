@@ -655,7 +655,7 @@
           href: /sql/relational-databases/security/authentication-access/
           homepage: /sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions
         - name: Encryption
-          href: /sql/relational-databases/security/
+          href: /sql/relational-databases/security/encryption/
           homepage: /sql/relational-databases/security/encryption/sql-server-encryption
       - name: Sequence numbers
         href: /sql/relational-databases/sequence-numbers/

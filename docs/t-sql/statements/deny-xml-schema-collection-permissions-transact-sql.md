@@ -1,7 +1,7 @@
 ---
 title: "DENY XML Schema Collection Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/25/2015"
+ms.date: "06/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,16 +30,12 @@ manager: "jhubbard"
 
   Denies permissions on an XML schema collection.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 DENY permission  [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  
     XML_schema_collection_name  
@@ -63,15 +59,15 @@ DENY permission  [ ,...n ] ON
  Specifies a permission that can be denied on an XML schema collection. For a list of the permissions, see the Remarks section later in this topic.  
   
  ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
- Specifies the XML schema collection on which the permission is being denied. The scope qualifier (::) is required. If *schema_name* is not specified, the default schema will be used. If *schema_name* is specified, the schema scope qualifier (.) is required.  
+ Specifies the XML schema collection on which the permission is being denied. The scope qualifier (::) is required. If *schema_name* is not specified, the default schema is used. If *schema_name* is specified, the schema scope qualifier (.) is required.  
   
- TO <database_principal>  
+ TO \<database_principal>  
  Specifies the principal to which the permission is being denied.  
   
  CASCADE  
  Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
   
- AS <database_principal>  
+ AS \<database_principal>  
  Specifies a principal from which the principal executing this query derives its right to deny the permission.  
   
  *Database_user*  

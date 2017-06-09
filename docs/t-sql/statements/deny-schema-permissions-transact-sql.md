@@ -62,7 +62,7 @@ CASCADE
  Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
   
 *denying_principal*  
- Specifies a principal from which the principal executing this query derives its right to deny the permission. *denying_principa*l can be one of the following:  
+ Specifies a principal from which the principal executing this query derives its right to deny the permission. *denying_principal* can be one of the following:  
   
 -   Database user  
 -   Database role  

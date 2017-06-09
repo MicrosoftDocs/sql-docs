@@ -1,7 +1,7 @@
 ---
 title: "Getting Started | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/16/2017"
+ms.date: "06/09/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,9 +58,10 @@ Try out the complete machine learning solution on this virtual machine that incl
 
 ## Demos, Blogs, and Tutorials
 
-This demo illustrates how a ski rental business might use machine learning to predict future rentals and schedule staff to meet demand.
+These demos illustrate how a ski rental business might use machine learning to predict future rentals and schedule staff to meet demand.
 
-+ [Build an intelligent app with SQL Server and R](https://www.microsoft.com/sql-server/developer-get-started/r)
++ [Build an intelligent app with SQL Server and R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
++ [Build an intelligent app with SQL Server and Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 
 See this page for links to tutorials and end-to-end solutions for using R in SQL Server.
 
@@ -72,9 +73,6 @@ Need to deploy a model to a web service using Machine Learning Server? See this 
 
 + [Publish and Consume Python Code](../advanced-analytics/python/publish-consume-python-code.md)
 
-This example demonstrates how to use unsupervised learning, using the rxKmeans library on SQL Server, to segment customers based on sales data.  (English only)
-
-+ [Clustering in SQL Server R Services](https://www.microsoft.com/sql-server/developer-get-started/rclustering)
 
 New to R? Wondering what RevoScaleR offers that R doesn't? See this R Server quick-start.
 

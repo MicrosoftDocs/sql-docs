@@ -164,8 +164,8 @@ In this example, OPENROWSET(BULK) reads the content of the file and passes that 
 
 Now you can return this table to the user, or load the data into another table.
 
-## Learn more about built-in JSON support in SQL Server  
- [Blog posts by Microsoft Program Manager Jovan Popovic](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
   
 ## See Also
 [Convert JSON Data to Rows and Columns with OPENJSON](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)

@@ -144,8 +144,8 @@ The **FOR JSON** clause uses the rules described in this topic to convert SQL da
 -   [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
  The **FOR JSON** clause escapes special characters and represents control characters in the JSON output as described in this topic.  
 
-## Learn more about FOR JSON and built-in JSON support in SQL Server  
- [Blog posts by Microsoft Program Manager Jovan Popovic](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
   
 ## See Also  
  [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)   

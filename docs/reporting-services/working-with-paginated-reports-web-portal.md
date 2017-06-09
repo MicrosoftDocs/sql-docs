@@ -1,7 +1,7 @@
 ---
 title: "Working with paginated reports (web portal) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/15/2017"
+ms.date: "05/25/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,7 @@ manager: "erikre"
 ---
 # Working with paginated reports (web portal)
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)]
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
 
 You can view and manage the properties of a paginated report within the web portal. The web portal can launch you into Report Builder to create or edit paginated reports.  
    

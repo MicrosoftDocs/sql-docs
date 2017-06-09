@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Explore and Visualize the Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/10/2017"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,14 +15,14 @@ dev_langs:
   - "Python"
   - "TSQL"
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Step 3: Explore and Visualize the Data
 
-Developing a data science solution usually includes intensive data exploration and data visualization. In this step, you'll review the sample data, and then generate some plots. In this walkthrough, you'll practice serializing figure objects in Python and the deserialize those object and make plots.
+Developing a data science solution usually includes intensive data exploration and data visualization. In this step, you'll explore the sample data and generate some plots. Later, you'll learn how to serialize graphics objects in Python, and then deserialize those object and make plots.
 
 > [!NOTE]
 > This walkthrough demonstrates only the binary classification task; you are welcome to try building separate models for the other two machine learning tasks, regression and multiclass classification.
@@ -52,21 +52,21 @@ In the original dataset, the taxi identifiers and trip records were provided in 
 
 Because visualization is such a powerful tool for understanding the distribution of the data and outliers, Python provides many packages for visualizing data. The **matplotlib** module is a popular library that includes many functions for creating histograms, scatter plots, box plots, and other data exploration graphs.
 
-In this section, you'll learn how to work with plots using stored procedures. You'll store the `plot` Python object as a varbinary data type, and then all the stored procedure on the client, and save the plots generated on the server.
+In this section, you'll learn how to work with plots using stored procedures. You'll store the `plot` Python object as a **varbinary** data type, and save the plots generated on the server.
 
 ### Storing plots as varbinary data type
 
-The **revoscalepy** module incuded with SQL Server 2017 Machine Learning Services contains libraries analogous to the R libraries in the RevoScaleR package. In this example, you'll use the Python equivalent of `rxHistogram` to plot a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. To make it easier, you will wrap it in a stored procedure, _PlotHistogram_.
+The **revoscalepy** module included with SQL Server 2017 Machine Learning Services contains libraries analogous to the R libraries in the RevoScaleR package. In this example, you'll use the Python equivalent of `rxHistogram` to plot a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. To make it easier, you will wrap it in a stored procedure, _PlotHistogram_.
 
-The stored procedure returns a serialized `figure` Python object as a stream of `varbinary` data. Obviously, you cannot view binary data directly, but you can use Python code on the client to deserialize and view the figures, and then save the image file on a client computer.
+The stored procedure returns a serialized Python `figure` object as a stream of **varbinary** data. You cannot view the binary data directly, but you can use Python code on the client to deserialize and view the figures, and then save the image file on a client computer.
 
 ### Create the stored procedure Plots_Python
 
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open a new query window.
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open a new **Query** window.
 
 2.  Select the database for the walkthrough,  and create the procedure using this statement. Be sure to modify the code to use the correct table name, if needed.
   
-    ```
+    ```SQL
     
 	CREATE PROCEDURE [dbo].[SerializePlots]
 	AS
@@ -137,18 +137,18 @@ The stored procedure returns a serialized `figure` Python object as a stream of 
   
 	**Results**
   
-	*plot*  
+	*plot*
 	*0xFFD8FFE000104A4649...*
 	*0xFFD8FFE000104A4649...*
 	*0xFFD8FFE000104A4649...*
 	*0xFFD8FFE000104A4649...*
 
   
-2.  On the client machine, run the python code below, providing the appropriate server name, database name, and credentials.  
+2.  On the client machine, run the following Python code, replacing the server name, database name, and credentials as appropriate.
   
-    For SQL server authentication:
+    **For SQL server authentication:**
     
-        ```  
+        ```python
         import pyodbc
         import pickle
         import os
@@ -160,11 +160,10 @@ The stored procedure returns a serialized `figure` Python object as a stream of 
             fig = pickle.loads(tables[i][0])
             fig.savefig(str(i)+'.png')
         print("The plots are saved in directory: ",os.getcwd())
-
         ```  
-    For Windows authentication:
+    **For Windows authentication:**
 
-        ```  
+        ```python
         import pyodbc
         import pickle
         import os
@@ -176,11 +175,10 @@ The stored procedure returns a serialized `figure` Python object as a stream of 
             fig = pickle.loads(tables[i][0])
             fig.savefig(str(i)+'.png')
         print("The plots are saved in directory: ",os.getcwd())
+        ```
 
-        ```  
-
-    > [!NOTE]  
-    > Make sure the Python version is the same on the client and the server. Also, make sure that the Python libraries you’re using on your client (such as matplotlib) are of the same or higher version relative to the libraries installed on the server. 
+    > [!NOTE]
+    > Make sure the Python version is the same on the client and the server. Also, make sure that the Python libraries you’re using on your client (such as matplotlib) are of the same or higher version relative to the libraries installed on the server.
 
 
 3.  If the connection is successful, you will see the results below

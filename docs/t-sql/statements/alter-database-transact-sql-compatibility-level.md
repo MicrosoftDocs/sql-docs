@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2017"
+ms.date: "06/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -109,8 +109,18 @@ SELECT name, compatibility_level FROM sys.databases;
  When a stored procedure executes, it uses the current compatibility level of the database in which it is defined. When the compatibility setting of a database is changed, all of its stored procedures are automatically recompiled accordingly.  
 
 ## Differences Between Compatibility Level 130 and Level 140  
-This section describes new behaviors introduced with compatibility level 140.     
-Customers running in this level will get the latest language features and query optimizer behaviors (including changes in each pre-release version that Microsoft releases).    
+This section describes new behaviors introduced with compatibility level 140.
+
+|Compatibility-level setting of 130 or lower|Compatibility-level setting of 140|  
+|--------------------------------------------------|-----------------------------------------|  
+|Cardinality estimates for statements referencing multi-statement table valued functions use a fixed row guess.|Cardinality estimates for eligible statements referencing multi-statement table valued functions will use the actual cardinality of the function output.  This is enabled via **interleaved execution** for multi-statement table valued functions.|
+|Batch-mode queries that request insufficient memory grant sizes that result in spills to disk may continue to have issues on consecutive executions.|Batch-mode queries that request insufficient memory grant sizes that result in spills to disk may have improved performance on consecutive executions.  This is enabled via **batch mode memory grant feedback** which will update the memory grant size of a cached plan if spills have occurred for batch mode operators. |
+|Batch-mode queries that request an excessive memory grant size that results in concurrency issues may continue to have issues on consecutive executions.|Batch-mode queries that request an excessive memory grant size that results in concurrency issues may have improved concurrency on consecutive executions.  This is enabled via **batch mode memory grant feedback** which will update the memory grant size of a cached plan if an excessive amount was originally requested.|
+|Batch-mode queries that contain join operators are eligible for three physical join algorithms, including nested loop, hash join and merge join.  If cardinality estimates are incorrect for join inputs, an inappropriate join algorithm may be selected.  If this occurs, performance will suffer and the inappropriate join algorithm will remain in-use until the cached plan is recompiled.|There is an additional join operator called **adaptive join**. If cardinality estimates are incorrect for the outer build join input, an inappropriate join algorithm may be selected.  If this occurs and the statement is eligible for an adaptive join, a nested loop will be used for smaller join inputs and a hash join will be used for larger join inputs dynamically without requiring recompilation. |
+|Trivial plans referencing Columnstore indexes are not eligible for batch mode execution. |A trivial plan referencing Columnstore indexes will be discarded in favor of a plan that is eligible for batch mode execution.|
+|The sp_execute_external_script UDX operator can only run in row mode.|The sp_execute_external_script UDX operator is eligible for batch mode execution.|
+
+Fixes that were under  trace flag 4199 in earlier versions of SQL Server prior to SQL Server 2017 are now enabled by default. With compatibility mode 140. Trace flag 4199 will still be applicable for new query optimizer fixes that are released after SQL Server 2017. For information about Trace Flag 4199, see [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  
   
 ## Differences Between Compatibility Level 120 and Level 130  
 This section describes new behaviors introduced with compatibility level 130.   

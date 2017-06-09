@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Invoke-ASCmd cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Enables a database administrator to execute an XMLA script, Multidimensional Expressions (MDX), Data Mining Extensions (DMX) statements, or Tabular Model Scripting Language (TMSL) script.  
   
  TMSL is supported only for Tabular server mode on a SQL Server 2016 Analysis Services instance.  

@@ -16,8 +16,10 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Configuration and Administration of a Report Server
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is a server-based reporting platform that provides a full range of ready-to-use tools and services to help you create, deploy, and manage reports for your organization, as well as programming features that enable you to extend and customize your reporting functionality. You can integrate your reporting environment with a SharePoint product to experience the benefits of using the collaborative environment provided by SharePoint sites.  
+
+SQL Server Reporting Services is a server-based reporting platform that provides a full range of ready-to-use tools and services to help you create, deploy, and manage reports for your organization, as well as programming features that enable you to extend and customize your reporting functionality. You can integrate your reporting environment with a SharePoint product to experience the benefits of using the collaborative environment provided by SharePoint sites.  
   
 ## In this section  
  Use the following sections to help you understand concepts, deployment scenarios, procedures, and more for integrating your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] environment with a SharePoint product or technology:  
@@ -54,6 +56,6 @@ manager: "erikre"
   
 -   [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- For more general information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. For information about other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../../sql-server/sql-server-technical-documentation.md).  
-  
-  
+ For more general information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. For information about other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../../sql-server/sql-server-technical-documentation.md).  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

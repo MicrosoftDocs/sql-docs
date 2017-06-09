@@ -75,6 +75,7 @@
 ## [sys.dm_exec_query_memory_grants](sys-dm-exec-query-memory-grants-transact-sql.md)  
 ## [sys.dm_exec_query_optimizer_info](sys-dm-exec-query-optimizer-info-transact-sql.md)  
 ## [sys.dm_exec_query_optimizer_memory_gateways](sys-dm-exec-query-optimizer-memory-gateways.md)
+## [sys.dm_exec_query_parallel_workers](sys-dm-exec-query-parallel-workers-transact-sql.md)
 ## [sys.dm_exec_query_plan](sys-dm-exec-query-plan-transact-sql.md)  
 ## [sys.dm_exec_query_profiles](sys-dm-exec-query-profiles-transact-sql.md)  
 ## [sys.dm_exec_query_resource_semaphores](sys-dm-exec-query-resource-semaphores-transact-sql.md)  

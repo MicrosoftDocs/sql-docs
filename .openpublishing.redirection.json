@@ -823,32 +823,32 @@
         {
             "source_path": "docs/connect/odbc/using-azure-key-vault-odbc.md",
             "redirect_url": "/sql/connect/odbc/using-always-encrypted-with-the-odbc-driver",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/connecting-with-bcp.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-bcp",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
             "redirect_url": "/sql/connect/odbc/using-transparent-network-ip-resolution",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/connecting-with-bcp.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-bcp",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/connecting-with-sqlcmd.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-sqlcmd",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/connection-string-keywords-and-data-source-names-dsns.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/custom-keystore-providers.md",
@@ -858,32 +858,32 @@
         {
             "source_path": "docs/connect/odbc/linux/data-access-tracing-with-the-odbc-driver-on-linux.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/frequently-asked-questions-faq-for-odbc-linux.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/index.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/index",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/installing-the-driver-manager.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/installing-the-driver-manager",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/installing-the-microsoft-odbc-driver-for-sql-server-on-linux.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/known-issues-in-this-version-of-the-driver.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/microsoft-odbc-driver-for-sql-server-on-linux.md",
@@ -893,22 +893,22 @@
         {
             "source_path": "docs/connect/odbc/linux/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/programming-guidelines.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/programming-guidelines",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/release-notes",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/system-requirements.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/system-requirements",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/using-always-encrypted-with-the-linux-odbc-driver.md",
@@ -918,7 +918,7 @@
         {
             "source_path": "docs/connect/odbc/linux/using-integrated-authentication.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/using-integrated-authentication",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/connect/odbc/linux/using-transparent-network-ip-resolution.md",
@@ -1016,93 +1016,93 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/integration-services/service/service/view-events-for-the-integration-services-service.md",
-            "redirect_url": "/sql/integration-services/service/service/events-logged-by-the-integration-services-service",
+            "source_path": "docs/integration-services/service/view-events-for-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/events-logged-by-the-integration-services-service",
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/integration-services/service/service/import-and-export-packages-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/package-management-ssis-service",
+            "source_path": "docs/integration-services/service/import-and-export-packages-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/import-package-dialog-box-ui-reference.md",
-            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "source_path": "docs/integration-services/service/import-package-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/export-package-dialog-box-ui-reference.md",
-            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "source_path": "docs/integration-services/service/export-package-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/package-backup-and-restore-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "source_path": "docs/integration-services/service/package-backup-and-restore-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/view-integration-services-packages-in-sql-server-management-studio-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/service/package-management-ssis-service",
+            "source_path": "docs/integration-services/service/view-integration-services-packages-in-sql-server-management-studio-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/manage-the-integration-services-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/manage-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/set-the-properties-of-the-integration-services-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/set-the-properties-of-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/grant-permissions-to-integration-services-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/grant-permissions-to-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/configuring-the-integration-services-service-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/configuring-the-integration-services-service-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/connect-to-integration-services.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/connect-to-integration-services.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/connect-to-a-remote-integration-services-server-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/connect-to-a-remote-integration-services-server-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md",
-            "redirect_url": "/sql/integration-services/service/service/integration-services-service-ssis-service",
+            "source_path": "docs/integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/create-the-ssis-catalog.md",
-            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "source_path": "docs/integration-services/service/create-the-ssis-catalog.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/catalog-properties-dialog-box.md",
-            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "source_path": "docs/integration-services/service/catalog-properties-dialog-box.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/backup-restore-and-move-the-ssis-catalog.md",
-            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "source_path": "docs/integration-services/service/backup-restore-and-move-the-ssis-catalog.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/upgrade-the-ssis-catalog-ssisdb.md",
-            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "source_path": "docs/integration-services/service/upgrade-the-ssis-catalog-ssisdb.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/integration-services/service/service/always-on-for-ssis-catalog-ssisdb.md",
-            "redirect_url": "/sql/integration-services/service/service/ssis-catalog",
+            "source_path": "docs/integration-services/service/always-on-for-ssis-catalog-ssisdb.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
             "redirect_document_id": false
         },
         {
@@ -1513,6 +1513,31 @@
         {
             "source_path": "docs/release-notes/microsoft-sql-server.md",
             "redirect_url": "/sql/sql-server/sql-server-technical-documentation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql-server/editions-and-supported-features-for-sql-server-2016.md",
+            "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2016",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/sql-server-driver-documentation.md",
+            "redirect_url": "/sql/connect/sql-server-drivers",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/whitepapers/microsoft-sql-and-the-gdpr-requirements.md",
+            "redirect_url": "/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements",
+            "redirect_document_id": false
+        },     
+        {
+            "source_path": "docs/whitepapers/sql-server-in-memory-oltp-internals-for-sql-server-2016.md",
+            "redirect_url": "/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/whitepapers/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md",
+            "redirect_url": "/sql/master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment",
             "redirect_document_id": false
         }
     ]

@@ -1,7 +1,7 @@
 ---
 title: "Model object (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Model object (TMSL)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
   Defines a Tabular model. There is one model per database, and only one database that can be specified in any given command. A Database object is the parent object.  
   
  Model definitions are too large to reproduce the entire syntax in one topic. For this reason, a  partial syntax highlighting the main parts can be found below, with links to child objects.  

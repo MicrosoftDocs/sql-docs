@@ -141,14 +141,13 @@ sudo apt-get install unixodbc-dev
 ```
 
 ### OS X 10.11 (El Capitan) and macOS 10.12 (Sierra)
-1. Install [homebrew](https://brew.sh):
-    - `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-3. Add msodbcsql tap:
-    - `brew tap microsoft/msodbcsql https://github.com/Microsoft/homebrew-msodbcsql`
-4. Update homebrew:
-    - `brew update`
-5. Install msodbcsql package:
-    - `brew install msodbcsql`
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
+brew update
+brew install msodbcsql mssql-tools
+```
 
 ## Microsoft ODBC Driver 13 for SQL Server
 

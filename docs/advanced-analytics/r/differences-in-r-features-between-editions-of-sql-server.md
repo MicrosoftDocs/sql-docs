@@ -1,7 +1,7 @@
 ---
 title: "Differences in R Features between Editions of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/01/2017"
+ms.date: "06/09/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,6 +15,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
+
 # Differences in R Features between Editions of SQL Server
  
  Support for machine learning is available in the following editions of SQL Server 2016 and SQL Server 2017. 
@@ -25,6 +26,7 @@ manager: "jhubbard"
      Includes R Services, for in-database analytics in SQL Server. Also includes R Server (Standalone), which can be used to connect to a variety of databases and pull data for analysis at scale, but does not run in-database.  In SQL Server 2017, the equivalent features are Machine Learning Services (In-Database) and Machine Learning Server (Standalone).
 
      No restrictions. Optimized performance and scalability through parallelization and streaming. Supports analysis of large datasets that do not fit in the available memory, by using enhanced R packages, streaming, and parallel execution.  
+
      
      Newer editions of Microsoft R Server include an improved version of the operationalization engine (formerly known as DeployR) that supports rapid, secure deployment and sharing of R solutions. For more information, see [Operationalize](https://msdn.microsoft.com/microsoft-r/operationalize/about).
   
@@ -37,9 +39,12 @@ manager: "jhubbard"
   
 -   **Standard Edition**  
   
-     Has all the capabilities of in-database analytics included with Enterprise Edition, except for resource governance. Performance and scale is also limited: the data that can be processed has to fit in server memory, and processing is limited to a single compute thread, even when using the **RevoScaleR** functions.
+
+     Has all the capabilities of in-database analytics included with Enterprise Edition, except for resource governance. Performance and scale is also limited: the data that can be processed must fit in server memory, and processing is limited to a single compute thread, even when using the **RevoScaleR** functions.
+
+
   
--   **Express Editions**  
+-   **Express And Web Editions**  
   
      Only Express Edition with Advanced Services includes the machine learning features. The performance limitations are similar to Standard Edition.  
 
@@ -56,6 +61,7 @@ Microsoft R Client can work with all editions.
 ## Enterprise Edition  
 
 Performance of machine learning solutions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is expected to generally be better than any conventional implementation using R, given the same hardware. That is because, in SQL Server, R solutions can be run using server resources and sometimes distributed to multiple processes using the **RevoScaleR** functions. Performance has not been assessed for Python solutions, as the feature is still under development, but some of the same benefits are expected to apply.  
+
   
  Users can also expect to see considerable differences in performance and scalability for the same machine learning solution if run in Enterprise Edition vs. Standard Edition. Reasons include support for parallel processing, streaming, and increased threads available for R worker processing.  
   
@@ -85,4 +91,4 @@ Express Edition is subject to the same limitations as Standard Edition.
 
 [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
 
-  
+

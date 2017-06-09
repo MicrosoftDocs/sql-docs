@@ -148,9 +148,9 @@ Note that this is only guaranteed to work as long as at least one replica availa
 
 For example, let's consider the case of an availability group with three synchronous replicas - one primary replica and two synchronous secondary replicas.
 
-- `required_synchronized_secondaries_to_commit`  is 3 / 2 = 1
+- `required_synchronized_secondaries_to_commit`  is 3 / 2 -> 1
 
-- The required number of replicas to respond to pre-promote action is 3 - 1 = 2. So 2 replicas have to be up for the failover to be triggered. This means that, in the case of primary outage, if one of the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
+- The required number of replicas to respond to pre-promote action is 3 - 1 = 2. So 2 replicas have to be up for the failover to be triggered. For succesful automatic failover after a primary replica outage both secondary replicas need to be up-to-date and respond to the pre-promote notification. If they are online they will have the same sequence number. The availability group will promote one of them. If one of  the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
 
 A user can choose to override the default behavior, and prevent the availability group resource from setting `required_synchronized_secondaries_to_commit` automatically as above.
 

@@ -155,17 +155,5 @@ AS BEGIN
 END
 ```
 
-## Next steps
-JSON in in-memory OLTP native modules provide a performance improvement for the built-in JSON functionality that's available in SQL Server and Azure SQL Database.
-
-To learn more about core scenarios for using JSON, check out some of these resources:
-
--   [TechNet Blog](https://blogs.technet.microsoft.com/dataplatforminsider/2016/01/05/json-in-sql-server-2016-part-1-of-4/)
--   [MSDN documentation](https://msdn.microsoft.com/library/dn921897.aspx)
--   [Channel 9 video](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
-To learn about various scenarios for integrating JSON into your application, check out the following resources:
--   See the demos in this [Channel 9 video](https://channel9.msdn.com/Events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds).
--   Find a scenario that matches your use case in [JSON Blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/).
--   Find examples in our [GitHub repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/json/).
-
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.

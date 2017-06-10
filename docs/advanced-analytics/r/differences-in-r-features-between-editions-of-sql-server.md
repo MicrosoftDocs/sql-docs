@@ -26,16 +26,14 @@ manager: "jhubbard"
      Includes R Services, for in-database analytics in SQL Server. Also includes R Server (Standalone), which can be used to connect to a variety of databases and pull data for analysis at scale, but does not run in-database.  In SQL Server 2017, the equivalent features are Machine Learning Services (In-Database) and Machine Learning Server (Standalone).
 
      No restrictions. Optimized performance and scalability through parallelization and streaming. Supports analysis of large datasets that do not fit in the available memory, by using enhanced R packages, streaming, and parallel execution.  
-
      
      Newer editions of Microsoft R Server include an improved version of the operationalization engine (formerly known as DeployR) that supports rapid, secure deployment and sharing of R solutions. For more information, see [Operationalize](https://msdn.microsoft.com/microsoft-r/operationalize/about).
   
      In-database analytics in SQL Server supports resource governance of external scripts to customize server resource usage.  
-  
+ 
 -   **Developer Edition**  
 
      Same capabilities as Enterprise Edition; however, Developer Edition cannot be used in production environments.  
-
   
 -   **Standard Edition**  
 
@@ -45,15 +43,8 @@ manager: "jhubbard"
   
      Only Express Edition with Advanced Services includes the machine learning features. The performance limitations are similar to Standard Edition.  
 
-The following machine learning languages are supported:
-
-+ SQL Server 2016: R 
-+ SQL Server 2017: R and Python
-
 For more information about other product features, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
- 
-Microsoft R Open is included with all editions.
-Microsoft R Client can work with all editions.
+
   
 ## Enterprise Edition  
 
@@ -82,7 +73,18 @@ Even Standard Edition should offer some performance benefit, in comparison to st
 ## Express Edition with Advanced Services  
 
 Express Edition is subject to the same limitations as Standard Edition.  
-  
+
+## All Editions
+
+The following machine learning languages are supported for all editions:
+
++ SQL Server 2016: R 
++ SQL Server 2017: R and Python
+
+Microsoft R Open is included with all editions.
+
+Microsoft R Client can work with all editions.
+
 ## See Also  
 
 [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 

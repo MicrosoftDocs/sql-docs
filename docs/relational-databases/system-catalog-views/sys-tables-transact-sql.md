@@ -76,11 +76,9 @@ GO
   
 ```  
   
- The following example shows how related temporal data can be exposed.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+The following example shows how related temporal data can be exposed.  
+   
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ```  
 SELECT T1.object_id, T1.name as TemporalTableName, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,  
@@ -93,10 +91,8 @@ ORDER BY T1.temporal_type desc
 ```  
 
 The following example shows how information on temporal history retention can be exposed.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+
+**Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 SELECT DB.is_temporal_history_retention_enabled, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema, 

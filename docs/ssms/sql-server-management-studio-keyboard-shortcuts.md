@@ -26,16 +26,16 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # SQL Server Management Studio Keyboard Shortcuts
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offers users two keyboard schemes. By default, it uses the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] scheme, with keyboard shortcuts based on [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] also offers a keyboard scheme similar to the standard scheme from [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. To change the keyboard scheme or add additional keyboard shortcuts, on the **Tools** menu, click **Options**. Select the desired keyboard scheme on the **Environment**, **Keyboard** page.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offers users two keyboard schemes. By default, it uses the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] scheme, with keyboard shortcuts based on [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also offers a keyboard scheme similar to the standard scheme from [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. To change the keyboard scheme or add additional keyboard shortcuts, on the **Tools** menu, click **Options**. Select the desired keyboard scheme on the **Environment**, **Keyboard** page.  
   
 > [!NOTE]  
 >  To show only the headings, click **Collapse All** at the top of this page.  
   
 ## Menu Activation Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Move to the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] menu bar|ALT|ALT|  
+|Move to the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] menu bar|ALT|ALT|  
 |Activate the menu for a tool component|ALT+HYPHEN|ALT+HYPHEN|  
 |Display the context menu|SHIFT+F10|SHIFT+F10|  
 |Display the **New File** dialog box to create a file|CTRL+N|CTRL+N|  
@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 ## Windows Management and Toolbar Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Close the current MDI child window|CTRL+F4|CTRL+F4|  
 |Close a menu or dialog box, cancels an operation in progress, or focuses on the current document window|ESC|ESC|  
@@ -63,10 +63,10 @@ manager: "jhubbard"
 |Moves the insertion point to the drop-down bar located at the top of the code editor when the editor is in Code view or Server Code view|CTRL+F2|No equivalent|  
 |Move to the current tool window toolbar|SHIFT+ALT|SHIFT+ALT|  
 |Display the IDE navigator with the first tool window selected|ALT+F7|No equivalent|  
-|Move to the next tool window|ALT+F6<br /><br /> or<br /><br /> F6 in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor|ALT+F6|  
+|Move to the next tool window|ALT+F6<br /><br /> or<br /><br /> F6 in the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor|ALT+F6|  
 |Move to the previous tool window|SHIFT+ALT+F7|SHIFT+ALT+F7|  
 |Move to the next pane of a split pane view of a single document|F6|F6|  
-|Move to the previously selected window|SHIFT+ALT+F6<br /><br /> or<br /><br /> SHIFT+F6 in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor|SHIFT+ALT+F6|  
+|Move to the previously selected window|SHIFT+ALT+F6<br /><br /> or<br /><br /> SHIFT+F6 in the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor|SHIFT+ALT+F6|  
 |Move to the previous pane of a split pane view of a single document|SHIFT+F6|F6|  
 |Display the dock menu|ALT+MINUS SIGN (-)|No equivalent|  
 |Display a popup listing all open windows|CTRL+ALT+DOWN ARROW|No equivalent|  
@@ -85,14 +85,14 @@ manager: "jhubbard"
 |Display the Bookmarks Window|CTRL+K, CTRL+W|CTRL+K, CTRL+W|  
 |Display the Browser Window|CTRL+ALT+R|CTRL+ALT+R|  
 |Display a smart tag menu of common commands for Web server controls in the HTML designer|SHIFT+ALT+F10|No equivalent|  
-|Display the Error List Window ([!INCLUDE[tsql](../../includes/tsql-md.md)] Editor only)|CRTL+\\, CTRL+E<br /><br /> or<br /><br /> CTRL+\\, E|CRTL+\\, CTRL+E|  
-|Move to the next entry in the Error List window ([!INCLUDE[tsql](../../includes/tsql-md.md)] Editor only)|CTRL+SHIFT+F12|CTRL+SHIFT+F12|  
+|Display the Error List Window ([!INCLUDE[tsql](../includes/tsql-md.md)] Editor only)|CRTL+\\, CTRL+E<br /><br /> or<br /><br /> CTRL+\\, E|CRTL+\\, CTRL+E|  
+|Move to the next entry in the Error List window ([!INCLUDE[tsql](../includes/tsql-md.md)] Editor only)|CTRL+SHIFT+F12|CTRL+SHIFT+F12|  
 |Display the previous page in the viewing history. Available only in the Web browser window|ALT+LEFT ARROW|No equivalent|  
 |Display the next page in the viewing history. Available only in the Web browser window|ALT+RIGHT ARROW|No equivalent|  
   
 ## Cursor Movement Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Move the cursor left|LEFT ARROW|LEFT ARROW|  
 |Move the cursor right|RIGHT ARROW|RIGHT ARROW|  
@@ -114,7 +114,7 @@ manager: "jhubbard"
   
 ## Text Selection Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Select text from the cursor to the beginning of the document|CTRL+SHIFT+ HOME|CTRL+SHIFT+ HOME|  
 |Select text from the cursor to the end of the document|CTRL+SHIFT+END|CTRL+SHIFT+END|  
@@ -152,7 +152,7 @@ manager: "jhubbard"
   
 ## Bookmark Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Set or remove a bookmark at the current line|CTRL+K, CTRL+K|CTRL+K, CTRL+K|  
 |Next bookmark|CTRL+K, CTRL+N|CTRL+K, CTRL+N|  
@@ -163,7 +163,7 @@ manager: "jhubbard"
   
 ## Tree Control Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Collapse tree nodes|- (on the numeric keypad)|- (on the numeric keypad)|  
 |Expand all tree nodes|*  (on the numeric keypad)|* (on the numeric keypad)|  
@@ -173,7 +173,7 @@ manager: "jhubbard"
 ## Code Editor Keyboard Shortcuts  
  All shortcuts are not implemented in all types of code editors.  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Toggle the full-screen display|SHIFT+ALT+ENTER|SHIFT+ALT+ENTER|  
 |Scroll text up one line|CTRL+UP ARROW|CTRL+UP ARROW|  
@@ -210,8 +210,8 @@ manager: "jhubbard"
 |Show the query results pane|CTRL+SHIFT+ALT+R||  
 |Toggle between query and results pane|F6|F6|  
 |Copy the result grid and headers to the clipboard|CTRL+SHIFT+C|No equivalent|  
-|Move to the next active window in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]|ALT+F6|ALT+F6|  
-|Open [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|CTRL+ALT+P|CTRL+ALT+P|  
+|Move to the next active window in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]|ALT+F6|ALT+F6|  
+|Open [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|CTRL+ALT+P|CTRL+ALT+P|  
 |Display the Query Designer dialog from the query editor window|CTRL+SHIFT+Q|No equivalent|  
 |Run the **sp_help** system stored procedure|ALT+F1|ALT+F1|  
 |Run the **sp_who** system stored procedure|CTRL+1|CTRL+1|  
@@ -228,7 +228,7 @@ manager: "jhubbard"
   
 ## Text Manipulation in Code Editor Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Insert a new line|ENTER or SHIFT+ENTER|ENTER or SHIFT+ENTER|  
 |Swap the characters on either side of the cursor (Does not apply to the SQL Editor.)|CTRL+T|CTRL+T|  
@@ -265,7 +265,7 @@ manager: "jhubbard"
   
 ## Transact-SQL Debugger Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Start or continue debugging|ALT+F5|ALT+F5|  
 |Stop debugging|SHIFT+F5|SHIFT+F5|  
@@ -299,7 +299,7 @@ manager: "jhubbard"
   
 ## Microsoft IntelliSense Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |List members|CTRL+J|CTRL+SPACE<br /><br /> or<br /><br /> CTRL+J|  
 |Complete word|CTRL+SPACE<br /><br /> or<br /><br /> ALT+RIGHT ARROW|ALT+RIGHT ARROW|  
@@ -317,7 +317,7 @@ manager: "jhubbard"
   
 ## Document Window and Browser Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Toggle full-screen mode|SHIFT+ALT+ENTER|SHIFT+ALT+ENTER|  
 |Move to the next pane of a split pane view of a document|F6|F6|  
@@ -329,7 +329,7 @@ manager: "jhubbard"
   
 ## Solution Explorer Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Display Solution Explorer|CTRL+ALT+L|CTRL+ALT+L|  
 |Display the **New File** dialog box to create a new file|CTRL+N|CTRL+N|  
@@ -339,7 +339,7 @@ manager: "jhubbard"
   
 ## Help and Books Online Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Help|F1<br /><br /> or<br /><br /> SHIFT+F1|F1|  
 |Display SQL Server Books Online|CTRL+F1|No equivalent|  
@@ -355,7 +355,7 @@ manager: "jhubbard"
   
 ## Search Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Display the **Find** dialog box|CTRL+F|CTRL+F|  
 |Displays the **In Files** tab of the **Find** dialog box.|||  
@@ -377,7 +377,7 @@ manager: "jhubbard"
   
 ## Cut and Paste Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Cut (delete the currently selected item and place it to the Clipboard)|CTRL+X<br /><br /> or<br /><br /> SHIFTRLT+DELETE|CTRL+X<br /><br /> or<br /><br /> SHIFT+DELETE|  
 |Cuts all of the selected lines, or the current line if nothing is selected.|CTRL+L<br /><br /> or<br /><br /> CTRL+SHIFT+L|No equivalent|  
@@ -387,7 +387,7 @@ manager: "jhubbard"
   
 ## Log Viewer Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Refresh|No equivalent|F5|  
 |Move between the **Select logs** pane and the **Log file summary** pane|No equivalent|F6|  
@@ -399,7 +399,7 @@ manager: "jhubbard"
   
 ## Activity Monitor Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Launches Activity Monitor|CTRLl+ALT+A|CTRLl+ALT+A|  
 |Closes Activity Monitor|CTRL+F4|CTRL+F4|  
@@ -415,14 +415,14 @@ manager: "jhubbard"
   
 ## Replication Monitor Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Refresh|F5|F5|  
 |Open a detail window from a grid|ENTER|ENTER|  
   
 ## Replication Conflict Viewer Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Define filter|F6|F6|  
 |Apply filter|F7|F7|  
@@ -430,7 +430,7 @@ manager: "jhubbard"
   
 ## Query Designer Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Cancels or stops the currently running query|CTRL+T|CTRL+T|  
 |Displays the diagram pane of the **Query Designer**|CTRL+1|CTRL+1|  
@@ -443,7 +443,7 @@ manager: "jhubbard"
   
 ## Designer Keyboard Shortcuts  
   
-|Action|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Move the selected control down in increments of 8 on the design surface|DOWN ARROW|No equivalent|  
 |Move the selected control left in increments of 8 on the design surface|LEFT ARROW|No equivalent|  

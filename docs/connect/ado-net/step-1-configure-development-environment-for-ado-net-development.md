@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Configure development environment for ADO.NET development | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "06/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,9 +35,5 @@ Download .NET Framework from the [Mono Project][linkid-mono-project]
 ## Mac  
   
 Download .NET Framework from the [Mono Project][linkid-mono-project]
-
-
-\<!-- Repeatable link IDs. 
--->
 
 [linkid-mono-project]: http://www.mono-project.com/

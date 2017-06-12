@@ -1,7 +1,7 @@
 ---
 title: "EXECUTE AS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2017"
+ms.date: "06/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -52,9 +52,7 @@ manager: "jhubbard"
   
 ## Arguments  
  LOGIN  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   

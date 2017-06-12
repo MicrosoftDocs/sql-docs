@@ -1,7 +1,7 @@
 ---
 title: "RsReportServer.config Configuration File | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "06/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -615,7 +615,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 			</Extension>
 			<Extension Name="RPL" Type="Microsoft.ReportingServices.Rendering.RPLRendering.RPLRenderer,Microsoft.ReportingServices.RPLRendering" Visible="false" LogAllExecutionRequests="false"/>
 		</Render>
-		\<!--
+		<!--
         For the SQLPDW extension to work, install the SQL Server PDW Client Tools on the report server.
         NOTE: The SQLPDW extension is deprecated. It supports old versions of SQL Server Parallel Data Warehouse (PDW).        
         To connect to Analytics Platform System, use the SQL (SQL Server) extension.        

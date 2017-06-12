@@ -1,7 +1,7 @@
 ---
 title: "sys.tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/11/2016"
+ms.date: "06/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -48,7 +48,7 @@ manager: "jhubbard"
 |lock_escalation|**tinyint**|The value of the LOCK_ESCALATION option for the table:<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
 |lock_escalation_desc|**nvarchar(60)**|A text description of the lock_escalation option for the table. Possible values are: TABLE, AUTO, and DISABLE.|  
 |is_filetable|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Table is a FileTable.<br /><br /> For more information about FileTables, see [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).|  
-|durability|**tinyint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The following are possible values:<br /><br /> 0 = SCHEMA_ONLY<br /><br /> 1 = SCHEMA_AND_DATA<br /><br /> The value of 0 is the default value.|  
+|durability|**tinyint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The following are possible values:<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> The value of 0 is the default value.|  
 |durability_desc|**nvarchar(60)**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The following are the possible values:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> The value of SCHEMA_AND_DATA indicates that the table is a durable, in-memory table. SCHEMA_AND_DATA is the default value for memory optimized tables. The value of SCHEMA_ONLY indicates that the table data will not be persisted upon restart of the database with memory optimized objects.|  
 |is_memory_optimized|**bit**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The following are the possible values:<br /><br /> 0 = not memory optimized.<br /><br /> 1 = is memory optimized.<br /><br /> A value of 0 is the default value.<br /><br /> Memory optimized tables are in-memory user tables, the schema of which is persisted on disk similar to other user tables. Memory optimized tables can be accessed from natively compiled stored procedures.|  
 |temporal_type|**tinyint**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The numeric value representing the type of table:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  

@@ -1,7 +1,7 @@
 ---
 title: "EXECUTE AS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,16 +34,13 @@ manager: "jhubbard"
   
  By default, a session starts when a user logs in and ends when the user logs off. All operations during a session are subject to permission checks against that user. When an **EXECUTE AS** statement is run, the execution context of the session is switched to the specified login or user name. After the context switch, permissions are checked against the login and user security tokens for that account instead of the person calling the **EXECUTE AS** statement. In essence, the user or login account is impersonated for the duration of the session or module execution, or the context switch is explicitly reverted.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 { EXEC | EXECUTE } AS <context_specification>  
 [;]  
   
@@ -55,14 +52,12 @@ manager: "jhubbard"
   
 ## Arguments  
  LOGIN  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   
 > [!NOTE]  
->  This option is not available in a contained database.  
+>  This option is not available in a contained database or in SQL Database.  
   
  USER  
  Specifies the context to be impersonated is a user in the current database. The scope of impersonation is restricted to the current database. A context switch to a database user does not inherit the server-level permissions of that user.  
@@ -108,7 +103,7 @@ manager: "jhubbard"
   
 -   The stored procedure or trigger where the command was executed exits.  
   
- You can create an execution context stack by calling the EXECUTE AS statement multiple times across multiple principals. When called, the REVERT statement switches the context to the login or user in the next level up in the context stack. For a demonstration of this behavior, see [Example A](#_exampleA).  
+You can create an execution context stack by calling the EXECUTE AS statement multiple times across multiple principals. When called, the REVERT statement switches the context to the login or user in the next level up in the context stack. For a demonstration of this behavior, see [Example A](#_exampleA).  
   
 ##  <a name="_user"></a> Specifying a User or Login Name  
  The user or login name specified in EXECUTE AS <context_specification> must exist as a principal in **sys.database_principals** or **sys.server_principals**, respectively, or the EXECUTE AS statement fails. Additionally, IMPERSONATE permissions must be granted on the principal. Unless the caller is the database owner, or is a member of the **sysadmin** fixed server role, the principal must exist even when the user is accessing the database or instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through a Windows group membership. For example, assume the following conditions:  
@@ -119,7 +114,7 @@ manager: "jhubbard"
   
  Although **CompanyDomain\SqlUser1** has access to the database through membership in the **SQLUsers** group, the statement `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` fails because `CompanyDomain\SqlUser1` does not exist as a principal in the database.  
   
- If the user is orphaned (the associated login no longer exists), and the user was not created with **WITHOUT LOGIN**, **EXECUTE AS** will fail for the user.  
+If the user is orphaned (the associated login no longer exists), and the user was not created with **WITHOUT LOGIN**, **EXECUTE AS** will fail for the user.  
   
 ## Best Practice  
  Specify a login or user that has the least privileges required to perform the operations in the session. For example, do not specify a login name with server-level permissions, if only database-level permissions are required; or do not specify a database owner account unless those permissions are required.  

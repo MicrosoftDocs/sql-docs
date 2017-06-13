@@ -56,7 +56,7 @@ This configuration consists of three synchronous replicas. By default, it provid
 
 ![Three replicas][3]
 
-The following table describes the high availability and data protection behavior based on the settings for three synchronous replicas. 
+The following table describes the high availability and data protection behavior based on the settings for an availability group with three synchronous replicas: 
 
 |`required_synchronized_secondaries_to_commit`|0 |1 \*|2
 | --- |:---:|:---:|:---:
@@ -77,7 +77,7 @@ By default, it provides high availability but not data protection.
 
 ![witness availability group][2]
 
-The following table describes the high availability and data protection behavior of this configuration:
+The following table describes the high availability and data protection behavior for an availability group with two synchronous replicas and a witness:
 
 |`required_synchronized_secondaries_to_commit`|0 \*|1
 | --- |:---:|:---:
@@ -93,7 +93,7 @@ For more information, see [More about a witness](#WitnessReplica).
 
 ## Two synchronous replicas
 
-A two synchronous replicas availability group enables data protection. Like the other availability group configurations, it can enable read scale-out. Two synchronous replicas does not provide high availability. 
+This configuration enables data protection. Like the other availability group configurations, it can enable read scale-out. The two synchronous replicas configuration does not provide high availability. 
 
 ![Two synchronous replicas][1]
 
@@ -101,7 +101,7 @@ This configuration requires two servers. These servers fill the role of primary 
 
 The two synchronous replicas configuration is optimized for data protection and distributing the read workload for databases. By default, the resource is configured for data protection. This configuration does not provide high availability because if either instance of SQL Server fails, either the database is not fully available or there is risk of data loss. 
 
-The following table describes the data protection behavior according to the possible values for two synchronous replicas availability group. 
+The following table describes the data protection behavior according to the possible values for an availability group with two synchronous replicas: 
 
 |`required_synchronized_secondaries_to_commit`|0 \*|1 
 | --- |:---|:---
@@ -142,7 +142,7 @@ To create an availability group with two synchronous replicas and a witness, see
 
 SQL Server 2017 CTP 1.4 added `sequence_number` to `sys.availability_groups` to allow Pacemaker to identify how up-to-date secondary replicas are with the primary replica. `sequence_number` is a monotonically increasing BIGINT that represents how up-to-date the local availability group replica is. Pacemaker updates the `sequence_number` with each availability group configuration change. Examples of configuration changes include failover, replica addition, or removal. The number is updated on the primary, then replicated to secondary replicas. Thus a secondary replica that has up-to-date configuration has the same sequence number as the primary. 
 
-When Pacemaker decides to promote a replica to primary, it first sends a *pre-promote* notification to all replicas and the witness - if applicable. The replicas return the sequence number. Next, when Pacemaker actually tries to promote a replica to primary, the replica only promotes itself if its sequence number is the highest of all the sequence numbers. The replica and rejects the promote operation if its own sequence number does not match the highest sequence number. In this way only the replica with the highest sequence number can be promoted to primary, ensuring no data loss. 
+When Pacemaker decides to promote a replica to primary, it first sends a *pre-promote* notification to all replicas and the witness - if applicable. The replicas return the sequence number. Next, when Pacemaker actually tries to promote a replica to primary, the replica only promotes itself if its sequence number is the highest of all the sequence numbers. If its own sequence number does not match the highest sequence number, the replica rejects the promote operation. In this way only the replica with the highest sequence number can be promoted to primary, ensuring no data loss. 
 
 This process requires at least one replica available for promotion with the same sequence number as the previous primary. The Pacemaker resource agent sets `required_synchronized_secondaries_to_commit` such that at least one synchronous secondary replica is up-to-date and available to be the target of an automatic failover by default. With each monitoring action, the value of `required_synchronized_secondaries_to_commit` is computed (and updated if necessary). The `required_synchronized_secondaries_to_commit` value is 'number of synchronous replicas' divided by 2. At failover time, the resource agent requires (`total number of replicas` - `required_synchronized_secondaries_to_commit` replicas) to respond to the pre-promote notification. The replica with the highest `sequence_number` is promoted to primary. 
 
@@ -152,7 +152,7 @@ For example, An availability group with three synchronous replicas - one primary
 
 - The required number of replicas to respond to pre-promote action is 2; (3 - 1 = 2). 
 
-In this scenario, two replicas have to respond for the failover to be triggered. For successful automatic failover after a primary replica outage both secondary replicas need to be up-to-date and respond to the pre-promote notification. If they are online they have the same sequence number. The availability group promotes one of them. If one of the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
+In this scenario, two replicas have to respond for the failover to be triggered. For successful automatic failover after a primary replica outage, both secondary replicas need to be up-to-date and respond to the pre-promote notification. If they are online and synchronous, they have the same sequence number. The availability group promotes one of them. If only one of the secondary replicas responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
 
 A user can choose to override the default behavior, and prevent the availability group resource from setting `required_synchronized_secondaries_to_commit` automatically as above.
 
@@ -172,7 +172,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
 >[!NOTE]
->Updating resource properties causes all replicas to stop and restart. This means primary is temporarily demoted to secondary, then promoted again. This action causes temporary write unavailability. The new value for`required_synchronized_secondaries_to_commit` is only  set once replicas are restarted, not instantaneously with running the pcs command.
+>Updating resource properties cause all replicas to stop and restart. This means primary is temporarily demoted to secondary, then promoted again. This action causes temporary write unavailability. The new value for`required_synchronized_secondaries_to_commit` is only  set once replicas are restarted, not instantaneously with running the pcs command.
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-availability-group-ha/1-read-scale-out.png

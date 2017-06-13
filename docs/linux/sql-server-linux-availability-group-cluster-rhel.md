@@ -119,7 +119,7 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 --master meta notif
 
 ## Create virtual IP resource
 
-To create the virtual IP address resource, run the following command on one node. Use an available static IP address from the network. Replace the IP address between `**<10.128.16.240>**' with a valid IP address.
+To create the virtual IP address resource, run the following command on one node. Use an available static IP address from the network. Replace the IP address between `**<10.128.16.240>**` with a valid IP address.
 
 ```bash
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=**<10.128.16.240>**

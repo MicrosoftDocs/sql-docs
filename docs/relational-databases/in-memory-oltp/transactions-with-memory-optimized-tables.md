@@ -31,24 +31,6 @@ For error conditions specific to transactions on memory-optimized tables, jump t
 For general information, see [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
   
-  
-#### Sections in this article:  
-  
-- [Pessimistic versus Optimistic](#pessvoptim22ni)  
-- [Transaction Initiation Modes](#txninitmodes24ni)  
-  - [Code Example with Explicit Mode](#codeexamexpmode25ni)  
-- [Row Versioning](#rowver28ni)  
-- [Transaction Isolation Levels](#confdegreeiso30ni)  
-- [Transaction Phases and Lifetime](#txnphaslife32ni)  
-- [Conflict Detection and Retry Logic](#confdetretry34ni)  
-  - [Retry T-SQL Code Example](#retrytsqlcodeexam35ni)  
-- [Cross-Container Transaction](#crossconttxn38ni)  
-- [Limitations](#limitations40ni)  
-- [Natively Compiled Stored Procedures](#natcompstorprocs42ni)  
-- [Other Transaction Links](#othertxnlinks44ni)  
-  
-  
-  
 <a name="pessvoptim22ni"/>  
   
 ## Pessimistic versus Optimistic  

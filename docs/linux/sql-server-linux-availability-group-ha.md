@@ -32,7 +32,7 @@ Choose an availability group design to meet specific business requirements for h
 >[!IMPORTANT]
 >The following configurations describe three availability group design patterns and the capabilities of each pattern. These design patterns apply to availability groups with `CLUSTER_TYPE = EXTERNAL` for high availability solutions. 
 
-The design patters are three availability group configuarations. The configurations include:
+The design patters are three availability group configurations. The configurations include:
 
 - **Three synchronous replicas**
 
@@ -144,7 +144,7 @@ SQL Server 2017 CTP 1.4 added `sequence_number` to `sys.availability_groups` to 
 
 When Pacemaker decides to promote a replica to primary, it first sends a *pre-promote* notification to all replicas and the witness - if applicable. The replicas return the sequence number. Next, when Pacemaker actually tries to promote a replica to primary, the replica only promotes itself if its sequence number is the highest of all the sequence numbers. The replica and rejects the promote operation if its own sequence number does not match the highest sequence number. In this way only the replica with the highest sequence number can be promoted to primary, ensuring no data loss. 
 
-This process requires at least one replica available for promotion with the same sequence number as the previous primary. To ensure this, the the Pacemaker resource agent sets `required_synchronized_secondaries_to_commit` such that at least one synchronous secondary replica is up-to-date and available to be the target of an automatic failover by default. With each monitoring action, the value of `required_synchronized_secondaries_to_commit` is computed (and updated if necessary). The `required_synchronized_secondaries_to_commit` value is 'number of synchronous replicas' divided by 2. At failover time, the resource agent requires (`total number of replicas` - `required_synchronized_secondaries_to_commit` replicas) to respond to the pre-promote notification. The replica with the highest `sequence_number` is promoted to primary. 
+This process requires at least one replica available for promotion with the same sequence number as the previous primary. The Pacemaker resource agent sets `required_synchronized_secondaries_to_commit` such that at least one synchronous secondary replica is up-to-date and available to be the target of an automatic failover by default. With each monitoring action, the value of `required_synchronized_secondaries_to_commit` is computed (and updated if necessary). The `required_synchronized_secondaries_to_commit` value is 'number of synchronous replicas' divided by 2. At failover time, the resource agent requires (`total number of replicas` - `required_synchronized_secondaries_to_commit` replicas) to respond to the pre-promote notification. The replica with the highest `sequence_number` is promoted to primary. 
 
 For example, An availability group with three synchronous replicas - one primary replica and two synchronous secondary replicas.
 
@@ -152,12 +152,12 @@ For example, An availability group with three synchronous replicas - one primary
 
 - The required number of replicas to respond to pre-promote action is 2; (3 - 1 = 2). 
 
-In this scenario, 2 replicas have to respond for the failover to be triggered. For successful automatic failover after a primary replica outage both secondary replicas need to be up-to-date and respond to the pre-promote notification. If they are online they will have the same sequence number. The availability group will promote one of them. If one of the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
+In this scenario, two replicas have to respond for the failover to be triggered. For successful automatic failover after a primary replica outage both secondary replicas need to be up-to-date and respond to the pre-promote notification. If they are online they have the same sequence number. The availability group promotes one of them. If one of the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
 
 A user can choose to override the default behavior, and prevent the availability group resource from setting `required_synchronized_secondaries_to_commit` automatically as above.
 
 >[!IMPORTANT]
->When `required_synchronized_secondaries_to_commit` is 0 there is risk of data loss. In the case of an outage of the primary, the resource agent will not automatically trigger a failover. The user has to decide if they want to wait for primary to recover or manually fail over using `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+>When `required_synchronized_secondaries_to_commit` is 0 there is risk of data loss. During a primary replica outage, the resource agent does not automatically trigger a failover. You can either wait for primary to recover, or manually fail over using `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
 The following script sets `required_synchronized_secondaries_to_commit` to 0 on an availability group named `<**ag1**>`. Before you run replace `<**ag1**>` with the name of your availability group.
 
@@ -172,7 +172,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
 >[!NOTE]
->Updating resource properties causes all replicas to stop and restart. This means primary will temporarily be demoted to secondary, then promoted again which will cause temporary write unavailability. The new value for`required_synchronized_secondaries_to_commit` will only be set once replicas are restarted, so it won't be instantaneous with running the pcs command.
+>Updating resource properties causes all replicas to stop and restart. This means primary is temporarily demoted to secondary, then promoted again. This action causes temporary write unavailability. The new value for`required_synchronized_secondaries_to_commit` is only  set once replicas are restarted, not instantaneously with running the pcs command.
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-availability-group-ha/1-read-scale-out.png

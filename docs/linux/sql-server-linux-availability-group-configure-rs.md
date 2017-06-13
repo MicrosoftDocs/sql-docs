@@ -30,7 +30,7 @@ You can configure a read-scale availability group for SQL Server on Linux. There
 
 This document explains how to create a *read-scale* availability group without a cluster manager. This architecture only provides read-only scalability. It does not provide HA.
 
-[!INCLUDE [Create Prereq](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
+[!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## Create the availability group
 
@@ -101,7 +101,9 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 
 ### Manual failover without data loss
 
-Use this method when the primary replica is available, but you need to temporarly or permanently change the configuration and change the SQL instance that hosts the primary replica. One such case is during SQL Server upgrades. Before issuing manual failover, the user has to ensure that the target secondary replica is up to date, and there is no potential of data loss. The steps below describe how to achive this safely, without incuring data loss.
+Use this method when the primary replica is available, but you need to temporarily or permanently change the configuration and change the SQL Server instance that hosts the primary replica. Before issuing manual failing over, ensure that the target secondary replica is up to date, so that there is no potential data loss. 
+
+The following steps describe how to manually fail over without data loss:
 
 1. Make the target secondary replica synchronous commit.
 
@@ -110,7 +112,7 @@ Use this method when the primary replica is available, but you need to temporarl
    ```
 1. Update `REQUIRED_COPIES_TO_COMMIT` to 1.
 
-   This ensures no active transactions are committed to the primary replica without committing first to at least one synchronous secondary. The availabilty group is ready to failover when they synchronization_state_desc is SYNCHRONIZED and the sequence_number is the same for both primary and target secondary replica. Run this query to check:
+   This ensures no active transactions are committed to the primary replica without committing first to at least one synchronous secondary. The availability group is ready to failover when the synchronization_state_desc is SYNCHRONIZED and the sequence_number is the same for both primary and target secondary replica. Run this query to check:
 
    ```Transact-SQL
    SELECT ag.name, 
@@ -136,7 +138,7 @@ Use this method when the primary replica is available, but you need to temporarl
    ```  
 
    > [!NOTE] 
-   > To delete an availability group use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group created with CLUSTER_TYPE NONE or EXTERNAL, the command has to be executed on all replicas part of the avilability group.
+   > To delete an availability group use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group created with CLUSTER_TYPE NONE or EXTERNAL, the command has to be executed on all replicas part of the availability group.
 
 ## Next steps
 

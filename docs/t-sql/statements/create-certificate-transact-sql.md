@@ -1,7 +1,7 @@
 ---
 title: "CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/26/2016"
+ms.date: "06/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -132,9 +132,7 @@ CREATE CERTIFICATE certificate_name
  ASN encoded certificate bits specified as a binary constant.  
   
  BINARY =*private_key_bits*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Private key bits specified as binary constant. These bits can be in encrypted form. If encrypted, the user must provide a decryption password. Password policy checks are not performed on this password. The private key bits should be in a PVK file format.  
   
@@ -145,7 +143,7 @@ CREATE CERTIFICATE certificate_name
  Specifies the password that will be used to encrypt the private key. Use this option only if you want to encrypt the certificate with a password. If this clause is omitted, the private key will be encrypted using the database master key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
  SUBJECT ='*certificate_subject_name*'  
- The term *subject* refers to a field in the metadata of the certificate as defined in the X.509 standard. The subject can be up to 128 characters long. Subjects that exceed 128 characters will be truncated when they are stored in the catalog, but the binary large object (BLOB) that contains the certificate will retain the full subject name.  
+ The term *subject* refers to a field in the metadata of the certificate as defined in the X.509 standard. The subject should be no more than 64 characters long, and this limit is enforced for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows, the subject can be up to 128 characters long. Subjects that exceed 128 characters will be truncated when they are stored in the catalog, but the binary large object (BLOB) that contains the certificate will retain the full subject name.  
   
  START_DATE ='*datetime*'  
  Is the date on which the certificate becomes valid. If not specified, START_DATE will be set equal to the current date. START_DATE is in UTC time and can be specified in any format that can be converted to a date and time.  
@@ -187,7 +185,6 @@ CREATE CERTIFICATE certificate_name
  The following example creates a certificate called `Shipping04`. The private key of this certificate is protected using a password.  
   
 ```  
-USE AdventureWorks2012;  
 CREATE CERTIFICATE Shipping04   
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
    WITH SUBJECT = 'Sammamish Shipping Records',   
@@ -199,7 +196,6 @@ GO
  The following example creates a certificate in the database, loading the key pair from files.  
   
 ```  
-USE AdventureWorks2012;  
 CREATE CERTIFICATE Shipping11   
     FROM FILE = 'c:\Shipping\Certs\Shipping11.cer'   
     WITH PRIVATE KEY (FILE = 'c:\Shipping\Certs\Shipping11.pvk',   
@@ -210,7 +206,6 @@ GO
 ### C. Creating a certificate from a signed executable file  
   
 ```  
-USE AdventureWorks2012;  
 CREATE CERTIFICATE Shipping19   
     FROM EXECUTABLE FILE = 'c:\Shipping\Certs\Shipping19.dll';  
 GO  
@@ -219,7 +214,6 @@ GO
  Alternatively, you can create an assembly from the `dll` file, and then create a certificate from the assembly.  
   
 ```  
-USE AdventureWorks2012;  
 CREATE ASSEMBLY Shipping19   
     FROM ' c:\Shipping\Certs\Shipping19.dll'   
     WITH PERMISSION_SET = SAFE;  
@@ -228,31 +222,15 @@ CREATE CERTIFICATE Shipping19 FROM ASSEMBLY Shipping19;
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
 ### D. Creating a self-signed certificate  
- The following example creates a certificate called `Shipping04`.  
+ The following example creates a certificate called `Shipping04` without specifying an encryption password. This example can be used with [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ```  
-USE master;  
-GO  
 CREATE CERTIFICATE Shipping04   
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  
 ```  
   
-### E. Creating a certificate from a file  
- The following example creates a certificate in the database, loading the key pair from files.  
-  
-```  
-USE master;  
-GO  
-CREATE CERTIFICATE Shipping11   
-    FROM FILE = '\\Server7A\Shipping\Certs\Shipping11.cer'   
-    WITH PRIVATE KEY (FILE = '\\Server7A\Shipping\Certs\Shipping11.pvk',   
-    DECRYPTION BY PASSWORD = 'sldkflk34et6gs%53#v00');  
-GO   
-```  
   
 ## See Also  
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   

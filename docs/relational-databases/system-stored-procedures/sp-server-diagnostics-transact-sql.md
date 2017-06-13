@@ -27,8 +27,6 @@ manager: "jhubbard"
 
   Captures diagnostic data and health information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to detect potential failures. The procedure runs in repeat mode and sends results periodically. It can be invoked from either a regular or a DAC connection.  
   
-||  
-|-|  
 |**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -36,7 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'   
 ```  
   
@@ -102,7 +99,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## Examples  
  It is best practice to use the extended sessions to capture the health information and save it to a file that is located outside of SQL Server. Therefore, you can still access it if there is a failure. The following example saves the output from an event session to a file:  
   
-```  
+```tsql  
 CREATE EVENT SESSION [diag]  
 ON SERVER  
            ADD EVENT [sp_server_diagnostics_component_result] (set collect_data=1)  
@@ -115,7 +112,7 @@ GO
   
  The example query below reads the extended session log file:  
   
-```  
+```tsql  
 SELECT  
     xml_data.value('(/event/@name)[1]','varchar(max)') AS Name  
   , xml_data.value('(/event/@package)[1]', 'varchar(max)') AS Package  
@@ -139,7 +136,7 @@ ORDER BY time;
   
  The following example captures the output of sp_server_diagnostics to a table in a non-repeat mode:  
   
-```  
+```tsql  
 CREATE TABLE SpServerDiagnosticsResult  
 (  
       create_time DateTime,  

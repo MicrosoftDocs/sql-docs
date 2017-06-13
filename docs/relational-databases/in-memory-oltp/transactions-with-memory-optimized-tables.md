@@ -3,7 +3,7 @@ title: "Transactions with Memory-Optimized Tables | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "08/18/2016"
+ms.date: "06/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -333,30 +333,3 @@ In the following Transact-SQL code example:
 - [Row Versioning-based Isolation Levels in the Database Engine](http://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [Control Transaction Durability](../../relational-databases/logs/control-transaction-durability.md)   
-  
-\<!--  
-Link Guids:  
-016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"  
-  
-ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "Introduction to Memory-Optimized Tables"  
-  
-a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"  
-  
-e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock (Transact-SQL)"  
-  
-3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "Control Transaction Durability"  
-  
-Image: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
-See also XMetal articles: dn133169.aspx , "Transaction Lifetime"  
-  
-Transactions with In-Memory Tables and Procedures  
-{ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
-Maybe replaces: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "Understanding Transactions on Memory-Optimized Tables"  
-  
-GeneMi , 2016-03-28 11:40am  
--->  
-  
-  
-  
-  
-

@@ -25,13 +25,16 @@ manager: "jhubbard"
   
 |Category|SQL Server data type|JSON data type|  
 |--------------|--------------|---------------|  
-|Character & string types|(n)(var)(char)|string|  
+|Character & string types|char, nchar, varchar, nvarchar|string|  
 |Numeric types|int, bigint, float, decimal, numeric|number|  
 |Bit type|bit|Boolean (true or false)|  
 |Date & time types|date, datetime, datetime2, time, datetimeoffset|string|  
 |Binary types|varbinary, binary, image, timestamp, rowversion|BASE64-encoded string|  
-|CLR types|CLR, geometry, geography|Not supported. These types return an error.<br /><br /> In the SELECT statement, use CAST or CONVERT, or use a CLR property or method, to convert the data to a data type that can be converted to a JSON type. For example, use **ToString()** for any CLR type, or **STAsText()** for the geometry type. The type of the JSON output value is then derived from the return type of the conversion that you use in the SELECT statement.|  
+|CLR types|geometry, geography, other CLR types|Not supported. These types return an error.<br /><br /> In the SELECT statement, use CAST or CONVERT, or use a CLR property or method, to convert the source data to a SQL Server data type that can be converted successfully to a JSON type. For example, use **STAsText()** for the geometry type, or use **ToString()** for any CLR type. The type of the JSON output value is then derived from the return type of the conversion that you apply in the SELECT statement.|  
 |Other types|uniqueidentifier, money|string|  
+
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
   
 ## See Also  
  [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  

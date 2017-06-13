@@ -98,7 +98,7 @@ This configuration enables data protection. Like the other availability group co
 ![Two synchronous replicas][1]
 
 This configuration requires two servers. These servers fill the role of primary replica and secondary replica.
-
+F
 The two synchronous replicas configuration is optimized for data protection and distributing the read workload for databases. By default, the resource is configured for data protection. This configuration does not provide high availability because if either instance of SQL Server fails, either the database is not fully available or there is risk of data loss. 
 
 The following table describes the data protection behavior according to the possible values for an availability group with two synchronous replicas: 
@@ -172,7 +172,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
 >[!NOTE]
->Updating resource properties cause all replicas to stop and restart. This means primary is temporarily demoted to secondary, then promoted again. This action causes temporary write unavailability. The new value for`required_synchronized_secondaries_to_commit` is only  set once replicas are restarted, not instantaneously with running the pcs command.
+>When you run the preceding commands, the primary is temporarily demoted to secondary, then promoted again. The resource update causes all replicas to stop and restart. The new value for`required_synchronized_secondaries_to_commit` is only  set once replicas are restarted, not instantaneously.
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-availability-group-ha/1-read-scale-out.png

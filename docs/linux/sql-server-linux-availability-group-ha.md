@@ -131,7 +131,7 @@ The witness has an availability mode - like a replica. A witness availability mo
 
 On a witness you cannot:
 
-- Failover an availability group to a witness.
+- Fail over an availability group to a witness.
 - Change the availability mode.
 
 To create an availability group with two synchronous replicas and a witness, see [Create availability group with two synchronous replicas and a witness](sql-server-linux-availability-group-configure-ha.md#witnessScript).
@@ -154,10 +154,10 @@ For example, An availability group with three synchronous replicas - one primary
 
 In this scenario, two replicas have to respond for the failover to be triggered. For successful automatic failover after a primary replica outage, both secondary replicas need to be up-to-date and respond to the pre-promote notification. If they are online and synchronous, they have the same sequence number. The availability group promotes one of them. If only one of the secondary replicas responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
 
-A user can choose to override the default behavior, and prevent the availability group resource from setting `required_synchronized_secondaries_to_commit` automatically as above.
-
 >[!IMPORTANT]
 >When `required_synchronized_secondaries_to_commit` is 0 there is risk of data loss. During a primary replica outage, the resource agent does not automatically trigger a failover. You can either wait for primary to recover, or manually fail over using `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+
+You can choose to override the default behavior, and prevent the availability group resource from setting `required_synchronized_secondaries_to_commit` automatically.
 
 The following script sets `required_synchronized_secondaries_to_commit` to 0 on an availability group named `<**ag1**>`. Before you run replace `<**ag1**>` with the name of your availability group.
 

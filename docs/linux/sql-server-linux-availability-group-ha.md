@@ -152,7 +152,7 @@ For example, An availability group with three synchronous replicas - one primary
 
 - The required number of replicas to respond to pre-promote action is 2; (3 - 1 = 2). 
 
-   2 replicas have to respond for the failover to be triggered. For successful automatic failover after a primary replica outage both secondary replicas need to be up-to-date and respond to the pre-promote notification. If they are online they will have the same sequence number. The availability group will promote one of them. If one of the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
+   In this scenario, 2 replicas have to respond for the failover to be triggered. For successful automatic failover after a primary replica outage both secondary replicas need to be up-to-date and respond to the pre-promote notification. If they are online they will have the same sequence number. The availability group will promote one of them. If one of the secondary replicas is unresponsive and only one of the secondaries responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
 
 A user can choose to override the default behavior, and prevent the availability group resource from setting `required_synchronized_secondaries_to_commit` automatically as above.
 

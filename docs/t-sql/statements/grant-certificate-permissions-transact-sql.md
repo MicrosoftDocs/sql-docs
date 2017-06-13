@@ -1,7 +1,7 @@
 ---
 title: "GRANT Certificate Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "06/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,8 +31,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```
 GRANT permission  [ ,...n ]    
     ON CERTIFICATE :: certificate_name   
     TO principal [ ,...n ] [ WITH GRANT OPTION ]   
@@ -50,41 +49,27 @@ GRANT permission  [ ,...n ]
  Specifies the principal to which the permission is being granted. One of the following:  
   
 -   database user  
-  
 -   database role  
-  
 -   application role  
-  
 -   database user mapped to a Windows login  
-  
 -   database user mapped to a Windows group  
-  
 -   database user mapped to a certificate  
-  
 -   database user mapped to an asymmetric key  
-  
 -   database user not mapped to a server principal.  
   
- GRANT OPTION  
+GRANT OPTION  
  Indicates that the principal will also be given the ability to grant the specified permission to other principals.  
   
- AS *granting_principal*  
+AS *granting_principal*  
  Specifies a principal from which the principal executing this query derives its right to grant the permission. One of the following:  
   
 -   database user  
-  
 -   database role  
-  
 -   application role  
-  
 -   database user mapped to a Windows login  
-  
 -   database user mapped to a Windows group  
-  
 -   database user mapped to a certificate  
-  
 -   database user mapped to an asymmetric key  
-  
 -   database user not mapped to a server principal.  
   
 ## Remarks  

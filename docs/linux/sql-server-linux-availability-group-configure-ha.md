@@ -159,8 +159,6 @@ Run **only one** of the following scripts:
    ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
    ```
 
->[!NOTE]
->Running the `CREATE AVAILABILITY GROUP` command completes with a warning: "Attempt to access non-existent or uninitialized availability group with ID . This is usually an internal condition, such as the availability group is being dropped or the local WSFC node has lost quorum. In such cases, and no user action is required." This is a known issue and Microsoft is working on a resolution. Meanwhile, users should assume command completed successfully. 
 
 You can also configure an availability group with `CLUSTER_TYPE=EXTERNAL` using SQL Server Management Studio or PowerShell. 
 

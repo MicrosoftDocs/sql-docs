@@ -59,8 +59,6 @@ CREATE AVAILABILITY GROUP [ag1]
 		
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ```
-   > [!NOTE] 
-   > Running the CREATE AVAILABILITY GROUP command will complete with a warning: "Attempt to access non-existent or uninitialized availability group with ID . This is usually an internal condition, such as the availability group is being dropped or the local WSFC node has lost quorum. In such cases, and no user action is required.". This is a known issue and product team is working on a fix. Meanwhile, users should assume command completed successfully.
 
 ### Join secondary SQL Servers to the availability group
 

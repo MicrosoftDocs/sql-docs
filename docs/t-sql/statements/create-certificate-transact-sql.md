@@ -140,7 +140,7 @@ CREATE CERTIFICATE certificate_name
  Specifies the password required to decrypt a private key that is retrieved from a file. This clause is optional if the private key is protected by a null password. Saving a private key to a file without password protection is not recommended. If a password is required but no password is specified, the statement fails.  
   
  ENCRYPTION BY PASSWORD ='*password*'  
- Specifies the password that will be used to encrypt the private key. Use this option only if you want to encrypt the certificate with a password. If this clause is omitted, the private key will be encrypted using the database master key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
+ Specifies the password used to encrypt the private key. Use this option only if you want to encrypt the certificate with a password. If this clause is omitted, the private key is encrypted using the database master key. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
  SUBJECT ='*certificate_subject_name*'  
  The term *subject* refers to a field in the metadata of the certificate as defined in the X.509 standard. The subject should be no more than 64 characters long, and this limit is enforced for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux. For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows, the subject can be up to 128 characters long. Subjects that exceed 128 characters are truncated when they are stored in the catalog, but the binary large object (BLOB) that contains the certificate retains the full subject name.  
@@ -167,7 +167,7 @@ CREATE CERTIFICATE certificate_name
   
  When you create a certificate from a container, loading the private key is optional. But when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a self-signed certificate, the private key is always created. By default, the private key is encrypted using the database master key. If the database master key does not exist and no password is specified, the statement fails.  
   
- The ENCRYPTION BY PASSWORD option is not required when the private key will be encrypted with the database master key. Use this option only when the private key is encrypted with a password. If no password is specified, the private key of the certificate will be encrypted using the database master key. If the master key of the database cannot be opened, omitting this clause causes an error.  
+ The ENCRYPTION BY PASSWORD option is not required when the private key is encrypted with the database master key. Use this option only when the private key is encrypted with a password. If no password is specified, the private key of the certificate will be encrypted using the database master key. If the master key of the database cannot be opened, omitting this clause causes an error.  
   
  You do not have to specify a decryption password when the private key is encrypted with the database master key.  
   

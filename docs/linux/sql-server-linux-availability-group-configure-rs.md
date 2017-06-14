@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure read-scale availability group for SQL Server on Linux | Microsoft Docs
+title: Configure read scale-out availability group for SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -24,19 +24,19 @@ ms.assetid:
 
 ---
 
-# Configure read-scale availability group for SQL Server on Linux
+# Configure read scale-out availability group for SQL Server on Linux
 
-You can configure a read-scale availability group for SQL Server on Linux. There are two architectures for availability groups. A *high availability* (HA) architecture uses a cluster manager to provide improved business continuity. This architecture can also include read-scale replicas. To create the HA architecture, see [Configure Always On availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
+You can configure a read scale-out availability group for SQL Server on Linux. There are two architectures for availability groups. A *high availability* architecture uses a cluster manager to provide improved business continuity. This architecture can also include read scale-out replicas. To create the high availability architecture, see [Configure Always On availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
 
-This document explains how to create a *read-scale* availability group without a cluster manager. This architecture only provides read-only scalability. It does not provide HA.
+This document explains how to create a *read scale-out* availability group without a cluster manager. This architecture only provides read scale-out only. It does not provide high availability.
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## Create the availability group
 
-Create the availability group. In order to create the availability group for read-scale on Linux, set `CLUSTER_TYPE = NONE`. In addition, set each replica with `FAILOVER_MODE = NONE`. In this configuration the availability group does not provide HA, but it does provide read-scale. The client applications running analytics or reporting workloads can directly connect to the secondary databases. You can also create a read only routing list. Connections to the primary replica forward read connection requests to each of the secondary replicas from the routing list in a round robin fashion.
+Create the availability group. Set `CLUSTER_TYPE = NONE`. In addition, set each replica with `FAILOVER_MODE = NONE`. Client applications running analytics or reporting workloads can directly connect to the secondary databases. You can also create a read-only routing list. Connections to the primary replica forward read connection requests to each of the secondary replicas from the routing list in a round robin fashion.
 
-The following Transact-SQL script creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Update the following script for your environment. Replace the  `**<node1>**` and `**<node2>**` values with the names of the SQL Server instances that will host the replicas. Replace the `**<5022>**` with the port you set for the endpoint. Run the following Transact-SQL on the primary SQL Server replica to create the availability group.
+The following Transact-SQL script creates an availability group name `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server after it is added to the availability group. Update the following script for your environment. Replace the  `**<node1>**` and `**<node2>**` values with the names of the SQL Server instances that host the replicas. Replace the `**<5022>**` with the port you set for the endpoint. Run the following Transact-SQL on the primary SQL Server replica:
 
 ```Transact-SQL
 CREATE AVAILABILITY GROUP [ag1]
@@ -72,34 +72,34 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-This is not an HA configuration, if you need HA, follow the instructions at [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md). Specifically, create the availability group with `CLUSTER_TYPE=WSFC` (in Windows) or `CLUSTER_TYPE=EXTERNAL` (in Linux) and integrate with a cluster manager - either WSFC on Windows or Pacemaker on Linux.
+This is not an high availability configuration, if you need high availability, follow the instructions at [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md). Specifically, create the availability group with `CLUSTER_TYPE=WSFC` (in Windows) or `CLUSTER_TYPE=EXTERNAL` (in Linux) and integrate with a cluster manager - either WSFC on Windows or Pacemaker on Linux.
 
-## Connect to read only secondary replicas
+## Connect to read-only secondary replicas
 
-There are two ways to connect to the read only secondary replicas. Applications can connect directly to the SQL Server instance that hosts the secondary replica and query the databases, or they can use read-only routing. Read only routing requires a listener.
+There are two ways to connect to the read-only secondary replicas. Applications can connect directly to the SQL Server instance that hosts the secondary replica and query the databases, or they can use read-only routing. read-only routing requires a listener.
 
 [Readable secondary replicas](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)
 
-[Read only routing](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)
+[read-only routing](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)
 
-## Failover primary replica on read-scale availability group
+## Fail over primary replica on read scale-out availability group
 
-Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is the primary, you can failover. In an availability group for HA, the cluster manager automates in the failover process. In a read-scale availability group, the failover process is manual. There are two ways to failover the primary replica in a read scale availability group.
+Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is the primary, you can fail over. In an availability group for high availability, the cluster manager automates in the failover process. In a read scale-out availability group, the failover process is manual. There are two ways to fail over the primary replica in a read scale availability group.
 
-- Forced manual failover with data loss
+- Forced manual fail over with data loss
 
-- Manual failover without data loss
+- Manual fail over without data loss
 
-### Forced failover with data loss
+### Forced fail over with data loss
 
 Use this method when the primary replica is not available and can not be recovered. You can find more information about forced failover with data loss at [Perform a Forced Manual Failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).
 
-To issue a forced failover with data loss, connect to the SQL instance hosting the target secondary replica and run:
+To force fail over with data loss, connect to the SQL instance hosting the target secondary replica and run:
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 ```
 
-### Manual failover without data loss
+### Manual fail over without data loss
 
 Use this method when the primary replica is available, but you need to temporarily or permanently change the configuration and change the SQL Server instance that hosts the primary replica. Before issuing manual failing over, ensure that the target secondary replica is up to date, so that there is no potential data loss. 
 
@@ -110,9 +110,9 @@ The following steps describe how to manually fail over without data loss:
    ```Transact-SQL
    ALTER AVAILABILITY GROUP [ag1] MODIFY REPLICA ON N'**<node2>*' WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
-1. Update `REQUIRED_COPIES_TO_COMMIT` to 1.
+1. Update `required_synchronized_secondaries_to_commit`to 1.
 
-   This ensures no active transactions are committed to the primary replica without committing first to at least one synchronous secondary. The availability group is ready to failover when the synchronization_state_desc is SYNCHRONIZED and the sequence_number is the same for both primary and target secondary replica. Run this query to check:
+   This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary. The availability group is ready to fail over when the synchronization_state_desc is SYNCHRONIZED and the sequence_number is the same for both primary and target secondary replica. Run this query to check:
 
    ```Transact-SQL
    SELECT ag.name, 
@@ -125,7 +125,7 @@ The following steps describe how to manually fail over without data loss:
    WHERE drs.group_id = ag.group_id; 
    ```
 
-1. Demote the primary replica to secondary replica. After the primary replica is demoted, connections to the primary replica will not be able to write to the databases. Run this command on the SQL instance hosting the primary replica to to update the role to SECONDARY:
+1. Demote the primary replica to secondary replica. After the primary replica is demoted, it is read-only. Run this command on the SQL instance hosting the primary replica to update the role to SECONDARY:
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY); 

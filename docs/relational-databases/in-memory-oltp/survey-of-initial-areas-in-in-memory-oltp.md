@@ -497,8 +497,10 @@ Here are links to other articles that discuss special considerations for memory-
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## Documentation guide for native procs  
-  
-  
+
+The following article, and its children articles in the table of contents (TOC), explain the details about natively compiled stored procedures.
+
+- [Natively compiled stored procedures](natively-compiled-stored-procedures.md)
   
 <a name="related-links-43f"></a>  
   

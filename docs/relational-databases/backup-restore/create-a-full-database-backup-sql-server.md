@@ -1,7 +1,7 @@
 ---
 title: "Create a Full Database Backup (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/25/2016"
+ms.date: "06/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,11 +22,11 @@ manager: "jhubbard"
 ---
 # Create a Full Database Backup (SQL Server)
 
- > For content related to previous versions of SQL Server, see [Create a Full Database Backup (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+ > For SQL Server 2014, go to [Create a Full Database Backup (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
   
->  For information on SQL Server backup to the Windows Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+>  For information on SQL Server backup to the Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 ##  <a name="BeforeYouBegin"></a> Before You begin! 
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   As a database increases in size full database backups take more time to finish and require more storage space. For a large database, you might want to supplement a full database backup with a series of *differential database backups*. For more information, see [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   As a database increases in size full database backups take more time to complete, and require more storage space. For a large database, consider supplementing a full database backup with a series of [differential database backups]((../../relational-databases/backup-restore/differential-backups-sql-server.md). For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Estimate the size of a full database backup by using the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure.  
   
@@ -192,7 +192,7 @@ In this example the `Sales` database will be backed up with encryption to the de
 
 7.  Click **OK**.
 
-#### **D.  Backing up to the Microsoft Azure Blob storage service**
+#### **D.  Back up to the Azure Blob storage service**
 #### **Common Steps**  
 The three examples below perform a full database backup of `Sales` to the Microsoft Azure Blob storage service.  The storage Account name is `mystorageaccount`.  The container is called `myfirstcontainer`.  For brevity, the first four steps are listed here once and all examples will start on **Step 5**.
 1.  In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
@@ -241,7 +241,7 @@ A stored access policy has been created with read, write, and list rights.  The 
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-### To create a full database backup  
+### Create a full database backup  
   
 1.  Execute the BACKUP DATABASE statement to create the full database backup, specifying:  
   
@@ -293,7 +293,7 @@ A stored access policy has been created with read, write, and list rights.  The 
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
   
-#### **A. Backing up to a disk device**  
+#### **A. Back up to a disk device**  
  The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to disk, by using `FORMAT` to create a new media set.  
   
 ```tsql  
@@ -307,7 +307,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### **B. Backing up to a tape device**  
+#### **B. Back up to a tape device**  
  The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to tape, appending the backup to the previous backups.  
   
 ```tsql  
@@ -320,7 +320,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### **C. Backing up to a logical tape device**  
+#### **C. Back up to a logical tape device**  
  The following example creates a logical backup device for a tape drive. The example then backs up the complete [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to that device.  
   
 ```tsql  

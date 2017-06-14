@@ -2,7 +2,7 @@
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/24/2017"
+ms.date: "06/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -75,7 +75,7 @@ sp_execute_external_script
  [ @language =    ] '*language*'  
 Indicates the script language. *language* is **sysname**.  
 
- Valid values are `PLython` or `R`. 
+ Valid values are `Python` or `R`. 
   
  [ @script = ]    '*script*'  
  External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.  

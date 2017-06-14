@@ -4,30 +4,31 @@
 The following steps install SQL Server Integration Services (mssql-server-is) on Linux. The information on the features supported for this release of the Integration Services, see the Release Notes.
 
 
-Install the SQL Server Integration Services for your platform
+Install the SQL Server Integration Services for your platform:
 
 - [Ubuntu](#ubuntu)
+- [Red Hat Enterprise Linux](#RHEL)
 
 
 ## <a name="ubuntu">Install on Ubuntu</a>
-To install the mssql-server-is Package on Ubuntu, follow these steps
+To install the mssql-server-is Package on Ubuntu, follow these steps:
 
 
-1.	Import the public repository GPG keys
+1. Import the public repository GPG keys.
 
 ```bash
 curl httpspackages.microsoft.comkeysmicrosoft.asc  sudo apt-key add –
 ```
 
 
-2.	Register the Microsoft SQL Server Ubuntu repository
+2. Register the Microsoft SQL Server Ubuntu repository.
 
 ```bash
 curl httpspackages.microsoft.comconfigubuntu16.04mssql-server.list sudo tee etcaptsources.list.dmssql-server.list
 ```
 
 
-3.	Run the following commands to install SQL Server Integration Services
+3. Run the following commands to install SQL Server Integration Services.
 
 ```bash
 sudo apt-get update
@@ -35,38 +36,45 @@ sudo apt-get install -y mssql-server-is
 ```
 
 
-4.	After installation, please run ssis-conf
+4. After installation, please run ssis-conf.
 
 ```bash
 sudo optssisbinssis-conf
 ```
 
 
-5.	Once the configuration is done, set path
+5. Once the configuration is done, set path.
 
 ```bash
 export PATH=optssisbin$PATH
 ```
 
 
-6.	(Optional) if you user is not in ssis group
-Add current user to ssis group 
+6. (Optional) if your user is not in SSIS group.
+Add current user to SSIS group. 
 
 ```bash
 sudo gpasswd -a “current user” ssis
 ```
 
-Use “ID” command to make sure current user is in SSIS group
+Use “ID” command to make sure current user is in SSIS group.
 
 ```bash
 id
 ```
 
 
-7.	Copy your SSIS package to your Linux machine and run
+7. Copy your SSIS package to your Linux machine and run.
 
 ```bash
 dtexec F “your package” DE “protection password”
 ```
 
+## <a name="RHEL">Install on RHEL</a>
 
+Not available yet.
+
+
+## Next steps
+
+For more information on how to use SSIS on Linux to extract, transform and load data for SQL Server on Linux, see [Extract, transform, and load data for SQL Server on Linux with SSIS](sql-server-linux-migrate-ssis.md).

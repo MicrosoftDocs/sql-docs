@@ -12,6 +12,7 @@
 ### [Install SQL Server tools](sql-server-linux-setup-tools.md)
 ### [Install SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [Install SQL Server Full-Text Search](sql-server-linux-setup-full-text-search.md)
+### [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ## [Connect and query](sql-server-linux-connect-and-query-sqlcmd.md)
 # [Develop](sql-server-linux-develop-overview.md)
 ## [Connectivity libraries](sql-server-linux-develop-connectivity-libraries.md)

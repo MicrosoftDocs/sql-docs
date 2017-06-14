@@ -1,7 +1,7 @@
 ---
 title: "View or Change the Default Locations for Data and Log Files | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/05/2016"
+ms.date: "06/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,12 +19,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # View or Change the Default Locations for Data and Log Files
-  This topic describes how to view and change the default locations of new data and log files in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. The default path is obtained from the registry. After you change the location all new databases created in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use that location if a different location is not specified.  
   
- 
-##  <a name="Recommendations"></a> Recommendations  
  The best practice for protecting your data files and log files is to ensure that they are protected by access control lists (ACLs). Set the ACLs on the directory root under which the files are created.  
-  
+ 
   
 ## View or change the default locations for database files  
   

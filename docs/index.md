@@ -30,7 +30,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">What's new</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
@@ -53,7 +53,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Explore</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Create your first</h4>
@@ -77,7 +77,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Download & install</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
@@ -121,7 +121,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL Server</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Latest versions</h4>
@@ -152,7 +152,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Database as a Service</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Microsoft SQL</h4>
@@ -184,7 +184,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Develop</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Design</h4>
@@ -339,7 +339,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL Server</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Machine learning</h4>
@@ -374,7 +374,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Analytics as a Service</h3>
                                                 </div>
                                                 <ul>
@@ -399,7 +399,7 @@ description: Learn about SQL
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Power BI</h3>
                                                 </div>
                                                 <ul>

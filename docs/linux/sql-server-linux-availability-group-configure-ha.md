@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 05/31/2017
+ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,13 +26,13 @@ ms.assetid:
 
 # Configure Always On availability group for SQL Server on Linux
 
-This article describes how to create a SQL Server Always on availability group with three replicas for high availability on Linux. You can configure an availability group for SQL Server on Linux. There are two architectures for availability groups. A *high availability* architecture has three servers and uses a cluster manager to provide business continuity. This architecture can also include read-scale replicas. This document explains how to create the availability group high availability architecture.
+This article describes how to create a SQL Server Always on availability group with three replicas for high availability on Linux. You can configure an availability group for SQL Server on Linux. There are two configuration type for availability groups. A *high availability* configuration has three servers and uses a cluster manager to provide business continuity. This configuration can also include read scale-out replicas. This document explains how to create the availability group high availability configuration.
 
-You can also create a *read-scale* availability group without a cluster manager. This architecture only provides read-only scalability. It does not provide HA. To create a read-scale availability group, see [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
+You can also create a *read scale-out* availability group without a cluster manager. This configuration only provides read-only replicas for performance scale-out. It does not provide high availability. To create a read scale-out availability group, see [Configure read scale-out availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 
 Configurations that guarantee high availability and data protection require either three synchronous commit replicas or two synchronous replicas and a witness. For details, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). 
 
-All servers must be either physical or virtual, and virtual servers must be on the same virtualization platform. This is because the fencing agents are platform specific. See [Policies for Guest Clusters](https://access.redhat.com/articles/29440#guest_policies).
+All servers must be either physical or virtual, and virtual servers must be on the same virtualization platform. This requirement is because the fencing agents are platform specific. See [Policies for Guest Clusters](https://access.redhat.com/articles/29440#guest_policies).
 
 ## Roadmap
 
@@ -56,7 +56,7 @@ The steps to create an availability group on Linux servers for high availability
    >[!IMPORTANT]
    >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
    
-   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing is not available in some cloud environments. See [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) for more information.
+   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing is not available in some cloud environments. For more information, see [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440).
    
    >For SLES, see [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
@@ -78,21 +78,25 @@ There are three availability group configurations.
 
 - [Two synchronous replicas and a witness](sql-server-linux-availability-group-ha.md#witness)
 
-- [Two synchronous replicas availability group](sql-server-linux-availability-group-ha.md#twoSynch)
+- [Two synchronous replicas](sql-server-linux-availability-group-ha.md#twoSynch)
 
 For high availability, use either three synchronous replicas, or two synchronous replicas and a witness. 
 
 For information about all three configurations, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
-Create the availability group. In order to create the availability group for HA on Linux, use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) Transact-SQL DDL with `CLUSTER_TYPE = EXTERNAL`. 
+Create the availability group for high availability on Linux. Use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) with `CLUSTER_TYPE = EXTERNAL`. 
 
-The `EXTERNAL` value for `CLUSTER_TYPE` option specifies that the external cluster entity manages the availability group. Pacemaker is an example of an external cluster entity. When the availability group `CLUSTER_TYPE = EXTERNAL`, set primary and secondary replica `FAILOVER_MODE = EXTERNAL`. After you create the availability group, configure the cluster resource for the availability group using the cluster management tools - for example with Pacemaker use `pcs` (on RHEL, Ubuntu) or `crm` (on SLES). See the Linux distribution specific cluster configuration section for an end-to-end example.
+* Availability group - `CLUSTER_TYPE = EXTERNAL` 
+   Specifies that an external cluster entity manages the availability group. Pacemaker is an example of an external cluster entity. When the availability group cluster type is external, 
 
-The following Transact-SQL scripts creates an availability group for HA named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, and `**<node2>**` values with the names of the SQL Server instances that will host the replicas. Replace `**<node3**` with the value for the witness. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. To create the availability group, run the following Transact-SQL on the SQL Server instance that will initially host the primary replica.
+* Set Primary and secondary replicas `FAILOVER_MODE = EXTERNAL`. 
+   Specifies that the replica interacts with an external cluster manager, like Pacemaker. 
+
+The following Transact-SQL scripts creates an availability group for high availability named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, and `**<node2>**` values with the names of the SQL Server instances that host the replicas. Replace `**<node3**` with the value for the witness. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. To create the availability group, run the following Transact-SQL on the SQL Server instance that hosts the primary replica.
 
 Run **only one** of the following scripts: 
 
-- Create availability group with three synchronous replicas
+- Create availability group with three synchronous replicas.
 
    ```Transact-SQL
    CREATE AVAILABILITY GROUP [ag1]
@@ -124,7 +128,7 @@ Run **only one** of the following scripts:
    ```
 
    >[!IMPORTANT]
-   >After you run the preceding script to create an availability group with three synchronous replicas, do not run the following script.
+   >After you run the preceding script to create an availability group with three synchronous replicas, do not run the following script:
 
 <a name="witnessScript"></a>
 
@@ -140,27 +144,25 @@ Run **only one** of the following scripts:
       WITH (CLUSTER_TYPE = EXTERNAL)
       FOR REPLICA ON
       N'node1' WITH (
-          ENDPOINT_URL = N'tcp://node1:5022',
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-          FAILOVER_MODE = EXTERNAL,
-          SEEDING_MODE = AUTOMATIC
+         ENDPOINT_URL = N'tcp://node1:5022',
+         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+         FAILOVER_MODE = EXTERNAL,
+         SEEDING_MODE = AUTOMATIC
       ),
       N'node2' WITH ( 
-          ENDPOINT_URL = N'tcp://node2:5022', 
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
-          FAILOVER_MODE = EXTERNAL,
-          SEEDING_MODE = AUTOMATIC
+         ENDPOINT_URL = N'tcp://node2:5022', 
+         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
+         FAILOVER_MODE = EXTERNAL,
+         SEEDING_MODE = AUTOMATIC
       ),
       N'node3' WITH (
-          ENDPOINT_URL = N'tcp://node3:5022',
-          AVAILABILITY_MODE = WITNESS_COMMIT
+         ENDPOINT_URL = N'tcp://node3:5022',
+         AVAILABILITY_MODE = WITNESS_COMMIT
       );
    		
    ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
    ```
 
->[!NOTE]
->Running the `CREATE AVAILABILITY GROUP` command completes with a warning: "Attempt to access non-existent or uninitialized availability group with ID . This is usually an internal condition, such as the availability group is being dropped or the local WSFC node has lost quorum. In such cases, and no user action is required." This is a known issue and Microsoft is working on a resolution. Meanwhile, users should assume command completed successfully. 
 
 You can also configure an availability group with `CLUSTER_TYPE=EXTERNAL` using SQL Server Management Studio or PowerShell. 
 
@@ -177,7 +179,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->After you create the availability group, you must configure integration with a cluster technology like Pacemaker for HA. For a read-only scale-out architecture using availability groups, starting with [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], setting up a cluster is not required.
+>After you create the availability group, you must configure integration with a cluster technology like Pacemaker for high availability. For a read scale-out configuration using availability groups, starting with [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], setting up a cluster is not required.
 
 If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. This configuration is valid for read scale-out/load balancing scenarios, it is not complete for high availability. For high availability, you need to add the availability group as a cluster resource. See [Next steps](#next-steps) for instructions. 
 
@@ -187,7 +189,7 @@ If you followed the steps in this document, you have an availability group that 
 >After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs`. In SLES use `crm`. 
 
 >[!IMPORTANT]
->If the availability group is a cluster resource, there is a known issue in current release where forced failover with data loss to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
+>If the availability group is a cluster resource, there is a known issue in current release where forced failover with data loss to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica succeeds. 
 
 
 ## Next steps

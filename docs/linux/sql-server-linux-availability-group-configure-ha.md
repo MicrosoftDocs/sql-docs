@@ -56,7 +56,7 @@ The steps to create an availability group on Linux servers for high availability
    >[!IMPORTANT]
    >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
    
-   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing is not available in some cloud environments. See [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) for more information.
+   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing is not available in some cloud environments. For more information, see [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440).
    
    >For SLES, see [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
@@ -90,13 +90,13 @@ Create the availability group for high availability on Linux. Use the [CREATE AV
    Specifies that an external cluster entity manages the availability group. Pacemaker is an example of an external cluster entity. When the availability group cluster type is external, 
 
 * Set Primary and secondary replicas `FAILOVER_MODE = EXTERNAL`. 
-   Specifies that the replica will interact with an external cluster manager, like Pacemaker. 
+   Specifies that the replica interacts with an external cluster manager, like Pacemaker. 
 
-The following Transact-SQL scripts creates an availability group for high availability named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, and `**<node2>**` values with the names of the SQL Server instances that will host the replicas. Replace `**<node3**` with the value for the witness. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. To create the availability group, run the following Transact-SQL on the SQL Server instance that will initially host the primary replica.
+The following Transact-SQL scripts creates an availability group for high availability named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, and `**<node2>**` values with the names of the SQL Server instances that host the replicas. Replace `**<node3**` with the value for the witness. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. To create the availability group, run the following Transact-SQL on the SQL Server instance that hosts the primary replica.
 
 Run **only one** of the following scripts: 
 
-- Create availability group with three synchronous replicas
+- Create availability group with three synchronous replicas.
 
    ```Transact-SQL
    CREATE AVAILABILITY GROUP [ag1]
@@ -128,7 +128,7 @@ Run **only one** of the following scripts:
    ```
 
    >[!IMPORTANT]
-   >After you run the preceding script to create an availability group with three synchronous replicas, do not run the following script.
+   >After you run the preceding script to create an availability group with three synchronous replicas, do not run the following script:
 
 <a name="witnessScript"></a>
 
@@ -189,7 +189,7 @@ If you followed the steps in this document, you have an availability group that 
 >After you configure the cluster and add the availability group as a cluster resource, you cannot use Transact-SQL to fail over the availability group resources. SQL Server cluster resources on Linux are not coupled as tightly with the operating system as they are on a Windows Server Failover Cluster (WSFC). SQL Server service is not aware of the presence of the cluster. All orchestration is done through the cluster management tools. In RHEL or Ubuntu use `pcs`. In SLES use `crm`. 
 
 >[!IMPORTANT]
->If the availability group is a cluster resource, there is a known issue in current release where forced failover with data loss to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica will succeed. 
+>If the availability group is a cluster resource, there is a known issue in current release where forced failover with data loss to an asynchronous replica does not work. This will be fixed in the upcoming release. Manual or automatic failover to a synchronous replica succeeds. 
 
 
 ## Next steps

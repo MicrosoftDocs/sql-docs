@@ -5,7 +5,6 @@ ms.custom:
 ms.date: "06/14/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
 ms.suite: ""
 ms.technology: 
   - "dbe-stretch"

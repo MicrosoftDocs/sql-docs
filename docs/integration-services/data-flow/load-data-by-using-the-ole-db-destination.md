@@ -53,7 +53,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  The OLE DB destination automatically maps same-named columns.  
   
-9. To configure the error output, click **Error Output**. For more information, see [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. To configure the error output, click **Error Output**. For more information, see [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. Click **OK**.  
   

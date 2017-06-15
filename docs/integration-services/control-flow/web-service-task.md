@@ -49,7 +49,7 @@ manager: "jhubbard"
  The results of the Web service method can be written to a variable or to a file. You use the File connection manager either to specify the file or to provide the name of the variable to write the results to. For more information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) and [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
   
 ## Custom Logging Messages Available on the Web Service Task  
- The following table lists the custom log entries that you can enable for the Web Service task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries that you can enable for the Web Service task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

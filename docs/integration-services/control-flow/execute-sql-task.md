@@ -570,7 +570,7 @@ This section describes how to create a mapping between a result set and a variab
 -   When you use ODBC and ADO.NET connection managers, the task does not ignore result sets that occur after the first result set. With these connection managers, the task will fail with an error when a result set other than the first result set contains an error.  
   
 ### Custom Log Entries  
- The following table describes the custom log entry for the Execute SQL task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table describes the custom log entry for the Execute SQL task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  

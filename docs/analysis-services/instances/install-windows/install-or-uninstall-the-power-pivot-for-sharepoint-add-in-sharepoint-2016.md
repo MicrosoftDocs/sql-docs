@@ -16,7 +16,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)
-  [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] is a collection of application server components and back-end services that provide [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data access in a [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] farm. The [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint add-in (**spPowerpivot16.msi**) is an installer package used to install the application server components.  
+  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] is a collection of application server components and back-end services that provide [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data access in a [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] farm. The [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint add-in (**spPowerpivot16.msi**) is an installer package used to install the application server components.  
   
  **Note:** This topic describes installing the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] solution files and [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 Configuration tool. After the installation, see the following topic for information on the configuration tool and additional features, [Configure Power Pivot and Deploy Solutions &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
@@ -43,7 +43,7 @@ manager: "erikre"
   
 -   **Application Server:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] functionality in SharePoint 2016 includes using workbooks as a data source, scheduled data refresh, and the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Management Dashboard.  
   
-     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] is a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Installer package (**spPowerpivot16.msi**) that deploys Analysis Services client libraries and copies [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] installation files to the computer. The installer does not deploy or configure [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] features in SharePoint. The following components install by default:  
+     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] is a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Installer package (**spPowerpivot16.msi**) that deploys Analysis Services client libraries and copies [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] installation files to the computer. The installer does not deploy or configure [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] features in SharePoint. The following components install by default:  
   
     -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]. This component includes PowerShell scripts (.ps1 files), SharePoint solution packages (.wsp), and the [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] configuration tool to deploy [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in a SharePoint 2016 farm.  
   
@@ -77,7 +77,7 @@ manager: "erikre"
   
 -   **spPowerPivot16.msi** is 64-bit only, in accordance with the requirements of SharePoint products and technologies.  
   
--   An [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode. Office Online Server will use the SQL Server Analysis Services instance as a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] server. Analysis Services can run on the local SharePoint server or a remote computer. It cannot be installed on the Office Online Server.  
+-   A server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode. Office Online Server will use the SQL Server Analysis Services instance as a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] server. Analysis Services can run on the local SharePoint server or a remote computer. It cannot be installed on the Office Online Server.  
   
 -   **Permissions:** To install [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)], the current user is required to be an administrator on the computer and in the SharePoint Farm Administrators group.  
   

@@ -1,7 +1,7 @@
 ---
 title: "ALTER PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/22/2017"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -112,9 +112,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not cache a plan for this procedure and the procedure is recompiled at run time.  
   
  ENCRYPTION  
- ||  
-|-|  
-|**Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].|  
+ **Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] will convert the original text of the ALTER PROCEDURE statement to an obfuscated format. The output of the obfuscation is not directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Users that have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users that can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users that can attach a debugger to the server process can retrieve the original procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -131,9 +129,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
  FOR REPLICATION  
- ||  
-|-|  
-|**Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].|  
+
   
  Specifies that stored procedures that are created for replication cannot be executed on the Subscriber. A stored procedure created with the FOR REPLICATION option is used as a stored procedure filter and only executed during replication. Parameters cannot be declared if FOR REPLICATION is specified. This option is not valid for CLR procedures. The RECOMPILE option is ignored for procedures created with FOR REPLICATION.  
   
@@ -144,9 +140,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements comprising the body of the procedure. You can use the optional BEGIN and END keywords to enclose the statements. For more information, see the Best Practices, General Remarks, and Limitations and Restrictions sections in [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
  EXTERNAL NAME *assembly_name***.***class_name***.***method_name*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the method of a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly for a CLR stored procedure to reference. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name uses a period (**.**) to separate namespace parts, the class name must be delimited by using brackets (**[]**) or quotation marks (**""**). The specified method must be a static method of the class.  
   
@@ -229,16 +223,14 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Vendor               Product name  Rating    Availability`  
-  
- `-------------------- ------------- -------   ------------`  
-  
- `Proseware, Inc.      LL Crankarm   Average   No`  
-  
- `Vision Cycles, Inc.  LL Crankarm   Superior  Yes`  
-  
- `(2 row(s) affected)`  
-  
+ ```   
+ Vendor               Product name  Rating    Availability  
+-------------------- ------------- -------   ------------  
+Proseware, Inc.      LL Crankarm   Average   No  
+Vision Cycles, Inc.  LL Crankarm   Superior  Yes  
+(2 row(s) affected)`  
+```  
+
 ## See Also  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   

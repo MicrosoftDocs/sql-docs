@@ -26,18 +26,6 @@ manager: "erikre"
   
  These tips and guidelines can help increase the portability of your business intelligence solutions and avoid errors that are directly related to language and collation settings.  
   
--   [Use similar collations throughout the stack](#bkmk_sameColl)  
-  
--   [Common collation recommendations](#bkmk_recos)  
-  
--   [Case sensitivity of object identifiers](#bkmk_objid)  
-  
--   [Locale testing using Excel and SQL Server Profiler](#bkmk_test)  
-  
--   [Writing MDX queries in a solution containing Translations](#bkmk_mdx)  
-  
--   [Writing MDX queries containing Date and Time Values](#bkmk_datetime)  
-  
 ##  <a name="bkmk_sameColl"></a> Use similar collations throughout the stack  
  If possible, try to use the same collation settings in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you use for the database engine, striving for correspondence in width-sensitivity and case-sensitivity, and access-sensitivity.  
   

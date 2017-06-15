@@ -73,11 +73,14 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- Requires CONTROL permission on [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
-  
- Requires ALTER SERVER STATE permission on [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+
+Applies to: SQL Server, Parallel Data Warehouse 
+
+- Requires membership in the **sysadmin** fixed server role.  
+
+Applies to: Azure SQL Data Warehouse
+
+- Requires membership in the DB_OWNER fixed server role.  
   
 ## See Also  
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   

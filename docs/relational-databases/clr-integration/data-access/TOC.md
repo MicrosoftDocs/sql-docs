@@ -1,5 +1,5 @@
-# [In-process ADO.NET +](../../../relational-databases/clr-integration-data-access-in-process-ado-net/index.md?toc=%2fsql%2frelational-databases%2fclr-integration-data-access-in-process-ado-net%2ftoc.json)
-# [Data access transactions +](../../../relational-databases/clr-integration-data-access-transactions/index.md?toc=%2fsql%2frelational-databases%2fclr-integration-data-access-transactions%2ftoc.json)
+# [In-process ADO.NET +](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)
+# [Data access transactions +](../../../relational-databases/clr-integration-data-access-transactions/accessing-the-current-transaction.md)
 # [Context Connection](context-connection.md)
 # [Context Connections and Regular Connections - Restrictions](context-connections-and-regular-connections-restrictions.md)
 # [Context Connections vs. Regular Connections](context-connections-vs-regular-connections.md)

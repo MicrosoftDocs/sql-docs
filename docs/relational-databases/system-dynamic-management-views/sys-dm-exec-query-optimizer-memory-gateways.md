@@ -60,7 +60,7 @@ What are the current optimizer memory gateway statistics for this instance of SQ
 SELECT [pool_id], [name], [max_count], [active_count],
        [waiter_count], [threshold_factor], [threshold],
        [is_active]
-FROM Sys.dm_exec_query_optimizer_memory_gateways;   
+FROM sys.dm_exec_query_optimizer_memory_gateways;   
 
 ```  
 

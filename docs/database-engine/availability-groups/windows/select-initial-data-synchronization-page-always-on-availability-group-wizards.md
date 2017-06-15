@@ -24,22 +24,8 @@ manager: "jhubbard"
 
   Use the Always On **Select Initial Data Synchronization** page to indicate your preference for initial data synchronization of new secondary databases. This page is shared by three wizards—the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], the [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], and the [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
   
- The possible choices include **Full**, **Join only**, or **Skip initial data synchronization**. Before you select **Full** or **Join only** ensure that your environment meets the prerequisites.  
-  
- **In this topic:**  
-  
--   [Recommendations](#Recommendations)  
-  
--   [Full](#Full)  
-  
--   [Join only](#Joinonly)  
-  
--   [Skip initial data synchronization](#Skip)  
-  
--   [To Prepare Secondary Databases Manually](#PrepareSecondaryDbs)  
-  
--   [Related Tasks](#LaunchWiz)  
-  
+ The possible choices include **Automatic seeding**, **Full database and log backup**, **Join only**, or **Skip initial data synchronization**. Before you select **Automatic seeding**, **Full**, or **Join only** ensure that your environment meets the prerequisites.  
+    
 ##  <a name="Recommendations"></a> Recommendations  
   
 -   Suspend log backup tasks for the primary databases during initial data synchronization.  
@@ -50,12 +36,16 @@ manager: "jhubbard"
   
      If your backup and restore operations must be highly secured, we recommend that you select either the **Join only** or **Skip initial data synchronization** option.  
   
-##  <a name="Full"></a> Full  
- For each primary database, the **Full** option performs several operations in one workflow:  create a full and log backup of the primary database, create the corresponding secondary databases by restoring these backups on every server instance that is hosting a secondary replica, and join each secondary database to availability group.  
+## <a name="Auto"></a> Automatic seeding
+ 
+ SQL Server automatically creates the secondary replicas for every database in the group. Automatic seeding requires that the data and log file paths are the same on every SQL Server instance participating in the group. Available on [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] and later. See [Automatically initialize Always On Availability group](automatically-initialize-always-on-availability-group.md).
+
+##  <a name="Full"></a> Full database and log backup 
+ For each primary database, the **Full database and log backup** option performs several operations in one workflow: create a full and log backup of the primary database, create the corresponding secondary databases by restoring these backups on every server instance that is hosting a secondary replica, and join each secondary database to availability group.  
   
  Select this option only if your environment meets the following prerequisites for using full initial data synchronization, and you want the wizard to automatically start data synchronization.  
   
- **Prerequisites for using full initial data synchronization**  
+ **Prerequisites for using full database and log backup initial data synchronization**  
   
 -   All the database-file paths must be identical on every server instance that hosts a replica for the availability group.  
   
@@ -75,7 +65,7 @@ manager: "jhubbard"
   
  **If prerequisites are met**  
   
- If these prerequisites are all met and you want the wizard to perform full initial data synchronization, select the **Full** option and specify a network share. This will cause  the wizard to create full database and log backups of every selected database and to place these backups on the network share that you specify. Then, on every server instance that hosts one of the new secondary replicas, the wizard will create the secondary databases by restoring backups using RESTORE WITH NORECOVERY. After creating each of the secondary databases, the wizard will join the new secondary database to the availability group. As soon as a secondary database is joined, data synchronizations starts on that database.  
+ If these prerequisites are all met and you want the wizard to perform full initial data synchronization, select the **Full database and log backup** option and specify a network share. This will cause  the wizard to create full database and log backups of every selected database and to place these backups on the network share that you specify. Then, on every server instance that hosts one of the new secondary replicas, the wizard will create the secondary databases by restoring backups using RESTORE WITH NORECOVERY. After creating each of the secondary databases, the wizard will join the new secondary database to the availability group. As soon as a secondary database is joined, data synchronizations starts on that database.  
   
  **Specify a shared network location accessible by all replicas**  
  To create and restore backups, the wizard requires that you specify a network share. The account used to start the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] on each server instance that will host an availability replica must have read and write file-system permissions on the network share.  

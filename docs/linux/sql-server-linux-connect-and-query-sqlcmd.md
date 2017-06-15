@@ -26,9 +26,9 @@ ms.custom: H1Hack27Feb2017
 ---
 # Connect to SQL Server on Linux and run Transact-SQL queries
 
-This topic provides connection requirements and guidance for SQL Server vNext CTP 1.4 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. This topic approaches the subject in the context of Linux and then points to other resources. 
+This topic provides connection requirements and guidance for SQL Server 2017 CTP 2.1 running on Linux. In most cases, the connection requirements and processes do not differ across platforms. This topic approaches the subject in the context of Linux and then points to other resources. 
 
-This topic is a walk-through. In this walk-through, you will use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server vNext on Linux. After successfully connecting, you will use Transact-SQL (T-SQL) queries to create and populate a small database.
+This topic is a walk-through. In this walk-through, you will use [sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx) to connect to SQL Server 2017 on Linux. After successfully connecting, you will use Transact-SQL (T-SQL) queries to create and populate a small database.
 
 > [!TIP]
 > **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas. 
@@ -47,7 +47,7 @@ To connect to SQL Server on Linux, you must use SQL Authentication (username and
 
 ## Connect to SQL Server on Linux
 
-In the following steps, connect to SQL Server vNext on Linux with sqlcmd.
+In the following steps, connect to SQL Server 2017 on Linux with sqlcmd.
 
 > [!TIP] 
 > On macOS, use [sql-cli](https://www.npmjs.com/package/sql-cli) because sqlcmd and bcp are not available.

@@ -26,7 +26,7 @@ manager: "jhubbard"
   
  **Name**  
  Displays the name of a local user database.  
-  
+
  **Size**  
  Displays the database size, if the size is available to the wizard.  
   

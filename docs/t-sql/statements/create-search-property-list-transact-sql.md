@@ -1,7 +1,7 @@
 ---
 title: "CREATE SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,7 +29,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # CREATE SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Creates a new search property list. A search property list is used to specify one or more search properties that you want to include in a full-text index.  
   
@@ -38,7 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE SEARCH PROPERTY LIST new_list_name  
    [ FROM [ database_name. ] source_list_name ]  
    [ AUTHORIZATION owner_name ]  
@@ -114,7 +113,8 @@ GO
  The following example creates a new the search property list,  `JobCandidateProperties`, from the list created by Example A, `DocumentPropertyList`, which is associated with a full-text index in the `AdventureWorks2012` database. The example then uses an ALTER FULLTEXT INDEX statement to associate the new property list with the full-text index of the `HumanResources.JobCandidate` table in the `AdventureWorks2012` database. This ALTER FULLTEXT INDEX statement starts a full population, which is the default behavior of the SET SEARCH PROPERTY LIST clause.  
   
 ```  
-CREATE SEARCH PROPERTY LIST JobCandidateProperties FROM AdventureWorks2012.DocumentPropertyList;  
+CREATE SEARCH PROPERTY LIST JobCandidateProperties 
+FROM AdventureWorks2012.DocumentPropertyList;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   
    SET SEARCH PROPERTY LIST JobCandidateProperties;  

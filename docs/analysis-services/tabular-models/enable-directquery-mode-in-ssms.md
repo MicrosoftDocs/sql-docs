@@ -21,7 +21,7 @@ manager: "erikre"
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], steps for DirectQuery configuration differ based on the model's compatibility level. Below you'll find steps that work for all compatibility levels.  
   
- This topic assumes that you have created and validated an in-memory tabular model at compatibility level 1200, and only need to enable DirectQuery access and update connection strings. If you're starting from a lower compatibility level, you need to manually upgrade it first. See [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) for steps.  
+ This topic assumes that you have created and validated an in-memory tabular model at compatibility level 1200 or higher, and only need to enable DirectQuery access and update connection strings. If you're starting from a lower compatibility level, you need to manually upgrade it first. See [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) for steps.  
   
 > [!IMPORTANT]  
 >  We recommend using [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] instead of Management Studio to switch data storage modes. When you use  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to change  model, and then follow that up with deployment to the server,  the model and database stay in sync. Moreover, changing the storage modes in the model lets you review any validation errors that occur. When using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as described in this article, validation errors are not reported.  

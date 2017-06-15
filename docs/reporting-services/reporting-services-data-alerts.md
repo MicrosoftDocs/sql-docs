@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Data Alerts | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "05/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -317,4 +317,5 @@ manager: "erikre"
 [Data Alert Designer](../reporting-services/data-alert-designer.md)   
 [Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

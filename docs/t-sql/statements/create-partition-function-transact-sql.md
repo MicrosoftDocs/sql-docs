@@ -1,7 +1,7 @@
 ---
 title: "CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,7 +42,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE PARTITION FUNCTION partition_function_name ( input_parameter_type )  
 AS RANGE [ LEFT | RIGHT ]   
 FOR VALUES ( [ boundary_value [ ,...n ] ] )   
@@ -151,7 +150,9 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
   
 ```tsql  
 --Create integer partition function for 15,000 partitions.  
-DECLARE @IntegerPartitionFunction nvarchar(max) = N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) AS RANGE RIGHT FOR VALUES (';  
+DECLARE @IntegerPartitionFunction nvarchar(max) = 
+    N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) 
+    AS RANGE RIGHT FOR VALUES (';  
 DECLARE @i int = 1;  
 WHILE @i < 14999  
 BEGIN  
@@ -168,7 +169,9 @@ GO
   
 ```tsql  
 --Create date partition function with increment by month.  
-DECLARE @DatePartitionFunction nvarchar(max) = N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) AS RANGE RIGHT FOR VALUES (';  
+DECLARE @DatePartitionFunction nvarchar(max) = 
+    N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) 
+    AS RANGE RIGHT FOR VALUES (';  
 DECLARE @i datetime2 = '20070101';  
 WHILE @i < '20110101'  
 BEGIN  

@@ -1,7 +1,7 @@
 ---
 title: "KPIs (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "04/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,18 +17,8 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# KPIs (SSAS Tabular)
+# KPIs
   A *KPI* (Key Performance Indicator), in a tabular model, is used to gauge performance of a value, defined by a *Base* measure, against a *Target* value, also defined by a measure or by an absolute value. This topic provides tabular model authors a basic understanding of KPIs in a tabular model.  
-  
- Sections in this topic:  
-  
--   [Benefits](#bkmk_benefits)  
-  
--   [Example](#bkmk_example)  
-  
--   [Create and Edit KPIs](#bkmk_create)  
-  
--   [Related Tasks](#bkmk_related_tasks)  
   
 ##  <a name="bkmk_benefits"></a> Benefits  
  In business terminology, a Key Performance Indicator (KPI) is a quantifiable measurement for gauging business objectives. A KPI is frequently evaluated over time. For example, the sales department of an organization may use a KPI to measure monthly gross profit against projected gross profit. The accounting department may measure monthly expenditures against revenue to evaluate costs, and a human resources department may measure quarterly employee turnover. Each is an example of a KPI. Business professionals frequently consume KPIs that are grouped together in a business scorecard to obtain a quick and accurate historical summary of business success or to identify trends.  
@@ -47,7 +37,7 @@ manager: "erikre"
 ##  <a name="bkmk_example"></a> Example  
  The sales manager at Adventure Works wants to create a PivotTable that she can use to quickly display whether or not sales employees are meeting their sales quota for a given period (year). For each sales employee, she wants the PivotTable to display the the actual sales amount in dollars, the sales quota amount in dollars, and a simple graphic display showing the status of whether or not each sales employee is below, at, or above their sales quota. She wants to be able to slice the data by year.  
   
- To do this, the sales manager enlists the help of her organization’s BI solution developer to add a Sales KPI to the AdventureWorks Tabular Model. The sales manager will then use [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] to connect to the Adventure Works Tabular Model as a data source and create a PivotTable with the fields (measures and KPI) and slicers to analyze whether or not the sales force is meeting their quotas.  
+ To do this, the sales manager enlists the help of her organization’s BI solution developer to add a Sales KPI to the AdventureWorks Tabular Model. The sales manager will then use Excel to connect to the Adventure Works Tabular Model as a data source and create a PivotTable with the fields (measures and KPI) and slicers to analyze whether or not the sales force is meeting their quotas.  
   
  In the model, a measure on the SalesAmount column in the FactResellerSales table, which gives the actual sales amount in dollars for each sales employee is created. This measure will define the Base value of the KPI.  
   
@@ -74,7 +64,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  The sales manager can now slice by year the actual sales amount, sales quota amount, and status for each sales employee. She can analyze sales trends over years to determine whether or not she needs to adjust the sales quota for a sales employee.  
   
-##  <a name="bkmk_create"></a> Create and Edit KPIs  
+##  <a name="bkmk_create"></a> Create and edit KPIs  
  To create KPIs, in the model designer, you will use the Key Performance Indicator dialog box. Since KPIs must be associated with a measure, you create a KPI by extending a measure that evaluates to a Base value, and then either creating a measure that evaluates to a Target value or by entering an absolute value. After the Base measure (value) and Target value is defined, you can then define the status threshold parameters between the Base and Target values. The status is displayed in a graphical format using selectable icons, bars, graphs, or colors. The Base and Target values, as well as the Status can then be added to a report or PivotTable as values that can be sliced against other data fields.  
   
  To view the Key Performance Indicator dialog box, in the measure grid for a table, right click a measure that will serve as the Base value, and then click **Create KPI**. After a measure has been extended to a KPI as a Base value, an icon will appear alongside the measure name in the measure grid identifying the measure as associated with a KPI.  
@@ -83,10 +73,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create and Manage KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|Describes how to create a KPI with a Base measure, a Target measure, and status thresholds.|  
+|[Create and Manage KPIs](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|Describes how to create a KPI with a Base measure, a Target measure, and status thresholds.|  
   
 ## See Also  
- [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Perspectives &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   

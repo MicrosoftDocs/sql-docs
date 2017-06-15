@@ -72,7 +72,7 @@ A connection manager can be created at the package level or at the project level
 > [!NOTE]  
 >  If you want to use data sources in your package, you need to convert the project to the package deployment model.  
 >   
->  For more information about the two models, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). For more information about converting a project to the project deployment model, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+>  For more information about the two models, and about converting a project to the project deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
 
 ### Built-in Connection Managers  
  The following table lists the connection manager types that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides.  

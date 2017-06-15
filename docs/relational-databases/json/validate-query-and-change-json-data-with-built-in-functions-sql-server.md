@@ -57,7 +57,7 @@ SET @jsonInfo=N'{
   
  The following example returns the JSON text if the column contains valid JSON.  
   
-```tsql  
+```sql  
 SELECT id,json_col
 FROM tab1
 WHERE ISJSON(json_col)>0 
@@ -70,7 +70,7 @@ WHERE ISJSON(json_col)>0
   
  The following example extracts the value of a JSON property into a local variable.  
   
-```tsql  
+```sql  
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
 ```  
   
@@ -81,7 +81,7 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
  
  The following example shows how to return a JSON fragment in query results.  
   
-```tsql  
+```sql  
 SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
@@ -120,7 +120,7 @@ ORDER BY LastName
 ### Example 1 - Return both standard columns and JSON data  
  The following query returns both standard relational columns and values from a JSON column.  
   
-```tsql  
+```sql  
 SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
@@ -135,7 +135,7 @@ WHERE ISJSON(Info)>0
 ### Example 2- Aggregate and filter JSON values  
  The following query aggregates subtotals by customer name (stored in JSON) and status (stored in an ordinary column). Then it filters the results by city (stored in JSON), and OrderDate (stored in an ordinary column).  
   
-```tsql  
+```sql  
 DECLARE @territoryid INT;
 DECLARE @city NVARCHAR(32);
 
@@ -157,14 +157,14 @@ HAVING SUM(SubTotal)>1000
   
  The following example updates the value of a property in a variable that contains JSON.  
   
-```tsql  
+```sql  
 SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
 ```  
   
  For more info, see [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md).  
   
-## Learn more about built-in JSON support in SQL Server  
- [Blog posts by Microsoft Program Manager Jovan Popovic](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
   
 ## See Also  
  [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)   

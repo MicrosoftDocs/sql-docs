@@ -43,7 +43,7 @@ manager: "jhubbard"
 |**query_parameterization_type_desc**|**nvarchar(60)**|Textual description for the parameterization type.|  
 |**initial_compile_start_time**|**datetimeoffset**|Compile start time.|  
 |**last_compile_start_time**|**datetimeoffset**|Compile start time.|  
-|**last_execution_time**|**datetimeoffset**|Execution time.|  
+|**last_execution_time**|**datetimeoffset**|Last execution time refers to the last end time of the query/plan.|  
 |**last_compile_batch_sql_handle**|**varbinary(64)**|Handle of the last SQL batch in which query was used last time. It can be provided as input to [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) to get the full text of the batch.|  
 |**last_compile_batch_offset_start**|**bigint**|Information that can be provided to sys.dm_exec_sql_text along with last_compile_batch_sql_handle.|  
 |**last_compile_batch_offset_end**|**bigint**|Information that can be provided to sys.dm_exec_sql_text along with last_compile_batch_sql_handle.|  
@@ -71,6 +71,7 @@ manager: "jhubbard"
  [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   

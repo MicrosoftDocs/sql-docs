@@ -6,7 +6,7 @@ description:
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,11 +26,10 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
 # Install SQL Server on Ubuntu
 
-This topic provides a walkthrough of how to install SQL Server vNext CTP 1.4 on Ubuntu 16.04 and 16.10.
+This topic provides a walkthrough of how to install SQL Server 2017 CTP 2.1 on Ubuntu 16.04 and 16.10.
 
-> [!NOTE] 
-> You need at least 3.25GB of memory to run SQL Server on Linux.
-> SQL Server Engine has been tested up to 1 TB of memory at this time.
+> [!NOTE]
+> You need at least 3.25GB of memory to run SQL Server on Linux. For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## Install SQL Server
 
@@ -99,6 +98,42 @@ To remove the **mssql-server** package on Ubuntu, follow these steps:
    sudo rm -rf /var/opt/mssql/
    ```
 
+## <a id="offline"></a> Offline installation
+
+[!INCLUDE[SQL Server Linux offline package installation](../includes/sql-server-linux-offline-package-install-intro.md)]
+
+To manually install the SQL Server database engine package for Ubuntu, use the following steps:
+
+1. **Download the .deb database engine package**. Find package download links in the package details section of the [Release Notes](sql-server-linux-release-notes.md).
+
+1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** commmand.
+
+1. **Install the database engine package**. Use the **dpkg** command. Replace `versionnumber` with your package version number.
+
+    ```bash
+    sudo dpkg -i mssql-server_versionnumber_amd64.deb
+    ```
+
+1. **Resolve missing dependencies**: Typically, there are missing dependencies at this point. If you have access to approved repositories containing those dependencies, the easiest solution is to use the **apt-get** command:
+
+    ```bash
+    sudo apt-get -f install
+    ```
+
+    > [!NOTE]
+    > This command completes the installation of the SQL Server package as well.
+
+    In some cases, you might have to manually install the dependencies. Inspect the package's dependencies with the following command:
+
+    ```bash
+    dpkg -I mssql-server_versionnumber_amd64.deb | grep "Depends:"
+    ```
+
+1. **Complete the SQL Server setup**. Use **mssql-conf** to complete the SQL Server setup:
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
 
 ## Next steps
 

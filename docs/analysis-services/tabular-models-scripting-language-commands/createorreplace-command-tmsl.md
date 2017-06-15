@@ -1,7 +1,7 @@
 ---
 title: "CreateOrReplace command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,11 +17,12 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # CreateOrReplace command (TMSL)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
   Creates or replaces the specified object and all the descendant objects that are specified. Non-existent objects are created. Existing objects are replaced with the new definition.  
   
  Whenever you specify a read-write property, make sure to include them all. Omission of  a read-write object is considered a deletion.  
-  
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
   
 ## Request  
  The structure of the request varies based on the object. An object that is a parent must include all of its children, although the full object definitions of siblings and parent(s) are not required.  

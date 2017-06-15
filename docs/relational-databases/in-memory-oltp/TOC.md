@@ -1,6 +1,7 @@
 # [Overview](in-memory-oltp-in-memory-optimization.md)  
 # [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](survey-of-initial-areas-in-in-memory-oltp.md)  
-# [Overview and Usage Scenarios](overview-and-usage-scenarios.md)  
+# [Overview and Usage Scenarios](overview-and-usage-scenarios.md)
+# [Internals for SQL Server 2016 whitepaper](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
 # [Plan your adoption of In-Memory OLTP Features in SQL Server](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
 # [Requirements for Using Memory-Optimized Tables](requirements-for-using-memory-optimized-tables.md)  
 # [In-Memory OLTP Code Samples](in-memory-oltp-code-samples.md)  
@@ -74,4 +75,5 @@
 ## [Migrating Computed Columns](migrating-computed-columns.md)  
 ## [Migrating Triggers](migrating-triggers.md)  
 ## [Cross-Database Queries](cross-database-queries.md)  
-## [Implementing IDENTITY in a Memory-Optimized Table](implementing-identity-in-a-memory-optimized-table.md)  
+## [Implementing IDENTITY in a Memory-Optimized Table](implementing-identity-in-a-memory-optimized-table.md)
+  

@@ -1,7 +1,7 @@
 ---
-title: "Understanding DAX in Tabular Models (SSAS Tabular) | Microsoft Docs"
+title: "DAX in Tabular Models (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "04/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,72 +17,37 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Understanding DAX in Tabular Models (SSAS Tabular)
-  Data Analysis Expressions (DAX) is the formula language used to create custom calculations in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel workbooks and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model projects. DAX formulas include functions, operators, and values to perform advanced calculations on data in tables and columns.  
+# DAX in Tabular Models (SSAS Tabular)
+  Data Analysis Expressions (DAX) is a formula language used to create custom calculations in Analysis Sevices, Power BI Desktop, and Power Pivot in Excel. DAX formulas include functions, operators, and values to perform advanced calculations on data in tables and columns.  
   
- While DAX applies to both [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks and tabular model projects, this topic applies more to tabular model projects authored in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Before reading this topic, you should have a good understanding of tabular models and the tabular model project authoring environment in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ While DAX is used in Analysis Services, Power BI Desktop, and Power Pivot in Excel, this topic applies more to Analysis Services tabular model projects authored in SQL Server Data Tools (SSDT).  
   
- Sections in this topic:  
+##  <a name="bkmk_DAX"></a> DAX formulas in calculated columns, measures, and row filters  
+ For tabular models authored in SSDT, DAX formulas are used in calculated columns, measures, and row filters.  
   
--   [DAX in Tabular Models](#bkmk_DAXintm)  
-  
--   [DAX Formulas in Calculated Columns, Measures, and Row Filters](#bkmk_DAX)  
-  
--   [DAX Data Types](#bkmk_DAX_datatypes)  
-  
--   [DAX Operators](#bkmk_DAX_opertors)  
-  
--   [DAX Formulas](#bkmk_DAX_Formulas)  
-  
--   [DAX Functions](#bkmk_DAX_functions)  
-  
--   [Context in DAX Formulas](#bkmk_context)  
-  
--   [Formulas and the Tabular Model](#bkmk_RelModel)  
-  
--   [Working with Tables and Columns](#bkmk_tables)  
-  
--   [Updating the Results of Formulas (Process)](#bkmk_RefreshRecalc)  
-  
--   [Troubleshooting Errors in Formulas](#bkmk_troubleshoot)  
-  
--   [Additional Resources](#bkmk_addional_resources)  
-  
-##  <a name="bkmk_DAXintm"></a> DAX in Tabular Models  
- In both [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] and tabular models, functionally, there is no difference in how DAX formulas calculate values from their respective data sets. However, where DAX formulas are created in the workbook and model authoring tools is different, as well as where context in certain measures is evaluated.  
-  
- In [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], calculation formulas are typically created by the workbook user for self-service business intelligence analysis. Calculated columns are created for a table in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] window, and measures are created in PivotTables or the calculation area. Unlike tabular model projects, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks do not provide role-based security, which can use DAX formulas to secure data.  
-  
- In tabular model projects, calculation formulas are created in the model designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] by model authors. While values for calculated columns, calculated by using DAX formulas, appear immediately in the table in the model designer, with exception to the measure preview feature in the measure grid, measures are not calculated until a user specifies a filter in a reporting client such as [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] or in PivotTables in Microsoft Excel.  
-  
- If you import a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook into a new tabular model project by using the Import from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] project template, DAX formulas for calculated columns will be automatically created in the new tabular model. DAX formulas for implicit and explicit measures in the workbook will be automatically created in the new tabular model as explicit measures. Because role and secure row filter functionality do not already exist in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks, you will need to create at least one role in the new tabular model to provide model data access to role members. DAX formulas in row filters are necessary only if you want to secure table data at the row-level.  
-  
-##  <a name="bkmk_DAX"></a> DAX Formulas in Calculated Columns, Measures, and Row Filters  
- For tabular models authored in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], DAX formulas are used in calculated columns, measures, and row filters.  
-  
-### Calculated Columns  
- A calculated column is a column that you add to an existing table (in the model designer) and then create a DAX formula that defines the column values. You create formulas for calculated columns in the model designer by using the formula bar.  
+### Calculated columns  
+ A calculated column is a column that you add to an existing table (in the model designer) and then create a DAX formula that defines the column's values. 
   
 > [!NOTE]  
 >  Calculated columns are not supported for models that retrieve data from a relational data source using DirectQuery mode.  
   
  When a calculated column contains a valid DAX formula, values are calculated for each row as soon as the formula is entered. Values are then stored in the database. For example, in a Date table, when the formula `=[Calendar Year] & " Q" & [Calendar Quarter]` is entered into the formula bar, a value for each row in the table is calculated by taking values from the Calendar Year column (in the same Date table), adding a space and the capital letter Q, and then adding the values from the Calendar Quarter column (in the same Date table). The result for each row in the calculated column is calculated immediately and appears, for example, as **2010 Q1**. Column values are only recalculated if the data is re-processed.  
   
- For more information, see [Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md).  
+ For more information, see [Calculated Columns](../../analysis-services/tabular-models/ssas-calculated-columns.md).  
   
 ### Measures  
- Measures are dynamic formulas where the results change depending on context. Measures are used in reporting formats that support combining and filtering model data by using multiple attributes such as a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] report or Excel PivotTable or PivotChart. In tabular model projects, measures are defined by the model author by using the measure grid (and formula bar) in the model designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ Measures are dynamic formulas where the results change depending on context. Measures are used in reporting formats that support combining and filtering model data by using multiple attributes such as a Power BI report or Excel PivotTable or PivotChart. Measures are defined by the model author by using the measure grid (and formula bar) in the model designer in SSDT.  
   
  A formula in a measure can use standard aggregation functions automatically created by using the Autosum feature, such as COUNT or SUM, or you can define your own formula by using DAX. When you define a formula for a measure in the formula bar, a Tooltip feature shows a preview of what the results would be for the total in the current context, but otherwise the results are not immediately output anywhere. Other measure details also appear in the **Properties** pane.  
   
- The reason you cannot see the (filtered) results of the calculation immediately is because the result of a measure cannot be determined without context. To evaluate a measure requires a reporting client application that can provide the context needed to retrieve the data relevant to each cell and then evaluate the expression for each cell. That client might be an Excel PivotTable or PivotChart, a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] report, or an MDX query. Regardless of the reporting client, a separate query is run for each cell in the results. That is to say, each combination of row and column headers in a PivotTable, or each selection of slicers and filters in a [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] report, generates a different subset of data over which the measure is calculated. For example, in a measure with the formula, `Total Sales:=SUM([Sales Amount])`, when a user places the Total Sales measure in the Values window in a PivotTable, and then places the Product Category column from a Product table into the Filters window, the sum of Sales Amount is calculated and displayed for each product category.  
+ The reason you cannot see the (filtered) results of the calculation immediately is because the result of a measure cannot be determined without context. To evaluate a measure requires a reporting client application that can provide the context needed to retrieve the data relevant to each cell and then evaluate the expression for each cell. That client might be an Excel PivotTable or PivotChart, a Power BI report, or an MDX query. Regardless of the reporting client, a separate query is run for each cell in the results. That is to say, each combination of row and column headers in a PivotTable, or each selection of slicers and filters in a Power BI report, generates a different subset of data over which the measure is calculated. For example, in a measure with the formula, `Total Sales:=SUM([Sales Amount])`, when a user places the TotalSales measure in the Values window in a PivotTable, and then places the DimProductCategory column from a DimProduct table into the Filters window, the sum of Sales Amount is calculated and displayed for each product category.  
   
  Unlike calculated columns and row filters, the syntax for a measure includes the measure’s name preceding the formula. In the example just provided, the name **Total Sales:** appears preceding the formula. After you have created a measure, the name and its definition appear in the reporting client application Field List and depending on perspectives and roles is available to all users of the model.  
   
- For more information, see [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md).  
+ For more information, see [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md).  
   
-### Row Filters  
- Row filters define which rows in a table are visible to members of a particular role. Row filters can be created for each table in a model by using DAX formulas. Row filters are created for a particular role by using Role Manager in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Row filters can also be defined for a deployed model by using Role Properties in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+### Row filters  
+ Row filters define which rows in a table are visible to members of a particular role. Row filters can be created for each table in a model by using DAX formulas. Row filters are created for a particular role by using Role Manager in SSDT. Row filters can also be defined for a deployed model by using Role Properties in SQL Server Management Studio (SSMS).  
   
  In a row filter, a DAX formula, which must evaluate to a Boolean TRUE/FALSE condition, defines which rows can be returned by the results of a query by members of that particular role. Rows not included in the DAX formula cannot be returned. For example, for members of the Sales role, the Customers table with the following DAX formula, `=Customers[Country] = “USA”`, members of the Sales role will only be able to view data for customers in the USA, and aggregates, such as SUM are returned only for customers in the USA.  
   
@@ -90,7 +55,7 @@ manager: "erikre"
   
  Row filters apply to the specified rows as well as related rows. When a table has multiple relationships, filters apply security for the relationship that is active. Row filters will be intersected with other row filters defined for related tables.  
   
- For more information, see [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md).  
+ For more information, see [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_DAX_datatypes"></a> DAX Data Types  
  You can import data into a model from many different data sources that might support different data types. When you import data into a model, the data is converted to one of the tabular model data types. When the model data is used in a calculation, the data is then converted to a DAX data type for the duration and output of the calculation. When you create a DAX formula, the terms used in the formula will automatically determine the value data type returned.  
@@ -111,7 +76,7 @@ manager: "erikre"
   
  While data types are typically automatically set, it is important to understand data types and how they apply, in-particular, to DAX formulas. Errors in formulas or unexpected results, for example, are often caused by using a particular operator that cannot be used with a data type specified in an argument. For example, the formula, `= 1 & 2`, returns a string result of 12. The formula, `= “1” + “2”`, however, returns an integer result of 3.  
   
- For detailed information about data types in tabular models and explicit and implicit conversions of data types in DAX, see [Data Types Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
+ For detailed information about data types in tabular models and explicit and implicit conversions of data types in DAX, see [Data Types Supported](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md).  
   
 ##  <a name="bkmk_DAX_opertors"></a> DAX Operators  
  The DAX language uses four different types of calculation operators in formulas:  
@@ -126,10 +91,10 @@ manager: "erikre"
   
  For detailed information about operators used in DAX formulas, see [DAX Operator Reference](http://msdn.microsoft.com/en-us/1befbddc-6178-472c-8bc4-05dafd62207e).  
   
-##  <a name="bkmk_DAX_Formulas"></a> DAX Formulas  
- DAX formulas are essential for creating calculations in calculated columns and measures, and securing your data by using row level filters. To create formulas for calculated columns and measures, you will use the formula bar along the top of the model designer window. To create formulas for row filters, you will use the Role Manager dialog box. Information in this section is meant to get you started with understanding the basics of DAX formulas.  
+##  <a name="bkmk_DAX_Formulas"></a> DAX formulas  
+ DAX formulas are essential for creating calculations in calculated columns and measures, and securing your data by using row level filters. To create formulas for calculated columns and measures, you will use the formula bar along the top of the model designer window or the DAX Editor. To create formulas for row filters, you will use the Role Manager dialog box. Information in this section is meant to get you started with understanding the basics of DAX formulas.  
   
-###  <a name="basics"></a> Formula Basics  
+###  <a name="basics"></a> Formula basics  
  DAX enables tabular model authors to define custom calculations in both model tables, as part of calculated columns, and as measures associated with tables, but not appearing directly in them. DAX also enables model authors to secure data, by creating calculations that return a Boolean value defining which rows in a particular or related table can be queried by member users of the associated role.  
   
  DAX formulas can be very simple or quite complex. The following table shows some examples of simple formulas that could be used in a calculated column.  
@@ -158,7 +123,7 @@ manager: "erikre"
 6.  Press ENTER to accept the formula.  
   
 > [!NOTE]  
->  In a calculated column, as soon as you accept the formula and the formula is validated, the column is populated with values. In a measure, pressing ENTER saves the measure definition in the measure grid with the table. If a formula is invalid, an error will be displayed.  
+>  In a calculated column, as soon as you enter the formula and the formula is validated, the column is populated with values. In a measure, pressing ENTER saves the measure definition in the measure grid with the table. If a formula is invalid, an error will be displayed.  
   
  In this example, we will look at a more complex formula in a measure named Days in Current Quarter:  
   
@@ -189,14 +154,14 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`'Date'`|Specifies the Date table.|  
 |`[Date]`|Specifies the Date column in the Date table.|  
   
-#### Using Formula AutoComplete  
+#### Using formula AutoComplete  
  Both the formula bar in the model designer and the formula Row Filters window in the Role Manager dialog box provide an AutoComplete feature. AutoComplete helps you enter a valid formula syntax by providing you with options for each element in the formula.  
   
--   You can use Formula AutoComplete in the middle of an existing formula with nested functions. The text immediately before the insertion point is used to display values in the drop-down list, and all of the text after the insertion point remains unchanged.  
+-   You can use formula AutoComplete in the middle of an existing formula with nested functions. The text immediately before the insertion point is used to display values in the drop-down list, and all of the text after the insertion point remains unchanged.  
   
 -   AutoComplete does not add the closing parenthesis of functions or automatically match parentheses. You must make sure that each function is syntactically correct or you cannot save or use the formula.  
   
-#### Using Multiple Functions in a Formula  
+#### Using multiple functions in a Formula  
  You can nest functions, meaning that you use the results from one function as an argument of another function. You can nest up to 64 levels of functions in calculated columns. However, nesting can make it difficult to create or troubleshoot formulas.  
   
  Many functions are designed to be used solely as nested functions. These functions return a table, which cannot be directly saved as a result; it must be provided as input to a table function. For example, the functions SUMX, AVERAGEX, and MINX all require a table as the first argument.  
@@ -204,7 +169,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 > [!NOTE]  
 >  Some limits are applied within measures on nesting of functions to ensure that performance is not affected by the many calculations required by dependencies among columns.  
   
-##  <a name="bkmk_DAX_functions"></a> DAX Functions  
+##  <a name="bkmk_DAX_functions"></a> DAX functions  
  This section provides an overview of the *types* of functions supported in DAX. For more detailed information, see [DAX Function Reference](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
  DAX provides a variety of functions you can use perform calculations using dates and times, create conditional values, work with strings, perform lookups based on relationships, and the ability to iterate over a table to perform recursive calculations. If you are familiar with Excel formulas, many of these functions will appear very similar; however, DAX formulas are different in the following important ways:  
@@ -215,42 +180,42 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   DAX includes many functions that return a table, rather than a value. The table is not displayed in a reporting client, but is used to provide input to other functions. For example, you can retrieve a table and then count the distinct values in it, or calculate dynamic sums across filtered tables or columns.  
   
--   DAX functions include a variety of *time intelligence* functions. These functions let you define or select date ranges, and perform dynamic calculations based on these dates or range. For example, you can compare sums across parallel periods.  
+-   DAX functions include a variety of *time-intelligence* functions. These functions let you define or select date ranges, and perform dynamic calculations based on these dates or range. For example, you can compare sums across parallel periods.  
   
-### Date and Time Functions  
+### Date and time functions  
  The date and time functions in DAX are similar to date and time functions in Microsoft Excel. However, DAX functions are based on the **datetime** data types used by Microsoft SQL Server. For more information, see [Date and Time Functions (DAX)](http://msdn.microsoft.com/en-us/9fc9214a-fcd6-40c0-bf51-0c95637c6ffb).  
   
-### Filter Functions  
+### Filter functions  
  The filter functions in DAX return specific data types, look up values in related tales, and filter by related values. The lookup functions work by using tables and relationships, like a database. The filtering functions let you manipulate data context to create dynamic calculations. For more information, see [Filter Functions (DAX)](http://msdn.microsoft.com/en-us/b036fd40-4d3b-426d-a0d2-80258b53d8e5).  
   
-### Information Functions  
+### Information functions  
  An information function looks at the cell or row that is provided as an argument and tells you whether the value matches the expected type. For example, the ISERROR function returns TRUE if the value that you reference contains an error. For more information, see [Information Functions (DAX)](http://msdn.microsoft.com/en-us/6d2bee09-0456-4444-b4d2-c231fd788a2e).  
   
-### Logical Functions  
+### Logical functions  
  Logical functions act upon an expression to return information about the values in the expression. For example, the TRUE function lets you know whether an expression that you are evaluating returns a TRUE value. For more information, see [Logical Functions (DAX)](http://msdn.microsoft.com/en-us/2eb33add-60b2-44ab-b761-012a473116a2).  
   
-### Mathematical and Trigonometric Functions  
+### Mathematical and trigonometric functions  
  The mathematical functions in DAX are very similar to the Excel mathematical and trigonometric functions. Some minor differences exist in the numeric data types used by DAX functions. For more information, see [Math and Trig Functions (DAX)](http://msdn.microsoft.com/en-us/1f408ec1-e769-43d6-a68c-567bc30d893f).  
   
-### Statistical Functions  
+### Statistical functions  
  DAX provides statistical functions that perform aggregations. In addition to creating sums and averages, or finding the minimum and maximum values, in DAX you can also filter a column before aggregating or create aggregations based on related tables. For more information, see [Statistical Functions (DAX)](http://msdn.microsoft.com/en-us/ba4c1298-57a0-40fc-b6f6-00e187ace559).  
   
-### Text Functions  
+### Text functions  
  The text functions in DAX are very similar to their counterparts in Excel. You can return part of a string, search for text within a string, or concatenate string values. DAX also provides functions for controlling the formats for dates, times, and numbers. For more information, see [Text Functions (DAX)](http://msdn.microsoft.com/en-us/e4821571-ae55-4df7-ae98-c578200bba5f).  
   
-### Time Intelligence Functions  
- The time intelligence functions provided in DAX let you create calculations that use built-in knowledge about calendars and dates. By using time and date ranges in combination with aggregations or calculations, you can build meaningful comparisons across comparable time periods for sales, inventory, and so on. For more information, see [Time Intelligence Functions (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517).  
+### Time-intelligence functions  
+ The time-intelligence functions provided in DAX let you create calculations that use built-in knowledge about calendars and dates. By using time and date ranges in combination with aggregations or calculations, you can build meaningful comparisons across comparable time periods for sales, inventory, and so on. For more information, see [Time-intelligence Functions (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517).  
   
-###  <a name="bkmk_TableFunc"></a> Table-Valued Functions  
+###  <a name="bkmk_TableFunc"></a> Table-valued functions  
  There are DAX functions that output tables, take tables as input, or do both. Because a table can have a single column, table-valued functions also take single columns as inputs. Understanding how to use these table-valued functions is important for fully utilizing DAX formulas. DAX includes the following types of table-valued functions:  
   
- **Filter functions** Return a column, table, or values related to the current row.  
+  **Filter functions** - Return a column, table, or values related to the current row.  
+    
+  **Aggregation functions** - Aggregate any expression over the rows of a table.  
+    
+  **Time-intelligence functions** - Return a table of dates, or use a table of dates to calculate an aggregation.  
   
- **Aggregation functions** Aggregate any expression over the rows of a table.  
-  
- **Time intelligence functions** Return a table of dates, or use a table of dates to calculate an aggregation.  
-  
-##  <a name="bkmk_context"></a> Context in DAX Formulas  
+##  <a name="bkmk_context"></a> Context in DAX formulas  
  *Context* is an important concept to understand when creating formulas using DAX. Context is what enables you to perform dynamic analysis, as the results of a formula change to reflect the current row or cell selection and also any related data. Understanding context and using context effectively are critical for building high-performing, dynamic analyses, and for troubleshooting problems in formulas.  
   
  Formulas in tabular models can be evaluated in a different context, depending on other design elements:  
@@ -263,7 +228,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  There are different types of context: *row context*, *query context*, and *filter context*.  
   
-###  <a name="bkmk_row_context"></a> Row Context  
+###  <a name="bkmk_row_context"></a> Row context  
  *Row context* can be thought of as "the current row”. If you create a formula in a calculated column, the row context for that formula includes the values from all columns in the current row. If the table is related to another table, the content also includes all the values from the other table that are related to the current row.  
   
  For example, suppose you create a calculated column, `=[Freight] + [Tax]`, that adds together values from two columns, Freight and Tax, from the same table. This formula automatically gets only the values from the current row in the specified columns.  
@@ -278,7 +243,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  This formula gets the tax rate for the current region from the Region table and adds it to the value of the Freight column. In DAX formulas, you do not need to know or specify the specific relationship that connects the tables.  
   
-#### Multiple Row Context  
+#### Multiple row context  
  DAX includes functions that iterate calculations over a table. These functions can have multiple current rows, each with its own row context.  In essence, these functions let you create formulas that perform operations recursively over an inner and outer loop.  
   
  For example, suppose your model contains a **Products** table and a **Sales** table. Users might want to go through the entire sales table, which is full of transactions involving multiple products, and find the largest quantity ordered for each product in any one transaction.  
@@ -293,7 +258,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  To summarize, the EARLIER function stores the row context from the operation that preceded the current operation. At all times, the function stores in memory two sets of context: one set of context represents the current row for the inner loop of the formula, and another set of context represents the current row for the outer loop of the formula. DAX automatically feeds values between the two loops so that you can create complex aggregates.  
   
-####  <a name="bkmk_query_context"></a> Query Context  
+####  <a name="bkmk_query_context"></a> Query context  
  *Query context* refers to the subset of data that is implicitly retrieved for a formula. When a user places a measure or other value field into a PivotTable or into a report based on a tabular model, the engine examines the row and column headers, Slicers, and report filters to determine the context. Then, the necessary queries are run against the data source to get the correct subset of data, make the calculations defined by the formula, and then populate each cell in the PivotTable or report. The set of data that is retrieved is the query context for each cell.  
   
 > [!WARNING]  
@@ -307,12 +272,12 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  In a PivotTable, context can be changed by adding or removing column and row headers and by adding or removing Slicers. Whenever users add column or row headings to the PivotTable, they change the query context in which the measure is evaluated. Slicing and filtering operations also affect context. Therefore, the same formula, used in a measure, is evaluated in a different *query context* for each cell.  
   
-####  <a name="bkmk_filter_context"></a> Filter Context  
+####  <a name="bkmk_filter_context"></a> Filter context  
  *Filter context* is the set of values allowed in each column, or in the values retrieved from a related table. Filters can be applied to the column in the designer, or in the presentation layer (reports and PivotTables). Filters can also be defined explicitly by filter expressions within the formula.  
   
  Filter context is added when you specify filter constraints on the set of values allowed in a column or table, by using arguments to a formula. Filter context applies on top of other contexts, such as row context or query context.  
   
- In tabular models, there are many ways to create filter context. Within the context of clients that can consume the model, such as [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports, users can create filters on the fly by adding slicers or report filters on the row and column headings. You can also specify filter expressions directly within the formula, to specify related values, to filter tables that are used as inputs, or to dynamically get context for the values that are used in calculations. You can also completely clear or selectively clear the filters on particular columns. This is very useful when creating formulas that calculate grand totals.  
+ In tabular models, there are many ways to create filter context. Within the context of clients that can consume the model, such as Power BI reports, users can create filters on the fly by adding slicers or report filters on the row and column headings. You can also specify filter expressions directly within the formula, to specify related values, to filter tables that are used as inputs, or to dynamically get context for the values that are used in calculations. You can also completely clear or selectively clear the filters on particular columns. This is very useful when creating formulas that calculate grand totals.  
   
  For more information about how to create filters within formulas, see the [FILTER Function (DAX)](http://msdn.microsoft.com/en-us/f1f6bee4-547b-407c-b70b-9216b2f3d3fd).  
   
@@ -320,7 +285,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  For examples of how to selectively clear and apply filters within formulas, see the [ALLEXCEPT Function (DAX)](http://msdn.microsoft.com/en-us/a6f575a1-9803-4bb2-85b3-c95c060f1fb1).  
   
-####  <a name="bkmk_determine_context"></a> Determining Context in Formulas  
+####  <a name="bkmk_determine_context"></a> Determining context in formulas  
  When you create a DAX formula, the formula is first tested for valid syntax, and then tested to make sure the names of the columns and tables included in the formula can be found in the current context. If any column or table specified by the formula cannot be found, an error is returned.  
   
  Context during validation (and recalculation operations) is determined as described in the preceding sections, by using the available tables in the model, any relationships between the tables, and any filters that have been applied.  
@@ -329,7 +294,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Context is a powerful concept that can also make it difficult to troubleshoot formulas. We recommend that you begin with simple formulas and relationships to see how context works. The following section provides some examples of how formulas use different types of context to dynamically return results.  
   
-##### Examples of Context in Formulas  
+##### Examples of context in formulas  
   
 1.  The [RELATED Function (DAX)](http://msdn.microsoft.com/en-us/0023fd13-c17a-4243-ab77-3779a4b502b6) function expands the context of the current row to include values in a related column. This lets you perform lookups. The example in this topic illustrates the interaction of filtering and row context.  
   
@@ -341,10 +306,10 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 5.  The [EARLIER Function (DAX)](http://msdn.microsoft.com/en-us/6d126c4d-2315-49ec-899d-cb396eefbae6) and [EARLIEST Function (DAX)](http://msdn.microsoft.com/en-us/9befa04d-78db-492e-a463-80b8b77206d6) functions let you loop through tables by performing calculations, while referencing a value from an inner loop. If you are familiar with the concept of recursion and with inner and outer loops, you will appreciate the power that the EARLIER and EARLIEST functions provide. If you are new to these concepts, you should follow the steps in the example carefully to see how the inner and outer contexts are used in calculations.  
   
-##  <a name="bkmk_RelModel"></a> Formulas and the Tabular Model  
- The model designer, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], is an area where you can work with multiple tables of data and connect the tables in a tabular model. Within this model, tables are joined by relationships on columns with common values (keys). The tabular model lets you link values to columns in other tables and create more interesting calculations. Just as in a relational database, you can connect many levels of related tables and use columns from any of the tables in the results.  
+##  <a name="bkmk_RelModel"></a> Formulas and the tabular model  
+ The model designer, in SSDT, is an area where you can work with multiple tables of data and connect the tables in a tabular model. Within this model, tables are joined by relationships on columns with common values (keys). The tabular model lets you link values to columns in other tables and create more interesting calculations. Just as in a relational database, you can connect many levels of related tables and use columns from any of the tables in the results.  
   
- For example, you can link a sales table, a products table, and a product categories table, and users can use various combinations of the columns in PivotTables and reports. Related fields can be used to filter connected tables, or to create calculations over subsets. (If you are not familiar with relational database and working with tables and joins, see [Relationships &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).)  
+ For example, you can link a sales table, a products table, and a product categories table, and users can use various combinations of the columns in PivotTables and reports. Related fields can be used to filter connected tables, or to create calculations over subsets. (If you are not familiar with relational database and working with tables and joins, see [Relationships](../../analysis-services/tabular-models/relationships-ssas-tabular.md).)  
   
  Tabular models support multiple relationships among tables. To avoid confusion or wrong results, only one relationship at a time is designated as the active relationship, but you can change the active relationship as necessary to traverse different connections in the data in calculations. The [USERELATIONSHIP Function (DAX)](http://msdn.microsoft.com/en-us/200484ab-9da1-4570-a100-7f9ed20d33af) can be used to specify one or more relationships to be used in a specific calculation.  
   
@@ -354,7 +319,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   When you link tables in your model by using relationships, you enlarge the scope, or *context*, in which your formulas are evaluated. Changes in context resulting from the addition of new tables, new relationships, or from changes in the active relationship can cause your results to change in ways that you might not anticipate. For more information, see [Context in DAX Formulas](#bkmk_context) earlier in this topic.  
   
-##  <a name="bkmk_tables"></a> Working with Tables and Columns  
+##  <a name="bkmk_tables"></a> Working with tables and columns  
  Tables in tabular models look like Excel tables, but are different in the way they work with data and with formulas:  
   
 -   Formulas work only with tables and columns, not with individual cells, range references, or arrays.  
@@ -365,7 +330,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   Because a data type is set for each column, each value in that column must be of the same type.  
   
-### Referring to Tables and Columns in Formulas  
+### Referring to tables and columns in formulas  
  You can refer to any table and column by using its name. For example, the following formula illustrates how to refer to columns from two tables by using the *fully qualified* name:  
   
 ```  
@@ -374,12 +339,12 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  When a formula is evaluated, the model designer first checks for general syntax, and then checks the names of columns and tables that you provide against possible columns and tables in the current context. If the name is ambiguous or if the column or table cannot be found, you will get an error on your formula (an #ERROR string instead of a data value in cells where the error occurs). For more information about naming requirements for tables, columns, and other objects, see "Naming Requirements" in [DAX Syntax Reference](http://msdn.microsoft.com/en-us/098630f4-7d1d-467e-976c-99b2279430d5).  
   
-### Table Relationships  
+### Table relationships  
  By creating relationships between tables, you gain the ability to look up data in another table and use related values to perform complex calculations. For example, you can use a calculated column to look up all the shipping records related to the current reseller, and then sum the shipping costs for each. In many cases, however, a relationship might not be necessary. You can use the LOOKUPVALUE function in a formula to return the value in *result_columnName* for the row that meets criteria specified in the *search_column* and *search_value* parameters.  
   
  Many DAX functions require that a relationship exist between the tables, or among multiple tables, in order to locate the columns that you have referenced and return results that make sense. Other functions will attempt to identify the relationship; however, for best results you should always create a relationship where possible. For more information, see [Formulas and the Tabular Model](#bkmk_RelModel) earlier in this topic.  
   
-##  <a name="bkmk_RefreshRecalc"></a> Updating the Results of Formulas (Process)  
+##  <a name="bkmk_RefreshRecalc"></a> Updating the results of formulas (Process)  
  *Data process* and *recalculation* are two separate but related operations. You should thoroughly understand these concepts when designing a model that contains complex formulas, large amounts of data, or data that is obtained from external data sources.  
   
  *Processing data* is the process of updating the data in a model with new data from an external data source.  
@@ -394,7 +359,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  For more information, see [Process Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
-##  <a name="bkmk_troubleshoot"></a> Troubleshooting Errors in Formulas  
+##  <a name="bkmk_troubleshoot"></a> Troubleshooting errors in formulas  
  If you get an error when defining a formula, the formula might contain either a *syntactic error*, *semantic error*, or *calculation error*.  
   
  Syntactic errors are the easiest to resolve. They typically involve a missing parenthesis or comma. For help with the syntax of individual functions, see [DAX Function Reference](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
@@ -413,19 +378,19 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  In the first four cases, DAX flags the entire column that contains the invalid formula. In the last case, DAX grays out the column to indicate that the column is in an unprocessed state.  
   
-##  <a name="bkmk_addional_resources"></a> Additional Resources  
+##  <a name="bkmk_addional_resources"></a> Additional resources  
  The [Tabular Modeling &#40;Adventure Works Tutorial&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md) provides step-by-step instructions on how to create a tabular model that includes many calculations in calculated columns, measures, and row filters. For most formulas, a description about what the formula is meant to do is provided.  
   
- The [Analysis Services and Power Pivot Team Blog](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) provides information, tips, news and announcements about [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] and [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+ The [Analysis Services Team Blog](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) provides the latest information, tips, news and announcements. 
   
  The [DAX Resource Center](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) provides both internal and external information on DAX, including numerous DAX solutions submitted by leading Business Intelligence professionals.  
   
 ## See Also  
  [Data Analysis Expressions (DAX) Reference](http://msdn.microsoft.com/en-us/70a82136-0926-4a91-bcb3-e18e82593b0d)   
- [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
- [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [KPIs &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Calculated Columns](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Data Sources Supported](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

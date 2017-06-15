@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Collation Name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,13 +33,11 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 <SQL_collation_name> :: =   
 SQL_SortRules[_Pref]_CPCodepage_<ComparisonStyle>  
   
 <ComparisonStyle> ::=  
-_CaseSensitivity_AccentSensitivity  
-| _BIN  
+_CaseSensitivity_AccentSensitivity | _BIN  
 ```  
   
 ## Arguments  
@@ -68,8 +66,9 @@ _CaseSensitivity_AccentSensitivity
 SELECT * FROM sys.fn_helpcollations()   
 WHERE name LIKE 'SQL%';  
 ```  
-  
- <sup>1</sup>For Sort Order ID 80, use any of the Window collations with the code page of 1250, and binary order. For example: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.  
+
+>  [!NOTE]  
+>  For Sort Order ID 80, use any of the Window collations with the code page of 1250, and binary order. For example: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.  
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

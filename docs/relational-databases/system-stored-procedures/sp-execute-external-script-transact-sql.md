@@ -2,7 +2,7 @@
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "02/28/2017"
+ms.date: "06/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -75,13 +75,13 @@ sp_execute_external_script
  [ @language =    ] '*language*'  
 Indicates the script language. *language* is **sysname**.  
 
- Valid values are `R`.
+ Valid values are `Python` or `R`. 
   
  [ @script = ]    '*script*'  
  External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.  
   
  [ @input_data_1_name = ] '*input_data_1_name*'  
- Specifies the name of the variable used to represent the query defined by @input_data_1. The data type of the variable in the external script depends on the language. In case of R, this variable will be a data frame.  *input_data_1_name* is **sysname**.  
+ Specifies the name of the variable used to represent the query defined by @input_data_1. The data type of the variable in the external script depends on the language. In case of R, the input variable will be a data frame. In the case of Python, input must be tabular. *input_data_1_name* is **sysname**.  
   
  Default value is "InputDataSet".  
   
@@ -89,7 +89,7 @@ Indicates the script language. *language* is **sysname**.
  Specifies the input data used by the external script in the form of a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. *input_data_1* is **nvarchar(max)**.  
   
  [ @output_data_1_name = ] '*output_data_1_name*'  
- Specifies the name of the variable in the external script that will contain the data to be returned to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upon completion of the stored procedure call. The data type of the variable in the external script depends on the language. In case of R, this variable will be a data frame. *output_data_1_name* is **sysname**.  
+ Specifies the name of the variable in the external script that will contain the data to be returned to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upon completion of the stored procedure call. The data type of the variable in the external script depends on the language. In the case of R, the output must be a data frame. In the case of Python, the output must be a pandas data frame. *output_data_1_name* is **sysname**.  
   
  Default value is "OutputDataSet".  
   
@@ -138,7 +138,8 @@ SELECT tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_dista
         , @params = N'@modelbin varbinary(max) OUTPUT'  
         , @modelbin = @model OUTPUT;  
 ```  
-  
+
+
 ## Streaming execution for R script  
  Streaming execution of R script is supported by specifying `@r_rowsPerRead int parameter` in `@params` collection.  Streaming allows R scripts to work with data that doesn’t fit in memory. For example, if there are billion rows to score using predict function the new `@r_rowsPerRead` parameter can be used to split the execution into one stream at a time. Because this parameter controls the number of rows that are sent to the R processes, it can also be used to throttle the number of rows being read at one time. This might be useful to mitigate server performance issues if, for example, a large model is being trained. Note that this parameter can only be used in cases where the output of the R script doesn’t depend on reading or looking at the entire set of rows.  
   
@@ -238,15 +239,14 @@ go
   
 ## See Also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Python Libraries and Data Types](../../advanced-analytics/python/python-libraries-and-data-types.md)  
+ [R Libraries and R Data Types](../../advanced-analytics/r/r-libraries-and-data-types.md)  
+ [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
+ [Known Issues for SQL Server R Services](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)   
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
- [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
- [Known Issues for SQL Server R Services](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)   
- [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
- [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)   
- [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)   
  [SQL Server, External Scripts Object](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 

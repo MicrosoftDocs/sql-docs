@@ -3,5 +3,4 @@
 # [Data-Tier Application Framework - License Terms](data-tier-application-framework-license-terms.md)
 # [Previous releases of SSDT and SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
 # [SQL Server Tools](sql-server-tools.md)
-# [SSDT Release Candidate](sql-server-data-tools-ssdt-release-candidate.md)
 # [License Terms - SSDT](sql-server-data-tools-license-terms.md)

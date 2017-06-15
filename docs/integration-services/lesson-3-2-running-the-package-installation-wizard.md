@@ -103,7 +103,3 @@ In an earlier lesson, you modified the packages in the tutorial to use configura
   
 ## See Also  
 [Integration Services Service &#40;SSIS Service&#41;](../integration-services/service/integration-services-service-ssis-service.md)  
-[Manage the Integration Services Service](../integration-services/service/manage-the-integration-services-service.md)  
-  
-  
-  

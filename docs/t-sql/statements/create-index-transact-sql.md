@@ -64,6 +64,9 @@ manager: "jhubbard"
   Creates a relational index on a table or view. Also called a rowstore index because it is either a clustered or nonclustered btree index. You can create a rowstore index before there is data in the table. Use a rowstore index to improve query performance, especially when the queries select from specific columns or require values to be sorted in a particular order.  
   
   
+> [!NOTE]  
+>  Azure SQL Data Warehouse and Parallel Data Warehouse currently do not support Unique constraints. Any examples referencing Unique Constraints are only applicable to SQL Server and Azure SQL Database    
+  
  **Simple examples:**  
   
 ```  
@@ -77,6 +80,7 @@ CREATE CLUSTERED INDEX i1 ON d1.s1.t1 (col1);
 ```  
   
 ```  
+-- Syntax for SQL Server and Azure SQL Database
 -- Create a nonclustered index with a unique constraint 
 -- on 3 columns and specify the sort order for each column  
 CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);  

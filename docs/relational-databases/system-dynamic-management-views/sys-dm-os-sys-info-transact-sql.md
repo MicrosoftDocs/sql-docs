@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/22/2016"
+ms.date: "04/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -73,6 +73,9 @@ manager: "jhubbard"
 |**sql_memory_model**|**int**|**Applies to: Starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.<br /><br /> Specifies the memory model used by SQL Server to allocate memory. Not nullable.<br /><br />1 = Conventional Memory Model<br />2 = Lock Pages in Memory<br /> 3 = Large Pages in Memory|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Applies to: Starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.<br /><br /> Specifies the memory model used by SQL Server to allocate memory. Not nullable.<br /><br />**CONVENTIONAL** = SQL Server is using Conventional Memory model to allocate memory. This is default sql memory model when SQL Server service account does not have Lock Pages in Memory privileges during startup.<br />**LOCK_PAGES** = SQL server is using Lock Pages in Memory to allocate memory. This is the default sql memory manager when SQL Server service account possess Lock Pages in Memory privilege during SQL Server startup.<br /> **LARGE_PAGES** = SQL Server is using Large Pages in Memory to allocate memory. SQL Server uses Large Pages allocator to allocate memory only with Enterprise edition when SQL Server service account possess Lock Pages in Memory privilege during server startup and when Trace Flag 834 is turned ON.|
 |**pdw_node_id**|**int**|**Applies to: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**<br /><br /> The identifier for the node that this distribution is on.|  
+|**socket_count** |**int** | **Applies to:** Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].<br />Specifies the number of processor sockets available on the system. |  
+|**cores_per_socket** |**int** | **Applies to:** Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].<br />Specifies the number of processors per socket available on the system. |  
+|**numa_node_count** |**int** | **Applies to:** Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].<br />Specifies the number of numa nodes available on the system. This column includes physical numa nodes as well as soft numa nodes. |  
   
 ## Permissions  
  On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires `VIEW SERVER STATE` permission on the server.  

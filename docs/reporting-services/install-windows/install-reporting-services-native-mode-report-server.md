@@ -2,7 +2,7 @@
 title: "Install Reporting Services native mode report server | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/30/2017"
+ms.date: "05/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,6 +25,9 @@ manager: "erikre"
 [!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)]
 
 Learn how to install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in native mode. This will provide access to a [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] where you can manage reports and other items.
+
+> [!NOTE]
+> Looking for Power BI Report Server? See [Install Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
 
 A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode report server is the default [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server mode and can be installed from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation wizard or from the command line. In the setup wizard, you can select to either install files and configure the server with default settings or to only install the files. This topic reviews the *Default configuration for native mode* where Setup both installs and configures a report server instance. After Setup is finished, the report server is running and ready to use for basic report viewing and report management.  Additional features such as [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration and e-mail delivery with subscription processing require additional configuration.  
   
@@ -84,15 +87,15 @@ A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode repo
 |Part|Description|  
 |----------|-----------------|  
 |Prefix|The default prefix is HTTP. If you previously installed a Secure Sockets Layer (SSL) certificate, Setup will try to create URL reservations that use the HTTPS prefix.|  
-|Host name|The default host name is a strong wildcard (+). It specifies that the report server will accept any HTTP request on the designated port for any host name that resolves to the computer, including http://\<computername>/reportserver, http://localhost/reportserver, or http://\<IPAddress>/reportserver.|  
+|Host name|The default host name is a strong wildcard (+). It specifies that the report server will accept any HTTP request on the designated port for any host name that resolves to the computer, including `http://<computername>/reportserver`, `http://localhost/reportserver`, or `http://<IPAddress>/reportserver`.|  
 |Port|The default port is 80. Note that if you use any port other than port 80, you will have to explicitly add it to the URL when you open a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web application in a browser window.|  
 |Virtual directory|By default, virtual directories are created in the format of ReportServer_\<*instance_name*> for the Report Server Web service and Reports_\<*instance_name*> for the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. For the Report Server Web service, the default virtual directory is **reportserver**. For the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], the default virtual directory is **reports**.|  
   
  An example of the complete URL string might be as follows:  
   
--   http://+:80/reportserver, provides access to the report server.  
+-   `http://+:80/reportserver`, provides access to the report server.  
   
--   http://+:80/reports, provides access to the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
+-   `http://+:80/reports`, provides access to the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
   
 ##  <a name="bkmk_installwithwizard"></a> Install native mode with the SQL Server installation wizard  
  The following list describes the  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specific  steps and options you select in the SQL Server Installation Wizard. The list does not described each page you will see in the installation wizard, only the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] related pages that are part of a Native mode installation.  
@@ -164,22 +167,22 @@ A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode repo
   
 ##  <a name="bkmk_additional_configuration"></a> Additional configuration  
   
--   To configure [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration so you can pin report items to a [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboard, see [Power BI Report Server Integration &#40;Configuration Manager&#41;](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   To configure [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration so you can pin report items to a [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboard, see [Power BI Report Server Integration](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
--   To configure email for subscriptions processing, see [E-Mail Settings - Reporting Services Native mode &#40;Configuration Manager&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   To configure email for subscriptions processing, see [E-Mail Settings - Reporting Services Native mode](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) and [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   To configure the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] so you can access it on a report computer to view and manage reports, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) and [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
+-   To configure the web portal so you can access it on a report computer to view and manage reports, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) and [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
 ## See Also
 
 [Troubleshoot a Reporting Services Installation](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
-[Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
-[Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-[Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Configure the Report Server Service Account](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+[Configure Report Server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[Configure a Report Server Database Connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Files-Only Installation &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
-[Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+[Initialize a Report Server](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
 [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
-[Quick-Start Installation of SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

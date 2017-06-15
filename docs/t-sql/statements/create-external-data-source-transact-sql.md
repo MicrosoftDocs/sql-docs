@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/04/2017"
+ms.date: "06/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -116,7 +116,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
 
 -- Bulk operations only: Azure Storage Blob as data source   
--- (on SQL Server vNext and Azure SQL Database).
+-- (on SQL Server 2017 and Azure SQL Database).
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = BLOB_STORAGE,  
@@ -126,8 +126,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 ```  
   
 ## Arguments  
- *data_source_name*  
- Specifies the user-defined name for the data source. The name must be unique within the database in SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. The name must be unique within the server in Parallel Data Warehouse.
+ *data_source_name*   Specifies the user-defined name for the data source. The name must be unique within the database in SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. The name must be unique within the server in Parallel Data Warehouse.
   
  TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
  Specifies the data source type. Use HADOOP when the external data source is Hadoop or Azure Storage blob for Hadoop. Use SHARD_MAP_MANAGER when creating an external data source for Elastic Database query for sharding on Azure SQL Database. Use RDBMS with external data sources for cross-database queries with Elastic Database query on Azure SQL Database.  Use BLOB_STORAGE when performing bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 or later.
@@ -246,7 +245,7 @@ For a complete list of Hadoop distributions and versions supported by each conne
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8021'  
     ```  
   
--   Cloudera 5.1 - 5.5 on Linux:   
+-   Cloudera 5.1 - 5.11 on Linux:   
     ```  
     RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
     ```  
@@ -272,10 +271,10 @@ For a complete list of supported external data sources, see [PolyBase Connectivi
 -   An external table that references the external data source and external file format.  
   
 ## Permissions  
- Requires ALTER ANY EXTERNAL DATA SOURCE permission.
+ Requires CONTROL permission on database in SQL DW, SQL Server, APS 2016, and SQL DB.
 
 > [!IMPORTANT]  
->  The ALTER ANY EXTERNAL DATA SOURCE  permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
+>  In previous releases of PDW, create external data source required ALTER ANY EXTERNAL DATA SOURCE permissions.
   
   
 ## Error Handling  
@@ -446,7 +445,7 @@ CREATE MASTER KEY
 
 -- These values come from your Azure Active Directory Application used to authenticate to ADLS
 CREATE DATABASE SCOPED CREDENTIAL ADLUser 
-WITH IDENTITY = '<clientID>@\<OAuth2.0TokenEndPoint>',
+WITH IDENTITY = '<clientID>@<OAuth2.0TokenEndPoint>',
 SECRET = '<KEY>' ;
 
 

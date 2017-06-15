@@ -18,10 +18,48 @@ manager: "jhubbard"
 # Previous SQL Server Management Studio Releases
   
 The following previous releases of SQL Server Management Studio are available.
-
-
    
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.5 release](http://go.microsoft.com/fwlink/?LinkID=832812)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 release](http://go.microsoft.com/fwlink/?LinkID=840946)
+
+**Version Information**  
+  
+*This release of SSMS uses the Visual Studio 2015 Isolated shell.*  
+The release number: 16.5.3  
+The build number for this release: 13.0.16106.4
+
+## Changelog  
+
+16.5.3
+
+The following issues were fixed this release:
+
+* Fixed an issue introduced in SSMS 16.5.2 which was causing the expansion of the 'Table' node when the table had more than one sparse column.
+
+* Users can deploy SSIS packages containing OData Connection Manager which connect to a Microsoft Dynamics AX/CRM Online resource to SSIS catalog. For more information, see [OData Connection Manager](https://msdn.microsoft.com/library/dn584133.aspx).
+
+* Configuring Always Encrypted on an existing table fails with errors on unrelated objects. [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
+
+* Configuring Always Encrypted for an existing database with multiple schemas doesn't work. [Connect ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
+
+* The Always Encrypted, Encrypted Column wizard fails due to the database containing views that reference system views. [Connect ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
+
+* When encrypting using Always Encrypted, errors from refreshing modules after encryption are incorrectly handled.
+
+* *Open recent* menu doesn't show recently saved files. [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+
+* SSMS is slow when right-clicking an index for a table (over a remote (Internet) connection). [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
+ 
+* Fixed an issue with the SQL Designer scrollbar. [Connect ID 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
+
+* Context menu for tables momentarily hangs 
+ 
+* SSMS occasionally throws exceptions in Activity Monitor and crashes. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
+
+* SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
+
+
+
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.5 release](http://go.microsoft.com/fwlink/?LinkID=832812)
 
 **Version Information**  
   
@@ -61,7 +99,7 @@ The build number for this release: 13.0.16000.28
 
 
    
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.4.1 (September 2016) release](http://go.microsoft.com/fwlink/?LinkID=828615)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.4.1 (September 2016) release](http://go.microsoft.com/fwlink/?LinkID=828615)
 
 **Version Information**  
   
@@ -173,7 +211,7 @@ Non-English localized releases of SSMS [require the KB 2862966 security update p
 
 
 
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.3 (August 2016) release](http://go.microsoft.com/fwlink/?LinkID=824938)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.3 (August 2016) release](http://go.microsoft.com/fwlink/?LinkID=824938)
  August 15, 2016 | Version number:	13.0.15700.28
 
 **Features**  
@@ -239,7 +277,7 @@ Non-English localized releases of SSMS [require the KB 2862966 security update p
 [More information on fixes available in the SSMS changelog.](../ssms/sql-server-management-studio-changelog-ssms.md)
  
 ---
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio July 2016 hotfix update release](http://go.microsoft.com/fwlink/?LinkID=822301)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio July 2016 hotfix update release](http://go.microsoft.com/fwlink/?LinkID=822301)
 
 July 13, 2016 | Version number: 13.0.15600.2
 
@@ -293,7 +331,7 @@ As a workaround for this problem, you can connect to your SQL Server Integration
 [More information and bug fixes available in the SSMS changelog.](../ssms/sql-server-management-studio-changelog-ssms.md)
 
 ---
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio June 2016 release](http://go.microsoft.com/fwlink/?LinkID=799832)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio June 2016 release](http://go.microsoft.com/fwlink/?LinkID=799832)
 
 June 1, 2016 | Version number: 13.0.15000.23
 
@@ -325,7 +363,7 @@ As a workaround for this problem, you can connect to your SQL Server Integration
 6. Bug fixes in Always Encrypted experience. Fixed bug where Always Encrypted menu option was not enabled correctly for Stretch databases. Also fixed bug in the Always Encrypted wizard where it was not properly using the SafeNet (Luna SA) HSM provider.
 
 ---
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
 
 May 14, 2015 | Version number: 12.0.4100.1
 
@@ -346,7 +384,7 @@ N/A
 7. SSMS may crash when you try to refresh the SSMS window icon on the task bar ([Microsoft Connect item #799430](https://connect.microsoft.com/SQLServer/feedback/details/799430/ssms-2012-sp-1-cu-5-installed-crash-when-enforce-refresh-on-connect)).
 
 ---
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
   
 November 21, 2015 | Version number: 11.0.6020.0
 
@@ -362,7 +400,7 @@ N/A
 2. "Unable to create restore plan due to break in the LSN chain" error when you restore differential backup in SSMS
 
 ---
-### Additional Downloads  
+## Additional Downloads  
 For a list of all SQL Server Management Studio downloads, search the [Microsoft Download Center](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).  
   
 For the latest release of SQL Server Management Studio, see [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  

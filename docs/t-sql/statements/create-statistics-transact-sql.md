@@ -1,7 +1,7 @@
 ---
 title: "CREATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/03/2016"
+ms.date: "04/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -184,9 +184,7 @@ CREATE STATISTICS statistics_name
   
 -   Statistics created with spatial indexes or XML indexes.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## Permissions  
  Requires one of these permissions:  
@@ -217,7 +215,9 @@ CREATE STATISTICS statistics_name
 *  You can list up to 64 columns per statistics object.
   
 ## Examples  
-  
+
+### Examples use the AdventureWorks database.  
+
 ### A. Using CREATE STATISTICS with SAMPLE number PERCENT  
  The following example creates the `ContactMail1` statistics, using a random sample of 5 percent of the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]database.  
   
@@ -225,7 +225,6 @@ CREATE STATISTICS statistics_name
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
-  
 ```  
   
 ### B. Using CREATE STATISTICS with FULLSCAN and NORECOMPUTE  
@@ -235,20 +234,12 @@ CREATE STATISTICS ContactMail1
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
-  
 ```  
   
 ### C. Using CREATE STATISTICS to create filtered statistics  
  The following example creates the filtered statistics `ContactPromotion1`. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] samples 50 percent of the data and then selects the rows with `EmailPromotion` equal to 2.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
-IF EXISTS (SELECT name FROM sys.stats  
-    WHERE name = N'ContactPromotion1'  
-    AND object_id = OBJECT_ID(N'Person.Person'))  
-DROP STATISTICS Person.Person.ContactPromotion1;  
-GO  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -267,10 +258,9 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
   
 --Create statistics on an external table and scan all the rows  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
-  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### Examples using AdventureWorksDW database. 
   
 ### E. Create statistics on two columns  
  The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
@@ -283,32 +273,16 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
  The following example creates the `CustomerStatsFullScan` statistics, based on scanning all of the rows in the `DimCustomer` table.  
   
 ```  
-CREATE STATISTICS CustomerStatsFullScan ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
+CREATE STATISTICS CustomerStatsFullScan 
+ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
   
 ### G. Create statistics by specifying the sample percentage  
  The following example creates the `CustomerStatsSampleScan` statistics, based on scanning 50 percent of the rows in the `DimCustomer` table.  
   
 ```  
-CREATE STATISTICS CustomerStatsSampleScan ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
-```  
-  
-### H. Create filtered statistics  
- The following example creates the filtered statistics `ContactPromotion1`. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] samples 50 percent of the data and then selects the rows with `EmailPromotion` equal to 2.  
-  
-```  
--- Uses AdventureWorks  
-  
-IF EXISTS (SELECT name FROM sys.stats  
-    WHERE name = N'ContactPromotion1'  
-    AND object_id = OBJECT_ID(N'Person.Person'))  
-DROP STATISTICS Person.Person.ContactPromotion1;  
-GO  
-CREATE STATISTICS ContactPromotion1  
-    ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
-WHERE EmailPromotion = 2  
-WITH SAMPLE 50 PERCENT;  
-GO  
+CREATE STATISTICS CustomerStatsSampleScan 
+ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  
   
 ## See Also  

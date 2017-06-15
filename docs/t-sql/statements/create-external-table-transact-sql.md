@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2017"
+ms.date: "06/5/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -251,6 +251,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   **ALTER ANY EXTERNAL DATA SOURCE**  
   
 -   **ALTER ANY EXTERNAL FILE FORMAT**  
+
+-   **CONTROL DATABASE**
   
  Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.  
   

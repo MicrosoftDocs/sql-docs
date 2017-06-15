@@ -154,6 +154,7 @@
 ## [sys.identity_columns](sys-identity-columns-transact-sql.md)  
 ## [sys.indexes](sys-indexes-transact-sql.md)  
 ## [sys.index_columns](sys-index-columns-transact-sql.md)  
+## [sys.index_resumable_operations](sys-index-resumable-operations.md)
 ## [sys.internal_partitions](sys-internal-partitions-transact-sql.md)  
 ## [sys.internal_tables](sys-internal-tables-transact-sql.md)  
 ## [sys.key_constraints](sys-key-constraints-transact-sql.md)  
@@ -168,7 +169,6 @@
 ## [sys.periods](sys-periods-transact-sql.md)  
 ## [sys.plan_guides](sys-plan-guides-transact-sql.md)  
 ## [sys.procedures](sys-procedures-transact-sql.md)  
-## [sys.resumable_index_operations](sys-resumable-index-operations.md)
 ## [sys.sequences](sys-sequences-transact-sql.md)  
 ## [sys.server_assembly_modules](sys-server-assembly-modules-transact-sql.md)  
 ## [sys.server_events](sys-server-events-transact-sql.md)  
@@ -221,6 +221,7 @@
 ## [sys.query_store_query](sys-query-store-query-transact-sql.md)  
 ## [sys.query_store_query_text](sys-query-store-query-text-transact-sql.md)  
 ## [sys.query_store_runtime_stats](sys-query-store-runtime-stats-transact-sql.md)  
+## [sys.query_store_wait_stats](sys-query-store-wait-stats-transact-sql.md) 
 ## [sys.query_store_runtime_stats_interval](sys-query-store-runtime-stats-interval-transact-sql.md)  
 
 # [Scalar Types](scalar-types-catalog-views-transact-sql.md)  
@@ -344,4 +345,3 @@
 ## [sys.xml_schema_types](sys-xml-schema-types-transact-sql.md)  
 ## [sys.xml_schema_wildcard_namespaces](sys-xml-schema-wildcard-namespaces-transact-sql.md)  
 ## [sys.xml_schema_wildcards](sys-xml-schema-wildcards-transact-sql.md)  
-

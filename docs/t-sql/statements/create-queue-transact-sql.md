@@ -1,7 +1,7 @@
 ---
 title: "CREATE QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,7 +40,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE QUEUE <object>  
    [ WITH  
      [ STATUS = { ON | OFF }  [ , ] ]  
@@ -52,7 +51,7 @@ CREATE QUEUE <object>
            EXECUTE AS { SELF | 'user_name' | OWNER }   
             ) [ , ] ]  
      [ POISON_MESSAGE_HANDLING (  
-       [ STATUS = { ON | OFF } )  
+         [ STATUS = { ON | OFF } ] ) ] 
     ]  
      [ ON { filegroup | [ DEFAULT ] } ]  
 [ ; ]  
@@ -163,7 +162,7 @@ CREATE QUEUE <object>
 |message_type_name|**nvarchar(256)**|Name of the message type that describes the message.|  
 |message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object identifier of the message type that describes the message.|  
 |validation|**nchar(2)**|Validation used for the message.<br /><br /> E=Empty<br /><br /> N=None<br /><br /> X=XML|  
-|message_body|**varbinary(MAX)**|Content of the message.|  
+|message_body|**varbinary(max)**|Content of the message.|  
 |message_id|**uniqueidentifier**|Unique identifier for the message.|  
   
 ## Permissions  

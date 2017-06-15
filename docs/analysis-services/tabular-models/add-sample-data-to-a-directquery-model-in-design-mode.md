@@ -28,7 +28,7 @@ You can, however, add a smaller amount of sample data to your model's working da
 >  Even in DirectQuery mode on an empty model, you can always view a small built-in rowset for each table. In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click **Table** > **Table Properties** to view the 50-row dataset.  
   
 ## Create a sample partition
- These instructions are for tabular models created at or upgraded to compatibility level 1200. Models at lower compatibility levels use different properties to get cached data. See [Enable DirectQuery mode in SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) for property descriptions.  
+ These instructions are for tabular models created at or upgraded to compatibility level 1200 or higher. Models at lower compatibility levels use different properties to get cached data. See [Enable DirectQuery mode in SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) for property descriptions.  
   
 1.  In SQL Server Data Tools, in Diagram or Data View, click a fact table to open its properties page. Fact tables provide the aggregated, numeric data and measures in your model. You might have more than one.  
   

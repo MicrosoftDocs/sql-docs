@@ -89,7 +89,7 @@ manager: "jhubbard"
          If you type a path for a file that does not exist, the system creates the file when you run the package.  
   
     > [!NOTE]  
-    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/access-to-files-used-by-packages.md).  
+    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/security-overview-integration-services.md#files).  
   
 7.  Configure the Cache Transform as needed. For more information, see [Cache Transformation Editor &#40;Connection Manager Page&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) and [Cache Transformation Editor &#40;Mappings Page&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
   
@@ -147,7 +147,7 @@ manager: "jhubbard"
          If you type a path for a file that does not exist, the system creates the file when you run the package.  
   
     > [!NOTE]  
-    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/access-to-files-used-by-packages.md).  
+    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/security-overview-integration-services.md#files).  
   
 6.  Click the **Columns** tab, and then specify which columns are the index columns by using the **Index Position** option.  
   
@@ -175,7 +175,7 @@ manager: "jhubbard"
     -   For **File name**, either type the file path or click **Browse** to select the file.  
   
     > [!NOTE]  
-    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/access-to-files-used-by-packages.md).  
+    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/security-overview-integration-services.md#files).  
   
 11. If you copied the column metadata in step 8, click **Columns**, select the empty row, and then press CTRL+V to paste the column metadata.  
   
@@ -233,7 +233,7 @@ manager: "jhubbard"
     -   For **File name**, either type the file path or click **Browse** to select the file.  
   
     > [!NOTE]  
-    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/access-to-files-used-by-packages.md).  
+    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/security-overview-integration-services.md#files).  
   
 6.  Click the **Columns** tab, and then specify which columns are the index columns by using the **Index Position** option.  
   

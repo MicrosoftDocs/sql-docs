@@ -1,4 +1,4 @@
----
+﻿---
 title: "Connect to an MDS Repository (MDS Add-in for Excel) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 4.  On the **Add New Connection** dialog box, in the **Description** field, type a description for your connection. This connection will be displayed when you click the arrow under the **Connect** button on the toolbar.  
   
-5.  In the **MDS server address** box, type the URL of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, for example http://contoso/mds.  
+5.  In the **MDS server address** box, type the URL of the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application, for example `http://contoso/mds`.  
   
     > [!NOTE]  
     >  Ensure that you use the computer name; do not use “localhost”.  

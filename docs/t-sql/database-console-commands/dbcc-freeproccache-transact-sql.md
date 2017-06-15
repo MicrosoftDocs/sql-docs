@@ -135,7 +135,13 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  "DBCC execution completed. If DBCC printed error messages, contact your system administrator."  
   
 ## Permissions  
- Requires ALTER SERVER STATE permission on the server.  
+Applies to: SQL Server, Parallel Data Warehouse 
+
+- Requires ALTER SERVER STATE permission on the server.  
+
+Applies to: Azure SQL Data Warehouse
+- Requires membership in the DB_OWNER fixed server role.  
+
   
 ## General Remarks for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Multiple DBCC FREEPROCCACHE commands can be run concurrently.  

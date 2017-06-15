@@ -1,4 +1,4 @@
----
+﻿---
 title: "SQL Server Connector Maintenance &amp; Troubleshooting | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2017"
@@ -160,7 +160,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
  The asymmetric key in the key vault is used to protect [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption keys. Only the public portion of the asymmetric key ever leaves the vault; the private portion is never exported by the vault. All cryptographic operations using the asymmetric key are done within the Azure Key Vault service, and are protected by the service’s security.  
   
  **What is a Key URI?**  
- Every key in Azure Key Vault has a Uniform Resource Identifier (URI), which you can use to reference the key in your application. Use the format **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** to get the current version, and use the format **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** to get a specific version.  
+ Every key in Azure Key Vault has a Uniform Resource Identifier (URI), which you can use to reference the key in your application. Use the format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` to get the current version, and use the format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` to get a specific version.  
   
 ### On Configuring [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 

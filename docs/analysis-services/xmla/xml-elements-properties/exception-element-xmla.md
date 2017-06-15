@@ -32,7 +32,7 @@ manager: "erikre"
 # Exception Element (XMLA)
   Indicates that an exception was returned from a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  
   
- **Namespace** http://schemas.microsoft.com/analysisservices/2003/exception  
+ **Namespace** `http://schemas.microsoft.com/analysisservices/2003/exception`  
   
 ## Syntax  
   

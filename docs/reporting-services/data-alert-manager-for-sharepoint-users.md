@@ -1,7 +1,7 @@
 ---
 title: "Data Alert Manager for SharePoint Users | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "05/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -85,4 +85,5 @@ When a SharePoint site is enabled for data alerts, two SharePoint pages, MyDataA
 [Data Alert Designer](../reporting-services/data-alert-designer.md)   
 [Create a Data Alert in Data Alert Designer](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
 title: "Guidelines for Online Index Operations | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/07/2017"
+ms.date: "04/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,7 +87,7 @@ For more information, see [Disk Space Requirements for Index DDL Operations](../
 ## Resumable Index Rebuild Considerations
 
 > [!NOTE]
-> See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). This feature is in public preview for SQL Server vNext.
+> See [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). This feature is in public preview for SQL Server 2017.
 >
 
 When you perform resumable online index rebuild the following guidelines apply:

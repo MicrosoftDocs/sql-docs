@@ -2,7 +2,7 @@
 title: "Get started with PolyBase | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
+ms.date: "5/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,12 +23,12 @@ ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "jhubbard" 
 ---
 # Get started with PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic contains the basics about running PolyBase. For more information see [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md).  
+  This topic contains the basics about running PolyBase on a SQL Server instance.
   
  After running the steps below, you will have:  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 -   Examples of queries using PolyBase objects  
   
 ## Prerequisites  
- An instance of  [SQL Server (64-bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
+ An instance of  [SQL Server (64-bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) with the following:  
   
 -   Microsoft .NET Framework 4.5.  
   
@@ -49,23 +49,21 @@ manager: "jhubbard"
   
 -   Minimum memory: 4GB  
   
--   Minimum hard disk space: 2GB  
-  
+-   Minimum hard disk space: 2GB    
 -   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
   
+ 
  An external data source, one of the following:  
   
 -   Hadoop cluster. For supported versions see [Configure PolyBase](#supported).  
 
--   Azure Blob storage. 
-
--   If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail with an error message. 
+-   Azure Blob storage
 
 > [!NOTE]
-> HDInsight clusters use Azure Blob storage as the file system for their permanent storage. You can use PolyBase to query the files managed by an HDInsight cluster. To do this, create an external data source to reference the blob that is configured as storage for the HDInsight cluster. 
-  
+>   If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail. 
+
 ## Install PolyBase  
- If you haven't installed PolyBase, see  [PolyBaseinstallation](../../relational-databases/polybase/polybase-installation.md).  
+ If you haven't installed PolyBase, see  [PolyBase installation](../../relational-databases/polybase/polybase-installation.md).  
   
 ### How to confirm installation  
  After installation, run the following command to confirm that PolyBase has been successfully installed. If PolyBase is installed, returns 1; otherwise, 0.  
@@ -75,17 +73,17 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ```  
   
 ##  <a name="supported"></a> Configure PolyBase  
- After installing, you must configure SQL Server to use either your Hadoop version, or Azure Blob storage. PolyBase supports two Hadoop providers, Hortonwork’s Data Platform (HDP) and Cloudera’s CDH. You can run Hortonworks on either a Windows or Linux machine, and that is also part of the configuration.  The supported external data sources include:  
+ After installing, you must configure SQL Server to use either your Hadoop version or Azure Blob Storage. PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  The supported external data sources include:  
   
 -   Hortonworks HDP 1.3 on Linux/Windows Server  
   
--   Hortonworks HDP 2.1 – 2.5 on Linux
+-   Hortonworks HDP 2.1 – 2.6 on Linux
 
 -   Hortonworks HDP 2.1 - 2.3 on Windows Server  
   
 -   Cloudera CDH 4.3 on Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9, 5.10 on Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.11 on Linux  
   
 -   Azure Blob Storage  
   
@@ -95,8 +93,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ### External data source configuration  
   
 1.  Run [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ and set an appropriate value. By Default, the hadoop connectivity is set to 7. To find the value, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-  
-    ```tsql  
+      ```tsql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -153,7 +150,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  For details, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  
   
 ## Create T-SQL objects  
- Create objects depending on the external data source, either Hadoop or Azure storage.  
+ Create objects depending on the external data source, either Hadoop or Azure Storage.  
   
 ### Hadoop  
   
@@ -183,8 +180,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );  
   
 -- 4: Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
-  
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).    
 CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
         FORMAT_TYPE = DELIMITEDTEXT,   
         FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
@@ -210,7 +206,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-### Azure blob storage  
+### Azure Blob Storage  
   
 ```sql  
 --1: Create a master key on the database.  

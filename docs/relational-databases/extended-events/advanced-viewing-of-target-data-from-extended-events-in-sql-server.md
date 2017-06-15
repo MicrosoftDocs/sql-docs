@@ -137,7 +137,8 @@ The target data is displayed in a tabbed pane in SSMS. This is shown in the foll
 ![your target > View Target Data](../../relational-databases/extended-events/media/xevents-ssms-ui20-viewtargetdata.png)
 
 
-> [AZURE.NOTE] **View Target Data** displays the *accumulated data from multiple .XEL files* from the given event session. Each **Start**-**Stop** cycle creates a file with a later time-derived integer embedded in its name, but each file shares the same root name.
+> [!NOTE] 
+> **View Target Data** displays the *accumulated data from multiple .XEL files* from the given event session. Each **Start**-**Stop** cycle creates a file with a later time-derived integer embedded in its name, but each file shares the same root name.
 
 
 

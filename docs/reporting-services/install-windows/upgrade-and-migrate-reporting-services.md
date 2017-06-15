@@ -1,7 +1,7 @@
 ---
 title: "Upgrade and Migrate Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/18/2016"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,8 +21,12 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Upgrade and Migrate Reporting Services
-  This topic is an overview of the upgrade and migration options for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. There are two general approaches to upgrading a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment:  
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+  This topic is an overview of the upgrade and migration options for SQL Server Reporting Services. There are two general approaches to upgrading a SQL Server Reporting Services deployment:  
   
 -   **Upgrade:** You upgrade the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components on the servers and instances where they are currently installed. This is commonly called an “in place” upgrade. In-place upgrade is not supported from one mode of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server to another. For example, you cannot upgrade a Native Mode report server to a SharePoint mode report server. You can migrate your report items from one mode to another. For more information, see the ‘Native to SharePoint Migration’ section later in this document.  
   
@@ -34,21 +38,21 @@ manager: "erikre"
  For a detailed list of the supported editions and versions you can upgrade, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  For the latest information regarding issues with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see the following:  
+>  For the latest information regarding issues with SQL Server, see the following:  
 >   
 >  -   [SQL Server 2016 Release Notes](http://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="bkmk_side_by_side"></a> Side By Side Installations  
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Native mode can be installed side-by-side with a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native mode deployment.  
+ SQL Server Reporting Services Native mode can be installed side-by-side with a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native mode deployment.  
   
- There is no support for side-by-side deployments of [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode and any previous versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode components.  
+ There is no support for side-by-side deployments of SQL Server Reporting Services in SharePoint mode and any previous versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode components.  
   
   
 ##  <a name="bkmk_inplace_upgrade"></a> In-place Upgrade  
  Upgrade is completed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup can be used to upgrade any or all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, including [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Setup detects the existing instances and prompts you to upgrade. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup provides upgrade options that you can specify as a command-line argument or in the Setup wizard.  
   
- When you run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, you can select the option to upgrade from one of the following versions or you can install a new instance of [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] that runs side-by-side existing installations:  
+ When you run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, you can select the option to upgrade from one of the following versions or you can install a new instance of SQL Server Reporting Services that runs side-by-side existing installations:  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -59,20 +63,18 @@ manager: "erikre"
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
  For more information on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the following:  
-  
-||  
-|-|  
-|[Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)|  
-|[Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
-|[Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|  
+
+* [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
+* [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+* [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
   
   
 ##  <a name="bkmk_upgrade_checklist"></a> Pre-Upgrade Checklist  
- Before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], review the following:  
+ Before upgrading to SQL Server Reporting Services, review the following:  
   
 -   Review requirements to determine whether your hardware and software can support [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. For more information, see [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   Use System Configuration Checker (SCC) to scan the report server computer for any conditions that might prevent a successful installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
+-   Use System Configuration Checker (SCC) to scan the report server computer for any conditions that might prevent a successful installation of SQL Server Reporting Services. For more information, see [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
 -   Review security best practices and guidance for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
@@ -106,13 +108,13 @@ manager: "erikre"
   
 1.  If the report server database is on a remote computer and you do not have permission to update that database, Setup prompts you to provide credentials to update to a remote report server database. Be sure to provide credentials that have **sysadmin** or database update permissions.  
   
-2.  Setup checks for conditions or settings that prevent upgrade and reads configuration settings. Examples include custom extensions deployed on the report server. If upgrade is blocked, you must either modify your installation so that upgrade is no longer blocked, or migrate to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance. For more information, see the Upgrade Advisor documentation.  
+2.  Setup checks for conditions or settings that prevent upgrade and reads configuration settings. Examples include custom extensions deployed on the report server. If upgrade is blocked, you must either modify your installation so that upgrade is no longer blocked, or migrate to a new SQL Server Reporting Services instance. For more information, see the Upgrade Advisor documentation.  
   
 3.  If upgrade can proceed, Setup prompts you to continue with the upgrade process.  
   
-4.  Setup creates new folders for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] program files. The program folders for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation include MSRS13.\<*instance name*>.  
+4.  Setup creates new folders for SQL Server Reporting Services program files. The program folders for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation include MSRS13.\<*instance name*>.  
   
-5.  Setup adds the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server program files, configuration tools, and command line utilities that are part of the report server feature.  
+5.  Setup adds the SQL Server Reporting Services report server program files, configuration tools, and command line utilities that are part of the report server feature.  
   
     1.  Program files from the previous version are removed.  
   
@@ -122,13 +124,13 @@ manager: "erikre"
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate download. For more information, see [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
   
-6.  Setup reuses the service entry in Service Control Manager for the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Server service. This service entry includes the Report Server Windows service account.  
+6.  Setup reuses the service entry in Service Control Manager for the SQL Server Reporting Services Report Server service. This service entry includes the Report Server Windows service account.  
   
 7.  Setup reserves new URLs based on existing virtual directory settings in IIS. Setup might not remove virtual directories in IIS, so be sure to remove those manually after upgrade is finished.  
   
 8.  Setup merges settings in the configuration files. Using the configuration files from the current installation as the basis, new entries are added. Obsolete entries are not removed, but they will no longer be read by the report server after upgrade is finished. Upgrade will not delete old log files, the obsolete RSWebApplication.config file, or virtual directory settings in IIS. Upgrade will not remove older versions of Report Designer, Management Studio, or other client tools. If you no longer require them, be sure to remove these files and tools after upgrade is finished.  
   
- **Migration:** Migrating a previous version of a native mode installation to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is the same steps for all of the supported versions that are listed earlier in this topic. For more information, see [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+ **Migration:** Migrating a previous version of a native mode installation to SQL Server Reporting Services is the same steps for all of the supported versions that are listed earlier in this topic. For more information, see [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
   
 ##  <a name="bkmk_native_scaleout"></a> Upgrade a Reporting Services Native Mode Scale-out Deployment  
@@ -138,14 +140,14 @@ manager: "erikre"
   
 2.  Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and remove all of the report servers from the scaled-out deployment. For more information, see [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
-3.  Upgrade one of the report servers to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+3.  Upgrade one of the report servers to SQL Server Reporting Services.  
   
 4.  Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to add the report servers back to the scale-out deployment. For more information, see [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      For each server, repeat the upgrade and Scale-out steps.  
   
 ##  <a name="bkmk_sharePoint_scenarios"></a> SharePoint Mode Upgrade and Migration Scenarios  
- The following sections describe the issues and basic steps needed to upgrade or migrate from specified versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.  
+ The following sections describe the issues and basic steps needed to upgrade or migrate from specified versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode to SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.  
   
  There are two installation components to upgrade a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode deployment.  
   
@@ -161,36 +163,36 @@ manager: "erikre"
 > [!IMPORTANT]  
 >  Some of the following scenarios require down time of the SharePoint environment due to the different technologies that need to be upgraded. If your situation does not allow for down time, you will need to complete a migration instead of an in-place upgrade.  
   
-### [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to SQL Server Reporting Services  
  **Starting environment:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1, SharePoint 2010 or SharePoint 2013.  
   
- **Ending environment:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], SharePoint 2013 or SharePoint 2016.   
+ **Ending environment:** SQL Server Reporting Services, SharePoint 2013 or SharePoint 2016.   
   
 -   **SharePoint 2013/2016:** SharePoint 2013/2016 does not support in-place upgrade from SharePoint 2010. However the procedure of **database-attach upgrade**  is supported.
   
      If you have a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation integrated with SharePoint 2010, you cannot upgrade in-place the SharePoint server. However you can migrate content databases and service application databases from the SharePoint 2010 farm to a SharePoint 2013/2016 farm.  
   
-### [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to SQL Server Reporting Services  
  **Starting environment:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
   
- **Ending environment:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], SharePoint 2013 or SharePoint 2016.   
+ **Ending environment:** SQL Server Reporting Services, SharePoint 2013 or SharePoint 2016.   
   
 -   **SharePoint 2013/2016:** SharePoint 2013/2016 does not support in-place upgrade from SharePoint 2010. However the procedure of **database-attach upgrade**  is supported.
   
      If you have a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation integrated with SharePoint 2010, you cannot upgrade in-place the SharePoint server. However you can migrate content databases and service application databases from the SharePoint 2010 farm to a SharePoint 2013/2016 farm.  
   
-### [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] to SQL Server Reporting Services  
  **Starting environment:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
   
- **Ending environment:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], SharePoint 2013 or SharePoint 2016.  
+ **Ending environment:** SQL Server Reporting Services, SharePoint 2013 or SharePoint 2016.  
  
 -   **SharePoint 2013/2016:** SharePoint 2013/2016 does not support in-place upgrade from SharePoint 2010. However the procedure of **database-attach upgrade**  is supported.
 
     SharePoint must be migrated first before you can upgrade Reporting Services.
   
--   Install the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint on each web front-end in the farm. You can install the add-in by using the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation wizard or by downloading the add-in.  
+-   Install the SQL Server Reporting Services version of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint on each web front-end in the farm. You can install the add-in by using the SQL Server Reporting Services installation wizard or by downloading the add-in.  
   
--   Run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation to upgrade SharePoint mode for each ‘report server’. The SQL Server installation wizard will install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service and create a new Service application. 
+-   Run SQL Server Reporting Services installation to upgrade SharePoint mode for each ‘report server’. The SQL Server installation wizard will install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service and create a new Service application. 
   
   
 ##  <a name="bkmk_migration_considerations"></a> Considerations for a Migration  
@@ -238,10 +240,10 @@ manager: "erikre"
 -   [Upgrade databases from SharePoint 2013 to SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
 -   [Upgrade databases from SharePoint 2010 to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690).  
-  
-  
-## See Also  
- [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)   
- [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
-  
+
+## Next steps
+
+[Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)   
+[Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

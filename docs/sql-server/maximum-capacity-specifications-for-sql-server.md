@@ -26,6 +26,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Maximum Capacity Specifications for SQL Server
+
+ > For content related to previous versions of SQL Server, see [Maximum Capacity Specifications for SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
+
   The following tables specify maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components. To navigate to the table for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technology, click on its link:  
   
  [SQL Server Database Engine Objects](#Engine)  

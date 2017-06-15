@@ -20,6 +20,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
+
+ > For content related to previous versions of SQL Server, see [Install SQL Server 2014 from the Installation Wizard (Setup)](https://msdn.microsoft.com/en-US/library/ms143219(SQL.120).aspx).
+
   This topic provides a step-by-step procedure for installing a new instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup installation wizard. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for installation of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components so that you do not have to install them individually. For more information on various components that can be installed, see [Installation for SQL Server 2016](../../database-engine/install-windows/installation-for-sql-server-2016.md).  For more information about how to install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components individually, see [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).  
 
  These additional topics document other ways to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -86,7 +89,7 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
 11. The Feature Rules window will automatically advance if all rules pass.  
   
-12. On the Instance Configuration page, specify whether to install a default instance or a named instance. For more information, see [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).  
+12. On the Instance Configuration page, specify whether to install a default instance or a named instance. For more information, see [Instance Configuration](../../sql-server/install/instance-configuration.md#instance-configuration).  
   
      **Instance ID** — By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a non-default instance ID, specify a different value for **Instance ID** text box.  
   
@@ -101,20 +104,20 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
 13. Use the Server Configuration — Service Accounts page to specify login accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features that you selected to install.  
   
-     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, are started manually, or are disabled. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have to complete their tasks. For more information, see [Server Configuration - Service Accounts](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, are started manually, or are disabled. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you configure service accounts individually to provide least privileges for each service, where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they have to have to complete their tasks. For more information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      To specify the same logon account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide credentials in the fields at the bottom of the page.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
-     Use the Server Configuration — Collation page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Server Configuration - Collation](http://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022).  
+     Use the Server Configuration — Collation page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 14. Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - Server Configuration page to specify the following:  
   
     -   Security Mode — Select Windows Authentication or Mixed Mode Authentication for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select Mixed Mode Authentication, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account.  
   
-         After a device establishes a successful connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the security mechanism is the same for both Windows Authentication and Mixed Mode. For more information, see [Database Engine Configuration - Server Configuration](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720).  
+         After a device establishes a successful connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the security mechanism is the same for both Windows Authentication and Mixed Mode. For more information, see [Database Engine Configuration - Server Configuration](../../sql-server/install/instance-configuration.md#database-engine-configuration---server-configuration).  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrators — You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -123,28 +126,25 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
     > [!IMPORTANT]  
     >  If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     For more information, see [Database Engine Configuration - Data Directories](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
+     For more information, see [Database Engine Configuration - Data Directories](../../sql-server/install/instance-configuration.md#database-engine-configuration---data-directories).  
   
-     Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - FILESTREAM page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - Filestream](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02).  
+     Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - FILESTREAM page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - Filestream](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream).  
   
-     Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - TempDB page to configure file size, number of files, non-default installation directories, and file-growth settings for TempDB. For more information see [Database Engine Configuration - TempDB](http://msdn.microsoft.com/library/7aabd304-f3c9-4c2d-bf9d-5479ee2498da).  
+     Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - TempDB page to configure file size, number of files, non-default installation directories, and file-growth settings for TempDB. For more information see [Database Engine Configuration - TempDB](../../sql-server/install/instance-configuration.md#database-engine-configuration---tempdb).  
   
-15. Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration — Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, choose the default option, Multidimensional and Data Mining server mode. Regarding administrator permissions, you must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To add the account under which SQL Server Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](http://msdn.microsoft.com/library/169b1af2-6fe2-467f-8ca4-919f24c620ce).  
-  
-     When you are finished editing the list, click **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, click **Next**.  
-  
-     Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration — Data Directories page to specify non-default installation directories. To install to default directories, click **Next**.  
-  
-    > [!IMPORTANT]  
-    >  -   When installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  if you specify the same directory path for INSTANCEDIR and SQLUSERDBDIR, SQL Server Agent and Full Text Search do not start due to missing permissions.  
-    > -   If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-     For more information, see [Analysis Services Configuration - Data Directories](http://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb).  
-  
-16. Use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration page to specify the kind of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation to create. For more information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration modes and the options we have, see [Reporting Services Configuration Options &#40;SSRS&#41;](http://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391).  
-  
-     After you choose an option, click **Next** to continue.  
-  
+15. Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration — Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, choose the default option, Multidimensional and Data Mining server mode. Regarding administrator permissions, you must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To add the account under which SQL Server Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning).  
+
+   When you are finished editing the list, click **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, click **Next**.
+   
+   Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration — Data Directories page to specify non-default installation directories. To install to default directories, click **Next**.  
+   
+   >[!IMPORTANT]  
+   >When installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],  if you specify the same directory path for INSTANCEDIR and SQLUSERDBDIR, SQL Server Agent and Full Text Search do not start due to missing permissions.  
+   >  
+   >If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+   
+   For more information, see [Analysis Services Configuration - Data Directories](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories).  
+   
 17. Use the Distributed Replay Controller Configuration page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Users that have administrative permissions will have unlimited access to the Distributed Replay controller service.  
   
      Click the **Add Current User** button to add the users to whom you want to grant access permissions for the Distributed Replay controller service. Click the **Add** button to add access permissions for the Distributed Replay controller service. Click the **Remove** button to remove access permissions from the Distributed Replay controller service.  

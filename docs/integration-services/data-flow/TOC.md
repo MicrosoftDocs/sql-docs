@@ -146,7 +146,7 @@
 ## [SQL Destination Editor (Advanced Page)](sql-destination-editor-advanced-page.md)  
 ## [Bulk Load Data by Using the SQL Server Destination](bulk-load-data-by-using-the-sql-server-destination.md)  
 ## [SQL Server Destination Custom Properties](sql-server-destination-custom-properties.md)
-# [Transformations](transformations/index.md)
+# [Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)
 # [XML Source](xml-source.md)  
 ## [XML Source Editor (Connection Manager Page)](xml-source-editor-connection-manager-page.md)  
 ## [XML Source Editor (Columns Page)](xml-source-editor-columns-page.md)  

@@ -1,7 +1,7 @@
 ---
 title: "INTO Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "05/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,23 +38,23 @@ manager: "jhubbard"
 
   SELECT…INTO creates a new table in the default filegroup and inserts the resulting rows from the query into it. To view the complete SELECT syntax, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
-[ INTO new_table ]  
+[ INTO new_table ]
+[ ON filegroup]
 ```  
   
 ## Arguments  
  *new_table*  
  Specifies the name of a new table to be created, based on the columns in the select list and the rows chosen from the data source.  
-  
+ 
+  *filegroup*
+ 
+ Specifies the name of the filegroup in which new table will be created. The filegroup specified should exist on the database else the SQL Server engine throws an error. This option is only supported beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
+ 
  The format of *new_table* is determined by evaluating the expressions in the select list. The columns in *new_table* are created in the order specified by the select list. Each column in *new_table* has the same name, data type, nullability, and value as the corresponding expression in the select list. The IDENTITY property of a column is transferred except under the conditions defined in "Working with Identity Columns" in the Remarks section.  
   
  To create the table in another database on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specify *new_table* as a fully qualified name in the form *database.schema.table_name*.  
@@ -76,7 +76,7 @@ manager: "jhubbard"
   
 -   The identity column is from a remote data source.  
   
- If any one of these conditions is true, the column is created NOT NULL instead of inheriting the IDENTITY property. If an identity column is required in the new table but such a column is not available, or you want a seed or increment value that is different than the source identity column, define the column in the select list using the IDENTITY function. See "Creating an identity column using the IDENTITY function" in the Examples section below.  
+If any one of these conditions is true, the column is created NOT NULL instead of inheriting the IDENTITY property. If an identity column is required in the new table but such a column is not available, or you want a seed or increment value that is different than the source identity column, define the column in the select list using the IDENTITY function. See "Creating an identity column using the IDENTITY function" in the Examples section below.  
   
 ## Limitations and Restrictions  
  You cannot specify a table variable or table-valued parameter as the new table.  
@@ -102,8 +102,7 @@ manager: "jhubbard"
 ### A. Creating a table by specifying columns from multiple sources  
  The following example creates the table `dbo.EmployeeAddresses` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database by selecting seven columns from various employee-related and address-related tables.  
   
-```  
-  
+```tsql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -117,16 +116,12 @@ FROM Person.Person AS c
     JOIN Person.StateProvince as sp   
     ON sp.StateProvinceID = a.StateProvinceID;  
 GO  
-  
 ```  
   
 ### B. Inserting rows using minimal logging  
  The following example creates the table `dbo.NewProducts` and inserts rows from the `Production.Product` table. The example assumes that the recovery model of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database is set to FULL. To ensure minimal logging is used, the recovery model of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database is set to BULK_LOGGED before rows are inserted and reset to FULL after the SELECT...INTO statement. This process ensures that the SELECT...INTO statement uses minimal space in the transaction log and performs efficiently.  
   
-```  
-IF OBJECT_ID('dbo.NewProducts', 'U') IS NOT NULL  
-    DROP TABLE dbo.NewProducts;  
-GO  
+```tsql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -142,30 +137,28 @@ GO
 ### C. Creating an identity column using the IDENTITY function  
  The following example uses the IDENTITY function to create an identity column in the new table `Person.USAddress` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. This is required because the SELECT statement that defines the table contains a join, which causes the IDENTITY property to not transfer to the new table. Notice that the seed and increment values specified in the IDENTITY function are different from those of the `AddressID` column in the source table `Person.Address`.  
   
-```  
-  
-IF OBJECT_ID ('Person.USAddress') IS NOT NULL  
-DROP TABLE Person.USAddress;  
-GO  
+```tsql  
 -- Determine the IDENTITY status of the source column AddressID.  
-SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, is_identity, seed_value, increment_value  
+SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
+  is_identity, seed_value, increment_value  
 FROM sys.identity_columns  
 WHERE name = 'AddressID';  
   
--- Create a new table with columns from the existing table Person.Address. A new IDENTITY  
--- column is created by using the IDENTITY function.  
+-- Create a new table with columns from the existing table Person.Address. 
+-- A new IDENTITY column is created by using the IDENTITY function.  
 SELECT IDENTITY (int, 100, 5) AS AddressID,   
        a.AddressLine1, a.City, b.Name AS State, a.PostalCode  
 INTO Person.USAddress   
 FROM Person.Address AS a  
-INNER JOIN Person.StateProvince AS b ON a.StateProvinceID = b.StateProvinceID  
+INNER JOIN Person.StateProvince AS b 
+  ON a.StateProvinceID = b.StateProvinceID  
 WHERE b.CountryRegionCode = N'US';   
   
 -- Verify the IDENTITY status of the AddressID columns in both tables.  
-SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, is_identity, seed_value, increment_value  
+SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
+  is_identity, seed_value, increment_value  
 FROM sys.identity_columns  
 WHERE name = 'AddressID';  
-  
 ```  
   
 ### D. Creating a table by specifying columns from a remote data source  
@@ -173,17 +166,19 @@ WHERE name = 'AddressID';
   
  **Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```tsql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
--- Specify a valid server name for @datasrc as 'server_name' or 'server_name\instance_name'.  
+-- Specify a valid server name for @datasrc as 'server_name' 
+-- or 'server_name\instance_name'.  
 EXEC sp_addlinkedserver @server = N'MyLinkServer',  
     @srvproduct = N' ',  
     @provider = N'SQLNCLI',   
     @datasrc = N'server_name',  
     @catalog = N'AdventureWorks2012';  
 GO  
+
 USE AdventureWorks2012;  
 GO  
 -- Specify the remote data source in the FROM clause using a four-part name   
@@ -199,7 +194,8 @@ FROM OPENQUERY(MyLinkServer, 'SELECT *
                FROM AdventureWorks2012.HumanResources.Department');   
 GO  
 -- Use the OPENDATASOURCE function to specify the remote data source.  
--- Specify a valid server name for Data Source using the format server_name or server_name\instance_name.  
+-- Specify a valid server name for Data Source using the format 
+-- server_name or server_name\instance_name.  
 SELECT DepartmentID, Name, GroupName, ModifiedDate  
 INTO dbo.DepartmentsUsingOpenDataSource  
 FROM OPENDATASOURCE('SQLNCLI',  
@@ -213,7 +209,7 @@ GO
   
  **Applies to:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```tsql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -226,6 +222,23 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 ORDER BY YearlyIncome  
   
 ```  
+### F. Creating a new table as a copy of another table and loading it a specified filegroup
+The following example demostrates creating a new table as a copy of another table and loading it into a specified filegroup different from the default filegroup of the user.
+
+ **Applies to:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+
+```tsql
+ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2016]
+ADD FILE
+(
+NAME='FG2_Data',
+FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
+)
+TO FILEGROUP FG2;
+GO
+SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
+```
   
 ## See Also  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

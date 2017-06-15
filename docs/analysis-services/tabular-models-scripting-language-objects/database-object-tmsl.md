@@ -1,7 +1,7 @@
 ---
 title: "Database object (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,10 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Database object (TMSL)
-  Defines a Tabular database at compatibility level 1200 or greater, based on a model of the same level. This topic documents the object definition of a database, providing the payload for requests that create, alter, delete, and perform database management tasks.  
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
+  Defines a Tabular database at compatibility level 1200 or higher, based on a model of the same level. This topic documents the object definition of a database, providing the payload for requests that create, alter, delete, and perform database management tasks.  
   
 > [!NOTE]  
 >  In any script, only one database at the time can be referenced. For any object other than database itself, the Database property is optional if you specify the model. There is one-to-one mapping between a Model and a Database that can be used to deduce the Database name if it's not explicitly provided.   
@@ -27,7 +30,7 @@ manager: "erikre"
  All objects have a common set of properties, including name, type, description, a properties collection, and annotations. **Database** objects also have the following properties.  
   
  compatibilitylevel  
- Currently, the only valid value is 1200. Lower compatibility levels use a different metadata engine.  
+ Currently, valid values are 1200, 1400. Lower compatibility levels use a different metadata engine.  
   
  readwritemode  
  Enumerates the mode of the database. It's common to make a database read-only in high availability or scalability configurations. Valid values include readWrite,  

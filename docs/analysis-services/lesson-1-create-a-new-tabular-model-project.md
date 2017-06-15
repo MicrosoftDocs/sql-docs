@@ -18,6 +18,8 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 1: Create a New Tabular Model Project
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 In this lesson, you will create a new, blank tabular model project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Once your new project is created, you can begin adding data by using the Table Import Wizard. This lesson also gives you a brief introduction to the tabular model authoring environment in SSDT.  
   
 Estimated time to complete this lesson: **10 minutes**  
@@ -49,7 +51,7 @@ This topic is the first lesson in a tabular model authoring tutorial. To complet
       
     If you don’t see SQL Server 2016 RTM (1200) in the Compatibility level listbox, you’re not using the latest version of SQL Server Data Tools. To get the latest version, see [Install SQL Server Data tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
-    If you're using the latest version of SSDT, you can also choose SQL Server SQL Server vNext (1400). However, to complete lesson 13: Deploy, you'll need a SQL Server vNext or Azure server to deploy to.
+    If you're using the latest version of SSDT, you can also choose SQL Server 2017 (1400). However, to complete lesson 13: Deploy, you'll need a SQL Server 2017 or Azure server to deploy to.
       
     Selecting an earlier compatibility level is only recommended if you intend on deploying your completed tabular model to a different Analysis Services instance running an earlier version of SQL Server. Integrated workspace is not supported for earlier compatibility levels. To learn more see, [Compatibility level](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).   
   

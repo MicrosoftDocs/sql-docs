@@ -1,7 +1,7 @@
 ---
 title: "PowerShell cmdlets for Reporting Services SharePoint Mode | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,44 +17,17 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # PowerShell cmdlets for Reporting Services SharePoint Mode
-  When you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode, PowerShell cmdlets are installed to support report Servers in SharePoint mode. The cmdlets cover three categories of functionality.  
+
+When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell cmdlets are installed to support report Servers in SharePoint mode. The cmdlets cover three categories of functionality.  
   
 -   Installation of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint shared service and proxy.  
   
 -   Provisioning and management of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications and associated proxies.  
   
 -   Management of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features, for example extensions and encryption keys.  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode|  
-  
- **This topic contains the following:**  
-  
--   [Cmdlet Summary](#bkmk_cmdlet_sum)  
-  
--   [Shared Service and Proxy Cmdlets](#bkmk_sharedservice_cmdlets)  
-  
--   [Service Application and Proxy Cmdlets](#bkmk_serviceapp_cmdlets)  
-  
--   [Reporting Services Custom Functionality Cmdlets](#bkmk_ssrsfeatures_cmdlets)  
-  
--   [Basic Samples Reporting Services PowerShell](#bkmk_basic_samples)  
-  
--   [Detailed Reporting Services PowerShell Samples](#bkmk_detailedsamples)  
-  
-    -   [Create a reporting services service application and proxy](#bkmk_example_create_service_application)  
-  
-    -   [Review and update a reporting services delivery extension](#bkmk_example_delivery_extension)  
-  
-    -   [Get and set Properties of the Reporting Service application database](#bkmk_example_db_properties)  
-  
-    -   [List Reporting Services data extensions](#bkmk_example_list_data_extensions)  
-  
-    -   [Change and list Reporting Services subscription owners](#bkmk_change_subscription_owner)  
-  
+
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet Summary  
- To run the cmdlets you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx) (http://technet.microsoft.com/library/hh847814.aspx). In the following cmdlet summaries, the references to service application ‘databases’, refer to all of the databases created and used by a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. This includes the configuration, alerting, and temp databases.  
+ To run the cmdlets you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](http://technet.microsoft.com/library/hh847814.aspx). In the following cmdlet summaries, the references to service application ‘databases’, refer to all of the databases created and used by a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. This includes the configuration, alerting, and temp databases.  
   
  If you see an error message similar to the following when you type the PowerShell examples:  
   
@@ -71,7 +44,7 @@ manager: "erikre"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- For more information see [Use Windows PowerShell to administer SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx) (http://technet.microsoft.com/library/ee806878.aspx).  
+ For more information see [Use Windows PowerShell to administer SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
   
 #### To Open the SharePoint Management Shell and run cmdlets  
   
@@ -175,7 +148,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  Add the proxy to the default proxy group  
   
-3.  Grant the service app access to the port 80 web app’s content database. The script assumes site “http://sitename” already exists.  
+3.  Grant the service app access to the port 80 web app’s content database. The script assumes site `http://sitename` already exists.  
   
 ```  
 # Create service application and service application proxy  
@@ -298,11 +271,11 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 ###  <a name="bkmk_change_subscription_owner"></a> Change and list Reporting Services subscription owners  
  See [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
-## See Also  
- [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [CheckList: Use PowerShell to Verify Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
- [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
- [CodePlex SharePoint Management PowerShell scripts](http://sharepointpsscripts.codeplex.com/)   
+## Next steps
 
-  
-  
+[Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+[CheckList: Use PowerShell to Verify Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[CodePlex SharePoint Management PowerShell scripts](http://sharepointpsscripts.codeplex.com/)   
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

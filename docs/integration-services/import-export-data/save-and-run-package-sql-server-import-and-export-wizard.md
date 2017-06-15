@@ -64,7 +64,7 @@ If you started the wizard from an Integration Services project in Visual Studio 
  **Package protection level**  
  Select a protection level from the list to help protect the data in the package.  
   
- The protection level determines the protection method, the password or user key, and the scope of package protection. Protection can include all data or sensitive data only. For more info about the available options, see [Access Control for Sensitive Data in Packages](../../integration-services/packages/access-control-for-sensitive-data-in-packages.md).  
+ The protection level determines the protection method, the password or user key, and the scope of package protection. Protection can include all data or sensitive data only. For more info about the available options, see [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
   
  **Password**  
  Type a password.  

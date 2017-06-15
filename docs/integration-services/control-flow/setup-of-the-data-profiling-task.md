@@ -42,7 +42,7 @@ manager: "jhubbard"
  For more information, see [Data Profiling Task Editor &#40;General Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md) and [Single Table Quick Profile Form &#40;Data Profiling Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md).  
   
 > [!IMPORTANT]  
->  The output file might contain sensitive data about your database and the data that database contains. For suggestions about how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/access-to-files-used-by-packages.md).  
+>  The output file might contain sensitive data about your database and the data that database contains. For suggestions about how to make this file more secure, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
 ## Selection and Configuration of the Profiles to be Computed  
  After you have set up the output file, you have to select which data profiles to compute. The Data Profiling Task can compute eight different data profiles. Five of these profiles analyze individual columns, and the remaining three analyze multiple columns or relationships between columns and tables. In a single Data Profiling task, you can compute multiple profiles for multiple columns or combinations of columns in multiple tables or views.  

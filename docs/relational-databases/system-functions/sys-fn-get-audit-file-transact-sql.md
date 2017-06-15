@@ -1,7 +1,7 @@
 ---
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,20 +26,15 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns information from an audit file created by a server audit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 fn_get_audit_file ( file_pattern,   
     { default | initial_file_name | NULL },   
     { default | audit_record_offset | NULL } )  
@@ -47,13 +42,25 @@ fn_get_audit_file ( file_pattern,
   
 ## Arguments  
  *file_pattern*  
- Specifies the directory or path and file name for the audit file set to be read. Type is **nvarchar(260)**. This argument must include both a path (drive letter or network share) and a file name that can include a wildcard. A single asterisk (*) can be used to collect multiple files from an audit file set. For example:  
+ Specifies the directory or path and file name for the audit file set to be read. Type is **nvarchar(260)**. 
+ 
+ - **SQL Server**:
+    
+    This argument must include both a path (drive letter or network share) and a file name that can include a wildcard. A single    asterisk (*) can be used to collect multiple files from an audit file set. For example:  
   
--   **\<path>\\\*** - Collect all audit files in the specified location.  
+    -   **\<path>\\\*** - Collect all audit files in the specified location.  
   
--   **\<path>\LoginsAudit_{GUID}** - Collect all audit files that have the specified name and GUID pair.  
+    -   **\<path>\LoginsAudit_{GUID}** - Collect all audit files that have the specified name and GUID pair.  
   
--   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
+    -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
+  
+ - **Azure SQL Database**:
+ 
+    This argument is used to specify a blob URL (including the storage endpoint and container). While it does not support an asterisk wildcard, you can use a partial file (blob) name prefix (instead of the full blob name) to collect multiple files (blobs) that begin with this prefix. For example:
+ 
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** - collects all audit files (blobs) for the specific database.    
+      
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<FileName\>.xel** - collects a specific audit file (blob).
   
 > [!NOTE]  
 >  Passing a path without a file name pattern will generate an error.  
@@ -78,15 +85,15 @@ fn_get_audit_file ( file_pattern,
 |event_time|**datetime2**|Date and time when the auditable action is fired. Is not nullable.|  
 |sequence_number|**int**|Tracks the sequence of records within a single audit record that was too large to fit in the write buffer for audits. Is not nullable.|  
 |action_id|**varchar(4)**|ID of the action. Is not nullable.|  
-|succeeded|**bit**<br /><br /> 1 = success<br /><br /> 0 = fail|Indicates whether the action that triggered the event succeeded. Is not nullable. For all events other than login events, this only reports whether the permission check succeeded or failed, not the operation.|  
+|succeeded|**bit**|Indicates whether the action that triggered the event succeeded. Is not nullable. For all events other than login events, this only reports whether the permission check succeeded or failed, not the operation.<br /> 1 = success<br /> 0 = fail|  
 |permission_bitmask|**varbinary(16)**|In some actions, this is the permissions that were grant, denied, or revoked.|  
-|is_column_permission|**bit**<br /><br /> 1 = true<br /><br /> 0 = false|Flag indicating if this is a column level permission. Is not nullable. Returns 0 when the permission_bitmask = 0.|  
+|is_column_permission|**bit**|Flag indicating if this is a column level permission. Is not nullable. Returns 0 when the permission_bitmask = 0.<br /> 1 = true<br /> 0 = false|  
 |session_id|**smallint**|ID of the session on which the event occurred. Is not nullable.|  
 |server_principal_id|**int**|ID of the login context that the action is performed in. Is not nullable.|  
 |database_principal_id|**int**|ID of the database user context that the action is performed in. Is not nullable. Returns 0 if this does not apply. For example, a server operation.|  
 |target_server_principal_id|**int**|Server principal that the GRANT/DENY/REVOKE operation is performed on. Is not nullable. Returns 0 if not applicable.|  
 |target_database_principal_id|**int**|The database principal the GRANT/DENY/REVOKE operation is performed on. Is not nullable. Returns 0 if not applicable.|  
-|object_id|**int**|The ID of the entity on which the audit occurred. This includes the following:<br /><br /> Server objects<br /><br /> Databases<br /><br /> Database objects<br /><br /> Schema objects<br /><br /> Is not nullable. Returns 0 if the entity is the Server itself or if the audit is not performed at an object level. For example, Authentication.|  
+|object_id|**int**|The ID of the entity on which the audit occurred. This includes the following:<br /> Server objects<br /> Databases<br /> Database objects<br /> Schema objects<br /> Is not nullable. Returns 0 if the entity is the Server itself or if the audit is not performed at an object level. For example, Authentication.|  
 |class_type|**varchar(2)**|The type of auditable entity that the audit occurs on. Is not nullable.|  
 |session_server_principal_name|**sysname**|Server principal for session. Is nullable.|  
 |server_principal_name|**sysname**|Current login. Is nullable.|  
@@ -98,29 +105,62 @@ fn_get_audit_file ( file_pattern,
 |server_instance_name|**sysname**|Name of the server instance where the audit occurred. The standard server\instance format is used.|  
 |database_name|**sysname**|The database context in which the action occurred. Is nullable. Returns NULL for audits occuring at the server level.|  
 |schema_name|**sysname**|The schema context in which the action occurred. Is nullable. Returns NULL for audits occuring outside a schema.|  
-|object_name|**sysname**|The name of the entity on which the audit occurred. This includes the following:<br /><br /> Server objects<br /><br /> Databases<br /><br /> Database objects<br /><br /> Schema objects<br /><br /> Is nullable. Returns NULL if the entity is the Server itself or if the audit is not performed at an object level. For example, Authentication.|  
+|object_name|**sysname**|The name of the entity on which the audit occurred. This includes the following:<br /> Server objects<br /> Databases<br /> Database objects<br /> Schema objects<br /> Is nullable. Returns NULL if the entity is the Server itself or if the audit is not performed at an object level. For example, Authentication.|  
 |statement|**nvarchar(4000)**|TSQL statement if it exists. Is nullable. Returns NULL if not applicable.|  
-|additional_information|**nvarchar(4000)**|Unique information that only applies to a single event is returned as XML. A small number of auditable actions contain this kind of information.<br /><br /> One level of TSQL stack will be displayed in XML format for actions that have TSQL stack associated with them. The XML format will be:<br /><br /> <tsql_stack>\<frame nest_level = '%u' database_name = '%.*s' schema_name = '%.\*s' object_name = '%.\*s' /></tsql_stack><br /><br /> Frame nest_level indicates the current nesting level of the frame. The Module name is represented in three part format (database_name, schema_name and object_name).  The module name will be parsed to escape invalid xml characters like '\<', '>', '/', '_x'. They will be escaped as _xHHHH\_. The HHHH stands for the four-digit hexadecimal UCS-2 code for the character<br /><br /> Is nullable. Returns NULL when there is no additional information reported by the event.|  
+|additional_information|**nvarchar(4000)**|Unique information that only applies to a single event is returned as XML. A small number of auditable actions contain this kind of information.<br /><br /> One level of TSQL stack will be displayed in XML format for actions that have TSQL stack associated with them. The XML format will be:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indicates the current nesting level of the frame. The Module name is represented in three part format (database_name, schema_name and object_name).  The module name will be parsed to escape invalid xml characters like `'\<'`, `'>'`, `'/'`, `'_x'`. They will be escaped as `_xHHHH\_`. The HHHH stands for the four-digit hexadecimal UCS-2 code for the character<br /><br /> Is nullable. Returns NULL when there is no additional information reported by the event.|  
 |file_name|**varchar(260)**|The path and name of the audit log file that the record came from. Is not nullable.|  
 |audit_file_offset|**bigint**|The buffer offset in the file that contains the audit record. Is not nullable.|  
 |user_defined_event_id|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
-|user_defined_information|**nvarchar(4000)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Used to record any extra information the user wants to record in audit log by using the **sp_audit_write** stored procedure.|  
+|user_defined_information|**nvarchar(4000)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Used to record any extra information the user wants to record in |audit log by using the **sp_audit_write** stored procedure.|  
+|audit_schema_version |**int** | |  
+|sequence_group_id |**nvarbinary** | SQL Server only (starting with 2016) |  
+|transaction_id |**bigint** | SQL Server only (starting with 2016) |  
+|client_ip |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  
+|application_name |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  
+|duration_milliseconds |**bigint** | Azure SQL DB only |  
+|response_rows |**bigint** | Azure SQL DB only |  
+|affected_rows |**bigint** | Azure SQL DB only |  
   
 ## Remarks  
  If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
   
 ## Permissions  
- Requires the **CONTROL SERVER** permission.  
+ - **SQL Server**: Requires the **CONTROL SERVER** permission.  
+ - **Azure SQL DB**: Requires the **CONTROL DATABASE** permission.     
+    - Server admins can access audit logs of all databases on the server.
+    - Non server admins can only access audit logs from the current database.
+    - Blobs that do not meet the above criteria will be skipped (a list of skipped blobs will be displayed in the query output message), and the function will return logs only from blobs for which access is allowed.  
   
-## Examples  
- This example reads from a file that is named `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+## Examples
+
+- **SQL Server**
+
+  This example reads from a file that is named `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
   
-```  
-SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
-GO  
-```  
+  ```  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  GO  
+  ```  
+
+- **Azure SQL Database**
+
+  This example reads from a file that is named `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`.  
   
- For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  ```  
+  SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
+  GO  
+  ```  
+
+  This example reads all audit logs from servers that begin with `Sh`.  
+  
+  ```  
+  SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);
+  GO  
+  ```
+
+For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
+
+For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing).
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

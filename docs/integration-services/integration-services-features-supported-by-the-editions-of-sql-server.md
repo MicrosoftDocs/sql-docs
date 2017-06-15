@@ -57,7 +57,6 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |Hadoop/HDFS connectors and tasks|Yes|Yes||||  
 |Basic data profiling tools|Yes|Yes|||| 
 |Change Data Capture Service for Oracle by Attunity|Yes|||||  
-|Change Data Capture Designer for Oracle by Attunity|Yes||||| 
 
 ##  <a name="ISAA"></a> Integration Services - Advanced sources and destinations  
   
@@ -69,7 +68,6 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |Data mining model training destination|Yes|||||  
 |Dimension processing destination|Yes|||||  
 |Partition processing destination|Yes|||||  
-|Connector for Open Database Connectivity (ODBC) by Attunity|Yes|||||  
   
 ##  <a name="ISAT"></a> Integration Services - Advanced transformations  
   

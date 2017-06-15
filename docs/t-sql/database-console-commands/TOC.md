@@ -19,6 +19,7 @@
 # [DBCC INDEXDEFRAG](dbcc-indexdefrag-transact-sql.md)  
 # [DBCC INPUTBUFFER](dbcc-inputbuffer-transact-sql.md)  
 # [DBCC OPENTRAN](dbcc-opentran-transact-sql.md)  
+# [DBCC BOGUS](dbcc-bogus.md)  
 # [DBCC OUTPUTBUFFER](dbcc-outputbuffer-transact-sql.md)  
 # [DBCC PDW_SHOWEXECUTIONPLAN](dbcc-pdw-showexecutionplan-transact-sql.md)  
 # [DBCC PDW_SHOWPARTITIONSTATS](dbcc-pdw-showpartitionstats-transact-sql.md)  

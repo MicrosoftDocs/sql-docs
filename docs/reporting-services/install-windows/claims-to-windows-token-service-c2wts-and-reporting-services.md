@@ -1,7 +1,7 @@
 ---
 title: "Claims to Windows Token Service (c2WTS) and Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: "06/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -94,7 +94,7 @@ manager: "erikre"
     ```  
     <configuration>  
       <windowsTokenService>  
-        \<!--  
+        <!--  
             By default no callers are allowed to use the Windows Identity Foundation Claims To NT Token Service.  
             Add the identities you wish to allow below.  
           -->  

@@ -83,6 +83,9 @@ DECLARE @json NVARCHAR(MAX) = '{
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))  
 ```  
+
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
   
 ## See Also  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

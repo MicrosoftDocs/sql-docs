@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/18/2017"
+ms.date: "06/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
@@ -28,10 +28,6 @@ To understand tables and how to use them, see [Tables in SQL Data Warehouse](htt
 NOTE: Discussions about SQL Data Warehouse in this article apply to both SQL Data Warehouse and Parallel Data Warehouse unless otherwise noted. 
  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-
-\<!-- Some browsers jump to the line after an H2 when jumping to a bookmark.  Putting this 2 lines above the H2.
-     H3's seem to render correctly, so their bookmarks can be on the same line.
--->
 
 <a name="Syntax"></a>   
 ## Syntax  
@@ -339,7 +335,6 @@ For more information, see these articles:
 ## Locking behavior  
  Takes an exclusive lock on the table. Takes a shared lock on the DATABASE, SCHEMA, and SCHEMARESOLUTION objects.  
  
-\<!-- Column example sections are H2 so they will show up in the right navigation -->
 
 <a name="ExamplesColumn"></a>   
 ## Examples for columns

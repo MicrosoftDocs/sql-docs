@@ -1,7 +1,7 @@
 ---
 title: "GRANT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "06/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -88,28 +88,28 @@ GRANT
   
 -   If the securable is a view, ALL means DELETE, INSERT, REFERENCES, SELECT, and UPDATE.  
   
- PRIVILEGES  
+PRIVILEGES  
  Included for ISO compliance. Does not change the behavior of ALL.  
   
- *permission*  
+*permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the sub-topics listed below.  
   
- *column*  
+*column*  
  Specifies the name of a column in a table on which permissions are being granted. The parentheses () are required.  
   
- *class*  
+*class*  
  Specifies the class of the securable on which the permission is being granted. The scope qualifier **::** is required.  
   
- *securable*  
+*securable*  
  Specifies the securable on which the permission is being granted.  
   
- TO *principal*  
+TO *principal*  
  Is the name of a principal. The principals to which permissions on a securable can be granted vary, depending on the securable. See the sub-topics listed below for valid combinations.  
   
- GRANT OPTION  
+GRANT OPTION  
  Indicates that the grantee will also be given the ability to grant the specified permission to other principals.  
   
- AS *principal*  
+AS *principal*  
  Use the AS principal clause to indicate that the principal recorded as the grantor of the permission should be a principal other than the person executing the statement. For example, presume that user Mary is principal_id 12 and user Raul is principal 15. Mary executes `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` Now the sys.database_permissions table will indicate that the grantor_prinicpal_id was 15 (Raul) even though the statement was actually executed by user 13 (Mary).
 
 Using the AS clause is typically not recommended unless you need to explicitly define the permission chain. For more information, see the **Summary of the Permission Check Algorithm** section of [Permissions (Database Engine)](../../relational-databases/security/permissions-database-engine.md).

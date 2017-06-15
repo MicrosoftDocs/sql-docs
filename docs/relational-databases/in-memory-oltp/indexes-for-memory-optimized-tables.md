@@ -3,7 +3,7 @@ title: "Indexes for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "10/24/2016"
+ms.date: "06/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -219,33 +219,9 @@ The following table lists all operations that are supported by the different ind
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Index Scan, retrieve all table rows. | Yes | Yes | Yes |  
 | Index seek on equality predicates (=). | Yes <br/> (Full key is required.) | Yes  | Yes |  
-| Index seek on inequality and range predicates <br/> (>, <, \<=, >=, BETWEEN). | No <br/> (Results in an index scan.) | Yes | Yes |  
+| Index seek on inequality and range predicates <br/> (>, <, <=, >=, BETWEEN). | No <br/> (Results in an index scan.) | Yes | Yes |  
 | Retrieve rows in a sort order that matches the index definition. | No | Yes | Yes |  
 | Retrieve rows in a sort-order that matches the reverse of the index definition. | No | No | Yes |  
   
   
 In the table, Yes means that the index can efficiently service the request, and No means that the index cannot efficiently satisfy the request.  
-
-
-  
-  
-\<!--   
-Indexes_for_Memory-Optimized_Tables.md , which is....  
-CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-mt670614.aspx  
-  
-Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}  
-  
-/Image/hekaton_tables_23d.png , fbc511a0-304c-42f7-807d-d59f3193748f  
-  
-  
-Replaces dn511012.aspx , which is....  
-CAPS guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
-  
-GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child article, e922cc3a-3d6e-453b-8d32-f4b176e98488.)  
--->  
-  
-  
-  
-
-

@@ -10,6 +10,7 @@
 
 # [Install and configure](master-data-services-installation-and-configuration.md)
 ## [Install-windows](../master-data-services/install-windows/install-master-data-services.md)
+## [Install on AlwaysOn whitepaper](installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md)
 ## [Master Data Services Server Configuration Page](server-configuration-mds-configuration-manager.md)  
 ## [Database Configuration Page](database-configuration-page-master-data-services-configuration-manager.md)  
 

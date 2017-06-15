@@ -315,7 +315,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### Microsoft blog posts  
   
--   [Blog posts by Microsoft Program Manager Jovan Popovic](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+-   For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.  
   
 ### Reference topics  
   

@@ -84,7 +84,7 @@ match_expression [ NOT ] LIKE pattern
   
  A string comparison using a pattern that contains **char** and **varchar** data may not pass a LIKE comparison because of how the data is stored. You should understand the storage for each data type and where a LIKE comparison may fail. The following example passes a local **char** variable to a stored procedure and then uses pattern matching to find all of the employees whose last names start with a specified set of characters.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -102,7 +102,7 @@ GO
   
  However, the following example succeeds because trailing blanks are not added to a **varchar** variable.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -117,22 +117,20 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName      LastName            City`  
-  
- `----------     -------------------- ---------------`  
-  
- `Angela         Barbariol            Snohomish`  
-  
- `David          Barber               Snohomish`  
-  
- `(2 row(s) affected)`  
-  
+ ```
+ FirstName      LastName            City
+ ----------     -------------------- --------------- 
+ Angela         Barbariol            Snohomish
+ David          Barber               Snohomish
+ (2 row(s) affected)  
+ ``` 
+ 
 ## Pattern Matching by Using LIKE  
  LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
-```  
+```tsql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -163,7 +161,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  For example, the following query shows all dynamic management views in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, because they all start with the letters `dm`.  
   
-```  
+```tsql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -202,7 +200,7 @@ GO
 ### A. Using LIKE with the % wildcard character  
  The following example finds all telephone numbers that have area code `415` in the `PersonPhone` table.  
   
-```  
+```tsql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -215,39 +213,28 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `FirstName             LastName             Phone`  
-  
- `-----------------     -------------------  ------------`  
-  
- `Ruben                 Alonso               415-555-124`  
-  
- `Shelby                Cook                 415-555-0121`  
-  
- `Karen                 Hu                   415-555-0114`  
-  
- `John                  Long                 415-555-0147`  
-  
- `David                 Long                 415-555-0123`  
-  
- `Gilbert               Ma                   415-555-0138`  
-  
- `Meredith              Moreno               415-555-0131`  
-  
- `Alexandra             Nelson               415-555-0174`  
-  
- `Taylor                Patterson            415-555-0170`  
-  
- `Gabrielle              Russell             415-555-0197`  
-  
- `Dalton                 Simmons             415-555-0115`  
-  
- `(11 row(s) affected)`  
-  
+ 
+ ```
+ FirstName             LastName             Phone
+ -----------------     -------------------  ------------
+ Ruben                 Alonso               415-555-124  
+ Shelby                Cook                 415-555-0121  
+ Karen                 Hu                   415-555-0114  
+ John                  Long                 415-555-0147  
+ David                 Long                 415-555-0123  
+ Gilbert               Ma                   415-555-0138  
+ Meredith              Moreno               415-555-0131  
+ Alexandra             Nelson               415-555-0174  
+ Taylor                Patterson            415-555-0170  
+ Gabrielle              Russell             415-555-0197  
+ Dalton                 Simmons             415-555-0115  
+ (11 row(s) affected)  
+ ``` 
+ 
 ### B. Using NOT LIKE with the % wildcard character  
  The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
   
-```  
+```tsql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -260,33 +247,25 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `FirstName              LastName            Phone`  
-  
- `---------------------- -------------------- -------------------`  
-  
- `Gail                  Alexander            1 (11) 500 555-0120`  
-  
- `Gail                  Butler               1 (11) 500 555-0191`  
-  
- `Gail                  Erickson             834-555-0132`  
-  
- `Gail                  Erickson             849-555-0139`  
-  
- `Gail                  Griffin              450-555-0171`  
-  
- `Gail                  Moore                155-555-0169`  
-  
- `Gail                  Russell              334-555-0170`  
-  
- `Gail                  Westover             305-555-0100`  
-  
- `(8 row(s) affected)`  
-  
+ 
+ ```
+FirstName              LastName            Phone
+---------------------- -------------------- -------------------
+Gail                  Alexander            1 (11) 500 555-0120  
+Gail                  Butler               1 (11) 500 555-0191  
+Gail                  Erickson             834-555-0132  
+Gail                  Erickson             849-555-0139  
+Gail                  Griffin              450-555-0171  
+Gail                  Moore                155-555-0169  
+Gail                  Russell              334-555-0170  
+Gail                  Westover             305-555-0100  
+(8 row(s) affected)  
+```  
+
 ### C. Using the ESCAPE clause  
  The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
   
-```  
+```tsql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -311,7 +290,7 @@ GO
 ### D. Using the [ ] wildcard characters  
  The following example finds employees on the `Person` table with the first name of `Cheryl` or `Sheryl`.  
   
-```  
+```tsql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -322,7 +301,7 @@ GO
   
  The following example finds the rows for employees in the `Person` table with last names of `Zheng` or `Zhang`.  
   
-```  
+```tsql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -337,7 +316,7 @@ GO
 ### E. Using LIKE with the % wildcard character  
  The following example finds all employees in the `DimEmployee` table with telephone numbers that start with `612`.  
   
-```  
+```tsql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -349,7 +328,7 @@ ORDER by LastName;
 ### F. Using NOT LIKE with the % wildcard character  
  The following example finds all telephone numbers in the `DimEmployee` table that do not start with  `612`.  .  
   
-```  
+```tsql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -361,7 +340,7 @@ ORDER by LastName;
 ### G. Using LIKE with the _ wildcard character  
  The following example finds all telephone numbers that have an area code starting with `6` and ending in `2` in the `DimEmployee` table. Note that the % wildcard character is also included at the end of the search pattern since the area code is the first part of the phone number and additional characters exist after in the column value.  
   
-```  
+```tsql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -373,14 +352,13 @@ ORDER by LastName;
 ### H. Using the [ ] wildcard characters  
  The following example finds `DimEmployee` rows with the first name of `Rob` or `Bob`.  
   
-```  
+```tsql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
 FROM DimEmployee  
 WHERE FirstName LIKE '[RB]ob'  
 ORDER by LastName;  
-  
 ```  
   
 ## See Also  
@@ -388,8 +366,4 @@ ORDER by LastName;
  [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
-  
-  
-
-
-
+ 

@@ -2,7 +2,7 @@
 title: "Master Data Services Add-in for Microsoft Excel | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "11/30/2016"
+ms.date: "06/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,7 +24,7 @@ manager: "jhubbard"
  In the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This helps to prevent duplicate data in MDS.  
 
 ## Downloads 
->*  Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] SP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836866).
+>*  Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2016 (../../includes/sscurrent-md.md)] SP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836866).
 >* Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017 CTP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867).
 
  

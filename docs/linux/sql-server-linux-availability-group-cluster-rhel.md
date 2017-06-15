@@ -34,13 +34,13 @@ This document explains how to create a three-node availability group cluster for
 For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
-> SQL Server is not as tightly integrated with Pacemaker on Linux as it is with Windows Server failover clustering. A SQL Server instance is not aware of the cluster. Pacemaker provides cluster resource orchestration. Also, the virtual network name is specific to Windows Server failover clustering; there is no equivalent in Pacemaker. Availabilty group dynamic management views (DMVs) that query cluster information return empty rows on Pacemaker clusters. You can still create a listener for transparent reconnection after failover, but you will have to manually register the listener name in DNS with the IP used to create the virtual IP resource. 
+> SQL Server is not as tightly integrated with Pacemaker on Linux as it is with Windows Server failover clustering. A SQL Server instance is not aware of the cluster. Pacemaker provides cluster resource orchestration. Also, the virtual network name is specific to Windows Server failover clustering - there is no equivalent in Pacemaker. Availability group dynamic management views (DMVs) that query cluster information return empty rows on Pacemaker clusters. To create a listener for transparent reconnection after failover, manually register the listener name in DNS with the IP used to create the virtual IP resource. 
 
 The following sections walk through the steps to set up a Pacemaker cluster and add an availability group as resource in the cluster for high availability.
 
 ## Roadmap
 
-The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high-level steps: 
 
 1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
 
@@ -77,7 +77,7 @@ Node level fencing ensures that a node does not run any resources. This is done 
 For information about STONITH, and fencing, see the following articles:
 
 * [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html)
+* [Fencing and STONITH](http://clusterlabs.org/doc/crm_fencing.html)
 * [Red Hat High Availability Add-On with Pacemaker: Fencing](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 Because the node level fencing configuration depends heavily on your environment, we will disable it for this tutorial (it can be configured at a later time):

@@ -1,4 +1,3 @@
-
 3. On all cluster nodes, open the Pacemaker firewall ports. To open these ports with `firewalld`, run the following command:
 
    ```bash

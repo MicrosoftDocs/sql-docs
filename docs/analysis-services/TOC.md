@@ -1,5 +1,6 @@
+# [What is Analysis Services?](analysis-services.md)
+
 # Overview
-## [What is Analysis Services?](analysis-services.md)  
 ## [What's new in SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  
 ## [What's new in SQL Server Analysis Services 2017](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [Tools and applications](tools-and-applications-used-in-analysis-services.md)   

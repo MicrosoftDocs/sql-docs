@@ -4,7 +4,7 @@ ms.prod: "sql-non-specified"
 ms.technology:
   - "samples"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "06/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -29,7 +29,7 @@ The workflow is as follows:
 
  ![WideWorldImporters ETL workflow](../../sample/world-wide-importers/media/wideworldimporters-etl-workflow.png)
 
-It starts with an expression task that works out the appropriate cutoff time. This time is the current time less a few seconds. (This is more robust than requesting data right to the current time). It then truncates any milliseconds from the time.
+It starts with an expression task that works out the appropriate cutoff time. This time is the current time less a few minutes. (This is more robust than requesting data right to the current time). It then truncates any milliseconds from the time.
 
 The main processing starts by populating the Date dimension table. It ensures that all dates for the current year have been populated in the table.
 

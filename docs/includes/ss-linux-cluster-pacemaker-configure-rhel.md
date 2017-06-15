@@ -26,7 +26,7 @@
 
    ​
 
-3. Enable and start `pcsd` service and Pacemaker. This will allow nodes to rejoin the cluster after the reboot. Run the following command on all nodes.
+3. To allow nodes to rejoin the cluster after the reboot, enable and start `pcsd` service and Pacemaker. Run the following command on all nodes.
 
    ```bash
    sudo systemctl enable pcsd
@@ -43,7 +43,7 @@
    ```
    
    >[!NOTE]
-   >If you previously configured a cluster on the same nodes, you need to use `--force` option when running `pcs cluster setup`. This option is equivalent to running `pcs cluster destroy`. Run `sudo systemctl enable pacemaker` to re-enable pacemaker.
+   >If you previously configured a cluster on the same nodes, you need to use `--force` option when running `pcs cluster setup`. This option is equivalent to running `pcs cluster destroy`. To re-enable pacemaker, run `sudo systemctl enable pacemaker`.
 
 5. Install SQL Server resource agent for SQL Server. Run the following commands on all nodes. 
 

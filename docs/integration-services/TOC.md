@@ -43,8 +43,8 @@
 # [Queries](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
 
-# [Deploy packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
-# [Run packages](packages/run-integration-services-ssis-packages.md)
+# [Deploy Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
+# [Run Packages](packages/run-integration-services-ssis-packages.md)
 
 # [Catalog and Server](service/integration-services-ssis-server-and-catalog.md)  
 ## [SSIS Catalog](service/ssis-catalog.md)  

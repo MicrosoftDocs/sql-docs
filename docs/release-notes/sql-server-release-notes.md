@@ -35,7 +35,8 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Release Notes topics 
 [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)  
   
 [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)  
-  
+[SQL Server 2012 SP3 Release Notes](../release-notes/sql-server-2012-sp3-release-notes.md)
+    
 ### SQL Server 2008 R2  
 [SQL Server 2008 R2 Release Notes](http://download.microsoft.com/download/E/7/D/E7DED7E4-5059-4E3E-82C5-B28BF3FD0AAC/SQLServer2008R2ReleaseNotes.htm)  
   

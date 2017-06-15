@@ -37,7 +37,7 @@ description: Learn about SQL
                                                 <ul>
                                                     <li><a href="/sql/sql-server/what-s-new-in-sql-server-2017">SQL Server 2017 Preview</a></li>
                                                     <li><a href="https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs">SQL Server 2017 Reporting Services Preview</a></li>
-                                                    <li><a href="sql/linux//sql-server-linux-whats-new">SQL Server on Linux</a></li>
+                                                    <li><a href="/sql/linux/sql-server-linux-whats-new">SQL Server on Linux</a></li>
                                                 </ul>
                                             </div>
                                         </div>

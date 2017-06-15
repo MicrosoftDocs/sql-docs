@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Native Client | Microsoft Docs"
-ms.date: "05/15/2017"
+ms.date: "04/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,9 +17,9 @@ manager: "jhubbard"
 # SQL Server Native Client
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-The last SQL Server Native Client offered can still be downloaded from [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065).  
+SNAC, or SQL Server Native Client, is a term that has been used interchangeably to refer to ODBC and OLE DB drivers for SQL Server. 
 
-To use an OLE DB provider to connect to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the OLE DB provider that shipped in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client.  
+**For more information and to download the SNAC or ODBC Drivers, visit [SNAC lifecycle explained](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).**
 
 For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver for SQL Server on Windows](https://msdn.microsoft.com/library/jj730314(v=sql.110).aspx).  See also, [Introducing the new Microsoft ODBC Drivers for SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/), and [ODBC Driver 13.1 for SQL Server released](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/).  
   

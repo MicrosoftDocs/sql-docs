@@ -1,7 +1,7 @@
 # Installing SQL Server Integration Services on Linux
 
 
-The following steps install SQL Server Integration Services (mssql-server-is) on Linux. The information on the features supported for this release of the Integration Services, see the Release Notes.
+The following steps install SQL Server Integration Services (mssql-server-is) on Linux. The information on the features supported for this release of the Integration Services, see the [Release Notes](sql-server-linux-release-notes.md).
 
 
 Install the SQL Server Integration Services for your platform:
@@ -50,7 +50,7 @@ export PATH=optssisbin$PATH
 ```
 
 
-6. (Optional) if your user is not in SSIS group.
+6. If your user is not in SSIS group.
 Add current user to SSIS group. 
 
 ```bash

@@ -50,8 +50,7 @@ export PATH=optssisbin$PATH
 ```
 
 
-6. If your user is not in SSIS group.
-Add current user to SSIS group. 
+6. If your user is not in SSIS group, please add current user to SSIS group. 
 
 ```bash
 sudo gpasswd -a “current user” ssis

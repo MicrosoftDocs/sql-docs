@@ -59,26 +59,34 @@ The steps to create an availability group on Linux servers for high availability
 
 ## Configure high availability for RHEL
 
-To configure high availability for RHEL, enable the high availabilility subscription and then configure Pacemaker.
+To configure high availability for RHEL, enable the high availability subscription and then configure Pacemaker.
 
-### Enable the high hvailability subscription for RHEL
+### Enable the high availability subscription for RHEL
 
 Each node in the cluster must have an appropriate subscription for RHEL and the High Availability Add on. Review the requirements at [How to install High Availability cluster packages in Red Hat Enterprise Linux](http://access.redhat.com/solutions/45930). Follow these steps to configure the subscription and repos:
 
 1. Register the system.
+
    ```bash
    #sudo subscription-manager register
    ```
+
 1. List the available pools for registration.
+
    ```bash
    #sudo subscription-manager list --available
    ```
+
    From the list of available pools, note the pool ID for the high availability subscription.
+
 1. Update the following script. Replace `<pool id>` with the pool ID for high availability from the preceding step. Run the script to attach the subscription.
+
    ```bash
    #sudo subscription-manager attach --pool=<pool id>
    ```
+
 1. Enable the repository.
+
    ```bash
    #sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```

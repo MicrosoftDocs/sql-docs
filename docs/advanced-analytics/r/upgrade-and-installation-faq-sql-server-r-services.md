@@ -46,9 +46,9 @@ limitations might apply.
 
 - You cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster. 
 
-- On a Azure VM, some additional configuration might be necessary. For example, you might need to create a firewall exception to support remote access.
+- On an Azure VM, some additional configuration might be necessary. For example, you might need to create a firewall exception to support remote access.
 
-- Side by side installation with another version of R, or with other releases from Revolution Analytics, is not supported.
+- Side-by-side installation with another version of R, or with other releases from Revolution Analytics, is not supported.
 
 - New installation of any pre-release version of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is no longer supported. If you are using a pre-release version, upgrade as soon as possible.
 
@@ -56,7 +56,7 @@ limitations might apply.
 
 ### Licensing agreements for unattended installs
 
-If you use the command line to upgrade an instance of SQL Server where R Services or Machine Learning Services is already installed,make sure that the command line includes the new license agreement parameter,
+If you use the command line to upgrade an instance of SQL Server where R Services or Machine Learning Services is already installed, make sure that the command line includes the new license agreement parameter,
 */IACCEPTROPENLICENSEAGREEMENT*.
 
 Failure to use the correct argument can cause setup to fail.
@@ -73,13 +73,15 @@ For more information, see [Installing R Components without Internet Access](../.
 
 To use machine learning with R or Python, some additional configuration is required after running SQL Server setup. Additional steps might be required depending on the security level of the server and of your SQL Server instance and databases. Review these steps from the setup instructions to determine if any additional configuration might be needed.
 
-- The feature that supports running external scripts, such as R or Python, is disabled by default for database security, and must be enabled. See [Enable External Script Services](set-up-sql-server-r-services-in-database/#bkmk_enableFeature)
+[Set up Sql Server R Servives In-Database](set-up-sql-server-r-services-in-database.md)
 
-- You must ensure that the worker accounts that are used by Launchpad to run R or Python have access to the instance. See [Enable implied authentication for Launchpad account group](set-up-sql-server-r-services-in-database/#bkmk_configureAccounts)
+- The feature that supports running external scripts, such as R or Python, is disabled by default for database security, and must be enabled.
 
-- You might need to enable remote access on the server or create a firewall rule allowing inbound communication with SQL Server. See [Configure the Windows Firewall to Allow SQL Server Access](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access)
+- You must ensure that the worker accounts that are used by Launchpad to run R or Python have access to the instance. See [Enable implied authentication for Launchpad account group]
 
-- Depending on the planned workload, you might need to optimise the server for machine learning tasks. See [Optimze the server for R](set-up-sql-server-r-services-in-database/#bkmk_optimize).
+- You might need to enable remote access on the server or create a firewall rule allowing inbound communication with SQL Server.
+
+- Depending on the planned workload, you might need to optimize the server for machine learning tasks. 
 
 ## Upgrades or Uninstallation
 
@@ -112,7 +114,7 @@ As hotfixes or improvements to SQL Server 2016 are released, R components will b
 
 If you are using SQL Server 2017, upgrades to R components are automatically installed.
 
-As of December 2016, it is also possible to upgrade R components on a faster cadence than the SQL Server release cycle, by *binding* an instance of R Services to the Modern Software Lifecycle policy. Currently support is provided only for upgrade of 2016 nstances; however, when a new version of R Server is released, you will be able to upgraded 2017 instances as well.
+As of December 2016, it is also possible to upgrade R components on a faster cadence than the SQL Server release cycle, by *binding* an instance of R Services to the Modern Software Lifecycle policy. Currently support is provided only for upgrade of 2016 instances. However, when a new version of R Server is released, you will be able to upgraded 2017 instances as well.
 
 For more information, see [Use SqlBindR to Upgrade an Instance of SQL Server R Services](../../advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md)
 
@@ -171,7 +173,7 @@ If you encountered this error, and need to upgrade these features, we recommend 
 
 4. Choose the instance, and then select the **R Services (In-Database)** option to add.
 
-In some cases this procedure will fail to clear up the earlier failed installation. In that case, you should uninstall and reinstall as follows:
+In some cases, this procedure will fail to clear up the earlier failed installation. In that case, you should uninstall and reinstall as follows:
 
 1. Uninstall R Services (In-Database) and R Server (Standalone) at the same time.
 

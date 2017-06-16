@@ -22,7 +22,7 @@ or Python code in SQL Server.
 
 Before you get started, we recommend that you collect some information about your system: [Data Collection for Troubleshooting](data-collection-ml-troubleshooting-process.md)
 
-Please also review this list of common issues specific to initial setup or configuration: [Setup and Upgrade FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
+Also, review this list of common issues specific to initial setup or configuration: [Setup and Upgrade FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ## Launchpad Status and Issues 
 
@@ -36,7 +36,7 @@ As part of the troubleshooting process, begin by asking and answering these ques
 
 ### Determine if Launchpad is running
 
-1.  Open the Services panel (Services.msc) or run [SQL Server Configuration Manager](https://docs.microsoft.comsql/relational-databases/sql-server-configuration-manager). From the command line, type SQLServerManager13.msc or SQLServerManager14.msc. Each instance where R or Pythonn is enabled should have its own instance of the Launchpad service.
+1.  Open the Services panel (Services.msc) or run [SQL Server Configuration Manager](https://docs.microsoft.comsql/relational-databases/sql-server-configuration-manager). From the command line, type SQLServerManager13.msc or SQLServerManager14.msc. Each instance where R or Python is enabled should have its own instance of the Launchpad service.
 
 2.  Make a note of the service account that the Launchpad is running under.
 
@@ -62,7 +62,7 @@ For more information about these user rights, see List of user rights and file
 level permissions: [Configure Windows Service Accounts and Permissions](https://msdn.microsoft.com/library/ms143504.aspx)
 
 > [!TIP]
-> If you are an advanced user who is already familiar with use of the SDP tool for SQL Server diagnostics, you can check the current permissions on the accocunt by using this tool. Review the output file with the name MachineName_UserRights.txt file.
+> If you are an advanced user who is already familiar with use of the SDP tool for SQL Server diagnostics, you can check the current permissions on the account by using this tool. Review the output file with the name MachineName_UserRights.txt file.
 
 ### Review Launchpad requirements
 
@@ -73,7 +73,7 @@ There are several issues that can prevent Launchpad from starting. The Launchpad
 For compatibility with R, SQL Server 2016 R Services (In-Database) required that the drive where the feature is installed support creation of short file names using the **8dot3** notation. An 8.3 filename is also called a short filename and is used for compatibility with older versions of Microsoft Windows prior or as an alternate filename to the long filename.
 
 If the volume where you are installing R does not support the short filenames, the processes that launch R from SQL Server might not be able to locate the correct executable and the
-[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] will not start.
+[!INCLUDE[rsql_launchpad](../includes/rsql-launchpad-md.md) will not start.
 
 As a workaround, you should enable the 8dot3 notation on the volume where SQL Server is installed and R Services is installed. You must then provide the short name for the working directory in the R Services configuration file.
 
@@ -86,16 +86,17 @@ As a workaround, you should enable the 8dot3 notation on the volume where SQL Se
 
 5.  Edit the configuration file to use the short name for `WORKING_DIRECTORY`. Alternatively, you can specify a different directory for `WORKING_DIRECTORY` that has a path compatible with the 8dot3 notation.
 
->   [!NOTE] This restriction has been removed in later releases. If you experience this issue, please install one of the following:
-
+>   [!NOTE] 
+> This restriction has been removed in later releases. If you experience this issue, install one of the following:
+> 
 >   SQL Server 2016 SP1 and CU1: [Cumulative Update 1 for SQL
 >   Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)
-
+> 
 >   SQL Server 2016 RTM, Service Pack 3, and this
 >   [hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3),
 >   available on demand
 
-#### Can user group for Launchpad log in locally
+#### User group for Launchpad cannot log in locally
 
 During setup of R Services, SQL Server creates the Windows user group, **SQLRUserGroup**, and provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs.
 
@@ -142,7 +143,7 @@ This section lists the most common error messages returned by Launchpad.
 
 #### Error: Unable to launch runtime for R script
 
-If the Windows group for R users (**SQLRUsers**; also used for Python) does not have the ability to log into the instance that is running R Services, you might see the following errors:
+If the Windows group for R users (which is also used for Python) does not have the ability to log into the instance that is running R Services, you might see the following errors:
 
 - When trying to run R scripts:
 
@@ -152,7 +153,7 @@ If the Windows group for R users (**SQLRUsers**; also used for Python) does not 
     *An external script error occurred. Unable to launch the runtime.*
 
 - Errors generated by the
-    [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service:
+    [!INCLUDE[rsql_launchpad](../includes/rsql-launchpad-md.md)] service:
 
 -   *Failed to initialize the launcher RLauncher.dll*
 
@@ -161,13 +162,14 @@ If the Windows group for R users (**SQLRUsers**; also used for Python) does not 
 -   Security logs indicate that the account NT SERVICE was unable to log in.
 
 For information about how to give this user group the necessary permissions, see [Set up SQL Server R
-Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).
+Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
 
->   [!NOTE] This limitation does not apply if you use SQL logins to run R scripts from a remote workstation.
+> [!NOTE]
+> This limitation does not apply if you use SQL logins to run R scripts from a remote workstation.
 
 #### Error: *Logon failure: the user has not been granted the requested logon type*
 
-By default, [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] uses the following account on startup, which is configured by [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] setup to have all
+By default, [!INCLUDE[rsql_launchpad_md](../includes/rsql-launchpad-md.md)] uses the following account on startup, which is configured by [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] setup to have all
 necessary permissions: `NT Service\MSSQLLaunchpad`
 
 If you assign a different account to the Launchpad or the right is removed by a policy on the SQL Server machine, the account might not have necessary permissions, and you might see this error:
@@ -186,7 +188,7 @@ To give the necessary permissions to the new service account, use the **Local Se
 
 If you install R Services and enable the feature, but get this error when you try to run an R script, it might be that the Launchpad service for the instance has stopped running.
 
-1.  From a Windows command prompt, open the SQL Server Configuration Manager. For more information, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+1.  From a Windows command prompt, open the SQL Server Configuration Manager. For more information, see [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md).
 
 2.  Right-click SQL Server Launchpad for the instance where R Services is not working, and select **Properties**.
 
@@ -210,7 +212,7 @@ This error indicates that the account the R script is attempting to use does not
 
 By default, 20 accounts are provisioned and associated with the Launchpad.exe process, with the names MSSQLSERVER01 – MSSQLSERVER20. More accounts might have been added if you make heavy use of R or Python.
 
-To resolve the issue, ensure that the group has the permission “Allow Log on Locally” rights to the local instance where R Services is used. In some environments, this might may require a GPO exception from the network
+To resolve the issue, ensure that the group has the permission “Allow Log on Locally” rights to the local instance where R Services is used. In some environments, this might require a GPO exception from the network
 administrator.
 
 ## R Script Issues
@@ -221,7 +223,7 @@ This section contains some common issues that are specific to R script execution
 
 You can easily get multiple installation of R on the same computer, or multiple copies of the same R package, in different versions.
 
-If you install both R Server (standalone) and R Services (In-Database), be aware that these install separate versions of the R libraries, and it is possible to have different versions of R for each. This can become very confusing when you are running R script and anecounter errors in one environment but not the other.
+If you install both R Server (standalone) and R Services (In-Database), be aware that these install separate versions of the R libraries, and it is possible to have different versions of R for each. This can become very confusing when you are running R script and see errors in one environment but not in the other.
 
 + Avoid direct use of the R libraries and tools installed for the SQL Server instance, except in limited cases such as troubleshooting. If you need to use an R command line tool, you can install Microsoft R Client.
 + SQL Server provides in-database management of R packages. This is the easiest way to create R package libraries that can be shared among users and easily ported to new instances. For more information, see  [Installing and Managing R Packages](r/installing-and-managing-r-packages.md).
@@ -243,13 +245,13 @@ If there are multiple variables to delete, we suggest saving the names of tempor
 
 ### Implied authentication for remote execution via ODBC
 
-If you connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer to run R commands using the **RevoScaleR** functions, you might get an error when using ODBC calls that write data to the server. This error happens only when using Windows authentication.
+If you connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer to run R commands using the **RevoScaleR** functions, you might get an error when using ODBC calls that write data to the server. This error happens only when using Windows authentication.
 
 The reason is that the worker accounts created for R Services do not have permission to connect to the server; therefore, ODBC calls cannot be executed on your behalf. The problem does not occur with SQL logins because, with SQL logins, the credentials are explicitly passed from the R client to the SQL Server instance and then to ODBC.
 
 To enable your Windows credentials to be passed securely from a script initiated remotely, however, SQL Server has to emulate your credentials, in a process known as implied authentication. To make this work, the worker accounts that run R or Python scripts on the SQL Server computer must have the correct permissions.
 
-1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as an administrator on the instance where you will run R code.
+1.  Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] as an administrator on the instance where you will run R code.
 
 2.  Run the following script. Be sure to edit the user group name, if you changed the default, and the computer and instance name.
 

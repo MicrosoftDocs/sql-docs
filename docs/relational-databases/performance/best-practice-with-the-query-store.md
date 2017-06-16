@@ -268,7 +268,7 @@ The following table provides best practices:
 |Delete less relevant queries when maximum size is reached.|Activate size-based cleanup policy.|  
   
 ##  <a name="Parameterize"></a> Avoid using non-parameterized queries  
- Using non-parameterized queries when that is not absolutely necessary (for example in case of ad-hoc analysis) is not a best practice.  Cached plans cannot be reused which forces Query Optimizer to compile queries for every unique query text. For more information on this topic, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#forcedparamguide).  
+ Using non-parameterized queries when that is not absolutely necessary (for example in case of ad-hoc analysis) is not a best practice.  Cached plans cannot be reused which forces Query Optimizer to compile queries for every unique query text. For more information on this topic, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
   Also, Query Store can rapidly exceed the size quota because of potentially a large number of different query texts and consequently a large number of different execution plans with similar shape.  
 As a result, performance of your workload will be sub-optimal and Query Store might switch to read-only mode or might be constantly deleting the data trying to keep up with the incoming queries.  
   
@@ -279,7 +279,7 @@ As a result, performance of your workload will be sub-optimal and Query Store mi
   
     -   Compare the number of  distinct query_hash values with the total number of entries in sys.query_store_query. If the ratio is close to 1 your ad-hoc workload generates different queries.  
   
--   Apply [**forced parameterization**](../../relational-databases/query-processing-architecture-guide.md#forcedparam), for the database or for a subset of queries if the number of different query plans is not large.  
+-   Apply [**forced parameterization**](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), for the database or for a subset of queries if the number of different query plans is not large.  
   
     -   Use [plan guide](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md) to force parameterization only for the selected query.  
   

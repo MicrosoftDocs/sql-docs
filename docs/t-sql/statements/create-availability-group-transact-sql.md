@@ -66,7 +66,7 @@ CREATE AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | WITNESS_COMMIT },  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
        FAILOVER_MODE = { AUTOMATIC | MANUAL }  
        [ , <add_replica_option> [ ,...n ] ]  
     )   
@@ -239,8 +239,8 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  Is a port number that is associated with the mirroring endpoint of the partner server instance (for the ENDPOINT_URL option) or the port number used by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] of the server instance (for the READ_ONLY_ROUTING_URL option).  
   
- AVAILABILITY_MODE **=** { {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT } | WITNESS_COMMMIT }  
- SYNCHRONOUS_COMMIT or ASYNCHRONOUS_COMMIT specifies whether the primary replica has to wait for the secondary replica to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database. The transactions on different databases on the same primary replica can commit independently. WITNESS_COMMIT designates a replica as a witness. See [More about a witness](../../linux/sql-server-linux-availability-group-ha.md#WitnessReplica).
+ AVAILABILITY_MODE **=** { {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
+ SYNCHRONOUS_COMMIT or ASYNCHRONOUS_COMMIT specifies whether the primary replica has to wait for the secondary replica to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database. The transactions on different databases on the same primary replica can commit independently.
   
  SYNCHRONOUS_COMMIT  
  Specifies that the primary replica will wait to commit transactions until they have been hardened on this secondary replica (synchronous-commit mode). You can specify SYNCHRONOUS_COMMIT for up to three replicas, including the primary replica.  

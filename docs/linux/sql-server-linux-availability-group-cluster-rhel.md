@@ -59,7 +59,7 @@ The steps to create an availability group on Linux servers for high availability
 
 ## Configure Pacemaker for RHEL
 
-Each node in the cluster must have an appropriate subscription for RHEL and the High Availability Add on. Review the requirements at [How to install High Availability and/or Resilient Storage cluster packages in Red Hat Enterprise Linux 5, 6, or 7? ](http://access.redhat.com/solutions/45930). Run the following script to configure the subscription and repos:
+Each node in the cluster must have an appropriate subscription for RHEL and the High Availability Add on. Review the requirements at [How to install High Availability cluster packages in Red Hat Enterprise Linux](http://access.redhat.com/solutions/45930). Run the following script to configure the subscription and repos:
 
    ```bash
    #sudo subscription-manager register

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "referencing WSDL"
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 caps.latest.revision: 38
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Accessing the SOAP API

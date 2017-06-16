@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Always On availability group deployment patterns | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "06/16/2017"
 ms.prod: sql-linux
 ms.reviewer: ""
 ms.suite: ""

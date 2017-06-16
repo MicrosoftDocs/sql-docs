@@ -22,7 +22,7 @@ Use this page as the jump-off point for finding known issues, common setup quest
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R and Python)
 
-## Known issues**
+## Known Issues
 
 These articles list known issues with the current release, or describe issues with previous releases.
 
@@ -32,7 +32,7 @@ These articles list known issues with the current release, or describe issues wi
 
 ## Troubleshooting Prerequisites
 
-If you have encountered an error, or need to understand an issue in your environment, it is important that you collect related information systematically: for example, the version, edition, security and execution context.
+If you have encountered an error, or need to understand an issue in your environment, it is important that you collect related information systematically: for example, the version, edition, security context, and execution context.
 
 This article provides a list of information that will facilitate self-help troubleshooting, or to prepare for a request for technical support.
 
@@ -40,7 +40,7 @@ This article provides a list of information that will facilitate self-help troub
 
 ## Setup and Configuration Guides
 
-Start here if you have not set up machine learning with SQL Server, or if you want to change defaults.
+Start here if you have not set up machine learning with SQL Server, or if you want to add the feature.
 
 + [Set up R Services or Machine Learning Services with R](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 + [Set up Machine Learning Services with Python](../advanced-analytics/python/setup-python-machine-learning-services.md)
@@ -71,4 +71,3 @@ These articles contain information about defaults, and how to customize the conf
 + [Set up R Server on an Azure VM](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 + [Install R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
 + [Get R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)
-

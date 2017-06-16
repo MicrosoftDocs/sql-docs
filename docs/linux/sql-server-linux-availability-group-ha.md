@@ -30,15 +30,13 @@ The current high availability solutions for Linux do not accommodate an external
 Choose an availability group design to meet specific business requirements for high availability, data protection, and read scale-out.
 
 >[!IMPORTANT]
->The following configurations describe three availability group design patterns and the capabilities of each pattern. These design patterns apply to availability groups with `CLUSTER_TYPE = EXTERNAL` for high availability solutions. 
+>The following configurations describe the availability group design patterns and the capabilities of each pattern. These design patterns apply to availability groups with `CLUSTER_TYPE = EXTERNAL` for high availability solutions. 
 
-The design patters are three availability group configurations. The configurations include:
+The design patters are two availability group configurations. The configurations include:
 
 - **Three synchronous replicas**
 
-- **Two synchronous replicas and a witness**
-
-- **Two synchronous replicas availability group**
+- **Two synchronous replicas**
 
 ## How the configuration affects default resource settings
 
@@ -67,38 +65,16 @@ The following table describes the high availability and data protection behavior
 
 \* Default setting when availability group is added as a resource in a cluster.
 
-<a name="witness"></a>
-
-## Two synchronous replicas and a witness
-
-This configuration has two synchronous replicas and a witness to enable high availability and data protection. The witness is introduced in SQL Server 2017 CTP 2.2. In this configuration, the servers have the roles of primary replica, secondary replica, or witness. The witness contains configuration data about the availability group, but not a copy of the availability group user databases. The witness requires a SQL Server instance with SQL Server Express edition or higher. 
-
-By default, it provides high availability but not data protection.
-
-![witness availability group][2]
-
-The following table describes the high availability and data protection behavior for an availability group with two synchronous replicas and a witness:
-
-|`required_synchronized_secondaries_to_commit`|0 \*|1
-| --- |:---:|:---:
-|Automatic failover after primary replica outage| |✔| 
-|Primary replica available after secondary replica outage| |✔|
-|Primary replica available after witness outage|✔| |
-
-\* Default setting when availability group is added as a resource in a cluster.
-
-For more information, see [More about a witness](#WitnessReplica).
-
 <a name="twoSynch"></a>
 
 ## Two synchronous replicas
 
-This configuration enables data protection. Like the other availability group configurations, it can enable read scale-out. The two synchronous replicas configuration does not provide high availability. 
+This configuration enables data protection. Like the other availability group configurations, it can enable read scale-out. The two synchronous replicas configuration does not provide automatic high availability. 
 
 ![Two synchronous replicas][1]
 
-This configuration requires two servers. These servers fill the role of primary replica and secondary replica.
-F
+This configuration requires two servers. These servers fill the role of primary replica and secondary replica. 
+
 The two synchronous replicas configuration is optimized for data protection and distributing the read workload for databases. By default, the resource is configured for data protection. This configuration does not provide high availability because if either instance of SQL Server fails, either the database is not fully available or there is risk of data loss. 
 
 The following table describes the data protection behavior according to the possible values for an availability group with two synchronous replicas: 
@@ -114,35 +90,13 @@ The following table describes the data protection behavior according to the poss
 
 The two synchronous replicas configuration may be the most economical because it only requires two instances of SQL Server on two servers.
 
-
-<a name="WitnessReplica"></a>
-
-## More about a witness
-
-A witness in a SQL Server Always On availability group enables a configuration with high availability and data protection without using a third replica - a *witness*. Any edition of SQL Server can host a witness. A witness contains availability group configuration data like availability group roles, and synchronization status data in the `master` database. It does not include replicated user databases. The witness uses the `WITNESS_COMMIT` availability mode. It is never the primary replica.
-
-Use a witness in an availability group with two synchronous replicas. The group can include additional asynchronous replicas. An availability group can only have one witness.
-
-An availability group with a witness requires two synchronous replicas and can have additional asynchronous replicas. An availability group cannot have more than one witness. 
-
-You can use any edition of SQL Server 2017 to host a witness. 
-
-The witness has an availability mode - like a replica. A witness availability mode is `WITNESS_COMMIT`. In this mode, configuration information is synchronously committed to the witness. You cannot modify the availability mode of a witness. 
-
-On a witness you cannot:
-
-- Fail over an availability group to a witness.
-- Change the availability mode.
-
-To create an availability group with two synchronous replicas and a witness, see [Create availability group with two synchronous replicas and a witness](sql-server-linux-availability-group-configure-ha.md#witnessScript).
-
 <a name="pacemakerNotify"></a>
 
 ## Understand SQL Server resource agent for pacemaker
 
 SQL Server 2017 CTP 1.4 added `sequence_number` to `sys.availability_groups` to allow Pacemaker to identify how up-to-date secondary replicas are with the primary replica. `sequence_number` is a monotonically increasing BIGINT that represents how up-to-date the local availability group replica is. Pacemaker updates the `sequence_number` with each availability group configuration change. Examples of configuration changes include failover, replica addition, or removal. The number is updated on the primary, then replicated to secondary replicas. Thus a secondary replica that has up-to-date configuration has the same sequence number as the primary. 
 
-When Pacemaker decides to promote a replica to primary, it first sends a *pre-promote* notification to all replicas and the witness - if applicable. The replicas return the sequence number. Next, when Pacemaker actually tries to promote a replica to primary, the replica only promotes itself if its sequence number is the highest of all the sequence numbers. If its own sequence number does not match the highest sequence number, the replica rejects the promote operation. In this way only the replica with the highest sequence number can be promoted to primary, ensuring no data loss. 
+When Pacemaker decides to promote a replica to primary, it first sends a *pre-promote* notification to all replicas. The replicas return the sequence number. Next, when Pacemaker actually tries to promote a replica to primary, the replica only promotes itself if its sequence number is the highest of all the sequence numbers. If its own sequence number does not match the highest sequence number, the replica rejects the promote operation. In this way only the replica with the highest sequence number can be promoted to primary, ensuring no data loss. 
 
 This process requires at least one replica available for promotion with the same sequence number as the previous primary. The Pacemaker resource agent sets `required_synchronized_secondaries_to_commit` such that at least one synchronous secondary replica is up-to-date and available to be the target of an automatic failover by default. With each monitoring action, the value of `required_synchronized_secondaries_to_commit` is computed (and updated if necessary). The `required_synchronized_secondaries_to_commit` value is 'number of synchronous replicas' divided by 2. At failover time, the resource agent requires (`total number of replicas` - `required_synchronized_secondaries_to_commit` replicas) to respond to the pre-promote notification. The replica with the highest `sequence_number` is promoted to primary. 
 
@@ -176,5 +130,4 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-availability-group-ha/1-read-scale-out.png
-[2]: ./media/sql-server-linux-availability-group-ha/2-witness.png
 [3]: ./media/sql-server-linux-availability-group-ha/3-three-replica.png

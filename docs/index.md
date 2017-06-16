@@ -37,6 +37,7 @@ description: Learn about SQL
                                                 <ul>
                                                     <li><a href="/sql/sql-server/what-s-new-in-sql-server-2017">SQL Server 2017 Preview</a></li>
                                                     <li><a href="https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs">SQL Server 2017 Reporting Services Preview</a></li>
+                                                    <li><a href="/sql/linux/sql-server-linux-whats-new">SQL Server on Linux</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -84,12 +85,12 @@ description: Learn about SQL
                                                 <ul>
                                                     <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2016</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-2017">SQL Server 2017 Preview</a></li>
-                                                    <li><a href="https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services">SQL Server Reporting Services</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services">SQL Server Reporting Services (SSRS)</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>
                                                 <ul>
                                                     <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
-                                                    <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools</a></li>
+                                                    <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
                                                     <li><a href="https://www.microsoft.com/download/details.aspx?id=55253">Power BI Report Server and tools</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Sample databases</h4>
@@ -276,7 +277,7 @@ description: Learn about SQL
                                                     <li><a href="/azure/storage/storage-import-export-service">Import-Export Service</a></li>
                                                     <li>
                                                         <a href="/sql/integration-services/sql-server-integration-services">
-                                                            SQL Server Integration Services
+                                                            SQL Server Integration Services (SSIS)
                                                         </a>
                                                     </li>
                                                 </ul>

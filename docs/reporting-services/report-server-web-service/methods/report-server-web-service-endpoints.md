@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 caps.latest.revision: 26
 author: "sabotta"
-ms.author: "carlasab"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Report Server Web Service Endpoints

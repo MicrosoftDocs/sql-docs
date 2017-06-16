@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 caps.latest.revision: 34
 author: "sabotta"
-ms.author: "carlasab"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Reporting Services Properties

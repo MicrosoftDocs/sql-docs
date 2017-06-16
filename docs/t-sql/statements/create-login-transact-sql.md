@@ -1,7 +1,7 @@
 ---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "06/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -94,7 +94,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
 ## Arguments  
  *login_name*  
- Specifies the name of the login that is created. There are four types of logins: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this topic. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins are type **sysname** and must conform to the rules for [Identifiers](http://msdn.microsoft.com/library/ms175874.aspx) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on users and groups in Active Directory, are limited to names of less than 21 characters.  
+ Specifies the name of the login that is created. There are four types of logins: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this topic. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins are type **sysname** and must conform to the rules for [Identifiers](http://msdn.microsoft.com/library/ms175874.aspx) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of less than 21 characters.  
   
  PASSWORD **='***password***'**  
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies the password for the login that is being created. You should use a strong password. For more information see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  

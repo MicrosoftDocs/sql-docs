@@ -69,6 +69,13 @@ Use “ID” command to make sure current user is in SSIS group.
 ```
 
 
+If you already have mssql-server-is installed, you can update to the latest version with the following command:
+
+```bash
+ sudo apt-get install mssql-server-is
+```
+
+
 ## Next steps
 
 For more information on how to use SSIS on Linux to extract, transform and load data for SQL Server on Linux, see [Extract, transform, and load data for SQL Server on Linux with SSIS](sql-server-linux-migrate-ssis.md).

@@ -56,7 +56,6 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |Azure data source connectors and tasks|Yes|Yes||||  
 |Hadoop/HDFS connectors and tasks|Yes|Yes||||  
 |Basic data profiling tools|Yes|Yes|||| 
-|Change Data Capture Service for Oracle by Attunity|Yes|||||  
 
 ##  <a name="ISAA"></a> Integration Services - Advanced sources and destinations  
   

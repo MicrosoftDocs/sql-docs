@@ -438,7 +438,7 @@ WHERE AddressID = 1 + 2;
 
 However, it can be parameterized according to simple parameterization rules. When forced parameterization is tried but fails, simple parameterization is still subsequently tried.
 
-### Simple Parameterization
+### <a name="SimpleParam"></a> Simple Parameterization
 
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], using parameters or parameter markers in Transact-SQL statements increases the ability of the relational engine to match new SQL statements with existing, previously-compiled execution plans.
 
@@ -474,7 +474,7 @@ Under the default behavior of simple parameterization, [!INCLUDE[ssNoVersion](..
 
 Alternatively, you can specify that a single query, and any others that are syntactically equivalent but differ only in their parameter values, be parameterized. 
 
-### Forced Parameterization
+### <a name="ForcedParam"></a> Forced Parameterization
 
 You can override the default simple parameterization behavior of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by specifying that all `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements in a database be parameterized, subject to certain limitations. Forced parameterization is enabled by setting the `PARAMETERIZATION` option to `FORCED` in the `ALTER DATABASE` statement. Forced parameterization may improve the performance of certain databases by reducing the frequency of query compilations and recompilations. Databases that may benefit from forced parameterization are generally those that experience high volumes of concurrent queries from sources such as point-of-sale applications.
 
@@ -525,7 +525,7 @@ When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parameterizes litera
 * Binary literals parameterize to varbinary(8000) if the literal fits within 8,000 bytes. If it is larger than 8,000 bytes, it is converted to varbinary(max).
 * Money type literals parameterize to money.
 
-#### Guidelines for Using Forced Parameterization
+#### <a name="ForcedParamGuide"></a> Guidelines for Using Forced Parameterization
 
 Consider the following when you set the `PARAMETERIZATION` option to FORCED:
 
@@ -580,7 +580,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the prepare/execute m
 * The prepare/execute model is portable to other databases, including earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
  
-### Parameter Sniffing
+### <a name="ParamSniffing"></a> Parameter Sniffing
 "Parameter sniffing" refers to a process whereby [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sniffs" the current parameter values during compilation or recompilation, and passes it along to the Query Optimizer so that they can be used to generate potentially more efficient query execution plans.
 
 Parameter values are sniffed during compilation or recompilation for the following types of batches:
@@ -606,7 +606,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does 
 * A serial execution plan is considered faster than any possible parallel execution plan for the particular query.
 * The query contains scalar or relational operators that cannot be run in parallel. Certain operators can cause a section of the query plan to run in serial mode, or the whole plan to run in serial mode.
 
-### Degree of Parallelism
+### <a name="DOP"></a> Degree of Parallelism
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically detects the best degree of parallelism for each instance of a parallel query execution or index data definition language (DDL) operation. It does this based on the following criteria: 
 
@@ -1035,4 +1035,5 @@ GO
 
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
- [Extended Events](../relational-databases/extended-events/extended-events.md)
+ [Extended Events](../relational-databases/extended-events/extended-events.md)  
+ [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)

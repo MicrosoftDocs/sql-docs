@@ -26,11 +26,11 @@ ms.assetid:
 
 # Configure Always On availability group for SQL Server on Linux
 
-This article describes how to create a SQL Server Always on availability group with three replicas for high availability on Linux. You can configure an availability group for SQL Server on Linux. There are two configuration type for availability groups. A *high availability* configuration has three servers and uses a cluster manager to provide business continuity. This configuration can also include read scale-out replicas. This document explains how to create the availability group high availability configuration.
+This article describes how to create a SQL Server Always on availability group for high availability on Linux. There are two configuration types for availability groups. A *high availability* configuration uses a cluster manager to provide business continuity. This configuration can also include read scale-out replicas. This document explains how to create the availability group high availability configuration.
 
 You can also create a *read scale-out* availability group without a cluster manager. This configuration only provides read-only replicas for performance scale-out. It does not provide high availability. To create a read scale-out availability group, see [Configure read scale-out availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 
-Configurations that guarantee high availability and data protection require either three synchronous commit replicas or two synchronous replicas and a witness. For details, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). 
+Configurations that guarantee high availability and data protection require either two or three synchronous commit replicas. With three synchronous replicas the availability group can automatically recovery even if one server is not available. For more information, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). 
 
 All servers must be either physical or virtual, and virtual servers must be on the same virtualization platform. This requirement is because the fencing agents are platform specific. See [Policies for Guest Clusters](https://access.redhat.com/articles/29440#guest_policies).
 
@@ -72,17 +72,13 @@ The steps to create an availability group on Linux servers for high availability
 
 ## Create the availability group
 
-There are three availability group configurations.
+There are two supported availability group configurations for SQL Server on Linux.
 
 - [Three synchronous replicas](sql-server-linux-availability-group-ha.md#threeSynch)
 
-- [Two synchronous replicas and a witness](sql-server-linux-availability-group-ha.md#witness)
-
 - [Two synchronous replicas](sql-server-linux-availability-group-ha.md#twoSynch)
 
-For high availability, use either three synchronous replicas, or two synchronous replicas and a witness. 
-
-For information about all three configurations, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
+For information, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
 
 Create the availability group for high availability on Linux. Use the [CREATE AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/create-availability-group-transact-sql) with `CLUSTER_TYPE = EXTERNAL`. 
 
@@ -92,7 +88,7 @@ Create the availability group for high availability on Linux. Use the [CREATE AV
 * Set Primary and secondary replicas `FAILOVER_MODE = EXTERNAL`. 
    Specifies that the replica interacts with an external cluster manager, like Pacemaker. 
 
-The following Transact-SQL scripts creates an availability group for high availability named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, and `**<node2>**` values with the names of the SQL Server instances that host the replicas. Replace `**<node3**` with the value for the witness. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. To create the availability group, run the following Transact-SQL on the SQL Server instance that hosts the primary replica.
+The following Transact-SQL scripts creates an availability group for high availability named `ag1`. The script configures the availability group replicas with `SEEDING_MODE = AUTOMATIC`. This setting causes SQL Server to automatically create the database on each secondary server. Update the following script for your environment. Replace the  `**<node1>**`, and `**<node2>**` values with the names of the SQL Server instances that host the replicas. Replace the `**<5022>**` with the port you set for the data mirroring endpoint. To create the availability group, run the following Transact-SQL on the SQL Server instance that hosts the primary replica.
 
 Run **only one** of the following scripts: 
 
@@ -130,14 +126,14 @@ Run **only one** of the following scripts:
    >[!IMPORTANT]
    >After you run the preceding script to create an availability group with three synchronous replicas, do not run the following script:
 
-<a name="witnessScript"></a>
+<a name="readScale"></a>
 
-- Create availability group with two synchronous replicas and a witness
+- Create availability group with two synchronous replicas
 
-   Include two replicas with synchronous availability mode and a witness. For example, the following script creates an availability group called `ag1`. `node1` and `node2` host replicas in synchronous mode, with automatic seeding and automatic failover. `node3` is a witness. The script defines only the SQL Server instance name `node3`, the endpoint, and the availability mode.
+   Include two replicas with synchronous availability mode. For example, the following script creates an availability group called `ag1`. `node1` and `node2` host replicas in synchronous mode, with automatic seeding and automatic failover.
 
    >[!IMPORTANT]
-   >Only run the following script to create an availability group with two synchronous replicas and a witness. Do not run the following script if you ran the preceding script. 
+   >Only run the following script to create an availability group with two synchronous replicas. Do not run the following script if you ran the preceding script. 
 
    ```Transact-SQL
    CREATE AVAILABILITY GROUP [ag1]
@@ -154,10 +150,6 @@ Run **only one** of the following scripts:
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
-      ),
-      N'node3' WITH (
-         ENDPOINT_URL = N'tcp://node3:5022',
-         AVAILABILITY_MODE = WITNESS_COMMIT
       );
    		
    ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

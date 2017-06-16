@@ -71,6 +71,8 @@ Each node in the cluster must have an appropriate subscription for RHEL and the 
    #sudo subscription-manager register
    ```
 
+   Provide your user name and password.   
+
 1. List the available pools for registration.
 
    ```bash

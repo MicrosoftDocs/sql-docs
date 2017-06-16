@@ -198,5 +198,7 @@
 
 ## [Data Science Solution Templates](tutorials/data-science-scenarios-and-solution-templates.md)
 ## [SQL Server Samples](https://github.com/Microsoft/sql-server-samples)
-## [Demand Forecasting with R Services](https://www.microsoft.com/sql-server/developer-get-started/r)
-## [Customer Clustering with R](https://www.microsoft.com/sql-server/developer-get-started/rclustering)
+## [Demand Forecasting with R Services](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-2016-R-Services-1)
+## [Build a predictive model using R and SQL Server ML Services](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
+## [Build a predictive model using Python and SQL Server ML Services]https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/
+## [Perform customer clustering using R and SQL Server ML Services](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/)

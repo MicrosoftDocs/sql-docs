@@ -138,10 +138,10 @@ CREATE AVAILABILITY GROUP group_name
 >  There is no enforcement of the AUTOMATED_BACKUP_PREFERENCE setting. The interpretation of this preference depends on the logic, if any, that you script into back jobs for the databases in a given availability group. The automated backup preference setting has no impact on ad-hoc backups. For more information, see [Configure Backup on Availability Replicas &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
->  To view the automated backup preference of an existing availability group, select the **automated_backup_preference** or **automated_backup_preference_desc** column of the [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) catalog view. Additionally, [sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) can be used to determine the preferred backup replica.  This function will always return 1 for at least one of the replicas, even when `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
+>  To view the automated backup preference of an existing availability group, select the **automated_backup_preference** or **automated_backup_preference_desc** column of the [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) catalog view. Additionally, [sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) can be used to determine the preferred backup replica.  This function returns 1 for at least one of the replicas, even when `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
   
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
- Specifies what failure conditions will trigger an automatic failover for this availability group. FAILURE_CONDITION_LEVEL is set at the group level but is relevant only on availability replicas that are configured for synchronous-commit availability mode (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT). Furthermore, failure conditions can trigger an automatic failover only if both the primary and secondary replicas are configured for automatic failover mode (FAILOVER_MODE **=** AUTOMATIC) and the secondary replica is currently synchronized with the primary replica.  
+ Specifies what failure conditions trigger an automatic failover for this availability group. FAILURE_CONDITION_LEVEL is set at the group level but is relevant only on availability replicas that are configured for synchronous-commit availability mode (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT). Furthermore, failure conditions can trigger an automatic failover only if both the primary and secondary replicas are configured for automatic failover mode (FAILOVER_MODE **=** AUTOMATIC) and the secondary replica is currently synchronized with the primary replica.  
   
  The failure-condition levels (1–5) range from the least restrictive, level 1, to the most restrictive, level 5. A given condition level encompasses all the less restrictive levels. Thus, the strictest condition level, 5, includes the four less restrictive condition levels (1-4), level 4 includes levels 1-3, and so forth. The following table describes the failure-condition that corresponds to each level.  
   
@@ -181,7 +181,7 @@ CREATE AVAILABILITY GROUP group_name
  Used to create a distributed availability group. This option is used with the AVAILABILITY GROUP ON parameter to connect two availability groups in separate Windows Server Failover Clusters.  For more information, see [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Distributed availability groups are supported beginning in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
 
  REQUIRED_SYNCHRONOUS_SECONDARIES_TO_COMMIT   
- Introduced in SQL Server 2017 CTP 2.2. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transactions will wait until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica will mark that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it will be in a "not synced" state and the replica will be marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica will not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary will fail. This setting applies to availability groups with cluster type `WSFC` and `EXTERNAL`. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
+ Introduced in SQL Server 2017 CTP 2.2. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transaction waits until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it is in a "not synced" state and the replica marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica waits until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary fail. This setting applies to availability groups with cluster type `WSFC` and `EXTERNAL`. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
 
  CLUSTER_TYPE  
  Introduced in SQL Server 2017 CTP 2.2. Used to identify if the availability group is on a Windows Server Failover Cluster (WSFC).  Set to WSFC when availability group is on a failover cluster instance on a Windows Server failover cluster. Set to EXTERNAL when the cluster is managed by a cluster manager that is not a Windows Server failover cluster, like Linux Pacemaker. Set to NONE when availability group not using WSFC for cluster coordination. For example, when an availability group includes Linux servers. 
@@ -189,15 +189,15 @@ CREATE AVAILABILITY GROUP group_name
  DATABASE *database_name*  
  Specifies a list of one or more user databases on the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (that is, the server instance on which you are creating the availability group). You can specify multiple databases for an availability group, but each database can belong to only one availability group. For information about the type of databases that an availability group can support, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). To find out which local databases already belong to an availability group, see the **replica_id** column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
   
- The DATABASE clause is optional. If you omit it, the new availability group will be empty.  
+ The DATABASE clause is optional. If you omit it, the new availability group is empty.  
   
- After you have created the availability group,  you will need connect to each server instance that hosts a secondary replica and then prepare each secondary database and join it to the availability group. For more information, see [Start Data Movement on an Always On Secondary Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+ After you have created the availability group, connect to each server instance that hosts a secondary replica and then prepare each secondary database and join it to the availability group. For more information, see [Start Data Movement on an Always On Secondary Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 > [!NOTE]  
 >  Later, you can add eligible databases on the server instance that hosts the current primary replica to an availability group. You can also remove a database from an availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
  REPLICA ON  
- Specifies from one to five SQL server instances to host availability replicas in the new availability group.  Each replica is specified by its server instance address followed by a WITH (…) clause. Minimally, you must specify your local server instance, which will become the initial primary replica. Optionally, you can also specify up to four secondary replicas.  
+ Specifies from one to five SQL server instances to host availability replicas in the new availability group.  Each replica is specified by its server instance address followed by a WITH (…) clause. Minimally, you must specify your local server instance, which becomes the initial primary replica. Optionally, you can also specify up to four secondary replicas.  
   
  You need to join every secondary replica to the availability group. For more information, see [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
@@ -226,7 +226,7 @@ CREATE AVAILABILITY GROUP group_name
  For information about the prerequisites for WSFC nodes and server instances, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
  ENDPOINT_URL **='**TCP**://***system-address***:***port***'**  
- Specifies the URL path for the [database mirroring endpoint](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that will host the availability replica that you are defining in your current REPLICA ON clause.  
+ Specifies the URL path for the [database mirroring endpoint](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the availability replica that you are defining in your current REPLICA ON clause.  
   
  The ENDPOINT_URL clause is required. For more information, see [Specify the Endpoint URL When Adding or Modifying an Availability Replica &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
@@ -243,7 +243,7 @@ CREATE AVAILABILITY GROUP group_name
  SYNCHRONOUS_COMMIT or ASYNCHRONOUS_COMMIT specifies whether the primary replica has to wait for the secondary replica to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database. The transactions on different databases on the same primary replica can commit independently.
   
  SYNCHRONOUS_COMMIT  
- Specifies that the primary replica will wait to commit transactions until they have been hardened on this secondary replica (synchronous-commit mode). You can specify SYNCHRONOUS_COMMIT for up to three replicas, including the primary replica.  
+ Specifies that the primary replica waits to commit transactions until they have been hardened on this secondary replica (synchronous-commit mode). You can specify SYNCHRONOUS_COMMIT for up to three replicas, including the primary replica.  
   
  ASYNCHRONOUS_COMMIT  
  Specifies that the primary replica commits transactions without waiting for this secondary replica to harden the log (synchronous-commit availability mode). You can specify ASYNCHRONOUS_COMMIT for up to five availability replicas, including the primary replica.  
@@ -265,10 +265,10 @@ CREATE AVAILABILITY GROUP group_name
  The FAILOVER_MODE clause is required. The two types of manual failover, manual failover without data loss and forced failover (with possible data loss), are supported under different conditions. For more information, see [Failover and Failover Modes &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
  SEEDING_MODE **=** { AUTOMATIC | MANUAL }  
- Specifies how the secondary replica will be initially seeded.  
+ Specifies how the secondary replica is initially seeded.  
   
  AUTOMATIC  
- Enables direct seeding. This method will seed the secondary replica over the network. This method does not require you to backup and restore a copy of the primary database on the replica.  
+ Enables direct seeding. This method seeds the secondary replica over the network. This method does not require you to backup and restore a copy of the primary database on the replica.  
   
 > [!NOTE]  
 >  For direct seeding, you must allow database creation on each secondary replica by calling **ALTER AVAILABILITY GROUP** with the  **GRANT CREATE ANY DATABASE** option.  
@@ -281,12 +281,12 @@ CREATE AVAILABILITY GROUP group_name
   
 -   1..100 indicates that the availability replica could be chosen for performing backups. 1 indicates the lowest priority, and 100 indicates the highest priority. If BACKUP_PRIORITY = 1, the availability replica would be chosen for performing backups only if no higher priority availability replicas are currently available.  
   
--   0 indicates that this availability replica will never be chosen for performing backups. This is useful, for example, for a remote availability replica to which you never want backups to fail over.  
+-   0 indicates that this availability replica is not for performing backups. This is useful, for example, for a remote availability replica to which you never want backups to fail over.  
   
  For more information, see [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** … **)**  
- Specifies role-specific settings that will take effect if this availability replica currently owns the secondary role (that is, whenever it is a secondary replica). Within the parentheses,  specify either or both secondary-role options. If you specify both, use a comma-separated list.  
+ Specifies role-specific settings that take effect if this availability replica currently owns the secondary role (that is, whenever it is a secondary replica). Within the parentheses,  specify either or both secondary-role options. If you specify both, use a comma-separated list.  
   
  The secondary role options are as follows:  
   
@@ -309,13 +309,13 @@ CREATE AVAILABILITY GROUP group_name
   
  For a named instance, you can obtain the port number by querying the **port** and **type_desc** columns of the [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) dynamic management view. The server instance uses the Transact-SQL listener (**type_desc='TSQL'**).  
   
- For more information about calculating the read-only routing URL for an availability replica, see [Calculating read_only_routing_url for Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx).  
+ For more information about calculating the read-only routing URL for a replica, see [Calculating read_only_routing_url for Always On](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx).  
   
 > [!NOTE]  
 >  For a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Transact-SQL listener should be configured to use a specific port. For more information, see [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
  PRIMARY_ROLE **(** … **)**  
- Specifies role-specific settings that will take effect if this availability replica currently owns the primary role (that is, whenever it is the primary replica). Within the parentheses,  specify either or both primary-role options. If you specify both, use a comma-separated list.  
+ Specifies role-specific settings that take effect if this availability replica currently owns the primary role (that is, whenever it is the primary replica). Within the parentheses,  specify either or both primary-role options. If you specify both, use a comma-separated list.  
   
  The primary role options are as follows:  
   
@@ -338,14 +338,14 @@ CREATE AVAILABILITY GROUP group_name
  The READ_ONLY_ROUTING_LIST values are as follows:  
   
  <server_instance>  
- Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is the host for an availability replica that is a readable secondary replica when running under the secondary role.  
+ Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is the host for a replica that is a readable secondary replica when running under the secondary role.  
   
- Use a comma-separated list to specify all the server instances that might host a readable secondary replica. Read-only routing will follow the order in which server instances are specified in the list. If you include a replica's host server instance on the replica's read-only routing list, placing this server instance at the end of the list is typically a good practice, so that read-intent connections go to a secondary replica, if one is available.  
+ Use a comma-separated list to specify all the server instances that might host a readable secondary replica. Read-only routing follows the order in which server instances are specified in the list. If you include a replica's host server instance on the replica's read-only routing list, placing this server instance at the end of the list is typically a good practice, so that read-intent connections go to a secondary replica, if one is available.  
   
  Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can load-balance read-intent requests across readable secondary replicas. You specify this by placing the replicas in a nested set of parentheses within the read-only routing list. For more information and examples, see [Configure load-balancing across read-only replicas](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
  NONE  
- Specifies that when this availability replica is the primary replica, read-only routing will not be supported. This is the default behavior.  
+ Specifies that when this availability replica is the primary replica, read-only routing is not supported. This is the default behavior.  
   
  SESSION_TIMEOUT **=** *integer*  
  Specifies the session-timeout period in seconds. If you do not specify this option, by default, the time period is 10 seconds. The minimum value is 5 seconds.  
@@ -381,7 +381,7 @@ CREATE AVAILABILITY GROUP group_name
  Specifies whether the primary replica has to wait for the secondary availability group to acknowledge the hardening (writing) of the log records to disk before the primary replica can commit the transaction on a given primary database.  
   
  SYNCHRONOUS_COMMIT  
- Specifies that the primary replica will wait to commit transactions until they have been hardened on the secondary availability group. You can specify SYNCHRONOUS_COMMIT for up to two availability groups, including the primary availability group.  
+ Specifies that the primary replica waits to commit transactions until they have been hardened on the secondary availability group. You can specify SYNCHRONOUS_COMMIT for up to two availability groups, including the primary availability group.  
   
  ASYNCHRONOUS_COMMIT  
  Specifies that the primary replica commits transactions without waiting for this secondary availability group to harden the log. You can specify ASYNCHRONOUS_COMMIT for up to two availability groups, including the primary availability group.  
@@ -397,10 +397,10 @@ CREATE AVAILABILITY GROUP group_name
  The FAILOVER_MODE clause is required, and the only option is MANUAL. Automatic failover to the secondary availability group is not supported.  
   
  SEEDING_MODE **=** { AUTOMATIC | MANUAL }  
- Specifies how the secondary availability group will be initially seeded.  
+ Specifies how the secondary availability group is initially seeded.  
   
  AUTOMATIC  
- Enables direct seeding. This method will seed the secondary availability group over the network. This method does not require you to backup and restore a copy of the primary database on the replicas of the secondary availability group.  
+ Enables direct seeding. This method seeds the secondary availability group over the network. This method does not require you to backup and restore a copy of the primary database on the replicas of the secondary availability group.  
   
  MANUAL  
  Specifies manual seeding (default). This method requires you to create a backup of the database on the primary replica and manually restore that backup on the replica(s) of the secondary availability group.  
@@ -424,13 +424,13 @@ CREATE AVAILABILITY GROUP group_name
  We recommend that you specify a meaningful string. For example, for an availability group named `AG1`, a meaningful DNS host name would be `ag1-listener`.  
   
 > [!IMPORTANT]  
->  NetBIOS recognizes only the first 15 chars in the dns_name. If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
+>  NetBIOS recognizes only the first 15 chars in the dns_name. If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both clusters using names with more than 15 characters and an identical 15 character prefix, an error reports that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  <listener_option>  
  LISTENER takes one of the following <listener_option> options:  
   
  WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
- Specifies that the availability group listener will use the Dynamic Host Configuration Protocol (DHCP).  Optionally, use the ON clause to identify the network on which this listener will be created. DHCP is limited to a single subnet that is used for every server instances that hosts an availability replica in the availability group.  
+ Specifies that the availability group listener uses the Dynamic Host Configuration Protocol (DHCP).  Optionally, use the ON clause to identify the network on which this listener is created. DHCP is limited to a single subnet that is used for every server instances that hosts a replica in the availability group.  
   
 > [!IMPORTANT]  
 >  We do not recommend DHCP in production environment. If there is a down time and the DHCP IP lease expires, extra time is required to register the new DHCP network IP address that is associated with the listener DNS name and impact the client connectivity. However, DHCP is good for setting up your development and testing environment to verify basic functions of availability groups and for integration with your applications.  
@@ -440,7 +440,7 @@ CREATE AVAILABILITY GROUP group_name
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
  WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
- Specifies that, instead of using DHCP, the availability group listener will use one or more static IP addresses. To create an availability group across multiple subnets, each subnet requires one static IP address in the listener configuration. For a given subnet, the static IP address can be either an IPv4 address or an IPv6 address. Contact your network administrator to get a static IP address for each subnet that will host an availability replica for the new availability group.  
+ Specifies that, instead of using DHCP, the availability group listener uses one or more static IP addresses. To create an availability group across multiple subnets, each subnet requires one static IP address in the listener configuration. For a given subnet, the static IP address can be either an IPv4 address or an IPv6 address. Contact your network administrator to get a static IP address for each subnet that hosts a replica for the new availability group.  
   
  For example:  
   
@@ -481,7 +481,7 @@ CREATE AVAILABILITY GROUP group_name
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|This automated backup preference indicates that backups should occur on a secondary replica except when the primary replica is the only replica online (this is the default behavior). For the AUTOMATED_BACKUP_PREFERENCE setting to have any effect, you need to script backup jobs on the availability databases to take the automated backup preference into account.|  
 |FAILURE_CONDITION_LEVEL|3|This failure condition level setting specifies that an automatic failover should be initiated on critical SQL Server internal errors, such as orphaned spinlocks, serious write-access violations, or too much dumping.|  
-|HEALTH_CHECK_TIMEOUT|600000|This health check timeout value, 60 seconds, specifies that the WSFC cluster will wait 60000 milliseconds for the [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure to return server-health information about a server instance that is hosting a synchronous-commit replica with automatic before the cluster assumes that the host server instance is slow or hung. (The default value is 30000 milliseconds).|  
+|HEALTH_CHECK_TIMEOUT|600000|This health check timeout value, 60 seconds, specifies that the WSFC cluster waits 60000 milliseconds for the [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) system stored procedure to return server-health information about a server instance that is hosting a synchronous-commit replica with automatic before the cluster assumes that the host server instance is slow or hung. (The default value is 30000 milliseconds).|  
   
  Three availability replicas are to be hosted by the default server instances on computers named `COMPUTER01`, `COMPUTER02`, and `COMPUTER03`. The following table summarizes the values specified for the replica options of each replica.  
   
@@ -490,9 +490,9 @@ CREATE AVAILABILITY GROUP group_name
 |ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|In this example, the systems are the same domain, so the endpoint URLs can use the name of the computer system as the system address.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|Two of the replicas use synchronous-commit mode. When synchronized, they support failover without data loss. The third replica, which uses asynchronous-commit availability mode.|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|The synchronous-commit replicas support automatic failover and planned manual failover. The synchronous-commit availability mode replica supports only forced manual failover.|  
-|BACKUP_PRIORITY|30|30|90|A higher priority, 90, is assigned to the asynchronous-commit replica, than to the synchronous-commit replicas. Backups will tend to occur on the server instance that hosts the asynchronous-commit replica.|  
+|BACKUP_PRIORITY|30|30|90|A higher priority, 90, is assigned to the asynchronous-commit replica, than to the synchronous-commit replicas. Backups tend to occur on the server instance that hosts the asynchronous-commit replica.|  
 |SECONDARY_ROLE|( ALLOW_CONNECTIONS = NO,<br /><br /> READ_ONLY_ROUTING_URL = 'TCP://COMPUTER01:1433' )|( ALLOW_CONNECTIONS = NO,<br /><br /> READ_ONLY_ROUTING_URL = 'TCP://COMPUTER02:1433' )|( ALLOW_CONNECTIONS = READ_ONLY, <br />READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03:1433' )|Only the asynchronous-commit replica serves as a readable secondary replica.<br /><br /> Specifies the computer name and default Database Engine port number (1433).<br /><br /> This argument is optional.|  
-|PRIMARY_ROLE|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = (COMPUTER03) )|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = (COMPUTER03) )|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = NONE )|In the primary role, all the replicas will reject read-intent connection attempts.<br /><br /> Read-intent connection requests will be routed to COMPUTER03 if the local replica is running under the secondary role. When that replica runs under the primary role, read-only routing is disabled.<br /><br /> This argument is optional.|  
+|PRIMARY_ROLE|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = (COMPUTER03) )|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = (COMPUTER03) )|( ALLOW_CONNECTIONS = READ_WRITE, <br />READ_ONLY_ROUTING_LIST = NONE )|In the primary role, all the replicas reject read-intent connection attempts.<br /><br /> Read-intent connection requests are routed to COMPUTER03 if the local replica is running under the secondary role. When that replica runs under the primary role, read-only routing is disabled.<br /><br /> This argument is optional.|  
 |SESSION_TIMEOUT|10|10|10|This example specifies the default session timeout value (10). This argument is optional.|  
   
  Finally, the example specifies the optional LISTENER clause to create an availability group listener for the new availability group. A unique DNS name, `MyAgListenerIvP6`, is specified for this listener. The two replicas are on different subnets, so the listener must use static IP addresses. For each of the two availability replicas, the WITH IP clause specifies a static IP address, `2001:4898:f0:f00f::cf3c` and `2001:4898:e0:f213::4ce2`, which use the IPv6 format. This example also specifies uses the optional PORT argument to specify port `60173` as the listener port.  

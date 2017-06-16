@@ -34,13 +34,13 @@ This document explains how to create a three-node availability group cluster for
 For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
-> SQL Server is not as tightly integrated with Pacemaker on Linux as it is with Windows Server failover clustering. A SQL Server instance is not aware of the cluster. Pacemaker provides cluster resource orchestration. Also, the virtual network name is specific to Windows Server failover clustering; there is no equivalent in Pacemaker. Availabilty group dynamic management views (DMVs) that query cluster information return empty rows on Pacemaker clusters. You can still create a listener for transparent reconnection after failover, but you will have to manually register the listener name in DNS with the IP used to create the virtual IP resource. 
+> SQL Server is not as tightly integrated with Pacemaker on Linux as it is with Windows Server failover clustering. A SQL Server instance is not aware of the cluster. Pacemaker provides cluster resource orchestration. Also, the virtual network name is specific to Windows Server failover clustering - there is no equivalent in Pacemaker. Availability group dynamic management views (DMVs) that query cluster information return empty rows on Pacemaker clusters. To create a listener for transparent reconnection after failover, manually register the listener name in DNS with the IP used to create the virtual IP resource. 
 
 The following sections walk through the steps to set up a Pacemaker cluster and add an availability group as resource in the cluster for high availability.
 
 ## Roadmap
 
-The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high-level steps: 
 
 1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
 
@@ -57,8 +57,50 @@ The steps to create an availability group on Linux servers for high availability
 
 5. [Add the availability group as a resource in the cluster](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
 
-## Configure Pacemaker for RHEL
+## Configure high availability for RHEL
 
+To configure high availability for RHEL, enable the high availability subscription and then configure Pacemaker.
+
+### Enable the high availability subscription for RHEL
+
+Each node in the cluster must have an appropriate subscription for RHEL and the High Availability Add on. Review the requirements at [How to install High Availability cluster packages in Red Hat Enterprise Linux](http://access.redhat.com/solutions/45930). Follow these steps to configure the subscription and repos:
+
+1. Register the system.
+
+   ```bash
+   #sudo subscription-manager register
+   ```
+
+   Provide your user name and password.   
+
+1. List the available pools for registration.
+
+   ```bash
+   #sudo subscription-manager list --available
+   ```
+
+   From the list of available pools, note the pool ID for the high availability subscription.
+
+1. Update the following script. Replace `<pool id>` with the pool ID for high availability from the preceding step. Run the script to attach the subscription.
+
+   ```bash
+   #sudo subscription-manager attach --pool=<pool id>
+   ```
+
+1. Enable the repository.
+
+   ```bash
+   #sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
+   ```
+
+For more information, see [Pacemaker – The Open Source, High Availability Cluster](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+
+After you have configured the subscription, complete the following steps to configure Pacemaker:
+
+### Configure Pacemaker
+
+After you register the subscription, complete the following steps to configure Pacemaker:
+   
 [!INCLUDE [RHEL-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
 
 After Pacemaker is configured, use `pcs` to interact with the cluster. Execute all commands on one node from the cluster. 
@@ -67,17 +109,17 @@ After Pacemaker is configured, use `pcs` to interact with the cluster. Execute a
 
 Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. STONITH stands for "shoot the other node in the head." When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing brings the cluster to a known state again.
 
-Resource level fencing ensures that there is no data corruption in case of an outage by configuring a resource. For example, you can use resource level fencing with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
+Resource level fencing ensures that there is no data corruption in case of an outage by configuring a resource. For example, you can use resource level fencing to mark the disk on a node as outdated when the communication link goes down. 
 
 Node level fencing ensures that a node does not run any resources. This is done by resetting the node. Pacemaker supports a great variety of fencing devices. Examples include an uninterruptible power supply or management interface cards for servers.
 
 For information about STONITH, and fencing, see the following articles:
 
 * [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html)
+* [Fencing and STONITH](http://clusterlabs.org/doc/crm_fencing.html)
 * [Red Hat High Availability Add-On with Pacemaker: Fencing](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
-Because the node level fencing configuration depends heavily on your environment, we will disable it for this tutorial (it can be configured at a later time):
+Because the node level fencing configuration depends heavily on your environment, disable it for this tutorial (it can be configured later). The following script disables node level fencing:
 
 ```bash
 sudo pcs property set stonith-enabled=false
@@ -99,7 +141,7 @@ pcs property set start-failure-is-fatal=false
 >[!WARNING]
 >After an automatic failover, when `start-failure-is-fatal = true` the resource manager will attempt to start the resource. If it fails on the first attempt, manually run `pcs resource cleanup <resourceName>` to clean up the resource failure count and reset the configuration.
 
-For more details on Pacemaker cluster properties see [Pacemaker Clusters Properties](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
+For information on Pacemaker cluster properties, see [Pacemaker Clusters Properties](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
 ## Create a SQL Server login for Pacemaker
 

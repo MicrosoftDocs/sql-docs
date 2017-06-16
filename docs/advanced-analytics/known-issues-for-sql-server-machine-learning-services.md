@@ -39,6 +39,14 @@ A description of processed and common questions related to initial setup and con
 
 Also see this article for information about upgrades, side-by-side installation, and installation of new R or Python components.
 
+### Unable to install Python components in in offline installs of SQL Server 2017
+
+If you install SQL Server 2017 on a computer without Internet access, the installer might fail to display the page that prompts for the location of the downloaded Python components; therefore, you will be able to install the Machine Learning Services feature, but not the Python components.
+
+This issue will be fixed in an upcoming release. As a workaround, you can temporarily enable Internet access for the duration of setup. This limitation does not apply to R.
+
+**Applies to:** SQL Server 2017 with Python
+
 ### Install latest service release to ensure compatibility with Microsoft R Client
 
 If you install the latest version of Microsoft R Client and use it to run R on SQL Server using a remote compute context, you might get an error like the following:

@@ -273,8 +273,7 @@ The following table provides best practices:
 As a result, performance of your workload will be sub-optimal and Query Store might switch to read-only mode or might be constantly deleting the data trying to keep up with the incoming queries.  
   
  Consider following options:  
-  
--   Parameterize queries where applicable, for example wrap queries inside a stored procedure.  
+  -   Parameterize queries where applicable, for example wrap queries inside a stored procedure.  
   
 -   Use the [**Optimize for Ad Hoc Workloads**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) option if your workload contains many single use ad-hoc batches with different query plans.  
   

@@ -280,7 +280,7 @@ As a result, performance of your workload will be sub-optimal and Query Store mi
   
     -   Compare the number of  distinct query_hash values with the total number of entries in sys.query_store_query. If the ratio is close to 1 your ad-hoc workload generates different queries.  
   
--   Apply [**forced parameterization**](../../relational-databases/query-processing-architecture-guide.md.md#forcedparam), for the database or for a subset of queries if the number of different query plans is not large.  
+-   Apply [**forced parameterization**](../../relational-databases/query-processing-architecture-guide.md#forcedparam), for the database or for a subset of queries if the number of different query plans is not large.  
   
     -   Use [plan guide](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md) to force parameterization only for the selected query.  
   

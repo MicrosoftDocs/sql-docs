@@ -208,10 +208,6 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 
 Manually fail over the availability group with `pcs`. Do not initiate failover with Transact-SQL. For instructions, see [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
 
-<!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
-
->additional line
-
 ## Next steps
 
 [Operate HA availability group](sql-server-linux-availability-group-failover-ha.md)

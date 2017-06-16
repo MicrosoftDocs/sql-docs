@@ -16,15 +16,11 @@
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   ​
-
 2. Set the password for the default user that is created when installing Pacemaker and Corosync packages. Use the same password on all nodes. 
 
    ```bash
    sudo passwd hacluster
    ```
-
-   ​
 
 3. To allow nodes to rejoin the cluster after the reboot, enable and start `pcsd` service and Pacemaker. Run the following command on all nodes.
 

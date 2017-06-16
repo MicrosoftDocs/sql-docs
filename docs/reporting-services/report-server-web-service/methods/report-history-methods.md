@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 caps.latest.revision: 35
 author: "sabotta"
-ms.author: "carlasab"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Report History Methods

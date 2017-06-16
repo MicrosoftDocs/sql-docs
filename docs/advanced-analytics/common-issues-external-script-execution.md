@@ -30,7 +30,7 @@ The **SQL Server Trusted Launchpad** is the service that manages execution of ex
 
 As part of the troubleshooting process, begin by asking and answering these questions:
 
-- Did Launchpad always fail or did it just stop working?
+- Did Launchpad always fail to run, or did it stop working?
 - What service account is Launchpad running under?
 - What user rights does the Launchpad service account have?
 
@@ -72,8 +72,7 @@ There are several issues that can prevent Launchpad from starting. The Launchpad
 
 For compatibility with R, SQL Server 2016 R Services (In-Database) required that the drive where the feature is installed support creation of short file names using the **8dot3** notation. An 8.3 filename is also called a short filename and is used for compatibility with older versions of Microsoft Windows prior or as an alternate filename to the long filename.
 
-If the volume where you are installing R does not support the short filenames, the processes that launch R from SQL Server might not be able to locate the correct executable and the
-[!INCLUDE[rsql_launchpad](../includes/rsql-launchpad-md.md) will not start.
+If the volume where you are installing R does not support the short filenames, the processes that launch R from SQL Server might not be able to locate the correct executable and the Launchpad will not start.
 
 As a workaround, you should enable the 8dot3 notation on the volume where SQL Server is installed and R Services is installed. You must then provide the short name for the working directory in the R Services configuration file.
 
@@ -162,7 +161,7 @@ If the Windows group for R users (which is also used for Python) does not have t
 -   Security logs indicate that the account NT SERVICE was unable to log in.
 
 For information about how to give this user group the necessary permissions, see [Set up SQL Server R
-Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+Services](r/set-up-sql-server-r-services-in-database.md).
 
 > [!NOTE]
 > This limitation does not apply if you use SQL logins to run R scripts from a remote workstation.

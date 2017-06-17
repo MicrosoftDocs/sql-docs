@@ -97,7 +97,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
   
 ##  <a name="bkmk_enableFeature"></a> Step 2: Enable Python script execution
   
-1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If it is not already installed, you can re-run the SQL Server setup wizard to open a download link and install it.
+1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If it is not already installed, you can run the SQL Server setup wizard again to open a download link and install it.
   
 2. Connect to the instance where you installed Machine Learning Services, and run the following command:
 
@@ -107,13 +107,14 @@ To perform an unattended installation, use the command-line options for SQL Serv
 
     The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default, to reduce the surface area. The feature must be explicitly enabled by an administrator before you can run R or Python scripts.
     
-3.  To enable the external scripting feature that supports Python, run the following statement. This is exactly the same process that is used to enable R, because the underlying extensibility feature supports both languages.
+3.  To enable the external scripting feature that supports Python, run the following statement. 
     
     ```SQL
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
-    
+    This is exactly the same process that is used to enable R, because the underlying extensibility feature supports both languages.
+
 4. Restart the SQL Server service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Restarting the SQL Server service will also automatically restart the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
     You can restart the service using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
@@ -155,20 +156,20 @@ If this command was successful, you can run Python commands from SQL Server Mana
 
 If not, review the following list and see if changes to the configuration of the service or database might be needed.
 
-It is important to note that not all of the listed changes are required, and none might be required. It depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
+It is important to note that not all the listed changes are required, and none might be required. It depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
 
 ###  <a name="bkmk_configureAccounts"></a> Enable implied authentication for Launchpad account group
 
 During setup, a number of new Windows user accounts are created for the purpose of running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When a user sends a Python or R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will activate an available worker account, map it to the identity of the calling user, and run the script on behalf of the user.
 
-This is called called *implied authentication*, and is a service of the database engine that supports secure execution of external scripts in SQL Server 2016 and SQL Server 2017.
+This is called *implied authentication*, and is a service of the database engine that supports secure execution of external scripts in SQL Server 2016 and SQL Server 2017.
 
-You can view these accounts in the Windows user group, **SQLRUserGroup**.  By default, 20 worker accounts are created, which is typically more than enough for running external script jobs.
+You can view these accounts in the Windows user group, **SQLRUserGroup**.  By default, 20 worker accounts are created, which is usually more than enough for running external script jobs.
 
 > [!IMPORTANT]
 > The worker group is named SQLRUserGroup regardless of the type of script you are running. There is a single group for each instance.
 
-If you need to run R scripts from a remote data science client and are using Windows authentication, these worker accounts must be given permission to log into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
+If you need to run R scripts from a remote data science client and are using Windows authentication, these worker accounts must be given permission to log in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, expand **Security**, right-click **Logins**, and select **New Login**.
 2. In the **Login - New** dialog box, click **Search**.
@@ -183,9 +184,9 @@ If you need to run R scripts from a remote data science client and are using Win
 
 ### Give users permission to run external scripts
 
-If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yourself and are running Python scripts in your own instance, you are typically executing scripts as an administrator and thus have implicit permission over various operations and all data in the database.
+If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yourself and are running Python scripts in your own instance, you typically execute scripts as an administrator, and thus have implicit permission over various operations and all data in the database.
 
-However, in an enterprise scenario, most users, including those accessing the database using SQL logins, do not have such elevated permissions. Therefore, for each user that will be running external scripts, you must grant users of machine learning services the permission to run scripts in each database where Python will be used.
+However, in an enterprise scenario, most users, including those accessing the database using SQL logins, do not have such elevated permissions. Therefore, for each user who will be using Python, you must grant users of machine learning services the permission to run external scripts in each database where Python will be used.
 
 ```SQL
 USE <database_name>
@@ -193,7 +194,8 @@ GO
 GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 ```
 
-Note that permissions are not specific to the supported script language. In other words, there are not separate permission levels for R script vs. Python script. If you need to maintain separate permissions for these languages, you can install R and Python on separate instances.
+> [!NOTE]
+> Permissions are not specific to the supported script language. In other words, there are not separate permission levels for R script vs. Python script. If you need to maintain separate permissions for these languages, you can install R and Python on separate instances.
 
 ### Add more worker accounts
 

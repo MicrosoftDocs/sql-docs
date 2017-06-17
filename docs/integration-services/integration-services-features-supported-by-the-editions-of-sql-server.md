@@ -18,9 +18,9 @@ manager: "jhubbard"
 # Integration Services Features Supported by the Editions of SQL Server
  This topic provides details about the features of SQL Server Integration Services (SSIS) supported by the different editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
 
-For features supported by Evaluation and Developer editions, see features listed for Enterprise Edition in the tables below.
+For features supported by Evaluation and Developer editions, see features listed for Enterprise Edition in the following tables.
   
-For the latest release notes and what's new information, see the following:
+For the latest release notes and what's new information, see the following articles:
 -   [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
 -   [What's New in Integration Services in SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
 -   [What's New in Integration Services in SQL Server 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
@@ -56,26 +56,23 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |Azure data source connectors and tasks|Yes|Yes||||  
 |Hadoop/HDFS connectors and tasks|Yes|Yes||||  
 |Basic data profiling tools|Yes|Yes|||| 
-|Change Data Capture Service for Oracle by Attunity|Yes|||||  
-|Change Data Capture Designer for Oracle by Attunity|Yes||||| 
 
 ##  <a name="ISAA"></a> Integration Services - Advanced sources and destinations  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|High performance Oracle destination|Yes|||||  
-|High performance Teradata Destination|Yes|||||  
+|High-performance Oracle destination|Yes|||||  
+|High-performance Teradata Destination|Yes|||||  
 |SAP BW source and destination|Yes|||||  
 |Data mining model training destination|Yes|||||  
 |Dimension processing destination|Yes|||||  
 |Partition processing destination|Yes|||||  
-|Connector for Open Database Connectivity (ODBC) by Attunity|Yes|||||  
   
 ##  <a name="ISAT"></a> Integration Services - Advanced transformations  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Persistent (high performance) lookups|Yes|||||  
+|Persistent (high-performance) lookups|Yes|||||  
 |Data mining query transformation|Yes|||||  
 |Fuzzy grouping and fuzzy lookup transformations|Yes|||||  
 |Term extraction and term lookup transformations|Yes|||||  

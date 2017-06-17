@@ -30,9 +30,7 @@ Follow the procedures for setting up [!INCLUDEssCurrent] and the R components as
 + [Set up SQL Server 2017 with Python](../python/setup-python-machine-learning-services.md)
 + [Create a Standalone R Server](create-a-standalone-r-server.md)
 
-After you have installed SQL Server, to use external R or Python scripts, you must perform some additional configuration steps. That is because the external script execution feature is not enabled by default, to reduce surface area:
-
-LINK
+After you have installed SQL Server, to use external R or Python scripts, you must perform some additional configuration steps. That is because the external script execution feature is not enabled by default, to reduce surface area.
 
 > [!NOTE]
 > Do not use setup instructions that were published prior to the public release of SQL Server 2016. The setup process changed completely between early releases and the official release version. 
@@ -183,5 +181,6 @@ In some cases, this procedure will fail to clear up the earlier failed installat
 
 ## See Also
 
- [Getting Started with SQL Server R Services](../../advanced-analytics/r-services/getting-started-with-sql-server-r-services.md)
- [Getting Started with Microsoft R Server &#40;Standalone&#41;](../../advanced-analytics/r-services/getting-started-with-microsoft-r-server-standalone.md)
+ [Getting Started with SQL Server R Services](../r/getting-started-with-sql-server-r-services.md)
+
+ [Getting Started with Microsoft R Server Standalone](../r/getting-started-with-microsoft-r-server-standalone.md)

@@ -350,3 +350,4 @@ Additionally, you can use the **sqlrutils** package to bundle your R script in a
 
 ## See Also
 
+[Troubleshooting Machine Learning in SQL Server](machine-learning-troubleshooting-faq.md)

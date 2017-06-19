@@ -65,10 +65,10 @@ GRANT <permission> [ ,...n ] ON
 - Table permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - View permissions: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- PRIVILEGES  
+PRIVILEGES  
  Included for [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 compliance. Does not change the behavior of ALL.  
   
- *column*  
+*column*  
  Specifies the name of a column in a table, view, or table-valued function on which the permission is being granted. The parentheses ( ) are required. Only SELECT, REFERENCES, and UPDATE permissions can be granted on a column. *column* can be specified in the permissions clause or after the securable name.  
   
 > [!CAUTION]  

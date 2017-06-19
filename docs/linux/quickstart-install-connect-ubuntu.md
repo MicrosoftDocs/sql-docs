@@ -17,7 +17,8 @@ This quick start first installs SQL Server 2017 CTP 2.1 on Ubuntu 16.04. You the
 
 - You must have a Ubuntu machine with at least 3.25GB of memory.
 
-  > [!TIP] To install Ubuntu, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. For instructions, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
+  > [!TIP]
+  > To install Ubuntu, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. For instructions, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
 
 - For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -49,7 +50,8 @@ To install the **mssql-server** Package on Ubuntu, follow these steps:
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
-   > [!IMPORTANT] If you plan to connect remotely, you might need to open the SQL Server TCP port on your firewall. The default SQL Server port is 1433.
+   > [!IMPORTANT]
+   > If you plan to connect remotely, you might need to open the SQL Server TCP port on your firewall. The default SQL Server port is 1433.
 
 1. Once the configuration is done, verify that the service is running:
 
@@ -108,7 +110,8 @@ The following steps use **sqlcmd** to locally connect to your new SQL Server ins
    > [!TIP]
    > You can omit the password on the command-line to be prompted to enter it.
 
-   > [!TIP] If you later decide to connect remotely, specify the machine name or IP address for the **-S** parameter, and make sure port 1433 is open on your firewall.
+   > [!TIP]
+   > If you later decide to connect remotely, specify the machine name or IP address for the **-S** parameter, and make sure port 1433 is open on your firewall.
 
 1. If successful, you should get to a **sqlcmd** command prompt: `1>`.
 

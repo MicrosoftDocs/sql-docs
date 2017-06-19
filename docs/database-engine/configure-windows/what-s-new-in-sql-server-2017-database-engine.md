@@ -54,9 +54,9 @@ manager: "jhubbard"
    - Improved performance. For more information, see [Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations](../../relational-databases/performance/performance-improvements-using-dta-recommendations.md).
    - The `-fc` option for allowing recommendations of columnstore indexes. For more information, see [DTA Utility](../../tools/dta/dta-utility.md) and [Columnstore index recommendations in Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).  
    - The `-iq` option for allowing the DTA to review a workload from the Query Store. For more information, see [Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).  
-- For In-Memory functionality, additional enhancements to memory-optimized tables and natively compiled functions are listed next, and code samples are available in [subsequent text](#InMemory_CodeSamples):
+- For In-Memory functionality, additional enhancements to memory-optimized tables and natively compiled functions are available. For code samples that illustrate these enhancements, see [Optimize JSON processing with in-memory OLTP](../../relational-databases/json/optimize-json-processing-with-in-memory-oltp.md).
     - Support for computed columns in memory-optimized tables, including indexes on computed columns.
-    - Full support for JSON functions in natively compiled modules, and in check constraints. For more information, see [Optimize JSON processing with in-memory OLTP](../../relational-databases/json/optimize-json-processing-with-in-memory-oltp.md).
+    - Full support for JSON functions in natively compiled modules, and in check constraints.  
     - `CROSS APPLY` operator in natively compiled modules.   
 - New string functions [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../../t-sql/functions/translate-transact-sql.md), and [TRIM](../../t-sql/functions/trim-transact-sql.md) are added.   
 - The `WITHIN GROUP` clause is now supported for the [STRING_AGG](../../t-sql/functions/string-agg-transact-sql.md) function.

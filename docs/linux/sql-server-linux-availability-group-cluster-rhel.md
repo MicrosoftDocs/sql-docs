@@ -68,7 +68,7 @@ Each node in the cluster must have an appropriate subscription for RHEL and the 
 1. Register the system.
 
    ```bash
-   #sudo subscription-manager register
+   sudo subscription-manager register
    ```
 
    Provide your user name and password.   
@@ -76,7 +76,7 @@ Each node in the cluster must have an appropriate subscription for RHEL and the 
 1. List the available pools for registration.
 
    ```bash
-   #sudo subscription-manager list --available
+   sudo subscription-manager list --available
    ```
 
    From the list of available pools, note the pool ID for the high availability subscription.
@@ -84,13 +84,13 @@ Each node in the cluster must have an appropriate subscription for RHEL and the 
 1. Update the following script. Replace `<pool id>` with the pool ID for high availability from the preceding step. Run the script to attach the subscription.
 
    ```bash
-   #sudo subscription-manager attach --pool=<pool id>
+   sudo subscription-manager attach --pool=<pool id>
    ```
 
 1. Enable the repository.
 
    ```bash
-   #sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
+   sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
 For more information, see [Pacemaker – The Open Source, High Availability Cluster](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 

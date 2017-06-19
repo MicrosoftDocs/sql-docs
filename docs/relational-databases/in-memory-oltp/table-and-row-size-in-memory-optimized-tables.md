@@ -18,11 +18,11 @@ manager: "jhubbard"
 # Table and Row Size in Memory-Optimized Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the in-row data size of a memory-optimized table couldn't be longer than [8,060 bytes](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). However, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] it is now possible to create a memory-optimized table with multiple large columns (e.g., multiple varbinary(8000) columns) and LOB columns (i.e., varbinary(max), varchar(max), and nvarchar(max)) and perform operations on them in natively compiled T-SQL modules and table types. 
+  Prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the in-row data size of a memory-optimized table couldn't be longer than [8,060 bytes](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). However, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] it is now possible to create a memory-optimized table with multiple large columns (e.g., multiple varbinary(8000) columns) and LOB columns (i.e., varbinary(max), varchar(max), and nvarchar(max)) and perform operations on them using natively compiled T-SQL modules and table types. 
   
-  Columns that do not fit in the 8060 byte row size limit are placed off-row, in a separate internal table. Each off-row column has a corresponding internal table, which in turn has a single nonclustered index. For details about internal tables used for off-row columns see [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
+  Columns that do not fit in the 8060 byte row size limit are placed off-row, in a separate internal table. Each off-row column has a corresponding internal table, which in turn has a single nonclustered index. For details about these internal tables used for off-row columns see [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
  
- There are certain scenarios where it is useful to compute the size of the table and the row:
+  There are certain scenarios where it is useful to compute the size of the row and the table:
   
 -   How much memory does a table use?  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
   
 -   The data size of a row, and does it fit in the 8,060 byte row size limitation? To answer these questions, use the computation for [row body size], discussed below.  
 
- A memory-optimized table consists of a collection of rows and indexes that contain pointers to rows. The following figure illustrates a table with indexes and rows, which in turn have row headers and bodies:  
+  A memory-optimized table consists of a collection of rows and indexes that contain pointers to rows. The following figure illustrates a table with indexes and rows, which in turn have row headers and bodies:  
   
  ![Memory optimized table.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 Memory-optimized table, consisting of indexes and rows.  

@@ -1749,6 +1749,81 @@
             "source_path": "docs/tools/sql-server-management-studio/tutorial-sql-server-management-studio.md",
             "redirect_url": "/docs/ssms/tutorials/tutorial-sql-server-management-studio.md",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/browse-for-servers-local-servers.md",
+            "redirect_url": "docs/tools/configuration-manager/sql-server-browser-service.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/browse-for-servers-network-servers.md",
+            "redirect_url": "docs/tools/configuration-manager/sql-server-browser-service.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-microsoft-azure-storage.md",
+            "redirect_url": "https://docs.microsoft.com/azure/storage/storage-create-storage-account",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-additional-connection-parameters-page.md",
+            "redirect_url": "docs/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-analysis-services.md",
+            "redirect_url": "docs/analysis-services/instances/connect-from-client-applications-analysis-services.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-connection-properties-page-analysis-services.md",
+            "redirect_url": "docs/analysis-services/instances/connect-from-client-applications-analysis-services.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-connection-properties-page-integration-services.md",
+            "redirect_url": "docs/integration-services/service/integration-services-service-ssis-service.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-connection-properties-page-reporting-services.md",
+            "redirect_url": "docs/reporting-services/tools/connect-to-a-report-server-in-management-studio.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-integration-services.md",
+            "redirect_url": "docs/integration-services/service/integration-services-service-ssis-service.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-login-page-analysis-services.md",
+            "redirect_url": "docs/analysis-services/instances/connect-from-client-applications-analysis-services.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-login-page-integration-services.md",
+            "redirect_url": "docs/integration-services/service/integration-services-service-ssis-service.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-login-page-reporting-services.md",
+            "redirect_url": "docs/reporting-services/tools/connect-to-a-report-server-in-management-studio.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-reporting-services.md",
+            "redirect_url": "docs/reporting-services/tools/connect-to-a-report-server-in-management-studio.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connection-properties-dialog-box.md",
+            "redirect_url": "docs/database-engine/configure-windows/view-or-change-server-properties-sql-server.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/password-expired.md",
+            "redirect_url": "docs/relational-databases/security/choose-an-authentication-mode.md",
+            "redirect_document_id": false
         }
 
     ]

@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/23/2017"
+ms.date: "06/19/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -70,7 +70,6 @@ This topic is a summary of what is new in the most recent Community Technical Pr
 - SQL Server setup supports specifying initial tempdb file size up to **256 GB (262,144 MB)** per file with a warning if the file size is set to value greater than **1 GB** and if IFI is not enabled.
 - A new Dynamic Management View (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) is introduced to track version store usage per database.
 - A new DMV [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) is introduced to expose the VLF information similar to DBCC LOGINFO.
-- DBCC CLONEDATABASE will flush runtime statistics while cloning to avoid missing query store runtime statistics in database clone. In addition to this, DBCC CLONEDATABASE is further enhanced to support and clone fulltext indexes.
 - System-versioned temporal tables now support CASCADE DELETE and CASCADE UPDATE.
 - This CTP contains bug fixes for the Database Engine.
 - For a detailed list of 2017 CTP enhancements in previous CTP releases, see [What's New in SQL Server 2017 (Database Engine)](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).   

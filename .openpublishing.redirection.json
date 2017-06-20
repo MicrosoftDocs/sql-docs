@@ -1824,6 +1824,11 @@
             "source_path": "docs/ssms/f1-help/password-expired.md",
             "redirect_url": "/sql/relational-databases/security/choose-an-authentication-mode",
             "redirect_document_id": false
+        },
+        {
+            "source_path":"docs/sql-server/sql-server-documentation-offline-access.md",
+            "redirect_url":"/sql/release-notes/sql-server-help-installation",
+            "redirect_document_id":false
         }
 
     ]

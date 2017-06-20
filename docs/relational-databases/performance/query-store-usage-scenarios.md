@@ -115,7 +115,7 @@ manager: "jhubbard"
 ## <a name="CEUpgrade"></a> Keep performance stability during the upgrade to newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Prior to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], users were exposed to the risk of performance regression during the upgrade to the latest platform version. The reason for that was the fact that latest version of Query Optimizer became active immediately once new bits are installed.  
   
- Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimizer changes are tied to the latest [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. Recommended upgrade workflow is shown in the following picture:  
+ Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] all Query Optimizer changes are tied to the latest [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. Recommended upgrade workflow is shown in the following picture:  
   
  ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   

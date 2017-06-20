@@ -82,7 +82,7 @@
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-## [Python Tutorials]((tutorials/sql-server-python-tutorials.md)
+## [Python Tutorials](tutorials/sql-server-python-tutorials.md)
 
 ### [Python: Run Python using T-SQL](tutorials/run-python-using-t-sql.md)
 ### [Python: Create a Model using revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)

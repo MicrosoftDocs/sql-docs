@@ -24,7 +24,7 @@ This example shows how you can run a simple Python script in SQL Server, by usin
 
 ## Step 1. Create the test data table
 
-First, you'll need to create some extra data, to use when mapping the names of the days of the week to numeric values in the source data. Run the following T-SQL statement to create the table.
+First, you'll create some extra data, to use when mapping the names of the days of the week to the source data. Run the following T-SQL statement to create the table.
 
 ```SQL
 CREATE TABLE PythonTest (
@@ -137,7 +137,7 @@ The stored procedure returns the original data, applies the script, and then ret
 |Monday|18.8||
 |Sunday|19.9|7|
 
-Status messages or errors returned to the Python console are returned as messages in the **Query** window. For example, you might see output like this:
+Status messages or errors returned to the Python console are returned as messages in the **Query** window. Here's an excerpt of the output you might see:
 
 *Sample results*
 
@@ -146,7 +146,7 @@ ParamINT=1234567
 ParamCharN=INPUT 
 Dataset (before):
 
-(10 row(s) affected)
+(10 rows affected)
 
 Dataset (after):
 STDOUT message(s) from external script: 
@@ -160,7 +160,7 @@ C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C5
 Hello World
 C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C52-96D6-8634DB843229
 
-(10 row(s) affected)
+(10 rows affected)
 Output parameters (after):
 ParamINT=2
 ParamCharN=OUTPUT
@@ -168,7 +168,9 @@ ParamCharN=OUTPUT
 **Notes**
 
 + The Message output includes the working directory used for script execution. In this example,  MSSQLSERVER01 refers to the worker account allocated by SQL Server to manage the job. The GUID is the name of a temporary folder that is created during script execution to store data and script artifacts. These temporary folders are secured by SQL Server, and are cleaned up by the Windows job object after script has terminated. 
-+ The section containing the message "Hello World" prints two times. This is because the value of *@RowsPerRead* was set to 5; therefore, two calls to Python are required to process all the rows in the table. In your production runs, you should experiment with different values to determine the maximum number of rows that should be passed in each batch, as the optimum number of rows is affected by the number of columns in the dataset and the type of data that you are passing.
++ The section containing the message "Hello World" prints two times. This happens because the value of *@RowsPerRead* was set to 5 and there are 10 rows in the table; therefore, two calls to Python are required to process all the rows in the table.
+
+    In your production runs, you should experiment with different values to determine the maximum number of rows that should be passed in each batch. The optimum number of rows is data-dependent, and is affected by both the number of columns in the dataset and the type of data that you are passing.
 
 ## Related Resources
 

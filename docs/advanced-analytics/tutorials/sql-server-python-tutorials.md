@@ -39,7 +39,7 @@ For information about requirements and setup, see [Prerequisites](#bkmk_Prerequi
 
 + [Create a Machine Learning Model in Python using revoscalepy](use-python-revoscalepy-to-create-model.md)
 
-   You'll create a model using rxLinMod, and run it in SQL Server, using the new **revoscalepy** library from a remote Python terminal.
+   You'll create a model using **rxLinMod**, from the new **revoscalepy** library. You'll launch the code from a remote Python terminal but the modeling will take place in the SQL Server compute context.
 
 + [Build a predictive model with Python](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/python/getting-started/rental-prediction)
 
@@ -47,7 +47,7 @@ For information about requirements and setup, see [Prerequisites](#bkmk_Prerequi
 
 + [In-Database Python Analytics for SQL Developers](sqldev-in-database-python-for-sql-developers.md)
 
-  NEW! Build a complete Python solution using T-SQL stored procedures; all Python code is included.
+  NEW! Build a complete Python solution using T-SQL stored procedures. All Python code is included.
 
 + [Deploy and Consume a Python Model](..\python\publish-consume-python-code.md)
 
@@ -78,4 +78,7 @@ After running SQL Server setup, don't forget these important steps:
 + Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample
 
 If you run into trouble, see this article for some common issues: [Upgrade and Installation of SQL Server R Services](../../advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md)
- 
+
+## See Also
+
+[R Tutorials](sql-server-r-tutorials.md)

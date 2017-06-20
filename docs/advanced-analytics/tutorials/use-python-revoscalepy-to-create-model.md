@@ -17,7 +17,7 @@ manager: "jhubbard"
 ---
 # Use Python with revoscalepy to Create a Model
 
-This example demonstrates how you can create a logistic regression model in SQL Server, using an algorithm from the **revoscalepy** package for Python Machine Learning Services. 
+This example demonstrates how you can create a logistic regression model in SQL Server, using an algorithm from the **revoscalepy** package.
 
 The **revoscalepy** package for Python contains objects, transformations, and algorithms similar to those provided for the **RevoScaleR** package for the R language. With this library, you can create a compute context, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more.
 
@@ -30,11 +30,7 @@ For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.m
 
 ## Run the Sample Code
 
-In general, the process of calling Python in a remote compute context is very much like that used for using R in a remote compute context. You execute the sample as a Python script from the command line, or by using a Python development environment that includes the Python integration components provided in this release.
-
-For a demonstration of this sample running from the command line, see this video: [SQL Server 2017 Advanced Analytics with Python](https://www.youtube.com/watch?v=FcoY795jTcc)
-
-In general, this code performs the following steps:
+This code performs the following steps:
 
 1. Imports the required libraries and functions
 2. Creates a connection to SQL Server, and creates data source objects for working with the data
@@ -44,6 +40,10 @@ In general, this code performs the following steps:
 6. Creates a summary based on the predicted values
 
 All operations are performed using an instance of SQL Server as the compute context.
+
+In general, the process of calling Python in a remote compute context is similar to the way you use R in a remote compute context. You execute the sample as a Python script from the command line, or by using a Python development environment that includes the Python integration components provided in this release.
+
+For a demonstration of this sample running from the command line, see this video: [SQL Server 2017 Advanced Analytics with Python](https://www.youtube.com/watch?v=FcoY795jTcc)
 
 ### Sample Code
 
@@ -57,7 +57,6 @@ from revoscalepy.functions.RxPredict import rx_predict_ex
 from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.utils.RxOptions import RxOptions
 from revoscalepy.etl.RxImport import rx_import_datasource
-
 
 import os
 
@@ -123,19 +122,19 @@ Now let's review the code and highlight some key steps:
 
 ### Defining a data source and compute context
 
-This is an important part of using **revoscalepy** and its related R package **RevoScaleR**. A data source is different from a compute context. The _data source_ defines the data that will be used in your code. The _compute context_ defines where the code will be executed.
+This is an important part of using **revoscalepy** and its related R package **RevoScaleR**. A data source is different from a compute context. The _data source_ defines the data used in your code. The _compute context_ defines where the code will be executed.
 
 Whereas RevoScaleR provides multiple functions for defining different types of data sources and compute contexts, currently **revoscalepy** supports just SQL Server. More data source and compute context types will be added in later releases.
 
 The overall process for creating and using a data source and compute context is as follows:
 
 1. Create Python variables, such as _sqlQuery_ and _connectionString_, that define the source and the data you want to use. Pass these variables to the **RxSqlServerData** constructor to  implement the **data source object** named _dataSource_.
-2. Create a compute context object by using the **RxInSqlServer** constructor. In this example, you pass the same connection string you defined earlier, on the assumption that the data you will be using is on the same SQL Server instance and database that you will be using for the compute context. However, the data source and the compute context could be completely different.
+2. Create a compute context object by using the **RxInSqlServer** constructor. In this example, you pass the same connection string you defined earlier, on the assumption that the data is on the same SQL Server instance that you will be using as the compute context. However, the data source and the compute context could be completely different.
 
     The resulting **compute context object** is named _computeContext_.
-3. Choose the active compute context. By default, operations are run locally, which means that if you don't specify a different compute context, the data will be fetched from the data source, but the model-fitting will run in your current Python environment. 
+3. Choose the active compute context. By default, operations are run locally, which means that if you don't specify a different compute context, the data will be fetched from the data source, but the model-fitting will run in your current Python environment.
 
-    In RevoScaleR, you would use the function `rxSetcomputeContext` to toggle between compute contexts, but in **revoscalepy**, you specify the compute context (if not local) as an argument to **rx_lin_mod_ex**. 
+    In RevoScaleR, you would use the function `rxSetcomputeContext` to toggle between compute contexts, but in **revoscalepy**, you specify the compute context (if not local) as an argument to **rx_lin_mod_ex**.
     
     `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = computeContext)`
 
@@ -165,7 +164,7 @@ If you want to save this data somewhere, you have several options:
 + You can use the function rxDataStep to write the data to an existing SQL Server table.
 + You could use an ODBC call from your Python code to write the data to a table, or save to an external file.
 
-## Related Resources
+## See Also
 
 See these Python samples and tutorials for advanced tips and end-to-end demos.
 

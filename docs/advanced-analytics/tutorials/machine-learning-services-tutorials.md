@@ -32,7 +32,7 @@ This article provides a comprehensive list of the tutorials, demos, and sample a
 
 ### Related resources
 
-+ [Samples](#bkmk_samples) are real-world scenarios for embedding machine learning in applications. All samples include code that you can download, modify and use in production.
++ [Samples](#bkmk_samples) are real-world scenarios for embedding machine learning in applications. All samples include code that you can download, modify, and use in production.
 
 + [Solutions](#bkmk_solutions) from the Microsoft Data Science team demonstrate end-to-end scenarios. Most are designed to run either in SQL Server or in a cloud environment such as Azure machine Learning.
 
@@ -86,7 +86,7 @@ Wondering what RevoScaleR offers that R doesn't? See these tutorials:
 
 ## <a name="bkmk_solutions"></a>Customizable End-to-End Solutions
 
-The Microsoft Data Science Team has provided a number of solution templates that can be used for copy-paste creation of solutions for common scenarios. All T-SQL and R code is provided, along with instructions on how to train and deploy a model for scoring using SQL Server stored procedures.
+The Microsoft Data Science Team has provided solution templates that can be used to jump-start solutions for common scenarios. All T-SQL and R code is provided, along with instructions on how to train and deploy a model for scoring using SQL Server stored procedures.
 
 + [Fraud detection](https://gallery.cortanaanalytics.com/Tutorial/Online-Fraud-Detection-Template-with-SQL-Server-R-Services-1)
 + [Custom churn prediction](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
@@ -99,7 +99,6 @@ For more information, see [Machine Learning Templates with SQL Server 2016 R Ser
 
 + Want to know the real story behind R Services? Read this article from the development and PM team: [Why did we build it?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/01/10/sql-server-r-services-why-did-we-build-it/)
 
-+ The original [SQL Server 2016 Product Samples](https://www.microsoft.com/en-us/download/details.aspx?id=49502), available on Github and on the Microsoft Download Center, contains some datasets and code samples for R Services, including a demo of insurance fraud detection based on Benford's law. To get only the samples for [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], select the zip file, and open the folder **Advanced Analytics**.  The setup instructions are for earlier releases and should be disregarded.
 
 ## <a name="bkmk_Prerequisites"></a>Prerequisites
 
@@ -119,4 +118,5 @@ After running SQL Server setup, don't forget these important steps:
 
 If you run into trouble, see this article for some common issues: [Upgrade and Installation of SQL Server R Services](../../advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md)
 
-Note that standard R or Python tools and libraries are insufficient to use these tutorials; both your development environment and the SQL Server computer with machine learning must have the R or Python libraries provided by Microsoft.
+> [!NOTE]
+> You cannot run these tutorials using just the standard R or Python tools. Both your development environment and the SQL Server computer with machine learning must have the R or Python libraries provided by Microsoft.

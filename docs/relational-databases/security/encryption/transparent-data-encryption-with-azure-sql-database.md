@@ -41,7 +41,7 @@ manager: "jhubbard"
   
 ##  <a name="Preview"></a> Enable TDE on a Database Using the Portal  
   
-1.  Visit the Azure Portal at [https://portal.azure.com](https://portal.azure.com) and sign-in with your Azure Administrator or Contributor account.  
+1.  Visit the Azure portal at [https://portal.azure.com](https://portal.azure.com) and sign-in with your Azure Administrator or Contributor account.  
   
 2.  On the left banner, click to **BROWSE**, and then click **SQL databases**.  
   
@@ -105,9 +105,9 @@ manager: "jhubbard"
   
 ##  <a name="Decrypt"></a> Decrypting a TDE Protected Database on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]  
   
-#### To Disable TDE by Using the Azure Portal  
+#### To Disable TDE by Using the Azure portal  
   
-1.  Visit the Azure Portal at [https://portal.azure.com](https://portal.azure.com) and sign-in with your Azure Administrator or Contributor account.  
+1.  Visit the Azure portal at [https://portal.azure.com](https://portal.azure.com) and sign-in with your Azure Administrator or Contributor account.  
   
 2.  On the left banner, click to **BROWSE**, and then click **SQL databases**.  
   

@@ -665,7 +665,7 @@ WHERE o_orderdate >= '2000/04/01'
    ORDER BY o_orderpriority
 ```
 
-Assume the following indexes are defined on the lineitem and orders tables:
+Assume the following indexes are defined on the `lineitem` and `orders` tables:
 
 ```tsql
 CREATE INDEX l_order_dates_idx 
@@ -752,7 +752,7 @@ The main phases of a parallel index operation include the following:
 
 Individual `CREATE TABLE` or `ALTER TABLE` statements can have multiple constraints that require that an index be created. These multiple index creation operations are performed in series, although each individual index creation operation may be a parallel operation on a computer that has multiple CPUs.
 
-## Distributted Query Architecture
+## Distributed Query Architecture
 
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports two methods for referencing heterogeneous OLE DB data sources in Transact-SQL statements:
 

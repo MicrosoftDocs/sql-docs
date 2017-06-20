@@ -115,9 +115,13 @@
 ### [Extending OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [Schema rowsets](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
-## [XML for Analysis (XMLA)](../analysis-services/xmla/xml-elements-methods-discover.md)
 
 
 # Reference
+## [Data Analysis Expressions (DAX)](https://msdn.microsoft.com/library/gg413422.aspx)
+## [Data Mining Extensions (DMX)](../dmx/data-mining-extensions-dmx-reference.md)
+## [Multidimensional Expressions (MDX)](../mdx/multidimensional-expressions-mdx-reference.md)
+## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)
 ## [PowerShell](../analysis-services/powershell/technical-reference-ssas.md)
 ## [Server properties](../analysis-services/server-properties/server-properties-in-analysis-services.md)
+## [XML for Analysis (XMLA)](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)

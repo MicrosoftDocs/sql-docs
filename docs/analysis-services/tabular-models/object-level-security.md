@@ -25,7 +25,7 @@ Data model security starts with effectively implementing [roles](../../analysis-
 
 ## Table-level security
 
-With table-level security, you can not only restrict access to table data, but also sensitive table names, helping prevent malicious users from discovering if a table exists. Access to the table’s metadata and all columns and data in the table is restricted.
+With table-level security, you can not only restrict access to table data, but also sensitive table names, helping prevent malicious users from discovering if a table exists. 
 
 > [!IMPORTANT]  
 > A relationship chain cannot pass through a secured table. For example, if there is a relationship between tables A and B, and B and C, you cannot secure table B. If table B is secured, a query on table A could not transit the relationship between table A and B, and table B and C.
@@ -51,7 +51,7 @@ In this example, the metadataPermission property of the tablePermissions class f
 
 ## Column-level security
 
-Similar to table-level security, with table-level security you can not only restrict access to column data, but also sensitive column names,  helping prevent malicious users from discovering a column. Access to the column’s metadata and data is restricted.
+Similar to table-level security, with column-level security you can not only restrict access to column data, but also sensitive column names,  helping prevent malicious users from discovering a column.
 
  Column-level security is set in the JSON-based metadata in the Model.bim, [Tabular Model Scripting Language (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md), or [Tabular Object Model (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md). Set the **metadataPermission** property of the **columnPermissions** class in the [Roles object](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) to **none**.
 

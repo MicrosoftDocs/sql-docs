@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 87329299-c2ea-4517-9148-d855726768a9
 caps.latest.revision: 36
 author: "sabotta"
-ms.author: "carlasab"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Using Secure Web Service Methods

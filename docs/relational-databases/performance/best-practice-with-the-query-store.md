@@ -274,6 +274,7 @@ The following table provides best practices:
 As a result, performance of your workload will be sub-optimal and Query Store might switch to read-only mode or might be constantly deleting the data trying to keep up with the incoming queries.  
   
  Consider following options:  
+
   -   Parameterize queries where applicable, for example wrap queries inside a stored procedure or sp_executesql. For more information on this topic, see [Parameters and Execution Plan Reuse](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
 -   Use the [**Optimize for Ad Hoc Workloads**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) option if your workload contains many single use ad-hoc batches with different query plans.  
@@ -292,6 +293,7 @@ As a result, performance of your workload will be sub-optimal and Query Store mi
  Query Store associates query entry with a containing object (stored procedure, function, and trigger).  When you recreate a containing object, a new query entry will be generated for the same query text. This will prevent you from tracking performance statistics for that query over time and use plan forcing mechanism. To avoid this, use the `ALTER <object>` process to change a containing object definition whenever it is possible.  
   
 ##  <a name="CheckForced"></a> Check the status of Forced Plans regularly  
+
  Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. However, as with plan hints and plan guides, forcing a plan is not a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing will start failing. In that case [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). The following query returns information about forced plans:  
   
 ```tsql  
@@ -308,7 +310,9 @@ WHERE is_forced_plan = 1;
  For full list of reasons, refer to [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track troubleshoot plan forcing failures.  
   
 ##  <a name="Renaming"></a> Avoid renaming databases if you have queries with Forced Plans  
+
  Execution plans reference objects using three-part names `database.schema.object`.   
+
 If you rename a database, plan forcing will fail which will cause recompilation in all subsequent query executions.  
   
 ## See Also  

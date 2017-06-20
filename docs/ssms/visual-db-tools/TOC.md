@@ -1,3 +1,4 @@
+# [Visual Database Tools](visual-database-tools.md)
 # [Add Table Dialog Box (Query and View Designers) (Visual Database Tools)](add-table-dialog-box-query-and-view-designers-visual-database-tools.md)
 # [Save Change Script Dialog Box (Visual Database Tools)](save-change-script-dialog-box-visual-database-tools.md)
 # [Reconcile Changes Made by Multiple Users (Visual Database Tools)](reconcile-changes-made-by-multiple-users-visual-database-tools.md)
@@ -155,7 +156,6 @@
 # [Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)
 # [Navigate in the Query and View Designer (Visual Database Tools)](navigate-in-the-query-and-view-designer-visual-database-tools.md)
 # [Work with Columns in Aggregate Queries (Visual Database Tools)](work-with-columns-in-aggregate-queries-visual-database-tools.md)
-# [Visual Database Tools](visual-database-tools.md)
 # [Select Rows That Do Not Match a Value (Visual Database Tools)](select-rows-that-do-not-match-a-value-visual-database-tools.md)
 # [Post-Save Notifications Dialog Box (Visual Database Tools)](post-save-notifications-dialog-box-visual-database-tools.md)
 # [Save Queries (Visual Database Tools)](save-queries-visual-database-tools.md)

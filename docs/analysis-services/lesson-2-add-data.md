@@ -1,7 +1,7 @@
 ---
 title: "Lesson 2: Add Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/27/2017"
+ms.date: "06/19/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,7 +31,7 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
   
 ## Create a connection  
   
-#### To create a connection to a the AdventureWorksDW2012 database  
+#### To create a connection to a the AdventureWorksDW2014 database  
   
 1.  In Tabular Model Explorer, right-click **Data Sources** > **Import from Data Source**.  
   

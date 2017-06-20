@@ -194,3 +194,5 @@
 
 # [Assemblies Management](multidimensional-model-assemblies-management.md)  
 
+# Reference
+## [MDX](../../mdx/multidimensional-expressions-mdx-reference.md)

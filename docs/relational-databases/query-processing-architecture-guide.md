@@ -1035,5 +1035,10 @@ GO
 
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
+<<<<<<< HEAD
  [Extended Events](../relational-databases/extended-events/extended-events.md)  
  [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)
+=======
+ [Extended Events](../relational-databases/extended-events/extended-events.md)  
+ [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)
+>>>>>>> fd8ce8d806f70484fa4d669a5996cd5c56b4de45

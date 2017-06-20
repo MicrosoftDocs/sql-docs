@@ -1,3 +1,5 @@
+# [Download SSMS](download-sql-server-management-studio-ssms.md)
+
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
 # [F1 Help +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
 # [Menu Help +](../ssms/menu-help/sql-server-management-studio-menu-help.md)
@@ -5,9 +7,10 @@
 # [Solution Explorer +](../ssms/solution/solution-explorer.md)
 # [Templates +](../ssms/template/template-explorer.md)
 # [Visual Database Tools +](../ssms/visual-db-tools/visual-database-tools.md)
+# [Register Servers +](../ssms/register-servers/register-servers.md)
+# [Tutorials +](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 
 # [What is SSMS?](sql-server-management-studio-ssms.md)
-# [Download SSMS](download-sql-server-management-studio-ssms.md)
 # [SSMS Changelog](sql-server-management-studio-changelog-ssms.md)
 # [Release notes](sql-server-management-studio-release-notes.md)
 # [Previous SQL Server Management Studio Releases](previous-sql-server-management-studio-releases.md)
@@ -41,3 +44,7 @@
 # [Add an External Tool to the Tools Menu (SSMS)](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [Configure Login Auditing (SSMS)](configure-login-auditing-sql-server-management-studio.md)
 # [Use the Toolbox](use-the-toolbox.md)
+
+# [Ssms Utility](ssms-utility.md)  
+# [SQL Server Management Studio Keyboard Shortcuts](sql-server-management-studio-keyboard-shortcuts.md)  
+

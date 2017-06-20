@@ -24,7 +24,7 @@ manager: ""
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload.
 
 # Common Performance Scenarios 
-Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Platform and how to resolve them. These include scenarios that are specifdic to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration (older versions to newer versions), as well as foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
+Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Platform and how to resolve them. These include scenarios that are specific to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration (older versions to newer versions), as well as foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
 ## <a name="CEUpgrade"></a> Query regressions due to change in CE version
 ​
@@ -109,7 +109,7 @@ Some examples of non-SARGable predicates:
   -   Complex expressions based on columnar data – evaluate the need to instead create persisted computed columns, which can be indexed;
 
 > [!NOTE] 
-> All of the above can be done programmaticaly.
+> All of the above can be done programmatically.
 
 ## <a name="TableValuedFunctions"></a> Use of Table Valued Functions (Multi-Statement vs Inline)
 

@@ -1,7 +1,7 @@
 ---
 title: "Run Python using T-SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/214/2017"
+ms.date: "06/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,18 +13,18 @@ applies_to:
   - "SQL Server 2016"
 dev_langs: 
   - "Python"
-caps.latest.revision: 1
+caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Run Python Using T-SQL
 
-This example shows how you can run a simple Python script in SQL Server, by using the stored procedure sp_execute_external_script.
+This example shows how you can run a simple Python script in SQL Server, by using the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
 ## Step 1. Create the test data table
 
-Run the following T-SQL statement to create a mapping table for days of the week.
+First, you'll need to create some extra data, to use when mapping the names of the days of the week to numeric values in the source data. Run the following T-SQL statement to create the table.
 
 ```SQL
 CREATE TABLE PythonTest (
@@ -51,9 +51,9 @@ GO
 
 The following code loads the Python executable, passes the input data, and for each row of input data, updates the day name in the table with a number representing the day-of-week index.
 
-The section containing the message "Hello World" prints two times because the value of @RowsPerRead is set to 5; therefore, the rows in the table must be processed in two calls to Python.
+Take a note of the parameter *@RowsPerRead*. This parameter specifies the number of rows that are passed to the Python runtime from SQL Server.
 
-Note that the Python Data Analysis Library, or **pandas**, is required for passing data to SQL Server, and is included by default with Machine Learning Services.
+The Python Data Analysis Library, or **pandas**, is required for passing data to SQL Server, and is included by default with Machine Learning Services.
 
 ```sql
 DECLARE @ParamINT INT = 1234567
@@ -115,9 +115,14 @@ print FORMATMESSAGE('ParamINT=%d', @ParamINT)
 print FORMATMESSAGE('ParamCharN=%s', @ParamCharN)
 GO
 ```
-### Expected Results
 
-The stored procedure returns the original data, applies the script, and then returns the modified data. 
+> [!TIP]
+> The parameters for this stored procedure are described in more detail in this quickstart: [Using R Code in T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md).
+
+## Step 3. View the Results
+
+The stored procedure returns the original data, applies the script, and then returns the modified data in the **Results** pane of Management Studio or other SQL query tool.
+
 
 |DayOfWeek (before)| Amount|DayOfWeek (after) |
 |-----|-----|-----|
@@ -132,34 +137,43 @@ The stored procedure returns the original data, applies the script, and then ret
 |Monday|18.8||
 |Sunday|19.9|7|
 
-### Messages
+Status messages or errors returned to the Python console are returned as messages in the **Query** window. For example, you might see output like this:
 
-Status messages or errors returned to the Python console are returned as messages in the Query window.
+*Sample results*
 
-------------------------------------------------------------------------
 Output parameters (before):
 ParamINT=1234567
 ParamCharN=INPUT 
 Dataset (before):
 
 (10 row(s) affected)
-------------------------------------------------------------------------
+
 Dataset (after):
 STDOUT message(s) from external script: 
 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy
-*******************************
-3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
-Hello World
-C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C52-96D6-8634DB843229
-*******************************
-*******************************
-3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
-Hello World
-C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C52-96D6-8634DB843229
-*******************************
 
+3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
+Hello World
+C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C52-96D6-8634DB843229
+
+3.5.2 |Anaconda 4.2.0 (64-bit)| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
+Hello World
+C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C52-96D6-8634DB843229
 
 (10 row(s) affected)
 Output parameters (after):
 ParamINT=2
 ParamCharN=OUTPUT
+
+**Notes**
+
++ The Message output includes the working directory used for script execution. In this example,  MSSQLSERVER01 refers to the worker account allocated by SQL Server to manage the job. The GUID is the name of a temporary folder that is created during script execution to store data and script artifacts. These temporary folders are secured by SQL Server, and are cleaned up by the Windows job object after script has terminated. 
++ The section containing the message "Hello World" prints two times. This is because the value of *@RowsPerRead* was set to 5; therefore, two calls to Python are required to process all the rows in the table. In your production runs, you should experiment with different values to determine the maximum number of rows that should be passed in each batch, as the optimum number of rows is affected by the number of columns in the dataset and the type of data that you are passing.
+
+## Related Resources
+
+See these Python samples and tutorials for advanced tips and end-to-end demos.
+
++ [Use Python revoscalepy to create a model](use-python-revoscalepy-to-create-model.md)
++ [In-Database Python for SQL Developers](sqldev-in-database-python-for-sql-developers.md)
++ [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)

@@ -21,14 +21,11 @@ manager: "erikre"
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Data model security starts with effectively implementing [roles](../../analysis-services/tabular-models/roles-ssas-tabular.md) and row-level filters to define user permissions on data model objects and data. Beginning with tabular 1400 models, you can also define object-level security, which collectively includes table-level security and column-level security in the [Roles object](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
+Data model security starts with effectively implementing [roles](../../analysis-services/tabular-models/roles-ssas-tabular.md) and row-level filters to define user permissions on data model objects and data. Beginning with tabular 1400 models, you can also define object-level security, which includes table-level security and column-level security in the [Roles object](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
 
 ## Table-level security
 
 With table-level security, you can not only restrict access to table data, but also sensitive table names, helping prevent malicious users from discovering if a table exists. 
-
-> [!IMPORTANT]  
-> A relationship chain cannot pass through a secured table. For example, if there is a relationship between tables A and B, and B and C, you cannot secure table B. If table B is secured, a query on table A could not transit the relationship between table A and B, and table B and C.
 
  Table-level security is set in the JSON-based metadata in the Model.bim, [Tabular Model Scripting Language (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md), or [Tabular Object Model (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md). Set the **metadataPermission** property of the **tablePermissions** class in the [Roles object](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md) to **none**.
 
@@ -76,6 +73,20 @@ In this example, the metadataPermission property of the columnPermissions class 
     ]
   }
 ```
+
+## Restrictions
+
+*  Table-level security cannot be set for a model if it breaks a relationship chain. An error will be generated at design time.
+ For example, if there are relationships between tables A and B, and B and C, you cannot secure table B. If table B is secured, a query on table A cannot transit the relationships between table A and B, and B and C. In this case, a seperate relationship could be configured between tables A and B.
+
+    ![Table-level security](../../analysis-services/tabular-models/media/ssas-ols.png)  
+
+
+*  Row-level security and object-level security cannot be combined if from different roles because this could introduce unintended access to secured data. An error will be generated at query time for users who are members of such a combination of roles.
+
+*  Dynamic calculations (measures, KPIs, DetailRows) will automatically be restricted if they reference a secured table or column. While there is no mechanism to explicitly secure a measure, it is possible to implicitly secure a measure by updating the expression to refer to a secured table or column.
+
+*  Relationships that reference a secured column will continue to work as long as the table the column is in is not secured.
 
 
 

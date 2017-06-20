@@ -1,5 +1,5 @@
 # [Using relational databases](relational-databases/database-features.md)
-# [SQL Server on Linux](./linux/index.md?toc=%2fsql%2flinux%2ftoc.json)
+# [SQL Server on Linux](./linux/index.md?toc=/sql/linux/toc.json)
 # [Advanced analytics on SQL Server](advanced-analytics/getting-started-with-machine-learning-services.md)
 # [SQL Server](sql-server/sql-server-technical-documentation.md)
 		

@@ -32,13 +32,13 @@ Below are some of the common performance scenarios encountered after migrating t
 
 When migrating from an older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] or newer, and upgrading the [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest one, a workload may be exposed to the risk of performance regression.
 
-This is because starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], all Query Optimizer changes are tied to the latest [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` database option to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. 
+This is because starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], all Query Optimizer changes are tied to the latest [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` database option to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. 
 
-For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/en-us/library/dn673537.aspx).
+For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], see [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/en-us/library/dn673537.aspx).
 
 ### Steps to resolve
 
-Follow the recommended upgrade workflow as shown in the following picture:
+Change the [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the source version, and follow the recommended upgrade workflow as shown in the following picture:
 
 ![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
 

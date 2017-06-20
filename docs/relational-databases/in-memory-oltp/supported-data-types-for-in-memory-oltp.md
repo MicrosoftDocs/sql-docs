@@ -1,7 +1,7 @@
 ---
 title: "Supported Data Types for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/05/2017"
+ms.date: "06/19/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,7 +51,7 @@ For the preceding string and binary data types, starting with SQL Server 2016:
 
 ### Identify LOBs and other columns that are off-row
 
-Starting with SQL Server 2016, memory-optimized tables support off-row columns, which allow a single table row to be larger than 8060 bytes. The following Transact-SQL SELECT statement reports all columns that are off-row, for memory-optimized tables. Note that:
+Starting with SQL Server 2016, memory-optimized tables [support off-row columns](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), which allow a single table row to be larger than 8060 bytes. The following Transact-SQL SELECT statement reports all columns that are off-row, for memory-optimized tables. Note that:
 
 - All index key columns are stored in-row.
   - Nonunique index keys can now include NULLable columns, on memory-optimized tables.

@@ -23,9 +23,9 @@ manager: "jhubbard"
 
   This topic outlines the best practices for using the Query Store with your workload.  
   
-##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
+##  <a name="SSMS"></a> Use the latest SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has set of user interfaces designed for configuring Query Store as well as for consuming collected data about your workload.  
-Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] from : [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
+Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
  For a quick description on how to use Query Store in troubleshooting scenarios refer to [Query Store @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
@@ -36,7 +36,8 @@ For more information, see [Azure SQL Database Query Performance Insight](https:/
 
 ##  Using Query Store with Elastic Pool Databases
 You can use Query Store in all databases without concerns, in even densely packed pools. All issues related to excessive resource usage, that might have occurred when Query Store was enabled for the large number of databases in the Elastic Pools, have been resolved.
-##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
+
+##  <a name="Configure"></a> Keep Query Store adjusted to your workload  
  Configure Query Store based on your workload and performance troubleshooting requirements.   
 The default parameters are good for a quick start but you should monitor how Query Store behaves over time and adjust its configuration accordingly:  
   
@@ -267,32 +268,31 @@ The following table provides best practices:
 |Filter out non-relevant queries.|Configure Query Capture Mode to Auto.|  
 |Delete less relevant queries when maximum size is reached.|Activate size-based cleanup policy.|  
   
-##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
- Using non-parameterized  queries when that is not absolutely necessary (for example in case of ad-hoc analysis) is not a best practice.  Cached plans cannot be reused which forces Query Optimizer to compile queries for every unique query text.  
+##  <a name="Parameterize"></a> Avoid using non-parameterized queries  
+ Using non-parameterized queries when that is not absolutely necessary (for example in case of ad-hoc analysis) is not a best practice.  Cached plans cannot be reused which forces Query Optimizer to compile queries for every unique query text. For more information on this topic, see [Guidelines for Using Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
   Also, Query Store can rapidly exceed the size quota because of potentially a large number of different query texts and consequently a large number of different execution plans with similar shape.  
 As a result, performance of your workload will be sub-optimal and Query Store might switch to read-only mode or might be constantly deleting the data trying to keep up with the incoming queries.  
   
  Consider following options:  
+  -   Parameterize queries where applicable, for example wrap queries inside a stored procedure or sp_executesql. For more information on this topic, see [Parameters and Execution Plan Reuse](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
--   Parameterize queries where applicable, for example wrap queries inside a stored procedure.  
-  
--   Use the **Optimize for Ad Hoc Workloads** option if your workload contains many single use ad-hoc batches with different query plans.  
+-   Use the [**Optimize for Ad Hoc Workloads**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) option if your workload contains many single use ad-hoc batches with different query plans.  
   
     -   Compare the number of  distinct query_hash values with the total number of entries in sys.query_store_query. If the ratio is close to 1 your ad-hoc workload generates different queries.  
   
--   Apply FORCED PARAMETERIZATION, for the database or for a subset of queries if the number of different query plans is not large.  
+-   Apply [**forced parameterization**](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), for the database or for a subset of queries if the number of different query plans is not large.  
   
-    -   Use plan guide to force parameterization only for the selected query.  
+    -   Use [plan guide](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md) to force parameterization only for the selected query.  
   
-    -   Configure FORCED PARAMETERIZATION for the database, if there are a small number of different query plans in your workload. (When the ratio between the count of distinct query_hash and the total number of entries in sys.query_store_query is much less than 1.)  
+    -   Configure forced parameterization as using the [Parameterization database option](../../relational-databases/databases/database-properties-options-page.md#miscellaneous) command, if there are a small number of different query plans in your workload: when the ratio between the count of distinct query_hash and the total number of entries in sys.query_store_query is much less than 1.  
   
 -   Set the **Query Capture Mode** to AUTO to automatically filter out ad-hoc queries with small resource consumption.  
   
-##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
+##  <a name="Drop"></a> Avoid a DROP and CREATE pattern when maintaining containing objects for the queries  
  Query Store associates query entry with a containing object (stored procedure, function, and trigger).  When you recreate a containing object, a new query entry will be generated for the same query text. This will prevent you from tracking performance statistics for that query over time and use plan forcing mechanism. To avoid this, use the `ALTER <object>` process to change a containing object definition whenever it is possible.  
   
-##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
- Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. However, as with plan hints and plan guides, forcing a plan is not a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing will start failing. In that case [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). The following query returns information about forced plans:  
+##  <a name="CheckForced"></a> Check the status of Forced Plans regularly  
+ Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. However, as with plan hints and plan guides, forcing a plan is not a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing will start failing. In that case [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). The following query returns information about forced plans:  
   
 ```tsql  
 USE [QueryStoreDB];  
@@ -305,15 +305,16 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- For full list of reasons, refer to [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track troubleshoot plan forcing failures.  
+ For full list of reasons, refer to [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track troubleshoot plan forcing failures.  
   
-##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
- Execution plans reference objects using three-part names (`database.schema.object`).   
+##  <a name="Renaming"></a> Avoid renaming databases if you have queries with Forced Plans  
+ Execution plans reference objects using three-part names `database.schema.object`.   
 If you rename a database, plan forcing will fail which will cause recompilation in all subsequent query executions.  
   
 ## See Also  
  [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)  
   

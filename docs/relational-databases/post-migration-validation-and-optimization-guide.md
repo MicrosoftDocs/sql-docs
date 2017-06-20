@@ -26,7 +26,25 @@ manager: ""
 # Common Performance Scenarios 
 Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Platform and how to resolve them. These include scenarios that are specifdic to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration (older versions to newer versions), as well as foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
-## <a name="Parameter Sniffing"></a> Sensitivity to parameter sniffing
+## <a name="CEUpgrade"></a> Query regressions due to change in CE version
+​
+**Applies to:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
+
+When migrating from an older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] or newer, and upgrading the [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest one, a workload may be exposed to the risk of performance regression.
+
+This is because starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], all Query Optimizer changes are tied to the latest [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` database option to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. 
+
+For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/en-us/library/dn673537.aspx).
+
+### Steps to resolve
+
+Follow the recommended upgrade workflow as shown in the following picture:
+
+![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+
+For more information on this topic, see [Keep performance stability during the upgrade to newer SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
+
+## <a name="ParameterSniffing"></a> Sensitivity to parameter sniffing
 
 **Applies to:** Foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
@@ -34,7 +52,7 @@ Below are some of the common performance scenarios encountered after migrating t
 > For [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migrations, if this issue existed in the source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], migrating to a newer version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] as-is will not address this scenario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compiles query plans on stored procedures by using sniffing the input parameters at the first compile, generating a parameterized and reusable plan, optimized for that input data distribution. Even if not stored procedures, most statements generating trivial plans will be parameterized. After a plan is first cached, any future execution maps to a previously cached plan.
-A potential problem arises when that first compilation may not have used the most common sets of parameters for the usual workload. For different parameters, the same execution plan becomes inefficient.
+A potential problem arises when that first compilation may not have used the most common sets of parameters for the usual workload. For different parameters, the same execution plan becomes inefficient. For more information on this topic, see [Parameter Sniffing](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### Steps to resolve
 
@@ -47,7 +65,7 @@ A potential problem arises when that first compilation may not have used the mos
 > [!TIP] 
 > Leverage the [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] Plan Analysis feature to quickly identify if this is an issue. More information available [here](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
 
-## <a name="Missing indexes"></a> Missing indexes
+## <a name="MissingIndexes"></a> Missing indexes
 
 **Applies to:** Foreign platform (such as Oracle, DB2, MySQL and Sybase) and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
@@ -65,7 +83,7 @@ Incorrect or missing indexes causes extra I/O that leads to extra memory and CPU
 > [!TIP] 
 > Examples of such pre-existing scripts include [Index Creation](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Creation) and [Index Information](https://github.com/Microsoft/tigertoolbox/tree/master/Index-Information). 
 
-## <a name="Inability to use predicates"></a> Inability to use predicates to filter data
+## <a name="InabilityPredicates"></a> Inability to use predicates to filter data
 
 **Applies to:** Foreign platform (such as Oracle, DB2, MySQL and Sybase) and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 
@@ -93,7 +111,7 @@ Some examples of non-SARGable predicates:
 > [!NOTE] 
 > All of the above can be done programmaticaly.
 
-## <a name="Table Valued Functions"></a> Use of Table Valued Functions (Multi-Statement vs Inline)
+## <a name="TableValuedFunctions"></a> Use of Table Valued Functions (Multi-Statement vs Inline)
 
 **Applies to:** Foreign platform (such as Oracle, DB2, MySQL and Sybase) and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] migration.
 

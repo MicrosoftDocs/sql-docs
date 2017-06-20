@@ -370,7 +370,7 @@ The `recompile_cause` column of `sql_statement_recompile` xEvent contains an int
 > This behavior applies to standard user-defined tables, temporary tables, and the inserted and deleted tables created by DML triggers. If query performance is affected by excessive recompilations, consider changing this setting to `OFF`. When the `AUTO_UPDATE_STATISTICS` database option is set to `OFF`, no recompilations occur based on statistics or cardinality changes, with the exception of the inserted and deleted tables that are created by DML `INSTEAD OF` triggers. Because these tables are created in tempdb, the recompilation of queries that access them depends on the setting of `AUTO_UPDATE_STATISTICS` in tempdb. 
 > Note that in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, queries continue to recompile based on cardinality changes to the DML trigger inserted and deleted tables, even when this setting is `OFF`.
 
-### Parameters and Execution Plan Reuse
+### <a name="PlanReuse"></a> Parameters and Execution Plan Reuse
 
 The use of parameters, including parameter markers in ADO, OLE DB, and ODBC applications, can increase the reuse of execution plans. 
 
@@ -438,7 +438,7 @@ WHERE AddressID = 1 + 2;
 
 However, it can be parameterized according to simple parameterization rules. When forced parameterization is tried but fails, simple parameterization is still subsequently tried.
 
-### Simple Parameterization
+### <a name="SimpleParam"></a> Simple Parameterization
 
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], using parameters or parameter markers in Transact-SQL statements increases the ability of the relational engine to match new SQL statements with existing, previously-compiled execution plans.
 
@@ -474,7 +474,7 @@ Under the default behavior of simple parameterization, [!INCLUDE[ssNoVersion](..
 
 Alternatively, you can specify that a single query, and any others that are syntactically equivalent but differ only in their parameter values, be parameterized. 
 
-### Forced Parameterization
+### <a name="ForcedParam"></a> Forced Parameterization
 
 You can override the default simple parameterization behavior of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by specifying that all `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements in a database be parameterized, subject to certain limitations. Forced parameterization is enabled by setting the `PARAMETERIZATION` option to `FORCED` in the `ALTER DATABASE` statement. Forced parameterization may improve the performance of certain databases by reducing the frequency of query compilations and recompilations. Databases that may benefit from forced parameterization are generally those that experience high volumes of concurrent queries from sources such as point-of-sale applications.
 
@@ -525,7 +525,7 @@ When [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parameterizes litera
 * Binary literals parameterize to varbinary(8000) if the literal fits within 8,000 bytes. If it is larger than 8,000 bytes, it is converted to varbinary(max).
 * Money type literals parameterize to money.
 
-#### Guidelines for Using Forced Parameterization
+#### <a name="ForcedParamGuide"></a> Guidelines for Using Forced Parameterization
 
 Consider the following when you set the `PARAMETERIZATION` option to FORCED:
 
@@ -580,7 +580,7 @@ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the prepare/execute m
 * The prepare/execute model is portable to other databases, including earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
  
-### Parameter Sniffing
+### <a name="ParamSniffing"></a> Parameter Sniffing
 "Parameter sniffing" refers to a process whereby [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sniffs" the current parameter values during compilation or recompilation, and passes it along to the Query Optimizer so that they can be used to generate potentially more efficient query execution plans.
 
 Parameter values are sniffed during compilation or recompilation for the following types of batches:
@@ -606,7 +606,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does 
 * A serial execution plan is considered faster than any possible parallel execution plan for the particular query.
 * The query contains scalar or relational operators that cannot be run in parallel. Certain operators can cause a section of the query plan to run in serial mode, or the whole plan to run in serial mode.
 
-### Degree of Parallelism
+### <a name="DOP"></a> Degree of Parallelism
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] automatically detects the best degree of parallelism for each instance of a parallel query execution or index data definition language (DDL) operation. It does this based on the following criteria: 
 
@@ -792,7 +792,7 @@ When possible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pushes rel
 
 ## Query Processing Enhancements on Partitioned Tables and Indexes
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008 improved query processing performance on partitioned tables for many parallel plans, changes the way parallel and serial plans are represented, and enhanced the partitioning information provided in both compile-time and run-time execution plans. This topic describes these improvements, provides guidance on how to interpret the query execution plans of partitioned tables and indexes, and provides best practices for improving query performance on partitioned objects. 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] improved query processing performance on partitioned tables for many parallel plans, changes the way parallel and serial plans are represented, and enhanced the partitioning information provided in both compile-time and run-time execution plans. This topic describes these improvements, provides guidance on how to interpret the query execution plans of partitioned tables and indexes, and provides best practices for improving query performance on partitioned objects. 
 
 > [!NOTE]
 > Partitioned tables and indexes are supported only in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer, and Evaluation editions.
@@ -955,13 +955,13 @@ To take another example, suppose that the table has four partitions on column A 
 
 To improve the performance of queries that access a large amount of data from large partitioned tables and indexes, we recommend the following best practices:
 
-* Stripe each partition across many disks.
+* Stripe each partition across many disks. This is especially relevant when using spinning disks.
 * When possible, use a server with enough main memory to fit frequently accessed partitions or all partitions in memory to reduce I/O cost.
 * If the data you query will not fit in memory, compress the tables and indexes. This will reduce I/O cost.
 * Use a server with fast processors and as many processor cores as you can afford, to take advantage of parallel query processing capability.
 * Ensure the server has sufficient I/O controller bandwidth. 
 * Create a clustered index on every large partitioned table to take advantage of B-tree scanning optimizations.
-* Follow the best practice recommendations in the white paper, [Loading Bulk Data into a Partitioned Table](http://go.microsoft.com/fwlink/?LinkId=154561), when bulk loading data into partitioned tables.
+* Follow the best practice recommendations in the white paper, [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx), when bulk loading data into partitioned tables.
 
 ### Example
 
@@ -1035,4 +1035,5 @@ GO
 
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
- [Extended Events](../relational-databases/extended-events/extended-events.md)
+ [Extended Events](../relational-databases/extended-events/extended-events.md)  
+ [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)

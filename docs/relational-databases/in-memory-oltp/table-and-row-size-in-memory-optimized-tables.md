@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Table and Row Size in Memory-Optimized Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the in-row data size of a memory-optimized table couldn't be longer than [8,060 bytes](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). However, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] it is now possible to create a memory-optimized table with multiple large columns (e.g., multiple varbinary(8000) columns) and LOB columns (i.e., varbinary(max), varchar(max), and nvarchar(max)) and perform operations on them using natively compiled T-SQL modules and table types. 
+  Prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the in-row data size of a memory-optimized table couldn't be longer than [8,060 bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). However, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] it is now possible to create a memory-optimized table with multiple large columns (e.g., multiple varbinary(8000) columns) and LOB columns (i.e., varbinary(max), varchar(max), and nvarchar(max)) and perform operations on them using natively compiled T-SQL modules and table types. 
   
   Columns that do not fit in the 8060 byte row size limit are placed off-row, in a separate internal table. Each off-row column has a corresponding internal table, which in turn has a single nonclustered index. For details about these internal tables used for off-row columns see [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
  
@@ -229,9 +229,11 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
 
-##  <a name="bkmk_OffRowLimitations"></a> Off Row Column Limitations   
--   If there is a columnstore index on a memory-optimized table then all the columns must fit in-row. 
--   All index key columns must be stored in-row; if an index key column doesn't fit in-row, adding the index will fail. 
+##  <a name="bkmk_OffRowLimitations"></a> Off-row Column Limitations
+  Certain limitations and caveats to using off-row columns in a memory-optimized table are listed below. [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://www.bing.com/search?q=whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) blog post further details some of these intricacies.   
+  
+-   If there is a columnstore index on a memory-optimized table, then all the columns must fit in-row. 
+-   All index key columns must be stored in-row. If an index key column doesn't fit in-row, adding the index fails. 
 -   [Caveats on altering a memory-optimized table with off-row columns](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
  
 ## See Also  

@@ -18,23 +18,24 @@ manager: "jhubbard"
 # Connect to an Access Data Source (SQL Server Import and Export Wizard)
 This topic shows you how to connect to a **Microsoft Access** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
 
-The following screen shot shows a sample connection to a Microsoft Access database. The target database doesn't use a workgroup information file, so you don't have to enter a user name and password.
+The following screen shot shows a sample connection to a Microsoft Access database. In this example, you don't have to enter a user name and password, because the target database doesn't use a workgroup information file.
 
 ![Connect to Access](../../integration-services/import-export-data/media/connect-to-access.jpg)
+
+## Options to specify
 
 > [!NOTE]
 > The connection options for this data provider are the same whether Access is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
 
-## Options to specify
 **Data source**  
 The list of data providers may contain several entries for Microsoft Access. Select the latest installed version, or the version that corresponds to the version of Access that created the database file.
 
-|Data source|Office version(s)|
+|Data source|Office version|
 |-------|-------|
 |Microsoft Access (Microsoft.ACE.OLEDB.16.0)|Office 2016|
 |Microsoft Access (Microsoft.ACE.OLEDB.15.0)|Office 2013|
 |Microsoft Access (Microsoft Access Database Engine)|Office 2010 and Office 2007|
-|Microsoft Access (Microsoft Jet Database Engine)|Office versions prior to Office 2007|
+|Microsoft Access (Microsoft Jet Database Engine)|Office versions earlier than Office 2007|
 
 > [!IMPORTANT]
 > You may have to download and install additional files to connect to the version of Access that you select. See [Get the files you need to connect to Access](#officeDownloads) on this page for more info.
@@ -83,15 +84,17 @@ In some cases, an Access database is password-protected, but isn't using a workg
 
 1.  On the **Choose a Data Source** or **Choose a Destination** page, click the **Advanced** button to open the **Data Link Properties** dialog box.  
 2.  In the **Data Link Properties** dialog box, select the **All** tab.  
-3.  In the list of properties and values, select **Jet OLEDB:Database Password**.  
+3.  In the list of properties and values, select **Jet OLEDB:Database Password**.   
+    
     ![Specify Access password, screen 1](../../integration-services/import-export-data/media/specify-access-password-screen-1.jpg) 
-4.  Click **Edit Value** to open the **Edit Property Value** dialog box.
+4.  Click **Edit Value** to open the **Edit Property Value** dialog box.  
+    
     ![Specify Access password, screen 2](../../integration-services/import-export-data/media/specify-access-password-screen-2.jpg)
 5.  In the **Edit Property Value** dialog box, enter the database password.
 6.  Click **OK** in each dialog box to return to the **Choose a Data Source** or **Choose a Destination** page of the wizard and continue.
 
 ## Keep your autonumber values when you export from Access
-Choose the **Enable identity insert** option in the **Column Mappings** dialog box to allow existing identity values in the source data to be inserted into an identity column in the destination table. By default, the destination identity column typically does not allow this. To show the **Column Mappings** dialog box, select **Edit mappings** when you reach the **Select Source Tables and Views** page of the wizard. To take a look at these pages, see [Select Source Tables and Views](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) and [Column Mappings](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
+To allow existing identity values in the source data to be inserted into an identity column in the destination table, choose the **Enable identity insert** option in the **Column Mappings** dialog box. By default, the destination identity column typically doesn't let you insert existing values. To show the **Column Mappings** dialog box, select **Edit mappings** when you reach the **Select Source Tables and Views** page of the wizard. To look at these pages, see [Select Source Tables and Views](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) and [Column Mappings](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
 
 If your existing primary keys are in an identity column, an autonumber column, or the equivalent, you typically have to select this option to keep your existing primary key values. Otherwise the destination identity column typically assigns new values.
 

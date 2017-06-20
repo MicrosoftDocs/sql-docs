@@ -1,7 +1,7 @@
 ---
 title: "Connect to an Excel Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/17/2017"
+ms.date: "06/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,10 +22,11 @@ The following screen shot shows a sample connection to a Microsoft Excel workboo
 
 ![Excel connection](../../integration-services/import-export-data/media/excel-connection.png) 
 
+## Options to specify
+
 > [!NOTE]
 > The connection options for this data provider are the same whether Excel is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
 
-## Options to specify
 **Excel file path**  
  Specify the path and file name for the Excel file. For example:
 -   For a file on the local computer, **C:\\MyData.xlsx**.
@@ -52,7 +53,7 @@ Indicate whether the first row of the data contains column names.
 -   If the data doesn't contain column names but you enable this option, the wizard treats the first row of source data as the column names.
 -   If the data contains column names but you disable this option, the wizard treats the row of column names as the first row of data.
 
-If you specify that the data doesn't have column names, the wizard uses F1, F2, and so forth as column headings.
+If you specify that the data doesn't have column names, the wizard uses F1, F2, and so forth, as column headings.
 
 ## I don't see Excel in the list of data sources
 If you don't see Excel in the list of data sources, are you running the 64-bit wizard? The providers for Excel and Access are typically 32-bit and aren't visible in the 64-bit wizard. Run the 32-bit wizard instead.

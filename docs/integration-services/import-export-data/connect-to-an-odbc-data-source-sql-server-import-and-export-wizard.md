@@ -150,7 +150,7 @@ To build and test the connection string for your ODBC driver on your own compute
     -   For a server-based data source like SQL Server, you typically need Server, Database, and login information. So in the sample DSN, you don't need TrustServerCertificate, WSID, or APP.
     -   For a file-based data source, you need at least file name and location.
     
-12. Paste this connection string into the **ConnectionString** field on the the **Choose a Data Source** or **Choose a Destination** page of the wizard. The wizard parses the string and you're ready to continue!
+12. Paste this connection string into the **ConnectionString** field on the **Choose a Data Source** or **Choose a Destination** page of the wizard. The wizard parses the string and you're ready to continue!
 
     ![Connect to SQL with ODBC after](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 

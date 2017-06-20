@@ -124,7 +124,7 @@
         homepage: /sql/connect/ruby/ruby-driver-for-sql-server
     - name: SQL Server on Linux
       href: /sql/linux/
-      homepage: /sql/linux/sql-server-linux-whats-new
+      homepage: /sql/linux/index?toc=/sql/linux/toc.json
     - name: Advanced analytics on SQL Server
       href: /sql/advanced-analytics/
       homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services

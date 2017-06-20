@@ -85,5 +85,6 @@ SELECT
 ## See Also  
  [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [Implementing SQL_VARIANT in a Memory-Optimized Table](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [Table and Row size in Memory-Optimized Table](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   

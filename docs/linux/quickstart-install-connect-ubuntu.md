@@ -11,7 +11,7 @@ ms.technology: database-engine
 ---
 # Install SQL Server and create a database on Ubuntu
 
-This quick start first installs SQL Server 2017 CTP 2.1 on Ubuntu 16.04. You then connect with **sqlcmd** to create your first database.
+In this quick start tutorial, you first install SQL Server 2017 CTP 2.1 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ This quick start first installs SQL Server 2017 CTP 2.1 on Ubuntu 16.04. You the
 
 ## Install SQL Server
 
-To install the **mssql-server** Package on Ubuntu, follow these steps:
+To configure SQL Server on Ubuntu, run the following commands in a terminal to install the **mssql-server** package:
 
 1. Import the public repository GPG keys:
 
@@ -51,7 +51,7 @@ To install the **mssql-server** Package on Ubuntu, follow these steps:
    sudo /opt/mssql/bin/mssql-conf setup
    ```
    > [!IMPORTANT]
-   > If you plan to connect remotely, you might need to open the SQL Server TCP port on your firewall. The default SQL Server port is 1433.
+   > If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
 
 1. Once the configuration is done, verify that the service is running:
 
@@ -64,9 +64,6 @@ At this point, SQL Server is running on your Ubuntu machine and is ready to use.
 ## <a id="tools"></a>Install the SQL Server command-line tools
 
 To create a database, you need to connect with a tool can run Transact-SQL statements on the SQL Server. The following steps install the SQL Server command-line tools, [sqlcmd](../tools/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
-
-> [!TIP]
-> **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. For other tools such as SQL Server Management Studio and Visual Studio Code, see the [Develop](sql-server-linux-develop-overview.md) and [Manage](sql-server-linux-management-overview.md) areas.
 
 1. Import the public repository GPG keys.
 
@@ -95,11 +92,12 @@ To create a database, you need to connect with a tool can run Transact-SQL state
    source ~/.bashrc
    ```
 
+> [!TIP]
+> **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. Other tools include [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) and [Visusal Studio Code](sql-server-linux-develop-use-vscode.md).
+
 ## Connect to SQL Server on Linux
 
 The following steps use **sqlcmd** to locally connect to your new SQL Server instance.
-
-1. On your Linux box, open a command terminal.
 
 1. Run **sqlcmd** with parameters for your SQL Server name (-S), the user name (-U), and the password (-P). In this tutorial, you are connecting locally, so the server name is `localhost`. The user name is `SA` and the password is the one you provided for the SA account during setup.
 
@@ -119,63 +117,69 @@ The following steps use **sqlcmd** to locally connect to your new SQL Server ins
 
 ## Create a database
 
-From the **sqlcmd** command prompt, paste the following Transact-SQL command to create a test database:
+The following steps create a new database named `TestDB`.
 
-```sql
-CREATE DATABASE testdb
-```
+1. From the **sqlcmd** command prompt, paste the following Transact-SQL command to create a test database:
 
-On the next line, write a query to return the name of all of the databases on your server:
+   ```sql
+   CREATE DATABASE TestDB
+   ```
 
-```sql
-SELECT Name from sys.Databases
-```
+1. On the next line, write a query to return the name of all of the databases on your server:
 
-The previous two commands were not executed immediately. You must type `GO` on a new line to execute the previous commands:
+   ```sql
+   SELECT Name from sys.Databases
+   ```
 
-```sql
-GO
-```
+1. The previous two commands were not executed immediately. You must type `GO` on a new line to execute the previous commands:
+
+   ```sql
+   GO
+   ```
 
 ## Insert data
 
-Switch context to the new `testdb` database:
+Next create a new table, `Inventory`, and insert two new rows.
 
-```sql
-USE testdb
-```
+1. From the **sqlcmd** command prompt, switch context to the new `TestDB` database:
 
-Create new table named `inventory`:
+   ```sql
+   USE TestDB
+   ```
 
-```sql
-CREATE TABLE inventory (id INT, name NVARCHAR(50), quantity INT)
-```
+1. Create new table named `Inventory`:
 
-Insert data into the new table:
+   ```sql
+   CREATE TABLE Inventory (id INT, name NVARCHAR(50), quantity INT)
+   ```
 
-```sql
-INSERT INTO inventory VALUES (1, 'banana', 150); INSERT INTO inventory VALUES (2, 'orange', 154);
-```
+1. Insert data into the new table:
 
-Type `GO` to execute the previous commands:
+   ```sql
+   INSERT INTO Inventory VALUES (1, 'banana', 150); INSERT INTO Inventory VALUES (2, 'orange', 154);
+   ```
 
-```sql
-GO
-```
+1. Type `GO` to execute the previous commands:
+
+   ```sql
+   GO
+   ```
 
 ## Select data
 
-Query rows from the `inventory` table where the quantity is greater than 152:
+Now, run a query to return data from the `Inventory` table.
 
-```sql
-SELECT * FROM inventory WHERE quantity > 152;
-```
+1. From the **sqlcmd** commandd prompt, enter a query that returns rows from the `Inventory` table where the quantity is greater than 152:
 
-Execute the command:
+   ```sql
+   SELECT * FROM Inventory WHERE quantity > 152;
+   ```
 
-```sql
-GO
-```
+1. Execute the command:
+
+   ```sql
+   GO
+   ```
 
 ## Exit the sqlcmd command prompt
 
@@ -184,8 +188,6 @@ To end your **sqlcmd** session, type `QUIT`:
 ```sql
 QUIT
 ```
-
-In this quick start you connected to SQL Server with **sqlcmd**, and created and populated a database. For more information on how to use sqlcmd.exe, see [sqlcmd Utility](https://msdn.microsoft.com/library/ms162773.aspx).
 
 ## Connect from Windows
 

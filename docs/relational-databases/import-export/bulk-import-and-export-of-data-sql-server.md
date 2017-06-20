@@ -1,7 +1,7 @@
 ---
 title: "Bulk Import and Export of Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2016"
+ms.date: "06/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

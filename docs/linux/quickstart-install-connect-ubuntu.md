@@ -63,21 +63,21 @@ At this point, SQL Server is running on your Ubuntu machine and is ready to use.
 
 ## <a id="tools"></a>Install the SQL Server command-line tools
 
-To create a database, you need to connect with a tool can run Transact-SQL statements on the SQL Server. The following steps install the SQL Server command-line tools, [sqlcmd](../tools/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
+To create a database, you need to connect with a tool that can run Transact-SQL statements on the SQL Server. The following steps install the SQL Server command-line tools, [sqlcmd](../tools/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
 
-1. Import the public repository GPG keys.
+1. Import the public repository GPG keys:
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Register the Microsoft Ubuntu repository.
+1. Register the Microsoft Ubuntu repository:
 
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Update the sources list and run the installation command with the unixODBC developer package.
+1. Update the sources list and run the installation command with the unixODBC developer package:
 
    ```bash
    sudo apt-get update

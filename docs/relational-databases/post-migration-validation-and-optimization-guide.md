@@ -38,7 +38,7 @@ For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14]
 
 ### Steps to resolve
 
-Follow the recommended upgrade workflow as shown in the following picture:
+Change the [database compatibility level](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the source version, and follow the recommended upgrade workflow as shown in the following picture:
 
 ![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
 

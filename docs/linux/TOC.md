@@ -1,8 +1,8 @@
-# [Overview]
+# Overview
 ## [About SQL Server on Linux](sql-server-linux-overview.md)
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md) 
-# [Quickstarts]
+# Quickstarts
 ## [Create DB - Ubuntu](quickstart-install-connect-ubuntu.md)
 # [Get Started](sql-server-linux-get-started-tutorial.md)
 ## [Install SQL Server](sql-server-linux-setup.md)

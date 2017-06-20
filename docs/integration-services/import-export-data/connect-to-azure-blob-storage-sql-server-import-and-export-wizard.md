@@ -30,10 +30,11 @@ The following screen shot shows the options to configure for a connection to Azu
 
 ![Azure blob storage connection](../../integration-services/import-export-data/media/azure-blob-storage-connection.png)
 
+## Options to specify
+
 > [!NOTE]
 > The connection options for this data provider are the same whether Azure Blob Storage is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
 
-## Options to specify
  **Use Azure account**  
  Specify whether to use an online account.
   

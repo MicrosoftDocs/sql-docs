@@ -154,7 +154,7 @@ The following sections describe known issues with this release of SQL Server 201
 - SqlPackage shows the location of files with a "C:\\" prefix.
 
 #### SQL Server Integration Services (SSIS)
-SSIS packages can be run on Linux. For more information, see [the blog post announcing SSIS support for SQL Server on Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
+You can run SSIS packages on Linux. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
 
 - The **mssql-server-is** package is only supported on Ubuntu at this time.
 
@@ -164,12 +164,14 @@ SSIS packages can be run on Linux. For more information, see [the blog post anno
   - Windows Authentication
   - Third party components
   - Third party ODBC drivers
-  - ODBC Connection Manager, Source, and Destination
+  - ODBC Connection Manager, Source, and Destination (supported with SSIS on Linux CTP 2.1 Refresh)
   - Change Data Capture (CDC)
   - Scale Out
   - Azure Feature Pack
   - Hadoop and HDFS Support
   - Microsoft Connector for SAP BW
+
+With SSIS on Linux CTP 2.1 Refresh, your SSIS packages can use ODBC connections on Linux. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.

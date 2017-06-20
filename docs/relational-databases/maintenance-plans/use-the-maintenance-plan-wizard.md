@@ -198,7 +198,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      The database is condensed to contiguous pages but the pages are not deallocated, and the database files do not shrink. Use this option if you expect the database to expand again, and you do not want to reallocate space. With this option, the database files do not shrink as much as possible. This uses the NOTRUNCATE option.  
   
      **Return freed space to operating system**  
-     The database is condensed to contiguous pages and the pages are released back to the operating system for use by other programs. This database files shrink as much as possible. This uses the TRUNCATEONLY option. This is the default option.  
+     The database is condensed to contiguous pages and the pages are released back to the operating system for use by other programs. This uses the TRUNCATEONLY option. This is the default option.  
   
 ## Define the Index Tasks  
   
@@ -257,7 +257,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
     > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      **MAXDOP** check box  
-     Overrides the max degree of parallelism configuration option of sp_configure for DBCC CHECKDB. For more information, see For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+     Overrides the max degree of parallelism configuration option of sp_configure for DBCC CHECKDB. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
 #### Define the Update Statistics Task  
   
@@ -357,7 +357,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      **Create a sub-directory for each database** check box  
      Create a sub-directory under the specified disk directory that contains the database backup for each database being backed up as part of the maintenance plan.  
   
-    > **IMPORTANT!!** The sub-directory will inherit permissions from the parent directory. Restrict permissions to avoid unauthorized access.  
+    > **IMPORTANT!** The sub-directory will inherit permissions from the parent directory. Restrict permissions to avoid unauthorized access.  
   
      **Folder** box  
      Specify the folder to contain the automatically created database files. This option is disabled if you selected URL as the backup destination.  
@@ -365,7 +365,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      **SQL Credential**  
      Select a SQL Credential used to authenticate to Windows Azure Storage. If you do not have an existing SQL Credential you can use, click the **Create** button to create a new SQL Credential.  
   
-    > **IMPORTANT!!** The dialog that opens when you click **Create** requires a management certificate or the publishing profile for the subscription. If you do not have access to the management certificate or publishing profile, you can create a SQL Credential by specifying the storage account name and access key information using Transact-SQL or SQL Server Management Studio. See the sample code in the [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) topic to create a credential using Transact-SQL. Alternatively, using SQL Server Management Studio, from the database engine instance, right click **Security**, select **New**, and select **Credential**. Specify the storage account name for **Identity** and the access key in the **Password** field.  
+    > **IMPORTANT!** The dialog that opens when you click **Create** requires a management certificate or the publishing profile for the subscription. If you do not have access to the management certificate or publishing profile, you can create a SQL Credential by specifying the storage account name and access key information using Transact-SQL or SQL Server Management Studio. See the sample code in the [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) topic to create a credential using Transact-SQL. Alternatively, using SQL Server Management Studio, from the database engine instance, right-click **Security**, select **New**, and select **Credential**. Specify the storage account name for **Identity** and the access key in the **Password** field.  
   
      **Azure storage container**  
      Specify the name of the Windows Azure storage container  

@@ -100,7 +100,10 @@
 ## [Release Notes](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
 
 ## [Setup and Troubleshooting Tips](machine-learning-troubleshooting-faq.md)
+### [Data Collection for Troubleshooting](data-collection-ml-troubleshooting-process.md)
 ### [Upgrade and Installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
+
+### [Common Issues for External Script Execution](common-issues-external-script-execution.md)
 ### [Add R Services to an Azure Virtual Machine](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Installing without Internet Access](/r/installing-ml-components-without-internet-access.md)
 ### [Installing Machine Learning Components without Internet Access](r/installing-ml-components-without-internet-access.md)
@@ -119,7 +122,7 @@
 
 ## Feedback Forums
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/azure/home?forum=MicrosoftR)
+### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
 
 # [Reference](r/machine-learning-services-r-reference.md)
 ## [MicrosoftML](using-the-microsoftml-package.md)
@@ -195,5 +198,7 @@
 
 ## [Data Science Solution Templates](tutorials/data-science-scenarios-and-solution-templates.md)
 ## [SQL Server Samples](https://github.com/Microsoft/sql-server-samples)
-## [Demand Forecasting with R Services](https://www.microsoft.com/sql-server/developer-get-started/r)
-## [Customer Clustering with R](https://www.microsoft.com/sql-server/developer-get-started/rclustering)
+## [Demand Forecasting with R Services](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-2016-R-Services-1)
+## [Build a predictive model using R and SQL Server ML Services](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
+## [Build a predictive model using Python and SQL Server ML Services]https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/
+## [Perform customer clustering using R and SQL Server ML Services](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/)

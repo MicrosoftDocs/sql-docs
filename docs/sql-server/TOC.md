@@ -38,5 +38,4 @@
 
 # About the documentation
 ## [SQL Server Resources](sql-server-resources.md)
-## [SQL Server Documentation Offline Access](sql-server-documentation-offline-access.md)
 ## [Help Viewer](../release-notes/sql-server-help-installation.md)

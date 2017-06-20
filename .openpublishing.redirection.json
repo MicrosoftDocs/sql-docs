@@ -1752,7 +1752,7 @@
         },
         {
             "source_path":"docs/sql-server/sql-server-documentation-offline-access.md",
-            "redirect_url":"sql/release-notes/sql-server-help-installation",
+            "redirect_url":"/sql/release-notes/sql-server-help-installation",
             "redirect_document_id":false
         }
 

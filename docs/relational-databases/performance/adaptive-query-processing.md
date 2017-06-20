@@ -22,7 +22,7 @@ At a general level, SQL Server executes a query as follows:
 Sometimes the plan chosen by the query optimizer is not optimal for a variety of reasons. For example, the estimated number of rows flowing through the query plan may be incorrect. The estimated costs help determine which plan gets selected for use in execution. If cardinality estimates are incorrect, the original plan is still used despite the poor original assumptions.
 SQL Server 2017 addresses these optimization issues with new adaptive query processing features. This article introduces the three features that you can use to improve query performance in SQL Server and Azure SQL Database.
 
-![Adaptive Query Processing Features](./media/performance/1_AQPFeatures.png)
+![Adaptive Query Processing Features](./media/1_AQPFeatures.png)
 
 ## How to enable adaptive query processing
 You can make workloads automatically eligible for adaptive query processing by enabling compatibility level 140 for the database.  You can set this using Transact-SQL. For example:
@@ -41,11 +41,11 @@ WHERE Timestamp BETWEEN @StartTime and @EndTime
 GROUP BY hash\_unique\_bigint\_id
 ORDER BY MAX(max\_elapsed\_time\_microsec) DESC;
 ```
-![](./media/performance/2_AQPGraphHighSpills.png)
+![](./media/2_AQPGraphHighSpills.png)
 
 With memory grant feedback enabled, for the second execution, duration is *1 second* (down from 88 seconds), spills are removed entirely, and the grant is higher: 
 
-![](./media/performance/3_AQPGraphNoSpills.png)
+![](./media/3_AQPGraphNoSpills.png)
 
 ## Memory grant feedback sizing
 *For excessive grants*, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant and update the cached plan.  Plans with memory grants under 1 MB will not be recalculated for overages.
@@ -80,7 +80,7 @@ WHERE   \[fo\].\[Quantity\] = 360;
 ```
 The query returns 336 rows.  Enabling Live Query Statistics we see the following plan:
 
-![](./media/performance/3_AQPGraphNoSpills.png)
+![](./media/3_AQPGraphNoSpills.png)
 
 In the plan, we see the following:
 - We have a columnstore index scan used to provide rows for the hash join build phase.
@@ -98,7 +98,7 @@ WHERE   \[fo\].\[Quantity\] = 361;
 ```
 The query returns one row.  Enabling Live Query Statistics we see the following plan:
 
-![](./media/performance/5_AQPStatsOneRow.png)
+![](./media/5_AQPStatsOneRow.png)
 
 In the plan, we see the following:
 - With one row returned, you see the Clustered Index Seek now has rows flowing through it.
@@ -141,14 +141,14 @@ If an adaptive join switches to a nested loop operation, it uses the rows alread
 ## Adaptive threshold rows
 The following chart shows an example intersection between the cost of a hash join vs. the cost of a nested loop join alternative.  At this intersection point, the threshold is determined that in turn determines the actual algorithm used for the join operation.
 
-![](./media/performance/6_AQPJoinThreshold.png)
+![](./media/6_AQPJoinThreshold.png)
 
 ## Interleaved execution for multi-statement table valued functions
 Interleaved execution changes the unidirectional boundary between the optimization and execution phases for a single-query execution and enables plans to adapt based on the revised cardinality estimates. During optimization if we encounter a candidate for interleaved execution, which is currently **multi-statement table valued functions (MSTVFs)**, we will pause optimization, execute the applicable subtree, capture accurate cardinality estimates, and then resume optimization for downstream operations.
 MSTVFs have a fixed cardinality guess of “100” in SQL Server 2014 and SQL Server 2016, and “1” for earlier versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with multi-statement table valued functions.
 The following is a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs (below shows Live Query Statistics output, so you can see the actual row flow vs. estimated rows):
 
-![](./media/performance/7_AQPFlowThreeAreas.png)
+![](./media/7_AQPFlowThreeAreas.png)
 
 Three noteworthy areas in the plan are numbered 1 through 3:
 1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are *527,597* rows flowing through this MSTVF Table Scan as seen in Live Query Statistics via the “527597 of 100” actual of estimated – so the fixed estimate is significantly skewed.
@@ -156,7 +156,7 @@ Three noteworthy areas in the plan are numbered 1 through 3:
 1. For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
 Contrast the prior plan with the actual plan generated with interleaved execution enabled:
 
-![](./media/performance/8_AQPInterleavedEnabledPlan.png)
+![](./media/8_AQPInterleavedEnabledPlan.png)
 
 Three noteworthy areas in the plan are numbered 1 through 3:
 1. Notice that the MSTVF table scan now reflects an accurate cardinality estimate. Also notice the re-ordering of this table scan and the other operations.

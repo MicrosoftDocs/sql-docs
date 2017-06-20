@@ -20,7 +20,11 @@ manager: "jhubbard"
 # Welcome to SQL Server Import and Export Wizard
   When you start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, the first page is **Welcome to SQL Server Import and Export Wizard**. You don't have to take any action on this page.
 
-This topic describes only the **first page** the wizard. If you're looking for something else, see [Related tasks and content](#related).
+> [!IMPORTANT]
+> This topic describes only the **first page** the wizard. If you're looking for something else, see [Related tasks and content](#related).
+
+## Prerequisite - Is the wizard installed on your computer?
+If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## Screen shot of the Welcome page  
 The following screen shot shows the **Welcome to SQL Server Import and Export Wizard** page of the wizard.  

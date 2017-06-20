@@ -76,17 +76,17 @@ In this example, the metadataPermission property of the columnPermissions class 
 
 ## Restrictions
 
-*  Table-level security cannot be set for a model if it breaks a relationship chain. An error will be generated at design time.
- For example, if there are relationships between tables A and B, and B and C, you cannot secure table B. If table B is secured, a query on table A cannot transit the relationships between table A and B, and B and C. In this case, a seperate relationship could be configured between tables A and B.
+*  Table-level security cannot be set for a model if it breaks a relationship chain. An error is generated at design time.
+ For example, if there are relationships between tables A and B, and B and C, you cannot secure table B. If table B is secured, a query on table A cannot transit the relationships between table A and B, and B and C. In this case, a separate relationship could be configured between tables A and B.
 
     ![Table-level security](../../analysis-services/tabular-models/media/ssas-ols.png)  
 
 
-*  Row-level security and object-level security cannot be combined if from different roles because this could introduce unintended access to secured data. An error will be generated at query time for users who are members of such a combination of roles.
+*  Row-level security and object-level security cannot be combined from different roles because it could introduce unintended access to secured data. An error is be generated at query time for users who are members of such a combination of roles.
 
-*  Dynamic calculations (measures, KPIs, DetailRows) will automatically be restricted if they reference a secured table or column. While there is no mechanism to explicitly secure a measure, it is possible to implicitly secure a measure by updating the expression to refer to a secured table or column.
+*  Dynamic calculations (measures, KPIs, DetailRows) are automatically  restricted if they reference a secured table or column. While there is no mechanism to explicitly secure a measure, it is possible to implicitly secure a measure by updating the expression to refer to a secured table or column.
 
-*  Relationships that reference a secured column will continue to work as long as the table the column is in is not secured.
+*  Relationships that reference a secured column work as long as the table the column is in isn't secured.
 
 
 

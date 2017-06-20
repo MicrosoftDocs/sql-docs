@@ -1,6 +1,6 @@
 ---
 title: "Use the Maintenance Plan Wizard | Microsoft Docs"
-ms.date: "08/19/2016"
+ms.date: "06/20/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,7 +39,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use the Maintenance Plan Wizard
-  This topic describes how to create a single  or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
+  This topic describes how to create a single or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
     
  
 ##  <a name="Restrictions"></a> Limitations and Restrictions  

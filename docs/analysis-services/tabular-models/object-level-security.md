@@ -82,11 +82,11 @@ In this example, the metadataPermission property of the columnPermissions class 
     ![Table-level security](../../analysis-services/tabular-models/media/ssas-ols.png)  
 
 
-*  Row-level security and object-level security cannot be combined from different roles because it could introduce unintended access to secured data. An error is be generated at query time for users who are members of such a combination of roles.
+*  Row-level security and object-level security cannot be combined from different roles because it could introduce unintended access to secured data. An error is generated at query time for users who are members of such a combination of roles.
 
 *  Dynamic calculations (measures, KPIs, DetailRows) are automatically  restricted if they reference a secured table or column. While there is no mechanism to explicitly secure a measure, it is possible to implicitly secure a measure by updating the expression to refer to a secured table or column.
 
-*  Relationships that reference a secured column work as long as the table the column is in isn't secured.
+*  Relationships that reference a secured column work provided the table the column is in is not secured.
 
 
 

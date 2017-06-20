@@ -59,7 +59,7 @@ manager: "jhubbard"
   
 -   **Partitioning.** Indicates that the database contains partitioned tables, partitioned indexes, partition schemes, or partition functions. To enable a database to be moved to an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] other than Enterprise or Developer, it is insufficient to modify the table to be on a single partition. You must remove the partitioned table. If the table contains data, use SWITCH PARTITION to convert each partition into a nonpartitioned table. Then delete the partitioned table, the partition scheme, and the partition function.  
   
--   **TransparentDataEncryption.** Indicates that a database is encrypted by using transparent data encryption. To remove transparent data encryption, use the ALTER DATABASE statement. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+-   **TransparentDataEncryption.** Indicates that a database is encrypted by using transparent data encryption. To remove transparent data encryption, use the ALTER DATABASE statement. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
  To determine whether a database uses any features that are restricted to specific editions, execute the following statement in the database:  
   

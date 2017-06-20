@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   When moving a TDE protected database, you must also move the certificate or asymmetric key that is used to open the DEK. The certificate or asymmetric key must be installed in the **master** database of the destination server, so that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can access the database files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+-   When moving a TDE protected database, you must also move the certificate or asymmetric key that is used to open the DEK. The certificate or asymmetric key must be installed in the **master** database of the destination server, so that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can access the database files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 -   You must retain copies of both the certificate file and the private key file in order to recover the certificate. The password for the private key does not have to be the same as the database master key password.  
   
@@ -321,6 +321,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Detach and Attach &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
+ [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   

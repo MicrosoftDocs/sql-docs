@@ -1829,6 +1829,16 @@
             "source_path":"docs/sql-server/sql-server-documentation-offline-access.md",
             "redirect_url":"/sql/release-notes/sql-server-help-installation",
             "redirect_document_id":false
+        },
+        {
+            "source_path": "docs/sql/relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md",
+            "redirect_url": "/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql/relational-databases/security/encryption/transparent-data-encryption-tde.md",
+            "redirect_url": "/sql/relational-databases/security/encryption/transparent-data-encryption",
+            "redirect_document_id": false
         }
 
     ]

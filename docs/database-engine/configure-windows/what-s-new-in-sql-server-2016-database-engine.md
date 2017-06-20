@@ -244,7 +244,7 @@ For overall information, see:
 
 - [Using Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) connections  can now access memory-optimized tables and natively compiled stored procedures.
 
-- [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md) support. If a database is configured for ENCRYPTION, files in the[The Memory Optimized Filegroup](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) are now also encrypted.
+- [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) support. If a database is configured for ENCRYPTION, files in the[The Memory Optimized Filegroup](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) are now also encrypted.
 
 For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).
 

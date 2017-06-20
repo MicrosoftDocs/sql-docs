@@ -24,11 +24,13 @@ The following screen shot shows a sample connection to a Microsoft Excel workboo
 
 > [!NOTE]
 > The connection options for this data provider are the same whether Excel is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
+
 ## Options to specify
 **Excel file path**  
  Specify the path and file name for the Excel file. For example:
 -   For a file on the local computer, **C:\\MyData.xlsx**.
 -   For a file on a network share, **\\\\Sales\\Database\\Northwind.xlsx**.
+
 Or, click **Browse**.  
   
  **Browse**  
@@ -40,10 +42,10 @@ Or, click **Browse**.
  **Excel version**  
 Select the version of Excel that's used by the source workbook.
 
-If you have a problem when you specify a version, try specifying a different version, even an earlier version. For example, you may not be able to install the Office 2016 data providers because you have a Microsoft Office 365 subscription. You can only install the data providers for Excel 2016 and Access 2016 with a desktop version of Microsoft Office. In this case, you can specify Excel 2013 instead of Excel 2016. The two versions of the provider are functionally equivalent. This limitation of the Office 2016 runtime is mentioned in [this blog post](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
-
 > [!IMPORTANT]
 > You may have to download and install additional files to connect to the version of Excel that you select. See [Get the files you need to connect to Excel](#officeDownloads) on this page for more info.
+
+If you have a problem when you specify a version, try specifying a different version, even an earlier version. For example, you may not be able to install the Office 2016 data providers because you have a Microsoft Office 365 subscription. You can only install the data providers for Excel 2016 and Access 2016 with a desktop version of Microsoft Office. In this case, you can specify Excel 2013 instead of Excel 2016. The two versions of the provider are functionally equivalent. This limitation of the Office 2016 runtime is mentioned in [this blog post](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
 
 **First row has column names**  
 Indicate whether the first row of the data contains column names.
@@ -52,7 +54,7 @@ Indicate whether the first row of the data contains column names.
 
 If you specify that the data doesn't have column names, the wizard uses F1, F2, and so forth as column headings.
 
-## I don't see Excel in the list
+## I don't see Excel in the list of data sources
 If you don't see Excel in the list of data sources, are you running the 64-bit wizard? The providers for Excel and Access are typically 32-bit and aren't visible in the 64-bit wizard. Run the 32-bit wizard instead.
 
 ## <a name="officeDownloads"></a>Get the files you need to connect to Excel  

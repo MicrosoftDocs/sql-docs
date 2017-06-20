@@ -1,7 +1,7 @@
 ---
 title: "Start the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "06/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,14 +24,19 @@ manager: "jhubbard"
 
  > For content related to previous versions of SQL Server, see [Run the SQL Server Import and Export Wizard](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
 
-You can start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in one of the following ways to import data from and export data to any supported data source. This topic briefly describes the steps for each method of starting the wizard.
+Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in one of the ways described in this topic to import data from and export data to any supported data source.
+
+> [!IMPORTANT]
+> This topic describes only how to **start** the wizard. If you're looking for something else, see [Related tasks and content](#related).
+
+You can start the wizard:
 -   From the [Start menu](#startStart).
 -   From the [command prompt](#startCmd). 
 -   From [SQL Server Management Studio (SSMS)](#startSSMS).
 -   From [Visual Studio with SQL Server Data Tools (SSDT)](#startVS).
 
-> [!IMPORTANT]
-> This topic describes only how to **start** the wizard. If you're looking for something else, see [Related tasks and content](#related).
+## Prerequisite - Is the wizard installed on your computer?
+If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="startStart"></a> Start menu  
 ### Start the SQL Server Import and Export Wizard from the Start menu

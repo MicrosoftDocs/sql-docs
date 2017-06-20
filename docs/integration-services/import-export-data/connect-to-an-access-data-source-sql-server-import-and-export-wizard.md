@@ -1,7 +1,7 @@
 ---
 title: "Connect to an Access Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "06/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,10 +36,10 @@ The list of data providers may contain several entries for Microsoft Access. Sel
 |Microsoft Access (Microsoft Access Database Engine)|Office 2010 and Office 2007|
 |Microsoft Access (Microsoft Jet Database Engine)|Office versions prior to Office 2007|
 
-If you have a problem when you specify a version, try specifying a different version, even an earlier version. For example, you may not be able to install the Office 2016 data providers because you have a Microsoft Office 365 subscription. You can only install the data providers for Access 2016 and Excel 2016 with a desktop version of Microsoft Office. In this case, you can specify Access 2013 instead of Access 2016. The two versions of the provider are functionally equivalent. This limitation of the Office 2016 runtime is mentioned in [this blog post](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
-
 > [!IMPORTANT]
 > You may have to download and install additional files to connect to the version of Access that you select. See [Get the files you need to connect to Access](#officeDownloads) on this page for more info.
+
+If you have a problem when you specify a version, try specifying a different version, even an earlier version. For example, you may not be able to install the Office 2016 data providers because you have a Microsoft Office 365 subscription. You can only install the data providers for Access 2016 and Excel 2016 with a desktop version of Microsoft Office. In this case, you can specify Access 2013 instead of Access 2016. The two versions of the provider are functionally equivalent. This limitation of the Office 2016 runtime is mentioned in [this blog post](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
 
  **File name**  
 Specify the path and file name for the Access file. For example, **C:\\MyData.mdb** for a file on the local computer, or **\\\\Sales\\Database\\Northwind.mdb** for a file on a network share. Or, click **Browse**. 
@@ -60,11 +60,6 @@ If the database is protected with a single password for all users, see [Is the d
   
  **Advanced**  
 Specify advanced options, such as the database password or a non-default workgroup information file, in the **Data Link Properties** dialog box.  
-
-## Keep your autonumber values when you export from Access
-Choose the **Enable identity insert** option in the **Column Mappings** dialog box to allow existing identity values in the source data to be inserted into an identity column in the destination table. By default, the destination identity column typically does not allow this. To show the **Column Mappings** dialog box, select **Edit mappings** when you reach the **Select Source Tables and Views** page of the wizard. To take a look at these pages, see [Select Source Tables and Views](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) and [Column Mappings](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
-
-If your existing primary keys are in an identity column, an autonumber column, or the equivalent, you typically have to select this option to keep your existing primary key values. Otherwise the destination identity column typically assigns new values.
 
 ## I don't see Access in the list of data sources
 If you don't see Access in the list of data sources, are you running the 64-bit wizard? The providers for Excel and Access are typically 32-bit and aren't visible in the 64-bit wizard. Run the 32-bit wizard instead.
@@ -94,6 +89,11 @@ In some cases, an Access database is password-protected, but isn't using a workg
     ![Specify Access password, screen 2](../../integration-services/import-export-data/media/specify-access-password-screen-2.jpg)
 5.  In the **Edit Property Value** dialog box, enter the database password.
 6.  Click **OK** in each dialog box to return to the **Choose a Data Source** or **Choose a Destination** page of the wizard and continue.
+
+## Keep your autonumber values when you export from Access
+Choose the **Enable identity insert** option in the **Column Mappings** dialog box to allow existing identity values in the source data to be inserted into an identity column in the destination table. By default, the destination identity column typically does not allow this. To show the **Column Mappings** dialog box, select **Edit mappings** when you reach the **Select Source Tables and Views** page of the wizard. To take a look at these pages, see [Select Source Tables and Views](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) and [Column Mappings](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
+
+If your existing primary keys are in an identity column, an autonumber column, or the equivalent, you typically have to select this option to keep your existing primary key values. Otherwise the destination identity column typically assigns new values.
 
 ## See also
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

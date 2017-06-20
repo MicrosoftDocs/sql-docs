@@ -59,7 +59,7 @@ The SQL Server engine version for this release is 14.0.600.250.
 ### Package details
 Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the following installation guides:
 
-- [Install SQL Sever package](sql-server-linux-setup.md)
+- [Install SQL Server package](sql-server-linux-setup.md)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
 
@@ -125,7 +125,7 @@ The following sections describe known issues with this release of SQL Server 201
     - **Resolution**: Change the language of the **sa** login with the **ALTER LOGIN** statement.
 
 #### Databases
-- System databases can not be moved with the mssql-conf utility.
+- System databases cannot be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
@@ -154,7 +154,7 @@ The following sections describe known issues with this release of SQL Server 201
 - SqlPackage shows the location of files with a "C:\\" prefix.
 
 #### SQL Server Integration Services (SSIS)
-SSIS packages can be run on Linux. For more information, see [the blog post announcing SSIS support for SQL Server on Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
+You can run SSIS packages on Linux. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
 
 - The **mssql-server-is** package is only supported on Ubuntu at this time.
 
@@ -162,14 +162,16 @@ SSIS packages can be run on Linux. For more information, see [the blog post anno
   - SSIS Catalog DB
   - Schedule Packages execution by SQL Agent
   - Windows Authentication
-  - Third party components
-  - Third party ODBC drivers
-  - ODBC Connection Manager, Source, and Destination
+  - Third-party components
+  - Third-party ODBC drivers
+  - ODBC Connection Manager, Source, and Destination (supported with SSIS on Linux CTP 2.1 Refresh)
   - Change Data Capture (CDC)
   - Scale Out
   - Azure Feature Pack
   - Hadoop and HDFS Support
   - Microsoft Connector for SAP BW
+
+With SSIS on Linux CTP 2.1 Refresh, your SSIS packages can use ODBC connections on Linux. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
@@ -208,7 +210,7 @@ The SQL Server engine version for this release is 14.0.500.272.
 ### Package details
 Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the following installation guides:
 
-- [Install SQL Sever package](sql-server-linux-setup.md)
+- [Install SQL Server package](sql-server-linux-setup.md)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
 
@@ -279,7 +281,7 @@ The following sections describe known issues with this release of SQL Server 201
     - **Resolution**: Change the language of the **sa** login with the **ALTER LOGIN** statement.
 
 #### Databases
-- System databases can not be moved with the mssql-conf utility.
+- System databases cannot be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
@@ -348,7 +350,7 @@ The SQL Server engine version for this release is 14.0.405.198.
 
 ### Package details
 Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the installation guides below
--	[Install SQL Sever package](sql-server-linux-setup.md)
+-	[Install SQL Server package](sql-server-linux-setup.md)
 -	[Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 -	[Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
 
@@ -427,7 +429,7 @@ The following sections describe known issues with this release of SQL Server 201
 - **CREATE ASSEMBLY** will not work when trying to use a file. Use the **FROM \<bits\>** method instead for now. 
 
 #### Databases
-- System databases can not be moved with the mssql-conf utility.
+- System databases cannot be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
@@ -600,7 +602,7 @@ The following sections describe known issues with this release of SQL Server 201
 #### Databases
 - Changing the locations of TempDB data and log files is not supported.
 
-- System databases can not be moved with the mssql-conf utility.
+- System databases cannot be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
@@ -631,7 +633,7 @@ The following sections describe known issues with this release of SQL Server 201
 #### Sqlcmd/BCP & ODBC 
 - SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql) depends on a custom unixODBC Driver Manager. This causes conflicts if you have a previously installed unixODBC Driver Manager. 
 
-    - **Resolution**: On Ubuntu, the conflict will be resolved automatically. When prompted if you would like to unisntall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC`. We are working on fixing this limitation for RHEL and SUSE and should have an update for you soon.  
+    - **Resolution**: On Ubuntu, the conflict will be resolved automatically. When prompted if you would like to uninstall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC`. We are working on fixing this limitation for RHEL and SUSE and should have an update for you soon.  
     
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
@@ -754,7 +756,7 @@ The following sections describe known issues with this release of SQL Server 201
 #### Databases
 - Changing the locations of TempDB data and log files is not supported.
 
-- System databases can not be moved with the mssql-conf utility.
+- System databases cannot be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
@@ -773,7 +775,7 @@ The following sections describe known issues with this release of SQL Server 201
 #### Sqlcmd/BCP & ODBC 
 - If you have an older version of SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql), you might have installed a custom unixODBC Driver Manager (unixODBC-utf16). This could casue a potential conflict as we no longer use a custom driver manager. 
 
-    - **Resolution**: On Ubuntu and SLES, the conflict will be resolved automatically. When prompted if you would like to unisntall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC-utf16 unixODBC-utf16-devel` and retry the install.
+    - **Resolution**: On Ubuntu and SLES, the conflict will be resolved automatically. When prompted if you would like to uninstall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC-utf16 unixODBC-utf16-devel` and retry the install.
     
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
@@ -893,7 +895,7 @@ The following sections describe known issues with this release of SQL Server 201
 #### Databases
 - Changing the locations of TempDB data and log files is not supported.
 
-- System databases can not be moved with the mssql-conf utility.
+- System databases cannot be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
@@ -912,7 +914,7 @@ The following sections describe known issues with this release of SQL Server 201
 #### Sqlcmd/BCP & ODBC 
 - SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql) depends on a custom unixODBC Driver Manager. This causes conflicts if you have a previously installed unixODBC Driver Manager. 
 
-    - **Resolution**: On Ubuntu, the conflict will be resolved automatically. When prompted if you would like to unisntall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC`. We are working on fixing this limitation for RHEL and SUSE and should have an update for you soon.  
+    - **Resolution**: On Ubuntu, the conflict will be resolved automatically. When prompted if you would like to uninstall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC`. We are working on fixing this limitation for RHEL and SUSE and should have an update for you soon.  
     
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
@@ -1028,7 +1030,7 @@ The following sections describe known issues with this release of SQL Server 201
 #### Databases
 - Changing the locations of TempDB data and log files is not supported.
 
-- System databases can not be moved with the mssql-conf utility.
+- System databases cannot be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
@@ -1047,7 +1049,7 @@ The following sections describe known issues with this release of SQL Server 201
 #### Sqlcmd/BCP & ODBC 
 - SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql) depends on a custom unixODBC Driver Manager. This causes conflicts if you have a previously installed unixODBC Driver Manager. 
 
-    - **Resolution**: On Ubuntu, the conflict will be resolved automatically. When prompted if you would like to unisntall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC`. We are working on fixing this limitation for RHEL and SUSE and should have an update for you soon.  
+    - **Resolution**: On Ubuntu, the conflict will be resolved automatically. When prompted if you would like to uninstall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC`. We are working on fixing this limitation for RHEL and SUSE and should have an update for you soon.  
     
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.

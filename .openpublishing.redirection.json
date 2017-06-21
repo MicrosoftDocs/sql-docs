@@ -1834,7 +1834,11 @@
             "source_path": "docs/analysis-services/instances/script-administrative-tasks-in-analysis-services.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
             "redirect_document_id": false
+        },
+        {
+            "source_path":"docs/tools/sql-server-profiler/run-sql-server-profiler.md",
+            "redirect_url":"/sql/tools/sql-server-profiler/start-sql-server-profiler",
+            "redirect_document_id":false
         }
-
     ]
 }

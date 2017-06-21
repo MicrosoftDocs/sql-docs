@@ -2,7 +2,7 @@
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "12/16/2016"
+ms.date: "06/21/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -152,9 +152,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
  For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
  DATA_COMPRESSION = **COLUMNSTORE** | COLUMNSTORE_ARCHIVE  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:  
   
@@ -220,9 +218,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 >  Parallel index operations are not available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ONLINE = [ON | OFF]   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], in nonclustered columnstore indexes only.|  
+   **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], in nonclustered columnstore indexes only.
 ON specifies that the nonclustered columnstore index will remain online and available while the new copy of the index is being built.
 
 OFF specifies that the index will not be available for use while the new copy is being built. As this is a nonclustered index only, the base table will remain available, only the nonclustered columnstore index will not be used to satisfy queries until the new index is complete. 
@@ -236,25 +232,19 @@ OFF specifies that the index will not be available for use while the new copy is
  Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:  
   
  COLUMNSTORE  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+   **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
   
  COLUMNSTORE_ARCHIVE  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
+   **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+
  Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.  
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
  WHERE <filter_expression> [ AND <filter_expression> ]  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+   **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Called a filter predicate, this specifies which rows to include in the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates filtered statistics on the data rows in the filtered index.  
   
@@ -349,7 +339,7 @@ OFF specifies that the index will not be available for use while the new copy is
   
 -   Cannot include the **ASC** or **DESC** keywords for sorting the index. Columnstore indexes are ordered according to the compression algorithms. Sorting would eliminate many of the performance benefits.  
 
--   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] version. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
+-   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] version and Azure SQL Database configured at premium pricing tier. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
 
  **Each column in a columnstore index must be of one of the following common business data types:** 
   
@@ -389,19 +379,19 @@ OFF specifies that the index will not be available for use while the new copy is
   
 -   nvarchar [ ( *n* ) ] 
 
--   nvarchar(max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], in  clustered columnstore indexes only)   
+-   nvarchar(max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and Azure SQL Database at premium pricing tier, in  clustered columnstore indexes only)   
   
 -   nchar [ ( *n* ) ]  
   
 -   varchar [ ( *n* ) ]  
 
--   varchar(max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], in  clustered columnstore indexes only)
+-   varchar(max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and Azure SQL Database at premium pricing tier, in  clustered columnstore indexes only)
   
 -   char [ ( *n* ) ]  
   
 -   varbinary [ ( *n* ) ] 
 
--   varbinary (max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], in  clustered columnstore indexes only)
+-   varbinary (max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and Azure SQL Database at premium pricing tier, in  clustered columnstore indexes only)
   
 -   binary [ ( *n* ) ]  
   
@@ -628,7 +618,7 @@ ON MyFactTable;
   
 
 ### G. Defragment by rebuilding the entire clustered columnstore index  
- Applies to: SQL Server 2014  
+   Applies to: SQL Server 2014  
   
  There are two ways to rebuild the full clustered columnstore index. You can use CREATE CLUSTERED COLUMNSTORE INDEX, or [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) and the REBUILD option. Both methods achieve the same results.  
   
@@ -709,10 +699,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
 ```  
   
 ###  <a name="ncDML"></a> D. Change the data in a nonclustered columnstore index  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
+   **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
   
  Once you create a nonclustered columnstore index on a table, you cannot directly modify the data in that table. A query with INSERT, UPDATE, DELETE, or MERGE will fail and return an error message. To add or modify the data in the table, you can do one of the following:  
   

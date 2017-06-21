@@ -1,7 +1,7 @@
 ---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/06/2016"
+ms.date: "06/21/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -367,39 +367,25 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Computed`  
-  
- `------`  
-  
- `379753754`  
-  
- `346698349`  
-  
- `257144242`  
-  
- `176493899`  
-  
- `281101272`  
-  
- `0`  
-  
- `301872549`  
-  
- `212623750`  
-  
- `298948202`  
-  
- `250784119`  
-  
- `239246890`  
-  
- `101664220`  
-  
- `124511336`  
-  
- `97688107`  
-  
- `(14 row(s) affected)`  
+```   
+Computed  
+ ------  
+379753754  
+346698349  
+257144242  
+176493899  
+281101272  
+0  
+301872549  
+212623750  
+298948202  
+250784119  
+239246890  
+101664220  
+124511336  
+97688107  
+(14 row(s) affected)
+```  
   
 ### C. Using CAST to concatenate  
  The following example concatenates noncharacter, nonbinary expressions by using `CAST`.  
@@ -415,21 +401,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `ListPrice`  
-  
- `------------------`  
-  
- `The list price is 357.06`  
-  
- `The list price is 364.09`  
-  
- `The list price is 364.09`  
-  
- `The list price is 364.09`  
-  
- `The list price is 364.09`  
-  
- `(5 row(s) affected)`  
+```   
+ListPrice  
+------------------  
+The list price is 357.06  
+The list price is 364.09  
+The list price is 364.09  
+The list price is 364.09  
+The list price is 364.09  
+(5 row(s) affected)
+```  
   
 ### D. Using CAST to produce more readable text  
  The following example uses `CAST` in the select list to convert the `Name` column to a `char(10)` column.  
@@ -447,17 +428,14 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name       UnitPrice`  
-  
- `---------- ---------------------`  
-  
- `Long-Sleev 31.2437`  
-  
- `Long-Sleev 32.4935`  
-  
- `Long-Sleev 49.99`  
-  
- `(3 row(s) affected)`  
+```   
+Name       UnitPrice  
+---------- ---------------------  
+Long-Sleev 31.2437  
+Long-Sleev 32.4935  
+Long-Sleev 49.99  
+(3 row(s) affected)
+```  
   
 ### E. Using CAST with the LIKE clause  
  The following example converts the `money` column `SalesYTD` to an `int` and then to a `char(20)` column so that it can be used with the `LIKE` clause.  
@@ -475,17 +453,14 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName        LastName            SalesYTD         SalesPersonID`  
-  
- `---------------- ------------------- ---------------- -------------`  
-  
- `Tsvi             Reiter              2811012.7151      279`  
-  
- `Syed             Abbas               219088.8836       288`  
-  
- `Rachel           Valdez              2241204.0424      289`  
-  
- `(3 row(s) affected)`  
+```  
+FirstName        LastName            SalesYTD         SalesPersonID  
+---------------- ------------------- ---------------- -------------  
+Tsvi             Reiter              2811012.7151      279  
+Syed             Abbas               219088.8836       288  
+Rachel           Valdez              2241204.0424      289  
+(3 row(s) affected)
+```  
   
 ### F. Using CONVERT or CAST with typed XML  
  The following are several examples that show using CONVERT to convert to typed XML by using the [XML Data Type and Columns &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md).  
@@ -523,13 +498,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `UnconvertedDateTime     UsingCast                      UsingConvertTo_ISO8601`  
-  
- `----------------------- ------------------------------ ------------------------------`  
-  
- `2006-04-18 09:58:04.570 Apr 18 2006  9:58AM            2006-04-18T09:58:04.570`  
-  
- `(1 row(s) affected)`  
+```   
+UnconvertedDateTime     UsingCast                      UsingConvertTo_ISO8601  
+----------------------- ------------------------------ ------------------------------  
+2006-04-18 09:58:04.570 Apr 18 2006  9:58AM            2006-04-18T09:58:04.570  
+(1 row(s) affected)
+```  
   
  The following example is approximately the opposite of the previous example. The example displays a date and time as character data, uses `CAST` to change the character data to the `datetime` data type, and then uses `CONVERT` to change the character data to the `datetime` data type.  
   
@@ -543,13 +517,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `UnconvertedText         UsingCast               UsingConvertFrom_ISO8601`  
-  
- `----------------------- ----------------------- ------------------------`  
-  
- `2006-04-25T15:50:59.997 2006-04-25 15:50:59.997 2006-04-25 15:50:59.997`  
-  
- `(1 row(s) affected)`  
+```  
+UnconvertedText         UsingCast               UsingConvertFrom_ISO8601  
+----------------------- ----------------------- ------------------------  
+2006-04-25T15:50:59.997 2006-04-25 15:50:59.997 2006-04-25 15:50:59.997  
+(1 row(s) affected)
+```  
   
 ### H. Using CONVERT with binary and character data  
  The following examples show the results of converting binary and character data by using different styles.  
@@ -561,14 +534,13 @@ SELECT CONVERT(char(8), 0x4E616d65, 0) AS [Style 0, binary to character];
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Style 0, binary to character`  
-  
- `----------------------------`  
-  
- `Name`  
-  
- `(1 row(s) affected)`  
-  
+```  
+Style 0, binary to character  
+----------------------------  
+Name  
+(1 row(s) affected)  
+```  
+
 ```  
 --The following example shows how Style 1 can force the result  
 --to be truncated. The truncation is caused by  
@@ -578,14 +550,13 @@ SELECT CONVERT(char(8), 0x4E616d65, 1) AS [Style 1, binary to character];
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Style 1, binary to character`  
-  
- `------------------------------`  
-  
- `0x4E616D`  
-  
- `(1 row(s) affected)`  
-  
+```  
+Style 1, binary to character  
+------------------------------  
+0x4E616D  
+(1 row(s) affected)  
+```   
+
 ```  
 --The following example shows that Style 2 does not truncate the  
 --result because the characters 0x are not included in  
@@ -595,14 +566,12 @@ SELECT CONVERT(char(8), 0x4E616d65, 2) AS [Style 2, binary to character];
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Style 2, binary to character`  
-  
- `------------------------------`  
-  
- `4E616D65`  
-  
- `(1 row(s) affected)`  
-  
+```   
+Style 2, binary to character  
+------------------------------  
+4E616D65  
+(1 row(s) affected)  
+```     
 ```  
 --Convert the character value 'Name' to a binary value.  
 SELECT CONVERT(binary(8), 'Name', 0) AS [Style 0, character to binary];  
@@ -610,42 +579,39 @@ SELECT CONVERT(binary(8), 'Name', 0) AS [Style 0, character to binary];
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Style 0, character to binary`  
-  
- `----------------------------------`  
-  
- `0x4E616D6500000000`  
-  
- `(1 row(s) affected)`  
-  
+```   
+Style 0, character to binary  
+----------------------------------  
+0x4E616D6500000000  
+(1 row(s) affected)  
+```   
+
 ```  
 SELECT CONVERT(binary(4), '0x4E616D65', 1) AS [Style 1, character to binary];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Style 1, character to binary`  
-  
- `----------------------------------`  
-  
- `0x4E616D65`  
-  
- `(1 row(s) affected)`  
-  
+ ```   
+Style 1, character to binary  
+----------------------------------  
+0x4E616D65  
+(1 row(s) affected)  
+```   
+
 ```  
 SELECT CONVERT(binary(4), '4E616D65', 2) AS [Style 2, character to binary];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Style 2, character to binary`  
-  
- `----------------------------------`  
-  
- `0x4E616D65`  
-  
- `(1 row(s) affected)`  
-  
+```   
+Style 2, character to binary  
+----------------------------------  
+0x4E616D65  
+(1 row(s) affected)`  
+```   
+
 ### I. Converting date and time data types  
  The following example demonstrates the conversion of date, time, and datetime data types.  
   

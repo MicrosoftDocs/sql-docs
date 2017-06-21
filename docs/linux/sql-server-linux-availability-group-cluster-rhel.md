@@ -135,7 +135,7 @@ sudo pcs property set stonith-enabled=false
 To update the property value to `false` run:
 
 ```bash
-pcs property set start-failure-is-fatal=false
+sudo pcs property set start-failure-is-fatal=false
 ```
 
 >[!WARNING]

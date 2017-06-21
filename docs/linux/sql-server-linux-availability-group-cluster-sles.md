@@ -31,7 +31,7 @@ This guide provides instructions to create a three-node cluster for SQL Server o
 For more details on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 >[!NOTE]
->At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server service on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources as if SQL Server were a standalone instance. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. On Linux, Always On Availability Group Dynamic Management Views (DMVs) will return empty rows. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
+>At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server service on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources, including the availability group resource. On Linux, you should not rely on Always On Availability Group Dynamic Management Views (DMVs) that provide cluster information like sys.dm_hadr_cluster. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the  DNS server with the IP used to create the virtual IP resource (as explained below).
 
 
 ## Roadmap
@@ -49,13 +49,13 @@ The steps to create an availability group on Linux servers for high availability
    >[!IMPORTANT]
    >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
    
-   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
+   >A Pacemaker cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
 5. [Add the availability group as a resource in the cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
 ## Prerequisites
 
-To complete the end-to-end scenario below you need three servers to deploy a three-node cluster. The steps below outline how to configure these servers.
+To complete the end-to-end scenario below you need three machines to deploy the three nodes cluster. The steps below outline how to configure these servers.
 
 ## Setup and configure the operating system on each cluster node 
 
@@ -63,25 +63,25 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ### Install and configure SQL Server service on each cluster node
 
-1. Install and setup SQL Server service on each node. For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
+1. Install and setup SQL Server service on all nodes. For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
 
-1. Designate one node as primary and the others as secondary, for purposes of configuration. Use these terms throughout this guide.
+1. Designate one node as primary and other nodes as secondaries. Use these terms throughout this guide.
 
 1. Make sure nodes that are going to be part of the cluster can communicate to each other.
 
-   The following example shows `/etc/hosts` with additions for trhee nodes named node1, node2 and node3.
+   The following example shows `/etc/hosts` with additions for three nodes named SLES1, SLES2 and SLES3.
 
    ```
    127.0.0.1   localhost
-   10.128.18.12 node1
-   10.128.16.77 node2
-   10.128.15.33 node3
+   10.128.16.33 SLES1
+   10.128.16.77 SLES2
+   10.128.16.22 SLES3
    ```
 
    All cluster nodes must be able to access each other via SSH. Tools like `hb_report` or `crm_report` (for troubleshooting) and Hawk's History Explorer require passwordless SSH access between the nodes, otherwise they can only collect data from the current node. In case you use a non-standard SSH port, use the -X option (see `man` page). For example, if your SSH port is 3479, invoke a `crm_report` with:
 
    ```bash
-   crm_report -X "-p 3479" [...]
+   sudo crm_report -X "-p 3479" [...]
    ```
 
    For additional information, see the [SLES Administration Guide - Miscellaneous section](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
@@ -114,7 +114,7 @@ On Linux servers configure the availability group and then configure the cluster
 1. Log in as `root` to the physical or virtual machine you want to use as cluster node.
 2. Start the bootstrap script by executing:
    ```bash
-   ha-cluster-init
+   sudo ha-cluster-init
    ```
 
    If NTP has not been configured to start at boot time, a message appears. 
@@ -135,7 +135,7 @@ On Linux servers configure the availability group and then configure the cluster
 4. For any details of the setup process, check `/var/log/sleha-bootstrap.log`. You now have a running one-node cluster. Check the cluster status with crm status:
 
    ```bash
-   crm status
+   sudo crm status
    ```
 
    You can also see cluster configuration with `crm configure show xml`  or `crm configure show`.
@@ -143,7 +143,7 @@ On Linux servers configure the availability group and then configure the cluster
 5. The bootstrap procedure creates a Linux user named hacluster with the password linux. Replace the default password with a secure one as soon as possible: 
 
    ```bash
-   passwd hacluster
+   sudo passwd hacluster
    ```
 
 ## Add nodes to the existing cluster
@@ -158,7 +158,7 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
 2. Start the bootstrap script by executing: 
 
    ```bash
-   ha-cluster-join
+   sudo ha-cluster-join
    ```
 
    If NTP has not been configured to start at boot time, a message appears. 
@@ -173,14 +173,14 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
 
 6. For details of the process, check `/var/log/ha-cluster-bootstrap.log`. 
 
-1. Check the cluster status with `crm status`. If you have successfully added a second node, the output will be similar to the following:
+1. Check the cluster status with `sudo crm status`. If you have successfully added a second node, the output will be similar to the following:
 
-   ```
-   crm status
+   ```bash
+   sudo crm status
    
    3 nodes configured
    1 resource configured
-   Online: [ node1 node2 node3 ]
+   Online: [ SLES1 SLES2 SLES3]
    Full list of resources:   
    admin_addr     (ocf::heartbeat:IPaddr2):       Started node1
    ```
@@ -190,8 +190,34 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
 
 After adding all nodes, check if you need to adjust the no-quorum-policy in the global cluster options. This is especially important for two-node clusters. For more information, refer to Section 4.1.2, Option no-quorum-policy. 
 
->[!NOTE]
->High availability solutions require three nodes. See [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).
+## Set cluster property start-failure-is-fatal to false
+
+`Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will take care of demoting the replica to secondary and it will automatically rejoin the availability group. Also, if `start-failure-is-fatal` is set to `false`, the cluster will fall back to the configured failcount limits configured with migration-threshold so you need to make sure default for migration threshold is updated accordingly.
+
+To update the property value to false run:
+```bash
+sudo crm configure property start-failure-is-fatal=false
+sudo crm configure rsc_defaults migration-threshold=5000
+```
+If the property has the default value of `true`, if first attempt to start the resource fails, user intervention is required after an automatic failover to cleanup the resource failure count and reset the configuration using: `sudo crm resource cleanup <resourceName>` command.
+
+For more details on Pacemaker cluster properties see [Configuring Cluster Resources](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
+
+# Configure fencing (STONITH)
+Pacemaker cluster vendors require STONITH to be enabled and a fencing device configured for a supported cluster setup. When the cluster resource manager cannot determine the state of a node or of a resource on a node, fencing is used to bring the cluster to a known state again.
+Resource level fencing ensures mainly that there is no data corruption in case of an outage by configuring a resource. You can use resource level fencing, for instance, with DRBD (Distributed Replicated Block Device) to mark the disk on a node as outdated when the communication link goes down.
+Node level fencing ensures that a node does not run any resources. This is done by resetting the node and the Pacemaker implementation of it is called STONITH (which stands for "shoot the other node in the head"). Pacemaker supports a great variety of fencing devices, e.g. an uninterruptible power supply or management interface cards for servers.
+For more details, see [Pacemaker Clusters from Scratch](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [Fencing and Stonith](http://clusterlabs.org/doc/crm_fencing.html) and [SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+
+At cluster initialization time, STONITH is disabled if no configuration is detected. It can be enabled later by running below command
+
+```bash
+sudo crm configure property stonith-enabled=true
+```
+  
+>[!IMPORTANT]
+>Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that SUSE does not provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
+
 
 ## Configure the cluster resources for SQL Server
 
@@ -199,23 +225,33 @@ Refer to [SLES Administration Guid](https://www.suse.com/documentation/sle-ha-12
 
 ### Create availability group resource
 
-The following command creates and configures the availability group resource for 2 replicas of availability group [ag1]. Run the command on one of the nodes in the cluster:
+The following command creates and configures the availability group resource for 3 replicas of availability group [ag1]. The monitor operations and timeouts have to be specified explicitly in SLES based on the fact that timeouts are highly workload dependent and need to be carefully adjusted for each deployment.
+Run the command on one of the nodes in the cluster:
 
 1. Run `crm configure` to open the crm prompt:
 
    ```bash
-   crm configure 
+   sudo crm configure 
    ```
 
 1. In the crm prompt, run the command below to configure the resource properties.
 
    ```bash
-   primitive ag_cluster \
-      ocf:mssql:ag \
-      params ag_name="ag1" 
-   ms ms-ag_cluster ag_cluster \
-      meta notify="true"
-   commit
+primitive ag_cluster \
+   ocf:mssql:ag \
+   params ag_name="ag1" \
+   op start timeout=60s \
+   op stop timeout=60s \
+   op promote timeout=60s \
+   op demote timeout=10s \
+   op monitor timeout=60s interval=10s \
+   op monitor timeout=60s interval=11s role="Master" \
+   op monitor timeout=60s interval=12s role="Slave" \
+   op notify timeout=60s
+ms ms-ag_cluster ag_cluster \
+   meta master-max="1" master-node-max="1" clone-max="3" \
+  clone-node-max="1" notify="true" \
+commit
    ```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
@@ -257,7 +293,7 @@ To prevent the IP address from temporarily pointing to the node with the pre-fai
 To add an ordering constraint, run the following command on one node: 
 
 ```bash
-crm configure \
+crm crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
 ```
 

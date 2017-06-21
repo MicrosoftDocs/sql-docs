@@ -45,7 +45,7 @@ With BYOK support, users can now control key management tasks including key rota
 
 To learn more about TDE with BYOK support for Azure SQL Database and Data Warehouse, see [Transparent Data Encryption with Bring Your Own Key support](transparent-data-encryption-byok-azure-sql.md).
 
-To start using TDE with BYOK support, visit the how-to guide [Turn on Transparent Data Encryption using your own key from Key Vault Using PowerShell](transparent-data-encryption-byok-azure-sql-howto-configure.md).
+To start using TDE with BYOK support, visit the how-to guide [Turn on Transparent Data Encryption using your own key from Key Vault Using PowerShell](transparent-data-encryption-byok-azure-sql-configure.md).
 
 ## Moving a TDE protected database
 
@@ -111,6 +111,6 @@ The TDE Protector cannot be switched to a key from Azure Key Vault using Transac
 
 - To learn more about TDE with BYOK support for Azure SQL Database and Data Warehouse, visit [Transparent Data Encryption with Bring Your Own Key support](transparent-data-encryption-byok-azure-sql.md).
 
-- To start using TDE with BYOK support, visit the how-to guide [Turn on Transparent Data Encryption using your own key from Key Vault Using PowerShell](transparent-data-encryption-byok-azure-sql-howto-configure.md).
+- To start using TDE with BYOK support, visit the how-to guide [Turn on Transparent Data Encryption using your own key from Key Vault Using PowerShell](transparent-data-encryption-byok-azure-sql-configure.md).
 
 - For more information about Key Vault, see [Key Vault documentation page](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).

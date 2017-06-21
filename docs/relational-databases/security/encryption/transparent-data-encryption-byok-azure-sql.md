@@ -73,7 +73,7 @@ Once a server no longer has access to the TDE Protector, **all connections to th
 ### Deleted keys
 
 Once the TDE Protector is deleted in Key Vault, **all connections to the encrypted databases under the server are blocked, and these databases go offline and get dropped within 24 hours.** Old backups encrypted with the compromised key are no longer be accessible.
-If there is an extreme case where a key is suspected to be compromised (such that a service or user had unauthorized access to the key), it’s best to delete the key. See [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-howto-remove-tde-protector.md).
+If there is an extreme case where a key is suspected to be compromised (such that a service or user had unauthorized access to the key), it’s best to delete the key. See [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md).
 
 ### Expired keys
 
@@ -155,6 +155,6 @@ We recommend that each server have access to a copy of the Key Vault key materia
 
 ## Next steps
 
-- Get started with Bring Your Own Key support for TDE: [Turn on TDE using your own key from Key Vault using PowerShell](transparent-data-encryption-byok-azure-sql-howto-configure.md)
-- Learn how to rotate the TDE Protector of a server to comply with security requirements: [Rotate the Transparent Data Encryption Protector Using PowerShell](transparent-data-encryption-byok-azure-sql-howto-keyrotation.md)
-- In case of a security risk, learn how to remove a potentially compromised TDE Protector: [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-howto-remove-tde-protector.md) 
+- Get started with Bring Your Own Key support for TDE: [Turn on TDE using your own key from Key Vault using PowerShell](transparent-data-encryption-byok-azure-sql-configure.md)
+- Learn how to rotate the TDE Protector of a server to comply with security requirements: [Rotate the Transparent Data Encryption Protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md)
+- In case of a security risk, learn how to remove a potentially compromised TDE Protector: [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) 

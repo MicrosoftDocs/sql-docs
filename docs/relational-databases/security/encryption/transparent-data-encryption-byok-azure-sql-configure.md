@@ -22,8 +22,6 @@ ms.author: rebeccaz
 
 # Enable Transparent Data Encryption using your own key from Azure Key Vault using PowerShell
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
-
 This how-to guide walks through how to use a key from Azure Key Vault for Transparent Data Encryption (TDE) on a SQL Database or Data Warehouse. To learn more about the TDE with Bring Your Own Key (BYOK) Support, visit [TDE Bring Your Own Key to Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
 ## Prerequisites
@@ -186,7 +184,7 @@ Check the following if an issue occurs:
 
 ## Next steps
 
-- Learn how to rotate the TDE Protector of a server to comply with security requirements: [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-azure-sql-howto-keyrotation.md).
-- In case of a security risk, learn how to remove a potentially compromised TDE Protector: [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-howto-remove-tde-protector.md). 
+- Learn how to rotate the TDE Protector of a server to comply with security requirements: [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md).
+- In case of a security risk, learn how to remove a potentially compromised TDE Protector: [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). 
 
 

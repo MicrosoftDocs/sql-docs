@@ -22,8 +22,6 @@ ms.author: rebeccaz
 
 # Remove a Transparent Data Encryption (TDE) Protector Using PowerShell
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
-
 ## Prerequisites
 1. You must have an Azure subscription and be an administrator on that subscription
 2. You must have Azure PowerShell version 4.2.0 or newer installed and running. 
@@ -106,6 +104,6 @@ The database and log files are automatically backed up, so a point-in-time resto
 
 ## Next steps
 
-- Learn how to rotate the TDE Protector of a server to comply with security requirements: [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-azure-sql-howto-keyrotation.md)
+- Learn how to rotate the TDE Protector of a server to comply with security requirements: [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md)
 
-- Get started with Bring Your Own Key support for TDE: [Turn on TDE using your own key from Key Vault using PowerShell](transparent-data-encryption-byok-azure-sql-howto-configure.md)
+- Get started with Bring Your Own Key support for TDE: [Turn on TDE using your own key from Key Vault using PowerShell](transparent-data-encryption-byok-azure-sql-configure.md)

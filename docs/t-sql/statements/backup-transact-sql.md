@@ -59,8 +59,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+``` 
 Backing Up a Whole Database   
 BACKUP DATABASE { database_name | @database_name_var }   
   TO <backup_device> [ ,...n ]   
@@ -174,7 +173,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 >  After a typical log backup, some transaction log records become inactive, unless you specify WITH NO_TRUNCATE or COPY_ONLY. The log is truncated after all the records within one or more virtual log files become inactive. If the log is not being truncated after routine log backups, something might be delaying log truncation. For more information, see.  
   
- { *database_name*| **@***database_name_var* }  
+ { *database_name*| **@**database_name_var* }  
  Is the database from which the transaction log, partial database, or complete database is backed up. If supplied as a variable (**@***database_name_var*), this name can be specified either as a string constant (**@***database_name_var***=***database name*) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
 > [!NOTE]  
@@ -193,7 +192,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  Consider using file backups when the database size and performance requirements make a database backup impractical.  
   
  *n*  
- Is a placeholder that indicates that multiple files and filegroups can be specified in a comma-separated list. The number is unlimited.  
+ Is a placeholder that indicates that multiple files and filegroups can be specified in a comma-separated list. The number is unlimited. 
   
  For more information, see: [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
@@ -226,12 +225,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* }  
  Specifies a disk file or tape device, or a Windows Azure Blob storage service. The URL format is used for creating backups to the Windows Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
-> [!WARNING]  
->  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)) and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> [!IMPORTANT]  
+>  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
-||  
-|-|  
-|**URL:Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  A disk device does not have to exist before it is specified in a BACKUP statement. If the physical device exists and the INIT option is not specified in the BACKUP statement, the backup is appended to the device.  
   
@@ -268,16 +265,12 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  CREDENTIAL  
  Used only when creating a backup to the Windows Azure Blob storage service.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  FILE_SNAPSHOT  
  Used to create an Azure snapshot of the database files when all of the SQL Server database files are stored using the Azure Blob storage service. For more information, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup takes Azure snapshots of the database files (data and log files) at a consistent state. A consistent set of Azure snapshots make up a backup and are recorded in the backup file. The only difference between **BACKUP DATABASE TO URL WITH FILE_SNAPSHOT** and **BACKUP LOG TO URL WITH FILE_SNAPSHOT** is that the latter also truncates the transaction log while the former does not. With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup, after the initial full backup that is required by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to establish the backup chain, only a single transaction log backup is required to restore a database to the point in time of the transaction log backup. Furthermore, only two transaction log backups are required to restore a database to a point in time between the time of the two transaction log backups.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  DIFFERENTIAL  
  Used only with BACKUP DATABASE, specifies that the database or file backup should consist only of the portions of the database or file changed since the last full backup. A differential backup usually takes up less space than a full backup. Use this option so that all individual log backups performed since the last full backup do not have to be applied.  
@@ -524,7 +517,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  UNLOAD/NOUNLOAD is a session setting that persists for the life of the session or until it is reset by specifying the alternative.  
   
  UNLOAD  
- Specifies that the tape is automatically rewound and unloaded when the backup is finished. UNLOAD is the default when a session begins.  
+ Specifies that the tape is automatically rewound and unloaded when the backup is finished. UNLOAD is the default when a session begins. 
   
  NOUNLOAD  
  Specifies that after the BACKUP operation the tape will remain loaded on the tape drive.  
@@ -619,7 +612,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  The following example writes a backup of the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to a new striped media set that uses three disk files.  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1.bak',   
 DISK='Y:\SQLServerBackups\AdventureWorks2.bak',   
@@ -641,7 +634,7 @@ GO
   
  For a mirrored media set, each MIRROR TO clause must list the same number and type of devices as the TO clause. The following example writes to a mirrored media set that contains two mirrors and uses three devices per mirror:  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',   
 DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
@@ -767,7 +760,7 @@ GO
 ###  <a name="backing_up_db"></a> A. Backing up a complete database  
  The following example backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to a disk file.  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH FORMAT;  
@@ -781,7 +774,7 @@ GO
   
  The example then creates a full database backup to `AdvWorksData`, and after a period of update activity, backs up the log to `AdvWorksLog`.  
   
-```  
+```tsql  
 -- To permit log backups, before the full database backup, modify the database   
 -- to use the full recovery model.  
 USE master;  
@@ -814,7 +807,7 @@ GO
 ###  <a name="full_file_backup"></a> C. Creating a full file backup of the secondary filegroups  
  The following example creates a full file backup of every file in both of the secondary filegroups.  
   
-```  
+```tsql  
 --Back up the files in SalesGroup1:  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -826,7 +819,7 @@ GO
 ###  <a name="differential_file_backup"></a> D. Creating a differential file backup of the secondary filegroups  
  The following example creates a differential file backup of every file in both of the secondary filegroups.  
   
-```  
+```tsql  
 --Back up the files in SalesGroup1:  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -840,7 +833,7 @@ GO
 ###  <a name="create_single_family_mirrored_media_set"></a> E. Creating and backing up to a single-family mirrored media set  
  The following example creates a mirrored media set containing a single media family and four mirrors and backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to them.  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012  
 TO TAPE = '\\.\tape0'  
 MIRROR TO TAPE = '\\.\tape1'  
@@ -854,7 +847,7 @@ WITH
 ###  <a name="create_multifamily_mirrored_media_set"></a> F. Creating and backing up to a multifamily mirrored media set  
  The following example creates a mirrored media set in which each mirror consists of two media families. The example then backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to both mirrors.  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
@@ -866,7 +859,7 @@ WITH
 ###  <a name="existing_mirrored_media_set"></a> G. Backing up to an existing mirrored media set  
  The following example appends a backup set to the media set created in the preceding example.  
   
-```  
+```tsql  
 BACKUP LOG AdventureWorks2012  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
@@ -881,7 +874,7 @@ WITH
 ###  <a name="creating_compressed_backup_new_media_set"></a> H. Creating a compressed backup in a new media set  
  The following example formats the media, creating a new media set, and perform a compressed full backup of the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database.  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
    FORMAT,   

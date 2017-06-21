@@ -23,9 +23,9 @@ manager: "jhubbard"
 
   This topic outlines the best practices for using the Query Store with your workload.  
   
-##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
+##  <a name="SSMS"></a> Use the latest SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has set of user interfaces designed for configuring Query Store as well as for consuming collected data about your workload.  
-Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] from : [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)  
+Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
  For a quick description on how to use Query Store in troubleshooting scenarios refer to [Query Store @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
@@ -36,7 +36,8 @@ For more information, see [Azure SQL Database Query Performance Insight](https:/
 
 ##  Using Query Store with Elastic Pool Databases
 You can use Query Store in all databases without concerns, in even densely packed pools. All issues related to excessive resource usage, that might have occurred when Query Store was enabled for the large number of databases in the Elastic Pools, have been resolved.
-##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
+
+##  <a name="Configure"></a> Keep Query Store adjusted to your workload  
  Configure Query Store based on your workload and performance troubleshooting requirements.   
 The default parameters are good for a quick start but you should monitor how Query Store behaves over time and adjust its configuration accordingly:  
   
@@ -137,7 +138,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
 |Overall Resource Consumption|Analyze the total resource consumption for the database for any of the execution metrics.<br />Use this view to identify resource patterns (daily vs. nightly workloads) and optimize overall consumption for your database.|  
 |Top Resource Consuming Queries|Choose an execution metric of interest and identify queries that had the most extreme values for a provided time interval. <br />Use this view to focus your attention on the most relevant queries which have the biggest impact to database resource consumption.|  
 |Queries With Forced Plans|Lists previously forced plans using Query Store. <br />Use this view to quickly access all currently forced plans.|  
-|Queries With High Variation|Analyze queries with high execution variation as it relates to any of the available dimensions, such as Duration, CPU time, IO, and Memory usage in the desired time interval.<br />Use this view to identify queries with widely variant performance that can be impacting user experience accross your applications.|  
+|Queries With High Variation|Analyze queries with high execution variation as it relates to any of the available dimensions, such as Duration, CPU time, IO, and Memory usage in the desired time interval.<br />Use this view to identify queries with widely variant performance that can be impacting user experience across your applications.|  
 |Tracked Queries|Track the execution of the most important queries in real-time. Typically, you use this view when you have queries with forced plans and you want to make sure that query performance is stable.|
   
 > [!TIP]  
@@ -273,7 +274,8 @@ The following table provides best practices:
 As a result, performance of your workload will be sub-optimal and Query Store might switch to read-only mode or might be constantly deleting the data trying to keep up with the incoming queries.  
   
  Consider following options:  
-  -   Parameterize queries where applicable, for example wrap queries inside a stored procedure.  
+
+  -   Parameterize queries where applicable, for example wrap queries inside a stored procedure or sp_executesql. For more information on this topic, see [Parameters and Execution Plan Reuse](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
 -   Use the [**Optimize for Ad Hoc Workloads**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) option if your workload contains many single use ad-hoc batches with different query plans.  
   
@@ -291,7 +293,8 @@ As a result, performance of your workload will be sub-optimal and Query Store mi
  Query Store associates query entry with a containing object (stored procedure, function, and trigger).  When you recreate a containing object, a new query entry will be generated for the same query text. This will prevent you from tracking performance statistics for that query over time and use plan forcing mechanism. To avoid this, use the `ALTER <object>` process to change a containing object definition whenever it is possible.  
   
 ##  <a name="CheckForced"></a> Check the status of Forced Plans regularly  
- Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. However, as with plan hints and plan guides, forcing a plan is not a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing will start failing. In that case [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). The following query returns information about forced plans:  
+
+ Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. However, as with plan hints and plan guides, forcing a plan is not a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing will start failing. In that case [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). The following query returns information about forced plans:  
   
 ```tsql  
 USE [QueryStoreDB];  
@@ -304,10 +307,12 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- For full list of reasons, refer to [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track troubleshoot plan forcing failures.  
+ For full list of reasons, refer to [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). You can also use the **query_store_plan_forcing_failed** XEvent to track troubleshoot plan forcing failures.  
   
 ##  <a name="Renaming"></a> Avoid renaming databases if you have queries with Forced Plans  
- Execution plans reference objects using three-part names (`database.schema.object`).   
+
+ Execution plans reference objects using three-part names `database.schema.object`.   
+
 If you rename a database, plan forcing will fail which will cause recompilation in all subsequent query executions.  
   
 ## See Also  

@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Getting Started with the Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2016"
+ms.date: "06/21/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,10 +42,10 @@ This tutorial has no knowledge prerequisites.
   
 Your system must have the following installed to use this tutorial:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] can be installed by running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] setup or by downloading and installing from [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To install [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms).  
   
 ## See Also  
-[Tutorial: SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+[Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   
   

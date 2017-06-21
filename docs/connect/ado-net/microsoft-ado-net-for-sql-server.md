@@ -36,9 +36,9 @@ ADO.NET is the core data access technology for .NET languages. Use the System.Da
 * [ADO.NET DataSet Forum](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
   
 ## More Samples  
-[ADO.NET Code Examples](https://msdn.microsoft.com/library/dw70f090.aspx)  
-[Getting Started with .NET Framework on Windows](https://www.microsoft.com/en-us/sql-server/developer-get-started/csharp/win/)
-[Getting Started with .NET Core on macOS](https://www.microsoft.com/en-us/sql-server/developer-get-started/csharp/macos/)
-[Getting Started with .NET Core on Ubuntu](https://www.microsoft.com/en-us/sql-server/developer-get-started/csharp/ubuntu/)
-[Getting Started with .NET Core on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/en-us/sql-server/developer-get-started/csharp/rhel/)
+* [ADO.NET Code Examples](https://msdn.microsoft.com/library/dw70f090.aspx)  
+* [Getting Started with .NET Framework on Windows](https://www.microsoft.com/en-us/sql-server/developer-get-started/csharp/win/)
+* [Getting Started with .NET Core on macOS](https://www.microsoft.com/en-us/sql-server/developer-get-started/csharp/macos/)
+* [Getting Started with .NET Core on Ubuntu](https://www.microsoft.com/en-us/sql-server/developer-get-started/csharp/ubuntu/)
+* [Getting Started with .NET Core on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/en-us/sql-server/developer-get-started/csharp/rhel/)
   

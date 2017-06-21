@@ -33,4 +33,11 @@ You can  connect to a SQL Database using Node.js on Windows, Linux, or Mac.
   
 ## Community  
 [Azure Node.js Developer Center](https://azure.microsoft.com/develop/nodejs/)  
-[Get Involved at nodejs.org](https://nodejs.org/en/get-involved/)  
+[Get Involved at nodejs.org](https://nodejs.org/en/get-involved/)
+
+## Samples
+* [Getting Started with Node.js on Windows](https://www.microsoft.com/en-us/sql-server/developer-get-started/node/windows/)
+* [Getting Started with Node.js on macOS](https://www.microsoft.com/en-us/sql-server/developer-get-started/node/macos/)
+* [Getting Started with Node.js on Ubuntu](https://www.microsoft.com/en-us/sql-server/developer-get-started/node/ubuntu/)
+* [Getting Started with Node.js on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/en-us/sql-server/developer-get-started/node/rhel/)
+* [Getting Started with Node.js on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/en-us/sql-server/developer-get-started/node/sles/)

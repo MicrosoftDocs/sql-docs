@@ -33,4 +33,9 @@ There are several python SQL Drivers available.  Choose which one you want to us
 [python.org Community](https://www.python.org/community/)  
   
 ## More Samples  
-[Create a Python web app using DJango and SQL Database in Azure Website](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Create a Python web app using DJango and SQL Database in Azure Website](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Getting Started with Python on Windows](https://www.microsoft.com/en-us/sql-server/developer-get-started/python/windows/)
+* [Getting Started with Python on macOS](https://www.microsoft.com/en-us/sql-server/developer-get-started/python/mac/)
+* [Getting Started with Python on Ubuntu](https://www.microsoft.com/en-us/sql-server/developer-get-started/python/ubuntu/)
+* [Getting Started with Python on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/en-us/sql-server/developer-get-started/python/rhel/)
+* [Getting Started with Python on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/en-us/sql-server/developer-get-started/python/sles/)

@@ -43,6 +43,11 @@ The Microsoft JDBC Driver for SQL Server has been tested against major applicati
  [Download Microsoft JDBC Driver for SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
   
 ## Samples  
- [Sample JDBC Driver Applications](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+* [Sample JDBC Driver Applications](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+* [Getting Started with Java on Windows](https://www.microsoft.com/en-us/sql-server/developer-get-started/java/windows/)
+* [Getting Started with Java on macOS](https://www.microsoft.com/en-us/sql-server/developer-get-started/java/mac/)
+* [Getting Started with Java on Ubuntu](https://www.microsoft.com/en-us/sql-server/developer-get-started/java/ubuntu/)
+* [Getting Started with Java on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/en-us/sql-server/developer-get-started/java/rhel/)
+* [Getting Started with Java on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/en-us/sql-server/developer-get-started/java/sles/)
   
   

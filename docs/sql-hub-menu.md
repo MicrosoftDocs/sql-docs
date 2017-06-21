@@ -280,7 +280,7 @@ description: Learn about SQL
                         </ul>
                     </li>
                     <li>
-                        <a href="/en-us/sql/linux?toc=/sql/docs/linux/toc.json">SQL Server on Linux</a>
+                        <a href="/en-us/sql/linux?toc=/sql/linux/toc.json">SQL Server on Linux</a>
                     </li>
                     <li>
                         <a href="/en-us/sql/advanced-analytics/r-services/">SQL Server R Services</a>

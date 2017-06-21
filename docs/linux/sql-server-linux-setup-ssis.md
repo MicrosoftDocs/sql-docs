@@ -15,65 +15,65 @@ To install the mssql-server-is Package on Ubuntu, follow these steps:
 
 1.    Import the public repository GPG keys.
 
-```bash
- curl httpspackages.microsoft.comkeysmicrosoft.asc  sudo apt-key add –
-```
+    ```bash
+    curl httpspackages.microsoft.comkeysmicrosoft.asc  sudo apt-key add –
+    ```
 
 
 2.    Register the Microsoft SQL Server Ubuntu repository.
 
-```bash
- curl httpspackages.microsoft.comconfigubuntu16.04mssql-server.list sudo tee etcaptsources.list.dmssql-server.list
-```
+    ```bash
+    curl httpspackages.microsoft.comconfigubuntu16.04mssql-server.list sudo tee etcaptsources.list.dmssql-server.list
+    ```
 
 
 3.    Run the following commands to install SQL Server Integration Services.
 
-```bash
- sudo apt-get update
- sudo apt-get install -y mssql-server-is
-```
+    ```bash
+    sudo apt-get update
+    sudo apt-get install -y mssql-server-is
+    ```
 
 
 4.    After installation, please run ssis-conf.
 
-```bash
- sudo optssisbinssis-conf
-```
+    ```bash
+    sudo optssisbinssis-conf
+    ```
 
 
 5.    Once the configuration is done, set path.
 
-```bash
- export PATH=optssisbin$PATH
-```
+    ```bash
+    export PATH=optssisbin$PATH
+    ```
 
 
 6.    If your user is not in SSIS group, please add current user to SSIS group. 
 
-```bash
- sudo gpasswd -a “current user” ssis
-```
+    ```bash
+    sudo gpasswd -a “current user” ssis
+    ```
 
-Use “ID” command to make sure current user is in SSIS group.
+      Use “ID” command to make sure current user is in SSIS group.
 
-```bash
- id
-```
+    ```bash
+    id
+    ```
 
 
 7.    Copy your SSIS package to your Linux machine and run.
 
-```bash
- dtexec F “your package” DE “protection password”
-```
+    ```bash
+    dtexec F “your package” DE “protection password”
+    ```
 
 
-If you already have mssql-server-is installed, you can update to the latest version with the following command:
+      If you already have mssql-server-is installed, you can update to the latest version with the following command:
 
-```bash
- sudo apt-get install mssql-server-is
-```
+    ```bash
+    sudo apt-get install mssql-server-is
+    ```
 
 
 ## Next steps

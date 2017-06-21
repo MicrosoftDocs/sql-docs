@@ -1539,6 +1539,297 @@
             "source_path": "docs/whitepapers/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md",
             "redirect_url": "/sql/master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-keyboard-shortcuts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/ssms-utility.md",
+            "redirect_url": "/sql/ssms/ssms-utility",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/change-a-server-s-registration-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/change-the-name-of-registered-server-or-registered-server-group.md",
+            "redirect_url": "/sql/ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md",
+            "redirect_url": "/sql/ssms/register-servers/create-a-central-management-server-and-server-group",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/create-a-new-registered-server-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/disconnect-from-a-registered-server-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md",
+            "redirect_url": "/sql/ssms/register-servers/execute-statements-against-multiple-servers-simultaneously",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/export-registered-server-information-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/import-registered-server-information-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md",
+            "redirect_url": "/sql/ssms/register-servers/move-a-registered-server-or-registered-server-group",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/register-a-connected-server-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/registered-servers-f1-help.md",
+            "redirect_url": "/sql/ssms/register-servers/registered-servers-f1-help",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/register-servers.md",
+            "redirect_url": "/sql/ssms/register-servers/register-servers",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/remove-a-registered-server-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/remove-a-registered-server-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/remove-a-server-group-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/remove-a-server-group-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/view-registered-servers-in-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/view-registered-servers-in-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-1-start-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-1-start-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-3-change-the-environment-layout.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-3-change-the-environment-layout",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-4-display-the-query-window.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-4-display-the-query-window",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-5-show-the-object-explorer-details-page.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-5-show-the-object-explorer-details-page",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-6-select-the-keyboard-shortcut-scheme.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-7-set-the-startup-options.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-7-set-the-startup-options",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-9-summary-basic-navigation.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-9-summary-basic-navigation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-basic-navigation-in-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-1-connecting-with-query-editor.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-1-connecting-with-query-editor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-2-adding-indentation.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-2-adding-indentation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-3-maximizing-query-editor.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-3-maximizing-query-editor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-4-using-comments.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-4-using-comments",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-5-other-ways-of-viewing-the-code-window.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-5-other-ways-of-viewing-the-code-window",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-6-script-a-table.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-6-script-a-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-writing-transact-sql.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-writing-transact-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-3-1-create-scripts-using-templates.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-3-1-create-scripts-using-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-3-2-create-custom-templates.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-3-2-create-custom-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-3-3-save-scripts-as-projects-or-solutions.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-3-3-save-scripts-as-projects-or-solutions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-3-4-summary-solutions-and-script-projects.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-3-4-summary-solutions-and-script-projects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-3-working-with-templates-solutions-and-script-projects.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/tutorial-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/tutorials/tutorial-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/browse-for-servers-local-servers.md",
+            "redirect_url": "/sql/tools/configuration-manager/sql-server-browser-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/browse-for-servers-network-servers.md",
+            "redirect_url": "/sql/tools/configuration-manager/sql-server-browser-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-microsoft-azure-storage.md",
+            "redirect_url": "/azure/storage/storage-create-storage-account",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-additional-connection-parameters-page.md",
+            "redirect_url": "/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/instances/connect-from-client-applications-analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-connection-properties-page-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/instances/connect-from-client-applications-analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-connection-properties-page-integration-services.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-connection-properties-page-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-integration-services.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-login-page-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/instances/connect-from-client-applications-analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-login-page-integration-services.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-login-page-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connection-properties-dialog-box.md",
+            "redirect_url": "/sql/database-engine/configure-windows/view-or-change-server-properties-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/password-expired.md",
+            "redirect_url": "/sql/relational-databases/security/choose-an-authentication-mode",
+            "redirect_document_id": false
+        },
+        {
+            "source_path":"docs/sql-server/sql-server-documentation-offline-access.md",
+            "redirect_url":"/sql/release-notes/sql-server-help-installation",
+            "redirect_document_id":false
         }
+
     ]
 }

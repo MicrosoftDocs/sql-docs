@@ -2,7 +2,7 @@
 title: "CREATE USER (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/11/2017"
+ms.date: "06/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -167,7 +167,7 @@ CREATE USER user_name
  Specifies the first schema that will be searched by the server when it resolves the names of objects for this database user.  
   
  '*windows_principal*'  
- Specifies the Windows principal for which the database user is being created. The *windows_principal* can be a Windows user, or a Windows group. The user will be created even if the *windows_principal* does not have a login. When connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the *windows_principal* does not have a login, the Windows principal must authenticate at the [!INCLUDE[ssDE](../../includes/ssde-md.md)] through membership in a Windows group that has a login, or the connection string must specify the contained database as the initial catalog. When creating a user from a Windows principal, use the format **[***\<domainName>***\\***\<loginName>***]**. For examples, see [Syntax Summary](#SyntaxSummary).  
+ Specifies the Windows principal for which the database user is being created. The *windows_principal* can be a Windows user, or a Windows group. The user will be created even if the *windows_principal* does not have a login. When connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the *windows_principal* does not have a login, the Windows principal must authenticate at the [!INCLUDE[ssDE](../../includes/ssde-md.md)] through membership in a Windows group that has a login, or the connection string must specify the contained database as the initial catalog. When creating a user from a Windows principal, use the format **[***\<domainName>***\\***\<loginName>***]**. For examples, see [Syntax Summary](#SyntaxSummary). Users based on Active Directory users, are limited to names of less than 21 characters.    
   
  '*Azure_Active_Directory_principal*'  
  **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
@@ -182,25 +182,25 @@ CREATE USER user_name
   
  For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
- WITH PASSWORD = '*password*'  
+WITH PASSWORD = '*password*'  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Can only be used in a contained database. Specifies the password for the user that is being created. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
   
- WITHOUT LOGIN  
+WITHOUT LOGIN  
  Specifies that the user should not be mapped to an existing login.  
   
- CERTIFICATE *cert_name*  
+CERTIFICATE *cert_name*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the certificate for which the database user is being created.  
   
- ASYMMETRIC KEY *asym_key_name*  
+ASYMMETRIC KEY *asym_key_name*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the asymmetric key for which the database user is being created.  
   
- DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*  
+DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],   [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies the default language for the new user. If a default language is specified for the user and the default language of the database is later changed, the users default language remains as specified. If no default language is specified, the default language for the user will be the default language of the database. If the default language for the user is not specified and the default language of the database is later changed, the default language of the user will change to the new default language for the database.  
@@ -208,12 +208,12 @@ CREATE USER user_name
 > [!IMPORTANT]  
 >  *DEFAULT_LANGUAGE* is used only for a contained database user.  
   
- SID = *sid*  
+SID = *sid*  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies only to users with passwords ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication) in a contained database. Specifies the SID of the new database user. If this option is not selected, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically assigns a SID. Use the SID parameter to create users in multiple databases that have the same identity (SID). This is useful when creating users in multiple databases to prepare for Always On failover. To determine the SID of a user, query sys.database_principals.  
   
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
+ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Suppresses cryptographic metadata checks on the server in bulk copy operations. This  enables the user to bulk copy encrypted data between tables or databases, without decrypting the data. The default is OFF.  
@@ -253,24 +253,16 @@ GO
  The following list shows possible syntax for users based on logins. The default schema options are not listed.  
   
 -   `CREATE USER [Domain1\WindowsUserBarry]`  
-  
 -   `CREATE USER [Domain1\WindowsUserBarry] FOR LOGIN Domain1\WindowsUserBarry`  
-  
 -   `CREATE USER [Domain1\WindowsUserBarry] FROM LOGIN Domain1\WindowsUserBarry`  
-  
 -   `CREATE USER [Domain1\WindowsGroupManagers]`  
-  
 -   `CREATE USER [Domain1\WindowsGroupManagers] FOR LOGIN [Domain1\WindowsGroupManagers]`  
-  
 -   `CREATE USER [Domain1\WindowsGroupManagers] FROM LOGIN [Domain1\WindowsGroupManagers]`  
-  
 -   `CREATE USER SQLAUTHLOGIN`  
-  
 -   `CREATE USER SQLAUTHLOGIN FOR LOGIN SQLAUTHLOGIN`  
-  
 -   `CREATE USER SQLAUTHLOGIN FROM LOGIN SQLAUTHLOGIN`  
   
- **Users that authenticate at the database**  
+**Users that authenticate at the database**  
   
  The following list shows possible syntax for users that can only be used in a contained database. The users created will not be related to any logins in the **master** database. The default schema and language options are not listed.  
   
@@ -278,12 +270,10 @@ GO
 >  This syntax grants users access to the database and also grants new access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   `CREATE USER [Domain1\WindowsUserBarry]`  
-  
 -   `CREATE USER [Domain1\WindowsGroupManagers]`  
-  
 -   `CREATE USER Barry WITH PASSWORD = 'sdjklalie8rew8337!$d'`  
   
- **Users based on Windows principals without logins in master**  
+**Users based on Windows principals without logins in master**  
   
  The following list shows possible syntax for users that have access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] through a Windows group but do not have a login in **master**. This syntax can be used in all types of databases. The default schema and language options are not listed.  
   
@@ -292,29 +282,20 @@ GO
  This syntax is similar to contained database users based on Windows principals, but this category of user does not get new access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   `CREATE USER [Domain1\WindowsUserBarry]`  
-  
 -   `CREATE USER [Domain1\WindowsUserBarry] FOR LOGIN Domain1\WindowsUserBarry`  
-  
 -   `CREATE USER [Domain1\WindowsUserBarry] FROM LOGIN Domain1\WindowsUserBarry`  
-  
 -   `CREATE USER [Domain1\WindowsGroupManagers]`  
-  
 -   `CREATE USER [Domain1\WindowsGroupManagers] FOR LOGIN [Domain1\WindowsGroupManagers]`  
-  
 -   `CREATE USER [Domain1\WindowsGroupManagers] FROM LOGIN [Domain1\WindowsGroupManagers]`  
   
- **Users that cannot authenticate**  
+**Users that cannot authenticate**  
   
  The following list shows possible syntax for users that cannot login to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   `CREATE USER RIGHTSHOLDER WITHOUT LOGIN`  
-  
 -   `CREATE USER CERTUSER FOR CERTIFICATE SpecialCert`  
-  
 -   `CREATE USER CERTUSER FROM CERTIFICATE SpecialCert`  
-  
 -   `CREATE USER KEYUSER FOR ASYMMETRIC KEY SecureKey`  
-  
 -   `CREATE USER KEYUSER FROM ASYMMETRIC KEY SecureKey`  
   
 ## Security  

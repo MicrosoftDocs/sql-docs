@@ -6,7 +6,7 @@ description: SQL Server 2017 CTP 2.1 now runs on Linux. This topic provides an o
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/25/2017
+ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -36,7 +36,7 @@ SQL Server 2017 CTP 2.1 is supported on the following platforms:
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3 | [Get RHEL 7.3](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 and 16.10| [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
+| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)
 
 ## <a id="system"></a> System requirements

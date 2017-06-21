@@ -16,12 +16,19 @@ manager: "jhubbard"
 ---
 
 # Adaptive Query Processing
-Learn about three features in SQL Server 2017 that improve query processing. This article includes feature summaries, how you enable the features, customer examples, and results you can expect.
+SQL Server 2017 addresses optimization issues with new adaptive query processing features. This article introduces the three features that you can use to improve query performance in SQL Server and Azure SQL Database.
+- Batch mode memory grant feedback.
+- Batch mode adaptive join.
+- Interleaved execution. 
+
+This article describes the features and how to enable them, gives customer examples, and results you can expect. 
 At a general level, SQL Server executes a query as follows:
-- The query optimization process generates a set of feasible execution plans for a specific query. During this time, the cost of plan options is estimated and the plan with the lowest estimated cost is used.
-- The query execution process takes the plan chosen by the query optimizer and uses it for execution
+1. The query optimization process generates a set of feasible execution plans for a specific query. During this time, the cost of plan options is estimated and the plan with the lowest estimated cost is used.
+1. The query execution process takes the plan chosen by the query optimizer and uses it for execution.
+    
 Sometimes the plan chosen by the query optimizer is not optimal for a variety of reasons. For example, the estimated number of rows flowing through the query plan may be incorrect. The estimated costs help determine which plan gets selected for use in execution. If cardinality estimates are incorrect, the original plan is still used despite the poor original assumptions.
-SQL Server 2017 addresses these optimization issues with new adaptive query processing features. This article introduces the three features that you can use to improve query performance in SQL Server and Azure SQL Database.
+
+
 
 ![Adaptive Query Processing Features](./media/1_AQPFeatures.png)
 

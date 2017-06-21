@@ -98,6 +98,7 @@ In the plan, we see the following:
 - Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard hash join operation. Notice that Live Query Statistics shows rows flowing through the operators – in this case “672 of 672”.
 - And the last branch is our Clustered Index Seek for use by the nested loop join had the threshold not been exceeded. Notice that we see “0 of 336” rows displayed (the branch is unused).
  Now let’s contrast the plan with the same query, but this time for a Quantity value that only has one row in the table:
+ 
 ```sql
 SELECT  \[fo\].\[Order Key\], \[si\].\[Lead Time Days\],
 \[fo\].\[Quantity\]

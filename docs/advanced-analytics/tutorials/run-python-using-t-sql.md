@@ -134,7 +134,7 @@ The stored procedure returns the original data, applies the script, and then ret
 |Friday|15.5|5|
 |Saturday|16.6|6|
 |Friday|17.7|5|
-|Monday|18.8||
+|Monday|18.8|1|
 |Sunday|19.9|7|
 
 Status messages or errors returned to the Python console are returned as messages in the **Query** window. Here's an excerpt of the output you might see:
@@ -167,10 +167,10 @@ ParamCharN=OUTPUT
 
 **Notes**
 
-+ The Message output includes the working directory used for script execution. In this example,  MSSQLSERVER01 refers to the worker account allocated by SQL Server to manage the job. The GUID is the name of a temporary folder that is created during script execution to store data and script artifacts. These temporary folders are secured by SQL Server, and are cleaned up by the Windows job object after script has terminated. 
++ The Message output includes the working directory used for script execution. In this example,  MSSQLSERVER01 refers to the worker account allocated by SQL Server to manage the job. The GUID is the name of a temporary folder that is created during script execution to store data and script artifacts. These temporary folders are secured by SQL Server, and are cleaned up by the Windows job object after script has terminated.
 + The section containing the message "Hello World" prints two times. This happens because the value of *@RowsPerRead* was set to 5 and there are 10 rows in the table; therefore, two calls to Python are required to process all the rows in the table.
 
-    In your production runs, you should experiment with different values to determine the maximum number of rows that should be passed in each batch. The optimum number of rows is data-dependent, and is affected by both the number of columns in the dataset and the type of data that you are passing.
+    In your production runs, we recommend that you experiment with different values to determine the maximum number of rows that should be passed in each batch. The optimum number of rows is data-dependent, and is affected by both the number of columns in the dataset and the type of data that you are passing.
 
 ## Related Resources
 

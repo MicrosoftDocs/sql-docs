@@ -80,7 +80,7 @@ This section lists tutorials that were developed for SQL Server 2016 R Services.
 
 These samples and demos provided by the SQL Server development team highlight ways that you can use embedded analytics in real-world applications.
 
-+ [Build a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction
++ [Build a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
 
   Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand.
 

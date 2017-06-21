@@ -67,9 +67,8 @@ To install the mssql-server-is Package on Ubuntu, follow these steps:
     ```bash
     dtexec F “your package” DE “protection password”
     ```
-
-
-      If you already have mssql-server-is installed, you can update to the latest version with the following command:
+    
+      If you already have mssql-server-is installed, you can update to the latest version with the following command.
 
     ```bash
     sudo apt-get install mssql-server-is

@@ -21,8 +21,8 @@ manager: "erikre"
 
   Add a member to the specified role of an Analysis Services tabular or multidimensional database.  
 
-  >[!NOTE] This article may contain outdated information and examples.  
->
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
 ## Syntax  
  `Add-RoleMember [-MemberName] <System.String> [-Database] <System.String> [-RoleName] <System.String> [<CommonParameters>]`  

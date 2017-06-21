@@ -21,8 +21,8 @@ manager: "erikre"
 
   Process a cube using a specific processing type variable.  
   
-  >[!NOTE] This article may contain outdated information and examples.  
->
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
 ## Syntax  
  `Invoke-ProcessCube [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  

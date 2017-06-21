@@ -21,8 +21,8 @@ manager: "erikre"
 
   Merges the data of one or more source partitions into a target partition and then deletes the source partitions.  
 
-  >[!NOTE] This article may contain outdated information and examples.  
->
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
 ## Syntax  
  `Merge-ASDatabase [-Name] <string> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  

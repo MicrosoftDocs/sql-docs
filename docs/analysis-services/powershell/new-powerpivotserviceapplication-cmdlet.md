@@ -21,8 +21,8 @@ manager: "erikre"
 
   Creates a new [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application.  
 
-  >[!NOTE] This article may contain outdated information and examples.  
->
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

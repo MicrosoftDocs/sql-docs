@@ -21,8 +21,8 @@ manager: "erikre"
 
   Returns one or more instances of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service running on application servers in the farm.  
 
-  >[!NOTE] This article may contain outdated information and examples.  
->
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

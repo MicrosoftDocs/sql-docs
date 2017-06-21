@@ -16,7 +16,7 @@ manager: "jhubbard"
 ---
 
 # Adaptive Query Processing
-SQL Server 2017 addresses optimization issues with new adaptive query processing features. This article introduces the three features that you can use to improve query performance in SQL Server and Azure SQL Database.
+SQL Server 2017 addresses optimization issues with new adaptive query processing features. This article introduces the three features that you can use to improve query performance in SQL Server and Azure SQL Database:
 - Batch mode memory grant feedback.
 - Batch mode adaptive join.
 - Interleaved execution. 
@@ -77,6 +77,7 @@ The batch mode adaptive joins feature enables the choice of a hash join or neste
 Here’s how it works:
 - If the row count of the build join input is small enough that a nested loop join would be more optimal than a hash join, your plan switches to a nested loop algorithm.
 - If the build join input exceeds a specific row count threshold, no switch occurs and your plan continues with a hash join.
+
 The following query is used to illustrate an adaptive join example:
 ```sql
 SELECT  \[fo\].\[Order Key\], \[si\].\[Lead Time Days\],
@@ -86,6 +87,7 @@ INNER JOIN \[Dimension\].\[Stock Item\] AS \[si\]
        ON \[fo\].\[Stock Item Key\] = \[si\].\[Stock Item Key\]
 WHERE   \[fo\].\[Quantity\] = 360;
 ```
+
 The query returns 336 rows.  Enabling Live Query Statistics we see the following plan:
 
 ![Query result 336 rows](./media/4_AQPStats336Rows.png)

@@ -16,7 +16,10 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Get started with this simple example of the Import and Export Wizard
-In this topic, you learn what to expect in the SQL Server Import and Export Wizard by walking through a common scenario - importing data from an Excel spreadsheet to a SQL Server database. Even if you plan to use a different source and a different destination, this topic shows you most of what you need to know about running the wizard.
+Learn what to expect in the SQL Server Import and Export Wizard by walking through a common scenario - importing data from an Excel spreadsheet to a SQL Server database. Even if you plan to use a different source and a different destination, this topic shows you most of what you need to know about running the wizard.
+
+## Prerequisite - Is the wizard installed on your computer?
+If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## Here's the Excel source data for this example
 Here's the source data that you're going to copy - a small two-column table in the WizardWalkthrough worksheet of the WizardWalkthrough.xlsx Excel workbook.
@@ -27,9 +30,6 @@ Here's the source data that you're going to copy - a small two-column table in t
 Here (in SQL Server Management Studio) is the SQL Server destination database to which you're going to copy the source data. The destination table isn't there - you're going to let the wizard create the table for you.
 
 ![SQL Server destination database](../../integration-services/import-export-data/media/sql-server-destination-database.jpg)
-
-## Prerequisite - Is the wizard installed on your computer?
-If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## Step 1 - Start the wizard
 You start the wizard from the Microsoft SQL Server 2016 group on the Windows Start menu.

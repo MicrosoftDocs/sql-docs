@@ -1839,7 +1839,11 @@
             "source_path": "docs/sql/relational-databases/security/encryption/transparent-data-encryption-tde.md",
             "redirect_url": "/sql/relational-databases/security/encryption/transparent-data-encryption",
             "redirect_document_id": false
+        },
+        {
+            "source_path":"docs/tools/sql-server-profiler/run-sql-server-profiler.md",
+            "redirect_url":"/sql/tools/sql-server-profiler/start-sql-server-profiler",
+            "redirect_document_id":false
         }
-
     ]
 }

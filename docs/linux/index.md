@@ -8,7 +8,7 @@ SQL Server 2017 CTP 2.1 runs on Linux! Learn about the core relational database 
 
 <ul class="panelContent cardsFTitle">
     <li>
-        <a href="sql-server-linux-setup.md?toc=/sql/docs/linux/toc.json">
+        <a href="sql-server-linux-setup.md?toc=/sql/linux/toc.json">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -26,7 +26,7 @@ SQL Server 2017 CTP 2.1 runs on Linux! Learn about the core relational database 
         </a>
     </li>
     <li>
-        <a href="sql-server-linux-management-overview.md?toc=/sql/docs/linux/toc.json">
+        <a href="sql-server-linux-management-overview.md?toc=/sql/linux/toc.json">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -44,7 +44,7 @@ SQL Server 2017 CTP 2.1 runs on Linux! Learn about the core relational database 
         </a>
     </li>
     <li>
-        <a href="sql-server-linux-develop-overview.md?toc=/sql/docs/linux/toc.json">
+        <a href="sql-server-linux-develop-overview.md?toc=/sql/linux/toc.json">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

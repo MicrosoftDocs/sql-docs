@@ -42,7 +42,7 @@ This tutorial has no knowledge prerequisites.
   
 Your system must have the following installed to use this tutorial:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To install [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. To install [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## See Also  
 [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

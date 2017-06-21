@@ -16,7 +16,7 @@ manager: "jhubbard"
 ---
 
 # Adaptive Query Processing
-SQL Server 2017 addresses optimization issues with new adaptive query processing features. This article introduces the three features that you can use to improve query performance in SQL Server and Azure SQL Database:
+SQL Server 2017 addresses optimization issues with new adaptive query processing features. This article introduces three features that you can use to improve query performance in SQL Server and Azure SQL Database:
 - Batch mode memory grant feedback.
 - Batch mode adaptive join.
 - Interleaved execution. 
@@ -34,7 +34,7 @@ Sometimes the plan chosen by the query optimizer is not optimal for a variety of
 ### How to enable adaptive query processing
 You can make workloads automatically eligible for adaptive query processing by enabling compatibility level 140 for the database.  You can set this using Transact-SQL. For example:
 ```sql
-ALTER DATABASE \[WideWorldImportersDW\] SET COMPATIBILITY\_LEVEL = 140;
+ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 140;
 ```
 ## Batch mode memory grant feedback
 A query’s post-execution plan in SQL Server includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan.  When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
@@ -42,11 +42,11 @@ The following graph shows one example of using batch mode adaptive memory grant 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
 DECLARE @StartTime datetime = '2016-09-15 00:00:00.000';
-SELECT TOP 10 hash\_unique\_bigint\_id
+SELECT TOP 10 hash_unique_bigint_id
 FROM dbo.TelemetryDS
 WHERE Timestamp BETWEEN @StartTime and @EndTime
-GROUP BY hash\_unique\_bigint\_id
-ORDER BY MAX(max\_elapsed\_time\_microsec) DESC;
+GROUP BY hash_unique_bigint_id
+ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ```
 ![High spills](./media/2_AQPGraphHighSpills.png)
 
@@ -56,17 +56,17 @@ With memory grant feedback enabled, for the second execution, duration is *1 se
 
 ### Memory grant feedback sizing
 *For excessive grants*, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant and update the cached plan.  Plans with memory grants under 1 MB will not be recalculated for overages.
-*For insufficiently sized memory grants* that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the *spilling\_report\_to\_memory\_grant\_feedback* XEvent event. This event returns the node id from the plan and spilled data size of that node.
+*For insufficiently sized memory grants* that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the *spilling_report_to_memory_grant_feedback* XEvent event. This event returns the node id from the plan and spilled data size of that node.
 
 ### Memory grant feedback and parameter sensitive scenarios
-Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as “parameter-sensitive.” For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements.  The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory\_grant\_feedback\_loop\_disabled* XEvent.
+Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as “parameter-sensitive.” For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements.  The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* XEvent.
 
 ### Memory grant feedback caching
 Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the query Ssore.
 Feedback is not persisted if the plan is evicted from cache. Feedback will also be lost if there is a failover. A statement using OPTION(RECOMPILE) creates a new plan and does not cache it. Since it is not cached, no memory grant feedback is produced and it is not stored for that compilation and execution.  However, if an equivalent statement (that is, with the same query hash) that did *not* use OPTION(RECOMPILE) was cached and then re-executed, the consecutive statement can benefit from memory grant feedback.
 
 ### Tracking memory grant feedback activity
-You can track memory grant feedback events using the *memory\_grant\_updated\_by\_feedback* XEvent event.  This event tracks the current execution count history, the number of times the plan has been updated by memory grant feedback, the ideal additional memory grant before modification and the ideal additional memory grant after memory grant feedback has modified the cached plan.
+You can track memory grant feedback events using the *memory_grant_updated_by_feedback* XEvent event.  This event tracks the current execution count history, the number of times the plan has been updated by memory grant feedback, the ideal additional memory grant before modification and the ideal additional memory grant after memory grant feedback has modified the cached plan.
 
 ### Memory grant feedback, resource governor and query hints
 The actual memory granted honors the query memory limit determined by the resource governor or query hint.
@@ -80,12 +80,12 @@ Here’s how it works:
 The following query is used to illustrate an adaptive join example:
 
 ```sql
-SELECT  \[fo\].\[Order Key\], \[si\].\[Lead Time Days\],
-\[fo\].\[Quantity\]
-FROM    \[Fact\].\[Order\] AS \[fo\]
-INNER JOIN \[Dimension\].\[Stock Item\] AS \[si\]
-       ON \[fo\].\[Stock Item Key\] = \[si\].\[Stock Item Key\]
-WHERE   \[fo\].\[Quantity\] = 360;
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
+[fo].[Quantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE   [fo].[Quantity] = 360;
 ```
 
 The query returns 336 rows.  Enabling Live Query Statistics we see the following plan:
@@ -100,12 +100,12 @@ In the plan, we see the following:
  Now let’s contrast the plan with the same query, but this time for a Quantity value that only has one row in the table:
  
 ```sql
-SELECT  \[fo\].\[Order Key\], \[si\].\[Lead Time Days\],
-\[fo\].\[Quantity\]
-FROM    \[Fact\].\[Order\] AS \[fo\]
-INNER JOIN \[Dimension\].\[Stock Item\] AS \[si\]
-       ON \[fo\].\[Stock Item Key\] = \[si\].\[Stock Item Key\]
-WHERE   \[fo\].\[Quantity\] = 361;
+SELECT  [fo].[Order Key], [si].[Lead Time Days],
+[fo].[Quantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE   [fo].[Quantity] = 361;
 ```
 The query returns one row.  Enabling Live Query Statistics we see the following plan:
 
@@ -135,8 +135,8 @@ The adaptive join operator has the following plan operator attributes:
 
 The estimated plan shows the adaptive join plan shape, along with a defined adaptive join threshold and estimated join type.
 
-### Adaptive join and query store Interoperability
-Query store captures and is able to force a batch mode adaptive join plan.
+### Adaptive join and Query Store interoperability
+Query Store captures and is able to force a batch mode adaptive join plan.
 
 ### Adaptive join eligible statements
 A few conditions make a logical join eligible for a batch mode adaptive join:
@@ -182,7 +182,7 @@ In general, the higher the skew between the estimated vs. actual number of rows,
 In general, interleaved execution benefits queries where:
 1. There is a large skew between the estimated vs. actual number of rows for the intermediate result set (in this case, the MSTVF), and…
 1. …the overall query is sensitive to a change in the size of the intermediate result. This typically happens when there is a complex tree above that subtree in the query plan.
-A simply "SELECT \*" from an MSTVF will not benefit from interleaved execution.
+A simply "SELECT *" from an MSTVF will not benefit from interleaved execution.
 
 ### Interleaved execution overhead
 The overhead should be minimal-to-none. MSTVFs were already being materialized prior to the introduction of interleaved execution, however the difference is that now we’re now allowing deferred optimization and are then leveraging the cardinality estimate of the materialized row set.
@@ -203,9 +203,9 @@ You can also track interleaved execution occurrences via the following XEvents:
 
 | XEvent | Description |
 | ---- | --- |
-| interleaved\_exec\_status | This event fires when interleaved execution is occurring. |
-| interleaved\_exec\_stats\_update | This event describes the cardinality estimates updated by interleaved execution. |
-| Interleaved\_exec\_disabled\_reason | This event fires when a query with a possible candidate for interleaved execution does not actually get interleaved execution. |
+| interleaved_exec_status | This event fires when interleaved execution is occurring. |
+| interleaved_exec_stats_update | This event describes the cardinality estimates updated by interleaved execution. |
+| Interleaved_exec_disabled_reason | This event fires when a query with a possible candidate for interleaved execution does not actually get interleaved execution. |
 
 A query must be executed in order to allow interleaved execution to revise MSTVF cardinality estimates. However, the estimated execution plan still shows when there are interleaved execution candidates via the ContainsInterleavedExecutionCandidates attribute.
 

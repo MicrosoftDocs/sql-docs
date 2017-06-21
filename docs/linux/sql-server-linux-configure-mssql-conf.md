@@ -25,7 +25,7 @@ ms.custom: H1Hack27Feb2017
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 
-**mssql-conf** is a configuration script that installs with SQL Server 2017 CTP 2.1 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with SQL Server 2017 RC0 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 - [TCP port](#tcpport): Change the port where SQL Server will listen for connections.
 - [Default data directory](#datadir): Change the directory where the new SQL Server database data files (.mdf) are created.

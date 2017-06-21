@@ -6,7 +6,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/23/2017
+ms.date: 06/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,12 +26,13 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ---
 # Release notes for SQL Server 2017 on Linux
 
-The following release notes apply to SQL Server 2017 running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, CTP 2.1. See the information in each section for supported platforms, tools, features, and known issues.
+The following release notes apply to SQL Server 2017 running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, RC0. See the information in each section for supported platforms, tools, features, and known issues.
 
 The following table lists the releases of SQL Server 2017 covered in this topic.
 
 | Release | Version | Release date |
 |-----|-----|-----|
+| [RC0](#rc0) | 00.0.000.000 | 6-2017 |
 | [CTP 2.1](#ctp21) | 14.0.600.250 | 5-2017 |
 | [CTP 2.0](#ctp20) | 14.0.500.272 | 4-2017 |
 | [CTP 1.4](#ctp14) | 14.0.405.198 | 3-2017 |
@@ -39,6 +40,157 @@ The following table lists the releases of SQL Server 2017 covered in this topic.
 | [CTP 1.2](#ctp12) | 14.0.200.24 | 1-2017 |
 | [CTP 1.1](#ctp11) | 14.0.100.187 | 12-2016 |
 | [CTP 1.0](#ctp10) | 14.0.1.246 | 11-2016 |
+
+## <a id="rc0"> RC0 (June 2017) </a>
+The SQL Server engine version for this release is 00.0.000.000.
+
+### Supported platforms 
+
+| Platform | File System | Installation Guide |
+|-----|-----|-----|
+| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](sql-server-linux-setup-suse-linux-enterprise-server.md) |
+| Ubuntu 16.04LTS | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
+| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
+
+> [!NOTE]
+> You need at least 3.25GB of memory to run SQL Server on Linux.
+> SQL Server Engine has been tested up to 1 TB of memory at this time.
+
+### Package details
+Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the following installation guides:
+
+- [Install SQL Server package](sql-server-linux-setup.md)
+- [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
+- [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 00.0.000.000-0 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-00.0.000.000-0.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-00.0.000.000-0.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-00.0.000.000-0.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-00.0.000.000-0.x86_64.rpm) | 
+| SLES RPM package | 00.0.000.000-0 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-00.0.000.000-0.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-00.0.000.000-0.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-00.0.000.000-0.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-00.0.000.000-0.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 00.0.000.000-0 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_00.0.000.000-0_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_00.0.000.000-0_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_00.0.000.000-0_amd64.deb)</br>[SQL Server Agent Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_00.0.000.000-0_amd64.deb) |
+
+### Supported client tools
+
+| Tool | Minimum version |
+|-----|-----|
+| [SQL Server Management Studio (SSMS) for Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
+| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
+| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (1.12) |
+
+### Unsupported features and services
+The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.
+
+| Area | Unsupported feature or service |
+|-----|-----|
+| **Database engine** | Replication |
+| &nbsp; | Stretch DB |
+| &nbsp; | Polybase |
+| &nbsp; | Distributed Query |
+| &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
+| &nbsp; | Filetable |
+| &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
+| **High Availability** | Database mirroring  |
+| **Security** | Active Directory Authentication |
+| &nbsp; | Windows Authentication |
+| &nbsp; | Extensible Key Management |
+| &nbsp; | Use of user-provided certificate for SSL or TLS |
+| **Services** | SQL Server Browser |
+| &nbsp; | SQL Server R services |
+| &nbsp; | StreamInsight |
+| &nbsp; | Analysis Services |
+| &nbsp; | Reporting Services |
+| &nbsp; | Data Quality Services |
+| &nbsp; | Master Data Services |
+
+### Known issues
+The following sections describe known issues with this release of SQL Server 2017 CTP 2.1 on Linux.
+
+#### General
+- The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
+
+    - **Resolution**: Change the name in /etc/hostname to something 15 characters long or less.
+
+- Manually setting the system time backwards in time will cause SQL Server to stop updating the internal system time within SQL Server.
+
+    - **Resolution**: Restart SQL Server.
+
+- Only single instance installations are supported.
+
+    - **Resolution**: If you want to have more than one instance on a given host, consider using VMs or Docker containers. 
+
+- SQL Server Configuration Manager can’t connect to SQL Server on Linux.
+
+- The default language of the **sa** login is English.
+
+    - **Resolution**: Change the language of the **sa** login with the **ALTER LOGIN** statement.
+
+#### Databases
+- System databases cannot be moved with the mssql-conf utility.
+
+- When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
+
+- Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
+
+#### Always On Availability Group
+- `sys.fn_hadr_backup_is_preffered_replica` does not work for `CLUSTER_TYPE=NONE` or `CLUSTER_TYPE=EXTERNAL` because it relies on the WSFC-replicated cluster registry key which not available. We are working on providing a similar functionality through a different function. 
+
+#### Full-Text Search
+- Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
+
+#### SQL Agent
+- The following components and subsystems of SQL Agent jobs are not currently supported on Linux:
+
+    - Subsystems: CmdExec, PowerShell, Replication Distributor, Snapshot, Merge, Queue Reader, SSIS, SSAS, SSRS
+    - Alerts
+    - DB Mail
+    - Log Reader Agent 
+    - Change Data Capture
+
+#### SqlPackage
+- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the "/tmp/sqlpackage.\<code\>/system/system32" folder. 
+
+  - **Resolution**: Use absolute file paths.
+
+- SqlPackage shows the location of files with a "C:\\" prefix.
+
+#### SQL Server Integration Services (SSIS)
+You can run SSIS packages on Linux. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
+
+- The **mssql-server-is** package is only supported on Ubuntu at this time.
+
+- The following features are not supported when running SSIS packages on Linux:
+  - SSIS Catalog DB
+  - Schedule Packages execution by SQL Agent
+  - Windows Authentication
+  - Third-party components
+  - Third-party ODBC drivers
+  - ODBC Connection Manager, Source, and Destination (supported with SSIS on Linux CTP 2.1 Refresh)
+  - Change Data Capture (CDC)
+  - Scale Out
+  - Azure Feature Pack
+  - Hadoop and HDFS Support
+  - Microsoft Connector for SAP BW
+
+With SSIS on Linux CTP 2.1 Refresh, your SSIS packages can use ODBC connections on Linux. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+
+#### SQL Server Management Studio (SSMS)
+The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
+
+- Maintenance plans are not supported.
+
+- Management Data Warehouse (MDW) and the data collector in SSMS are not supported. 
+
+- SSMS UI components that have Windows Authentication or Windows event log options do not work with Linux. You can still use these features with other options, such as SQL logins. 
+
+- Number of log files to retain cannot be modified.
+
+### Next steps
+To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
+<br/>
+<br/>
+
+![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp21"> CTP 2.1 (May 2017) </a>
 The SQL Server engine version for this release is 14.0.600.250.

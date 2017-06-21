@@ -1,7 +1,7 @@
 ---
 # required metadata
 title: Install SQL Server on Red Hat Enterprise Linux | Microsoft Docs
-description: Describes how to install SQL Server 2017 CTP 2.1 on Red Hat Enterprise Linux.
+description: Describes how to install SQL Server 2017 RC0 on Red Hat Enterprise Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -25,7 +25,7 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ---
 # Install SQL Server on Red Hat Enterprise Linux
 
-This topic provides a walkthrough of how to install SQL Server 2017 CTP 2.1 on Red Hat Enterprise Linux (RHEL).
+This topic provides a walkthrough of how to install SQL Server 2017 RC0 on Red Hat Enterprise Linux (RHEL).
 
 > [!NOTE]
 > You need at least 3.25GB of memory to run SQL Server on Linux. For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).

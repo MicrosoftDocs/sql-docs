@@ -2,12 +2,12 @@
 ---
 # required metadata
 
-title: What's New for SQL Server 2017 CTP 2.1 on Linux | Microsoft Docs
+title: What's New for SQL Server 2017 RC0 on Linux | Microsoft Docs
 description: This topic highlights what's new for the current release of SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 06/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -27,6 +27,12 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 # What's new for SQL Server 2017 on Linux
 
 This topic describes what's new for SQL Server 2017 running on Linux.
+
+## RC0
+
+The RC0 release contains the following improvements and fixes:
+
+- TBD.
 
 ## CTP 2.1
 

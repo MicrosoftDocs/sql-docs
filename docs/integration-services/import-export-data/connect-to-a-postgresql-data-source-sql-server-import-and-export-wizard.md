@@ -39,6 +39,10 @@ Here's the generic screen that you see immediately after selecting the .NET Fram
 ![Connect to PostgreSQL with ODBC before](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
 ### Options to specify (PostgreSQL ODBC driver)
+
+> [!NOTE]
+> The connection options for this data provider and ODBC driver are the same whether PostgreSQL is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
+
 To connect to PostgreSQL with the PostgreSQL ODBC driver, assemble a connection string that includes the following settings and their values. The format of a complete connection string immediately follows the list of settings.
 
 > [!TIP]
@@ -74,9 +78,6 @@ The following example uses this connection string.
 Here's the screen that you see after entering the connection string.
 
 ![Connect to PostgreSQL with ODBC](../../integration-services/import-export-data/media/connect-to-postgresql-with-odbc.png)
-
-> [!NOTE]
-> The connection options for this data provider and ODBC driver are the same whether PostgreSQL is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
 
 ## Other data providers and more info
 For info about how to connect to PostgreSQL with a data provider that's not listed here, see [PostgreSQL connection strings](https://www.connectionstrings.com/postgresql/). This third-party site also contains more info about the data providers and the connection parameters described on this page.

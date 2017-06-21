@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Invoke-ProcessASDatabase
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Conducts the **Process** operation on a specified **Database** with a specific **ProcessType** or **RefreshType** depending on the underlying metadata type.  
   
  Use **ProcessType** for database with Multidimensional metadata (this includes tabular databases with compatibility level 1050, 1100, or 1103).  
@@ -61,7 +64,7 @@ manager: "erikre"
 |Accept wildcard characters?|false|  
   
 ### -RefreshType \<Microsoft.AnalysisServices.RefreshType>  
- Specifies the process type for a Tabular database at compatibility level 1200.  Valid values are  Full, ClearValues, Calculate, DataOnly,  Automatic, Add, and  Defragment. See [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) for descriptions and guidance.  
+ Specifies the process type for a Tabular database.  Valid values are  Full, ClearValues, Calculate, DataOnly,  Automatic, Add, and  Defragment. See [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) for descriptions and guidance.  
   
 |||  
 |-|-|  

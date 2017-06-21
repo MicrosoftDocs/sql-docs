@@ -24,8 +24,6 @@ manager: "erikre"
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- In SSDT, the mechanics of setting up a cross filter is through the Filter Direction option in the  table relationships dialog box. This feature is available only for tabular models created at the 1200 compatibility level in [SQL Server Data Tools for Visual Studio 2015 (SSDT)](http://go.microsoft.com/fwlink/p/?LinkID=627574).  
-  
  There are two types of cross filters: one- and two-way filtering. One-way is the traditional many-to-one filter direction between fact and dimensional tables in that relationship. Two-way is a cross-filter that enables the filter context of one relationship to be used as the filter context for another table relationship, with  one table common to both relationships.  
   
  Given **DimDate** and **DimProduct** with foreign key relationships to **FactOnlineSales**, a two-way cross filter is equivalent of **FactOnlineSales-to-DimDate** plus **FactOnlineSales-to-DimProduct** used simultaneously.  
@@ -105,7 +103,7 @@ manager: "erikre"
   
 3.  In Tabular Model Designer, set the workspace database to a SQL Server 2016 Preview Analysis Services instance in tabular server mode.  
   
-4.  Verify model compatibility level is set to **SQL Server 2016 RTM (1200)**.  
+4.  Verify model compatibility level is set to **SQL Server 2016 RTM (1200)** or higher.  
   
      Click **OK** to create the project.  
   

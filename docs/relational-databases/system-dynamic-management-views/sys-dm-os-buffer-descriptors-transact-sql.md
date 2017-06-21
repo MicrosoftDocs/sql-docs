@@ -45,8 +45,9 @@ manager: "jhubbard"
 |free_space_in_bytes|**int**|Amount of available free space, in bytes, on the page. Is nullable.|  
 |is_modified|**bit**|1 = Page has been modified after it was read from the disk. Is nullable.|  
 |numa_node|**int**|Nonuniform Memory Access node for the buffer. Is nullable.|  
-|read_microsec|**bigint**|The actual time (in microseconds) required to read the page into the buffer. This number is reset when the buffer is reused. Is nullable.|  
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|read_microsec|**bigint**|The actual time (in microseconds) required to read the page into the buffer. This number is reset when the buffer is reused. Is nullable.|  
+|is_in_bpool_extension|**bit**|1 = Page is in buffer pool extension. Is nullable.|  
+|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   

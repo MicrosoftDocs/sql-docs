@@ -31,7 +31,7 @@ The command takes an object definition and returns either an empty result set or
   
 -   Multidimensional + pre-SQL Server 2016 Tabular 1100 or 1103 compatibility level databases are described in Multidimensional modeling constructs like **cubeID**, **measuregroupID**, and **partitionID**.  
   
--   Metadata for new Tabular model databases at compatibility level 1200  consist of descriptors like **TableName** and **PartitionName**.  
+-   Metadata for new Tabular model databases at compatibility level 1200 and higher consist of descriptors like **TableName** and **PartitionName**.  
   
  DBCC for Analysis Services will execute on any Analysis Services database at any compatibility level, as long as the database is running on a  SQL Server 2016 instance. Just make sure you're using the right command syntax for each database type.  
   
@@ -41,8 +41,8 @@ The command takes an object definition and returns either an empty result set or
 ## Permission requirements  
  You must be an Analysis Services database or server administrator (a member of the server role) to run the command. See [Grant database permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) or [Grant server admin rights to an  Analysis Services instance](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) for instructions.  
   
-## Command syntax for Tabular 1200 databases  
- Tabular databases at the 1200 compatibility level use tabular metadata for object definitions. The complete DBCC syntax for a tabular database created at a SQL Server 2016 functional level is illustrated in the following example.  
+## Command syntax 
+ Tabular databases at the 1200 and higher compatibility levels use tabular metadata for object definitions. The complete DBCC syntax for a tabular database created at a SQL Server 2016 functional level is illustrated in the following example.  
   
  Key differences between the two syntaxes include a newer XMLA namespace, no \<Object> element, and  no \<Model> element (there is still only one model per database).  
   

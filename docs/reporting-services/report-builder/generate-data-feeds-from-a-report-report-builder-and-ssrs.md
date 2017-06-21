@@ -1,7 +1,7 @@
 ---
 title: "Generate Data Feeds from a Report (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,8 +16,10 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Generate Data Feeds from a Report (Report Builder and SSRS)
-  You can generate Atom-compliant data feeds from paginated reports, and then use the data feeds in applications, such as the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client, that can consume data feeds.  
+
+You can generate Atom-compliant data feeds from paginated reports, and then use the data feeds in applications, such as Power Pivot, or Power BI, that can consume data feeds.  
   
  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a report. The document lists at least one data feed for each data region in the report. Depending on the type of data region and the data that the data region displays, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] might generate multiple data feeds from a data region.  
   
@@ -79,8 +81,9 @@ manager: "erikre"
 7.  Verify the document type is **ATOM File**, and then click **Save**.  
   
 8.  Optionally, open the .atom file in a browser or text editor or XML editor.  
-  
-## See Also  
- [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## Next steps
+
+[Export Reports](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

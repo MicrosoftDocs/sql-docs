@@ -63,7 +63,7 @@ By using the Workspace Database and Workspace Server properties for model.bim, y
 -   You cannot import data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook when creating a new tabular model project by using the Import from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] project template.  
   
   > [!IMPORTANT]  
->  The model's compatibility level and the Workspace Server must correspond. For Tabular models at **SQL Server 2016 RTM (1200)** compatibility level, the Workspace Server must be a [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] tabular instance.  
+>  The model's compatibility level and the Workspace Server must correspond.
   
 > [!NOTE]  
 >  If any of the tables in your model will contain a large number of rows, consider importing only a subset of the data during model authoring. By importing a subset of the data, you can reduce processing time and consumption of workspace database server resources.  

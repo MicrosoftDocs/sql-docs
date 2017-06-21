@@ -62,7 +62,8 @@ manager: "jhubbard"
   
  In case of a system crash, Query Store can lose runtime data up to amount defined with `DATA_FLUSH_INTERVAL_SECONDS`. The default value of 900 seconds (15 minutes) is an optimal balance between query capture performance and data availability.  
 In case of memory pressure, runtime statistics can be flushed to disk earlier than defined with `DATA_FLUSH_INTERVAL_SECONDS`.  
-During the read of the Query Store data in-memory and on-disk data are unified transparently.  
+During the read of the Query Store data in-memory and on-disk data are unified transparently.
+In case of session termination or client application restart/crash query statistics won’t be recorded.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

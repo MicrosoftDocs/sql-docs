@@ -1,7 +1,7 @@
 ---
 title: "Sequence command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Sequence command (TMSL)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
   Use the **Sequence** command to run a consecutive set of operations in batch mode on an instance of Analysis Services.  The entire command and all of its component parts must complete in order for the transaction to succeed.  
   
  The following commands can be run sequentially, except for the **Refresh** command which runs in parallel to process multiple objects concurrently.  
@@ -38,8 +41,6 @@ manager: "erikre"
 -   [Attach command &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)  
   
 -   [Detach command &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)  
-  
- **Applies to:** Tabular databases at compatibility level SQL Server 2016 (1200).  
   
 ## Request  
  **maxParallelism** is an optional property that determines whether **Refresh** operations run sequentially or in parallel.  

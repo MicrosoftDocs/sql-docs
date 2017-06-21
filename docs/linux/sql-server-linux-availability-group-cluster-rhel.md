@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 05/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -38,6 +38,25 @@ For more details on cluster configuration, resource agents options, and manageme
 
 The following sections walk through the steps to set up a Pacemaker cluster and add an availability group as resource in the cluster for high availability.
 
+## Roadmap
+
+The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
+
+1. [Configure SQL Server on the cluster nodes](sql-server-linux-setup.md).
+
+2. [Create the availability group](sql-server-linux-availability-group-failover-ha.md). 
+
+3. Configure a cluster resource manager, like Pacemaker. These instructions are in this document.
+   
+   The way to configure a cluster resource manager depends on the specific Linux distribution. 
+
+   >[!IMPORTANT]
+   >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
+   
+   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) for more information.
+
+5. [Add the availability group as a resource in the cluster](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
+
 ## Configure Pacemaker for RHEL
 
 [!INCLUDE [RHEL-Configure-Pacemaker](../includes/ss-linux-cluster-pacemaker-configure-rhel.md)]
@@ -58,6 +77,17 @@ sudo pcs property set stonith-enabled=false
   
 >[!IMPORTANT]
 >Disabling STONITH is just for testing purposes. If you plan to use Pacemaker in a production environment, you should plan a STONITH implementation depending on your environment and keep it enabled. Note that RHEL does not provide fencing agents for any cloud environments (including Azure) or Hyper-V. Consequentially, the cluster vendor does not offer support for running production clusters in these environments. We are working on a solution for this gap that will be available in future releases.
+
+## Set cluster property start-failure-is-fatal to false
+
+`Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will take care of demoting the replica to secondary and it will automatically rejoin the availability group. 
+To update the property value to false run:
+```bash
+pcs property set start-failure-is-fatal=false
+```
+If the property has the default value of `true`, if first attempt to start the resource fails, user intervention is required after an automatic failover to cleanup the resource failure count and reset the configuration using: `pcs resource cleanup <resourceName>` command.
+
+For more details on Pacemaker cluster properties see [Pacemaker Clusters Properties](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
 ## Create a SQL Server login for Pacemaker
 

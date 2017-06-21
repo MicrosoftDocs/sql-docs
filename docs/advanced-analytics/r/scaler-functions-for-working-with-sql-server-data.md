@@ -1,7 +1,7 @@
 ---
 title: "ScaleR Functions for Working with SQL Server Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/27/2017"
+ms.date: "05/19/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,51 +18,62 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # ScaleR Functions for Working with SQL Server Data
-This topic provides an overview of the main ScaleR functions for use with SQL Server, along with comments on their syntax.
 
-For a complete list of ScaleR functions and how to use them, see the [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/index#) reference in the MSDN library. 
+This topic provides an overview of the main functions provided in RevoScaleR for working with SQL Server data. For a complete list of ScaleR functions and how to use them, see the [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/scaler/scaler) reference in the MSDN library.
 
-## Functions for working with SQL Server Data Sources
-The following functions let you define a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] data source. A data source object is a container that specifies a connection string together with the set of data that you want, defined either as a table, view, or query. Stored procedure calls are not supported.  
+## Create SQL Server Data Sources
 
-In addition to defining a data source, you can execute DDL statements from R, if you have the necessary permissions on the instance and database. 
-+ [RxSqlServerData](https://msdn.microsoft.com/microsoft-r/scaler/RxSqlServerData) - Define a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] data source object
-+ [rxSqlServerDropTable](https://msdn.microsoft.com/microsoft-r/scaler/rxSqlServerDropTable) - Drop a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] table
-+ [rxSqlServerTableExists](https://msdn.microsoft.com/microsoft-r/scaler/rxSqlServerTableExists) - Check for the existence of a database table or object
-+ [rxExecuteSQLDDL](https://msdn.microsoft.com/microsoft-r/scaler/rxExecuteSQLDDL) - Execute a command to define, manipulate, or control SQL data, but not return data  
+The following functions let you define a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] data source. A data source object is a container that specifies a connection string together with the set of data that you want, defined either as a table, view, or query. Stored procedure calls are not supported.
 
-## Functions for Defining or Managing a Compute Context
+In addition to defining a data source, you can execute DDL statements from R, if you have the necessary permissions on the instance and database.
+
++ [RxSqlServerData](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxsqlserverdata) - Define a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] data source object.
+
+## Perform DDL Statements
+
+In addition to defining a data source, you can execute DDL statements from R, if you have the necessary permissions on the instance and database. These functions execute an ODBC call against the database schema.
+
++ [rxSqlServerDropTable](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxSqlServerDropTable) - Drop a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] table
++ [rxSqlServerTableExists](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxSqlServerDropTable) - Check for the existence of a database table or object
++ [rxExecuteSQLDDL](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxExecuteSQLDDL) - Execute a Data Definition Language (DDL) command that defines or manipulates database objects. This function cannot return data, and is used only to retrieve or modify the object schema or metadata.
+
+## Define or Manage Compute Contexts
+
 The following functions let you define a new compute context, switch compute contexts, or identify the current compute context.
-+ [RxComputeContext](https://msdn.microsoft.com/microsoft-r/scaler/RxComputeContext) - Create a compute context. 
-+ [rxInSqlServer](https://msdn.microsoft.com/microsoft-r/scaler/rxInSqlServer) - Generate a SQL Server compute context that lets **ScaleR** functions run in SQL Server R Services. This compute context is currently supported only for SQL Server instances on Windows.
-+ [rxGetComputeContext](https://msdn.microsoft.com/microsoft-r/scaler/rxGetComputeContext) - Get the current compute context. 
-+ [rxSetComputeContext](https://msdn.microsoft.com/microsoft-r/scaler/rxSetComputeContext) - Specify which compute context to use. 
 
-## Functions for Using a Data Source
-After you have created a data source object, you can open it to get data, or write new data to it. Depending on the size of the data in the source, you can also define the batch size as part of the data source and move data in chunks. 
-+ [rxIsOpen](https://msdn.microsoft.com/microsoft-r/scaler/rxIsOpen) - Check whether a data source is available
-+ [rxOpen](https://msdn.microsoft.com/microsoft-r/scaler/rxOpen) - Open a data source for reading
-+ [rxReadNext](https://msdn.microsoft.com/microsoft-r/scaler/rxReadNext) - Read data from a source
-+ [rxWriteNext](https://msdn.microsoft.com/microsoft-r/scaler/rxWriteNext) - Write data to the target
-+ [rxClose](https://msdn.microsoft.com/microsoft-r/scaler/rxclose) - Close a data source
++ [RxComputeContext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/RxComputeContext) - Create a compute context.
++ [rxInSqlServer](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxInSqlServer) - Generate a SQL Server compute context that lets **ScaleR** functions run in SQL Server R Services. This compute context is currently supported only for SQL Server instances on Windows.
++ [rxGetComputeContext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxSetComputeContext) - Get the current compute context.
++ [rxSetComputeContext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxSetComputeContext) - Specify which compute context to use.
 
-For more information about working with these ScaleR functions, which can work with data sources other than [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], see [ Microsoft R Server - Getting Started](https://msdn.microsoft.com/microsoft-r/rserver).
 
-## Functions that work with XDF Files
-The following functions can be used to create a local data cache in the XDF format. This file can be useful when working with more data than can be transferred from the database in one batch, or more data than can fit in memory.
+## Use a Data Source
 
-If you regularly move large amounts of data from a database to a local workstation, rather than query the database repeatedly for each R operation, you can use the XDF file to save the data locally and then work with it in your R workspace, using the XDF file as the cache.
+After you have created a data source object, you can open it to get data, or write new data to it. Depending on the size of the data in the source, you can also define the batch size as part of the data source and move data in chunks.
 
-+ `rxImport` - Move data from an ODBC source to the XDF file
-+ `RxXdfData` - Create an XDF data object
-+ `RxDataStep` - Read data from XDF int a data frame
-+ `rxXdfToDataFrame` - Read data from XDF into a data frame
-+ `rxReadXdf` - Reads data from XDF into a data frame
++ [rxIsOpen](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Check whether a data source is available
++ [rxOpen](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Open a data source for reading
++ [rxReadNext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Read data from a source
++ [rxWriteNext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Write data to the target
++ [rxClose](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Close a data source
 
-For an example of how XDF files are used, see this tutorial:  [Data Science Deep Dive - Using the ScaleR Functions](../../advanced-analytics/r-services/data-science-deep-dive-using-the-revoscaler-packages.md)
+For more information about working with these functions, including using data sources other than [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], see [Getting Started with Microsoft R](https://msdn.microsoft.com/microsoft-r/microsoft-r-get-started-node).
 
-For more information about these ScaleR functions, which can be used to transfer data from many different sources, see[ Microsoft R Server - Getting Started](http://msdn.microsoft.com/microsoft-r/rserver/rserver-getting-started).
+## Work with XDF Files
+
+The following functions can be used to create a local data store in the XDF format. This file can be useful when working with more data than can be transferred from the database in one batch, or more data than can fit in memory.
+
+For example, if you regularly move large amounts of data from a database to a local workstation, rather than query the database repeatedly for each R operation, you can use the XDF file as a kind of cache to save the data locally and then work with it in your R workspace.
+
++ [rxImport](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rximport) - Move data from an ODBC source to the XDF file
++ [RxXdfData](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxxdfdata) - Create an XDF data object
++ [RxDataStep](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxdatastep) - Moves data from an input data source to an output data source, and optionally transforms the data that is written to the output. For more information about the types of transformation that can be applied, see [Transforming and Subsetting Data](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-transform)
++ [rxReadXdf](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxreadxdf) - Reads data from an XDF file into a data frame
+
+For an example of how XDF files are used, see this tutorial:  [Data Science Deep Dive - Using the ScaleR Functions](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
+
 
 ## See Also
-[Comparison of Base R and ScaleR Functions](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
+
+[Comparison of Base R and RevoScaleR Functions](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 

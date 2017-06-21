@@ -1,11 +1,10 @@
 ---
-title: "SQL Server 2016 Technical Documentation | Microsoft Docs"
+title: "SQL Server Technical Documentation | Microsoft Docs"
 ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "server-general"
+ms.technology: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -20,28 +19,27 @@ helpviewer_keywords:
   - "portal page [SQL Server]"
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 caps.latest.revision: 106
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "craigg-msft"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server Technical Documentation
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+ > For content related to previous versions of SQL Server, see [Installation for SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
 
  Documentation to help you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] language topics, see [Language Reference](../t-sql/language-reference.md).
 
 **SQL Server 2017**
 
-- For the latest release notes, see [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
-- For the latest information on what is new, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
+- [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
  
 **SQL Server 2016:**
  
 - [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
 - [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
-**Content for previous versions of SQL Server:**
-- [!INCLUDE[previous-content-versions](../includes/previous-content-versions.md)]
- 
  **Try SQL Server!**    
  - [**Download SQL Server 2016  from the Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
  - **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
@@ -59,7 +57,20 @@ manager: "jhubbard"
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] is an analytical data platform and toolset for personal, team, and corporate business intelligence. Servers and client designers support traditional OLAP solutions, new tabular modeling solutions, as well as self-service analytics and collaboration using [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], Excel, and a SharePoint Server environment. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] also includes Data Mining so that you can uncover the patterns and relationships hidden inside large volumes of data.|    
 |![Replication services](../sql-server/media/replication-services.png "Replication services")|**[Replication](../relational-databases/replication/sql-server-replication.md)**<br /><br /> Replication is a set of technologies for copying and distributing data and database objects from one database to another, and then synchronizing between databases to maintain consistency. By using replication, you can distribute data to different locations and to remote or mobile users by means of local and wide area networks, dial-up connections, wireless connections, and the Internet.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services delivers enterprise, Web-enabled reporting functionality so you can create reports that draw content from a variety of data sources, publish reports in various formats, and centrally manage security and subscriptions.|    
-     
+
+    
+## Earlier SQL Server versions
+- [Books Online for SQL Server 2014 Books Online](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+- [Install SQL Server 2014 Express and other older SQL Server versions](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Thank you to [Scott Hanselman](http://www.hanselman.com/) for collecting all of the installer package links in one place!**)  
+- [SQL Server 2012 technical documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
+- [SQL Server 2008 R2 Product Documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
+- [SQL Server 2008 technical documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
+- [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
+
+**Sample databases**  
+- [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
+- [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
+- [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## More information   
 + [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)

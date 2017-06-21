@@ -1,5 +1,5 @@
-# [JDBC Code Samples +](./code-samples/index.md)
-# [JDBC Reference +](./reference/index.md?toc=%2fsql%2fconnect%2fjdbc%2freference%2ftoc.json)
+# [JDBC Code Samples +](../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)
+# [JDBC Reference +](../../connect/jdbc/reference/datetimeoffset-class.md)
 
 # [Microsoft JDBC Driver for SQL Server](microsoft-jdbc-driver-for-sql-server.md)
 

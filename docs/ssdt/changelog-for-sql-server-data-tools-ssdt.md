@@ -18,16 +18,46 @@ manager: "jhubbard"
 # Changelog for SQL Server Data Tools (SSDT)
 This change log is for [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-For detailed posts about what’s new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).  
+For detailed posts about what’s new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+## SSDT 17.1
+Build number: 14.0.61705.170
+
+### What's New?
+**AS projects:**
+- Users can set encoding hints on columns in the UI on 1400 models
+- Non-model-related IntelliSense is now available in offline mode
+- Tabular Model Explorer now contains a node to represent named M expressions available across the model (1400 compat-level tabular models)
+- Azure Active Directory People Picker similar to Microsoft Azure Portal's IAM now available when setting up Role Members in Tabular Models
+
+**Database projects:**
+- Updated to DacFx 17.1
+
+### Bug Fixes
+- Fixed an issue where the Business Intelligence Designers group name was displayed incorrectly in Visual Studio Options in VS2017
+- Fixed an issue where a crash could occur generating a Code Map for a solution with a Report Project or AS Project
+- Fixed a number of issues with PowerQuery integration for Analysis Services 1400 compat-level tabular models
+- Fixed an issue in the new DAX editor tool window where the assignment operator could not be on a separate line when defining a measure
+- Fixed an issue that prevented the tabular measure display from updating when renaming measures in perspective
+- Updated Analysis Services integrated workspace engine and Tabular Object Model that fixes a regression that caused 1200 tabular projects containing translations to fail on deploy to SQL Server 2016 Analysis Services server
+- Fixed a performance issue that made creation\deletion of new 1400 tabular data sources very slow
+- Fixed an issue where the DSV diagram in multi-dimensional models could stop rendering if changing view quickly between different DSVs
+
+## DacFx 17.1
+- Fixed an issue when encrypting a column with memory-optimized tables with other identity columns
+- SQLDOM support for CATALOG_COLLATION option for CREATE DATABASE
+
+## DacFx 17.0.1 
+- Fix for issue with databases with an asymmetric key by an HSM with an EKM provider [Connect item](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
 
 ## SSDT 17.0 (supports up to SQL Server 2017)
 Build number: 14.0.61704.140
 
 ### What's New?
 **Database projects:**
-- Amending a clustered index on a view will no longer block deployment.
+- Amending a clustered index on a view will no longer block deployment
 - Schema comparison strings relating to column encryption will use the proper name rather than the instance name.   
-- Added a new command line option to SqlPackage: ModelFilePath.  This provides an option for advanced users to specify an external model.xml file for import, publishing and scripting operations.   
+- Added a new command line option to SqlPackage: ModelFilePath.  This provides an option for advanced users to specify an external model.xml file for import, publishing and scripting operations   
 - The DacFx API was extended to support  Azure AD Universal Authentication and Multi-factor authentication (MFA)
 
 **IS projects:**

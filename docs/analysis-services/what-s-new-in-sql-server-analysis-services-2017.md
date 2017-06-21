@@ -1,5 +1,5 @@
 ---
-title: "What&#39;s new in SQL Server Analysis Services 2017 | Microsoft Docs"
+title: "What&#39;s new in SQL Server 2017 Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: "sql-server-2017"
@@ -15,11 +15,14 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# What&#39;s new in SQL Server Analysis Services 2017
+# What&#39;s new in SQL Server 2017 Analysis Services
 [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-## SQL Server Analysis Services on Windows CTP 2.0
-This release see many new enhancements for tabular model, including:
+## SQL Server Analysis Services CTP 2.1
+There are no new features in this release. Improvements in this release include bug fixes and performance, and enhancements to [Dynamic Management Views](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV). DMVs are queries in SQL Server Profiler that return information about local server operations and server health. For more details, see the [Analysis Services blog](https://blogs.msdn.microsoft.com/analysisservices/).
+
+## SQL Server Analysis Services CTP 2.0
+This release has many new enhancements for tabular model, including:
 
 * Object-level security to secure the metadata of tabular models.
 * Transaction-performance improvements for a more responsive developer experience.

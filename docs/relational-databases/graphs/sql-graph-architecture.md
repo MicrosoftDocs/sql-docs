@@ -151,7 +151,7 @@ Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced i
 |Task	|Related Topic  |Notes
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nodes and edges are stored as tables internally, hence most of the operations supported on a table in SQL Server or Azure SQL Database are supported on the node and edge tables  |
-|MATCH	| [MATCH &#40;Transact-SQL&#41;](../../t-sql/statements/match-sql-graph.md)|MATCH built-in is introduced to support pattern matching and traversal through the graph.  |
+|MATCH	| [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|MATCH built-in is introduced to support pattern matching and traversal through the graph.  |
 
 
 
@@ -162,6 +162,7 @@ There are certain limitations on node and edge tables in this release:
 * Node and edge tables cannot be created as system-versioned temporal tables.   
 * Node and edge tables cannot be memory optimized tables.  
 * Users cannot update the $from_id and $to_id columns of an edge using UPDATE statement. To update the nodes that an edge connects, users will have to insert the new edge pointing to new nodes and delete the previous one.
+* Cross database queries on graph objects are not supported. 
 
 
 ## Next Steps

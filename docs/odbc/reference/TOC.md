@@ -1,9 +1,9 @@
 
-# [Installation +](./install/index.md)
-# [Develop Applications +](./develop-app/index.md)
-# [Develop Drivers +](./develop-driver/index.md)
-# [Syntax +](./syntax/index.md)
-# [Appendixes +](./appendixes/index.md)
+# [Installation +](../../odbc/reference/install/odbc-subkey.md)
+# [Develop Applications +](../../odbc/reference/develop-app/checking-feature-support-and-variability.md)
+# [Develop Drivers +](../../odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver.md)
+# [Syntax +](../../odbc/reference/syntax/odbc-reference.md)
+# [Appendixes +](../../odbc/reference/appendixes/sqlgetdata-cursor-library.md)
 
 # [ODBC Programmer's Reference](odbc-programmer-s-reference.md)
 # [What's New in ODBC 3.8](what-s-new-in-odbc-3-8.md)

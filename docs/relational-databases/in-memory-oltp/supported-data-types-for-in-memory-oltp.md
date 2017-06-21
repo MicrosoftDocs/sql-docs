@@ -1,7 +1,7 @@
 ---
 title: "Supported Data Types for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/27/2016"
+ms.date: "06/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 -   Memory-optimized tables  
   
--   Natively compiled stored procedures  
+-   Natively compiled T-SQL modules  
   
 ## Unsupported Data Types  
  The following data types are not supported:  
@@ -51,7 +51,7 @@ For the preceding string and binary data types, starting with SQL Server 2016:
 
 ### Identify LOBs and other columns that are off-row
 
-The following Transact-SQL SELECT statement reports all columns that are off-row, for memory-optimized tables. Note that:
+Starting with SQL Server 2016, memory-optimized tables support off-row columns, which allow a single table row to be larger than 8060 bytes. The following Transact-SQL SELECT statement reports all columns that are off-row, for memory-optimized tables. Note that:
 
 - All index key columns are stored in-row.
   - Nonunique index keys can now include NULLable columns, on memory-optimized tables.
@@ -75,24 +75,15 @@ SELECT
 ```
 
 
-#### Natively compiled modules support for LOBs
-
-
-When you use a built-in string function in a natively compiled modules, such as a native proc, the function can accept a string LOB type. For example, in a native proc, the LTrim function can input a parameter of type nvarchar(max) or varbinary(max).
-
-These LOBs can be the return type from a natively compiled scalar UDF (user-defined function).
-
-
 ### Other Data Types
 
 
 |Other Types|For more information|  
 |-----------------|--------------------------|  
-|table types|[Memory-Optimized Table Variables](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|  
+|table types|[Memory-Optimized Table Variables](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
 ## See Also  
  [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [Implementing LOB Columns in a Memory-Optimized Table](http://msdn.microsoft.com/en-us/bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e)   
  [Implementing SQL_VARIANT in a Memory-Optimized Table](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

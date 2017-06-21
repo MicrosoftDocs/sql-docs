@@ -1,7 +1,7 @@
 ---
 title: "Working with subscriptions (web portal) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/25/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,6 +16,9 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Working with subscriptions (web portal)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Use the Subscriptions page to list all of the subscriptions for the current report. If you have sufficient permission (as conveyed by the "Manage all subscriptions" task), you can view the subscriptions of all users. Otherwise, this page shows only the subscriptions that you own.  
   
 Before you can create a new subscription, you must verify that the report data source uses stored credentials. Use the Data Sources properties page to store credentials.  
@@ -25,7 +28,7 @@ Before you can create a new subscription, you must verify that the report data s
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-You can get to the Subscriptions page by selecting the **ellipse (…)** of a report, selecting **Manage** and selecting **Subscriptions**.  
+You can get to the Subscriptions page by selecting the **ellipsis (…)** of a report, selecting **Manage** and selecting **Subscriptions**.  
   
 From the Subscriptions page, you can create new subscriptions by selecting **+ New Subscription**. You can also edit existing subscriptions, or delete subscriptions that you have selected.  
   
@@ -79,7 +82,10 @@ For best result, run the query in SQL Server Management Studio first, before usi
   
 You can then validate the query. You can also define a **query timeout**.  
   
-After the query has been created, you can then assign values to the required fields. You can either enter your manual data, or select a field from the dataset you created.  
-  
-  
-  
+After the query has been created, you can then assign values to the required fields. You can either enter your manual data, or select a field from the dataset you created.
+
+[Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Working with paginated reports](working-with-paginated-reports-web-portal.md)  
+[Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

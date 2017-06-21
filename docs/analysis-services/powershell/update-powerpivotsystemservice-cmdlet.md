@@ -20,6 +20,9 @@ manager: "erikre"
 [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Upgrades the parent object of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service in the farm.  
+
+  >[!NOTE] This article may contain outdated information and examples.  
+>
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

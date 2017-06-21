@@ -19,6 +19,9 @@ manager: "erikre"
 
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
+>[!NOTE] This article may contain outdated information and examples.  
+>
+
   Below is an example PowerShell script that calls Analysis Services Management Object (AMO) types to create a Tabular database (compatibility level 1200 or higher) based on a SQL Server relational database.  
   
  This example is for demonstration purposes only. It stops short of defining table relationships, and it does not include data import.  This makes the script more of a snippet than execution-ready code. To be runnable, it would need other helper functions and more commands  to fill in the gaps.  
@@ -281,10 +284,5 @@ function Get-TabularColumnTypeFromSQL()
 }  
 ```  
   
-## See Also  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Analysis Services PowerShell Reference](../../analysis-services/powershell/analysis-services-powershell-reference.md)   
- [Analysis Services Management Objects &#40;AMO&#41;](https://msdn.microsoft.com/library/mt436122.aspx)   
- [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

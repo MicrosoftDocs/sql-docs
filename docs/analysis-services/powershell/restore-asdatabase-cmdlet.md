@@ -20,6 +20,9 @@ manager: "erikre"
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Restores a Multidimensional or Tabular database backup (.abf) file to an Analysis Services instance.  
+
+  >[!NOTE] This article may contain outdated information and examples.  
+>
   
 ## Syntax  
  `Restore-ASDatabase [-RestoreFile] <string> [-Name] <string> [-AllowOverwrite <SwitchParameter>] Locations <Microsoft.AnalysisServices.RestoreLocation[]>] [-Security <Microsoft.AnalysisServices.RestoreSecurity>] [-Password <System.SecureString>] [-StorageLocation <System.string>] [-Server <string>] [-Credential <PSCredential>] [<CommonParameters>]`  
@@ -126,7 +129,7 @@ manager: "erikre"
   
  To use this parameter, first create a PSCredential object using Get-Credential to specify the username and password (for example, `$Cred=Get-Credential “adventure-works\admin”`. You can then pipe this object to the –Credential parameter `(-Credential:$Cred`).  
   
- For more information about authentication and credential usage, see [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md). For more information about HTTP access, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
+ For more information about HTTP access, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 |||  
 |-|-|  
@@ -190,9 +193,4 @@ PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase –restorefile “\\my
 ```  
   
  This command restores an encrypted Analysis Services backup file (testdb.abf) in a remote backup folder on a remote Analysis Services default instance. The –StorageLocation parameter is used to place the database files in a non-default location, in this case a file shared named restoreDBfiles.  
-  
-## See Also  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
-  
   

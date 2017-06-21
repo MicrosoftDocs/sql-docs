@@ -11,7 +11,7 @@ ms.technology: database-engine
 ---
 # Install SQL Server and create a database on Ubuntu
 
-In this quick start tutorial, you first install SQL Server 2017 CTP 2.1 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database.
+In this quick start tutorial, you first install SQL Server 2017 CTP 2.1 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
 
 ## Prerequisites
 
@@ -95,7 +95,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 > [!TIP]
 > **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. Other tools include [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) and [Visusal Studio Code](sql-server-linux-develop-use-vscode.md).
 
-## Connect to SQL Server on Linux
+## Connect locally
 
 The following steps use **sqlcmd** to locally connect to your new SQL Server instance.
 
@@ -115,7 +115,10 @@ The following steps use **sqlcmd** to locally connect to your new SQL Server ins
 
 1. If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection).
 
-## Create a database
+## Create and query data
+The following sections walk you through using **sqlcmd** and Transact-SQL to create a new database, add data, and run a simple query.
+
+### Create a new database
 
 The following steps create a new database named `TestDB`.
 
@@ -137,7 +140,7 @@ The following steps create a new database named `TestDB`.
    GO
    ```
 
-## Insert data
+### Insert data
 
 Next create a new table, `Inventory`, and insert two new rows.
 
@@ -165,7 +168,7 @@ Next create a new table, `Inventory`, and insert two new rows.
    GO
    ```
 
-## Select data
+### Select data
 
 Now, run a query to return data from the `Inventory` table.
 
@@ -181,7 +184,7 @@ Now, run a query to return data from the `Inventory` table.
    GO
    ```
 
-## Exit the sqlcmd command prompt
+### Exit the sqlcmd command prompt
 
 To end your **sqlcmd** session, type `QUIT`:
 

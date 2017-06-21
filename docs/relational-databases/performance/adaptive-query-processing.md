@@ -21,7 +21,6 @@ SQL Server 2017 addresses optimization issues with new adaptive query processing
 - Batch mode adaptive join.
 - Interleaved execution. 
 
-This article describes the features and how to enable them, gives customer examples, and results you can expect. 
 At a general level, SQL Server executes a query as follows:
 1. The query optimization process generates a set of feasible execution plans for a specific query. During this time, the cost of plan options is estimated and the plan with the lowest estimated cost is used.
 1. The query execution process takes the plan chosen by the query optimizer and uses it for execution.
@@ -79,6 +78,7 @@ Here’s how it works:
 - If the build join input exceeds a specific row count threshold, no switch occurs and your plan continues with a hash join.
 
 The following query is used to illustrate an adaptive join example:
+
 ```sql
 SELECT  \[fo\].\[Order Key\], \[si\].\[Lead Time Days\],
 \[fo\].\[Quantity\]

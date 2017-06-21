@@ -42,7 +42,7 @@ manager: "jhubbard"
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |role|**tinyint**|Geo-replication role, one of:<br /><br /> 0 = Primary. The database_id  refers to the primary database in the geo-replication partnership.<br /><br /> 1 = Secondary.  The database_id  refers to the primary database in the geo-replication partnership.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_type|**tinyint**|The secondary type, one of:<br /><br /> -1 = No. The secondary database is not accessible until failover.<br /><br /> 0 = All.   The secondary database is accessible to any client connection.|  
+|secondary_allow_connections|**tinyint**|The secondary type, one of:<br /><br /> 0 = No direct connections are allowed to the secondary database and the database is not available for read access.<br /><br /> 2 = All connections are allowed to the database in the secondary repl;ication for read-only access.|  
 |secondary_type _desc|**nvarchar(256)**|No<br /><br /> All|  
   
 > [!NOTE]  

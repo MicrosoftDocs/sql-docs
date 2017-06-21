@@ -31,9 +31,10 @@ This article walks you through how to install local Help, and how to display onl
 ## SQL Server 2016 and Help Viewer 2.2  
 Help Viewer 2.2 is available in SQL Server Management Studio starting with the April 2016 Preview (13.0.12500.29) and in SQL Server Data Tools for Visual Studio.  
 
-> [![Download SSMS](../release-notes/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**  
+> [![Download SSMS](../release-notes/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**
 
-For information on how to download SQL Server Data Tools, see [Download SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)
+> [![Download SQL Server Data Tools](../release-notes/media/download.png)](../ssdt/download-sql-server-data-tools-ssdt.md) **[Download SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)**
+
 
 **To install local Help to use with Help Viewer 2.2**  
 1. Open Help Viewer 2.2 by launching SQL Server Management Studio or Visual Studio, and clicking **Add and Remove Help Content** on the **Help** menu.  

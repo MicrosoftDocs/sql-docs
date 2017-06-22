@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/1/2017"
+ms.date: "06/22/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -49,7 +49,6 @@ SQL Server 2017 includes many new Database Engine features, enhancements, and pe
     - [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) exposes VLF information to monitor, alert, and avert potential transaction log issues. (CTP 2.0)
     - [sys.dm_db_stats_histogram](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) is a new dynamic management view for examining statistics. (CTP 1.3)
     - **sys.dm_os_host_info** provides operating system information for both Windows and Linux. (CTP 1.0)
-    - Five new dynamic management views return information about Linux processes. For more information, see [Linux Process Dynamic Management Views](../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md). (CTP 1.3)
 - The **Database Tuning Advisor (DTA)** has additional options and improved performance. (CTP 1.2)
 - **In-memory enhancements** include support for computed columns in memory-optimized tables, full support for JSON functions in natively compiled modules, and the CROSS APPLY operator in natively compiled modules. (CTP 1.1)
 - New **string functions** are CONCAT_WS, TRANSLATE, and TRIM, and WITHIN GROUP is now supported for the STRING_AGG function. (CTP 1.1)

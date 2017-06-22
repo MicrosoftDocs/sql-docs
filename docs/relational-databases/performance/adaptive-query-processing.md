@@ -15,7 +15,7 @@ ms.author: "monicar"
 manager: "jhubbard"
 ---
 
-# Adaptive Query Processing
+# Adaptive query processing
 SQL Server 2017 addresses optimization issues with new adaptive query processing features. This article introduces three features that you can use to improve query performance in SQL Server and Azure SQL Database:
 - Batch mode memory grant feedback.
 - Batch mode adaptive join.
@@ -157,19 +157,18 @@ The following chart shows an example intersection between the cost of a hash joi
 ## Interleaved execution for multi-statement table valued functions
 Interleaved execution changes the unidirectional boundary between the optimization and execution phases for a single-query execution and enables plans to adapt based on the revised cardinality estimates. During optimization if we encounter a candidate for interleaved execution, which is currently **multi-statement table valued functions (MSTVFs)**, we will pause optimization, execute the applicable subtree, capture accurate cardinality estimates, and then resume optimization for downstream operations.
 MSTVFs have a fixed cardinality guess of “100” in SQL Server 2014 and SQL Server 2016, and “1” for earlier versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with multi-statement table valued functions.
-The following is a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs (below shows Live Query Statistics output, so you can see the actual row flow vs. estimated rows):
 
-![Row flow vs. estimated rows](./media/7_AQPFlowThreeAreas.png)
-
-Three noteworthy areas in the plan are numbered 1 through 3:
+The following image depicts a live query statistis ouput, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworhy areas of the plan (flow is from right to left):
 1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are *527,597* rows flowing through this MSTVF Table Scan as seen in Live Query Statistics via the “527597 of 100” actual of estimated – so the fixed estimate is significantly skewed.
 1. For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
 1. For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.
+
+![Row flow vs. estimated rows](./media/7_AQPFlowThreeAreas.png)
+
 Contrast the prior plan with the actual plan generated with interleaved execution enabled:
 
 ![Interleaved plan](./media/8_AQPInterleavedEnabledPlan.png)
 
-Three noteworthy areas in the plan are numbered 1 through 3:
 1. Notice that the MSTVF table scan now reflects an accurate cardinality estimate. Also notice the re-ordering of this table scan and the other operations.
 1. And regarding join algorithms, we have switched from a Nested Loop operation to a Hash Match operation instead, which is more optimal given the large number of rows involved.
 1. Also notice that we no longer have spill-warnings, as we’re granting more memory based on the true row count flowing from the MSTVF table scan.

@@ -1,3 +1,3 @@
 --- 
-redirect_url: /sql/tools/command-prompt-utility-reference-database-engine 
+redirect_url: /sql/tools/overview-sql-tools 
 --- 

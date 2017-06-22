@@ -53,6 +53,6 @@
 #### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
 # [Security](sql-server-linux-security-overview.md)
 ## [Get started with security features](sql-server-linux-security-get-started.md)
-## [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)
+## [Encrypting Connections](sql-server-linux-encrypted-connections.md)
 # [Optimize Performance](sql-server-linux-performance-get-started.md)
 # [Troubleshoot](sql-server-linux-troubleshooting-guide.md)

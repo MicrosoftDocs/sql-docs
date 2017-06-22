@@ -1,25 +1,19 @@
 ---
-title: "Encrypting Connections to SQL Server on Linux | Microsoft Docs"
-description: "This topic describes Encrypting Connections to SQL Server on Linux."
-author: "tmullaney" 
-ms.date: "06/14/2017"
-ms.author: "thmullan;rickbyh" 
-manager: "jhubbard"
-ms.topic: "article"
-ms.prod: "sql-linux"
-ms.technology: "database-engine"
+title: Encrypting Connections to SQL Server on Linux | Microsoft Docs
+description: This topic describes Encrypting Connections to SQL Server on Linux.
+author: tmullaney 
+ms.date: 06/14/2017
+ms.author: thmullan;rickbyh 
+manager: jhubbard
+ms.topic: article
+ms.prod: sql-linux
+ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords: 
   - "Linux, encrypted connections"
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
 ---
-# Encrypting Connections to SQL Server on Linux   
+# Encrypting Connections to SQL Server on Linux
+
 [!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
 
 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] on Linux can use Transport Layer Security (TLS) to encrypt data that is transmitted across a network between a client application and an instance of [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] supports the same TLS protocols on both Windows and Linux: TLS 1.2, 1.1, and 1.0. However, the steps to configure TLS are specific to the operating system on which [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] is running.  

@@ -1,7 +1,8 @@
 ---
-title: "Adaptive Query Processing | Microsoft Docs"
+title: "Adaptive query processing in Microsoft SQL | Microsoft Docs | Microsoft Docs"
+description: "Adaptive query processing features to improve query performance in SQL Server and Azure SQL Database."
 ms.custom: 
-ms.date: "06/21/2017"
+ms.date: "06/22/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,8 +16,8 @@ ms.author: "monicar"
 manager: "jhubbard"
 ---
 
-# Adaptive query processing
-SQL Server 2017 addresses optimization issues with new adaptive query processing features. This article introduces three features that you can use to improve query performance in SQL Server and Azure SQL Database:
+# Adaptive query processing for Microsoft SQL
+This article introduces these adaptive query processing features that you can use to improve query performance in SQL Server and Azure SQL Database:
 - Batch mode memory grant feedback.
 - Batch mode adaptive join.
 - Interleaved execution. 
@@ -26,8 +27,6 @@ At a general level, SQL Server executes a query as follows:
 1. The query execution process takes the plan chosen by the query optimizer and uses it for execution.
     
 Sometimes the plan chosen by the query optimizer is not optimal for a variety of reasons. For example, the estimated number of rows flowing through the query plan may be incorrect. The estimated costs help determine which plan gets selected for use in execution. If cardinality estimates are incorrect, the original plan is still used despite the poor original assumptions.
-
-
 
 ![Adaptive Query Processing Features](./media/1_AQPFeatures.png)
 

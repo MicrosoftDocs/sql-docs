@@ -72,7 +72,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|The event contents, in XML format. Is not nullable.|  
 |file_name|**nvarchar(260)**|The name of the file that contains the event. Is not nullable.|  
 |file_offset|**bigint**|The offset of the block in the file that contains the event. Is not nullable.|  
-|timestamp_utc|**datetime2**|**Applies to**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br />The date and time (UTC timezone) of the event. Is not nullable.|  
+|timestamp_utc|**datetime2**|**Applies to**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />The date and time (UTC timezone) of the event. Is not nullable.|  
 
   
 ## Remarks  

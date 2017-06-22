@@ -29,12 +29,10 @@ ms.assetid:
 Follow the steps in this article to install SQL Server Integration Services (`mssql-server-is`) on Linux. For info about the features supported in this release of Integration Services for Linux, see the [Release Notes](sql-server-linux-release-notes.md).
 
 
-Install SQL Server Integration Services for your platform:
-
-- [Ubuntu](#ubuntu)
+At this time, Integration Services on Linux is supported only on the Ubuntu platform.
 
 
-## <a name="ubuntu">Install SSIS on Ubuntu</a>
+## <a name="ubuntu"></a> Install SSIS on Ubuntu
 To install the `mssql-server-is` package on Ubuntu, follow these steps:
 
 

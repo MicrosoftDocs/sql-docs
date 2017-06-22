@@ -16,8 +16,8 @@ ms.author: "monicar"
 manager: "jhubbard"
 ---
 
-# Adaptive query processing for Microsoft SQL
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+# Adaptive query processing in Microsoft SQL
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 This article introduces these adaptive query processing features that you can use to improve query performance in SQL Server and Azure SQL Database:
 - Batch mode memory grant feedback.

@@ -1,9 +1,9 @@
 
-# [Overview of SQL Server Tools and Utilities](../tools/download-sql-server-management-studio-ssms.md)
+# [Overview of SQL Server Tools and Utilities](../tools/overview-sql-tools.md)
 
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
-# [SQL Server Data Tools (SSDT)](../ssdt/overview-sql-tools.md)
+# [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 # [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)
 # [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md)

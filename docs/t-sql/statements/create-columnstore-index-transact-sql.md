@@ -141,7 +141,7 @@ COMPRESSION_DELAY = **0** | *delay* [ Minutes ]
    The default is 0 minutes.  
    For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-DATA_COMPRESSION = **COLUMNSTORE** | COLUMNSTORE_ARCHIVE  
+DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
    Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:   
 COLUMNSTORE  
@@ -168,7 +168,7 @@ ON
   
    If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. QUOTED_IDENTIFIER is ON by default. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-CREATE [**NONCLUSTERED** ] COLUMNSTORE INDEX  
+CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
 Create an in-memory nonclustered columnstore index on a rowstore table stored as a heap or clustered index. The index can have a filtered condition and does not need to include all of the columns of the underlying table. The columnstore index requires enough space to store a copy of the data. It is updateable and will be updated as the underlying table is changed. The nonclustered columnstore index on a clustered index enables real-time analytics.  
   
 *index_name*  

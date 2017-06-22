@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in SQL Server 2017 (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/17/2017"
+ms.date: "06/22/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -48,7 +48,6 @@ manager: "jhubbard"
 - Temporal Tables Retention Policy support added,
 - New DMV SYS.DM_DB_STATS_HISTOGRAM
 - Online non-clustered columnstore index build and rebuild support added
-- Five new dynamic management views to return information about Linux process. For more information, see [Linux Process Dynamic Management Views](../../relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md).   
 - [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) is added for examining statistics.
 - The Database Tuning Advisor (DTA) released with SQL Server Management Studio version 16.4, when analyzing SQL Server 2016 and later, has additional options.    
    - Improved performance. For more information, see [Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations](../../relational-databases/performance/performance-improvements-using-dta-recommendations.md).

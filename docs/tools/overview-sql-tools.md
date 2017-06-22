@@ -22,7 +22,7 @@ manager: "craigg"
 
 - [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
-- [SQL Server Data Tools (SSDT)](../ssdt/overview-sql-tools.md)
+- [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [Command Prompt Utilities](command-prompt-utility-reference-database-engine.md)  
 
 - [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)

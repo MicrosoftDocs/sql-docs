@@ -4,6 +4,11 @@
 ## [What's new in this release?](sql-server-linux-whats-new.md) 
 # Quickstarts
 ## [Create DB - Ubuntu](quickstart-install-connect-ubuntu.md)
+# Samples
+## Unattended Install
+### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
+### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+### [Ubuntu](sample-unattended-install-ubuntu.md)
 # [Get Started](sql-server-linux-get-started-tutorial.md)
 ## [Install SQL Server](sql-server-linux-setup.md)
 ### [Install on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)

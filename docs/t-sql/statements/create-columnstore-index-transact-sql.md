@@ -34,30 +34,25 @@ author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
 ---
+
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Convert a rowstore table to a clustered columnstore index or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload or to improve data compression and query performance for data warehousing workloads.  
+Convert a rowstore table to a clustered columnstore index or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload or to improve data compression and query performance for data warehousing workloads.  
   
 > [!NOTE]  
 >  Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create the table as a clustered columnstore index.   It is no longer necessary to first create a rowstore table and then convert it to a clustered columnstore index.  
   
- Skip to examples:  
-  
+Skip to examples:  
 -   [Examples for converting a rowstore table to columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
-  
 -   [Examples for nonclustered columnstore indexes](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
- Go to scenarios:  
-  
+Go to scenarios:  
 -   [Columnstore indexes for real-time operational analytics](https://msdn.microsoft.com/library/dn817827.aspx)  
-  
 -   [Columnstore indexes for data warehousing](https://msdn.microsoft.com/library/dn913734.aspx)  
   
- Learn more:  
-  
+Learn more:  
 -   [Columnstore indexes guide](https://msdn.microsoft.com/library/gg492088.aspx)  
-  
 -   [Columnstore indexes feature summary](https://msdn.microsoft.com/library/dn934994.aspx)  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -112,173 +107,153 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 ```  
   
 ## Arguments  
- CREATE CLUSTERED COLUMNSTORE INDEX  
- Create a clustered columnstore index in which all of the data is compressed and stored by column. The index includes all of the columns in the table, and stores the entire table. If the existing table is a heap or clustered index, the table will be converted to a clustered columnstore index. If the table is already stored as a clustered columnstore index, the existing index will be dropped and rebuilt.  
+CREATE CLUSTERED COLUMNSTORE INDEX  
+Create a clustered columnstore index in which all of the data is compressed and stored by column. The index includes all of the columns in the table, and stores the entire table. If the existing table is a heap or clustered index, the table will be converted to a clustered columnstore index. If the table is already stored as a clustered columnstore index, the existing index will be dropped and rebuilt.  
   
- *index_name*  
- Specifies the name for the new index.  
+*index_name*  
+Specifies the name for the new index.  
   
- If the table already has a clustered columnstore index, you can specify the same name as the existing index, or you can use the DROP EXISTING option to specify a new name.  
+If the table already has a clustered columnstore index, you can specify the same name as the existing index, or you can use the DROP EXISTING option to specify a new name.  
   
- ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
- Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table will be converted from rowstore to a columnstore. If the table is already a columnstore, this statement will rebuild the clustered columnstore index.  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+   Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table will be converted from rowstore to a columnstore. If the table is already a columnstore, this statement will rebuild the clustered columnstore index.  
   
- WITH  
- DROP_EXISTING = [OFF] | ON  
- DROP_EXISTING = ON specifies to drop the existing clustered columnstore index, and create a new columnstore index.  
+WITH  
+DROP_EXISTING = [OFF] | ON  
+   DROP_EXISTING = ON specifies to drop the existing clustered columnstore index, and create a new columnstore index.  
+
+   The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error will occur is the specified index name already exists.  
   
- The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error will occur is the specified index name already exists.  
+MAXDOP = *max_degree_of_parallelism*  
+   Overrides the existing maximum degree of parallelism server configuration for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
- MAXDOP = *max_degree_of_parallelism*  
- Overrides the existing maximum degree of parallelism server configuration for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
+   *max_degree_of_parallelism* values can be:  
+   - 1 - Suppress parallel plan generation.  
+   - \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used will be 4 or less.  
+   - 0 (default) - Use the actual number of processors or fewer based on the current system workload.  
   
- *max_degree_of_parallelism* values can be:  
+   For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+ 
+COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+   **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+
+   For a disk-based table, *delay* specifies the minimum number of minutes a  delta rowgroup in the CLOSED state must remain in the delta rowgroup before SQL Server can compress it into the compressed rowgroup. Since disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to  delta rowgroups in the CLOSED state.  
+   The default is 0 minutes.  
+   For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
--   1 - Suppress parallel plan generation.  
+DATA_COMPRESSION = **COLUMNSTORE** | COLUMNSTORE_ARCHIVE  
+   **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
--   \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used will be 4 or less.  
+   Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:   
+COLUMNSTORE  
+   COLUMNSTORE is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
   
--   0 (default) - Use the actual number of processors or fewer based on the current system workload.  
+COLUMNSTORE_ARCHIVE  
+   COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. Use this option for situations such as archival that require a smaller storage size and can afford more time for storage and retrieval.  
   
- For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+   For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+
+ON  
+   With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index will use the settings partition or filegroup settings of the existing table.  
   
- COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
- This feature will be available after SQL Server 2016 CTP 3.3  
+   *partition_scheme_name* **(** *column_name* **)**  
+   Specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
+ 
+   *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using.  
+
+   *filegroup_name*  
+   Specifies the filegroup for storing the clustered columnstore index. If no location is specified and the table is not partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.  
+
+   **"**default**"**  
+   To create the index on the default filegoup, use "default" or [ default ].  
   
- For a disk-based table, *delay* specifies the minimum number of minutes a  delta rowgroup in the CLOSED state must remain in the delta rowgroup before SQL Server can compress it into the compressed rowgroup.    Since disk-based tables don't track insert and update times on individual rows, SQL Server applies the delay to  delta rowgroups in the CLOSED state.  
+   If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. QUOTED_IDENTIFIER is ON by default. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- The default is 0 minutes.  
+CREATE [**NONCLUSTERED** ] COLUMNSTORE INDEX  
+Create an in-memory nonclustered columnstore index on a rowstore table stored as a heap or clustered index. The index can have a filtered condition and does not need to include all of the columns of the underlying table. The columnstore index requires enough space to store a copy of the data. It is updateable and will be updated as the underlying table is changed. The nonclustered columnstore index on a clustered index enables real-time analytics.  
   
- For recommendations on when to use COMPRESSION_DELAY, see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
-  
- DATA_COMPRESSION = **COLUMNSTORE** | COLUMNSTORE_ARCHIVE  
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-  
- Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:  
-  
- COLUMNSTORE  
- COLUMNSTORE is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
-  
- COLUMNSTORE_ARCHIVE  
- COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. Use this option for situations such as archival that require a smaller storage size and can afford more time for storage and retrieval.  
-  
- For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
-  
- ON  
- With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index will use the settings partition or filegroup settings of the existing table.  
-  
- *partition_scheme_name* **(** *column_name* **)**  
- Specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
-  
- *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using.  
-  
- *filegroup_name*  
- Specifies the filegroup for storing the clustered columnstore index. If no location is specified and the table is not partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.  
-  
- **"**default**"**  
- To create the index on the default filegoup, use "default" or [ default ].  
-  
- If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. QUOTED_IDENTIFIER is ON by default. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
-  
- CREATE [**NONCLUSTERED** ] COLUMNSTORE INDEX  
- Create an in-memory nonclustered columnstore index on a rowstore table stored as a heap or clustered index. The index can have a filtered condition and does not need to include all of the columns of the underlying table. The columnstore index requires enough space to store a copy of the data. It is updateable and will be updated as the underlying table is changed. The nonclustered columnstore index on a clustered index enables real-time analytics.  
-  
- *index_name*  
- Specifies the name of the index. *index_name*  must be unique within the table, but does not have to be unique within the database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).  
+*index_name*  
+   Specifies the name of the index. *index_name*  must be unique within the table, but does not have to be unique within the database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  **(** *column*  [ **,**...*n* ] **)**  
- Specifies the columns to store. A nonclustered columnstore index is limited to 1024 columns.  
+    Specifies the columns to store. A nonclustered columnstore index is limited to 1024 columns.  
+   Each column must be of a supported data type for columnstore indexes. See [Limitations and Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) for a list of the supported data types.  
+
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+   Specifies the one-, two-, or three-part name of the table that will contain the index.  
+
+WITH
+DROP_EXISTING = [OFF] | ON  
+   DROP_EXISTING = ON The existing index is dropped and rebuilt. The index name specified must be the same as a currently existing index; however, the index definition can be modified. For example, you can specify different columns, or index options.
   
- Each column must be of a supported data type for columnstore indexes. See [Limitations and Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) for a list of the supported data types.  
+   DROP_EXISTING = OFF An error is displayed if the specified index name already exists. The index type cannot be changed by using DROP_EXISTING. In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXISTING = ON.  
+
+MAXDOP = *max_degree_of_parallelism*  
+   Overrides the [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) configuration option for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
- ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
- Specifies the one-, two-, or three-part name of the table that will contain the index.  
+   *max_degree_of_parallelism* values can be:  
+   - 1 - Suppress parallel plan generation.  
+   - \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used will be 4 or less.  
+   - 0 (default) - Use the actual number of processors or fewer based on the current system workload.  
   
- WITH
- 
- DROP_EXISTING = [OFF] | ON  
- DROP_EXISTING = ON The existing index is dropped and rebuilt. The index name specified must be the same as a currently existing index; however, the index definition can be modified. For example, you can specify different columns, or index options.
-  
- DROP_EXISTING = OFF An error is displayed if the specified index name already exists. The index type cannot be changed by using DROP_EXISTING. In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXISTING = ON.  
-  
- MAXDOP = *max_degree_of_parallelism*  
- Overrides the [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) configuration option for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
-  
- *max_degree_of_parallelism* values can be:  
-  
--   1 - Suppress parallel plan generation.  
-  
--   \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used will be 4 or less.  
-  
--   0 (default) - Use the actual number of processors or fewer based on the current system workload.  
-  
- For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+   For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
 >  Parallel index operations are not available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ONLINE = [ON | OFF]   
    **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], in nonclustered columnstore indexes only.
-ON specifies that the nonclustered columnstore index will remain online and available while the new copy of the index is being built.
+   ON specifies that the nonclustered columnstore index will remain online and available while the new copy of the index is being built.
 
-OFF specifies that the index will not be available for use while the new copy is being built. As this is a nonclustered index only, the base table will remain available, only the nonclustered columnstore index will not be used to satisfy queries until the new index is complete. 
+   OFF specifies that the index will not be available for use while the new copy is being built. As this is a nonclustered index only, the base table will remain available, only the nonclustered columnstore index will not be used to satisfy queries until the new index is complete. 
 
- COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
- This feature will be available after SQL Server 2016 CTP 3.3  
-  
- Specifies a lower bound on how long a row should stay in delta rowgroup before it is eligible for migration to compressed rowgroup.     For example, a customer can say that if a row is unchanged for  120 minutes, make it  eligible for compressing into columnar storage format.   For columnstore index on disk-based tables, we don’t track the time when a row was inserted or updated,  we use the delta rowgroup closed time as a proxy for the row instead. The default duration is 0 minutes. A row is migrated to columnar storage once 1 million rows have been accumulated in delta rowgroup and it has been marked closed.  
-  
- DATA_COMPRESSION  
- Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:  
-  
- COLUMNSTORE  
+COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
- Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
+   Specifies a lower bound on how long a row should stay in delta rowgroup before it is eligible for migration to compressed rowgroup.     For example, a customer can say that if a row is unchanged for  120 minutes, make it  eligible for compressing into columnar storage format.   For columnstore index on disk-based tables, we don’t track the time when a row was inserted or updated,  we use the delta rowgroup closed time as a proxy for the row instead. The default duration is 0 minutes. A row is migrated to columnar storage once 1 million rows have been accumulated in delta rowgroup and it has been marked closed.  
   
- COLUMNSTORE_ARCHIVE  
+DATA_COMPRESSION  
+   Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:  
+COLUMNSTORE  
+   **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+   Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
+  
+COLUMNSTORE_ARCHIVE  
    **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-
- Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.  
+   Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.  
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
- WHERE <filter_expression> [ AND <filter_expression> ]  
+WHERE <filter_expression> [ AND <filter_expression> ]  
    **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
- Called a filter predicate, this specifies which rows to include in the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates filtered statistics on the data rows in the filtered index.  
+   Called a filter predicate, this specifies which rows to include in the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates filtered statistics on the data rows in the filtered index.  
   
- The filter predicate uses simple comparison logic. Comparisons using NULL literals are not allowed with the comparison operators. Use the IS NULL and IS NOT NULL operators instead.  
+   The filter predicate uses simple comparison logic. Comparisons using NULL literals are not allowed with the comparison operators. Use the IS NULL and IS NOT NULL operators instead.  
   
- Here are some examples of filter predicates for the `Production.BillOfMaterials` table:  
+   Here are some examples of filter predicates for the `Production.BillOfMaterials` table:  
+   `WHERE StartDate > '20000101' AND EndDate <= '20000630'`    
+   `WHERE ComponentID IN (533, 324, 753)`  
+   `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+   
+   For guidance on filtered indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ON  
+   These options specify the filegroups on which the index will be created.  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+*partition_scheme_name* **(** *column_name* **)**  
+   Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. When partitioning a columnstore index, [!INCLUDE[ssDE](../../includes/ssde-md.md)] adds the partitioning column as a column of the index, if it is not already specified.  
+   If *partition_scheme_name* or *filegroup* is not specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.  
+   A columnstore index on a partitioned table must be partition aligned.  
+   For more information about partitioning indexes, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+
+*filegroup_name*  
+   Specifies a filegroup name on which to create the index. If *filegroup_name* is not specified and the table is not partitioned, the index uses the same filegroup as the underlying table. The filegroup must already exist.  
+ 
+**"**default**"**  
+Creates the specified index on the default filegroup.  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
-  
- For guidance on filtered indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
-  
- ON  
- These options specify the filegroups on which the index will be created.  
-  
- *partition_scheme_name* **(** *column_name* **)**  
- Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. When partitioning a columnstore index, [!INCLUDE[ssDE](../../includes/ssde-md.md)] adds the partitioning column as a column of the index, if it is not already specified.  
-  
- If *partition_scheme_name* or *filegroup* is not specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.  
-  
- A columnstore index on a partitioned table must be partition aligned.  
-  
- For more information about partitioning indexes, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
-  
- *filegroup_name*  
- Specifies a filegroup name on which to create the index. If *filegroup_name* is not specified and the table is not partitioned, the index uses the same filegroup as the underlying table. The filegroup must already exist.  
-  
- **"**default**"**  
- Creates the specified index on the default filegroup.  
-  
- The term default, in this context, is not a keyword. It is an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+The term default, in this context, is not a keyword. It is an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER permission on the table.  
@@ -286,17 +261,14 @@ OFF specifies that the index will not be available for use while the new copy is
 ##  <a name="GenRemarks"></a> General Remarks  
  A  columnstore index can be created on a temporary table. When the table is dropped or the session ends, the index is also dropped.  
  
- ## Filtered Indexes  
- A filtered index is an optimized nonclustered index, suited for queries that select a small percentage of rows from a table. It uses a filter predicate to index a portion of the data in the table. A well-designed filtered index can improve query performance, reduce storage costs, and reduce maintenance costs.  
+## Filtered Indexes  
+A filtered index is an optimized nonclustered index, suited for queries that select a small percentage of rows from a table. It uses a filter predicate to index a portion of the data in the table. A well-designed filtered index can improve query performance, reduce storage costs, and reduce maintenance costs.  
   
 ### Required SET Options for Filtered Indexes  
- The SET options in the Required Value column are required whenever any of the following conditions occur:  
-  
--   Create a filtered index.  
-  
--   INSERT, UPDATE, DELETE, or MERGE operation modifies the data in a filtered index.  
-  
--   The filtered index is used by the query optimizer to produce the query plan.  
+The SET options in the Required Value column are required whenever any of the following conditions occur:  
+- Create a filtered index.  
+- INSERT, UPDATE, DELETE, or MERGE operation modifies the data in a filtered index.  
+- The filtered index is used by the query optimizer to produce the query plan.  
   
     |SET options|Required value|Default server value|Default<br /><br /> OLE DB and ODBC value|Default<br /><br /> DB-Library value|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  

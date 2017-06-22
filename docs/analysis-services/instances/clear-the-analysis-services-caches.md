@@ -88,7 +88,6 @@ manager: "erikre"
     ```  
   
 ## See Also  
- [Script Administrative Tasks in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)   
  [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   

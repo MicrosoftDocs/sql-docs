@@ -213,7 +213,7 @@ From data type **int**, **smallint**, or **tinyint**:
 |**nvarchar**| E |  
 
 
-From data type **money**, **smallmoney**, **numeric**, **decimal**, **float**, or **real**
+From data type **money**, **smallmoney**, **numeric**, **decimal**, **float**, or **real**:
 |To data type|Result|  
 |------------------|------------|  
 |**char**|E|  
@@ -328,7 +328,7 @@ SELECT CAST (@x AS NVARCHAR(3));
  Upgrading the database to compatibility level 110 and higher will not change user data that has been stored to disk. You must manually correct this data as appropriate. For example, if you used SELECT INTO to create a table from a source that contained a computed column expression described above, the data (using style 0) would be stored rather than the computed column definition itself. You would need to manually update this data to match style 121.  
   
 ## <a name="BKMK_examples"></a> Examples  
-Example use the AdventureWorks database.
+Examples use the AdventureWorks database.
   
 ### A. Using both CAST and CONVERT  
  Each example retrieves the name of the product for those products that have a `3` in the first digit of their list price and converts their `ListPrice` to `int`.  
@@ -360,22 +360,22 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-BusinessEntityID	Computed
+BusinessEntityID  Computed
 ----------------  --------
-275	              313598182
-276		            283424570
-277		            212627891
-278		            145371947
-279	              231518561
-280	              135257713
-281	              245853562
-282	              173636048
-283	              131084412
-284	              82976958
-286	              78989496
-288	              101503706
-289	              205843561
-290	              195101020
+275               313598182
+276               283424570
+277               212627891
+278               145371947
+279               231518561
+280               135257713
+281               245853562
+282               173636048
+283               131084412
+284               82976958
+286               78989496
+288               101503706
+289               205843561
+290               195101020
 (14 row(s) affected)  
 ```  
 
@@ -512,7 +512,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
   
 ### H. Using CONVERT with binary and character data  
  The following examples show the results of converting binary and character data by using different styles.  
-Convert the binary value 0x4E616d65 to a character value.   
+Convert the binary value `0x4E616d65` to a character value.   
 ```  
 SELECT CONVERT(char(8), 0x4E616d65, 0) AS [Style 0, binary to character];  
 ```  

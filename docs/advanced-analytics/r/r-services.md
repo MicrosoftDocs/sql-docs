@@ -98,7 +98,7 @@ For more information, see:
 
 Many of the algorithms provided in Azure ML are now included in Microsoft Machine Learning Services, as part of the MicrosoftML package. For more information, see [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml) on MSDN.
 
-Azure Machine Learning is also a convenient platform if you want to build and train models to deploy as a Web service, and publish solutions to the [Machine Learning Marketplace](http://datamarket.azure.com/browse/data?category=machine-learning).
+Azure Machine Learning is another convenient platform for data scientist and developers who need to build, train, and deploy models using Web services. You can publish solutions to the [Machine Learning Marketplace](http://datamarket.azure.com/browse/data?category=machine-learning).
 
 ### Data Science Virtual Machines
 
@@ -111,7 +111,7 @@ The Azure Marketplace contains several virtual machines that support data scienc
 + The **R Server Only SQL Server 2016 Enterprise** virtual machine includes a standalone installer for R Server 9.0.1 that supports the new Modern Software Lifecycle licensing model.
 
 > [!TIP]
-> The new [Data Science VM for windows Server 2016](http://aka.ms/dsvm/win2016) provides GPU versions of popular deep learning frameworks such as CNTK, pre-installed, including all the GPU Nvidia drivers, CUDA Toolkit 8.0, and the NVidia cuDNN library for GPU workloads. In just minutes, you an have a complete envirnment for building deep learning models that can run on either CPU or CPU plus GPU.
+> The new [Data Science VM for Windows Server 2016](http://aka.ms/dsvm/win2016) provides GPU versions of popular deep learning frameworks such as CNTK. Tools are pre-installed, and include the GPU NVIDIA drivers, CUDA Toolkit 8.0, and the NVIDIA cuDNN library for GPU workloads. In just minutes, you can have a complete environment for building deep learning models that can run on either CPU or CPU plus GPU.
 
 ## See Also
 

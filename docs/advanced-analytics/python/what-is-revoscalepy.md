@@ -41,7 +41,7 @@ The **revoscalepy** module is available only when you install one of the followi
 
 ## Supported functions and data types
 
-This sections lists the Python data types and new Python functions supported in the **revoscalepy** module.
+This section lists the Python data types and new Python functions supported in the **revoscalepy** module.
 
 > [!IMPORTANT] 
 > This list describes functionality available in the SQL Server 2017 CTP 2.0 release. Some additional functions might be included in subsequent updates, but have not been extensively tested.
@@ -52,7 +52,7 @@ For a list of mappings between SQL and Python data types, see [Python Libraries 
 
 ### <a name="bkmk_cc"></a>Data sources and compute contexts
 
-You can work with data from an ODBC database, SQL Server, or XDF file by using the data source functions listed in the following table. After deinfing the data source, you load or transform the data by using an appropriate [ETL function](#bkmk_etl).
+You can work with data from an ODBC database, SQL Server, or XDF file by using the data source functions listed in the following table. After defining the data source, you load or transform the data by using an appropriate [ETL function](#bkmk_etl).
 
 |Function|Description|Availability|
 |----|----|----|
@@ -93,9 +93,9 @@ The following machine learning algorithms are included in SQL Server 2017 CTP 2.
 
 You can run code that includes **revoscalepy** functions either locally or in a remote compute context. You can also run Python inside SQL Server by embedding Python code in a stored procedure.
 
-When running locally, you will typically run a Python script from the command line, or from a Python development environment, and specify a SQL Server compute context using one of the **revoscalepy** fuctions. You can use the remote compute context for the entire code, or for individual functions. For example, you might want to offload model training to the server to use the latest data and avoid data movement.
+When running locally, you typically run a Python script from the command line, or from a Python development environment, and specify a SQL Server compute context using one of the **revoscalepy** functions. You can use the remote compute context for the entire code, or for individual functions. For example, you might want to offload model training to the server to use the latest data and avoid data movement.
 
-If you want to put a complete Python script inside the stored procedure, [sp_execute_external_script].(https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), we recommend that you rewrite the code as a single function that has clearly defined inputs and outputs. Inputs and outputs must be **pandas** data frames. When this is done, you can call the stored procedure from any client that supports T-SQL, easily pass SQL queries as inputs, and save the results to SQL tables. For an example, see [In-Database Python Analytics for L Developers](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+If you want to put a complete Python script inside the stored procedure, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), we recommend that you rewrite the code as a single function that has clearly defined inputs and outputs. Inputs and outputs must be **pandas** data frames. When this is done, you can call the stored procedure from any client that supports T-SQL, easily pass SQL queries as inputs, and save the results to SQL tables. For an example, see [In-Database Python Analytics for L Developers](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### Using remote compute contexts
 
@@ -111,7 +111,7 @@ If you want to put a complete Python script inside the stored procedure, [sp_exe
 
 ### Using revoscalepy with MicrosoftML
 
-The Python version of the MicrosoftMLfunctions are integrated with the compute contexts and data sources that are provided in revoscalepy. Therefore, you could use an MicrosoftML algorithm to define and train a model in Python, and use the revoscalepy functions to execute the Python code either locally or in a SQl Server compute context.
+The Python functions for MicrosoftML are integrated with the compute contexts and data sources that are provided in revoscalepy. Therefore, you could use an MicrosoftML algorithm to define and train a model in Python, and use the revoscalepy functions to execute the Python code either locally or in a SQl Server compute context.
 
 Just import the modules in your Python code, and then reference the individual functions you need.
 
@@ -125,8 +125,8 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 
 To run Python code in SQL Server, you must have installed SQL Server 2017 together with the feature **Machine Learning Services**, and enabled the Python language. Earlier versions of SQL Server do not support Python integration.
 
-> [!WARNING]
-> Open source distributions of Python do not support SQL Server compute contexts. However, you can install Microsoft Machine Learning Server to publish and consume Python applications from Windows without installing SQL Server. For more information, see [Create a Standalone R Server](../r/create-a-standalone-r-server.md)
+> [!NOTE]
+> Open source distributions of Python do not support SQL Server compute contexts. However, if you need to publish and consume Python applications from Windows, you can install Microsoft Machine Learning Server without installing SQL Server. For more information, see [Create a Standalone R Server](../r/create-a-standalone-r-server.md)
 
 ## Get more help
 
@@ -134,8 +134,8 @@ Complete documentation for these APIs will be available when the product is rele
 
 + [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler).
 + [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
-  
-You can also get help on any Python function by importing the module, and then calling `help()`. For example, running `help(revoscalepy)` from your Python IDE returns a list of all included functions with their signatures.
+
+You can get help on any Python function by importing the module, and then calling `help()`. For example, running `help(revoscalepy)` from your Python IDE returns a list of all functions in the revoscalepy module, with their signatures.
 
 If you use Python Tools for Visual Studio, you can use Intellisense to get syntax and argument help. For more information, see [Installing Python Support in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions.
 

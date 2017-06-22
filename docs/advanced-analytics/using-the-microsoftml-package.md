@@ -33,7 +33,7 @@ In SQL Server 2017 CTP 2.0, support was added for the Python language. Python fu
 
   `rxFastForest` is a logistic regression model based on the random forest method. It is similar to the `rxLogit` function in RevoScaleR, but supports L1 and L2 regularization. Supports binary classification and regression.
 
-- Logistic regression: `rxLogisticRegression` is a logistic regression model similar to the `rxLogit` function in RevoScaleR, with additional support for L1 and L2 regularization. Supports binary or multiclass classification .
+- Logistic regression: `rxLogisticRegression` is a logistic regression model similar to the `rxLogit` function in RevoScaleR, with additional support for L1 and L2 regularization. Supports binary or multiclass classification.
 
 - Neural networks: The `rxNeuralNet` function supports binary classification, multiclass classification, and regression using neural networks. Customizable and supports convoluted networks with GPU acceleration, using a single GPU.
 
@@ -43,7 +43,7 @@ In SQL Server 2017 CTP 2.0, support was added for the Python language. Python fu
 
 MicrosoftML includes numerous specialized functions that are useful for transforming data and extracting features.
 
-- Text processing capabilities include the `featurizeText` and `getSentiment` functions. You can count ngrams, detect the language used, or perform text normalization. You can also perform common text cleaning operations such as stopword removal, or generate hashed or count-based features from text.
+- Text processing capabilities include the `featurizeText` and `getSentiment` functions. You can count n-grams, detect the language used, or perform text normalization. You can also perform common text cleaning operations such as stopword removal, or generate hashed or count-based features from text.
 
 - Feature selection and feature transformation functions, such as  `selectFeatures` or `getSentiment`, analyze data and create features that are most useful for modeling.
 
@@ -57,7 +57,7 @@ For more information, see [MicrosoftML functions](https://msdn.microsoft.com/mic
 
 The MicrosoftML package is fully integrated with the data processing pipeline used by the RevoScaleR package. Currently, you can use the MicrosoftML package in any Windows-based compute context, including SQL Server R Services.
 
-In your R code, load the MicrosoftML package and call its functions, like you would with any other package.
+In your R code, load the MicrosoftML package and call its functions, as with any other package.
 
 ```R
 library(microsoftml);
@@ -67,7 +67,7 @@ logisticRegression(args);
 
 ## How to use MicrosoftML in Python Services
 
-In SQL Server 2017 CTP 2.0, most MicrosoftML functions have been ported to Python and are available as Python35-compatible modules. The functions are integrated with the compute contexts and data sources that are supported by **revoscalepy**. What this means is that you can define and train a MicrosoftML model in Python and use it for prediction, running either locally, or in any Windows-based compute context (including SQL Server).
+In SQL Server 2017 CTP 2.0, the MicrosoftML package has been ported to Python as a Python35-compatible module. The MicrosoftML functions are integrated with the compute contexts and data sources that are supported by **revoscalepy**. What this means is that you can define and train a MicrosoftML model in Python and use it for prediction, running either locally, or in any Windows-based compute context (including SQL Server).
 
 In your Python code, import the MicrosoftML module, as well as the revoscalepy module, and then reference the individual functions you need.
 

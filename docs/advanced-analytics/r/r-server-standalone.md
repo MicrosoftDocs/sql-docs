@@ -2,7 +2,7 @@
 title: "R Server (Standalone) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/14/2017"
+ms.date: "06/22/2017"
 ms.prod: "r-server"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ ms.topic: "article"
 dev_langs: 
   - "R"
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: 21
+caps.latest.revision: 22
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
@@ -74,7 +74,10 @@ Enterprise users of SQL Server Machine Learning can use the downloadable install
 
   [Using SqlBindR to Upgrade an Instance of R Services](./use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
   
-  You can use the standalone installer to upgrade an instance of SQL Server 2016 R Services to use the latest version of R. When you run the installer, the instance you specify will use the Modern Lifecycle support policy instead, and thus get more frequent updates. This update can only be performed on an existing installation of SQL Server 2016.
+  You can use the standalone installer to upgrade an instance of SQL Server 2016 R Services to use the latest version of R. When you run the installer, the Modern Lifecycle support policy will be applied to the server, and the R components will get more frequent updates.
+  
+  > [!NOTE}
+  > Currently this update method is available only for existing installations of SQL Server 2016. However, upgrades will be supported for SQL Server 2017 in future.
 
 ## Related machine learning products
 
@@ -82,13 +85,13 @@ Enterprise users of SQL Server Machine Learning can use the downloadable install
 
   [Provision an R Server Virtual Machine](../../advanced-analytics/r-services/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
   
-  The Azure marketplace includes multiple virtual machine images that include R Server. Creating a new Azure virtual machine is the fastest way to set up a server for operationalizing predictive models. Some images come with scaling and sharing features (formerly known as DeployR) already configured, which makes it easier to embed R analytics inside applications and integrate R with backend systems.
+  The Azure marketplace includes multiple virtual machine images that include R Server. Creating a new R Server virtual machine in Microsoft Azure is the fastest way to set up a server to use in developing and deploying predictive models. Images come with features for scaling and sharing already configured, which makes it easier to embed R analytics inside applications and to integrate R with backend systems.
 
 + Data Science Virtual Machine
 
   [Data Science Virtual Machine - Windows 2016 Preview](http://aka.ms/dsvm/win2016)
 
-  The latest version of the Data Science Virtual machine includes R Server, SQL Server, plus an array of the most popular tools for machine learning, all preinstalled and tested. Create Jupyter notebooks, develop solutions in Julia, and use GPU-enabled deep learning libraries like mxNet, CNTK, and TensorFlow.
+  The latest version of the Data Science Virtual machine includes R Server, SQL Server, plus an array of the most popular tools for machine learning, all preinstalled and tested. Create Jupyter notebooks, develop solutions in Julia, and use GPU-enabled deep learning libraries like MXNet, CNTK, and TensorFlow.
 
 ## Resources
 

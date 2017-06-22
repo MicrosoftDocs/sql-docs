@@ -43,19 +43,22 @@ By executing a trusted scripting language within a secure framework managed by S
 
 ## Architecture core concepts
 
-To meet these goals, the architecture of SQL Server 2016 R Services and SQL Server 2017 Machine Machine Learning Services for R and Python is based on these core concepts:
+To meet these goals, the architecture of SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services for R and Python is based on these core concepts:
 
 + **Multi-process architecture**
- Both R and Python are open-source languages with rich and enthusiastic community support. Therefore, it is important to maintain full interoperability with open source R and Python.
+
+  Both R and Python are open-source languages with rich and enthusiastic community support. Therefore, it is important to maintain full interoperability with open source R and Python.
 
   Open source distributions of R and Python are installed with SQL Server under license, and can function independently from SQL Server if needed.
 
-   In addition, Microsoft provides a set of proprietary libraries that provide integration with SQL Server, including data translation, compression and optimization targeted at each supported language.
+   In addition, Microsoft provides a set of proprietary libraries that provide integration with SQL Server, including data translation, compression, and optimization targeted at each supported language.
 
 + **Security**
+
    Better security means support for both integrated Windows authentication and password-based SQL logins, as well as secure handling of credentials, reliance on SQL Server for data protection, and use of the SQL Server Trusted Launchpad to manage external script execution and secure data used in scripts.
 
 + **Scalability and performance**
+
   Integration with SQL Server is key to improving the usefulness of R and Python in the enterprise. Any R or Python script can be run by calling a stored procedure, and the results are returned as tabular results directly to SQL Server, making it easy to generate or consume machine learning from any application that can send a SQL query and handle the results.
 
   Performance optimization relies on two equally powerful aspects of the platform: resource governance and parallel processing using SQL Server, and distributed computing provided by the algorithms in **RevoScaleR** and **revoscalepy**.

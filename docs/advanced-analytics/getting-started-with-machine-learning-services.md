@@ -67,7 +67,7 @@ You can also install R Server through platform-specific installers available fro
 
   Jump-start your entry into machine learning by getting this complete machine learning solution from the Azure eMarketplace. which includes the server and all development tools, a Python Anaconda distribution, Jupyter notebooks, and the latest version of Microsoft R.
   
-  The latest version of the Data Science Virtual Machine (DSVM) runs on Windows 2016 Preview Edition, to provide the clean customizable look of Windows 10. It comes pre-configured with Nvidia drivers, CUDA Toolkit 8.0, and the NVIDIA cuDNN library for GPU workloads.
+  The latest version of the Data Science Virtual Machine (DSVM) runs on Windows 2016 Preview Edition, to provide the clean customizable look of Windows 10. It comes pre-configured with NVIDIA drivers, CUDA Toolkit 8.0, and the NVIDIA cuDNN library for GPU workloads.
 
 ## Resources for learning
 

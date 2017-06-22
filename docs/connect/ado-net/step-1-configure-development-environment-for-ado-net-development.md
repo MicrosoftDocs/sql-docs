@@ -30,10 +30,8 @@ manager: "jhubbard"
   
 ## Ubuntu Linux  
   
-Download .NET Framework from the [Mono Project][linkid-mono-project]
+Download [.NET Core](https://www.microsoft.com/net/core#linuxubuntu), a cross-platform & open source version of .NET. 
   
 ## Mac  
   
-Download .NET Framework from the [Mono Project][linkid-mono-project]
-
-[linkid-mono-project]: http://www.mono-project.com/
+Download [.NET Core](https://www.microsoft.com/net/core#macos), a cross-platform & open source version of .NET. 

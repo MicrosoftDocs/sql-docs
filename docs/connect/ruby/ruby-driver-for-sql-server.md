@@ -29,6 +29,9 @@ You can  connect to a SQL Database using Ruby on Windows, Linux, or Mac.
 [Documentation at ruby-lang.org](https://www.ruby-lang.org/en/documentation/)  
   
 ## Community  
-[Azure Ruby Developer Center](https://azure.microsoft.com/en-us/develop/ruby/)  
+[Azure Ruby Developer Center](https://azure.microsoft.com/develop/ruby/)  
   
-    
+## Samples
+* [Getting Started with Ruby on macOS](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/mac/)
+* [Getting Started with Ruby on Ubuntu](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/ubuntu/)
+* [Getting Started with Ruby on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/en-us/sql-server/developer-get-started/ruby/rhel/)

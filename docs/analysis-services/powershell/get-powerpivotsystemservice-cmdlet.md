@@ -19,7 +19,10 @@ manager: "erikre"
 
 [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
-  Returns the global properties of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service object in a farm.  
+  Returns the global properties of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service object in a farm. 
+
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

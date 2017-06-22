@@ -20,6 +20,9 @@ manager: "erikre"
 [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Returns one or more [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service applications.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

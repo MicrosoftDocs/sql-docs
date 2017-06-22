@@ -32,7 +32,7 @@ manager: "jhubbard"
   Reads files that are created by the Extended Events asynchronous file target. One event, in XML format, is returned per row.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accepts trace results generated in XEL and XEM format. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Extended Events only supports trace results in XEL format. We recommend that you use SQL Server Management Studio to read trace results in XEL format.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accept trace results generated in XEL and XEM format. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Extended Events only support trace results in XEL format. We recommend that you use SQL Server Management Studio to read trace results in XEL format.    
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

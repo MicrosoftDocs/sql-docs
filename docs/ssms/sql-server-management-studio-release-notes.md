@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio -  Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "06/22/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,6 +51,9 @@ The following are issues and limitations with this release of SQL Server Managem
     
 5. **Non-English SSMS installations may require the installation of an additional security package.**  
 Non-English localized releases of SSMS [require the KB 2862966 security update package](https://support.microsoft.com/en-us/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
+
+5. **Clicking Help or pressing F1 does not open help**  
+Some environments display the following when clicking help or pressing F1: **You'll need a new app to open ms-xhelp**. This error is a known issue and will be fixed in an upcoming release.
   
 ## Feedback  
   

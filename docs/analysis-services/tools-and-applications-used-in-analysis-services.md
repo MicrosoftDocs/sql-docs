@@ -44,7 +44,7 @@ manager: "erikre"
  Although it's officially deprecated in favor of xEvents, SQL Server Profiler provides a familiar approach for monitoring connections, MDX query execution, and other server operations. SQL Server Profiler is installed by default. You can find it with SQL Server applications on Apps in Windows.  
   
 ### PowerShell  
- You can use PowerShell commands to perform many administrative tasks. See [PowerShell scripting in Analysis Services](../analysis-services/instances/powershell-scripting-in-analysis-services.md) for more information.  
+ You can use PowerShell commands to perform many administrative tasks. See [PowerShell reference](../analysis-services/powershell/analysis-services-powershell-reference.md) for more information.  
   
 ### Community and Third-party tools  
  Check the [Analysis Services codeplex page](http://sqlsrvanalysissrvcs.codeplex.com/) for community code samples. [Forums](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) can be helpful when seeking recommendations for third-party tools that support Analysis Services.  

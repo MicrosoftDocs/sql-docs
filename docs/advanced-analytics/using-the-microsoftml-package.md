@@ -1,7 +1,7 @@
 ---
-title: "Using the MicrosoftML Package with SQL Server R Services | Microsoft Docs"
+title: "Using the MicrosoftML Package with SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/27/2017"
+ms.date: "06/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,63 +12,67 @@ ms.topic: "article"
 dev_langs: 
   - "R"
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 12
+caps.latest.revision: 132
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Using the MicrosoftML Package with SQL Server R Services
-The [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package that is provided with Microsoft R Server and SQL Server 2017 CTP 1.0 includes multiple machine learning algorithms developed by Microsoft that support multicore processing and fast data streaming. The package also includes transformations for text processing and featurization.
+# Using the MicrosoftML Package with SQL Server
 
-### New machine learning algorithms
+The [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package that is provided with Microsoft R Server and SQL Server 2017 includes multiple machine learning algorithms. These APIs were developed by Microsoft for internal machine learning applications, and have been refined over the years to support big data and high performance, with multicore processing and fast data streaming. MicrosoftML also includes numerous transformations for text processing and featurization.
 
+In SQL Server 2017 CTP 2.0, support was added for the Python language. Python functions equivalent to those in the MicrosoftML package for R have been included in this release.
 
--  **Fast Linear.** A linear learner based on stochastic dual coordinate ascent that can be used for binary classification or regression. The model supports L1 and L2 regularization.
+## What's in MicrosoftML
 
-- **Fast Tree.** A boosted decision tree algorithm originally known as FastRank, which was developed for use in Bing. It is one of the fastest and most popular learners. Supports binary classification and regression.
+**Machine learning algorithms**
 
-- **Fast Forest.** A logistic regression model based on the random forest method. It is similar to the `rxLogit` function in RevoScaleR, but supports L1 and L2 regularization. Supports binary classification and regression.
+-  Linear models: `rxFastLinear` is a linear learner based on stochastic dual coordinate ascent that can be used for binary classification or regression. The model supports L1 and L2 regularization.
 
-- **Logistic Regression.** A logistic regression model similar to the `rxLogit` function in RevoScaleR, with additional support for L1 and L2 regularization. Supports binary or multiclass classification .
+- Decision tree and decision forest models: `rxFastTree` is a boosted decision tree algorithm originally known as FastRank, which was developed for use in Bing. It is one of the fastest and most popular learners. Supports binary classification and regression.
 
-- **Neural Net.** A neural network model for binary classification, multiclass classification, and regression. Supports customizable convoluted networks and GPU acceleration using a single GPU.
+  `rxFastForest` is a logistic regression model based on the random forest method. It is similar to the `rxLogit` function in RevoScaleR, but supports L1 and L2 regularization. Supports binary classification and regression.
 
-- **One-Class SVM.** An anomaly detection model based on the SVM method that can be used for binary classification in unbalanced data sets.
+- Logistic regression: `rxLogisticRegression` is a logistic regression model similar to the `rxLogit` function in RevoScaleR, with additional support for L1 and L2 regularization. Supports binary or multiclass classification.
 
-## Transformation functions
+- Neural networks: The `rxNeuralNet` function supports binary classification, multiclass classification, and regression using neural networks. Customizable and supports convoluted networks with GPU acceleration, using a single GPU.
 
-The **MicrosoftML** package also includes the following functions that can be used for transforming data and extracting features.
+- Anomaly detection.  The `rxOneClassSvm` function is based on the SVM method but is optimized for binary classification in unbalanced data sets.
 
-- `featurizeText()`
- 
-  Generates counts of ngrams in a given text string. 
+**Transformation functions**
 
-  The function includes the options to detect the language used, perform text tokenization and normalization, remove stopwords, and generate features from text. 
+MicrosoftML includes numerous specialized functions that are useful for transforming data and extracting features.
 
-- `categorical()`
+- Text processing capabilities include the `featurizeText` and `getSentiment` functions. You can count n-grams, detect the language used, or perform text normalization. You can also perform common text cleaning operations such as stopword removal, or generate hashed or count-based features from text.
 
-  Builds a dictionary of categories and transforms each category into an indicator vector. 
- 
-- `categoricalHash()`
+- Feature selection and feature transformation functions, such as  `selectFeatures` or `getSentiment`, analyze data and create features that are most useful for modeling.
 
-  Converts categorical values into an indicator array by hashing the value and using the hash as an index in the bag.  
+- Work with categorical variables by using such as `categorical` or `categoricalHash`, which convert categorical values into indexed arrays for better performance.
 ​
-- `selectFeatures()` 
+- Functions specific to image processing and analytics, such as `extractPixels` or `featurizeImage`, let you get the most information about of images and process images faster.
 
-  Selects a subset of features from the given variable, either by counting non-default values, or by computing a mutual-information score with respect to the label​. 
+For more information, see [MicrosoftML functions](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml).
 
-For detailed information about these new features, see [MicrosoftML functions](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml).
+## How to use MicrosoftML in R Services
 
-## Support for MicrosoftML in R Services
+The MicrosoftML package is fully integrated with the data processing pipeline used by the RevoScaleR package. Currently, you can use the MicrosoftML package in any Windows-based compute context, including SQL Server R Services.
 
-The **MicrosoftML** package is fully integrated with the data processing pipeline used by the **RevoScaleR** package. Currently, you can use the **MicrosoftML** package in any Windows-based compute context, including SQL Server R Services.
+In your R code, load the MicrosoftML package and call its functions, as with any other package.
 
+```R
+library(microsoftml);
+library(RevoScaleR);
+logisticRegression(args);
+```
 
+## How to use MicrosoftML in Python Services
 
-## See Also
+In SQL Server 2017 CTP 2.0, the MicrosoftML package has been ported to Python as a Python35-compatible module. The MicrosoftML functions are integrated with the compute contexts and data sources that are supported by **revoscalepy**. What this means is that you can define and train a MicrosoftML model in Python and use it for prediction, running either locally, or in any Windows-based compute context (including SQL Server).
 
-[Introduction to MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction)
+In your Python code, import the MicrosoftML module, as well as the revoscalepy module, and then reference the individual functions you need.
 
-[RevoScaleR Function Reference](https://msdn.microsoft.com/microsoft-r/scaler/scaler)
-
-
+```Python
+from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
+from revoscalepy.functions.RxSummary import rx_summary
+from revoscalepy.etl.RxImport import rx_import_datasource
+```

@@ -217,6 +217,7 @@ We also recommend that you check out some of these additional samples and resour
 + [In-database advanced analytics](../../advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md)
 + [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 + [Additional Resources](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)
+
 ## Previous Lesson  
 [Lesson 4: Build and Save the Model &#40;Data Science End-to-End Walkthrough&#41;](../../advanced-analytics/r-services/lesson-4-build-and-save-the-model-data-science-end-to-end-walkthrough.md)  
   

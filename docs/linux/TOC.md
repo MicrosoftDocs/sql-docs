@@ -3,17 +3,16 @@
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md) 
 # Quickstarts
+## Create DB - Red Hat
+## Create DB - SUSE
 ## [Create DB - Ubuntu](quickstart-install-connect-ubuntu.md)
-## Create DB - Red Hat Enterprise Linux
-## Create DB - SUSE Linux Enterprise Server
 ## Create DB - Docker
 # Tutorials
-## Migrate
-### [Migrate from Windows](sql-server-linux-migrate-restore-database.md)
-### Migrate from other data sources
-## [Secure the database](sql-server-linux-security-get-started.md)
-## [Optimize Performance](sql-server-linux-performance-get-started.md)
-## [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+## [1 - Migrate from Windows](sql-server-linux-migrate-restore-database.md)
+## 1 - Migrate other data sources
+## [2 - Secure the database](sql-server-linux-security-get-started.md)
+## [3 - Optimize Performance](sql-server-linux-performance-get-started.md)
+## [4 - Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 # Samples
 ## Unattended Install
 ### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)

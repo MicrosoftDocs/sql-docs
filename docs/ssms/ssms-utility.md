@@ -19,7 +19,7 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 caps.latest.revision: 50
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Ssms Utility
   The **Ssms**utility opens [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. If specified, **Ssms** also establishes a connection to a server, and opens queries, scripts, files, projects, and solutions.  

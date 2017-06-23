@@ -43,7 +43,7 @@ manager: "jhubbard"
 |role|**tinyint**|Geo-replication role, one of:<br /><br /> 0 = Primary. The database_id  refers to the primary database in the geo-replication partnership.<br /><br /> 1 = Secondary.  The database_id  refers to the primary database in the geo-replication partnership.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|The secondary type, one of:<br /><br /> 0 = No direct connections are allowed to the secondary database and the database is not available for read access.<br /><br /> 2 = All connections are allowed to the database in the secondary repl;ication for read-only access.|  
-|secondary_type _desc|**nvarchar(256)**|No<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
   
 > [!NOTE]  
 >  If the replication relationship is terminated by removing the secondary database (section 4.2), the row for that database in the **sys.dm_geo_replication_link_status** view disappears.  

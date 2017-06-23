@@ -62,8 +62,7 @@ All the code that you will has been provided in a GitHub repository. You can use
   
     ![After completion of PowerShell script](media/rsql-e2e-psscriptresults.PNG "After completion of PowerShell script")  
   
-5.  In the PowerShell console, you can run the command `ls` to view a list of the files that were downloaded to *DestDir*.  For a description of the filesls
-, see [What's Included](#What-the-Download-Includes).
+5.  In the PowerShell console, you can run the command `ls` to view a list of the files that were downloaded to *DestDir*.  For a description of the files, see [What's Included](#What-the-Download-Includes).
   
 ## 2. Install Required Packages  
 This walkthrough requires some R libraries that are not installed by default as part of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. You must install the packages both on the client where you will be developing the solution, and on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer where you will deploy the solution.  

@@ -4,28 +4,25 @@
 ## [What's new in this release?](sql-server-linux-whats-new.md) 
 # Quickstarts
 ## [Create DB - Ubuntu](quickstart-install-connect-ubuntu.md)
+## Create DB - Red Hat Enterprise Linux
+## Create DB - SUSE Linux Enterprise Server
+## Create DB - Docker
 # Tutorials
+## Migrate
+### [Migrate from Windows](sql-server-linux-migrate-restore-database.md)
+### Migrate from other data sources
+## [Secure the database](sql-server-linux-security-get-started.md)
+## [Optimize Performance](sql-server-linux-performance-get-started.md)
+## [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 # Samples
 ## Unattended Install
 ### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
 ### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 # Concepts
-## [Get Started](sql-server-linux-get-started-tutorial.md)
-### [Install SQL Server](sql-server-linux-setup.md)
-#### [Install on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
-#### [Install on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
-#### [Install on Ubuntu](sql-server-linux-setup-ubuntu.md)
-#### [Run the Docker image](sql-server-linux-setup-docker.md)
-#### [Provision a SQL Server VM in Azure](sql-server-linux-azure-virtual-machine.md)
-### [Install Optional Packages]()
-#### [Install SQL Server tools](sql-server-linux-setup-tools.md)
-#### [Install SQL Server Agent](sql-server-linux-setup-sql-agent.md)
-#### [Install SQL Server Full-Text Search](sql-server-linux-setup-full-text-search.md)
-### [Connect and query](sql-server-linux-connect-and-query-sqlcmd.md)
 ## [Develop](sql-server-linux-develop-overview.md)
 ### [Connectivity libraries](sql-server-linux-develop-connectivity-libraries.md)
-### [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+### [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 ### [Use SSMS](sql-server-linux-develop-use-ssms.md)
 ### [Use SSDT](sql-server-linux-develop-use-ssdt.md)
 ## [Manage](sql-server-linux-management-overview.md)
@@ -42,6 +39,18 @@
 ### [Migrate with SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
 ### [Bulk copy with bcp](sql-server-linux-migrate-bcp.md)
 ### [Load data with (SSIS)](sql-server-linux-migrate-ssis.md)
+## [Security](sql-server-linux-security-overview.md)
+### [Get started with security features](sql-server-linux-security-get-started.md)
+# How-to Guides
+## [Installation](sql-server-linux-setup.md)
+### [Install on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
+### [Install on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
+### [Install on Ubuntu](sql-server-linux-setup-ubuntu.md)
+### [Run the Docker image](sql-server-linux-setup-docker.md)
+### Install Optional Packages
+#### [Install SQL Server tools](sql-server-linux-setup-tools.md)
+#### [Install SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+#### [Install SQL Server Full-Text Search](sql-server-linux-setup-full-text-search.md)
 ## [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ### [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)
@@ -60,9 +69,5 @@
 ##### [Operate](sql-server-linux-availability-group-failover-ha.md)
 #### [Create for read-scale only]()
 ##### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
-## [Security](sql-server-linux-security-overview.md)
-### [Get started with security features](sql-server-linux-security-get-started.md)
-## [Optimize Performance](sql-server-linux-performance-get-started.md)
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
-# How-to Guides
 # Resources

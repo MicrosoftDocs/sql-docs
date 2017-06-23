@@ -17,7 +17,7 @@
 ## [Failover clustering and availability groups](failover-clustering-and-always-on-availability-groups-sql-server.md)  
 ## [Client connectivity](always-on-client-connectivity-sql-server.md)  
 ## [Basic availability groups](basic-availability-groups-always-on-availability-groups.md)  
-## [Distributed availability groups](distributed-availability-groups-always-on-availability-groups.md)  
+## [Distributed availability groups](distributed-availability-groups.md)  
 ## [Domain independent availability groups](domain-independent-availability-groups.md)  
 ## [Availability modes](availability-modes-always-on-availability-groups.md)  
 ## [Failover and failover modes](failover-and-failover-modes-always-on-availability-groups.md)  

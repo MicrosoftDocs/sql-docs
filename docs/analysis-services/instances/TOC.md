@@ -30,7 +30,6 @@
 ### [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md)  
 ### [Use the Analysis Services Scripts Project in Management Studio](analysis-services-scripts-project-in-sql-server-management-studio.md)  
 ## [Schedule Administrative Tasks with SQL Server Agent](schedule-ssas-administrative-tasks-with-sql-server-agent.md)  
-## [PowerShell Scripting in Analysis Services](powershell-scripting-in-analysis-services.md)  
 ## [Automate Administrative Tasks with SSIS](automate-analysis-services-administrative-tasks-with-ssis.md)  
 # [High Availability and Scalability](high-availability-and-scalability-in-analysis-services.md)  
 # [Logging in Analysis Services](log-operations-in-analysis-services.md)  

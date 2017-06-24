@@ -41,9 +41,11 @@ To install the **mssql-server** package on SLES, follow these steps:
    sudo zypper --gpg-auto-import-keys refresh
    ```
 2. Run the following command to add the SLES v12 SP2 SDK repository, in order to obtain libsss_nss_idmap0.
+   
    ```bash
    sudo SUSEConnect -p sle-sdk/12.2/x86_64
    ```
+   
 3. Run the following commands to install SQL Server:
 
    ```bash
@@ -83,7 +85,7 @@ To remove the **mssql-server** package on SLES, follow these steps:
    sudo zypper remove mssql-server
    ```
 
-2. Removing the package will not delete the generated database files. If you want to delete the database files use the following command:
+2. Removing the package will not delete the generated database files. If you want to delete the database files, use the following command:
    ```bash
    sudo rm -rf /var/opt/mssql/
    ```

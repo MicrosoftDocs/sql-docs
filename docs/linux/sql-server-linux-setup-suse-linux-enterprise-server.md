@@ -1,7 +1,7 @@
 ---
 # required metadata
 title: Install SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
-description: Describes how to install SQL Server 2017 RC0 on SUSE Linux Enterprise Server.
+description: Describes how to install SQL Server 2017 RC1 on SUSE Linux Enterprise Server.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -25,7 +25,7 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ---
 # Install SQL Server on SUSE Linux Enterprise Server
 
-This topic provides a walkthrough of how to install SQL Server 2017 RC0 on SUSE Linux Enterprise Server (SLES) v12 SP2.
+This topic provides a walkthrough of how to install SQL Server 2017 RC1 on SUSE Linux Enterprise Server (SLES) v12 SP2.
 
 > [!NOTE]
 > You need at least 3.25GB of memory to run SQL Server on Linux. Also, the file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported. For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).

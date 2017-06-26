@@ -26,7 +26,7 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
 # Install SQL Server on Ubuntu
 
-This topic provides a walkthrough of how to install SQL Server 2017 RC0 on Ubuntu 16.04.
+This topic provides a walkthrough of how to install SQL Server 2017 RC1 on Ubuntu 16.04.
 
 > [!NOTE]
 > You need at least 3.25GB of memory to run SQL Server on Linux. For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).

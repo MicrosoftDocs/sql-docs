@@ -2,7 +2,7 @@
 # required metadata
 
 title: Migrate a SQL Server database from Windows to Linux | Microsoft Docs
-description: This topic shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server 2017 RC0.
+description: This topic shows how to take a SQL Server database backup on Windows and restore it to a Linux machine running SQL Server 2017 RC1.
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
@@ -26,14 +26,14 @@ ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ---
 # Migrate a SQL Server database from Windows to Linux using backup and restore
 
-SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server 2017 RC0 on Linux. This topic provides step-by-step instructions for this technique. In this tutorial, you will:
+SQL Server's backup and restore feature is the recommended way to migrate a database from SQL Server on Windows to SQL Server 2017 RC1 on Linux. This topic provides step-by-step instructions for this technique. In this tutorial, you will:
 
 - Download the AdventureWorks backup file on a Windows machine
 - Transfer the backup to your Linux machine
 - Restore the database using Transact-SQL commands
 
 > [!NOTE] 
-> This tutorial assumes that you have installed [SQL Server 2017 RC0](sql-server-linux-setup.md) and the [SQL Server Tools](sql-server-linux-setup-tools.md) on your target Linux server.
+> This tutorial assumes that you have installed [SQL Server 2017 RC1](sql-server-linux-setup.md) and the [SQL Server Tools](sql-server-linux-setup-tools.md) on your target Linux server.
 
 ## Download the AdventureWorks database backup
 

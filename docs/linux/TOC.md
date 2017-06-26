@@ -40,15 +40,15 @@
 ### [Get started with security features](sql-server-linux-security-get-started.md)
 # How-to Guides
 ## Install and configure
-### [Install](sql-server-linux-setup.md)
+### [Install]
 #### [Install SQL Server](sql-server-linux-setup.md)
 #### [Install SQL Server tools](sql-server-linux-setup-tools.md)
 #### [Install SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 #### [Install SQL Server Full-Text Search](sql-server-linux-setup-full-text-search.md)
-#### [Docker configuration](sql-server-linux-setup-docker.md)
-### [Configure](sql-server-linux-configure-mssql-conf.md)
+### [Configure]
 #### [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
 #### [Configure with environment variables](sql-server-linux-configure-environment-variables.md)
+#### [Configure Docker](sql-server-linux-setup-docker.md)
 ## [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ### [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)

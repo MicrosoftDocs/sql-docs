@@ -1,5 +1,5 @@
-# Overview
 ## [About SQL Server on Linux](sql-server-linux-overview.md)
+# Overview
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md) 
 # Quickstarts
@@ -70,3 +70,8 @@
 ##### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
 # Resources
+## [SQL Server Documentation](../sql-server/sql-server-technical-documentation.md)
+## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
+## [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+## [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+## [Reddit](https://connect.microsoft.com/SQLServer/Feedback)

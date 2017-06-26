@@ -1,4 +1,4 @@
-## [About SQL Server on Linux](sql-server-linux-overview.md)
+# [About SQL Server on Linux](sql-server-linux-overview.md)
 # Overview
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md) 

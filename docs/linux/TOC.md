@@ -3,10 +3,10 @@
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md) 
 # Quickstarts
-## Create DB - Red Hat
-## Create DB - SUSE
-## [Create DB - Ubuntu](quickstart-install-connect-ubuntu.md)
-## Create DB - Docker
+## Install - Red Hat
+## Install - SUSE
+## [Install - Ubuntu](quickstart-install-connect-ubuntu.md)
+## Install - Docker
 # Tutorials
 ## [1 - Migrate from Windows](sql-server-linux-migrate-restore-database.md)
 ## 1 - Migrate other data sources
@@ -25,8 +25,6 @@
 ### [Use SSMS](sql-server-linux-develop-use-ssms.md)
 ### [Use SSDT](sql-server-linux-develop-use-ssdt.md)
 ## [Manage](sql-server-linux-management-overview.md)
-### [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
-### [Configure with environment variables](sql-server-linux-configure-environment-variables.md)
 ### [Use SSMS to manage](sql-server-linux-manage-ssms.md)
 ### [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
 ### [Create and run jobs](sql-server-linux-run-sql-server-agent-job.md)
@@ -41,15 +39,16 @@
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)
 # How-to Guides
-## [Installation](sql-server-linux-setup.md)
-### [Install on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
-### [Install on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
-### [Install on Ubuntu](sql-server-linux-setup-ubuntu.md)
-### [Run the Docker image](sql-server-linux-setup-docker.md)
-### Install Optional Packages
+## Install and configure
+### Install
+#### [Install SQL Server](sql-server-linux-setup.md)
 #### [Install SQL Server tools](sql-server-linux-setup-tools.md)
 #### [Install SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 #### [Install SQL Server Full-Text Search](sql-server-linux-setup-full-text-search.md)
+### Configure
+#### [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
+#### [Configure with environment variables](sql-server-linux-configure-environment-variables.md)
+#### [Configure Docker](sql-server-linux-setup-docker.md)
 ## [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ### [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)

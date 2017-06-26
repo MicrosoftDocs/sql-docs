@@ -40,13 +40,14 @@ To install the **mssql-server** package on SLES, follow these steps:
 
    sudo zypper --gpg-auto-import-keys refresh
    ```
-2. Run the following command to add the SLES v12 SP2 SDK repository, in order to obtain libsss_nss_idmap0.
+
+2. Run the following command to add the SLES v12 SP2 SDK repository to obtain the libsss_nss_idmap0 dependency.
    
    ```bash
    sudo SUSEConnect -p sle-sdk/12.2/x86_64
    ```
    
-3. Run the following commands to install SQL Server:
+3. Run the following command to install SQL Server:
 
    ```bash
    sudo zypper install mssql-server

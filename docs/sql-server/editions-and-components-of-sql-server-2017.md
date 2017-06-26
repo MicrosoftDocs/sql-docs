@@ -1,9 +1,10 @@
 ---
-title: "Editions and supported features of SQL Server 2016 | Microsoft Docs"
+title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/24/2017"
-ms.prod: "sql-server-2016"
+  - "SQL2017_New_Updated"
+ms.date: "06/26/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,7 +34,7 @@ helpviewer_keywords:
   - "installing SQL Server, editions"
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
-ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
+ms.assetid: 
 caps.latest.revision: 121
 author: "MikeRayMSFT"
 ms.author: "mikeray"
@@ -41,9 +42,14 @@ manager: "jhubbard"
 ---
 # Editions and supported features of SQL Server
 
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+<!---[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]--->
 
-This topic provides details of features supported by the SQL Server editions.  At this time there are no changes to features supported by editions for SQL Server 2017.  
+This topic provides details of features supported by the various editions of SQL Server 2017.  
+
+For information about older versions, see:
+
+* [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
+* [SQL Server 2014](http://msdn.microsoft.com/en-us/library/cc645993(v=sql.120).aspx).
   
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -51,16 +57,16 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
   
 For the latest release notes and what's new information, see the following:
 - [SQL Server 2017 release notes](../sql-server/sql-server-2017-release-notes.md)
-- [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
 - [What's new in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-- [What's new in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
 
 ### Try SQL Server!    
     
-> [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
-    
+> [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 CTP from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
+
+<!---    
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
-  
+--->
+
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Editions  
  The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
@@ -112,7 +118,6 @@ For the latest release notes and what's new information, see the following:
 
 **Developer and Evaluation Editions**  
 For features supported by Developer and Evaluation editions, see features listed for the SQL Server Enterprise Edition in the tables below.
-For a list of features that were added to the Developer edition for [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, see [SQL Server 2016 SP1 editions](https://aka.ms/uw6cw4).  
 
 The Developer edition continues to support only 1 client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -141,7 +146,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Log shipping|Yes|Yes|Yes|No|No|  
 |Database mirroring|Yes|Yes<br /><br /> Full safety only|Witness only|Witness only|Witness only| 
 |Backup compression|Yes|Yes|No|No|No| 
-|Database snapshot|Yes|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup>|
+|Database snapshot|Yes|Yes|Yes|Yes|Yes|
 |Always On failover cluster instances|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No|No|  
 |Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|No|
 |Basic availability groups <sup>2</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
@@ -159,22 +164,20 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>2</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
-<sup>3</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.
-  
 ##  <a name="RDBMSSP"></a> RDBMS Scalability and Performance  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Columnstore <sup>1</sup>|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes<sup>2</sup>|Yes<sup>2</sup>|  
-|In-Memory OLTP <sup>1</sup>|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>, <sup>3</sup>|Yes <sup>2</sup>|
+|Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|  
+|In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes, <sup>2</sup>|Yes|
 |Stretch Database|Yes|Yes|Yes|Yes|Yes|
 |Persistent Main Memory|Yes|Yes|Yes|Yes|Yes|
 |Multi-instance support|50|50|50|50|50|
-|Table and index partitioning|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|  
-|Data compression|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
+|Table and index partitioning|Yes|Yes|Yes|Yes|Yes|  
+|Data compression|Yes|Yes|Yes|Yes|Yes|
 |Resource Governor|Yes|No|No|No|No|  
 |Partitioned Table Parallelism|Yes|No|No|No|No|
-|Multiple Filestream containers|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|Yes <sup>2</sup>|
+|Multiple Filestream containers|Yes|Yes|Yes|Yes|Yes|
 |NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
 |IO Resource Governance|Yes|No|No|No|No|  
@@ -182,25 +185,22 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
-
-<sup>3</sup> This feature is not included in the LocalDB installation option.
+<sup>2</sup> This feature is not included in the LocalDB installation option.
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Feature|Enterprise|Standard|Web|Express|Express with Advanced Services|  
 |-------------|----------------|--------------|---------|-------------|------------------------------------| 
-|Row-level security|Yes|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|  
-|Always Encrypted|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
-|Dynamic data masking|Yes|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|   
+|Row-level security|Yes|Yes|Yes|Yes|Yes|  
+|Always Encrypted|Yes|Yes|Yes|Yes|Yes| 
+|Dynamic data masking|Yes|Yes|Yes|Yes|Yes|   
 |Basic auditing|Yes|Yes|Yes|Yes|Yes| 
-|Fine grained auditing|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>|Yes <sup>1</sup>| 
+|Fine grained auditing|Yes|Yes|Yes|Yes|Yes| 
 |Transparent database encryption|Yes|No|No|No|No|   
 |Extensible key management|Yes|No|No|No|No| 
 |User-defined roles|Yes|Yes|Yes|Yes|Yes| 
 |Contained databases|Yes|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|No|  
 
-<sup>1</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.  
 ##  <a name="Replication"></a> Replication  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
@@ -260,8 +260,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
  <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-<sup>2</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1. 
-  
 ##  <a name="DevTools"></a> Development Tools  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
@@ -278,7 +276,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Basic R integration|Yes|Yes|Yes|Yes|No|   
 |Advanced R integration|Yes|No|No|No|No| 
 |R Server (Standalone)|Yes|No|No|No|No|   
-|Polybase compute node|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>, <sup>2</sup>|Yes <sup>1</sup>, <sup>2</sup>|Yes <sup>1</sup>, <sup>2</sup>| 
+|Polybase compute node|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>, <sup>2</sup>|Yes <sup>1</sup>, <sup>2</sup>|Yes <sup>1</sup>, | 
 |Polybase head node|Yes|No|No|No|No| 
 |JSON|Yes|Yes|Yes|Yes|Yes|   
 |Query Store|Yes|Yes|Yes|Yes|Yes|   
@@ -298,8 +296,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> Scale out with multiple compute nodes requires a head node.
 
-<sup>2</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.
-  
 ## <a name="IS"></a> Integration Services
 
 For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services Features Supported by the Editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
@@ -314,13 +310,12 @@ For info about the Integration Services (SSIS) features supported by the edition
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Create cubes without a database|Yes|Yes|No|No|No |   
 |Auto-generate staging and data warehouse schema|Yes|Yes|No|No|No| 
-|Change data capture|Yes|Yes <sup>1</sup>|No|No|No| 
+|Change data capture|Yes|Yes|No|No|No| 
 |Star join query optimizations|Yes|No|No|No|No| 
 |Scalable read-only Analysis Services configuration|Yes|No|No|No|No| 
 |Parallel query processing on partitioned tables and indexes|Yes|No|No|No|No|   
 |Global batch aggregation|Yes|No|No|No|No| 
 
-<sup>1</sup> Applies to [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1.  
 ##  <a name="SSAS"></a> Analysis Services  
   
 For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 

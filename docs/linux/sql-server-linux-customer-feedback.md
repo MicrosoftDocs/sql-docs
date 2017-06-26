@@ -40,7 +40,7 @@ SQL Server 2017 always collects and sends information about the installation exp
 >  You can disable the sending of information to Microsoft only in paid versions of SQL Server. You cannot disable this functionality in Developer, Enterprise Evaluation, and Express editions of SQL Server 2016.
 
 ## Disable Customer Feedback
-This option will let you change if SQL Server sends feedback to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
+This option lets you change if SQL Server sends feedback to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
 
 1. Run the mssql-conf script as root with the "set" command for "telemetry.customerfeedback":
 
@@ -60,7 +60,7 @@ Microsoft SQL Server 2017 contains Internet-enabled features that can collect an
 In SQL Server on Linux, Local Audit is configurable at instance level for SQL Server Database Engine. Other SQL Server components and SQL Server Tools do not have Local Audit capability for usage feedback collection.
 
 ### Enable Local Audit
-This option enables Local Audit and will let you set the directory where the Local Audit logs are created.
+This option enables Local Audit and lets you set the directory where the Local Audit logs are created.
 
 1. Create the directory where the Local Audit logs will reside. For example, we will use /tmp/audit:
 

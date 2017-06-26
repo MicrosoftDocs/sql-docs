@@ -32,15 +32,13 @@ manager: "craigg"
 SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL from wherever you deploy it. With SSMS you can deploy, monitor, and upgrade the data-tier components used by your applications, as well as build queries and scripts. 
 
 This release features improved compatibility with previous versions of SQL Server, a stand-alone web installer, and toast notifications within SSMS when new releases become available.  
-
-SSMS is free! Download it below!
-    
-![download](../ssdt/media/download.png) **[Download SQL Server Management Studio 17.1](https://go.microsoft.com/fwlink/?linkid=849819)**  SMS 17.X is the latest generation of SQL Server Management Studio and provides support for SQL Server 2017. 
+  
+![download](../ssdt/media/download.png) SSMS is free! **[Download SQL Server Management Studio 17.1](https://go.microsoft.com/fwlink/?linkid=849819)**  SSMS 17.X is the latest generation of SQL Server Management Studio and provides support for SQL Server 2017. 
 
 ![download](../ssdt/media/download.png) **[Download SQL Server Management Studio 17.1 Upgrade Package (upgrades 17.0 to 17.1)](https://go.microsoft.com/fwlink/?linkid=849821)**
 
 > [!NOTE]
-> The SQL Server PowerShell module is now a separate install through the PowerShell Gallery.  Please see the [download instructions](download-sql-server-ps-module.md) for more information.
+> The SQL Server PowerShell module is now a separate install through the PowerShell Gallery.  See the [download instructions](download-sql-server-ps-module.md) for more information.
 
 ## SQL Server Management Studio   
 **Version Information**  
@@ -54,7 +52,7 @@ SSMS 17.1 is first update to the 17.X generation of SQL Server Management Studio
 
 Version 17.1 includes:
 
-* Fixes for several user reported issues 
+* Fixes for several users reported issues 
 * A new Integration Services scale-out management tool
 
 For the full list of changes, see   
@@ -82,17 +80,17 @@ This release of SSMS supports the following platforms when used with the latest 
 - Windows Server 2008 R2 (64-bit)  
 
 >[!NOTE]
->SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility very seriously and ensures that already-shipped applications continue to run on the latest Windows releases. Because of this, we do not anticipate that SSMS with all latest updates applied) will encounter issues when running on Windows Server 2016. Customers are advised to contact support, should they encounter any issues with SSMS on Windows Server 2016. Support will then work with customers to determine if the issue is with SSMS or Visual Studio or with Windows compatibility, and route the issue appropriately.
+>SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS Widows Server 2016, ensure SSMS has all of the latest updates applied. Customers are advised to contact support if they expereince any issues with SSMS on Windows Server 2016. Support determines if the issue is with SSMS or Visual Studio or with Windows compatibility, and route the issue appropriately.
 
 ## SSMS installation tips and issues
 **Minimize Installation Reboots**
 
-- You can reduce the chances of SSMS setup requiring a reboot at the end by making by taking the following actions:
-  - Make sure you are running an up-to-date version of the Visual C++ 2013 Redistributable Package. You’ll need version 12.00.40649.5 (or greater). Only the x64 version is needed.
-  - Make sure the version of .NET Framework on the machine is 4.6.1 (or greater)
-  - Close any other version Visual Studio that may be running on the machine
-  - Make sure all the latest OS updates are installed on the machine
-  - The noted actions should only be required once. The likelihood of reboots needed while doing addtiional upgrades to newer versions of SSMS (same major version) is very limited, since all the prerequirements for SSMS are already on the machine.
+- Take the following actions to reduce the chances of SSMS setup requiring a reboot at the end of installation:
+  - Make sure you are running an up-to-date version of the Visual C++ 2013 Redistributable Package. Version 12.00.40649.5 (or greater) is required. Only the x64 version is needed.
+  - Verify the version of .NET Framework on the computer is 4.6.1 (or greater).
+  - Close any other instances of Visual Studio that are open on the computer.
+  - Make sure all the latest OS updates are installed on the computer.
+  - The noted actions should only be required once. There are few cases where a reboot is required during addtiional upgrades to the same major version of SSMS. For minor upgrades, all the prerequirements for SSMS will already be installed on the computer.
 
 - To see the list of known issues and work arounds, see [SQL Server Management Studio -  Release Notes](../ssms/sql-server-management-studio-release-notes.md)
 

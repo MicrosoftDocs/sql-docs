@@ -1,3 +1,28 @@
+---
+# required metadata
+
+title: Configure RHEL Cluster for SQL Server Availability Group | Microsoft Docs
+description: 
+author: annashres 
+ms.author: anshrest 
+manager: jhubbard
+ms.date: 06/26/2017
+ms.topic: article
+ms.prod: sql-linux
+ms.technology: database-engine
+ms.assetid:
+
+# optional metadata
+# keywords: ""
+# ROBOTS: ""
+# audience: ""
+# ms.devlang: ""
+# ms.reviewer: ""
+# ms.suite: ""
+# ms.tgt_pltfrm: ""
+# ms.custom: ""
+
+---
 # Customer Feedback for SQL Server on Linux
 
 By default, Microsoft SQL Server collects information about how its customers are using the application. Specifically, SQL Server collects information about the installation experience, usage, and performance. This information helps Microsoft improve the product to better meet customer needs. For example, Microsoft collects information about what kinds of error codes customers encounter so that we can fix related bugs, improve our documentation about how to use SQL Server, and determine whether features should be added to the product to better serve customers.

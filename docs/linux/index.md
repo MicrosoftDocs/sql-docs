@@ -4,7 +4,7 @@ layout: LandingPage
 
 #SQL Server on Linux Documentation
 
-SQL Server 2017 RC0 runs on Linux! Learn about the core relational database capabilities in this release of SQL Server, and how to install, manage, secure, and develop for this new release. 
+SQL Server 2017 RC1 runs on Linux! Learn about the core relational database capabilities in this release of SQL Server, and how to install, manage, secure, and develop for this new release. 
 
 <ul class="panelContent cardsFTitle">
     <li>

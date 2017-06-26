@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install SQL Server on Linux | Microsoft Docs
-description: SQL Server 2017 RC0 now runs on Linux. This topic provides an overview on how to install SQL Server on Linux with links to the guides for specific platforms. 
+description: SQL Server 2017 RC1 now runs on Linux. This topic provides an overview on how to install SQL Server on Linux with links to the guides for specific platforms. 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -26,11 +26,11 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
 # Install SQL Server on Linux
 
-SQL Server 2017 RC0 is supported on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. It is also available as a Docker image which can run on Docker Engine on Linux or Docker for Windows/Mac. The topics in this section provide tutorials and general guidance for installing SQL Server 2017 RC0 on Linux. 
+SQL Server 2017 RC1 is supported on Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. It is also available as a Docker image which can run on Docker Engine on Linux or Docker for Windows/Mac. The topics in this section provide tutorials and general guidance for installing SQL Server 2017 RC1 on Linux. 
 
 ## Supported platforms
 
-SQL Server 2017 RC0 is supported on the following platforms:
+SQL Server 2017 RC1 is supported on the following platforms:
 
 | Platform | Supported version(s) | Get
 |-----|-----|-----

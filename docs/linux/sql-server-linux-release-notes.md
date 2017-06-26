@@ -6,7 +6,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 06/28/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,13 +26,13 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ---
 # Release notes for SQL Server 2017 on Linux
 
-The following release notes apply to SQL Server 2017 running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, RC0. See the information in each section for supported platforms, tools, features, and known issues.
+The following release notes apply to SQL Server 2017 running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, RC1. See the information in each section for supported platforms, tools, features, and known issues.
 
 The following table lists the releases of SQL Server 2017 covered in this topic.
 
 | Release | Version | Release date |
 |-----|-----|-----|
-| [RC0](#rc0) | 00.0.000.000 | 6-2017 |
+| [RC1](#RC1) | 00.0.000.000 | 7-2017 |
 | [CTP 2.1](#ctp21) | 14.0.600.250 | 5-2017 |
 | [CTP 2.0](#ctp20) | 14.0.500.272 | 4-2017 |
 | [CTP 1.4](#ctp14) | 14.0.405.198 | 3-2017 |
@@ -41,7 +41,7 @@ The following table lists the releases of SQL Server 2017 covered in this topic.
 | [CTP 1.1](#ctp11) | 14.0.100.187 | 12-2016 |
 | [CTP 1.0](#ctp10) | 14.0.1.246 | 11-2016 |
 
-## <a id="rc0"> RC0 (June 2017) </a>
+## <a id="RC1"> RC1 (July 2017) </a>
 The SQL Server engine version for this release is 00.0.000.000.
 
 ### Supported platforms 
@@ -83,13 +83,19 @@ The following features and services are not available on Linux at this time. The
 
 | Area | Unsupported feature or service |
 |-----|-----|
-| **Database engine** | Replication |
+| **Database engine** | Transactional replication |
+| &nbsp; | Merge replication |
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Distributed Query |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
+| **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader , SSIS, SSAS, SSRS |
+| &nbsp; | Alerts |
+| &nbsp; | Log Reader Agent |
+| &nbsp; | Change Data Capture |
+| &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Active Directory Authentication |
 | &nbsp; | Windows Authentication |
@@ -137,15 +143,6 @@ The following sections describe known issues with this release of SQL Server 201
 
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
-
-#### SQL Agent
-- The following components and subsystems of SQL Agent jobs are not currently supported on Linux:
-
-    - Subsystems: CmdExec, PowerShell, Replication Distributor, Snapshot, Merge, Queue Reader, SSIS, SSAS, SSRS
-    - Alerts
-    - DB Mail
-    - Log Reader Agent 
-    - Change Data Capture
 
 #### SqlPackage
 - Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the "/tmp/sqlpackage.\<code\>/system/system32" folder. 

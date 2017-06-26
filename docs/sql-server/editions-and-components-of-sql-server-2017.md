@@ -276,7 +276,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Basic R integration|Yes|Yes|Yes|Yes|No|   
 |Advanced R integration|Yes|No|No|No|No| 
 |R Server (Standalone)|Yes|No|No|No|No|   
-|Polybase compute node|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>, <sup>2</sup>|Yes <sup>1</sup>, <sup>2</sup>|Yes <sup>1</sup>, | 
+|Polybase compute node|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>, <sup>2</sup>|Yes <sup>1</sup>,|Yes <sup>1</sup>, | 
 |Polybase head node|Yes|No|No|No|No| 
 |JSON|Yes|Yes|Yes|Yes|Yes|   
 |Query Store|Yes|Yes|Yes|Yes|Yes|   

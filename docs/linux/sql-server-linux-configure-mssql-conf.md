@@ -37,7 +37,7 @@ ms.custom: H1Hack27Feb2017
 - [High Availability](#hadr): Enable Availability Groups.
 - [Set traceflags](#traceflags): Set the traceflags that the service is going to use.
 - [Set collation](#collation): Set a new collation for SQL Server on Linux.
-- [Set customer feedback](sql-server-linux-customer-feedback.md): Change if SQL Server sends feedback to Microsoft or not.
+- [Set customer feedback](sql-server-linux-customer-feedback.md): Choose whether or not SQL Server sends feedback to Microsoft.
 - [Set Local Audit directory](sql-server-linux-customer-feedback.md): Set a a directory to add Local Audit files.
 The following sections show examples of how to use mssql-conf for each of these scenarios.
 

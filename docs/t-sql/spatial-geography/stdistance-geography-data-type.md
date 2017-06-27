@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STDistance (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Returns the shortest distance between a point in a **geography** instance and a point in another **geography** instance.  
   

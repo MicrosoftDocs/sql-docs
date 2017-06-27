@@ -18,7 +18,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Extended Methods on Geography Instances
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a number of extended methods on Open Geospatial Consortium (OGC) geography instances.  
   

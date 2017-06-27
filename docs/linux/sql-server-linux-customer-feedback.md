@@ -47,7 +47,7 @@ This option lets you change if SQL Server sends feedback to Microsoft or not. By
    ```bash
    sudo /opt/mssql/bin/mssql-conf set customerfeedback false
    ```
-2. Restart the SQL Server service as instructed by the configuration utility:
+2. Restart the SQL Server service:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -80,7 +80,7 @@ This option enables Local Audit and lets you set the directory where the Local A
    ```bash
    sudo /opt/mssql/bin/mssql-conf set userrequestedlocalauditdirectory /tmp/audit
    ```
-4. Restart the SQL Server service as instructed by the configuration utility:
+4. Restart the SQL Server service:
 
    ```bash
    sudo systemctl restart mssql-server

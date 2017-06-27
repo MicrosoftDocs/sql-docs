@@ -164,7 +164,7 @@ ON
    Specifies the filegroup for storing the clustered columnstore index. If no location is specified and the table is not partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.  
 
    **"**default**"**  
-   To create the index on the default filegoup, use "default" or [ default ].  
+   To create the index on the default filegroup, use "default" or [ default ].  
   
    If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. QUOTED_IDENTIFIER is ON by default. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
@@ -313,88 +313,47 @@ The SET options in the Required Value column are required whenever any of the fo
 -   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] version and Azure SQL Database configured at premium pricing tier. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
 
  **Each column in a columnstore index must be of one of the following common business data types:** 
-  
 -   datetimeoffset [ ( *n* ) ]  
-  
 -   datetime2 [ ( *n* ) ]  
-  
 -   datetime  
-  
 -   smalldatetime  
-  
 -   date  
-  
 -   time [ ( *n* ) ]  
-  
 -   float [ ( *n* ) ]  
-  
 -   real [ ( *n* ) ]  
-  
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
-
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
-  
 -   money  
-  
 -   smallmoney  
-  
 -   bigint  
-  
 -   int  
-  
 -   smallint  
-  
 -   tinyint  
-  
 -   bit  
-  
 -   nvarchar [ ( *n* ) ] 
-
 -   nvarchar(max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and Azure SQL Database at premium pricing tier, in  clustered columnstore indexes only)   
-  
 -   nchar [ ( *n* ) ]  
-  
 -   varchar [ ( *n* ) ]  
-
 -   varchar(max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and Azure SQL Database at premium pricing tier, in  clustered columnstore indexes only)
-  
 -   char [ ( *n* ) ]  
-  
 -   varbinary [ ( *n* ) ] 
-
 -   varbinary (max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and Azure SQL Database at premium pricing tier, in  clustered columnstore indexes only)
-  
 -   binary [ ( *n* ) ]  
-  
 -   uniqueidentifier  (Applies to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later)
-
-  
   
  **Columns that use any of the following data types cannot be included in a columnstore index:**
-  
 -   ntext, text, and image  
-
 -   nvarchar(max), varchar(max), and varbinary(max) (Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and prior versions, and nonclustered columnstore indexes) 
-    
 -   rowversion (and timestamp)  
-  
 -   sql_variant  
-  
 -   CLR types (hierarchyid and spatial types)  
-  
 -   xml  
-  
 -   uniqueidentifier (Applies to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
-
- **Columnstore indexes cannot be combined with the following features:**  
-
+**Columnstore indexes cannot be combined with the following features:**  
 -   Computed columns
-  
 -   Page and row compression, and **vardecimal** storage format (A columnstore index is already compressed in a different format.)  
-  
 -   Replication  
-  
 -   Filestream
 
 You cannot use cursors or triggers on a table with a clustered columnstore index. This restriction does not apply to nonclustered columnstore indexes; you can use cursors and triggers on a table with a nonclustered columnstore index.
@@ -417,17 +376,11 @@ You cannot use cursors or triggers on a table with a clustered columnstore index
  All of the columns in a columnstore index are stored in the metadata as included columns. The columnstore index does not have key columns. These system views provide information about columnstore indexes.  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
-  
 -   [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
 -   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)  
-  
 -   [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
-  
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
-  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
-  
 
 ##  <a name="convert"></a> Examples for converting a rowstore table to columnstore  
   
@@ -688,7 +641,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### E. Change a clustered index to a clustered columnstore index  
+### A. Change a clustered index to a clustered columnstore index  
  By using the CREATE CLUSTERED COLUMNSTORE INDEX statement with DROP_EXISTING = ON, you can:  
   
 -   Change a clustered index into a clustered columnstore index.  
@@ -719,7 +672,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### F. Rebuild a clustered columnstore index  
+### B. Rebuild a clustered columnstore index  
  Building on the previous example, this example uses CREATE CLUSTERED COLUMNSTORE INDEX to rebuild the existing clustered columnstore index called cci_xDimProduct.  
   
 ```  
@@ -729,7 +682,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### G. Change the name of a clustered columnstore index  
+### C. Change the name of a clustered columnstore index  
  To change the name of a clustered columnstore index, drop the existing clustered columnstore index, and then recreate the index with a new name.  
   
  We recommend only doing this operation with a small table or an empty table. It will take a long time to drop a large clustered columnstore index and rebuild with a different name.  
@@ -747,7 +700,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = OFF );  
 ```  
   
-### H. Convert a columnstore table to a rowstore table with a clustered index  
+### D. Convert a columnstore table to a rowstore table with a clustered index  
  There might be a situation for which you want to drop a clustered columnstore index and create a clustered index. This stores the table in rowstore format. This example converts a columnstore table to a rowstore table with a clustered index with the same name. None of the data is lost. All data goes to the rowstore table and the columns listed become the key columns in the clustered index.  
   
 ```  
@@ -760,7 +713,7 @@ WITH ( DROP_EXISTING = ON);
   
 ```  
   
-### I. Convert a columnstore table back to a rowstore heap  
+### E. Convert a columnstore table back to a rowstore heap  
  Use [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) to drop the clustered columnstore index and convert the table to a rowstore heap. This example converts the cci_xDimProduct table to a rowstore heap. The table continues to be distributed, but is stored as a heap.  
   
 ```  

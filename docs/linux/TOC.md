@@ -1,4 +1,6 @@
 # [Understand and Explore](sql-server-linux-overview.md)
+
+# What's new
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md) 
 # [Get Started](sql-server-linux-get-started-tutorial.md)

@@ -57,7 +57,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     { 
         DISTRIBUTION = HASH ( distribution_column_name ) 
       | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
-      | DISTRIBUTION = REPLICATE -- default and only available in Parallel Data Warehouse
+      | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }   
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )  

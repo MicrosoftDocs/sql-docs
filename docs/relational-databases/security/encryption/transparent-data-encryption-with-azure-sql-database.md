@@ -24,7 +24,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Transparent Data Encryption with Azure SQL Database
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx_md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] transparent data encryption helps protect against the threat of malicious activity by performing real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.  
   

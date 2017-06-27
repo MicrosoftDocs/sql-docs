@@ -293,19 +293,8 @@ The SET options in the Required Value column are required whenever any of the fo
  For more information about Filtered Indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md). 
   
 ##  <a name="LimitRest"></a> Limitations and Restrictions  
- If the underlying table has a column of a data type that is not supported for columnstore indexes, you must omit that column from the nonclustered columnstore index.  
-  
- Nonclustered columnstore indexes:  
--   Cannot have more than 1024 columns.  
--   A table with a nonclustered columnstore index can have unique constraints, primary key constraints, or foreign key constraints, but the constraints cannot be included in the nonclustered columnstore index.  
--   Cannot be created on a view or indexed view.  
--   Cannot include a sparse column.  
--   Cannot be changed by using the **ALTER INDEX** statement. To change the nonclustered index, you must drop and re-create the columnstore index instead. You can use **ALTER INDEX** to disable and rebuild a columnstore index.  
--   Cannot be created by using the **INCLUDE** keyword.  
--   Cannot include the **ASC** or **DESC** keywords for sorting the index. Columnstore indexes are ordered according to the compression algorithms. Sorting would eliminate many of the performance benefits.  
--   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] version and Azure SQL Database configured at premium pricing tier. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
 
- **Each column in a columnstore index must be of one of the following common business data types:** 
+**Each column in a columnstore index must be of one of the following common business data types:** 
 -   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [ ( *n* ) ]  
 -   datetime  
@@ -334,7 +323,9 @@ The SET options in the Required Value column are required whenever any of the fo
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier  (Applies to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later)
   
- **Columns that use any of the following data types cannot be included in a columnstore index:**
+If the underlying table has a column of a data type that is not supported for columnstore indexes, you must omit that column from the nonclustered columnstore index.  
+  
+**Columns that use any of the following data types cannot be included in a columnstore index:**
 -   ntext, text, and image  
 -   nvarchar(max), varchar(max), and varbinary(max) (Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and prior versions, and nonclustered columnstore indexes) 
 -   rowversion (and timestamp)  
@@ -342,6 +333,16 @@ The SET options in the Required Value column are required whenever any of the fo
 -   CLR types (hierarchyid and spatial types)  
 -   xml  
 -   uniqueidentifier (Applies to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
+
+**Nonclustered columnstore indexes:**
+-   Cannot have more than 1024 columns.  
+-   A table with a nonclustered columnstore index can have unique constraints, primary key constraints, or foreign key constraints, but the constraints cannot be included in the nonclustered columnstore index.  
+-   Cannot be created on a view or indexed view.  
+-   Cannot include a sparse column.  
+-   Cannot be changed by using the **ALTER INDEX** statement. To change the nonclustered index, you must drop and re-create the columnstore index instead. You can use **ALTER INDEX** to disable and rebuild a columnstore index.  
+-   Cannot be created by using the **INCLUDE** keyword.  
+-   Cannot include the **ASC** or **DESC** keywords for sorting the index. Columnstore indexes are ordered according to the compression algorithms. Sorting would eliminate many of the performance benefits.  
+-   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] version and Azure SQL Database configured at premium pricing tier. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
 
 **Columnstore indexes cannot be combined with the following features:**  
 -   Computed columns
@@ -351,16 +352,12 @@ The SET options in the Required Value column are required whenever any of the fo
 
 You cannot use cursors or triggers on a table with a clustered columnstore index. This restriction does not apply to nonclustered columnstore indexes; you can use cursors and triggers on a table with a nonclustered columnstore index.
 
- **SQL Server 2014 limitations**  
-  ,
- These limitations apply only to SQL Server 2014. In this release, we introduced updateable clustered columnstore indexes. Nonclustered columnstore indexes were still read-only.  
-  
+**SQL Server 2014 specific limitations**  
+These limitations apply only to SQL Server 2014. In this release, we introduced updateable clustered columnstore indexes. Nonclustered columnstore indexes were still read-only.  
+
 -   Change tracking. You cannot use change tracking with nonclustered columnstore indexes (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
-  
 -   Change data capture. You cannot use change data capture for nonclustered columnstore index (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
-  
 -   Readable secondary. You cannot access  a clustered clustered columnstore index (CCI) from a readable secondary of an Always OnReadable availability group.  You can access a nonclustered columnstore index (NCCI) from a readable secondary.  
-  
 -   Multiple Active Result Sets (MARS). SQL Server 2014 uses MARS for  read-only connections to tables with a columnstore index.    However, SQL Server 2014 does not support MARS for concurrent data manipulation language (DML) operations on a table with a columnstore index. When this occurs, SQL Server terminates the connections and aborts the transactions.  
   
  For information about the performance benefits and limitations of columnstore indexes, see [Columnstore Indexes Overview](../../relational-databases/indexes/columnstore-indexes-overview.md).

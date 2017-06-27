@@ -38,7 +38,7 @@ manager: "jhubbard"
 |AlwaysOn supports columnstore indexes.|yes|yes|yes|yes|yes|yes| 
 |AlwaysOn readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|  
 |AlwaysOn readable secondary supports updateable columnstore indexes.|||yes|||yes|  
-|Read-only nonclustered columnstore index on heap or btree.|yes|yes|yes*|yes*|yes*|yes|  
+|Read-only nonclustered columnstore index on heap or btree.|yes|yes|yes*|yes*|yes*|yes*|  
 |Updateable nonclustered columnstore index on heap or btree|||yes|yes|yes|yes|  
 |Additional btree indexes allowed on a heap or btree that has a nonclustered columnstore index.|yes|yes|yes|yes|yes|yes|  
 |Updateable clustered columnstore index.||yes|yes|yes|yes|yes|  
@@ -46,7 +46,7 @@ manager: "jhubbard"
 |Columnstore index on a memory-optimized table.|||yes|yes|yes|yes|  
 |Nonclustered columnstore index definition supports using a filtered condition.|||yes|yes|yes|yes|  
 |Compression delay option for columnstore indexes in CREATE TABLE and ALTER TABLE.|||yes|yes|yes|yes|
-|Computed columns||||||yes|   
+|Computed columns||||yes|||   
   
  *To create a readable nonclustered columnstore index, store the index on a read-only filegroup.  
 

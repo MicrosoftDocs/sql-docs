@@ -352,8 +352,8 @@ The SET options in the Required Value column are required whenever any of the fo
 You cannot use cursors or triggers on a table with a clustered columnstore index. This restriction does not apply to nonclustered columnstore indexes; you can use cursors and triggers on a table with a nonclustered columnstore index.
 
  **SQL Server 2014 limitations**  
-  
- These limitations apply only to SQL Server 2014. In this release we introduced updateable clustered columnstore indexes. Nonclustered columnstore indexes were still read-only.  
+  ,
+ These limitations apply only to SQL Server 2014. In this release, we introduced updateable clustered columnstore indexes. Nonclustered columnstore indexes were still read-only.  
   
 -   Change tracking. You cannot use change tracking with nonclustered columnstore indexes (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
   
@@ -618,7 +618,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
 ###  <a name="ncDML"></a> D. Change the data in a nonclustered columnstore index  
    Applies to: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
   
- Once you create a nonclustered columnstore index on a table, you cannot directly modify the data in that table. A query with INSERT, UPDATE, DELETE, or MERGE fails and return an error message. To add or modify the data in the table, you can do one of the following:  
+ Once you create a nonclustered columnstore index on a table, you cannot directly modify the data in that table. A query with INSERT, UPDATE, DELETE, or MERGE fails and returns an error message. To add or modify the data in the table, you can do one of the following:  
   
 -   Disable or drop the columnstore index. You can then update the data in the table. If you disable the columnstore index, you can rebuild the columnstore index when you finish updating the data. For example,  
   
@@ -694,7 +694,7 @@ WITH ( DROP_EXISTING = OFF );
 ```  
   
 ### D. Convert a columnstore table to a rowstore table with a clustered index  
- There might be a situation for which you want to drop a clustered columnstore index and create a clustered index. This stores the table in rowstore format. This example converts a columnstore table to a rowstore table with a clustered index with the same name. None of the data is lost. All data goes to the rowstore table and the columns listed become the key columns in the clustered index.  
+ There might be a situation for which you want to drop a clustered columnstore index and create a clustered index. This stores the table in rowstore format. This example converts a columnstore table to a rowstore table with a clustered index with the same name. None of the data is lost. All data goes to the rowstore table and the columns listed becomes the key columns in the clustered index.  
   
 ```  
 --Drop the clustered columnstore index and create a clustered rowstore index.   

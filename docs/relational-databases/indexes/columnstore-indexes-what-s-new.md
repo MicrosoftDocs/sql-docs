@@ -28,27 +28,34 @@ manager: "jhubbard"
  This table summarizes key features for columnstore indexes and the products in which they are available.  
 
   
-|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|  
-|Batch execution for multi-threaded queries|yes|yes|yes|yes|yes|  
-|Batch execution for single-threaded queries|||yes|yes|yes|  
-|Archival compression option.||yes|yes|yes|yes|  
-|Snapshot isolation and read-committed snapshot isolation|||yes|yes|yes|  
-|Specify columnstore index when creating a table.|||yes|yes|yes|  
-|AlwaysOn supports columnstore indexes.|yes|yes|yes|yes|yes|  
-|AlwaysOn readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|  
-|AlwaysOn readable secondary supports updateable columnstore indexes.|||yes|||  
-|Read-only nonclustered columnstore index on heap or btree.|yes|yes|yes*|yes*|yes*|  
-|Updateable nonclustered columnstore index on heap or btree|||yes|yes|yes|  
-|Additional btree indexes allowed on a heap or btree that has a nonclustered columnstore index.|yes|yes|yes|yes|yes|  
-|Updateable clustered columnstore index.||yes|yes|yes|yes|  
-|Btree index on a clustered columnstore index.|||yes|yes|yes|  
-|Columnstore index on a memory-optimized table.|||yes|yes|yes|  
-|Nonclustered columnstore index definition supports using a filtered condition.|||yes|yes|yes|  
-|Compression delay option for columnstore indexes in CREATE TABLE and ALTER TABLE.|||yes|yes|yes|   
+|Batch execution for multi-threaded queries|yes|yes|yes|yes|yes|yes| 
+|Batch execution for single-threaded queries|||yes|yes|yes|yes|  
+|Archival compression option.||yes|yes|yes|yes|yes|  
+|Snapshot isolation and read-committed snapshot isolation|||yes|yes|yes|yes| 
+|Specify columnstore index when creating a table.|||yes|yes|yes|yes|  
+|AlwaysOn supports columnstore indexes.|yes|yes|yes|yes|yes|yes| 
+|AlwaysOn readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|  
+|AlwaysOn readable secondary supports updateable columnstore indexes.|||yes|||yes|  
+|Read-only nonclustered columnstore index on heap or btree.|yes|yes|yes*|yes*|yes*|yes|  
+|Updateable nonclustered columnstore index on heap or btree|||yes|yes|yes|yes|  
+|Additional btree indexes allowed on a heap or btree that has a nonclustered columnstore index.|yes|yes|yes|yes|yes|yes|  
+|Updateable clustered columnstore index.||yes|yes|yes|yes|yes|  
+|Btree index on a clustered columnstore index.|||yes|yes|yes|yes|  
+|Columnstore index on a memory-optimized table.|||yes|yes|yes|yes|  
+|Nonclustered columnstore index definition supports using a filtered condition.|||yes|yes|yes|yes|  
+|Compression delay option for columnstore indexes in CREATE TABLE and ALTER TABLE.|||yes|yes|yes|yes|
+|Computed columns||||||yes|   
   
  *To create a readable nonclustered columnstore index, store the index on a read-only filegroup.  
-  
+
+## [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]  
+ [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] add these new features.
+
+### Functional
+- A columnstore index can have computed columns.
+
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adds key enhancements to improve the performance and flexibility of columnstore indexes. This enhances data warehousing scenarios and enables real-time operational analytics.  
   

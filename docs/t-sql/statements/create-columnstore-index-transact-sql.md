@@ -389,7 +389,7 @@ The SET options in the Required Value column are required whenever any of the fo
 
  **Columnstore indexes cannot be combined with the following features:**  
 
--   Computed columns
+-   Computed columns in SQL Server 2016 and earlier versions. Computed columns are supported starting with SQL Server 2017.
   
 -   Page and row compression, and **vardecimal** storage format (A columnstore index is already compressed in a different format.)  
   

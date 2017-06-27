@@ -45,7 +45,7 @@ If you have an existing server, use the following to add an AAD identity to your
    $server = Set-AzureRmSqlServer `
    -ResourceGroupName <SQLDatabaseResourceGroupName> `
    -ServerName <LogicalServerName> `
-   -AssignIdentity SystemAssigned
+   -AssignIdentity
    ```
 
 If you are creating a server, use the [New-AzureRmSqlServer](/powershell/module/azurerm.sql/new-azurermsqlserver) cmdlet with the tag -Identity to add an AAD identity during server creation:
@@ -57,7 +57,7 @@ If you are creating a server, use the [New-AzureRmSqlServer](/powershell/module/
    -ServerName <LogicalServerName> `
    -ServerVersion "12.0" `
    -SqlAdministratorCredentials <PSCredential> `
-   -AssignIdentity SystemAssigned 
+   -AssignIdentity 
    ```
 
 ## Step 2. Grant Key Vault permissions to your server

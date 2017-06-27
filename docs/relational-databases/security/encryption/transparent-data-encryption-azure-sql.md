@@ -22,7 +22,7 @@ ms.author: rebeccaz
 
 # Transparent Data Encryption for Azure SQL Database and Data Warehouse
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Transparent Data Encryption (TDE) helps protect Azure SQL Database and Data Warehouse against the threat of malicious activity by performing real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.
 

@@ -21,7 +21,10 @@ manager: "erikre"
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] PowerShell cmdlets are included in the [SqlServer module](https://www.powershellgallery.com/packages/SqlServer/21.0.17099).
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] PowerShell cmdlets are included in the [SqlServer module](https://www.powershellgallery.com/packages/SqlServer/21.0.17099). 
+  
+>[!NOTE] 
+> Azure Analysis Services database operations use the same SqlServer module as SQL Server Analysis Services. However, not all cmdlets are supported for Azure Analysis Services. To learn more, see [Manage Azure Analysis Services with PowerShell](https://docs.microsoft.com/azure/analysis-services/analysis-services-powershell).
   
 ##  <a name="bkmk_cmdlets"></a> Analysis Services Cmdlets  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides cmdlets correspond to methods in the **Microsoft.AnalysisServices** namespace. The following table describes each cmdlet and provides a link to the corresponding AMO method.  

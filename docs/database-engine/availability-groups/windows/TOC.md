@@ -51,9 +51,6 @@
 ## [Readable secondary](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
 
 # [How-to guides](administration-of-an-availability-group-sql-server.md)  
-### Add Database
-#### [Dialog](availability-group-add-a-database.md)  
-#### [Wizard](availability-group-add-database-to-group-wizard.md)  
 ## Configure availability group 
 ### [Change replica availability](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [Change replica failover mode](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
@@ -80,6 +77,9 @@
 ### [View replica properties](view-availability-replica-properties-sql-server.md)  
 ### [View listener properties](view-availability-group-listener-properties-sql-server.md)  
 ## Operation
+### Add Database
+#### [Dialog](availability-group-add-a-database.md)  
+#### [Wizard](availability-group-add-database-to-group-wizard.md)  
 ### [Add replica - wizard](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
 ### [Add secondary replica](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
 ### [Change session-timeout period](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  

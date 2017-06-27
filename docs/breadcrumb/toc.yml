@@ -124,7 +124,7 @@
         homepage: /sql/connect/ruby/ruby-driver-for-sql-server
     - name: SQL Server on Linux
       href: /sql/linux/
-      homepage: /sql/linux/index?toc=/sql/linux/toc.json
+      homepage: /sql/linux
     - name: Advanced analytics on SQL Server
       href: /sql/advanced-analytics/
       homepage: /sql/advanced-analytics/getting-started-with-machine-learning-services
@@ -1021,7 +1021,7 @@
         homepage: /sql/sample/world-wide-importers/overview
     - name: Tools
       href: /sql/tools/
-      homepage: /sql/tools/command-prompt-utility-reference-database-engine
+      homepage: /sql/tools/overview-sql-tools
       items:
       - name: Configuration Manager
         href: /sql/tools/configuration-manager/

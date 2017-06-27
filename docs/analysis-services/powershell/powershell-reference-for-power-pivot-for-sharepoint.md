@@ -21,6 +21,9 @@ manager: "erikre"
 [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   This section lists the PowerShell cmdlets used to configure or administer a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation. For more information about enabling the cmdlets and viewing built-in help, see [Power Pivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
+
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
 ## Cmdlet List  
  To see a list of cmdlets from the PowerShell prompt:  

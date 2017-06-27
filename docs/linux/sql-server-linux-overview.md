@@ -42,4 +42,4 @@ many ways simply SQL Server. It’s the same SQL Server database engine, with ma
 - [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - general discussion about R](https://www.reddit.com/r/SQLServer/)
+- [Reddit - discuss SQL Server](https://www.reddit.com/r/SQLServer/)

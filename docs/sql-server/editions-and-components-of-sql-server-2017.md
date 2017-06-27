@@ -49,7 +49,7 @@ This topic provides details of features supported by the various editions of SQL
 For information about older versions, see:
 
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
-* [SQL Server 2014](http://msdn.microsoft.com/en-us/library/cc645993(v=sql.120).aspx).
+* [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
   
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -67,7 +67,7 @@ For the latest release notes and what's new information, see the following:
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
 --->
 
-## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Editions  
+## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions  
  The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Definition|  
@@ -81,14 +81,15 @@ For the latest release notes and what's new information, see the following:
 ## Using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with an Internet Server  
  On an Internet server, such as a server that is running Internet Information Services (IIS), you will typically install the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client tools. Client tools include the client connectivity components used by an application connecting to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-> **NOTE:**  Although you can install an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a computer that is running IIS, this is typically done only for small Web sites that have a single server computer. Most Web sites have their middle-tier IIS systems on one server or a cluster of servers, and their databases on a separate server or federation of servers.  
+>[!NOTE]
+>Although you can install an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a computer that is running IIS, this is typically done only for small Web sites that have a single server computer. Most Web sites have their middle-tier IIS systems on one server or a cluster of servers, and their databases on a separate server or federation of servers.  
   
-## Using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with Client/Server Applications  
+## Using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with client/server applications  
  You can install just the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client components on a computer that is running client/server applications that connect directly to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A client components installation is also a good option if you administer an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a database server, or if you plan to develop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applications.  
   
  The client tools option installs the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features: backward compatibility components, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], connectivity components, management tools, software development kit, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online components. For more information, see  [Install SQL Server](../database-engine/install-windows/install-sql-server.md).  
   
-## Deciding Among [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Components  
+## Deciding among [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components  
  Use the Feature Selection page of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Installation Wizard to select the components to include in an installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. By default, none of the features in the tree are selected.  
   
  Use the information in the following tables to determine the set of features that best fits your needs.  
@@ -121,7 +122,7 @@ For features supported by Developer and Evaluation editions, see features listed
 
 The Developer edition continues to support only 1 client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
-##  <a name="Cross-BoxScaleLimits"></a> Scale Limits  
+##  <a name="Cross-BoxScaleLimits"></a> Scale limits  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -136,7 +137,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per SQL Server instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> RDBMS High Availability  
+##  <a name="RDBMSHA"></a> RDBMS high availability  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -162,7 +163,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>2</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
-##  <a name="RDBMSSP"></a> RDBMS Scalability and Performance  
+##  <a name="RDBMSSP"></a> RDBMS scalability and performance  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
@@ -184,7 +185,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
 <sup>2</sup> This feature is not included in the LocalDB installation option.
-##  <a name="RDBMSS"></a> RDBMS Security  
+
+##  <a name="RDBMSS"></a> RDBMS security  
   
 |Feature|Enterprise|Standard|Web|Express|Express with Advanced Services|  
 |-------------|----------------|--------------|---------|-------------|------------------------------------| 
@@ -213,7 +215,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Transactional replication to Azure|Yes|Yes|No|No|No|   
 |Transactional replication updateable subscription|Yes|No|No|No|No|  
   
-##  <a name="SSMS"></a> Management Tools  
+##  <a name="SSMS"></a> Management tools  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -232,7 +234,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
  <sup>2</sup> Tuning enabled only on Standard edition features  
   
-##  <a name="RDBMSM"></a> RDBMS Manageability  
+##  <a name="RDBMSM"></a> RDBMS manageability  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -258,7 +260,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
  <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-##  <a name="DevTools"></a> Development Tools  
+##  <a name="DevTools"></a> Development tools  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
@@ -302,7 +304,7 @@ For info about the Integration Services (SSIS) features supported by the edition
  For information about the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] and Data Quality Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server](../master-data-services/master-data-services-and-data-quality-services-features-support.md). 
 
   
-##  <a name="DW"></a> Data Warehouse  
+##  <a name="DW"></a> Data warehouse  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
@@ -318,11 +320,11 @@ For info about the Integration Services (SSIS) features supported by the edition
   
 For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
   
-##  <a name="BIMD"></a> BI Semantic Model (Multi Dimensional)  
+##  <a name="BIMD"></a> BI semantic model (Multi Dimensional)  
   
 For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
    
-##  <a name="BIT"></a> BI Semantic Model (Tabular)  
+##  <a name="BIT"></a> BI semantic model (Tabular)  
   
 For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
@@ -330,7 +332,7 @@ For information about the Analysis Services features supported by the editions o
   
 For information about the Power Pivot for SharePoint features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
-##  <a name="DM"></a> Data Mining  
+##  <a name="DM"></a> Data mining  
   
 For information about the Data Mining features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
@@ -338,11 +340,11 @@ For information about the Data Mining features supported by the editions of [!IN
   
 For information about the Reporting Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Reporting Services Features Supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-##  <a name="BIC"></a> Business Intelligence Clients  
+##  <a name="BIC"></a> Business intelligence clients  
 
 For information about the Business Intelligence Client features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) or [Reporting Services Features Supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
   
-##  <a name="SLS"></a> Spatial and Location Services  
+##  <a name="SLS"></a> Spatial and location services  
   
 |Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -351,14 +353,14 @@ For information about the Business Intelligence Client features supported by the
 |Advanced spatial libraries|Yes|Yes|Yes|Yes|Yes|   
 |Import/export of industry-standard spatial data formats|Yes|Yes|Yes|Yes|Yes|   
   
-##  <a name="ADS"></a> Additional Database Services  
+##  <a name="ADS"></a> Additional database services  
   
 |Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Yes|Yes|Yes|Yes|Yes|   
 |Database mail|Yes|Yes|Yes|No|No| 
   
-##  <a name="Other"></a> Other Components  
+##  <a name="Other"></a> Other components  
   
 |Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -367,7 +369,7 @@ For information about the Business Intelligence Client features supported by the
   
 > [![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
   
-## See Also  
+## Next steps 
  [Product Specifications for SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  

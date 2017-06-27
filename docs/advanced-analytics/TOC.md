@@ -1,6 +1,7 @@
-# Machine Learning
+# [Getting Started](getting-started-with-machine-learning-services.md)
+
+# Overview
 ## [What is Microsoft Machine Learning Services](r/r-services.md)
-## [Getting Started](getting-started-with-machine-learning-services.md)
 ## [What's New](what-s-new-in-sql-server-machine-learning-services.md)
 ## [Architecture and Overview](architecture-overview-machine-learning.md)
 ## [Differences in Features between Editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)

@@ -28,7 +28,7 @@ manager: "jhubbard"
  This table summarizes key features for columnstore indexes and the products in which they are available.  
 
   
-|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|  
 |Batch execution for multi-threaded queries|yes|yes|yes|yes|yes|yes| 
 |Batch execution for single-threaded queries|||yes|yes|yes|yes|  
@@ -50,8 +50,8 @@ manager: "jhubbard"
   
  *To create a readable nonclustered columnstore index, store the index on a read-only filegroup.  
 
-## [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]  
- [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] add these new features.
+## [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 
+ [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] adds these new features.
 
 ### Functional
 - A columnstore index can have computed columns.

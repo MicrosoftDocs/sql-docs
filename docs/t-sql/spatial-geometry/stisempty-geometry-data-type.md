@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STIsEmpty (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns 1 if a **geometry** instance is empty. Returns 0 if a **geometry** instance is not empty.  
   

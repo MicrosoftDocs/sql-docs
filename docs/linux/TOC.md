@@ -54,3 +54,4 @@
 ## [Get started with security features](sql-server-linux-security-get-started.md)
 # [Optimize Performance](sql-server-linux-performance-get-started.md)
 # [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
+# [Customer Feedback](sql-server-linux-customer-feedback.md)

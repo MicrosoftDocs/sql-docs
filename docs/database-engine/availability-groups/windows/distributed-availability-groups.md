@@ -19,23 +19,23 @@ manager: "jhubbard"
 ---
 # Distributed Availability Groups
 
-A distributed availability group is a new feature introduced in SQL Server 2016, as a variation of the existing Always On availability groups (AG) feature. This article will clarify some aspects of distributed availability groups and complement the existing [SQL Server documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
+Distributed availability groups is a new feature introduced in SQL Server 2016, as a variation of the existing Always On availability groups feature. This article clarifies some aspects of distributed availability groups and complements the existing [SQL Server documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
 
 > [!NOTE]
-> "DAG" is not the official abbreviation for a distributed availability group since that is already used for Exchange's Database Availability Group feature, which has no relation to a SQL Server availability group or a distributed availability group.
+> "DAG" is not the official abbreviation for a distributed availability group, because the abbreviation is already used for the Exchange Database Availability Group feature. This Exchange feature has no relation to SQL Server availability groups or distributed availability groups.
 
-## Understanding Distributed Availability Groups
+## Understand Distributed Availability Groups
 
-A distributed availability group is a special type of availability group that spans two separate availability groups. The underlying availability groups are configured on two different Windows Server failover clusters (WSFCs). The availability groups participating in a distributed availability group do not need to be in the same location. They can be physical, virtual, on premises, in the public cloud, or anywhere that supports an availability group deployment. As long as two availability groups can communicate, you can configure a distributed availability group with them.
+A distributed availability group is a special type of availability group that spans two separate availability groups. The underlying availability groups are configured on two different Windows Server failover clusters. The availability groups that participate in a distributed availability group do not need to be in the same location. They can be physical, virtual, on-premises, in the public cloud, or anywhere that supports an availability-group deployment. As long as two availability groups can communicate, you can configure a distributed availability group with them.
 
-A traditional availability group has resources configured in a WSFC. A distributed availability group does not configure anything in the WSFC -- everything about it is maintained within SQL Server. For more information on how to see the information of a distributed availability group, see [Viewing Distributed Availability Group Information](#viewing-distributed-availability-group-information). 
+A traditional availability group has resources configured in a Windows Server failover cluster. A distributed availability group does not configure anything in the Windows Server failover cluster. Everything about it is maintained within SQL Server. To learn how to view information for a distributed availability group, see [Viewing Distributed Availability Group Information](#viewing-distributed-availability-group-information). 
 
 A distributed availability group requires that the underlying availability groups have a listener. Rather than providing the underlying server name for a standalone instance (or in the case of a SQL Server failover cluster instance (FCI), the value associated with the network name resource) as you would with a traditional availability group, the configured listener is specified for the distributed availability group with the parameter ENDPOINT_URL during creation. Even though each underlying availability group of the distributed availability group has a listener, there is no listener for a distributed availability group.
 
 The following figure shows a high-level view of a distributed availability group that spans two availability groups (AG 1 and AG 2), each configured on their own WSFC. The distributed availability group has a total of four replicas, with two in each availability group. Each availability group can support up to the maximum number of replicas, so a distributed availability group based on Standard Edition can have up to four replicas, and one based on Enterprise Edition can have up to 18 total replicas.
 
 <a name="fig1"></a>
-![High level view of a distributed availability group][1]
+![High-level view of a distributed availability group][1]
 
 The data movement in distributed availability groups can be configured as synchronous or asynchronous. However, data movement is slightly different within distributed availability groups compared to a traditional availability group. Although each availability group has a primary replica, there is only one copy of the database(s) participating in a Distributed Availability Group that can accept inserts, updates, and deletes. As shown below, AG 1 is the primary availability group. Its primary replica sends transactions to both the secondary replica(s) of AG 1 and the primary replica of AG 2. The primary replica of AG 2 then keeps the secondary replica(s) of AG 2 updated. 
 
@@ -110,7 +110,7 @@ Since a distributed availability group is loosely coupled, which in this case me
 
 ### Migration Using a Distributed Availability Group
 
-Because a distributed availability group supports two completely different availability group configurations, it enables not only easier disaster recovery and multi-site scenarios, but also migration scenarios. Whether you are migrating to new hardware or virtual machines (on premises or IaaS in the public cloud), configuring a distributed availability group allows a migration to occur where in the past backup, copy, and restore, or log shipping may have been used. 
+Because a distributed availability group supports two completely different availability group configurations, it enables not only easier disaster recovery and multi-site scenarios, but also migration scenarios. Whether you are migrating to new hardware or virtual machines (on-premises or IaaS in the public cloud), configuring a distributed availability group allows a migration to occur where in the past backup, copy, and restore, or log shipping may have been used. 
 
 The ability to migrate is especially useful in scenarios where the underlying OS will be changed and/or upgraded while keeping the SQL Server version the same. While Windows Server 2016 does allow a rolling upgrade from Windows Server 2012 R2 on the same hardware, most will still choose to deploy new hardware or virtual machines. 
 

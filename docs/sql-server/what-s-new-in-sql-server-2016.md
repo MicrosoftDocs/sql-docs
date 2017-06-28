@@ -24,9 +24,9 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # What's New in SQL Server 2016
- SQL Server 2016 is the biggest leap forward in Microsoft data platform history. Gain insights across your transactional and analytical data using a scalable database platform with everything built in: Unparalleled in-memory performance, new security innovations and high availability, to advanced analytics that make mission-critical applications intelligent.
+ SQL Server 2016 - Build intelligent, mission-critical applications using a scalable, hybrid database platform that has everything built in—from in-memory performance and advanced security to in-database analytics.
  
- This topic lists links to the detailed SQL Server 2016 component-level what's new information.   
+ This page provides links to detailed SQL Server 2016 what's new information for each component.   
  
   ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
  

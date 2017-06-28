@@ -287,3 +287,4 @@ and	ag.is_distributed = 1
 [12]: ./media/dag-12-distributed-ag-status.png
 [13]: ./media/dag-13-performance-information-distributed-ag.png
 
+ 

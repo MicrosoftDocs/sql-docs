@@ -71,7 +71,7 @@
 
 # Developer
 ## [Application integration](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-## [Report server web service](../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+## [Report server web service](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Extensions](../reporting-services/extensions/reporting-services-extension-library.md)
 ## [Custom report items](../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
 ## [Custom assemblies](../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)

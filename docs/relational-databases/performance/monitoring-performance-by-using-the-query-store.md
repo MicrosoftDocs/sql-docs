@@ -57,7 +57,9 @@ manager: "jhubbard"
  Execution plans for any specific query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typically evolve over time due to a number of different reasons such as statistics changes, schema changes, creation/deletion of indexes, etc. The procedure cache (where cached query plans are stored) only stores the latest execution plan. Plans also get evicted from the plan cache due to memory pressure. As a result, query performance regressions caused by execution plan changes can be non-trivial and time consuming to resolve.  
   
  Since the query store retains multiple execution plans per query, it can enforce policies to direct the query processor to use a specific execution plan for a query. This is referred to as plan forcing. Plan forcing in Query Store is provided by using a mechanism similar to the [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) query hint, but it does not require any change in user applications. Plan forcing can resolve a query performance regression caused by a plan change in a very short period of time.  
-  
+
+ **Wait stats** are another source of information that helps to troubleshoot performance in SQL Server. For a long time, wait statistics were available only on instance level, which made it hard to backtrack it to the actual query. In SQL Server 2017 and Azure SQL Database we added another dimension in Query Store that tracks wait stats. 
+
  Common scenarios for using the Query Store feature are:  
   
 -   Quickly find and fix a plan performance regression by forcing the previous query plan. Fix queries that have recently regressed in performance due to execution plan changes.  
@@ -69,8 +71,15 @@ manager: "jhubbard"
 -   Audit the history of query plans for a given query.  
   
 -   Analyze the resource (CPU, I/O, and Memory) usage patterns for a particular database.  
+-   Identify top n queries that are waiting on resources. 
+-   Understand wait nature for a particular query or plan.
   
- The query store contains two stores; a **plan store** for persisting the execution plan information, and a **runtime stats store** for persisting the execution statistics information. The number of unique plans that can be stored for a query in the plan store is limited by the **max_plans_per_query** configuration option. To enhance performance, the information is written to the two stores asynchronously. To minimize space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. The information in these stores is visible by querying the query store catalog views.  
+ The query store contains three stores:
+ - a **plan store** for persisting the execution plan information
+ - a **runtime stats store** for persisting the execution statistics information. 
+ - a **wait stats store** for persisting wait statistics information.
+ 
+ The number of unique plans that can be stored for a query in the plan store is limited by the **max_plans_per_query** configuration option. To enhance performance, the information is written to the two stores asynchronously. To minimize space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. The information in these stores is visible by querying the query store catalog views.  
   
  The following query returns information about queries and plans in the query store.  
   
@@ -93,7 +102,21 @@ JOIN sys.query_store_query_text AS Txt
  ![Regressed queries in object explorer](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Regressed queries in object explorer")  
   
  To force a plan, select a query and plan, and then click **Force Plan**. You can only force plans that were saved by the query plan feature and are still retained in the query plan cache.  
- 
+##  <a name="Waiting"></a> Finding wait queries
+
+Starting from SQL Server 2017 CTP 2.0 and on Azure SQL Database wait statistics per query over time are available for Query Store customers. 
+In Query Store wait types are combined into **wait categories**. Full mapping is available here [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
+
+**Wait categories** are combining different wait types into buckets similar by nature. Different wait categories require a different follow up analysis to resolve the issue, but wait types from the same category lead to very similar troubleshooting experiences, and providing the affected query on top of waits would be the missing piece to complete the majority of such investigations successfully.
+
+Here are some examples how you can get more insights into your workload before and after introducing wait categories in Query Store:
+|||| 
+|-|-|-|
+|Previous experience|New experience|Action|
+|High RESOURCE_SEMAPHORE waits per database|High Memory waits in Query Store for specific queries|Find the top memory consuming queries in Query Store. These queries are probably delaying further progress of the affected queries. Consider using MAX_GRANT_PERCENT query hint for these queries, or for the affected queries.|
+|High LCK_M_X waits per database|High Lock waits in Query Store for specific queries|Check the query texts for the affected queries and identify the target entities. Look in Query Store for other queries modifying the same entity, which are executed frequently and/or have high duration. After identifying these queries, consider changing the application logic to improve concurrency, or use a less restrictive isolation level.|
+|High PAGEIOLATCH_SH waits per database|High Buffer IO waits in Query Store for specific queries|Find the queries with a high number of physical reads in Query Store. If they match the queries with high IO waits, consider introducing an index on the underlying entity, in order to do seeks instead of scans, and thus minimize the IO overhead of the queries.|
+|High SOS_SCHEDULER_YIELD waits per database|High CPU waits in Query Store for specific queries|Find the top CPU consuming queries in Query Store. Among them, identify the queries for which high CPU trend correlates with high CPU waits for the affected queries. Focus on optimizing those queries – there could be a plan regression, or perhaps a missing index.| 
 ##  <a name="Options"></a> Configuration Options 
 
 The following options are available to configure query store parameters.
@@ -227,7 +250,8 @@ SET QUERY_STORE (
     INTERVAL_LENGTH_MINUTES = 15,  
     SIZE_BASED_CLEANUP_MODE = AUTO,  
     QUERY_CAPTURE_MODE = AUTO,  
-    MAX_PLANS_PER_QUERY = 1000  
+    MAX_PLANS_PER_QUERY = 1000,
+    WAIT_STATS_CAPTURE_MODE = ON 
 );  
 ```  
   
@@ -418,7 +442,23 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
 ```  
   
  If you want to see performance all regressions (not only those related to plan choice change) than just remove condition `AND p1.plan_id <> p2.plan_id` from the previous query.  
-  
+
+ **Queries that are waiting the most?**
+ This query will return top 10 queries that wait the most. 
+ ```tsql 
+  SELECT TOP 10
+	qt.query_text_id,
+	q.query_id,
+	p.plan_id,
+	sum(total_query_wait_time_ms) AS sum_total_wait_ms
+FROM sys.query_store_wait_stats ws
+JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
+JOIN sys.query_store_query q ON p.query_id = q.query_id
+JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
+GROUP BY qt.query_text_id, q.query_id, p.plan_id
+ORDER BY sum_total_wait_ms DESC
+ ```
+ 
  **Queries that recently regressed in performance (comparing recent vs. history execution)?** The next query compares query execution based periods of execution. In this particular example the query compares execution in recent period (1 hour) vs. history period (last day) and identifies those that introduced `additional_duration_workload`. This metrics is calculated as a difference between recent average execution and history average execution multiplied by the number of recent executions. It actually represents how much of additional duration recent executions introduced compared to history:  
   
 ```tsql  

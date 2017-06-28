@@ -56,3 +56,4 @@
 ## [Encrypting Connections](sql-server-linux-encrypted-connections.md)
 # [Optimize Performance](sql-server-linux-performance-get-started.md)
 # [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
+# [Customer Feedback](sql-server-linux-customer-feedback.md)

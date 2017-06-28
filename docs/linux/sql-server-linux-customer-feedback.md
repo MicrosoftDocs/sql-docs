@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure RHEL Cluster for SQL Server Availability Group | Microsoft Docs
+title: Customer Feedback for SQL Server on Linux | Microsoft Docs
 description: 
 author: annashres 
 ms.author: anshrest 

@@ -24,11 +24,10 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# What are the SQL functions?
+# What are the SQL database functions?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-Learn about the categories of functions you can use with SQL databases. Use the built-in functions or create your own user-defined functions.
-  
+Learn about the categories of built-in functions you can use with SQL databases. You can use the built-in functions or create your own user-defined functions.
   
 ## Aggregate functions
 

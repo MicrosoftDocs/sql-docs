@@ -82,8 +82,9 @@ The following table lists the tools that install Help Viewer, based on the SQL S
 **To install offline content**  
 1. Navigate to the [download site](https://www.microsoft.com/en-us/download/details.aspx?id=42557) for the Help content and click **Download**.  
 2. Click **Save** in the message box to save the SQLServer2014Documentation_*.exe file to your computer.  
-   >[!NOTE]
-   >For firewall and proxy restricted environments, save the download to a USB drive or other portable media that can be carried into the environment.   
+
+ For firewall and proxy restricted environments, save the download to a USB drive or other portable media that can be carried into the environment.   
+
 3. Double-click the .exe to unpack the Help content file and save the file to a local or shared folder.  
 4. Open the **Help Library Manager** by launching SQL Server Management Studio or Visual Studio and clicking **Manage Help Settings** on the **Help** menu.  
 5. Click **Install content from disk**, and browse to the folder where you unpacked the Help content file.  

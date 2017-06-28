@@ -24,7 +24,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # What's New in SQL Server 2016
- [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] is the biggest leap forward in Microsoft data platform history. Gain real time insights across your transactional and analytical data with a scalable database platform that has everything built in, from unparalleled in-memory performance, new security innovations and high availability, to advanced analytics that make mission-critical applications intelligent.
+ SQL Server 2016 is the biggest leap forward in Microsoft data platform history. Gain insights across your transactional and analytical data using a scalable database platform with everything built in: Unparalleled in-memory performance, new security innovations and high availability, to advanced analytics that make mission-critical applications intelligent.
  
  This topic lists links to the detailed SQL Server 2016 component-level what's new information.   
  
@@ -34,7 +34,7 @@ manager: "jhubbard"
  
     
  **Try SQL Server today!**    
- - Download the **free** [**SQL Server 2016 Developer edition!!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
+ - Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
     
 [![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
@@ -67,6 +67,6 @@ Links to individual topics:
 + [SQL Server 2016 datasheet](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [Features supported by Editions of SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
  + [Hardware and Software Requirements for Installing SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
- + [Install SQL Server 2016 from the Installtion Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
+ + [Install SQL Server 2016 from the Installation Wizard](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
  [Setup and Servicing Installation](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
 

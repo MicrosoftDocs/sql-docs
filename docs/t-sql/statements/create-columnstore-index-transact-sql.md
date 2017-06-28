@@ -2,7 +2,7 @@
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/21/2017"
+ms.date: "06/26/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -108,7 +108,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 ## Arguments  
 CREATE CLUSTERED COLUMNSTORE INDEX  
-Create a clustered columnstore index in which all of the data is compressed and stored by column. The index includes all of the columns in the table, and stores the entire table. If the existing table is a heap or clustered index, the table will be converted to a clustered columnstore index. If the table is already stored as a clustered columnstore index, the existing index will be dropped and rebuilt.  
+Create a clustered columnstore index in which all of the data is compressed and stored by column. The index includes all of the columns in the table, and stores the entire table. If the existing table is a heap or clustered index, the table is converted to a clustered columnstore index. If the table is already stored as a clustered columnstore index, the existing index is dropped and rebuilt.  
   
 *index_name*  
 Specifies the name for the new index.  
@@ -116,20 +116,20 @@ Specifies the name for the new index.
 If the table already has a clustered columnstore index, you can specify the same name as the existing index, or you can use the DROP EXISTING option to specify a new name.  
   
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table will be converted from rowstore to a columnstore. If the table is already a columnstore, this statement will rebuild the clustered columnstore index.  
+   Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table is converted from rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index.  
   
 WITH  
 DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON specifies to drop the existing clustered columnstore index, and create a new columnstore index.  
 
-   The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error will occur is the specified index name already exists.  
+   The default, DROP_EXISTING = OFF expects the index name is the same as the existing name. An error occurs is the specified index name already exists.  
   
 MAXDOP = *max_degree_of_parallelism*  
    Overrides the existing maximum degree of parallelism server configuration for the duration of the index operation. Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.  
   
    *max_degree_of_parallelism* values can be:  
    - 1 - Suppress parallel plan generation.  
-   - \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used will be 4 or less.  
+   - \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used is 4 or less.  
    - 0 (default) - Use the actual number of processors or fewer based on the current system workload.  
   
    For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
@@ -148,28 +148,28 @@ COLUMNSTORE
    COLUMNSTORE is the default and specifies to compress with the most performant columnstore compression. This is the typical choice.  
   
 COLUMNSTORE_ARCHIVE  
-   COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. Use this option for situations such as archival that require a smaller storage size and can afford more time for storage and retrieval.  
+   COLUMNSTORE_ARCHIVE further compresses the table or partition to a smaller size. Use this option for situations such as archival that require a smaller storage size and can afford more time for storage and retrieval.  
   
    For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
 
 ON  
-   With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index will use the settings partition or filegroup settings of the existing table.  
+   With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index uses the settings partition or filegroup settings of the existing table.  
   
    *partition_scheme_name* **(** *column_name* **)**  
    Specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
-   *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using.  
+   *column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using.  
 
    *filegroup_name*  
    Specifies the filegroup for storing the clustered columnstore index. If no location is specified and the table is not partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.  
 
    **"**default**"**  
-   To create the index on the default filegoup, use "default" or [ default ].  
+   To create the index on the default filegroup, use "default" or [ default ].  
   
    If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. QUOTED_IDENTIFIER is ON by default. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
-Create an in-memory nonclustered columnstore index on a rowstore table stored as a heap or clustered index. The index can have a filtered condition and does not need to include all of the columns of the underlying table. The columnstore index requires enough space to store a copy of the data. It is updateable and will be updated as the underlying table is changed. The nonclustered columnstore index on a clustered index enables real-time analytics.  
+Create an in-memory nonclustered columnstore index on a rowstore table stored as a heap or clustered index. The index can have a filtered condition and does not need to include all of the columns of the underlying table. The columnstore index requires enough space to store a copy of the data. It is updateable and is updated as the underlying table is changed. The nonclustered columnstore index on a clustered index enables real-time analytics.  
   
 *index_name*  
    Specifies the name of the index. *index_name*  must be unique within the table, but does not have to be unique within the database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -179,7 +179,7 @@ Create an in-memory nonclustered columnstore index on a rowstore table stored as
    Each column must be of a supported data type for columnstore indexes. See [Limitations and Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) for a list of the supported data types.  
 
 ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Specifies the one-, two-, or three-part name of the table that will contain the index.  
+   Specifies the one-, two-, or three-part name of the table that contains the index.  
 
 WITH
 DROP_EXISTING = [OFF] | ON  
@@ -192,7 +192,7 @@ MAXDOP = *max_degree_of_parallelism*
   
    *max_degree_of_parallelism* values can be:  
    - 1 - Suppress parallel plan generation.  
-   - \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used will be 4 or less.  
+   - \>1 - Restrict the maximum number of processors used in a parallel index operation to the specified number or fewer based on the current system workload. For example, when MAXDOP = 4, the number of processors used is 4 or less.  
    - 0 (default) - Use the actual number of processors or fewer based on the current system workload.  
   
    For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
@@ -202,9 +202,9 @@ MAXDOP = *max_degree_of_parallelism*
   
 ONLINE = [ON | OFF]   
    Applies to: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], in nonclustered columnstore indexes only.
-   ON specifies that the nonclustered columnstore index will remain online and available while the new copy of the index is being built.
+   ON specifies that the nonclustered columnstore index remains online and available while the new copy of the index is being built.
 
-   OFF specifies that the index will not be available for use while the new copy is being built. As this is a nonclustered index only, the base table will remain available, only the nonclustered columnstore index will not be used to satisfy queries until the new index is complete. 
+   OFF specifies that the index is not available for use while the new copy is being built. As this is a nonclustered index only, the base table remains available, only the nonclustered columnstore index is not used to satisfy queries until the new index is complete. 
 
 COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
@@ -219,7 +219,7 @@ COLUMNSTORE
   
 COLUMNSTORE_ARCHIVE  
    Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
-   Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE will further compress the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.  
+   Applies only to columnstore indexes, including both nonclustered columnstore and clustered columnstore indexes. COLUMNSTORE_ARCHIVE further compresses the table or partition to a smaller size. This can be used for archival, or for other situations that require a smaller storage size and can afford more time for storage and retrieval.  
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
@@ -238,10 +238,11 @@ WHERE <filter_expression> [ AND <filter_expression> ]
    For guidance on filtered indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 ON  
-   These options specify the filegroups on which the index will be created.  
+   These options specify the filegroups on which the index is created.  
   
 *partition_scheme_name* **(** *column_name* **)**  
-   Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. When partitioning a columnstore index, [!INCLUDE[ssDE](../../includes/ssde-md.md)] adds the partitioning column as a column of the index, if it is not already specified.  
+   Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index is mapped. The partition scheme must exist within the database by executing [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
+   *column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. When partitioning a columnstore index, [!INCLUDE[ssDE](../../includes/ssde-md.md)] adds the partitioning column as a column of the index, if it is not already specified.  
    If *partition_scheme_name* or *filegroup* is not specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.  
    A columnstore index on a partitioned table must be partition aligned.  
    For more information about partitioning indexes, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
@@ -292,124 +293,72 @@ The SET options in the Required Value column are required whenever any of the fo
  For more information about Filtered Indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md). 
   
 ##  <a name="LimitRest"></a> Limitations and Restrictions  
- If the underlying table has a column of a data type that is not supported for columnstore indexes, you must omit that column from the nonclustered columnstore index.  
-  
- Nonclustered columnstore indexes:  
-  
--   Cannot have more than 1024 columns.  
-  
--   A table with a nonclustered columnstore index can have unique constraints, primary key constraints, or foreign key constraints, but the constraints cannot be included in the nonclustered columnstore index.  
-  
--   Cannot be created on a view or indexed view.  
-  
--   Cannot include a sparse column.  
-  
--   Cannot be changed by using the **ALTER INDEX** statement. To change the nonclustered index, you must drop and re-create the columnstore index instead. You can use **ALTER INDEX** to disable and rebuild a columnstore index.  
-  
--   Cannot be created by using the **INCLUDE** keyword.  
-  
--   Cannot include the **ASC** or **DESC** keywords for sorting the index. Columnstore indexes are ordered according to the compression algorithms. Sorting would eliminate many of the performance benefits.  
 
--   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] version and Azure SQL Database configured at premium pricing tier. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
-
- **Each column in a columnstore index must be of one of the following common business data types:** 
-  
+**Each column in a columnstore index must be of one of the following common business data types:** 
 -   datetimeoffset [ ( *n* ) ]  
-  
 -   datetime2 [ ( *n* ) ]  
-  
 -   datetime  
-  
 -   smalldatetime  
-  
 -   date  
-  
 -   time [ ( *n* ) ]  
-  
 -   float [ ( *n* ) ]  
-  
 -   real [ ( *n* ) ]  
-  
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
-
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
-  
 -   money  
-  
 -   smallmoney  
-  
 -   bigint  
-  
 -   int  
-  
 -   smallint  
-  
 -   tinyint  
-  
 -   bit  
-  
 -   nvarchar [ ( *n* ) ] 
-
 -   nvarchar(max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and Azure SQL Database at premium pricing tier, in  clustered columnstore indexes only)   
-  
 -   nchar [ ( *n* ) ]  
-  
 -   varchar [ ( *n* ) ]  
-
 -   varchar(max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and Azure SQL Database at premium pricing tier, in  clustered columnstore indexes only)
-  
 -   char [ ( *n* ) ]  
-  
 -   varbinary [ ( *n* ) ] 
-
 -   varbinary (max)  (Applies to [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and Azure SQL Database at premium pricing tier, in  clustered columnstore indexes only)
-  
 -   binary [ ( *n* ) ]  
-  
 -   uniqueidentifier  (Applies to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later)
-
   
+If the underlying table has a column of a data type that is not supported for columnstore indexes, you must omit that column from the nonclustered columnstore index.  
   
- **Columns that use any of the following data types cannot be included in a columnstore index:**
-  
+**Columns that use any of the following data types cannot be included in a columnstore index:**
 -   ntext, text, and image  
-
 -   nvarchar(max), varchar(max), and varbinary(max) (Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and prior versions, and nonclustered columnstore indexes) 
-    
 -   rowversion (and timestamp)  
-  
 -   sql_variant  
-  
 -   CLR types (hierarchyid and spatial types)  
-  
 -   xml  
-  
 -   uniqueidentifier (Applies to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
+**Nonclustered columnstore indexes:**
+-   Cannot have more than 1024 columns.  
+-   A table with a nonclustered columnstore index can have unique constraints, primary key constraints, or foreign key constraints, but the constraints cannot be included in the nonclustered columnstore index.  
+-   Cannot be created on a view or indexed view.  
+-   Cannot include a sparse column.  
+-   Cannot be changed by using the **ALTER INDEX** statement. To change the nonclustered index, you must drop and re-create the columnstore index instead. You can use **ALTER INDEX** to disable and rebuild a columnstore index.  
+-   Cannot be created by using the **INCLUDE** keyword.  
+-   Cannot include the **ASC** or **DESC** keywords for sorting the index. Columnstore indexes are ordered according to the compression algorithms. Sorting would eliminate many of the performance benefits.  
+-   Cannot include large object (LOB) columns of type nvarchar(max), varchar(max), and varbinary(max) in nonclustered column store indexes. Only clustered columnstore indexes support LOB types, beginning in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] version and Azure SQL Database configured at premium pricing tier. Note, prior versions do not support LOB types in clustered and nonclustered columnstore indexes.
 
- **Columnstore indexes cannot be combined with the following features:**  
-
+**Columnstore indexes cannot be combined with the following features:**  
 -   Computed columns
-  
 -   Page and row compression, and **vardecimal** storage format (A columnstore index is already compressed in a different format.)  
-  
 -   Replication  
-  
 -   Filestream
 
 You cannot use cursors or triggers on a table with a clustered columnstore index. This restriction does not apply to nonclustered columnstore indexes; you can use cursors and triggers on a table with a nonclustered columnstore index.
 
- **SQL Server 2014 limitations**  
-  
- These limitations apply only to SQL Server 2014. In this release we introduced updateable clustered columnstore indexes. Nonclustered columnstore indexes were still read-only.  
-  
+**SQL Server 2014 specific limitations**  
+These limitations apply only to SQL Server 2014. In this release, we introduced updateable clustered columnstore indexes. Nonclustered columnstore indexes were still read-only.  
+
 -   Change tracking. You cannot use change tracking with nonclustered columnstore indexes (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
-  
 -   Change data capture. You cannot use change data capture for nonclustered columnstore index (NCCI) because they are read-only. It does work for clustered columnstore indexes (CCI).  
-  
 -   Readable secondary. You cannot access  a clustered clustered columnstore index (CCI) from a readable secondary of an Always OnReadable availability group.  You can access a nonclustered columnstore index (NCCI) from a readable secondary.  
-  
--   Multiple Active Result Sets (MARS). SQL Server 2014 uses MARS for  read-only connections to tables with a columnstore index.    However, SQL Server 2014 does not support MARS for concurrent data manipulation language (DML) operations on a table with a columnstore index. When this occurs, SQL Server will terminate the connections and abort the transactions.  
+-   Multiple Active Result Sets (MARS). SQL Server 2014 uses MARS for  read-only connections to tables with a columnstore index.    However, SQL Server 2014 does not support MARS for concurrent data manipulation language (DML) operations on a table with a columnstore index. When this occurs, SQL Server terminates the connections and aborts the transactions.  
   
  For information about the performance benefits and limitations of columnstore indexes, see [Columnstore Indexes Overview](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
@@ -417,17 +366,11 @@ You cannot use cursors or triggers on a table with a clustered columnstore index
  All of the columns in a columnstore index are stored in the metadata as included columns. The columnstore index does not have key columns. These system views provide information about columnstore indexes.  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
-  
 -   [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
 -   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)  
-  
 -   [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
-  
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
-  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
-  
 
 ##  <a name="convert"></a> Examples for converting a rowstore table to columnstore  
   
@@ -463,7 +406,7 @@ GO
 ```  
   
 ### C. Handle nonclustered indexes when converting a rowstore table to a columnstore index.  
- This example shows how to handle nonclustered indexes when converting a rowstore table to a columnstore index. Actually, beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no special action is required; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will automatically define and rebuild the nonclustered indexes on the new clustered columnstore index.  
+ This example shows how to handle nonclustered indexes when converting a rowstore table to a columnstore index. Actually, beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no special action is required; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically defines and rebuilds the nonclustered indexes on the new clustered columnstore index.  
   
  If you want to drop the nonclustered indexes, use the DROP INDEX statement prior to creating the columnstore index. The DROP EXISTING option only drops the clustered index that is being converted. It does not drop the nonclustered indexes.  
   
@@ -528,7 +471,7 @@ GO
   
 3.  Drop the clustered index.  
   
-    -   Do this only if you want to specify a new name for the index when it is converted to a clustered columnstore index. If you do not drop the clustered index, the new clustered columnstore index will have the same name.  
+    -   Do this only if you want to specify a new name for the index when it is converted to a clustered columnstore index. If you do not drop the clustered index, the new clustered columnstore index has the same name.  
   
         > [!NOTE]  
         >  The name of the index might be easier to remember if you use your own name. All rowstore clustered indexes use the default name which is 'ClusteredIndex_\<GUID>'.  
@@ -672,7 +615,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
 ###  <a name="ncDML"></a> D. Change the data in a nonclustered columnstore index  
    Applies to: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
   
- Once you create a nonclustered columnstore index on a table, you cannot directly modify the data in that table. A query with INSERT, UPDATE, DELETE, or MERGE will fail and return an error message. To add or modify the data in the table, you can do one of the following:  
+ Once you create a nonclustered columnstore index on a table, you cannot directly modify the data in that table. A query with INSERT, UPDATE, DELETE, or MERGE fails and returns an error message. To add or modify the data in the table, you can do one of the following:  
   
 -   Disable or drop the columnstore index. You can then update the data in the table. If you disable the columnstore index, you can rebuild the columnstore index when you finish updating the data. For example,  
   
@@ -688,7 +631,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### E. Change a clustered index to a clustered columnstore index  
+### A. Change a clustered index to a clustered columnstore index  
  By using the CREATE CLUSTERED COLUMNSTORE INDEX statement with DROP_EXISTING = ON, you can:  
   
 -   Change a clustered index into a clustered columnstore index.  
@@ -719,7 +662,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### F. Rebuild a clustered columnstore index  
+### B. Rebuild a clustered columnstore index  
  Building on the previous example, this example uses CREATE CLUSTERED COLUMNSTORE INDEX to rebuild the existing clustered columnstore index called cci_xDimProduct.  
   
 ```  
@@ -729,10 +672,10 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### G. Change the name of a clustered columnstore index  
+### C. Change the name of a clustered columnstore index  
  To change the name of a clustered columnstore index, drop the existing clustered columnstore index, and then recreate the index with a new name.  
   
- We recommend only doing this operation with a small table or an empty table. It will take a long time to drop a large clustered columnstore index and rebuild with a different name.  
+ We recommend only doing this operation with a small table or an empty table. It takes a long time to drop a large clustered columnstore index and rebuild with a different name.  
   
  Using the cci_xDimProduct clustered columnstore index from the previous example, this example drops the cci_xDimProduct clustered columnstore index and then recreates the clustered columnstore index with the name mycci_xDimProduct.  
   
@@ -747,20 +690,20 @@ ON xdimProduct
 WITH ( DROP_EXISTING = OFF );  
 ```  
   
-### H. Convert a columnstore table to a rowstore table with a clustered index  
- There might be a situation for which you want to drop a clustered columnstore index and create a clustered index. This stores the table in rowstore format. This example converts a columnstore table to a rowstore table with a clustered index with the same name. None of the data is lost. All data goes to the rowstore table and the columns listed become the key columns in the clustered index.  
+### D. Convert a columnstore table to a rowstore table with a clustered index  
+ There might be a situation for which you want to drop a clustered columnstore index and create a clustered index. This stores the table in rowstore format. This example converts a columnstore table to a rowstore table with a clustered index with the same name. None of the data is lost. All data goes to the rowstore table and the columns listed becomes the key columns in the clustered index.  
   
 ```  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
---All of the columns will be stored in the rowstore clustered index.   
---The columns listed will be the included columns in the index.  
+--All of the columns are stored in the rowstore clustered index.   
+--The columns listed are the included columns in the index.  
 CREATE CLUSTERED INDEX cci_xDimProduct    
 ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode)  
 WITH ( DROP_EXISTING = ON);  
   
 ```  
   
-### I. Convert a columnstore table back to a rowstore heap  
+### E. Convert a columnstore table back to a rowstore heap  
  Use [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) to drop the clustered columnstore index and convert the table to a rowstore heap. This example converts the cci_xDimProduct table to a rowstore heap. The table continues to be distributed, but is stored as a heap.  
   
 ```  

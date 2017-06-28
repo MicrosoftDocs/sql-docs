@@ -2,7 +2,7 @@
 title: "What&#39;s New in SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "12/15/2016"
+ms.date: "06/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,10 +23,10 @@ author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
 ---
-# What&#39;s New in SQL Server 2016
+# What's New in SQL Server 2016
  [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] is the biggest leap forward in Microsoft data platform history. Gain real time insights across your transactional and analytical data with a scalable database platform that has everything built in, from unparalleled in-memory performance, new security innovations and high availability, to advanced analytics that make mission-critical applications intelligent.
  
- This topic summarizes links to the detailed [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] component level what's new information.   
+ This topic lists links to the detailed SQL Server 2016 component-level what's new information.   
  
   ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
  
@@ -34,14 +34,11 @@ manager: "jhubbard"
  
     
  **Try SQL Server today!**    
- - Get the **free** [**SQL Server 2016 Developer edition!!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
- 
- 
-[![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) Download SQL Server 2016 from the **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)** 
+ - Download the **free** [**SQL Server 2016 Developer edition!!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
     
-[![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.  
+[![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
- [![Download from Evaluation Center](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Download the latest version of SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx).   
+ [![Download from Evaluation Center](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) Download the latest version of [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).   
 
     
  ## What's new in SQL Server?
@@ -55,17 +52,17 @@ Links to individual topics:
 
  - [New SQL PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
  
- - [Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
+ - [Integration Services (SSIS)](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
   
  - [Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx)   
   
- - [Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)    
+ - [Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md)    
        
  - [SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)    
       
   
     
-## See Also    
+## More links   
  +   [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md). 
 + [SQL Server 2016 datasheet](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [Features supported by Editions of SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)

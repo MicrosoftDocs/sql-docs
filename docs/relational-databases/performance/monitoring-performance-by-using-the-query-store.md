@@ -74,10 +74,10 @@ manager: "jhubbard"
 -   Identify top n queries that are waiting on resources. 
 -   Understand wait nature for a particular query or plan.
   
- The query store contains three stores:
- - a **plan store** for persisting the execution plan information
- - a **runtime stats store** for persisting the execution statistics information. 
- - a **wait stats store** for persisting wait statistics information.
+The query store contains three stores:
+- a **plan store** for persisting the execution plan information
+- a **runtime stats store** for persisting the execution statistics information. 
+- a **wait stats store** for persisting wait statistics information.
  
  The number of unique plans that can be stored for a query in the plan store is limited by the **max_plans_per_query** configuration option. To enhance performance, the information is written to the two stores asynchronously. To minimize space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. The information in these stores is visible by querying the query store catalog views.  
   
@@ -446,6 +446,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
 
  **Queries that are waiting the most?**
  This query will return top 10 queries that wait the most. 
+ 
  ```tsql 
   SELECT TOP 10
 	qt.query_text_id,

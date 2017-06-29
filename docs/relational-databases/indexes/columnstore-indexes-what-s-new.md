@@ -37,7 +37,7 @@ manager: "jhubbard"
 |Specify columnstore index when creating a table.|||yes|yes|yes|yes|  
 |AlwaysOn supports columnstore indexes.|yes|yes|yes|yes|yes|yes| 
 |AlwaysOn readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|  
-|AlwaysOn readable secondary supports updateable columnstore indexes.|||yes|||yes|  
+|AlwaysOn readable secondary supports updateable columnstore indexes.|||yes|yes|||  
 |Read-only nonclustered columnstore index on heap or btree.|yes|yes|yes*|yes*|yes*|yes*|  
 |Updateable nonclustered columnstore index on heap or btree|||yes|yes|yes|yes|  
 |Additional btree indexes allowed on a heap or btree that has a nonclustered columnstore index.|yes|yes|yes|yes|yes|yes|  
@@ -46,7 +46,7 @@ manager: "jhubbard"
 |Columnstore index on a memory-optimized table.|||yes|yes|yes|yes|  
 |Nonclustered columnstore index definition supports using a filtered condition.|||yes|yes|yes|yes|  
 |Compression delay option for columnstore indexes in CREATE TABLE and ALTER TABLE.|||yes|yes|yes|yes|
-|Computed columns||||yes|||   
+|Columnstore index can have a non-persisted computed column.||||yes|||   
   
  *To create a readable nonclustered columnstore index, store the index on a read-only filegroup.  
 
@@ -54,7 +54,7 @@ manager: "jhubbard"
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] adds these new features.
 
 ### Functional
-- A columnstore index can have computed columns.
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supports non-persisted computed columns in clustered columnstore indexes. Persisted columns are not supported in clustered columnstore indexes.You cannot create a nonclustered index on a columnstore index that has a computed column. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adds key enhancements to improve the performance and flexibility of columnstore indexes. These improvements enhance data warehousing scenarios and enable real-time operational analytics.  

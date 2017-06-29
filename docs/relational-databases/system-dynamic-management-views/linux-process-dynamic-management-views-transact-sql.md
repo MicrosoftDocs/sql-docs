@@ -1,7 +1,7 @@
 ---
 title: "Linux Process Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/10/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""

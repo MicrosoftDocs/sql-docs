@@ -8,7 +8,7 @@
 ## [Administration of Replication](./administration/administration-replication.md)
 ## [Replication Agents](./agents/replication-agents.md)
 ## [Developer Concepts](../../relational-databases/replication/concepts/replication-developer-documentation.md)
-## [Monitoring Replication](monitoring-replication.md)
+## [Monitoring Replication](./monitor/monitoring-replication.md)
 ## [Non-SQL Heterogeneous Database Replication](./non-sql/heterogeneous-database-replication.md)
 ## [Publish Data and Database Objects](./publish/publish-data-and-database-objects.md)
 ## [Security for Replication](./security/security-overview-replication.md)
@@ -17,7 +17,7 @@
 ## [Types of Replication](types-of-replication.md)  
 ### [Snapshot Replication](snapshot-replication.md)  
 ### [Merge Replication](./merge/merge-replication.md)
-### [Transactional Replication](transactional-replication.md) 
+### [Transactional Replication](./transactional/transactional-replication.md) 
 
 ## [Replication to Memory-Optimized Table Subscribers](replication-to-memory-optimized-table-subscribers.md)  
 ## [Replication to SQL Database](replication-to-sql-database.md)  

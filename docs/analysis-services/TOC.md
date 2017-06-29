@@ -99,12 +99,9 @@
 ## Tabular models
 ### [Tabular Model Programming for Compatibility Level 1200 and higher](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
 #### [Tabular Model Scripting Language (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
-#### [Tabular Model Scripting Language (TMSL) commands](../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)
-#### [Tabular Model Scripting Language (TMSL) objects](../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)
-#### [Tabular Object Model (TOM)](../analysis-services/tabular-model-programming-compatibility-level-1200/add-a-data-source-to-tabular-model-analysis-services-amo-tom.md)
+#### [Tabular Model Scripting Language (TMSL) commands](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+#### [Tabular Model Scripting Language (TMSL) objects](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
 ### [Tabular Model Programming for Compatibility Levels 1050 and 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
-#### [Analysis Services Scripting Language (ASSL)](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
-#### [CSDLBI](../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)
 
 ## Multimdimensional models
 ### [Analysis Services Scripting Language (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
@@ -115,12 +112,13 @@
 ### [Extending OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
 ## [Schema rowsets](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
+## [Analysis Services Scripting Language (ASSL for XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
 
 # Reference
-## [Data Analysis Expressions (DAX)](https://msdn.microsoft.com/library/gg413422.aspx)
+## [Data Analysis Expressions (DAX) on MSDN](https://msdn.microsoft.com/library/gg413422.aspx)
 ## [Data Mining Extensions (DMX)](../dmx/data-mining-extensions-dmx-reference.md)
-## [Multidimensional Expressions (MDX)](../mdx/multidimensional-expressions-mdx-reference.md)
+## [Multidimensional Expressions (MDX)](../mdx/analysis-services-language-reference.md)
 ## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)
 ## [PowerShell](../analysis-services/powershell/technical-reference-ssas.md)
 ## [Server properties](../analysis-services/server-properties/server-properties-in-analysis-services.md)

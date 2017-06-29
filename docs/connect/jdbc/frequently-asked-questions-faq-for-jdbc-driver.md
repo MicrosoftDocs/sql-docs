@@ -29,8 +29,8 @@ manager: "jhubbard"
   
 ||||  
 |-|-|-|  
-|mssql-jdbc.6.2.0.jre8.jar|JDBC 4.2, 4.1, and 4.0|JDK 8.0 and 7.0|  
-|mssql-jdbc.6.2.0.jre7.jar|JDBC 4.1 and 4.0|JDK 7.0 and 6.0|  
+|mssql-jdbc-6.2.0.jre8.jar|JDBC 4.2, 4.1, and 4.0|JDK 8.0 and 7.0|  
+|mssql-jdbc-6.2.0.jre7.jar|JDBC 4.1 and 4.0|JDK 7.0 and 6.0|  
  
  The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server support both JDBC 4.1 and JDBC 4.2 specifications and include two JAR class libraries in the installation package as follows:  
   

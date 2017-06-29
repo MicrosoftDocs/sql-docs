@@ -100,7 +100,7 @@ This how-to guide goes over two approaches depending on the desired result after
  
 ## To make the encrypted resources inaccessible
 1. Drop the databases that are being encrypted by the potentially compromised key.
-The database and log files are automatically backed up, so a point-in-time restore of the database can be done at any point (as long as you provide the key). 
+The database and log files are automatically backed up, so a point-in-time restore of the database can be done at any point (as long as you provide the key). The databases must be dropped before deletion of an active TDE protector to prevent potential data loss of up to 10 minutes of the most recent transactions. 
 2. Back up the key material of the TDE Protector in Key Vault.
 3. Remove the potentially compromised key from Key Vault
 

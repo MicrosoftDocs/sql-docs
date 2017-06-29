@@ -27,37 +27,21 @@
 #### [Create a Predictive Model](tutorials/rtsql-create-a-predictive-model-r.md)
 #### [Predict and Plot from Model](tutorials/rtsql-predict-and-plot-from-model.md)
 
-## [R: Data Science End to End Solution](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
-### [Prerequisites for Data Science Walkthroughs](tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)
-### [Prepare the Data](tutorials/walkthrough-prepare-the-data.md)
-### [Explore the Data](tutorials/walkthrough-view-and-explore-the-data.md)
-### [Summarize Data using R](tutorials/walkthrough-view-and-summarize-data-using-r.md)
-### [Create Graphs and Plots Using R](tutorials/walkthrough-create-graphs-and-plots-using-r.md)
-### [Create Data Features using SQL and R](tutorials/walkthrough-create-data-features.md)
-### [Build and Save the Model](tutorials/walkthrough-build-and-save-the-model.md)
-### [Deploy and Use the Model](tutorials/walkthrough-deploy-and-use-the-model.md)
-
+### [R: Data Science End to End Solution](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+#### [Prerequisites for Data Science Walkthroughs](tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md)
+#### [Prepare the Data](tutorials/walkthrough-prepare-the-data.md)
+#### [Explore the Data](tutorials/walkthrough-view-and-explore-the-data.md)
+#### [Summarize Data using R](tutorials/walkthrough-view-and-summarize-data-using-r.md)
+#### [Create Graphs and Plots Using R](tutorials/walkthrough-create-graphs-and-plots-using-r.md)
+#### [Create Data Features using SQL and R](tutorials/walkthrough-create-data-features.md)
+#### [Build and Save the Model](tutorials/walkthrough-build-and-save-the-model.md)
+#### [Deploy and Use the Model](tutorials/walkthrough-deploy-and-use-the-model.md)
 
 ### [R: Data Science Deep Dive with RevoScaleR](tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-#### [Lesson 1: Work with SQL Server Data](tutorials/deepdive-work-with-sql-server-data-using-r.md)
-#### [Create SQL Server Data Objects using RxSqlServerData](tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-#### [Query and Modify the SQL Server Data](tutorials/deepdive-query-and-modify-the-sql-server-data.md)
-#### [Define and Use Compute Contexts](tutorials/deepdive-define-and-use-compute-contexts.md)
-
-### [Lesson 2: Create and Run R Scripts](tutorials/deepdive-create-and-run-r-scripts.md)
-#### [Visualize SQL Server Data using R](tutorials/deepdive-visualize-sql-server-data-using-r.md)
-#### [Create Models](tutorials/deepdive-create-models.md)
-#### [Score New Data](tutorials/deepdive-score-new-data.md)
-
-### [Lesson 3: Transform Data Using R](tutorials/deepdive-transform-data-using-r.md)
-#### [Load Data into Memory using rxImport](tutorials/deepdive-load-data-into-memory-using-rximport.md)
-#### [Create New SQL Server Table using rxDataStep](tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-#### [Perform Chunking Analysis using rxDataStep](tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
-
-### [Lesson 4: Analyze Data in Local Compute Context](tutorials/deepdive-analyze-data-in-local-compute-context.md)
+#### [Lesson 1: Work with # [Lesson 4: Analyze Data in Local Compute Context](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [Move Data between SQL Server and XDF File](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 
-### [Lesson 5: Create a Simple Simulation](tutorials/deepdive-create-a-simple-simulation.md)
+#### [Lesson 5: Create a Simple Simulation](tutorials/deepdive-create-a-simple-simulation.md)
 
 ### [R: In-Database Analytics for SQL Developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
 #### [Step 1: Download the Sample Data](tutorials/sqldev-download-the-sample-data.md)
@@ -66,7 +50,6 @@
 #### [Step 4: Create Data Features using T-SQL](tutorials/sqldev-create-data-features-using-t-sql.md)
 #### [Step 5: Train and Save a Model using T-SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
 #### [Step 6: Operationalize the Model](tutorials/sqldev-operationalize-the-model.md)
-
 
 # [Machine Learning Services - Python](python/sql-server-python-services.md)
 
@@ -202,4 +185,4 @@
 ## [R Tutorials for SQL Server](tutorials/sql-server-r-tutorials.md)
 
 ## [Data Science Solution Templates](tutorials/data-science-scenarios-and-solution-templates.md)
-## [SQL Server Samples](https://github.com/Microsoft/sql-server-samples)
+## [SQL Server Samples (GitHub)](https://github.com/Microsoft/sql-server-samples)

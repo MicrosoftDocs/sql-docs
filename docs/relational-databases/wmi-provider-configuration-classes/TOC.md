@@ -1,3 +1,5 @@
+# [WMI Provider for Configuration Management Classes](wmi-provider-for-configuration-management-classes.md)
+
 # Specific Areas
 ## [ClientNetLibInfo class +](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)
 ## [ClientNetworkProtocol class +](../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)
@@ -13,6 +15,7 @@
 ## [SqlServerAlias class +](../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/aliasname-property-sqlserveralias-class.md)
 ## [SqlService class +](../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md)
 ## [SqlServiceAdvancedProperty class +](../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md)
+
 # [CInstance Class - InstanceName Property](cinstance-class-instancename-property.md)
 # [CInstance Class - SetDefaults Method](cinstance-class-setdefaults-method.md)
 # [CInstance Class](cinstance-class.md)
@@ -21,4 +24,3 @@
 # [ClientSettings Class](clientsettings-class.md)
 # [SqlErrorLogEvent Class](sqlerrorlogevent-class.md)
 # [SqlErrorLogFile Class](sqlerrorlogfile-class.md)
-# [WMI Provider for Configuration Management Classes](wmi-provider-for-configuration-management-classes.md)

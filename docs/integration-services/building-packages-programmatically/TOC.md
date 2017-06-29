@@ -1,8 +1,9 @@
+# [Adding Connections Programmatically](adding-connections-programmatically.md)
+
 # [Building Packages Programmatically](building-packages-programmatically.md)
 # [Creating a Package Programmatically](creating-a-package-programmatically.md)
 # [Adding Tasks Programmatically](adding-tasks-programmatically.md)
 # [Connecting Tasks Programmatically](connecting-tasks-programmatically.md)
-# [Adding Connections Programmatically](adding-connections-programmatically.md)
 # [Working with Variables Programmatically](working-with-variables-programmatically.md)
 # [Handling Events Programmatically](handling-events-programmatically.md)
 # [Enabling Logging Programmatically](enabling-logging-programmatically.md)

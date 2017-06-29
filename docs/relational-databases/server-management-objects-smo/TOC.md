@@ -1,5 +1,8 @@
+# [SQL Server Management Objects (SMO) Programming Guide](sql-server-management-objects-smo-programming-guide.md)
+
 # [Create program +](../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)
 # [Tasks +](../../relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md)
+
 # [Backward Compatibility in SMO](backward-compatibility-in-smo.md)
 # [Files and Version Numbers](files-and-version-numbers.md)
 # [Getting Started in SMO](getting-started-in-smo.md)
@@ -15,6 +18,5 @@
 # [SMO Programming - Getting Started in Visual C# .NET](smo-programming-getting-started-in-visual-csharp-net.md)
 # [SMO Programming Languages](smo-programming-languages.md)
 # [SMO Syntax Conventions](smo-syntax-conventions.md)
-# [SQL Server Management Objects (SMO) Programming Guide](sql-server-management-objects-smo-programming-guide.md)
 # [SQL-DMO Mapping to SMO](sql-dmo-mapping-to-smo.md)
 # [System Requirements](system-requirements.md)

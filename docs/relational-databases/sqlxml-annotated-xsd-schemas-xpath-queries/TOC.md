@@ -6,7 +6,7 @@
 ## [Location path +](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md)
 ## [Samples +](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md)
 ## [Updategrams +](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)
-## [Bulk load XML +](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/C:\Users\genemi\gitgm\sql-docs-pr\docs\relational-databases\sqlxml-annotated-xsd-schemas-xpath-queries\bulk-load-xml.md)
+## [Bulk load XML +](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)
 ## [Data access components provider +](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)
 ## [Caching templates XML schemas +](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)
 ## [Security +](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)

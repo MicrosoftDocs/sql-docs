@@ -36,7 +36,7 @@ manager: "jhubbard"
 |total_log_size_in_bytes |**bigint** |The size of the log  |
 |used_log_space_in_bytes |**bigint** |The occupied size of the log  |     
 |used_log_space_in_percent |**real** |The occupied size of the log as a percent of the total log size |
-|log_space_in_bytes_since_last_backup |**bigint** |The amount of space used since the last log backup <br />**Applies to:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)],  [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+|log_space_in_bytes_since_last_backup |**bigint** |The amount of space used since the last log backup <br />**Applies to:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] through [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)],  [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
     
   
 ## Permissions  

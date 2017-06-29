@@ -68,12 +68,7 @@ TDE with BYOK support is a security capability that is built into Azure SQL Data
 
 ### Loss of access to keys
 
-Once a server no longer has access to the TDE Protector, **all connections to the encrypted databases under the server are blocked, and these databases go offline and get dropped within 24 hours.**
-
-### Deleted keys
-
-Once the TDE Protector is deleted in Key Vault, **all connections to the encrypted databases under the server are blocked, and these databases go offline and get dropped within 24 hours.** Old backups encrypted with the compromised key are no longer be accessible.
-If there is an extreme case where a key is suspected to be compromised (such that a service or user had unauthorized access to the key), it’s best to delete the key. See [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md).
+Once a server no longer has access to the TDE Protector (either by removed Key Vault permissions or a deleted key), **all connections to the encrypted databases under the server are blocked, and these databases go offline and get dropped within 24 hours**. Old backups encrypted with the unavailable key are no longer be accessible. If there is an extreme case where a key is suspected to be compromised (such that a service or user had unauthorized access to the key), it’s best to delete the key by following the guidelines at [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). The databases must be dropped before deletion of an active TDE protector to prevent up to 10 minutes of potential data loss.  
 
 ### Expired keys
 

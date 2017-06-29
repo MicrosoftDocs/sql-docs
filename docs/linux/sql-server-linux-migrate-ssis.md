@@ -37,7 +37,7 @@ To run SSIS packages on a Linux computer, first you have to install SQL Server I
 
 ## Run an SSIS package
 
-To run an SSIS package on a Linux computer, do the following things.
+To run an SSIS package on a Linux computer, do the following things:
 
 1.  Copy the SSIS package to the Linux computer.
 2.  Run the following command:
@@ -47,7 +47,7 @@ To run an SSIS package on a Linux computer, do the following things.
 
 ## More about SSIS
 
-Microsoft SQL Server Integration Services (SSIS) is a platform for building high performance data integration solutions, including extraction, transformation, and loading (ETL) packages for data warehousing. For more info about SSIS, see [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services.md).
+Microsoft SQL Server Integration Services (SSIS) is a platform for building high-performance data integration solutions, including extraction, transformation, and loading (ETL) packages for data warehousing. For more info about SSIS, see [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services.md).
 
 SSIS includes the following features:
 - graphical tools and wizards for building and debugging packages on Windows

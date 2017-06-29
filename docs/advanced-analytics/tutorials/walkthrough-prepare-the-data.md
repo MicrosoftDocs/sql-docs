@@ -21,7 +21,7 @@ manager: "jhubbard"
 ---
 # 1. Prepare the Data
 
-At this point you should have installed either SQL Server 2016 or 2017 with support for the R language enabled. In this lesson, you'll get the data and R packages needed for the scenario in these steps:
+At this point, you should have installed either SQL Server 2016 or 2017 with support for the R language enabled. In this lesson, you'll get the data and R packages needed for the scenario in these steps:
 
 1. Download the data and all R scripts from Github. A PowerShell script is provided for convenience.
 2. Install some additional R packages, both on the server and on your R workstation.
@@ -61,7 +61,7 @@ All the code has been provided in a GitHub repository. You can use a PowerShell 
   
 ## 2. Install required packages
 
-For this walkthrough, you'll install some R libraries that are not included with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. You must install the packages both on the client where you will be developing the solution, and on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer where you will deploy the solution.
+For this walkthrough, you'll install some R libraries that are not included with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. You must install the packages both on the client where you develop the solution, and on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer where you deploy the solution.
 
 The R script that you downloaded includes the commands to download and install these packages.
 
@@ -114,13 +114,13 @@ The R script that you downloaded includes the commands to download and install t
 
 When you downloaded the data files along with R and T-SQL scripts, the PowerShell script `RunSQL_R_Walkthrough.ps1` was included in the download. The script performs these actions:
 
-- Checks whether the SQL Native Client and command-line utilities for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are installed. The command-line tools are needed to run the [bcp Utility](../../tools/bcp-utility.md), which is used for fast bulk loading of data into SQL tables.
+- Checks whether the SQL Native Client and command-line utilities for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are installed. You need the command-line tools to get the [bcp utility](../../tools/bcp-utility.md), which is used for fast bulk loading of data into SQL tables.
 - Connects to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and runs some [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that configure the database and create the tables for the model and data.
 - Runs a SQL script to create several stored procedures
 - Loads the data you downloaded previously into a table named `nyctaxi_sample`
 - Rewrites the arguments in the R script file to use the database name that you specify
 
-You should run this script on the computer where you will be building the solution, such as the laptop where you develop and test your R code. This computer, which we'll call the data science client, must be able to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer using the Named Pipes protocol.
+You should run this script on the computer where you will be building the solution, such as the laptop where you develop and test your R code. This computer, which we'll refer to as the data science client, must be able to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer using the Named Pipes protocol.
 
 1. Open a PowerShell command line as administrator.
 
@@ -130,7 +130,7 @@ You should run this script on the computer where you will be building the soluti
     .\RunSQL_R_Walkthrough.ps1
     ```
   
-3.  You will be prompted for each of the following parameters:
+3.  You are prompted for each of the following parameters:
   
     **Database server name**: The name of the SQL Server instance where R Services or Machine Learning Services is installed.
     
@@ -140,7 +140,7 @@ You should run this script on the computer where you will be building the soluti
     
     + Type the name of a SQL login that has CREATE DATABASE privileges, and provide the SQL password on a successive prompt.
     + Press ENTER without typing any name to use your own Windows identity, and at the secured prompt, type your Windows password. PowerShell does not support entering a different Windows user name.
-    + If you fail to specify a valid user, the script will default to using integrated Windows authentication. 
+    + If you fail to specify a valid user, the script defaults to using Windows authentication.
     
       > [!WARNING] 
       > When you use the prompt in the PowerShell script to provide your credentials, the password will be written to the updated script file in plain text. Edit the file to remove the credentials immediately after you have created the necessary R objects.
@@ -209,7 +209,7 @@ You might get this error when running one of the scripts:
 ### The table schema was created but the table has no data
 
 If the rest of the script ran without problems, you can upload the data to the table manually by calling **bcp** from the command line.
- 
+
 #### Using a SQL login
 
 `bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestserver.contoso.com -f C:\tempR\taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U <SQL login> -P <password>`
@@ -218,10 +218,10 @@ If the rest of the script ran without problems, you can upload the data to the t
 
 `bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestserver.contoso.com -f C:\tempR\taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -T`
 
-+ The **in** keyword specifies the direction of data movement.
-+ The  **-f** argument requires that you specify the full path of a format file. A format file is required if you use the **in** option.
-+ Use the **-U** and **-P** arguments if running bcp with a SQL login.
-+ Use the **-T** argument if you are using Windows integrated authentication.
++ The <code>in</code> keyword specifies the direction of data movement.
++ The  <code>-f</code> argument requires that you specify the full path of a format file. A format file is required if you use the <code>in</code> option.
++ Use the <code>-U</code> and <code>-P</code> arguments if running bcp with a SQL login.
++ Use the <code>-T</code> argument if you are using Windows integrated authentication.
 
 If the script doesn't load the data, check the syntax, and verify that your server name is specified correctly for your network. For example, be sure to include any subnets, and include the computer name if you are connecting to a named instance.
 
@@ -255,8 +255,7 @@ When you download the files from the GitHub repository, you'll get the following
 
 ### Training and scoring data
 
-The data is a representative sampling of the New York City taxi data set, which contains records of over 173 million individual trips in 2013, including the fares and tip amounts paid for each trip.  To learn more about how this data was originally collected, see 
-[http://chriswhong.com/open-data/foil_nyc_taxi/](http://chriswhong.com/open-data/foil_nyc_taxi/).
+The data is a representative sampling of the New York City taxi data set, which contains records of over 173 million individual trips in 2013, including the fares and tip amounts paid for each trip.  To learn more about how this data was originally collected, see [http://chriswhong.com/open-data/foil_nyc_taxi/](http://chriswhong.com/open-data/foil_nyc_taxi/).
 
 To make the data easier to work with, the Microsoft data science team performed downsampling to get just 1% of the data.  This data has been shared in a public blob storage container in Azure, in .CSV format. The source data is an uncompressed file, just under 350MB.
 

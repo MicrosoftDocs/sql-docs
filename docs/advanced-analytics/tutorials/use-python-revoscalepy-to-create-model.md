@@ -2,7 +2,7 @@
 title: "Use Python with revoscalepy to Create a Model| Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/20/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -10,7 +10,7 @@ ms.technology:
   - "r-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-caps.latest.revision: 2
+caps.latest.revision: 4
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
@@ -28,7 +28,7 @@ For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.m
 > [!IMPORTANT]
 > To run Python code in SQL Server, you must have installed SQL Server 2017 CTP 2.0 or later, and you must install and enable the feature, **Machine Learning Services** with Python. Other versions of SQL Server do not support Python integration.
 
-## Run the Sample Code
+## Run the sample code
 
 This code performs the following steps:
 
@@ -41,9 +41,12 @@ This code performs the following steps:
 
 All operations are performed using an instance of SQL Server as the compute context.
 
-In general, the process of calling Python in a remote compute context is similar to the way you use R in a remote compute context. You execute the sample as a Python script from the command line, or by using a Python development environment that includes the Python integration components provided in this release. In your code, you create an use a compute context object to indicate where you want specific computations to be performed.
+In general, the process of calling Python in a remote compute context is similar to the way you use R in a remote compute context. You execute the sample as a Python script from the command line, or by using a Python development environment that includes the Python integration components provided in this release. In your code, you create and use a compute context object to indicate where you want specific computations to be performed.
 
-For a demonstration of this sample running from the command line, see this video: [SQL Server 2017 Advanced Analytics with Python](https://www.youtube.com/watch?v=FcoY795jTcc)
+> [!NOTE]
+> Be sure to change the database and environment names as appropriate.
+> 
+> For a demonstration of this sample running from the command line, see this video: [SQL Server 2017 Advanced Analytics with Python](https://www.youtube.com/watch?v=FcoY795jTcc)
 
 ### Sample Code
 
@@ -61,38 +64,38 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 import os
 
 def test_linmod_sql():
-    sqlServer = os.getenv('RTEST_SQL_SERVER', '.')
+    sqlServer = os.getenv('PYTEST_SQL_SERVER', '.')
     
-    connectionString = 'Driver=SQL Server;Server=' + sqlServer + ';Database=RevoTestDb;Trusted_Connection=True;'
-    print("connectionString={0!s}".format(connectionString))
+    sql_connection_string = 'Driver=SQL Server;Server=' + sqlServer + ';Database=PyTestDb;Trusted_Connection=True;'
+    print("connectionString={0!s}".format(sql_connection_string))
     
-    dataSource = RxSqlServerData(
-        sqlQuery = "select top 10 * from airlinedemosmall", 
-        connectionString = connectionString,
-        colInfo = { 
-            "ArrDelay" : { "type" : "integer" }, 
-            "DayOfWeek" : { 
-                "type" : "factor", 
-                "levels" : ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-            }
-        })
+    airline_query = "select top ArrDelay],[CRSDepTime],[DayOfWeek] FROM airlinedemosmall"
 
-    computeContext = RxInSqlServer(
-        connectionString = connectionString,
+    ds = RxSqlServerData(sql_query = airline_query, connectionString = sql_connection_string)
+
+    sql_cc = RxInSqlServer(
+        connectionString = sql_connection_string,
         numTasks = 1,
-        autoCleanup = False
-        )
+        autoCleanup = False,
+        consoleOutput = True,
+        executionTimeoutSeconds = 0,
+        wait = true,
+        colInfo = {"ArrDelay" : { "type" : "integer" },
+                   "DayOfWeek" : { "type" : "factor", "levels" : ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+                  }
+        })
+ )
 
     #
     # Import data source to avoid factor levels
     #        
-    data = rx_import_datasource(dataSource)
+    data = rx_import_datasource(ds)
     print(data)
 
     #
     # run linmod
     #
-    linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = computeContext)
+    linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_cc)
     assert (linmod is not None)
     assert (linmod._results is not None)
     print(linmod)
@@ -100,7 +103,7 @@ def test_linmod_sql():
     #
     # Predict results
     # 
-    data = rx_import_datasource(dataSource)
+    data = rx_import_datasource(ds)
     del data["ArrDelay"]
     predict = rx_predict_ex(linmod, data = data)
     assert (predict is not None)
@@ -109,7 +112,7 @@ def test_linmod_sql():
     #
     # Create a summary
     #
-    summary = rx_summary("ArrDelay ~ DayOfWeek", data = dataSource, compute_context = computeContext)
+    summary = rx_summary("ArrDelay ~ DayOfWeek", data = ds, compute_context = sqlcc)
     assert (summary is not None)
     print(summary)
 

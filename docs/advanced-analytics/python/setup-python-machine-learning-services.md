@@ -147,8 +147,12 @@ Take a moment to verify that all components used to launch Python script are run
     
     **Results**
     
-    *col*
+    *<code>&nbsp;&nbsp;</code>*
     *1*
+
+> [!NOTE]
+> Column or headings used in the Python script are not returned, by design. To add column names for your output, you must specify the schema for the return dataset using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
+> For example, you could add the following line to generate an arbitrary column name: `WITH RESULT SETS ((Col1 AS int))`
 
 ## Troubleshooting and Additional Steps
 

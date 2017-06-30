@@ -48,7 +48,7 @@ In general, the process of calling Python in a remote compute context is similar
 > 
 > For a demonstration of this sample running from the command line, see this video: [SQL Server 2017 Advanced Analytics with Python](https://www.youtube.com/watch?v=FcoY795jTcc)
 
-### Sample Code
+### Sample code
 
 ```python
 
@@ -64,27 +64,27 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 import os
 
 def test_linmod_sql():
-    sqlServer = os.getenv('PYTEST_SQL_SERVER', '.')
+    sql_server = os.getenv('PYTEST_SQL_SERVER', '.')
     
     sql_connection_string = 'Driver=SQL Server;Server=' + sqlServer + ';Database=PyTestDb;Trusted_Connection=True;'
     print("connectionString={0!s}".format(sql_connection_string))
-    
-    airline_query = "select top ArrDelay],[CRSDepTime],[DayOfWeek] FROM airlinedemosmall"
 
-    ds = RxSqlServerData(sql_query = airline_query, connectionString = sql_connection_string)
+    data_source = RxSqlServerData(
+        sql_query = "select top 10 * from airlinedemosmall",
+        connection_string = sql_connection_string,
+        column_info = {
+            "ArrDelay" : { "type" : "integer" },
+            "DayOfWeek" : {
+                "type" : "factor",
+                "levels" : ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+            }
+        })
 
     sql_cc = RxInSqlServer(
-        connectionString = sql_connection_string,
-        numTasks = 1,
-        autoCleanup = False,
-        consoleOutput = True,
-        executionTimeoutSeconds = 0,
-        wait = true,
-        colInfo = {"ArrDelay" : { "type" : "integer" },
-                   "DayOfWeek" : { "type" : "factor", "levels" : ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-                  }
-        })
- )
+        connection_string = sql_connection_string,
+        numTasks = 4,
+        autoCleanup = False
+        )
 
     #
     # Import data source to avoid factor levels
@@ -103,7 +103,7 @@ def test_linmod_sql():
     #
     # Predict results
     # 
-    data = rx_import_datasource(ds)
+    data = rx_import_datasource(data_source)
     del data["ArrDelay"]
     predict = rx_predict_ex(linmod, data = data)
     assert (predict is not None)
@@ -112,7 +112,7 @@ def test_linmod_sql():
     #
     # Create a summary
     #
-    summary = rx_summary("ArrDelay ~ DayOfWeek", data = ds, compute_context = sqlcc)
+    summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sqlcc)
     assert (summary is not None)
     print(summary)
 
@@ -125,35 +125,37 @@ Let's review the code and highlight some key steps.
 
 ### Defining a data source and compute context
 
-This is an important part of using **revoscalepy** and its related R package **RevoScaleR**. A data source is different from a compute context. The _data source_ defines the data used in your code. The _compute context_ defines where the code will be executed.
+This is an important part of using **revoscalepy** (just like in the related R package, **RevoScaleR**). A data source is different from a compute context. The _data source_ defines the data used in your code. The _compute context_ defines where the code will be executed.
 
 > [!NOTE]
 > Support for some data source types supported in RevoScaleR might be limited in the pre-release version. For more information about functions included in the latest release, see [What is revoscalepy](../python/what-is-revoscalepy.md).
 
 The overall process for creating and using a data source and compute context is as follows:
 
-1. Create Python variables, such as _sqlQuery_ and _connectionString_, that define the source and the data you want to use. Pass these variables to the **RxSqlServerData** constructor to  implement the **data source object** named _dataSource_.
-2. Create a compute context object by using the **RxInSqlServer** constructor. In this example, you pass the same connection string you defined earlier, on the assumption that the data is on the same SQL Server instance that you will be using as the compute context. However, the data source and the compute context could be on different servers. The resulting **compute context object** is named _computeContext_.
+1. Create Python variables, such as `sql_query` and `sql_connection_string`, that define the source and the data you want to use. Pass these variables to the RxSqlServerData constructor to  implement the **data source object** named `data_source`.
+2. Create a compute context object by using the **RxInSqlServer** constructor. In this example, you pass the same connection string you defined earlier, on the assumption that the data is on the same SQL Server instance that you will be using as the compute context. However, the data source and the compute context could be on different servers. The resulting **compute context object** is named `sql_cc`.
 3. Choose the active compute context. By default, operations are run locally, which means that if you don't specify a different compute context, the data will be fetched from the data source, and the model-fitting will run in your current Python environment.
 
-    In RevoScaleR, you can also use the function `rxSetComputeContext` to toggle between compute contexts. The function is not implemented yet in the preview version of **revoscalepy**, but you can specify the compute context as an argument to **rx_lin_mod_ex**.
+    In RevoScaleR, you can use the function **rxSetComputeContext** to toggle between compute contexts that have already been defined. In this example, the compute context is set on the individual **rx** function.
     
     `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = computeContext)`
 
     The same applies in the call to **rxsummary**, where the compute context is reused.
 
-    `summary = rx_summary("ArrDelay ~ DayOfWeek", data = dataSource, compute_context = computeContext)`
+    `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_cc)`
 
 
 ### Support for parallel processing
 
 The definition of the compute context contains this line, which indicates the maximum number of tasks that will be used in the SQL Server compute context.
 
-`numTasks = 1`
+`numTasks = 4`
+
+The sample was run on a computer with four processors, so we used 4.
 
 If you set this value to 0, SQL Server uses the default, which is to run as many tasks in parallel as possible, under the current MAXDOP settings for the server. However, even in servers with many processors, the exact number of tasks that might be allocated depends on many other factors, such as server settings, and other jobs that are running:
 
-For more information, see [RxInSqlServer](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxinsqlserver).
+For more information, see [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver).
 
 > [!NOTE]
 > Support for parallel operations will be implemented in a later release.
@@ -164,7 +166,7 @@ Note that this code only returns the predicted values to the console; it doesn't
 
     # Predict results
     # 
-    data = rx_import_datasource(dataSource)
+    data = rx_import_datasource(data_source)
     del data["ArrDelay"]
     predict = rx_predict_ex(linmod, data = data)
     assert (predict is not None)
@@ -176,7 +178,7 @@ If you want to save this data somewhere, you have many options:
 + You can use the function **rx_data_step_ex** to write the data to a SQL Server table.
 + You could use an ODBC call from your Python code to write the data to a table, or another Python function to convert the data to CSV and write to an external file.
 
-## See Also
+## Related samples
 
 See these Python samples and tutorials for advanced tips and end-to-end demos.
 

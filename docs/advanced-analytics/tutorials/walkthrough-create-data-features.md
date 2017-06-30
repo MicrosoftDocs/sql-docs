@@ -27,8 +27,8 @@ For this modeling task, rather than using the raw latitude and longitude values 
 
 You'll compare two different methods for creating a feature from data:
 
--   Using R and the rxDataStep function
--   Using a custom function in [!INCLUDE[tsql](../../includes/tsql-md.md)]
+- Using R and the rxDataStep function
+- Using a custom function in [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 For both methods, the result of the code is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source object, *featureDataSource*, that includes the new numeric feature, *direct_distance*.
 
@@ -36,30 +36,31 @@ For both methods, the result of the code is a [!INCLUDE[ssNoVersion](../../inclu
 
 The R language is well-known for its rich and varied statistical libraries, but you still might need to create custom data transformations.
 
-+ You'll create a new R function, *ComputeDist*, to calculate the linear distance between two points specified by latitude and longitude values.
-+ You'll call the function to transform the data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data object you created earlier, an save it in a new data source, *featureDataSource*.
+In this sample, you'll create a new R function, *ComputeDist*, to calculate the linear distance between two points specified by latitude and longitude values.
+
+You'll then call the function to transform the data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data object you created earlier, an save it in a new data source, *featureDataSource*.
 
 1.  Run the following code to create a custom R function, *ComputeDist*. It takes in two pairs of latitude and longitude values, and calculates the linear distance between them.  The function returns a distance in miles.
   
-    ```R  
-    env <- new.env()  
-    env$ComputeDist <- function(pickup_long, pickup_lat, dropoff_long, dropoff_lat){  
-      R <- 6371/1.609344 #radius in mile  
-      delta_lat <- dropoff_lat - pickup_lat  
-      delta_long <- dropoff_long - pickup_long  
-      degrees_to_radians = pi/180.0  
-      a1 <- sin(delta_lat/2*degrees_to_radians)  
-      a2 <- as.numeric(a1)^2  
-      a3 <- cos(pickup_lat*degrees_to_radians)  
-      a4 <- cos(dropoff_lat*degrees_to_radians)  
-      a5 <- sin(delta_long/2*degrees_to_radians)  
-      a6 <- as.numeric(a5)^2  
-      a <- a2+a3*a4*a6  
-      c <- 2*atan2(sqrt(a),sqrt(1-a))  
-      d <- R*c  
-      return (d)  
-    }  
-    ```  
+    ```R
+    env <- new.env()
+    env$ComputeDist <- function(pickup_long, pickup_lat, dropoff_long, dropoff_lat){
+      R <- 6371/1.609344 #radius in miles
+      delta_lat <- dropoff_lat - pickup_lat
+      delta_long <- dropoff_long - pickup_long
+      degrees_to_radians = pi/180.0
+      a1 <- sin(delta_lat/2*degrees_to_radians)
+      a2 <- as.numeric(a1)^2
+      a3 <- cos(pickup_lat*degrees_to_radians)
+      a4 <- cos(dropoff_lat*degrees_to_radians)
+      a5 <- sin(delta_long/2*degrees_to_radians)
+      a6 <- as.numeric(a5)^2
+      a <- a2+a3*a4*a6
+      c <- 2*atan2(sqrt(a),sqrt(1-a))
+      d <- R*c
+      return (d)
+    }
+    ```
   
     + The first line defines a new environment. In R, an environment can be used to encapsulate name spaces in packages and such.
     + You can use the `search()` function to view the environments in your workspace. To view the objects in a specific environment, type `ls(<envname>)`.
@@ -70,88 +71,87 @@ The R language is well-known for its rich and varied statistical libraries, but 
 2. Create a data source to work with by using the RxSqlServerData constructor.
   
     ```R
-    featureDataSource = RxSqlServerData(table = "features",   
-       colClasses = c(pickup_longitude = "numeric", 
-       pickup_latitude = "numeric",   
-       dropoff_longitude = "numeric", 
-       dropoff_latitude = "numeric",  
-       passenger_count  = "numeric", 
-       trip_distance  = "numeric",  
-       trip_time_in_secs  = "numeric", 
-       direct_distance  = "numeric"),  
-      connectionString = connStr)  
-    ```  
+    featureDataSource = RxSqlServerData(table = "features",
+       colClasses = c(pickup_longitude = "numeric",
+       pickup_latitude = "numeric",
+       dropoff_longitude = "numeric",
+       dropoff_latitude = "numeric",
+       passenger_count  = "numeric",
+       trip_distance  = "numeric",
+       trip_time_in_secs  = "numeric",
+       direct_distance  = "numeric"),
+      connectionString = connStr)
+    ```
   
-3.  Call the *rxDataStep* function to apply the `env$ComputeDist` function to the specified data.
+3.  Call the **rxDataStep** function to apply the `env$ComputeDist` function to the specified data.
     
     ```R
-    start.time <- proc.time()  
+    start.time <- proc.time()
   
-    rxDataStep(inData = inDataSource, outFile = featureDataSource,  
-         overwrite = TRUE,  
-         varsToKeep=c("tipped", "fare_amount", passenger_count", "trip_time_in_secs", 
+    rxDataStep(inData = inDataSource, outFile = featureDataSource,
+         overwrite = TRUE,
+         varsToKeep=c("tipped", "fare_amount", passenger_count", "trip_time_in_secs",
             "trip_distance", "pickup_datetime", "dropoff_datetime", "pickup_longitude",
             "pickup_latitude", "dropoff_longitude", "dropoff_latitude")
-         , transforms = list(direct_distance=ComputeDist(pickup_longitude, 
+         , transforms = list(direct_distance=ComputeDist(pickup_longitude,
             pickup_latitude, dropoff_longitude, dropoff_latitude)),
-            transformEnvir = env, rowsPerRead=500, reportProgress = 3)  
+            transformEnvir = env, rowsPerRead=500, reportProgress = 3)
   
-    used.time <- proc.time() - start.time  
-    print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""))    
-    ```  
-
-
+    used.time <- proc.time() - start.time
+    print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""))
+    ```
+    
     > [!IMPORTANT]
-    > Earlier versions of the walkthrough included use of the arguments *varsToKeep* and *varsToDrop*. These arguments are not supported for SQL server data sources in current releases.
+    > Earlier versions of the walkthrough included use of the arguments *varsToKeep* and *varsToDrop*. These arguments are not supported for SQL Server data sources in current releases.
   
-4.  Call *rxGetVarInfo* to inspect the schema of the new data source:
+4.  Call **rxGetVarInfo** to inspect the schema of the new data source:
   
     ```R
-    rxGetVarInfo(data = featureDataSource)  
+    rxGetVarInfo(data = featureDataSource)
     ```
   
     *Results*
     
-    *"It takes CPU Time=0.74 seconds, Elapsed Time=35.75 seconds to generate features."*  
-    *Var 1: tipped, Type: integer*   
-    *Var 2: fare_amount, Type: numeric*   
-    *Var 3: passenger_count, Type: numeric*   
-    *Var 4: trip_time_in_secs, Type: numeric*   
-    *Var 5: trip_distance, Type: numeric*   
-    *Var 6: pickup_datetime, Type: character*   
-    *Var 7: dropoff_datetime, Type: character*   
-    *Var 8: pickup_longitude, Type: numeric*   
-    *Var 9: pickup_latitude, Type: numeric*   
-    *Var 10: dropoff_longitude, Type: numeric*   
-    *Var 11: dropoff_latitude, Type: numeric*   
-    *Var 12: direct_distance, Type: numeric*   
+    *"It takes CPU Time=0.74 seconds, Elapsed Time=35.75 seconds to generate features."*
+    <br/>*Var 1: tipped, Type: integer*
+    <br/>*Var 2: fare_amount, Type: numeric*
+    <br/>*Var 3: passenger_count, Type: numeric*
+    <br/>*Var 4: trip_time_in_secs, Type: numeric*
+    <br/>*Var 5: trip_distance, Type: numeric*
+    <br/>*Var 6: pickup_datetime, Type: character*
+    <br/>*Var 7: dropoff_datetime, Type: character*
+    <br/>*Var 8: pickup_longitude, Type: numeric*
+    <br/>*Var 9: pickup_latitude, Type: numeric*
+    <br/>*Var 10: dropoff_longitude, Type: numeric*
+    <br/>*Var 11: dropoff_latitude, Type: numeric*
+    <br/>*Var 12: direct_distance, Type: numeric*
   
 ## Create features using Transact-SQL
 
-Now you'll create a custom SQL function, *ComputeDist*, to do the same thing as the R function you just created. The custom SQL function *ComputeDist* operates on an existing *RxSqlServerData* data object to create the new distance features from the existing latitude and longitude values.  
+Now you'll create a custom SQL function, *ComputeDist*, to do the same thing as the R function you just created. The custom SQL function *ComputeDist* operates on an existing RxSqlServerData data object to create the new distance features from the existing latitude and longitude values.
   
 You'll save the results of the transformation to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data object, *featureDataSource*, just as you did using R.
   
 1.  Define a new custom SQL function, named *fnCalculateDistance*.
   
     ```SQL
-    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
-    -- User-defined function calculates the direct distance between two geographical coordinates.  
+    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
+    -- User-defined function calculates the direct distance between two geographical coordinates.
     RETURNS float
     AS
     BEGIN
-      DECLARE @distance decimal(28, 10)  
-      -- Convert to radians  
-      SET @Lat1 = @Lat1 / 57.2958  
-      SET @Long1 = @Long1 / 57.2958  
-      SET @Lat2 = @Lat2 / 57.2958  
-      SET @Long2 = @Long2 / 57.2958  
-      -- Calculate distance  
-      SET @distance = (SIN(@Lat1) * SIN(@Lat2)) + (COS(@Lat1) * COS(@Lat2) * COS(@Long2 - @Long1))  
-      --Convert to miles  
-      IF @distance <> 0  
+      DECLARE @distance decimal(28, 10)
+      -- Convert to radians
+      SET @Lat1 = @Lat1 / 57.2958
+      SET @Long1 = @Long1 / 57.2958
+      SET @Lat2 = @Lat2 / 57.2958
+      SET @Long2 = @Long2 / 57.2958
+      -- Calculate distance
+      SET @distance = (SIN(@Lat1) * SIN(@Lat2)) + (COS(@Lat1) * COS(@Lat2) * COS(@Long2 - @Long1))
+      --Convert to miles
+      IF @distance <> 0
       BEGIN
-        SET @distance = 3958.75 * ATAN(SQRT(1 - POWER(@distance, 2)) / @distance);  
+        SET @distance = 3958.75 * ATAN(SQRT(1 - POWER(@distance, 2)) / @distance);
       END
       RETURN @distance
     END
@@ -162,20 +162,18 @@ You'll save the results of the transformation to a [!INCLUDE[ssNoVersion](../../
 2.  Run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement from any application that supports [!INCLUDE[tsql](../../includes/tsql-md.md)], just to see how the function works.
   
     ```SQL
-    SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,       
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,  
-    pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude   
+    SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance, pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
     FROM nyctaxi_sample
     ```
 
 3.  To use the custom SQL function in R code, save the feature engineering query in an R variable.
   
     ```R
-    featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,  
-        trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,   
-        dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,  
-        pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude  
-        FROM nyctaxi_joined_1_percent  
+    featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,
+        trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
+        dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
+        pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
+        FROM nyctaxi_joined_1_percent
         tablesample (1 percent) repeatable (98052)"
     ```
   
@@ -206,7 +204,7 @@ As it turns out, for this particular task, the [!INCLUDE[tsql](../../includes/ts
 Proceed to the next lesson to learn how to build a predictive model using this data and save the model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
 
 > [!TIP]
-> Very often, feature engineering using [!INCLUDE[tsql](../../includes/tsql-md.md)] will be faster than R. For example, T-SQL includes windowing and ranking functions that are extremely fast in tasks that data scientists frequently perform in R, such as rolling moving averages and *n*tiles. Choose the most efficient method based on your data and task.
+> Very often, feature engineering using [!INCLUDE[tsql](../../includes/tsql-md.md)] will be faster than R. For example, T-SQL includes windowing and ranking functions that are extremely fast in tasks that data scientists frequently perform in R, such as rolling moving averages and *n*-tiles. Choose the most efficient method based on your data and task.
 
 ## Next step
 

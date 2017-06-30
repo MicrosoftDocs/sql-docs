@@ -57,10 +57,10 @@ Note that the estimated times do not include setup.
 |[Build and Save the Model](/walkthrough-build-and-save-the-model.md)|Train and tune a a classification model, then assess model performance. Plot the model's accuracy using R.<br />15 minutes|
 |[Deploy and Use the Model](/walkthrough-deploy-and-use-the-model.md)|Deploy the model in production by saving the model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Call the model from a stored procedure to generate predictions.<br />10 minutes|
 
-### Notes
+The walkthrough is designed to introduce R developers to [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], so R is used wherever possible. This does not mean that R is necessarily the best tool for each task. In many cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might provide better performance, particularly for tasks such as data aggregation and feature engineering.  Such tasks can particularly benefit from new features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], such as memory-optimized columnstore indexes. We'll point out possible optimizations along the way.
 
-+ The walkthrough is designed to introduce R developers to [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], so R is used whever possible. This does not mean that R is necessarily the best tool for each task. In many cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might provide better performance, particularly for tasks such as data aggregation and feature engineering.  Such tasks can particularly benefit from new features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], such as memory optimized columnstore indexes. We'll point out possible optimizations along the way.
-+ The walkthrough was originally developed for and tested on SQL Server 2016. However, screenshots and procedures have been updated to use the latest version of SQL Server Management Studio, which works with SQL Server 2017.
+> [!NOTE]
+> The walkthrough was originally developed for and tested on SQL Server 2016. However, screenshots and procedures have been updated to use the latest version of SQL Server Management Studio, which works with SQL Server 2017.
 
 ## Next step
 

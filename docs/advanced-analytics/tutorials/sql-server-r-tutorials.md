@@ -2,7 +2,7 @@
 title: "SQL Server R Tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/282/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,7 +33,7 @@ For information about requirements and setup, see [Prerequisites](#bkmk_Prerequi
 
 ## <a name="bkmk_sqltutorials"></a>R Tutorials
 
-This section lists tutorials that were developed for SQL Server 2016 R Services. Unless otherwise indicated, these tutorials are expected to work without modification in SQL Server 2017. All tutorials make extensive use of features in the RevoScaleR package for SQL Server compute contexts.
+This section lists tutorials that were developed for SQL Server 2016 R Services. Unless otherwise indicated, these tutorials are expected to work without modification in SQL Server 2017 Machine Learning Services. All tutorials make extensive use of features in the RevoScaleR package for SQL Server compute contexts.
 
 + [Data Science Deep Dive with R and SQL Server](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 

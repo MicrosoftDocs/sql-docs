@@ -1,5 +1,5 @@
 ---
-title: 1. Prepare the Data| Microsoft Docs"
+title: 1. Prepare the Data and R Packages| Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"
 ms.prod: "sql-server-2016"
@@ -19,7 +19,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# 1. Prepare the Data
+# 1. Prepare the Data and R Packages
 
 At this point, you should have installed either SQL Server 2016 or 2017 with support for the R language enabled. In this lesson, you'll get the data and R packages needed for the scenario in these steps:
 
@@ -71,29 +71,29 @@ The R script that you downloaded includes the commands to download and install t
   
 2.  Highlight and execute these lines.
   
-    ```  
+    ```
     # Install required R libraries, if they are not already installed.
   
     if (!('ggmap' %in% rownames(installed.packages()))){
-      install.packages('ggmap')  
+      install.packages('ggmap')
     }  
-    if (!('mapproj' %in% rownames(installed.packages()))){  
-      install.packages('mapproj')  
+    if (!('mapproj' %in% rownames(installed.packages()))){
+      install.packages('mapproj')
     }  
-    if (!('ROCR' %in% rownames(installed.packages()))){  
-      install.packages('ROCR')  
+    if (!('ROCR' %in% rownames(installed.packages()))){
+      install.packages('ROCR')
     }  
-    if (!('RODBC' %in% rownames(installed.packages()))){  
-      install.packages('RODBC')  
+    if (!('RODBC' %in% rownames(installed.packages()))){
+      install.packages('RODBC')
     }  
-    ```  
+    ```
    Some packages will also install required packages. In all, about 32 packages are required.
 
 ### Install required packages on the server
 
 1.  On the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, open RGui.exe **as an administrator**.  If you have installed SQL Server R Services using the defaults, RGui.exe can be found in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64).
   
-    Do not install to a user library if prompted, because if you do, the SQL Server instance will not find the packages in the R library used by R Services. For more information, see [Installing New R Packages on SQL Server](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md).
+    Do not install to a user library if prompted, because if you do, the SQL Server instance will not find the packages in the R library used by R Services. For more information, see [Installing New R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).
   
 2.  At an R prompt, run the following R commands:
   
@@ -106,7 +106,7 @@ The R script that you downloaded includes the commands to download and install t
 
 **Notes:**
 
-- This example uses the R `grep` function to search the vector of available paths and find the one in “Program Files”. For more information, see [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).   
+- This example uses the R `grep` function to search the vector of available paths and find the one in “Program Files”. For more information, see [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
   
 - If you think the packages are already installed, check the list of installed packages by using the R function, `installed.packages()`.
 
@@ -142,7 +142,7 @@ You should run this script on the computer where you will be building the soluti
     + Press ENTER without typing any name to use your own Windows identity, and at the secured prompt, type your Windows password. PowerShell does not support entering a different Windows user name.
     + If you fail to specify a valid user, the script defaults to using Windows authentication.
     
-      > [!WARNING] 
+      > [!WARNING]
       > When you use the prompt in the PowerShell script to provide your credentials, the password will be written to the updated script file in plain text. Edit the file to remove the credentials immediately after you have created the necessary R objects.
       
     **Path to the csv file**: Provide the full path to the data file. The default path and filename is `C:\tempR\nyctaxi1pct.csv1`.
@@ -166,7 +166,7 @@ This step (plugging in database information) takes 0.48 seconds.
 
 If you were successful, click [here](/walkthrough-view-and-explore-the-data.md) to go to the next step, where you'll view and explore the data.
 
-## <a name="bkmk_Troubleshooting"></a>Troubleshooting 
+## <a name="bkmk_Troubleshooting"></a>Troubleshooting
 
 If you run into trouble, you can run all or any of the steps manually, using the lines of the PowerShell script as examples.
 

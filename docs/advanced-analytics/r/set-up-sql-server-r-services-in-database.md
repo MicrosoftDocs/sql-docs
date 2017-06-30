@@ -1,7 +1,7 @@
 ---
 title: "Set up SQL Server R Services (In-Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/16/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -97,7 +97,7 @@ To use machine learning, you must install SQL Server 2016 or later. At least one
   
 6.  When installation is complete, restart the computer as instructed.
 
-##  <a name="bkmk_enableFeature"></a> Step 2: Enable External Script Services
+##  <a name="bkmk_enableFeature"></a> Step 2: Enable external script services
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If it is not already installed, you can rerun the SQL Server setup wizard to open a download link and install it.
   
@@ -120,7 +120,7 @@ To use machine learning, you must install SQL Server 2016 or later. At least one
 
     You can restart the service using the **Services** panel in Control Panel, or by using SQL Server Configuration Manager.
 
-## <a name="bkmk_TestScript"></a> Step 3. Verify that Script Execution Works Locally
+## <a name="bkmk_TestScript"></a> Step 3. Verify that script execution works locally
 
 Verify that the external script execution service is enabled.
 
@@ -138,8 +138,8 @@ Verify that the external script execution service is enabled.
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'OutputDataSet<-InputDataSet',
-    @input_data_1 =N'select 1 as hello'
-    WITH RESULT SET (([hello] int not null));
+    @input_data_1 =N'SELECT 1 as hello'
+    WITH RESULT SETS (([hello] int not null));
     GO
     ```
   
@@ -150,7 +150,7 @@ Verify that the external script execution service is enabled.
   
    If the command executes without an error, go on to the next steps.  If you get an error, see this article for a list of some common problems:  [Upgrade and Installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
-## Next Steps
+## Next steps
 
 After you have verified that the script execution feature works in SQL Server, you can run R commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
 

@@ -1,8 +1,9 @@
-# [Overview](catalog-views-transact-sql.md)  
-## [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.md)  
-## [Schemas - sys.schemas](schemas-catalog-views-sys-schemas.md)  
-## [Messages (for errors) - sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
-## [Extended Properties - sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
+# [Overview](catalog-views-transact-sql.md)
+
+# [Querying the SQL Server System Catalog FAQ](querying-the-sql-server-system-catalog-faq.md)  
+# [Schemas - sys.schemas](schemas-catalog-views-sys-schemas.md)  
+# [Messages (for errors) - sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
+# [Extended Properties - sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
 
 # Change tracking
 ## [sys.change_tracking_databases](change-tracking-catalog-views-sys-change-tracking-databases.md)  

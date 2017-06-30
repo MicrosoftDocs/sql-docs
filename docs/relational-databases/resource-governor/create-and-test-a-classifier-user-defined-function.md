@@ -124,11 +124,12 @@ manager: "jhubbard"
     WITH SCHEMABINDING  
     AS  
     BEGIN  
+    -- set transaction isolation level snapshot /*Use transaction isolation level snapshot to avoid blocking while reading if lookup table is updated frequently
          DECLARE @strGroup sysname  
          DECLARE @loginTime time  
          SET @loginTime = CONVERT(time,GETDATE())  
          SELECT TOP 1 @strGroup = strGroupName  
-              FROM dbo.tblClassificationTimeTable  
+              FROM dbo.tblClassificationTimeTable WITH(NOLOCK)
               WHERE tStartTime <= @loginTime and tEndTime >= @loginTime  
          IF(@strGroup is not null)  
          BEGIN  

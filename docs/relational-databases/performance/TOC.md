@@ -1,3 +1,8 @@
+
+# [Performance Center for SQL Server Database Engine and Azure SQL Database](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [Configuring Storage Spaces with a NVDIMM-N write-back cache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
+
+# [Adaptive Query Processing](adaptive-query-processing.md)
 # [Automatic Tuning](../automatic-tuning/automatic-tuning.md)
 # [Cardinality Estimation](cardinality-estimation-sql-server.md)  
 
@@ -49,8 +54,5 @@
 ## [Validate Plan Guides After Upgrade](validate-plan-guides-after-upgrade.md)  
 ## [Delete a Plan Guide](delete-a-plan-guide.md)  
 ## [Enable or Disable a Plan Guide](enable-or-disable-a-plan-guide.md)  
-
-# [Performance Center for SQL Server Database Engine and Azure SQL Database](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-## [Configuring Storage Spaces with a NVDIMM-N write-back cache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 #[Monitor Resource Usage (System Monitor)](../performance-monitor/monitor-resource-usage-system-monitor.md) 

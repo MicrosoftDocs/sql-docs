@@ -1,4 +1,6 @@
 # [Understand and Explore](sql-server-linux-overview.md)
+
+# What's new
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md) 
 # [Get Started](sql-server-linux-get-started-tutorial.md)
@@ -32,7 +34,7 @@
 ## [Export and import a BACPAC with SSMS](sql-server-linux-migrate-ssms.md)
 ## [Migrate with SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
 ## [Bulk copy with bcp](sql-server-linux-migrate-bcp.md)
-## [Load data with (SSIS)](sql-server-linux-migrate-ssis.md)
+## [Load data with SSIS](sql-server-linux-migrate-ssis.md)
 # [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ## [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 ### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)

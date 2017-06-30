@@ -1829,7 +1829,21 @@
             "source_path":"docs/sql-server/sql-server-documentation-offline-access.md",
             "redirect_url":"/sql/release-notes/sql-server-help-installation",
             "redirect_document_id":false
+        },
+        {
+            "source_path": "docs/analysis-services/instances/script-administrative-tasks-in-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/amo-powershell-example.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path":"docs/tools/sql-server-profiler/run-sql-server-profiler.md",
+            "redirect_url":"/sql/tools/sql-server-profiler/start-sql-server-profiler",
+            "redirect_document_id":false
         }
-
     ]
 }

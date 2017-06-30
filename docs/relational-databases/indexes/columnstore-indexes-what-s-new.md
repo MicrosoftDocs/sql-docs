@@ -2,7 +2,7 @@
 title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
+ms.date: "06/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,35 +28,42 @@ manager: "jhubbard"
  This table summarizes key features for columnstore indexes and the products in which they are available.  
 
   
-|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
-|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|  
-|Batch execution for multi-threaded queries|yes|yes|yes|yes|yes|  
-|Batch execution for single-threaded queries|||yes|yes|yes|  
-|Archival compression option.||yes|yes|yes|yes|  
-|Snapshot isolation and read-committed snapshot isolation|||yes|yes|yes|  
-|Specify columnstore index when creating a table.|||yes|yes|yes|  
-|AlwaysOn supports columnstore indexes.|yes|yes|yes|yes|yes|  
-|AlwaysOn readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|  
-|AlwaysOn readable secondary supports updateable columnstore indexes.|||yes|||  
-|Read-only nonclustered columnstore index on heap or btree.|yes|yes|yes*|yes*|yes*|  
-|Updateable nonclustered columnstore index on heap or btree|||yes|yes|yes|  
-|Additional btree indexes allowed on a heap or btree that has a nonclustered columnstore index.|yes|yes|yes|yes|yes|  
-|Updateable clustered columnstore index.||yes|yes|yes|yes|  
-|Btree index on a clustered columnstore index.|||yes|yes|yes|  
-|Columnstore index on a memory-optimized table.|||yes|yes|yes|  
-|Nonclustered columnstore index definition supports using a filtered condition.|||yes|yes|yes|  
-|Compression delay option for columnstore indexes in CREATE TABLE and ALTER TABLE.|||yes|yes|yes|   
+|Columnstore Index Feature|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
+|Batch execution for multi-threaded queries|yes|yes|yes|yes|yes|yes| 
+|Batch execution for single-threaded queries|||yes|yes|yes|yes|  
+|Archival compression option.||yes|yes|yes|yes|yes|  
+|Snapshot isolation and read-committed snapshot isolation|||yes|yes|yes|yes| 
+|Specify columnstore index when creating a table.|||yes|yes|yes|yes|  
+|AlwaysOn supports columnstore indexes.|yes|yes|yes|yes|yes|yes| 
+|AlwaysOn readable secondary supports read-only nonclustered columnstore index|yes|yes|yes|yes|yes|yes|  
+|AlwaysOn readable secondary supports updateable columnstore indexes.|||yes|yes|||  
+|Read-only nonclustered columnstore index on heap or btree.|yes|yes|yes*|yes*|yes*|yes*|  
+|Updateable nonclustered columnstore index on heap or btree|||yes|yes|yes|yes|  
+|Additional btree indexes allowed on a heap or btree that has a nonclustered columnstore index.|yes|yes|yes|yes|yes|yes|  
+|Updateable clustered columnstore index.||yes|yes|yes|yes|yes|  
+|Btree index on a clustered columnstore index.|||yes|yes|yes|yes|  
+|Columnstore index on a memory-optimized table.|||yes|yes|yes|yes|  
+|Nonclustered columnstore index definition supports using a filtered condition.|||yes|yes|yes|yes|  
+|Compression delay option for columnstore indexes in CREATE TABLE and ALTER TABLE.|||yes|yes|yes|yes|
+|Columnstore index can have a non-persisted computed column.||||yes|||   
   
  *To create a readable nonclustered columnstore index, store the index on a read-only filegroup.  
-  
+
+## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
+ [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] adds these new features.
+
+### Functional
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] supports non-persisted computed columns in clustered columnstore indexes. Persisted columns are not supported in clustered columnstore indexes.You cannot create a nonclustered index on a columnstore index that has a computed column. 
+
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adds key enhancements to improve the performance and flexibility of columnstore indexes. This enhances data warehousing scenarios and enables real-time operational analytics.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] adds key enhancements to improve the performance and flexibility of columnstore indexes. These improvements enhance data warehousing scenarios and enable real-time operational analytics.  
   
 ### Functional  
   
 -   A rowstore table can have one updateable nonclustered columnstore index. Previously, the nonclustered columnstore index was read-only.  
   
--   The nonclustered columnstore index definition supports using a filtered condition. Use this feature to create a nonclustered columnstore index on only the cold data of an operational workload. By doing this, the performance impact of having a columnstore index on an OLTP table will be minimal.  
+-   The nonclustered columnstore index definition supports using a filtered condition. To minimize the performance impact of adding a columnstore index on an OLTP table, use a filtered condition to create a nonclustered columnstore index on only the cold data of your operational workload. 
   
 -   An in-memory table can have one columnstore index. You can create it when the table is created or add it later with [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md). Previously, only a disk-based table could have a columnstore index.  
   
@@ -64,17 +71,17 @@ manager: "jhubbard"
   
 -   Support for primary keys and foreign keys by using a btree index to enforce these constraints on a clustered columnstore index.  
   
--   Columnstore indexes have a compression delay option that minimizes the impact the transactional workload can have on real-time operational analytics.  This option allows for frequently changing rows to stabilize before compressing them into the columnstore. For details, see [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) and [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
+-   Columnstore indexes have a compression delay option that minimizes the impact of the transactional workload on real-time operational analytics.  This option allows for frequently changing rows to stabilize before compressing them into the columnstore. For details, see [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) and [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 ### Performance for database compatibility level 120 or 130  
   
 -   Columnstore indexes support read committed snapshot isolation level (RCSI) and snapshot isolation (SI). This enables transactional consistent analytics queries with no locks.  
   
--   Columnstore supports index defragmentation by removing deleted rows without the need to explicitly rebuild the index. The ALTER INDEX … REORGANIZE statement will remove deleted rows, based on an internally defined policy, from the columnstore as an online operation  
+-   Columnstore supports index defragmentation by removing deleted rows without the need to explicitly rebuild the index. The ALTER INDEX … REORGANIZE statement removes deleted rows, based on an internally defined policy, from the columnstore as an online operation  
   
 -   Columnstore indexes can be access on an AlwaysOn readable secondary replica. You can improve performance for operational analytics by offloading analytics queries to an AlwaysOn secondary replica.  
   
--   To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computes the aggregate functions MIN, MAX, SUM, COUNT, AVG during table scans when the data type uses no more than eight bytes, and is not of a string type. Aggregate pushdown is supported with or  without Group By clause for both clustered columnstore indexes and nonclustered columnstore indexes.  
+-   To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computes the aggregate functions MIN, MAX, SUM, COUNT, AVG during table scans when the data type uses no more than 8 bytes, and is not of a string type. Aggregate pushdown is supported with or  without Group By clause for both clustered columnstore indexes and nonclustered columnstore indexes.  
   
 -   Predicate pushdown speeds up queries that compare strings of type [v]char or n[v]char. This applies to the common comparison operators and includes operators such as LIKE that use bitmap filters. This works with all collations that SQL Server supports.  
   
@@ -153,17 +160,17 @@ manager: "jhubbard"
   
 -   A rowstore table can have one nonclustered columnstore index.  
   
--   The colum store index is read-only. After you create the columnstore index, you cannot update the table by insert, delete, and update operations; to perform these operations you must drop the index, update the table and rebuild the columnstore index. You can load additional data into the table by using partition switching. The advantage of partition switching is you can load data without dropping and rebuilding the columnstore index.  
+-   The columnstore index is read-only. After you create the columnstore index, you cannot update the table by insert, delete, and update operations; to perform these operations you must drop the index, update the table and rebuild the columnstore index. You can load additional data into the table by using partition switching. The advantage of partition switching is you can load data without dropping and rebuilding the columnstore index.  
   
 -   The column store index always requires extra storage, typically an additional 10% over rowstore, because it stores a copy of the data.  
   
--   Batch processing providex 2x or better query performance, but it is only available for parallel query execution.  
+-   Batch processing provides 2x or better query performance, but it is only available for parallel query execution.  
   
 ## See Also  
  Columnstore Indexes Guide   
  Columnstore Indexes Data Loading   
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
- [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
+ [Get started with Columnstore for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  Columnstore Indexes for Data Warehousing   
  [Columnstore Indexes Defragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   

@@ -175,7 +175,7 @@ To continue learning about solutions using R with SQL Server, see the tutorials 
 
 For guidance on using the new RevoScaleR packages, see these resources for [Microsoft R](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started):
 
-+ [Explore R and ScaleR in 25 functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started-tutorial)
++ [Explore R and ScaleR in 25 functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-tutorial-r2revoscaler)
 + [Fitting Linear Models](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-linear-model)
 + [Models in RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-models)
     

@@ -20,7 +20,7 @@ manager: "jhubbard"
 ---
 # Converting R Code for Use in R Services
 
-When you move R code from R Studio or another environment to SQL Server, often the code will work without further modification when added to the *@script* parameter of [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This is particularly true if you have developed your solution using the **RevoScaleR** functions, making it relatively simple to change execution contexts.
+When you move R code from R Studio or another environment to SQL Server, often the code works without further modification when added to the *@script* parameter of [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). This is particularly true if you have developed your solution using the **RevoScaleR** functions, making it relatively simple to change execution contexts.
 
 However, typically you will want to modify your R code to run in SQL Server, both to take advantage of the tighter integration with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and to avoid expensive transfer of data.
 
@@ -40,7 +40,7 @@ When you are working in a dedicated R development environment such as [!INCLUDE[
 |-------|-------|
 | Ingest data| Define input data as a SQL query. Avoid data movement. |
 | Summarize and visualize data| Plots can be exported as images or sent to a remote workstation.|
-|Feature engineering| Use R in-database if you don;t want to alter your code, but look at optimizing your queries. Investigate whether it might be more efficient to call T-SQL functions or custom UDFs.|
+|Feature engineering| Use R in-database if you don't want to alter your code, but look at optimizing your queries. Investigate whether it might be more efficient to call T-SQL functions or custom UDFs.|
 |Data cleansing part of analysis process| Perform feature engineering, feature extraction, and data cleansing in advance as part of data workflows.|
 |Output predictions to file| Output predictions to a table to avoid data movement. Wrap predict functions in stored procedures for direct access by applications.|
 
@@ -52,7 +52,7 @@ When you are working in a dedicated R development environment such as [!INCLUDE[
 
 + Identify primary data sources such as model training data, or input data for predictions vs. secondary sources such as factors, additional grouping variables, and so forth. Map your largest dataset to the input parameter of [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-+ Change your input data statements to work directly in the database. Rather than moving data to a local CSV file, or making repeated ODBC calls, you'll get better performance by using SQL queries or views that can be run directly against the database, avoiding data movement.
++ Change your input data statements to work directly in the database. Rather than moving data to a local CSV file, or making repeated ODBC calls, you can get better performance by using SQL queries or views that can be run directly against the database, avoiding data movement.
 
 + Use SQL Server query plans to identify tasks that can be performed in parallel. If the input query can be parallelized, set `@parallel=1` as part of your arguments to [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Parallel processing with this flag is typically possible any time that SQL Server can work with partitioned tables or distribute a query among multiple processes and aggregate the results at the end.
 
@@ -75,23 +75,23 @@ When you are working in a dedicated R development environment such as [!INCLUDE[
 
 -   All R data types are supported. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a greater variety of data types than does R, so some implicit data type conversions are performed when sending [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data to R and vice versa. You might also need to explicitly cast or convert some data.
 
-- NULL values are supported. R uses the `na` data construct to represent missing values, which is similar to a null.
+- NULL values are supported. R uses the `na` data construct to represent a missing value, which is similar to a null.
 
 For more information, see [R Libraries and Data Types](../r/r-libraries-and-data-types.md).
 
 ### Inputs and outputs
 
-+ You can define only one input dataset as part of the stored procedure parameters. This input query for the stored procedure can be any valid single  SELECT statement. We recommend that you use this input for the biggest dataset, and get smaller datasets if needed by using calls to RODBC.
++ You can define only one input dataset as part of the stored procedure parameters. This input query for the stored procedure can be any valid single  SELECT statement. We recommend that you use this input for the biggest dataset, and get smaller datasets as needed by using calls to RODBC.
 
 + Stored procedure calls preceded by EXECUTE cannot be used as an input to [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-+ All columns in the input dataset must be mapped to variables in the R script. Variables are mapped automatically by name. For example, say your R script contains a formula like this one:
++ All columns in the input dataset must be mapped to variables in the R script. Variables are mapped automatically by name. For example, assume your R script contains a formula like this one:
     
     ```R
     formula <- ArrDelay ~ CRSDepTime + DayOfWeek + CRSDepHour:DayOfWeek
     ```
     
-     An error will be raised if the input dataset does not contains columns with the matching names ArrDelay, CRSDepTime, DayOfWeek, CRSDepHour, and DayOfWeek.
+     An error is raised if the input dataset does not contain columns with the matching names ArrDelay, CRSDepTime, DayOfWeek, CRSDepHour, and DayOfWeek.
 
 + You can also provide multiple scalar parameters as input. However, any variables that you pass in as parameters of the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) must be mapped to variables in the R code. By default, variables are mapped by name.
 

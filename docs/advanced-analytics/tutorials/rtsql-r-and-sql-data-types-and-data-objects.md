@@ -20,8 +20,8 @@ manager: "jhubbard"
 ---
 # R and SQL Data Types and Data Objects (R in T-SQL Tutorial)
 
-In this step, you'll learn about some common issues that arise when moving data between R and SQL Server. 
-  
+In this step, you'll learn about some common issues that arise when moving data between R and SQL Server:
+
 + Data types sometimes do not match
 + Implicit conversions are performed
 + Cast and convert operations are sometimes required
@@ -31,9 +31,9 @@ In this step, you'll learn about some common issues that arise when moving data 
 
 When your script returns results from R to SQL Server, it must return the data as a **data.frame**. Any other type of object that you generate in your script — whether that be a list, factor, vector, or binary data — must be converted to a data frame if you want to output it as part of the stored procedure results. Fortunately, there are multiple R functions to support changing other objects to a data frame. You can even serialize a binary model and return it in a data frame, which you'll do later in this tutorial.
 
-First, let'll experiment with some R basic R objects — vectors, matrices, and lists — and see how conversion to a data frame changes the output passed to SQL Server.
+First, let's experiment with some R basic R objects — vectors, matrices, and lists — and see how conversion to a data frame changes the output passed to SQL Server.
 
-Compare these two Hello World R scripts, which look almost identical.  The first returns a single column of three values, and the second returns three columns with a single value each.
+Compare these two "Hello World"scripts in R. The scripts look almost identical, but the first returns a single column of three values, whereas the second returns three columns with a single value each.
 
 **Example 1**
 
@@ -139,7 +139,7 @@ Under the covers, the column of three values is converted to a single-column mat
 |120|130|140|150|
 |1200|1300|1400|1500|
 
-However, note what happens if you change the size of the array `y`.
+However, note what happens when you change the size of the array `y`.
 
 ```sql
 execute sp_execute_external_script
@@ -160,14 +160,14 @@ Now R returns a single value as the result.
 |---|
 |1542|
 
-Why? In this case, because the two arguments can be handled as vectors of the same length, R will return the inner product as a matrix.  This is the expected behavior according to the rules of linear algebra; however, it could cause problems if your downstream application expects the output schema to never change!
+Why? In this case, because the two arguments can be handled as vectors of the same length, R returns the inner product as a matrix.  This is the expected behavior according to the rules of linear algebra; however, it could cause problems if your downstream application expects the output schema to never change!
 
 
 ## Merge or multiply columns of different length
 
 R provides great flexibility for working with vectors of different sizes, and for combining these column-like structures into data frames. Lists of vectors can look like a table, but they don't follow all the rules that govern database tables.
 
-For example, the following script defines a numeric array of length 6 and stores it in the R variable `df1`. The numeric array is then combined with the integers of the RTestData table, which contains 3 values, to make a new data frame, `df2`.
+For example, the following script defines a numeric array of length 6 and stores it in the R variable `df1`. The numeric array is then combined with the integers of the RTestData table, which contains three (3) values, to make a new data frame, `df2`.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -220,9 +220,9 @@ SELECT ReportingDate
 ```
 
 > [!NOTE]
-> Any version of AdventureWorks will do, or you can use a query of your own. The point is to try to handle some data containing text, datetime and numeric values.
+> You can use any version of AdventureWorks, or create a different query of your own. The point is to try to handle some data containing text, datetime and numeric values.
 
-Now, try pasting this query into an R script wrapper. If you get an error, you'll probably need to make some edits to the query text. For example, the string predicate in the WHERE clause must be enclosed by two sets of single quotation marks.
+Now, try pasting this query into the R script wrapper. If you get an error, you'll probably need to make some edits to the query text. For example, the string predicate in the WHERE clause must be enclosed by two sets of single quotation marks.
 
 ```sql
 EXECUTE sp_execute_external_script

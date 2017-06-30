@@ -92,9 +92,18 @@ manager: "jhubbard"
 |jaasConfigurationName|String|SQLJDBCDriver|Beginning with Microsoft JDBC Driver 6.2 for SQL Server, each connection to SQL Server can have its own JAAS Login Configuration file to establish Kerberos connection. Name of the Login Configuration file can be passed through this property. <BR/> By default, driver sets property `useDefaultCcache = true` for IBM JVMs, and `useTicketCache = true` for other JVMs.|
 |serverPreparedStatementDiscardThreshold|Integer|10|Controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean-up the outstanding handles on the server is executed. If the setting is <= 1 un-prepare actions will be executed immediately on prepared statement close. If it is set to >1 these calls will be batched together to avoid overhead of calling sp_unprepare too often.|
 |enablePrepareOnFirstPreparedStatementCall|boolean<br /><br /> ["true"&#124;"false"]|false|If this configuration is set to false the first execution of a prepared statement will call sp_executesql and not prepare a statement, once the second execution happens it will call sp_prepexec and actually setup a prepared statement handle.|
+|statementPoolingCacheSize|Integer|10|Configurable cachable Statements for Reuse in Pool| 
   
 > [!NOTE]  
 >  The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] takes the server default values for connection properties except for ANSI_DEFAULTS and IMPLICIT_TRANSACTIONS. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] automatically sets ANSI_DEFAULTS to ON and IMPLICIT_TRANSACTIONS to OFF.  
+
+> [!Note]
+> Important: If authentication is set to ActiveDirectoryPassword, the following library will need to be included in classpath: [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java). It can be found on [Maven Repository](https://mvnrepository.com/artifact/com.microsoft.azure/adal4j). The simplest way to download the library and its dependencies is using Maven: 
+ >1. First, install Maven on your system 
+ >2. Go to the [GitHub page](https://github.com/Microsoft/mssql-jdbc) of the driver
+ >3. Download the pom.xml file
+ >4. Run  the following Maven command to download the library and its dependencies: 
+  > mvn dependency:copy-dependencies
   
 ## See Also  
  [Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

@@ -107,5 +107,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [FIPS Mode](../../connect/jdbc/fips-mode.md)
   
   

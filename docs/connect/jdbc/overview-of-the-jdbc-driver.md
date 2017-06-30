@@ -38,6 +38,7 @@ manager: "jhubbard"
 |[Frequently Asked Questions &#40;FAQ&#41; for JDBC Driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Frequently asked questions about the Microsoft JDBC driver.|  
   
 ## See Also  
+ [JDBC Driver GitHub Repository](https://github.com/microsoft/mssql-jdbc)  
  [JDBC Driver API Reference](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

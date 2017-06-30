@@ -30,27 +30,27 @@ The JDBC Driver is open source and the source code can be found on [GitHub](http
  **What should I know when upgrading my driver?**  
  The Microsoft JDBC Driver 6.2 supports the JDBC 4.0, 4.1, and 4.2 specifications and includes two JAR class libraries in the installation package as follows:  
   
-|Jar|JDBC Specification|JDK Version|  
+|JAR|JDBC Specification|JDK Version|  
 |-|-|-|  
 |mssql-jdbc-6.2.0.jre8.jar|JDBC 4.2, 4.1, and 4.0|JDK 8.0|  
 |mssql-jdbc-6.2.0.jre7.jar|JDBC 4.1 and 4.0|JDK 7.0|  
  
  The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server supports JDBC 4.0, 4.1, and 4.2 specifications and include two JAR class libraries in the installation package as follows:  
   
-|Jar|JDBC Specification|JDK Version|   
+|JAR|JDBC Specification|JDK Version|   
 |-|-|-|  
 |sqljdbc42.jar|JDBC 4.2, 4.1, and 4.0|JDK 8.0|  
 |sqljdbc41.jar|JDBC 4.1 and 4.0|JDK 7.0|  
   
  The Microsoft JDBC Driver 4.1 for SQL Server supports the JDBC 4.0 specification and includes one JAR class library in the installation package as follows:  
   
-|Jar|JDBC Specification|JDK Version|    
+|JAR|JDBC Specification|JDK Version|    
 |-|-|-|  
 |sqljdbc41.jar|JDBC 4.0|JDK 7.0 and 6.0|
   
  The Microsoft JDBC Driver 4.0 for SQL Server supports both JDBC 3.0 and JDBC 4.0 specifications and includes two JAR class libraries in the installation package for each specification: sqljdbc.jar and sqljdbc4.jar, respectively.  
   
-|Jar|JDBC Specification|JDK Version|   
+|JAR|JDBC Specification|JDK Version|   
 |-|-|-|  
 |sqljdbc4.jar|JDBC 4.0|JDK 6.0 and 5.0|  
 |sqljdbc.jar|JDBC 3.0|JDK 6.0 and 5.0|  

@@ -12,7 +12,7 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 author: "ronortloff"
-ms.author: "rortloff"
+ms.author: "rortloff;barbkess"
 manager: "jhubbard"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)

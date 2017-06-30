@@ -444,7 +444,7 @@ WITH
 ```  
   
 ### <a name="Replicated"></a> G. Create a replicated table  
- The following example creates a replicated table similar to the previous examples. Replicated tables are copied in full to the first distribution database on each Compute node. With this copy on each Compute node, data movement is reduced for queries. This example is created with a CLUSTERED INDEX, which gives better data compression than a heap and may not contain enough rows to achieve good CLUSTERED COLUMNSTORE INDEX compression.  
+ The following example creates a replicated table similar to the previous examples. Replicated tables are copied in full to each Compute node. With this copy on each Compute node, data movement is reduced for queries. This example is created with a CLUSTERED INDEX, which gives better data compression than a heap and may not contain enough rows to achieve good CLUSTERED COLUMNSTORE INDEX compression.  
   
 ```  
 CREATE TABLE myTable   

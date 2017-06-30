@@ -1,7 +1,7 @@
 ---
 title: "Setup and Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/16/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,8 +17,8 @@ manager: "jhubbard"
 
   You install the components required for using Python by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard and following the interactive prompts as described in this topic.
 
-**Overview of the setup process**
-  
+Overview of the setup process
+
   + Be sure to install the database engine. An instance of SQL Server is required to run Python scripts in-database.
   + Choose the **Machine Learning Services** feature, and select **Python** as the language.
   + After installation is complete, reconfigure the instance to allow execution of scripts that use an external executable.
@@ -42,17 +42,16 @@ To perform an unattended installation, use the command-line options for SQL Serv
     + You use a different library and different executable and get different results than when running in SQL Server.
     + Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
   
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > After setup is complete, be sure to complete the additional post-configuration steps described in this topic. These include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run Python jobs on your behalf.
- 
+
 ##  <a name="bkmk_installPythonInDatabase"></a> Step 1: Install Machine Learning Services (In-Database) on SQL Server
 
-
-1.  Run the setup wizard for SQL Server 2017.
+1. Run the setup wizard for SQL Server 2017.
   
-2.  On the **Installation** tab, click **New SQL Server stand-alone installation or add features to an existing installation**.
+2. On the **Installation** tab, click **New SQL Server stand-alone installation or add features to an existing installation**.
    
-3.  On the **Feature Selection** page, select both of these options:
+3. On the **Feature Selection** page, select both of these options:
   
     -   **Database Engine Services**
   
@@ -70,18 +69,18 @@ To perform an unattended installation, use the command-line options for SQL Serv
         
         ![Setup options for Python](media/ml-svcs-features-python-highlight.png "Setup options for Python")
 
-4.  On the page, **Consent to Install Python**, click **Accept**.
+4. On the page, **Consent to Install Python**, click **Accept**.
   
      This license agreement is required to download the Python executable, Python packages from Anaconda.
      
      ![Agreement to Python license](media/ml-svcs-license-python.png "License agreement for Python")
   
-    > [!NOTE]  
+    > [!NOTE]
     >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately as described here: [Installing Components without Internet Access](../r/installing-ml-components-without-internet-access.md)
   
      Click **Accept**, wait until the **Next** button becomes active, and then click **Next**.
   
-5.  On the **Ready to Install** page, verify that these selections are included, and click **Install**.
+5. On the **Ready to Install** page, verify that these selections are included, and click **Install**.
   
      + Database Engine Services
      + Machine Learning Services (In-Database)
@@ -93,10 +92,10 @@ To perform an unattended installation, use the command-line options for SQL Serv
 
     Optionally, make a note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-6.  When installation is complete, restart the computer.
-  
+6. When installation is complete, restart the computer.
+
 ##  <a name="bkmk_enableFeature"></a> Step 2: Enable Python script execution
-  
+
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If it is not already installed, you can run the SQL Server setup wizard again to open a download link and install it.
   
 2. Connect to the instance where you installed Machine Learning Services, and run the following command:
@@ -107,7 +106,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
 
     The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default, to reduce the surface area. The feature must be explicitly enabled by an administrator before you can run R or Python scripts.
     
-3.  To enable the external scripting feature that supports Python, run the following statement. 
+3.  To enable the external scripting feature that supports Python, run the following statement.
     
     ```SQL
     EXEC sp_configure  'external scripts enabled', 1

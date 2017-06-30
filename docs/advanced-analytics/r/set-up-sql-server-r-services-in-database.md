@@ -133,7 +133,7 @@ Verify that the external script execution service is enabled.
     
 2. Open the **Services** panel and verify that the Launchpad service for your instance is running. If you install multiple instances, each instance has its own Launchpad service.
    
-3. Open a new Query window in  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and run a simple R script.
+3. Open a new **Query** window in  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and run a simple R script such as the following.
   
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
@@ -245,7 +245,7 @@ If you create an R solution on a data science client computer and need to run co
 
 + For SQL logins: Ensure that the login has appropriate permissions on the database where you will be reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. If you need to create objects, you will need `DDL_admin` rights.  To save data to tables, add the login to the `db_datawriter` role.
 
-+ For Windows authentication: You must configure an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [Using the ODBC Data Source Administrator](http://windows.microsoft.com/windows/using-odbc-data-source-administrator).
++ For Windows authentication: You must configure an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC Data Source Administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
 ### <a name="bkmk_optimize"></a>Optimize the server for R
 

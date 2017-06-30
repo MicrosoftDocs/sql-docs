@@ -315,6 +315,7 @@ As described in the picture above, a log shipping session involves the following
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 
 

@@ -253,7 +253,7 @@ manager: "jhubbard"
   
     4.  No triggers on the table.  
   
-    5.  If you are updating the table contents, make sure to use a snapshot isolation level transaction to prevent Writer blocking Readers. Note that using the `NOLOCK` hint should also mitigate this.  
+    5.  If you are updating the table contents, make sure to use a snapshot isolation level transaction in the classifier function to prevent Writer blocking Readers. Note that using the `NOLOCK` hint should also mitigate this.  
   
     6.  If possible, disable the classifier function when changing the table contents.  
   

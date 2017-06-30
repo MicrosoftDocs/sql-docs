@@ -61,13 +61,13 @@ The JDBC Driver is open source and the source code can be found on [GitHub](http
  **How much does the driver cost?**  
  The Microsoft JDBC Driver for SQL Server is available at no additional charge.  
   
- **Can I redistribute the driver? ** 
+ **Can I redistribute the driver?** 
  The JDBC Drivers 4.1, 4.2, 6.0, and 6.2 are redistributable. Please review the “Distributable Code” clause in the license agreements.
  
  The JDBC Driver 4.0 is freely redistributable under a separate Redistribution License that requires registration. To register or for more information, see our  [Redistributing the Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md). 
  
    
- **Can I use the driver to access Microsoft SQL Server from a Linux computer? ** 
+ **Can I use the driver to access Microsoft SQL Server from a Linux computer?** 
  Yes! You can use the driver to access SQL Server from Linux, Unix, and other non-Windows platforms. See our  [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) for more details.  
   
  **Does the driver support Secure Sockets Layer (SSL) encryption?** 

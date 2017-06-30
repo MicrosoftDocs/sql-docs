@@ -23,6 +23,7 @@ manager: "jhubbard"
 -   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]  
   
      You can download the Microsoft JDBC Driver from the Microsoft Download Center links below: 
+     * [Microsoft JDBC Driver 6.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=852460)
      * [Microsoft JDBC Driver 6.0 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841535)
      * [Microsoft JDBC Driver 4.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841534) 
      * [Microsoft JDBC Driver 4.1 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 

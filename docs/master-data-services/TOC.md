@@ -1,5 +1,6 @@
-# [Overview](master-data-services-overview-mds.md)  
+# [Introduction](master-data-services-overview-mds.md)  
 
+# Overview
 ## [What's New in Master Data Services (MDS)](what-s-new-in-master-data-services-mds.md)  
 ## [Learn SQL Server Master Data Services](learn-sql-server-master-data-services.md)  
 ## [SQL Server Samples: Model Deployment Packages (MDS)](sql-server-samples-model-deployment-packages-mds.md)  

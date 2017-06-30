@@ -1,3 +1,5 @@
+# [Rowsets](rowsets.md)
+
 # [Bookmarks](bookmarks.md)
 # [Creating a Rowset with IOpenRowset](creating-a-rowset-with-iopenrowset.md)
 # [Creating Rowsets with ICommand::Execute](creating-rowsets-with-icommand-execute.md)
@@ -8,7 +10,6 @@
 # [Fetching Rows](fetching-rows.md)
 # [Rowset Properties and Behaviors](rowset-properties-and-behaviors.md)
 # [Rowsets and SQL Server Cursors](rowsets-and-sql-server-cursors.md)
-# [Rowsets](rowsets.md)
 # [Updating Data in Rowsets - Resynchronizing Rows](updating-data-in-rowsets-resynchronizing-rows.md)
 # [Updating Data in Rowsets](updating-data-in-rowsets.md)
 # [Updating Data in SQL Server Cursors](updating-data-in-sql-server-cursors.md)

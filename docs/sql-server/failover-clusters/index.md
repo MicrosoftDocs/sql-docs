@@ -1,3 +1,3 @@
 --- 
-redirect_url: /sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring 
+redirect_url: /sql/sql-server/failover-clusters/install/sql-server-failover-cluster-installation
 --- 

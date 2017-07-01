@@ -124,7 +124,7 @@ manager: "jhubbard"
     WITH SCHEMABINDING  
     AS  
     BEGIN  
-    -- set transaction isolation level snapshot /*Use transaction isolation level snapshot to avoid blocking while reading if lookup table is updated frequently
+    /* We recommend running the classifier function code under snapshot isolation level OR using NOLOCK hint to avoid blocking on lookup table. In this example, we are using NOLOCK hint. */
          DECLARE @strGroup sysname  
          DECLARE @loginTime time  
          SET @loginTime = CONVERT(time,GETDATE())  

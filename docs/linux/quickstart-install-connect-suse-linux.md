@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Install SQL Server on SUSE Linux Enterprise Server | Microsoft Docs
+title: Get started with SQL Server 2017 on SUSE Linux Enterprise Server | Microsoft Docs
 description: Describes how to install SQL Server 2017 CTP 2.1 on SUSE Linux Enterprise Server.
 author: sabotta 
 ms.author: carlasab 

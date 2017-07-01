@@ -2,6 +2,7 @@
 
 # Overview
 ## [What's new in Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
+## [New and recently updated articles](new-updated-reporting-services.md)
 ## [Reporting Services Concepts (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services Features and Tasks](reporting-services-features-and-tasks-ssrs.md)   
 ## [Backward Compatibility](reporting-services-backward-compatibility.md)  

@@ -215,33 +215,33 @@ This section lists very similar articles for recently updated articles in other 
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (12+2): **Advanced Analystics for SQL** docs](/sql/advanced-analytics-new-updated-sql-docs-pr)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](/sql/analysis-services-new-updated-sql-docs-pr)
-- [New + Updated (0+2):  **Connect to SQL** docs](/sql/connect-new-updated-sql-docs-pr)
-- [New + Updated (3+0):  **Database Engine for SQL** docs](/sql/database-engine-new-updated-sql-docs-pr)
-- [New + Updated (1+2):  **Integration Services for SQL** docs](/sql/integration-services-new-updated-sql-docs-pr)
-- [New + Updated (2+8):  **Linux for SQL** docs](/sql/linux-new-updated-sql-docs-pr)
-- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](/sql/master-data-services-new-updated-sql-docs-pr)
-- [New + Updated (5+5):  **Relational Databases for SQL** docs](/sql/relational-databases-new-updated-sql-docs-pr)
-- [New + Updated (2+0):  **Reporting Services for SQL** docs](/sql/reporting-services-new-updated-sql-docs-pr)
-- [New + Updated (0+4):  **Microsoft SQL Server** docs](/sql/sql-server-new-updated-sql-docs-pr)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](/sql/ssdt-new-updated-sql-docs-pr)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](/sql/ssms-new-updated-sql-docs-pr)
-- [New + Updated (1+0):  **Tools for SQL** docs](/sql/tools-new-updated-sql-docs-pr)
+- [New + Updated (12+2): **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (1+0):  **Analysis Services for SQL** docs](../docs/analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+2):  **Connect to SQL** docs](../docs/connect/new-updated-connect.md)
+- [New + Updated (3+0):  **Database Engine for SQL** docs](../docs/database-engine/new-updated-database-engine.md)
+- [New + Updated (1+2):  **Integration Services for SQL** docs](../docs/integration-services/new-updated-integration-services.md)
+- [New + Updated (2+8):  **Linux for SQL** docs](../docs/linux/new-updated-linux.md)
+- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](../docs/master-data-services/new-updated-master-data-services.md)
+- [New + Updated (5+5):  **Relational Databases for SQL** docs](../docs/relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+0):  **Reporting Services for SQL** docs](../docs/reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+4):  **Microsoft SQL Server** docs](../docs/sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../docs/ssdt/new-updated-ssdt.md)
+- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../docs/ssms/new-updated-ssms.md)
+- [New + Updated (1+0):  **Tools for SQL** docs](../docs/tools/new-updated-tools.md)
 
 
 #### Subject areas which have no new or recently updated articles
 
-- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](/sql/ado-new-updated-sql-docs-pr)
-- [New + Updated (0+0): **Data Quality Services for SQL** docs](/sql/data-quality-services-new-updated-sql-docs-pr)
-- [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](/sql/dmx-new-updated-sql-docs-pr)
-- [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](/sql/mdx-new-updated-sql-docs-pr)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](/sql/odbc-new-updated-sql-docs-pr)
-- [New + Updated (0+0): **PowerShell for SQL** docs](/sql/powershell-new-updated-sql-docs-pr)
-- [New + Updated (0+0): **Samples for SQL** docs](/sql/sample-new-updated-sql-docs-pr)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](/sql/ssma-new-updated-sql-docs-pr)
-- [New + Updated (0+0): **Transact-SQL** docs](/sql/t-sql-new-updated-sql-docs-pr)
-- [New + Updated (0+0): **XQuery for SQL** docs](/sql/xquery-new-updated-sql-docs-pr)
+- [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../docs/ado/new-updated-ado.md)
+- [New + Updated (0+0): **Data Quality Services for SQL** docs](../docs/data-quality-services/new-updated-data-quality-services.md)
+- [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../docs/dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../docs/mdx/new-updated-mdx.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../docs/odbc/new-updated-odbc.md)
+- [New + Updated (0+0): **PowerShell for SQL** docs](../docs/powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Samples for SQL** docs](../docs/sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../docs/ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Transact-SQL** docs](../docs/t-sql/new-updated-t-sql.md)
+- [New + Updated (0+0): **XQuery for SQL** docs](../docs/xquery/new-updated-xquery.md)
 
 
 &nbsp;

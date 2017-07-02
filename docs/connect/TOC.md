@@ -1,4 +1,5 @@
 # [SQL Server Drivers](sql-server-drivers.md)
+# [New and recently updated articles](new-updated-connect.md)
 
 # [ADO.NET +](../connect/ado-net/microsoft-ado-net-for-sql-server.md)
 # [JDBC +](../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)

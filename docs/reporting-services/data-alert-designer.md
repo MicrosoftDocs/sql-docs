@@ -1,7 +1,7 @@
 ---
 title: "Data Alert Designer | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/10/2017"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,9 @@ manager: "erikre"
 ---
 # Data Alert Designer
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017]../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
 You create and edit data alert definitions in Data Alert Designer. An alert definition is a collection of metadata, including the report data that you are interested in, the rules that report data must satisfy to create data alert instances and send data alert messages, the recipients of the alert message, and so forth.  
 

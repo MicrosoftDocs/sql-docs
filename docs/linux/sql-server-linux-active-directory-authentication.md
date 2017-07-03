@@ -38,34 +38,78 @@ Before you configure AD Authentication, you need to:
 Numerous tools exist to help you join the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine to your AD domain. This walkthrough uses [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html), a popular open source package. If you haven't already, install both the **realmd** and Kerberos client packages on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:  
 ```bash  
 # RHEL
-sudo yum install realmd
-sudo yum install krb5-workstation
+sudo yum install realmd krb5-workstation
 
 # SUSE
-sudo zypper install realmd
-sudo zypper install krb5-client
+sudo zypper install realmd krb5-client
 
 # Ubuntu
-sudo apt-get install realmd
-sudo apt-get install krb5-user
+sudo apt-get install realmd krb5-user
 ```  
 
 If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.  
-Run the following command to verify that the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine is configured to use the AD domain controller for DNS. For the rest of this walkthrough, you should replace "contoso.com" and "CONTOSO.COM" with your own domain.  
+
+>  [!NOTE]  
+>  This walkthrough uses "contoso.com" and "CONTOSO.COM" as example domain and realm names, respectively. You should replace these with your own values. These commands are case-sensitive, so make sure you use uppercase wherever it is used in this walkthrough.  
+
+Run the following command to verify that the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine is configured to use the AD domain controller for as a DNS nameserver:
 ```bash  
 sudo realm discover contoso.com -v
 ```  
-If no domains are found, you need to configure your machine to use your AD domain controller as a DNS nameserver. Make sure that your `/etc/resolv.conf` file contains a line like the following:  
-```Code  
-nameserver **<your AD domain controller IP address>**
+If your domain is not found, you need to configure your [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine to use your AD domain controller's IP address as a DNS nameserver. The specific steps to do this depend on your network device configuration, domain configuration, and Linux distribution. Here are some example approaches.
+
+### Example DNS configuration: Ubuntu
+Edit the `/etc/network/interfaces` file so that your AD domain controller's IP address is listed as a dns-nameserver. For example: 
+ 
+```/etc/network/interfaces
+<...>
+# The primary network interface
+auth eth0
+iface eth0 inet dhcp
+dns-nameservers **<AD domain controller IP address>**
+dns-search **<AD domain name>**
 ```  
-Next, join the domain. You'll need to authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain:  
+After editing this file, restart the network service:
+```bash
+sudo ifdown eth0 && sudo ifup eth0
+```
+Now check that your `/etc/resolv.conf` file contains a line like the following:  
+```Code  
+nameserver **<AD domain controller IP address>**
+```  
+
+### Example DNS configuration: RHEL
+Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file (or other interface config file as appropriate) so that your AD domain controller's IP address is listed as a DNS server:
+
+ ```/etc/sysconfig/network-scripts/ifcfg-eth0
+<...>
+PEERDNS=no
+DNS1=**<AD domain controller IP address>**
+```
+After editing this file, restart the network service:
+```bash
+sudo systemctl restart network
+```
+Now check that your `/etc/resolv.conf` file contains a line like the following:  
+```Code  
+nameserver **<AD domain controller IP address>**
+```  
+
+### Join the domain
+Once you've confirmed that your DNS is configured properly, join the domain by running the command below. You'll need to authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain. 
+Specifically, this command will create a new computer account in AD, create the `/etc/krb5.keytab` host keytab file, and configure the domain in `/etc/sssd/sssd.conf`:
 ```bash  									
 sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
-<snip>
+<...>
  * Successfully enrolled machine in realm
 ```    
-Specifically, this command creates a new computer account in AD, create the `/etc/krb5.keytab` host keytab file, and configure the domain in `/etc/sssd/sssd.conf`. If you see an error, "Necessary packages are not installed," then you should install those packages using your Linux distro's package manager before running the realm join command again.  
+
+>  [!NOTE]  
+>   If you see an error, "Necessary packages are not installed," then you should install those packages using your Linux distro's package manager before running the `realm join` command again. 
+>  
+>  If you receive an error, "Insufficient permissions to join the domain," then you will need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
+
+ 
 Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user:  
 ```bash  
 id user@contoso.com
@@ -77,33 +121,63 @@ Password for user@CONTOSO.COM:
 klist
 Ticket cache: FILE:/tmp/krb5cc_1000
 Default principal: user@CONTOSO.COM
-<snip>
+<...>
 ```   
+
+>  [!NOTE]  
+>   If `id user@contoso.com` returns, "No such user," make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the "No such user" error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).  
+>  
+>  If `kinit user@CONTOSO.COM` returns, "KDC reply did not match expectations while getting initial credentials," make sure you specified the realm in uppercase.
+
 For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
 ## Step 2: Create AD user for [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] and set SPN  
-On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. You will be prompted to enter a new password for the account:  
+On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. This example names the account "mssql," but the account name can be anything you like. You will be prompted to enter a new password for the account:  
 ```PowerShell  	
+Import-Module ActiveDirectory
+
 New-ADUser mssql -AccountPassword (Read-Host -AsSecureString "Enter Password") -PasswordNeverExpires $true -Enabled $true
 ```   
-Now set the ServicePrincipalName (SPN) for this account using the `setspn.exe` tool. The SPN must be formatted exactly as specified in the following example: You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine by running hostname `--fqdn` on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host, and the TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] to use a different port number.  
+
+>  [!NOTE]  
+>  It is a security best practice to have a dedicated AD account for SQL Server, so that SQL Server's credentials aren't shared with other services using the same account. However, you can reuse an existing AD account if you prefer, if you know the account's password (required to generate a keytab file in the next step).
+
+Now set the ServicePrincipalName (SPN) for this account using the `setspn.exe` tool. The SPN must be formatted exactly as specified in the following example: You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host, and the TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] to use a different port number.  
 ```PowerShell   
 setspn -A MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>** mssql
 ```   
+
+>  [!NOTE]  
+>  If you receive an error, "Insufficient access rights," then you need to check with a domain administrator that you have sufficient permissions to set an SPN on this account.
+>  
+>  If you change the TCP port in the future, then you will need to run the setspn command again with the new port number. You will also need to add the new SPN to the SQL Server service keytab by following the steps in the next section.
+
 For more information, see [Register a Service Principal Name for Kerberos Connections](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
 
 ## Step 3: Configure [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] service keytab  
-On the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine, create a keytab file for the AD user you just created. The `addent` command prompts you for a password. Enter the same password you used to create the AD user for [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)].   
+First, check the Key Version Number (kvno) for the AD account created in the previous step. Usually it will be 2, but it could be another integer if you changed the account's password multiple times. On the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine, run the following:
+
+```bash
+kinit user@CONTOSO.COM
+
+kvno MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>**
+```
+
+Now create a keytab file for the AD user you created in the previous step. When prompted, enter the password for that AD account. 
 ```bash  
 sudo ktutil
 
-ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>**@CONTOSO.COM -k 2 -e aes256-cts-hmac-sha1-96
+ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
+
+ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+
 ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+
 quit
 ```  
 
 >  [!NOTE]  
->  If your domain controller is using Windows Server 2008 R2 or older, you should use `rc4-hmac` instead of `aes256-cts-hmac-sha1-96` as the encryption algorithm in the preceding `addent` command. For more information on which encryption algorithms are supported by different versions of Windows and Active Directory, see Network security: [Configure encryption types allowed for Kerberos Win7 only](https://docs.microsoft.com/windows/device-security/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos).  
+>  The ktutil tool does not validate the password, so make sure you enter it correctly.
 
 Anyone with access to this `keytab` file can impersonate [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] on the domain, so make sure you restrict access to the file such that only the `mssql` account has read access:  
 ```bash  
@@ -119,11 +193,9 @@ sudo systemctl restart mssql-server
 ## Step 4: Create AD-based logins in Transact-SQL  
 Connect to [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] and create a new, AD-based login:  
 ```Transact-SQL  
-CREATE LOGIN [user@contoso.com] FROM EXTERNAL PROVIDER;
+CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
 ```   
 
->  [!NOTE]  
->  Starting with [!INCLUDE[sssqlv14-md](../../docs/includes/sssqlv14-md.md)], the userPrincipalName (UPN) `login_name@DomainName` is the preferred format for creating AD-based logins. However, the pre-Windows 2000 user logon name format is also supported for compatibility: `CREATE LOGIN [CONTOSO\user] FROM WINDOWS;`  
 Verify that the login is now listed in the [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql.mc) system catalog view:  
 ```Transact-SQL  
 SELECT name FROM sys.server_principals;

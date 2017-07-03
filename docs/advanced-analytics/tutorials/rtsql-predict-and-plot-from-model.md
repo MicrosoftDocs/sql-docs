@@ -20,7 +20,7 @@ manager: "jhubbard"
 ---
 # Use SQL to Predict and Plot from an R Model
 
-To perform _scoring_ using new data, you'll get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean "generating predictions, probabilities, or other values based on new data fed into a trained model".
+To perform _scoring_ using new data, you'll get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
 
 ## Create the table of new speeds
 
@@ -167,7 +167,7 @@ Integration of R with SQL Server makes it easier to deploy R solutions at scale,
 
 + [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/r-server/r/tutorial-introduction)
 
-    Learn how to use the new RevoScaleR packages ot create models and transform data.
+    Learn how to use the new RevoScaleR packages to create models and transform data.
 
 + [Get Started with MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 

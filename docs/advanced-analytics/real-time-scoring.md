@@ -59,7 +59,7 @@ To support very fast scoring, the deserialized model is cached until batch execu
 
 In Microsoft R Server (or Machine Learning Server Standalone), the equivalent functionality is provided by the [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) function. This function supports the same models and transformations, and has been optimized for very high throughput.
 
-For an example of how rxPredict can used for scoring ,see this sample: [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
+For an example of how rxPredict can used for scoring, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ### Requirements
 
@@ -140,7 +140,7 @@ By default, real-time scoring functionality is disabled in SQL Server. You must 
 
 	+ Trusted assemblies
 	+ The stored procedure sp_rxPredict
-	+ A new database role, `rxpredict_users`. The database administrator can use this role to grant permission to users who will run the real-time scoring functionality.
+	+ A new database role, `rxpredict_users`. The database administrator can use this role to grant permission to users who use the real-time scoring functionality.
 
 > [!TIP]
 > To disable real-time scoring functionality, open an elevated command prompt, and run the following command: `RegisterRExt.exe /uninstallrts /database:databasename [/instance:name]`

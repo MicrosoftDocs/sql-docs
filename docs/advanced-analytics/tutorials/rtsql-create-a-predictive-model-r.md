@@ -36,7 +36,7 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'car_speed'
 ```
 
-+ Some people like to use temporary tables, but be aware that some R clients will disconnect sessions between batches.
++ Some people like to use temporary tables, but be aware that some R clients disconnect sessions between batches.
 
 + Many datasets, small and large, are included with the R runtime. To get a list of datasets installed with R,  type `library(help="datasets")` from an R command prompt.
 
@@ -51,7 +51,7 @@ The requirements of a linear model are simple:
 + Provide input data to use in training the model
 
 > [!TIP]
-> If you need a refresher on linear models, we recommend this tutorial, which describes the process of fitting a linear models using rxLInMod: [Fitting Linear Models](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
+> If you need a refresher on linear models, we recommend this tutorial, which describes the process of fitting a model using rxLinMod: [Fitting Linear Models](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
 
 To actually build the model, you define the formula inside your R code, and pass the data as an input parameter.
 
@@ -78,9 +78,7 @@ GO
 
 ## Create a table for storing the model
 
-Now you'll store the model so you can retrain or use it for prediction.
-
-The output of an R package that creates a model is usually a **binary object**. Therefore, the table where you store the model must provide a column of **varbinary** type.
+Next, store the model so you can retrain or use it for prediction. The output of an R package that creates a model is usually a **binary object**. Therefore, the table where you store the model must provide a column of **varbinary** type.
 
 ```sql
 CREATE TABLE stopping_distance_models (
@@ -97,7 +95,7 @@ INSERT INTO stopping_distance_models (model)
 EXEC generate_linear_model;
 ```
 
-Note that if you run this code a second time, you'll get this error:
+Note that if you run this code a second time, you get this error:
 
 ```
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models

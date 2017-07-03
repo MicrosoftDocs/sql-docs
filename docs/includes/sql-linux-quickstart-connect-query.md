@@ -16,7 +16,7 @@ The following steps use **sqlcmd** to locally connect to your new SQL Server ins
 
 1. If successful, you should get to a **sqlcmd** command prompt: `1>`.
 
-1. If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection).
+1. If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
 ## Create and query data
 The following sections walk you through using **sqlcmd** and Transact-SQL to create a new database, add data, and run a simple query.
@@ -99,15 +99,16 @@ QUIT
 
 It is important to note that SQL Server tools on Windows connect to SQL Server instances on Linux in the same way they would connect to any remote SQL Server instance.
 
-If you have a Windows machine that can connect to your Linux machine, try the same steps in this topic from a Windows command-prompt running **sqlcmd**. Just verify that you use the target Linux machine name or IP address rather than localhost, and make sure that TCP port 1433 is open. If you have any problems connecting from Windows, see [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection).
+If you have a Windows machine that can connect to your Linux machine, try the same steps in this topic from a Windows command-prompt running **sqlcmd**. Just verify that you use the target Linux machine name or IP address rather than localhost, and make sure that TCP port 1433 is open. If you have any problems connecting from Windows, see [connection troubleshooting recommendations](../linux/sql-server-linux-troubleshooting-guide.md#connection).
 
 For other tools that run on Windows but connect to SQL Server on Linux, see:
-- [SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
-- [Windows PowerShell](sql-server-linux-manage-powershell.md)
-- [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
+
+- [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-develop-use-ssms.md)
+- [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
+- [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
 ## Next Steps
 
-If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/library/ms365303.aspx) and the [Transact-SQL Reference (Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx).
+If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md) and the [Transact-SQL Reference (Database Engine)](../t-sql/language-reference.md).
 
-To explore other ways to connect and manage SQL Server, see [Visusal Studio Code](sql-server-linux-develop-use-vscode.md) and  [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md).
+To explore other ways to connect and manage SQL Server, see [Visusal Studio Code](../linux/sql-server-linux-develop-use-vscode.md) and  [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md).

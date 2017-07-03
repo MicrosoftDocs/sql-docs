@@ -25,6 +25,7 @@
 ## [Validating User Input](validating-user-input.md)
 ## [Application Security](application-security.md)
 ## [Using SSL Encryption](using-ssl-encryption.md)
+## [FIPS Mode](../../connect/jdbc/fips-mode.md)
 ### [Understanding SSL Support](understanding-ssl-support.md)
 ### [Connecting with SSL Encryption](connecting-with-ssl-encryption.md)
 ### [Configuring the Client for SSL Encryption](configuring-the-client-for-ssl-encryption.md)

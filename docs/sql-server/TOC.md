@@ -3,12 +3,11 @@
 # Overview
 ## [What's New in SQL Server 2016](what-s-new-in-sql-server-2016.md)
 ## [What's New in SQL Server 2017](what-s-new-in-sql-server-2017.md)
+## [New and recently updated articles](new-updated-sql-server.md)
 ## [Editions and supported features of SQL Server](editions-and-components-of-sql-server-2016.md)
 ## [Maximum Capacity Specifications for SQL Server](maximum-capacity-specifications-for-sql-server.md)
 ## [Compute Capacity Limits by Edition of SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Customer Experience Improvement Program](customer-experience-improvement-program-for-sql-server-data-tools.md)
-
-# [Recently Updated Articles for SQL Server](sql-server-new-updated-sql-docs-pr.md)
 
 # Release Notes
 

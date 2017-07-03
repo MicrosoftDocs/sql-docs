@@ -1,7 +1,7 @@
 ---
 title: "R and SQL Data Types and Data Objects (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/29/2017"
+ms.date: "07/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,12 +18,12 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# R and SQL Data Types and Data Objects (R in T-SQL Tutorial)
+# R and SQL Data Types and Data Objects
 
 In this step, you'll learn about some common issues that arise when moving data between R and SQL Server:
 
 + Data types sometimes do not match
-+ Implicit conversions are performed
++ Implicit conversions might take place
 + Cast and convert operations are sometimes required
 + R and SQL use different data objects
 
@@ -162,7 +162,6 @@ Now R returns a single value as the result.
 
 Why? In this case, because the two arguments can be handled as vectors of the same length, R returns the inner product as a matrix.  This is the expected behavior according to the rules of linear algebra; however, it could cause problems if your downstream application expects the output schema to never change!
 
-
 ## Merge or multiply columns of different length
 
 R provides great flexibility for working with vectors of different sizes, and for combining these column-like structures into data frames. Lists of vectors can look like a table, but they don't follow all the rules that govern database tables.
@@ -202,7 +201,7 @@ Remember that a data frame only looks like a table, and is actually a list of ve
 
 R and SQL Server don't use the same data types, so when you run a query in SQL Server to get data and then pass that to the R runtime, some type of implicit conversion usually takes place. Another set of conversions takes place when you return data from R to SQL Server.
 
-- SQL Server pushes the data from the query to the R process managed by the Launchpad service and converts it to an internal representation.
+- SQL Server pushes the data from the query to the R process managed by the Launchpad service and converts it to an internal representation for greater efficiency.
 - The R runtime loads the data into a data.frame variable and performs its own operations on the data.
 - The database engine returns the data to SQL Server using a secured internal connection and presents the data in terms of SQL Server data types.
 - You get the data by connecting to SQL Server using a client or network library that can issue SQL queries and handle tabular data sets. This client application can potentially affect the data in other ways.
@@ -242,33 +241,30 @@ WITH RESULT SETS undefined;
 After you get the query working, review the results of the `str` function to see how R treats the input data.
 
 **Results**
-    
+
   *STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:*
   *STDOUT message(s) from external script: $ ReportingDate: POSIXct, format: "2010-12-24 23:00:00" "2010-12-24 23:00:00"*
   *STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M200 Europe",..: 1 1 1 1 1 1 1 1 1 1 ...*
   *STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 16950 16950*
 
-From this, you can see a couple of changes in even a small query:
-
 + The datetime column has been processed using the R data type, **POSIXct**.
 + The text column [ProductSeries] has been identified as a **factor**, meaning a categorical variable. String values are handled as factors by default. If you pass a string to R, it is converted to an integer for internal use, and then mapped back to the string on output.
 
-
 ### Summary
 
-Some SQL Server data types are not supported by R. To avoid errors:
+From even these short examples, you can see the need to check the effects of data conversion when passing SQL queries as input. Because some SQL Server data types are not supported by R, consider these ways to avoid errors:
 
-+ Test your data in advance and verify columns or values in your schema that could be  a problem when passed to R code.
++ Test your data in advance and verify columns or values in your schema that could be a problem when passed to R code.
 + Specify columns in your input data source individually, rather than using `SELECT *`, and know how each column will be handled.
 + Perform explicit casts as necessary when preparing your input data, to avoid surprises.
-
++ Avoid passing columns of data (such as **GUIDS** or **rowguids**) that cause errors and aren't useful for modeling.
 
 For more information on supported and unsupported data types, see [Working with R Data Types](../r/r-libraries-and-data-types.md).
 
 For information about the performance impact of run-time conversion of strings to numerical factors, see [SQL Server R Services Performance Tuning](../r/sql-server-r-services-performance-tuning.md).
 
-## Next Step
+## Next lesson
 
 In the next step, you'll learn how to apply R functions to SQL Server data.
 
-[Using R Functions with SQL Server Data](../tutorials/rtsql-using-r-functions-with-sql-server-data.md)
+[Using R Functions with SQL Server Data](/rtsql-using-r-functions-with-sql-server-data.md)

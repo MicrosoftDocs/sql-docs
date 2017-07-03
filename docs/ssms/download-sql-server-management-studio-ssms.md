@@ -80,7 +80,7 @@ This release of SSMS supports the following platforms when used with the latest 
 - Windows Server 2008 R2 (64-bit)  
 
 >[!NOTE]
->SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS Widows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. Support determines if the issue is with SSMS, Visual Studio, or with Windows compatibility, and the issue is directed to the appropriate team.
+>SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. Support determines if the issue is with SSMS, Visual Studio, or with Windows compatibility, and the issue is directed to the appropriate team.
 
 ## SSMS installation tips and issues
 **Minimize Installation Reboots**

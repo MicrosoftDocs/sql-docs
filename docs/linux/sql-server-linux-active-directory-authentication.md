@@ -4,7 +4,7 @@
 title: "Active Directory Authentication with SQL Server on Linux | Microsoft Docs"
 description: "Configuration steps for AAD authentication for SQL Server on Linux"
 author: "tmullaney" 
-ms.date: "06/14/2017"
+ms.date: "07/03/2017"
 ms.author: "thmullan;rickbyh" 
 manager: "jhubbard"
 ms.topic: "article"
@@ -105,7 +105,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 ```    
 
 >  [!NOTE]  
->   If you see an error, "Necessary packages are not installed," then you should install those packages using your Linux distro's package manager before running the `realm join` command again. 
+>   If you see an error, "Necessary packages are not installed," then you should install those packages using your Linux distribution's package manager before running the `realm join` command again. 
 >  
 >  If you receive an error, "Insufficient permissions to join the domain," then you will need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
 
@@ -221,7 +221,7 @@ sqlcmd -S mssql.contoso.com
 Log in to a domain-joined Windows client using your domain credentials. Make sure [!INCLUDE[ssmanstudiofull-md](../../docs/includes/ssmanstudiofull-md.md)] is installed, then connect to your [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] instance by specifying **Windows Authentication** in the **Connect to Server** dialog.  
 
 ### AD Authentication using other client drivers  
-•	JDBC: [Using Kerberos Integrated Authentication to Connect SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server]()  
+•	JDBC: [Using Kerberos Integrated Authentication to Connect SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server])  
 •	ODBC: [Using Integrated Authentication](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)  
 •	ADO.NET: [Connection String Syntax](https://msdn.microsoft.com/library/ms254500.aspx)   
 

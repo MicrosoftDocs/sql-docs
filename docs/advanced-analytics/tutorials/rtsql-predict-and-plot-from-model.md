@@ -1,7 +1,7 @@
 ---
 title: "Predict and Plot from Model (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/29/2017"
+ms.date: "07/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,9 +18,9 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Predict and Plot from Model (R in T-SQL Tutorial)
+# Use SQL to Predict and Plot from an R Model
 
-To score new data, you'll get one of the trained models from the table, and then call a new set of data on which to base predictions.
+To perform _scoring_ using new data, you'll get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean "generating predictions, probabilities, or other values based on new data fed into a trained model".
 
 ## Create the table of new speeds
 
@@ -38,12 +38,11 @@ VALUES (40),  (50),  (60), (70), (80), (90), (100)
 
 ## Predict stopping distance
 
-
 By now, your table might contain multiple R models, all built using different parameters or algorithms, or trained on different subsets of data.
 
 ![rsql_basictut_listofmodels](media/rsql-basictut-listofmodels.png)
 
-To get predictions based on a specific model, you must write a SQL script that does the following:
+To get predictions based on one specific model, you must write a SQL script that does the following:
 
 1. Gets the model you want
 2. Gets the new input data
@@ -69,14 +68,11 @@ EXEC sp_execute_external_script
 WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 ```
 
-**Notes**
-
 + Use a SELECT statement to get a single model from the table, and pass it as an input parameter.
 +  After retrieving the model from the table, call the `unserialize` function on the model.
 +  Apply the `rxPredict` function with appropriate arguments to the model, and provide the new input data.
-+ We used the `str` function while testing to check the schema of data being returned from R. You can always remove the statement later.
-+ You can add column names to the output data frame as part of your R script, but here we just used the WITH RESULTS clause.
-+ To return columns from the original dataset together with the prediction results, concatenate the source column with the predicted values column as part of your R script, and then return the data frame to SQL Server.
++  In the example, the `str` function is added during the testing phase, to check the schema of data being returned from R. You can remove the statement later.
++ The column names used in the R script are not necessarily passed to the stored procedure output. Here we've used the WITH RESULTS clause to define some new column names.
 
 **Results**
 
@@ -84,11 +80,11 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 
 ## Perform scoring in parallel
 
-The predictions came back fairly fast on this tiny data set. But suppose you needed to make lots of predictions very fast? There are many ways to speed up operations in SQL Server, more so if the operations are parallelizable. For scoring in particular, one easy way is to add the *@parallel* parameter to `sp_execute_external_script` and set the value to **1**.
+The predictions came back fairly fast on this tiny data set. But suppose you needed to make lots of predictions very fast? There are many ways to speed up operations in SQL Server, more so if the operations can be processed in  parallel. For scoring in particular, one easy way is to add the *@parallel* parameter to `sp_execute_external_script` and set the value to **1**.
 
 Let's assume that you have obtained a much bigger table of possible car speeds, including hundreds of thousands of values. There are many sample T-SQL scripts from the community to help you generate number tables, so we won't reproduce those here. Let's just say that you have a column containing many integers, and want to use that as input for `speed` in the model.
 
-To do this, just run the same prediction query, but substitute the larger dataset, and add the _@parallel = 1_ parameter.
+To do this, just run the same prediction query, but substitute the larger dataset, and add the `@parallel = 1` argument.
 
 ```sql
 DECLARE @speedmodel varbinary(max) = (select model from [dbo].[stopping_distance_models] where model_name = 'default model');
@@ -108,15 +104,13 @@ EXEC sp_execute_external_script
 WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 ```
 
-**Notes**
-
-+ Parallel execution provides benefits only when working with very large data. Moreover, the SQL query that gets your data must be capable of generating a parallel query plan.
++ Parallel execution generally provides benefits only when working with very large data. The SQL database engine might decide that parallel execution is not needed. Moreover, the SQL query that gets your data must be capable of generating a parallel query plan.
 
 + When using the option for parallel execution, you **must** specify the output results schema in advance, by using the WITH RESULT SETS clause. Specifying the output schema in advance allows SQL Server to aggregate the results of multiple parallel datasets, which otherwise might have unknown schemas.
 
 + If you are *training* a model instead of *scoring*, this parameter often won't have an effect. Depending on the model type, model creation might require that all the rows be read before summaries can be created.
 
-  To get the benefits of parallel processing when you train your model, we recommend that you use one of the **RevoScaleR** algorithms. These algorithms are designed to distribute processing automatically, even if you don't specify <code>@parallel =1</code> in the call to `sp_execute_external_script`. For guidance on how to get the best performance with RevoScaleR algorithms, see [ScaleR Distributed Computing](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
++ To get the benefits of parallel processing when you train your model, we recommend that you use one of the **RevoScaleR** algorithms. These algorithms are designed to distribute processing automatically, even if you don't specify <code>@parallel =1</code> in the call to `sp_execute_external_script`. For guidance on how to get the best performance with RevoScaleR algorithms, see [Distributed and parallel computing with ScaleR in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing).
 
 ## Create an R plot of the model
 
@@ -129,10 +123,10 @@ The following example demonstrates how to create a simple graphic using a plotti
 ```sql
  EXECUTE sp_execute_external_script
  @language = N'R'
- , @script = N' 
+ , @script = N'
      imageDir <- ''C:\\temp\\plots'';
      image_filename = tempfile(pattern = "plot_", tmpdir = imageDir, fileext = ".jpg")
-     print(image_filename); 
+     print(image_filename);
      jpeg(filename=image_filename,  width=600, height = 800);
      print(plot(distance~speed, data=InputDataSet, xlab="Speed", ylab="Stopping distance", main = "1920 Car Safety"));
      abline(lm(distance~speed, data = InputDataSet));
@@ -143,12 +137,10 @@ The following example demonstrates how to create a simple graphic using a plotti
   WITH RESULT SETS ((plot varbinary(max)));
 ```
 
-**Notes**
-
 + The `tempfile` function returns a string that can be used as a file name, but the file is not actually generated yet.
-+ For arguments to `tempfile`, you can specify a prefix and file extension, as well as a tmpdir. To verify the file name and path, we printed a message using `str()`.
++ For arguments to `tempfile`, you can specify a prefix and file extension, as well as a tmpdir. To verify the file name and path, print a message using `str()`.
 + The `jpeg` function creates an R device with the specified parameters.
-+ After you have created the plot, you can add more visual features to it. In this case, a regression line was added using `abline`.
++ After you create the plot, you can add more visual features to it. In this case, a regression line is added using `abline`.
 + When you are done adding plot features, you must close the graphics device using the `dev.off()` function.
 + The `readBin` function takes a file to read, a format specification, and the number of records. The **rb** keyword indicates that the file is binary rather than containing text.
 
@@ -158,12 +150,12 @@ The following example demonstrates how to create a simple graphic using a plotti
 
 If you want to do some more elaborate plots, using some of the great graphics packages for R, we recommend these articles. Both require the popular **ggplot2** package.
 
-+ [Loan Classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/): End-to-end scenario based on insurance data. Also requires the **reshape** package.
-+ [Create Graphs and Plots Using R](https://msdn.microsoft.com/library/mt629162.aspx): Lesson 2 in an end-to-end solution, based on the NYC taxi data.
++ [Loan Classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/): End-to-end scenario based on insurance data. Requires the **reshape** package.
++ [Create Graphs and Plots Using R](/walkthrough-create-graphs-and-plots-using-r.md)
 
-## Conclusion
+## Conclusions
 
-Integration of R with SQL Server makes it easier to deploy R solutions at scale, leveraging the best features of R and relational databases, for high-performance data handling and rapid R analytics.
+Integration of R with SQL Server makes it easier to deploy R solutions at scale, leveraging the best features of R and relational databases, for high-performance data handling and rapid R analytics. See these additional resources for more R samples:
 
 +  [SQL Server R tutorials](/sql-server-r-tutorials.md)
 
@@ -179,4 +171,4 @@ Integration of R with SQL Server makes it easier to deploy R solutions at scale,
 
 + [Get Started with MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
-    Learn how to use the fast, scalable machine learning algorithms from Microsoft Research.
+    Learn more about the fast, scalable machine learning algorithms from Microsoft Research.

@@ -3,8 +3,8 @@
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md) 
 # Quickstarts
-## Install - Red Hat
-## Install - SUSE
+## [Install - Red Hat](quickstart-install-connect-red-hat.md)
+## [Install - SUSE](quickstart-install-connect-suse.md)
 ## [Install - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## Install - Docker
 # Tutorials

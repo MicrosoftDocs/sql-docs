@@ -1,7 +1,7 @@
 ---
 title: "RTRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/27/2017"
+ms.date: "07/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -84,17 +84,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------------------------------------------------------------------------`  
- `Four spaces are after the period in this sentence.     Next string.`  
-  
- `(1 row(s) affected)`  
+ ```sql   
+ -------------------------------------------------------------------------  
+ Four spaces are after the period in this sentence.     Next string.  
  
- `-------------------------------------------------------------------------`  
- `Four spaces are after the period in this sentence. Next string.`  
+ (1 row(s) affected)`  
  
- `(1 row(s) affected)`  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ -------------------------------------------------------------------------  
+ Four spaces are after the period in this sentence. Next string.  
+ 
+ (1 row(s) affected)
+ ```  
   
 
   
@@ -102,6 +102,8 @@ GO
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
   
   
 

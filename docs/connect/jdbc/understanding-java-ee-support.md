@@ -23,7 +23,7 @@ manager: "jhubbard"
  First, make sure that your Java environment (JDK, JRE) includes the javax.sql package. This is a required package for any JDBC application that uses the optional API. JDK 1.5 and later versions already contain this package, so you do not have to install it separately.  
   
 ## Driver Name  
- The driver class name is **com.microsoft.sqlserver.jdbc.SQLServerDriver**. The driver is contained in the sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar file.  
+ The driver class name is **com.microsoft.sqlserver.jdbc.SQLServerDriver**. For JDBC Drivers 4.0, 4.1, 4.2, and 6.0, the driver is contained in the sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar, or sqljdbc42.jar file. For JDBC Driver 6.2, the driver is contained in mssql-jdbc-6.2.0.jre7-jar or mssql-jdbc-6.2.0-jre8.jar.
   
  The class name is used whenever you load the driver with the JDBC DriverManager class. It is also used whenever you must specify the class name of the driver in any driver configuration. For example, configuring a data source within a Java EE application server might require that you enter the driver class name.  
   

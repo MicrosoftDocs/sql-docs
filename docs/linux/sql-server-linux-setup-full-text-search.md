@@ -6,7 +6,7 @@ description: This topic describes how to install SQL Server Full-Text Search on 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 07/03/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -299,4 +299,4 @@ In order to use Semantic Search, you must first download and attach the [Semanti
 
 ## Next steps
 
-For information about Full-Text Search, see [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx). 
+For information about Full-Text Search, see [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md). 

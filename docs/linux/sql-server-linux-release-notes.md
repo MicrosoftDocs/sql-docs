@@ -153,7 +153,7 @@ The following sections describe known issues with this release of SQL Server 201
 
 - SqlPackage shows the location of files with a "C:\\" prefix.
 
-#### SQL Server Integration Services (SSIS)
+#### <a name="ssis"></a> SQL Server Integration Services (SSIS)
 You can run SSIS packages on Linux. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
 
 - The **mssql-server-is** package is only supported on Ubuntu at this time.

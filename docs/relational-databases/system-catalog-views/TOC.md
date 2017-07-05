@@ -322,6 +322,7 @@
 ## [sys.pdw_nodes_partitions](sys-pdw-nodes-partitions-transact-sql.md)  
 ## [sys.pdw_nodes_pdw_physical_databases](sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
 ## [sys.pdw_nodes_tables](sys-pdw-nodes-tables-transact-sql.md)  
+## [sys.pdw_replicated_table_cache_state](sys-pdw-replicated-table-cache-state-transact-sql.md)
 ## [sys.pdw_table_distribution_properties](sys-pdw-table-distribution-properties-transact-sql.md)  
 ## [sys.pdw_table_mappings](sys-pdw-table-mappings-transact-sql.md)  
 

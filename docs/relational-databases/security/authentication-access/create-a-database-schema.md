@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   The new schema is owned by one of the following database-level principals: database user, database role, or application role. Objects created within a schema are owned by the owner of the schema, and have a NULL **principal_id** in **sys.objects**. Ownership of schema-contained objects can be transferred to any database-level principal, but the schema owner always retains CONTROL permission on objects within the schema.  
   
--   When creating a database object, if you specify a valid domain principal (user or group) as the object owner, the domain principal will be added to the database as a schema. The new schema will be owned by that domain principal.  
+-   When creating a database object, if you specify a valid domain principal (user or group) as the object owner, the domain principal is added to the database as a schema. The new schema is owned by that domain principal.  
   
 ###  <a name="Security"></a> Security  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   Requires CREATE SCHEMA permission on the database.  
   
--   To specify another user as the owner of the schema being created, the caller must have IMPERSONATE permission on that user. If a database role is specified as the owner, the caller must have one of the following: membership in the role or ALTER permission on the role.  
+-   To specify another user as the owner of the schema being created, the caller must have IMPERSONATE permission on that user. If a database role is specified as the owner, the caller must meet one of the following criteria: membership in the role or ALTER permission on the role.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   

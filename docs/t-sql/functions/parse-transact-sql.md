@@ -62,7 +62,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  Use PARSE only for converting from string to date/time and number types. For general type conversions, continue to use CAST or CONVERT. Keep in mind that there is a certain performance overhead in parsing the string value.  
   
- PARSE relies on the presence of .the .NET Framework Common Language Runtime (CLR).  
+ PARSE relies on the presence of the .NET Framework Common Language Runtime (CLR).  
   
  This function will not be remoted since it depends on the presence of the CLR. Remoting a function that requires the CLR would cause an error on the remote server.  
   

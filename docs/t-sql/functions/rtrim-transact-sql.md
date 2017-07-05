@@ -61,7 +61,7 @@ SELECT RTRIM('Removes trailing spaces.   ');
   `Removes trailing spaces.`  
   
 ### B: Simple Example  
- The following example demonstrates how to use `RTRIM` to remove trailing spaces. This time there is another string concatenated ot the first string to show that the spaces are gone.  
+ The following example demonstrates how to use `RTRIM` to remove trailing spaces. This time there is another string concatenated to the first string to show that the spaces are gone.  
   
 ```  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  

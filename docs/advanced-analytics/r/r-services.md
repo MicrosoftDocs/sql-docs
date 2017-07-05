@@ -2,7 +2,7 @@
 title: "Microsoft Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/20/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,7 +11,7 @@ ms.technology:
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
-caps.latest.revision: 22
+caps.latest.revision: 23
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
@@ -56,7 +56,7 @@ When you install machine learning for SQL Server, you get a distribution of the 
 
 To get started, see these resources:
 
-+ [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)
++ [SQL Server R Services](sql-server-r-services.md)
 + [SQL Server Python Services](../python/sql-server-python-services.md)
 + [Machine Learning Tutorials](../tutorials/machine-learning-services-tutorials.md)
 
@@ -67,7 +67,7 @@ To get started, see these resources:
 
 This standalone server system supports distributed, scalable R solutions on multiple platforms and using multiple enterprise data sources, including Linux, Hadoop, and Teradata.
 
-For more information, see [Microsoft R Server (MSDN)](https://msdn.microsoft.com/microsoft-r/index).
+For more information, see [Microsoft R Server](https://docs.microsoft.com/r-server/index).
 
 If you don't need to integrate with SQL Server, you can install R Server to enable rapid development, deployment, and operationalization of machine learning solutions. You can also use the R Server installers to upgrade the R components associated with a SQL Server instance and obtain the latest version of R.
 
@@ -92,11 +92,12 @@ For more information, see:
 
 When you create your own workspace in Azure Machine Learning Studio, you'll have access to over 400 preloaded R packages. You can also choose when you create an experiment that uses R, to deploy R using either a standard CRAN R distribution, or Microsoft R Open. You can even create your own R packages and upload them to Azure to run as custom modules.
 
-For more information, see:
-+ [Extend your experiment with R](https://docs.microsoft.com/azure/machine-learning/machine-learning-extend-your-experiment-with-r)
-+ [Author custom R modules in Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/machine-learning-custom-r-module)
+For more information, see these resources:
 
-Many of the algorithms provided in Azure ML are now included in Microsoft Machine Learning Services, as part of the MicrosoftML package. For more information, see [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml) on MSDN.
++ [Extend your experiment with R](https://docs.microsoft.com/azure/machine-learning/machine-learning-extend-your-experiment-with-r)
++ [Author custom R modules in Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/machine-learning-custom-r-modules)
+
+Many of the algorithms provided in Azure ML are now included in Microsoft Machine Learning Services, as part of the MicrosoftML package. For more information, see [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package).
 
 Azure Machine Learning is another convenient platform for data scientist and developers who need to build, train, and deploy models using Web services. You can publish solutions to the [Machine Learning Marketplace](http://datamarket.azure.com/browse/data?category=machine-learning).
 
@@ -115,9 +116,8 @@ The Azure Marketplace contains several virtual machines that support data scienc
 
 ## See Also
 
-[Getting Started with SQL Server R Services](../../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
+[Getting Started with SQL Server R Services](getting-started-with-sql-server-r-services.md)
 
-[Getting started with Microsoft R Server](../../advanced-analytics/r/getting-started-with-microsoft-r-server-standalone.md)
+[Getting started with Microsoft R Server](getting-started-with-microsoft-r-server-standalone.md)
 
 [Install SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md)
-

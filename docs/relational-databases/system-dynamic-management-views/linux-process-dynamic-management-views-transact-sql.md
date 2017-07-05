@@ -1,7 +1,7 @@
 ---
 title: "Linux Process Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/10/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,19 +18,14 @@ caps.latest.revision: 4
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ROBOTS: NOINDEX
 ---
 # Linux Process Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssLinx-xxxx-xxxx-xxx](../../includes/tsql-appliesto-sslinx-xxxx-xxxx-xxx.md)]
 
 Process information is exposed in catalog views that are optimized for performance and utility. Use the following catalog views to access catalog metadata for [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] running on Linux.
 
-## In this Section  
-
-|||  
-|-|-| 
-|[sys.dm_linux_proc_all_stat (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-all-stat-transact-sql.md)|[sys.dm_linux_proc_cpuinfo (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-cpuinfo-transact-sql.md)|   
-|[sys.dm_linux_proc_meminfo (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-meminfo-transact-sql.md)|[sys.dm_linux_proc_sql_maps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-maps-transact-sql.md)|   
-|[sys.dm_linux_proc_sql_threads (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-threads-transact-sql.md)||
+Information not available.
 
 ## See Also
 

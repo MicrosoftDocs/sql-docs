@@ -1,7 +1,7 @@
 ---
-title: "Transactions - Always On Availability Groups and Database Mirroring | Microsoft Docs"
+title: "Configure Availability Group for Distributed Transactions | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2017"
+ms.date: "09/29/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,17 +21,52 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Transactions - Always On availability groups and Database Mirroring
+# Configure Availability Group for Distributed Transactions
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-This topic describes cross-database and distributed transactions support for Always On availability groups and database mirroring.  
+This article explains how to configure an availability group for distributed transactions  
 
 ## Support for distributed transactions
 
-SQL Server 2017 supports distributed transactions for databases in availability groups. This support includes databases on the same instance of SQL Server or databases on different instances of SQL Server. Distributed transactions are not supported for databases configured for database mirroring.
+SQL Server 2017 supports distributed transactions for databases in availability groups. This support includes cross-database transactions, for example, databases on the same instance of SQL Server. In order to prevent in-doubt transactions after an availability group fails over, configure the availability group for distributed transactions. 
 
 >[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)]SQL Server 2016 included limited support for distributed transactions in for databases in an availability group. Distributed transactions using databases in an availability group were supported as long as no other databases in the transaction were in the same instance of SQL Server. For more information, see [SQL Server 2016 DTC Support In Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-gr)
+>SQL Server does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However, databases in an availability group that are not configured for distributed transactions are vulnerable to in-doubt transactions under specific scenarios. 
+
+## Create an availability group for distributed transactions
+
+To create an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the availability group definition. The example script below creates an availability group for distributed transactions. 
+
+```transact-sql
+CREATE AVAILABILITY GROUP My AG
+   WITH (
+      DTC_SUPPORT = PER_DB  
+      )
+...
+```
+
+>[!NOTE]
+>You can create an availability group for distributed transactions on SQL Server 2016 or later. 
+
+## Alter an availability group for distributed transactions
+
+To alter an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the `ALTER AVAILABILITY GROUP` script. The example script changes the availability group to support distributed transactions. 
+
+```transact-sql
+ALTER AVAILABILITY GROUP My AG
+   WITH (
+      DTC_SUPPORT = PER_DB  
+      );
+```
+
+>[!NOTE]
+>You can alter an availability group for distributed transactions on SQL Server 2017 or later. On SQL Server 2016 you cannot alter an availability group for distributed transactions. To change the setting drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
+
+## Effects of configuring an availability group for distributed transactions
+
+In order to participate in distributed transactions, an instance of SQL Server enlists with a distributed transaction coordinator (DTC) service. Normally the instance of SQL Server enlists with the DTC service on the local server. The DTC service assigns the instance of SQL Server a resource manager identification (RMID). In the default configuration, all databases on an instance of SQL Server use the same RMID. 
+
+When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of SQL Server. To support this movement, each database must have a unique RMID. When an availability group is configured with `DTC_SUPPORT = PER_DB` SQL Server registers and RMID for each database in the availability group with the DTC service. 
 
 ### Handling unresolved transaction
 
@@ -51,12 +86,14 @@ See more information at:
 - [DTC Developers Guide](http://msdn.microsoft.com/library/ms679938.aspx)
 - [DTC Programmers Reference](http://msdn.microsoft.com/library/ms686108.aspx)
 
-SQL Server uses a resource manager identifier (RMID) to uniquely identify the database as resource manager in conjunction with DTC. SQL Server can not resolve the outcome of the transactions that are in prepared state while actions that result in change of RMDID occur. The actions include:
+SQL Server uses a resource manager identifier to uniquely identify the database as resource manager in conjunction with DTC. SQL Server will not be able to resolve the outcome of the transactions that are in prepared state while actions that result in change of resource manager identifier occur. The actions include:
 - Adding new database to the availability group
 - Removing a database from the availability group
 - Updating the dtc_support option for the availability group
 
-During these actions, SQL Server enlists first with DTC with the old resource manager identifier. The identifier is changed following the action and SQL Server will try to determine the transaction outcome using the new resource manager identifier. This will fail as the new RMID is not recognized by the DTC. 
+During these actions, SQL Server enlists first with DTC with the old resource manager identifier. The identifier is changed following the action and SQL Server will try to determine the transaction outcome using the new resource manager identifier. This will fail as the new identifier is not recognized by the DTC. As of SQL Server 2017 CTP2.0, SQL Server will presume transactions in 'prepared' state are aborted in this case.
+An option to let users choose the outcome of the transactions in this corner case is being worked on and will be available in the upcoming preview release.
+
 
 ## SQL Server 2016 and before: Support for cross-database transactions within the same SQL Server instance  
 

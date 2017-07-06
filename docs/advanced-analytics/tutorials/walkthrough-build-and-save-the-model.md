@@ -1,7 +1,7 @@
 ---
-title: "Lesson 4: Build and Save the Model (Data Science End-to-End Walkthrough) | Microsoft Docs"
+title: "Build and Save an R Model using SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/22/2016"
+ms.date: "07/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,206 +19,226 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Lesson 4: Build and Save the Model (Data Science End-to-End Walkthrough)
-In this lesson, you'll learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-## Creating a Classification Model  
-The model you'll build is a binary classifier that predicts whether the taxi driver is likely to get a tip on a particular ride or not. You'll use the data source you created in the previous lesson, `featureDataSource,` to train the tip classifier, using logistic regression.  
-  
-Here are the features you'll use in the model:  
-  
--   passenger_count  
-  
--   trip_distance  
-  
--   trip_time_in_secs  
-  
--   direct_distance  
+# Build an R model and save it to SQL (walkthrough)
 
-### Create the model using rxLogit  
-1.  Call the *rxLogit* function, included in the **RevoScaleR** package, to create a logistic regression model.  
-  
-    ```R  
-    system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource))    
-    ```  
-    + The call that builds the model is enclosed in the system.time function. This lets you get the time required to build the model.
-    
-2.  After you build the model, you'll want to inspect it using the `summary` function, and view the coefficients.  
-  
-    ```  
-    summary(logitObj)  
-    ```  
+In this part of the data science walkthrough, you'll learn how to build a machine learning model using R, and save the model in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
+
+You'll use these columns as the features in the model:
+
++ passenger_count
++ trip_distance
++ trip_time_in_secs
++ direct_distance
+
+## Create a classification model using rxLogit
+
+The model you'll build is a binary classifier that predicts whether the taxi driver is likely to get a tip on a particular ride or not. You'll use the data source you created in the previous lesson, `featureDataSource,` to train the tip classifier, using logistic regression.
+
+1. Call the [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) function, included in the **RevoScaleR** package, to create a logistic regression model.
+
+    ```R
+    system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = new_ds))
+    ```
+
+    The call that builds the model is enclosed in the system.time function. This lets you get the time required to build the model.
+
+2. After you build the model, you'll want to inspect it using the `summary` function, and view the coefficients.
+
+    ```R
+    summary(logitObj)
+    ```
 
      *Results*
 
-     *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs +*  
-     *direct_distance*  
-     *Data: featureDataSource (RxSqlServerData Data Source)*  
-     *Dependent variable(s): tipped*  
-     *Total independent variables: 5*   
-     *Number of valid observations: 17068*  
-     *Number of missing observations: 0*   
-     *-2\*LogLikelihood: 23540.0602 (Residual deviance on 17063 degrees of freedom)*  
-     *Coefficients:*  
-     *Estimate Std. Error z value Pr(>|z|)*   
-     *(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*   
-     *passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**  
-     *trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**   
-     *trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**  
-     *direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**   
-     *---*  
-     *Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*  
-     *Condition number of final variance-covariance matrix: 48.3933*   
-     *Number of iterations: 4*  
-  
-### Use the logistic regression model for scoring  
-Now that the model is built, you can use to predict whether the driver is likely to get a tip on a particular drive or not.  
-  
-1.  First, define the data object to use for storing the scoring results  
-  
-    ```R  
-    scoredOutput <- RxSqlServerData(  
-      connectionString = connStr,  
-      table = "taxiScoreOutput"  )  
-    ```  
-    + To make this example simpler, the input to the logistic regression model is the same `featureDataSource` that you used to train the model.  More typically, you might have some new data to score with, or you might have set aside some data for testing vs. training.  
-  
-    + The prediction results are saved in the table, _taxiscoreOutput_. Notice that the schema for this table is not defined when you create it using `rxSqlServerData`, but is obtained from the *scoredOutput* object output from `rxPredict`.  
-  
-    + To create the table that stores the predicted values, the SQL login running the `rxSqlServer` data function must have DDL privileges in the database. If the login cannot create tables, the statement will fail.  
-  
-2.  Call the *rxPredict* function to generate results.  
-  
-    ```R  
-    rxPredict(modelObject = logitObj, 
-        data = featureDataSource, 
-        outData = scoredOutput,   
-        predVarNames = "Score", 
-        type = "response",   
-        writeModelVars = TRUE, overwrite = TRUE)  
-    ```  
-
-  
-## Plotting Model Accuracy  
-To get an idea of the accuracy of the model, you can use the *rxRocCurve* function to plot the Receiver Operating Curve. Because *rxRocCurve* is one of the new functions provided by the RevoScaleR package that supports remote compute contexts, you have two options:  
-  
-+ You can use the `rxRocCurve` function to execute the plot in the remote computer context and then return the plot to your local client.
-+ You can also import the data to your R client computer, and use other R plotting functions to create the performance graph.  
-  
-In this section, you'll use both techniques.  
-  
-### Execute a plot in the remote (SQL Server) compute context  
-  
-1.  Call the function *rxRocCurve* and provide the data defined earlier as input.  
-  
-    ```R  
-    rxRocCurve( "tipped", "Score", scoredOutput)  
-    ```  
-  
-    Note that you must also specify the label column tipped (the variable you are trying to predict) and the name of the column that stores the prediction (_Score_).  
-  
-2.  View the graph that is generated by opening the R graphics device, or by clicking the **Plot** window in RStudio.  
-  
-    ![ROC plot for the model](media/rsql-e2e-rocplot.png "ROC plot for the model")  
-
-    The graph is created on the remote compute context, and then returned to your R environment.   
+    ```
+    rxLogit(formula = tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = new_ds)
     
-### Create the plots in the local compute context using data from SQL Server  
-  
-1.  Use the *rxImport* function to bring the specified data to your local R environment.  
-  
-    ```R  
-    scoredOutput = rxImport(scoredOutput)  
-    ```  
-  
-2.  Having loaded the data into local memory, you can then call the **ROCR** library to create some predictions, and  generate the plot.  
-  
-    ```R  
-    library('ROCR')  
-    pred <- prediction(scoredOutput$Score, scoredOutput$tipped)  
-  
-    acc.perf = performance(pred, measure = 'acc')  
-    plot(acc.perf)  
-    ind = which.max( slot(acc.perf, 'y.values')[[1]] )  
-    acc = slot(acc.perf, 'y.values')[[1]][ind]  
-    cutoff = slot(acc.perf, 'x.values')[[1]][ind]  
-    ```  
-  
-3.  The following plot is generated in both cases.  
-  
-    ![plotting model performance using R](media/rsql-e2e-performanceplot.png "plotting model performance using R")  
-  
-## Deploying a Model  
+    Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance
+    Data: new_ds (RxSqlServerData Data Source)
+    Dependent variable(s): tipped
+    Total independent variables: 5
+    Number of valid observations: 1703957
+    Number of missing observations: 0
+    -2*LogLikelihood: 2356636.8033 (Residual deviance on 1703952 degrees of freedom)
+     
+    Coefficients:
+                        Estimate Std. Error z value Pr(>|z|)
+    (Intercept)        1.253e-01  2.787e-03  44.954 2.22e-16 ***
+    passenger_count   -3.130e-02  1.111e-03 -28.177 2.22e-16 ***
+    trip_distance     -1.193e-07  2.460e-07  -0.485    0.628
+    trip_time_in_secs  7.014e-08  8.861e-08   0.792    0.429
+    direct_distance    1.129e-02  6.450e-04  17.507 2.22e-16 ***
+    ---
+    Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+    
+    Condition number of final variance-covariance matrix: 1.0592
+    Number of iterations: 7
+    ```
 
-After you have built a model and ascertained that it is performing well, you might want to *operationalize* the model. Because [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] lets you invoke an R model using a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, it is extremely easy to use R in a client application.  
+## Use the logistic regression model for scoring
+
+Now that the model is built, you can use to predict whether the driver is likely to get a tip on a particular drive or not.
+
+1. First, use the [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) function to define a data source object for storing the scoring results:
+
+    ```R
+    scoredOutput <- RxSqlServerData(
+      connectionString = connStr,
+      table = "taxiScoreOutput"  )
+    ```
+    + To make this example simpler, the input to the logistic regression model is the same feature data source (`new_ds`) that you used to train the model.  More typically, you might have some new data to score with, or you might have set aside some data for testing vs. training.
   
+    + The prediction results will be saved in the table, _taxiscoreOutput_. Notice that the schema for this table is not defined when you create it using rxSqlServerData. The schema is obtained from the rxPredict output.
+  
+    + To create the table that stores the predicted values, the SQL login running the rxSqlServer data function must have DDL privileges in the database. If the login cannot create tables, the statement will fail.
+
+2. Call the [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) function to generate results.
+
+    ```R
+    rxPredict(modelObject = logitObj,
+        data = new_ds,
+        outData = scoredOutput,
+        predVarNames = "Score",
+        type = "response",
+        writeModelVars = TRUE, overwrite = TRUE)
+    ```
+    
+    If the statement succeeds, it should take some time to run. When complete, you can open SQL Server Management Studio and verify that the table was created and that it contains the Score column and other expected output.
+
+## Plot model accuracy
+
+To get an idea of the accuracy of the model, you can use the [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) function to plot the Receiver Operating Curve. Because rxRoc is one of the new functions provided by the RevoScaleR package that supports remote compute contexts, you have two options:
+
++ You can use the rxRoc function to execute the plot in the remote compute context and then return the plot to your local client.
+
++ You can also import the data to your R client computer, and use other R plotting functions to create the performance graph.
+
+In this section, you'll experiment with both techniques.
+
+### Execute a plot in the remote (SQL Server) compute context
+
+1. Call the function rxRoc and provide the data defined earlier as input.
+
+    ```R
+    scoredOutput = rxImport(scoredOutput)
+    rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput)
+    ```
+
+    This call returns the values used in computing the ROC chart. The label column is _tipped_, which has the actual results you are trying to predict, while the _Score_ column has the prediction.
+
+2. To actually plot the chart, you can save the ROC object and then draw it with the `plot` function. The graph is created on the remote compute context, and then returned to your R environment.
+
+    ```R
+    scoredOutput = rxImport(scoredOutput)
+    rocObjectOut <- rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput)
+    plot(rocObjectOut)
+    ```
+
+    View the graph by opening the R graphics device, or by clicking the **Plot** window in RStudio. 
+
+    ![ROC plot for the model](media/rsql-e2e-rocplot.png "ROC plot for the model")
+
+### Create the plots in the local compute context using data from SQL Server
+
+1. For the local compute context, the process is much the same.
+
+    Use the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function to bring the specified data to your local R environment.
+
+    ```R
+    scoredOutput = rxImport(scoredOutput)
+    ```
+
+2. Using the data into local memory, you can call the **ROCR** library to create some new predictions.
+
+    ```R
+    library('ROCR')
+    pred <- prediction(scoredOutput$Score, scoredOutput$tipped)
+
+3. Generate a local plot, based on the predictions.
+
+    ```R
+    acc.perf = performance(pred, measure = 'acc')
+    plot(acc.perf)
+    ind = which.max( slot(acc.perf, 'y.values')[[1]] )
+    acc = slot(acc.perf, 'y.values')[[1]][ind]
+    cutoff = slot(acc.perf, 'x.values')[[1]][ind]
+    ```
+
+    ![plotting model performance using R](media/rsql-e2e-performanceplot.png "plotting model performance using R")
+
+> [!NOTE]
+> Your charts might look different from these, depending on how many data points you used.
+
+## Deploy the model
+
+After you have built a model and ascertained that it is performing well, you probably want to deploy it to a site where users or people in your organization can make use of the model, or perhaps retrain and recalibrate the model on a regular basis. This process is sometimes called  *operationalizing* a model.
+
+Because [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] lets you invoke an R model using a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, it is extremely easy to use R in a client application.
+
 However, before you can call the model from an external application, you must save the model to the database used for production. In [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], trained models are stored in binary form, in a single column of type **varbinary(max)**.
 
-Therefore, moving a trained model from R to SQL Server includes these steps:  
-  
+Therefore, moving a trained model from R to SQL Server includes these steps:
+
 + Serializing the model into a hexadecimal string
+
 + Transmitting the serialized object to the database
-+ Saving the model in a varbinary(max) column  
-  
-In this section, you will learn how to persist the model, and how to call it to make predictions.  
-  
-### Serialize the model  
-  
-+  In your local R environment, serialize the model and save it in a variable.  
-  
-    ```R  
-    modelbin <- serialize(logitObj, NULL)  
-    modelbinstr=paste(modelbin, collapse="")  
-    ```  
-  
-    The *serialize* function is included in the R **base** package, and provides a simple low-level interface for serializing to connections. For more information, see [http://www.inside-r.org/r-doc/base/serialize](http://www.inside-r.org/r-doc/base/serialize).  
-  
-### Move the model to SQL Server
 
-+ Open an ODBC connection, and call a stored procedure to store the binary representation of the model in a column in the database. 
-  
-    ```R  
-    library(RODBC)  
-    conn <- odbcDriverConnect(connStr )  
-  
-    # persist model by calling a stored procedure from SQL  
-    q\<-paste("EXEC PersistModel @m='", modelbinstr,"'", sep="")  
-    sqlQuery (conn, q)    
-    ```  
++ Saving the model in a **varbinary(max)** column
 
-Saving a model to a table requires only an INSERT statement. However, to make it easier, here we have used the _PersistModel_ stored procedure is used. 
- 
-For reference, here is the complete code of the stored procedure:  
-  
-```tsql  
-CREATE PROCEDURE [dbo].[PersistModel]  @m nvarchar(max)  
-AS  
-BEGIN  
-        -- SET NOCOUNT ON added to prevent extra result sets from  
-        -- interfering with SELECT statements.  
-        SET NOCOUNT ON;  
-        insert into nyc_taxi_models (model) values (convert(varbinary(max),@m,2))  
-END   
-```  
-> [!TIP]
-> We recommend creating helper functions such as this stored procedure to make it easier to manage and update your R models in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-  
-### Invoke the saved model  
-After you have saved the model to the database, you can call it directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
-  
-For example, to generate predictions, you simply connect to the database and run a stored procedure that uses the saved model as an input, together with some input data.  
-  
-However, if you have a model you use often, it's easier to wrap the input query and the call to the model, as well as any other parameters,  in a custom stored procedure.  
-  
-In the next lesson, you'll learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
-## Next Lesson  
-[Lesson 5: Deploy and Use the Model &#40;Data Science End-to-End Walkthrough&#41;](../../advanced-analytics/r-services/lesson-5-deploy-and-use-the-model-data-science-end-to-end-walkthrough.md)  
-  
-## Previous Lesson  
-[Lesson 3: Create Data Features &#40;Data Science End-to-End Walkthrough&#41;](../../advanced-analytics/r-services/lesson-3-create-data-features-data-science-end-to-end-walkthrough.md)  
-  
-  
-  
+In this section, you will learn how to persist the model, and how to call it to make predictions.
 
+1. Switch back to your local R environment if you are not already using it, serialize the model, and save it in a variable.
+
+    ```R
+    rxSetComputeContext("local")
+    modelbin <- serialize(logitObj, NULL)
+    modelbinstr=paste(modelbin, collapse="")
+    ```
+
+2. Open an ODBC connection.
+
+    ```R
+    library(RODBC)
+    conn <- odbcDriverConnect(connStr)
+    ```
+
+3. Call the stored procedure created by the PowerShell script, to store the binary representation of the model in a column in the database.
+
+    ```R
+    q <- paste("EXEC PersistModel @m='", modelbinstr,"'", sep="")
+    sqlQuery (conn, q)
+    ```
+
+    Saving a model to a table requires only an INSERT statement. However, it's easier when wrapped in a stored procedure, such as _PersistModel_.
+
+    > [!NOTE]
+    > If you get an error such as "The EXECUTE permission was denied on the object PersistModel", make sure that your login has permission. You can grant explicit permissions on just the stored proceure by running a T-SQL statement like this: `GRANT EXECUTE ON [dbo].[PersistModel] TO [RTestUser]`
+
+3. After you have created a model and saved it in a database, you can call it directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
+    However, if you have a model you use often, it's easier to wrap the input query and the call to the model, as well as any other parameters, in a custom stored procedure.
+
+    Here is the complete code of the stored procedure. We recommend creating helper functions such as this stored procedure to make it easier to manage and update your R models in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+    ```tsql
+    CREATE PROCEDURE [dbo].[PersistModel]  @m nvarchar(max)
+    AS
+    BEGIN
+      SET NOCOUNT ON;
+      INSERT INTO nyc_taxi_models (model) values (convert(varbinary(max),@m,2))
+    END
+    ```
+
+  > [!NOTE]
+  > Use the **SET NOCOUNT ON** clause to prevent extra result sets from interfering with SELECT statements.
+
+
+In the next and final lesson, you'll learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../includes/tsql-md.md)].
+
+## Next lesson
+
+[Deploy the R model and use in SQL](/walkthrough-deploy-and-use-the-model.md)
+
+## Previous lesson
+
+[Create data features using R and SQL](/walkthrough-create-data-features.md)

@@ -1,7 +1,7 @@
 ---
 title: "SCOPE_IDENTITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "07/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,7 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 SCOPE_IDENTITY()  
 ```  
   
@@ -71,21 +70,17 @@ INSERT TZ
    VALUES ('Lisa'),('Mike'),('Carla');  
   
 SELECT * FROM TZ;  
-  
---Result set: This is how table TZ looks.  
-```  
-  
- `Z_id   Z_name`  
-  
- `-------------`  
-  
- `1      Lisa`  
-  
- `2      Mike`  
-  
- `3      Carla`  
+```     
+Result set: This is how table TZ looks.  
   
 ```  
+Z_id   Z_name  
+-------------  
+1      Lisa  
+2      Mike  
+3      Carla  
+```  
+``` 
 CREATE TABLE TY (  
    Y_id  int IDENTITY(100,5)PRIMARY KEY,  
    Y_name varchar(20) NULL);  
@@ -94,53 +89,45 @@ INSERT TY (Y_name)
    VALUES ('boathouse'), ('rocks'), ('elevator');  
   
 SELECT * FROM TY;  
---Result set: This is how TY looks:  
+```   
+Result set: This is how TY looks:  
 ```  
-  
- `Y_id  Y_name`  
-  
- `---------------`  
-  
- `100   boathouse`  
-  
- `105   rocks`  
-  
- `110   elevator`  
-  
+Y_id  Y_name  
+---------------  
+100   boathouse  
+105   rocks  
+110   elevator  
 ```  
-/*Create the trigger that inserts a row in table TY   
-when a row is inserted in table TZ.*/  
+
+Create the trigger that inserts a row in table TY when a row is inserted in table TZ.  
+```  
 CREATE TRIGGER Ztrig  
 ON TZ  
 FOR INSERT AS   
    BEGIN  
    INSERT TY VALUES ('')  
    END;  
-  
-/*FIRE the trigger and determine what identity values you obtain   
-with the @@IDENTITY and SCOPE_IDENTITY functions.*/  
+```  
+FIRE the trigger and determine what identity values you obtain with the @@IDENTITY and SCOPE_IDENTITY functions.   
+```
 INSERT TZ VALUES ('Rosalie');  
   
 SELECT SCOPE_IDENTITY() AS [SCOPE_IDENTITY];  
 GO  
 SELECT @@IDENTITY AS [@@IDENTITY];  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `SCOPE_IDENTITY`  
-  
- `4`  
-  
- `/*SCOPE_IDENTITY returned the last identity value in the same scope. This was the insert on table TZ.*/`  
-  
- `@@IDENTITY`  
-  
- `115`  
-  
- `/*@@IDENTITY returned the last identity value inserted to TY by the trigger. This fired because of an earlier insert on TZ.*/`  
+```
+SCOPE_IDENTITY  
+4  
+/*SCOPE_IDENTITY returned the last identity value in the same scope. This was the insert on table TZ.*/`  
+
+@@IDENTITY  
+115  
+/*@@IDENTITY returned the last identity value inserted to TY by the trigger. This fired because of an earlier insert on TZ.*/
+```  
   
 ### B. Using @@IDENTITY and SCOPE_IDENTITY() with replication  
  The following examples show how to use `@@IDENTITY` and `SCOPE_IDENTITY()` for inserts in a database that is published for merge replication. Both tables in the examples are in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database: `Person.ContactType` is not published, and `Sales.Customer` is published. Merge replication adds triggers to tables that are published. Therefore, `@@IDENTITY` can return the value from the insert into a replication system table instead of the insert into a user table.  
@@ -156,18 +143,14 @@ SELECT SCOPE_IDENTITY() AS [SCOPE_IDENTITY];
 GO  
 SELECT @@IDENTITY AS [@@IDENTITY];  
 GO  
-  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `SCOPE_IDENTITY`  
-  
- `21`  
-  
- `@@IDENTITY`  
-  
- `21`  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+```SCOPE_IDENTITY  
+21  
+@@IDENTITY  
+21
+```  
   
  The `Sales.Customer` table has a maximum identity value of 29483. If you insert a row into the table, `@@IDENTITY` and `SCOPE_IDENTITY()` return different values. `SCOPE_IDENTITY()` returns the value from the insert into the user table, whereas `@@IDENTITY` returns the value from the insert into the replication system table. Use `SCOPE_IDENTITY()` for applications that require access to the inserted identity value.  
   
@@ -178,18 +161,15 @@ SELECT SCOPE_IDENTITY() AS [SCOPE_IDENTITY];
 GO  
 SELECT @@IDENTITY AS [@@IDENTITY];  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `SCOPE_IDENTITY`  
-  
- `29484`  
-  
- `@@IDENTITY`  
-  
- `89`  
+ ```
+ SCOPE_IDENTITY  
+ 29484  
+ @@IDENTITY  
+ 89
+ ```  
   
 ## See Also  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  

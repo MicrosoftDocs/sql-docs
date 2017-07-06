@@ -50,7 +50,7 @@ manager: "jhubbard"
 -   One expression is **decimal** and the other is a data type with a lower precedence than **decimal**.  
   
  The operand expressions are denoted as expression e1, with precision p1 and scale s1, and expression e2, with precision p2 and scale s2. The precision and scale for any expression that is not **decimal** is the precision and scale defined for the data type of the expression.  
-  
+,  
 |Operation|Result precision|Result scale *|  
 |---------------|----------------------|---------------------|  
 |e1 + e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  
@@ -60,8 +60,30 @@ manager: "jhubbard"
 |e1 { UNION &#124; EXCEPT &#124; INTERSECT } e2|max(s1, s2) + max(p1-s1, p2-s2)|max(s1, s2)|  
 |e1 % e2|min(p1-s1, p2 -s2) + max( s1,s2 )|max(s1, s2)|  
   
- \* The result precision and scale have an absolute maximum of 38. When a result precision is greater than 38, the corresponding scale is reduced to prevent the integral part of a result from being truncated.  
-  
+ \* The result precision and scale have an absolute maximum of 38. When a result precision is greater than 38, it is reduced to 38, and the corresponding scale is reduced to try to prevent the integral part of a result from being truncated. In some cases such as multiplication or division, scale factor will not be reduced in order to keep decimal precision, although the overflow error can be raised.
+
+In addition and subtraction operations we need `max(p1 – s1, p2 – s2)` places to store integral part of the decimal number. If there are not enough space to store them i.e. `max(p1 – s1, p2 – s2) < min(38, precision) – scale`, the scale is reduced to provide enough space for integral part. Resulting scale is `MIN(precision, 38) - max(p1 – s1, p2 – s2)`, so the fractional part might be rounded to fit into the resulting scale.
+
+In multiplication and division operations we need `precision - scale` places to store the integral part of the result. The scale might be reduced using the following rules:
+1.	The resulting scale is reduced to `min(scale, 38 – (precision-scale))` if the integral part is less than 32, because it cannot be greater than `38 – (precision-scale)`. Result might be rounded in this case.
+2.	The scale will not be changed if it is less than 6 and if the integral part is greater than 32. In this case, overflow error might be raised if it cannot fit into decimal(38,scale) 
+3.	The scale will be set to 6 if it is greater than 6 and if the integral part is greater than 32. In this case, both integral part and scale would be reduced and resulting type is decimal(38,6). Result might be rounded to 6 decimal places or overflow error will be thrown if integral part cannot fit into 32 digits.
+
+## Examples
+The following expression returns result `0.00000090000000000` without rounding, because result can fit into `decimal(38,17)`:
+```
+select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
+```
+In this case precision is 61, and scale is 40.
+Integral part (precision-scale = 21) is less than 32, so this is case (1) in multiplication rules and scale is calculated as `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17`. Result type is `decimal(38,17)`.
+
+The following expression returns result `0.000001` to fit into `decimal(38,6)`:
+```
+select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
+```
+In this case precision is 61, and scale is 20.
+Scale is greater than 6 and integral part (`precision-scale = 41`) is greater than 32. This is case (3) in multiplication rules and result type is `decimal(38,6)`.
+
 ## See Also  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

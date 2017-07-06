@@ -46,7 +46,7 @@ manager: "jhubbard"
   
  [ ORDER BY *order_expression* [ ASC | DESC ] ]  
   
- The UNION, EXCEPT and INTERSECT operators can be used between queries to combine or compare their results into one result set.  
+ The UNION, EXCEPT, and INTERSECT operators can be used between queries to combine or compare their results into one result set.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -118,7 +118,7 @@ SELECT <select_criteria>
  Some syntax restrictions apply to SELECT statements that involve remote tables.  
   
 ## Logical Processing Order of the SELECT statement  
- The following steps show the logical processing order, or binding order, for a SELECT statement. This order determines when the objects defined in one step are made available to the clauses in subsequent steps. For example, if the query processor can bind to (access) the tables or views defined in the FROM clause, these objects and their columns are made available to all subsequent steps. Conversely, because the SELECT clause is step 8, any column aliases or derived columns defined in that clause cannot be referenced by preceding clauses. However, they can be referenced by subsequent clauses such as the ORDER BY clause. Note that the actual physical execution of the statement is determined by the query processor and the order may vary from this list.  
+ The following steps show the logical processing order, or binding order, for a SELECT statement. This order determines when the objects defined in one step are made available to the clauses in subsequent steps. For example, if the query processor can bind to (access) the tables or views defined in the FROM clause, these objects and their columns are made available to all subsequent steps. Conversely, because the SELECT clause is step 8, any column aliases or derived columns defined in that clause cannot be referenced by preceding clauses. However, they can be referenced by subsequent clauses such as the ORDER BY clause. The actual physical execution of the statement is determined by the query processor and the order may vary from this list.  
   
 1.  FROM  
 2.  ON  
@@ -136,7 +136,7 @@ SELECT <select_criteria>
  Selecting data requires **SELECT** permission on the table or view, which could be inherited from a higher scope such as **SELECT** permission on the schema or **CONTROL** permission on the table. Or requires membership in the **db_datareader** or **db_owner** fixed database roles, or the **sysadmin** fixed server role. Creating a new table using **SELECTINTO** also requires both the **CREATETABLE** permission, and the **ALTERSCHEMA** permission on the schema that owns the new table.  
   
 ## Examples:   
-The following example use the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
+The following examples use the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
   
 ### A. Using SELECT to retrieve rows and columns  
  This section shows three code examples. This first code example returns all rows (no WHERE clause is specified) and all columns (using the `*`) from the `DimEmployee` table.  
@@ -174,7 +174,7 @@ ORDER BY LastName;
 ```  
   
 ### B. Using SELECT with column headings and calculations  
- The following example returns all rows from the `DimEmployee` table, and calculates the gross pay for each employee based on their `BaseRate` and a 40 hour work week.  
+ The following example returns all rows from the `DimEmployee` table, and calculates the gross pay for each employee based on their `BaseRate` and a 40-hour work week.  
   
 ```sql  
 SELECT FirstName, LastName, BaseRate, BaseRate * 40 AS GrossPay  

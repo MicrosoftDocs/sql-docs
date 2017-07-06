@@ -59,7 +59,7 @@ SCOPE_IDENTITY()
 ### A. Using @@IDENTITY and SCOPE_IDENTITY with triggers  
  The following example creates two tables, `TZ` and `TY`, and an INSERT trigger on `TZ`. When a row is inserted to table `TZ`, the trigger (`Ztrig`) fires and inserts a row in `TY`.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
 CREATE TABLE TZ (  
@@ -80,7 +80,7 @@ Z_id   Z_name
 2      Mike  
 3      Carla  
 ```  
-``` 
+```sql 
 CREATE TABLE TY (  
    Y_id  int IDENTITY(100,5)PRIMARY KEY,  
    Y_name varchar(20) NULL);  
@@ -100,7 +100,7 @@ Y_id  Y_name
 ```  
 
 Create the trigger that inserts a row in table TY when a row is inserted in table TZ.  
-```  
+```sql  
 CREATE TRIGGER Ztrig  
 ON TZ  
 FOR INSERT AS   
@@ -109,7 +109,7 @@ FOR INSERT AS
    END;  
 ```  
 FIRE the trigger and determine what identity values you obtain with the @@IDENTITY and SCOPE_IDENTITY functions.   
-```
+```sql
 INSERT TZ VALUES ('Rosalie');  
   
 SELECT SCOPE_IDENTITY() AS [SCOPE_IDENTITY];  
@@ -135,7 +135,7 @@ SCOPE_IDENTITY
   
  The `Person.ContactType` table has a maximum identity value of 20. If you insert a row into the table, `@@IDENTITY` and `SCOPE_IDENTITY()` return the same value.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 INSERT INTO Person.ContactType ([Name]) VALUES ('Assistant to the Manager');  
@@ -147,7 +147,8 @@ GO
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-```SCOPE_IDENTITY  
+```  
+SCOPE_IDENTITY  
 21  
 @@IDENTITY  
 21
@@ -155,7 +156,7 @@ GO
   
  The `Sales.Customer` table has a maximum identity value of 29483. If you insert a row into the table, `@@IDENTITY` and `SCOPE_IDENTITY()` return different values. `SCOPE_IDENTITY()` returns the value from the insert into the user table, whereas `@@IDENTITY` returns the value from the insert into the replication system table. Use `SCOPE_IDENTITY()` for applications that require access to the inserted identity value.  
   
-```  
+```sql  
 INSERT INTO Sales.Customer ([TerritoryID],[PersonID]) VALUES (8,NULL);  
 GO  
 SELECT SCOPE_IDENTITY() AS [SCOPE_IDENTITY];  

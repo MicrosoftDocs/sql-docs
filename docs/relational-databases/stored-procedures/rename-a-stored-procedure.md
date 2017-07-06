@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 -   Renaming a stored procedure retains the `object_id` and all the permissions that are specifically assigned to the procedure. Dropping and recreating the object creates a new `object_id` and removes any permissions specifically assign to the procedure.
 
--   Renaming a stored procedure dooes not change the name of the corresponding object name in the definition column of the **sys.sql_modules** catalog view. To do that, you must drop and re-create the stored procedure with its new name.  
+-   Renaming a stored procedure does not change the name of the corresponding object name in the definition column of the **sys.sql_modules** catalog view. To do that, you must drop and re-create the stored procedure with its new name.  
 
 -   Changing the name or definition of a procedure can cause dependent objects to fail when the objects are not updated to reflect the changes that have been made to the procedure. For more information, see [View the Dependencies of a Stored Procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
   

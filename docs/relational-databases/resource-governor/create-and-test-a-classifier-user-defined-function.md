@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  The classifier function extends the login time. An overly complex function can cause logins to time out or slow down fast connections.  
   
-### To create the classifier user-defined function  
+## To create the classifier user-defined function  
   
 1.  Create and configure the new resource pools and workload groups. Assign each workload group to the appropriate resource pool.  
   
@@ -150,7 +150,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-### To verify the resource pools, workload groups, and the classifier user-defined function  
+## To verify the resource pools, workload groups, and the classifier user-defined function  
   
 1.  Obtain the resource pool and workload group configuration by using the following query.  
   
@@ -228,7 +228,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-### Best practices for using Lookup Tables in a classifier function  
+## Best practices for using Lookup Tables in a classifier function  
   
 1.  Do not use a lookup table unless it is absolutely necessary. If you need to use a lookup table, it can be hard coded into the function itself; however, this needs to be balanced with the complexity and dynamic changes of the classifier function.  
   

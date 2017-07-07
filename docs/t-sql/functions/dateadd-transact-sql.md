@@ -1,7 +1,7 @@
 ---
 title: "DATEADD (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,8 +42,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATEADD (datepart , number , date )  
 ```  
   
@@ -89,9 +87,10 @@ DATEADD (datepart , number , date )
   
  If *datepart* is **month** and the *date* month has more days than the return month and the *date* day does not exist in the return month, the last day of the return month is returned. For example, September has 30 days; therefore, the two following statements return 2006-09-30 00:00:00.000:  
   
- `SELECT DATEADD(month, 1, '2006-08-30');`  
-  
- `SELECT DATEADD(month, 1, '2006-08-31');`  
+ ```
+ SELECT DATEADD(month, 1, '2006-08-30');  
+ SELECT DATEADD(month, 1, '2006-08-31');
+ ```  
   
 ## number Argument  
  The *number* argument cannot exceed the range of **int**. In the following statements, the argument for *number* exceeds the range of **int** by 1. The following error message is returned: "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`  
@@ -113,11 +112,8 @@ SELECT DATEADD(year,-2147483647, '2006-07-31');
  The seconds part of a [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) value is always 00. If *date* is **smalldatetime**, the following apply:  
   
 -   If *datepart* is **second** and *number* is between -30 and +29, no addition is performed.  
-  
 -   If *datepart* is **second** and *number* is less than-30 or more than +29, addition is performed beginning at one minute.  
-  
 -   If *datepart* is **millisecond** and *number* is between -30001 and +29998, no addition is performed.  
-  
 -   If *datepart* is **millisecond** and *number* is less than -30001 or more than +29998, addition is performed beginning at one minute.  
   
 ## Remarks  
@@ -145,7 +141,6 @@ UNION ALL
 SELECT '50 nanoseconds', DATEADD(nanosecond,50,@datetime2)  
 UNION ALL  
 SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -158,14 +153,14 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
 49 nanoseconds    2007-01-01 13:10:10.1111111  
 50 nanoseconds    2007-01-01 13:10:10.1111112  
 150 nanoseconds   2007-01-01 13:10:10.1111113  
-  
 ```  
   
 ## Time Zone Offset  
  Addition is not allowed for time zone offset.  
   
 ## Examples  
-  
+
+
 ### A. Incrementing datepart by an interval of 1  
  Each of the following statements increments *datepart* by an interval of 1.  
   
@@ -196,7 +191,6 @@ UNION ALL
 SELECT 'microsecond',DATEADD(microsecond,1,@datetime2)  
 UNION ALL  
 SELECT 'nanosecond',DATEADD(nanosecond,1,@datetime2);  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -215,7 +209,6 @@ second       2007-01-01 13:10:11.1111111
 millisecond  2007-01-01 13:10:10.1121111  
 microsecond  2007-01-01 13:10:10.1111121  
 nanosecond   2007-01-01 13:10:10.1111111  
-  
 ```  
   
 ### B. Incrementing more than one level of datepart in one statement  
@@ -239,14 +232,12 @@ SELECT DATEADD(millisecond,1,@datetime2); --2007-01-01 01:01:01.110
 ```  
   
 ### C. Using expressions as arguments for the number and date parameters  
- The following examples use different types of expressions as arguments for the *number* and *date* parameters.  
+ The following examples use different types of expressions as arguments for the *number* and *date* parameters. The examples use the AdventureWorks database.  
   
 #### Specifying a column as date  
  The following example adds `2` days to each value in the `OrderDate` column to derive a new column named  `PromisedShipDate`.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 SELECT SalesOrderID  
     ,OrderDate   
     ,DATEADD(day,2,OrderDate) AS PromisedShipDate  
@@ -283,7 +274,6 @@ SalesOrderID OrderDate               PromisedShipDate
 DECLARE @days int = 365,   
         @datetime datetime = '2000-01-01 01:01:01.111'; /* 2000 was a leap year */;  
 SELECT DATEADD(day, @days, @datetime);  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -293,7 +283,6 @@ SELECT DATEADD(day, @days, @datetime);
 2000-12-31 01:01:01.110  
   
 (1 row(s) affected)  
-  
 ```  
   
 #### Specifying scalar system function as date  
@@ -310,15 +299,12 @@ SELECT DATEADD(month, 1, SYSDATETIME());
 2013-02-06 14:29:59.6727944  
   
 (1 row(s) affected)  
-  
 ```  
   
 #### Specifying scalar subqueries and scalar functions as number and date  
  The following example uses scalar subqueries, `MAX(ModifiedDate)`, as arguments for *number* and *date*. `(SELECT TOP 1 BusinessEntityID FROM Person.Person)` is an artificial argument for the number parameter to show how to select a *number* argument from a value list.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 SELECT DATEADD(month,(SELECT TOP 1 BusinessEntityID FROM Person.Person),  
     (SELECT MAX(ModifiedDate) FROM Person.Person));  
 ```  
@@ -334,8 +320,6 @@ SELECT DATEADD(month,-(10/2), SYSDATETIME());
  The following example uses a ranking function as arguments for *number*.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 SELECT p.FirstName, p.LastName  
     ,DATEADD(day,ROW_NUMBER() OVER (ORDER BY  
         a.PostalCode),SYSDATETIME()) AS 'Row Number'  
@@ -352,8 +336,6 @@ WHERE TerritoryID IS NOT NULL
  The following example uses an aggregate window function as an argument for *number*.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 SELECT SalesOrderID, ProductID, OrderQty  
     ,DATEADD(day,SUM(OrderQty)   
         OVER(PARTITION BY SalesOrderID),SYSDATETIME()) AS 'Total'  
@@ -362,125 +344,6 @@ WHERE SalesOrderID IN(43659,43664);
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Incrementing datepart by an interval of 1  
- Each of the following statements increments *datepart* by an interval of 1.  
-  
-```  
-CREATE TABLE Customer (  
-  ID INTEGER,  
-  CustomerDate datetime2);  
-  
-INSERT INTO Customer VALUES (1, '2007-01-01 13:10:10.1111111');  
-  
-SELECT 'year', DATEADD(year,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'quarter',DATEADD(quarter,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'month',DATEADD(month,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'dayofyear',DATEADD(dayofyear,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'day',DATEADD(day,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'week',DATEADD(week,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'weekday',DATEADD(weekday,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'hour',DATEADD(hour,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'minute',DATEADD(minute,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'second',DATEADD(second,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'millisecond',DATEADD(millisecond,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'microsecond',DATEADD(microsecond,1,CustomerDate) FROM Customer  
-UNION ALL  
-SELECT 'nanosecond',DATEADD(nanosecond,1,CustomerDate) FROM Customer;  
-```  
-  
- `--------------  --------------------------`  
-  
- `Year            01/01/2008 1:10:10.1111111`  
-  
- `Quarter         04/01/2007 1:10:10.1111111`  
-  
- `Month           02/01/2007 1:10:10.1111111`  
-  
- `Dayofyear       01/02/2007 1:10:10.1111111`  
-  
- `Day             01/02/2007 1:10:10.1111111`  
-  
- `Week            01/08/2007 1:10:10.1111111`  
-  
- `Weekday         01/02/2007 1:10:10.1111111`  
-  
- `Hour            01/01/2007 2:10:10.1111111`  
-  
- `Minute          01/01/2007 1:11:10.1111111`  
-  
- `Second          01/01/2007 1:10:11.1111111`  
-  
- `Millisecond     01/01/2007 1:10:10.1121111`  
-  
- `Microsecond     01/01/2007 1:10:10.1111121`  
-  
- `Nanosecond      01/01/2007 1:10:10.1111111`  
-  
-### E. Using expressions as arguments for the number and date parameters  
- The following examples use different types of expressions as arguments for the *number* and *date* parameters.  
-  
-#### Specifying column as date  
- The following example adds `60` days to each `HireDate` to calculate the date that the employee is eligible for company benefits.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT EmployeeKey  
-    ,HireDate  
-    ,DATEADD(day,60,HireDate) AS BenefitsDate  
-FROM DimEmployee;  
-```  
-  
-#### Specifying scalar system function as date  
- The following example specifies `SYSDATETIME` for *date*.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT TOP (1) DATEADD(month, 1, SYSDATETIME()) FROM DimCustomer;  
-```  
-  
-#### Specifying scalar subqueries and scalar functions as number and date  
- The following example uses scalar subqueries and scalar functions (`MAX(HireDate))`, as arguments for *number* and *date*. `(SELECT (TOP(1) EmployeeKey FROM dbo.DimEmployee)` is an artificial argument for the *number* parameter to show how to select a *number* argument from a value list.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT TOP(1) DATEADD (month, (SELECT TOP(1) EmployeeKey FROM dbo.DimEmployee),  
-    (SELECT MAX(HireDate) FROM dbo.DimEmployee))  
-FROM dbo.DimCustomer;  
-```  
-  
-#### Specifying constants as number and date  
- The following example uses numeric and character constants as arguments for *number* and *date*.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT TOP (1) DATEADD(minute, 1, '2007-05-07 09:53:01.123') FROM DimCustomer;  
-```  
-  
-#### Specifying numeric expressions and scalar system functions as number and date  
- The following example uses a numeric expressions (-`(10/2))`, and a scalar system function (`SYSDATETIME`) as arguments for *number* and *date*.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT TOP (1) DATEADD(month,10/2, SYSDATETIME()) FROM DimCustomer;  
-```  
   
 ## See Also  
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  

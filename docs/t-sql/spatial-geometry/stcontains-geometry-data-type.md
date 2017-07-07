@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STContains (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Returns 1 if a **geometry** instance completely contains another **geometry** instance. Returns 0 if it does not.  
   

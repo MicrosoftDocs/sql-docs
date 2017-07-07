@@ -61,14 +61,14 @@ To install the `mssql-server-is` package on Ubuntu, follow these steps:
 4.  After installing Integration Services, run `ssis-conf`.
 
     ```bash
-    sudo optssisbinssis-conf
+    sudo /opt/ssis/bin/ssis-conf
     ```
 
 
 5.  After the configuration is done, set the path.
 
     ```bash
-    export PATH=optssisbin$PATH
+    export PATH=/opt/ssis/bin:$PATH
     ```
 
 
@@ -85,7 +85,7 @@ To install the `mssql-server-is` package on Ubuntu, follow these steps:
     ```
 
 ## Update SSIS
-If you already have `mssql-server-is` installed, you can update to the latest version with the following command.
+If you already have `mssql-server-is` installed, you can update to the latest version with the following command:
 
 ```bash
 sudo apt-get install mssql-server-is

@@ -3,7 +3,7 @@ title: "Security Center for SQL Server Database Engine and Azure SQL Database | 
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "01/31/2017"
+ms.date: "06/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -23,7 +23,7 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 55
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

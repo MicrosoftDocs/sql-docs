@@ -57,7 +57,7 @@ After you have created a data source object, you can open it to get data, or wri
 + [rxWriteNext](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Write data to the target
 + [rxClose](https://msdn.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Close a data source
 
-For more information about working with these functions, including using data sources other than [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], see [Getting Started with Microsoft R](https://msdn.microsoft.com/microsoft-r/microsoft-r-get-started-node).
+For more information about working with these functions, including using data sources other than [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], see [Tutorial: Data import and exploration](https://msdn.microsoft.com/microsoft-r/scaler-getting-started-data-import-exploration).
 
 ## Work with XDF Files
 

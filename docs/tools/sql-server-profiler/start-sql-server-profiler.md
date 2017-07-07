@@ -36,10 +36,12 @@ When you first start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md
  You can start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] from several locations in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. When [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] starts, it loads the connection context, trace template, and filter context of its launch point. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] starts each SQL Server Profiler session in its own instance, and Profiler continues to run if you shut down [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 ### To start SQL Server Profiler from the Tools menu  
 -  In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Tools** menu, click **SQL Server Profiler**.  
+
 ### To start SQL Server Profiler from the Query Editor  
 - In Query Editor, right-click and then select **Trace Query in SQL Server Profiler**.  
-    > [!NOTE]  
-    >  The connection context is the editor connection, the trace template is TSQL_SPs, and the applied filter is SPID = query window SPID.  
+  > [!NOTE]  
+  >  The connection context is the editor connection, the trace template is TSQL_SPs, and the applied filter is SPID = query window SPID.  
+    
 ### To start SQL Server Profiler from Activity Monitor  
 - In Activity Monitor, click the **Processes** pane, right-click the process that you want to profile, and then click **Trace Process in SQL Server Profiler**.  
     > [!NOTE]  

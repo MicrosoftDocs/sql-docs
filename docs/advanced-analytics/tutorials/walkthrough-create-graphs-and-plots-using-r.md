@@ -48,11 +48,11 @@ In this part of the walkthrough, you'll learn techniques for generating plots an
 
 ### Create a map plot
 
-Typically, database servers block Internet access. This can be inconvenient when using R packages that need to download maps or other images to generate plots. However, there is a workaround, which we'll demonstrate in this section, as you might find it useful when developing your own applications.
+Typically, database servers block Internet access. This can be inconvenient when using R packages that need to download maps or other images to generate plots. However, there is a workaround that you might find useful when developing your own applications. Basically, you generate the map representation on the client, and then overlay on the map the points that are stored as attributes in the SQL Server table.
 
-Namely, you generate the map representation on the client, and then overlay on the map the points that are stored as attributes in the SQL Server table.
+We'll walk you through it in this lesson.
 
-1.  Define the function that creates the R plot object. The custom function *mapPlot* creates a scatter plot that uses the taxi pickup locations to plot the number of rides that started from each location. It uses the **ggplot2** and  **ggmap** packages, which should already be installed and loaded.
+1.  Define the function that creates the R plot object. The custom function *mapPlot* creates a scatter plot that uses the taxi pickup locations, and plots the number of rides that started from each location. It uses the **ggplot2** and  **ggmap** packages, which should already be installed and loaded.
 
     ```R
     mapPlot <- function(inDataSource, googMap){
@@ -67,7 +67,7 @@ Namely, you generate the map representation on the client, and then overlay on t
     ```
 
     + The *mapPlot* function takes two arguments: an existing data object, which you defined earlier using RxSqlServerData, and the map representation passed from the client.
-    + Note the use of the *ds* variable to load data from the previously created data source, *inDataSource*, which contains only 1000 rows. If you want to create a mpa with more data points, at the expense of taking longer, substitute a different data source.
+    + In the line beginning with the *ds* variable, RxImport is used to load into memory data from the previously created data source, *inDataSource*. However, that data source contains only 1000 rows; if you want to create a map with more data points, you can substitute a different data source.
     + Whenever you use **open source** R functions, data must be loaded into data frames in local memory. However, by calling the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function, you can run in the memory of the remote compute context.
 
 2. Change the compute context to local, and load the libraries required for creating the maps.
@@ -80,9 +80,9 @@ Namely, you generate the map representation on the client, and then overlay on t
     googMap <- get_googlemap(center = as.numeric(gc), zoom = 12, maptype = 'roadmap', color = 'color');
     ```
 
-    + The *gc* variable stores a set of coordinates for Times Square, NY.
+    + The `gc` variable stores a set of coordinates for Times Square, NY.
 
-    + The line beginning with *googmap* generates a map with the specified coordinates at the center.
+    + The line beginning with `googmap` generates a map with the specified coordinates at the center.
 
 3. Change to the SQL Server compute context, and render the results, by wrapping the plot function in [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) as shown here. The [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) function is part of the **RevoScaleR** package, and supports execution of arbitrary R functions in a remote compute context.
 
@@ -92,11 +92,11 @@ Namely, you generate the map representation on the client, and then overlay on t
     plot(myplots[[1]][["myplot"]]);
     ````
 
-    + The map data (*googMap*) is passed as an argument to the remotely executed function *mapPlot*. Because the maps were generated in your local environment, they must be passed to the function in order to create the plot in the context of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md).
+    + The map data in `googMap` is passed as an argument to the remotely executed function *mapPlot*. Because the maps were generated in your local environment, they must be passed to the function in order to create the plot in the context of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md).
 
     + When the line beginning with `plot` runs, the rendered data is serialized back to the local R environment so that you can view it in your R client.
 
-4. The following image shows the output plot. The taxi pickup locations are added to the map as red dots. Your image might look different, depending how many locations were in the data source you used.
+4. The following image shows the output plot. The taxi pickup locations are added to the map as red dots. Your image might look different, depending how many locations are in the data source you used.
 
     ![plotting taxi rides using a custom R function](media/rsql-e2e-mapplot.png "plotting taxi rides using a custom R function")
 

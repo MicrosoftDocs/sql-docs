@@ -23,9 +23,9 @@ manager: "jhubbard"
 
 Data engineering is an important part of machine learning. Data often needs to be transformed before you can use it for predictive modeling. If the data does not have the features you need, you can engineer them from existing values.
 
-For this modeling task, rather than using the raw latitude and longitude values of the pickup and drop-off location, you'd like to have the distance in miles between the two locations. To create this feature, you'll compute the direct linear distance between two points, by using the [haversine formula](https://en.wikipedia.org/wiki/Haversine_formula).
+For this modeling task, rather than using the raw latitude and longitude values of the pickup and drop-off location, you'd like to have the distance in miles between the two locations. To create this feature, you compute the direct linear distance between two points, by using the [haversine formula](https://en.wikipedia.org/wiki/Haversine_formula).
 
-You'll compare two different methods for creating a feature from data:
+In this step, we compare two different methods for creating a feature from data:
 
 - Using a custom R function
 - Using a custom T-SQL function in [!INCLUDE[tsql](../../includes/tsql-md.md)]
@@ -36,7 +36,7 @@ The goal is to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 The R language is well-known for its rich and varied statistical libraries, but you still might need to create custom data transformations.
 
-First, let's do it the way R users are accustomed to: get the data onto your laptop, and then run a custom R function. The custom R function we'll use, *ComputeDist*, calculates the linear distance between two points specified by latitude and longitude values.
+First, let's do it the way R users are accustomed to: get the data onto your laptop, and then run a custom R function, *ComputeDist*, which calculates the linear distance between two points specified by latitude and longitude values.
 
 1. Remember that the data source object you created earlier gets only the top 1000 rows. So let's define a query that gets all the data.
 
@@ -78,7 +78,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 
     
 
-4. Having defined the function, you will apply it to the data to create a new feature column, *direct_distance*. but before you run the transformation, change the compute context to local.
+4. Having defined the function, you apply it to the data to create a new feature column, *direct_distance*. but before you run the transformation, change the compute context to local.
 
     ```R
     rxSetComputeContext("local")
@@ -104,24 +104,13 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 
     + The rxDataStep function supports various methods for modifying data in place. In this example, we've used the _transforms_ argument to specify both the pass-through columns and the transformed columns. For more information, see this article:  [How to transform and subset data in Microsft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
 
-    Unfortunately, not all arguments to rxDataStep are supported for all data sources. For example, *varsToKeep* and *varsToDrop* are not supported for SQL Server. Also, when running in a SQL Server compute context, the _inData_ argument can only take a SQL Server data source.
+    Unfortunately, not all arguments to rxDataStep are supported for all data sources. For example, *varsToKeep* and *varsToDrop* are no longer supported for SQL Server data sources. Also, when running in a SQL Server compute context, the _inData_ argument can only take a SQL Server data source.
 
-6. The results were incomplete, as the local compute context didn't have enough memory to process all the rows. (The R timing summaries  help figure out what went wrong.)
-
-    You might get better results, depending on your computer's memory. However, it does point up the problems inherent in trying to run everything in memory, R.
+6. The results were incomplete, as the local compute context didn't have enough memory to process all the rows. You might get better results, depending on your computer's memory. However, it does point up the problems inherent in trying to run everything in memory, in R.
 
     ```
     ReadNum=1, CurrentBlockNum=1, CurrentNumRows=1703957, TotalRowsProcessed=1703957, ReadTime=18.969, ProcessDataTime = 25.397, TransformTime = 22.376, LoopTime = 44.366 
 
-    Overall compute summaries time: 45.030 secs.
-    Total loop time: 44.366
-    Total read time for 1 reads: 18.969
-    Total transform data time: 22.376
-    Total process data time: 25.397
-    Average read time per read: 18.969
-    Average data transform time per read: 22.376
-    Average process data time per read: 25.397
-    Number of threads used: 2
     WARNING: The number of rows (1703957) times the number of columns (12) exceeds the 'maxRowsByCols' argument (3000000). Rows will be truncated.
     ```
 
@@ -259,7 +248,7 @@ Your times might vary significantly, depending on your network speed, and your h
 At least for this particular task, the [!INCLUDE[tsql](../../includes/tsql-md.md)] function approach is faster than using a custom R function. Therefore, you'll use the [!INCLUDE[tsql](../../includes/tsql-md.md)] function for these calculations in subsequent steps.
 
 > [!TIP]
-> Very often, feature engineering using [!INCLUDE[tsql](../../includes/tsql-md.md)] will be faster than R. For example, T-SQL includes windowing and ranking functions that are extremely fast in tasks that data scientists frequently perform in R, such as rolling moving averages and *n*tiles. Choose the most efficient method based on your data and task.
+> Very often, feature engineering using [!INCLUDE[tsql](../../includes/tsql-md.md)] will be faster than R. For example, T-SQL includes very fast windowing and ranking functions, which could be used for common data science calculations such as rolling moving averages and *n*tiles. Choose the most efficient method based on your data and task.
 
 ## Next lesson
 

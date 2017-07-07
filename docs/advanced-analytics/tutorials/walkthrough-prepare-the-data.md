@@ -26,22 +26,22 @@ By this time, you should have one of the following installed:
 + SQL Server 2016 R Services
 + SQL Server 2017 Machine Learning Services, with the R language enabled
 
-In this lesson, you'll download the data, R packages, and R scripts used in the walkhrough from a Github repository. You can download everything using a PowerShell script for convenience.
+In this lesson, you download the data, R packages, and R scripts used in the walkthrough from a Github repository. You can download everything using a PowerShell script for convenience.
 
-You'll also need to install some additional R packages, both on the server and on your R workstation. The steps are described.
+You also need to install some additional R packages, both on the server and on your R workstation. The steps are described.
 
-Then, you'll use a second PowerShell script, RunSQL_R_Walkthrough.ps1, to configure the database that will be used for modeling and scoring. That script performs a bulk load of the data into the database you specify, and then creates some SQL functions and stored procedures that simplify data science tasks.
+Then, you use a second PowerShell script, RunSQL_R_Walkthrough.ps1, to configure the database that is used for modeling and scoring. That script performs a bulk load of the data into the database you specify, and then creates some SQL functions and stored procedures that simplify data science tasks.
 
 Let's get started!
 
 ## 1. Download the data and scripts
 
-All the code that you will has been provided in a GitHub repository. You can use a PowerShell script to make a local copy of the files.
-  
+All the code needed has been provided in a GitHub repository. You can use a PowerShell script to make a local copy of the files.
+
 1.  On your data science client computer, open a Windows PowerShell command prompt as administrator.
-  
+
 2.  To ensure that you can run the download script without an error, run this command. It  temporarily allows scripts without changing system defaults.
-  
+
     ```
     Set-ExecutionPolicy Unrestricted -Scope Process -Force
     ```
@@ -56,7 +56,7 @@ All the code that you will has been provided in a GitHub repository. You can use
     .\Download_Scripts_R_Walkthrough.ps1 –DestDir 'C:\tempR'
     ```
   
-    If you want to save the files in a different directory, edit the values of the parameter *DestDir* and specify a different folder on your computer. If you type a folder name that does not exist, the PowerShell script will create the folder for you.
+    If you want to save the files in a different directory, edit the values of the parameter *DestDir* and specify a different folder on your computer. If you type a folder name that does not exist, the PowerShell script creates the folder for you.
   
 4.  Downloading might take a while. After it is complete, the Windows PowerShell command console should look like this:
   
@@ -66,7 +66,7 @@ All the code that you will has been provided in a GitHub repository. You can use
 
 ## 2. Install required R packages
 
-This walkthrough requires some R libraries that are not installed by default as part of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. You must install the packages both on the client where you will be developing the solution, and on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer where you will deploy the solution.
+This walkthrough requires some R libraries that are not installed by default as part of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. You must install the packages both on the client where you develop the solution, and on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer where you deploy the solution.
 
 ### Install required packages on the client
 
@@ -84,14 +84,14 @@ The R script that you downloaded includes the commands to download and install t
     if (!('RODBC' %in% rownames(installed.packages()))){install.packages('RODBC')}
     ```
     
-    Some packages will also install required packages. In all, about 32 packages are required.
+    Some packages also install required packages. In all, about 32 packages are required.
 
 ### Install required packages on the server
 
 There are many different ways that you can install packages on SQL Server. For example, SQL Server provides a [package management](../r/installing-and-managing-r-packages.md) feature that lets database administrators create a package repository and assign user the rights to install their own packages. However, if you are an administrator on the computer, you can install new packages using R, as long as you install to the correct library.
 
 > [!NOTE]
-> On the server, **do not** install to a user library even if prompted. If you install to a user library, the SQL Server instance will not be able to find or run the packages. For more information, see [Installing New R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).
+> On the server, **do not** install to a user library even if prompted. If you install to a user library, the SQL Server instance cannot find or run the packages. For more information, see [Installing New R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 1. On the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, open RGui.exe **as an administrator**.  If you have installed SQL Server R Services using the defaults, RGui.exe can be found in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64).
 
@@ -122,7 +122,7 @@ Along with the data files, R scripts, and T-SQL scripts, the download includes t
 
 - Rewrites the arguments in the R script file to use the database name that you specify.
 
-You should run this script on the computer where you will be building the solution, for example, the laptop where you develop and test your R code. This computer, which we'll call the data science client, must be able to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer using the Named Pipes protocol.
+You should run this script on the computer where you build the solution: for example, the laptop where you develop and test your R code. This computer, which we'll call the data science client, must be able to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer using the Named Pipes protocol.
 
 1. Open a PowerShell command line **as administrator**.
   
@@ -132,7 +132,7 @@ You should run this script on the computer where you will be building the soluti
     .\RunSQL_R_Walkthrough.ps1
     ```
   
-3.  You will be prompted for each of the following parameters:
+3.  You are prompted for each of the following parameters:
   
     **Database server name**: The name of the SQL Server instance where Machine learning Services or R Services is installed.
 
@@ -144,10 +144,10 @@ You should run this script on the computer where you will be building the soluti
     
     + Type the name of a SQL login that has CREATE DATABASE privileges, and provide the SQL password on a successive prompt.
     + Press ENTER without typing any name to use your own Windows identity, and at the secured prompt, type your Windows password. PowerShell does not support entering a different Windows user name.
-    + If you fail to specify a valid user, the script will default to using integrated Windows authentication.
+    + If you fail to specify a valid user, the script defaults to using integrated Windows authentication.
     
       > [!WARNING]
-      > When you use the prompt in the PowerShell script to provide your credentials, the password will be written to the updated script file in plain text. Edit the file to remove the credentials immediately after you have created the necessary R objects.
+      > When you use the prompt in the PowerShell script to provide your credentials, the password is written to the updated script file in plain text. Edit the file to remove the credentials immediately after you have created the necessary R objects.
       
     **Path to the csv file**: Provide the full path to the data file. The default path and filename is `C:\tempR\nyctaxi1pct.csv1`.
   
@@ -168,9 +168,7 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-Click here to jump to the next lesson!
-
-[View and explore the data using SQL](/walkthrough-view-and-explore-the-data.md)
+Click this link to jump to the next lesson: [View and explore the data using SQL](/walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>Troubleshooting
 
@@ -182,7 +180,7 @@ To download the data manually, right-click the following link and select **Save 
 
 [http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
-Make a note of the path to the downloaded data file and the file name where the data was saved. You will need the path to load the data to the table using **bcp**.
+Make a note of the path to the downloaded data file and the file name where the data was saved. You need the full path to load the data to the table using **bcp**.
 
 ### Unable to download the data
 
@@ -255,11 +253,11 @@ The following example runs the script using a SQL login:
 
 ### The data loaded but it contains duplicates
 
-If your database contains a table of the same name and the same schema, bcp will insert a new copy of the data rather than overwriting existing data. To avoid duplicate data, truncate any existing tables before re-running the script.
+If your database contains a table of the same name and the same schema, **bcp** inserts a new copy of the data rather than overwriting existing data. To avoid duplicate data, truncate any existing tables before re-running the script.
 
 ## What's included in the sample
 
-When you download the files from the GitHub repository, you'll get the following:
+When you download the files from the GitHub repository, you get the following:
 
 + Data in CSV format; see [Training and scoring data](#bkmk_data) for details
 + A PowerShell script for preparing the environment
@@ -276,11 +274,11 @@ To make the data easier to work with, the Microsoft data science team performed 
 
 ### PowerShell and R script files
 
-+ **RunSQL_R_Walkthrough.ps1** You'll run this script first, using PowerShell. It calls the SQL scripts to load data into the database.
++ **RunSQL_R_Walkthrough.ps1** You run this script first, using PowerShell. It calls the SQL scripts to load data into the database.
 
 + **taxiimportfmt.xml** A format definition file that is used by the BCP utility to load data into the database.
 
-+ **RSQL_R_Walkthrough.R**  This is the core R script that will be used in rest of the lessons for doing your data analysis and modeling. It provides all the R code that you need to explore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data, build the classification model, and create plots.
++ **RSQL_R_Walkthrough.R**  This is the core R script that is used in rest of the lessons for doing your data analysis and modeling. It provides all the R code that you need to explore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data, build the classification model, and create plots.
 
 ### T-SQL script files
 

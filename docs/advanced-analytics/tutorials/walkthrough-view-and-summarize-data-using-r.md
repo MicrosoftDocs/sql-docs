@@ -22,7 +22,7 @@ manager: "jhubbard"
 ---
 # View and summarize data using R
 
-Now you'll work with the same data using R code. You'll also learn how to use the functions in the **RevoScaleR** package included with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+Now let's work with the same data using R code. In this lesson, you learn how to use the functions in the **RevoScaleR** package.
 
 An R script is provided with this walkthrough that includes all the code needed to create the data object, generate summaries, and build models. The R script file, **RSQL_RWalkthrough.R**, can be found in the location where you installed the script files.
 
@@ -30,7 +30,8 @@ An R script is provided with this walkthrough that includes all the code needed 
 + For people learning to use RevoScaleR, this tutorial goes through the script line by line.
 + To run individual lines from the script, you can highlight a line or lines in the file and press Ctrl + ENTER.
 
-Save your R workspace in case you want to complete the rest of the walkthrough later.  That way the data objects and other variables will be ready for re-use.
+> [!TIP]
+> Save your R workspace in case you want to complete the rest of the walkthrough later.  That way the data objects and other variables are ready for re-use.
 
 ## Define a SQL Server compute context
 
@@ -39,7 +40,7 @@ Microsoft R makes it easy to get data from  [!INCLUDE[ssNoVersion](../../include
 - Create a connection to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance
 - Define a query that has the data you need, or specify a table or view
 - Define one or more compute contexts to use when running R code
-- Optionally, define transformation that are applied to the data source while it is being read from the source
+- Optionally, define transformations that are applied to the data source while it is being read from the source
 
 The following steps are all part of the R code and should be run in an R environment. We used Microsoft R Client, because it includes all the RevoScaleR packages, as well as a basic, lightweight set of R tools.
 
@@ -49,7 +50,7 @@ The following steps are all part of the R code and should be run in an R environ
     library("RevoScaleR")
     ```
 
-     The quotation marks are optional, in this case, though usually recommended.
+     The quotation marks are optional, in this case, though recommended.
      
      If you get an error, make sure that your R development environment is using a library that includes the RevoScaleR package. Use a command such as `.libPaths()` to view the current library path.
 
@@ -90,7 +91,7 @@ The following steps are all part of the R code and should be run in an R environ
     sqlcc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
     ```
 
-4. By default, the compute context is local, so you'll need to explicitly set the *active* compute context.
+4. By default, the compute context is local, so you need to explicitly set the *active* compute context.
 
     ```R
     rxSetComputeContext(sqlcc)
@@ -107,7 +108,7 @@ In Microsoft R, a *data source* is an object you create using RevoScaleR functio
 
 Earlier you defined a connection string, and saved that information in an R variable. You can re-use that connection information to specify the data you want to get.
 
-1. Save a SQL query as a string variable. The query defines the data you'll use to train the model.
+1. Save a SQL query as a string variable. The query defines the data for training the model.
     ```R
     sampleDataQuery <- "SELECT TOP 1000 tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
     ```
@@ -128,41 +129,44 @@ Earlier you defined a connection string, and saved that information in an R vari
   
     + The argument *rowsPerRead* is important for managing memory usage and efficient computations.  Most of the enhanced analytical functions in[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] process data in chunks and accumulate intermediate results, returning the final computations after all of the data has been read.  By adding the *rowsPerRead* parameter, you can control how many rows of data are read into each chunk for processing.  If the value of this parameter is too large, data access might be slow because you don’t have enough memory to efficiently process such a large chunk of data.  On some systems, setting *rowsPerRead* to an excessively small value can also provide slower performance.
 
-3. At this point, you've created the *inDataSource* object, but it doesn't contain any data. The data is not pulled from the SQl query into the local environment until you run a function such as [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) or [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary).
+3. At this point, you've created the *inDataSource* object, but it doesn't contain any data. The data is not pulled from the SQL query into the local environment until you run a function such as [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) or [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary).
 
-    However, this object is a convenient shortcut for defining the data. You can call the data source using multiple functions, to move data, to get a summary of the data and its variables, to manipulate and transform the data, or to use it for training a model.
+    However, now that you've defined the data objects, you can use it as the argument to other functions.
 
 ## Use the SQL Server data in R summaries
 
-You can now apply R functions to the data source, to explore, summarize, and chart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. In this section, you'll try out several of the functions provided in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] that support remote compute contexts.
+In this section, you'll try out several of the functions provided in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] that support remote compute contexts. By applying R functions to the data source, you can explore, summarize, and chart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data.
 
 1. Call the function [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) to get a list of the variables in the data source and their data types.
 
     **rxGetVarInfo** is a handy function; you can call it on any data frame, or on a set of data in a remote data object, to get information such as the maximum and minimum values, the data type, and the number of levels in factor columns.
     
-    Consider running this function after any kind of  data input, feature transformation, or feature engineering. By doing so you can ensure that all the features you want to use in your model are of the expected data type and avoid errors.
+    Consider running this function after any kind of  data input, feature transformation, or feature engineering. By doing so, you can ensure that all the features you want to use in your model are of the expected data type and avoid errors.
   
     ```R
     rxGetVarInfo(data = inDataSource)
     ```
 
-    **Results:**
-    </br>*Var 1: tipped, Type: integer*
-    </br>*Var 2: fare_amount, Type: numeric*
-    </br>*Var 3: passenger_count, Type: integer*
-    </br>*Var 4: trip_time_in_secs, Type: numeric, Storage: int64*
-    </br>*Var 5: trip_distance, Type: numeric*
-    </br>*Var 6: pickup_datetime, Type: character*
-    </br>*Var 7: dropoff_datetime, Type: character*
-    </br>*Var 8: pickup_longitude, Type: numeric*
-    </br>*Var 9: pickup_latitude, Type: numeric*
-    </br>*Var 10: dropoff_longitude, Type: numeric*
+    **Results**
+    
+    ```
+    Var 1: tipped, Type: integer
+    Var 2: fare_amount, Type: numeric
+    Var 3: passenger_count, Type: integer
+    Var 4: trip_time_in_secs, Type: numeric, Storage: int64
+    Var 5: trip_distance, Type: numeric
+    Var 6: pickup_datetime, Type: character
+    Var 7: dropoff_datetime, Type: character
+    Var 8: pickup_longitude, Type: numeric
+    Var 9: pickup_latitude, Type: numeric
+    Var 10: dropoff_longitude, Type: numeric
+    ```
 
 2. Now, call the RevoScaleR function [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary) to get more detailed statistics about individual variables.
 
     rxSummary is based on the R `summary` function, but has some additional features and advantages. rxSummary works in multiple compute contexts and supports chunking.  You can also use rxSummary to transform values, or summarize based on factor levels.
     
-    In this example, you'll summarize the fare amount based on the number of passengers.
+    In this example, you summarize the fare amount based on the number of passengers.
     
     ```R
     start.time <- proc.time()
@@ -178,29 +182,30 @@ You can now apply R functions to the data source, to explore, summarize, and cha
     + This example also includes some code to track the time the function starts and completes, so that you can compare performance.
   
     **Results**
-    
-    *rxSummary(formula = ~fare_amount:F(passenger_count), data = inDataSource)*
-    </br>*Summary Statistics Results for: ~fare_amount:F(passenger_count)*
-    </br>*Data: inDataSource (RxSqlServerData Data Source)*
-    </br>*Number of valid observations: 1000*
-    </br>*Name                          Mean    StdDev   Min Max ValidObs MissingObs*
-    </br>*fare_amount:F_passenger_count 12.4875 9.682605 2.5 64  1000     0*
-    </br>*Statistics by category (6 categories):*
-    </br>*Category                             F_passenger_count Means    StdDev    Min*
-    </br>*fare_amount for F(passenger_count)=1 1                 12.00901  9.219458  2.5*
-    </br>*fare_amount for F(passenger_count)=2 2                 11.61893  8.858739  3.0*
-    </br>*fare_amount for F(passenger_count)=3 3                 14.40196 10.673340  3.5*
-    </br>*fare_amount for F(passenger_count)=4 4                 13.69048  8.647942  4.5*
-    </br>*fare_amount for F(passenger_count)=5 5                 19.30909 14.122969  3.5*
-    </br>*fare_amount for F(passenger_count)=6 6                 12.00000        NA 12.0*
-    </br>*Max ValidObs*
-    </br>*55  666*
-    </br>*52  206*
-    </br>*52   51*
-    </br>*39   21*
-    </br>*64   55*
-    </br>*12    1*
-    </br>*"It takes CPU Time=0.5 seconds, Elapsed Time=4.59 seconds to summarize the inDataSource."*
+
+    ```
+    rxSummary(formula = ~fare_amount:F(passenger_count), data = inDataSource)
+    Data: inDataSource (RxSqlServerData Data Source)
+    Number of valid observations: 1000
+    Name  Mean    StdDev   Min Max ValidObs MissingObs
+    fare_amount:F_passenger_count 12.4875 9.682605 2.5 64  1000     0
+    Statistics by category (6 categories):*
+    Category                             F_passenger_count Means    StdDev    Min
+    fare_amount for F(passenger_count)=1 1                 12.00901  9.219458  2.5
+    fare_amount for F(passenger_count)=2 2                 11.61893  8.858739  3.0
+    fare_amount for F(passenger_count)=3 3                 14.40196 10.673340  3.5
+    fare_amount for F(passenger_count)=4 4                 13.69048  8.647942  4.5
+    fare_amount for F(passenger_count)=5 5                 19.30909 14.122969  3.5
+    fare_amount for F(passenger_count)=6 6                 12.00000        NA 12.0
+    Max ValidObs
+    55  666
+    52  206
+    52   51
+    39   21
+    64   55
+    12    1
+    "It takes CPU Time=0.5 seconds, Elapsed Time=4.59 seconds to summarize the inDataSource."
+    ```
 
 Did you get different results? That's because the smaller query using the TOP keyword is not guaranteed to bring back the same results each time.
 
@@ -228,7 +233,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 ```
 
 > [!TIP]
-> While this is running, you can use a tool like [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/processexplorer.aspx) or SQL Profiler to see how the connection is made and the R code is run using SQL Server services. 
+> While this is running, you can use a tool like [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/processexplorer.aspx) or SQL Profiler to see how the connection is made and the R code is run using SQL Server services.
 > 
 > Another option is to monitor R jobs running on SQL Server using these [custom reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 

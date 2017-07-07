@@ -21,9 +21,9 @@ manager: "jhubbard"
 ---
 # Build an R model and save it to SQL (walkthrough)
 
-In this part of the data science walkthrough, you'll learn how to build a machine learning model using R, and save the model in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
+In this part of the data science walkthrough, you learn how to build a machine learning model using R, and save the model in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
 
-You'll use these columns as the features in the model:
+These columns can be used as the features in the model:
 
 + passenger_count
 + trip_distance
@@ -32,9 +32,9 @@ You'll use these columns as the features in the model:
 
 ## Create a classification model using rxLogit
 
-The model you'll build is a binary classifier that predicts whether the taxi driver is likely to get a tip on a particular ride or not. You'll use the data source you created in the previous lesson, `featureDataSource,` to train the tip classifier, using logistic regression.
+The model you build is a binary classifier that predicts whether the taxi driver is likely to get a tip on a particular ride or not. You'll use the data source you created in the previous lesson to train the tip classifier, using logistic regression.
 
-1. Call the [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) function, included in the **RevoScaleR** package, to create a logistic regression model.
+1. Call the [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) function, included in the **RevoScaleR** package, to create a logistic regression model. 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = new_ds))
@@ -42,7 +42,7 @@ The model you'll build is a binary classifier that predicts whether the taxi dri
 
     The call that builds the model is enclosed in the system.time function. This lets you get the time required to build the model.
 
-2. After you build the model, you'll want to inspect it using the `summary` function, and view the coefficients.
+2. After you build the model, you can inspect it using the `summary` function, and view the coefficients.
 
     ```R
     summary(logitObj)
@@ -90,7 +90,7 @@ Now that the model is built, you can use to predict whether the driver is likely
   
     + The prediction results will be saved in the table, _taxiscoreOutput_. Notice that the schema for this table is not defined when you create it using rxSqlServerData. The schema is obtained from the rxPredict output.
   
-    + To create the table that stores the predicted values, the SQL login running the rxSqlServer data function must have DDL privileges in the database. If the login cannot create tables, the statement will fail.
+    + To create the table that stores the predicted values, the SQL login running the rxSqlServer data function must have DDL privileges in the database. If the login cannot create tables, the statement fails.
 
 2. Call the [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) function to generate results.
 
@@ -173,7 +173,7 @@ In this section, you'll experiment with both techniques.
 
 After you have built a model and ascertained that it is performing well, you probably want to deploy it to a site where users or people in your organization can make use of the model, or perhaps retrain and recalibrate the model on a regular basis. This process is sometimes called  *operationalizing* a model.
 
-Because [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] lets you invoke an R model using a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, it is extremely easy to use R in a client application.
+Because [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] lets you invoke an R model using a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, it is easy to use R in a client application.
 
 However, before you can call the model from an external application, you must save the model to the database used for production. In [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], trained models are stored in binary form, in a single column of type **varbinary(max)**.
 
@@ -185,7 +185,7 @@ Therefore, moving a trained model from R to SQL Server includes these steps:
 
 + Saving the model in a **varbinary(max)** column
 
-In this section, you will learn how to persist the model, and how to call it to make predictions.
+In this section, you learn how to persist the model, and how to call it to make predictions.
 
 1. Switch back to your local R environment if you are not already using it, serialize the model, and save it in a variable.
 
@@ -212,13 +212,13 @@ In this section, you will learn how to persist the model, and how to call it to 
     Saving a model to a table requires only an INSERT statement. However, it's easier when wrapped in a stored procedure, such as _PersistModel_.
 
     > [!NOTE]
-    > If you get an error such as "The EXECUTE permission was denied on the object PersistModel", make sure that your login has permission. You can grant explicit permissions on just the stored proceure by running a T-SQL statement like this: `GRANT EXECUTE ON [dbo].[PersistModel] TO [RTestUser]`
+    > If you get an error such as "The EXECUTE permission was denied on the object PersistModel", make sure that your login has permission. You can grant explicit permissions on just the stored procedure by running a T-SQL statement like this: `GRANT EXECUTE ON [dbo].[PersistModel] TO [RTestUser]`
 
 3. After you have created a model and saved it in a database, you can call it directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    However, if you have a model you use often, it's easier to wrap the input query and the call to the model, as well as any other parameters, in a custom stored procedure.
+    However, with any model you use often, it's easier to wrap the input query and the call to the model, together with other parameters, in a custom stored procedure.
 
-    Here is the complete code of the stored procedure. We recommend creating helper functions such as this stored procedure to make it easier to manage and update your R models in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+    Here is the complete code of one such stored procedure. We recommend creating stored procedure such as this one to make it easier to manage and update your R models in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
     ```tsql
     CREATE PROCEDURE [dbo].[PersistModel]  @m nvarchar(max)
@@ -233,7 +233,7 @@ In this section, you will learn how to persist the model, and how to call it to 
   > Use the **SET NOCOUNT ON** clause to prevent extra result sets from interfering with SELECT statements.
 
 
-In the next and final lesson, you'll learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../includes/tsql-md.md)].
+In the next and final lesson, you learn how to perform scoring against the saved model using [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 ## Next lesson
 

@@ -21,9 +21,9 @@ manager: "jhubbard"
 ---
 # View and explore the data using R and SQL
 
-Data exploration is an important part of modeling data, and involves reviewing summaries of data objects to be used in the analyses, as well as data visualization. In this lesson, you'll explore the data objects and generate plots, using both [!INCLUDE[tsql](../../includes/tsql-md.md)] and R functions included in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+Data exploration is an important part of modeling data, and involves reviewing summaries of data objects to be used in the analyses, as well as data visualization. In this lesson, you explore the data objects and generate plots, using both [!INCLUDE[tsql](../../includes/tsql-md.md)] and R functions included in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
-Then you  will generate plots to visualize the data, using new functions provided by packages installed with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+Then you generate plots to visualize the data, using new functions provided by packages installed with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
 > [!TIP]
 > Already an R maestro?
@@ -42,7 +42,7 @@ First, take a minute to ascertain that your data was loaded correctly.
   
     ![rsql_e2e_ssms_newobjects](media/rsql-e2e-ssms-newobjects.PNG)
   
-3.  To verify that the data was loaded correctly, right-click the table and select **Select top 1000 rows** to run this query:
+3.  To verify that the data loaded correctly, right-click the table and select **Select TOP 1000 rows**. The menu option runs this query:
 
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]

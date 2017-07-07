@@ -21,11 +21,11 @@ manager: "jhubbard"
 ---
 # Deploy the R model and use it in SQL
 
-In this lesson, you will use your R models in a production environment, by calling a trained model from a stored procedure. You can then invoke the stored procedure from R or any application programming language that supports [!INCLUDE[tsql](../../includes/tsql-md.md)] (such as C#, Java, Python, etc), to use the model to make predictions on new observations.
+In this lesson, you use your R models in a production environment, by calling a trained model from a stored procedure. You can then invoke the stored procedure from R or any application programming language that supports [!INCLUDE[tsql](../../includes/tsql-md.md)] (such as C#, Java, Python, etc.), to use the model to make predictions on new observations.
 
 This sample demonstrates the two most common ways to use a model in scoring:
 
-- **Batch scoring mode** is used when you need to create multiple predictions very fast, by passing a SQL query or table as input. A table of results is returned, which typically you'll insert into a table or output to a file.
+- **Batch scoring mode** is used when you need to create multiple predictions very fast, by passing a SQL query or table as input. A table of results is returned, which you might insert directly into a table or write to a file.
 
 - **Individual scoring mode** is used when you need to create predictions one at a time, or "on the fly". You pass a set of individual values to the stored procedure. The values correspond to features in the model, which th e model uses to create a prediction, or generate another result such as a probability value. You can then return that value to the application, or user.
 
@@ -35,7 +35,7 @@ A stored procedure for batch scoring was created when you initially ran the Powe
 
 - Gets a set of input data as a SQL query
 - Calls the trained logistic regression model that you saved in the previous lesson
-- Predicts the probability that the driver will get any non-zero tip
+- Predicts the probability that the driver gets any non-zero tip
 
 1. Take a minute to look over the script for the stored procedure, *PredictTipBatchMode*. It illustrates several aspects of how a model can be operationalized using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
   
@@ -69,7 +69,7 @@ A stored procedure for batch scoring was created when you initially ran the Powe
 
     + To generate the scores, the stored procedure calls the `rxPredict` function from the **RevoScaleR** library.
 
-    + The return value, *Score*, is a predicted probability that the driver will be given a tip. Optionally, you could easily apply some kind of filter to the returned values to categorize the return values into "tip" and "no tip" groups.  For example, a probability of less than 0.5 would mean a tip is unlikely.
+    + The return value, *Score*, is the probability, given the model, that driver gets a tip. Optionally, you could easily apply some kind of filter to the returned values to categorize the return values into "tip" and "no tip" groups.  For example, a probability of less than 0.5 would mean a tip is unlikely.
   
 3.  To call the stored procedure in batch mode, you define the input query, and assemble the stored procedure call using code such as the following:
   
@@ -111,7 +111,7 @@ A stored procedure for batch scoring was created when you initially ran the Powe
 
 When calling the model for prediction on a row-by-row basis, you pass a set of values that represent features for each individual case. The stored procedure *PredictTipSingleMode* demonstrates this approach.
 
-1.  If the stored procedure *PredictTipSingleMode* was not created by the initial PowerShell script, you can run the following Transact-SQL statement to create it now.
+1. If the stored procedure *PredictTipSingleMode* was not created by the initial PowerShell script, you can run the following Transact-SQL statement to create it now.
 
     ```tsql
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,
@@ -187,7 +187,7 @@ When calling the model for prediction on a row-by-row basis, you pass a set of v
 
 ### Generate scores
 
-1. Call the `sqlQuery` function of the **RODBC** package, and pass the connection string and the string variable containing the the stored procedure call.
+1. Call the `sqlQuery` function of the **RODBC** package, and pass the connection string, together with the string variable containing the stored procedure call.
 
     ```R
     # predict with stored procedure in single mode
@@ -198,7 +198,7 @@ When calling the model for prediction on a row-by-row basis, you pass a set of v
 
 ## Summary
 
-Now that you have learned how to work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data and persist trained R models to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it should be relatively easy for you to create some additional models based on this data set. For example, you might try creating models like these:
+Now that you have learned how to work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data and persist trained R models to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it should be relatively easy for you to create new models based on this data set. For example, you might try creating these additional models:
 
 - A regression model that predicts the tip amount
 

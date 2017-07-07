@@ -38,7 +38,7 @@ manager: "jhubbard"
   
  The classifier function extends the login time. An overly complex function can cause logins to time out or slow down fast connections.  
   
-### To create the classifier user-defined function  
+## To create the classifier user-defined function  
   
 1.  Create and configure the new resource pools and workload groups. Assign each workload group to the appropriate resource pool.  
   
@@ -124,11 +124,12 @@ manager: "jhubbard"
     WITH SCHEMABINDING  
     AS  
     BEGIN  
+    /* We recommend running the classifier function code under snapshot isolation level OR using NOLOCK hint to avoid blocking on lookup table. In this example, we are using NOLOCK hint. */
          DECLARE @strGroup sysname  
          DECLARE @loginTime time  
          SET @loginTime = CONVERT(time,GETDATE())  
          SELECT TOP 1 @strGroup = strGroupName  
-              FROM dbo.tblClassificationTimeTable  
+              FROM dbo.tblClassificationTimeTable WITH(NOLOCK)
               WHERE tStartTime <= @loginTime and tEndTime >= @loginTime  
          IF(@strGroup is not null)  
          BEGIN  
@@ -149,7 +150,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-### To verify the resource pools, workload groups, and the classifier user-defined function  
+## To verify the resource pools, workload groups, and the classifier user-defined function  
   
 1.  Obtain the resource pool and workload group configuration by using the following query.  
   
@@ -227,7 +228,7 @@ manager: "jhubbard"
     GO  
     ```  
   
-### Best practices for using Lookup Tables in a classifier function  
+## Best practices for using Lookup Tables in a classifier function  
   
 1.  Do not use a lookup table unless it is absolutely necessary. If you need to use a lookup table, it can be hard coded into the function itself; however, this needs to be balanced with the complexity and dynamic changes of the classifier function.  
   
@@ -253,7 +254,7 @@ manager: "jhubbard"
   
     4.  No triggers on the table.  
   
-    5.  If you are updating the table contents, make sure to use a snapshot isolation level transaction to prevent Writer blocking Readers. Note that using the `NOLOCK` hint should also mitigate this.  
+    5.  If you are updating the table contents, make sure to use a snapshot isolation level transaction in the classifier function to prevent Writer blocking Readers. Note that using the `NOLOCK` hint should also mitigate this.  
   
     6.  If possible, disable the classifier function when changing the table contents.  
   

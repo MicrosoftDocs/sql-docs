@@ -18,12 +18,12 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Deprecated and discontinued features in SQL Server Analysis Services
+# Deprecated and discontinued features in SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017-later](../includes/ssas-appliesto-sql2017-later.md)]
 
-A *deprecated feature* is a feature that will be cut from the product in a future release, but is still supported and included in the current release to maintain backward compatibility. In-general, it's recommended you do not use deprecated features in new and existing projects to maintain compatibility with future releases.
+A *deprecated feature* will be discontinued from the product in a future release, but is still supported and included in the current release to maintain backward compatibility. It's recommended you discontinue using deprecated features in new and existing projects to maintain compatibility with future releases.
 
-A *discontinued feature* is one that was deprecated in an earlier release. It may continue to be included in the current release, but is no longer supported. Discontinued features may be removed entirely in a future release.
+A *discontinued feature* was deprecated in an earlier release. It may continue to be included in the current release, but is no longer supported. Discontinued features may be removed entirely in a future release or update.
 
 ## Deprecated features in SQL Server 2017 Analysis Services
 The following features are deprecated in this release and will no longer be supported in a future release.
@@ -33,7 +33,7 @@ The following features are deprecated in this release and will no longer be supp
 |**Mode/Category**|**Feature**|
 |Tabular|Remote linked measure groups|
 |Tabular|Models at the 1100 and 1103 compatibility level|
-|Tabular|TOM properties: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
+|Tabular|Tabular Object Model properties: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
 |Multidimensional|Data Mining|
 
 ## Discontinued features in SQL Server 2017 Analysis Services

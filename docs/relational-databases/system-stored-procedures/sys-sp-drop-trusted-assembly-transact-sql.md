@@ -35,13 +35,13 @@ Adds an assembly to the list of trusted assemblies for the server.
 ## Syntax
 ```  
 sp_drop_trusted_assembly 
-    [ @clr_name = ] 'clr_name'
+    [ @hash = ] 'value'
 ```  
 
 ## Arguments
 
-[ @clr_name = ] '*clr_name*'  
-Canonical name that encodes the simple name, version number, culture, public key, and architecture of the assembly to trust. This value uniquely identifies the assembly on the common language runtime (CLR) side. The value is the same as the clr_name value in sys.assemblies.
+[ @hash = ] '*value*'  
+The SHA2_512 hash value of the assembly to add to the list of trusted assemblies for the server. Trusted assemblies may load when clr strict security is enabled, even if the assembly is unsigned or the database is not marked as trustworthy.
 
 ## Remarks  
 
@@ -53,11 +53,11 @@ Requires membership in the `sysadmin` fixed server role or `CONTROL SERVER` perm
 
 ## Examples  
 
-The following example drops an assembly named `pointudt` from the list of trusted assemblies for the server.  
+The following example drops an assembly hash from the list of trusted assemblies for the server.  
 
 ```  
 EXEC sp_drop_trusted_assembly 
-N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarchitecture=msil'; 
+0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC; 
 ```  
 
 ## See Also  

@@ -30,6 +30,8 @@ This article explains how to configure an availability group for distributed tra
 
 SQL Server 2017 supports distributed transactions for databases in availability groups. This support includes cross-database transactions, for example, databases on the same instance of SQL Server. In order to prevent in-doubt transactions after an availability group fails over, configure the availability group for distributed transactions. 
 
+SQL Server 2016 also supports distributed transactions for databases in availability groups, however this support does not include transactions involving two or more databases on the same instance of SQL Server. 
+
 >[!NOTE]
 >SQL Server does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However, databases in an availability group that are not configured for distributed transactions are vulnerable to in-doubt transactions under specific scenarios. 
 

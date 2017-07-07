@@ -182,7 +182,7 @@ quit
 Anyone with access to this `keytab` file can impersonate [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] on the domain, so make sure you restrict access to the file such that only the `mssql` account has read access:  
 ```bash  
 sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
-sudo chmod 600 /var/opt/mssql/secrets/mssql.keytab
+sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
 ```  
 Next, configure [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] to use this `keytab` file for Kerberos authentication:  
 ```bash  

@@ -35,8 +35,8 @@ Adds an assembly to the list of trusted assemblies for the server.
 ## Syntax
 ```  
 sp_add_trusted_assembly 
-    [ @clr_name = ] 'clr_name', 
     [ @hash = ] 'value'
+    [ , [ @description = ] 'description' ]
 ```  
 
 ## Remarks  
@@ -45,11 +45,11 @@ This procedure adds an assembly to  [sys.trusted_assemblies](../../relational-da
 
 ## Arguments
 
-[ @clr_name = ] '*clr_name*'  
-Canonical name that encodes the simple name, version number, culture, public key, and architecture of the assembly to trust. This value uniquely identifies the assembly on the common language runtime (CLR) side. The value is the same as the clr_name value in sys.assemblies.
-
 [ @hash = ] '*value*'  
 The SHA2_512 hash value of the assembly to add to the list of trusted assemblies for the server. Trusted assemblies may load when CLR strict security is enabled, even if the assembly is unsigned or the database is not marked as trustworthy.
+
+[ @description = ] '*description*'  
+Optional user-defined description of the assembly. Microsoft recommends using the canonical name that encodes the simple name, version number, culture, public key, and architecture of the assembly to trust. This value uniquely identifies the assembly on the common language runtime (CLR) side and is the same as the clr_name value in sys.assemblies. 
 
 ## Permissions
 
@@ -60,9 +60,8 @@ Requires membership in the `sysadmin` fixed server role or `CONTROL SERVER` perm
 The following example adds an assembly named `pointudt` to the list of trusted assemblies for the server. These values are available from  [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
 
 ```  
-EXEC sp_add_trusted_assembly 
-N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarchitecture=msil', 
-0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC;
+EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC, 
+N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarchitecture=msil';
 ```  
 
 ## See Also  

@@ -24,49 +24,26 @@ manager: "jhubbard"
 ---
 # Run SQL Server Profiler
   You can run [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in several different ways, to support gathering trace output in a variety of scenarios. You can start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] from the Windows **Start** menu, from the **Tools** menu in [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor, and from several locations in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-  
- When you first start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and select **New Trace** from the **File** menu, the application displays a **Connect to Server** dialog box where you can specify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
-  
+When you first start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] and select **New Trace** from the **File** menu, the application displays a **Connect to Server** dialog box where you can specify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
 ## To start SQL Server Profiler from the Windows 10 Start menu  
-  
 -  From the **Start** menu, browse or search for **Microsoft SQL Server Tools 2017**, and then click **SQL Server Profiler 17**.  
-  
 ## To start SQL Server Profiler in Database Engine Tuning Advisor  
-  
 -  On the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor **Tools** menu, click **SQL Server Profiler**.  
-  
 ## To start SQL Server Profiler in SQL Server Management Studio  
  You can start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] from several locations in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. When [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] starts, it loads the connection context, trace template, and filter context of its launch point. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] starts each profiler session in its own instance, and continues to run if you shut down [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-  
 ### To start SQL Server Profiler from the Tools menu  
-  
 -  In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Tools** menu, click **SQL Server Profiler**.  
-  
 ### To start SQL Server Profiler from the Query Editor  
-  
-1.  On the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] menu bar, click **New Query**.  
-  
-2.  In Query Editor, right-click and then select **Trace Query in SQL Server Profiler**.  
-  
+- In Query Editor, right-click and then select **Trace Query in SQL Server Profiler**.  
     > [!NOTE]  
     >  The connection context is the editor connection, the trace template is TSQL_SPs, and the applied filter is SPID = query window SPID.  
-  
 ### To start SQL Server Profiler from Activity Monitor  
-  
-1.  In Object Explorer, right-click an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then click **Activity Monitor**.  
-  
-2.  Click the **Processes** pane, right-click the process that you want to profile, and then click **Trace Process in SQL Server Profiler**.  
-  
+- In Activity Monitor, click the **Processes** pane, right-click the process that you want to profile, and then click **Trace Process in SQL Server Profiler**.  
     > [!NOTE]  
     >  When a process is selected, the connection context is the Object Explorer connection when Activity Monitor was opened. The trace template is the default based on the server type, and the SPID equals the SPID for the selected process.  
-  
 ## .NET Framework Security  
- In Windows Authentication mode, the user account that runs [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] must have permission to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- To perform tracing with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], users must also have the ALTER TRACE permission.  
-  
+- In Windows Authentication mode, the user account that runs [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] must have permission to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- To perform tracing with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], users must also have the ALTER TRACE permission.  
 ## Next steps  
  [SQL Server Profiler overview](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
-  
-  

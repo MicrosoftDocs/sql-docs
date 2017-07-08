@@ -24,12 +24,8 @@ SQL Server 2017 represents a major step towards making SQL Server a platform tha
 >**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/) and [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
 
 ## Latest release  
-New in the **SQL Server 2017 Release Candidate** (RC0, June 2017):
-
-- 
-- 
-- 
-
+**SQL Server 2017 Release Candidate** (RC1, July 2017)
+<!-- - add features in bulleted list here -->
 
 ## SQL Server Database Engine  
 SQL Server 2017 includes many new Database Engine features, enhancements, and performance improvements. 

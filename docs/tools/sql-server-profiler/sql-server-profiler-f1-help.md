@@ -153,6 +153,7 @@ The **Performance Counters Limit** dialog box is populated with the performance 
 ### To select performance objects and counters to correlate with a trace  
 1.  Expand a performance object to see which counters are included in the performance log file.  
 2.  Check the counters that you want to correlate with the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace file.  
+
 If you want to select all counters for a performance object, check the box that is adjacent to the performance object. Checking the topmost node, which indicates the computer, selects all performance objects and counters contained in the performance log file. 
 ## Tools/options (General options page)
 Use the **General Options** dialog box to view or specify the following options.  
@@ -168,7 +169,7 @@ Use the **General Options** dialog box to view or specify the following options.
 |Item|Description
 |---|---
 |**Start tracing immediately after making connection**|Begin a trace using the default template as soon as a connection is made.  
-| **Update trace definition when provider version changes**|Apply the most current trace definition to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when the provider is updated. This item is not checked by default. This forces [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to query the server for the trace definition and re-create, if one exists, the file on disk.  
+|**Update trace definition when provider version changes**|Apply the most current trace definition to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when the provider is updated. This item is not checked by default. This forces [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to query the server for the trace definition and re-create, if one exists, the file on disk.  
 ### File rollover options  
 |Item|Description
 |---|---

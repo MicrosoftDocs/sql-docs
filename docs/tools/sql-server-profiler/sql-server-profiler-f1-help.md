@@ -47,7 +47,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # SQL Server Profiler dialog boxes
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is a tool that captures [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events from a server. The events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem. The following are the commands and settings that are available in the dialog boxes of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is a tool that captures [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events from a server. The events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem. The following are the commands and settings available in the dialog boxes of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 ## Trace properties
 ### General tab
 Use the **General** tab of the **Trace Properties** dialog box to view or specify properties of a trace.  

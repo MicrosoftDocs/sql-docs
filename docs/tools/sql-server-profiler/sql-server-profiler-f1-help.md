@@ -259,8 +259,9 @@ Move data column names under **Groups** to group or aggregate event classes in t
 |**Down**|After selecting a data column, click **Down** to move data columns out of **Groups**. You can also click **Down** to rearrange the display of columns in the trace window display.  
 ## Edit filter
 Use the **Edit Filter** dialog box to create and modify data column filters in a trace. Click a data column name in the list and the filter criteria that is available for that data column displays in the adjacent pane. Enter the filter criteria and click **OK** to apply it to the selected data column. If a filter icon appears to the left of the data column name in the list, that column already has a filter configured for it.  
->[!NOTE]
->For string type data columns, the filter criteria will show as a LIKE or NOT LIKE string value.  
+ >[!NOTE]
+ >For string type data columns, the filter criteria will show as a LIKE or NOT LIKE string value.  
+
 ## Select template name
 Use the **Select Template Name** dialog box to select an existing [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace template to export to a file on the operating system. You can also use this dialog box to select or enter a different name to save a trace template as when editing an existing trace template. To access this dialog box when exporting a template, on the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Export Template**. To access this dialog box when changing the name of a template, on the **File** menu, point to **Templates**, point to **Edit Template**, and then click **Save As**.  
 |Item|Description

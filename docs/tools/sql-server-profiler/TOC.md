@@ -31,7 +31,7 @@
 # [Correlate a Trace with Windows Performance Log Data](correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
 # [Correlate a Trace with Windows Performance Log Data](correlate-a-trace-with-windows-performance-log-data.md)  
 # [Filter Traces with SQL Server Profiler](filter-traces-with-sql-server-profiler.md)  
-# [Filter Events in a Trace](filter-events-in-a-trace-sql-server-profiler.md)  
+## [Filter Events in a Trace](filter-events-in-a-trace-sql-server-profiler.md)  
 ## [View Filter Information](view-filter-information-sql-server-profiler.md)  
 ## [Modify a Filter](modify-a-filter-sql-server-profiler.md)  
 ## [Filter Events Based on the Event Start Time](filter-events-based-on-the-event-start-time-sql-server-profiler.md)  

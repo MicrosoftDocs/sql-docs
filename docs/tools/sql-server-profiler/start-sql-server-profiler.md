@@ -39,16 +39,20 @@ When you first start [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md
 
 ### To start SQL Server Profiler from the Query Editor  
 - In Query Editor, right-click and then select **Trace Query in SQL Server Profiler**.  
+
   > [!NOTE]  
   >  The connection context is the editor connection, the trace template is TSQL_SPs, and the applied filter is SPID = query window SPID.  
     
 ### To start SQL Server Profiler from Activity Monitor  
 - In Activity Monitor, click the **Processes** pane, right-click the process that you want to profile, and then click **Trace Process in SQL Server Profiler**.  
+
     > [!NOTE]  
     >  When a process is selected, the connection context is the Object Explorer connection when Activity Monitor was opened. The trace template is the default based on the server type, and the SPID equals the SPID for the selected process.  
+    
 ## .NET Framework Security  
 - In Windows Authentication mode, the user account that runs [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] must have permission to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 - To perform tracing with [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], users must also have the ALTER TRACE permission.  
+
 ## Next steps  
  [SQL Server Profiler overview](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  

@@ -55,4 +55,4 @@
 ## [Replay to a Breakpoint](replay-to-a-breakpoint-sql-server-profiler.md)  
 ## [Replay to a Cursor](replay-to-a-cursor-sql-server-profiler.md)  
 ## [Replay a Transact-SQL Script](replay-a-transact-sql-script-sql-server-profiler.md)  
-# [SQL Server Profiler dialog box commands](sql-server-profiler-f1-help.md)  
+# [SQL Server Profiler dialog boxes](sql-server-profiler-f1-help.md)  

@@ -108,26 +108,35 @@ If the cases above happen while `DTC_SUPPORT = NONE`, and the primary replica fa
 The new SQL Server error log has an entry like the example below:
 
 ```
-Microsoft Distributed Transaction Coordinator (MS DTC) failed to reenlist citing that the database RMID does not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] associated with the transaction.  Please manually resolve the transaction.
-	SQL Server detected a DTC/KTM in-doubt transaction with UOW  {yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it following the guideline for Troubleshooting DTC Transactions.
+Microsoft Distributed Transaction Coordinator (MS DTC) 
+failed to reenlist citing that the database RMID does 
+not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] 
+associated with the transaction.  Please manually resolve
+the transaction.
+	
+SQL Server detected a DTC/KTM in-doubt transaction with UOW 
+{yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it 
+following the guideline for Troubleshooting DTC Transactions.
 ```
 
 The above example shows that the DTC service could not enlist the database from the new primary replica in the transaction that was created before failover. This is why the database is suspect. In order to recover the database you need to either commit or rollback the transaction manually. 
 
 >[!WARNING]
->When you manually commit or rollback a transaction it can affect an application. Verify that the action of commit or rollback is consistent with your application requirements. Run one of the following scripts:
+>When you manually commit or rollback a transaction it can affect an application. Verify that the action of commit or rollback is consistent with your application requirements. 
 
-* To commit the transaction, update the following script. Replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
+Run only one of the following scripts:
 
-   ```transact-sql
-   kill 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' with commit
-   ```
+   * To commit the transaction, update the following script. Replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
 
-* To rollback the transaction, update the following script. Replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
+      ```transact-sql
+      kill 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' with commit
+      ```
 
-   ```transact-sql
-   kill 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' with rollback
-   ```
+   * To rollback the transaction, update the following script. Replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
+
+      ```transact-sql
+      kill 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' with rollback
+     ```
 
 After you commit or rollback the transaction, you can use `ALTER DATABASE` to set the database online. Update the following script. Set the database name for the name of the suspect database. For example:
 

@@ -83,13 +83,13 @@ This release of SSMS supports the following platforms when used with the latest 
 >SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. The support team determines if the issue is with SSMS, Visual Studio, or with Windows compatibility. The support team then routes the issue to the appropriate team for further investigation.
 
 ## SSMS installation tips and issues
-**Minimize Installation Reboots**
 
 >[!NOTE]
 > SSMS 17.x installation does not upgrade or replace previous versions of SSMS.  SSMS 17.x installs side by side with previous versions so that both versions are available for use.
 > If a computer contains side- by-side installations of SSMS, verify you start the correct version for you specific needs.
 >  ![SSMS 17.x](media/ssms-start-menu.png)
 
+**Minimize Installation Reboots**
 - Take the following actions to reduce the chances of SSMS setup requiring a reboot at the end of installation:
   - Make sure you are running an up-to-date version of the Visual C++ 2013 Redistributable Package. Version 12.00.40649.5 (or greater) is required. Only the x64 version is needed.
   - Verify the version of .NET Framework on the computer is 4.6.1 (or greater).

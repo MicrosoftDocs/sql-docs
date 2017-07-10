@@ -123,7 +123,7 @@ When a database is in an availability group, the read-write copy of the database
 
 For more detail on distributed transactions in [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], see [Distributed transactions](transactions-always-on-availability-and-database-mirroring.md#distTran)
 
-### Manage in-doubt transactions
+## Manage in-doubt transactions
 
 When an availability group fails over, while distributed transactions are pending, the instance that hosts the primary replica contacts DTC to find out the results of the transactions. If databases in the availability group are not configured for distributed transactions, the RMID is the new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. The RMID when the transaction began was from the instance that held the primary replica before failover. The failover results in a changed RMID. The new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance cannot get the transaction outcome from DTC for active transactions because the RMID has changed. The following cases can result in a changed RMID:
 

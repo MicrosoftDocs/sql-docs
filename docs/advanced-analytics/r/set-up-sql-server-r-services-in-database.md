@@ -12,7 +12,7 @@ ms.topic: "article"
 keywords: 
   - "installing SQL Server R Services"
 ms.assetid: 4d773c74-c779-4fc2-b1b6-ec4b4990950d
-caps.latest.revision: 35
+caps.latest.revision: 36
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
@@ -29,7 +29,7 @@ SQL Server setup provides these options for installing R:
 
 + Install a standalone server
 
-  This option creates a development environment for machine learning solutions that runs separately from SQL Server. We recommend that you installing R Server on a different computer than the one hosting SQL Server. For more information on this option, see [Create a Standalone R Server](../r/create-a-standalone-r-server.md).
+  This option creates a development environment for machine learning solutions that runs separately from SQL Server. We recommend that you install R Server on a different computer than the one hosting SQL Server. For more information on this option, see [Create a Standalone R Server](../r/create-a-standalone-r-server.md).
 
 **Overview of installation process**
 
@@ -40,14 +40,14 @@ SQL Server setup provides these options for installing R:
 
 ## <a name="bkmk_prereqs"> </a> Prerequisites
 
-+  Avoid installing both R Server and R Services at the same time. Installing R Server (Standalone) is typically done because you want to create an environment that a data scientist or developer can use to connect to SQL Server and deploy R solutions. Therefore, there is no need to install both on the same computer.
++  Avoid installing both R Server and R Services at the same time. Typically, you would install R Server (Standalone) to create an environment that a data scientist or developer uses to connect to SQL Server and deploy R solutions. Therefore, there is no need to install both on the same computer.
 
-+ If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Side-by-side install is not supported. For help removing previous versions, see [Upgrade and Installation FAQ for SQL Server R Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
++ If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Side by side installation is not supported. For help removing previous versions, see [Upgrade and Installation FAQ for SQL Server R Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 + You cannot install machine learning services on a failover cluster. The reason is that the security mechanism used for isolating external script processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance with R Services, or install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a standalone computer that uses Always On and is part of an availability group.
 
 > [!IMPORTANT]
-> After setup is complete, some additional steps are required to enable machine learning feature. You might also need to give users permissions to specific databases, change or configure accounts, or set up a remote data science client.
+> After setup is complete, some additional steps are required to enable the machine learning feature. You might also need to give users permissions to specific databases, change or configure accounts, or set up a remote data science client.
 
 ##  <a name="bkmk_installExt"></a> Step 1: Install the extensibility features and choose a machine learning language
 
@@ -73,7 +73,7 @@ To use machine learning, you must install SQL Server 2016 or later. At least one
     - Select at least one machine learning language to enable. You can select just R, or add both R and Python.
 
     > [!NOTE]
-    > If you do not select either the R or Python language options, the setup wizard will install only the extensibility framework, which includes SQL Server Trusted Launchpad, but will not install any language-specific components. This option is for binding the SQL Server instance to R or Python as a part of the modern lifecycle support policy. For more information, see [Use SqlBindR to Upgrade an Instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+    > If you do not select either the R or Python language options, the setup wizard installs only the extensibility framework, which includes SQL Server Trusted Launchpad, but will not install any language-specific components. This option is for binding the SQL Server instance to R or Python as a part of the modern lifecycle support policy. For more information, see [Use SqlBindR to Upgrade an Instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 
 4.  On the page, **Consent to Install Microsoft R Open**, click **Accept**.
   
@@ -109,14 +109,14 @@ To use machine learning, you must install SQL Server 2016 or later. At least one
 
     The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default, to reduce the surface area, and must be explicitly enabled by an administrator.
      
-3.  To enable the external scripting feature, run the following statement.
+3.  To enable the external scripting feature, run the following statement:
   
     ```SQL
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
   
-10. Restart the SQL Server service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Restarting the SQL Server service will also automatically restart the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+10. Restart the SQL Server service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Restarting the SQL Server service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
     You can restart the service using the **Services** panel in Control Panel, or by using SQL Server Configuration Manager.
 
@@ -133,7 +133,7 @@ Verify that the external script execution service is enabled.
     
 2. Open the **Services** panel and verify that the Launchpad service for your instance is running. If you install multiple instances, each instance has its own Launchpad service.
    
-3. Open a new Query window in  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and run a simple R script.
+3. Open a new **Query** window in  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and run a simple R script such as the following.
   
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
@@ -174,14 +174,14 @@ You can also set up user groups to share packages on a per-database level, or co
 
 Depending on your use case for R in SQL Server, you might need to make additional changes to the server, the firewall, the accounts used by the service, or to database permissions.
 
-For example, you might need to access SQL Server data from a remote R development terminal, perform ODBC calls from your R code, or convert R code to stored procedures. If you have additional security restrictions, you will need to ensure that the Launchpad services accounts can access the database. If you will be running R scripts from a remote computer, you will need to give the remote users database access and permission to run external scripts.
+For example, you might need to access SQL Server data from a remote R development terminal, perform ODBC calls from your R code, or convert R code to stored procedures. If you have additional security restrictions, you must ensure that the Launchpad services accounts can access the database. If you will be running R scripts from a remote computer, you must give the remote users database access and permission to run external scripts.
 
 > [!NOTE]
 > Not all the listed changes might be required. However, we recommend that you review all items to see if they are applicable to your scenario.
 
 ###  <a name="bkmk_configureAccounts"></a> Enable implied authentication for Launchpad account group
 
-During setup, a number of new Windows user accounts are created for the purpose of running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When a user sends an R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will activate an available worker account, map it to the identity of the calling user, and run the R script on behalf of the user. This is a new service of the database engine that supports secure execution of external scripts, called *implied authentication*.
+During setup, a number of new Windows user accounts are created for the purpose of running tasks under the security token of the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. When a user sends an R script from an external client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activates an available worker account, maps it to the identity of the calling user, and runs the R script on behalf of the user. This is a new service of the database engine that supports secure execution of external scripts, called *implied authentication*.
 
 You can view these accounts in the Windows user group, **SQLRUserGroup**.  By default, 20 worker accounts are created, which is typically more than enough for running R jobs.
 
@@ -202,7 +202,7 @@ However, if you need to run R scripts from a remote data science client and are 
 
 If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and are running R scripts in your own instance, you are typically executing scripts as an administrator, or at least database owner, and thus have implicit permission over various operations, all data in the database, and the ability to install new R packages as needed.
 
-However, in an enterprise scenario, most users, including those accessing the database using SQL logins, do not have such elevated permissions. Therefore, for each user who will be running R or Python scripts, you must grant the user permissions to run scripts in each database where external scripts will be used.
+However, in an enterprise scenario, most users, including users accessing the database using SQL logins, do not have such elevated permissions. Therefore, for each user who will be running R or Python scripts, you must grant the user permissions to run scripts in each database where external scripts will be used.
 
 ```SQL
 USE <database_name>
@@ -221,13 +221,13 @@ Also check whether the firewall allows access to SQL Server. By default, the por
 
 ### Add more worker accounts
 
-If you think you will use R heavily, or if you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the User Account Pool for SQL Server R Services](modify-the-user-account-pool-for-sql-server-r-services.md).
+If you think you might use R heavily, or if you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the User Account Pool for SQL Server R Services](modify-the-user-account-pool-for-sql-server-r-services.md).
 
 ### Give your users read, write, or DDL permissions to database
 
 While running R scripts, the user account or SQL login might need to read data from other databases, create new tables to store results, and write data into tables.
 
-For each user account or SQL login that will be executing R scripts, be sure that the account or login has `db_datareader`, `db_datawriter`, or `db_ddladmin` permissions on the specific database.
+For each user account or SQL login that will be executing R scripts, be sure that the account or login has the appropriate permissions on the database: `db_datareader`, `db_datawriter`, or `db_ddladmin` as the case may be.
 
 For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement gives the SQL login *MySQLLogin* the rights to run T-SQL queries in the *RSamples* database. To run this statement, the SQL login must already exist in the security context of the server.
 
@@ -243,9 +243,9 @@ For more information about the permissions included in each role, see [Database-
 
 If you create an R solution on a data science client computer and need to run code using the SQL Server computer as the compute context, you can use either a SQL login, or integrated Windows authentication.
 
-+ For SQL logins: Ensure that the login has appropriate permissions on the database where you will be reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. If you need to create objects, you will need `DDL_admin` rights.  To save data to tables, add the login to the `db_datawriter` role.
++ For SQL logins: Ensure that the login has appropriate permissions on the database where you will be reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. For logins that need to create objects, add `DDL_admin` rights.  For logins that must save data to tables, add the login to the `db_datawriter` role.
 
-+ For Windows authentication: You must configure an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [Using the ODBC Data Source Administrator](http://windows.microsoft.com/windows/using-odbc-data-source-administrator).
++ For Windows authentication: You might need to configure an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC Data Source Administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
 ### <a name="bkmk_optimize"></a>Optimize the server for R
 

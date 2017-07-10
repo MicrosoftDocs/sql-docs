@@ -1,7 +1,7 @@
 ---
 title: "Create a Database Schema | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   The new schema is owned by one of the following database-level principals: database user, database role, or application role. Objects created within a schema are owned by the owner of the schema, and have a NULL **principal_id** in **sys.objects**. Ownership of schema-contained objects can be transferred to any database-level principal, but the schema owner always retains CONTROL permission on objects within the schema.  
   
--   When creating a database object, if you specify a valid domain principal (user or group) as the object owner, the domain principal will be added to the database as a schema. The new schema will be owned by that domain principal.  
+-   When creating a database object, if you specify a valid domain principal (user or group) as the object owner, the domain principal is added to the database as a schema. The new schema is owned by that domain principal.  
   
 ###  <a name="Security"></a> Security  
   
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   Requires CREATE SCHEMA permission on the database.  
   
--   To specify another user as the owner of the schema being created, the caller must have IMPERSONATE permission on that user. If a database role is specified as the owner, the caller must have one of the following: membership in the role or ALTER permission on the role.  
+-   To specify another user as the owner of the schema being created, the caller must have IMPERSONATE permission on that user. If a database role is specified as the owner, the caller must meet one of the following criteria: membership in the role or ALTER permission on the role.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
@@ -86,21 +86,28 @@ manager: "jhubbard"
   
 2.  On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
-  
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    -- Creates the schema Sprockets owned by Annik that contains table NineProngs.   
-    -- The statement grants SELECT to Mandar and denies SELECT to Prasanna.  
-  
+3.  The following example creates a schema named `Chains`, and then creates a table named `Sizes`.  
+    ```sql  
+    CREATE SCHEMA Chains;
+    GO
+    CREATE TABLE Chains.Sizes (ChainID int, width dec(10,2));
+    ```
+
+4.  Additional options can be performed in a single statement. The following example creates the schema `Sprockets` owned by Annik that contains table `NineProngs`. The statement grants `SELECT` to Mandar and denies `SELECT` to Prasanna.  
+
+    ```sql  
     CREATE SCHEMA Sprockets AUTHORIZATION Annik  
         CREATE TABLE NineProngs (source int, cost int, partnumber int)  
         GRANT SELECT ON SCHEMA::Sprockets TO Mandar  
         DENY SELECT ON SCHEMA::Sprockets TO Prasanna;  
     GO  
     ```  
-  
+5. Execute the following statement, to view the schemas in this database:
+
+   ```sql
+   SELECT * FROM sys.schemas;
+   ```
+
  For more information, see [CREATE SCHEMA &#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md).  
   
   

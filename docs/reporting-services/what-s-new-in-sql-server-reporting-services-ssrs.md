@@ -1,6 +1,6 @@
 ---
-title: "What&#39;s new in Reporting Services (SSRS) | Microsoft Docs"
-ms.date: "05/30/2017"
+title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,7 +20,11 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# What&#39;s new in SQL Server Reporting Services (SSRS)
+
+# What's new in SQL Server Reporting Services (SSRS)
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
+
 Learn about what's new in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This covers the major feature areas and is updated as new items are released.
   
   For information on what's new in other areas of SQL Server, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) or [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).

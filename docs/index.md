@@ -1,4 +1,4 @@
----
+﻿---
 layout: HubPage
 hide_bc: true
 title: Microsoft SQL Documentation | Microsoft Docs
@@ -133,7 +133,7 @@ description: Learn about SQL
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Run on Windows or Linux</h4>
                                                 <ul>
-                                                    <li><a href="/sql/linux/?toc=/sql/linux/toc.json">SQL Server on Linux</a></li>
+                                                    <li><a href="/sql/linux/sql-server-linux-overview">SQL Server on Linux</a></li>
                                                     <li><a href="/azure/virtual-machines/linux/">Linux virtual machines</a></li>
                                                     <li><a href="/azure/virtual-machines/windows/">Windows virtual machines</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/cloud-platform/windows-server">Windows Server 2016</a></li>
@@ -190,7 +190,7 @@ description: Learn about SQL
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Design</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-server-driver-documentation">Connect with client applications</a></li>
+                                                    <li><a href="/sql/connect/sql-server-driver">Connect with client applications</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">Relational database concepts</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>

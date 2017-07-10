@@ -1,7 +1,7 @@
 ---
 title: "Working with Inputs and Outputs (R in T-SQL Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/29/2017"
+ms.date: "07/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,16 +18,15 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Working with R Inputs and Outputs
+# Working with R Inputs and Outputs in SQL
 
-When you want to run R code in SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client. 
-
+When you want to run R code in  SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
 
 ## <a name="bkmk_SSMSBasics"></a>Create some simple test data
 
-Create a small table of test data by running the following T-SQL statement.
+Create a small table of test data by running the following T-SQL statement:
 
-```SQL
+```sql
 CREATE TABLE RTestData ([col1] int not null) ON [PRIMARY]
 INSERT INTO RTestData   VALUES (1);
 INSERT INTO RTestData   VALUES (10);
@@ -42,7 +41,7 @@ SELECT * FROM RTestData
 ```
 
 **Results**
-  
+
 |col1|
 |------|
 |*1*|
@@ -50,9 +49,9 @@ SELECT * FROM RTestData
 |*100*|
 
 ## Get the same data using R script
-  
-fter the table has been created, run the following statement. It gets the data from the table, makes a round-trip through the R runtime, and returns the values with the column name, *NewColName*.
-  
+
+After the table has been created, run the following statement. It gets the data from the table, makes a round-trip through the R runtime, and returns the values with the column name, *NewColName*.
+
 ```sql
 EXECUTE sp_execute_external_script
       @language = N'R'
@@ -66,6 +65,9 @@ EXECUTE sp_execute_external_script
 ![rsql_basictut_getsamedataR](media/rsql-basictut-getsamedatar.PNG)
 
 
+**Comments**
+
++ In Management Studio, tabular results are returned in the **Values** pane. Messages returned by the R runtime are provided in the **Messages** pane.
 + The *@language* parameter defines the language extension to call, in this case, R.
 + In the *@script* parameter, you define the commands to pass to the R runtime. Your entire R script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable.
 + The data returned by the query is passed to the R runtime, which returns the data to SQL Server as a data frame.
@@ -87,23 +89,31 @@ EXECUTE sp_execute_external_script
   WITH RESULT SETS (([NewColName] int NOT NULL));
 ```
 
-Did you get this error?
+Did you get this error? That's because R is case-sensitive! In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*.
 
-  *Error in eval(expr, envir, enclos) : object 'SQL_in' not found*
+```Error
+Error in eval(expr, envir, enclos) : object 'SQL_in' not found
+```
 
 That's because R is case-sensitive! In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*.
+Try correcting **only** the *SQL_In* variable and re-run the stored procedure.
 
-Try correcting only the *SQL_In* variable and re-run the stored procedure. Now you get a different error:
+Now you get a **different** error:
 
-  *EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.*
+```Error
+EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.*
+```
 
-This is a generic error that you'll see often while testing your R code. It means that the R script ran successfully, but SQL Server got back no data, or got back wrong or unexpected data. In this case, the output schema (the line beginning with **WITH**) specifies that one column of integer data should be returned, but since R put the data in a different variable, nothing came back to SQL Server; hence, the error.
+We're showing you this error because it's a common one when testing new R code. It means that the R script ran successfully, but SQL Server got back no data, or got back wrong or unexpected data.
+
+In this case, the output schema (the line beginning with **WITH**) specifies that one column of integer data should be returned, but since R put the data in a different variable, nothing came back to SQL Server; hence, the error.
+
+**Remember these requirements!**
 
 - Variable names must follow the rules for valid SQL identifiers.
 - The order of the parameters is important. You must specify the required parameters *@input_data_1* and *@output_data_1* first, in order to use the optional parameters *@input_data_1_name* and *@output_data_1_name*.
 - Only one input dataset can be passed as a parameter, and you can return only one dataset. However, you can call other datasets from inside your R code and you can return outputs of other types in addition to the dataset. You can also add the OUTPUT keyword to any parameter to have it returned with the results. There is a simple example later in this tutorial.
 - The `WITH RESULT SETS` statement defines the schema for the data, for the benefit of SQL Server. You need to provide SQL compatible data types for each column you return from R. You can use the schema definition to provide new column names too; you need not use the column names from the R data.frame. In some cases this clause is optional; try omitting it and see what happens.
-- In Management Studio, tabular results are returned in the **Values** pane. Messages returned by the R runtime are provided in the **Messages** pane.
 
 ## Generate results using R
 
@@ -119,13 +129,13 @@ EXECUTE sp_execute_external_script
 ```
 
 **Results**
-   
+
 *Col1*
 *hello*
 <code>   </code>
 *world*
 
-## Next step
+## Next lesson
 
 You'll examine some of the problems that you might encounter when passing data between R and SQL Server, such as implicit conversions and differences in tabular data between R and SQL.
 

@@ -1,8 +1,8 @@
 ---
-title: "DirectQuery Mode (SSAS Tabular) | Microsoft Docs"
+title: "DirectQuery Mode | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
+ms.date: "07/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,10 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# DirectQuery Mode (SSAS Tabular)
+# DirectQuery Mode
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   This topic describes *DirectQuery mode* for Analysis Services tabular models at the 1200 and higher compatibility levels
   . DirectQuery mode can be turned on for models you're designing in SSDT, or for tabular models that have already been deployed, you can change to DirectQuery mode in SSMS. Before choosing DirectQuery mode, it's important to understand both the benefits and restrictions.
   
@@ -31,7 +34,7 @@ manager: "erikre"
   
 -   Datasets can be larger than the memory capacity of an Analysis Services server.  
   
--   DirectQuery can take advantage of provider-side query acceleration, such as that provided by xVelocity memory optimized column indexes.  
+-   DirectQuery can take advantage of provider-side query acceleration, such as that provided by memory optimized column indexes.  
   
 -   Security can be enforced by the back-end database , using row-level security features from the database (alternatively, you can use row-level security in the model via DAX).  
   

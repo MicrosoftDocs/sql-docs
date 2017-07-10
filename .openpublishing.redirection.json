@@ -1,6 +1,21 @@
 {
     "redirections": [
         {
+            "source_path": "docs/relational-databases/relational-databases-new-updated-sql-docs-pr.md",
+            "redirect_url": "/sql/relational-databases/new-updated-relational-databases",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/sql-server/sql-server-new-updated-sql-docs-pr.md",
+            "redirect_url": "/sql/sql-server/new-updated-sql-server",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/t-sql/t-sql-new-updated-sql-docs-pr.md",
+            "redirect_url": "/sql/t-sql/new-updated-t-sql",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
             "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate",
             "redirect_document_id": true
@@ -1844,6 +1859,36 @@
             "source_path":"docs/tools/sql-server-profiler/run-sql-server-profiler.md",
             "redirect_url":"/sql/tools/sql-server-profiler/start-sql-server-profiler",
             "redirect_document_id":false
+        },
+                {
+            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-all-stat-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-cpuinfo-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-meminfo-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-maps-transact-sql.md",
+             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+           "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-threads-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
         }
     ]
 }

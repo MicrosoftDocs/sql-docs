@@ -19,7 +19,7 @@ manager: "erikre"
 
 # How to install custom security extensions
 
-[!INCLUDE[ssrs-appliesto](../../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../../includes/ssrs-appliesto-pbirs.md)]
 
 Reporting Services 2016 introduced a new web portal in order to host new Odata APIs and also host new report workloads such as mobile reports and KPIS. This new portal relies on newer technologies and is isolated from the familiar ReportingServicesService by running in a separate process. This process is not an ASP.NET hosted application and as such breaks assumptions from existing custom security extensions. Moreover, the current interfaces for custom security extensions don't allow for any external context to be passed-in, leaving implementers with the only choice to inspect well-known global ASP.NET Objects, this required some changes to the interface.
 
@@ -59,13 +59,77 @@ There is no longer a separate web.config for the Report Manager, the portal will
 
 ## Machine Keys
 
-Using Forms authentication requires that all report server processes can access the authentication cookie. This involves configuring a machine key and decryption algorithm. This is similar to if you had to configure Reporting Services for a scale-out configuration.
+For the case of Forms authentication which requires the decryption of the Authentication cookie, both processes need to be configured with the same machine key and decryption algorithm. This was a step familiar to those who had previously setup Reporting Services to work on scale-out environments, but now is a requirement even for deployments on a single machine.
 
 You should use a validation key specific for you deployment, there are several tools to generate the keys like Internet Information Services Manager (IIS). Other tools can be found on the internet.
+
+### SQL Server Reporting Services 2017 and later
+
+**\ReportServer\rsReportServer.config**
+
+Add under `<configuration>`.
 
 ```
 <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
 ```
+
+### SQL Server Reporting Services 2016
+
+**\ReportServer\web.config**
+
+Add under `<system.web>`.
+	
+```
+	<machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
+```
+
+**\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe.config**
+
+Add under `<configuration>`.
+
+```
+	<system.web>
+	    <machineKey validationKey=="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
+    </system.web>
+```
+
+### Power BI Report Server
+
+This is available as of the June 2017 (Build 14.0.600.301) release.
+
+**\ReportServer\rsReportServer.config**
+
+Add under `<configuration>`.
+
+```
+<machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
+```
+
+## Machine Keys
+
+For the case of Forms authentication which requires the decryption of the Authentication cookie, both processes need to be configured with the same machine key and decryption algorithm. This was a step familiar to those who had previously setup Reporting Services to work on scale-out environments, but now is a requirement even for deployments on a single machine.
+
+For example:
+	
+**\ReportServer\web.config**
+
+Add under `<system.web>`.
+	
+```
+	<machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
+```
+
+**\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe.config**
+
+Add under `<configuration>`.
+
+```
+	<system.web>
+	    <machineKey validationKey=="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
+    </system.web>
+```
+
+You should use a validation key specific for you deployment, there are several tools to generate the keys like Internet Information Services Manager (IIS). Other tools can be found on the internet.
 
 ## Configure Passthrough cookies
 

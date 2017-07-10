@@ -28,12 +28,12 @@ This article explains how to configure an availability group for distributed tra
 
 ## Support for distributed transactions
 
-SQL Server 2017 supports distributed transactions for databases in availability groups. This support includes cross-database transactions, for example, databases on the same instance of SQL Server. In order to prevent in-doubt transactions after an availability group fails over, configure the availability group for distributed transactions. 
+SQL Server 2017 supports distributed transactions for databases in availability groups. This support includes transactions containing multiple databases on the same instance of SQL Server as well as involving multiple instances. To enable the SQL Server service to get the outcome of in-doubt transactions from the distributed transaction coordinator (DTC) service after an availability group fails over, configure the availability group for distributed transactions. 
 
-SQL Server 2016 also supports distributed transactions for databases in availability groups, however this support does not include transactions involving two or more databases on the server. 
+SQL Server 2016 also supports distributed transactions for databases in availability groups, however this support does not include transactions involving two or more databases on the same server. The transactions can be between multiple databases from different servers. SQL Server 2016 does not support distributed transactions for databases in availability groups if more than one database is on the same server.
 
 >[!NOTE]
->SQL Server does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However, databases in an availability group that are not configured for distributed transactions are vulnerable to in-doubt transactions under specific scenarios. 
+>SQL Server does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However, databases in an availability group that are not configured for distributed transactions might not return the correct outcome from the DTC service for the in-doubt transactions under specific scenarios. 
 
 All instances of SQL Server that participate in the distributed transaction must be SQL Server 2016 or later.
 
@@ -81,15 +81,39 @@ ALTER AVAILABILITY GROUP MyaAG
 
 ## Effects of configuring an availability group for distributed transactions
 
-In order to participate in distributed transactions, an instance of SQL Server enlists with a distributed transaction coordinator (DTC) service. Normally the instance of SQL Server enlists with the DTC service on the local server. The DTC service assigns the instance of SQL Server a resource manager identification (RMID). In the default configuration, all databases on an instance of SQL Server use the same RMID. The instance of SQL Server is a *resource manager* for DTC transactions. 
+Each entity participating in a distributed transaction is called a *resource manager*. Examples of resource managers include:
 
-When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of SQL Server. To support distributed transactions during this movement, each database must have a unique RMID. When an availability group has `DTC_SUPPORT = PER_DB`, SQL Server registers an RMID for each database in the availability group with the DTC service. In this configuration, the database is a resource manager for DTC transactions.
+* A SQL Server instance. 
+* A database in an availability group that has been configured for distributed transactions.
+* Other data sources. 
+
+In order to participate in distributed transactions, an instance of SQL Server enlists with a DTC service. Normally the instance of SQL Server enlists with the DTC service on the local server. Each instance of SQL Server creates a resource manager identifier (RMID) and registers it with DTC. In the default configuration, all databases on an instance of SQL Server use the same RMID. 
+
+When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of SQL Server. To support distributed transactions during this movement, each database should act as a separate resource manager and must have a unique RMID. When an availability group has `DTC_SUPPORT = PER_DB`, SQL Server creates a resource manager for each database and registers with DTC using a unique RMID. In this configuration, the database is a resource manager for DTC transactions.
+
+For more detail on distributed transactions in SQL Server, see [Distributed transactions](transactions-always-on-availability-and-database-mirroring.md#distTran)
+
+## <a name="distTran"/>Distributed transactions
+
+Distributed transactions span two or more servers known as resource managers. The management of the transaction must be coordinated between the resource managers by a server component called a transaction manager. Each instance of the SQL Server Database Engine can operate as a resource manager in distributed transactions coordinated by transaction managers, such as Microsoft Distributed Transaction Coordinator (MS DTC), or other transaction managers that support the Open Group XA specification for distributed transaction processing. For more information, see the MS DTC documentation.
+
+A transaction within a single instance of the Database Engine that spans two or more databases is actually a distributed transaction. The instance manages the distributed transaction internally; to the user, it operates as a local transaction.
+
+At the application, a distributed transaction is managed much the same as a local transaction. At the end of the transaction, the application requests the transaction to be either committed or rolled back. A distributed commit must be managed differently by the transaction manager to minimize the risk that a network failure may result in some resource managers successfully committing while others roll back the transaction. This is achieved by managing the commit process in two phases (the prepare phase and the commit phase), which is known as a two-phase commit (2PC).
+
+- **Prepare phase**
+   
+   When the transaction manager receives a commit request, it sends a prepare command to all of the resource managers involved in the transaction. Each resource manager then does everything required to make the transaction durable, and all buffers holding log images for the transaction are flushed to disk. As each resource manager completes the prepare phase, it returns success or failure of the prepare to the transaction manager.
+
+- **Commit phase**
+   
+   If the transaction manager receives successful prepares from all of the resource managers, it sends commit commands to each resource manager. The resource managers can then complete the commit. If all of the resource managers report a successful commit, the transaction manager then sends a success notification to the application. If any resource manager reported a failure to prepare, the transaction manager sends a rollback command to each resource manager and indicates the failure of the commit to the application.
 
 ## How distributed transactions work
 
 The following list explains how distributed transactions work.
 
-1. When an application requires a distributed transaction, it connects to a DTC service to begin the transaction. The client owns the DTC transaction. The DTC service is one resource manager. 
+1. When an application requires a distributed transaction, it connects to a DTC service to begin the transaction. The client owns the DTC transaction. The DTC service is the transaction manager. 
 2. The client then connects to a SQL Server instance and enlists in the DTC transaction and creates another resource manager. Normally, the SQL Server instance this resource manager. If the database is in an availability group and registered for DTC support, the database is this resource manager. This resource manager exchanges transaction information with the DTC service. 
 3. The client does some work in the SQL Server instance under the DTC transaction. The SQL Server instance holds locks, and preserves references to the DTC transaction. 
 4. The client either disconnects or enlists in NULL. The client can disconnect from the SQL Server instance. The SQL Server instance unhooks the connection from the DTC transaction it is tracking. The transaction object remains in the list of SQL Server transactions because it is active. It stays active until the DTC resource manager indicates either abort or commit.
@@ -97,13 +121,14 @@ The following list explains how distributed transactions work.
 6. The SQL Server instance either commits or aborts the transaction and releases the locks.
 
 ### Manage in-doubt transactions
-When DTC support is not configured per database, a database in an availability group can have in-doubt transactions in the following cases:
 
-* Set distributed transaction support per database while transactions are in flight. 
-* Add or remove a database while transactions are in flight. 
+When an availability group fails over, while distributed transactions are pending, the instance that hosts the primary replica contacts DTC to find out the results of the transactions. If databases in the availability group are not configured for distributed transactions, the RMID is the new SQL Server instance. The RMID when the transaction began was from the instance that held the primary replica before failover. The failover results in a changed RMID. The new SQL Server instance cannot get the transaction outcome from DTC for active transactions because the RMID hs changed. The following cases can result in a changed RMID:
+
+* Change `DTC_SUPPORT` for an availability group. 
+* Add or remove a database from an availability group. 
 * Drop an availability group.
 
-If the preceding cases happen while `DTC_SUPPORT = NONE`, and the primary replica fails over to a new instance of SQL Server, the instance tries to contact the DTC service to identify the transaction result. The DTC service cannot identify the transaction result because the resource manager was registered under the instance of SQL Server that hosted the primary replica before fail over. Therefore the database goes into SUSPECT state.
+If the preceding cases happen while `DTC_SUPPORT = NONE`, and the primary replica fails over to a new instance of SQL Server, the instance tries to contact the DTC service to identify the transaction result. The DTC service cannot return the coutcome because the RMID that the database is using to get the outcome for in-doubt transactions during recovery was not enlisted before. Therefore the database goes into SUSPECT state.
 
 The new SQL Server error log has an entry like the following example:
 
@@ -119,7 +144,7 @@ SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 following the guideline for Troubleshooting DTC Transactions.
 ```
 
-The preceding example shows that the DTC service could not enlist the database from the new primary replica in the transaction that was created before failover. The SQL Server instance cannot determine the result of the result of the distributed transaction so it marks the database as suspect. In order to recover the database, either commit or rollback the transaction manually. 
+The preceding example shows that the DTC service could not enlist the database from the new primary replica in the transaction that was created after failover. The SQL Server instance cannot determine the result of the result of the distributed transaction so it marks the database as suspect. In order to recover the database, either commit or rollback the transaction manually. 
 
 >[!WARNING]
 >When you manually commit or rollback a transaction it can affect an application. Verify that the action of commit or rollback is consistent with your application requirements. 
@@ -144,6 +169,7 @@ After you commit or roll back the transaction, you can use `ALTER DATABASE` to s
    ALTER DATABASE [DB1] SET ONLINE
    ```
 
+For more information about resolving in-doubt transactions, see [Resolve Transactions Manually](http://technet.microsoft.com/library/cc754134.aspx).
 
 ## See Also  
 

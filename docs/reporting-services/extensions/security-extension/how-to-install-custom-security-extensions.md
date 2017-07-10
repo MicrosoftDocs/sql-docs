@@ -105,32 +105,6 @@ Add under `<configuration>`.
 <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
 ```
 
-## Machine Keys
-
-For the case of Forms authentication which requires the decryption of the Authentication cookie, both processes need to be configured with the same machine key and decryption algorithm. This was a step familiar to those who had previously setup Reporting Services to work on scale-out environments, but now is a requirement even for deployments on a single machine.
-
-For example:
-	
-**\ReportServer\web.config**
-
-Add under `<system.web>`.
-	
-```
-	<machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
-```
-
-**\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe.config**
-
-Add under `<configuration>`.
-
-```
-	<system.web>
-	    <machineKey validationKey=="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
-    </system.web>
-```
-
-You should use a validation key specific for you deployment, there are several tools to generate the keys like Internet Information Services Manager (IIS). Other tools can be found on the internet.
-
 ## Configure Passthrough cookies
 
 The new portal and the reportserver communicate using internal soap APIs for some of its operations (similar to the previous version of the Report Manager). When additional cookies are required to be passed from the portal to the server the PassThroughCookies properties is still available. For more information, see [Configure the Web Portal to Pass Custom Authentication Cookies](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).

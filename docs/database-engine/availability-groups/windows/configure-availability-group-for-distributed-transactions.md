@@ -129,13 +129,13 @@ Run only one of the following scripts:
    * To commit the transaction, update the following script. Replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
 
       ```transact-sql
-      kill 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' with commit
+      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
       ```
 
    * To rollback the transaction, update the following script. Replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
 
       ```transact-sql
-      kill 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' with rollback
+      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
      ```
 
 After you commit or rollback the transaction, you can use `ALTER DATABASE` to set the database online. Update the following script. Set the database name for the name of the suspect database. For example:

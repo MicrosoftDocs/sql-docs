@@ -28,12 +28,13 @@ This article explains how to configure an availability group for distributed tra
 
 ## Support for distributed transactions
 
-SQL Server 2017 supports distributed transactions for databases in availability groups. This support includes transactions containing multiple databases on the same instance of SQL Server as well as involving multiple instances. To enable the SQL Server service to get the outcome of in-doubt transactions from the distributed transaction coordinator (DTC) service after an availability group fails over, configure the availability group for distributed transactions. 
+[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports distributed transactions for databases in availability groups. This support includes transactions containing multiple databases on the same instance of SQL Server as well as involving multiple instances. You need to configure an availability group to support distributed transactions. This article explains how to configure the availability group for distributed transactions.
 
-SQL Server 2016 also supports distributed transactions for databases in availability groups, however this support does not include transactions involving two or more databases on the same server. The transactions can be between multiple databases from different servers. SQL Server 2016 does not support distributed transactions for databases in availability groups if more than one database is on the same server.
+[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] also supports distributed transactions for databases in availability groups, however this support does not include transactions involving two or more databases on the same server. The transactions can be between multiple databases from different servers. [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] does not support distributed transactions for databases in availability groups if more than one database is on the same server.
 
->[!NOTE]
->SQL Server does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However, databases in an availability group that are not configured for distributed transactions might not return the correct outcome from the DTC service for the in-doubt transactions under specific scenarios. 
+SQL Server does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However after failover, SQL Server may not be able to get the transaction outcome from the distributed transaction coordinator (DTC) service unless the availability group is configured for distributed transactions. To enable the SQL Server service to get the outcome of in-doubt transactions from the distributed transaction coordinator (DTC) service after an availability group fails over, configure the availability group for distributed transactions. 
+
+## Prerequisites
 
 All instances of SQL Server that participate in the distributed transaction must be SQL Server 2016 or later.
 
@@ -67,7 +68,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ## Alter an availability group for distributed transactions
 
-You can alter an availability group for distributed transactions on SQL Server 2017 or later. To alter an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the `ALTER AVAILABILITY GROUP` script. The example script changes the availability group to support distributed transactions. 
+You can alter an availability group for distributed transactions on [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] or later. To alter an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the `ALTER AVAILABILITY GROUP` script. The example script changes the availability group to support distributed transactions. 
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
@@ -77,7 +78,7 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->On SQL Server 2016 you cannot alter an availability group for distributed transactions. To change the setting drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
+>On [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] you cannot alter an availability group for distributed transactions. To change the setting drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
 
 ## Effects of configuring an availability group for distributed transactions
 

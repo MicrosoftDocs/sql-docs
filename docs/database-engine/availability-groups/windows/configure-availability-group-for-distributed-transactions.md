@@ -83,14 +83,14 @@ ALTER AVAILABILITY GROUP MyaAG
 
 In order to participate in distributed transactions, an instance of SQL Server enlists with a distributed transaction coordinator (DTC) service. Normally the instance of SQL Server enlists with the DTC service on the local server. The DTC service assigns the instance of SQL Server a resource manager identification (RMID). In the default configuration, all databases on an instance of SQL Server use the same RMID. The instance of SQL Server is a *resource manager* for DTC transactions. 
 
-When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of SQL Server. To support distributed transactions during this movement, each database must have a unique RMID. When an availability group is configured with `DTC_SUPPORT = PER_DB`, SQL Server registers an RMID for each database in the availability group with the DTC service. In this configuration, the database is a resource manager for DTC transactions.
+When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of SQL Server. To support distributed transactions during this movement, each database must have a unique RMID. When an availability group has `DTC_SUPPORT = PER_DB`, SQL Server registers an RMID for each database in the availability group with the DTC service. In this configuration, the database is a resource manager for DTC transactions.
 
 ## How distributed transactions work
 
 The following list explains how distributed transactions work.
 
 1. When an application requires a distributed transaction, it connects to a DTC service to begin the transaction. The client owns the DTC transaction. The DTC service is one resource manager. 
-2. The client then connects to a SQL Server instance and enlists in the DTC transaction. Normally, the SQL Server instance is also the resource manager. If the database is in an availability group and registered for DTC support, the database is a resource manager. The SQL Server instance or database resource manager exchange transaction information with the DTC service. 
+2. The client then connects to a SQL Server instance and enlists in the DTC transaction and creates another resource manager. Normally, the SQL Server instance this resource manager. If the database is in an availability group and registered for DTC support, the database is this resource manager. This resource manager exchanges transaction information with the DTC service. 
 3. The client does some work in the SQL Server instance under the DTC transaction. The SQL Server instance holds locks, and preserves references to the DTC transaction. 
 4. The client either disconnects or enlists in NULL. The client can disconnect from the SQL Server instance. The SQL Server instance unhooks the connection from the DTC transaction it is tracking. The transaction object remains in the list of SQL Server transactions because it is active. It stays active until the DTC resource manager indicates either abort or commit.
 5. After the client has completed the work on all resources, the DTC service sends either abort or commit to the SQL Server instance - and any other resources in the transaction.

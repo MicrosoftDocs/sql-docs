@@ -32,7 +32,9 @@ This article explains how to configure an availability group for distributed tra
 
 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] also supports distributed transactions for databases in availability groups, however this support does not include transactions involving two or more databases on the same server. The transactions can be between multiple databases from different servers. [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] does not support distributed transactions for databases in availability groups if more than one database is on the same server.
 
-[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However when an availability group is not configured for distributed transactions, failover may not succeed in some situations. Specifically the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance may not be able to get the transaction outcome from the distributed transaction coordinator (DTC) service unless the availability group is configured for distributed transactions. To enable the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance to get the outcome of in-doubt transactions from the DTC service after an availability group fails over, configure the availability group for distributed transactions. 
+In a distributed transaction, client applications work with Microsoft Distributed Transaction Coordinator (MS DTC or DTC) to guarantee transactional consistency across multiple data sources. DTC is a service available on all supported operating systems. Normally a SQL Server instance is the resource manager for all databases in an instance. When a database is in an availability group, each database needs to be its own resource manager for distributed transactions.
+
+[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However when an availability group is not configured for distributed transactions, failover may not succeed in some situations. Specifically the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance may not be able to get the transaction outcome from DTC unless the availability group is configured for distributed transactions. To enable the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance to get the outcome of in-doubt transactions from the DTC after an availability group fails over, configure the availability group for distributed transactions. 
 
 ## Prerequisites
 
@@ -80,21 +82,7 @@ ALTER AVAILABILITY GROUP MyaAG
 >[!NOTE]
 >On [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] you cannot alter an availability group for distributed transactions. To change the setting drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
 
-## Effects of configuring an availability group for distributed transactions
-
-Each entity participating in a distributed transaction is called a *resource manager*. Examples of resource managers include:
-
-* A [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. 
-* A database in an availability group that has been configured for distributed transactions.
-* Other data sources. 
-
-In order to participate in distributed transactions, an instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] enlists with a DTC service. Normally the instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] enlists with the DTC service on the local server. Each instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] creates a resource manager identifier (RMID) and registers it with DTC. In the default configuration, all databases on an instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] use the same RMID. 
-
-When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]. To support distributed transactions during this movement, each database should act as a separate resource manager and must have a unique RMID. When an availability group has `DTC_SUPPORT = PER_DB`, [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] creates a resource manager for each database and registers with DTC using a unique RMID. In this configuration, the database is a resource manager for DTC transactions.
-
-For more detail on distributed transactions in [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], see [Distributed transactions](transactions-always-on-availability-and-database-mirroring.md#distTran)
-
-## <a name="distTran"/>Distributed transactions
+## <a name="distTran"/>Distributed transactions - technical concepts
 
 Distributed transactions span two or more servers known as resource managers. The management of the transaction must be coordinated between the resource managers by a server component called a transaction manager. Each instance of the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] Database Engine can operate as a resource manager in distributed transactions coordinated by transaction managers, such as Microsoft Distributed Transaction Coordinator (MS DTC), or other transaction managers that support the Open Group XA specification for distributed transaction processing. For more information, see the MS DTC documentation.
 
@@ -110,16 +98,30 @@ At the application, a distributed transaction is managed much the same as a loca
    
    If the transaction manager receives successful prepares from all of the resource managers, it sends commit commands to each resource manager. The resource managers can then complete the commit. If all of the resource managers report a successful commit, the transaction manager then sends a success notification to the application. If any resource manager reported a failure to prepare, the transaction manager sends a rollback command to each resource manager and indicates the failure of the commit to the application.
 
-## How distributed transactions work
+### Detailed steps
 
-The following list explains how distributed transactions work.
+The following list explains how the application works with DTC to complete distributed transactions.
 
-1. When an application requires a distributed transaction, it connects to a DTC service to begin the transaction. The client owns the DTC transaction. The DTC service is the transaction manager. 
-2. The client then connects to a [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance and enlists in the DTC transaction and creates another resource manager. Normally, the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance this resource manager. If the database is in an availability group and registered for DTC support, the database is this resource manager. This resource manager exchanges transaction information with the DTC service. 
+1. When an application requires a distributed transaction, it connects to a DTC to begin the transaction. The client owns the DTC transaction. DTC is the transaction manager. 
+2. The client then connects to a [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance and enlists in the DTC transaction and creates another resource manager. Normally, the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance this resource manager. If the database is in an availability group and registered for DTC support, the database is this resource manager. This resource manager exchanges transaction information with DTC. 
 3. The client does some work in the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance under the DTC transaction. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance holds locks, and preserves references to the DTC transaction. 
 4. The client either disconnects or enlists in NULL. The client can disconnect from the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance unhooks the connection from the DTC transaction it is tracking. The transaction object remains in the list of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] transactions because it is active. It stays active until the DTC resource manager indicates either abort or commit.
-5. After the client has completed the work on all resources, the DTC service sends either abort or commit to the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance - and any other resources in the transaction.
+5. After the client has completed the work on all resources, DTC sends either abort or commit to the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance - and any other resources in the transaction.
 6. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance either commits or aborts the transaction and releases the locks.
+
+### Effects of configuring an availability group for distributed transactions
+
+Each entity participating in a distributed transaction is called a *resource manager*. Examples of resource managers include:
+
+* A [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. 
+* A database in an availability group that has been configured for distributed transactions.
+* Other data sources. 
+
+In order to participate in distributed transactions, an instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] enlists with a DTC. Normally the instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] enlists with DTC on the local server. Each instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] creates a resource manager identifier (RMID) and registers it with DTC. In the default configuration, all databases on an instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] use the same RMID. 
+
+When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]. To support distributed transactions during this movement, each database should act as a separate resource manager and must have a unique RMID. When an availability group has `DTC_SUPPORT = PER_DB`, [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] creates a resource manager for each database and registers with DTC using a unique RMID. In this configuration, the database is a resource manager for DTC transactions.
+
+For more detail on distributed transactions in [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], see [Distributed transactions](transactions-always-on-availability-and-database-mirroring.md#distTran)
 
 ### Manage in-doubt transactions
 
@@ -129,7 +131,7 @@ When an availability group fails over, while distributed transactions are pendin
 * Add or remove a database from an availability group. 
 * Drop an availability group.
 
-If the preceding cases happen while `DTC_SUPPORT = NONE`, and the primary replica fails over to a new instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], the instance tries to contact the DTC service to identify the transaction result. The DTC service cannot return the coutcome because the RMID that the database is using to get the outcome for in-doubt transactions during recovery was not enlisted before. Therefore the database goes into SUSPECT state.
+If the preceding cases happen while `DTC_SUPPORT = NONE`, and the primary replica fails over to a new instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], the instance tries to contact DTC to identify the transaction result. DTC cannot return the coutcome because the RMID that the database is using to get the outcome for in-doubt transactions during recovery was not enlisted before. Therefore the database goes into SUSPECT state.
 
 The new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] error log has an entry like the following example:
 
@@ -145,7 +147,7 @@ SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 following the guideline for Troubleshooting DTC Transactions.
 ```
 
-The preceding example shows that the DTC service could not enlist the database from the new primary replica in the transaction that was created after failover. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance cannot determine the result of the result of the distributed transaction so it marks the database as suspect. In order to recover the database, either commit or rollback the transaction manually. 
+The preceding example shows that DTC could not enlist the database from the new primary replica in the transaction that was created after failover. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance cannot determine the result of the result of the distributed transaction so it marks the database as suspect. In order to recover the database, either commit or rollback the transaction manually. 
 
 >[!WARNING]
 >When you manually commit or rollback a transaction it can affect an application. Verify that the action of commit or rollback is consistent with your application requirements. 

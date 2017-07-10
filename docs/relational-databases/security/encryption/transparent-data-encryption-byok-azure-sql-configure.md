@@ -69,7 +69,7 @@ Use the [Set-AzureRmKeyValutAccessPolicy](/powershell/module/azurerm.keyvault/se
    ```powershell
    Set-AzureRmKeyVaultAccessPolicy  `
    -VaultName <KeyVaultName> `
-   -ServicePrincipalName $server.Identity.PrincipalId `
+   -ObjectId $server.Identity.PrincipalId `
    -PermissionsToKeys get, wrapKey, unwrapKey
    ```
 

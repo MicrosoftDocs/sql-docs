@@ -85,8 +85,8 @@ This release of SSMS supports the following platforms when used with the latest 
 ## SSMS installation tips and issues
 
 >[!NOTE]
-> SSMS 17.x installation does not upgrade or replace previous versions of SSMS.  SSMS 17.x installs side by side with previous versions so that both versions are available for use.
-> If a computer contains side- by-side installations of SSMS, verify you start the correct version for you specific needs.
+> The SSMS 17.x installation does not upgrade or replace previous versions of SSMS.  SSMS 17.x installs side by side with previous versions so that both versions are available for use.
+> If a computer contains side-by-side installations of SSMS, verify you start the correct version for your specific needs.
 >  ![SSMS 17.x](media/ssms-start-menu.png)
 
 **Minimize Installation Reboots**

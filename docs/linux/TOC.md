@@ -26,8 +26,8 @@
 
 ## Configure
 ### [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
-### [Configure with environment variables](sql-server-linux-configure-environment-variables.md)
-### [Configure Docker](sql-server-linux-setup-docker.md)
+### [Environment variables](sql-server-linux-configure-environment-variables.md)
+### [Docker](sql-server-linux-setup-docker.md)
 ### [Customer Feedback](sql-server-linux-customer-feedback.md)
 
 ## [Develop](sql-server-linux-develop-overview.md)
@@ -72,11 +72,11 @@
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)
 ### [Encrypting Connections](sql-server-linux-encrypted-connections.md)
-## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
 
 ## [Optimize Performance](sql-server-linux-performance-get-started.md)
 
 # Resources
+## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server Documentation](../sql-server/sql-server-technical-documentation.md)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)

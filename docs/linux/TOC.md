@@ -11,13 +11,6 @@
 ## [Install - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## Install - Docker
 
-# Tutorials
-## [1 - Migrate from Windows](sql-server-linux-migrate-restore-database.md)
-## 1 - Migrate other data sources
-## [2 - Secure the database](sql-server-linux-security-get-started.md)
-## [3 - Optimize Performance](sql-server-linux-performance-get-started.md)
-## [4 - Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-
 # Samples
 ## Unattended Install
 ### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
@@ -80,6 +73,8 @@
 ### [Get started with security features](sql-server-linux-security-get-started.md)
 ### [Encrypting Connections](sql-server-linux-encrypted-connections.md)
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
+
+## [Optimize Performance](sql-server-linux-performance-get-started.md)
 
 # Resources
 ## [SQL Server Documentation](../sql-server/sql-server-technical-documentation.md)

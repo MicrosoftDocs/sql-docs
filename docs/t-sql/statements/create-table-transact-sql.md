@@ -2,7 +2,7 @@
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/11/2017"
+ms.date: "07/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -920,7 +920,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  MIGRATION_STATE = { OUTBOUND |  INBOUND | PAUSED }  
    
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL . 
   
 -   Specify `OUTBOUND` to migrate data from SQL Server to Azure.  
   
@@ -990,7 +990,7 @@ Column and table indexes can be specified as part of the CREATE TABLE statement.
   
  Prefix local temporary table names with single number sign (#*table_name*), and prefix global temporary table names with a double number sign (##*table_name*).  
   
- SQL statements reference the temporary table by using the value specified for *table_name* in the CREATE TABLE statement, for example:  
+ SQL statements reference the temporary table by using the value specified for *table_name* in the CREATE TABLE statement, for example####:  
   
 ```  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
@@ -1057,7 +1057,76 @@ GO
  When you create local or global temporary tables, the CREATE TABLE syntax supports constraint definitions except for FOREIGN KEY constraints. If a FOREIGN KEY constraint is specified in a temporary table, the statement returns a warning message that states the constraint was skipped. The table is still created without the FOREIGN KEY constraints. Temporary tables cannot be referenced in FOREIGN KEY constraints.  
   
  If a temporary table is created with a named constraint and the temporary table is created within the scope of a user-defined transaction, only one user at a time can execute the statement that creates the temp table. For example, if a stored procedure creates a temporary table with a named primary key constraint, the stored procedure cannot be executed simultaneously by multiple users.  
+
+
+## Database scoped global temporary tables (Azure SQL Database)
+
+Global temporary tables for SQL Server (initiated with ## table name) are stored in tempdb and shared among all users’ sessions across the whole SQL Server instance. For information on SQL table types, see the above section on Create Tables.  
+
+Azure SQL Database supports global temporary tables that are also stored in tempdb and scoped to the database level.  This means that global temporary tables are shared for all users’ sessions within the same Azure SQL database. User sessions from other Azure SQL databases cannot access global temporary tables.
+
+Global temporary tables for Azure SQL DB follow the same syntax and semantics that SQL Server uses for temporary tables.  Similarly, global temporary stored procedures are also scoped to the database level in Azure SQL DB. Local temporary tables (initiated with # table name) are also supported for Azure SQL Database and follow the same syntax and semantics that SQL Server uses.  See the above section on [Temporary Tables](#temporary-tables).  
+
+> [!IMPORTANT]
+> This feature is in public preview and is available for Azure SQL Database.
+>
+
+### Troubleshooting global temporary tables for Azure SQL DB 
+
+For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396). To access the troubleshooting DMVs in Azure SQL Database, you must be a server admin.
   
+### Permissions  
+
+ Any user can create global temporary objects. Users can only access their own objects, unless they receive additional permissions. 
+ .  
+  
+### Examples 
+
+- Session A creates a global temp table ##test in Azure SQL Database testdb1 and adds 1 row
+
+```tsql
+CREATE TABLE ##test ( a int, b int);
+INSERT INTO ##test values (1,1);
+
+--Obtain object ID for temp table ##test 
+SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID'; 
+
+---Result
+1253579504
+
+---Obtain global temp table name for a given object ID 1253579504 in tempdb (2)
+SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
+
+---Result
+##test
+```
+- Session B connects to Azure SQL Database testdb1 and can access table ##test created by session A
+
+```tsql
+SELECT * FROM ##test
+---Results
+1,1
+```
+
+- Session C connects to another database in Azure SQL Database testdb2 and wants to access ##test created in testdb1. This select fails due to the database scope for the global temp tables 
+
+```tsql
+SELECT * FROM ##test
+---Results
+Msg 208, Level 16, State 0, Line 1
+Invalid object name '##test'
+```
+
+- Addressing system object in Azure SQL Database tempdb from current user database testdb1
+
+```tsql
+SELECT * FROM tempdb.sys.objects
+SELECT * FROM tempdb.sys.columns
+SELECT * FROM tempdb.sys.database_files
+```
+
+
+
 ## Partitioned Tables  
  Before creating a partitioned table by using CREATE TABLE, you must first create a partition function to specify how the table becomes partitioned. A partition function is created by using [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md). Second, you must create a partition scheme to specify the filegroups that will hold the partitions indicated by the partition function. A partition scheme is created by using [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). Placement of PRIMARY KEY or UNIQUE constraints to separate filegroups cannot be specified for partitioned tables. For more information, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   

@@ -3,7 +3,7 @@ title: "sys.index_resumable_operations (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "04/14/2017"
+ms.date: "07/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

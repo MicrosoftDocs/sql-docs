@@ -1,7 +1,7 @@
 ---
 title: "Guidelines for Online Index Operations | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/14/2017"
+ms.date: "07/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

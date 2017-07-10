@@ -35,13 +35,13 @@ SQL Server 2016 also supports distributed transactions for databases in availabi
 >[!NOTE]
 >SQL Server does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However, databases in an availability group that are not configured for distributed transactions are vulnerable to in-doubt transactions under specific scenarios. 
 
-All instances of SQL Server that will participate in the distributed transaction must be SQL Server 2016 or later.
+All instances of SQL Server that participate in the distributed transaction must be SQL Server 2016 or later.
 
 Availability groups must be running on Windows Server 2016 or Windows Server 2012 R2. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
 
 ## Create an availability group for distributed transactions
 
-You can create an availability group for distributed transactions on SQL Server 2016 or later. To create an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the availability group definition. The example script below creates an availability group for distributed transactions. 
+You can create an availability group for distributed transactions on SQL Server 2016 or later. To create an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the availability group definition. The following script creates an availability group for distributed transactions. 
 
 ```transact-sql
 CREATE AVAILABILITY GROUP MyAG
@@ -63,7 +63,7 @@ CREATE AVAILABILITY GROUP MyAG
 ```
 
 >[!NOTE]
->The script above is a simple example of an availability group and is not designed for any specific production environment. 
+>The preceding script is a simple example of an availability group and is not designed for any specific production environment. 
 
 ## Alter an availability group for distributed transactions
 
@@ -83,7 +83,7 @@ ALTER AVAILABILITY GROUP MyaAG
 
 In order to participate in distributed transactions, an instance of SQL Server enlists with a distributed transaction coordinator (DTC) service. Normally the instance of SQL Server enlists with the DTC service on the local server. The DTC service assigns the instance of SQL Server a resource manager identification (RMID). In the default configuration, all databases on an instance of SQL Server use the same RMID. The instance of SQL Server is a *resource manager* for DTC transactions. 
 
-When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of SQL Server. To support distributed transactions during this movement, each database must have a unique RMID. When an availability group is configured with `DTC_SUPPORT = PER_DB` SQL Server registers an RMID for each database in the availability group with the DTC service. In this configuration, the database is a resource manager for DTC transactions.
+When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of SQL Server. To support distributed transactions during this movement, each database must have a unique RMID. When an availability group is configured with `DTC_SUPPORT = PER_DB`, SQL Server registers an RMID for each database in the availability group with the DTC service. In this configuration, the database is a resource manager for DTC transactions.
 
 ## How distributed transactions work
 
@@ -103,9 +103,9 @@ When DTC support is not configured per database, a database in an availability g
 * Add or remove a database while transactions are in flight. 
 * Drop an availability group.
 
-If the cases above happen while `DTC_SUPPORT = NONE`, and the primary replica fails over to a new instance of SQL Server, the instance will try to contact the DTC service to identify the transaction result. The DTC service will not be able to identify the transaction result because the resource manager was registered under the instance of SQL Server that hosted the primary replica before fail over. The database will go into SUSPECT state.
+If the preceding cases happen while `DTC_SUPPORT = NONE`, and the primary replica fails over to a new instance of SQL Server, the instance tries to contact the DTC service to identify the transaction result. The DTC service cannot identify the transaction result because the resource manager was registered under the instance of SQL Server that hosted the primary replica before fail over. Therefore the database goes into SUSPECT state.
 
-The new SQL Server error log has an entry like the example below:
+The new SQL Server error log has an entry like the following example:
 
 ```
 Microsoft Distributed Transaction Coordinator (MS DTC) 
@@ -119,26 +119,26 @@ SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 following the guideline for Troubleshooting DTC Transactions.
 ```
 
-The above example shows that the DTC service could not enlist the database from the new primary replica in the transaction that was created before failover. This is why the database is suspect. In order to recover the database you need to either commit or rollback the transaction manually. 
+The preceding example shows that the DTC service could not enlist the database from the new primary replica in the transaction that was created before failover. This is why the database is suspect. In order to recover the database, either commit or rollback the transaction manually. 
 
 >[!WARNING]
 >When you manually commit or rollback a transaction it can affect an application. Verify that the action of commit or rollback is consistent with your application requirements. 
 
 Run only one of the following scripts:
 
-   * To commit the transaction, update the following script. Replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
+   * To commit the transaction, update the following script - replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
 
       ```transact-sql
       KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
       ```
 
-   * To rollback the transaction, update the following script. Replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
+   * To roll back the transaction, update the following script - replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
 
       ```transact-sql
       KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
      ```
 
-After you commit or rollback the transaction, you can use `ALTER DATABASE` to set the database online. Update the following script. Set the database name for the name of the suspect database. For example:
+After you commit or roll back the transaction, you can use `ALTER DATABASE` to set the database online. Update the following script. Set the database name for the name of the suspect database. For example:
 
    ```transact-sql
    ALTER DATABASE [DB1] SET ONLINE

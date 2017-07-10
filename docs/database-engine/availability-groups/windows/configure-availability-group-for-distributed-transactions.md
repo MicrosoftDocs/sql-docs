@@ -34,7 +34,7 @@ This article explains how to configure an availability group for distributed tra
 
 In a distributed transaction, client applications work with Microsoft Distributed Transaction Coordinator (MS DTC or DTC) to guarantee transactional consistency across multiple data sources. DTC is a service available on all supported operating systems. Normally a SQL Server instance is the resource manager for all databases in an instance. When a database is in an availability group, each database needs to be its own resource manager for distributed transactions.
 
-[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However when an availability group is not configured for distributed transactions, failover may not succeed in some situations. Specifically the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance may not be able to get the transaction outcome from DTC unless the availability group is configured for distributed transactions. To enable the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance to get the outcome of in-doubt transactions from the DTC after an availability group fails over, configure the availability group for distributed transactions. 
+[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However when an availability group is not configured for distributed transactions, failover may not succeed in some situations. Specifically the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance may not be able to get the transaction outcome from DTC. To enable the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance to get the outcome of in-doubt transactions from the DTC after failover, configure the availability group for distributed transactions. 
 
 ## Prerequisites
 
@@ -125,13 +125,13 @@ For more detail on distributed transactions in [!INCLUDE[SQLServer](../../../inc
 
 ### Manage in-doubt transactions
 
-When an availability group fails over, while distributed transactions are pending, the instance that hosts the primary replica contacts DTC to find out the results of the transactions. If databases in the availability group are not configured for distributed transactions, the RMID is the new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. The RMID when the transaction began was from the instance that held the primary replica before failover. The failover results in a changed RMID. The new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance cannot get the transaction outcome from DTC for active transactions because the RMID hs changed. The following cases can result in a changed RMID:
+When an availability group fails over, while distributed transactions are pending, the instance that hosts the primary replica contacts DTC to find out the results of the transactions. If databases in the availability group are not configured for distributed transactions, the RMID is the new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. The RMID when the transaction began was from the instance that held the primary replica before failover. The failover results in a changed RMID. The new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance cannot get the transaction outcome from DTC for active transactions because the RMID has changed. The following cases can result in a changed RMID:
 
 * Change `DTC_SUPPORT` for an availability group. 
 * Add or remove a database from an availability group. 
 * Drop an availability group.
 
-If the preceding cases happen while `DTC_SUPPORT = NONE`, and the primary replica fails over to a new instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], the instance tries to contact DTC to identify the transaction result. DTC cannot return the coutcome because the RMID that the database is using to get the outcome for in-doubt transactions during recovery was not enlisted before. Therefore the database goes into SUSPECT state.
+If the preceding cases happen while `DTC_SUPPORT = NONE`, and the primary replica fails over to a new instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], the instance tries to contact DTC to identify the transaction result. DTC cannot return the outcome because the RMID that the database is using to get the outcome for in-doubt transactions during recovery was not enlisted before. Therefore the database goes into SUSPECT state.
 
 The new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] error log has an entry like the following example:
 

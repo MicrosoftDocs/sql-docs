@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_linux_proc_cpuinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/29/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ROBOTS: NOINDEX
 ---
 # sys.dm_linux_proc_cpuinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssLinx-xxxx-xxxx-xxx](../../includes/tsql-appliesto-sslinx-xxxx-xxxx-xxx.md)]

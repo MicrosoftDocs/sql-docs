@@ -63,7 +63,7 @@ For information about user data collection, see
   
 ## Supported SQL offerings
   
-* This version of SSMS works with all [supported versions of SQL Server 2008 - SQL Server 2017](https://support.microsoft.com/en-us/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.  
+* This version of SSMS works with all [supported versions of SQL Server 2008 - SQL Server 2017](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.  
 * There is no explicit block for SQL Server 2000 or SQL Server 2005, but some features may not work properly.  
 * Additionally, SSMS 17.X can be installed side by side with SSMS 16.X or SQL Server 2014 SSMS and earlier. 
   
@@ -80,17 +80,22 @@ This release of SSMS supports the following platforms when used with the latest 
 - Windows Server 2008 R2 (64-bit)  
 
 >[!NOTE]
->SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. Support determines if the issue is with SSMS, Visual Studio, or with Windows compatibility, and the issue is directed to the appropriate team.
+>SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. The support team determines if the issue is with SSMS, Visual Studio, or with Windows compatibility. The support team then routes the issue to the appropriate team for further investigation.
 
 ## SSMS installation tips and issues
-**Minimize Installation Reboots**
 
+>[!NOTE]
+> SSMS 17.x installation does not upgrade or replace previous versions of SSMS.  SSMS 17.x installs side by side with previous versions so that both versions are available for use.
+> If a computer contains side- by-side installations of SSMS, verify you start the correct version for you specific needs.
+>  ![SSMS 17.x](media/ssms-start-menu.png)
+
+**Minimize Installation Reboots**
 - Take the following actions to reduce the chances of SSMS setup requiring a reboot at the end of installation:
   - Make sure you are running an up-to-date version of the Visual C++ 2013 Redistributable Package. Version 12.00.40649.5 (or greater) is required. Only the x64 version is needed.
   - Verify the version of .NET Framework on the computer is 4.6.1 (or greater).
   - Close any other instances of Visual Studio that are open on the computer.
   - Make sure all the latest OS updates are installed on the computer.
-  - The noted actions are typically required one once. There are few cases where a reboot is required during additional upgrades to the same major version of SSMS. For minor upgrades, all the prerequirements for SSMS will already be installed on the computer.
+  - The noted actions are typically required only once. There are few cases where a reboot is required during additional upgrades to the same major version of SSMS. For minor upgrades, all the prerequirements for SSMS are already be installed on the computer.
 
 - To see the list of known issues and work-arounds, see [SQL Server Management Studio -  Release Notes](../ssms/sql-server-management-studio-release-notes.md)
 

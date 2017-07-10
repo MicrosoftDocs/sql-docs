@@ -119,26 +119,26 @@ SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 following the guideline for Troubleshooting DTC Transactions.
 ```
 
-The preceding example shows that the DTC service could not enlist the database from the new primary replica in the transaction that was created before failover. This is why the database is suspect. In order to recover the database, either commit or rollback the transaction manually. 
+The preceding example shows that the DTC service could not enlist the database from the new primary replica in the transaction that was created before failover. The SQL Server instance cannot determine the result of the result of the distributed transaction so it marks the database as suspect. In order to recover the database, either commit or rollback the transaction manually. 
 
 >[!WARNING]
 >When you manually commit or rollback a transaction it can affect an application. Verify that the action of commit or rollback is consistent with your application requirements. 
 
 Run only one of the following scripts:
 
-   * To commit the transaction, update the following script - replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
+   * To commit the transaction, update and run the following script - replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
 
       ```transact-sql
       KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
       ```
 
-   * To roll back the transaction, update the following script - replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
+   * To roll back the transaction, update and run the following script - replace the `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy` with the in-doubt transaction UOW from the previous error message, and run:
 
       ```transact-sql
       KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
      ```
 
-After you commit or roll back the transaction, you can use `ALTER DATABASE` to set the database online. Update the following script. Set the database name for the name of the suspect database. For example:
+After you commit or roll back the transaction, you can use `ALTER DATABASE` to set the database online. Update and run the following script - set the database name for the name of the suspect database:
 
    ```transact-sql
    ALTER DATABASE [DB1] SET ONLINE

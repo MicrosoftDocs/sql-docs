@@ -113,10 +113,10 @@ manager: "erikre"
   
 ##  <a name="importlist"></a> Import data feeds from SharePoint lists  
  You can import any SharePoint list that has an **Export as Data Feed** button on the (SharePoint) ribbon. You can click this button to export the list as a feed.  
- 
-    > [!NOTE]  
-    >  This feature only works for SharePoint 2010 and SharePoint 2013. 
   
+> [!NOTE]  
+>  This applies only to SharePoint 2010 and SharePoint 2013.  
+   
 #### To import data feeds from a SharePoint list  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  

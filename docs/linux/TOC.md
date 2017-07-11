@@ -6,10 +6,10 @@
 ## [New and recently updated articles](new-updated-linux.md)
 
 # Quickstarts
-## [Install - Red Hat](quickstart-install-connect-red-hat.md)
-## [Install - SUSE](quickstart-install-connect-suse.md)
-## [Install - Ubuntu](quickstart-install-connect-ubuntu.md)
-## Install - Docker
+## [Install & Connect - Red Hat](quickstart-install-connect-red-hat.md)
+## [Install & Connect - SUSE](quickstart-install-connect-suse.md)
+## [Install & Connect - Ubuntu](quickstart-install-connect-ubuntu.md)
+## [Install & Connect - Docker](quickstart-install-connect-docker.md)
 
 # Samples
 ## Unattended Install

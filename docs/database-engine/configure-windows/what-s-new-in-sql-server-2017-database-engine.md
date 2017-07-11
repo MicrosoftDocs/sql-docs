@@ -18,6 +18,8 @@ manager: "jhubbard"
 # What&#39;s New in SQL Server 2017 (Database Engine)
 [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
+This topic describes improvements made to the [!INCLUDE[ssdenoversion-md](../../includes/ssdenoversion-md.md)] for [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]. Click the links for more information on each item.
+
 > [!NOTE]  
 > SQL Server 2017 also includes the features added in SQL Server 2016 service packs. For those items, see [What's New in SQL Server 2016 (Database Engine)](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 

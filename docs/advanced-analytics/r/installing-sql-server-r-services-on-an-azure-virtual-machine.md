@@ -24,7 +24,7 @@ If you deploy an Azure virtual machine that includes [!INCLUDE[ssCurrent](../../
 
 ## <a name="new"></a>Create a new SQL Server 2016 Enterprise Virtual Machine with R Services Enabled
 
-1. In the Azure Portal, click VIRTUAL MACHINES and then click NEW.
+1. In the Azure portal, click VIRTUAL MACHINES and then click NEW.
 2. Select SQL Server 2016 Enterprise Edition.
 3. Configure the server name and account permissions, and select a pricing plan.
 4. On Step 4 in the VM setup wizard, in **SQL Server Settings**, locate **R Services (Advanced Analytics)** and click **Enable**.
@@ -49,20 +49,20 @@ Some additional steps are required if you expect remote clients to access the se
 
 By default, the firewall on the Azure virtual machine includes a rule that blocks network access for local R user accounts.
 
-You must disable this rule to ensure that you can access the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance from a remote data science client.  Otherwise, your R code cannot execute in compute contexts that use the virtual machine's workspace, even if other R code usess the SQL Server compute context without problems. 
+You must disable this rule to ensure that you can access the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance from a remote data science client.  Otherwise, your R code cannot execute in compute contexts that use the virtual machine's workspace, even if other R code uses the SQL Server compute context without problems.
 
 To enable access to R Services from remote data science clients:
 
 1. On the virtual machine, open Windows Firewall with Advanced Security.
 2. Select **Outbound Rules**
-3. Disable the following rule:  
+3. Disable the following rule:
   
      `Block network access for R local user accounts in SQL Server instance MSSQLSERVER`
   
 ### Enable ODBC callbacks for remote clients
 
 If you expect that R clients calling the server will need to issue ODBC queries as part of their R solutions, you must ensure that the Launchpad can make ODBC calls on behalf of the remote client. To do this, you must allow the SQL worker accounts that are used by Launchpad to log into the instance.
-   For more information, see [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md). 
+   For more information, see [Set Up SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
 
 ### <a name="network"></a>Add network protocols
 
@@ -72,8 +72,9 @@ If you expect that R clients calling the server will need to issue ODBC queries 
   
 + Enable TCP/IP
 
-  TCP/IP is required for loopback connections to SQL Server R Services. If you get the following error, enable TCP/IP on the virtual machine that supports the instance
-DBNETLIB; SQL Server does not exist or access denied.
+  TCP/IP is required for loopback connections to SQL Server R Services. If you get the following error, enable TCP/IP on the virtual machine that supports the instance:
+
+  "DBNETLIB; SQL Server does not exist or access denied"
 
 ## How to disable R Services on an instance
 
@@ -87,9 +88,9 @@ You can also enable or disable the feature on an existing virtual machine at any
 If you created an Azure virtual machine that did not include R Services, you can add the feature by following these steps:
 
 1. Re-run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup and add the feature on the **Server Configuration** page of the wizard.
-2. Enable execution of external scripts and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see see [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).
+2. Enable execution of external scripts and restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. For more information, see [Set Up SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
 3. (Optional) Configure database access for R worker accounts, if needed for remote script execution.
-   For more information, see [Set Up SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md). 
+   For more information, see [Set Up SQL Server R Services](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
 3. (Optional) Modify a firewall rule on the Azure virtual machine, if you intend to allow R script execution from remote data science clients. For more information, see [Unblock firewall](#firewall).
 4. Install or enable required network libraries. For more information, see [Add network protocols](#network).
 

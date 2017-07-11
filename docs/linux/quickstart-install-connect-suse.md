@@ -38,7 +38,7 @@ In this quick start tutorial, you first install SQL Server 2017 CTP 2.1 on SUSE 
 
 - For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
-## Install SQL Server
+## <a id="install"></a>Install SQL Server
 
 To configure SQL Server on SLES, run the following commands in a terminal to install the **mssql-server** package:
 

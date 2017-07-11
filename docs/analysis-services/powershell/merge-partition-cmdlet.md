@@ -16,7 +16,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Merge-Partition cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Merges the data of one or more source partitions into a target partition and then deletes the source partitions.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
 ## Syntax  
  `Merge-ASDatabase [-Name] <string> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
@@ -101,7 +107,7 @@ manager: "erikre"
 |Accept wildcard characters?|false|  
   
 ### -Credential \<PSCredential>  
- This parameter is used to pass in a username and password when using an HTTP connection to an Analysis Service instance, for an instance that you have configured for HTTP access. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) and [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md) for HTTP connections.  
+ This parameter is used to pass in a username and password when using an HTTP connection to an Analysis Service instance, for an instance that you have configured for HTTP access. For more information, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md) for HTTP connections.  
   
  If this parameter is specified, the username and password will be used to connect to the specified Analysis Server instance. If no credentials are specified default windows account of the user who is running the tool will be used.  
   
@@ -142,8 +148,5 @@ manager: "erikre"
   
  This command merges partitions from 2001, 2002, and 2003 into the partition for 2004, and then deletes the partitions from previous years.  
   
-## See Also  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
-  
+
   

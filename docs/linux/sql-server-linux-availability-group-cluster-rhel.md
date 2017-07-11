@@ -83,7 +83,7 @@ sudo pcs property set stonith-enabled=false
 `Start-failure-is-fatal` indicates whether a failure to start a resource on a node prevents further start attempts on that node. When set to `false`, the cluster will decide whether to try starting on the same node again based on the resource's current failure count and migration threshold. So, after failover occurs, Pacemaker will retry starting the availability group resource on the former primary once the SQL instance is available. Pacemaker will take care of demoting the replica to secondary and it will automatically rejoin the availability group. 
 To update the property value to false run:
 ```bash
-pcs property set start-failure-is-fatal=false
+sudo pcs property set start-failure-is-fatal=false
 ```
 If the property has the default value of `true`, if first attempt to start the resource fails, user intervention is required after an automatic failover to cleanup the resource failure count and reset the configuration using: `pcs resource cleanup <resourceName>` command.
 

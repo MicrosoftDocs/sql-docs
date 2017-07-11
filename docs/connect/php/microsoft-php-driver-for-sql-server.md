@@ -40,3 +40,8 @@ The SQL Server Driver for PHP is designed to enable reliable, scalable integrati
   
 ## Samples  
 * [Code Samples for PHP SQL Driver](../../connect/php/code-samples-for-php-sql-driver.md)
+* [Getting Started with PHP on Windows](https://www.microsoft.com/en-us/sql-server/developer-get-started/php/windows/)
+* [Getting Started with PHP on macOS](https://www.microsoft.com/en-us/sql-server/developer-get-started/php/mac/)
+* [Getting Started with PHP on Ubuntu](https://www.microsoft.com/en-us/sql-server/developer-get-started/php/ubuntu/)
+* [Getting Started with PHP on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/en-us/sql-server/developer-get-started/php/rhel/)
+* [Getting Started with PHP on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/en-us/sql-server/developer-get-started/php/sles/)

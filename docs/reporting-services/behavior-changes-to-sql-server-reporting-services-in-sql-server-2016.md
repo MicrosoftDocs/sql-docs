@@ -1,6 +1,6 @@
 ---
-title: "Behavior changes to SQL Server Reporting Services  in SQL Server 2016 | Microsoft Docs"
-ms.date: "03/15/2017"
+title: "Behavior changes to SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,15 +28,22 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# Behavior changes to SQL Server Reporting Services  in SQL Server 2016
-  This topic describes behavior changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as compared to previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-  
- There are no behavior changes.
-  
-## See Also  
- [What's New in Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
- [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
- [Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
- [Breaking changes in SQL Server Reporting Services in SQL Server 2016](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
-  
-  
+
+# Behavior changes to SQL Server Reporting Services in SQL Server 2016
+
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+This topic describes behavior changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Behavior changes affect how features work or interact in SQL Server 2016 as compared to previous versions of SQL Server.  
+
+There are no behavior changes.
+
+## Next steps
+
+[What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
+[Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+[Discontinued functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
+[Breaking changes in SQL Server Reporting Services in SQL Server 2016](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

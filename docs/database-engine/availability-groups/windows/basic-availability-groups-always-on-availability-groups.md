@@ -40,7 +40,9 @@ manager: "jhubbard"
   
 -   Basic availability groups cannot be upgraded to advanced availability groups. The group must be dropped and re-added to a group that contains servers running only SQL Server 2016 Enterprise Edition.  
   
--   Basic availability groups are only supported for Standard Edition servers.  
+-   Basic availability groups are only supported for Standard Edition servers. 
+
+-   Basic availability groups can not be part of a distributed availability group. 
   
 ## Configuration  
  An Always On basic availability group can be created on any two SQL Server 2016 Standard Edition servers. When you create a basic availability group, you must specify both replicas during creation.  

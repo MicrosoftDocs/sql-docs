@@ -1,5 +1,5 @@
 # [Using relational databases](relational-databases/database-features.md)
-# [SQL Server on Linux](./linux/index.md?toc=%2fsql%2fdocs%2flinux%2ftoc.json)
+# [SQL Server on Linux](./linux/index.md?toc=/sql/linux/toc.json)
 # [Advanced analytics on SQL Server](advanced-analytics/getting-started-with-machine-learning-services.md)
 # [SQL Server](sql-server/sql-server-technical-documentation.md)
 		
@@ -10,7 +10,7 @@
 ## [XQuery](xquery/xquery-language-reference-sql-server.md)
 		
 # [Samples](sample/microsoft-sql-server-samples.md)
-# [Tools](tools/command-prompt-utility-reference-database-engine.md)
+# [Tools](tools/overview-sql-tools.md)
 		
 # Developer		
 ## [SQL Server Data Tools (SSDT)](ssdt/download-sql-server-data-tools-ssdt.md)

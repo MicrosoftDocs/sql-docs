@@ -1,7 +1,7 @@
 ---
 title: "Using the WebForms ReportViewer Control | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/06/2016"
+ms.date: "06/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,7 +65,7 @@ manager: "erikre"
  The example uses integrated Windows Authentication so you first must enable impersonation. To do this insert the following line into the **web.config** file:  
   
 ```  
-\<!-- Web.config file. -->  
+<!-- Web.config file. -->  
 <identity impersonate="true"/>  
 ```  
   

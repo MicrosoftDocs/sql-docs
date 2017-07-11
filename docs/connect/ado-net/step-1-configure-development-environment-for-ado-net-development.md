@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Configure development environment for ADO.NET development | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "06/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,14 +30,8 @@ manager: "jhubbard"
   
 ## Ubuntu Linux  
   
-Download .NET Framework from the [Mono Project][linkid-mono-project]
+Download [.NET Core](https://www.microsoft.com/net/core#linuxubuntu), a cross-platform & open source version of .NET. 
   
 ## Mac  
   
-Download .NET Framework from the [Mono Project][linkid-mono-project]
-
-
-\<!-- Repeatable link IDs. 
--->
-
-[linkid-mono-project]: http://www.mono-project.com/
+Download [.NET Core](https://www.microsoft.com/net/core#macos), a cross-platform & open source version of .NET. 

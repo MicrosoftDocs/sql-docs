@@ -44,7 +44,7 @@ Analysis Services provides many ways to customize a solution through code, but m
 
   - Multidimensional models and Tabular models at compatibility levels 1050-1103 use Analysis Services Scripting Language (ASSL), which is the Analysis Services extension of the XMLA open standard.
 
-  - You can generate ASSL or TMSL script in Management Studio. You can also use **View Code** in SQL Server Data Tools to view the model definition in ASSL or TMSL. See [Script Administrative Tasks in Analysis Services](../analysis-services/instances/script-administrative-tasks-in-analysis-services.md) for more information.
+  - You can generate ASSL or TMSL script in Management Studio. You can also use **View Code** in SQL Server Data Tools to view the model definition in ASSL or TMSL.
 
 - Although it is possible to build a solution based on the open standards of XMLA and MDX, it's quite rare to do so. There is no documentation other than XMLA and MDX reference to help you, and most community and forum support draws from experiences with .NET or native (MSOLAP) technologies.
 

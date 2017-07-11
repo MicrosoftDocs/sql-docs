@@ -85,7 +85,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 ## Examples  
  You can use the following query to find out how long a worker has been running in a SUSPENDED or RUNNABLE state.  
   
-```  
+```tsql
 SELECT   
     t1.session_id,  
     CONVERT(varchar(10), t1.status) AS status,  
@@ -111,37 +111,25 @@ SELECT
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `session_id status     command         worker_state w_suspended w_runnable`  
-  
- `---------- ---------- --------------- ------------ ----------- --------------------`  
-  
- `4          background LAZY WRITER     SUSPENDED    688         688`  
-  
- `6          background LOCK MONITOR    SUSPENDED    4657        4657`  
-  
- `19         background BRKR TASK       SUSPENDED    603820344   603820344`  
-  
- `14         background BRKR EVENT HNDL SUSPENDED    63583641    63583641`  
-  
- `51         running    SELECT          RUNNING      0           0`  
-  
- `2          background RESOURCE MONITO RUNNING      0           603825954`  
-  
- `3          background LAZY WRITER     SUSPENDED    422         422`  
-  
- `7          background SIGNAL HANDLER  SUSPENDED    603820485   603820485`  
-  
- `13         background TASK MANAGER    SUSPENDED    603824704   603824704`  
-  
- `18         background BRKR TASK       SUSPENDED    603820407   603820407`  
-  
- `9          background TRACE QUEUE TAS SUSPENDED    454         454`  
-  
- `52         suspended  SELECT          SUSPENDED    35094       35094`  
-  
- `1          background RESOURCE MONITO RUNNING      0           603825954`  
-  
+
+```
+ session_id status     command         worker_state w_suspended w_runnable  
+ ---------- ---------- --------------- ------------ ----------- --------------------  
+ 4          background LAZY WRITER     SUSPENDED    688         688  
+ 6          background LOCK MONITOR    SUSPENDED    4657        4657
+ 19         background BRKR TASK       SUSPENDED    603820344   603820344  
+ 14         background BRKR EVENT HNDL SUSPENDED    63583641    63583641  
+ 51         running    SELECT          RUNNING      0           0  
+ 2          background RESOURCE MONITO RUNNING      0           603825954  
+ 3          background LAZY WRITER     SUSPENDED    422         422  
+ 7          background SIGNAL HANDLER  SUSPENDED    603820485   603820485  
+ 13         background TASK MANAGER    SUSPENDED    603824704   603824704  
+ 18         background BRKR TASK       SUSPENDED    603820407   603820407  
+ 9          background TRACE QUEUE TAS SUSPENDED    454         454  
+ 52         suspended  SELECT          SUSPENDED    35094       35094  
+ 1          background RESOURCE MONITO RUNNING      0           603825954  
+```
+
  In the output, when `w_runnable` and `w_suspended` are equal, this represents the time that the worker is in the SUSPENDED state. Otherwise, `w_runnable` represents the time that is spent by the worker in the RUNNABLE state. In the output, session `52` is `SUSPENDED` for `35,094` milliseconds.  
   
 ## See Also  

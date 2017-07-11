@@ -190,8 +190,8 @@ As described in the picture above, a log shipping session involves the following
 - Run this script from your secondary server
 
     ```tsql
-    RESTORE DATABASE SampleDB2 WITH NORECOVERY
-    FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak' ;
+    RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
+    WITH NORECOVERY;
     ```
     
     ```tsql
@@ -315,6 +315,7 @@ As described in the picture above, a log shipping session involves the following
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 
 

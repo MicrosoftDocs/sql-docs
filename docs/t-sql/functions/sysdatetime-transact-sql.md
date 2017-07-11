@@ -83,9 +83,8 @@ SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
 CURRENT_TIMESTAMP  2007-04-30 13:10:02.047  
 GETDATE()          2007-04-30 13:10:02.047  
 GETUTCDATE()       2007-04-30 20:10:02.047  
-```  
-  
-### */  
+*/
+```    
   
 ### B. Getting the current system date  
   

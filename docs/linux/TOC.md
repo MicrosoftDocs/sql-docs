@@ -1,6 +1,10 @@
 # [Understand and Explore](sql-server-linux-overview.md)
+
+# What's new
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md) 
+## [New and recently updated articles](new-updated-linux.md)
+
 # [Get Started](sql-server-linux-get-started-tutorial.md)
 ## [Install SQL Server](sql-server-linux-setup.md)
 ### [Install on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
@@ -12,12 +16,15 @@
 ### [Install SQL Server tools](sql-server-linux-setup-tools.md)
 ### [Install SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [Install SQL Server Full-Text Search](sql-server-linux-setup-full-text-search.md)
+### [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ## [Connect and query](sql-server-linux-connect-and-query-sqlcmd.md)
+
 # [Develop](sql-server-linux-develop-overview.md)
 ## [Connectivity libraries](sql-server-linux-develop-connectivity-libraries.md)
 ## [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 ## [Use SSMS](sql-server-linux-develop-use-ssms.md)
 ## [Use SSDT](sql-server-linux-develop-use-ssdt.md)
+
 # [Manage](sql-server-linux-management-overview.md)
 ## [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
 ## [Configure with environment variables](sql-server-linux-configure-environment-variables.md)
@@ -25,13 +32,15 @@
 ## [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
 ## [Create and run jobs](sql-server-linux-run-sql-server-agent-job.md)
 ## [Use log shipping](sql-server-linux-use-log-shipping.md)
+
 # [Migrate](sql-server-linux-migrate-overview.md)
 ## [Restore from Windows](sql-server-linux-migrate-restore-database.md)
 ## [Export and import a BACPAC with SqlPackage](sql-server-linux-migrate-sqlpackage.md)
 ## [Export and import a BACPAC with SSMS](sql-server-linux-migrate-ssms.md)
 ## [Migrate with SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
 ## [Bulk copy with bcp](sql-server-linux-migrate-bcp.md)
-## [Load data with (SSIS)](sql-server-linux-migrate-ssis.md)
+## [Load data with SSIS](sql-server-linux-migrate-ssis.md)
+
 # [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ## [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 ### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)
@@ -50,7 +59,9 @@
 #### [Operate](sql-server-linux-availability-group-failover-ha.md)
 ### [Create for read-scale only]()
 #### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
+
 # [Security](sql-server-linux-security-overview.md)
 ## [Get started with security features](sql-server-linux-security-get-started.md)
+
 # [Optimize Performance](sql-server-linux-performance-get-started.md)
 # [Troubleshoot](sql-server-linux-troubleshooting-guide.md)

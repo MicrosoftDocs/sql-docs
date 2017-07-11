@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/odbc/reference/appendixes/sqlgetdata-cursor-library
+redirect_url: /sql/odbc/reference/appendixes/odbc-appendixes
 ---

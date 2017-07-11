@@ -1,7 +1,7 @@
 ---
 title: "Test a model in DirectQuery mode | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "07/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Test a model in DirectQuery mode
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Review your options for testing a tabular model in DirectQuery mode at each stage of development, starting with design.  
   
 ## Test in Excel 

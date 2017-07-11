@@ -1,7 +1,7 @@
 ---
 title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,8 +24,12 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Migrate a Reporting Services Installation (Native Mode)
-  This topic provides step-by-step instructions for migrating one of the following supported versions of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode deployment to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance:  
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)]
+
+This topic provides step-by-step instructions for migrating one of the following supported versions of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode deployment to a new SQL Server Reporting Services instance:  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -34,34 +38,31 @@ manager: "erikre"
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
+
+For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.|  
-  
- For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
-  
- Migration is defined as moving application data files to a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance. The following are common reasons you must migrate your installation:  
+ Migration is defined as moving application data files to a new SQL Server instance. The following are common reasons you must migrate your installation:  
   
 -   You have a large-scale deployment or uptime requirements.  
   
 -   You are changing the hardware or topology of your installation.  
   
 -   You encounter an issue that blocks upgrade.
-  
-##  <a name="bkmk_nativemode_migration_overview"></a> Native Mode Migration Overview  
+
+## <a name="bkmk_nativemode_migration_overview"></a> Native Mode Migration Overview
+
  The migration process for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes manual and automated steps. The following tasks are part of a report server migration:  
   
 -   Back up database, application, and configuration files.  
   
 -   Back up the encryption key.  
   
--   Install a new instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. If you are using the same hardware, you can install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] side-by-side with your existing installation if it was one of the supported versions.  
+-   Install a new instance of SQL Server. If you are using the same hardware, you can install SQL Server side-by-side with your existing installation if it was one of the supported versions.  
   
     > [!TIP]  
-    >  A side-by-side installation may require that you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] as a named instance.  
+    >  A side-by-side installation may require that you install SQL Server as a named instance.  
   
--   Move the report server database and other application files from your existing installation to your new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation.  
+-   Move the report server database and other application files from your existing installation to your new SQL Server installation.  
   
 -   Move any custom application files to the new installation.  
   
@@ -75,7 +76,7 @@ manager: "erikre"
   
  There are restrictions on the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that host the report server database. Review the following topic if you are reusing a report server database that was created in a previous installation.  
   
--   [Create a Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
+-   [Create a Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> Fixed Database Name  
  You cannot rename the report server database. The identity of the database is recorded in report server stored procedures when the database is created. Renaming either the report server primary or temporary databases causes errors when the procedures run, invalidating your report server installation.  
@@ -89,31 +90,32 @@ manager: "erikre"
 -   If you have just a few items, you can republish reports, report models, and shared data sources from Report Designer, Model Designer, and Report Builder to the new report server. You must re-create role assignments, subscriptions, shared schedules, report snapshot schedules, custom properties that you set on reports or other items, model item security, and properties that you set on the report server. You will lose report history and report execution log data.  
   
 ##  <a name="bkmk_before_you_start"></a> Before You Start  
- Even though you are migrating rather than upgrading the installation, consider running Upgrade Advisor on your existing installation help identify any issues that could affect migration. This step is especially helpful if you are migrating a report server that you did not install or configure. By running Upgrade Advisor, you can find out about custom settings that might not be supported in a new [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation.  
+ Even though you are migrating rather than upgrading the installation, consider running Upgrade Advisor on your existing installation help identify any issues that could affect migration. This step is especially helpful if you are migrating a report server that you did not install or configure. By running Upgrade Advisor, you can find out about custom settings that might not be supported in a new SQL Server installation.  
   
- In addition, you should be aware of several important changes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that will affect how you migrate your installation:
+ In addition, you should be aware of several important changes in SQL Server Reporting Services that will affect how you migrate your installation:
  
 - The new [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] has replaced Report Manager.
   
--   Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IIS is no longer a prerequisite. If you are migrating a report server installation to a new computer, you do not need to add the Web server role. In addition, steps for configuring URLs and authentication are different from the previous release, as are techniques and tools for diagnosing and troubleshooting problems.  
+- Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IIS is no longer a prerequisite. If you are migrating a report server installation to a new computer, you do not need to add the Web server role. In addition, steps for configuring URLs and authentication are different from the previous release, as are techniques and tools for diagnosing and troubleshooting problems.  
   
--   Report Server Web service, the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)], and the Report Server Windows service run under the same account. All three applications read configuration settings from RSReportServer.config file. 
+- Report Server Web service, the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)], and the Report Server Windows service run under the same account. All three applications read configuration settings from RSReportServer.config file. 
   
--   The [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] and SQL Server Management Studio are designed to remove overlapping features. Each tool supports a distinct set of tasks.
+- The [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] and SQL Server Management Studio are designed to remove overlapping features. Each tool supports a distinct set of tasks.
   
--   ISAPI filters are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use ISAPI filters, you must redesign your reporting solution prior to migration.  
+- ISAPI filters are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use ISAPI filters, you must redesign your reporting solution prior to migration.  
   
--   IP address restrictions are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use IP address restrictions, you must redesign your reporting solution prior to migration or use a technology such as a firewall, router, or Network Address Translation (NAT) to configure addresses that are restricted from accessing the report server.  
+- IP address restrictions are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use IP address restrictions, you must redesign your reporting solution prior to migration or use a technology such as a firewall, router, or Network Address Translation (NAT) to configure addresses that are restricted from accessing the report server.  
   
--   Client Secure Sockets Layer (SSL) certificates are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use client SSL certificates, you must redesign your reporting solution prior to migration.  
+- Client Secure Sockets Layer (SSL) certificates are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use client SSL certificates, you must redesign your reporting solution prior to migration.  
   
--   If you use an authentication type other than Windows Integrated authentication, you must update the `<AuthenticationTypes>` element in the **RSReportServer.config** file with a supported authentication type. The supported authentication types are NTLM, Kerberos, Negotiate, and Basic. Anonymous, .NET Passport, and Digest authentication are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions.  
+- If you use an authentication type other than Windows Integrated authentication, you must update the `<AuthenticationTypes>` element in the **RSReportServer.config** file with a supported authentication type. The supported authentication types are NTLM, Kerberos, Negotiate, and Basic. Anonymous, .NET Passport, and Digest authentication are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions.  
   
--   If you use custom cascading style sheets in your reporting environment, they will not be migrated. You must manually move them following migration.  
+- If you use custom cascading style sheets in your reporting environment, they will not be migrated. You must manually move them following migration.  
   
- For more information about changes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see the Upgrade Advisor documentation and [What's New in Reporting Services &#40;SSRS&#41;](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
-  
-##  <a name="bkmk_backup"></a> Backup Files and Data  
+For more information about changes in SQL Server Reporting Services, see the Upgrade Advisor documentation and [What's New in Reporting Services](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).  
+
+## <a name="bkmk_backup"></a> Backup Files and Data
+
  Before you install a new instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], be sure to back up all of the files in your current installation.  
   
 1.  Back up the encryption key for the report server database. This step is critical to migration success. Further on in the migration process, you must restore it for the report server to regain access to encrypted data. To back up the key, use the Reporting Services Configuration Manager.  
@@ -132,11 +134,12 @@ manager: "erikre"
   
     5.  Reportingservicesservice.exe.config  
   
-    6.  Web.config for both the Report Server and Report Manager [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications.  
+    6.  Web.config for the Report Server [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] application.  
   
     7.  Machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] if you modified it for report server operations.  
-  
-##  <a name="bkmk_install_ssrs"></a> Install SQL Server Reporting Services  
+
+## <a name="bkmk_install_ssrs"></a> Install SQL Server Reporting Services
+
  Install a new report server instance in files-only mode so that you can configure it to use non-default values. For command line installation, use the **FilesOnly** argument. In the Installation Wizard, select the **Install but do not configure option**.  
   
  Click one of the following links to view instructions on how to install a new instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
@@ -144,17 +147,18 @@ manager: "erikre"
 -   [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
 -   [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-  
-##  <a name="bkmk_move_database"></a> Move the Report Server Database  
+
+## <a name="bkmk_move_database"></a> Move the Report Server Database
+
  The report server database contains published reports, models, shared data sources, schedules, resources, subscriptions, and folders. It also contains system and item properties, and permissions for accessing report server content.  
   
  If your migration includes using a different [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance, you must move the report server database to the new [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance. If you are using the same [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance, skip to section [Move Custom Assemblies or Extensions](#bkmk_move_custom).  
   
  To move the report server database, do the following:  
   
-1.  Choose the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance to use. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requires that you use one of the following versions to host the report server database:  
+1.  Choose the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance to use. SQL Server Reporting Services requires that you use one of the following versions to host the report server database:  
   
-    -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+    -   SQL Server 2016  
   
     -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -171,8 +175,9 @@ manager: "erikre"
 4.  Follow the instructions in [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
  Remember that both the report server database and the temporary database are interdependent and must be moved together. Do not copy the databases; copying does not transfer all of the security settings to the new installation. Do not move SQL Server Agent jobs for scheduled report server operations. The report server will recreate these jobs automatically.  
-  
-##  <a name="bkmk_move_custom"></a> Move Custom Assemblies or Extensions  
+
+## <a name="bkmk_move_custom"></a> Move Custom Assemblies or Extensions
+
  If your installation includes custom report items, assemblies, or extensions, you must redeploy the custom components. If you are not using custom components, skip to section [Configure the Report Server](#bkmk_configure_reportserver).  
   
  To redeploy the custom components, do the following:  
@@ -187,7 +192,7 @@ manager: "erikre"
   
     -   Other custom assemblies should not require recompilation.  
   
-2.  Move the assemblies to the new report server and Report Manager \bin folders. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the report server binaries are located in the following location for the default [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance:  
+2.  Move the assemblies to the new report server \bin folder. In SQL Server, the report server binaries are located in the following location for the default report server instance:  
   
      `\Program files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin`  
   
@@ -204,11 +209,12 @@ manager: "erikre"
     5.  [Deploying a Rendering Extension](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
   
     6.  [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
+
+## <a name="bkmk_configure_reportserver"></a> Configure the Report Server
+
+ Configure URLs for the Report Server Web service and web portal, and configure the connection to the report server database.  
   
-##  <a name="bkmk_configure_reportserver"></a> Configure the Report Server  
- Configure URLs for the Report Server Web service and Report Manager, and configure the connection to the report server database.  
-  
- If you are migrating a scale-out deployment, take all of the report server nodes offline and migrate each server one at a time. Once the first report server is migrated and it successfully connects to the report server database, the report server database version is automatically upgraded to the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database version.  
+ If you are migrating a scale-out deployment, take all of the report server nodes offline and migrate each server one at a time. Once the first report server is migrated and it successfully connects to the report server database, the report server database version is automatically upgraded to the SQL Server database version.  
   
 > [!IMPORTANT]  
 >  If any of the report servers in the scale-out deployment are online and have not been migrated, they might encounter an rsInvalidReportServerDatabase exception because they are using an older schema when connected to the upgraded.  
@@ -222,35 +228,38 @@ manager: "erikre"
   
 1.  Start the Reporting Services Configuration Manager and connect to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance you just installed. For more information, see [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Configure URLs for the report server and Report Manager. For more information, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2.  Configure URLs for the report server and the web portal. For more information, see [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
-3.  Configure the report server database, selecting the existing report server database from your previous installation. After successful configuration, the report server services will restart, and once a connection is made to the report server database, the database will be automatically upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For more information about how to run the Change Database Wizard that you use to create or select a report server database, see [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+3.  Configure the report server database, selecting the existing report server database from your previous installation. After successful configuration, the report server services will restart, and once a connection is made to the report server database, the database will be automatically upgraded to SQL Server Reporting Services. For more information about how to run the Change Database Wizard that you use to create or select a report server database, see [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
 4.  Restore the encryption keys. This step is necessary for enabling reversible encryption on pre-existing connection strings and credentials that are already in the report server database. For more information, see [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
 5.  If you installed report server on a new computer and you are using Windows Firewall, be sure that the TCP port on which the report server listens is open. By default, this port is 80. For more information, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-6.  If you want to administer your native mode report server locally, you need to configure the operating system to allow local administration with Report Manager. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
-  
-##  <a name="bkmk_copy_custom_config"></a> Copy Custom Configuration Settings to RSReportServer.config File  
- If you modified the RSReportServer.config file or RSWebApplication.config file in the previous installation, you should make the same modifications in the new RSReportServer.config file. The following list summarizes some of the reasons why you might have modified the previous configuration file and provides links to additional information about how to configure the same settings in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+6.  If you want to administer your native mode report server locally, you need to configure the operating system to allow local administration with the web portal. For more information, see [Configure a Native Mode Report Server for Local Administration](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+
+## <a name="bkmk_copy_custom_config"></a> Copy Custom Configuration Settings to RSReportServer.config File
+
+If you modified the RSReportServer.config file or RSWebApplication.config file in the previous installation, you should make the same modifications in the new RSReportServer.config file. The following list summarizes some of the reasons why you might have modified the previous configuration file and provides links to additional information about how to configure the same settings in SQL Server 2016.  
   
 |Customization|Information|  
 |-------------------|-----------------|  
-|Report Server E-mail delivery with custom settings|[E-Mail Settings - Reporting Services Native mode &#40;Configuration Manager&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
+|Report Server E-mail delivery with custom settings|[E-Mail Settings - Reporting Services Native mode](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Device information settings|[Customize Rendering Extension Parameters in RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
-  
-##  <a name="bkmk_windowsservice_group"></a> Windows Service Group and Security ACLs  
- In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], there is one service group, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Service group, which is used to create security ACLs for all the registry keys, files, and folders that are installed with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. This Windows group name appears in the format SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>.  
-  
-##  <a name="bkmk_verify"></a> Verify Your Deployment  
-  
+
+## <a name="bkmk_windowsservice_group"></a> Windows Service Group and Security ACLs
+
+ In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], there is one service group, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Service group, which is used to create security ACLs for all the registry keys, files, and folders that are installed with SQL Server Reporting Services. This Windows group name appears in the format SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>.  
+
+## <a name="bkmk_verify"></a> Verify Your Deployment
+
 1.  Test the report server and [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] virtual directories by opening a browser and typing in the URL address. For more information, see [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
-2.  Test reports and verify they contain the data you expect. Review data source information to see whether the data source connection information is still specified. The report server uses the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report object model when processing and rendering reports, but it does not replace [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] constructs with new report definition language elements. To learn more about how existing reports run on a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
-  
-##  <a name="bkmk_remove_unused"></a> Remove Unused Programs and Files  
- Once you have successfully migrated your report server to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance, you might want to perform the following steps to remove programs and files that are no longer necessary.  
+2.  Test reports and verify they contain the data you expect. Review data source information to see whether the data source connection information is still specified. The report server uses the report object model when processing and rendering reports, but it does not replace [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] constructs with new report definition language elements. To learn more about how existing reports run on a new version of your report server, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
+
+## <a name="bkmk_remove_unused"></a> Remove Unused Programs and Files
+
+Once you have successfully migrated your report server to a new instance, you might want to perform the following steps to remove programs and files that are no longer necessary.  
   
 1.  Uninstall the previous version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] if you no longer need it. This step does not delete the following items, but you can manually remove them if you no longer need them:  
   
@@ -266,13 +275,14 @@ manager: "erikre"
   
     -   Report server log files  
   
-2.  Remove IIS if you no longer need it on this computer.  
-  
-## See Also  
- [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [Report Server Database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)   
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-  
-  
+2.  Remove IIS if you no longer need it on this computer.
+
+## Next steps
+
+[Migrate a Reporting Services Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)   
+[Report Server Database](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+[Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)   
+[Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

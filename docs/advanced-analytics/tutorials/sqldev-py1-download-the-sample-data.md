@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Download the Sample Data| Microsoft Docs"
 ms.custom: ""
-ms.date: "04/28/2017"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,14 +15,14 @@ dev_langs:
   - "Python"
   - "TSQL"
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # Step 1: Download the Sample Data
 
-In this step, you'll download the sample dataset and the scripts that are used in this walkthrough. Both the data and the script files are shared on Github, but the PowerShell script will download the data and script files to a local directory of your choosing.
+In this step, you'll download the sample dataset and the scripts. Both the data and the script files are shared on Github, but the PowerShell script will download the data and script files to a local directory of your choosing.
 
 ## Download the Data and Scripts
 
@@ -42,7 +42,7 @@ In this step, you'll download the sample dataset and the scripts that are used i
     
     If the folder you specify in *DestDir* does not exist, it will be created by the PowerShell script.
     
-    If you get an error, you can temporarily set the policy for execution of PowerShell scripts to **unrestricted** only for this walkthrough, by using the Bypass argument and scoping the changes to the current session. Running this command does not result in a configuration change.
+    If you get an error, you can temporarily set the policy for execution of PowerShell scripts to **unrestricted** only for this walkthrough, by using the **Bypass** argument and scoping the changes to the current session. Running this command does not result in a configuration change.
     
     `Set\-ExecutionPolicy Bypass \-Scope Process`
 

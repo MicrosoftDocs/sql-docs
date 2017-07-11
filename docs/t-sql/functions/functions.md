@@ -1,7 +1,7 @@
 ---
-title: "Functions | Microsoft Docs"
+title: "What are the Microsoft SQL database functions? | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "06/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,10 +24,10 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# Functions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+# What are the SQL database functions?
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides many built-in functions and also lets you create user-defined functions. The categories of built-in functions are listed on this page.  
+Learn about the categories of built-in functions you can use with SQL databases. You can use the built-in functions or create your own user-defined functions.
   
 ## Aggregate functions
 
@@ -36,7 +36,7 @@ Aggregate functions perform a calculation on a set of values and return a single
 All aggregate functions are deterministic, which means they always return the same value when they run on the same input values. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).|
 
 ## Analytic functions
-Analytic functions compute an aggregate value based on a group of rows. However, unlike aggregate functions, analytic functions can return multiple rows for each group. You can use analytic functions to compute moving averages, running totals, percentages or top-N results within a group.
+Analytic functions compute an aggregate value based on a group of rows. However, unlike aggregate functions, analytic functions can return multiple rows for each group. You can use analytic functions to compute moving averages, running totals, percentages, or top-N results within a group.
 
 ## Ranking functions
 Ranking functions return a ranking value for each row in a partition. Depending on the function that is used, some rows might receive the same value as other rows. Ranking functions are nondeterministic.

@@ -30,16 +30,6 @@ manager: "erikre"
 > [!NOTE]  
 >  Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], the **rs** utility is supported against report servers that are configured for SharePoint integrated mode as well as servers configured in native mode. Previous versions only supported native mode configurations.  
   
- **In this topic:**  
-  
--   [File Location](#bkmk_filelocation)  
-  
--   [Arguments](#bkmk_arguments)  
-  
--   [Permissions](#bkmk_permissions)  
-  
--   [Examples](#bkmk_examples)  
-  
 ## Syntax  
   
 ```  
@@ -131,9 +121,9 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 >  For a detailed example, see [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
 ## See Also  
- [Run a Reporting Services Script File](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
- [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Script with the rs.exe Utility and the Web Service](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
- [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+- [Run a Reporting Services Script File](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
+- [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
+- [Script with the rs.exe Utility and the Web Service](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

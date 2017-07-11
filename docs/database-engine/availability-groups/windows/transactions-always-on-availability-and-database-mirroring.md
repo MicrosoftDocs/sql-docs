@@ -1,5 +1,5 @@
 ---
-title: "Transactions - Always On Availability Groups and Database Mirroring | Microsoft Docs"
+title: "Transactions - Always On availability groups and database mirroring | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
 ms.prod: "sql-server-2016"
@@ -21,7 +21,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Transactions - Always On availability groups and Database Mirroring
+# Transactions - availability groups and database mirroring
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 This topic describes cross-database and distributed transactions support for Always On availability groups and database mirroring.  

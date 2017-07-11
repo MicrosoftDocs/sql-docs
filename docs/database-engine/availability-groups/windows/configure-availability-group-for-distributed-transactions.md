@@ -1,5 +1,5 @@
 ---
-title: "Configure Availability Group for Distributed Transactions | Microsoft Docs"
+title: "Configure availability group for distributed transactions | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2017"
 ms.prod: "sql-server-2016"
@@ -21,7 +21,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Configure Availability Group for Distributed Transactions
+# Configure availability group for distributed transactions
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 This article explains how to configure an availability group for distributed transactions  

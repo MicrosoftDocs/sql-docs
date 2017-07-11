@@ -2,7 +2,7 @@
 title: "SQL Server Machine Learning Tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/20/2017"
+ms.date: "07/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,11 +20,11 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# SQL Server Machine Learning Tutorials
+# SQL Server Machine Learning tutorials
 
 This article provides a comprehensive list of the tutorials, demos, and sample applications that use R or Python with SQL Server 2016 or SQL Server 2017. Start here to learn how to run R or Python from T-SQL, use remote and local compute contexts, and optimize your R and Python code for a SQL production environment.
 
-## Start Here
+## Start here
 
 + [**Python tutorials**](#bkmk_pythontutorials)
 
@@ -54,9 +54,9 @@ For more information about setup, see [Prerequisites](#bkmk_Prerequisites).
 
 > [!NOTE]
 >
-> Support for Python is a new feature in SQL Server 2017 (CTP 2.0). Although the feature is in pre-release and not supported for production environments, we invite you to try it out and send feedback.
+> Support for Python is a new feature in SQL Server 2017, beginning with CTP 2.0. Although the feature is in pre-release and not supported for production environments, we invite you to try it out and send feedback.
 
-## <a name ="bkmk_samples"></a>SQL Server Product Samples
+## <a name ="bkmk_samples"></a>SQL Server product samples
 
 These samples and demos provided by the SQL Server and R Server development team highlight ways that you can use embedded analytics in real-world applications.
 
@@ -70,21 +70,21 @@ These samples and demos provided by the SQL Server and R Server development team
 
 + [Clustering in SQL Server R Services](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/)
 
-  Use unsupervised learning to segment customers based on sales data. 
+  Use unsupervised learning to segment customers based on sales data.
 
-## Learn RevoScaleR
+## Learn about Microsoft R
 
-Wondering what RevoScaleR offers that R doesn't? See these tutorials:
+Wondering what the RevoScaleR package offers? See these tutorials:
 
-+ [Explore R and Scale R in 25 Short Functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started-tutorial)
++ [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/r-server/r/tutorial-introduction)
 
-  This R Server tutorial demonstrates how you can write R code once and deploy anywhere, using RevoScaleR data sources and remote compute contexts.
+  These R Server tutorials demonstrate how you can write R code once and deploy anywhere, using RevoScaleR data sources and remote compute contexts.
 
-+ [How-to guides for data analysis in Microsoft R](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
++ [Get started with MicrosoftML](https://docs.microsoft.com/en-us/r-server/r/concept-what-is-the-microsoftml-package)
 
-  Learn how to use RevoScaleR for advanced modeling and data transformation, and optimize for different compute contexts.
+  Learn how to use the new algorithms in the MicrosoftML package for advanced modeling and scalable data transformations, optimized for multiple compute contexts.
 
-## <a name="bkmk_solutions"></a>Customizable End-to-End Solutions
+## <a name="bkmk_solutions"></a>Customizable solutions
 
 The Microsoft Data Science Team has provided solution templates that can be used to jump-start solutions for common scenarios. All T-SQL and R code is provided, along with instructions on how to train and deploy a model for scoring using SQL Server stored procedures.
 
@@ -95,7 +95,7 @@ The Microsoft Data Science Team has provided solution templates that can be used
 
 For more information, see [Machine Learning Templates with SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/).
 
-## Resources and Reading
+## Resources and reading
 
 + Want to know the real story behind R Services? Read this article from the development and PM team: [Why did we build it?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/01/10/sql-server-r-services-why-did-we-build-it/)
 

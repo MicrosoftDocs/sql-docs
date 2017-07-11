@@ -44,7 +44,7 @@ For information about other connection attributes, see [Connection Options](../.
 
 Connection pooling can be enabled/disabled by editing odbcinst.ini configuration file. The driver should be reloaded for the changes to take effect.
 
-Setting `Pooling` to `Yes` and a positive `CPTimeout`value in odbcinst.ini will enable connection pooling. 
+Setting `Pooling` to `Yes` and a positive `CPTimeout`value in odbcinst.ini enables connection pooling. 
 ```
 [ODBC]
 Pooling=Yes
@@ -52,7 +52,7 @@ Pooling=Yes
 [ODBC Driver 13 for SQL Server]
 CPTimeout=<int value>
 ```
-Setting `Pooling` to `No` in odbcinst.ini will force the driver to create a new connection.
+Setting `Pooling` to `No` in odbcinst.ini forces the driver to create a new connection.
 ```
 [ODBC]
 Pooling=No

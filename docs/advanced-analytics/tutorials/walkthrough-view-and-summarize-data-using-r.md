@@ -233,7 +233,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 ```
 
 > [!TIP]
-> While this is running, you can use a tool like [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/processexplorer.aspx) or SQL Profiler to see how the connection is made and the R code is run using SQL Server services.
+> While this is running, you can use a tool like [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) or SQL Profiler to see how the connection is made and the R code is run using SQL Server services.
 > 
 > Another option is to monitor R jobs running on SQL Server using these [custom reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 

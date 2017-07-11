@@ -220,6 +220,8 @@ We also recommend that you check out some of these additional samples and resour
 
 [Build an R model and save it in SQL Server](/walkthrough-build-and-save-the-model.md)
 
-## Related resources
+## Next steps
 
 [SQL Server R Services Tutorials](sql-server-r-tutorials.md)
+
+[How to create a stored procedure using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)

@@ -29,7 +29,7 @@ In this part of the walkthrough, you'll learn techniques for generating plots an
 1. Generate the first plot, using the [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) function.  The rxHistogram function provides functionality similar to that in open source R packages, but can run in a remote execution context.
 
     ```R
-    #Plot fare amount on SQL Server and return the plot
+    # Plot fare amount on SQL Server and return the plot
     start.time <- proc.time()
     rxHistogram(~fare_amount, data = inDataSource, title = "Fare Amount Histogram")
     used.time <- proc.time() - start.time

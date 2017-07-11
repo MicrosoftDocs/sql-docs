@@ -846,7 +846,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |SQL_SHARED_MR||Installs Microsoft R Server.|  
 |Tools*||Installs client tools and SQL Server Books Online components.|  
 ||BC|Installs backward compatibility components.|  
-||BOL|Installs SQL Server Books Online components to view and manage help content.|
+||BOL|Installs SQL Server Books Online components to view and manage help content. Not available to [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] and later.|
 ||Conn|Installs connectivity components.|
 ||DREPLAY_CTLR|Installs Distributed Replay controller|  
 ||DREPLAY_CLT|Installs Distributed Replay client|  

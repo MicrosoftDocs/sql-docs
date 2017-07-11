@@ -61,3 +61,4 @@ Pooling=No
 ## See Also  
 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md)  
 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+  

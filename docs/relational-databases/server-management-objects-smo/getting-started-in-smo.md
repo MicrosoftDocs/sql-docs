@@ -1,7 +1,7 @@
 ---
 title: "Getting Started in SMO | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,12 +19,8 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Getting Started in SMO
-  This topic contains information about getting started using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). The SMO section is aimed at developers. The following list will help you to locate information about the SMO object hierarchy, how to prepare for writing programs in SMO, how to start writing an SMO program in different programming languages, and general and specific programming tasks.  
-  
- **Preparing for SMO**  
-  
--   [Preparing for SMO](http://msdn.microsoft.com/library/05018a4d-2339-4ecf-8769-414ec781c535) provides information about system requirements, installation, and comparisons with SQL-DMO.  
-  
+  This topic contains links to about topics to help you get started using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). The SMO section is aimed at developers. The following list will help you to locate information about the SMO object hierarchy, how to prepare for writing programs in SMO, how to start writing an SMO program in different programming languages, and general and specific programming tasks.  
+ 
  **Object Model**  
   
 -   The [Object Model](../../relational-databases/server-management-objects-smo/smo-object-model.md) describes the SMO object hierarchy and how the objects relate to one another.  

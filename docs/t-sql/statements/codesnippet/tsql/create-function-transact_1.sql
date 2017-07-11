@@ -1,0 +1,1 @@
+SELECT * FROM Sales.ufn_SalesByStore (602);

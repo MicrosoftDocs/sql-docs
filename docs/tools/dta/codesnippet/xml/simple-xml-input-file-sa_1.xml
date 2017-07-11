@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-16" ?>
+<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">
+  <DTAInput>
+    <Server>
+      <Name>MyServerName</Name>
+<!-- To tune multiplate databases, list them and their associated tables in the following section. -->
+      <Database>
+        <Name>MyDatabaseName</Name>
+        <Schema>
+          <Name>MyDatabaseSchemaName</Name>
+<!-- You can list as many tables as necessary in the following section. -->
+          <Table>
+            <Name>MyTableName1</Name>
+          </Table>
+          <Table>
+            <Name>MyTableName2</Name>
+          </Table>
+        </Schema>
+      </Database>
+    </Server>
+    <Workload>
+<!-- The following element specifies a workload file, which can be a trace file or a Transact-SQL script file. -->
+      <File>c:\PathToYourWorkloadFile</File>
+    </Workload>
+    <TuningOptions>
+      <TuningTimeInMin>60</TuningTimeInMin>
+      <FeatureSet>IDX_IV</FeatureSet>
+      <Partitioning>NONE</Partitioning>
+      <KeepExisting>NONE</KeepExisting>
+      <OnlineIndexOperation>OFF</OnlineIndexOperation>
+    </TuningOptions>
+  </DTAInput>
+</DTAXML>

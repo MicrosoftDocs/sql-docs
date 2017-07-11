@@ -1,0 +1,1 @@
+![yes](media/yes.png)SharePoint integrated mode

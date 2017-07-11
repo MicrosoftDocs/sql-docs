@@ -11,7 +11,7 @@ ms.technology: database-engine
 ---
 # Get started with SQL Server 2017 on Docker
 
-In this quick start tutorial, you use Docker to pull and run the SQL Server 2017 RC1 containter image, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Then connect with **sqlcmd** to create your first database and run queries.
+In this quick start tutorial, you use Docker to pull and run the SQL Server 2017 RC1 container image, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Then connect with **sqlcmd** to create your first database and run queries.
 
 This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
 
@@ -26,20 +26,20 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 > [!IMPORTANT]
-> The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you must change it to 4 GB. If you are running on Mac or Windows, use the procedures below in increase the memory.
+> The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you must change it to 4 GB. If you are running on Mac or Windows, use the following procedures to increase the memory.
 
-### Mac: Increase Docker memory to 4GB
+### Mac: Increase Docker memory to 4 GB
 
-The following steps increase the memory for Docker for Mac to 4GB.
+The following steps increase the memory for Docker for Mac to 4 GB.
 
 1. Click the Docker logo on the top status bar.
 1. Select **Preferences**.
 1. Move the memory indicator to 4 GB or more.
 1. Click the **restart** button at the button of the screen.
 
-### Windows: Increase Docker memory to 4GB
+### Windows: Increase Docker memory to 4 GB
 
-The following steps increase the memory for Docker for Windows to 4GB.
+The following steps increase the memory for Docker for Windows to 4 GB.
 
 1. Right-click on the Docker icon from the task bar.
 1. Click **Settings** under that menu.
@@ -96,7 +96,7 @@ The following steps increase the memory for Docker for Windows to 4GB.
 
 ## Change the SA password
 
-The SA account is an system administrator on the SQL Server instance that gets created during setup. After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, change your SA password.
+The SA account is a system administrator on the SQL Server instance that gets created during setup. After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, change your SA password.
 
 1. Choose a strong password to use for the SA user.
 
@@ -119,7 +119,7 @@ The following steps use the SQL Server command-line tool, **sqlcmd**, inside the
     > [!TIP]
     > You don't always have to specify the entire container id. You only have to specify enough characters to uniquely identify it. So in this example, it might be enough to use `e6` or `e69` rather than the full id.
 
-1. Once inside the container, connect locally with sqlcmd. Note that sqlcmd is not in the path by default, so you have to specify the full path.
+1. Once inside the container, connect locally with sqlcmd. Sqlcmd is not in the path by default, so you have to specify the full path.
 
     ```bash
     /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourPassword>'
@@ -207,7 +207,7 @@ Next create a new table, `Inventory`, and insert two new rows.
 
 Now, run a query to return data from the `Inventory` table.
 
-1. From the **sqlcmd** commandd prompt, enter a query that returns rows from the `Inventory` table where the quantity is greater than 152:
+1. From the **sqlcmd** command prompt, enter a query that returns rows from the `Inventory` table where the quantity is greater than 152:
 
    ```sql
    SELECT * FROM Inventory WHERE quantity > 152;
@@ -233,7 +233,7 @@ Now, run a query to return data from the `Inventory` table.
 
 You can also connect to the SQL Server instance on your Docker machine from any external Linux, Windows, or macOS tool that supports SQL connections.
 
-The following steps uses **sqlcmd** outside of your container to connect to SQL Server running in the container. These steps assume that you already have the SQL Server command-line tools installed outside of your container. The same principals apply when using other tools, but the process of connecting will be unique to each tool.
+The following steps use **sqlcmd** outside of your container to connect to SQL Server running in the container. These steps assume that you already have the SQL Server command-line tools installed outside of your container. The same principals apply when using other tools, but the process of connecting is unique to each tool.
 
 1. Find the IP address for the machine that hosts your container. On Linux, use **ifconfig** or **ip addr**. On Windows, use **ipconfig**.
 

@@ -28,7 +28,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 > [!IMPORTANT]
 > The default on Docker for Mac and Docker for Windows is 2 GB for the Moby VM, so you must change it to 4 GB. If you are running on Mac or Windows, use the following procedures to increase the memory.
 
-### Mac: Increase Docker memory to 4 GB
+### Increase Docker memory to 4 GB (Mac)
 
 The following steps increase the memory for Docker for Mac to 4 GB.
 
@@ -37,7 +37,7 @@ The following steps increase the memory for Docker for Mac to 4 GB.
 1. Move the memory indicator to 4 GB or more.
 1. Click the **restart** button at the button of the screen.
 
-### Windows: Increase Docker memory to 4 GB
+### Increase Docker memory to 4 GB (Windows)
 
 The following steps increase the memory for Docker for Windows to 4 GB.
 

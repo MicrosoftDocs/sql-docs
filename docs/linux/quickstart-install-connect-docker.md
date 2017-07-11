@@ -130,27 +130,8 @@ The following steps use the SQL Server command-line tool, **sqlcmd**, inside the
 
 1. If successful, you should get to a **sqlcmd** command prompt: `1>`.
 
-## Connect locally
-
-The following steps use **sqlcmd** to locally connect to your new SQL Server instance.
-
-1. Run **sqlcmd** with parameters for your SQL Server name (-S), the user name (-U), and the password (-P). In this tutorial, you are connecting locally, so the server name is `localhost`. The user name is `SA` and the password is the one you provided for the SA account during setup.
-
-   ```bash
-   sqlcmd -S localhost -U SA -P '<YourPassword>'
-   ```
-
-   > [!TIP]
-   > You can omit the password on the command-line to be prompted to enter it.
-
-   > [!TIP]
-   > If you later decide to connect remotely, specify the machine name or IP address for the **-S** parameter, and make sure port 1433 is open on your firewall.
-
-1. If successful, you should get to a **sqlcmd** command prompt: `1>`.
-
-1. If you get a connection failure, first attempt to diagnose the problem from the error message. Then review the [connection troubleshooting recommendations](../linux/sql-server-linux-troubleshooting-guide.md#connection).
-
 ## Create and query data
+
 The following sections walk you through using **sqlcmd** and Transact-SQL to create a new database, add data, and run a simple query.
 
 ### Create a new database

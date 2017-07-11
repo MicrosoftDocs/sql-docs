@@ -123,7 +123,7 @@ In order to participate in distributed transactions, an instance of [!INCLUDE[SQ
 
 When a database is in an availability group, the read-write copy of the database - or primary replica - may move to a different instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]. To support distributed transactions during this movement, each database should act as a separate resource manager and must have a unique RMID. When an availability group has `DTC_SUPPORT = PER_DB`, [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] creates a resource manager for each database and registers with DTC using a unique RMID. In this configuration, the database is a resource manager for DTC transactions.
 
-For more detail on distributed transactions in [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], see [Distributed transactions](transactions-always-on-availability-and-database-mirroring.md#distTran)
+For more detail on distributed transactions in [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], see [Distributed transactions](#distTran)
 
 ## Manage in-doubt transactions
 

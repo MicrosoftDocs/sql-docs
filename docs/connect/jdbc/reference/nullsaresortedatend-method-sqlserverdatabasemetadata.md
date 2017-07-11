@@ -1,0 +1,49 @@
+---
+title: "nullsAreSortedAtEnd Method (SQLServerDatabaseMetaData) | Microsoft Docs"
+ms.custom: ""
+ms.date: "01/19/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "drivers"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "SQLServerDatabaseMetaData.nullsAreSortedAtEnd"
+apilocation: 
+  - "sqljdbc.jar"
+apitype: "Assembly"
+ms.assetid: 713cf636-40f2-474a-8a5d-5aba4a310a9c
+caps.latest.revision: 7
+author: "MightyPen"
+ms.author: "genemi"
+manager: "jhubbard"
+---
+# nullsAreSortedAtEnd Method (SQLServerDatabaseMetaData)
+[!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
+
+  Retrieves whether NULL values are sorted at the end, regardless of sort order.  
+  
+## Syntax  
+  
+```  
+  
+public boolean nullsAreSortedAtEnd()  
+```  
+  
+## Return Value  
+ **true** if sorted at the end. Otherwise, **false**.  
+  
+## Exceptions  
+ [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
+  
+## Remarks  
+ This nullsAreSortedAtEnd method is specified by the nullsAreSortedAtEnd method in the java.sql.DatabaseMetaData interface.  
+  
+## See Also  
+ [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
+ [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+ [SQLServerDatabaseMetaData Class](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
+  
+  

@@ -1,0 +1,50 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+           "**/mref/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.gif",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/*.md"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "layout": "Conceptual",
+      "breadcrumb_path": "~/breadcrumb/toc.yml",
+      "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana"],
+      "_op_documentIdPathDepotMapping": {
+        "linux/": {
+          "depot_name": "SQL.linux",
+          "folder_relative_path_in_docset": "."
+        }
+      }
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "docs",
+    "xref":["mref/sql130.zip","mref/System.Reflection.Assembly.Load.yml","mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml"]
+  }
+}

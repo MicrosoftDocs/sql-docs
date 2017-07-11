@@ -41,13 +41,13 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 1. Remember that the data source object you created earlier gets only the top 1000 rows. So let's define a query that gets all the data.
 
     ```R
-    baseQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample";
+    bigQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample";
     ```
 
 2. Create a new SQL Server data source using the query.
 
     ```R
-    featureDataSource <- RxSqlServerData(sqlQuery = baseQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
+    featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
 3. Run the following code to create the custom R function. ComputeDist takes in two pairs of latitude and longitude values, and calculates the linear distance between them, returning the distance in miles.
@@ -102,17 +102,13 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + The rxDataStep function supports various methods for modifying data in place. In this example, we've used the _transforms_ argument to specify both the pass-through columns and the transformed columns. For more information, see this article:  [How to transform and subset data in Microsft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + The rxDataStep function supports various methods for modifying data in place. For more information, see this article:  [How to transform and subset data in Microsft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    
+    However, a couple of points worth noting regarding rxDataStep: 
+    
+    In other data sources, you can use the arguments *varsToKeep* and *varsToDrop*, but these are not supported for SQL Server data sources. Therefore, in this example, we've used the _transforms_ argument to specify both the pass-through columns and the transformed columns. Another restriction tot be aware of is that when running in a SQL Server compute context, the _inData_ argument can only take a SQL Server data source.
 
-    Unfortunately, not all arguments to rxDataStep are supported for all data sources. For example, *varsToKeep* and *varsToDrop* are no longer supported for SQL Server data sources. Also, when running in a SQL Server compute context, the _inData_ argument can only take a SQL Server data source.
-
-6. The results were incomplete, as the local compute context didn't have enough memory to process all the rows. You might get better results, depending on your computer's memory. However, it does point up the problems inherent in trying to run everything in memory, in R.
-
-    ```
-    ReadNum=1, CurrentBlockNum=1, CurrentNumRows=1703957, TotalRowsProcessed=1703957, ReadTime=18.969, ProcessDataTime = 25.397, TransformTime = 22.376, LoopTime = 44.366 
-
-    WARNING: The number of rows (1703957) times the number of columns (12) exceeds the 'maxRowsByCols' argument (3000000). Rows will be truncated.
-    ```
+    The above code can also produce a warning message when run on larger data sets. When the number of rows times the number of columns being created exceeds a set value (the default is 3,000,000), rxDataStep returns a warning, and the number of rows in the returned data frame will be truncated. To remove the warning, you can modify the maxRowsByCols argument in the rxDataStep function. However, if  maxRowsByCols is set to be too large, you may experience problems from loading a huge data frame into memory.
 
 7. Optionally, you can call [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) to inspect the schema of the transformed data source.
 
@@ -169,7 +165,7 @@ Now you'll create a custom SQL function, *ComputeDist*, to accomplish the same t
     FROM nyctaxi_sample
     ```
 
-4. However, let's see how to call the custom SQL function from R code. First, save the feature engineering query in an R variable.
+4. However, let's see how to call the custom SQL function from R code. First, store the SQL featurization query in an R variable.
 
     ```R
     featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,
@@ -182,7 +178,7 @@ Now you'll create a custom SQL function, *ComputeDist*, to accomplish the same t
 5. Use the following lines of code to call the [!INCLUDE[tsql](../../includes/tsql-md.md)] function from your R environment and apply it to the data defined in *featureEngineeringQuery*. At this point, you should be in the local compute context.
 
     ```R
-    new_ds = RxSqlServerData(sqlQuery = featureEngineeringQuery,
+    sql_feature_ds = RxSqlServerData(sqlQuery = featureEngineeringQuery,
       colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric",
              dropoff_longitude = "numeric", dropoff_latitude = "numeric",
              passenger_count  = "numeric", trip_distance  = "numeric",
@@ -193,7 +189,7 @@ Now you'll create a custom SQL function, *ComputeDist*, to accomplish the same t
 5. Now that the new feature has been added to the data source, call rxGetVarInfo to create a summary of the feature table.
 
     ```R
-    rxGetVarInfo(data = new_ds)
+    rxGetVarInfo(data = sql_feature_ds)
     ```
 
     *Results*
@@ -232,23 +228,10 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 
 You can try using this with the SQL custom function example to see how long the data transformation takes when calling a SQL function. Also, try switching compute contexts with rxSetComputeContext and compare the timings.
 
-*Results for local compute context*
-
-```
-It takes CPU Time=0.22 seconds, Elapsed Time=1.19 seconds to generate features.
-```
-
-*Results for sqlcc*
-```
- "It takes CPU Time=0.23 seconds, Elapsed Time=0.87 seconds to generate features."
- ```
-
-Your times might vary significantly, depending on your network speed, and your hardware configuration, but certainly completing in 1.19 seconds is an improvement over not completing at all.
-
-At least for this particular task, the [!INCLUDE[tsql](../../includes/tsql-md.md)] function approach is faster than using a custom R function. Therefore, you'll use the [!INCLUDE[tsql](../../includes/tsql-md.md)] function for these calculations in subsequent steps.
+Your times might vary significantly, depending on your network speed, and your hardware configuration. In the configurations we tested, the [!INCLUDE[tsql](../../includes/tsql-md.md)] function approach was faster than using a custom R function. Therefore, we've use the [!INCLUDE[tsql](../../includes/tsql-md.md)] function for these calculations in subsequent steps.
 
 > [!TIP]
-> Very often, feature engineering using [!INCLUDE[tsql](../../includes/tsql-md.md)] will be faster than R. For example, T-SQL includes very fast windowing and ranking functions, which could be used for common data science calculations such as rolling moving averages and *n*tiles. Choose the most efficient method based on your data and task.
+> Very often, feature engineering using [!INCLUDE[tsql](../../includes/tsql-md.md)] will be faster than R. For example, T-SQL includes very fast windowing and ranking functions that can be applied to common data science calculations such as rolling moving averages and *n*tiles. Choose the most efficient method based on your data and task.
 
 ## Next lesson
 

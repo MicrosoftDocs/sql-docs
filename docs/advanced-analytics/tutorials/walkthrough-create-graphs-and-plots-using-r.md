@@ -32,7 +32,7 @@ In this part of the walkthrough, you'll learn techniques for generating plots an
     #Plot fare amount on SQL Server and return the plot
     start.time <- proc.time()
     rxHistogram(~fare_amount, data = inDataSource, title = "Fare Amount Histogram")
-    used.time \<- proc.time() - start.time
+    used.time <- proc.time() - start.time
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2), " seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate plot.", sep=""))
     ```
 
@@ -67,7 +67,7 @@ We'll walk you through it in this lesson.
     ```
 
     + The *mapPlot* function takes two arguments: an existing data object, which you defined earlier using RxSqlServerData, and the map representation passed from the client.
-    + In the line beginning with the *ds* variable, rxImport is used to load into memory data from the previously created data source, *inDataSource*. However, that data source contains only 1000 rows; if you want to create a map with more data points, you can substitute a different data source.
+    + In the line beginning with the *ds* variable, rxImport is used to load into memory data from the previously created data source, *inDataSource*. (That data source contains only 1000 rows; if you want to create a map with more data points, you can substitute a different data source.)
     + Whenever you use **open source** R functions, data must be loaded into data frames in local memory. However, by calling the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function, you can run in the memory of the remote compute context.
 
 2. Change the compute context to local, and load the libraries required for creating the maps.
@@ -84,7 +84,7 @@ We'll walk you through it in this lesson.
 
     + The line beginning with `googmap` generates a map with the specified coordinates at the center.
 
-3. Change to the SQL Server compute context, and render the results, by wrapping the plot function in [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) as shown here. The rxExec function is part of the **RevoScaleR** package, and supports execution of arbitrary R functions in a remote compute context.
+3. Switch to the SQL Server compute context, and render the results, by wrapping the plot function in [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) as shown here. The rxExec function is part of the **RevoScaleR** package, and supports execution of arbitrary R functions in a remote compute context.
 
     ```R
     rxSetComputeContext(sqlcc)
@@ -97,7 +97,7 @@ We'll walk you through it in this lesson.
     + When the line beginning with `plot` runs, the rendered data is serialized back to the local R environment so that you can view it in your R client.
 
     > [!NOTE]
-    > If you're using SQL Server in an Azure virtual machine, you might get an error at this point. That's because a default firewall rule in Azure blocks network access by R code. For details on how to disable this rule, see [Installing R Services in an Azure VM](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > If you're using SQL Server in an Azure virtual machine, you might get an error at this point. That's because a default firewall rule in Azure blocks network access by R code. For details on how to fix this error, see [Installing R Services in an Azure VM](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
 
 4. The following image shows the output plot. The taxi pickup locations are added to the map as red dots. Your image might look different, depending how many locations are in the data source you used.
 

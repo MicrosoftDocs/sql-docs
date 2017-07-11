@@ -25,10 +25,10 @@ In this part of the data science walkthrough, you learn how to build a machine l
 
 These columns can be used as the features in the model:
 
-+ passenger_count
-+ trip_distance
-+ trip_time_in_secs
-+ direct_distance
++ passenger\_count
++ trip\_distance
++ trip\_time\_in\_secs
++ direct\_distance
 
 ## Create a classification model using rxLogit
 
@@ -37,7 +37,7 @@ The model you build is a binary classifier that predicts whether the taxi driver
 1. Call the [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) function, included in the **RevoScaleR** package, to create a logistic regression model. 
 
     ```R
-    system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = new_ds));
+    system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = sql_feature_ds));
     ```
 
     The call that builds the model is enclosed in the system.time function. This lets you get the time required to build the model.
@@ -51,10 +51,10 @@ The model you build is a binary classifier that predicts whether the taxi driver
      *Results*
 
     ```
-    rxLogit(formula = tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = new_ds)
+    rxLogit(formula = tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = sql_feature_ds)
     
     Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance
-    Data: new_ds (RxSqlServerData Data Source)
+    Data: sql_feature_ds (RxSqlServerData Data Source)
     Dependent variable(s): tipped
     Total independent variables: 5
     Number of valid observations: 1703957
@@ -86,7 +86,7 @@ Now that the model is built, you can use to predict whether the driver is likely
       connectionString = connStr,
       table = "taxiScoreOutput"  )
     ```
-    + To make this example simpler, the input to the logistic regression model is the same feature data source (`new_ds`) that you used to train the model.  More typically, you might have some new data to score with, or you might have set aside some data for testing vs. training.
+    + To make this example simpler, the input to the logistic regression model is the same feature data source (`sql_feature_ds`) that you used to train the model.  More typically, you might have some new data to score with, or you might have set aside some data for testing vs. training.
   
     + The prediction results will be saved in the table, _taxiscoreOutput_. Notice that the schema for this table is not defined when you create it using rxSqlServerData. The schema is obtained from the rxPredict output.
   
@@ -96,7 +96,7 @@ Now that the model is built, you can use to predict whether the driver is likely
 
     ```R
     rxPredict(modelObject = logitObj,
-        data = new_ds,
+        data = sql_feature_ds,
         outData = scoredOutput,
         predVarNames = "Score",
         type = "response",
@@ -134,7 +134,7 @@ In this section, you'll experiment with both techniques.
     plot(rocObjectOut);
     ```
 
-    View the graph by opening the R graphics device, or by clicking the **Plot** window in RStudio. 
+    View the graph by opening the R graphics device, or by clicking the **Plot** window in RStudio.
 
     ![ROC plot for the model](media/rsql-e2e-rocplot.png "ROC plot for the model")
 
@@ -152,7 +152,7 @@ In this section, you'll experiment with both techniques.
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
 
-3. Generate a local plot, based on the values stored in the output varaible `pred`.
+3. Generate a local plot, based on the values stored in the output variable `pred`.
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -212,9 +212,9 @@ In this section, you learn how to persist the model, and how to call it to make 
     Saving a model to a table requires only an INSERT statement. However, it's easier when wrapped in a stored procedure, such as _PersistModel_.
 
     > [!NOTE]
-    > If you get an error such as "The EXECUTE permission was denied on the object PersistModel", make sure that your login has permission. You can grant explicit permissions on just the stored procedure by running a T-SQL statement like this: `GRANT EXECUTE ON [dbo].[PersistModel] TO [RTestUser]`
+    > If you get an error such as "The EXECUTE permission was denied on the object PersistModel", make sure that your login has permission. You can grant explicit permissions on just the stored procedure by running a T-SQL statement like this: `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>`
 
-3. After you have created a model and saved it in a database, you can call it directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+4. After you have created a model and saved it in a database, you can call it directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
     However, with any model you use often, it's easier to wrap the input query and the call to the model, together with other parameters, in a custom stored procedure.
 

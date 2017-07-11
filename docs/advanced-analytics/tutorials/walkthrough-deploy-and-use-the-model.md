@@ -71,7 +71,7 @@ A stored procedure for batch scoring was created when you initially ran the Powe
 
     + The return value, *Score*, is the probability, given the model, that driver gets a tip. Optionally, you could easily apply some kind of filter to the returned values to categorize the return values into "tip" and "no tip" groups.  For example, a probability of less than 0.5 would mean a tip is unlikely.
   
-3.  To call the stored procedure in batch mode, you define the query required as input to the stored procedure. Here is the SQL query; you can run it in SSMS to verify that it works.
+2.  To call the stored procedure in batch mode, you define the query required as input to the stored procedure. Here is the SQL query; you can run it in SSMS to verify that it works.
 
     ```SQL
     SELECT TOP 10
@@ -92,24 +92,28 @@ A stored procedure for batch scoring was created when you initially ran the Powe
       WHERE b.medallion is null
     ```
 
-4. Use this R code to create the input string from the SQL query:
+3. Use this R code to create the input string from the SQL query:
 
     ```R
     input <- "N'SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) AS direct_distance FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a LEFT OUTER JOIN ( SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample  tablesample (1 percent) repeatable (98052)  )b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND  a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'";
     q <- paste("EXEC PredictTipBatchMode @inquery = ", input, sep="");
     ```
 
-5. To run the stored procedure from R, call the **sqlQuery** method of the **RODBC** package and use the SQL connection `conn` that you defined earlier:
+4. To run the stored procedure from R, call the **sqlQuery** method of the **RODBC** package and use the SQL connection `conn` that you defined earlier:
 
     ```R
     sqlQuery (conn, q);
     ```
 
-    If you get an ODBC error, check the query syntax, and the quotation marks. If you get a permissions error, make sure the login has the ability to execute the stored procedure.
+    If you get an ODBC error, check the query syntax, and whether you have the right number of quotation marks. 
+    
+    If you get a permissions error, make sure the login has the ability to execute the stored procedure.
 
 ## Single row scoring
 
-When calling the model for prediction on a row-by-row basis, you pass a set of values that represent features for each individual case. The stored procedure *PredictTipSingleMode* demonstrates this approach.
+When calling the model for prediction on a row-by-row basis, you pass a set of values that represent features for each individual case. The stored procedure then returns a single prediction or probability. 
+
+The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes as input multiple parameters representing feature values (for example, passenger count and trip distance), scores these features using the stored R model, and outputs the tip probability.
 
 1. If the stored procedure *PredictTipSingleMode* was not created by the initial PowerShell script, you can run the following Transact-SQL statement to create it now.
 
@@ -165,11 +169,9 @@ When calling the model for prediction on a row-by-row basis, you pass a set of v
     END
     ```
 
-    This stored procedure takes feature values as input (for example, passenger count and trip distance), scores these features using the stored R model, and outputs the tip probability.
-
 ### Call the stored procedure and pass parameters
 
-1. In SQL Server Management Studio, you can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procedure (or **EXECUTE**) to call the stored procedure, and pass it the required inputs.
+1. In SQL Server Management Studio, you can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procedure (or **EXECUTE**) to call the stored procedure, and pass it the required inputs. For example, try running this statement in Management Studido:
 
     ```SQL
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

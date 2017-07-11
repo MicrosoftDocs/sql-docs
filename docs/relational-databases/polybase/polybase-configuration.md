@@ -1,7 +1,7 @@
 ---
 title: "PolyBase configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/12/2017"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,7 +21,7 @@ manager: "jhubbard"
   Use the procedures below to configure PolyBase.  
   
 ## External data source configuration  
- You must ensure connectivity to the external data source from SQL Server. The type of connectivity strongly influences the expected query performance. For example, a 10Gbit Ethernet link will result in a faster query response time for PolyBase queries than a 1Gbit Ethernet link.  
+ You must ensure connectivity to the external data source from SQL Server. The type of connectivity strongly influences query performance. For example, a 10Gbit Ethernet link will result in a faster query response time for PolyBase queries than a 1Gbit Ethernet link.  
   
  You must configure SQL Server to connect to  either your Hadoop version or Azure Blob storage using **sp_configure**. PolyBase supports two Hadoop distributions: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  For a complete list of supported external data sources, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
  

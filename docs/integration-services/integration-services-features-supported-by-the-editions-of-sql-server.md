@@ -41,7 +41,7 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 
 <sup>1</sup> This feature is also supported in SQL Server 2016 with Service Pack 1.
 
-<sup>2</sup> If you run packages that require Enterprise-only features in Scale Out, then the Scale Out Workers must also run on instances of SQL Server Enterprise.
+<sup>2</sup> If you run packages that require Enterprise-only features in Scale Out, the Scale Out Workers must also run on instances of SQL Server Enterprise.
 
 ## <a name="IEWiz"></a> SQL Server Import and Export Wizard
 

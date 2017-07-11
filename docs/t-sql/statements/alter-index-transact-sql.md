@@ -178,12 +178,12 @@ ALTER INDEX { index_name | ALL }
   
 |Using the keyword ALL with this operation|Fails if the table has one or more|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index : **Applies to:** SQL Server (starting with SQL Server 2012) and Azure SQL Database.|  
+|REBUILD WITH ONLINE = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index: **Applies to:** SQL Server (starting with SQL Server 2012) and Azure SQL Database.|  
 |REBUILD PARTITION = *partition_number*|Nonpartitioned index, XML index, spatial index, or disabled index|  
 |REORGANIZE|Indexes with ALLOW_PAGE_LOCKS set to OFF|  
 |REORGANIZE PARTITION = *partition_number*|Nonpartitioned index, XML index, spatial index, or disabled index|  
-|IGNORE_DUP_KEY = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index : **Applies to:** SQL Server (starting with SQL Server 2012) and Azure SQL Database.|  
-|ONLINE = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index : **Applies to:** SQL Server (starting with SQL Server 2012) and Azure SQL Database.|
+|IGNORE_DUP_KEY = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index: **Applies to:** SQL Server (starting with SQL Server 2012) and Azure SQL Database.|  
+|ONLINE = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index: **Applies to:** SQL Server (starting with SQL Server 2012) and Azure SQL Database.|
 | RESUMABLE = ON  | Resumable indexes not supported with **All** keyword. <br /><br /> **Applies to**: Beginning with SQL Server 2017  and Azure SQL Database (feature is in public preview) |   
   
 > [!WARNING]
@@ -272,7 +272,7 @@ LOB_COMPACTION = ON
   
 -   For a nonclustered index, this compacts all LOB columns that are nonkey (included) columns in the index.  
   
--   REORGANIZE ALL performs LOB_COMPACTION on all indexes. For each index, this compacts all LOB columns in the clustered index, underlying table, or included columns in a nonclustered index..  
+-   REORGANIZE ALL performs LOB_COMPACTION on all indexes. For each index, this compacts all LOB columns in the clustered index, underlying table, or included columns in a nonclustered index.  
   
 LOB_COMPACTION = OFF  
   
@@ -551,7 +551,7 @@ The default is 0 minutes.
   
  To set different types of data compression for different partitions, specify the DATA_COMPRESSION option more than once, for example:  
   
-```  
+```tsql  
 REBUILD WITH   
 (  
 DATA_COMPRESSION = NONE ON PARTITIONS (1),   
@@ -561,10 +561,10 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 ```  
   
  ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
- Specifies whether an index or an index partition of an underlying table can be rebuild online or offline. If **REBUILD** is performed online (**ON**) the data in this table is available for queries and data modification during the index operation.  The default is **OFF**.  
+ Specifies whether an index or an index partition of an underlying table can be rebuilt online or offline. If **REBUILD** is performed online (**ON**) the data in this table is available for queries and data modification during the index operation.  The default is **OFF**.  
   
  ON  
- Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source  table. A S-lock on the table is required in the beginning of the index rebuild and a Sch-M lock on the table at the end of the online index rebuild. Although both locks are short metadata locks, especially the Sch-M lock must wait for all blocking transactions to be completed. During the wait time the Sch-M lock blocks all other transactions that wait behind this lock when accessing the same table.  
+ Long-term table locks are not held for the duration of the index operation. During the main phase of the index operation, only an Intent Share (IS) lock is held on the source  table. An S-lock on the table is required in the beginning of the index rebuild and a Sch-M lock on the table at the end of the online index rebuild. Although both locks are short metadata locks, especially the Sch-M lock must wait for all blocking transactions to be completed. During the wait time the Sch-M lock blocks all other transactions that wait behind this lock when accessing the same table.  
   
 > [!NOTE]
 >  Online index rebuild can set the *low_priority_lock_wait* options described later in this section.  
@@ -723,7 +723,7 @@ ONLINE INDEX REBUILD is specified as resumable using the RESUMABLE=ON option.
 (cannot be part of begin tran … commit  block).
 -  Only index operations that are paused are resumable.
 -  	When resuming an index operation that is paused, you can change the MAXDOP value to a new value.  If MAXDOP is not specified when resuming an  index operation that is paused, the last MAXDOP value is taken. IF the MAXDOP option is not specified at all for index rebuild operation, the default value is taken.
-- To pause immediately the index operation, you can stop the ongoing command (Ctrl-C) or you can execute the ALTER INDEX PAUSE command or the KILL <session_id> command. Once the command is paused it can be resumed using RESUME option.
+- To pause immediately the index operation, you can stop the ongoing command (Ctrl-C) or you can execute the ALTER INDEX PAUSE command or the KILL *session_id* command. Once the command is paused it can be resumed using RESUME option.
 -  The ABORT command kills the session that hosted the original index rebuild and aborts the index operation  
 -  No extra resources are required for resumable index rebuild except for
    -	Additional space required to keep the index being built, including the time when index is being paused
@@ -746,7 +746,7 @@ The following functionality is disabled for resumable index rebuild operations
   
  ### WAIT_AT_LOW_PRIORITY with online index operations  
   
- In order to execute the DDL statement for an online index rebuild, all active blocking transactions running on a particular table must be completed. When the online index rebuild executes, it blocks all new transactions that are ready to start execution on this table. Although the duration of the lock for online index rebuild is very short, waiting for all open transactions on a given table to complete and blocking the new transactions to start, might significantly affect the throughput, causing a workload slow down or timeout, and significantly limit access to the underlying table. The **WAIT_AT_LOW_PRIORITY** option allows DBA's to manage the S-lock and Sch-M locks required for online index rebuilds and allows them to select one of 3 options. In all 3 cases, if during the wait time ( `(MAX_DURATION = n [minutes])` ) there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.  
+ In order to execute the DDL statement for an online index rebuild, all active blocking transactions running on a particular table must be completed. When the online index rebuild executes, it blocks all new transactions that are ready to start execution on this table. Although the duration of the lock for online index rebuild is very short, waiting for all open transactions on a given table to complete and blocking the new transactions to start, might significantly affect the throughput, causing a workload slow down or timeout, and significantly limit access to the underlying table. The **WAIT_AT_LOW_PRIORITY** option allows DBA's to manage the S-lock and Sch-M locks required for online index rebuilds and allows them to select one of 3 options. In all 3 cases, if during the wait time ( `(MAX_DURATION = n [minutes])` ), there are no blocking activities, the online index rebuild is executed immediately without waiting and the DDL statement is completed.  
   
 ## Spatial Index Restrictions  
  When you rebuild a spatial index, the underlying user table is unavailable for the duration of the index operation because the spatial index holds a schema lock.  
@@ -786,7 +786,7 @@ The following functionality is disabled for resumable index rebuild operations
   
 ## Basic syntax example:   
   
-``` 
+```tsql 
 ALTER INDEX index1 ON table1 REBUILD;  
   
 ALTER INDEX ALL ON table1 REBUILD;  
@@ -845,19 +845,20 @@ CREATE TABLE cci_target (
      )  
   
 -- Convert the table to a clustered columnstore index named inxcci_cci_target;  
+```tsql
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
  Use the TABLOCK option to insert rows in parallel. Starting with SQL Server 2016, the INSERT INTO operation can run in parallel when TABLOCK is used.  
   
-```  
+```tsql  
 INSERT INTO cci_target WITH (TABLOCK) 
 SELECT TOP 300000 * FROM staging;  
 ```  
   
  Run this command to see the OPEN delta rowgroups. The number of rowgroups depends on the degree of parallelism.  
   
-```  
+```tsql  
 SELECT *   
 FROM sys.dm_db_column_store_row_group_physical_stats   
 WHERE object_id  = object_id('cci_target');  
@@ -865,20 +866,20 @@ WHERE object_id  = object_id('cci_target');
   
  Run this command to force all CLOSED and OPEN rowgroups into the columnstore.  
   
-```  
+```tsql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
  Run this command again and you will see that smaller rowgroups are merged into one compressed rowgroup.  
   
-```  
+```tsql  
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
 ### B. Compress CLOSED delta rowgroups into the columnstore  
  This example uses the REORGANIZE option to compresses each CLOSED delta rowgroup into the columnstore as a compressed  rowgroup.   This is not necessary, but is useful when the tuple-mover is not compressing CLOSED rowgroups fast enough.  
   
-```  
+```tsql  
 -- Uses AdventureWorksDW  
 -- REORGANIZE all partitions  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -894,7 +895,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
   
  REORGANIZE combines rowgroups to fill rowgroups up to a maximum number of rows \<= 1,024,576. Therefore, when you compress all OPEN and CLOSED rowgroups you won't end up with lots of compressed rowgroups that only have a few rows in them. You want rowgroups to be as full as possible to reduce the compressed size and improve query performance.  
   
-```  
+```tsql  
 -- Uses AdventureWorksDW2016  
 -- Move all OPEN and CLOSED delta rowgroups into the columnstore.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
@@ -911,7 +912,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 > [!NOTE]
 >  Starting with SQL Server 2016, rebuilding a columnstore index is no longer necessary in most situations since REORGANIZE physically removes deleted rows and merges rowgroups. The COMPRESS_ALL_ROW_GROUPS option forces all OPEN or CLOSED delta rowgroups into the columnstore which previously could only be done with a rebuild.   REORGANIZE is online and occurs in the background so queries can continue as the operation happens.  
   
-```  
+```tsql  
 -- Uses AdventureWorks  
 -- Defragment by physically removing rows that have been logically deleted from the table, and merging rowgroups.  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;  
@@ -927,7 +928,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
   
  This example shows how to rebuild a clustered columnstore index and force all delta rowgroups into the columnstore. This first step prepares a table FactInternetSales2 with a clustered columnstore index and inserts data from the first four columns.  
   
-```  
+```tsql  
 -- Uses AdventureWorksDW  
   
 CREATE TABLE dbo.FactInternetSales2 (  
@@ -948,7 +949,7 @@ SELECT * FROM sys.column_store_row_groups;
   
  The results show there is one OPEN rowgroup, which means [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will wait for more rows to be added before it closes the rowgroup and moves the data to the columnstore. This next statement rebuilds the clustered columnstore index, which forces all rows into the columnstore.  
   
-```  
+```tsql  
 ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REBUILD;  
 SELECT * FROM sys.column_store_row_groups;  
 ```  
@@ -960,7 +961,7 @@ SELECT * FROM sys.column_store_row_groups;
   
  To rebuild a partition of a large clustered columnstore index, use ALTER INDEX REBUILD with the partition option. This example rebuilds partition 12. Starting with SQL Server 2016, we recommend replacing REBUILD with REORGANIZE.  
   
-```  
+```tsql  
 ALTER INDEX cci_fact3   
 ON fact3  
 REBUILD PARTITION = 12;  
@@ -969,11 +970,11 @@ REBUILD PARTITION = 12;
 ### G. Change a clustered columstore index to use archival compression  
  Does not apply to: SQL Server 2012  
   
- You can choose to reduce the size of a clustered columnstore index even further by using the COLUMNSTORE_ARCHIVE data compression option. This is practical for older data that you want to keep on cheaper storage. We recommend only using this on data that is not accessed often since decomrpess is slower than with the normal COLUMNSTORE compression.  
+ You can choose to reduce the size of a clustered columnstore index even further by using the COLUMNSTORE_ARCHIVE data compression option. This is practical for older data that you want to keep on cheaper storage. We recommend only using this on data that is not accessed often since decompress is slower than with the normal COLUMNSTORE compression.  
   
  The following example rebuilds a clustered columnstore index to use archival compression, and then shows how to remove the archival compression. The final result will use only columnstore compression.  
   
-```  
+```tsql  
 --Prepare the example by creating a table with a clustered columnstore index.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -1005,7 +1006,7 @@ GO
 ### A. Rebuilding an index  
  The following example rebuilds a single index on the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```tsql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
@@ -1014,7 +1015,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
   
 **Applies to**: SQL Server (starting with SQL Server 2008) and Azure SQL Database.  
   
-```  
+```tsql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON);  
 ```  
@@ -1023,7 +1024,7 @@ REBUILD WITH (FILLFACTOR = 80, SORT_IN_TEMPDB = ON, STATISTICS_NORECOMPUTE = ON)
   
 **Applies to**: SQL Server (starting with SQL Server 2014) and Azure SQL Database.  
   
-```  
+```tsql  
 ALTER INDEX ALL ON Production.Product  
 REBUILD WITH   
 (  
@@ -1038,7 +1039,7 @@ REBUILD WITH
 ### C. Reorganizing an index with LOB compaction  
  The following example reorganizes a single clustered index in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. Because the index contains a LOB data type in the leaf level, the statement also compacts all pages that contain the large object data. Note that specifying the WITH (LOB_COMPACTION) option is not required because the default value is ON.  
   
-```  
+```tsql  
 ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE WITH (LOB_COMPACTION);  
 ```  
   
@@ -1047,7 +1048,7 @@ ALTER INDEX PK_ProductPhoto_ProductPhotoID ON Production.ProductPhoto REORGANIZE
   
 **Applies to**: SQL Server (starting with SQL Server 2008) and Azure SQL Database.  
   
-```  
+```tsql  
 ALTER INDEX AK_SalesOrderHeader_SalesOrderNumber ON  
     Sales.SalesOrderHeader  
 SET (  
@@ -1061,20 +1062,20 @@ GO
 ### E. Disabling an index  
  The following example disables a nonclustered index on the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```tsql  
 ALTER INDEX IX_Employee_ManagerID ON HumanResources.Employee DISABLE;
 ```  
   
 ### F. Disabling constraints  
  The following example disables a PRIMARY KEY constraint by disabling the PRIMARY KEY index in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The FOREIGN KEY constraint on the underlying table is automatically disabled and warning message is displayed.  
   
-```  
+```tsql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;  
 ```  
   
  The result set returns this warning message.  
   
- ```  
+ ```tsql  
  Warning: Foreign key 'FK_EmployeeDepartmentHistory_Department_DepartmentID'  
  on table 'EmployeeDepartmentHistory' referencing table 'Department'  
  was disabled as a result of disabling the index 'PK_Department_DepartmentID'.
@@ -1085,13 +1086,13 @@ ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department DISABLE;
   
  The PRIMARY KEY constraint is enabled by rebuilding the PRIMARY KEY index.  
   
-```  
+```tsql  
 ALTER INDEX PK_Department_DepartmentID ON HumanResources.Department REBUILD;  
 ```  
   
  The FOREIGN KEY constraint is then enabled.  
   
-```  
+```tsql  
 ALTER TABLE HumanResources.EmployeeDepartmentHistory  
 CHECK CONSTRAINT FK_EmployeeDepartmentHistory_Department_DepartmentID;  
 GO  
@@ -1102,7 +1103,7 @@ GO
   
 **Applies to**: SQL Server (starting with SQL Server 2014) and Azure SQL Database.  
   
-```  
+```tsql  
 -- Verify the partitioned indexes.  
 SELECT *  
 FROM sys.dm_db_index_physical_stats (DB_ID(),OBJECT_ID(N'Production.TransactionHistory'), NULL , NULL, NULL);  
@@ -1118,7 +1119,7 @@ GO
 ### I. Changing the compression setting of an index  
  The following example rebuilds an index on a nonpartitioned rowstore table.  
   
-```  
+```tsql
 ALTER INDEX IX_INDEX1   
 ON T1  
 REBUILD   
@@ -1135,32 +1136,38 @@ GO
  The following examples show how to use online resumable index rebuild. 
 
 1. Execute an online index rebuild as resumable operation with MAXDOP=1.
-   ```
+
+   ```tsql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON) ;
    ```
 
 2. Executing the same command again (see above) after an index operation was paused, resumes automatically the index rebuild operation.
 
 3. Execute an online index rebuild as resumable operation with MAX_DURATION set to 240 minutes.
-   ```
+
+   ```tsql
    ALTER INDEX test_idx on test_table REBUILD WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240) ; 
    ```
 4. Pause a running resumable online index rebuild.
-   ```
+
+   ```tsql
    ALTER INDEX test_idx on test_table PAUSE ;
    ```   
 5. Resume an online index rebuild for an index rebuild that was executed as resumable operation specifying a new value for MAXDOP set to 4.
-   ```
+
+   ```tsql
    ALTER INDEX test_idx on test_table RESUME WITH (MAXDOP=4) ;
    ```
-6. Resume an online index rebuild operation for an index online rebuild that was executed as resumable. Set MAXDOP to 2, set the execution time for the index being running as resmable to 240 minutes and in case of an index being blocked on the lock wait 10 minutes and after that kill all blockers. 
-   ```
+6. Resume an online index rebuild operation for an index online rebuild that was executed as resumable. Set MAXDOP to 2, set the execution time for the index being running as resmumable to 240 minutes and in case of an index being blocked on the lock wait 10 minutes and after that kill all blockers. 
+
+   ```tsql
       ALTER INDEX test_idx on test_table  
          RESUME WITH (MAXDOP=2, MAX_DURATION= 240 MINUTES, 
          WAIT_AT_LOW_PRIORITY (MAX_DURATION=10, ABORT_AFTER_WAIT=BLOCKERS)) ;
    ```      
-7. Abort resumable index rebuild operation which is running or paused
-   ```
+7. Abort resumable index rebuild operation which is running or paused.
+
+   ```tsql
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   

@@ -62,4 +62,5 @@ To begin this tutorial, let's take a look at [!INCLUDE[ssManStudioFull](../../in
   
 ## Next Task in Lesson  
 [Connect with Registered Servers and Object Explorer](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
+
   

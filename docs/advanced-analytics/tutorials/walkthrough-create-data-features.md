@@ -41,19 +41,19 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 1. Remember that the data source object you created earlier gets only the top 1000 rows. So let's define a query that gets all the data.
 
     ```R
-    baseQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample"
+    baseQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample";
     ```
 
 2. Create a new SQL Server data source using the query.
 
     ```R
-    featureDataSource <- RxSqlServerData(sqlQuery = baseQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr)
+    featureDataSource <- RxSqlServerData(sqlQuery = baseQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
 3. Run the following code to create the custom R function. ComputeDist takes in two pairs of latitude and longitude values, and calculates the linear distance between them, returning the distance in miles.
 
     ```R
-    env <- new.env()
+    env <- new.env();
     env$ComputeDist <- function(pickup_long, pickup_lat, dropoff_long, dropoff_lat){
       R <- 6371/1.609344 #radius in mile
       delta_lat <- dropoff_lat - pickup_lat
@@ -81,13 +81,13 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 4. Having defined the function, you apply it to the data to create a new feature column, *direct_distance*. but before you run the transformation, change the compute context to local.
 
     ```R
-    rxSetComputeContext("local")
+    rxSetComputeContext("local");
     ```
 
 5. Call the [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) function to get the feature engineering data, and apply the `env$ComputeDist` function to the data in memory.
 
     ```R
-    start.time <- proc.time()
+    start.time <- proc.time();
   
     changed_ds <- rxDataStep(inData = featureEngineeringQuery,
     transforms = list(direct_distance=ComputeDist(pickup_longitude,pickup_latitude, dropoff_longitude, dropoff_latitude),
@@ -96,10 +96,10 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     pickup_datetime = "pickup_datetime",  dropoff_datetime = "dropoff_datetime"),
     transformEnvir = env,
     rowsPerRead=500,
-    reportProgress = 3)
+    reportProgress = 3);
   
-    used.time <- proc.time() - start.time
-    print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""))
+    used.time <- proc.time() - start.time;
+    print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
     + The rxDataStep function supports various methods for modifying data in place. In this example, we've used the _transforms_ argument to specify both the pass-through columns and the transformed columns. For more information, see this article:  [How to transform and subset data in Microsft R](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
@@ -117,7 +117,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 7. Optionally, you can call [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) to inspect the schema of the transformed data source.
 
     ```R
-    rxGetVarInfo(data = changed_ds)
+    rxGetVarInfo(data = changed_ds);
     ```
 
 ## Featurization using Transact-SQL

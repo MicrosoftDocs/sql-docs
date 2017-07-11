@@ -22,7 +22,7 @@ manager: "jhubbard"
 ---
 # Create graphs and plots using SQL and R (walkthrough)
 
-In this part of the walkthrough, you'll learn techniques for generating plots and maps using R with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. You'll create a simple histogram, to get some practice, and then develop a more complex map plot.
+In this part of the walkthrough, you'll learn techniques for generating plots and maps using R with SQL Server data. You'll create a simple histogram, to get some practice, and then develop a more complex map plot.
 
 ### Create a histogram
 
@@ -43,7 +43,7 @@ In this part of the walkthrough, you'll learn techniques for generating plots an
     > [!NOTE]
     > Does your graph look different?
     >  
-    > That's because _inDataSource_ uses only the top 1000 rows. The ordering of rows using TOP is non-deterministic in the absence of an ORDER BY clause, so it's expected that the data and the resulting graph can vary.
+    > That's because _inDataSource_ uses only the top 1000 rows. The ordering of rows using TOP is non-deterministic in the absence of an ORDER BY clause, so it's expected that the data and the resulting graph might vary.
     > This particular image was generated using about 10,000 rows of data. We recommend that you experiment with different numbers of rows to get different graphs, and note how long it takes to return the results in your environment.
 
 ### Create a map plot
@@ -52,7 +52,7 @@ Typically, database servers block Internet access. This can be inconvenient when
 
 We'll walk you through it in this lesson.
 
-1.  Define the function that creates the R plot object. The custom function *mapPlot* creates a scatter plot that uses the taxi pickup locations, and plots the number of rides that started from each location. It uses the **ggplot2** and  **ggmap** packages, which should already be installed and loaded.
+1. Define the function that creates the R plot object. The custom function *mapPlot* creates a scatter plot that uses the taxi pickup locations, and plots the number of rides that started from each location. It uses the **ggplot2** and  **ggmap** packages, which should already be installed and loaded.
 
     ```R
     mapPlot <- function(inDataSource, googMap){
@@ -67,7 +67,7 @@ We'll walk you through it in this lesson.
     ```
 
     + The *mapPlot* function takes two arguments: an existing data object, which you defined earlier using RxSqlServerData, and the map representation passed from the client.
-    + In the line beginning with the *ds* variable, RxImport is used to load into memory data from the previously created data source, *inDataSource*. However, that data source contains only 1000 rows; if you want to create a map with more data points, you can substitute a different data source.
+    + In the line beginning with the *ds* variable, rxImport is used to load into memory data from the previously created data source, *inDataSource*. However, that data source contains only 1000 rows; if you want to create a map with more data points, you can substitute a different data source.
     + Whenever you use **open source** R functions, data must be loaded into data frames in local memory. However, by calling the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function, you can run in the memory of the remote compute context.
 
 2. Change the compute context to local, and load the libraries required for creating the maps.
@@ -84,7 +84,7 @@ We'll walk you through it in this lesson.
 
     + The line beginning with `googmap` generates a map with the specified coordinates at the center.
 
-3. Change to the SQL Server compute context, and render the results, by wrapping the plot function in [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) as shown here. The [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) function is part of the **RevoScaleR** package, and supports execution of arbitrary R functions in a remote compute context.
+3. Change to the SQL Server compute context, and render the results, by wrapping the plot function in [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) as shown here. The rxExec function is part of the **RevoScaleR** package, and supports execution of arbitrary R functions in a remote compute context.
 
     ```R
     rxSetComputeContext(sqlcc)
@@ -92,12 +92,12 @@ We'll walk you through it in this lesson.
     plot(myplots[[1]][["myplot"]]);
     ````
 
-    + The map data in `googMap` is passed as an argument to the remotely executed function *mapPlot*. Because the maps were generated in your local environment, they must be passed to the function in order to create the plot in the context of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md).
+    + The map data in `googMap` is passed as an argument to the remotely executed function *mapPlot*. Because the maps were generated in your local environment, they must be passed to the function in order to create the plot in the context of SQL Server.
 
     + When the line beginning with `plot` runs, the rendered data is serialized back to the local R environment so that you can view it in your R client.
 
     > [!NOTE]
-    > If you're using SQL Server in an Azure virtual machine, you might get an error at this point. That's because a default firewall rule in Azure blocks network access by Rcode. For details on how to disable this rule, see [Installing R Services in an Azure VM](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > If you're using SQL Server in an Azure virtual machine, you might get an error at this point. That's because a default firewall rule in Azure blocks network access by R code. For details on how to disable this rule, see [Installing R Services in an Azure VM](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
 
 4. The following image shows the output plot. The taxi pickup locations are added to the map as red dots. Your image might look different, depending how many locations are in the data source you used.
 

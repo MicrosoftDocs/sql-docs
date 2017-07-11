@@ -71,41 +71,41 @@ A stored procedure for batch scoring was created when you initially ran the Powe
 
     + The return value, *Score*, is the probability, given the model, that driver gets a tip. Optionally, you could easily apply some kind of filter to the returned values to categorize the return values into "tip" and "no tip" groups.  For example, a probability of less than 0.5 would mean a tip is unlikely.
   
-3.  To call the stored procedure in batch mode, you define the input query, and assemble the stored procedure call using code such as the following:
-  
-    ```
-    input = "N'
-	  SELECT TOP 10
-	      a.passenger_count AS passenger_count
-          a.trip_time_in_secs AS trip_time_in_secs,
-          a.trip_distance AS trip_distance,
-          a.dropoff_datetime AS dropoff_datetime,
-          dbo.fnCalculateDistance(
-			pickup_latitude,
-			pickup_longitude,
-			dropoff_latitude,
-			dropoff_longitude) AS direct_distance
-      FROM
-	  
-      (SELECT medallion, hack_license, pickup_datetime,
-      passenger_count,trip_time_in_secs,trip_distance,
-      dropoff_datetime, pickup_latitude, pickup_longitude,
-      dropoff_latitude, dropoff_longitude from nyctaxi_sample)a
-	  
+3.  To call the stored procedure in batch mode, you define the query required as input to the stored procedure. Here is the SQL query; you can run it in SSMS to verify that it works.
+
+    ```SQL
+    SELECT TOP 10
+      a.passenger_count AS passenger_count,
+      a.trip_time_in_secs AS trip_time_in_secs,
+      a.trip_distance AS trip_distance,
+      a.dropoff_datetime AS dropoff_datetime,
+      dbo.fnCalculateDistance( pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) AS direct_distance
+      FROM 
+        (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude 
+        FROM nyctaxi_sample)a 
       LEFT OUTER JOIN
-	  
       ( SELECT medallion, hack_license, pickup_datetime
-	    FROM nyctaxi_sample  tablesample (1 percent) repeatable (98052)  )b
-
+      FROM nyctaxi_sample  tablesample (1 percent) repeatable (98052)  )b
       ON a.medallion=b.medallion
-	  AND a.hack_license=b.hack_license
-	  AND a.pickup_datetime=b.pickup_datetime
-
+      AND a.hack_license=b.hack_license
+      AND a.pickup_datetime=b.pickup_datetime
       WHERE b.medallion is null
-    '"
-    q<-paste("EXEC PredictTipBatchMode @inquery = ", input, sep="")
-    sqlQuery (conn, q)
     ```
+
+4. Use this R code to create the input string from the SQL query:
+
+    ```R
+    input <- "N'SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) AS direct_distance FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a LEFT OUTER JOIN ( SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample  tablesample (1 percent) repeatable (98052)  )b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND  a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'";
+    q <- paste("EXEC PredictTipBatchMode @inquery = ", input, sep="");
+    ```
+
+5. To run the stored procedure from R, call the **sqlQuery** method of the **RODBC** package and use the SQL connection `conn` that you defined earlier:
+
+    ```R
+    sqlQuery (conn, q);
+    ```
+
+    If you get an ODBC error, check the query syntax, and the quotation marks. If you get a permissions error, make sure the login has the ability to execute the stored procedure.
 
 ## Single row scoring
 
@@ -177,21 +177,21 @@ When calling the model for prediction on a row-by-row basis, you pass a set of v
 
     The values passed in here are, respectively, for the variables _passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_, and _dropoff\_longitude_.
 
-2. To run this same call from R code, you simply define an R variable that contains the entire stored procedure call.
+2. To run this same call from R code, you simply define an R variable that contains the entire stored procedure call, like this one:
 
     ```R
-    q = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 "
+    q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
     The values passed in here are, respectively, for the variables _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_, and _dropoff\_longitude_.
 
 ### Generate scores
 
-1. Call the `sqlQuery` function of the **RODBC** package, and pass the connection string, together with the string variable containing the stored procedure call.
+1. Call `sqlQuery` (from the **RODBC** package) and pass the connection string, together with the string variable containing the stored procedure call.
 
     ```R
     # predict with stored procedure in single mode
-    sqlQuery (conn, q)
+    sqlQuery (conn, q2);
     ```
 
     For more information about **RODBC**, see [http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery](http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery).

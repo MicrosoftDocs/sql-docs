@@ -1,5 +1,5 @@
 ---
-title: "Build and Save an R Model using SQL | Microsoft Docs"
+title: "Build an R Model and Save using SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2016"
 ms.prod: "sql-server-2016"
@@ -37,7 +37,7 @@ The model you build is a binary classifier that predicts whether the taxi driver
 1. Call the [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) function, included in the **RevoScaleR** package, to create a logistic regression model. 
 
     ```R
-    system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = new_ds))
+    system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = new_ds));
     ```
 
     The call that builds the model is enclosed in the system.time function. This lets you get the time required to build the model.
@@ -45,7 +45,7 @@ The model you build is a binary classifier that predicts whether the taxi driver
 2. After you build the model, you can inspect it using the `summary` function, and view the coefficients.
 
     ```R
-    summary(logitObj)
+    summary(logitObj);
     ```
 
      *Results*
@@ -120,18 +120,18 @@ In this section, you'll experiment with both techniques.
 1. Call the function rxRoc and provide the data defined earlier as input.
 
     ```R
-    scoredOutput = rxImport(scoredOutput)
-    rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput)
+    scoredOutput = rxImport(scoredOutput);
+    rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
     This call returns the values used in computing the ROC chart. The label column is _tipped_, which has the actual results you are trying to predict, while the _Score_ column has the prediction.
 
-2. To actually plot the chart, you can save the ROC object and then draw it with the `plot` function. The graph is created on the remote compute context, and then returned to your R environment.
+2. To actually plot the chart, you can save the ROC object and then draw it with the `plot` function. The graph is created on the remote compute context, and returned to your R environment.
 
     ```R
-    scoredOutput = rxImport(scoredOutput)
-    rocObjectOut <- rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput)
-    plot(rocObjectOut)
+    scoredOutput = rxImport(scoredOutput);
+    rocObjectOut <- rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
+    plot(rocObjectOut);
     ```
 
     View the graph by opening the R graphics device, or by clicking the **Plot** window in RStudio. 
@@ -140,28 +140,26 @@ In this section, you'll experiment with both techniques.
 
 ### Create the plots in the local compute context using data from SQL Server
 
-1. For the local compute context, the process is much the same.
-
-    Use the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function to bring the specified data to your local R environment.
+1. For the local compute context, the process is much the same. You use the [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) function to bring the specified data into your local R environment.
 
     ```R
     scoredOutput = rxImport(scoredOutput)
     ```
 
-2. Using the data into local memory, you can call the **ROCR** library to create some new predictions.
+2. Using the data in local memory, you load the **ROCR** package, and use the prediction function from that package to create some new predictions.
 
     ```R
-    library('ROCR')
-    pred <- prediction(scoredOutput$Score, scoredOutput$tipped)
+    library('ROCR');
+    pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
 
-3. Generate a local plot, based on the predictions.
+3. Generate a local plot, based on the values stored in the output varaible `pred`.
 
     ```R
-    acc.perf = performance(pred, measure = 'acc')
-    plot(acc.perf)
-    ind = which.max( slot(acc.perf, 'y.values')[[1]] )
-    acc = slot(acc.perf, 'y.values')[[1]][ind]
-    cutoff = slot(acc.perf, 'x.values')[[1]][ind]
+    acc.perf = performance(pred, measure = 'acc');
+    plot(acc.perf);
+    ind = which.max( slot(acc.perf, 'y.values')[[1]] );
+    acc = slot(acc.perf, 'y.values')[[1]][ind];
+    cutoff = slot(acc.perf, 'x.values')[[1]][ind];
     ```
 
     ![plotting model performance using R](media/rsql-e2e-performanceplot.png "plotting model performance using R")
@@ -190,23 +188,25 @@ In this section, you learn how to persist the model, and how to call it to make 
 1. Switch back to your local R environment if you are not already using it, serialize the model, and save it in a variable.
 
     ```R
-    rxSetComputeContext("local")
-    modelbin <- serialize(logitObj, NULL)
-    modelbinstr=paste(modelbin, collapse="")
+    rxSetComputeContext("local");
+    modelbin <- serialize(logitObj, NULL);
+    modelbinstr=paste(modelbin, collapse="");
     ```
 
-2. Open an ODBC connection.
+2. Open an ODBC connection using **RODBC**.
 
     ```R
-    library(RODBC)
-    conn <- odbcDriverConnect(connStr)
+    library(RODBC);
+    conn <- odbcDriverConnect(connStr);
     ```
+
+    You can omit the call to RODBC if you already have the package loaded.
 
 3. Call the stored procedure created by the PowerShell script, to store the binary representation of the model in a column in the database.
 
     ```R
-    q <- paste("EXEC PersistModel @m='", modelbinstr,"'", sep="")
-    sqlQuery (conn, q)
+    q <- paste("EXEC PersistModel @m='", modelbinstr,"'", sep="");
+    sqlQuery (conn, q);
     ```
 
     Saving a model to a table requires only an INSERT statement. However, it's easier when wrapped in a stored procedure, such as _PersistModel_.

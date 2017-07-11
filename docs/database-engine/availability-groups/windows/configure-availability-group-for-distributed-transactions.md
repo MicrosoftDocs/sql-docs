@@ -1,7 +1,7 @@
 ---
 title: "Configure Availability Group for Distributed Transactions | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2016"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

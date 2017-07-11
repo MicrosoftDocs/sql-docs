@@ -54,8 +54,9 @@
 ## Configure availability group 
 ### [Change replica availability](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [Change replica failover mode](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
-### [Configure flexible failover policy](configure-flexible-automatic-failover-policy.md)  
 ### [Configure backup on replicas](configure-backup-on-availability-replicas-sql-server.md)  
+### [Configure flexible failover policy](configure-flexible-automatic-failover-policy.md)  
+### [Configure for distributed transactions](configure-availability-group-for-distributed-transactions.md)
 ### [Configure read-only access replica](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [Configure read-only routing](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [Remove listener](remove-an-availability-group-listener-sql-server.md)  

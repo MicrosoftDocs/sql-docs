@@ -15,7 +15,7 @@ In this quick start tutorial, you first install SQL Server 2017 CTP 2.1 on Ubunt
 
 ## Prerequisites
 
-- You must have a Ubuntu machine with at least 3.25GB of memory.
+- You must have a Ubuntu machine with at least 3.25 GB of memory.
 
   > [!TIP]
   > To install Ubuntu, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. For instructions, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
@@ -59,7 +59,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    systemctl status mssql-server
    ```
 
-At this point, SQL Server is running on your Ubuntu machine and is ready to use.
+At this point, SQL Server is running on your Ubuntu machine and is ready to use!
 
 ## <a id="tools"></a>Install the SQL Server command-line tools
 

@@ -25,7 +25,13 @@ SQL Server 2017 represents a major step towards making SQL Server a platform tha
 
 ## Latest release  
 **SQL Server 2017 Release Candidate** (RC1, July 2017)
-<!-- - add features in bulleted list here -->
+
+### SQL Server Integration Services (SSIS)
+The new **Scale Out** feature in SSIS has the following new and changed features in RC1. For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
+-   Scale Out Master now supports high availability
+-   The failover handling of the execution logs from Scale Out Workers is improved.
+-   The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
+-   The SSIS Catalog has a new global property to specify the default mode for executing SSIS packages.
 
 ## SQL Server Database Engine  
 SQL Server 2017 includes many new Database Engine features, enhancements, and performance improvements. 
@@ -55,6 +61,19 @@ SQL Server 2017 includes many new Database Engine features, enhancements, and pe
 
 For more information, see [What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
 
+## SQL Server Integration Services (SSIS)
+- The new **Scale Out** feature in SSIS has the following new and changed features. For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md). (RC1)
+    -   Scale Out Master now supports high availability.
+    -   The failover handling of the execution logs from Scale Out Workers is improved.
+    -   The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
+    -   The SSIS Catalog has a new global property to specify the default mode for executing SSIS packages.
+- In the new **Scale Out for SSIS** feature, you can now use the **Use32BitRuntime** parameter when you trigger execution. (CTP 2.1)
+- SQL Server 2017 Integration Services (SSIS) now supports **SQL Server on Linux**, and a new package lets you run SSIS packages on Linux from the command line. For more information, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). (CTP 2.1)
+- The new **Scale Out for SSIS** feature makes it much easier to run SSIS on multiple machines. See [Integration Services Scale Out](~/integration-services/integration-services-ssis-scale-out.md). (CTP 1.0)
+- OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online. (CTP 1.0)
+
+For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
+
 ## SQL Server Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 introduces many enhancements for tabular models. These include:
 - Tabular mode as the default installation option for Analysis Services. (CTP 2.0)
@@ -70,11 +89,6 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 - DAX **IN** operator for specifying multiple values. (CTP 1.1)
 
 For more information, see [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).
-
-## SQL Server Integration Services (SSIS)
-- The new **Scale Out for SSIS** feature makes it much easier to run SSIS on multiple machines. See [Integration Services Scale Out](~/integration-services/integration-services-ssis-scale-out.md). (CTP 1.0) You can now use the **Use32BitRuntime** parameter when you trigger execution in Scale Out. (CTP 2.1)
-- SQL Server 2017 Integration Services (SSIS) now supports **SQL Server on Linux**, and a new package lets you run SSIS packages on Linux from the command line. For more information, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). (CTP 2.1)
-- OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online. (CTP 1.0)
 
 ## SQL Server Reporting Services (SSRS)
 As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download the May 2017 Preview of Power BI Report Server and Power BI Desktop optimized for Power BI Report Server](https://www.microsoft.com/download/details.aspx?id=55253). For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).

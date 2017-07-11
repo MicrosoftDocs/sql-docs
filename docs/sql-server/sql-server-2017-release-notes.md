@@ -25,6 +25,15 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
  **Try it out:**    
    -   [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
+## SQL Server 2017 Release Candidate (RC1 - July 2017)
+
+### SQL Server Integration Services (SSIS) (RC1 - July 2017)
+- **Issue and customer impact:** The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
+- **Workaround:** If you have existing scripts to run packages in Scale Out, you have to change the parameter name from *runincluster* to *runinscaleout* to make the scripts work in RC1.
+
+- **Issue and customer impact:** SQL Server Management Studio (SSMS) 17.1 and earlier versions can't trigger package execution in Scale Out in RC1. The error message is: "*@runincluster* is not a parameter for procedure **create_execution**." This issue is fixed in the next release of SSMS, version 17.2. Versions 17.2 and later of SSMS support the new parameter name and package execution in Scale Out. 
+- **Workaround:** Until SSMS version 17.2 is available, you can use your existing version of SSMS to generate the package execution script, then change the name of the *runincluster* parameter to *runinscaleout* in the script, and run the script.
+
 ## SQL Server 2017 Release Candidate (RC0 - June 2017)
 ### Documentation (RC0)
 - **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] will be noted with **Applies To**. 

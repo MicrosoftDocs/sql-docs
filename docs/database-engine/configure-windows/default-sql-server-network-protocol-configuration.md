@@ -1,7 +1,7 @@
 ---
 title: "Default SQL Server Network Protocol Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2016"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,7 +34,7 @@ Enterprise	| New installation	| Enabled	| Enabled	| Disabled for network connect
 Standard	| New installation	| Enabled	| Enabled	| Disabled for network connections.
 Web	| New installation	| Enabled	| Enabled	| Disabled for network connections.
 Developer	| New installation	| Enabled	| Disabled	| Disabled for network connections.
-Evaluation	| New installation	| Enabled	| Disabled	| Disabled for network connections.
+Evaluation	| New installation	| Enabled	| Enabled	| Disabled for network connections.
 SQL Server Express	| New installation	| Enabled	| Disabled	| Disabled for network connections.
 All editions	| Previous installation is present but is not being upgraded.	| Same as new installation	| Same as new installation	| Same as new installation
 All editions	| Upgrade	| Enabled	| Settings from the previous installation are preserved.	| Settings from the previous installation are preserved.

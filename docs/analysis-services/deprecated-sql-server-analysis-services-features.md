@@ -42,10 +42,11 @@ The following features were deprecated in an earlier release and are no longer s
 |||  
 |-|-|  
 |**Mode/Category**|**Feature**|  
+|Tabular|VertipaqPagingPolicy memory property value (2), enable paging to disk using memory mapped files|
 |Multidimensional|Remote partitions|  
 |Multidimensional|Remote linked measure groups|  
 |Multidimensional|Dimensional writeback|  
-|Multidimensional|Linked dimensions|  
+|Multidimensional|Linked dimensions|
 |Tools|SQL Server Profiler for Trace Capture<br /><br /> The replacement is to use Extended Events Profiler embedded in SQL Server Management Studio.  <br /> See [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Tools|Server Profiler for Trace Replay <br />Replacement. There is no replacement.|  
 |Trace Management Objects and Trace APIs|Microsoft.AnalysisServices.Trace objects (contains the APIs for Analysis Services Trace and Replay objects). The replacement is multi-part:<br /><br /> -   Trace Configuration: Microsoft.SqlServer.Management.XEvent<br />-   Trace Reading: Microsoft.SqlServer.XEvent.Linq<br />-   Trace Replay: None|  

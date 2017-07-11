@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_2814 | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2017"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -74,5 +74,5 @@ The following table lists the reasons for recompilation.
 3.  If the problem persists, contact Microsoft Customer Support Services.  
   
 ## See Also  
-[SQL:StmtRecompile Event Class](../Topic/SQL:StmtRecompile%20Event%20Class.md)  
+[SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)  
   

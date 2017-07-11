@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server from the Command Prompt | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/20/2017"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -846,7 +846,6 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |SQL_SHARED_MR||Installs Microsoft R Server.|  
 |Tools*||Installs client tools and SQL Server Books Online components.|  
 ||BC|Installs backward compatibility components.|  
-||BOL|Installs SQL Server Books Online components to view and manage help content.|
 ||Conn|Installs connectivity components.|
 ||DREPLAY_CTLR|Installs Distributed Replay controller|  
 ||DREPLAY_CLT|Installs Distributed Replay client|  

@@ -163,7 +163,7 @@ Use the **General Options** dialog box to view or specify the following options.
 |**Font name**|Displays the name of the font used in the trace results grid during traces.  
 |**Font size**|Displays the size of the font used in the trace results grid during traces.  
 |**Choose Font**|Opens a dialog to change the font settings.  
-|**Use regional settings to display date and time values**|Displays date and time values in regional settings configured for your computer. If you do not select this option, the date and time values are displayed in the fixed format used by Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which includes milliseconds. **Note:** Toggling this checkbox changes the time columns display format such as **StartTime** and **EndTime**. However, it does not change the **DateTime** value parameters inside the language events or remote procedure calls (RPCs).  
+|**Use regional settings to display date and time values**|Displays date and time values in regional settings configured for your computer. If you do not select this option, the date and time values are displayed in the fixed format used by Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which includes milliseconds. Note that toggling this checkbox changes the time columns display format such as **StartTime** and **EndTime**. However, it does not change the **DateTime** value parameters inside the language events or remote procedure calls (RPCs).  
 |**Show values in Duration column in microseconds**|Displays the values in microseconds in the **Duration** data column of traces. By default, the **Duration** column displays values in milliseconds.  
 ### Tracing options  
 |Item|Description

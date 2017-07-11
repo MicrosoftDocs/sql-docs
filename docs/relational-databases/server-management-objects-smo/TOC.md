@@ -9,7 +9,7 @@
 # [How to Create a Visual Basic SMO Project in Visual Studio .NET](how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md)
 # [How to Create a Visual C# SMO Project in Visual Studio .NET](how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)
 # [Installing SMO](installing-smo.md)
-# [Link to Programming Samples](link-to-programming-samples.md)
+# [Programming Samples](link-to-programming-samples.md)
 # [SMO Object Model Diagram](smo-object-model-diagram.md)
 # [SMO Object Model Namespaces](smo-object-model-namespaces.md)
 # [SMO Object Model](smo-object-model.md)
@@ -18,4 +18,3 @@
 # [SMO Programming Languages](smo-programming-languages.md)
 # [SMO Syntax Conventions](smo-syntax-conventions.md)
 # [SQL-DMO Mapping to SMO](sql-dmo-mapping-to-smo.md)
-# [System Requirements](system-requirements.md)

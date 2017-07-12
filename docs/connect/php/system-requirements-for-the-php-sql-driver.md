@@ -1,7 +1,7 @@
 ---
 title: "System Requirements for the PHP SQL Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,6 +26,7 @@ To access data in a SQL Server or Azure SQL Database using the [!INCLUDE[ssDrive
   
 |Microsoft Drivers for PHP for SQL Server Version|Supported PHP Versions|  
 |----------------------------------------------------|--------------------------|  
+|4.3|PHP 7.0 and PHP 7.1| 
 |4.0|PHP 7.0|  
 |3.2|PHP 5.6.4+ or<br /><br />PHP 5.5.16+ or<br /><br />PHP 5.4.32|  
 |3.1|PHP 5.5.16+ or<br /><br />PHP 5.4.32|  
@@ -44,7 +45,8 @@ To access data in a SQL Server or Azure SQL Database using the [!INCLUDE[ssDrive
 -   The correct version of the Microsoft ODBC Driver for SQL Server or SQL Server Native Client is required on the computer where PHP is running.  Note that if you are using a 64-bit operating system, the x86 version will be installed with the x64 installer (do not use the x86 version of the installer unless you are using a 32-bit operating system).  
 
 |Microsoft Drivers for PHP for SQL Server Version|Version of Microsoft ODBC Driver for SQL Server or SQL Server Native Client|  
-|----------------------------------------------------|--------------------------|  
+|----------------------------------------------------|--------------------------|
+|4.3|Microsoft ODBC Driver 11 for SQL Server or Microsoft ODBC Driver 13.1 for SQL Server. To download the x64 package for 64-bit operating systems, or x86 package for 32-bit operating systems, see the [Microsoft ODBC Driver 11 for SQL Server page](http://www.microsoft.com/download/details.aspx?id=36434) or [Microsoft ODBC Driver 13.1 for SQL Server page](https://www.microsoft.com/en-us/download/details.aspx?id=53339)|    
 |4.0|Microsoft ODBC Driver 11 for SQL Server or Microsoft ODBC Driver 13 for SQL Server. To download the x64 package for 64-bit operating systems, or x86 package for 32-bit operating systems, see the [Microsoft ODBC Driver 11 for SQL Server page](http://www.microsoft.com/download/details.aspx?id=36434) or [Microsoft ODBC Driver 13 for SQL Server page](https://www.microsoft.com/download/details.aspx?id=50420)|  
 |3.2 or <br><br> 3.1|Microsoft ODBC Driver 11 for SQL Server. To download the x64 package for 64-bit operating systems, or x86 package for 32-bit operating systems, see the [Microsoft ODBC Driver 11 for SQL Server page](http://www.microsoft.com/download/details.aspx?id=36434)|   
 |3.0|Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Native Client. You can download Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Native Client from the [SQL Server 2012 feature pack page](http://go.microsoft.com/fwlink/?LinkID=236805)| 
@@ -58,7 +60,9 @@ If you are using the SQLSRV driver, [sqlsrv_client_info](../../connect/php/sqlsr
 ## Database Versions
 -   Azure SQL Databases are supported. For information see [Connecting to Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md). 
 
-- [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version 3.1 and later support SQL Server 2008 and later
+- [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version 4.3 support SQL Server 2008 R2 and later
+- [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version 4.0 support SQL Server 2008 and later
+- [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version 3.1 support SQL Server 2008 and later
 - [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version 2.0 and 3.0 support SQL Server 2005 and later
 
 
@@ -66,6 +70,21 @@ If you are using the SQLSRV driver, [sqlsrv_client_info](../../connect/php/sqlsr
 This section lists the drivers that are included with each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 Follow the installation instructions in [Loading the PHP SQL Driver](../../connect/php/loading-the-php-sql-driver.md)  to configure the driver for use with the PHP runtime.  
+  
+**Microsoft Drivers 4.3 for PHP for SQL Server:**  
+
+On Windows, for 4.3 the following versions of the driver are installed:
+  
+|Driver file|PHP version|Thread safe?|Use with PHP .dll|  
+|---------------|---------------|----------------|---------------------|  
+|php_sqlsrv_7_nts_x86.dll<br /><br />php_pdo_sqlsrv_7_nts_x86.dll|7.0|no|32-bit php7.dll| 
+|php_sqlsrv_7_ts_x86.dll<br /><br />php_pdo_sqlsrv_7_ts_x86.dll|7.0|yes|32-bit php7ts.dll| 
+|php_sqlsrv_7_nts_x64.dll<br /><br />php_pdo_sqlsrv_7_nts_x64.dll|7.0|no|64-bit php7.dll|  
+|php_sqlsrv_7_ts_x64.dll<br /><br />php_pdo_sqlsrv_7_ts_x64.dll|7.0|yes|64-bit php7ts.dll| 
+|php_sqlsrv_71_nts_x86.dll<br /><br />php_pdo_sqlsrv_71_nts_x86.dll|7.1|no|32-bit php7.dll|  
+|php_sqlsrv_71_ts_x86.dll<br /><br />php_pdo_sqlsrv_71_ts_x86.dll|7.1|yes|32-bit php7ts.dll|  
+|php_sqlsrv_71_nts_x64.dll<br /><br />php_pdo_sqlsrv_71_nts_x64.dll|7.1|no|64-bit php7.dll|  
+|php_sqlsrv_71_ts_x64.dll<br /><br />php_pdo_sqlsrv_71_ts_x64.dll|7.1|yes|64-bit php7ts.dll|   
   
 **Microsoft Drivers 4.0 for PHP for SQL Server:**  
 
@@ -123,7 +142,22 @@ On the supported versions of Linux, the appropriate version of sqlsrv and/or pdo
 If the name of the driver file contains "vc9", it should be used with a PHP version compiled with Visual C++ 9.0.  
 ## Operating Systems 
 Supported operating systems for the versions of the driver are as follows:
--   4.0 (for Windows):  
+
+-   4.3 :
+    -   Windows Server 2012  
+    -   Windows Server 2012 R2
+    -   Windows Server 2016	
+    -   Windows 8  
+    -   Windows 8.1   
+    -   Windows 10
+    -   Ubuntu 15.10 (64-bit)
+    -   Ubuntu 16.04 (64-bit)
+	-   Debian 8
+    -   Red Hat Enterprise Linux 7 (64-bit)
+	-   Mac OS Sierra
+	-   Mac OS El Capitan
+	
+-   4.0 :  
     -   Windows Server 2008 SP2
     -   Windows Server 2008 R2 SP1  
     -   Windows Server 2012  
@@ -132,8 +166,7 @@ Supported operating systems for the versions of the driver are as follows:
     -   Windows 7 SP1  
     -   Windows 8  
     -   Windows 8.1   
-    -   Windows 10
--   4.0 (for Linux): 
+    -   Windows 10 
     -   Ubuntu 15.04 (64-bit)
     -   Ubuntu 16.04 (64-bit)
     -   Red Hat Enterprise Linux 7 (64-bit)

@@ -1,4 +1,16 @@
 # [Download SSMS](download-sql-server-management-studio-ssms.md)
+# [What is SSMS?](sql-server-management-studio-ssms.md)
+
+# What's New
+## [SSMS Changelog](sql-server-management-studio-changelog-ssms.md)
+## [Release notes](sql-server-management-studio-release-notes.md)
+## [New and recently updated articles](new-updated-ssms.md)
+## [Previous SSMS Releases](previous-sql-server-management-studio-releases.md)
+
+# [Use SSMS](use-sql-server-management-studio.md)
+# [Features in SSMS](features-in-sql-server-management-studio.md)
+# [Usage Feedback Collection](sql-server-management-studio-telemetry-ssms.md)
+# [Download SQL Server PowerShell Module](download-sql-server-ps-module.md)
 
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
 # [F1 Help +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
@@ -10,41 +22,31 @@
 # [Register Servers +](../ssms/register-servers/register-servers.md)
 # [Tutorials +](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 
-# [What is SSMS?](sql-server-management-studio-ssms.md)
-# [SSMS Changelog](sql-server-management-studio-changelog-ssms.md)
-# [Release notes](sql-server-management-studio-release-notes.md)
-# [Previous SQL Server Management Studio Releases](previous-sql-server-management-studio-releases.md)
-# [Usage Feedback Collection](sql-server-management-studio-telemetry-ssms.md)
-# [Download SQL Server PowerShell Module](download-sql-server-ps-module.md)
-
 # [Introduction to SSMS for BI](introduction-to-sql-server-management-studio-for-business-intelligence.md)
 # [Customize Menus and Shortcut Keys](customize-menus-and-shortcut-keys.md)
-# [Use SSMS](use-sql-server-management-studio.md)
-# [Features in SQL Server Management Studio](features-in-sql-server-management-studio.md)
-# [Tool Windows in SQL Server Management Studio](tool-windows-in-sql-server-management-studio.md)
+# [Tool Windows in SSMS](tool-windows-in-sql-server-management-studio.md)
 # [Use SSMS to Build Database Projects](build-database-projects-by-using-sql-server-management-studio.md)
-# [Understand SQL Server Management Studio Windows Management](understand-sql-server-management-studio-windows-management.md)
+# [Understand SSMS Windows Management](understand-sql-server-management-studio-windows-management.md)
 # [External Tools Dialog Box](external-tools-dialog-box.md)
 
 # [Arguments Dialog Box](arguments-dialog-box.md)
-# [Administer Servers with SQL Server Management Studio](administer-servers-with-sql-server-management-studio.md)
+# [Administer Servers with SSMS](administer-servers-with-sql-server-management-studio.md)
 # [License Terms](sql-server-management-studio-license-terms.md)
-# [Previous SQL Server Management Studio Releases](previous-sql-server-management-studio-releases.md)
 # [Configure WMI to Show Server Status in SQL Server Tools](configure-wmi-to-show-server-status-in-sql-server-tools.md)
-# [The SQL Server Management Studio Environment](the-sql-server-management-studio-environment.md)
+# [The SSMS Environment](the-sql-server-management-studio-environment.md)
 # [Property Pages in SSMS](property-pages-in-sql-server-management-studio.md)
-# [Properties Window (SSMS)](properties-window-management-studio.md)
+# [Properties Window in SSMS](properties-window-management-studio.md)
 
 # [About Dialog Box](about-dialog-box.md)
-# [SQL Server Management Studio Web Browser](sql-server-management-studio-web-browser.md)
+# [SSMS Web Browser](sql-server-management-studio-web-browser.md)
 # [General User Interface Elements](general-user-interface-elements.md)
 
 # [User Assistance in SSMS](user-assistance-in-sql-server-management-studio.md)
 # [Arguments for External Tools](use-of-sql-server-features-and-capabilities-wwi-oltp.md)
-# [Add an External Tool to the Tools Menu (SSMS)](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
-# [Configure Login Auditing (SSMS)](configure-login-auditing-sql-server-management-studio.md)
+# [Add an External Tool to the Tools Menu](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
+# [Configure Login Auditing](configure-login-auditing-sql-server-management-studio.md)
 # [Use the Toolbox](use-the-toolbox.md)
 
 # [Ssms Utility](ssms-utility.md)  
-# [SQL Server Management Studio Keyboard Shortcuts](sql-server-management-studio-keyboard-shortcuts.md)  
+# [SSMS Keyboard Shortcuts](sql-server-management-studio-keyboard-shortcuts.md)  
 

@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## Views  
  The following diagram shows Query Store views and their logical relationships, with compile time information presented as blue entities:  
   
- ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
+ ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **View Descriptions**  
   

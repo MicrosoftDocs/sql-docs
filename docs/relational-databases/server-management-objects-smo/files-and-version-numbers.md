@@ -1,7 +1,7 @@
 ---
 title: "Files and Version Numbers | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/02/2016"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,11 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Files and Version Numbers
-  All required [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) components are installed as part of an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client or server. SMO is implemented in several managed assemblies. You can develop SMO applications on either a client or a server.  
+  All required SQL Server Management Object (SMO) components are installed as part of an instance of SQL Server client or server. SMO is implemented in several managed assemblies. You can develop SMO applications on either a client or a server.  
+
+**Note!** 
+ - 120 = SQL Server 2014
+ - 130 = SQL Server 2016
   
 |Directory|File|Description|  
 |---------------|----------|-----------------|  

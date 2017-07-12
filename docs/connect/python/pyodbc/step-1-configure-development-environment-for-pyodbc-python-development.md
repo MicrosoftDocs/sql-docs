@@ -28,9 +28,7 @@ b. Select your language, and agree to the terms.
 c. Follow the instructions on the screen and Python should be installed on your computer. 
 d. You can verify that is Python is installed by going to C:\Python27 or C:\Python35 and run python -v or py -v(for 3.x) 
       
-3. **Install the Microsoft ODBC Driver 11, 13**  
-a. For [v11](https://www.microsoft.com/en-us/download/details.aspx?id=36434) 
-b. For [v13](https://www.microsoft.com/en-us/download/details.aspx?id=50420)
+3. [**Install the Microsoft ODBC Driver**](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server)  
   
 4. **Open cmd.exe as an administrator**     
 

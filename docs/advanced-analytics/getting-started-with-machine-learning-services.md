@@ -48,7 +48,7 @@ The option to install Microsoft R Server is provided in SQL Server 2016 to suppo
   
 You can also install R Server through platform-specific installers available from MSDN:
 
-  + [R Server for Windows](https://msdn.microsoft.commicrosoft-r/rserver-install-windows)
+  + [R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
   + [R Server for Linux](https://msdn.microsoft.com/microsoft-r/rserver-install-linux-server)
   + [R Server for Hadoop](https://msdn.microsoft.com/microsoft-r/rserver-install-hadoop)
 

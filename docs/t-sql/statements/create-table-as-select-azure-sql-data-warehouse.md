@@ -338,6 +338,8 @@ RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
+<a name="ctas-change-distributed-to-replicated-bk"></a>
+
 ### D. Use CTAS to change from a distributed to a replicated table  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse 
 

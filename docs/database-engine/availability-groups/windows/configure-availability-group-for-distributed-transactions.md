@@ -28,23 +28,23 @@ This article explains how to configure an availability group for distributed tra
 
 ## Support for distributed transactions
 
-[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports distributed transactions for databases in availability groups. This support includes transactions containing multiple databases on the same instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] as well as databases across multiple instances. 
+[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] supports distributed transactions for databases in availability groups across multiple data sources, including SQL Server instances on different servers. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] adds support for all distributed transactions - including databases in availability groups on the same instances and on different instances on the same server.
 
-[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] also supports distributed transactions for databases in availability groups, however this support does not include transactions involving two or more databases on the same server. The transactions can be between multiple databases from different servers. [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] does not support distributed transactions for databases in availability groups when more than one database is on the same server.
+In a distributed transaction, client applications work with Microsoft Distributed Transaction Coordinator (MS DTC or DTC) to guarantee transactional consistency across multiple data sources. DTC is a service available on supported Windows Server-based operating systems. For a distributed transaction, DTC is the *transaction coordinator*. Normally, a SQL Server instance is the *resource manager*. When a database is in an availability group, each database needs to be its own resource manager. 
 
-In a distributed transaction, client applications work with Microsoft Distributed Transaction Coordinator (MS DTC or DTC) to guarantee transactional consistency across multiple data sources. DTC is a service available on all supported operating systems. For a distributed transaction, DTC is the *transaction coordinator*. Normally, a SQL Server instance is the *resource manager*. When a database is in an availability group, each database needs to be its own resource manager. 
-
-Configure an availability group to support distributed transactions. Set the availability group to allow each database to register as a resource manager. This article explains how to configure an availability group so that each database can be a resource manager in DTC.
-
-[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However when an availability group is not configured for distributed transactions, failover may not succeed in some situations. Specifically the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance may not be able to get the transaction outcome from DTC. To enable the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance to get the outcome of in-doubt transactions from the DTC after failover, configure the availability group for distributed transactions. 
+[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] does not prevent distributed transactions for databases in an availability group - even when the availability group is not configured for distributed transactions. However when an availability group is not configured for distributed transactions, failover may not succeed in some situations. Specifically the new primary replica [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance may not be able to get the transaction outcome from DTC. To enable the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance to get the outcome of in-doubt transactions from the DTC after failover, configure the availability group for distributed transactions. 
 
 ## Prerequisites
 
-All instances of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] that participate in the distributed transaction must be  [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] or later.
+Before you configure an availability group to support distributed transactions, you must meet the following prerequisites:
 
-Availability groups must be running on Windows Server 2016 or Windows Server 2012 R2. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
+* All instances of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] that participate in the distributed transaction must be  [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] or later.
+
+* Availability groups must be running on Windows Server 2016 or Windows Server 2012 R2. For Windows Server 2012 R2, you must install the update in KB3090973 available at [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
 
 ## Create an availability group for distributed transactions
+
+Configure an availability group to support distributed transactions. Set the availability group to allow each database to register as a resource manager. This article explains how to configure an availability group so that each database can be a resource manager in DTC.
 
 You can create an availability group for distributed transactions on  [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] or later. To create an availability group for distributed transactions, include `DTC_SUPPORT = PER_DB` in the availability group definition. The following script creates an availability group for distributed transactions. 
 
@@ -56,12 +56,12 @@ CREATE AVAILABILITY GROUP MyAG
    FOR DATABASE DB1, DB2
    REPLICA ON
       Server1 WITH (
-         ENDPOINT_URL = 'TCP://Server1:5022',  
+         ENDPOINT_URL = 'TCP://SERVER1.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
          )
       Server2 WITH (
-         ENDPOINT_URL = 'TCP://Server2:5022',  
+         ENDPOINT_URL = 'TCP://SERVER2.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
          )
@@ -86,9 +86,9 @@ ALTER AVAILABILITY GROUP MyaAG
 
 ## <a name="distTran"/>Distributed transactions - technical concepts
 
-Distributed transactions span two or more databases. The management of the transaction must be coordinated between the resource managers by a server component called a transaction manager. Each instance of the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] Database Engine can operate as a resource manager in distributed transactions coordinated by transaction managers, such as Microsoft Distributed Transaction Coordinator (MS DTC), or other transaction managers that support the Open Group XA specification for distributed transaction processing. When an availability group is configured with `DTC_SUPPORT = PER_DB`, the databases can operate as resource managers. For more information, see the MS DTC documentation.
+A distributed transaction spans two or more databases. As the transaction manager, DTC coordinates the transaction between SQL Server instances, and other data sources. Each instance of the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] database engine can operate as a resource manager. When an availability group is configured with `DTC_SUPPORT = PER_DB`, the databases can operate as resource managers. For more information, see the MS DTC documentation.
 
-A transaction within a single instance of the Database Engine that spans two or more databases is actually a distributed transaction. The instance manages the distributed transaction internally; to the user, it operates as a local transaction. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] handles all cross-database transactions as distributed transactions when databases are in an availability group configured with `DTC_SUPPORT = PER_DB` - even within a single instance of SQL Server. 
+A transaction with two or more databases in a single instance of the database engine is actually a distributed transaction. The instance manages the distributed transaction internally; to the user, it operates as a local transaction. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] handles all cross-database transactions as distributed transactions when databases are in an availability group configured with `DTC_SUPPORT = PER_DB` - even within a single instance of SQL Server. 
 
 At the application, a distributed transaction is managed much the same as a local transaction. At the end of the transaction, the application requests the transaction to be either committed or rolled back. A distributed commit must be managed differently by the transaction manager to minimize the risk that a network failure may result in some resource managers successfully committing while others roll back the transaction. This is achieved by managing the commit process in two phases (the prepare phase and the commit phase), which is known as a two-phase commit (2PC).
 
@@ -113,10 +113,11 @@ The following list explains how the application works with DTC to complete distr
 
 ### Effects of configuring an availability group for distributed transactions
 
-Each entity participating in a distributed transaction is called a *resource manager*. Examples of resource managers include:
+Each entity participating in a distributed transaction is called a resource manager. Examples of resource managers include:
 
 * A [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. 
 * A database in an availability group that has been configured for distributed transactions.
+* DTC service - can also be a transaction manager.
 * Other data sources. 
 
 In order to participate in distributed transactions, an instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] enlists with a DTC. Normally the instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] enlists with DTC on the local server. Each instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] creates a resource manager identifier (RMID) and registers it with DTC. In the default configuration, all databases on an instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] use the same RMID. 
@@ -127,7 +128,7 @@ For more detail on distributed transactions in [!INCLUDE[SQLServer](../../../inc
 
 ## Manage in-doubt transactions
 
-When an availability group fails over, while distributed transactions are pending, the instance that hosts the primary replica contacts DTC to find out the results of the transactions. If databases in the availability group are not configured for distributed transactions, the RMID is the new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. The RMID when the transaction began was from the instance that held the primary replica before failover. The failover results in a changed RMID. The new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance cannot get the transaction outcome from DTC for active transactions because the RMID has changed. The following cases can result in a changed RMID:
+When an availability group fails over, while distributed transactions are pending, the instance that hosts the primary replica contacts DTC to find out the results of the transactions. If databases in the availability group are not configured for distributed transactions, the RMID is the new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. The RMID when the transaction began was from the instance that held the primary replica before failover. The failover results in a changed RMID. The new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance cannot get the transaction outcome from DTC for active transactions because the RMID has changed. The transaction is *in-doubt*. The following cases can result in a changed RMID:
 
 * Change `DTC_SUPPORT` for an availability group. 
 * Add or remove a database from an availability group. 
@@ -184,3 +185,7 @@ For more information about resolving in-doubt transactions, see [Resolve Transac
 [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [Transactions - Always On availability groups and Database Mirroring](transactions-always-on-availability-and-database-mirroring.md)  
+
+[Supporting XA Transactions](http://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
+
+[How It Works: Session/SPID (–2) for DTC Transactions](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

@@ -64,6 +64,34 @@ You can install SQL Server on Linux from the command-line. For instructions, see
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-ubuntu.md)
 
+## <a id="upgrade"></a> Upgrade SQL Server
+
+To upgrade the **mssql-server** package on Linux, use one of the following commands based on your platform:
+
+| Platform | Package update command(s) |
+|-----|-----|
+| RHEL | `sudo yum update mssql-server` |
+| SLES | `sudo zypper update mssql-server` |
+| Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
+
+These commands download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases are not affected by this operation.
+
+## <a id="uninstall"></a> Uninstall SQL Server
+
+To remove the **mssql-server** package on Linux, use one of the following commands based on your platform:
+
+| Platform | Package removal command(s) |
+|-----|-----|
+| RHEL | `sudo yum remove mssql-server` |
+| SLES | `sudo zypper remove mssql-server` |
+| Ubuntu | `sudo apt-get remove mssql-server` |
+
+Removing the package does not delete the generated database files. If you want to delete the database files, use the following command:
+
+```bash
+sudo rm -rf /var/opt/mssql/
+```
+
 ## <a id="unattended"></a> Unattended install
 
 You can perform an unattended installation in the following way:
@@ -84,34 +112,6 @@ For a more detailed sample script, see the following examples:
 - [Red Hat unattended installation script](sample-unattended-install-redhat.md)
 - [SUSE unattended installation script](sample-unattended-install-suse.md)
 - [Ubuntu unattended installation script](sample-unattended-install-ubuntu.md)
-
-## <a id="upgrade"></a> Upgrade
-
-To upgrade the **mssql-server** package on Linux, use one of the following commands based on your platform:
-
-| Platform | Package update command(s) |
-|-----|-----|
-| RHEL | `sudo yum update mssql-server` |
-| SLES | `sudo zypper update mssql-server` |
-| Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
-
-These commands download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases are not affected by this operation.
-
-## <a id="uninstall"></a> Uninstall
-
-To remove the **mssql-server** package on Linux, use one of the following commands based on your platform:
-
-| Platform | Package removal command(s) |
-|-----|-----|
-| RHEL | `sudo yum remove mssql-server` |
-| SLES | `sudo zypper remove mssql-server` |
-| Ubuntu | `sudo apt-get remove mssql-server` |
-
-Removing the package does not delete the generated database files. If you want to delete the database files, use the following command:
-
-```bash
-sudo rm -rf /var/opt/mssql/
-```
 
 ## <a id="offline"></a> Offline install
 

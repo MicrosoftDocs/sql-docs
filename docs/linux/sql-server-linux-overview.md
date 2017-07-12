@@ -43,7 +43,7 @@ To get started, install SQL Server on Linux using one of the following quick sta
 
 ## Connect
 
-After installation, connect to the running SQL Server instance on your Linux machine. You can do locally or remotely and with a variety of tools and drivers. The quick start tutorials demonstrate how to use the **sqlcmd** command-line tool. Other tools include the following:
+After installation, connect to the SQL Server instance on your Linux machine. You can connect locally or remotely and with a variety of tools and drivers. The quick start tutorials demonstrate how to use the [sqlcmd](sql-server-linux-setup-tools.md) command-line tool. Other tools include the following:
 
 | Tool | Tutorial |
 |-----|-----|
@@ -53,9 +53,9 @@ After installation, connect to the running SQL Server instance on your Linux mac
 
 ## Explore
 
-SQL Server 2017 has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux. This area of the documentation exposes some of features from a Linux perspective. It also calls out areas that have unique requirements on Linux.
+SQL Server 2017 has the same underlying database engine on all supported platforms, including Linux. So many existing features and capabilities operate the same way on Linux. This area of the documentation exposes some of these features from a Linux perspective. It also calls out areas that have unique requirements on Linux.
 
-If you are already familiar with SQL Server, you'll want to review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release. Then look at [what's new for SQL Server on Linux](sql-server-linux-whats-new.md) as well as [what's new for SQL Server 2017 overall](../sql-server/what-s-new-in-sql-server-2017.md)
+If you are already familiar with SQL Server, review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release. Then look at [what's new for SQL Server on Linux](sql-server-linux-whats-new.md) as well as [what's new for SQL Server 2017 overall](../sql-server/what-s-new-in-sql-server-2017.md).
 
 ##  ![info_tip](./media/general/info_tip.png) Engage with the SQL Server engineering team 
 - [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)

@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Getting Started in SMO
-This topic provides links to topics to help you get started using SQL Server Management Objects (SMO). The topics listed will help you locate information about the SMO object hierarchy, prepare for writing programs in SMO, start writing a SMO program in different programming languages, and learn more general and specific programming tasks.  
+This page provides links to topics designed to help you get started using SQL Server Management Objects (SMO). The topics listed cover the SMO object hierarchy, writing programs in SMO, SMO and different programming languages, and specific programming tasks.  
  
 ## Object Model  
 [Object Model](../../relational-databases/server-management-objects-smo/smo-object-model.md) describes the SMO object hierarchy and how the objects relate to one another.  

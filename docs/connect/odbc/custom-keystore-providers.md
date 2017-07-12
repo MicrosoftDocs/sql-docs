@@ -353,7 +353,6 @@ CEKEYSTOREPROVIDER *CEKeystoreProvider[] = {
     &MyCustomKSPName_desc,
     0
 };
-
 ```
 
 ### ODBC Application
@@ -364,19 +363,27 @@ The following code is a demo application which uses the keystore provider above.
 /*
  Example application for demonstration of custom keystore provider usage
 
+Windows:   compile with cl /MD kspapp.c /link odbc32.lib
+Linux/Mac: compile with gcc -o kspapp -fshort-wchar kspapp.c -lodbc -ldl
+ 
  usage: kspapp connstr
 
  */
 
+#define KSPNAME L"MyCustomKSPName"
 #define PROV_ENCRYPT_KEY "JHKCWYT06N3RG98J0MBLG4E3"
 
 #include <stdio.h>
 #include <stdlib.h>
+#ifdef _WIN32
+#include <windows.h>
+#else
+#define __stdcall
 #include <dlfcn.h>
-#include <sqltypes.h>
-#include <msodbcsql.h>
+#endif
 #include <sql.h>
 #include <sqlext.h>
+#include "msodbcsql.h"
 
 /* Convenience functions */
 
@@ -427,11 +434,14 @@ int main(int argc, char **argv) {
     unsigned char CEK[32];
     unsigned char *ECEK;
     unsigned short ECEKlen;
-    void* hProvLib;
+#ifdef _WIN32
+    HMODULE hProvLib;
+#else
+    void *hProvLib;
+#endif
     CEKEYSTORECONTEXT ctx = {0};
     CEKEYSTOREPROVIDER **ppKsp, *pKsp;
-    int(__stdcall *pEncryptCEK)(CEKEYSTORECONTEXT *, errFunc *, unsigned char *, unsigned short,
-        unsigned char **, unsigned short *);
+    int(__stdcall *pEncryptCEK)(CEKEYSTORECONTEXT *, errFunc *, unsigned char *, unsigned short, unsigned char **, unsigned short *);
     int i;
     if (argc < 2) {
         fprintf(stderr, "usage: kspapp connstr\n");
@@ -439,44 +449,43 @@ int main(int argc, char **argv) {
     }
 
     /* Load the provider library */
-    if (!(hProvLib = dlopen("MyKSP.so", RTLD_LAZY))) {
+#ifdef _WIN32
+    if (!(hProvLib = LoadLibrary("MyKSP.dll"))) {
+#else
+    if (!(hProvLib = dlopen("./MyKSP.so", RTLD_NOW))) {
+#endif
         fprintf(stderr, "Error loading KSP library\n");
         return 2;
     }
-    
-    /* Check that the loaded library contains the CEKeyStoreProvider entry point */
+#ifdef _WIN32
     if (!(ppKsp = (CEKEYSTOREPROVIDER**)GetProcAddress(hProvLib, "CEKeystoreProvider"))) {
+#else
+    if (!(ppKsp = (CEKEYSTOREPROVIDER**)dlsym(hProvLib, "CEKeystoreProvider"))) {
+#endif
         fprintf(stderr, "The export CEKeystoreProvider was not found in the KSP library\n");
         return 3;
     }
-    
-    /* Iterate the CEKeyStoreProviders in the library, looking for the custom one MyCustomKSPName */
-    bool foundProv = false;
     while (pKsp = *ppKsp++) {
-        if (!wcscmp(L"MyCustomKSPName", pKsp->Name)){
-            foundProv = true;
-            break;
-        }
+        if (!memcmp(KSPNAME, pKsp->Name, sizeof(KSPNAME)))
+            goto FoundProv;
     }
-    
-    if (!foundProv) {
-        fprintf(stderr, "Could not find provider in the library\n");
-        return 4;
-    }
-
-    /* Initialize Provider */
+    fprintf(stderr, "Could not find provider in the library\n");
+    return 4;
+FoundProv:
     if (pKsp->Init && !pKsp->Init(&ctx, postKspError)) {
         fprintf(stderr, "Could not initialise provider\n");
         return 5;
     }
-    
-    /* Determine Provider capabilities */
-    if (!(pEncryptCEK = (void*)GetProcAddress(hProvLib, "KeystoreEncrypt"))) {
+#ifdef _WIN32
+    if (!(pEncryptCEK = (LPVOID)GetProcAddress(hProvLib, "KeystoreEncrypt"))) {
+#else
+    if (!(pEncryptCEK = dlsym(hProvLib, "KeystoreEncrypt"))) {
+#endif
         fprintf(stderr, "The export KeystoreEncrypt was not found in the KSP library\n");
         return 6;
     }
     if (!pKsp->Write) {
-        fprintf(stderr, "Sample Custom Provider does not support configuration.\n");
+        fprintf(stderr, "Provider does not support configuration\n");
         return 7;
     }
 
@@ -531,10 +540,18 @@ int main(int argc, char **argv) {
         printf("Create CEK: %s\n", cekSql);
         SQLExecDirect(stmt, cekSql, SQL_NTS);
         free(cekSql);
+#ifdef _WIN32
+        LocalFree(ECEK);
+#else
         free(ECEK);
+#endif
     }
 
+#ifdef _WIN32
     FreeLibrary(hProvLib);
+#else
+    dlclose(hProvLib);
+#endif
 
     /* Create a table with encrypted columns */
     {
@@ -552,7 +569,11 @@ int main(int argc, char **argv) {
         pKsd->name = L"MyCustomKSPName";
         pKsd->dataSize = sizeof(PROV_ENCRYPT_KEY) - 1;
         memcpy(pKsd->data, PROV_ENCRYPT_KEY, sizeof(PROV_ENCRYPT_KEY) - 1);
+#ifdef _WIN32
         rc = SQLSetConnectAttr(dbc, SQL_COPT_SS_CEKEYSTOREPROVIDER, "MyKSP.dll", SQL_NTS);
+#else
+        rc = SQLSetConnectAttr(dbc, SQL_COPT_SS_CEKEYSTOREPROVIDER, "./MyKSP.so", SQL_NTS);
+#endif
         checkRC(rc, "Loading KSP into ODBC Driver", 7, dbc, SQL_HANDLE_DBC);
         rc = SQLSetConnectAttr(dbc, SQL_COPT_SS_CEKEYSTOREDATA, (SQLPOINTER)pKsd, SQL_IS_POINTER);
         checkRC(rc, "Configuring the KSP", 7, dbc, SQL_HANDLE_DBC);

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Extract, transform, and load data with SSIS on Linux | Microsoft Docs
+title: Extract, transform, and load data on Linux with SSIS | Microsoft Docs
 description: 
 author: sanagama
 ms.author: sanagama 
@@ -23,7 +23,7 @@ ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 # ms.custom: ""
 
 ---
-# Extract, transform, and load data for SQL Server on Linux with SSIS
+# Extract, transform, and load data on Linux with SSIS
 
 This topic describes how to run SQL Server Integration Services (SSIS) packages on Linux. SSIS solves complex data integration problems by loading data from multiple sources and formats, transforming and cleansing the data, and updating multiple destinations. 
 

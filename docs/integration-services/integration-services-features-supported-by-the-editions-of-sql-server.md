@@ -1,7 +1,7 @@
 ---
 title: "Integration Services Features Supported by the Editions of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "07/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,15 +31,17 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
     
 > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-##  <a name="IS"></a>New Integration Services Features in SQL Server 2017
+## <a name="ISNew"></a> New Integration Services Features in SQL Server 2017
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Scale Out Master|Yes|||||
-|Scale Out Worker|Yes|Yes|TBD|TBD|TBD|
+|Scale Out Worker|Yes|Yes <sup>2</sup>|TBD|TBD|TBD|
 |Support for Microsoft Dynamics AX and Microsoft Dynamics CRM in OData components <sup>1</sup>|Yes|Yes||||
 
 <sup>1</sup> This feature is also supported in SQL Server 2016 with Service Pack 1.
+
+<sup>2</sup> If you run packages that require Enterprise-only features in Scale Out, the Scale Out Workers must also run on instances of SQL Server Enterprise.
 
 ## <a name="IEWiz"></a> SQL Server Import and Export Wizard
 
@@ -47,7 +49,7 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |SQL Server Import and Export Wizard|Yes|Yes|Yes|Yes|Yes|  
 
-##  <a name="IS"></a> Integration Services  
+## <a name="IS"></a> Integration Services  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -57,7 +59,7 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |Hadoop/HDFS connectors and tasks|Yes|Yes||||  
 |Basic data profiling tools|Yes|Yes|||| 
 
-##  <a name="ISAA"></a> Integration Services - Advanced sources and destinations  
+## <a name="ISAA"></a> Integration Services - Advanced sources and destinations  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -68,7 +70,7 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |Dimension processing destination|Yes|||||  
 |Partition processing destination|Yes|||||  
   
-##  <a name="ISAT"></a> Integration Services - Advanced transformations  
+## <a name="ISAT"></a> Integration Services - Advanced transformations  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  

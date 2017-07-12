@@ -31,7 +31,7 @@ This topic discusses what was added in the each version of the [!INCLUDE[ssDrive
 - Support for Always On Availability groups via Transparent Network IP Resolution. For more information, see [Connection Options](../../connect/php/connection-options.md). 
 - Added support for sql_variant data type with limitation.
 - Idle Connection Resiliency support in Windows. For more information, see [Connection Options](../../connect/php/connection-options.md).
-- Connection pooling support for Linux and macOS. For more information, see [Connection Pooling](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server).
+- Connection pooling support for Linux and macOS. For more information, see [Connection Pooling](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
 - Support for Azure Active Directory Authentication with ActiveDirectoryPassword and SqlPassword. For more information, see [Connection Options](../../connect/php/connection-options.md).
   
 ## What's New in Version 4.0 

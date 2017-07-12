@@ -1,7 +1,7 @@
 ---
 title: "Getting Started in SMO | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2017"
+ms.date: "07/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Getting Started in SMO
-  This topic contains links to about topics to help you get started using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). The SMO section is aimed at developers. The following list will help you to locate information about the SMO object hierarchy, how to prepare for writing programs in SMO, how to start writing an SMO program in different programming languages, and general and specific programming tasks.  
+  This topic contains links to about topics to help you get started using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). The following list will help you to locate information about the SMO object hierarchy, how to prepare for writing programs in SMO, how to start writing a SMO program in different programming languages, and general and specific programming tasks.  
  
  **Object Model**  
   

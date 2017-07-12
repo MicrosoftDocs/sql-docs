@@ -125,7 +125,7 @@ Placeholder name for a provider-defined communication function. The driver calls
 |`ctx`|[Input] Operation context.|
 |`onError`|[Input] Error-reporting function.|
 |`data`|[Input] Pointer to a buffer containing the data for the provider to read. This corresponds to the data field of the CEKEYSTOREDATA structure. The provider must not read more than len bytes from this buffer.|
-|`len`|[In] The number of bytes available in data. This corresponds to the dataSize field of the CEKEYSTOREDATA structure.|
+|`len`|[Input] The number of bytes available in data. This corresponds to the dataSize field of the CEKEYSTOREDATA structure.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
 ```

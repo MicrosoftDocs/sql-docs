@@ -18,7 +18,7 @@ author: "MightyPen"
 # Using Always Encrypted with the ODBC Driver 13.1 for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) and the [ODBC Driver 13.1 for SQL Server](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md).
+This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) and the [ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
 Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver 13.1 for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx).
 
@@ -40,7 +40,7 @@ Always Encrypted may also be enabled in the DSN configuration, using the same ke
  SQLSetConnectAttr(hdbc, SQL_COPT_SS_COLUMN_ENCRYPTION, (SQLPOINTER)SQL_COLUMN_ENCRYPTION_ENABLE, 0);
 ```
 
-Once enabled for the connection, the behaviour of Always Encrypted may be adjusted for individual queries. See [Controlling the Performance Impact of Always Encrypted](#controlling-performance-impact-always-encrypted) below for more information.
+Once enabled for the connection, the behaviour of Always Encrypted may be adjusted for individual queries. See [Controlling the Performance Impact of Always Encrypted](#controlling-the-performance-impact-of-always-encrypted) below for more information.
 
 Note that enabling Always Encrypted is not sufficient for encryption or decryption to succeed; you also need to make sure that:
 
@@ -86,7 +86,7 @@ This example inserts a row into the Patients table. Note the following:
 
 - There is nothing specific to encryption in the sample code. The driver automatically detects and encrypts the values of the SSN and date parameters, which target encrypted columns. This makes encryption transparent to the application.
 
-- The values inserted into database columns, including the encrypted columns, are passed as bound parameters (See [SQLBindParameter Function](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). While using parameters is optional when sending values to non-encrypted columns (although it is highly recommended because it helps prevent SQL injection), it is required for values targeting encrypted columns. If the values inserted in the SSN or BirthDate columns were passed as literals embedded in the query statement, the query would fail because the driver does not attempt to encrypt or otherwise process literals in queries. As a result, the server would reject them as incompatible with the encrypted columns.
+- The values inserted into database columns, including the encrypted columns, are passed as bound parameters (see [SQLBindParameter Function](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). While using parameters is optional when sending values to non-encrypted columns (although it is highly recommended because it helps prevent SQL injection), it is required for values targeting encrypted columns. If the values inserted in the SSN or BirthDate columns were passed as literals embedded in the query statement, the query would fail because the driver does not attempt to encrypt or otherwise process literals in queries. As a result, the server would reject them as incompatible with the encrypted columns.
 
 - The SQL type of the parameter inserted into the SSN column is set to SQL_CHAR, which maps to the **char** SQL Server data type (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). If the type of the parameter was set to SQL_WCHAR, which maps to **nchar**, the query would fail, as Always Encrypted does not support server-side conversions from encrypted nchar values to encrypted char values. See [ODBC Programmer's Reference -- Appendix D: Data Types](https://msdn.microsoft.com/library/ms713607.aspx) for information about the data type mappings.
 
@@ -390,7 +390,7 @@ Two connection attributes are used to interact with custom keystore providers. T
 
 - `SQL_COPT_SS_CEKEYSTOREDATA`
 
-The former is used to load and query loaded keystore providers, while the latter enables application-provider communications. These connection attributes may be used at any time, before or after establishing a connection, since application-provider interaction does not involve communication with SQL Server. However, because the driver has not been loaded yet, setting and getting these attributes before connecting will cause them to be processed by the Driver Manager, and may not yield the expected results.
+The former is used to load and enumerate loaded keystore providers, while the latter enables application-provider communications. These connection attributes may be used at any time, before or after establishing a connection, since application-provider interaction does not involve communication with SQL Server. However, because the driver has not been loaded yet, setting and getting these attributes before connecting will cause them to be processed by the Driver Manager, and may not yield the expected results.
 
 #### Loading a Keystore Provider
 
@@ -477,7 +477,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 Additional detailed error information may be obtained via [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
 
-NOTE: The provider can use the connection handle to associate the written data to a specific connection, if it so desires. This is useful for implementing per-connection configuration. It may also ignore the connection context and treat the data identically regardless of the connection used to send the data. See [Context Association](../../connect/odbc/custom-keystore-providers.md) for more information.
+NOTE: The provider can use the connection handle to associate the written data to a specific connection, if it so desires. This is useful for implementing per-connection configuration. It may also ignore the connection context and treat the data identically regardless of the connection used to send the data. See [Context Association](../../connect/odbc/custom-keystore-providers.md#context-association) for more information.
 
 #### Reading data from a provider
 
@@ -516,8 +516,8 @@ While the ODBC driver will allow the use of [asynchronous operations](https://ms
 |----------|-----------------|  
 |`ColumnEncryption`|Accepted values are `Enabled`/`Disabled`.<br>`Enabled` -- enables Always Encrypted functionality for the connection.<br>`Disabled` -- disable Always Encrypted functionality for the connection. <br><br>The default is `Disabled`.|  
 |`KeyStoreAuthentication` | Valid Values: `KeyVaultPassword`, `KeyVaultClientSecret` |
-|`KeyStorePrincipalId` | When `KeyStoreAuthentication` = `KeyVaultPassword`, set this value to a valid Azure Active Directory User Principle Name. <br>When `KeyStoreAuthetication` = `KeyVaultClientSecret` set this value to a valid Azure Active Directory Application Client ID |
-|`KeyStoreSecret` | When `KeyStoreAuthentication` = `KeyVaultPassword` set this value to the password for a valid Azure Active Directory User Principle Name. <br>When `KeyStoreAuthentication` = `KeyVaultClientSecret` set this value to the Application Secret associated with a valid Azure Active Directory Application Client ID|
+|`KeyStorePrincipalId` | When `KeyStoreAuthentication` = `KeyVaultPassword`, set this value to a valid Azure Active Directory User Principal Name. <br>When `KeyStoreAuthetication` = `KeyVaultClientSecret` set this value to a valid Azure Active Directory Application Client ID |
+|`KeyStoreSecret` | When `KeyStoreAuthentication` = `KeyVaultPassword` set this value to the password for the corresponding user name. <br>When `KeyStoreAuthentication` = `KeyVaultClientSecret` set this value to the Application Secret associated with a valid Azure Active Directory Application Client ID|
 
 ### Connection Attributes
 

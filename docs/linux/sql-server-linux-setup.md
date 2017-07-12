@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Install SQL Server on Linux | Microsoft Docs
-description: SQL Server 2017 RC1 now runs on Linux. This topic provides an overview on how to install SQL Server on Linux with links to the guides for specific platforms. 
+title: Install SQL Server 2017 on Linux | Microsoft Docs
+description: Install, update, and uninstall SQL Server on Linux. This topic covers online, offline, and unattended scenarios. 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -24,13 +24,16 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 # ms.custom: ""
 
 ---
-# Install SQL Server on Linux
+# Installation guidance for SQL Server on Linux
 
-SQL Server 2017 RC1 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac. The topics in this section provide tutorials and general guidance for installing SQL Server 2017 RC1 on Linux.
+This topic explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 RC1 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+
+> [TIP]
+> To get started quickly, jump to one of the quick start tutorials for [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), or [Docker](quickstart-install-connect-docker.md).
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
-SQL Server 2017 RC1 is supported on the following platforms:
+SQL Server 2017 is supported on the following Linux platforms:
 
 | Platform | Supported version(s) | Get
 |-----|-----|-----
@@ -45,11 +48,11 @@ SQL Server 2017 has the following system requirements for Linux:
 
 |||
 |-----|-----|
-| **Memory** | Minimum 3.25 GB |
+| **Memory** | 3.25 GB |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |
-| **Disk space** | Minimum 1 GB |
-| **Processor speed** | Minimum 1.4 GHz |
-| **Processor cores** | Minimum 2 |
+| **Disk space** | 6 GB |
+| **Processor speed** | 2 GHz |
+| **Processor cores** | 2 cores |
 | **Processor type** | x64-compatible only |
 
 > [!NOTE]

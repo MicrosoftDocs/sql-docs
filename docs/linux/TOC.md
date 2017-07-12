@@ -9,13 +9,7 @@
 ## [Install & Connect - Red Hat](quickstart-install-connect-red-hat.md)
 ## [Install & Connect - SUSE](quickstart-install-connect-suse.md)
 ## [Install & Connect - Ubuntu](quickstart-install-connect-ubuntu.md)
-## [Install & Connect - Docker](quickstart-install-connect-docker.md)
-
-# Samples
-## Unattended Install
-### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
-### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
-### [Ubuntu](sample-unattended-install-ubuntu.md)
+## [Run & Connect - Docker](quickstart-install-connect-docker.md)
 
 # Concepts
 ## Install
@@ -74,6 +68,12 @@
 ### [Encrypting Connections](sql-server-linux-encrypted-connections.md)
 
 ## [Optimize Performance](sql-server-linux-performance-get-started.md)
+
+# Samples
+## Unattended Install
+### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
+### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Resources
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)

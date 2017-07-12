@@ -261,4 +261,9 @@ To manually install these packages, use the following steps:
 
 ## Next steps
 
-After installation, connect to the SQL Server instance to create and manage databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query-sqlcmd.md).
+After installation, connect to the SQL Server instance to create and manage databases. For examples, see the following quick start tutorials:
+
+- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-ubuntu.md)

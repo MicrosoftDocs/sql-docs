@@ -32,21 +32,15 @@ This article describes changes in feature availability and behavior between the 
 ## Deprecated features
 A *deprecated feature* will be discontinued from the product in a future release, but is still supported and included in the current release to maintain backward compatibility. It's recommended you discontinue using deprecated features in new and existing projects to maintain compatibility with future releases.
   
- ### Not supported in the next major release of SQL Server
+The following features are deprecated in this release:
   
 |||  
 |-|-|  
-|**Category**|**Feature**|  
+|**Mode/Category**|**Feature**|  
 |Multidimensional|Remote partitions|  
 |Multidimensional|Remote linked measure groups|  
 |Multidimensional|Dimensional writeback|  
-|Multidimensional|Linked dimensions|  
-  
- ### Not supported in a future release of SQL Server
-  
-|||  
-|-|-|  
-|**Category**|**Feature**|  
+|Multidimensional|Linked dimensions|   
 |Multidimensional|SQL Server table notifications for proactive caching.  <br />The replacement is to use polling for proactive caching. <br />See [Proactive Caching &#40;Dimensions&#41;](../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md) and [Proactive Caching &#40;Partitions&#41;](../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |Multidimensional|Session cubes. There is no replacement.|  
 |Multidimensional|Local cubes. There is no replacement.|  

@@ -50,7 +50,7 @@ The following features are deprecated in this release:
 |Trace Management Objects and Trace APIs|Microsoft.AnalysisServices.Trace objects (contains the APIs for Analysis Services Trace and Replay objects). The replacement is multi-part:<br /><br /> -   Trace Configuration: Microsoft.SqlServer.Management.XEvent<br />-   Trace Reading: Microsoft.SqlServer.XEvent.Linq<br />-   Trace Replay: None|  
   
 > [!NOTE]  
->  Previously deprecated feature announcements from [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] remain in effect. Because the code supporting those features has not yet been cut from the product, many  of these features are still present in this release. While previously deprecated features might be accessible, they are still considered deprecated and could be physically removed from the product at any point during the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release. We strongly recommend that you avoid using deprecated features in any new models or applications based on [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+>  Previously deprecated feature announcements from [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] remain in effect. Because the code supporting those features has not yet been cut from the product, many  of these features are still present in this release. While previously deprecated features might be accessible, they are still considered deprecated and could be physically removed from the product at any time.  
 
 ## Discontinued features
 A *discontinued feature* was deprecated in an earlier release. It may continue to be included in the current release, but is no longer supported. Discontinued features may be removed entirely in a future release or update.
@@ -67,7 +67,7 @@ The following features were deprecated in an earlier release and are no longer s
 |CELL_EVALUATION_LIST intrinsic cell property|None. This feature was deprecated in SQL Server 2005.|  
   
 > [!NOTE]  
->  Previously deprecated feature announcements from [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] remain in effect. Because the code supporting those features has not yet been cut from the product, many  of these features are still present in this release. While previously deprecated features might be accessible, they are still considered deprecated and could be physically removed from the product at any point during the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release. We strongly recommend that you avoid using deprecated features in any new models or applications based on [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+>  Previously deprecated feature announcements from [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] remain in effect. Because the code supporting those features has not yet been cut from the product, many  of these features are still present in this release. While previously deprecated features might be accessible, they are still considered deprecated and could be physically removed from the product at any time.  
 
 ## Breaking changes
 A *breaking change* causes a data model, application code, or script  to no longer function after upgrading either the model or the server.
@@ -90,7 +90,7 @@ using Microsoft.AnalysisServices.Core;
  Although there are now multiple namespaces, both exist in the same assembly (Microsoft.AnalysisServices.dll).  
   
 ### XEvent DISCOVER changes  
- To better support XEvent DISCOVER streaming in SSMS for [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], `DISCOVER_XEVENT_TRACE_DEFINITION` is replaced with the following XEvent traces:  
+ To better support XEvent DISCOVER streaming in SSMS for SQL Server 2016 Analysis Services, `DISCOVER_XEVENT_TRACE_DEFINITION` is replaced with the following XEvent traces:  
   
 -   DISCOVER_XEVENT_PACKAGES  
   
@@ -108,12 +108,12 @@ Revisions to  default values, manual configuration required to complete an upgra
 Feature behaviors that changed in this release, yet do not break an existing model or code post-upgrade, are listed here.
   
 ### Analysis Services in SharePoint mode
- Running the Power Pivot Configuration wizard is no longer required as a post-installation task. This is true for all supported versions of SharePoint that load models from the  current [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].
+ Running the Power Pivot Configuration wizard is no longer required as a post-installation task. This is true for all supported versions of SharePoint that load models from the current SQL Server 2016 Analysis Services.
   
 ### DirectQuery mode for Tabular models
  *DirectQuery* is a data access mode for tabular models, where query execution is performed on a backend relational database, retrieving a result set in real time. It's often used for very large datasets that cannot fit in memory or when data is volatile and you want the most recent data returned in queries against a tabular model.
   
- DirectQuery has existed as a data access mode for the last several releases. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], the implementation has been slightly revised, assuming the tabular model is at compatibility level 1200 or higher. DirectQuery has fewer restrictions than before. It also has different database properties.
+ DirectQuery has existed as a data access mode for the last several releases. In SQL Server 2016 Analysis Services, the implementation has been slightly revised, assuming the tabular model is at compatibility level 1200 or higher. DirectQuery has fewer restrictions than before. It also has different database properties.
   
  If you are using DirectQuery in an existing tabular model, you can keep the model at its currently compatibility level of 1100 or 1103 and continue to use DirectQuery as its implemented for those levels. Alternatively, you can upgrade to 1200 or higher to benefit from enhancements made to DirectQuery.
   

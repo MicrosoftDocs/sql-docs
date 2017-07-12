@@ -32,5 +32,5 @@ manager: "jhubbard"
   
 
 ## Redistribute the Microsoft JDBC 4.1, 4.2, and 6.0 Driver
-Please review the “Distributable Code” clause in the license agreements for the 4.1, 4.2, and 6.0 versions of the driver.
+Please review the “Distributable Code” clause in the license agreements for the 4.1, 4.2, 6.0, and 6.2 versions of the driver.
   

@@ -30,6 +30,8 @@ This topic describes the features that have been added or updated in [!INCLUDE[s
     - Some reports in the current version of SQL Server Management Studio (SSMS) don’t currently display these logs for executions in Scale Out. We anticipate that they will be supported in the next release of SSMS. The affected reports include the *All Connections* report, the *Error Context* report, and the *Connection Information* section in the Integration Service Dashboard.
     - A new column **event_message_guid** has been added. Use this column to join the [catalog].[event_message_context] view and the [catalog].[event_messages] view instead of using **event_message_id** when you query these logs of executions in Scale Out.
 
+To get the management application for SSIS Scale Out, [download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 or later.
+
 ## New in SSIS in SQL Server 2017 CTP 2.0
 
 There are no new SSIS features in SQL Server 2017 CTP 2.0.

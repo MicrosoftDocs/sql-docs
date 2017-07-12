@@ -2,7 +2,7 @@
 title: "DROP FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.date: "06/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,7 +39,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
- -- SQL Server (starting with 2008), Azure SQL Database 
+ -- SQL Server, Azure SQL Database 
 
 DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]   
 [;]
@@ -55,7 +55,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ## Arguments  
  *IF EXISTS*    
- Conditionally drops the function only if it already exists.  
+ Conditionally drops the function only if it already exists. Available beginning with [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 and in [!INCLUDE[sssds_md](../../includes/sssds_md.md)].
   
  *schema_name*  
  Is the name of the schema to which the user-defined function belongs.  
@@ -78,7 +78,6 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  
- 
 ```  
   
 ## See Also  

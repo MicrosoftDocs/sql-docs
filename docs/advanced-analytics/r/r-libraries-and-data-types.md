@@ -34,9 +34,7 @@ To view the R version associated with a particular instance of SQL Server, open 
 1. For the default instance, the path would be as follows: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 2. A message is displayed that lists the R distribution and the Microsoft R Open version number.
 
-To find the version of R included in a particular version of Microsoft R Server, see the [R Server Release Notes](https://msdn.microsoft.com/microsoft-r/notes/r-server-notes).
-
-Additional information about recent releases can be found in the [R Server - What’s New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) notes.
+To find the version of R included in a particular version of Microsoft R Server, see [R Server - What’s New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
 Note that the package management system in SQL Server means that multiple versions of an R package can be installed on the same computer, with multiple users sharing the same package, or using different versions of the same package. For more information, see [R Package Management in SQL Server](../r/r-package-management-for-sql-server-r-services.md).
 

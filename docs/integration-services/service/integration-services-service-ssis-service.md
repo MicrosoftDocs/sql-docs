@@ -9,6 +9,12 @@ ms.technology:
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.ssiseditserverregistration.connectionproperties.f1"
+  - "sql13.swb.connecttodts.connectionproperties.f1"
+  - "sql13.swb.connection.login.dtsserver.f1"
+  - "sql13.swb.connecttodts.login.f1"
+  - "sql13.swb.connecttodtsserver.login.f1"
 helpviewer_keywords: 
   - "Integration Services service, about Integration Services service"
   - "SQL Server Integration Services service"

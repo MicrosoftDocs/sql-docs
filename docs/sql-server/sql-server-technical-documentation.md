@@ -1,11 +1,10 @@
 ---
 title: "SQL Server Technical Documentation | Microsoft Docs"
-ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
+ms.date: "06/27/2017"
+ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "server-general"
+ms.technology: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
@@ -30,6 +29,8 @@ manager: "jhubbard"
  > For content related to previous versions of SQL Server, see [Installation for SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
 
  Documentation to help you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] language topics, see [Language Reference](../t-sql/language-reference.md).
+
+You can also view SQL Server documentation offline by using the Help Viewer. For more information, see [Help Viewer and Offline Content for SQL Server](../release-notes/sql-server-help-installation.md).
 
 **SQL Server 2017**
 

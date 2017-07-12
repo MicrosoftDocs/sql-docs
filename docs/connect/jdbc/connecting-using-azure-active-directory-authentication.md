@@ -36,13 +36,13 @@ For details see the authentication property on the [Setting the Connection Prope
 ## Client Setup Requirements
 Please make sure that the following components are installed on the client machine:
 * Java 7 or above
-*	Microsoft JDBC Driver 6.0 (or higher) for SQL Server
-*	Active Directory Authentication Library for SQL Server (ADALSQL.DLL)
-	* 	ADALSQL.DLL enables applications to authenticate to Microsoft Azure SQL Database using Azure Active Directory. Download the DLL from [Microsoft Active Directory Authentication Library for Microsoft SQL Server
-](http://www.microsoft.com/en-us/download/details.aspx?id=48742)
-	*	For ADALSQL.DLL two binary versions X86 and X64 are available to download. If the wrong binary version is installed or if the DLL is missing, the driver will raise the following error: "Unable to load adalsql.dll (Authentication=…….). Error code: 0x2.". In such case download the right version of ADALSQL.DLL. 
+*	Microsoft JDBC Driver 6.2 (or higher) for SQL Server
 *	If you are using the access token based authentication mode, you will need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies to run the examples from this article. See **Connecting using Access Token** section for more details.
-*	If you are using the ActiveDirectoryIntegrated or the ActiveDirectoryPassword authentication modes, you will need to install the sqljdbc_auth.dll that is available in the driver package. Copy the sqljdbc_auth.dll file to a directory on the Windows system path on the computer where the JDBC driver is installed. Alternatively you can set the java.libary.path system property to specify the directory of the sqljdbc_auth.dll. 
+*	If you are using the ActiveDirectoryPassword authentication mode you will need [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies. See **Connecting using ActiveDirectoryPassword Authentication Mode** section for more details.
+*	If you are using the ActiveDirectoryIntegrated mode, you will need to install the Active Directory Authentication Library for SQL Server (ADALSQL.DLL) and sqljdbc_auth.dll.
+	* ADALSQL.DLL enables applications to authenticate to Microsoft Azure SQL Database using Azure Active Directory. Download the DLL from [Microsoft Active Directory Authentication Library for Microsoft SQL Server](http://www.microsoft.com/en-us/download/details.aspx?id=48742)
+	* For ADALSQL.DLL two binary versions X86 and X64 are available to download. If the wrong binary version is installed or if the DLL is missing, the driver will raise the following error: "Unable to load adalsql.dll (Authentication=…….). Error code: 0x2.". In such case download the right version of ADALSQL.DLL. 
+	* sqljdbc_auth.dll is available in the driver package. Copy the sqljdbc_auth.dll file to a directory on the Windows system path on the computer where the JDBC driver is installed. Alternatively you can set the java.libary.path system property to specify the directory of the sqljdbc_auth.dll. 
 	* If you are running a 64-bit JVM on a x64 processor, use the sqljdbc_auth.dll file in the x64 folder. 
 	* If you are running a 32-bit Java Virtual Machine (JVM), use the sqljdbc_auth.dll file in the x86 folder, even if the operating system is the x64 version. 
 	* For example, if you are using the 32-bit JVM and the JDBC driver is installed in the default directory, you can specify the location of the DLL by using the following virtual machine (VM) argument when the Java application is started:  
@@ -94,12 +94,13 @@ You have successfully logged on as: <your domain user name>
 The following example shows how to use 'authentication=ActiveDirectoryPassword' mode.
 
 Before building and running the example:
-1. Locate the following lines of code and replace the server/database name with your server/database name.
+1.	On the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java library](https://github.com/AzureAD/azure-activedirectory-library-for-java) and its dependencies, and include them in the Java build path
+2.	Locate the following lines of code and replace the server/database name with your server/database name.
 	```
 	ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
 	ds.setDatabaseName("demo"); // replace with your database name
 	```
-2.	Locate the following lines of code and replace user name, with the name of the Azure AD user you want to connect as.
+3.	Locate the following lines of code and replace user name, with the name of the Azure AD user you want to connect as.
 	```
 	ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
 	ds.setPassword("password"); 	// replace with your password

@@ -29,12 +29,11 @@ In this quick start tutorial, you first install SQL Server 2017 RC1 on Red Hat E
 
 ## Prerequisites
 
-- You must have a RHEL 7.3 machine with at least 3.25 GB of memory.
+You must have a RHEL 7.3 machine with at least 3.25 GB of memory. 
 
-  > [!TIP]
-  > To install RHEL, go to [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. For the basic process, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
+To install Red Hat Enterprise Linux, go to [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. For the basic process, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
 
-- For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## <a id="install"></a>Install SQL Server
 

@@ -28,7 +28,7 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 
 This topic explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 RC1 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
 
-> [TIP]
+> [!TIP]
 > To get started quickly, jump to one of the quick start tutorials for [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), or [Docker](quickstart-install-connect-docker.md).
 
 ## <a id="supportedplatforms"></a> Supported platforms
@@ -99,7 +99,7 @@ sudo rm -rf /var/opt/mssql/
 
 You can perform an unattended installation in the following way:
 
-- Follow the initial steps in the quick start tutorials to register the repositories and install SQL Server.
+- Follow the initial steps in the [quick start tutorials](#platforms) to register the repositories and install SQL Server.
 - When you run `mssql-conf setup`, set [environment variables](sql-server-linux-configure-environment-variables.md) and use the `-n` (no prompt) option.
 
 The following example configures the Developer edition of SQL Server with the **MSSQL_PID** environment variable. It also sets the SA user password with the **SA_PASSWORD** environment variable. The `-n` parameter pulls in these values for a simple unattended install:

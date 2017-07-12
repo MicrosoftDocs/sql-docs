@@ -25,7 +25,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Analysis Services backward compatibility (SQL Server 2016)
-[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sqla2016.md)]
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
 This article describes changes in feature availability and behavior between the current version and the previous version.
 

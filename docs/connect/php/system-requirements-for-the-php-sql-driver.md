@@ -143,7 +143,7 @@ If the name of the driver file contains "vc9", it should be used with a PHP vers
 ## Operating Systems 
 Supported operating systems for the versions of the driver are as follows:
 
--   4.3 :
+-   4.3:
     -   Windows Server 2012  
     -   Windows Server 2012 R2
     -   Windows Server 2016	
@@ -157,7 +157,7 @@ Supported operating systems for the versions of the driver are as follows:
 	-   Mac OS Sierra
 	-   Mac OS El Capitan
 	
--   4.0 :  
+-   4.0:  
     -   Windows Server 2008 SP2
     -   Windows Server 2008 R2 SP1  
     -   Windows Server 2012  
@@ -172,7 +172,7 @@ Supported operating systems for the versions of the driver are as follows:
     -   Red Hat Enterprise Linux 7 (64-bit)
 
  
--   3.2 and 3.1 :  
+-   3.2 and 3.1:  
     -   Windows Server 2008 R2 SP1  
     -   Windows Vista SP2  
     -   Windows Server 2008 SP2  
@@ -183,7 +183,7 @@ Supported operating systems for the versions of the driver are as follows:
     -   Windows 8.1  
   
   
--   3.0 :  
+-   3.0:  
     -   Windows Server 2008 R2 SP1  
     -   Windows Vista SP2  
     -   Windows Server 2008 SP2  

@@ -24,6 +24,8 @@ Distributed availability groups are a new feature introduced in SQL Server 2016,
 > [!NOTE]
 > "DAG" is not the official abbreviation for *distributed availability group*, because the abbreviation is already used for the Exchange Database Availability Group feature. This Exchange feature has no relation to SQL Server availability groups or distributed availability groups.
 
+To configure a distributed availability group, see [Configure distributed availability groups](configure-distributed-availability-groups.md).
+
 ## Understand distributed availability groups
 
 A distributed availability group is a special type of availability group that spans two separate availability groups. The underlying availability groups are configured on two different Windows Server Failover Clustering (WSFC) clusters. The availability groups that participate in a distributed availability group do not need to be in the same location. They can be physical, virtual, on-premises, in the public cloud, or anywhere that supports an availability-group deployment. As long as two availability groups can communicate, you can configure a distributed availability group with them.

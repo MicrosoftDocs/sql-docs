@@ -230,19 +230,31 @@ Each of these contexts is an opaque value which, while not the same as the corre
 
 ## Example
 
-Custom KeyStore Provider Implementation Sample
-
 ### Keystore Provider
+
+The following code is an example of a minimal keystore provider implementation.
+
 ```
-/* Custom Keystore Provider Example */
+/* Custom Keystore Provider Example
+
+Windows:   compile with cl MyKSP.c /LD /MD /link /out:MyKSP.dll
+Linux/Mac: compile with gcc -fshort-wchar -fPIC -o MyKSP.so -shared MyKSP.c
+
+ */
+
+#ifdef _WIN32
+#include <windows.h>
+#else
+#define __stdcall
+#endif
 
 #include <stdlib.h>
 #include <sqltypes.h>
-#include <msodbcsql.h>
+#include "msodbcsql.h"
 #include <sql.h>
 #include <sqlext.h>
 
-int KeystoreInit(CEKEYSTORECONTEXT *ctx, errFunc *onError) {
+int __stdcall KeystoreInit(CEKEYSTORECONTEXT *ctx, errFunc *onError) {
     printf("KSP Init() function called\n");
     return 1;
 }
@@ -250,7 +262,7 @@ int KeystoreInit(CEKEYSTORECONTEXT *ctx, errFunc *onError) {
 static unsigned char *g_encryptKey;
 static unsigned int g_encryptKeyLen;
 
-int KeystoreWrite(CEKEYSTORECONTEXT *ctx, errFunc *onError, void *data, unsigned int len) {
+int __stdcall KeystoreWrite(CEKEYSTORECONTEXT *ctx, errFunc *onError, void *data, unsigned int len) {
     printf("KSP Write() function called (%d bytes)\n", len);
     if (len) {
         if (g_encryptKey)
@@ -267,7 +279,7 @@ int KeystoreWrite(CEKEYSTORECONTEXT *ctx, errFunc *onError, void *data, unsigned
 }
 
 // Very simple "encryption" scheme - rotating XOR with the key
-int KeystoreDecrypt(CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg,
+int __stdcall KeystoreDecrypt(CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg,
     unsigned char *ecek, unsigned short ecekLen, unsigned char **cekOut, unsigned short *cekLen) {
     unsigned int i;
     printf("KSP Decrypt() function called (keypath=%S alg=%S ecekLen=%u)\n", keyPath, alg, ecekLen);
@@ -283,7 +295,11 @@ int KeystoreDecrypt(CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *key
         onError(ctx, L"Keystore provider not initialised with key");
         return 0;
     }
+#ifndef _WIN32
     *cekOut = malloc(ecekLen);
+#else
+    *cekOut = LocalAlloc(LMEM_FIXED, ecekLen);
+#endif
     if (!*cekOut) {
         onError(ctx, L"Memory Allocation Error");
         return 0;
@@ -298,6 +314,9 @@ int KeystoreDecrypt(CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *key
 // structure. However, that does not preclude keystore providers from exporting their own functions,
 // as illustrated by this example where the encryption is performed via a separate function (with a
 // different prototype than the one in the KSP interface.)
+#ifdef _WIN32
+__declspec(dllexport)
+#endif
 int KeystoreEncrypt(CEKEYSTORECONTEXT *ctx, errFunc *onError,
     unsigned char *cek, unsigned short cekLen,
     unsigned char **ecekOut, unsigned short *ecekLen) {
@@ -327,6 +346,9 @@ CEKEYSTOREPROVIDER MyCustomKSPName_desc = {
     0
 };
 
+#ifdef _WIN32
+__declspec(dllexport)
+#endif
 CEKEYSTOREPROVIDER *CEKeystoreProvider[] = {
     &MyCustomKSPName_desc,
     0
@@ -334,7 +356,10 @@ CEKEYSTOREPROVIDER *CEKeystoreProvider[] = {
 
 ```
 
-### Using the Custom Keystore Provider with ODBC
+### ODBC Application
+
+The following code is a demo application which uses the keystore provider above. When running it, ensure that the provider library is in the same directory as the application binary, and that the connection string specifies (or specifies a DSN which contains) the `ColumnEncryption=Enabled` setting.
+
 ```
 /*
  Example application for demonstration of custom keystore provider usage

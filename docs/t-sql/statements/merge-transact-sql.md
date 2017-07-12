@@ -174,7 +174,7 @@ SET
  Is the name of the schema to which *target_table* belongs.  
   
  *target_table*  
- Is the table or view against which the data rows from \<table_source> are matched based on <clause_search_condition>. *target_table* is the target of any insert, update, or delete operations specified by the WHEN clauses of the MERGE statement.  
+ Is the table or view against which the data rows from \<table_source> are matched based on \<clause_search_condition>. *target_table* is the target of any insert, update, or delete operations specified by the WHEN clauses of the MERGE statement.  
   
  If *target_table* is a view, any actions against it must satisfy the conditions for updating views. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   

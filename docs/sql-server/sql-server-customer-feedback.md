@@ -59,6 +59,8 @@ SQL Server 2017 always collects and sends information about the installation exp
 - By using the Error and Usage Reporting application
 - By setting registry subkeys on the server
 
+For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md)
+
 > [!NOTE]
 > You can disable the sending of information to Microsoft only in paid versions of SQL Server.
 

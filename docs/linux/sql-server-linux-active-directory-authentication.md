@@ -4,7 +4,7 @@
 title: "Active Directory Authentication with SQL Server on Linux | Microsoft Docs"
 description: "Configuration steps for AAD authentication for SQL Server on Linux"
 author: "tmullaney" 
-ms.date: "07/03/2017"
+ms.date: "07/17/2017"
 ms.author: "thmullan;rickbyh" 
 manager: "jhubbard"
 ms.topic: "article"
@@ -27,12 +27,12 @@ AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../..
 •	AD enables you to enforce a centralized password policy across your organization.   
 
 ## Prerequisites
-Before you configure AD Authentication, you need to:  
+Before you configure AD Authentication, you need to:
 - Set up an AD Domain Controller (Windows) on your network  
-- Install [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]  
-  - [Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)  
-  - [SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)  
-  - [Ubuntu](sql-server-linux-setup-ubuntu.md)  
+- Install [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]
+  - [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+  - [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+  - [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 ## Step 1: Join [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host to AD domain
 Numerous tools exist to help you join the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine to your AD domain. This walkthrough uses [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html), a popular open source package. If you haven't already, install both the **realmd** and Kerberos client packages on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:  

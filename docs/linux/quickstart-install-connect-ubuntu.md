@@ -11,7 +11,7 @@ ms.technology: database-engine
 ---
 # Install SQL Server and create a database on Ubuntu
 
-In this quick start tutorial, you first install SQL Server 2017 CTP 2.1 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
+In this quick start tutorial, you first install SQL Server 2017 RC1 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
 
 ## Prerequisites
 

@@ -26,7 +26,7 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
 # Install SQL Server on Linux
 
-SQL Server 2017 RC1 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image which can run on Docker Engine on Linux or Docker for Windows/Mac. The topics in this section provide tutorials and general guidance for installing SQL Server 2017 RC1 on Linux.
+SQL Server 2017 RC1 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac. The topics in this section provide tutorials and general guidance for installing SQL Server 2017 RC1 on Linux.
 
 ## <a id="supportedplatforms"></a> Supported platforms
 
@@ -48,7 +48,7 @@ SQL Server 2017 has the following system requirements for Linux:
 | **Memory** | Minimum 3.25 GB |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |
 | **Disk space** | Minimum 1 GB |
-| **Processor speed** | Minimum 1.4 Ghz |
+| **Processor speed** | Minimum 1.4 GHz |
 | **Processor cores** | Minimum 2 |
 | **Processor type** | x64-compatible only |
 
@@ -95,7 +95,7 @@ To upgrade the **mssql-server** package on Linux, use one of the following comma
 | SLES | `sudo zypper update mssql-server` |
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
-These commands will download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases will not be affected by this operation.
+These commands download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases are not affected by this operation.
 
 ## <a id="uninstall"></a> Uninstall
 
@@ -107,7 +107,7 @@ To remove the **mssql-server** package on Linux, use one of the following comman
 | SLES | `sudo zypper remove mssql-server` |
 | Ubuntu | `sudo apt-get remove mssql-server` |
 
-Removing the package will not delete the generated database files. If you want to delete the database files use the following command:
+Removing the package does not delete the generated database files. If you want to delete the database files, use the following command:
 
 ```bash
 sudo rm -rf /var/opt/mssql/
@@ -118,7 +118,7 @@ sudo rm -rf /var/opt/mssql/
 If your Linux machine does not have access to the online repositories used in the [quick starts](#platforms), you can download the package files directly. These packages are located in the Microsoft repository, [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]
-> If you successfully installed with the steps in the quick starts, you do not need to download or manually install the package(s) below. This is only for the offline scenario.
+> If you successfully installed with the steps in the quick starts, you do not need to download or manually install the package(s) below. This section is only for the offline scenario.
 
 1. **Download the database engine package for your platform**. Find package download links in the package details section of the [Release Notes](sql-server-linux-release-notes.md).
 
@@ -135,7 +135,7 @@ If your Linux machine does not have access to the online repositories used in th
     > [!NOTE]
     > You can also install the RPM packages (RHEL and SLES) with the `rpm -ivh` command, but the commands in the previous table automatically install dependencies if available from approved repositories.
 
-1. **Resolve missing dependencies**: You might have missing dependencies at this point. If not, you can skip this step. On Ubuntu, if you have access to approved repositories containing those dependencies, the easiest solution is to use the `apt-get -f install` command. This also completes the installation of SQL Server. To manually inspect dependencies, use the following commands:
+1. **Resolve missing dependencies**: You might have missing dependencies at this point. If not, you can skip this step. On Ubuntu, if you have access to approved repositories containing those dependencies, the easiest solution is to use the `apt-get -f install` command. This command also completes the installation of SQL Server. To manually inspect dependencies, use the following commands:
 
    | Platform | List dependencies command |
    |-----|-----|

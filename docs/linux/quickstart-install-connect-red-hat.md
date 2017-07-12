@@ -1,7 +1,7 @@
 ---
 # required metadata
 title: Get started with SQL Server 2017 on Red Hat Enterprise Linux | Microsoft Docs
-description: Describes how to install SQL Server 2017 CTP 2.1 on Red Hat Enterprise Linux.
+description: Describes how to install SQL Server 2017 RC1 on Red Hat Enterprise Linux.
 author: sabotta 
 ms.author: carlasab 
 manager: craigg
@@ -25,7 +25,7 @@ ms.assetid: ""
 ---
 # Install SQL Server and create a database on Red Hat
 
-In this quick start tutorial, you first install SQL Server 2017 CTP 2.1 on Red Hat Enterprise Linux (RHEL) 7.3. Then connect with **sqlcmd** to create your first database and run queries.
+In this quick start tutorial, you first install SQL Server 2017 RC1 on Red Hat Enterprise Linux (RHEL) 7.3. Then connect with **sqlcmd** to create your first database and run queries.
 
 ## Prerequisites
 

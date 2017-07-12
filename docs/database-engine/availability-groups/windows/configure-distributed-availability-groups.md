@@ -18,12 +18,43 @@ manager: "jhubbard"
 
 # Configure distributed availability group  
 
-To create a distributed availability group, you must create an availability group and listener on each WSFC. You then combine these into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example does not cover all of the details of creating availability groups and listeners; instead, it focusses on highlighting the key requirements. 
+To create a distributed availability group, you must create an availability group and listener on each WSFC. You then combine these into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example does not cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements. 
 
-For a technical overview of distributed availability groups, see [Distributed Availability Groups](distributed-availability-groups.md).     
-  
+For a technical overview of distributed availability groups, see [Distributed Availability Groups](distributed-availability-groups.md).   
+
+## Set the endpoint listeners to listen to all IP addresses
+
+On each server that will host a replica in the distributed availability group, configure the listener to `LISTENER_IP = ALL`. The listeners on each server cannot listen to a specific IP address because the endpoint listener must listen to traffic coming over the server IP address as well as the listener IP address.  
+
+### Create a listener to listen to all IP addresses
+
+For example, the following script creates a listener endpoint on TCP port 5022 that listens on all IP addresses.  
+
+```tsql
+CREATE ENDPOINT [aodns-hadr] 
+    STATE=STARTED
+    AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
+FOR DATA_MIRRORING (
+   ROLE = ALL, 
+   AUTHENTICATION = WINDOWS NEGOTIATE,
+   ENCRYPTION = REQUIRED ALGORITHM AES
+)
+GO
+```
+
+### Alter a listener to listen to all IP addresses
+
+For example, the following script changes a listener endpoint to listen on all IP addresses.  
+
+```tsql
+ALTER ENDPOINT [aodns-hadr] 
+    AS TCP (LISTENER_IP = ALL)
+GO
+```
+
+
 ## Create the primary availability group on the first cluster  
- Create an availability group on the first WSFC.   In this example, the availability group is named `ag1` for the database `db1`.      
+Create an availability group on the first WSFC.   In this example, the availability group is named `ag1` for the database `db1`.      
   
 ```tsql  
 CREATE AVAILABILITY GROUP [ag1]   

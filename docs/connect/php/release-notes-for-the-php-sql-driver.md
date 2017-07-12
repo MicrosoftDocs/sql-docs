@@ -1,7 +1,7 @@
 ---
 title: "Release Notes for the PHP SQL Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,10 +21,24 @@ manager: "jhubbard"
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This topic discusses what was added in the each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## What's New in Version 4.3
+Support for PHP 7.1
+Support for Mac OS Sierra and Mac OS El Capitan
+Support for Ubuntu 15.10, and Debian 8
+Dropped support for Ubuntu 15.04
+Support for Always On Availability groups via Transparent Network IP Resolution
+Added support for sql_variant data type with limitation
+Idle Connection Resiliency support in Windows
+Connection pooling support for Linux and macOS
+Azure Active Directory Authentication with ActiveDirectoryPassword and SqlPassword
+  
 ## What's New in Version 4.0  
 Support for PHP 7.0  
 
 Full 64-bit support
+
+Support for Ubuntu 15.04, Ubuntu 16.04, and RedHat 7
 
 ## What's New in Version 3.2  
 Support for PHP 5.6  

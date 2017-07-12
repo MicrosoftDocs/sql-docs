@@ -19,7 +19,7 @@ manager: "jhubbard"
 ---
 # Distributed availability groups
 
-Distributed availability groups is a new feature introduced in SQL Server 2016, as a variation of the existing Always On availability groups feature. This article clarifies some aspects of distributed availability groups and complements the existing [SQL Server documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
+Distributed availability groups are a new feature introduced in SQL Server 2016, as a variation of the existing Always On availability groups feature. This article clarifies some aspects of distributed availability groups and complements the existing [SQL Server documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
 
 > [!NOTE]
 > "DAG" is not the official abbreviation for *distributed availability group*, because the abbreviation is already used for the Exchange Database Availability Group feature. This Exchange feature has no relation to SQL Server availability groups or distributed availability groups.
@@ -42,10 +42,10 @@ You can configure the data movement in distributed availability groups as synchr
 
 ![Distributed availability group and its data movement][2]
 
-The only way to make AG 2's primary replica accept inserts, updates, and deletions is to manually fail over the distributed availability group from AG 1. In the figure above, because AG 1 contains the writeable copy of the database, issuing a failover makes AG 2 the availability group that can handle inserts, updates, and deletions. For information about how to fail over one distributed availability group to another, see [Failover to a secondary availability group]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
+The only way to make AG 2's primary replica accept inserts, updates, and deletions is to manually fail over the distributed availability group from AG 1. In the preceding figure, because AG 1 contains the writeable copy of the database, issuing a failover makes AG 2 the availability group that can handle inserts, updates, and deletions. For information about how to fail over one distributed availability group to another, see [Failover to a secondary availability group]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
 
 > [!NOTE]
-> Distributed availability groups in SQL Server 2016 support failover only from one availability group to another using the option FORCE_FAILOVER_ALLOW_DATA_LOSS.
+> Distributed availability groups in SQL Server 2016 support failover only from one availability group to another by using the option FORCE_FAILOVER_ALLOW_DATA_LOSS.
 
 ## SQL Server version and edition requirements for distributed availability groups
 
@@ -99,7 +99,7 @@ A traditional availability group requires that all servers be part of the same W
 
 Distributed availability groups offer a more flexible deployment scenario for availability groups that span multiple data centers. You can even use distributed availability groups where features such as [log shipping]( https://docs.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server) were used in the past. However, unlike traditional availability groups, distributed availability groups cannot have delayed application of transactions. This means that availability groups or distributed availability groups cannot help in the event of human error in which data is incorrectly updated or deleted.
 
-Distributed availability groups are loosely coupled, which in this case means that they don't require a single WSFC cluster and they're maintained by SQL Server. Therefore, because the WSFC clusters are maintained individually and the synchronization is primarily asynchronous between the two availability groups, it's easier to configure disaster recovery at another site. The primary replicas in each availability group synchronize their own secondary replicas.
+Distributed availability groups are loosely coupled, which in this case means that they don't require a single WSFC cluster and they're maintained by SQL Server. Because the WSFC clusters are maintained individually and the synchronization is primarily asynchronous between the two availability groups, it's easier to configure disaster recovery at another site. The primary replicas in each availability group synchronize their own secondary replicas.
 
 * Only manual failover is supported for a distributed availability group. In a disaster recovery situation where you are switching data centers, you should not configure automatic failover (with rare exceptions). 
 * You most likely will not need to set some of the traditional items or parameters for multi-site or subnet WSFC clusters, such as CrossSubnetThreshold, but you still need to see about network latency at a different layer for the data transport. The difference is that each WSFC cluster maintains its own availability; the cluster isn't one big entity of four nodes. You have two separate two-node WSFC clusters as shown in the previous figure.  
@@ -112,7 +112,7 @@ Because distributed availability groups support two completely different availab
 
 The ability to migrate is especially useful in scenarios where you're changing or upgrading the underlying OS while you keep the same SQL Server version. Although Windows Server 2016 does allow a rolling upgrade from Windows Server 2012 R2 on the same hardware, most users choose to deploy new hardware or virtual machines. 
 
-To complete the migration to the new configuration, at the end of the process, stop all data traffic to the original availability group, and change the distributed availability group to synchronous data movement. This action ensures that the primary replica of the second availability group is fully synchronized, so there would be no data loss. After you've verified the synchronization, fail over the distributed availability group to the second availability group in the ["Fail over to a secondary availability group"](https://msdn.microsoft.com/en-US/library/mt651673.aspx) section.
+To complete the migration to the new configuration, at the end of the process, stop all data traffic to the original availability group, and change the distributed availability group to synchronous data movement. This action ensures that the primary replica of the second availability group is fully synchronized, so there would be no data loss. After you've verified the synchronization, fail over the distributed availability group to the second availability group in the [Fail over to a secondary availability group](https://msdn.microsoft.com/en-US/library/mt651673.aspx) section.
 
 Post-migration, where the second availability group is now the new primary availability group, you might need to do either of the following:
 
@@ -121,7 +121,7 @@ Post-migration, where the second availability group is now the new primary avail
 
 ### Scale out readable replicas with distributed availability groups
 
-A single distributed availability group can have up to 16 secondary replicas, as needed, which means it could have up 18 copies for reading, including the two primary replicas of the different availability groups. This approach means that more than one site could have near-real-time access for reporting to various applications.
+A single distributed availability group can have up to 16 secondary replicas, as needed. So it can have up 18 copies for reading, including the two primary replicas of the different availability groups. This approach means that more than one site can have near-real-time access for reporting to various applications.
 
 Distributed availability groups can help you scale out a read-only farm more than you can with just a single availability group. A distributed availability group can scale out readable replicas in two ways:
 
@@ -138,9 +138,9 @@ The following figure shows AG 1 as the primary replica for two different distrib
 ![Another scaling out of reads using distributed availability groups example][6]
 
 
-In both preceding examples, there could be up to 27 total replicas across the three availability groups, all of which could be used for read-only queries. 
+In both preceding examples, there can be up to 27 total replicas across the three availability groups, all of which can be used for read-only queries. 
 
-[Read-only routing]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) currently does not work with distributed availability groups, which means that all queries, if they use the listener to connect, go to the primary replica. Otherwise, you need to configure each replica to allow all connections as a secondary replica and access them directly. This behavior might be changed in an update to SQL Server 2016 or in a future version of SQL Server.
+[Read-only routing]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) currently does not work with distributed availability groups. All queries, if they use the listener to connect, go to the primary replica. Otherwise, you need to configure each replica to allow all connections as a secondary replica and access them directly. This behavior might be changed in an update to SQL Server 2016 or in a future version of SQL Server.
 
 ## Initialize secondary availability groups in a distributed availability group
 
@@ -159,7 +159,7 @@ When you add the second availability group's primary replica to the distributed 
 
 * The output shown in `sys.dm_hadr_automatic_seeding` on the primary replica of the first availability group will show a current_state of COMPLETED. 
 
-* Seeding also has different behavior with distributed availability groups. For seeding to begin on the second replica, you must issue the command `ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE` command on the replica. Although this condition is still true of any secondary replica that participates in the underlying availability group, the primary replica of the second availability group already has the right permissions to allow seeding to begin after it is added to the distributed availability group. If the secondary replica of the second availability group in a distributed availability group has already had the `ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE` issued, 
+* Seeding also has different behavior with distributed availability groups. For seeding to begin on the second replica, you must issue the command `ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE` command on the replica. Although this condition is still true of any secondary replica that participates in the underlying availability group, the primary replica of the second availability group already has the right permissions to allow seeding to begin after it is added to the distributed availability group. 
 
 ### View distributed availability group information 
 	
@@ -194,7 +194,7 @@ All detailed information about a distributed availability group is in SQL Server
 ![View in SQL Server Management Studio of the primary replica on the first WSFC cluster of a distributed availability group][8]
 
 
-However, if you right-click the distributed availability group, no options are available (see the following figure), and the expanded Availability Databases, Availability Group Listeners, and Availability Replicas folders are all empty. SQL Server Management Studio 16 displays this result, but it could change in a future version of SQL Server Management Studio.
+However, if you right-click the distributed availability group, no options are available (see the following figure), and the expanded Availability Databases, Availability Group Listeners, and Availability Replicas folders are all empty. SQL Server Management Studio 16 displays this result, but it might change in a future version of SQL Server Management Studio.
 
 ![No options available for action][9]
 

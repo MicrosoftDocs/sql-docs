@@ -1,4 +1,3 @@
-
 ---
 # required metadata
 
@@ -24,7 +23,7 @@ This topic describes what's new for SQL Server 2017 running on Linux.
 The RC1 release contains the following improvements and fixes:
 
 - Enabled Transparent Layer Security (TLS) for encrypted connections. For more information, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
-- Enabled Windows Authentication.
+- Enabled [Windows Authentication](sql-server-linux-active-directory-authentication.md).
 - Enabled [DB Mail](../relational-databases/database-mail/database-mail.md).
 - Added IPV6 support.
 

@@ -1888,12 +1888,12 @@
         {
             "source_path": "docs/sql/sql-hub-menu.md",
             "redirect_url": "/sql/index",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/sql/microsoft-sql-documentation-table-of-contents.md",
             "redirect_url": "/sql/index",
-            "redirect_document_id": false
+            "redirect_document_id": true
         }
     ]
 }

@@ -1,3 +1,29 @@
+---
+# required metadata
+
+title: Configure SQL Server to send feedback to Microsoft | Microsoft Docs
+description: 
+author: annashres 
+ms.author: anshrest 
+manager: jhubbard
+ms.date: 07/12/2017
+ms.topic: article
+ms.prod: sql-server-2016
+ms.technology: database-engine
+ms.assetid:
+
+# optional metadata
+# keywords: ""
+# ROBOTS: ""
+# audience: ""
+# ms.devlang: ""
+# ms.reviewer: ""
+# ms.suite: ""
+# ms.tgt_pltfrm: ""
+# ms.custom: ""
+
+---
+
 # Configure SQL Server to send feedback to Microsoft
 
 ## Summary

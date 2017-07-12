@@ -1491,6 +1491,26 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/discontinued-analysis-services-functionality-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "docs/analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "docs/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
             "redirect_document_id": false

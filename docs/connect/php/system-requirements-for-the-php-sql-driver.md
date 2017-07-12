@@ -42,23 +42,23 @@ To access data in a SQL Server or Azure SQL Database using the [!INCLUDE[ssDrive
     > [!NOTE]  
     > Microsoft provides support only for IIS.  
   
--   The correct version of the Microsoft ODBC Driver for SQL Server or SQL Server Native Client is required on the computer where PHP is running.  Note that if you are using a 64-bit operating system, the x86 version will be installed with the x64 installer (do not use the x86 version of the installer unless you are using a 32-bit operating system).  
+-   The correct version of the Microsoft ODBC Driver for SQL Server or SQL Server Native Client is required on the computer where PHP is running.  If you are using a 64-bit operating system, the ODBC driver x86 version is installed with the x64 installer. If you use 32-bit operating system, use ODBC x86 installer .
 
 |Microsoft Drivers for PHP for SQL Server Version|Version of Microsoft ODBC Driver for SQL Server or SQL Server Native Client|  
 |----------------------------------------------------|--------------------------|
-|4.3|Microsoft ODBC Driver 11 for SQL Server or Microsoft ODBC Driver 13.1 for SQL Server. To download the x64 package for 64-bit operating systems, or x86 package for 32-bit operating systems, see the [Microsoft ODBC Driver 11 for SQL Server page](http://www.microsoft.com/download/details.aspx?id=36434) or [Microsoft ODBC Driver 13.1 for SQL Server page](https://www.microsoft.com/en-us/download/details.aspx?id=53339)|    
-|4.0|Microsoft ODBC Driver 11 for SQL Server or Microsoft ODBC Driver 13 for SQL Server. To download the x64 package for 64-bit operating systems, or x86 package for 32-bit operating systems, see the [Microsoft ODBC Driver 11 for SQL Server page](http://www.microsoft.com/download/details.aspx?id=36434) or [Microsoft ODBC Driver 13 for SQL Server page](https://www.microsoft.com/download/details.aspx?id=50420)|  
-|3.2 or <br><br> 3.1|Microsoft ODBC Driver 11 for SQL Server. To download the x64 package for 64-bit operating systems, or x86 package for 32-bit operating systems, see the [Microsoft ODBC Driver 11 for SQL Server page](http://www.microsoft.com/download/details.aspx?id=36434)|   
+|4.3|Microsoft ODBC Driver 11 for SQL Server or Microsoft ODBC Driver 13.1 for SQL Server. To download Microsoft ODBC Driver, see the [Microsoft ODBC Driver 11 for SQL Server page](http://www.microsoft.com/download/details.aspx?id=36434) or [Microsoft ODBC Driver 13.1 for SQL Server page](https://www.microsoft.com/en-us/download/details.aspx?id=53339)|    
+|4.0|Microsoft ODBC Driver 11 for SQL Server or Microsoft ODBC Driver 13 for SQL Server. To download Microsoft ODBC Driver, see the [Microsoft ODBC Driver 11 for SQL Server page](http://www.microsoft.com/download/details.aspx?id=36434) or [Microsoft ODBC Driver 13 for SQL Server page](https://www.microsoft.com/download/details.aspx?id=50420)|  
+|3.2 or <br><br> 3.1|Microsoft ODBC Driver 11 for SQL Server. To download Microsoft ODBC Driver, see the [Microsoft ODBC Driver 11 for SQL Server page](http://www.microsoft.com/download/details.aspx?id=36434)|   
 |3.0|Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Native Client. You can download Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Native Client from the [SQL Server 2012 feature pack page](http://go.microsoft.com/fwlink/?LinkID=236805)| 
 |2.0|Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro_md.md)] Native Client:<br /><br />[Download the X86 package](http://go.microsoft.com/fwlink/?LinkID=188400&clcid=0x409) for 32-bit operating systems <br /><br />[Download the X64 package](http://go.microsoft.com/fwlink/?LinkID=188401&clcid=0x409) for 64-bit operating systems|  
 
   
-If you are using the SQLSRV driver, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) will return information about which version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client or Microsoft ODBC Driver for SQL Server is being used by the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. If you are using the PDO_SQLSRV driver, you can use [PDO::getAttribute](../../connect/php/pdo-getattribute.md) to discover the version.  
+If you are using the SQLSRV driver, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) returns information about which version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client or Microsoft ODBC Driver for SQL Server is being used by the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. If you are using the PDO_SQLSRV driver, you can use [PDO::getAttribute](../../connect/php/pdo-getattribute.md) to discover the version.  
 
 
 
 ## Database Versions
--   Azure SQL Databases are supported. For information see [Connecting to Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md). 
+-   Azure SQL Databases are supported. For information, see [Connecting to Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md). 
 
 - [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version 4.3 support SQL Server 2008 R2 and later
 - [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version 4.0 support SQL Server 2008 and later
@@ -69,7 +69,7 @@ If you are using the SQLSRV driver, [sqlsrv_client_info](../../connect/php/sqlsr
 ## Driver Versions  
 This section lists the drivers that are included with each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-Follow the installation instructions in [Loading the PHP SQL Driver](../../connect/php/loading-the-php-sql-driver.md)  to configure the driver for use with the PHP runtime.  
+To configure the driver for use with the PHP runtime, follow the installation instructions in [Loading the PHP SQL Driver](../../connect/php/loading-the-php-sql-driver.md).  
   
 **Microsoft Drivers 4.3 for PHP for SQL Server:**  
 

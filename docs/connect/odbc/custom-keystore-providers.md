@@ -1,7 +1,7 @@
 ---
 title: "Custom Keystore Providers | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -88,7 +88,7 @@ typedef struct CEKeystoreProvider {
 |`EncryptCEK`|CEK encryption function. The driver does not call this function, but it is provided to allow for programmatic access to ECEK creation by key management tools. May be null if not required.|
 |`Free`|Termination function. May be null if not required.|
 
-With the exception of Free, the functions in this interface all have a pair of parameters, **ctx** and **onError**. The former identifies the context in which the function is called, while the latter is used for reporting errors. See [Contexts](#contexts) and [Error Handling](#error-handling) below for more information.
+With the exception of Free, the functions in this interface all have a pair of parameters, **ctx** and **onError**. The former identifies the context in which the function is called, while the latter is used for reporting errors. See [Contexts](#context-association) and [Error Handling](#error-handling) below for more information.
 
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);

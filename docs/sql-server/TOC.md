@@ -7,7 +7,7 @@
 ## [Maximum Capacity Specifications for SQL Server](maximum-capacity-specifications-for-sql-server.md)
 ## [Compute Capacity Limits by Edition of SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Customer Experience Improvement Program](customer-experience-improvement-program-for-sql-server-data-tools.md)
-
+## [Configure SQL Server to send feedback to Microsoft](sql-server-windows-customer-feedback.md)
 # [Recently Updated Articles for SQL Server](sql-server-new-updated-sql-docs-pr.md)
 
 # Release Notes

@@ -19,22 +19,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Getting Started in SMO
-  This topic contains links to about topics to help you get started using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). The following list will help you to locate information about the SMO object hierarchy, how to prepare for writing programs in SMO, how to start writing a SMO program in different programming languages, and general and specific programming tasks.  
+This topic provides links to topics to help you get started using SQL Server Management Objects (SMO). The topics listed will help you locate information about the SMO object hierarchy, prepare for writing programs in SMO, start writing a SMO program in different programming languages, and learn more general and specific programming tasks.  
  
- **Object Model**  
+## Object Model  
+[Object Model](../../relational-databases/server-management-objects-smo/smo-object-model.md) describes the SMO object hierarchy and how the objects relate to one another.  
   
--   The [Object Model](../../relational-databases/server-management-objects-smo/smo-object-model.md) describes the SMO object hierarchy and how the objects relate to one another.  
+## Programming Languages  
+[Programming Languages](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) describes the programming environment and includes detailed procedures to start writing an SMO program in C# and Visual Basic.  
   
- **Programming Languages**  
+## General Programming in SMO  
+[General Programming in SMO](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md) is an introduction to programming with SMO. This topic describes how to connect to an instance of SQL Server, and how to use properties, methods, and collections. More advanced topics describe data types, transactions, setting the capture mode, and event and exception handling.  
   
--   [Programming Languages](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) describes the programming environment and includes detailed procedures to start writing an SMO program in C# and Visual Basic.  
-  
- **General Programming in SMO**  
-  
--   [General Programming in SMO](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md) is an introduction to programming with SMO. This topic describes how to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and how to use properties, methods, and collections. More advanced topics describe data types, transactions, setting the capture mode, and event and exception handling.  
-  
- **Programming Specific Tasks**  
-  
--   The [Programming Specific Tasks](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md) section contains concepts and procedures about how to program specific tasks by using SMO. The topic also describes complete programmatic management of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## Programming Specific Tasks  
+[Programming Specific Tasks](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md) includes concepts and procedures about how to program specific tasks using SMO. The topic also describes complete programmatic management of SQL Server.  
   
   

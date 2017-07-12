@@ -1,7 +1,7 @@
 ---
 title: "Connect to Microsoft Azure Storage | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2017"
+ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.swb.windowsazurestorage.connect.f1"
+  - "SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1"
 ms.assetid:
 caps.latest.revision: 4
 author: "stevestein"

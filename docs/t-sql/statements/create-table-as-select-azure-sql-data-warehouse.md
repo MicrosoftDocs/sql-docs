@@ -338,12 +338,12 @@ RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
-<a name="ctas-change-distributed-to-replicated-bk"></a>
+<a name="ctas-change-to-replicated-bk"></a>
 
-### D. Use CTAS to change from a distributed to a replicated table  
+### D. Use CTAS to convert a table to a replicated table  
 Applies to: Azure SQL Data Warehouse and Parallel Data Warehouse 
 
-The following example takes the previous method of changing the distribution type one step further.  Since DimSalesTerritory is a dimension and likely a smaller a table, you can choose to re-create the table as replicated to avoid data movement when joining to other tables.
+This example applies for converting round-robin or hash-distributed tables to a replicated table. This particular example takes the previous method of changing the distribution type one step further.  Since DimSalesTerritory is a dimension and likely a smaller table, you can choose to re-create the table as replicated to avoid data movement when joining to other tables. 
 
 ```
 -- DimSalesTerritory is hash-distributed.

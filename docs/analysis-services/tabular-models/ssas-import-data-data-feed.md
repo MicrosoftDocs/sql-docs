@@ -1,7 +1,7 @@
 ---
 title: "Import from a Data Feed (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/22/2017"
+ms.date: "07/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -114,6 +114,9 @@ manager: "erikre"
 ##  <a name="importlist"></a> Import data feeds from SharePoint lists  
  You can import any SharePoint list that has an **Export as Data Feed** button on the (SharePoint) ribbon. You can click this button to export the list as a feed.  
   
+> [!NOTE]  
+>  This applies only to SharePoint 2010 and SharePoint 2013.  
+   
 #### To import data feeds from a SharePoint list  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], click the **Model** menu, and then click **Import from Data Source**.  
@@ -189,7 +192,7 @@ manager: "erikre"
   
 12. In the **Select Tables and Views** page, click **Finish**.  
   
-## See Also  
+## See also  
  [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Data Types Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)   
  [Impersonation &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   

@@ -49,34 +49,36 @@ manager: "erikre"
 ##  <a name="bkmk_models"></a> Model Features  
   The following table summarizes feature availability at the model level. Review this list to ensure that the feature you want to use is available in the type of model you plan to build.  
   
-|||||  
-|-|-|-|-|  
-||Multidimensional|Tabular|Power Pivot|  
-|Actions|Yes|No|No|  
-|Aggregations|Yes|No|No|  
-|Calculated Column|No|Yes|Yes|  
-|Calculated Measures|Yes|Yes|Yes|  
-|Calculated Tables|No|Yes <sup>1</sup>|No|  
-|Custom Assemblies|Yes|No|No|  
-|Custom Rollups|Yes|No|No|  
-|Default Member|Yes|No|No|  
-|Display folders|Yes|Yes <sup>1</sup>|No|  
-|Distinct Count|Yes|Yes (via DAX)|Yes (via DAX)|  
-|Drillthrough|Yes|Yes (detail opens in separate worksheet)|Yes|  
-|Hierarchies|Yes|Yes|Yes|  
-|KPIs|Yes|Yes|Yes|  
-|Linked objects|Yes|Yes (linked tables)|No|  
-|Many-to-many relationships|Yes|No (but there is [bi-directional cross filters](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) at 1200 and higher compatibility levels)|No|  
-|Named sets|Yes|No|No|  
-|Ragged Hierarchies|Yes|Yes|No|  
-|Parent-child Hierarchies|Yes|Yes (via DAX)|Yes (via DAX)|  
-|Partitions|Yes|Yes|Yes|  
-|Perspectives|Yes|Yes|Yes| 
-|Row-level Security|Yes|Yes|No| 
-|Semi-additive Measures|Yes|Yes|Yes|  
-|Translations|[Yes](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Yes|[Yes](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)|  
-|User-defined Hierarchies|Yes|Yes|Yes|  
-|Writeback|Yes|No|No|  
+|||| 
+|-|-|-|
+||Multidimensional|Tabular|
+|Actions|Yes|No|
+|Aggregations|Yes|No|
+|Calculated Column|No|Yes|  
+|Calculated Measures|Yes|Yes| 
+|Calculated Tables|No|Yes<sup>1</sup>|  
+|Custom Assemblies|Yes|No|
+|Custom Rollups|Yes|No| 
+|Default Member|Yes|No|  
+|Display folders|Yes|Yes<sup>1</sup>|  
+|Distinct Count|Yes|Yes (via DAX)|
+|Drillthrough|Yes|Yes (depends on client application)|
+|Hierarchies|Yes|Yes|
+|KPIs|Yes|Yes| 
+|Linked objects|Yes|Yes (linked tables)|
+|M expressions|No|Yes<sup>1</sup>|
+|Many-to-many relationships|Yes|No (but there is [bi-directional cross filters](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) at 1200 and higher compatibility levels)| 
+|Named sets|Yes|No| 
+|Ragged Hierarchies|Yes|Yes<sup>1</sup>|  
+|Parent-child Hierarchies|Yes|Yes (via DAX)|
+|Partitions|Yes|Yes| 
+|Perspectives|Yes|Yes|
+|Row-level Security|Yes|Yes| 
+|Object-level Security|Yes|Yes<sup>1</sup>|
+|Semi-additive Measures|Yes|Yes| 
+|Translations|[Yes](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Yes| 
+|User-defined Hierarchies|Yes|Yes|
+|Writeback|Yes|No| 
   
  <sup>1</sup> See [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) for information about functional differences between compatibility levels.  
   
@@ -107,7 +109,7 @@ manager: "erikre"
   
  **Supported Data Sources**  
   
- Tabular models can import data from relational data sources, data feeds, and some document formats. You can also use OLE DB for ODBC providers with tabular models. Tabular models at the 1400 compatibility level offer a signifcant increase in the variety of data sources from which you can import from. This is due to the introduction of the modern Get Data data query and import features in SSDT.   
+ Tabular models can import data from relational data sources, data feeds, and some document formats. You can also use OLE DB for ODBC providers with tabular models. Tabular models at the 1400 compatibility level offer a significant increase in the variety of data sources from which you can import from. This is due to the introduction of the modern Get Data data query and import features in SSDT utilizing the M formula query language.   
 
   Multidimensional solutions can import data from relational data sources using OLE DB native and managed providers.  
   

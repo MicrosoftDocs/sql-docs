@@ -1,7 +1,7 @@
 ---
 title: "Compatibility level for tabular models in Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2017"
+ms.date: "07/07/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,7 +28,7 @@ manager: "erikre"
   
 Major features in the 1400 compatibility level include:
 
-*  New infrastructure for data connectivity and ingestion into tabular models with support for TOM APIs and TMSL scripting. This enables support for additional data sources such as Azure Blob storage. Additional data sources will be included in future updates.
+*  New infrastructure for data connectivity and import into tabular models with support for TOM APIs and TMSL scripting. This enables support for additional data sources such as Azure Blob storage. Additional data sources will be included in future updates.
 *  Data transformation and data mashup capabilities by using Get Data and M expressions.
 *  Measures now support a Detail Rows property with a DAX expression, enabling BI tools such as Microsoft Excel drill-down to detailed data from an aggregated report. For example, when end-users view total sales for a region and month, they can view the associated order details. 
 *  Object-level security for table and column names, in addition to the data within them.
@@ -43,9 +43,10 @@ Major features in the 1400 compatibility level include:
 |**Compatibility level**|**Server version**| 
 |1400|Azure Analysis Services (Preview), SQL Server 2017 |  
 |1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
-|1103|SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
-|1100|SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
+|1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
+|1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
+\* 1100 and 1103 compatibility levels are deprecated in SQL Server 2017.
   
 ## Set compatibility level 
  When creating a new tabular model project in SQL Server Data Tools (SSDT), you can specify the compatibility level on the **Tabular model designer** dialog. 

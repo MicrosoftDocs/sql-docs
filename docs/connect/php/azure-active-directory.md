@@ -1,27 +1,19 @@
 ---
 title: "Azure Active Directory | Microsoft Docs"
-ms.custom: ""
 ms.date: "07/13/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
 ms.technology:
   - "drivers"
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-helpviewer_keywords:
-  - ""
-caps.latest.revision: 1
 author: "david-puglielli"
 ms.author: "v-dapugl"
-manager: "v-hakaka"
 ---
 # Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) is a central user ID management technology that operates as an alternative to [SQL Server authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD allows connections to Microsoft Azure SQL Database and SQL Data Warehouse with federated identities in Azure AD using a username and password, Windows Integrated Authentication, or an Azure AD access token; the PHP drivers for SQL Server offer partial support for these features.
 
-To use Azure AD, use the **Authentication** keyword. By default it is not set -- see the table below for details.
+To use Azure AD, use the **Authentication** keyword. By default it is not set -- see the following table for details.
 
 |Values for **Authentication**|Description|
 |-|-|

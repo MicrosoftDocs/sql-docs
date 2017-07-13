@@ -1,25 +1,17 @@
 ---
 title: "Idle Connection Resiliency"
-ms.custom: ""
 ms.date: "07/13/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
 ms.technology:
   - "drivers"
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-helpviewer_keywords:
-  - ""
-caps.latest.revision: 1
 author: "david-puglielli"
 ms.author: "v-dapugl"
-manager: "v-hakaka"
 ---
 ## Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Connection resiliency](https://msdn.microsoft.com/en-us/library/dn632678.aspx) is the principle that an idle connection that is broken can be reestablished, within certain constraints. If a connection to Microsoft SQL Server fails, connection resiliency allows the client to automatically attempt to reestablish the connection. Connection resiliency is a property of the data source; only SQL Server 2014 and later and Azure SQL Database support connection resiliency.
+[Connection resiliency](https://msdn.microsoft.com/en-us/library/dn632678.aspx) is the principle that a broken idle connection can be reestablished, within certain constraints. If a connection to Microsoft SQL Server fails, connection resiliency allows the client to automatically attempt to reestablish the connection. Connection resiliency is a property of the data source; only SQL Server 2014 and later and Azure SQL Database support connection resiliency.
 
 Connection resiliency is implemented with two connection keywords that can be added to connection strings: **ConnectRetryCount** and **ConnectRetryInterval**.
 

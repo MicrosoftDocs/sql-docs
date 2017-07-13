@@ -152,10 +152,10 @@ Supported operating systems for the versions of the driver are as follows:
     -   Windows 10
     -   Ubuntu 15.10 (64-bit)
     -   Ubuntu 16.04 (64-bit)
-	-   Debian 8
+    -   Debian 8 (64-bit)
     -   Red Hat Enterprise Linux 7 (64-bit)
-	-   Mac OS Sierra
-	-   Mac OS El Capitan
+    -   Mac OS Sierra (64-bit)
+    -   Mac OS El Capitan (64-bit)
 	
 -   4.0:  
     -   Windows Server 2008 SP2

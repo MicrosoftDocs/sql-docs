@@ -70,7 +70,7 @@ The *.BACPAC file is imported to create a new database in the target server you 
 
 ## <a id="sqlpackage"></a> SqlPackage command-line option
 
-It is also possible to use the SQL Server Data Tools (SSDT) command-line tool, [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) to export and import BACPAC files.
+It is also possible to use the SQL Server Data Tools (SSDT) command-line tool, [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx), to export and import BACPAC files.
 
 The following example command exports a BACPAC file:
 
@@ -86,4 +86,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## See also
-For more information on how to use SSMS, see [Use SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx).
+For more information on how to use SSMS, see [Use SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx). For more information on SqlPackage.exe, see the [SqlPackage reference documentation](https://msdn.microsoft.com/library/hh550080.aspx).

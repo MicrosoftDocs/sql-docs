@@ -31,7 +31,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/linux/sql-linux-quickstart-connect-docker.md",
+            "source_path": "docs/linux/sql-server-linux-setup-docker.md",
             "redirect_url": "/sql/linux/quickstart-install-connect-docker",
             "redirect_document_id": false
         },                                        

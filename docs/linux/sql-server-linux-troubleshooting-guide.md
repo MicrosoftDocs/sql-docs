@@ -91,7 +91,7 @@ You can stop or restart the SQL Server service as needed using the following com
    ```
 
 > [!TIP]
-> For more troubleshooting tips for Docker, see [Troubleshooting SQL Server Docker containers](sql-server-linux-setup-docker.md#troubleshooting).
+> For more troubleshooting tips for Docker, see [Troubleshooting SQL Server Docker containers](sql-server-linux-configure-docker.md#troubleshooting).
 
 ## Access the log files
    

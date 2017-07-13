@@ -99,7 +99,10 @@ The following steps increase the memory for Docker for Windows to 4 GB.
 There are two useful `docker run` options not used in the previous example for simplicity. The `-h` (host name) parameter changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 
 ```sql
-SELECT @@SERVERNAME, SERVERPROPERTY('ComputerNamePhysicalNetBIOS'), SERVERPROPERTY('MachineName'), SERVERPROPERTY('ServerName')
+SELECT @@SERVERNAME,
+    SERVERPROPERTY('ComputerNamePhysicalNetBIOS'),
+    SERVERPROPERTY('MachineName'),
+    SERVERPROPERTY('ServerName')
 ```
 
 You also might find the `--name` parameter useful to name your container rather than having a generated container name. Setting `-h` and `--name` to the same value is a good way to easily identify the target container.

@@ -39,6 +39,9 @@ Install the tools for your platform:
 - [macOS](#macos)
 - [Docker](#docker)
 
+> [!TIP]
+> This topic describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
+
 ## <a id="RHEL"><a/>Install tools on RHEL
 
 Use the following steps to install the **mssql-tools** on Red Hat Enterprise Linux. 
@@ -261,9 +264,11 @@ To manually install these packages, use the following steps:
 
 ## Next steps
 
-After installation, connect to the SQL Server instance to create and manage databases. For examples, see the following quick start tutorials:
+For an example of how to use **sqlcmd** to create a database, see one of the following quick start tutorials:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-ubuntu.md)
+
+For an example of how to use **bcp** to bulk import and export data, see [Bulk copy data to SQL Server on Linux](sql-server-linux-migrate-bcp.md).

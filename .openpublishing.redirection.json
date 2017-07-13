@@ -2,32 +2,32 @@
     "redirections": [
         {
             "source_path": "docs/linux/sql-server-linux-get-started-tutorial.md",
-            "redirect_url": "docs/linux/sql-server-linux-overview.md",
+            "redirect_url": "/sql/linux/sql-server-linux-overview",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/linux/sql-server-linux-connect-and-query-sqlcmd.md",
-            "redirect_url": "docs/linux/sql-server-linux-setup-tools.md",
+            "redirect_url": "/sql/linux/sql-server-linux-setup-tools",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/linux/sql-server-linux-setup-suse-linux-enterprise-server",
-            "redirect_url": "docs/linux/quickstart-install-connect-suse.md",
+            "source_path": "docs/linux/sql-server-linux-setup-suse-linux-enterprise-server.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-suse",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/linux/sql-server-linux-setup-red-hat",
-            "redirect_url": "docs/linux/quickstart-install-connect-red-hat.md",
+            "source_path": "docs/linux/sql-server-linux-setup-red-hat.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-red-hat",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/linux/sql-server-linux-setup-ubuntu",
-            "redirect_url": "docs/linux/quickstart-install-connect-ubuntu.md",
+            "source_path": "docs/linux/sql-server-linux-setup-ubuntu.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-ubuntu",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/linux/sql-linux-quickstart-connect-docker",
-            "redirect_url": "docs/linux/quickstart-install-connect-docker.md",
+            "source_path": "docs/linux/sql-linux-quickstart-connect-docker.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-docker",
             "redirect_document_id": false
         },                                        
         {

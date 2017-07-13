@@ -15,16 +15,18 @@ In this quick start tutorial, you first install SQL Server 2017 RC1 on Ubuntu 16
 
 ## Prerequisites
 
-- You must have a Ubuntu machine with at least 3.25 GB of memory.
+You must have a Ubuntu machine with at least 3.25 GB of memory.
 
-  > [!TIP]
-  > To install Ubuntu, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. For instructions, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
+To install Ubuntu, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. For instructions, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
 
-- For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## <a id="install"></a>Install SQL Server
 
-To configure SQL Server on Ubuntu, run the following commands in a terminal to install the **mssql-server** package:
+To configure SQL Server on Ubuntu, run the following commands in a terminal to install the **mssql-server** package.
+
+> [!TIP]
+> These commands involve user input and assume a connection to the internet. If you are interested in the unattended or offline installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 1. Import the public repository GPG keys:
 

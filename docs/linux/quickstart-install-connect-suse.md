@@ -29,18 +29,18 @@ In this quick start tutorial, you first install SQL Server 2017 RC1 on SUSE Linu
 
 ## Prerequisites
 
-- You must have a SLES v12 SP2 machine with at least 3.25 GB of memory.
+You must have a SLES v12 SP2 machine with at least 3.25 GB of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
-  > [!TIP]
-  > To install SLES, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. For the basic process, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
+To install SUSE Linux Enterprise Server, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. For the basic process, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
 
-- The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
-
-- For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## <a id="install"></a>Install SQL Server
 
 To configure SQL Server on SLES, run the following commands in a terminal to install the **mssql-server** package:
+
+> [!TIP]
+> These commands involve user input and assume a connection to the internet. If you are interested in the unattended or offline installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 1. Download the Microsoft SQL Server SLES repository configuration file:
 

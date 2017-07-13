@@ -17,6 +17,7 @@
 ### [Install SQL Server tools](sql-server-linux-setup-tools.md)
 ### [Install SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 ### [Install SQL Server Full-Text Search](sql-server-linux-setup-full-text-search.md)
+### [Provision a SQL Server VM in Azure](sql-server-linux-azure-virtual-machine.md)
 
 ## Configure
 ### [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)

@@ -141,7 +141,7 @@ To test your installation, see **Testing Your Installation** at the end of this 
  
 ## Installing the drivers on Red Hat 7 for PHP 7.0 and 7.1
 ### Step 1. Install PHP 
-To install PHP 7.1, simply replace remi-php70 with remi-php71 in the commands below. 
+To install PHP 7.1, replace remi-php70 with remi-php71 in the following commands. 
 ```
 sudo su
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
@@ -280,7 +280,7 @@ To test your installation, see **Testing Your Installation** at the end of this 
  
 ## Installing the drivers on MacOS El Capitan and Sierra
 ### Step 1. Install PHP 
-To install PHP 7.1, simply replace php70 with php71 in the commands below.
+To install PHP 7.1, replace php70 with php71 in the following commands.
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap 
@@ -316,7 +316,7 @@ sudo apachectl restart
 To test your installation, see **Testing Your Installation** at the end of this document.
  
 ## Testing Your Installation
-To test this sample script, create a file called testsql.php in /var/www/html/ (/usr/local/var/www/htdocs on MacOS) and copy the script below to it, replacing the server, database, username, and password as appropriate. 
+To test this sample script, create a file called testsql.php in /var/www/html/ (/usr/local/var/www/htdocs on MacOS) and copy the following script to it, replacing the server, database, username, and password as appropriate. 
 ```
 <?php
 $serverName = "yourServername";

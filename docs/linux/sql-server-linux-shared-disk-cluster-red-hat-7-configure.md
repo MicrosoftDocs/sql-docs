@@ -38,7 +38,7 @@ For more details on cluster configuration, resource agents options, and manageme
 
 
 > [!NOTE] 
-> At this point, SQL Server's integration with Pacemaker is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. It is expected that @@servername and  sys.servers to return the node name, while the cluster dmvs sys.dm_os_cluster_nodes and sys.dm_os_cluster_properties will no records.
+> At this point, SQL Server's integration with Pacemaker is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also for example, cluster dmvs sys.dm_os_cluster_nodes and sys.dm_os_cluster_properties will no records.
 To use a connection string that points to a string server name and not use the IP, they will have to register in their DNS server the IP used to create the virtual IP resource (as explained below) with the chosen server name.
 
 > [!NOTE] 

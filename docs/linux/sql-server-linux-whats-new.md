@@ -28,6 +28,7 @@ The RC1 release contains the following improvements and fixes:
 - Added IPV6 support.
 - Added environment variables for initial SQL Server setup. For more information, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
 - Removed **sqlpackage** from installed binaries. SqlPackage can still be run against Linux remotely from Windows.
+- Shared disk cluster resource agent sets the resource name like it does on a Windows SQL Server failover cluster instance. `@@ServerName` returns the SQL Server shared disk cluster resource name; prior to RC1 it returned the name of the cluster node that owned the resource.
 
 ## CTP 2.1
 

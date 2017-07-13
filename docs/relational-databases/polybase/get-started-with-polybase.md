@@ -2,7 +2,7 @@
 title: "Get started with PolyBase | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "5/30/2017"
+ms.date: "7/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -50,7 +50,8 @@ manager: "jhubbard"
 -   Minimum memory: 4GB  
   
 -   Minimum hard disk space: 2GB    
--   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
+
+-   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) SQL Server Developer and Express editions have TCP/IP disabled by default. PolyBase can be installed but will not fully start until TCP/IP is enabled. You must manually enable TCP/IP to have PolyBase functionality. 
   
  
  An external data source, one of the following:  

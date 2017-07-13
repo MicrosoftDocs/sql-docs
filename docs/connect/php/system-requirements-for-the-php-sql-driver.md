@@ -42,7 +42,7 @@ To access data in a SQL Server or Azure SQL Database using the [!INCLUDE[ssDrive
     > [!NOTE]  
     > Microsoft provides support only for IIS.  
   
--   The correct version of the Microsoft ODBC Driver for SQL Server or SQL Server Native Client is required on the computer where PHP is running.  If you are using a 64-bit operating system, ODBC 64-bit installer installs both 32-bit and 64-bit ODBC driver. If you use 32-bit operating system, use ODBC x86 installer.
+-   The correct version of the Microsoft ODBC Driver for SQL Server or SQL Server Native Client is required on the computer where PHP is running.  If you are using a 64-bit operating system, the ODBC 64-bit installer installs both 32-bit and 64-bit ODBC drivers. If you use a 32-bit operating system, use the ODBC x86 installer.
 
 |Microsoft Drivers for PHP for SQL Server Version|Version of Microsoft ODBC Driver for SQL Server or SQL Server Native Client|  
 |----------------------------------------------------|--------------------------|

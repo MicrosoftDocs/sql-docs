@@ -143,15 +143,15 @@ The following sections describe known issues with this release of SQL Server 201
 - Upgrade of an existing shared disk cluster instance from CTP 2.1 to RC1 requires additional steps:
 
    1. Upgrade secondary (passive) cluster node first.
-      - Upgrade `mssql-server`.
-      - Upgrade `mssql-server-ha`.
+      - Upgrade **mssql-server**.
+      - Upgrade **mssql-server-ha**.
    1. Manually fail over to the upgraded node.
       `pcs resource move <resourceName>`
       - Resource fails initially because the resource agent checks the actual and expected serverName. The expected serverName will be different.
       - Cluster will restart SQL Server resource on the same node. This will update the server name.
    1. Upgrade the other node. 
-      - Upgrade `mssql-server`.
-      - Upgrade `mssql-server-ha`.
+      - Upgrade **mssql-server**.
+      - Upgrade **mssql-server-ha**.
    1. Remove the constraint added by the manual resource move. See [Failover cluster manually](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md#failManual).
    2. If desired, fail back to the original primary node. 
 

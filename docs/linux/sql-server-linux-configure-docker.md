@@ -6,7 +6,7 @@ description: Explore different ways of using and interacting with SQL Server 201
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/31/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

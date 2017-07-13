@@ -1911,6 +1911,16 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md",
+            "redirect_url": "/sql/tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md",
+            "redirect_url": "/sql/tools/sql-server-profiler/modify-trace-templates",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/sql/microsoft-sql-documentation-table-of-contents.md",
             "redirect_url": "/sql/index",
             "redirect_document_id": false

@@ -144,13 +144,6 @@ The following sections describe known issues with this release of SQL Server 201
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
 
-#### SqlPackage
-- Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the "/tmp/sqlpackage.\<code\>/system/system32" folder. 
-
-  - **Resolution**: Use absolute file paths.
-
-- SqlPackage shows the location of files with a "C:\\" prefix.
-
 #### SQL Server Integration Services (SSIS)
 You can run SSIS packages on Linux. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
 

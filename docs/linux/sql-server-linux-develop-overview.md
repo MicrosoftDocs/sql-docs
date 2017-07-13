@@ -72,7 +72,6 @@ You can also use new command-line tools that are native for Linux. These tools i
 
 - [sqlcmd](../tools/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
-- [sqlpackage](sql-server-linux-migrate-sqlpackage.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
 ## Next steps

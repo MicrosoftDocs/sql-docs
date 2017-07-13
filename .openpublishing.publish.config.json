@@ -35,23 +35,6 @@
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0
-    },
-    {
-      "docset_name": "sql-public",
-      "build_source_folder": "docs",
-      "build_output_subfolder": "sql-public",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_groups": [],
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0
     }
   ],
   "notification_subscribers": [],

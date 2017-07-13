@@ -96,6 +96,17 @@ The following steps increase the memory for Docker for Windows to 4 GB.
 
 1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
 
+There are two useful `docker run` options not used in the previous example for simplicity. The `-h` (host name) parameter changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
+
+```sql
+SELECT @@SERVERNAME,
+    SERVERPROPERTY('ComputerNamePhysicalNetBIOS'),
+    SERVERPROPERTY('MachineName'),
+    SERVERPROPERTY('ServerName')
+```
+
+You also might find the `--name` parameter useful to name your container rather than having a generated container name. Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
+
 ## Change the SA password
 
 The SA account is a system administrator on the SQL Server instance that gets created during setup. After creating your SQL Server container, the `SA_PASSWORD` environment variable you specified is discoverable by running `echo $SA_PASSWORD` in the container. For security purposes, change your SA password.

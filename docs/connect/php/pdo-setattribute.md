@@ -1,7 +1,7 @@
 ---
 title: "PDO::setAttribute | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -50,7 +50,7 @@ Returns true on success, otherwise false.
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Sets the character set encoding used by the driver to communicate with the server.<br /><br />PDO::SQLSRV_ENCODING_BINARY is not supported.<br /><br />The default is PDO::SQLSRV_ENCODING_UTF8.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true or false|Handles numeric fetches from columns with numeric SQL types (bit, integer, smallint, tinyint, float, or real).<br /><br />When connection option flag ATTR_STRINGIFY_FETCHES is on, even when SQLSRV_ATTR_FETCHES_NUMERIC_TYPE is on, the return value will still be string.<br /><br />When the returned PDO type in bind column is PDO_PARAM_INT, the return value from an integer column will be int even if SQLSRV_ATTR_FETCHES_NUMERIC_TYPE is off.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Sets the query timeout in seconds.<br /><br />The default is 0, which means the driver will wait indefinitely for results.<br /><br />Negative numbers are not allowed.|  
-|PDO::SQLSVR_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Sets the size of the query buffer.<br /><br />The default is 0, which indicates unlimited buffer size.<br /><br />Negative numbers are not allowed.<br /><br />For more information about queries that create a client-side cursor, see [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Sets the size of the query buffer.<br /><br />The default is 0, which indicates unlimited buffer size.<br /><br />Negative numbers are not allowed.<br /><br />For more information about queries that create a client-side cursor, see [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
   
 PDO processes some of the predefined attributes and requires the driver to process others. All custom attributes and connection options are processed by the driver. An unsupported attribute, connection option, or unsupported value will be reported according to the setting of PDO::ATTR_ERRMODE.  
   

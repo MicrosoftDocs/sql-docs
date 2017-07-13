@@ -15,7 +15,7 @@ ms.workload:
 ms.tgt_pltfrm: na
 ms.devlang: 
 ms.topic: article
-ms.date: 06/23/2017
+ms.date: 07/13/2017
 ms.author: 
 ---
 # Troubleshoot PolyBase connectivity

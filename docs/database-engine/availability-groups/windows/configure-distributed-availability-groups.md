@@ -22,11 +22,13 @@ To create a distributed availability group, you must create an availability grou
 
 For a technical overview of distributed availability groups, see [Distributed availability groups](distributed-availability-groups.md).   
 
-## Set the endpoint listeners to listen to all IP addresses
+## Prerequisites
+
+### Set the endpoint listeners to listen to all IP addresses
 
 Make sure the endpoints can communicate between the different availability groups in the distributed availability group. If one availability group is set to a specific network on the endpoint, the distributed AG will not work properly. On each server that will host a replica in the distributed availability group, configure the listener to `LISTENER_IP = ALL`. 
 
-### Create a listener to listen to all IP addresses
+#### Create a listener to listen to all IP addresses
 
 For example, the following script creates a listener endpoint on TCP port 5022 that listens on all IP addresses.  
 
@@ -42,7 +44,7 @@ FOR DATA_MIRRORING (
 GO
 ```
 
-### Alter a listener to listen to all IP addresses
+#### Alter a listener to listen to all IP addresses
 
 For example, the following script changes a listener endpoint to listen on all IP addresses.  
 
@@ -52,7 +54,9 @@ ALTER ENDPOINT [aodns-hadr]
 GO
 ```
 
-## Create the primary availability group on the first cluster  
+## Create first availability group
+
+### Create the primary availability group on the first cluster  
 Create an availability group on the first WSFC.   In this example, the availability group is named `ag1` for the database `db1`.      
   
 ```tsql  
@@ -76,7 +80,7 @@ GO
   
 Note that this example uses direct seeding, where **SEEDING_MODE** is set to **AUTOMATIC** for both the replicas and the distributed availability group. This means that once established, the secondary replicas and secondary availability group will be automatically populated without requiring a manual backup and restore of primary database.  
   
-## Join the secondary replicas to the primary availability group  
+### Join the secondary replicas to the primary availability group  
 Any secondary replicas must be joined to the availability group with **ALTER AVAILABILITY GROUP** with the **JOIN** option. Because direct seeding is used in this example, you must also call  **ALTER AVAILABILITY GROUP** with the **GRANT CREATE ANY DATABASE** option. This allows the availability group to create the database and begin seeding it automatically from the primary replica.  
   
 In this example, the following commands are run on the secondary replica, `server2`, to join the `ag1` availability group. The availability group is then permitted to create databases on the secondary.  
@@ -87,7 +91,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE
 GO  
 ```  
   
-## Create a listener for the primary availability group  
+### Create a listener for the primary availability group  
 
 Next add a listener for the primary availability group on the first WSFC. In this example, the listener is named `ag1-listener`. For detailed instructions on creating a listener, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
@@ -97,7 +101,8 @@ ALTER AVAILABILITY GROUP [ag1]
 GO  
 ```  
   
-## Create the secondary availability group on the second cluster  
+
+## Create second availability group  
  Then on the second WSFC, create a second availability group, `ag2`. In this case, the database is not specified, because it will be automatically seeded from the primary availability group.  
   
 ```tsql  
@@ -121,7 +126,7 @@ GO
 > [!NOTE]  
 >  Note that the secondary availability group must use the same database mirroring endpoint (in this example port 5022). Otherwise, replication will stop after a local failover.  
   
-## Join the secondary replicas to the secondary availability group  
+### Join the secondary replicas to the secondary availability group  
  In this example, the following  commands are run on the secondary replica, `server4`, to join the `ag2` availability group. The availability group is then permitted to create databases on the secondary to support direct seeding.  
   
 ```tsql  
@@ -130,7 +135,7 @@ ALTER AVAILABILITY GROUP [ag2] GRANT CREATE ANY DATABASE
 GO  
 ```  
   
-## Create a listener for  the secondary availability group  
+### Create a listener for  the secondary availability group  
  Next add a listener for the secondary availability group on the second WSFC. In this example, the listener is named `ag2-listener`. For detailed instructions on creating a listener, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
 ```  
@@ -139,7 +144,7 @@ ALTER AVAILABILITY GROUP [ag2]
 GO  
 ```  
   
-## Create the distributed availability group on the first cluster  
+## Create distributed availability group on first cluster  
  On the first WSFC, create a distributed availability group (named `distributedag` in this example). Use the **CREATE AVAILABILITY GROUP** command with the **DISTRIBUTED** option. The **AVAILABILITY GROUP ON** parameter specifies the member availability groups, `ag1` and `ag2`.  
   
 ```tsql  
@@ -166,7 +171,7 @@ GO
 > [!NOTE]  
 >  The **LISTENER_URL** specifies the listener for each availability group along with the database mirroring endpoint of the availability group. In this example, that is port `5022` (not port `60173` used to create the listener).  
   
-## Join the distributed availability group on the second cluster  
+## Join distributed availability group on second cluster  
  Then join the distributed availability group on the second WSFC.  
   
 ```tsql  
@@ -275,7 +280,7 @@ After completing the steps above, the distributed availability group fails over 
 DROP AVAILABILITY GROUP [distributedag]  
 ```  
 
-## Create a distributed availability group with failover cluster instances
+## Create distributed availability group on failover cluster instances
 
 You can create a distributed availability group using an availability group on a failover cluster instance (FCI). In this case, you don't need an availability group listener. Use the virtual network name (VNN) for the primary replica of the FCI instance. The following example shows a distributed availability group called SQLFCIDAG. One availability group is SQLFCIAG. SQLFCIAG has 2 FCI replicas. The VNN for the primary FCI replica is SQLFCIAG-1, and the VNN for the secondary FCI replica is SQLFCIAG-2. The distributed availability group also includes SQLAG-DR, for disaster recovery.
 

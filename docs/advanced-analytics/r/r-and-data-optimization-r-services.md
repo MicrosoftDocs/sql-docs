@@ -25,7 +25,7 @@ In SQL Server 2016 and 2017, you can use either the **local** or **SQL** compute
 
 When using the **local** compute context, analysis is performed on your computer and not on the server. Therefore, if you are getting data from SQL Server to use in your code, the data must be fetched over the network. The performance hit incurred for this network transfer depends on the size of the data transferred, speed of the network, and other network transfers occurring at the same time.
 
-When using the **SQL Server compute context**, the code is executed inside [!INCLUDE[ssNoVersion_md](file:///C:\AA-Work\includes\ssnoversion-md.md)]. If you are getting data from SQL Server, the data should be local to the server running the analysis, and therefore no network overhead is introduced. If you need to import data from other sources, consider arranging ETL beforehand.
+When using the **SQL Server compute context**, the code is executed inside [!INCLUDE[ssNoVersion_md](..\includes\ssnoversion-md.md)]. If you are getting data from SQL Server, the data should be local to the server running the analysis, and therefore no network overhead is introduced. If you need to import data from other sources, consider arranging ETL beforehand.
 
 When working with large data sets, you should always use the SQL compute context.
 
@@ -92,11 +92,11 @@ There are two ways to achieve parallelization with R in SQL Server:
 -   **Use numTasks =1.** When using **rx** functions in a SQL Server compute context, set the value of the _numTasks_ parameter to the number of processes that you would like to create. The number of processes created can never be more than **MAXDOP**; however, the actual number of processes created is determined by the database engine and may be less than you requested.
 
     If the R script can be parallelized, and if the SQL query can be parallelized, then SQL Server
-    will create multiple parallel processes when running the rx functions. The actua number of processes that will be created depends on a variety of factors such as resource governance, current usage of resources, other sessions, and the query execution plan for the query used with the R script.
+    will create multiple parallel processes when running the rx functions. The actual number of processes that will be created depends on a variety of factors such as resource governance, current usage of resources, other sessions, and the query execution plan for the query used with the R script.
 
 ## Query parallelization
 
-In Microsoft R, you can work with SQL Server data sources by defining your data as an RxSqlServerData data source object. 
+In Microsoft R, you can work with SQL Server data sources by defining your data as an RxSqlServerData data source object.
 
 Creates a data source based on an entire table or view:
 
@@ -151,7 +151,7 @@ Many RevoScaleR algorithms support parameters to control how the trained model i
 
 + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
 
-    Use the `cube` argument if the first dependent variable is a factor variable. 
+    Use the `cube` argument if the first dependent variable is a factor variable.
     
     When `cube` is set to `TRUE`, the algorithm uses a partitioned inverse, which might be faster and use less memory. If the formula has a large number of variables, the performance gain can be significant.
 

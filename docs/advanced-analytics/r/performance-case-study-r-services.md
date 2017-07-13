@@ -359,29 +359,29 @@ The following are links to information, tools, and scripts used in the developme
 
 ### Learn about SQL Server optimizations
 
-+ [Reorganize and Rebuild Indexes](..\..\relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [Reorganize and Rebuild Indexes](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
 
 + [Introduction to memory-optimized tables](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
 + [Demonstration: Performance improvement of in-memory OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
-+ [Data compression](..\..\relational-databases\data-compression\data-compression.md)
++ [Data compression](../../relational-databases/data-compression/data-compression.md)
 
-+ [Enable Compression on a Table or Index](..\..\relational-databases\data-compression\enable-compression-on-a-table-or-index.md)
++ [Enable Compression on a Table or Index](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [Disable Compression on a Table or Index](..\..\relational-databases\data-compression\disable-compression-on-a-table-or-index.md)
++ [Disable Compression on a Table or Index](../../relational-databases/data-compression/disable-compression-on-a-table-or-index.md)
 
 ### Learn about managing SQL Server
 
-+ [Monitor and Tune for Performance](..\..\relational-databases\performance\monitor-and-tune-for-performance.md)
++ [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 
-+ [Resource Governor](..\..\relational-databases\resource-governor\resource-governor.md)
++ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
 
 + [Introducing Resource Governor](https://technet.microsoft.com/library/bb895232.aspx)
 
-+ [Resource Governance for R Services](/r/resource-governance-for-r-services)
++ [Resource Governance for R Services](../r/resource-governance-for-r-services)
 
-+ [How to Create a resource pool for R](r/how-to-create-a-resource-pool-for-r)
++ [How to Create a resource pool for R](../r/how-to-create-a-resource-pool-for-r)
 
 + [An example of configuring Resource Governor](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
@@ -394,10 +394,10 @@ The following are links to information, tools, and scripts used in the developme
 
 ## Other articles in this series
 
-[Performance tuning for R – introduction](/r/sql-server-r-services-performance-tuning.md)
+[Performance tuning for R – introduction](../r/sql-server-r-services-performance-tuning.md)
 
-[Performance tuning for R - SQL Server configuration](/r/sql-server-configuration-r-services.md)
+[Performance tuning for R - SQL Server configuration](../r/sql-server-configuration-r-services.md)
 
-[Performance tuning for R - R code and data optimization](/r/r-and-data-optimization-r-services.md)
+[Performance tuning for R - R code and data optimization](../r/r-and-data-optimization-r-services.md)
 
-[Performance Tuning - case study results](/r/performance-case-study-r-services.md)
+[Performance Tuning - case study results](../r/performance-case-study-r-services.md)

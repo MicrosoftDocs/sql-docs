@@ -87,9 +87,9 @@ A columnstore might not be as efficient if there are a lot of insertions into th
 
 For more information, see the following documents:
 
-+ [Data compression](..\..\relational-databases\data-compression\data-compression.md)
++ [Data compression](../../relational-databases/data-compression/data-compression.md)
 
-+ [Enable compression on a table or index](..\..\relational-databases\data-compression\enable-compression-on-a-table-or-index.md)
++ [Enable compression on a table or index](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
 + [Columnstore indexes guide](https://msdn.microsoft.com/library/gg492088.aspx)
 
@@ -126,13 +126,13 @@ The configuration options supported are **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCEN
 
 -  If there many R sessions using the same server at the same time, all three will be increased.
 
-To change the allocated resource values, use T-SQL statements. 
+To change the allocated resource values, use T-SQL statements.
 
 + This statement sets the memory usage to 40%: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
 
 + This statement sets all three configurable values: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ If you wish the settings to take effect immediately, after changing a memory, CPU, or max process setting, run this statement: `ALTER RESOURCE GOVERNOR RECONFIGURE` 
++ If you wish the settings to take effect immediately, after changing a memory, CPU, or max process setting, run this statement: `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## NUMA, soft-NUMA, and CPU affinity
 
@@ -162,7 +162,7 @@ One pain point with R is that it is usually processed on a single CPU. This is a
 
 There are multiple ways to improve the performance of feature engineering. You can either optimize your R code and keep feature extraction inside the modeling process, or move the feature engineering process into SQL.
 
-- Using R. You define a function and then pass it as the argument to rxTransform during training. If the model supports parallel processing, the feature engineering will also be processed using multiple CPUs. Using this approach, the data science team observed a 16% performance improvement in terms of scoring time. However, this approach requires a model that supports parallelization and a query that can be executed using a parallel plan.
+- Using R. You define a function and then pass it as the argument to [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform) during training. If the model supports parallel processing, the feature engineering will also be processed using multiple CPUs. Using this approach, the data science team observed a 16% performance improvement in terms of scoring time. However, this approach requires a model that supports parallelization and a query that can be executed using a parallel plan.
 
 - Use R with a SQL compute context. In a multiprocessor environment with isolated resources available for execution of separate batches, you can achieve greater efficiency by isolating the SQL queries used for each batch, to extract data from tables and constrain the data on the same workload group. Methods used to isolate the batches include partitioning, and use of PowerShell to execute separate queries in parallel.
 
@@ -184,8 +184,7 @@ To scale up the scoring problem, a good practice is to adopt the map-reduce appr
 
 This is the approach used in the resume-matching scenario; however, resource governance in SQL Server is essential for implementing this approach. By setting up workload groups for external script jobs, you can route R scoring jobs to different processor groups and achieve faster throughput.
 
-Resource governance can also help allocate divide the available resources on the server (CPU and memory) to minimize workload competition. You can set up classifier functions to distinguish between different types of R jobs: for example, you might decide that scoring called from an application always takes priority, while retraining jobs have low priority. This resource isolation can
-potentially improve execution time and provide more predictable performance.
+Resource governance can also help allocate divide the available resources on the server (CPU and memory) to minimize workload competition. You can set up classifier functions to distinguish between different types of R jobs: for example, you might decide that scoring called from an application always takes priority, while retraining jobs have low priority. This resource isolation can potentially improve execution time and provide more predictable performance.
 
 ### Concurrent scoring using PowerShell
 
@@ -213,10 +212,10 @@ However, depending on the algorithm you use, some models can be quite large, esp
 
 ## Articles in this series
 
-[Performance tuning for R – introduction](/r/sql-server-r-services-performance-tuning.md)
+[Performance tuning for R – introduction](../r/sql-server-r-services-performance-tuning.md)
 
-[Performance tuning for R - SQL Server configuration](/r/sql-server-configuration-r-services.md)
+[Performance tuning for R - SQL Server configuration](../r/sql-server-configuration-r-services.md)
 
-[Performance tuning for R - R code and data optimization](/r/r-and-data-optimization-r-services.md)
+[Performance tuning for R - R code and data optimization](../r/r-and-data-optimization-r-services.md)
 
-[Performance Tuning - case study results](/r/performance-case-study-r-services.md)
+[Performance Tuning - case study results](../r/performance-case-study-r-services.md)

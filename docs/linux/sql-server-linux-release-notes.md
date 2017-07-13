@@ -138,9 +138,6 @@ The following sections describe known issues with this release of SQL Server 201
 
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
-#### Always On Availability Group
-- `sys.fn_hadr_backup_is_preffered_replica` does not work for `CLUSTER_TYPE=NONE` or `CLUSTER_TYPE=EXTERNAL` because it relies on the WSFC-replicated cluster registry key which not available. We are working on providing a similar functionality through a different function. 
-
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
 

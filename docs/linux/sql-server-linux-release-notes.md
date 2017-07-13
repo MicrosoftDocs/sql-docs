@@ -140,7 +140,7 @@ The following sections describe known issues with this release of SQL Server 201
 
 #### <a name = "fci"></a>Shared disk cluster instance upgrade
 
-Upgrade of an existing shared disk cluster instance from CTP 2.1 to RC1 requires additional steps:
+In RC1 the cluster resource agent sets the virtual server name like it does in a Failover Cluster Instance on Windows. Prior to RC1 @@servername on a shared disk cluster returned the specific node name. After failover @@servername returned a different value. In RC1 the serverName of the shared disk cluster instance is updated with the resource name when the resource is added to the cluster. Because of this, upgrade of an existing shared disk cluster instance from CTP 2.1 to RC1 requires the following additional steps:
 
 1. Upgrade secondary (passive) cluster node first.
    - Upgrade **mssql-server** package.

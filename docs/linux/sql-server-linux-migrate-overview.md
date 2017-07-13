@@ -41,8 +41,7 @@ For a tutorial on migrating a database with backup and restore, see the followin
 
 It is also possible to export your database to a BACPAC file (a compressed file that contains your database schema and data). If you have a BACPAC file, you can transfer this file to your Linux machine and then import it to SQL Server. For more information, see the following topics:
 
-- [Export and import a database with sqlpackage](sql-server-linux-migrate-sqlpackage.md)
-- [Export and import a database with SSMS](sql-server-linux-migrate-ssms.md)
+- [Export and import a database with SSMS or SqlPackage.exe](sql-server-linux-migrate-ssms.md)
 
 ## Migrate from other database servers
 You can migrate databases on other database systems to SQL Server 2017 on Linux. This includes Microsoft Access, DB2, MySQL, Oracle, and Sybase databases. In this scenario, use the SQL Server Management Assistant (SSMA) to automate the migration to SQL Server on Linux. For more information, see [Use SSMA to migrate databases to SQL Server on Linux](sql-server-linux-migrate-ssma.md).  

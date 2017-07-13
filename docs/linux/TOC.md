@@ -39,8 +39,7 @@
 
 ## [Migrate](sql-server-linux-migrate-overview.md)
 ### [Restore from Windows](sql-server-linux-migrate-restore-database.md)
-### [Export and import a BACPAC with SqlPackage](sql-server-linux-migrate-sqlpackage.md)
-### [Export and import a BACPAC with SSMS](sql-server-linux-migrate-ssms.md)
+### [Export and import a BACPAC from Windows](sql-server-linux-migrate-ssms.md)
 ### [Migrate with SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
 ### [Bulk copy with bcp](sql-server-linux-migrate-bcp.md)
 ### [Load data with (SSIS)](sql-server-linux-migrate-ssis.md)

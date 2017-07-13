@@ -1,30 +1,26 @@
 ---
-title: SQL Server Unattended Install on Ubuntu | Microsoft Docs
+title: Unattended install for SQL Server on Ubuntu | Microsoft Docs
 description: SQL Server Script Sample - Unattended Install on Ubuntu
-services: sql-database
-documentationcenter: sql-database
 author: edmacauley
-manager: 
-editor: 
-tags: azure-service-management
-
-ms.assetid:
-ms.service: sql-database
-ms.custom: mvc
-ms.devlang: azurecli
-ms.topic: sample
-ms.tgt_pltfrm: sql-database
-ms.workload: database
-ms.date: 6/19/2017
 ms.author: edmacauley
+manager: jhubbard
+ms.date: 07/17/2017
+ms.topic: article
+ms.prod: sql-linux
+ms.technology: database-engine
 ---
+# Sample: Unattended SQL Server installation script for Ubuntu
 
-# Install SQL Server on Ubuntu
+This sample Bash script installs SQL Server 2017 CTP 2.1 on Ubuntu 16.04 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
-This sample Bash script installs SQL Server 2017 CTP 2.1 on Ubuntu 16.04 without interactive input.
+> [!TIP]
+> If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quick start tutorial for Ubuntu](quickstart-install-connect-ubuntu.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
-> [!NOTE]
-> You need at least 3.25 GB of memory to run SQL Server on Linux. Also, the file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported. For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+## Prerequisites
+
+- You need at least 3.25 GB of memory to run SQL Server on Linux.
+- The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
+- For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## Sample script
 
@@ -35,6 +31,11 @@ This sample Bash script installs SQL Server 2017 CTP 2.1 on Ubuntu 16.04 without
 
 # Password for the SA user (required)
 SA_PASSWORD='<YourStrong!Passw0rd>'
+
+# Product ID of the version of SQL server you're installing
+# Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
+# Defaults to developer
+MSSQL_PID='evaluation'
 
 # Install SQL Server Agent (recommended)
 SQL_INSTALL_AGENT='y'
@@ -67,7 +68,8 @@ sudo apt-get install -y mssql-server
 
 echo Running mssql-conf setup...
 sudo SA_PASSWORD=$SA_PASSWORD \
-  /opt/mssql/bin/mssql-conf -n setup accept-eula
+     MSSQL_PID=$MSSQL_PID \
+     /opt/mssql/bin/mssql-conf -n setup accept-eula
 
 echo Installing mssql-tools and unixODBC developer...
 sudo ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev
@@ -96,12 +98,12 @@ echo Configuring UFW to allow traffic on port 1433...
 sudo ufw allow 1433/tcp
 sudo ufw reload
 
-# Example of setting post-installation configuration options
-# Set trace flags 1204 and 1222 for deadlock tracing:
-echo Setting trace flags...
-sudo /opt/mssql/bin/mssql-conf traceflag 1204 1222 on
+# Optional example of post-installation configuration.
+# Trace flags 1204 and 1222 are for deadlock tracing.
+# echo Setting trace flags...
+# sudo /opt/mssql/bin/mssql-conf traceflag 1204 1222 on
 
-# Restart SQL Server after making configuration changes:
+# Restart SQL Server after installing:
 echo Restarting SQL Server...
 sudo systemctl restart mssql-server
 
@@ -111,7 +113,7 @@ errstatus=1
 while [ $counter -le 5 ] && [ $errstatus = 1 ]
 do
   echo Waiting for SQL Server to start...
-  sleep 5s
+  sleep 3s
   /opt/mssql-tools/bin/sqlcmd \
     -S localhost \
     -U SA \
@@ -142,16 +144,74 @@ fi
 echo Done!
 ```
 
+### Running the script
+
+To run the script
+
+1. Paste the sample into your favorite text editor and save it with a memorable name, like `install_sql.sh`.
+
+1. Customize `SA_PASSWORD`, `MSSQL_PID`, and any of the other variables you'd like to change.
+
+1. Mark the script as executable
+
+   ```bash
+   chmod +x install_sql.sh
+   ```
+
+1. Run the script
+
+   ```bash
+   ./install_sql.sh
+   ```
+
+### Understanding the script
+The first thing the Bash script does is set a few variables. These can be either scripting variables, like the sample, or environment variables. The variable ``` SA_PASSWORD ``` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
+
+1. Import the public Microsoft GPG keys.
+
+1. Register the Microsoft repositories for SQL Server and the command-line tools.
+
+1. Update the local repositories
+
+1. Install SQL Server
+
+1. Configure SQL Server with the ```SA_PASSWORD``` and automatically accept the End-User License Agreement.
+
+1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the unixodbc-dev package.
+
+1. Add the SQL Server command-line tools to the path for ease of use.
+
+1. Install the SQL Server Agent if the scripting variable ```SQL_INSTALL_AGENT``` is set, on by default.
+
+1. Optionally install SQL Server Full-Text search, if the variable ```SQL_INSTALL_FULLTEXT``` is set.
+
+1. Unblock port 1433 for TCP on the system firewall, necessary to connect to SQL Server from another system.
+
+1. Optionally set trace flags for deadlock tracing. (requires uncommenting the lines)
+
+1. SQL Server is now installed, to make it operational, restart the process.
+
+1. Verify that SQL Server is installed correctly, while hiding any error messages.
+
+1. Create a new server administrator user if ```SQL_INSTALL_USER``` and ```SQL_INSTALL_USER_PASSWORD``` are both set.
+
 ## Next steps
 
-Simplify your unattended installs by creating a Bash script that sets the proper environment variables, instead of doing it inline.
+Simplify multiple unattended installs and create a stand-alone Bash script that sets the proper environment variables. You can remove any of the variables the sample script uses and put them in their own Bash script.
 
 ```bash
 #!/bin/bash
 export SA_PASSWORD='<YourStrong!Passw0rd>'
+export MSSQL_PID='evaluation'
 export SQL_INSTALL_AGENT='y'
 export SQL_INSTALL_USER='<Username>'
 export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
+export SQL_INSTALL_AGENT='y'
+```
+
+Then run the Bash script as follows:
+```bash
+. ./my_script_name.sh
 ```
 
 For more information about SQL Server on Linux, see [SQL Server on Linux overview](sql-server-linux-overview.md).

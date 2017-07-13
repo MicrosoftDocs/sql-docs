@@ -53,7 +53,7 @@ You can use several different environment variables to configure SQL Server 2017
 
 ## Example: initial setup
 
-The following example runs **mssql-conf setup** without prompts (`-n`). This mode looks for environment variables to use for configuration. The following environment variables are specified:
+This example runs `mssql-conf setup` without prompts (`-n`). This mode looks for environment variables to use for configuration. The following environment variables are specified:
 
 - **ACCEPT_EULA** accepts the end user license agreement.
 - **MSSSQL_PID** specifies the freely licensed Developer Edition of SQL Server for non-production use.
@@ -66,7 +66,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' SA_PASSWORD='<YourStrong!Passw0rd>' M
 
 ## Example: Docker
 
-The following example docker command uses the following environment variables to create a new SQL Server 2017 container:
+This example docker command uses the following environment variables to create a new SQL Server 2017 container:
 
 - **ACCEPT_EULA** accepts the end user license agreement.
 - **MSSSQL_PID** specifies the freely licensed Developer Edition of SQL Server for non-production use.

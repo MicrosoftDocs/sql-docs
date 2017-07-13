@@ -16,25 +16,24 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # What's new in SQL Server 2017
-SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas in the most recent SQL Server 2017 Release Candidate (RC0, June 2017) and Community Technical Preview (CTP) releases.
+SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas in the most recent SQL Server 2017 Release Candidate (RC1, July 2017) and Community Technical Preview (CTP) releases.
 
 **Try it out:** [Download the SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)
 
 >[!TIP]
 >**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/) and [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
 
-## Latest release  
-**SQL Server 2017 Release Candidate** (RC1, July 2017)
+## Latest release: SQL Server 2017 Release Candidate (RC1, July 2017)
 
 ### SQL Server Database Engine    
-- CLR assemblies can now be added to a whitelist, as a work-around for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies.  
+- CLR assemblies can now be added to a whitelist, as a workaround for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies.  
 
 ### SQL Server Integration Services (SSIS)
-The new **Scale Out** feature in SSIS has the following new and changed features in RC1. For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
--   Scale Out Master now supports high availability
--   The failover handling of the execution logs from Scale Out Workers is improved.
--   The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
--   The SSIS Catalog has a new global property to specify the default mode for executing SSIS packages.
+- The new **Scale Out** feature in SSIS has the following new and changed features in RC1. For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
+    -   Scale Out Master now supports high availability.
+    -   The failover handling of the execution logs from Scale Out Workers is improved.
+    -   The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
+    -   The SSIS Catalog has a new global property to specify the default mode for executing SSIS packages.
 
 ## SQL Server Database Engine  
 SQL Server 2017 includes many new Database Engine features, enhancements, and performance improvements. 

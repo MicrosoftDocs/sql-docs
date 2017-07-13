@@ -61,13 +61,13 @@ The following steps increase the memory for Docker for Windows to 4 GB.
 1. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS):
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 -d microsoft/mssql-server-linux
+    docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
     ```
 
     If you are using Docker for Windows, use the following command from an elevated PowerShell command-prompt:
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 -d microsoft/mssql-server-linux
+    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
     ```
 
     > [!NOTE]
@@ -80,6 +80,7 @@ The following steps increase the memory for Docker for Windows to 4 GB.
     | **-e 'ACCEPT_EULA=Y'** |  Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the [End-User Licensing Agreement](http://go.microsoft.com/fwlink/?LinkId=746388). Required setting for the SQL Server image. |
     | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Specify your own strong password that is at least 8 characters and meets [SQL Server's password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
     | **-e 'MSSQL_PID=Developer'** | Specifies the edition or product key. In this example, the freely licensed Developer Edition is used for non-production testing. For other values, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md). |
+    | **--cap-add SYS_PTRACE** | Adds the Linux capability to trace a process. This enables SQL Server to generate dumps on an exception. |
     | **-p 1401:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1401, on the host. |
     | **microsoft/mssql-server-linux** | The SQL Server Linux container image. Unless otherwise specified, this defaults to the **latest** image. |
 
@@ -93,7 +94,7 @@ The following steps increase the memory for Docker for Windows to 4 GB.
 
     ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting](#troubleshooting) section.
+1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
 
 ## Change the SA password
 
@@ -238,4 +239,6 @@ Other common tools to connect to SQL Server include:
 
 ## Next steps
 
-Check out the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues.
+To explore other scenarios, such as running multiple containers, data persistence, and troublehshooting, see [Configure SQL Server 2017 container images on Docker](sql-server-linux-configure-docker.md).
+
+Also, check out the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues.

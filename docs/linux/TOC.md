@@ -22,7 +22,7 @@
 ## Configure
 ### [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
 ### [Environment variables](sql-server-linux-configure-environment-variables.md)
-### [Docker](sql-server-linux-setup-docker.md)
+### [Docker](sql-server-linux-configure-docker.md)
 ### [Customer Feedback](sql-server-linux-customer-feedback.md)
 
 ## [Develop](sql-server-linux-develop-overview.md)

@@ -1,6 +1,6 @@
 # [ODBC Appendixes](odbc-appendixes.md)
 
-# Appenndixes
+# Appendixes
 ## [Appendix A: ODBC Error Codes](appendix-a-odbc-error-codes.md)
 ## [Appendix B: ODBC State Transition Tables](appendix-b-odbc-state-transition-tables.md)
 ## [Appendix C: SQL Grammar](appendix-c-sql-grammar.md)

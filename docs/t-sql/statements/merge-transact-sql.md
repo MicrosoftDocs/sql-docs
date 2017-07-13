@@ -1,7 +1,7 @@
 ---
 title: "MERGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/12/2017"
+ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -174,7 +174,7 @@ SET
  Is the name of the schema to which *target_table* belongs.  
   
  *target_table*  
- Is the table or view against which the data rows from <table_source> are matched based on <clause_search_condition>. *target_table* is the target of any insert, update, or delete operations specified by the WHEN clauses of the MERGE statement.  
+ Is the table or view against which the data rows from \<table_source> are matched based on \<clause_search_condition>. *target_table* is the target of any insert, update, or delete operations specified by the WHEN clauses of the MERGE statement.  
   
  If *target_table* is a view, any actions against it must satisfy the conditions for updating views. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   
@@ -184,7 +184,7 @@ SET
  Is an alternative name used to reference a table.  
   
  USING \<table_source>  
- Specifies the data source that is matched with the data rows in *target_table* based on <merge_search condition>. The result of this match dictates the actions to take by the WHEN clauses of the MERGE statement. <table_source> can be a remote table or a derived table that accesses remote tables.  
+ Specifies the data source that is matched with the data rows in *target_table* based on \<merge_search condition>. The result of this match dictates the actions to take by the WHEN clauses of the MERGE statement. <table_source> can be a remote table or a derived table that accesses remote tables.  
   
  \<table_source> can be a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to construct a table by specifying multiple rows.  
   

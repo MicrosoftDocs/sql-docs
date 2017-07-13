@@ -1906,7 +1906,12 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/sql-hub-menu.md",
+            "source_path": "docs/sql-hub-menu.md",
+            "redirect_url": "/sql/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/microsoft-sql-documentation-table-of-contents.md",
             "redirect_url": "/sql/index",
             "redirect_document_id": false
         },
@@ -1921,7 +1926,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/microsoft-sql-documentation-table-of-contents.md",
+            "source_path": "docs/whitepapers/microsoft-white-papers.md",
             "redirect_url": "/sql/index",
             "redirect_document_id": false
         }

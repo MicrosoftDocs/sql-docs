@@ -1,5 +1,5 @@
 ---
-title: "Automatic Seeding for Secondary Replicas (SQL Server) | Microsoft Docs"
+title: "Automatic seeding for secondary replicas (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2017"
 ms.prod: "sql-server-2016"
@@ -87,6 +87,7 @@ Setting SEEDING_MODE on a primary replica during a CREATE AVAILABILITY GROUP sta
 On an instance that becomes a secondary replica, once the instance is joined the following message is added to the SQL Server Log:
 
 Local availability replica for availability group 'AGName' has not been granted permission to create databases, but has a SEEDING_MODE of AUTOMATIC. Use the ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE command to allow the creation of databases seeded by the primary availability replica.
+
 After joining, issue the following statement:
 
 ```
@@ -94,7 +95,8 @@ ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE
  GO
 ````
 
-[!NOTE] There is currently a known issue as of SQL Server 2016 SP1 CU2 where a secondary replica must wait three minutes to allow the AG to seed the database before executing an ALTER AVAILABILITY GROUP... statement. Before that time elapses, the statement will not return an error, rather it will indicate success. This is also a known issue. These issues will be fixed in a future update to SQL Server. As a workaround, insert a WAITFOR statement:
+> [!NOTE] 
+> There is currently a known issue as of SQL Server 2016 SP1 CU2 where a secondary replica must wait three minutes to allow the AG to seed the database before executing an ALTER AVAILABILITY GROUP... statement. Before that time elapses, the statement will not return an error, rather it will indicate success. This is also a known issue. These issues will be fixed in a future update to SQL Server. As a workaround, insert a WAITFOR statement:
 
 ```
 WAITFOR DELAY '00:03:15';
@@ -114,7 +116,7 @@ In addition to the [Dynamic Management Views](#dynamic-management-views) describ
 
 ## Combine backup and restore with automatic seeding
 
-It is possible to combine the traditional backup, copy, and restore with automatic seeding. In this case, first restore the database on a secondary replica including all available transaction logs. Next, enable automatic seeding when creating the availability group to "catch up" the secondary replica’s database, as if a tail-log backup were restored (see [Tail-Log Backups (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
+It is possible to combine the traditional backup, copy, and restore with automatic seeding. In this case, first restore the database on a secondary replica including all available transaction logs. Next, enable automatic seeding when creating the availability group to "catch up" the secondary replica’s database, as if a tail-log backup were restored (see [Tail-Log Backups (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
 
 ## Add a database to an availability group with automatic seeding
 
@@ -207,7 +209,7 @@ The following table lists extended events related to automatic seeding.
 |hadr_automatic_seeding_failure|Occurs when an automatic seeding operation fails.|
 |hadr_automatic_seeding_timeout|Occurs when an automatic seeding operation times out.|
 
-## See Also
+## See also
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 
@@ -215,7 +217,7 @@ The following table lists extended events related to automatic seeding.
 
 [Always On Availability Groups Troubleshooting and Monitoring Guide](http://technet.microsoft.com/library/dn135328.aspx)
 
->This content written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
+> This content written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

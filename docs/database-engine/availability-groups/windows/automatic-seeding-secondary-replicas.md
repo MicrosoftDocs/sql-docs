@@ -1,5 +1,7 @@
 ---
 title: "Automatic seeding for secondary replicas (SQL Server) | Microsoft Docs"
+description: "Use automatic seeding to initialize secondary replicas."
+services: data-lake-analytics
 ms.custom: ""
 ms.date: "06/22/2017"
 ms.prod: "sql-server-2016"
@@ -60,7 +62,7 @@ Security permissions vary depending on the type of replica being initialized:
 
 ## Create an availability group with automatic seeding
 
-You create an availability group using automatic seeding with either Transact-SQL or SQL Server Management Studio (SSMS, version 17 or later). To use the Availability Group Wizard in SSMS, follow [these instructions](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) - when you get to Step 9, you will see automatic seeding as the first, and default, option.
+You create an availability group using automatic seeding with either Transact-SQL or SQL Server Management Studio (SSMS, version 17 or later). To use the Availability Group Wizard in SSMS, follow [these instructions](use-the-availability-group-wizard-sql-server-management-studio.md) - when you get to Step 9, you will see automatic seeding as the first, and default, option.
 
 ![Select initial data synchronization][1]
 
@@ -116,7 +118,7 @@ In addition to the [Dynamic Management Views](#dynamic-management-views) describ
 
 ## Combine backup and restore with automatic seeding
 
-It is possible to combine the traditional backup, copy, and restore with automatic seeding. In this case, first restore the database on a secondary replica including all available transaction logs. Next, enable automatic seeding when creating the availability group to "catch up" the secondary replica’s database, as if a tail-log backup were restored (see [Tail-Log Backups (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
+It is possible to combine the traditional backup, copy, and restore with automatic seeding. In this case, first restore the database on a secondary replica including all available transaction logs. Next, enable automatic seeding when creating the availability group to "catch up" the secondary replica’s database, as if a tail-log backup were restored (see [Tail-Log Backups (SQL Server)](../../../relational-databases/backup-restore/tail-log-backups-sql-server.md)).
 
 ## Add a database to an availability group with automatic seeding
 

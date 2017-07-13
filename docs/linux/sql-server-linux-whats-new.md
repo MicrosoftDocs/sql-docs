@@ -26,6 +26,8 @@ The RC1 release contains the following improvements and fixes:
 - Enabled [Windows Authentication](sql-server-linux-active-directory-authentication.md).
 - Enabled [DB Mail](../relational-databases/database-mail/database-mail.md).
 - Added IPV6 support.
+- Added environment variables for initial SQL Server setup. For more information, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+- Removed **sqlpackage** from installed binaries. SqlPackage can still be run against Linux remotely from Windows.
 
 ## CTP 2.1
 

@@ -1,7 +1,7 @@
 ---
 title: "Azure Active Directory | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/10/2017"
+ms.date: "07/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,26 +11,32 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords:
   - ""
-ms.assetid:
 caps.latest.revision: 1
-author: ""
-ms.author: ""
-manager: ""
+author: "david-puglielli"
+ms.author: "v-dapugl"
+manager: "v-hakaka"
 ---
 # Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) is a central user ID management technology that operates as an alternative to [SQL Server authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD allows connections to Microsoft Azure SQL Database and SQL Data Warehouse with federated identities in Azure AD using a username and password, Windows Integrated Authentication, or an Azure AD access token; the PHP drivers for SQL Server offer partial support for these features.
 
-To use Azure AD, use the **Authentication** keyword. This keyword can take on two values: **SqlPassword** and **ActiveDirectoryPassword**. To connect to a SQL Server instance (which may be an Azure instance), set **Authentication** to **SqlPassword**. To connect to an Azure SQL database using an Azure AD account username and password, set **Authentication** to **ActiveDirectoryPassword** in the connection string.
+To use Azure AD, use the **Authentication** keyword. By default it is not set -- see the table below for details.
 
-When using the **Authentication** keyword, the username and password must be passed into the connection string using the **UID** and **PWD** keywords. By default, the **Encrypt** keyword is set to true, so the client will request encryption; moreover, the server certificate will be validated irrespective of the encryption setting unless **TrustServerCertificate** is set to true. This is distinguished from the old, and less secure, login method, in which the server certificate is not validated unless encryption is specifically requested in the connection string.
+|Values for **Authentication**|Description|
+|-|-|
+|(not set)|Authentication mode determined by other keywords (existing legacy connection options). |
+| (empty string)| Connection string only. Override and unset an `Authentication` value set in the DSN.|
+|`SqlPassword`|Directly authenticate to a SQL Server instance (which may be an Azure instance) using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
+| `ActiveDirectoryPassword`|Authenticate with an Azure Active Directory identity using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
 
-Before using Azure AD with the PHP drivers for SQL Server, ensure that you have installed the [Active Directory Authentication Library for SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=48742) and the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/en-ca/download/details.aspx?id=41950).
+The **Authentication** keyword affects the connection security settings. If it is set in the connection string, then by default the **Encrypt** keyword is set to true, so the client will request encryption. Moreover, the server certificate will be validated irrespective of the encryption setting unless **TrustServerCertificate** is set to true. This is distinguished from the old, and less secure, login method, in which the server certificate is not validated unless encryption is specifically requested in the connection string.
+
+Before using Azure AD with the PHP drivers for SQL Server on Windows, ensure that you have installed the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/en-ca/download/details.aspx?id=41950) (not required for Linux and MacOS).
 
 #### Limitations
 
-On Windows, the underlying ODBC driver supports a third value for the **Authentication** keyword, **ActiveDirectoryIntegrated**, but the PHP drivers do not support this value on any platform and hence also do not support Azure AD token-based authentication.
+On Windows, the underlying ODBC driver supports one more value for the **Authentication** keyword, **ActiveDirectoryIntegrated**, but the PHP drivers do not support this value on any platform and hence also do not support Azure AD token-based authentication.
 
 ## Example
 

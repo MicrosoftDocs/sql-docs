@@ -1,7 +1,7 @@
 ---
-title: "Connection Resiliency | Microsoft Docs"
+title: "Idle Connection Resiliency"
 ms.custom: ""
-ms.date: "07/10/2017"
+ms.date: "07/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,11 +11,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords:
   - ""
-ms.assetid:
 caps.latest.revision: 1
-author: ""
-ms.author: ""
-manager: ""
+author: "david-puglielli"
+ms.author: "v-dapugl"
+manager: "v-hakaka"
 ---
 ## Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,8 +23,10 @@ manager: ""
 
 Connection resiliency is implemented with two connection keywords that can be added to connection strings: **ConnectRetryCount** and **ConnectRetryInterval**.
 
-* **ConnectRetryCount** refers to the maximum number of times an attempt to reestablish a broken connection is made before giving up. This is an integer between 0 and 255 (inclusive). The default value is 1, i.e., a single attempt is made to reestablish a connection when broken. A value of 0 means that no reconnection will be attempted.
-* **ConnectRetryInterval** refers to the time between attempts to reestablish a connection. This is an integer that varies from 1 second to 60 seconds (inclusive). The default is 1, but note that the application will attempt to reconnect immediately upon detecting a broken connection, and will then wait **ConnectRetryInterval** seconds before trying again. This keyword is ignored if **ConnectRetryCount** is equal to 0.
+|Name|Values|Default|Description|
+|-|-|-|-|
+|**ConnectRetryCount**| Integer between 0 and 255 (inclusive)|1|The maximum number of attempts to reestablish a broken connection before giving up. By default, a single attempt is made to reestablish a connection when broken. A value of 0 means that no reconnection will be attempted.|
+|**ConnectRetryInterval**| Integer between 1 and 60 (inclusive)|1| The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait **ConnectRetryInterval** seconds before trying again. This keyword is ignored if **ConnectRetryCount** is equal to 0.
 
 If **ConnectRetryCount*ConnectRetryInterval** is larger than **LoginTimeout**, then the client will cease attempting to connect once **LoginTimeout** is reached; otherwise, it will continue to try to reconnect until **ConnectRetryCount** is reached.
 
@@ -45,6 +46,8 @@ Connection resiliency applies when the connection is idle. Failures that occur w
 ## Example
 
 The following code connects to a database and executes a query. The connection is interrupted by killing the session and a new query is attempted using the broken connection. This example uses the [AdventureWorks](https://msdn.microsoft.com/en-us/library/ms124501%28v=sql.100%29.aspx) sample database.
+
+In this example, we specify a buffered cursor before breaking the connection. If we do not specify a buffered cursor, the connection would not be reestablished because there would be an active server-side cursor and thus the connection would not be idle when broken. However, in that case we could call sqlsrv_free_stmt() before breaking the connection to vacate the cursor, and the connection would be successfully reestablished.
 
 ```php
 <?php
@@ -126,7 +129,6 @@ Statement 1 successful.
 Statement 2 successful.
 16 rows in result set.
 ```
-In this example, if we had not specified a buffered cursor, the connection would not have been reestablished because there would have been an active server-side cursor and thus the connection would not have been idle when broken. However, in that case we could have called sqlsrv_free_stmt() before breaking the connection to vacate the cursor, and the connection would have been successfully reestablished.
 
 ## See Also
 [Connection Resiliency in the Windows ODBC Driver](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

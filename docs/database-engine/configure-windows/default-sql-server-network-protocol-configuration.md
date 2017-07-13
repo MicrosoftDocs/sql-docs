@@ -1,7 +1,7 @@
 ---
 title: "Default SQL Server Network Protocol Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2016"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Default SQL Server Network Protocol Configuration
-To enhance security, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] disables network connectivity for some new installations. Network connectivity using TCP/IP is not disabled if you are using the Enterprise, Standard, or Workgroup edition or if a previous installation of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is present. For all installations, shared memory protocol is enabled to allow local connections to the server. The [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service might be stopped, depending on installation conditions and installation options.
+To enhance security, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] disables network connectivity for some new installations. Network connectivity using TCP/IP is not disabled if you are using the Enterprise, Standard, Evaluation, or Workgroup edition, or if a previous installation of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is present. For all installations, shared memory protocol is enabled to allow local connections to the server. The [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service might be stopped, depending on installation conditions and installation options.
 
 Use the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Network Configuration node of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuration Manager to configure the network protocols after installation. Use the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Services node of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuration Manager to configure the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service to start automatically. For more information, see [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -34,14 +34,14 @@ Enterprise	| New installation	| Enabled	| Enabled	| Disabled for network connect
 Standard	| New installation	| Enabled	| Enabled	| Disabled for network connections.
 Web	| New installation	| Enabled	| Enabled	| Disabled for network connections.
 Developer	| New installation	| Enabled	| Disabled	| Disabled for network connections.
-Evaluation	| New installation	| Enabled	| Disabled	| Disabled for network connections.
+Evaluation	| New installation	| Enabled	| Enabled	| Disabled for network connections.
 SQL Server Express	| New installation	| Enabled	| Disabled	| Disabled for network connections.
 All editions	| Previous installation is present but is not being upgraded.	| Same as new installation	| Same as new installation	| Same as new installation
 All editions	| Upgrade	| Enabled	| Settings from the previous installation are preserved.	| Settings from the previous installation are preserved.
 
 
 >[!NOTE]
-> If the instance is running on a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] failover cluster, it will listen on those ports on each IP address selected for [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] during [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] setup.
+> If the instance is running on a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] failover cluster, it listens on those ports on each IP address selected for [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] during [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] setup.
  
 >[!NOTE]
 > When you are installing [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] with command-prompt arguments, you can specify the protocols to enable by using the `TCPENABLED` and `NPENABLED` parameters. For more information, see [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
@@ -59,7 +59,7 @@ See the following topics for samples of connection strings:
 The [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service can be configured to start automatically during setup. The default is to start automatically under the following conditions:
 
 * When upgrading an installation.
-* When installing side-by-side with another instance of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+* When installing side by side with another instance of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 * When installing on a cluster.
 * When installing a named instance of the Database Engine including all instances of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Express.
 * When installing a named instance of Analysis Services.

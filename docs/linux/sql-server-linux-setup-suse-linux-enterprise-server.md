@@ -28,7 +28,7 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 This topic provides a walkthrough of how to install SQL Server 2017 CTP 2.1 on SUSE Linux Enterprise Server (SLES) v12 SP2.
 
 > [!NOTE]
-> You need at least 3.25GB of memory to run SQL Server on Linux. Also, the file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported. For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+> You need at least 3.25 GB of memory to run SQL Server on Linux. Also, the file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported. For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## Install SQL Server
 To install the **mssql-server** package on SLES, follow these steps:
@@ -40,26 +40,32 @@ To install the **mssql-server** package on SLES, follow these steps:
 
    sudo zypper --gpg-auto-import-keys refresh
    ```
+
+2. Run the following command to add the SLES v12 SP2 SDK repository to obtain the libsss_nss_idmap0 dependency.
    
-2. Run the following commands to install SQL Server:
+   ```bash
+   sudo SUSEConnect -p sle-sdk/12.2/x86_64
+   ```
+   
+3. Run the following command to install SQL Server:
 
    ```bash
    sudo zypper install mssql-server
    ```
    
-3. After the package installation finishes, run **mssql-conf setup** and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+4. After the package installation finishes, run **mssql-conf setup** and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-4. Once the configuration is done, verify that the service is running:
+5. Once the configuration is done, verify that the service is running:
 
    ```bash
    systemctl status mssql-server
    ```
  
-5. To allow remote connections, you may need to open the SQL Server TCP port on your firewall. The default SQL Server port is 1433.
+6. To allow remote connections, you may need to open the SQL Server TCP port on your firewall. The default SQL Server port is 1433.
 
 ## Upgrade SQL Server
 
@@ -69,7 +75,7 @@ To upgrade the **mssql-server** package on SLES, execute the following command:
    sudo zypper update mssql-server
    ```
 
-These commands will download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases will not be affected by this operation. 
+These commands download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases are not affected by this operation. 
 
 ## Uninstall SQL Server
 
@@ -80,7 +86,7 @@ To remove the **mssql-server** package on SLES, follow these steps:
    sudo zypper remove mssql-server
    ```
 
-2. Removing the package will not delete the generated database files. If you want to delete the database files use the following command:
+2. Removing the package will not delete the generated database files. If you want to delete the database files, use the following command:
    ```bash
    sudo rm -rf /var/opt/mssql/
    ```

@@ -1,7 +1,7 @@
 ---
 title: "time (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,6 +30,9 @@ manager: "jhubbard"
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Defines a time of a day. The time is without time zone awareness and is based on a 24-hour clock.  
+  
+  > [!NOTE]  
+  > Informatica information is provided for PDW customers using the Informatica Connector. 
   
 ## time Description  
   

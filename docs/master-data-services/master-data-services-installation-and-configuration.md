@@ -70,7 +70,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
      ![Icon for the Server Manager in Windows Server 2012 taskbar](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Icon for the Server Manager in Windows Server 2012 taskbar")  
   
 5.  In **Server Manager**, click, **Add Roles and Features** on the **Manage** menu.  
-  
+   
      ![In Server Manage, the Add Roles and Features menu command](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "In Server Manage, the Add Roles and Features menu command")  
   
 6.  On the **Installation Type** page of the **Add Roles and Features Wizard**, accept the default value (**Role-based or feature-based installation**) and click **Next**.  
@@ -95,7 +95,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
     > [!WARNING]  
     >  Do not install the WebDAV Publishing role service. WebDAV Publishing is not compatible with [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-    |Role Services|Role Services|  
+     |Role Services|Role Services|  
     |-----------------------------|-----------------------------|  
     |![mds_AddRolesFeaturesWizard_RoleServicesPage](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_PerformSecurity](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-performsecurity.png)|  
     |![mds_AddRolesFeaturesWizard_RoleServicesPage_AppDevsection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-appdevsection.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_ManageToolssection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-managetoolssection.png)|  
@@ -190,7 +190,8 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
      
 15. Click **Apply**. The **Configuration Complete** message box displays. Click **OK** in the message box to launch the web application. The web site address is http://*server name*/*web application*/. 
 
-    ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
+
+![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
   
      For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
@@ -231,7 +232,11 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
     >  `MDSModelDeploy listservices`  
     >   
     >  The first service value in the list of values returned, is the one you specify to deploy a model.  
-  
+    >
+    > [!NOTE]
+    > In order to know more about the metadata information of the sample models, please refer to the readme file available at this  location "c:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration"
+    >
+   
      **To deploy the chartofaccounts_en.pkg sample model**  
   
     ```  

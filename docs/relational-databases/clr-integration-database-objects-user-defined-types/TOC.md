@@ -1,7 +1,7 @@
+# [CLR User-Defined Types](clr-user-defined-types.md)
 # [Accessing User-Defined Types - Retrieving UDT Data](accessing-user-defined-types-retrieving-udt-data.md)
 # [Accessing User-Defined Types - Updating UDT Columns with DataAdapters](accessing-user-defined-types-updating-udt-columns-with-dataadapters.md)
 # [Accessing User-Defined Types in ADO.NET](accessing-user-defined-types-in-ado-net.md)
-# [CLR User-Defined Types](clr-user-defined-types.md)
 # [Creating User-Defined Types - Coding](creating-user-defined-types-coding.md)
 # [Creating User-Defined Types - Requirements](creating-user-defined-types-requirements.md)
 # [Creating User-Defined Types](creating-user-defined-types.md)

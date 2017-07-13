@@ -55,7 +55,7 @@ If the source data contains control characters, the **FOR JSON** clause encodes 
   
  Query:  
   
-```tsql  
+```sql  
 SELECT  
   'VALUE\    /  
   "' as [KEY\/"],  
@@ -75,6 +75,9 @@ FOR JSON PATH
 	"31": "\u001f"
 }
 ```  
+
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
   
 ## See Also  
  [Format Query Results as JSON with FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  

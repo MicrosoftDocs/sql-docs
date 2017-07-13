@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 caps.latest.revision: 37
 author: "sabotta"
-ms.author: "carlasab"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Report Server Namespace Management Methods

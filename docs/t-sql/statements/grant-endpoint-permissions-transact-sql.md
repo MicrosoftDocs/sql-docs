@@ -1,7 +1,7 @@
 ---
 title: "GRANT Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,17 +26,13 @@ manager: "jhubbard"
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Grants permissions on an endpoint.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name  
         TO < server_principal >  [ ,...n ]  
     [ WITH GRANT OPTION ]  
@@ -56,7 +52,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  ON ENDPOINT **::***endpoint_name*  
  Specifies the endpoint on which the permission is being granted. The scope qualifier (**::**) is required.  
   
- TO <server_principal>  
+ TO \<server_principal>  
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to which the permission is being granted.  
   
  *SQL_Server_login*  

@@ -1,7 +1,7 @@
 ---
 title: "sys.check_constraints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "06/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sys.check_constraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contains a row for each object that is a CHECK constraint, with **sys.objects.type** = 'C'.  
   

@@ -9,6 +9,8 @@ ms.technology:
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
 ms.topic: "reference"
+f1_keywords: 
+  - "sql13.swb.connecttoserver.options.registeredservers.f1"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], connection string keywords"
   - "SQLNCLI, connection string keywords"

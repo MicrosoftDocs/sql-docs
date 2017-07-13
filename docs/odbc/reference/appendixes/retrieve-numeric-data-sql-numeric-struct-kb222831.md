@@ -1,5 +1,5 @@
 ---
-title: "Retrieve Numeric Data with SQL_NUMERIC_STRUCT | Microsoft Docs" 
+title: "Retrieve numeric data with SQL_NUMERIC_STRUCT | Microsoft Docs" 
 description: "C/C++ using ODBC retrieves the SQL Server numeric data type by using SQL_NUMERIC_STRUCT, related to SQL_C_NUMERIC."
 services: "sql-database"
 documentationCenter: ""
@@ -13,10 +13,10 @@ ms.topic: "article"
 ms.custom: ""
 ms.tgt_pltfrm: "NA"
 ms.workload: "NA"
-ms.date: "07/12/2017"
+ms.date: "07/13/2017"
 ms.author: "genemi"
 ---
-# How To: Retrieve Numeric Data with SQL\_NUMERIC\_STRUCT
+# Retrieve numeric data with SQL\_NUMERIC\_STRUCT
 
 This article describes how to retrieve numeric data from the SQL Server ODBC driver into a numeric structure. It also describes how to get the correct values using specific precision and scale values.
 
@@ -27,7 +27,7 @@ The C buffer that is used has the type definition of **SQL\_NUMERIC\_STRUCT**. T
 The article [C Data Types](c-data-types.md) provides more information about the format and use of SQL\_NUMERIC\_STRUCT. Generally the [Appendix D](appendix-d-data-types.md) of the ODBC 3.0 Programmer's Reference discusses data types.
 
 
-## SQL\_NUMERIC\_STRUCT Overview
+## SQL\_NUMERIC\_STRUCT overview
 
 
 The SQL\_NUMERIC\_STRUCT is defined in the sqltypes.h header file as follows:
@@ -49,7 +49,7 @@ The precision and scale fields of the numeric structure are never used for input
 
 The driver uses the default precision (driver-defined) and default scale (0) whenever returning data to the application. Unless the application specifies values for precision and scale, the driver assumes the default and truncates the decimal portion of the numeric data.
 
-## SQL\_NUMERIC\_STRUCT Code Sample
+## SQL\_NUMERIC\_STRUCT code sample
 
 This code sample shows you how to:
 
@@ -212,7 +212,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ```
 
 
-### Interim Results:
+### Interim results:
 
 
 ```
@@ -261,7 +261,7 @@ long strtohextoval()
 ```
 
 
-### Applies To Versions
+### Applies to versions
 
 
 The preceding information about SQL\_NUMERIC\_STRUCT applies to the following product versions:
@@ -273,7 +273,7 @@ The preceding information about SQL\_NUMERIC\_STRUCT applies to the following pr
 - Microsoft Data Access Components 2.7
 
 
-## SQL\_C\_NUMERIC Overview
+## SQL\_C\_NUMERIC overview
 
 
 The following sample program illustrates the use of SQL\_C\_NUMERIC, by inserting 123.45 into a table. In the table, the column is defined as a numeric or a decimal, with precision 5, and with scale 2.

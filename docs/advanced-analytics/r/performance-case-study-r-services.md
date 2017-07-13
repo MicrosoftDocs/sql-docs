@@ -379,9 +379,9 @@ The following are links to information, tools, and scripts used in the developme
 
 + [Introducing Resource Governor](https://technet.microsoft.com/library/bb895232.aspx)
 
-+ [Resource Governance for R Services](../r/resource-governance-for-r-services)
++ [Resource Governance for R Services](resource-governance-for-r-services)
 
-+ [How to Create a resource pool for R](../r/how-to-create-a-resource-pool-for-r)
++ [How to Create a resource pool for R](how-to-create-a-resource-pool-for-r)
 
 + [An example of configuring Resource Governor](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
@@ -394,10 +394,10 @@ The following are links to information, tools, and scripts used in the developme
 
 ## Other articles in this series
 
-[Performance tuning for R – introduction](../r/sql-server-r-services-performance-tuning.md)
+[Performance tuning for R – introduction](sql-server-r-services-performance-tuning.md)
 
-[Performance tuning for R - SQL Server configuration](../r/sql-server-configuration-r-services.md)
+[Performance tuning for R - SQL Server configuration](sql-server-configuration-r-services.md)
 
-[Performance tuning for R - R code and data optimization](../r/r-and-data-optimization-r-services.md)
+[Performance tuning for R - R code and data optimization](r-and-data-optimization-r-services.md)
 
-[Performance Tuning - case study results](../r/performance-case-study-r-services.md)
+[Performance Tuning - case study results](performance-case-study-r-services.md)

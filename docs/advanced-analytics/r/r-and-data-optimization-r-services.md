@@ -25,7 +25,7 @@ In SQL Server 2016 and 2017, you can use either the **local** or **SQL** compute
 
 When using the **local** compute context, analysis is performed on your computer and not on the server. Therefore, if you are getting data from SQL Server to use in your code, the data must be fetched over the network. The performance hit incurred for this network transfer depends on the size of the data transferred, speed of the network, and other network transfers occurring at the same time.
 
-When using the **SQL Server compute context**, the code is executed inside [!INCLUDE[ssNoVersion_md](..\includes\ssnoversion-md.md)]. If you are getting data from SQL Server, the data should be local to the server running the analysis, and therefore no network overhead is introduced. If you need to import data from other sources, consider arranging ETL beforehand.
+When using the **SQL Server compute context**, the code is executed on the server. If you are getting data from SQL Server, the data should be local to the server running the analysis, and therefore no network overhead is introduced. If you need to import data from other sources, consider arranging ETL beforehand.
 
 When working with large data sets, you should always use the SQL compute context.
 
@@ -84,10 +84,7 @@ There are two ways to achieve parallelization with R in SQL Server:
     parallelized, then the database engine will create multiple parallel processes. The maximum number of processes that can be created is equal to the **max degree of parallelism** (MAXDOP)
     setting for the instance. All processes then run the same script, but receive only a portion of the data.
     
-    Thus, this method is not useful with scripts that must see all the data, such as when training a model. However, it is useful when performing tasks such as batch prediction in parallel. For more information on using parallelism with
-    [sp_execute_external_script](..\..\relational-databases\system-stored-procedures\sp-execute-external-script-transact-sql.md),
-    see the **Advanced tips: parallel processing** section of [Using R Code in
-    Transact-SQL](\tutorials\rtsql-using-r-code-in-transact-sql-quickstart.md).
+    Thus, this method is not useful with scripts that must see all the data, such as when training a model. However, it is useful when performing tasks such as batch prediction in parallel. For more information on using parallelism with `sp_execute_external_script`,see the **Advanced tips: parallel processing** section of [Using R Code in Transact-SQL](\tutorials\rtsql-using-r-code-in-transact-sql-quickstart.md).
 
 -   **Use numTasks =1.** When using **rx** functions in a SQL Server compute context, set the value of the _numTasks_ parameter to the number of processes that you would like to create. The number of processes created can never be more than **MAXDOP**; however, the actual number of processes created is determined by the database engine and may be less than you requested.
 
@@ -116,7 +113,7 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 To ensure that the data can be analyzed in parallel, the query used to retrieve the data should be framed in such a way that the database engine can create a parallel query plan. If the code or algorithm uses large volumes of data, make sure that the query given to `RxSqlServerData` is optimized for parallel execution. A query that does not result in a parallel execution plan can result in a single process for computation.
 
 If you need to work with large datasets, use Management Studio or another SQL query analyzer 
-before you run your R code, to analyze the execution plan. Then, take any recommended steps to improve the performance of the query. For example, a missing index on a table can affect the time taken to execute a query. For more information, see [Monitor and Tune for Performance](..\..\relational-databases\performance\monitor-and-tune-for-performance.md).
+before you run your R code, to analyze the execution plan. Then, take any recommended steps to improve the performance of the query. For example, a missing index on a table can affect the time taken to execute a query. For more information, see [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md).
 
 Another common mistake that can affect performance is that a query retrieves more columns than are required. For example, if a formula is based on only three columns, but your source table has 30 columns, you are moving data unnecessarily.
 
@@ -161,7 +158,7 @@ For additional guidance on optimization of RevoScaleR, see these articles:
 
 + Methods for controlling model fit in a boosted tree model: [Estimating Models Using Stochastic Gradient Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ Overview of how RevoScaleR moves and processe data: [Write custom chunking algorithms in ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Overview of how RevoScaleR moves and processes data: [Write custom chunking algorithms in ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
 + Programming model for RevoScaleR: [Managing threads in RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
@@ -190,10 +187,10 @@ code with other computers, and integrate R analytics inside web, desktop, mobile
 
 ## Articles in this series
 
-[Performance tuning for R – introduction](/r/sql-server-r-services-performance-tuning.md)
+[Performance tuning for R – introduction](sql-server-r-services-performance-tuning.md)
 
-[Performance tuning for R - SQL Server configuration](/r/sql-server-configuration-r-services.md)
+[Performance tuning for R - SQL Server configuration](sql-server-configuration-r-services.md)
 
-[Performance tuning for R - R code and data optimization](/r/r-and-data-optimization-r-services.md)
+[Performance tuning for R - R code and data optimization](r-and-data-optimization-r-services.md)
 
-[Performance Tuning - case study results](/r/performance-case-study-r-services.md)
+[Performance Tuning - case study results](performance-case-study-r-services.md)

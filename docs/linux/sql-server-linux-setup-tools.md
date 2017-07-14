@@ -6,7 +6,7 @@ description: This topic describes how to install the SQL Server Tools on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -264,7 +264,7 @@ To manually install these packages, use the following steps:
 
 ## Next steps
 
-For an example of how to use **sqlcmd** to create a database, see one of the following quick start tutorials:
+For an example of how to use **sqlcmd** to connect to SQL Server and create a database, see one of the following quick start tutorials:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

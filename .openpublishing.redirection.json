@@ -18,22 +18,22 @@
         {
             "source_path": "docs/linux/sql-server-linux-setup-suse-linux-enterprise-server.md",
             "redirect_url": "/sql/linux/quickstart-install-connect-suse",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/linux/sql-server-linux-setup-red-hat.md",
             "redirect_url": "/sql/linux/quickstart-install-connect-red-hat",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/linux/sql-server-linux-setup-ubuntu.md",
             "redirect_url": "/sql/linux/quickstart-install-connect-ubuntu",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/linux/sql-server-linux-setup-docker.md",
             "redirect_url": "/sql/linux/quickstart-install-connect-docker",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },                                        
         {
             "source_path": "docs/relational-databases/relational-databases-new-updated-sql-docs-pr.md",

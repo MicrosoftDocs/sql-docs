@@ -8,6 +8,7 @@ ms.date: 07/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ---
 # Run the SQL Server 2017 container image with Docker
 

@@ -1,6 +1,6 @@
 ---
 title: Get started with SQL Server 2017 on Ubuntu | Microsoft Docs
-description: This quick start tutorial shows how to install SQL Server on Ubuntu and then create and query a database with sqlcmd.
+description: This quick start tutorial shows how to install SQL Server 2017 on Ubuntu and then create and query a database with sqlcmd.
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -8,6 +8,7 @@ ms.date: 07/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
 # Install SQL Server and create a database on Ubuntu
 

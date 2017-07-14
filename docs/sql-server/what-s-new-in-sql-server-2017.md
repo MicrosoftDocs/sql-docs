@@ -18,7 +18,7 @@ manager: "jhubbard"
 # What's new in SQL Server 2017
 SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas in the most recent SQL Server 2017 Release Candidate (RC1, July 2017) and Community Technical Preview (CTP) releases.
 
-**Try it out:** [Download the SQL Server 2017 Community Technology Preview](http://go.microsoft.com/fwlink/?LinkID=829477)
+**Try it out:** [Download the SQL Server 2017 Release Candidate (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
 
 >[!TIP]
 >**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/) and [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).

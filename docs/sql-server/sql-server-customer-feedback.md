@@ -29,8 +29,6 @@ ms.assetid:
 ## Summary
 By default, Microsoft SQL Server collects information about how its customers are using the application. Specifically, SQL Server collects information about the installation experience, usage, and performance. This information helps Microsoft improve the product to better meet customer needs. For example, Microsoft collects information about what kinds of error codes customers encounter so that we can fix related bugs, improve our documentation about how to use SQL Server, and determine whether features should be added to the product to better serve customers.
 
-By default, Microsoft SQL Server collects information about how its customers are using the application. Specifically, SQL Server collects information about the installation experience, usage, and performance. This information helps Microsoft improve the product to better meet customer needs. For example, Microsoft collects information about what kinds of error codes customers encounter so that we can fix related bugs, improve our documentation about how to use SQL Server, and determine whether features should be added to the product to better serve customers.
-
 Specifically, Microsoft does not send any of the following types of information through this mechanism:
 - Any values from inside user tables
 - Any logon credentials or other authentication information
@@ -157,4 +155,20 @@ Similar to the behavior in an earlier version of SQL Server, SQL Server 2017 Ent
 Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 crash dump collection. 
 
 ## Crash dump collection for SSMS
-SSMS doesn’t collect its own crash dump. Any crash dump that's related to SSMS is collected as part of Windows Error Reporting. The procedure to turn this feature on or off is dependent on the OS version.
+SSMS doesn’t collect its own crash dump. Any crash dump that's related to SSMS is collected as part of Windows Error Reporting.
+
+The procedure to turn this feature on or off is dependent on the OS version. To turn the feature on or off, follow the steps in the appropriate article for your Windows version.
+ 
+- Windows Server 2016 and Windows 10
+
+    [Configure Windows telemetry in your organization](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
+- Windows Server 2008 R2 and Windows 7
+
+    [WER Settings](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx)
+ 
+## Feedback for Analysis Services
+
+During installation, SQL Server 2016 Analysis Services adds a special account to your Analysis Services instance. This account is a member of the Analysis Services Server Admin role. The account is used to collect information for feedback from the Analysis Services instance.  
+
+You can configure your service not to send usage data, as described in the "Set registry subkeys on the server" section. However, doing this does not remove the service account. 
+ 

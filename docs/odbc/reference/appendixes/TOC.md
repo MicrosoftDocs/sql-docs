@@ -14,6 +14,7 @@
 # [Block Cursors, Scrollable Cursors, and Backward Compatibility](block-cursors-scrollable-cursors-and-backward-compatibility.md)
 # [Bookmark C Data Type](bookmark-c-data-type.md)
 # [C Data Types](c-data-types.md)
+## [Retrieve numeric data with SQL_NUMERIC_STRUCT in C](retrieve-numeric-data-sql-numeric-struct-kb222831.md)
 # [C Interval Structure](c-interval-structure.md)
 
 # [Converting Data from C to SQL Data Types](converting-data-from-c-to-sql-data-types.md)

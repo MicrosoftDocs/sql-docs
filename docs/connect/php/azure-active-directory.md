@@ -19,7 +19,6 @@ To use Azure AD, use the **Authentication** keyword. The values that **Authentic
 |Keyword|Values|Description|
 |-|-|-|
 |**Authentication**|Not set (default)|Authentication mode determined by other keywords. For more information, see [Connection Options](../../connect/php/connection-options.md). |
-|| (empty string)| Connection string only. Override and unset an `Authentication` value set in the DSN.|
 ||`SqlPassword`|Directly authenticate to a SQL Server instance (which may be an Azure instance) using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
 ||`ActiveDirectoryPassword`|Authenticate with an Azure Active Directory identity using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
 

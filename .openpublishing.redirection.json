@@ -1491,6 +1491,26 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/discontinued-analysis-services-functionality-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "docs/analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "docs/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
             "redirect_document_id": false
@@ -1886,12 +1906,27 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/sql-hub-menu.md",
+            "source_path": "docs/sql-hub-menu.md",
             "redirect_url": "/sql/index",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/microsoft-sql-documentation-table-of-contents.md",
+            "source_path": "docs/microsoft-sql-documentation-table-of-contents.md",
+            "redirect_url": "/sql/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md",
+            "redirect_url": "/sql/tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md",
+            "redirect_url": "/sql/tools/sql-server-profiler/modify-trace-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/whitepapers/microsoft-white-papers.md",
             "redirect_url": "/sql/index",
             "redirect_document_id": false
         }

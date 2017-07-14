@@ -190,7 +190,7 @@ description: Learn about SQL
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Design</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-server-driver">Connect with client applications</a></li>
+                                                    <li><a href="/sql/connect/sql-server-drivers">Connect with client applications</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">Relational database concepts</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>

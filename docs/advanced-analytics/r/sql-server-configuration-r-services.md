@@ -17,7 +17,7 @@ manager: "jhubbard"
 ---
 # SQL Server configuration for use with R
 
-This article is the second in a series that describes performance optimization for R Services based on two case studies.  This article provides guidance about the hardware and network configuration of the computer that is used to run SQL Server R Services. It also contains information about ways to configure the SQL Server instance, database, or tables used in a solution. Because use of NUMA in SQL Server blurs the line between hardware and database optimizations, a third section discusses CPU affinitization and resource governance in detail.  
+This article is the second in a series that describes performance optimization for R Services based on two case studies.  This article provides guidance about the hardware and network configuration of the computer that is used to run SQL Server R Services. It also contains information about ways to configure the SQL Server instance, database, or tables used in a solution. Because use of NUMA in SQL Server blurs the line between hardware and database optimizations, a third section discusses CPU affinitization and resource governance in detail.
 
 > [TIP]
 > If you are new to SQL Server, we highly recommend that you also review the SQL Server performance tuning guide: [Monitor and tune for performance](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
@@ -34,28 +34,27 @@ Optimization of the server computer is important for making sure that you have t
 
 The amount of memory available on the computer can have a large impact on the performance of advanced analytic algorithms. Insufficient memory might affect the degree of parallelism when using the SQL compute context. It can also affect the chunk size (rows per read operation) that can be processed, and the number of simultaneous sessions that can be supported.
 
-A minimum of 32GB is highly recommended. If you have more than 32GB available, you can configure the SQL data source to use more rows in every read operation to improve performance.
+A minimum of 32 GB is highly recommended. If you have more than 32 GB available, you can configure the SQL data source to use more rows in every read operation to improve performance.
 
 You can also manage memory used by the instance. By default, SQL Server is prioritized over external script processes when memory is allocated. In a default installation of R Services, only 20% of available memory is allocated to R.
 
-Typically this is not enough for data science tasks, but neither do you want to starve SQL server of memory. Hence you will need to fine-tune memory allocation between SQL server and external scripts, with the understanding that the optimum configuration varies case by case.
+Typically this is not enough for data science tasks, but neither do you want to starve SQL server of memory. You should experiment and fine-tune memory allocation between the database engine, related services, and external scripts, with the understanding that the optimum configuration varies case by case.
 
 For the resume-matching model, external script use was heavy and there were no other database engine services running; therefore, resources allocated to external scripts were increased to 70%, which was the best configuration for script performance.
 
 ### Power options
 
-On the Windows operating system, the **High Performance** power option should be used. Using a different power setting will result in decreased or inconsistent performance when using SQL Server.
+On the Windows operating system, the **High performance** power option should be used. Using a different power setting results in decreased or inconsistent performance when using SQL Server.
 
 ### Disk IO
 
-Training and prediction jobs using R Services are inherently IO bound, and depend on the speed of the disk(s) that the database is stored on. Faster drives, such as solid state drives (SSD) may help.
+Training and prediction jobs using R Services are inherently IO bound, and depend on the speed of the disk(s) that the database is stored on. Faster drives, such as solid-state drives (SSD) may help.
 
 Disk IO is also affected by other applications accessing the disk: for example, read operations against a database by other clients. Disk IO performance can also be affected by settings on the file system in use, such as the block size used by the file system.
 
-If multiple drives are available, store the databases on a different drive than
-SQL Server so that requests for the database engine are not hitting the same disk as requests for data stored in the database.
+If multiple drives are available, store the databases on a different drive than SQL Server so that requests for the database engine are not hitting the same disk as requests for data stored in the database.
 
-Disk IO can also greatly impact performance when running RevoScaleR analytic functions that use multiple iterations during training. For example, `rxLogit`, `rxDTree`, `rxDForest` and `rxBTrees` all use multiple iterations. When the data source is SQL Server, these algorithms use temporary files that are optimized to capture the data. These files are automatically cleaned up after the session completes. Having a high performance disk for read/write operations can significantly improve the overall elapsed time for these algorithms.
+Disk IO can also greatly impact performance when running RevoScaleR analytic functions that use multiple iterations during training. For example, `rxLogit`, `rxDTree`, `rxDForest`, and `rxBTrees` all use multiple iterations. When the data source is SQL Server, these algorithms use temporary files that are optimized to capture the data. These files are automatically cleaned up after the session completes. Having a high-performance disk for read/write operations can significantly improve the overall elapsed time for these algorithms.
 
 > [!NOTE]
 > Early versions of R Services required 8.3 filename support on Windows operating systems. This restriction was lifted after Service Pack 1. However, you can use fsutil.exe to determine whether a drive supports 8.3 filenames, or to enable support if it does not.
@@ -73,9 +72,9 @@ For information on sizing the page file, see [How to determine the appropriate p
 Optimization of the SQL Server instance is the key to efficient execution of external scripts.
 
 > [!NOTE]
-> The optimal settings will be different for each case, depending on the size and type of your data, the number of columns you are using for scoring or training a model.
+> The optimal settings differ depending on the size and type of your data, the number of columns you are using for scoring or training a model.
 > 
-> You can review the results of specific optimizations in the final article: [Performance Tuning - case study results](/r/performance-case-study-r-services.md)
+> You can review the results of specific optimizations in the final article: [Performance Tuning - case study results](../r/performance-case-study-r-services.md)
 > 
 > For sample scripts, see the separate [GitHub repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning).
 
@@ -83,7 +82,7 @@ Optimization of the SQL Server instance is the key to efficient execution of ext
 
 IO performance can often be improved by using either compression or a columnar data store. Generally, data is often repeated in several columns within a table, so using a columnstore takes advantage of these repetitions when compressing the data.
 
-A columnstore might not be as efficient if there are a lot of insertions into the table, but is a good choice if the data is static or only changes infrequently. If a columnar store is not appropriate, enabling compression on a row major table can be used to improve IO.
+A columnstore might not be as efficient if there are numerous insertions into the table, but is a good choice if the data is static or only changes infrequently. If a columnar store is not appropriate, enabling compression on a row major table can be used to improve IO.
 
 For more information, see the following documents:
 
@@ -97,9 +96,9 @@ For more information, see the following documents:
 
 Nowadays, memory is no longer a problem for modern computers. As hardware specifications continue to improve, it is relatively easy to get RAM at good values. However, at the same time, data is being produced more quickly than ever before, and the data must be processed with low latency.
 
-Memory-optimized tables represent one solution, in that they leverage the advanced computers with lots of memory to tackle the problem of big data. Memory-optimized tables mainly reside in memory, so that data is read from and written to memory. For durability, a second copy of the table is maintained on disk and data is only read from disk during database recovery.
+Memory-optimized tables represent one solution, in that they leverage the large memory available in advanced computers to tackle the problem of big data. Memory-optimized tables mainly reside in memory, so that data is read from and written to memory. For durability, a second copy of the table is maintained on disk and data is only read from disk during database recovery.
 
-If you need to read from and write to tables very frequently, memory-optimized tables can help with high scalability and low latency.  In the resume-matching scenario, use of memory-optimized tables allowed us to read all the resume features from the database and store them in main memory, to match with new job openings. This significantly reduced disk IO.
+If you need to read from and write to tables frequently, memory-optimized tables can help with high scalability and low latency.  In the resume-matching scenario, use of memory-optimized tables allowed us to read all the resume features from the database and store them in main memory, to match with new job openings. This significantly reduced disk IO.
 
 Additional performance gains were achieved by using memory-optimized table in the process of writing predictions back to the database from multiple concurrent batches. The use of memory-optimized tables on SQL Server enabled low latency on table reads and writes.
 
@@ -107,7 +106,7 @@ The experience was also seamless during development. Durable memory-optimized ta
 
 ### Processor
 
-SQL Server can perform tasks in parallel by using the available cores on the machine; the more cores that are available, the better the performance. While increasing the number of cores might not help for IO bound operations, CPU bound algorithms will benefit from faster CPUs with many cores.
+SQL Server can perform tasks in parallel by using the available cores on the machine; the more cores that are available, the better the performance. While increasing the number of cores might not help for IO bound operations, CPU bound algorithms benefit from faster CPUs with many cores.
 
 Because the server is normally used by multiple users simultaneously, the database administrator must
 determine the ideal number of cores that are needed to support peak workload computations.
@@ -124,7 +123,7 @@ The configuration options supported are **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCEN
 
 -  If the server is primarily used for R Services, it might be helpful to increase MAX_CPU_PERCENT to 40% or 60%.
 
--  If there many R sessions using the same server at the same time, all three will be increased.
+-  If many R sessions must use the same server at the same time, all three settings should be increased.
 
 To change the allocated resource values, use T-SQL statements.
 
@@ -136,9 +135,9 @@ To change the allocated resource values, use T-SQL statements.
 
 ## NUMA, soft-NUMA, and CPU affinity
 
-SQL Server has been designed to take advantage of NUMA-based computers without requiring any application changes. Both SQL Server 2016 and 2017 include the Soft-NUMA feature, which is automatically enabled at the database-instance level when starting the SQL Server service.
+SQL Server has been designed to take advantage of NUMA-based computers without requiring any application changes. SQL Server 2016 and SQL Server 2017 include the Soft-NUMA feature, which is automatically enabled at the database-instance level when starting the SQL Server service.
 
-The soft-NUMA feature automatically partitions service threads per node, and thus generally increases scalability and performance by reducing IO and lazy writer bottlenecks. Whenever the database engine server detects more than 8 physical cores per NUMA node or socket, it automatically creates soft-NUMA nodes that ideally contain 8 cores, with as few as 5 and as many as 9 logical cores per node. You can review the SQL Server log files to determine soft-NUMA usage. Details will be output to the log whenever SQL Server detects more than 8 physical cores in each socket.
+The soft-NUMA feature automatically partitions service threads per node, and thus generally increases scalability and performance by reducing IO and lazy writer bottlenecks. Whenever the database engine server detects more than 8 physical cores per NUMA node or socket, it automatically creates soft-NUMA nodes that ideally contain 8 cores, with as few as five and as many as nine logical cores per node. You can review the SQL Server log files to determine soft-NUMA usage. Details are output to the log whenever SQL Server detects more than eight physical cores in each socket.
 
 In editions that support resource governance, you can also leverage the NUMA nodes when configuring resource pools to optimize hardware utilization. Soft-NUMA and CPU affinity cannot divide physical memory in the physical NUMA nodes; therefore, all soft NUMA nodes based on the same physical NUMA node must use memory in the same OS memory block. To use this to your advantage, assign each resource pool to a different workload group, which effectively allocates some number of CPUs to specific workloads.
 
@@ -162,7 +161,7 @@ One pain point with R is that it is usually processed on a single CPU. This is a
 
 There are multiple ways to improve the performance of feature engineering. You can either optimize your R code and keep feature extraction inside the modeling process, or move the feature engineering process into SQL.
 
-- Using R. You define a function and then pass it as the argument to [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform) during training. If the model supports parallel processing, the feature engineering will also be processed using multiple CPUs. Using this approach, the data science team observed a 16% performance improvement in terms of scoring time. However, this approach requires a model that supports parallelization and a query that can be executed using a parallel plan.
+- Using R. You define a function and then pass it as the argument to [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform) during training. If the model supports parallel processing, the feature engineering task can be processed using multiple CPUs. Using this approach, the data science team observed a 16% performance improvement in terms of scoring time. However, this approach requires a model that supports parallelization and a query that can be executed using a parallel plan.
 
 - Use R with a SQL compute context. In a multiprocessor environment with isolated resources available for execution of separate batches, you can achieve greater efficiency by isolating the SQL queries used for each batch, to extract data from tables and constrain the data on the same workload group. Methods used to isolate the batches include partitioning, and use of PowerShell to execute separate queries in parallel.
 
@@ -172,9 +171,9 @@ There are multiple ways to improve the performance of feature engineering. You c
 
 ### Prediction (scoring) in parallel
 
-One of the benefits of SQL Server is its ability to handle a very large volume of rows in parallel. Nowhere is this advantage so marked as in scoring. Generally the model does not need access to all the data for scoring, so you can partition the input data , with each workload group processing one task.
+One of the benefits of SQL Server is its ability to handle a large volume of rows in parallel. Nowhere is this advantage so marked as in scoring. Generally the model does not need access to all the data for scoring, so you can partition the input data, with each workload group processing one task.
 
-You can also send the input data as a single query, and SQL Server will analyze the query. If a parallel query plan can be created for the input data, it will automatically partition data assigned to the nodes and perform joining and aggregations in parallel as well.
+You can also send the input data as a single query, and SQL Server then analyzes the query. If a parallel query plan can be created for the input data, it automatically partitions data assigned to the nodes and performs required joins and aggregations in parallel as well.
 
 If you are interested in the details of how to define a stored procedure for use in scoring, see the sample project on [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR) and look for the file "step5_score_for_matching.sql". The sample script also tracks query start and end times and writes the time to the SQL console so that you can assess performance.
 
@@ -202,13 +201,12 @@ To see the PowerShell scripts for this scenario, open the file experiment.ps1 in
 
 ### Storing models for prediction
 
-When training and evaluation is complete and you have selected a best model, we recommend storing the model in the database so that it is readily available for predictions. Loading the pre-computed model from the database for the prediction is very efficient, because SQL Server machine learning uses special serialization algorithms to store and load models when moving between R and the
-database.
+When training and evaluation finishes and you have selected a best model, we recommend storing the model in the database so that it is available for predictions. Loading the pre-computed model from the database for the prediction is efficient, because SQL Server machine learning uses special serialization algorithms to store and load models when moving between R and the database.
 
 > [!TIP]
 > In SQL Server 2017, you can use the PREDICT function to perform scoring even if R is not installed on the server. Limited models types are supported, from the RevoScaleR package.
 
-However, depending on the algorithm you use, some models can be quite large, especially when used on a large data set. For example, algorithms such as **lm** or **glm** generate a lot of summary data along with rules. Because there are limits on the size of a model that can be stored in a varbinary column, we recommend that, in your production model, you eliminate unnecessary artifacts before storing the model in the database.
+However, depending on the algorithm you use, some models can be quite large, especially when trained on a large data set. For example, algorithms such as **lm** or **glm** generate a lot of summary data along with rules. Because there are limits on the size of a model that can be stored in a varbinary column, we recommend that, in your production model, you eliminate unnecessary artifacts before storing the model in the database.
 
 ## Articles in this series
 

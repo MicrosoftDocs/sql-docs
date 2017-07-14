@@ -17,14 +17,14 @@ manager: "jhubbard"
 ---
 # Performance for R Services: results and resources
 
-This article is the fourth and final in a series that describes performance optimization for R Services. This article summarizes the methods, findings, and conclusions of two case studies that tested varous optimization methods. 
+This article is the fourth and final in a series that describes performance optimization for R Services. This article summarizes the methods, findings, and conclusions of two case studies that tested various optimization methods.
 
 The two case studies had different goals:
 
 + The first case study, by the R Services development team, sought to measure the impact of specific optimization techniques
 + The second case study, by a data scientist team, experimented with multiple methods to determine the best optimizations for a specific high-volume scoring scenario.
 
-This topic lists the detailed results of the first case study. For the second case study, a summary describes the overall findings. At the end of this topic you will find links to all scripts and sample data, and resources used by the original authors.
+This topic lists the detailed results of the first case study. For the second case study, a summary describes the overall findings. At the end of this topic, you will find links to all scripts and sample data, and resources used by the original authors.
 
 ## Performance case study: Airline dataset
 
@@ -45,7 +45,7 @@ This case study by the SQL Server R Services development team tested the effects
 | *airlineWithIntCol*   | *DayOfWeek* converted to an integer rather than a string. Also adds a *rowNum* column.|
 | *airlineWithIndex*    | The same data as the *airlineWithIntCol* table, but with a single clustered index using the *rowNum* column.|
 | *airlineWithPageComp* | The same data as the *airlineWithIndex* table, but with page compression enabled. Also adds two columns, *CRSDepHour* and *Late*, which are computed from *CRSDepTime* and *ArrDelay*. |
-| *airlineWithRowComp*  | The same data as the *airlineWithIndex* table, but with row compression enabled. Also adds two columns, *CRSDepHour* and *Late* which are computed from *CRSDepTime* and *ArrDelay*. |
+| *airlineWithRowComp*  | The same data as the *airlineWithIndex* table, but with row compression enabled. Also adds two columns, *CRSDepHour* and *Late*, which are computed from *CRSDepTime* and *ArrDelay*. |
 | *airlineColumnar*     | A columnar store with a single clustered index. This table is populated with data from a cleaned up csv file.|
 
 Each test consisted of these steps:
@@ -112,7 +112,7 @@ This test compared the benefits of row compression, page compression, and no com
 | *airlineWithPageComp* | PageCompression | 1        | 6.7875       |
 |                       | PageCompression - parallel | 4        | 5.3225       |
 | *airlineWithRowComp*  | RowCompression  | 1        | 6.1325       |
-|                       | RowCompression - paralle  | 4        | 5.2375       |
+|                       | RowCompression - parallel  | 4        | 5.2375       |
 
 **Conclusions**
 
@@ -124,9 +124,9 @@ For larger data sets, the effect of compression may be more noticeable. Compress
 
 ### Effect of Windows power plan options
 
-In this experiment, `rxLinMod` was used with the *airlineWithIntCol* table. The Windows Power Plan was set to either **Balanced** or **High Performance**. For all tests, *numTasks* was set to 1. The test was run 6 times, and was performed twice under both power options to investigate the variability of results.
+In this experiment, `rxLinMod` was used with the *airlineWithIntCol* table. The Windows Power Plan was set to either **Balanced** or **High performance**. For all tests, *numTasks* was set to 1. The test was run six times, and was performed twice under both power options to investigate the variability of results.
 
-**High Performance** power option:
+**High performance** power option:
 
 | Test name | Run \# | Elapsed time | Average time |
 |-----------|--------|--------------|--------------|
@@ -166,13 +166,13 @@ In this experiment, `rxLinMod` was used with the *airlineWithIntCol* table. The 
 
 **Conclusions**
 
-The execution time is more consistent and faster when using the high performance power plan.
+The execution time is more consistent and faster when using the Windows **High performance** power plan.
 
 #### Using integer vs. strings in formulas
 
 This test assessed the impact of modifying the R code to avoid a common problem with string factors. Specifically, a model was trained using `rxLinMod` using two tables: in the first, factors are stored as strings; in the second table, factors are stored as integers.
 
-+ For the *airline* table, the [DayOfWeek] column contains strings. The _colInfo_ parameter was used to specify the factor levels (`Monday`, `Tuesday`, …) 
++ For the *airline* table, the [DayOfWeek] column contains strings. The _colInfo_ parameter was used to specify the factor levels (Monday, Tuesday, …)
 
 +  For the *airlineWithIndex* table, [DayOfWeek] is an integer. The _colInfo_ parameter was not specified.
 
@@ -231,7 +231,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 In the table, the factors *DayOfWeek* is stored as a string.
 
-| Test name     | Cube parameter | numTasks | Average time | One row predict (ArrDelay_Pred) |
+| Test name     | Cube parameter | numTasks | Average time | Single-row predict (ArrDelay_Pred) |
 |---------------|----------------|----------|--------------|---------------------------------|
 | CubeArgEffect | `cube = F`     | 1        | 91.0725      | 9.959204                        |
 |               |                | 4        | 44.09        | 9.959204                        |
@@ -260,7 +260,7 @@ As the depth of the tree increases, the total number of nodes increases exponent
 
 ### Prediction on a stored model
 
-The purpose of this test was to determine the performance impacts on scoring if the trained model is saved to a SQL Server table rather than generated as part of the currently executing code. For scoring, the stored model is loaded from the database and predictions are created using a one-row data frame in memory (local compute context).
+The purpose of this test was to determine the performance impacts on scoring when the trained model is saved to a SQL Server table rather than generated as part of the currently executing code. For scoring, the stored model is loaded from the database and predictions are created using a one-row data frame in memory (local compute context).
 
 The test results show the time to save the model, and the time taken to load the model and predict.
 
@@ -279,7 +279,7 @@ The resume-matching model was developed by Microsoft data scientist Ke Huang to 
 
 ### Methods
 
-Both the RevoScaleR and MicrosoftML packages were used to train a predictive model in a complex R solution involving large datasets. SQL queries and R code were identical. All tests were conducted on a single Azure VM with SQL Server installed. He then compared scoring times with and without these optimizations provided by SQL Server:
+Both the RevoScaleR and MicrosoftML packages were used to train a predictive model in a complex R solution involving large datasets. SQL queries and R code were identical. All tests were conducted on a single Azure VM with SQL Server installed. The author then compared scoring times with and without these optimizations provided by SQL Server:
 
 - In-memory tables
 - Soft-NUMA
@@ -294,15 +294,15 @@ memory-to-processor affinity.
 
 The following process was used to create this configuration:
 
-1. Reduce the amount of memory allocated by default to SQL Server
+1. Reduce the amount of memory allocated by default to SQL Server.
 
-2. Create 4 new pools for running the R jobs in parallel.
+2. Create four new pools for running the R jobs in parallel.
 
-3. Create 4 workload groups such that each workload group is associated with a resource pool
+3. Create four workload groups such that each workload group is associated with a resource pool.
 
 4. Restart Resource Governor with the new workload groups and assignments.
 
-5. Define a User-defined classifier function (UDF) to assign different tasks on different workload groups.
+5. Create a user-defined classifier function (UDF) to assign different tasks on different workload groups.
 
 6. Update the Resource Governor configuration to use the function for appropriate workload groups.
 
@@ -310,11 +310,11 @@ The following process was used to create this configuration:
 
 The configuration that had the best performance in the resume-matching study was as follows:
 
--   4 internal resource pools (for SQL Server)
+-   Four internal resource pools (for SQL Server)
 
--   4 external resource pools (for external script jobs)
+-   Four external resource pools (for external script jobs)
 
--   Each resource pool is associated with a specific workload group.
+-   Each resource pool is associated with a specific workload group
 
 -   Each resource pool is assigned to different CPUs
 
@@ -322,9 +322,9 @@ The configuration that had the best performance in the resume-matching study was
 
 -   Maximum memory for use by R sessions = 70%
 
-For the resume-matching model, external script use was heavy and there were no other database engine services running, so we were able to increase the resources allocated to external scripts to 70%, which was the best configuration for script performance.
+For the resume-matching model, external script use was heavy and there were no other database engine services running. Therefore, the resources allocated to external scripts was increased to 70%, which was the best configuration for script performance.
 
-This configuration was arrived at by experimenting with different configurations. If you use different hardware or a different solution, the optimum configuration might be different.
+This configuration was arrived at by experimenting with different values. If you use different hardware or a different solution, the optimum configuration might be different.
 
 > [!IMPORTANT]
 > Experiment to find the best configuration for your case!

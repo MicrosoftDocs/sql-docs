@@ -42,11 +42,12 @@ As the number of supported versions and language grows, it is important that the
 
 Performance optimization for machine learning is clearly not a one-size-fits-all proposition. The following common tasks might have very different performance profiles:
 
-- Training: creating and training a regression model vs. training a neural network
+- Training tasks: creating and training a regression model vs. training a neural network
 - Feature engineering using R vs. feature extraction using T-SQL
 - Scoring on single rows or small batches, vs. bulk scoring using tabular inputs
-- Deploying models to production. changing R code to minimize data transfer or costly data transformations.
-- Automated testing and retraining mof models
+- Running scoring in R vs. deploying models to production on SQL Server in stored procedures
+- Modifying R code to minimize data transfer or remove costly data transformations
+- Enable automated testing and retraining of models
 
 Because the choice of optimization techniques depends on which task is critical for your application or use case, the case studies cover both general performance tips, and guidance on how to optimize for a specific scenario, optimization for batch scoring.
 
@@ -64,13 +65,13 @@ Because the choice of optimization techniques depends on which task is critical 
 
 We suggest that you review all results from the first case study to determine which techniques are applicable to your solution, and weigh their potential impact.
 
-Then, review the results of the scoring optimization case study to see how the author selected techniques to develop a strategy that was optimized to support this particular workload.
+Then, review the results of the scoring optimization case study to see how the author applied different techniques and optimized the server to support a particular workload.
 
 ## Performance optimization process
 
 Configuration and tuning for performance requires creating a solid base, on which to layer optimizations designed for specific workloads:
 
-- Choose an appropriate server to host analytics. Typically, a reporting secondary, data warehouse or other server that is already used for other reporting or analytics is preferred. However, in a hybrid transactional-analytical processing (HTAP) solution, operational data can be used as the input to R for very fast scoring.
+- Choose an appropriate server to host analytics. Typically, a reporting secondary, data warehouse or other server that is already used for other reporting or analytics is preferred. However, in a hybrid transactional-analytical processing (HTAP) solution, operational data can be used as the input to R for fast scoring.
 
 - Configure the SQL Server instance to balance database engine operations and R or Python script execution at appropriate levels. This can include changing SQL Server defaults for memory and CPU usage, NUMA and processor affinity settings, and creation of resource groups.
 

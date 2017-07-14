@@ -35,7 +35,7 @@
       "layout": "Conceptual",
       "breadcrumb_path": "~/breadcrumb/toc.yml",
       "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana"],,
-      "searchScope": ["sql"]
+      "searchScope": ["sql"],
       "_op_documentIdPathDepotMapping": {
         "linux/": {
           "depot_name": "SQL.linux",

@@ -46,7 +46,7 @@ This topic lists the options that are permitted in the associative array (when u
 |UID<br /><br />(not supported in the PDO_SQLSRV driver)|String|Specifies the User ID to be used when connecting with SQL Server Authentication<sup>4</sup>.|No value set.|  
 |WSID|String|Specifies the name of the computer for tracing.|No value set.|  
 
-1. `ConnectionPooling` attribute cannot be used to enable/disable connection pooling in Linux and Mac. See [Connection Pooling (Microsoft Drivers for PHP for SQL Server)](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md). 
+1. The `ConnectionPooling` attribute cannot be used to enable/disable connection pooling in Linux and Mac. See [Connection Pooling (Microsoft Drivers for PHP for SQL Server)](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md). 
 
 2. All queries executed on the established connection are made to the database that is specified by the *Database* attribute. However, if the user has the appropriate permissions, data in other databases can be accessed by using a fully qualified name. For example, if the *master* database is set with the *Database* connection attribute, it is still possible to execute a Transact-SQL query that accesses the *AdventureWorks.HumanResources.Employee* table by using the fully qualified name.  
   

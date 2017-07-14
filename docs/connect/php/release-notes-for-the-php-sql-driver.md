@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Release Notes for the PHP SQL Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-This topic discusses what was added in the each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+This topic discusses what was added in each version of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
 ## What's New in Version 4.3
 
@@ -59,7 +59,7 @@ This topic discusses what was added in the each version of the [!INCLUDE[ssDrive
 - AttachDBFileName connection option is added. For more information, see [Connection Options](../../connect/php/connection-options.md).  
 - Support for the high-availability, disaster recovery features. For more information, see [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).
 - Support for client-side cursors (caching a result set in-memory). For more information, see [Cursor Types &#40;SQLSRV Driver&#41;](../../connect/php/cursor-types-sqlsrv-driver.md) and [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
-- The PDO::ATTR_EMULATE_PREPARES attribute has been added.  See [PDO::prepare](../../connect/php/pdo-prepare.md) for more information.  
+- The PDO::ATTR_EMULATE_PREPARES attribute has been added. For more information, see [PDO::prepare](../../connect/php/pdo-prepare.md).  
   
 ## What's New in Version 2.0  
 In version 2.0, support for the PDO_SQLSRV driver was added. For more information, see [PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md).  

@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 2.  In the **Trace Template Properties** dialog box, on the **General** tab, you can modify the server type and template name, or choose to use a default template for the server type.  
   
-3.  On the **Events Selection**tab, use the grid control to add or remove events and data columns from the trace file as follows.  
+3.  On the **Events Selection** tab, use the grid control to add or remove events and data columns from the trace file as follows.  
   
     -   To add an event, expand the appropriate event category in the **Events** column, and then select the event name.  
   
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
     -   To add filters, click the data column name and specify the filter criteria in the **Edit Filter** dialog box. You can also right-click the data column name, and click **Edit Column Filter** to launch the **Edit Filter** dialog box. Click **OK** to add the filter.  
   
-4.  Click **Save**, or click **Save As**to save the trace template under another name.  
+4.  Click **Save**, or click **Save As** to save the trace template under another name.  
   
 ## Next steps  
 [Start a trace](../../tools/sql-server-profiler/start-a-trace.md)  

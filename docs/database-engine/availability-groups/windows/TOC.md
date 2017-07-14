@@ -15,6 +15,7 @@
 
 # Concepts
 ## [Automatic seeding](automatically-initialize-always-on-availability-group.md)  
+## [Automatic seeding for secondary replicas](automatic-seeding-secondary-replicas.md)
 ## [Availability group policies](always-on-policies-for-operational-issues-always-on-availability.md)  
 ## [Availability modes](availability-modes-always-on-availability-groups.md)  
 ## [Backup on secondary](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  

@@ -3,7 +3,7 @@ title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
   - "SQL2017_New_Updated"
-ms.date: "06/26/2017"
+ms.date: "07/13/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""

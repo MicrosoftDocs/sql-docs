@@ -34,7 +34,8 @@ manager: "jhubbard"
 # DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Denies a permission to a principal. Prevents that principal from inheriting the permission through its group or role memberships.  
+  Denies a permission to a principal. Prevents that principal from inheriting the permission through its group or role memberships. DENY takes precedence over all permissions, except that DENY does not apply to object owners or members of the sysadmin fixed server role.
+  **Security Note** Members of the sysadmin fixed server role and object owners cannot be denied permissions."
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

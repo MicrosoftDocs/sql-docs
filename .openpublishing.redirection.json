@@ -1491,6 +1491,26 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/discontinued-analysis-services-functionality-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "docs/analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "docs/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
             "redirect_document_id": false
@@ -1776,11 +1796,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/ssms/f1-help/connect-to-microsoft-azure-storage.md",
-            "redirect_url": "/azure/storage/storage-create-storage-account",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "docs/ssms/f1-help/connect-to-server-additional-connection-parameters-page.md",
             "redirect_url": "/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client",
             "redirect_document_id": false
@@ -1861,33 +1876,58 @@
             "redirect_document_id":false
         },
                 {
-            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md",
+            "source_path": "docs/relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md",
             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-all-stat-transact-sql.md",
+            "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-all-stat-transact-sql.md",
             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-cpuinfo-transact-sql.md",
+            "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-cpuinfo-transact-sql.md",
             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-meminfo-transact-sql.md",
+            "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-meminfo-transact-sql.md",
             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-maps-transact-sql.md",
+            "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-maps-transact-sql.md",
              "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
            "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-threads-transact-sql.md",
+            "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-threads-transact-sql.md",
             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql-hub-menu.md",
+            "redirect_url": "/sql/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/microsoft-sql-documentation-table-of-contents.md",
+            "redirect_url": "/sql/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md",
+            "redirect_url": "/sql/tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md",
+            "redirect_url": "/sql/tools/sql-server-profiler/modify-trace-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/whitepapers/microsoft-white-papers.md",
+            "redirect_url": "/sql/index",
             "redirect_document_id": false
         }
     ]

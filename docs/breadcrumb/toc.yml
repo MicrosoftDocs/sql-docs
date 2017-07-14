@@ -42,8 +42,8 @@
         - name: ADOX API
           href: /sql/ado/reference/adox-api/
           homepage: /sql/ado/reference/adox-api/adox-object-model
-        - name: ADO RDS API
-          href: /sql/ado/reference/ado-rds-api/
+        - name: ADO RDS API (Deprecated)
+          href: /sql/ado/reference/rds-api/
           homepage: /sql/ado/reference/rds-api/rds-api-reference
     - name: Connect your client to SQL
       href: /sql/connect/
@@ -69,12 +69,9 @@
         href: /sql/connect/odbc/
         homepage: /sql/connect/odbc/microsoft-odbc-driver-for-sql-server
         items:
-        - name: Linux
-          href: /sql/connect/odbc/linux/
-          homepage: /sql/connect/odbc/linux/microsoft-odbc-driver-for-sql-server-on-linux
-        - name: Mac
-          href: /sql/connect/odbc/mac/
-          homepage: /sql/connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac
+        - name: Linux and Mac
+          href: /sql/connect/odbc/linux-mac/
+          homepage: /sql/connect/odbc/linux-mac/connecting-with-bcp
         - name: Windows
           href: /sql/connect/odbc/windows/
           homepage: /sql/connect/odbc/windows/asynchronous-execution-notification-method-sample
@@ -137,7 +134,7 @@
       items:
       - name: Failover clusters
         href: /sql/sql-server/failover-clusters/
-        homepage: /sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring
+        homepage: /sql/sql-server/failover-clusters/high-availability-solutions-sql-server
       - name: Install
         href: /sql/sql-server/install/
         homepage: /sql/sql-server/install/planning-a-sql-server-installation
@@ -416,15 +413,18 @@
         href: /sql/master-data-services/
         homepage: /sql/master-data-services/master-data-services-overview-mds
         items:
-        - name: Install on Windows
-          href: /sql/master-data-services/install-windows/
-          homepage: /sql/master-data-services/install-windows/install-master-data-services
-        - name: Excel add-in
-          href: /sql/master-data-services/microsoft-excel-add-in/
-          homepage: /sql/master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel
         - name: Develop
           href: /sql/master-data-services/develop/
           homepage: /sql/master-data-services/develop/categorized-web-service-operations-master-data-services
+        - name: Install on Windows
+          href: /sql/master-data-services/install-windows/
+          homepage: /sql/master-data-services/install-windows/install-master-data-services
+        - name: Install MDS in AlwaysOn
+          href: /sql/master-data-services/installing-mds-in-an-alwayson-group-environment/
+          homepage: /sql/master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment
+        - name: Excel add-in
+          href: /sql/master-data-services/microsoft-excel-add-in/
+          homepage: /sql/master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel
       - name: Reporting Services
         href: /sql/reporting-services/
         homepage: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
@@ -1003,6 +1003,9 @@
             - name: Security
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
               homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
+    - name: SQL Server Release Notes
+      href: /sql/release-notes/
+      homepage: /sql/release-notes/sql-server-release-notes
     - name: DMX
       href: /sql/dmx/
       homepage: /sql/dmx/data-mining-extensions-dmx-reference
@@ -1118,12 +1121,18 @@
       - name: Object
         href: /sql/ssms/object/
         homepage: /sql/ssms/object/object-explorer
+      - name: Register Servers
+        href: /sql/ssms/register-servers/
+        homepage: /sql/ssms/register-servers/register-servers
       - name: Solution
         href: /sql/ssms/solution/
         homepage: /sql/ssms/solution/solution-explorer
       - name: Template
         href: /sql/ssms/template/
         homepage: /sql/ssms/template/template-explorer
+      - name: Tutorials
+        href: /sql/ssms/tutorials/
+        homepage: /sql/ssms/tutorials/tutorial-sql-server-management-studio
       - name: Visual DB tools
         href: /sql/ssms/visual-db-tools/
         homepage: /sql/ssms/visual-db-tools/visual-database-tools

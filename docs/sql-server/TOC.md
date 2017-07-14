@@ -8,6 +8,9 @@
 ## [Maximum Capacity Specifications for SQL Server](maximum-capacity-specifications-for-sql-server.md)
 ## [Compute Capacity Limits by Edition of SQL Server](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [Customer Experience Improvement Program](customer-experience-improvement-program-for-sql-server-data-tools.md)
+## [Configure SQL Server to send feedback to Microsoft](sql-server-customer-feedback.md)
+
+# [Recently Updated Articles for SQL Server](sql-server-new-updated-sql-docs-pr.md)
 
 # Release Notes
 
@@ -29,7 +32,7 @@
 # [Failover clusters](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [Install](../sql-server/install/planning-a-sql-server-installation.md)
 # [Integration Services](../integration-services/sql-server-integration-services.md)
-# [Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)
+# [Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)

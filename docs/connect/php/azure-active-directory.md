@@ -7,20 +7,21 @@ ms.technology:
 ms.topic: "article"
 author: "david-puglielli"
 ms.author: "v-dapugl"
+manager: "v-hakaka"
 ---
-# Azure Active Directory
+# How to: Connect Using Azure Active Directory Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) is a central user ID management technology that operates as an alternative to [SQL Server authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD allows connections to Microsoft Azure SQL Database and SQL Data Warehouse with federated identities in Azure AD using a username and password, Windows Integrated Authentication, or an Azure AD access token; the PHP drivers for SQL Server offer partial support for these features.
 
-To use Azure AD, use the **Authentication** keyword. By default it is not set -- see the following table for details.
+To use Azure AD, use the **Authentication** keyword. The values that **Authentication** can take on are explained in the following table.
 
-|Values for **Authentication**|Description|
-|-|-|
-|(not set)|Authentication mode determined by other keywords (existing legacy connection options). |
-| (empty string)| Connection string only. Override and unset an `Authentication` value set in the DSN.|
-|`SqlPassword`|Directly authenticate to a SQL Server instance (which may be an Azure instance) using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
-| `ActiveDirectoryPassword`|Authenticate with an Azure Active Directory identity using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
+|Keyword|Values|Description|
+|-||
+|**Authentication**|Not set (default)|Authentication mode determined by other keywords. For more information, see [Connection Options](../../connect/php/connection-options.md). |
+|| (empty string)| Connection string only. Override and unset an `Authentication` value set in the DSN.|
+||`SqlPassword`|Directly authenticate to a SQL Server instance (which may be an Azure instance) using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
+||`ActiveDirectoryPassword`|Authenticate with an Azure Active Directory identity using a username and password. The username and password must be passed into the connection string using the **UID** and **PWD** keywords. |
 
 The **Authentication** keyword affects the connection security settings. If it is set in the connection string, then by default the **Encrypt** keyword is set to true, so the client will request encryption. Moreover, the server certificate will be validated irrespective of the encryption setting unless **TrustServerCertificate** is set to true. This is distinguished from the old, and less secure, login method, in which the server certificate is not validated unless encryption is specifically requested in the connection string.
 

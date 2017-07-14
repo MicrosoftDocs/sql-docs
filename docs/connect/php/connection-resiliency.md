@@ -7,6 +7,7 @@ ms.technology:
 ms.topic: "article"
 author: "david-puglielli"
 ms.author: "v-dapugl"
+manager: "v-hakaka"
 ---
 ## Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -15,12 +16,12 @@ ms.author: "v-dapugl"
 
 Connection resiliency is implemented with two connection keywords that can be added to connection strings: **ConnectRetryCount** and **ConnectRetryInterval**.
 
-|Name|Values|Default|Description|
+|Keyword|Values|Default|Description|
 |-|-|-|-|
 |**ConnectRetryCount**| Integer between 0 and 255 (inclusive)|1|The maximum number of attempts to reestablish a broken connection before giving up. By default, a single attempt is made to reestablish a connection when broken. A value of 0 means that no reconnection will be attempted.|
 |**ConnectRetryInterval**| Integer between 1 and 60 (inclusive)|1| The time, in seconds, between attempts to reestablish a connection. The application will attempt to reconnect immediately upon detecting a broken connection, and will then wait **ConnectRetryInterval** seconds before trying again. This keyword is ignored if **ConnectRetryCount** is equal to 0.
 
-If **ConnectRetryCount*ConnectRetryInterval** is larger than **LoginTimeout**, then the client will cease attempting to connect once **LoginTimeout** is reached; otherwise, it will continue to try to reconnect until **ConnectRetryCount** is reached.
+If the product of **ConnectRetryCount** multiplied by **ConnectRetryInterval** is larger than **LoginTimeout**, then the client will cease attempting to connect once **LoginTimeout** is reached; otherwise, it will continue to try to reconnect until **ConnectRetryCount** is reached.
 
 #### Remarks
 

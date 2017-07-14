@@ -138,6 +138,9 @@ The following sections describe known issues with this release of SQL Server 201
 
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
+#### Server Collation
+When using the MSSQL_COLLATION override, OR when doing a localized (non English) install, it is possible SQL Server will hit a deadlock when trying to set the server collation, which generates a dump. Setup does complete successfully, however the server collation will not have been set. The workaround is to simply run ./mssql-conf set-collation and enter the collation name desired when prompted (the collation name can be found in the errorlog at the line: “Attempting to change default collation to …”).
+
 #### <a name = "fci"></a>Shared disk cluster instance upgrade
 
 In RC1 the cluster resource agent sets the virtual server name like it does in a Failover Cluster Instance on Windows. Prior to RC1 `@@servername` on a shared disk cluster returned the specific node name so after failover `@@servername` returned a different value. In RC1 the serverName of the shared disk cluster instance is updated with the resource name when the resource is added to the cluster. Because of this, the cluster will have to restart the SQL Server after the manual failover during the upgrade - as in the following steps:

@@ -35,4 +35,4 @@ manager: "jhubbard"
 ### Linux
 
 
-*	Configure loading the PHP driver and configure your web server to host PHP applications, as noted here: [PHP Linux Drivers for SQL Server - Installation Tutorial](https://github.com/Microsoft/msphpsql/blob/PHP-7.0-Linux/LinuxTutorial.md)
+*	Configure loading the PHP driver and configure your web server to host PHP applications, as noted here: [PHP Linux and Mac Drivers Installation Tutorial](../../connect/php/installation-tutorial-linux-mac.md)

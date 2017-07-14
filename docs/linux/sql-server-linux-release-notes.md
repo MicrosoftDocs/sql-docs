@@ -32,7 +32,7 @@ The following table lists the releases of SQL Server 2017 covered in this topic.
 
 | Release | Version | Release date |
 |-----|-----|-----|
-| [RC1](#RC1) | 00.0.000.000 | 7-2017 |
+| [RC1](#RC1) | 14.0.800.90 | 7-2017 |
 | [CTP 2.1](#ctp21) | 14.0.600.250 | 5-2017 |
 | [CTP 2.0](#ctp20) | 14.0.500.272 | 4-2017 |
 | [CTP 1.4](#ctp14) | 14.0.405.198 | 3-2017 |
@@ -42,7 +42,7 @@ The following table lists the releases of SQL Server 2017 covered in this topic.
 | [CTP 1.0](#ctp10) | 14.0.1.246 | 11-2016 |
 
 ## <a id="RC1"> RC1 (July 2017) </a>
-The SQL Server engine version for this release is 00.0.000.000.
+The SQL Server engine version for this release is 14.0.800.90.
 
 ### Supported platforms 
 
@@ -66,9 +66,9 @@ Package details and download locations for the RPM and Debian packages are liste
 
 | Package | Package version | Downloads |
 |-----|-----|-----|
-| Red Hat RPM package | 00.0.000.000-0 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-00.0.000.000-0.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-00.0.000.000-0.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-00.0.000.000-0.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-00.0.000.000-0.x86_64.rpm) | 
-| SLES RPM package | 00.0.000.000-0 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-00.0.000.000-0.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-00.0.000.000-0.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-00.0.000.000-0.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-00.0.000.000-0.x86_64.rpm) | 
-| Ubuntu 16.04 Debian package | 00.0.000.000-0 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_00.0.000.000-0_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_00.0.000.000-0_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_00.0.000.000-0_amd64.deb)</br>[SQL Server Agent Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_00.0.000.000-0_amd64.deb) |
+| Red Hat RPM package | 14.0.800.90-2 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.800.90-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.800.90-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.800.90-2.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.800.90-2.x86_64.rpm) | 
+| SLES RPM package | 14.0.800.90-2 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.800.90-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.800.90-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.800.90-2.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.800.90-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.800.90-2 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.800.90-2_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.800.90-2_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.800.90-2_amd64.deb)</br>[SQL Server Agent Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.800.90-2_amd64.deb) |
 
 ### Supported client tools
 
@@ -76,7 +76,7 @@ Package details and download locations for the RPM and Debian packages are liste
 |-----|-----|
 | [SQL Server Management Studio (SSMS) for Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
 | [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
-| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest (1.12) |
+| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest |
 
 ### Unsupported features and services
 The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.
@@ -139,6 +139,7 @@ The following sections describe known issues with this release of SQL Server 201
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### Server Collation
+
 When using the MSSQL_COLLATION override, OR when doing a localized (non English) install, it is possible SQL Server will hit a deadlock when trying to set the server collation, which generates a dump. Setup does complete successfully, however the server collation will not have been set. The workaround is to simply run ./mssql-conf set-collation and enter the collation name desired when prompted (the collation name can be found in the errorlog at the line: “Attempting to change default collation to …”).
 
 #### <a name = "fci"></a>Shared disk cluster instance upgrade

@@ -15,11 +15,13 @@ ms.workload:
 ms.tgt_pltfrm: na
 ms.devlang: 
 ms.topic: article
-ms.date: 07/13/2017
+ms.date: 07/14/2017
 ms.author: 
 ---
 # Troubleshoot PolyBase connectivity
-You can use An interactive diagnostics tool, that has been built into PolyBase, to help troubleshoot authentication problems when using PolyBase against a Kerberos-secured Hadoop cluster. This article serves as a guide to walk through the debugging process of such issues by leveraging this tool.
+You can use An interactive diagnostics tool, that has been built into PolyBase, to help troubleshoot authentication problems when using PolyBase against a Kerberos-secured Hadoop cluster. 
+
+This article serves as a guide to walk through the debugging process of such issues by leveraging this tool.
 
 **Prerequisites**
 1. SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 or higher with PolyBase installed
@@ -44,6 +46,7 @@ Issues with authentication fall into one or more of the above four steps. To hel
 
 ## Troubleshooting
 PolyBase has multiple configuration XMLs containing properties of the Hadoop cluster. Namely, these are core-site.xml, hdfs-site.xml, hive-site.xml, jaas.conf, mapred-site.xml, and yarn-site.xml. They are located under "\[System Drive\]:*{{INSTALL\_PATH}}\\{{INSTANCE\_NAME}}*\\MSSQL\\Binn\\Polybase\\Hadoop\\conf". The default for SQL Server 2016, for instance, would be "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase\\Hadoop\\conf".
+
 Update one of the PolyBase configuration files, **core-site.xml**, with the three properties below with the values set according to the environment:
 ```xml
 <property>
@@ -60,6 +63,7 @@ Update one of the PolyBase configuration files, **core-site.xml**, with the thr
 </property>
 ```
 The other XMLs will later need to be updated as well if pushdown operations are desired, but with just this file configured, the HDFS file system should at least be able to be accessed.
+
 The tool runs independently of SQL Server, so it does not need to be running, nor does it need to be restarted if updates are made to the configuration XMLs. To run the tool, execute the following on the host with SQL Server installed:
 
 ```dos
@@ -67,8 +71,9 @@ The tool runs independently of SQL Server, so it does not need to be running, no
 > java -classpath ".\\Hadoop\\conf;.\\Hadoop\\\*;.\\Hadoop\\HDP2\_2\\\*" com.microsoft.polybase.client.HdfsBridge <Name Node Address> <Name Node Port> <Service Principal> <Filepath containing Service Principal's Password> <Remote HDFS file path (optional)>
 ```
 ## Arguments
-| *Name Node Address* | The IP or FQDN of the name node. This refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL.|
+| Argument | Description|
 | --- | --- |
+| *Name Node Address* | The IP or FQDN of the name node. This refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL.|
 | *Name Node Port* | The port of the name node. This refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL. This is typically 8020. |
 | *Service Principal* | The admin service principal to your KDC. This should match what you use as your "IDENTITY" argument in your CREATE DATABASE SCOPED CREDENTIAL T-SQL.|
 | *Service Password* | Instead of typing your password at the console, store it in a file and pass the file path here. The contents of the file should match what you use as your "SECRET" argument in your CREATE DATABASE SCOPED CREDENTIAL T-SQL. |
@@ -78,9 +83,12 @@ The tool runs independently of SQL Server, so it does not need to be running, no
 ```dos
 > java -classpath ".\\Hadoop\\conf;.\\Hadoop\\\*;.\\Hadoop\\HDP2\_2\\\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin\_user "C:\\temp\\kerberos\_pass.txt"
 ```
-The output is verbose for enhanced debugging, but there are only four main checkpoints to look for regardless of whether you are using MIT or AD. They correspond to the four steps outlined above. The following excerpts are from an MIT KDC. You may refer to complete sample outputs from both MIT and AD at the end of this article in the References.
+The output is verbose for enhanced debugging, but there are only four main checkpoints to look for regardless of whether you are using MIT or AD. They correspond to the four steps outlined above. 
+
+The following excerpts are from an MIT KDC. You may refer to complete sample outputs from both MIT and AD at the end of this article in the References.
 ## Checkpoint 1
 There should be a hex dump of a ticket with Server Principal = krbtgt/*MYREALM.COM@MYREALM.COM*. This indicates SQL Server successfully authenticated against the KDC and received a TGT. If not, the problem lies strictly between SQL Server and the KDC, and not Hadoop.
+
 PolyBase does **not** support trust relationships between AD and MIT and must be configured against the same KDC as configured in the Hadoop cluster. In such environments, manually creating a service account on that KDC and using that to perform authentication will work.
 ```dos
 | >>> KrbAsReq creating message 
@@ -117,7 +125,7 @@ PolyBase will make an attempt to access the HDFS and fail because the request di
 ## Checkpoint 3
 A second hex dump indicates that SQL Server successfully used the TGT and acquired the applicable Service Ticket for the name node's SPN from the KDC.
 ```dos
-| >>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, \#bytes=664 
+|>>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, \#bytes=664 
  >>> KDCCommunication: kdc=kerberos.contoso.com UDP:88, timeout=30000,Attempt =1, \#bytes=664 
  >>> KrbKdcReq send: \#bytes read=669 
  >>> KdcAccessibility: remove kerberos.contoso.com 
@@ -140,6 +148,7 @@ A second hex dump indicates that SQL Server successfully used the TGT and acquir
 ```
 ## Checkpoint 4
 Finally, the file properties of the target path should be printed along with a confirmation message. This indicates SQL Server was authenticated by Hadoop using the ST and a session was granted to access the secured resource.
+
 Reaching this point confirms that: (i) the three actors are able to communicate correctly, (ii) the core-site.xml and jaas.conf are correct, and (iii) your KDC recognized your credentials.
 ```dos
 | \[2017-04-25 21:34:35,096\] INFO 2235\[main\] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1586) - File properties for "/": FileStatus{path=hdfs://10.193.27.232:8020/; isDirectory=true; modification\_time=1492028259862; access\_time=0; owner=hdfs; group=hdfs; permission=rwxr-xr-x; isSymlink=false} 
@@ -159,6 +168,7 @@ If the tool was run and the file properties of the target path were *not* printe
 ## Debugging tips
 ### MIT KDC  
 All the SPNs registered with the KDC, including the admins, can be viewed by running **kadmin.local** > (admin login) > **listprincs** on the KDC host or any configured KDC client. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available in the cluster (e.g. nn, dn, rm, yarn, spnego, etc.) Their corresponding keytab files (password substitutes) can be seen under **/etc/security/keytabs**, by default. They are encrypted using the KDC's private key.  
+
 Also consider using the [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) tool to verify the admin credentials on the KDC locally. An example usage would be: *kinit identity@MYREALM.COM*. A prompt for a password indicates the identity exists.  
 The KDC logs are available in **/var/log/krb5kdc.log**, by default, which includes all of the requests for tickets including the client IP that made the request. There should be two requests from the SQL Server machine's IP wherein the tool was run: first for the TGT from the Authenticating Server as an **AS\_REQ**, followed by a **TGS\_REQ** for the ST from the Ticket Granting Server.
 ```dos

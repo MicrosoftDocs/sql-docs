@@ -379,9 +379,9 @@ The following are links to information, tools, and scripts used in the developme
 
 + [Introducing Resource Governor](https://technet.microsoft.com/library/bb895232.aspx)
 
-+ [Resource Governance for R Services](resource-governance-for-r-services)
++ [Resource Governance for R Services](resource-governance-for-r-services.md)
 
-+ [How to Create a resource pool for R](how-to-create-a-resource-pool-for-r)
++ [How to Create a resource pool for R](how-to-create-a-resource-pool-for-r.md)
 
 + [An example of configuring Resource Governor](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 

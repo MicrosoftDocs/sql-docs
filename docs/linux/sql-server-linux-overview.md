@@ -57,8 +57,10 @@ SQL Server 2017 has the same underlying database engine on all supported platfor
 
 If you are already familiar with SQL Server, review the [Release notes](sql-server-linux-release-notes.md) for general guidelines and known issues for this release. Then look at [what's new for SQL Server on Linux](sql-server-linux-whats-new.md) as well as [what's new for SQL Server 2017 overall](../sql-server/what-s-new-in-sql-server-2017.md).
 
-##  ![info_tip](./media/general/info_tip.png) Engage with the SQL Server engineering team 
-- [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - discuss SQL Server](https://www.reddit.com/r/SQLServer/)
+##  ![info_tip](./media/general/info_tip.png) Engage with the SQL Server engineering team
+
+- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Ask database administration questions
+- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Ask development questions
+- [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Ask technical questions
+- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): Report bugs and request feature
+- [Reddit](https://www.reddit.com/r/SQLServer/): Discuss SQL Server

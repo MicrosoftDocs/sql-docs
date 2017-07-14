@@ -79,6 +79,7 @@
 # Resources
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server Documentation](../sql-server/sql-server-technical-documentation.md)
+## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 ## [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)

@@ -32,7 +32,7 @@ manager: "jhubbard"
 * Configure loading the PHP driver, as noted here: [Loading the PHP SQL Driver](../../connect/php/loading-the-php-sql-driver.md) 
 * Configure IIS to host PHP applications, as noted here: [Configuring IIS for PHP SQL Driver](../../connect/php/configuring-iis-for-php-sql-driver.md)
 
-### Linux
+### Linux and Mac
 
 
 *	Configure loading the PHP driver and configure your web server to host PHP applications, as noted here: [PHP Linux and Mac Drivers Installation Tutorial](../../connect/php/installation-tutorial-linux-mac.md)

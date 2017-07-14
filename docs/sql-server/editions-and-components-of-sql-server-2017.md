@@ -51,7 +51,7 @@ For information about older versions, see:
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
 * [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
 
->[NOTE!]
+>[!NOTE]
 >All of the information in this article is subject to change because it applies to a preliminary release of SQL Server 2017. 
   
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

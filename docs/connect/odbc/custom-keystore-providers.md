@@ -81,7 +81,7 @@ typedef struct CEKeystoreProvider {
 |Field Name|Description|
 |:--|:--|
 |`Name`|The name of the keystore provider. It must not be the same as any other keystore provider previously loaded by the driver or present in this library. Null-terminated, wide-character* string.|
-|`Init`|Initialisation function. If an initialisation function is not required, this field may be null.|
+|`Init`|Initialization function. If an initialization function is not required, this field may be null.|
 |`Read`|Provider read function. May be null if not required.|
 |`Write`|Provider write function. Required if Read is not null. May be null if not required.|
 |`DecryptCEK`|ECEK decryption function. This function is the reason for existence of a keystore provider, and must not be null.|
@@ -93,7 +93,7 @@ With the exception of Free, the functions in this interface all have a pair of p
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
-Placeholder name for a provider-defined initialization function. The driver calls this function once, after a provider has been loaded, but before the first time it needs it to perform ECEK decryption or Read()/Write() requests. Use this function to perform any initialisation it needs. 
+Placeholder name for a provider-defined initialization function. The driver calls this function once, after a provider has been loaded, but before the first time it needs it to perform ECEK decryption or Read()/Write() requests. Use this function to perform any initialization it needs. 
 
 |Argument|Description|
 |:--|:--|
@@ -141,7 +141,7 @@ Placeholder name for a provider-defined ECEK decryption function. The driver cal
 |`alg`|[Input] The value of the [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) metadata attribute for the given ECEK. Null-terminated wide-character* string. This is intended to identify the encryption algorithm used to encrypt the given ECEK.|
 |`ecek`|[Input] Pointer to the ECEK to be decrypted.|
 |`ecekLen`|[Input] Length of the ECEK.|
-|`cekOut`|[Output] The provider shall allocate memory for the decrypted ECEK and write its address to the pointer pointed to by cekOut. It must be possible to free this block of memory using the [LocalFree](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) or free (Linux/Mac) function. If no memory was allocated due to an error or otherwise, the provider shall set *cekOut to a null pointer.|
+|`cekOut`|[Output] The provider shall allocate memory for the decrypted ECEK and write its address to the pointer pointed to by cekOut. It must be possible to free this block of memory using the [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) or free (Linux/Mac) function. If no memory was allocated due to an error or otherwise, the provider shall set *cekOut to a null pointer.|
 |`cekLen`|[Output] The provider shall write to the address pointed to by cekLen the length of the decrypted ECEK that it has written to **cekOut.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
@@ -158,7 +158,7 @@ Placeholder name for a provider-defined CEK encryption function. The driver does
 |`alg`|[Input] The value of the [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) metadata attribute for the given ECEK. Null-terminated wide-character* string. This is intended to identify the encryption algorithm used to encrypt the given ECEK.|
 |`cek`|[Input] Pointer to the CEK to be encrypted.|
 |`cekLen`|[Input] Length of the CEK.|
-|`ecekOut`|[Output] The provider shall allocate memory for the encrypted CEK and write its address to the pointer pointed to by ecekOut. It must be possible to free this block of memory using the [LocalFree](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) or free (Linux/Mac) function. If no memory was allocated due to an error or otherwise, the provider shall set *ecekOut to a null pointer.|
+|`ecekOut`|[Output] The provider shall allocate memory for the encrypted CEK and write its address to the pointer pointed to by ecekOut. It must be possible to free this block of memory using the [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) or free (Linux/Mac) function. If no memory was allocated due to an error or otherwise, the provider shall set *ecekOut to a null pointer.|
 |`ecekLen`|[Output] The provider shall write to the address pointed to by ecekLen the length of the encrypted CEK that it has written to **ecekOut.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
@@ -167,7 +167,8 @@ void (*Free)();
 ```
 Placeholder name for a provider-defined termination function. The driver may call this function upon normal termination of the process.
 
-*NB: Wide-character strings are 2-byte characters (UTF-16) due to how SQL Server stores them.*
+> [!NOTE]
+> *Wide-character strings are 2-byte characters (UTF-16) due to how SQL Server stores them.*
 
 
 ### Error Handling
@@ -183,7 +184,7 @@ The **onError** parameter points to an error-reporting function, with the follow
 |Argument|Description|
 |:--|:--|
 |`ctx`|[Input] The context to report the error on.|
-|`msg`|[Input] The error message to report. Null-terminated wide-character string. To allow parameterized information to be present, this string may contain insert-formatting sequences of the form accepted by the [FormatMessage](https://msdn.microsoft.com/en-us/library/windows/desktop/ms679351(v=vs.85).aspx) function. Extended functionality may be specified by this parameter as described below.|
+|`msg`|[Input] The error message to report. Null-terminated wide-character string. To allow parameterized information to be present, this string may contain insert-formatting sequences of the form accepted by the [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx) function. Extended functionality may be specified by this parameter as described below.|
 |...|[Input] Additional variadic parameters to fit format specifiers in msg, as appropriate.|
 
 To report when an error has occurred, the provider calls onError, supplying the context parameter passed into the provider function by the driver and an error message with optional additional parameters to be formatted in it. The provider may call this function multiple times to post multiple error messages consecutively within one provider-function invocation. For example:
@@ -292,7 +293,7 @@ int __stdcall KeystoreDecrypt(CEKEYSTORECONTEXT *ctx, errFunc *onError, const wc
         return 0;
     }
     if (!g_encryptKey) {
-        onError(ctx, L"Keystore provider not initialised with key");
+        onError(ctx, L"Keystore provider not initialized with key");
         return 0;
     }
 #ifndef _WIN32
@@ -323,7 +324,7 @@ int KeystoreEncrypt(CEKEYSTORECONTEXT *ctx, errFunc *onError,
     unsigned int i;
     printf("KSP Encrypt() function called (cekLen=%u)\n", cekLen);
     if (!g_encryptKey) {
-        onError(ctx, L"Keystore provider not initialised with key");
+        onError(ctx, L"Keystore provider not initialized with key");
         return 0;
     }
     *ecekOut = malloc(cekLen);
@@ -473,7 +474,7 @@ int main(int argc, char **argv) {
     return 4;
 FoundProv:
     if (pKsp->Init && !pKsp->Init(&ctx, postKspError)) {
-        fprintf(stderr, "Could not initialise provider\n");
+        fprintf(stderr, "Could not initialize provider\n");
         return 5;
     }
 #ifdef _WIN32

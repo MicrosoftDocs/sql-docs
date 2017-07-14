@@ -40,7 +40,7 @@ Always Encrypted may also be enabled in the DSN configuration, using the same ke
  SQLSetConnectAttr(hdbc, SQL_COPT_SS_COLUMN_ENCRYPTION, (SQLPOINTER)SQL_COLUMN_ENCRYPTION_ENABLE, 0);
 ```
 
-Once enabled for the connection, the behaviour of Always Encrypted may be adjusted for individual queries. See [Controlling the Performance Impact of Always Encrypted](#controlling-the-performance-impact-of-always-encrypted) below for more information.
+Once enabled for the connection, the behavior of Always Encrypted may be adjusted for individual queries. See [Controlling the Performance Impact of Always Encrypted](#controlling-the-performance-impact-of-always-encrypted) below for more information.
 
 Note that enabling Always Encrypted is not sufficient for encryption or decryption to succeed; you also need to make sure that:
 
@@ -280,7 +280,7 @@ This section describes the built-in performance optimizations in the ODBC Driver
 
 If Always Encrypted is enabled for a connection, the ODBC Driver 13.1 for SQL Server will, by default, call [sys.sp_describe_parameter_encryption](https://msdn.microsoft.com/library/mt631693.aspx) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them. The above behavior ensures a high-level of transparency to the client application: The application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
 
-### Per-Statement Always Encrypted Behaviour
+### Per-Statement Always Encrypted Behavior
 
 To control the performance impact of retrieving encryption metadata for parameterized queries, you can alter the Always Encrypted behavior for individual queries if it has been enabled on the connection. This way, you can ensure that `sys.sp_describe_parameter_encryption` is invoked only for queries that you know have parameters targeting encrypted columns. Note, however, that by doing so, you reduce transparency of encryption: if you encrypt additional columns in your database, you may need to change the code of your application to align it with the schema changes.
 
@@ -320,7 +320,8 @@ If SQL Server informs the driver that the parameter does not need to be encrypte
 
 To reduce the number of calls to a column master key store to decrypt column encryption keys, the driver caches the plaintext CEKs in memory. After receiving the ECEK from database metadata, the driver first tries to find the plaintext CEK corresponding to the encrypted key value in the cache. The driver calls the key store containing the CMK only if it cannot find the corresponding plaintext CEK in the cache.
 
-**Note:** In the ODBC Driver 13.1 for SQL Server, the entries in the cache are evicted after a two hour timeout. This means that for a given ECEK, the driver contacts the key store only once during the lifetime of the application or every two hours, whichever is less.
+> [!NOTE]
+> In the ODBC Driver 13.1 for SQL Server, the entries in the cache are evicted after a two hour timeout. This means that for a given ECEK, the driver contacts the key store only once during the lifetime of the application or every two hours, whichever is less.
 
 ## Working with Column Master Key Stores
 
@@ -416,13 +417,15 @@ The driver attempts to load the library identified by the ValuePtr parameter usi
 
 `SQLSetConnectAttr` returns the usual error or success values, and additional information is available for any errors which occurred via the standard ODBC diagnostic mechanism.
 
-NOTE: The application programmer must ensure that any custom providers are loaded before any query requiring them is sent over any connection. Failure to do so results in the error:
+> [!NOTE]
+> The application programmer must ensure that any custom providers are loaded before any query requiring them is sent over any connection. Failure to do so results in the error:
 
 | Error | Description |
 |:--|:--|
 |`CE200`|Keystore provider %1 not found. Ensure that the appropriate keystore provider library has been loaded.|
 
-NOTE: Keystore provider implementors should avoid the use of `MSSQL` in the name of their custom providers. This term is reserved exclusively for Microsoft use and may cause conflicts with future built-in providers. Using this term in the name of a custom provider may result in an ODBC warning.
+> [!NOTE]
+> Keystore provider implementors should avoid the use of `MSSQL` in the name of their custom providers. This term is reserved exclusively for Microsoft use and may cause conflicts with future built-in providers. Using this term in the name of a custom provider may result in an ODBC warning.
 
 #### Getting the List of Loaded Providers
 
@@ -445,7 +448,8 @@ To allow retrieving the entire list, every Get operation returns the current pro
 
 The `SQL_COPT_SS_CEKEYSTOREDATA` connection attribute enables a client application to communicate with loaded keystore providers for configuring additional parameters, keying material, etc. The communication between a client application and a provider follows a simple request-response protocol, based on Get and Set requests using this connection attribute. Communication is initiated only by the client application.
 
-NOTE: Due to the nature of the ODBC calls CEKeyStoreProvider’s respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
+> [!NOTE]
+> Due to the nature of the ODBC calls CEKeyStoreProvider’s respond to (SQLGet/SetConnectAttr), the ODBC interface only supports setting data at the resolution of the connection context.
 
 The application communicates with keystore providers through the driver via the CEKeystoreData structure:
 
@@ -477,7 +481,8 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 Additional detailed error information may be obtained via [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx).
 
-NOTE: The provider can use the connection handle to associate the written data to a specific connection, if it so desires. This is useful for implementing per-connection configuration. It may also ignore the connection context and treat the data identically regardless of the connection used to send the data. See [Context Association](../../connect/odbc/custom-keystore-providers.md#context-association) for more information.
+> [!NOTE]
+> The provider can use the connection handle to associate the written data to a specific connection, if it so desires. This is useful for implementing per-connection configuration. It may also ignore the connection context and treat the data identically regardless of the connection used to send the data. See [Context Association](../../connect/odbc/custom-keystore-providers.md#context-association) for more information.
 
 #### Reading data from a provider
 

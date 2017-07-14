@@ -102,10 +102,10 @@ You can perform an unattended installation in the following way:
 - Follow the initial steps in the [quick start tutorials](#platforms) to register the repositories and install SQL Server.
 - When you run `mssql-conf setup`, set [environment variables](sql-server-linux-configure-environment-variables.md) and use the `-n` (no prompt) option.
 
-The following example configures the Developer edition of SQL Server with the **MSSQL_PID** environment variable. It also sets the SA user password with the **SA_PASSWORD** environment variable. The `-n` parameter pulls in these values for a simple unattended install:
+The following example configures the Developer edition of SQL Server with the **MSSQL_PID** environment variable. It also sets the SA user password with the **MSSQL_SA_PASSWORD** environment variable. The `-n` parameter pulls in these values for a simple unattended install:
 
 ```bash
-sudo MSSQL_PID=Developer SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
+sudo MSSQL_PID=Developer MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
 ```
 
 You can also create a script that performs other actions. For example, you could install other SQL Server packages.

@@ -38,7 +38,7 @@ You can use several different environment variables to configure SQL Server 2017
 | Environment variable | Description |
 |-----|-----|
 | **ACCEPT_EULA** | Accept the SQL Server license agreement when set to any value (for example, 'Y'). |
-| **SA_PASSWORD** | Configure the SA user password. |
+| **MSSQL_SA_PASSWORD** | Configure the SA user password. |
 | **MSSQL_PID** | Set the SQL Server edition or product key. Possible values include: Evaluation, Developer, Express, Web, Standard, Enterprise, or a product key in the form of #####-#####-#####-#####-#####, where '#' is a number or a letter. |
 | **MSSQL_LCID** | Sets the language ID to use for SQL Server. For example 1036 is French. |
 | **MSSQL_COLLATION** | Sets the default collation for SQL Server. This overrides the default mapping of language id (LCID) to collation. |
@@ -57,11 +57,11 @@ This example runs `mssql-conf setup` without prompts (`-n`). This mode looks for
 
 - **ACCEPT_EULA** accepts the end user license agreement.
 - **MSSSQL_PID** specifies the freely licensed Developer Edition of SQL Server for non-production use.
-- **SA_PASSWORD** sets a strong password.
+- **MSSQL_SA_PASSWORD** sets a strong password.
 - **MSSQL_TCP_PORT** sets the TCP port that SQL Server listens on to 1234.
 
 ```bash
-sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf -n setup
+sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf -n setup
 ```
 
 ## Example: Docker
@@ -70,19 +70,19 @@ This example docker command uses the following environment variables to create a
 
 - **ACCEPT_EULA** accepts the end user license agreement.
 - **MSSSQL_PID** specifies the freely licensed Developer Edition of SQL Server for non-production use.
-- **SA_PASSWORD** sets a strong password.
+- **MSSQL_SA_PASSWORD** sets a strong password.
 - **MSSQL_TCP_PORT** sets the TCP port that SQL Server listens on to 1234. This means that instead of mapping port 1433 (default) to a host port, the custom TCP port must be mapped with the `-p 1234:1234` command in this example.
 
 If you are running Docker on Linux/macOS, use the following syntax with single quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 --cap-add SYS_PTRACE -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 --cap-add SYS_PTRACE -p 1234:1234 -d microsoft/mssql-server-linux
 ```
 
 If you are running Docker on Windows, use the following syntax with double quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 --cap-add SYS_PTRACE -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 --cap-add SYS_PTRACE -p 1234:1234 -d microsoft/mssql-server-linux
 ```
 
 ## Next steps

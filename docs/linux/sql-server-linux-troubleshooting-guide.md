@@ -173,4 +173,10 @@ For SQL dumps
 
 ## Support
 
-Support is available through the community and monitored by the engineering team. For specific questions head to [Stack Overflow](http://stackoverflow.com/), discuss  on [reddit.com/r/sqlserver](http://www.reddit.com/r/sqlserver), and report bugs to [connect](http://connect.microsoft.com/).
+Support is available through the community and monitored by the engineering team. For specific questions, use the following resources:
+
+- [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server): Ask database administration questions
+- [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server): Ask development questions
+- [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): Ask technical questions
+- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): Report bugs and request feature
+- [Reddit](https://www.reddit.com/r/SQLServer/): Discuss SQL Server

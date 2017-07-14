@@ -39,7 +39,7 @@ Install the tools for your platform:
 - [macOS](#macos)
 - [Docker](#docker)
 
-## <a id="RHEL"><a/>Install tools on RHEL
+## <a id="RHEL"><a/>Install tools on RHEL 7
 
 Use the following steps to install the **mssql-tools** on Red Hat Enterprise Linux. 
 
@@ -97,7 +97,7 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Install tools on Ubuntu
+## <a id="ubuntu"></a>Install tools on Ubuntu 16.04
 
 Use the following steps to install the **mssql-tools** on Ubuntu. 
 
@@ -142,7 +142,7 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>Install tools on SLES
+## <a id="SLES"></a>Install tools on SLES 12
 
 Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise Server. 
 

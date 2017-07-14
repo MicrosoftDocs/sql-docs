@@ -153,13 +153,16 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Basic availability groups <sup>2</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
 |Online indexing|Yes|No|No|No|No|
+|Resumable online index rebuilds|Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|
 |Fast recovery|Yes|No|No|No|No|
 |Mirrored backups|Yes|No|No|No|No|
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|  
+|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
+|Clusterless availability group|Yes|Yes|Yes|No|No|No|
+|Minimum replica commit availability group|Yes|Yes|Yes|No|No|No|
   
  <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -170,6 +173,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|  
+|Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|Yes|  
+|Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
 |In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes, <sup>2</sup>|Yes|
 |Stretch Database|Yes|Yes|Yes|Yes|Yes|
 |Persistent Main Memory|Yes|Yes|Yes|Yes|Yes|
@@ -183,6 +188,11 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Buffer Pool Extension|Yes|Yes|No|No|No|
 |IO Resource Governance|Yes|No|No|No|No|  
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|
+|Automatic Tuning|Yes|No|No|No|No|
+|Batch Mode Adaptive Joins|Yes|No|No|No|No|
+|Batch Memory Grant Feedback|Yes|No|No|No|No|
+|Bulk insert improvements|Yes|Yes|Yes|Yes|Yes|
+
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
@@ -297,6 +307,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Specification of language in query|Yes|Yes|Yes|Yes|No|   
 |Service Broker (messaging)|Yes|Yes|No (Client only)|No (Client only)|No (Client only)|   
 |Transact-SQL endpoints|Yes|Yes|Yes|No|No| 
+|Graph|Yes|Yes|Yes|Yes|Yes|  
+
 
 <sup>1</sup> Scale out with multiple compute nodes requires a head node.
 

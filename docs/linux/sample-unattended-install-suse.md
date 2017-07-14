@@ -33,7 +33,7 @@ This sample Bash script installs SQL Server 2017 CTP 2.1 on SUSE Linux Enterpris
 # Use the following variables to control your install:
 
 # Password for the SA user (required)
-SA_PASSWORD='<YourStrong!Passw0rd>'
+MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 # Product ID of the version of SQL server you're installing
 # Must be evaluation, developer, express, web, standard, enterprise, or your 25 digit product key
@@ -50,9 +50,9 @@ SQL_INSTALL_AGENT='y'
 # SQL_INSTALL_USER='<Username>'
 # SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
 
-if [ -z $SA_PASSWORD ]
+if [ -z $MSSQL_SA_PASSWORD ]
 then
-  echo Environment variable SA_PASSWORD must be set for unattended install
+  echo Environment variable MSSQL_SA_PASSWORD must be set for unattended install
   exit 1
 fi
 
@@ -68,7 +68,7 @@ echo Installing SQL Server...
 sudo zypper install -y mssql-server
 
 echo Running mssql-conf setup...
-sudo SA_PASSWORD=$SA_PASSWORD \
+sudo MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD \
      MSSQL_PID=$MSSQL_PID \
      /opt/mssql/bin/mssql-conf -n setup accept-eula
 
@@ -119,7 +119,7 @@ do
   /opt/mssql-tools/bin/sqlcmd \
     -S localhost \
     -U SA \
-    -P $SA_PASSWORD \
+    -P $MSSQL_SA_PASSWORD \
     -Q "SELECT @@VERSION" 2>/dev/null
   errstatus=$?
   ((counter++))
@@ -139,7 +139,7 @@ then
   /opt/mssql-tools/bin/sqlcmd \
     -S localhost \
     -U SA \
-    -P $SA_PASSWORD \
+    -P $MSSQL_SA_PASSWORD \
     -Q "CREATE LOGIN [$SQL_INSTALL_USER] WITH PASSWORD=N'$SQL_INSTALL_USER_PASSWORD', DEFAULT_DATABASE=[master], CHECK_EXPIRATION=ON, CHECK_POLICY=ON; ALTER SERVER ROLE [sysadmin] ADD MEMBER [$SQL_INSTALL_USER]"
 fi
 
@@ -152,7 +152,7 @@ To run the script
 
 1. Paste the sample into your favorite text editor and save it with a memorable name, like `install_sql.sh`.
 
-1. Customize `SA_PASSWORD`, `MSSQL_PID`, and any of the other variables you'd like to change.
+1. Customize `MSSQL_SA_PASSWORD`, `MSSQL_PID`, and any of the other variables you'd like to change.
 
 1. Mark the script as executable
 
@@ -167,7 +167,7 @@ To run the script
    ```
 
 ### Understanding the script
-The first thing the Bash script does is set a few variables. These can be either scripting variables, like the sample, or environment variables. The variable ``` SA_PASSWORD ``` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
+The first thing the Bash script does is set a few variables. These can be either scripting variables, like the sample, or environment variables. The variable ``` MSSQL_SA_PASSWORD ``` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
 
 1. Import the public Microsoft GPG keys.
 
@@ -177,7 +177,7 @@ The first thing the Bash script does is set a few variables. These can be either
 
 1. Install SQL Server
 
-1. Configure SQL Server with the ```SA_PASSWORD``` and automatically accept the End-User License Agreement.
+1. Configure SQL Server with the ```MSSQL_SA_PASSWORD``` and automatically accept the End-User License Agreement.
 
 1. Automatically accept the End-User License Agreement for the SQL Server command-line tools, install them, and install the unixodbc-dev package.
 
@@ -203,7 +203,7 @@ Simplify multiple unattended installs and create a stand-alone Bash script that 
 
 ```bash
 #!/bin/bash
-export SA_PASSWORD='<YourStrong!Passw0rd>'
+export MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 export MSSQL_PID='evaluation'
 export SQL_INSTALL_AGENT='y'
 export SQL_INSTALL_USER='<Username>'

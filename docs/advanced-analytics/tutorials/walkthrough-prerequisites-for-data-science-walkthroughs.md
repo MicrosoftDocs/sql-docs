@@ -1,8 +1,8 @@
 ---
-title: "Prerequisites for Data Science Walkthroughs (SQL Server R Services) | Microsoft Docs"
+title: "Prerequisites for the data science walkthrough for SQL Server and R | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/28/20176"
+ms.date: "07/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,48 +20,48 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Prerequisites for Data Science Walkthroughs
+# Prerequisites for the data science walkthrough for SQL Server and R
 
-We recommend that you do most of these walkthroughs on an R workstation that can connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer on the same network. You can also run the walkthrough on a computer that has both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and an R development environment.
+We recommend that you do this walkthrough on a laptop or other computer that has the Microsoft R libraries installed. You must be able to connect, on the same network, to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer with machine learning services and the R language enabled.
 
-Some tutorials contain all code and are intended to be run in SQL Server Management Studio or other SQL development environment. For these, you still need to install and enable the machine learning services on the SQL Server instance where you will run the R or Python code.
+You can run the walkthrough on a computer that has both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and an R development environment but we don't recommend this configuration for a production environment.
 
-## Install SQL Server Machine Learning Services (In-Database)
+## Install machine learning for SQL Server
 
-Requires one of the following environments:
+You must have access to an instance of SQL Server with either of the following features installed:
 
-+ SQL Server 2016 with R Services (In-Database)
-+ sQL Server 2017 Machine Learning Services
++ Machine Learning Services (In-Database) for SQL Server 2017
++ SQL Server 2016 R Services
 
-For detailed information about setup, see [Set up  SQL Server R Services (In-Database](https://msdn.microsoft.com/library/mt696069.aspx).
+For more information, see [Set up  SQL Server R Services (In-Database](../r/set-up-sql-server-r-services-in-database.md).
 
 > [!IMPORTANT]
-> Older versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do not support integration with R. However, you can use older SQL databases as an ODBC data source.
+> Be sure to use [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or later. Previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do not support integration with R. However, you can use older SQL databases as an ODBC data source.
 
-## Install an R development environment (optional)
+## Install an R development environment
 
-Some of these tutorials require that you run R or Python code from a client computer. The easiest way to work with R code is to install an R development environment, such as R Tools for Visual Studio; however, you can use any tool that can send R commands to a remote SQL Server.
+For this walkthrough, we recommend that you use an R development environment. Here are some suggestions:
 
-- **R Tools for Visual Studio** is a free plug-in that provides Intellisense, debugging, and support for Microsoft R Server and SQL Server R Services. To download, see [R Tools for Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx).  
-    
-- **Microsoft R Client** is a lightweight development tool that supports development in R and includes the ScaleR packages. To get it, see [Get Started with Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started).
-  
-- **RStudio** is one of the more popular environments for R development. For more information, see [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).  
-  
-    You cannot complete this tutorial using a generic installation of RStudio or any other environment; you must also install the R packages and connectivity libraries for Microsoft R Open. For more information, see [Set Up a Data Science Client](https://msdn.microsoft.com/library/mt696067.aspx).  
+- **R Tools for Visual Studio** (RTVS) is a free plug-in that provides Intellisense, debugging, and support for Microsoft R. YOu can use it with both R Server and SQL Server Machine Learning Services. To download, see [R Tools for Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx).
 
-- R tools (R.exe, RTerm.exe, RScripts.exe) are installed by default when you install [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]. If you do not wish to install an IDE you can use these tools.  
+- **Microsoft R Client** is a lightweight development tool that supports development in R using the ScaleR packages. To get it, see [Get Started with Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started).
 
-## Get permissions to connect to SQL Server
+- **RStudio** is one of the more popular environments for R development. For more information, see [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/).
 
-You will need to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to run scripts and upload data. To do this, you must have a valid login on the database server.  You can use either a SQL login or integrated Windows authentication.
+    You cannot complete this tutorial using a generic installation of RStudio or other environment; you must also install the R packages and connectivity libraries for Microsoft R Open. For more information, see [Set Up a Data Science Client](../r/set-up-a-data-science-client.md).
 
-Ask the database administrator to create an account for you on the server with the following privileges on the database where you will be using R:
+- Basic R tools (R.exe, RTerm.exe, RScripts.exe) are also installed by default when you install [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]. If you do not wish to install an IDE, you can use these tools.
+
+## Get permissions on the SQL Server instance and database
+
+To connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to run scripts and upload data, you must have a valid login on the database server.  You can use either a SQL login or integrated Windows authentication. Ask the database administrator to configure the following permissions for the account, in the database where you use R:
 
 - Create database, tables, functions, and stored procedures
-- Insert data into tables
-- EXECUTE ANY EXTERNAL SCRIPT (database level permission)
+- Write data into tables
+- Ability to run R script (`GRANT EXECUTE ANY EXTERNAL SCRIPT to <user>`)
 
-## Next step
+For this walkthrough, we have used the SQL login **RTestUser**. We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some demo purposes.
 
-[Prepare the Data](/walkthrough-prepare-the-data.md)
+## Next lesson
+
+[Prepare the data using PowerShell](/walkthrough-prepare-the-data.md)

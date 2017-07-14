@@ -116,7 +116,7 @@ To use machine learning, you must install SQL Server 2016 or later. At least one
     RECONFIGURE WITH OVERRIDE
     ```
   
-10. Restart the SQL Server service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Restarting the SQL Server service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+4. Restart the SQL Server service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Restarting the SQL Server service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
     You can restart the service using the **Services** panel in Control Panel, or by using SQL Server Configuration Manager.
 
@@ -154,7 +154,18 @@ Verify that the external script execution service is enabled.
 
 After you have verified that the script execution feature works in SQL Server, you can run R commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
 
-However, if you intend to run commands from a remote R development client, you might need to make additional changes. For more information, see [Additional Configuration](#bkmk_FollowUp).
+However, if you intend to run commands from a remote R development client, you might need to make additional changes. These changes can include:
+
+- Updating the firewall rules
+- Enabling additional network protocols
+- Ensuring that the server supports remote connections
+- Giving users permissions to run R script or use databases
+
+For details, see [Additional Configuration](#bkmk_FollowUp).
+
+### Using R Services in an Azure VM
+
+If you installed R Services or SQL Server Machine Learning Services on an Azure virtual machine, you might need to change some additional defaults. For more information, see [Installing SQL Server Machine Learning on an Azure Virtual Machine](installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 
 ### Tutorials
 
@@ -170,11 +181,15 @@ Packages that you want to use from SQL Server must be installed in the default l
 
 You can also set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Package Management](r-package-management-for-sql-server-r-services.md).
 
-## <a name="bkmk_FollowUp"></a> Additional Configuration
+## <a name="bkmk_FollowUp"></a> Additional configuration
 
-Depending on your use case for R in SQL Server, you might need to make additional changes to the server, the firewall, the accounts used by the service, or to database permissions.
+Depending on your use case for R or Python, you might need to make additional changes to the server, the firewall, the accounts used by the service, or to database permissions. The exact changes you must make vary case-by-case. Common scenarios that require additional changes include:
 
-For example, you might need to access SQL Server data from a remote R development terminal, perform ODBC calls from your R code, or convert R code to stored procedures. If you have additional security restrictions, you must ensure that the Launchpad services accounts can access the database. If you will be running R scripts from a remote computer, you must give the remote users database access and permission to run external scripts.
++ Firewall rules prevent inbound connections to SQL Server
++ Users will access SQL Server data from a remote R development terminal and execute  RODBC calls from your R code (requires *implied authentication*)
++ Additional security restrictions are in-place that changed the Launchpad service accounts
++ Users have permission to read data but not to run R code or wrte data using R code
++ On Azure VMs, default firewall rules prevent network access by local R users
 
 > [!NOTE]
 > Not all the listed changes might be required. However, we recommend that you review all items to see if they are applicable to your scenario.

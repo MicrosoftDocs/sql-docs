@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 - Enable or disable query optimization hotfixes at the database level.  
 
-- Enable or disable the identity cache at the database level. **Applies to**: SQL Server 2017 (feature is in public preview) 
+- Enable or disable the identity cache at the database level. **Applies to**: SQL Server 2017 and Azure SQL Database (feature is in public preview) 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ ALTER DATABASE SCOPED CONFIGURATION
      {  [ FOR SECONDARY] SET <set_options>  }    
 }  
 | CLEAR PROCEDURE_CACHE  
-| IDENTITY_CACHE = { ON | OFF }
+| SET IDENTITY_CACHE = { ON | OFF }
 [;]    
   
 < set_options > ::=    
@@ -119,7 +119,7 @@ Clears the procedure cache for the database. This can be executed both on the pr
 
 IDENTITY_CACHE = { **ON** | OFF }  
 
-**Applies to**: SQL Server 2017 (feature is in public preview) 
+**Applies to**: SQL Server 2017 and Azure SQL Database (feature is in public preview) 
 
 Enables or disables identity cache at the database level. The default is **ON**. Identity caching is used to improve INSERT performance on tables with Identity columns. To avoid gaps in the values of the Identity column in cases where the server restarts unexpectedly or fails over to a secondary server, disable the IDENTITY_CACHE option. This option is similar to the existing SQL Server Trace Flag 272, except that it can be set at the database level rather than only at the server level.   
 
@@ -256,7 +256,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 ### G. Set IDENTITY_CACHE
 
-**Applies to**: SQL Server 2017 (feature is in public preview) 
+**Applies to**: SQL Server 2017 and Azure SQL Database (feature is in public preview) 
 
 This example disables the identity cache.
 

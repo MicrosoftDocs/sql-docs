@@ -1,7 +1,7 @@
 ---
 title: "Performance for R Services - results and resources| Microsoft Docs"
 ms.custom: ""
-ms.date: "03/10/2017"
+ms.date: "07/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -335,7 +335,7 @@ The results also suggested that the **number of features** had a significant imp
 
 We recommend that you read this blog article and the accompanying tutorial for a detailed discussion.
 
--   [Optimization tips and tricks for machine learning in SQL Server](https://azure.microsoft.com/en-us/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+-   [Optimization tips and tricks for machine learning in SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
 ## Resources
 

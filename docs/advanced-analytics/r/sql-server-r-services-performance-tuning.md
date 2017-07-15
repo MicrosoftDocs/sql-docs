@@ -25,10 +25,10 @@ This article is the first in a series of four articles that describe performance
 
 The goal of this series is to provide guidance about the types of performance tuning techniques that are most useful for running R jobs in SQL Server.
 
-1. This topic provides an overview of the architecture and some common problems when optimizing for data science tasks.
-2. The second article covers specific hardware and SQL Server optimizations.
-3. The third article covers optimizations in R code and resources for operationalization.
-4. The fourth article describes test methods in detail, and reports findings and conclusions.
++ This (first) topic provides an overview of the architecture and some common problems when optimizing for data science tasks.
++ The second article covers specific hardware and SQL Server optimizations.
++ The third article covers optimizations in R code and resources for operationalization.
++ The fourth article describes test methods in detail, and reports findings and conclusions.
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 

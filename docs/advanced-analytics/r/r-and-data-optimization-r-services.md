@@ -79,9 +79,9 @@ There are two ways to achieve parallelization with R in SQL Server:
 
 -   **Use \@parallel.** When using the `sp_execute_external_script` stored procedure to run an R script, set the `@parallel` parameter to `1`. This is the best method if your R script does **not** use RevoScaleR functions, which have other mechanisms for processing. If your script uses RevoScaleR functions (generally prefixed with "rx"), parallel processing is performed automatically and you do not need to explicitly set `@parallel` to `1`.
 
--   If the R script can be parallelized, and if the SQL query can be parallelized, then the database engine creates multiple parallel processes. The maximum number of processes that can be created is equal to the **max degree of parallelism** (MAXDOP) setting for the instance. All processes then run the same script, but receive only a portion of the data.
+    If the R script can be parallelized, and if the SQL query can be parallelized, then the database engine creates multiple parallel processes. The maximum number of processes that can be created is equal to the **max degree of parallelism** (MAXDOP) setting for the instance. All processes then run the same script, but receive only a portion of the data.
     
-    Thus, this method is not useful with scripts that must see all the data, such as when training a model. However, it is useful when performing tasks such as batch prediction in parallel. For more information on using parallelism with `sp_execute_external_script`, see the **Advanced tips: parallel processing** section of [Using R Code in Transact-SQL](\tutorials\rtsql-using-r-code-in-transact-sql-quickstart.md).
+    Thus, this method is not useful with scripts that must see all the data, such as when training a model. However, it is useful when performing tasks such as batch prediction in parallel. For more information on using parallelism with `sp_execute_external_script`, see the **Advanced tips: parallel processing** section of [Using R Code in Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
 
 -   **Use numTasks =1.** When using **rx** functions in a SQL Server compute context, set the value of the _numTasks_ parameter to the number of processes that you would like to create. The number of processes created can never be more than **MAXDOP**; however, the actual number of processes created is determined by the database engine and may be less than you requested.
 
@@ -108,15 +108,14 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 To ensure that the data can be analyzed in parallel, the query used to retrieve the data should be framed in such a way that the database engine can create a parallel query plan. If the code or algorithm uses large volumes of data, make sure that the query given to `RxSqlServerData` is optimized for parallel execution. A query that does not result in a parallel execution plan can result in a single process for computation.
 
-If you need to work with large datasets, use Management Studio or another SQL query analyzer 
-before you run your R code, to analyze the execution plan. Then, take any recommended steps to improve the performance of the query. For example, a missing index on a table can affect the time taken to execute a query. For more information, see [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md).
+If you need to work with large datasets, use Management Studio or another SQL query analyzer before you run your R code, to analyze the execution plan. Then, take any recommended steps to improve the performance of the query. For example, a missing index on a table can affect the time taken to execute a query. For more information, see [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md).
 
 Another common mistake that can affect performance is that a query retrieves more columns than are required. For example, if a formula is based on only three columns, but your source table has 30 columns, you are moving data unnecessarily.
 
  + Avoid using `SELECT *`!
- + Take some time to review the columns in the dataset and identify only the ones needed for analysis.
- + Remove from your queries any columns that contain data types that are incompatible with R code, such as GUIDS and rowguids.
- + Check for unsupported date and time formats.
+ + Take some time to review the columns in the dataset and identify only the ones needed for analysis
+ + Remove from your queries any columns that contain data types that are incompatible with R code, such as GUIDS and rowguids
+ + Check for unsupported date and time formats
  + Rather than load a table, create a view that selects certain values or casts columns to avoid conversion errors
 
 ## Optimizing the machine learning algorithm
@@ -124,7 +123,7 @@ Another common mistake that can affect performance is that a query retrieves mor
 This section provides miscellaneous tips and resources that are specific to RevoScaleR and other options in Microsoft R.
 
 > [!TIP]
-> A general discussion of R optimization is out of the scope of this article. However, if you need to make your code faster, we recommend the popular article, [The R Inferno](http://www.burns-stat.com/pages/Tutor/R_inferno.pdf). It covers programming constructs in R and common pitfalls in colorful language and great detail, and provides many specific examples of R programming techniques.
+> A general discussion of R optimization is out of the scope of this article. However, if you need to make your code faster, we recommend the popular article, [The R Inferno](http://www.burns-stat.com/pages/Tutor/R_inferno.pdf). It covers programming constructs in R and common pitfalls in vivid language and detail, and provides many  specific examples of R programming techniques.
 
 ### Optimizations for RevoScaleR
 

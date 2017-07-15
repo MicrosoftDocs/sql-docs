@@ -19,7 +19,7 @@ manager: "jhubbard"
 
 This article is the second in a series that describes performance optimization for R Services based on two case studies.  This article provides guidance about the hardware and network configuration of the computer that is used to run SQL Server R Services. It also contains information about ways to configure the SQL Server instance, database, or tables used in a solution. Because use of NUMA in SQL Server blurs the line between hardware and database optimizations, a third section discusses CPU affinitization and resource governance in detail.
 
-> [TIP]
+> [!TIP]
 > If you are new to SQL Server, we highly recommend that you also review the SQL Server performance tuning guide: [Monitor and tune for performance](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
 
 ## Hardware optimization
@@ -119,7 +119,7 @@ Resource governance in SQL Server lets you centralize monitoring and control of 
 
 The default value for memory consumption by external scripts is limited to 20% of the total memory available for SQL Server itself. This limit is applied by default to ensure that all tasks that rely on the database server are not severely affected by long running R jobs. However, these limits can be changed by the database administrator. In many cases, the 20% limit is not adequate to support serious machine learning workloads.
 
-The configuration options supported are **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, and **MAX_PROCESSES**. To view the current settings, use this statement: 1SELECT * FROM sys.resource_governor_external_resource_pools`
+The configuration options supported are **MAX_CPU_PERCENT**, **MAX_MEMORY_PERCENT**, and **MAX_PROCESSES**. To view the current settings, use this statement: `SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  If the server is primarily used for R Services, it might be helpful to increase MAX_CPU_PERCENT to 40% or 60%.
 
@@ -131,13 +131,13 @@ To change the allocated resource values, use T-SQL statements.
 
 + This statement sets all three configurable values: `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ If you wish the settings to take effect immediately, after changing a memory, CPU, or max process setting, run this statement: `ALTER RESOURCE GOVERNOR RECONFIGURE`
++ If you change a memory, CPU, or max process setting, and then want to apply the settings immediately, run this statement: `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## NUMA, soft-NUMA, and CPU affinity
 
 SQL Server has been designed to take advantage of NUMA-based computers without requiring any application changes. SQL Server 2016 and SQL Server 2017 include the Soft-NUMA feature, which is automatically enabled at the database-instance level when starting the SQL Server service.
 
-The soft-NUMA feature automatically partitions service threads per node, and thus generally increases scalability and performance by reducing IO and lazy writer bottlenecks. Whenever the database engine server detects more than 8 physical cores per NUMA node or socket, it automatically creates soft-NUMA nodes that ideally contain 8 cores, with as few as five and as many as nine logical cores per node. You can review the SQL Server log files to determine soft-NUMA usage. Details are output to the log whenever SQL Server detects more than eight physical cores in each socket.
+The soft-NUMA feature automatically partitions service threads per node, and thus generally increases scalability and performance by reducing IO and lazy writer bottlenecks. Whenever the database engine server detects more than eight physical cores per NUMA node or socket, it automatically creates soft-NUMA nodes that ideally contain eight cores, with as few as five and as many as nine logical cores per node. You can review the SQL Server log files to determine soft-NUMA usage. Details are output to the log whenever SQL Server detects more than eight physical cores in each socket.
 
 In editions that support resource governance, you can also leverage the NUMA nodes when configuring resource pools to optimize hardware utilization. Soft-NUMA and CPU affinity cannot divide physical memory in the physical NUMA nodes; therefore, all soft NUMA nodes based on the same physical NUMA node must use memory in the same OS memory block. To use this to your advantage, assign each resource pool to a different workload group, which effectively allocates some number of CPUs to specific workloads.
 
@@ -193,7 +193,7 @@ In the resume-matching scenario, concurrency was designed as follows:
 
 - 20 processors divided into four groups of five CPUs each. Each group of CPUs is located on the same NUMA node.
 
-- Maximum number of concurrent batches was set to 8.
+- Maximum number of concurrent batches was set to eight.
 
 - Each workload group must handle two scoring tasks. As soon as one task finished reading data and starts scoring, the other task can start reading data from the database.
 
@@ -206,7 +206,7 @@ When training and evaluation finishes and you have selected a best model, we rec
 > [!TIP]
 > In SQL Server 2017, you can use the PREDICT function to perform scoring even if R is not installed on the server. Limited models types are supported, from the RevoScaleR package.
 
-However, depending on the algorithm you use, some models can be quite large, especially when trained on a large data set. For example, algorithms such as **lm** or **glm** generate a lot of summary data along with rules. Because there are limits on the size of a model that can be stored in a varbinary column, we recommend that, in your production model, you eliminate unnecessary artifacts before storing the model in the database.
+However, depending on the algorithm you use, some models can be quite large, especially when trained on a large data set. For example, algorithms such as **lm** or **glm** generate a lot of summary data along with rules. Because there are limits on the size of a model that can be stored in a varbinary column, we recommend that you eliminate unnecessary artifacts from the model before storing the model in the database for production.
 
 ## Articles in this series
 

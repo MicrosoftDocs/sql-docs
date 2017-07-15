@@ -1,7 +1,7 @@
-
-title: "Create data features using R and T-SQL (walkthrough)| Microsoft Docs"
+---
+title: "Create data features using R and SQL (alkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/14/2017"
+ms.date: "07/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,7 +14,7 @@ applies_to:
 dev_langs: 
   - "R"
 ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 22
+caps.latest.revision: 21
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"

@@ -169,9 +169,7 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
     END
     ```
 
-### Call the stored procedure and pass parameters
-
-1. In SQL Server Management Studio, you can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procedure (or **EXECUTE**) to call the stored procedure, and pass it the required inputs. For example, try running this statement in Management Studido:
+2. In SQL Server Management Studio, you can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procedure (or **EXECUTE**) to call the stored procedure, and pass it the required inputs. For example, try running this statement in Management Studido:
 
     ```SQL
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
@@ -179,7 +177,7 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
 
     The values passed in here are, respectively, for the variables _passenger\_count_, _trip_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_, and _dropoff\_longitude_.
 
-2. To run this same call from R code, you simply define an R variable that contains the entire stored procedure call, like this one:
+3. To run this same call from R code, you simply define an R variable that contains the entire stored procedure call, like this one:
 
     ```R
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
@@ -187,7 +185,7 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
 
     The values passed in here are, respectively, for the variables _passenger\_count_, _trip\_distance_, _trip\_time\_in\_secs_, _pickup\_latitude_, _pickup\_longitude_, _dropoff\_latitude_, and _dropoff\_longitude_.
 
-3. Call `sqlQuery` (from the **RODBC** package) and pass the connection string, together with the string variable containing the stored procedure call.
+4. Call `sqlQuery` (from the **RODBC** package) and pass the connection string, together with the string variable containing the stored procedure call.
 
     ```R
     # predict with stored procedure in single mode

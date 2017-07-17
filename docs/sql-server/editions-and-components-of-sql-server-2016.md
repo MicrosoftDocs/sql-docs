@@ -1,5 +1,5 @@
 ---
-title: "Editions and supported features of SQL Server | Microsoft Docs"
+title: "Editions and supported features of SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "05/24/2017"
@@ -39,7 +39,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Editions and supported features of SQL Server
+# Editions and supported features of SQL Server 2016
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 

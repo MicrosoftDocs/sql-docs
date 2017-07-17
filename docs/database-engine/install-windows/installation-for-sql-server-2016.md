@@ -28,17 +28,11 @@ manager: "jhubbard"
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree to install all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
-  
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
-  
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
-  
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
-  
 -   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]  
-  
 -   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]  
-  
 -   Connectivity components  
   
 Starting with [!INCLUDE[ss2016](../../includes/sssql15-md.md)], SQL Server Management Tools is no longer installed from  the main feature tree; for details see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)  
@@ -56,9 +50,7 @@ Regardless of whether you use the [!INCLUDE[ssNoVersion](../../includes/ssnovers
 Describes how to prepare your computer for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Hardware and software requirements.  
-  
 -   System Configuration Checker requirements and blocking issues.  
-  
 -   Security considerations.  
   
 [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)  

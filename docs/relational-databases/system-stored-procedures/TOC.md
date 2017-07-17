@@ -376,7 +376,7 @@
 ## [sp_defaultlanguage](sp-defaultlanguage-transact-sql.md)  
 ## [sp_denylogin](sp-denylogin-transact-sql.md)  
 ## [sp_describe_parameter_encryption](sp-describe-parameter-encryption-transact-sql.md)  
-## [sp_drop_trusted_assembly](sys-sp-dropd-trusted-assembly-transact-sql.md)  
+## [sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
 ## [sp_dropalias](sp-dropalias-transact-sql.md)  
 ## [sp_dropapprole](sp-dropapprole-transact-sql.md)  
 ## [sp_droplogin](sp-droplogin-transact-sql.md)  

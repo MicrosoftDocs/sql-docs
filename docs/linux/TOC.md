@@ -67,6 +67,7 @@
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)
 ### [Encrypting Connections](sql-server-linux-encrypted-connections.md)
+### [Active Directory Authentication](sql-server-linux-active-directory-authentication.md)
 
 ## [Optimize Performance](sql-server-linux-performance-get-started.md)
 

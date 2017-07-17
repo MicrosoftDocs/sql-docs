@@ -74,21 +74,33 @@ Use the following query to obtain a script that will fix the issue:
 
 ```   
 SELECT reason, score,
-      JSON_VALUE(details, '$.implementationDetails.script') script,
-      planForceDetails.*
+      script = JSON_VALUE(details, '$.implementationDetails.script'),
+      planForceDetails.*,
+      estimated_gain = (regressedPlanExecutionCount+recommendedPlanExecutionCount)
+                  *(regressedPlanCpuTimeAverage-recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount>recommendedPlanErrorCount), 'YES','NO'),
 FROM sys.dm_db_tuning_recommendations
   CROSS APPLY OPENJSON (Details, '$.planForceDetails')
     WITH (  [query_id] int '$.queryId',
             [new plan_id] int '$.regressedPlanId',
-            [recommended plan_id] int '$.forcedPlanId'
+            [recommended plan_id] int '$.recommendedPlanId',
+
+            regressedPlanErrorCount int,
+            recommendedPlanErrorCount int,
+
+            regressedPlanExecutionCount int,
+            regressedPlanCpuTimeAverage float,
+            recommendedPlanExecutionCount int,
+            recommendedPlanCpuTimeAverage float
+
           ) as planForceDetails;
 ```
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | script | query\_id | new plan\_id | recommended plan\_id |
-| --- | --- | --- | --- | --- | --- | --- |
-| CPU time changed from 3ms to 46ms | 36 | EXEC sp\_query\_store\_force\_plan 12, 17; | 12 | 28 | 17 |
+| reason | score | script | query\_id | new plan\_id | recommended plan\_id | estimated\_gain | error\_prone
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| CPU time changed from 3ms to 46ms | 36 | EXEC sp\_query\_store\_force\_plan 12, 17; | 12 | 28 | 17 | 11.59 | 0
 
 
 ## Automatic plan choice correction

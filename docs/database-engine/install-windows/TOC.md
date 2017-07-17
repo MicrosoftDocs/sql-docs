@@ -15,7 +15,7 @@
 ## [Upgrade Replicated Databases](upgrade-replicated-databases.md)  
 ## [Upgrade SQL Server Management Tools](upgrade-sql-server-management-tools.md)  
 ## [Upgrade SQL Server Using the Installation Wizard (Setup)](upgrade-sql-server-using-the-installation-wizard-setup.md)  
-## [Upgrade to a Different Edition of SQL Server 2016 (Setup)](upgrade-to-a-different-edition-of-sql-server-setup.md)  
+## [Upgrade to a Different Edition of SQL Server (Setup)](upgrade-to-a-different-edition-of-sql-server-setup.md)  
 # [Install SQL Server](install-sql-server.md)  
 ## [Install SQL Server Database Engine](install-sql-server-database-engine.md)  
 ## [Install SQL Server Replication](install-sql-server-replication.md)  

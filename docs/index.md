@@ -91,7 +91,7 @@ description: Learn about SQL
                                                 <ul>
                                                     <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
                                                     <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
-                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=55253">Power BI Report Server and tools</a></li>
+                                                    <li><a href="https://aka.ms/pbireportserver">Power BI Report Server</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Sample databases</h4>
                                                 <ul>

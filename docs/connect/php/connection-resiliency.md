@@ -9,10 +9,10 @@ author: "david-puglielli"
 ms.author: "v-dapugl"
 manager: "v-hakaka"
 ---
-## Idle Connection Resiliency
+# Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Connection resiliency](https://msdn.microsoft.com/en-us/library/dn632678.aspx) is the principle that a broken idle connection can be reestablished, within certain constraints. If a connection to Microsoft SQL Server fails, connection resiliency allows the client to automatically attempt to reestablish the connection. Connection resiliency is a property of the data source; only SQL Server 2014 and later and Azure SQL Database support connection resiliency.
+[Connection resiliency](https://msdn.microsoft.com/library/dn632678.aspx) is the principle that a broken idle connection can be reestablished, within certain constraints. If a connection to Microsoft SQL Server fails, connection resiliency allows the client to automatically attempt to reestablish the connection. Connection resiliency is a property of the data source; only SQL Server 2014 and later and Azure SQL Database support connection resiliency.
 
 Connection resiliency is implemented with two connection keywords that can be added to connection strings: **ConnectRetryCount** and **ConnectRetryInterval**.
 
@@ -38,7 +38,7 @@ Connection resiliency applies when the connection is idle. Failures that occur w
 
 ## Example
 
-The following code connects to a database and executes a query. The connection is interrupted by killing the session and a new query is attempted using the broken connection. This example uses the [AdventureWorks](https://msdn.microsoft.com/en-us/library/ms124501%28v=sql.100%29.aspx) sample database.
+The following code connects to a database and executes a query. The connection is interrupted by killing the session and a new query is attempted using the broken connection. This example uses the [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) sample database.
 
 In this example, we specify a buffered cursor before breaking the connection. If we do not specify a buffered cursor, the connection would not be reestablished because there would be an active server-side cursor and thus the connection would not be idle when broken. However, in that case we could call sqlsrv_free_stmt() before breaking the connection to vacate the cursor, and the connection would be successfully reestablished.
 

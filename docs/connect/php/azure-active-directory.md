@@ -9,7 +9,7 @@ author: "david-puglielli"
 ms.author: "v-dapugl"
 manager: "v-hakaka"
 ---
-# How to: Connect Using Azure Active Directory Authentication
+# Connect Using Azure Active Directory Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) is a central user ID management technology that operates as an alternative to [SQL Server authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD allows connections to Microsoft Azure SQL Database and SQL Data Warehouse with federated identities in Azure AD using a username and password, Windows Integrated Authentication, or an Azure AD access token; the PHP drivers for SQL Server offer partial support for these features.
@@ -24,7 +24,7 @@ To use Azure AD, use the **Authentication** keyword. The values that **Authentic
 
 The **Authentication** keyword affects the connection security settings. If it is set in the connection string, then by default the **Encrypt** keyword is set to true, so the client will request encryption. Moreover, the server certificate will be validated irrespective of the encryption setting unless **TrustServerCertificate** is set to true. This is distinguished from the old, and less secure, login method, in which the server certificate is not validated unless encryption is specifically requested in the connection string.
 
-Before using Azure AD with the PHP drivers for SQL Server on Windows, ensure that you have installed the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/en-ca/download/details.aspx?id=41950) (not required for Linux and MacOS).
+Before using Azure AD with the PHP drivers for SQL Server on Windows, ensure that you have installed the [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=41950) (not required for Linux and MacOS).
 
 #### Limitations
 

@@ -20,6 +20,7 @@
 ## [Connecting to the Server](connecting-to-the-server.md)
 ### [How to: Connect Using Windows Authentication](how-to-connect-using-windows-authentication.md)
 ### [How to: Connect Using SQL Server Authentication](how-to-connect-using-sql-server-authentication.md)
+### [How to: Connect Using Azure Active Directory Authentication](azure-active-directory.md)
 ### [How to: Connect on a Specified Port](how-to-connect-on-a-specified-port.md)
 ### [Connection Pooling](connection-pooling-microsoft-drivers-for-php-for-sql-server.md)
 ### [How to: Disable Multiple Active Resultsets (MARS)](how-to-disable-multiple-active-resultsets-mars.md)
@@ -27,6 +28,7 @@
 ### [PHP Driver for SQL Server Support for LocalDB](php-driver-for-sql-server-support-for-localdb.md)
 ### [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)
 ### [Connecting to Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md)
+### [Connection Resiliency](connection-resiliency.md)
 ## [Comparing Execution Functions](comparing-execution-functions.md)
 ## [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)
 ## [Retrieving Data](retrieving-data.md)
@@ -126,4 +128,3 @@
 # [Code Samples](code-samples-for-php-sql-driver.md)
 ## [Example Application (PDO_SQLSRV Driver)](example-application-pdo-sqlsrv-driver.md)
 ## [Example Application (SQLSRV Driver)](example-application-sqlsrv-driver.md)
-

@@ -59,7 +59,7 @@ Describes how to prepare your computer for [!INCLUDE[ssNoVersion](../../includes
 [SQL Server Setup User Interface Reference](http://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
  Describes the installation options presented by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard.  
   
-[Upgrade to SQL Server 2017](../../database-engine/install-windows/upgrade-sql-server.md)  
+[Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
  Describes options for upgrading to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 [Uninstall SQL Server](../../sql-server/install/uninstall-sql-server.md)  

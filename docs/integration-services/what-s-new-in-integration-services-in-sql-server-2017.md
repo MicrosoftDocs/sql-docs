@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in Integration Services in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,16 +21,29 @@ This topic describes the features that have been added or updated in [!INCLUDE[s
 >   [!NOTE]
 > SQL Server 2017 also includes the features of SQL Server 2016 and the features added in SQL Server 2016 updates. For info about the new SSIS features in SQL Server 2016, see [What's New in Integration Services in SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
 
+## New in SSIS in SQL Server 2017 RC1
+
+### New and changed features in Scale Out for SSIS
+
+-   Scale Out Master now supports high availability. You can enable Always On for SSISDB and set up Windows Server failover clustering for the server that hosts the Scale Out Master service. By applying this change to Scale Out Master, you avoid a single point of failure and provide high availability for the entire Scale Out deployment.
+-   The failover handling of the execution logs from Scale Out Workers is improved. The execution logs are persisted to local disk in case the Scale Out Worker stops unexpectedly. Later, when the worker restarts, it reloads the persisted logs and continues saving them to SSISDB.
+-   The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability. This change of parameter name has the following impact:
+    -   If you have existing scripts to run packages in Scale Out, you have to change the parameter name from *runincluster* to *runinscaleout* to make the scripts work in RC1.
+    -   SQL Server Management Studio (SSMS) 17.1 and earlier versions can't trigger package execution in Scale Out in RC1. The error message is: "*@runincluster* is not a parameter for procedure **create_execution**." This issue is fixed in the next release of SSMS, version 17.2. Version 17.2 and later of SSMS support the new parameter name and package execution in Scale Out. Until SSMS version 17.2 is available, as a workaround, you can use your existing version of SSMS to generate the package execution script, then change the name of the *runincluster* parameter to *runinscaleout* in the script, and run the script.
+-   The SSIS Catalog has a new global property to specify the default mode for executing SSIS packages. This new property applies when you call the **[catalog].[create_execution]** stored procedure with the *runinscaleout* parameter set to null. This mode also applies to SSIS SQL Agent jobs. You can set the new global property in the Properties dialog box for the SSISDB node in SSMS, or with the following command:
+    ```sql
+    EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1
+    ```
+
 ## New in SSIS in SQL Server 2017 CTP 2.1
 
-### New features in Scale Out for SSIS
+### New and changed features in Scale Out for SSIS
 
-1.	You can now use the **Use32BitRuntime** parameter when you trigger execution in Scale Out.
-2.	The performance of logging to SSISDB for package executions in Scale Out has been improved. The Event Message and Message Context logs are now written to SSISDB in batch mode instead of one by one. Here are some additional notes about this improvement:        
+-   You can now use the **Use32BitRuntime** parameter when you trigger execution in Scale Out.
+-   The performance of logging to SSISDB for package executions in Scale Out has been improved. The Event Message and Message Context logs are now written to SSISDB in batch mode instead of one by one. Here are some additional notes about this improvement:        
     - Some reports in the current version of SQL Server Management Studio (SSMS) don’t currently display these logs for executions in Scale Out. We anticipate that they will be supported in the next release of SSMS. The affected reports include the *All Connections* report, the *Error Context* report, and the *Connection Information* section in the Integration Service Dashboard.
     - A new column **event_message_guid** has been added. Use this column to join the [catalog].[event_message_context] view and the [catalog].[event_messages] view instead of using **event_message_id** when you query these logs of executions in Scale Out.
-
-To get the management application for SSIS Scale Out, [download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 or later.
+-   To get the management application for SSIS Scale Out, [download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 or later.
 
 ## New in SSIS in SQL Server 2017 CTP 2.0
 

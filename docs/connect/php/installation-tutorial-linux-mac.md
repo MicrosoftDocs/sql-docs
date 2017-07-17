@@ -10,9 +10,9 @@ ms.author: "v-ulibra"
 manager: "Hadis Fard"
 ---
 # PHP Linux and Mac Drivers Installation Tutorial
-The following instructions assume a clean environment and show how to install PHP 7.x, Microsoft ODBC driver, apache, and Microsoft PHP drivers on Ubuntu 15.10, 16.04, RedHat 7, Debian 8, and Mac OS X.
+The following instructions assume a clean environment and show how to install PHP 7.x, Microsoft ODBC driver, Apache, and Microsoft PHP drivers on Ubuntu 15.10, 16.04, RedHat 7, Debian 8, and Mac OS X.
 ## Installing the drivers on Ubuntu 15.10 for PHP 7.0
-Note that there is no PHP 7.1 package available for Ubuntu 15.10.
+There is no PHP 7.1 package available for Ubuntu 15.10.
 ### Step 1. Install PHP
 ```
 sudo su
@@ -53,7 +53,7 @@ echo "extension=pdo_sqlsrv.so" >> /etc/php/7.0/apache2/php.ini
 ```
 sudo service apache2 restart
 ```
-To test your installation, see **Testing Your Installation** at the end of this document.
+To test your installation, see **Testing your installation** at the end of this document.
  
 ## Installing the drivers on Ubuntu 16.04 for PHP 7.0
 ### Step 1. Install PHP 
@@ -95,7 +95,7 @@ echo "extension=pdo_sqlsrv.so" >> /etc/php/7.0/apache2/php.ini
 ```
 sudo service apache2 restart
 ```
-To test your installation, see **Testing Your Installation** at the end of this document.
+To test your installation, see **Testing your installation** at the end of this document.
  
 ## Installing the drivers on Ubuntu 16.04 for PHP 7.1
 ### Step 1. Install PHP 
@@ -138,7 +138,7 @@ echo "extension=pdo_sqlsrv.so" >> /etc/php/7.1/apache2/php.ini
 ```
 sudo service apache2 restart
 ```
-To test your installation, see **Testing Your Installation** at the end of this document.
+To test your installation, see **Testing your installation** at the end of this document.
  
 ## Installing the drivers on Red Hat 7 for PHP 7.0 and 7.1
 ### Step 1. Install PHP 
@@ -178,7 +178,7 @@ yum install httpd
 echo "extension=sqlsrv.so" > /etc/php.d/sqlsrv.ini
 echo "extension=pdo_sqlsrv.so" > /etc/php.d/pdo_sqlsrv.ini
 ```
-Note: SELinux is installed by default and runs in Enforcing mode. To allow Apache to connect to databases through SELinux, run the following command:
+SELinux is installed by default and runs in Enforcing mode. To allow Apache to connect to databases through SELinux, run the following command:
 ```
 sudo setsebool -P httpd_can_network_connect_db 1
 ```
@@ -186,7 +186,7 @@ sudo setsebool -P httpd_can_network_connect_db 1
 ```
 sudo apachectl restart
 ```
-To test your installation, see **Testing Your Installation** at the end of this document.
+To test your installation, see **Testing your installation** at the end of this document.
  
 ## Installing the drivers on Debian 8 for PHP 7.0
 ### Step 1. Install PHP 
@@ -232,7 +232,7 @@ echo "extension=pdo_sqlsrv.so" >> /etc/php/7.0/apache2/php.ini
 ```
 sudo service apache2 restart
 ```
-To test your installation, see **Testing Your Installation** at the end of this document.
+To test your installation, see **Testing your installation** at the end of this document.
  
 ## Installing the drivers on Debian 8 for PHP 7.1
 ### Step 1. Install PHP 
@@ -277,7 +277,7 @@ echo "extension=pdo_sqlsrv.so" >> /etc/php/7.1/apache2/php.ini
 ```
 sudo service apache2 restart
 ```
-To test your installation, see **Testing Your Installation** at the end of this document.
+To test your installation, see **Testing your installation** at the end of this document.
  
 ## Installing the drivers on MacOS El Capitan and Sierra
 ### Step 1. Install PHP 
@@ -314,7 +314,7 @@ sudo pecl install pdo_sqlsrv
 ```
 sudo apachectl restart
 ```
-To test your installation, see **Testing Your Installation** at the end of this document.
+To test your installation, see **Testing your installation** at the end of this document.
  
 ## Testing Your Installation
 To test this sample script, create a file called testsql.php in /var/www/html/ (/usr/local/var/www/htdocs on MacOS) and copy the following script to it, replacing the server, database, username, and password as appropriate. 

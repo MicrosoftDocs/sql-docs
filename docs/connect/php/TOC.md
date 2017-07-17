@@ -12,6 +12,7 @@
 ## [System Requirements](system-requirements-for-the-php-sql-driver.md)
 ## [Loading the driver](loading-the-php-sql-driver.md)
 ## [Configuring IIS](configuring-iis-for-php-sql-driver.md)
+## [PHP Linux and Mac Drivers Installation Tutorial](installation-tutorial-linux-mac.md)
 ## [Release Notes](release-notes-for-the-php-sql-driver.md)
 ## [Support Resources](support-resources-for-the-php-sql-driver.md)
 ## [About Code Samples](about-code-examples-in-the-documentation.md)

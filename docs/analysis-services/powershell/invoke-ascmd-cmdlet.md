@@ -16,6 +16,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Invoke-ASCmd cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Enables a database administrator to execute an XMLA script, Multidimensional Expressions (MDX), Data Mining Extensions (DMX) statements, or Tabular Model Scripting Language (TMSL) script.  
   
  TMSL is supported only for Tabular server mode on a SQL Server 2016 Analysis Services instance.  
@@ -89,7 +92,7 @@ manager: "erikre"
   
  To use this parameter, first create a PSCredential object using Get-Credential to specify the username and password (for example, `$Cred=Get-Credential “adventure-works\admin”`. You can then pipe this object to the –Credential parameter `(-Credential:$Cred`).  
   
- For more information about authentication and credential usage, see [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md). For more information about HTTP access, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
+   For more information about HTTP access, see [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 |||  
 |-|-|  
@@ -235,8 +238,5 @@ Invoke-ASCmd -Database:"Adventure Works DW" -Query:"<Discover xmlns='urn:schemas
   
  The Discover XMLA query returns available data sources for the Analysis server and the information required to connect to them. The results are in XML. For improved readability, you can pipe the output to an XML file (for example, append `| Out-file C:\Results\XMLAQueryOutput.xml` to the command) and view the results in a browser or other application that supports structured XML.  
   
-## See Also  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
   
   

@@ -1,15 +1,14 @@
+# [Introduction to ODBC](introduction-to-odbc.md)
 
-# [Installation +](./install/index.md)
-# [Develop Applications +](./develop-app/index.md)
-# [Develop Drivers +](./develop-driver/index.md)
-# [Syntax +](./syntax/index.md)
-# [Appendixes +](./appendixes/index.md)
+# [Installation +](../../odbc/reference/install/odbc-subkey.md)
+# [Develop Applications +](../../odbc/reference/develop-app/checking-feature-support-and-variability.md)
+# [Develop Drivers +](../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
+# [Syntax +](../../odbc/reference/syntax/odbc-reference.md)
+# [Appendixes +](../../odbc/reference/appendixes/odbc-appendixes.md)
 
 # [ODBC Programmer's Reference](odbc-programmer-s-reference.md)
 # [What's New in ODBC 3.8](what-s-new-in-odbc-3-8.md)
 # [Sample ODBC Program](sample-odbc-program.md)
-
-# [Introduction to ODBC](introduction-to-odbc.md)
 
 ## [ODBC Overview](odbc-overview.md)
 ### [Why Was ODBC Created?](why-was-odbc-created.md)

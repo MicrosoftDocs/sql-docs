@@ -44,7 +44,7 @@ The following diagram illustrates the components in a Linux cluster with SQL Ser
 
 For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-## Failover cluster manually
+## <a name = "failManual"></a>Failover cluster manually
 
 The `resource move` command creates a constraint forcing the resource to start on the target node.  After executing the `move` command, executing resource `clear` will remove the constraint so it is possible to move the resource again or have the resource automatically fail over. 
 

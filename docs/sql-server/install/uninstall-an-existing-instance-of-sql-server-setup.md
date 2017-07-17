@@ -23,6 +23,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
+
+ > For content related to previous versions of SQL Server, see [Uninstall an Existing Instance of SQL Server (Setup)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
+
   This article describes how to uninstall a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By following the steps in this topic, you also prepare the system so that you can reinstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 >**IMPORTANT!** To uninstall an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must be a local administrator with permission to log on as a service.  

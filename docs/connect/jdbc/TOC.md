@@ -1,7 +1,7 @@
-# [JDBC Code Samples +](./code-samples/index.md)
-# [JDBC Reference +](./reference/index.md?toc=%2fsql%2fconnect%2fjdbc%2freference%2ftoc.json)
-
 # [Microsoft JDBC Driver for SQL Server](microsoft-jdbc-driver-for-sql-server.md)
+
+# [JDBC Code Samples +](../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)
+# [JDBC Reference +](../../connect/jdbc/reference/datetimeoffset-class.md)
 
 # [Getting Started with the JDBC Driver](getting-started-with-the-jdbc-driver.md)
 ## [Step 1: Configure development environment for Java development](step-1-configure-development-environment-for-java-development.md)
@@ -25,6 +25,7 @@
 ## [Validating User Input](validating-user-input.md)
 ## [Application Security](application-security.md)
 ## [Using SSL Encryption](using-ssl-encryption.md)
+## [FIPS Mode](../../connect/jdbc/fips-mode.md)
 ### [Understanding SSL Support](understanding-ssl-support.md)
 ### [Connecting with SSL Encryption](connecting-with-ssl-encryption.md)
 ### [Configuring the Client for SSL Encryption](configuring-the-client-for-ssl-encryption.md)

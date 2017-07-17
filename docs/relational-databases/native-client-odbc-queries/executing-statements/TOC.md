@@ -1,6 +1,6 @@
+# [Executing Statements (ODBC)](executing-statements-odbc.md)
 # [Batches of Statements](batches-of-statements.md)
 # [Direct Execution](direct-execution.md)
 # [Effects of ISO Options](effects-of-iso-options.md)
-# [Executing Statements (ODBC)](executing-statements-odbc.md)
 # [Prepared Execution](prepared-execution.md)
 # [Procedures](procedures.md)

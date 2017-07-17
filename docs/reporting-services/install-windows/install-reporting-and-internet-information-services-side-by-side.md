@@ -1,7 +1,7 @@
 ---
 title: "Install Reporting and Internet Information Services Side-by-Side | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,11 +17,14 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Install Reporting and Internet Information Services Side-by-Side
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-  You can install and run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) and Internet Information Services (IIS) on the same computer. The version of IIS that you are using determines the interoperability issues you must address.  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+You can install and run SQL Server Reporting Services (SSRS) and Internet Information Services (IIS) on the same computer. The version of IIS that you are using determines the interoperability issues you must address.  
   
 |IIS version|Issues|Description|  
 |-----------------|------------|-----------------|  
@@ -48,7 +51,7 @@ manager: "erikre"
   
  One indication of a port conflict is that you will see the following error message: 'System.IO.FileLoadException: The process cannot access the file because it is being used by another process. (Exception from HRESULT: 0x80070020).'  
   
-## URL Reservations for IIS 8.0, 8.5 with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services  
+## URL Reservations for IIS 8.0, 8.5 with SQL Server Reporting Services  
  Given the precedence rules outlined in the previous section, you can begin to understand how URL reservations defined for Reporting Services and IIS promote interoperability. Reporting Services receives requests that explicitly specify the virtual directory names for its applications; IIS receives all remaining requests, which can then be directed to applications that run within the IIS process model.  
   
 |Application|URL reservation|Description|Request receipt|  
@@ -56,15 +59,16 @@ manager: "erikre"
 |Report Server|`http://+:80/ReportServer`|Strong wildcard on port 80, with report server virtual directory.|Receives all requests on port 80 that specify the report server virtual directory. The Report Server Web service receives all requests to http://\<computername>/reportserver.|  
 |Web portal|`http://+:80/Reports`|Strong wildcard on port 80, with Reports virtual directory.|Receives all requests on port 80 that specify the reports virtual directory. The [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] receives all requests to http://\<computername>/reports.|  
 |IIS|`http://*:80/`|Weak wildcard on port 80.|Receives any remaining requests on port 80 that are not received by another application.|  
-  
-## Side-by-Side Deployments of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and SQL Server 2016 Reporting Services on IIS 8.0, 8.5  
+
+## Side-by-Side Deployments of SQL Server Reporting Services on IIS 8.0, 8.5
+
  Interoperability issues between IIS and Reporting Services occur when IIS Web sites have virtual directory names that are identical to those used by Reporting Services. For example, suppose you have the following configuration:  
   
 -   A Web site in IIS that is assigned to port 80 and a virtual directory named "Reports".  
   
--   A [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server instance installed in the default configuration, where the URL reservation also specifies port 80 and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] application also uses "Reports" for the virtual directory name.  
+-   A report server instance installed in the default configuration, where the URL reservation also specifies port 80 and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] application also uses "Reports" for the virtual directory name.  
   
- Given this configuration, a request that is sent to http://\<computername>:80/reports will be received by the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. The application that is accessed through the Reports virtual directory in IIS will no longer receive requests after [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server instance is installed.  
+ Given this configuration, a request that is sent to http://\<computername>:80/reports will be received by the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. The application that is accessed through the Reports virtual directory in IIS will no longer receive requests after the report server instance is installed.  
   
  If you are running side-by-side deployments of older and newer versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you are likely to encounter the routing problem just described. This is because all versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] use "ReportServer" and "Reports" as virtual directory names for the report server and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] applications, increasing the likelihood that you will have a "reports" and "reportserver" virtual directories in IIS.  
   
@@ -73,10 +77,11 @@ manager: "erikre"
 -   For Reporting Services installations, use virtual directory names that are not already used by an IIS Web site on the same port as Reporting Services. If there is a conflict, install Reporting Services in "files-only" mode (using the Install but do not configure the server option in the Installation Wizard) so that you can configure the virtual directories after Setup is finished. One indication that your configuration has a conflict is you will see the error message: System.IO.FileLoadException: The process cannot access the file because it is being used by another process. (Exception from HRESULT: 0x80070020).  
   
 -   For installations that you configure manually, adopt the default naming conventions in the URLs that configure. If you install [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] as a named instance, include the instance name when creating a virtual directory.  
-  
-## See Also
 
-[Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-[Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+## Next steps
+
+[Configure Report Server URLs](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Install Reporting Services Native Mode Report Server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -111,7 +111,7 @@ If you installed an earlier version of Microsoft R Server (Standalone) you can u
 
 ### Change in Default Folder for R Packages
 
-When you install using SLq Server setup, the R libraries are installed in a folder associated with the SQL Server version that you used for setup. In this folder you will also find sample data, documentation for the R base packages, and documentation of the R tools and runtime.
+When you install using SQL Server setup, the R libraries are installed in a folder associated with the SQL Server version that you used for setup. In this folder you will also find sample data, documentation for the R base packages, and documentation of the R tools and runtime.
 
 **R Server (Standalone) with setup using SQL Server 2016**
 

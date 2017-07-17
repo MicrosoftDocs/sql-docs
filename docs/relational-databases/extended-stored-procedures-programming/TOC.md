@@ -1,6 +1,6 @@
+# [Database Engine Extended Stored Procedures - Programming](database-engine-extended-stored-procedures-programming.md)
 # [Adding an Extended Stored Procedure to SQL Server](adding-an-extended-stored-procedure-to-sql-server.md)
 # [Creating Extended Stored Procedures](creating-extended-stored-procedures.md)
-# [Database Engine Extended Stored Procedures - Programming](database-engine-extended-stored-procedures-programming.md)
 # [Execution Characteristics of Extended Stored Procedures](execution-characteristics-of-extended-stored-procedures.md)
 # [How Extended Stored Procedures Work](how-extended-stored-procedures-work.md)
 # [Querying Extended Stored Procedures Installed in SQL Server](querying-extended-stored-procedures-installed-in-sql-server.md)

@@ -1,7 +1,7 @@
 ---
 title: "DENY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "05/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,7 +34,8 @@ manager: "jhubbard"
 # DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Denies a permission to a principal. Prevents that principal from inheriting the permission through its group or role memberships.  
+  Denies a permission to a principal. Prevents that principal from inheriting the permission through its group or role memberships. DENY takes precedence over all permissions, except that DENY does not apply to object owners or members of the sysadmin fixed server role.
+  **Security Note** Members of the sysadmin fixed server role and object owners cannot be denied permissions."
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,10 +45,18 @@ manager: "jhubbard"
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Simplified syntax for DENY  
-DENY { ALL [ PRIVILEGES ] }  
-      | permission [ ( column [ ,...n ] ) ] [ ,...n ]  
-      [ ON [ class :: ] securable ] TO principal [ ,...n ]   
-      [ CASCADE] [ AS principal ]  
+DENY   { ALL [ PRIVILEGES ] } 
+     | <permission>  [ ( column [ ,...n ] ) ] [ ,...n ]  
+    [ ON [ <class> :: ] securable ] 
+    TO principal [ ,...n ]   
+    [ CASCADE] [ AS principal ]  
+[;]
+
+<permission> ::=  
+{ see the tables below }  
+  
+<class> ::=  
+{ see the tables below }  
 ```  
   
 ```  
@@ -55,7 +64,7 @@ DENY { ALL [ PRIVILEGES ] }
   
 DENY   
     <permission> [ ,...n ]  
-    [ ON [ <class_type> :: ] securable ]   
+    [ ON [ <class_> :: ] securable ]   
     TO principal [ ,...n ]  
     [ CASCADE ]  
 [;]  
@@ -63,7 +72,7 @@ DENY
 <permission> ::=  
 { see the tables below }  
   
-<class_type> ::=  
+<class> ::=  
 {  
       LOGIN  
     | DATABASE  

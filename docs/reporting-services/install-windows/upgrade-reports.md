@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Reports | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,11 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Upgrade Reports
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+
   Report definition (.rdl) files are automatically upgraded in the following ways:  
   
 -   When you open a report in Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the report definition is upgraded to the currently supported RDL schema. When you specify a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] report server in the project properties, the report definition is saved in a schema that is compatible with the target server.  
@@ -36,24 +40,8 @@ manager: "erikre"
   
  After a report is upgraded locally or on the report server, you might notice additional errors, warnings, and messages. This is the result of changes to the internal report object model and processing components, which cause messages to appear when underlying problems in the report are detected. For more information, see [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "Backward Compatibility | Reporting Services").  
   
- For more information about new features for [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], see [What's New in Reporting Services &#40;SSRS&#41;](https://msdn.microsoft.com/library/ms170438.aspx).  
-  
- In this topic:  
-  
--   [Versions Supported by Upgrade](#bkmk_versionsupported)  
-  
--   [Report Definition (.rdl) Files and Report Designer](#bkmk_rdlfiles)  
-  
--   [Published Reports and Report Snapshots](#bkmk_publishedreports_and_snapshots)  
-  
--   [Backward-Compatibility Mode](#bkmk_backcompat)  
-  
--   [Upgrading a Report with Subreports](#bkmk_subreports)  
-  
--   [Upgrading a Report with Custom Report Items](#bkmk_CRIs)  
-  
--   [Convert CRI Dialog Box](#bkmk_convertCRIdialog)  
-  
+ For more information about new features for [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], see [What's New in Reporting Services](https://msdn.microsoft.com/library/ms170438.aspx).  
+
 ##  <a name="bkmk_versionsupported"></a> Versions Supported by Upgrade  
  Reports that were created in any previous version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be upgraded. This includes the following versions:  
   
@@ -72,12 +60,12 @@ manager: "erikre"
   
  Deployment properties that you set can affect which schema the report definition file is saved in. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
- You can upload an .rdl file created in an earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server and it is automatically upgraded on first use. The report server stores the report definition file in the original format. The report is automatically upgraded the first time it is viewed, but the stored report definition file remains unchanged.  
+ You can upload an .rdl file created in an earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] to the new version and it is automatically upgraded on first use. The report server stores the report definition file in the original format. The report is automatically upgraded the first time it is viewed, but the stored report definition file remains unchanged.  
   
  To identify the current RDL schema for a report, for a report server, or for Report Designer, see [Find the Report Definition Schema Version &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ##  <a name="bkmk_publishedreports_and_snapshots"></a> Published Reports and Report Snapshots  
- On first use, the report server tries to upgrade existing published reports and report snapshots to the new report definition schema, requiring no specific action on your part. When a user views a report or a report snapshot, or when the report server processes a subscription, the upgrading attempt occurs. The report definition is not replaced but continues to be stored on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server in its original schema. If a report cannot be upgraded, the report runs in backward-compatibility mode.  
+ On first use, the report server tries to upgrade existing published reports and report snapshots to the new report definition schema, requiring no specific action on your part. When a user views a report or a report snapshot, or when the report server processes a subscription, the upgrading attempt occurs. The report definition is not replaced but continues to be stored on the report server in its original schema. If a report cannot be upgraded, the report runs in backward-compatibility mode.  
   
 ##  <a name="bkmk_backcompat"></a> Backward-Compatibility Mode  
  A report that is successfully upgraded is processed by the [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report processor. A report that cannot be upgraded is processed by the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report processor in backward-compatibility mode. A report cannot be processed by both report processors. On first use, a report is either successfully upgraded or marked for backward compatibility.  
@@ -126,7 +114,7 @@ manager: "erikre"
 |Third-party CRIs|Upgrade not performed.<br /><br /> Processed by the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report processor.|  
   
 ###  <a name="OpeningaReport"></a> Opening a Report with CRIs in Report Designer  
- When you open a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report with CRIs in Report Designer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the report will be upgraded to the new report definition schema. Depending on the CRIs contained in the report, one of the following actions will take place:  
+ When you open a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report with CRIs in Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the report will be upgraded to the new report definition schema. Depending on the CRIs contained in the report, one of the following actions will take place:  
   
 -   Third-party CRIs detected. If the version of the CRI that is installed on the report authoring computer is not compatible with the new RDL schema, the design surface shows a text box with a red X. You must contact your system administrator to install new versions of the CRI from third-party vendors that are compatible with the new RDL schema.  
   
@@ -146,16 +134,17 @@ manager: "erikre"
   
  In either case, the report is upgraded to the new report definition format and a backup copy of the original report is saved as *\<Report Name>* `-` Backup.rdl. If you save the report in your report authoring tool, you are saving the upgraded report in the new report definition format. If you publish the report, the report is first saved on your computer, and then published to the report server. You are publishing the upgraded version of the report to the report server.  
   
- If you do not save the report, the original report remains unchanged. However, you cannot edit this report in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] or a report authoring environment that uses a newer report definition format. You can continue to run the original version of the report by uploading it to a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server by using the web portal. For more information, see [Web Portal](../../reporting-services/web-portal-ssrs-native-mode.md).  
+ If you do not save the report, the original report remains unchanged. However, you cannot edit this report in the SQL Server 2016 version of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] or a report authoring environment that uses a newer report definition format. You can continue to run the original version of the report by uploading it to a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server by using the web portal. For more information, see [Web Portal](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
  For reports that you upload instead of publish to a report server, the report processor determines whether the report can be upgraded on first use. Reports that cannot be upgraded are processed in backward-compatibility mode, and continue to display as they did in the earlier version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
-## See Also  
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
- [Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
- [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016]](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
- [Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)   
- [Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
-  
-  
+
+## Next steps
+
+[Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+[Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)   
+[Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

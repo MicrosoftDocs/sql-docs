@@ -1,20 +1,19 @@
+# [What is Analysis Services?](analysis-services.md)
+
 # Overview
-## [What is Analysis Services?](analysis-services.md)  
 ## [What's new in SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  
 ## [What's new in SQL Server Analysis Services 2017](what-s-new-in-sql-server-analysis-services-2017.md) 
+## [New and recently updated articles](new-updated-analysis-services.md)
 ## [Tools and applications](tools-and-applications-used-in-analysis-services.md)   
 ## [Comparing Tabular and Multidimensional solutions](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [Analysis Services features supported by SQL Server 2016 edition](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [Analysis Services features supported by SQL Server 2016 editions](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [Backward compatibility (SQL Server 2016 Analysis Services)](analysis-services-backward-compatibility.md)  
+## [Backward compatibility (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)  
 ## [Globalization and translation](globalization-scenarios-for-analysis-services.md)  
 ### [Languages and collations](languages-and-collations-analysis-services.md)  
 ### [Translations](translation-support-in-analysis-services.md)  
 ### [Currency conversions](currency-conversions-analysis-services.md)  
 ### [Tips and best practices](globalization-tips-and-best-practices-analysis-services.md) 
-## [Backward compatibility](analysis-services-backward-compatibility.md)  
-### [Deprecated features in Analysis Services](deprecated-analysis-services-features-in-sql-server-2016.md)  
-### [Discontinued functionality in Analysis Services](discontinued-analysis-services-functionality-in-sql-server-2016.md)  
-### [Breaking changes in Analysis Services](breaking-changes-to-analysis-services-features-in-sql-server-2016.md)  
-### [Behavior changes in Analysis Services](behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
 
 # Samples
 ## [Analysis Services samples](analysis-services-samples.md)
@@ -87,36 +86,38 @@
 ## [Data Mining](data-mining-tutorials-analysis-services.md)  
 
 # How-to
-## [Tabular modeling](tabular-models/index.md)
-## [Multidimensional modeling](multidimensional-models/index.md)
-## [Data mining](data-mining/index.md)
-## [Power Pivot for Sharepoint](power-pivot-sharepoint/index.md)
-## [Manage servers](instances/index.md)
-## [Trace-events](trace-events/index.md)
+## [Tabular modeling](../analysis-services/tabular-models/tabular-models-ssas.md)
+## [Multidimensional modeling](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
+## [Data mining](../analysis-services/data-mining/data-mining-ssas.md)
+## [Power Pivot for Sharepoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)
+## [Manage servers](../analysis-services/instances/analysis-services-instance-management.md)
+## [Trace-events](../analysis-services/trace-events/analysis-services-trace-events.md)
 
 # Developer
 ## Tabular models
 ### [Tabular Model Programming for Compatibility Level 1200 and higher](./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
 #### [Tabular Model Scripting Language (TMSL)](tabular-model-scripting-language-tmsl-reference.md)
-#### [Tabular Model Scripting Language (TMSL) commands](tabular-models-scripting-language-commands/index.md)
-#### [Tabular Model Scripting Language (TMSL) objects](tabular-models-scripting-language-objects/index.md)
-#### [Tabular Object Model (TOM)](tabular-model-programming-compatibility-level-1200/index.md)
+#### [Tabular Model Scripting Language (TMSL) commands](../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)
+#### [Tabular Model Scripting Language (TMSL) objects](../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)
 ### [Tabular Model Programming for Compatibility Levels 1050 and 1103](./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)
-#### [Analysis Services Scripting Language (ASSL)](../analysis-services/multidimensional-models/scripting-language-assl/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fscripting-language-assl%2ftoc.json)
-#### [CSDLBI](tabular-model-programming-compatibility-levels-1050-1103/index.md)
 
 ## Multimdimensional models
-### [Analysis Services Scripting Language (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fscripting-language-assl%2ftoc.json)
-### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fadomd-net%2ftoc.json)
-### [Analysis management objects +](../analysis-services/multidimensional-models/analysis-management-objects/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fanalysis-management-objects%2ftoc.json)
-### [OLAP logical +](../analysis-services/multidimensional-models/olap-logical/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2folap-logical%2ftoc.json)
-### [OLAP physical +](../analysis-services/multidimensional-models/olap-physical/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2folap-physical%2ftoc.json)
-### [Extending OLAP +](../analysis-services/multidimensional-models/extending-olap/index.md?toc=%2fsql%2fanalysis-services%2fmultidimensional-models%2fextending-olap%2ftoc.json)
+### [Analysis Services Scripting Language (ASSL) +](../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)
+### [ADOMD.NET +](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)
+### [Analysis management objects +](../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)
+### [OLAP logical +](../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+### [OLAP physical +](../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md)
+### [Extending OLAP +](../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)
 
-## [Schema rowsets](schema-rowsets/index.md)
-## [XML for Analysis (XMLA)](xmla/index.md)
+## [Schema rowsets](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
+## [Analysis Services Scripting Language (ASSL for XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
 
 # Reference
-## [PowerShell](powershell/index.md)
-## [Server properties](server-properties/index.md)
+## [Data Analysis Expressions (DAX) on MSDN](https://msdn.microsoft.com/library/gg413422.aspx)
+## [Data Mining Extensions (DMX)](../dmx/data-mining-extensions-dmx-reference.md)
+## [Multidimensional Expressions (MDX)](../mdx/analysis-services-language-reference.md)
+## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)
+## [PowerShell](../analysis-services/powershell/technical-reference-ssas.md)
+## [Server properties](../analysis-services/server-properties/server-properties-in-analysis-services.md)
+## [XML for Analysis (XMLA)](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)

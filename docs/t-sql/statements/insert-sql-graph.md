@@ -1,7 +1,7 @@
 ---
 title: "INSERT (SQL Graph) | Microsoft Docs"
 description: INSERT syntax for SQL Graph node or edge tables. 
-ms.date: "05/04/2017"
+ms.date: "05/12/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,7 +24,7 @@ manager: "jhubbard"
 # INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
-  Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#Examples).  
+  Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]   
 >  For standard Transact-SQL statements, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
@@ -106,7 +106,7 @@ INSERT
  Is an optional keyword that can be used between `INSERT` and the target table.  
   
  *search_condition_with_match*   
- `MATCH` clause can be used in a subquery while inserting into a node or edge table. For `MATCH` statement syntax, see [GRAPH MATCH (Transact-SQL)](../../t-sql/statements/match-sql-graph.md)
+ `MATCH` clause can be used in a subquery while inserting into a node or edge table. For `MATCH` statement syntax, see [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
 
  *graph_search_pattern*   
  Search pattern provided to `MATCH` clause as part of the graph predicate.

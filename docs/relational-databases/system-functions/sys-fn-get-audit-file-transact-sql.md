@@ -1,7 +1,7 @@
 ---
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/20/2017"
+ms.date: "05/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,13 +42,25 @@ fn_get_audit_file ( file_pattern,
   
 ## Arguments  
  *file_pattern*  
- Specifies the directory or path and file name for the audit file set to be read. Type is **nvarchar(260)**. This argument must include both a path (drive letter or network share) and a file name that can include a wildcard. A single asterisk (*) can be used to collect multiple files from an audit file set. For example:  
+ Specifies the directory or path and file name for the audit file set to be read. Type is **nvarchar(260)**. 
+ 
+ - **SQL Server**:
+    
+    This argument must include both a path (drive letter or network share) and a file name that can include a wildcard. A single    asterisk (*) can be used to collect multiple files from an audit file set. For example:  
   
--   **\<path>\\\*** - Collect all audit files in the specified location.  
+    -   **\<path>\\\*** - Collect all audit files in the specified location.  
   
--   **\<path>\LoginsAudit_{GUID}** - Collect all audit files that have the specified name and GUID pair.  
+    -   **\<path>\LoginsAudit_{GUID}** - Collect all audit files that have the specified name and GUID pair.  
   
--   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
+    -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
+  
+ - **Azure SQL Database**:
+ 
+    This argument is used to specify a blob URL (including the storage endpoint and container). While it does not support an asterisk wildcard, you can use a partial file (blob) name prefix (instead of the full blob name) to collect multiple files (blobs) that begin with this prefix. For example:
+ 
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** - collects all audit files (blobs) for the specific database.    
+      
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<FileName\>.xel** - collects a specific audit file (blob).
   
 > [!NOTE]  
 >  Passing a path without a file name pattern will generate an error.  
@@ -101,29 +113,54 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Used to record any extra information the user wants to record in |audit log by using the **sp_audit_write** stored procedure.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**nvarbinary** | |  
-|transaction_id |**bigint** | |  
-|client_ip |**nvarchar(128)** | |  
-|application_name |**nvarchar(128)** | |  
-|duration_milliseconds |**bigint** | |  
-|response_rows |**bigint** | |  
-|affected_rows |**bigint** | |  
+|sequence_group_id |**nvarbinary** | SQL Server only (starting with 2016) |  
+|transaction_id |**bigint** | SQL Server only (starting with 2016) |  
+|client_ip |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  
+|application_name |**nvarchar(128)** | Azure SQL DB + SQL Server (starting with 2017) |  
+|duration_milliseconds |**bigint** | Azure SQL DB only |  
+|response_rows |**bigint** | Azure SQL DB only |  
+|affected_rows |**bigint** | Azure SQL DB only |  
   
 ## Remarks  
  If the *file_pattern* argument passed to **fn_get_audit_file** references a path or file that does not exist, or if the file is not an audit file, the **MSG_INVALID_AUDIT_FILE** error message is returned.  
   
 ## Permissions  
- Requires the **CONTROL SERVER** permission.  
+ - **SQL Server**: Requires the **CONTROL SERVER** permission.  
+ - **Azure SQL DB**: Requires the **CONTROL DATABASE** permission.     
+    - Server admins can access audit logs of all databases on the server.
+    - Non server admins can only access audit logs from the current database.
+    - Blobs that do not meet the above criteria will be skipped (a list of skipped blobs will be displayed in the query output message), and the function will return logs only from blobs for which access is allowed.  
   
-## Examples  
- This example reads from a file that is named `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
+## Examples
+
+- **SQL Server**
+
+  This example reads from a file that is named `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`.  
   
-```  
-SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
-GO  
-```  
+  ```  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  GO  
+  ```  
+
+- **Azure SQL Database**
+
+  This example reads from a file that is named `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`.  
   
- For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  ```  
+  SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
+  GO  
+  ```  
+
+  This example reads all audit logs from servers that begin with `Sh`.  
+  
+  ```  
+  SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);
+  GO  
+  ```
+
+For a full example about how to create an audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).
+
+For information on setting up Azure SQL Database auditing, see [Get Started with SQL Database auditing](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing).
   
 ## See Also  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

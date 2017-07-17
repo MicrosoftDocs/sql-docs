@@ -33,7 +33,7 @@ Users can create one graph per database. A graph is a collection of node and edg
 Figure 1: SQL Graph database architecture
  
 ## Node Table
-A node table represents an entity in a graph schema. Every time a node table is created, along with the user defined columns, an implicit `$node_id` column is created, which uniquely identifies a given node in the database. The values in `$node_id` are automatically generated and are a combination of `object_id` of that node table and an internally generated bigint value. However, when the `$node_id` column is selected, a computed value in the form of a JSON string is displayed. Also, `$node_id` is a pseudo column, that maps to an internal name with hex string in it. When you select `$node_id` from the table, the column name will appear as `$node_id_\<hex_string>`. Using pseudo-column names in quereis is the recommended way of querying the internal `$node_id` column and using internal name with hex string should be avoided.
+A node table represents an entity in a graph schema. Every time a node table is created, along with the user defined columns, an implicit `$node_id` column is created, which uniquely identifies a given node in the database. The values in `$node_id` are automatically generated and are a combination of `object_id` of that node table and an internally generated bigint value. However, when the `$node_id` column is selected, a computed value in the form of a JSON string is displayed. Also, `$node_id` is a pseudo column, that maps to an internal name with hex string in it. When you select `$node_id` from the table, the column name will appear as `$node_id_\<hex_string>`. Using pseudo-column names in queries is the recommended way of querying the internal `$node_id` column and using internal name with hex string should be avoided.
 
 It is recommended that users create a unique constraint or index on the `$node_id` column at the time of creation of node table, but if one is not created, a default unique, non-clustered index is automatically created. 
  
@@ -43,7 +43,7 @@ An edge table represents a relationship in a graph. Edges are always directed an
 
 |Column name    |Description  |
 |---   |---  |
-|`$edge_id`   |Uniquely identifies a given edge in the database. It is a generated column and the value is a combination of object_id of the edge table and a internally generated bigint value. However, when the `$edge_id` column is selected, a computed value in the form of a JSON string is displayed. `$edge_id` is a pseudo-column, that maps to an internal name with hex string in it. When you select `$edge_id` from the table, the column name will appear as `$edge_id_\<hex_string>`. Using pseudo-column names in quereis is the recommended way of querying the internal `$edge_id` column and using internal name with hex string should be avoided. |
+|`$edge_id`   |Uniquely identifies a given edge in the database. It is a generated column and the value is a combination of object_id of the edge table and a internally generated bigint value. However, when the `$edge_id` column is selected, a computed value in the form of a JSON string is displayed. `$edge_id` is a pseudo-column, that maps to an internal name with hex string in it. When you select `$edge_id` from the table, the column name will appear as `$edge_id_\<hex_string>`. Using pseudo-column names in queries is the recommended way of querying the internal `$edge_id` column and using internal name with hex string should be avoided. |
 |`$from_id`   |Stores the `$node_id` of the node, from where the edge originates.  |
 |`$to_id`   |Stores the `$node_id` of the node, at which the edge terminates. |
 
@@ -151,7 +151,7 @@ Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced i
 |Task	|Related Topic  |Notes
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nodes and edges are stored as tables internally, hence most of the operations supported on a table in SQL Server or Azure SQL Database are supported on the node and edge tables  |
-|MATCH	| [MATCH &#40;Transact-SQL&#41;](../../t-sql/statements/match-sql-graph.md)|MATCH built-in is introduced to support pattern matching and traversal through the graph.  |
+|MATCH	| [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|MATCH built-in is introduced to support pattern matching and traversal through the graph.  |
 
 
 
@@ -162,6 +162,7 @@ There are certain limitations on node and edge tables in this release:
 * Node and edge tables cannot be created as system-versioned temporal tables.   
 * Node and edge tables cannot be memory optimized tables.  
 * Users cannot update the $from_id and $to_id columns of an edge using UPDATE statement. To update the nodes that an edge connects, users will have to insert the new edge pointing to new nodes and delete the previous one.
+* Cross database queries on graph objects are not supported. 
 
 
 ## Next Steps

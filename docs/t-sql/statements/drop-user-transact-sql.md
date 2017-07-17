@@ -2,7 +2,7 @@
 title: "DROP USER (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.date: "05/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,9 +51,7 @@ DROP USER user_name
   
 ## Arguments  
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
  Conditionally drops the user only if it already exists.  
   
@@ -75,17 +73,6 @@ DROP USER user_name
  The following example removes database user `AbolrousHazem` from the `AdventureWorks2012` database.  
   
 ```  
-USE AdventureWorks2012;  
-DROP USER AbolrousHazem;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example removes database user `AbolrousHazem` from the `AdventureWorks2008R2` database.  
-  
-```  
--- Uses AdventureWorks  
-  
 DROP USER AbolrousHazem;  
 GO  
 ```  
@@ -95,6 +82,3 @@ GO
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
-  
-
-

@@ -1,7 +1,7 @@
 ---
 title: "Tabular Model Programming for Compatibility Level 1200 | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/24/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,12 +16,15 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Tabular Model Programming for Compatibility Level 1200
-Compatibility level 1200 advances Tabular modeling in Analysis Services through the use of Tabular metadata to describe model constructs, thus replacing historical Multidimensional metadata as descriptors for Tabular model objects. In SQL Server 2016, metadata for tables, columns, and relationships are table, column, and relationship, rather than the Multidimensional equivalents (dimension and attribute).  
+# Tabular Model Programming for Compatibility Level 1200 and higher
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
+Beginning with compatibility level 1200, Tabular metadata is used to describe model constructs, replacing historical Multidimensional metadata as descriptors for Tabular model objects. Metadata for tables, columns, and relationships are table, column, and relationship, rather than the Multidimensional equivalents (dimension and attribute).  
   
-You can create new models at compatibility level 1200 using the Microsoft.AnalysisServices.Tabular APIs, the latest version of SQL Server Data Tools (SSDT), or by changing the **CompatibilityLevel** of an existing Tabular model to upgrade it (also done in SSDT). Doing so binds the model to newer versions of the server, tools, and programming interfaces in SQL Server 2016.   
+You can create new models at compatibility level 1200 or higher by using the Microsoft.AnalysisServices.Tabular APIs, the latest version of SQL Server Data Tools (SSDT), or by changing the **CompatibilityLevel** of an existing Tabular model to upgrade it (also done in SSDT). Doing so binds the model to newer versions of the server, tools, and programming interfaces.   
   
-Upgrading an existing Tabular solution is recommended but not required. Existing script and custom solutions that access or manage Tabular models or databases can be used as-is. Earlier compatibility levels are fully supported on a new SQL Server 2016 instance of Analysis Services using the features available at that level.  
+Upgrading an existing Tabular solution is recommended but not required. Existing script and custom solutions that access or manage Tabular models or databases can be used as-is. Earlier compatibility levels are fully supported in SQL Server 2016 using the features available at that level. Azure Analysis Services supports compatibility level 1200 and higher only.
   
  New Tabular models will require different code and script, summarized below.  
   
@@ -39,13 +42,13 @@ Upgrading an existing Tabular solution is recommended but not required. Existing
  DAX and MDX are supported for all Tabular models.  
   
 ## Expression Language  
- Filters and expressions used to create calculated objects, including measures and KPIs, are formulated in DAX. See [Understanding DAX in Tabular Models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) and [Data Analysis Expressions &#40;DAX&#41; in Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5).  
+ Filters and expressions used to create calculated objects, including measures and KPIs, are formulated in DAX. See [Understanding DAX in Tabular Models](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) and [Data Analysis Expressions &#40;DAX&#41; in Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5).  
   
 ## Managed Code for Tabular Models and Databases  
- AMO includes a new namespace, Microsoft.AnalysisServices.Tabular, for working with Tabular 1200 or higher models programmatically. See [Microsoft.AnalysisServices Namespace](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx) for more information.  
+ AMO includes a new namespace, Microsoft.AnalysisServices.Tabular, for working with models programmatically. See [Microsoft.AnalysisServices Namespace](https://msdn.microsoft.com/library/ms146720\(SQL.130\).aspx) for more information.  
   
 > [!NOTE]  
->  Analysis Services Management Objects (AMO), ADOMD.NET, and Tabular Object Model (TOM) client libraries in SQL Server 2016 Analysis Services now target the .NET 4.0 runtime.   
+>  Analysis Services Management Objects (AMO), ADOMD.NET, and Tabular Object Model (TOM) client libraries now target the .NET 4.0 runtime.   
   
 ## See Also  
  [Analysis Services Developer Documentation](../../analysis-services/analysis-services-developer-documentation.md)   

@@ -16,7 +16,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Add-RoleMember cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Add a member to the specified role of an Analysis Services tabular or multidimensional database.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
 ## Syntax  
  `Add-RoleMember [-MemberName] <System.String> [-Database] <System.String> [-RoleName] <System.String> [<CommonParameters>]`  
@@ -112,8 +118,6 @@ PS SQLSERVER:\sqlas\localhost\default\Databases\AWTEST\Roles> $roles[0] | Add-ro
   
  This command adds a Windows domain user account to the first role in an array, where the array is created by listing the children of the Roles folder, in the context of a specific database (AWTEST).  
   
-## See Also  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
+
   
   

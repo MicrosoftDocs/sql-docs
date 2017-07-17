@@ -26,7 +26,7 @@ ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ---
 # Backup and restore SQL Server databases on Linux
 
-You can take backups of databases from SQL Server 2017 CTP 2.0 on Linux with the same tools as other platforms. On a Linux server, you can use `sqlcmd` to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](http://msdn.microsoft.com/library/dn435916.aspx). 
+You can take backups of databases from SQL Server 2017 RC1 on Linux with the same tools as other platforms. On a Linux server, you can use `sqlcmd` to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](http://msdn.microsoft.com/library/dn435916.aspx). 
 
 ## Backup with sqlcmd
 
@@ -81,7 +81,7 @@ You can use SSMS from a Windows computer to connect to a Linux database and take
 
 The following steps walk through taking a backup with SSMS. 
 
-1. Start SSMS and connect to your server in SQL Server 2017 CTP 2.0 on Linux.
+1. Start SSMS and connect to your server in SQL Server 2017 RC1 on Linux.
 
 1. In Object Explorer, right-click on your database, Click **Tasks**, and then click **Back Up...**.
 

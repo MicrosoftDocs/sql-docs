@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Report Server (SharePoint Mode) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,9 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Reporting Services Report Server (SharePoint Mode)
+
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server configured for **SharePoint Mode** can run within a deployment of a SharePoint product. A report server in SharePoint mode can use the collaboration and management features of SharePoint for reports and other [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] content types. SharePoint mode requires installing the appropriate version of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products on your SharePoint Web Front Ends.  
   
  For more information on installing and configuring, see the following:  
@@ -121,7 +123,7 @@ manager: "erikre"
   
 -   All application pages, tools, errors, warnings, and messages that originate from [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will appear in the language used by the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance in one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] languages.  
   
--   Application pages that you open on a SharePoint site, the Report Viewer Web Part, and Report Builder will appear in one of the supported languages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in. To view the list of supported languages, go to [SQL Server Downloads](http://msdn.microsoft.com/sql/downloads/) and find the download page for the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in.  
+-   Application pages that you open on a SharePoint site, the Report Viewer Web Part, and Report Builder will appear in one of the supported languages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in. To view the list of supported languages, go to [SQL Server Downloads](http://msdn.microsoft.com/sql/downloads/) and find the download page for the SQL Server 2016 Reporting Services Add-in.  
   
 -   SharePoint sites, SharePoint Central Administration, online help, and messages are available in the languages supported by Office Server products.  
   
@@ -137,10 +139,11 @@ manager: "erikre"
 |Add additional SharePoint web front-ends that have the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components installed for viewing and report items.|[Add an Additional Reporting Services Web Front-end to a Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Configure e-mail for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data alerting and subscription features.|[Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2010 and SharePoint 2013&#41;](https://msdn.microsoft.com/library/hh231673.aspx)|  
 |Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkId=221297).|  
-  
-## See Also  
- [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [Report Viewer Web Part on a SharePoint Site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Quiz: Configuring SSRS 2012 for SharePoint Integration](http://go.microsoft.com/fwlink/?LinkId=306443)  
-  
-  
+
+## Next steps
+
+[Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+[Report Viewer Web Part on a SharePoint Site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+[Quiz: Configuring SSRS 2012 for SharePoint Integration](http://go.microsoft.com/fwlink/?LinkId=306443)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

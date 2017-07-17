@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Native Client | Microsoft Docs"
-ms.date: "02/01/2017"
+ms.date: "04/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,11 +17,13 @@ manager: "jhubbard"
 # SQL Server Native Client
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-The last SQL Server Native Client can be downloaded from [Microsoft® SQL Server® 2012 Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065).  Developers who wish to use an OLE DB provider to connect to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must use the OLE DB provider that shipped in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client.  
+SNAC, or SQL Server Native Client, is a term that has been used interchangeably to refer to ODBC and OLE DB drivers for SQL Server. 
+
+**For more information and to download the SNAC or ODBC Drivers, visit [SNAC lifecycle explained](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).**
 
 For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver for SQL Server on Windows](https://msdn.microsoft.com/library/jj730314(v=sql.110).aspx).  See also, [Introducing the new Microsoft ODBC Drivers for SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/), and [ODBC Driver 13.1 for SQL Server released](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/).  
   
- The following topics describe significant new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client features in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+ Information on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client features released with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the last available version of SQL Server native Client: 
   
 -   [SQL Server Native Client Support for LocalDB](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
   
@@ -33,7 +35,7 @@ For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver f
   
 -   [Accessing Diagnostic Information in the Extended Events Log](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
   
- In addition, ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client now supports three features that were added to standard ODBC in the Windows 7 SDK:  
+ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supports three features that were added to standard ODBC in the Windows 7 SDK:  
   
 -   Asynchronous execution on connection-related operations. For more information, see [Asynchronous Execution](http://go.microsoft.com/fwlink/?LinkID=191493).  
   
@@ -47,12 +49,12 @@ For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver f
   
 -   When calling **ICommandWithParameters::SetParameterInfo**, the value passed to the *pwszName* parameter must be a valid identifier. For more information, see [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md).  
   
--   **SQLDescribeParam** will now consistently return a value that conforms to the ODBC specification. For more information, see [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md).  
+-   **SQLDescribeParam** will consistently return an ODBC specification conforming value. For more information, see [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md).  
   
 -   [ODBC Driver Behavior Change When Handling Character Conversions](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   
-## See Also  
-[Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
+## See also  
+[Install SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [SQL Server Native Client Features](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

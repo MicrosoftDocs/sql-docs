@@ -1,10 +1,11 @@
-# [Data +](./data/index.md)
-# [Extensions +](./extensions/index.md)
-# [Multidimensional +](./multidimensional/index.md)
-# [Remote Data service +](./remote-data-service/index.md)
-# [Appendixes +](./appendixes/index.md)
-
 # [ADO Programmer's Guide](ado-programmer-s-guide.md)
+
+# [Data +](../../ado/guide/data/ado-fundamentals.md)
+# [Extensions +](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+# [Multidimensional +](../../ado/guide/multidimensional/ado-md-fundamentals.md)
+# [Remote Data service +](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+# [Appendixes +](../../ado/guide/appendixes/appendix-a-providers.md)
+
 # [Referencing the ADO Libraries In a Visual C++ Application](referencing-the-ado-libraries-in-a-visual-c-application.md)
 # [Referencing the ADO Libraries In a Visual Basic 6 Application](referencing-the-ado-libraries-in-a-visual-basic-6-application.md)
 # [ADO Introduction](ado-introduction.md)

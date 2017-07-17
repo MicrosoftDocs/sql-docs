@@ -1,7 +1,7 @@
 ﻿---
 title: "Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,9 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Turn on Reporting Services events for the SharePoint trace log (ULS)
+
   Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers in SharePoint mode can write [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] events to the SharePoint Unified Logging Service (ULS) trace log. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specific categories are available on the Monitoring page of SharePoint Central Administration.  
   
  In this Topic:  
@@ -100,7 +102,7 @@ Get-SPDiagnosticConfig
 |Local Mode Rendering||  
 |SOAP Client Proxy||  
 |UI Pages||  
-|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], a feature of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of “SQL Server Reporting Services” and the **Area** of “Power View”.<br /><br /> The content of entries logged with the area of “Power View” is determined by the client application.|  
+|Power View|Log entries that were written to the **LogClientTraceEvents** API. These entries are sourced from client applications, including Power View, a feature of SQL Server Reporting Services Add-in.<br /><br /> All log entries from the LogClientTraceEvents API will be logged under the **Category** of “SQL Server Reporting Services” and the **Area** of “Power View”.<br /><br /> The content of entries logged with the area of “Power View” is determined by the client application.|  
 |Report Server Alerting Runtime||  
 |Report Server App Domain Manager||  
 |Report Server Buffered Response||  
@@ -152,5 +154,5 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
  The Trace Log files are usually found in the folder **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** but you can verify or change the path from the **Diagnostic Logging** page in SharePoint Central Administration.  
   
  For more information and steps to configure diagnostic logging on a SharePoint server in SharePoint 2010 Central Administration, see [Configure diagnostic logging settings (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
-  
-  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -53,16 +53,16 @@ With Machine Learning Services in SQL Server, there is no need to change this pr
 
 ![rsql_keyscenario2](media/rsql-keyscenario2.png) 
 
-+ **Use the R or Python IDE you prefer**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] client components provide the data scientist with all the tools needed to experiment and develop. These tools include the R runtime, the Intel math kernel library to boost the performance of standard R operations, and a set of enhanced R packages that support executing R code in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
++ **Use the IDE you prefer**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] client components provide the data scientist with all the tools needed to experiment and develop. These tools include the R runtime, the Intel math kernel library to boost the performance of standard R operations, and a set of enhanced R packages that support executing R code in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 + **Work remotely or locally**. Data scientists can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and bring the data to the client for local analysis, as usual. However, a better solution is to use the **ScaleR** APIs to push computations to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, avoiding costly and insecure data movement.
 
-+ **Embedd R or Python scripts in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures**. When your code is fully optimized, wrap it in a stored procedure to avoid unnecessary data movement and optimize data processing tasks.
++ **Embed R or Python scripts in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures**. When your code is fully optimized, wrap it in a stored procedure to avoid unnecessary data movement and optimize data processing tasks.
 
 
 **Resources**
 
-+ Install [R Tools for Visual Studio](https://www.visualstudio.com/features/rtvs-vs.aspx) or RStudio.  
++ Install [R Tools for Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation) or RStudio.  
 
 ## Step 3. Optimize
 
@@ -119,7 +119,7 @@ Learn how to use the RevoScaleR package for scalable and high performance analys
 
 Especially for the data developer -- all R code provided! Learn how to embed R in SQL stored procedures to create or train models, and get predictions from a stored model.
 
-+ [In-Database Advanced Analytics for SQL Developers](../tutorials/sqldev-in-database-advanced-analytics-for-sql-developers.md)
++ [In-Database Advanced Analytics for SQL Developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Learn the syntax for calling R from a stored procedure.
 

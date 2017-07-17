@@ -1,7 +1,7 @@
 ---
 title: "Previous SQL Server Management Studio Releases | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,8 +18,21 @@ manager: "jhubbard"
 # Previous SQL Server Management Studio Releases
   
 The following previous releases of SQL Server Management Studio are available.
+
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 17.0 release](http://go.microsoft.com/fwlink/?LinkID=847722)
+
+**Version Information**  
+  
+*This release of SSMS uses the Visual Studio 2015 Isolated shell.*  
+The release number: 17.0  
+The build number for this release: 14.0.17099.0
+
+## Changelog  
+
+See [17.0](sql-server-management-studio-changelog-ssms.md#ssms-170-release).
+
    
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 release](http://go.microsoft.com/fwlink/?LinkID=840946)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 release](http://go.microsoft.com/fwlink/?LinkID=840946)
 
 **Version Information**  
   
@@ -59,7 +72,7 @@ The following issues were fixed this release:
 
 
 
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.5 release](http://go.microsoft.com/fwlink/?LinkID=832812)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.5 release](http://go.microsoft.com/fwlink/?LinkID=832812)
 
 **Version Information**  
   
@@ -99,7 +112,7 @@ The build number for this release: 13.0.16000.28
 
 
    
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.4.1 (September 2016) release](http://go.microsoft.com/fwlink/?LinkID=828615)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.4.1 (September 2016) release](http://go.microsoft.com/fwlink/?LinkID=828615)
 
 **Version Information**  
   
@@ -211,7 +224,7 @@ Non-English localized releases of SSMS [require the KB 2862966 security update p
 
 
 
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.3 (August 2016) release](http://go.microsoft.com/fwlink/?LinkID=824938)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.3 (August 2016) release](http://go.microsoft.com/fwlink/?LinkID=824938)
  August 15, 2016 | Version number:	13.0.15700.28
 
 **Features**  
@@ -277,7 +290,7 @@ Non-English localized releases of SSMS [require the KB 2862966 security update p
 [More information on fixes available in the SSMS changelog.](../ssms/sql-server-management-studio-changelog-ssms.md)
  
 ---
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio July 2016 hotfix update release](http://go.microsoft.com/fwlink/?LinkID=822301)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio July 2016 hotfix update release](http://go.microsoft.com/fwlink/?LinkID=822301)
 
 July 13, 2016 | Version number: 13.0.15600.2
 
@@ -331,7 +344,7 @@ As a workaround for this problem, you can connect to your SQL Server Integration
 [More information and bug fixes available in the SSMS changelog.](../ssms/sql-server-management-studio-changelog-ssms.md)
 
 ---
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio June 2016 release](http://go.microsoft.com/fwlink/?LinkID=799832)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio June 2016 release](http://go.microsoft.com/fwlink/?LinkID=799832)
 
 June 1, 2016 | Version number: 13.0.15000.23
 
@@ -363,7 +376,7 @@ As a workaround for this problem, you can connect to your SQL Server Integration
 6. Bug fixes in Always Encrypted experience. Fixed bug where Always Encrypted menu option was not enabled correctly for Stretch databases. Also fixed bug in the Always Encrypted wizard where it was not properly using the SafeNet (Luna SA) HSM provider.
 
 ---
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe)
 
 May 14, 2015 | Version number: 12.0.4100.1
 
@@ -384,7 +397,7 @@ N/A
 7. SSMS may crash when you try to refresh the SSMS window icon on the task bar ([Microsoft Connect item #799430](https://connect.microsoft.com/SQLServer/feedback/details/799430/ssms-2012-sp-1-cu-5-installed-crash-when-enforce-refresh-on-connect)).
 
 ---
-### ![download](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe)  
   
 November 21, 2015 | Version number: 11.0.6020.0
 
@@ -400,7 +413,7 @@ N/A
 2. "Unable to create restore plan due to break in the LSN chain" error when you restore differential backup in SSMS
 
 ---
-### Additional Downloads  
+## Additional Downloads  
 For a list of all SQL Server Management Studio downloads, search the [Microsoft Download Center](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).  
   
 For the latest release of SQL Server Management Studio, see [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  

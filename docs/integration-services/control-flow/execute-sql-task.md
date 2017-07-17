@@ -10,11 +10,11 @@ ms.technology:
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executesqltask.f1"
-  - "sql13.dts.designer.executesqltask.general.f1"
-  - "sql13.dts.designer.executesqltask.parametermapping.f1"
-  - "sql13.dts.designer.executesqltask.resultset.f1"
+f1_keywords:
+- "sql13.dts.designer.executesqltask.f1"
+- "sql13.dts.designer.executesqltask.general.f1"
+- "sql13.dts.designer.executesqltask.parametermapping.f1"
+- "sql13.dts.designer.executesqltask.resultset.f1"
 helpviewer_keywords: 
   - "Transact-SQL statements, SSIS"
   - "statements [Integration Services]"

@@ -1,6 +1,6 @@
 ---
 title: "Analysis Services | Microsoft Docs"
-ms.date: "03/28/2017"
+ms.date: "05/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,12 +42,13 @@ Analysis Services is now available in the cloud as an Azure service. Azure Analy
  A single instance can be configured with only one mode,  and cannot be changed later.  You can install multiple instances with different modes on the same server, but you'll need to run Setup and specify configuration settings for each instance. For detailed information and a comparison of different features offered in each of the modes, see [Comparing Tabular and Multidimensional Solutions](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).
   
 ## Authoring and managing solutions  
- To create a model, you use SQL Server Data Tools, choosing either a Tabular or Multidimensional and Data Mining project template. The project template contains folders for all of the objects needed in a model. Wizards help create many of the basic elements, such as data sources, data source views, dimensions, cubes, and roles. Once your model database is deployed to a server, you use SQL Server Management Studio (SSMS) to configure data processing, monitor, and manage your server and databases. To learn more, see [Tools and applications used in Analysis Services](../analysis-services/tools-and-applications-used-in-analysis-services.md)) 
+ To create a model and deploy it to a server, you use SQL Server Data Tools, choosing either a Tabular or Multidimensional and Data Mining project template. The project template contains folders for all of the objects needed in a model. Wizards and designers help you create many of the basic elements such as connecting to data sources, relationships, measures, and roles. Once your model database is deployed to a server, you use SQL Server Management Studio (SSMS) to configure data processing, monitor, and manage your server and databases. To learn more, see [Tools and applications used in Analysis Services](../analysis-services/tools-and-applications-used-in-analysis-services.md). 
   
 ## Documentation by area  
-Documentation for Analysis Services is organized into sections that correspond to the type of project you are building. Use the left nav or the following links to learn more about modes and features.  
+In-general, documentation for Azure Analysis Services is included with Azure documentation. And, documentation for SQL Server Analysis Services is included with SQL documentation. However, at least for tabular models, how you create and deploy your projects is much the same regardless of what platform you're using.  
    
-*  [What's New](../analysis-services/what-s-new-in-analysis-services.md)   
+*  [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)
+*  [What's New in SQL Server Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)   
 *  [Comparing Tabular and Multidimensional Solutions](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
 *  [Tabular Models](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [Multidimensional Models](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  

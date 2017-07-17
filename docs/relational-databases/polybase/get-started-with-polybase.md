@@ -2,7 +2,7 @@
 title: "Get started with PolyBase | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
+ms.date: "7/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,12 +23,12 @@ ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
-manager: "jhubbard"
+manager: "jhubbard" 
 ---
 # Get started with PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic contains the basics about running PolyBase. For more information see [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md).  
+  This topic contains the basics about running PolyBase on a SQL Server instance.
   
  After running the steps below, you will have:  
   
@@ -39,32 +39,32 @@ manager: "jhubbard"
 -   An understanding of how to manage PolyBase objects in SQL Server Management Studio (SSMS)  
   
 -   Examples of queries using PolyBase objects  
-6  
+  
 ## Prerequisites  
- An instance of  [SQL Server (64-bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
+ An instance of  [SQL Server (64-bit)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) with the following:  
   
 -   Microsoft .NET Framework 4.5.  
   
 -   Oracle Java SE RunTime Environment (JRE) version 7.51 or higher (64-bit). (Either [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) will work). Go to [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). The installer will fail if JRE is not present.   
   
--   Minimum memory: 4GB  
+-   Minimum memory: 4 GB  
   
--   Minimum hard disk space: 2GB    
--   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
+-   Minimum hard disk space: 2 GB    
+
+-   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) SQL Server Developer and Express editions have TCP/IP disabled by default. PolyBase can be installed but will not fully start until TCP/IP is enabled. You must manually enable TCP/IP to have PolyBase functionality. 
   
+ 
  An external data source, one of the following:  
   
 -   Hadoop cluster. For supported versions see [Configure PolyBase](#supported).  
 
--   Azure Blob storage. 
-
--   If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail with an error message. 
+-   Azure Blob storage
 
 > [!NOTE]
-> HDInsight clusters use Azure Blob storage as the file system for their permanent storage. You can use PolyBase to query the files managed by an HDInsight cluster. To do this, create an external data source to reference the blob that is configured as storage for the HDInsight cluster. 
-  
+>   If you are going to use the computation pushdown functionality against Hadoop, you will need to ensure that the target Hadoop cluster has core components of HDFS, Yarn/MapReduce with Jobhistory server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the JobHistory Server. Without either component the query will fail. 
+
 ## Install PolyBase  
- If you haven't installed PolyBase, see  [PolyBaseinstallation](../../relational-databases/polybase/polybase-installation.md).  
+ If you haven't installed PolyBase, see  [PolyBase installation](../../relational-databases/polybase/polybase-installation.md).  
   
 ### How to confirm installation  
  After installation, run the following command to confirm that PolyBase has been successfully installed. If PolyBase is installed, returns 1; otherwise, 0.  
@@ -74,7 +74,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ```  
   
 ##  <a name="supported"></a> Configure PolyBase  
- After installing, you must configure SQL Server to use either your Hadoop version, or Azure Blob storage. PolyBase supports two Hadoop providers, Hortonwork’s Data Platform (HDP) and Cloudera’s CDH. You can run Hortonworks on either a Windows or Linux machine, and that is also part of the configuration.  The supported external data sources include:  
+ After installing, you must configure SQL Server to use either your Hadoop version or Azure Blob Storage. PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  The supported external data sources include:  
   
 -   Hortonworks HDP 1.3 on Linux/Windows Server  
   
@@ -94,8 +94,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ### External data source configuration  
   
 1.  Run [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ‘hadoop connectivity’ and set an appropriate value. By Default, the hadoop connectivity is set to 7. To find the value, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-  
-    ```tsql  
+      ```tsql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -152,7 +151,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  For details, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  
   
 ## Create T-SQL objects  
- Create objects depending on the external data source, either Hadoop or Azure storage.  
+ Create objects depending on the external data source, either Hadoop or Azure Storage.  
   
 ### Hadoop  
   
@@ -182,8 +181,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );  
   
 -- 4: Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
-  
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).    
 CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
         FORMAT_TYPE = DELIMITEDTEXT,   
         FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
@@ -209,7 +207,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-### Azure blob storage  
+### Azure Blob Storage  
   
 ```sql  
 --1: Create a master key on the database.  
@@ -351,7 +349,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  After upgrading from SQL Server 2016 RC1 to RC2 or RC3, queries may fail. For details and a remedy, see [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) and search for "PolyBase."  
   
 ## Next steps  
- To understand the scale-out feature, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  To monitor PolyBase, see [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md). To trouble shoot PolyBase perfomance, see [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
+ To understand the scale-out feature, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  To monitor PolyBase, see [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md). To troubleshoot PolyBase performance, see [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
 ## See Also  
  [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)   

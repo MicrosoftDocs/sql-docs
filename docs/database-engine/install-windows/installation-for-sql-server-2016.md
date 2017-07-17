@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   Connectivity components  
   
- Starting with [!INCLUDE[ss2016](sssql15-md.md)], SQL Server Management Tools is no longer installed from  the main feature tree; for details see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)  
+ Starting with [!INCLUDE[ss2016]](sssql15-md.md), SQL Server Management Tools is no longer installed from  the main feature tree; for details see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)  
   
  You can install each component individually or select a combination of the components listed above. To make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the features supported by your version of SQL Server:
 

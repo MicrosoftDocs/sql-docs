@@ -1,8 +1,10 @@
 ---
-title: "Installation for SQL Server 2016 | Microsoft Docs"
+title: "Installation for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: "07/17/2017"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,7 +23,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Installation for SQL Server 2016
+# Installation for SQL Server
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree to install all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -38,9 +40,13 @@ manager: "jhubbard"
   
 -   Connectivity components  
   
- Starting with SQL Server 2016, SQL Server Management Tools is no longer installed from  the main feature tree; for details see [Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)  
+ Starting with [!INCLUDE[ss2016](sssql15-md.md)], SQL Server Management Tools is no longer installed from  the main feature tree; for details see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)  
   
- You can install each component individually or select a combination of the components listed above. To make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ You can install each component individually or select a combination of the components listed above. To make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the features supported by your version of SQL Server:
+
+- [Features Supported by the [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+- [Features Supported by the [!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
+- [Features Supported by the Editions of [!INCLUDE[ss2014](../../includes/sssql14-md.md)]](http://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
   
 ## In This Section  
  Regardless of whether you use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard or the command prompt to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Setup involves the following steps:  
@@ -54,7 +60,7 @@ manager: "jhubbard"
   
 -   Security considerations.  
   
- [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
+ [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)  
  Describes installation options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [SQL Server Setup User Interface Reference](http://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
@@ -63,13 +69,13 @@ manager: "jhubbard"
  [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
  Describes options for upgrading to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Uninstall SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)  
+ [Uninstall SQL Server](../../sql-server/install/uninstall-sql-server.md)  
  Describes procedures to uninstall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
  [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  This section of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup documentation explains how to install, and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster.  
   
- [Install SQL Server 2016 Business Intelligence Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
+ [Install SQL Server Business Intelligence Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are part of the Microsoft BI platform include [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and several client applications used for creating or working with analytical data. This section of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup documentation explains how to install [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## More Information
@@ -85,7 +91,7 @@ See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.a
   
 ## See Also  
  [What's New in SQL Server Installation](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
- [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
   
 

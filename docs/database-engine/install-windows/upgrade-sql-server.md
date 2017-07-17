@@ -28,34 +28,21 @@ manager: "jhubbard"
    - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
   
 ## In This Section  
- This section contains the following topics:  
+This section contains the following topics:  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
-  
 -   [Prepare for upgrade by running Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
-  
 -   [Are you upgrading from SQL Server 2005?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
-  
 -   [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
-  
 -   [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
-  
 -   [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)  
-  
 -   [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)  
-  
 -   [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)  
-  
 -   [Upgrade Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
-  
 -   [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)  
-  
 -   [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
-  
 -   [Upgrade SQL Server Management Tools](../../database-engine/install-windows/upgrade-sql-server-management-tools.md)  
-  
 -   [Upgrade SQL Server using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
 -   [Upgrade to a different edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)  
   
 ## See Also  

@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/12/2017"
+ms.date: "07/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
@@ -145,7 +145,7 @@ Assigns each row to one distribution by hashing the value stored in *distributio
 Distributes the rows evenly across all the distributions in a round-robin fashion. This is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
 `DISTRIBUTION = REPLICATE`    
-Stores one copy of the table on each Compute node. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] the table is stored on the first distribution database of each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Stores one copy of the table on each Compute node. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Table partition options
 For guidance on using table partitions, see [Partitioning tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).

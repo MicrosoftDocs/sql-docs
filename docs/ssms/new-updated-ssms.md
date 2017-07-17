@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
 ms.workload: ssms-sql-server-management-studio
 ---
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-17** &nbsp; -to- &nbsp; **2017-06-30**
+- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
 - *Subject area:* &nbsp; **SQL Server Management Studio (SSMS)**.
 
 
@@ -41,9 +41,6 @@ Recent updates are reported for the following date range and subject:
 
 The following links jump to new articles which have been added recently.
 
-*No genuinely new articles were added, this time.*
-
-<!--  GeneMi:  These are all merely phystical relocations and consolidations, not genuinely new content.
 
 1. [Change a Server&#39;s Registration (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
 2. [Change the Name of Registered Server or Registered Server Group](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
@@ -87,7 +84,18 @@ The following links jump to new articles which have been added recently.
 40. [Lesson 3-4 - Summary - Solutions and Script Projects](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
 41. [Lesson 3: Working with Templates, Solutions, and Script Projects](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
 42. [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
--->
+
+
+
+
+&nbsp;
+
+<a name="compactupdatedlist"/>
+
+## Compact List of Articles Updated Recently
+
+This compact list provides links to all the updated articles which are listed in the Excerpts section.
+
 
 
 &nbsp;
@@ -154,20 +162,7 @@ Generally available | Build number: 14.0.17119.0
 
 
 
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## Compact List of Articles Updated Recently
-
-This compact list provides links to all the updated articles which are listed in the preceding section.
-
-1. [SQL Server Management Studio - Changelog (SSMS)](#TitleNum_1)
-
-
-
-
-<a name="sisters2"/>
+<a name="similars2"/>
 
 &nbsp;
 
@@ -175,23 +170,22 @@ This compact list provides links to all the updated articles which are listed in
 
 This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (12+2): **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (3+0):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8):  **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0):  **Tools for SQL** docs](../tools/new-updated-tools.md)
+- [New + Updated (4+4) : **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
+- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
+- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 #### Subject areas which have no new or recently updated articles
@@ -199,12 +193,13 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
 

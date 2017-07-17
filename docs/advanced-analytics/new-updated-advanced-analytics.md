@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
 ms.workload: advanced-analytics
 ---
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-17** &nbsp; -to- &nbsp; **2017-06-30**
+- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
 - *Subject area:* &nbsp; **Advanced Analytics for SQL Server**.
 
 
@@ -44,16 +44,19 @@ The following links jump to new articles which have been added recently.
 
 1. [Common Issues with External Script Execution](common-issues-external-script-execution.md)
 2. [Data Collection for Machine Learning Troubleshooting](data-collection-ml-troubleshooting-process.md)
-3. [In-Database Python Analytics for SQL Developers](tutorials/sqldev-in-database-python-for-sql-developers.md)
-4. [In-Database R Analytics for SQL Developers](tutorials/sqldev-in-database-r-for-sql-developers.md)
-5. [Step 1: Download the Sample Data](tutorials/sqldev-py1-download-the-sample-data.md)
-6. [Step 2: Import Data to SQL Server using PowerShell](tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md)
-7. [Step 3: Explore and Visualize the Data](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
-8. [Step 4: Create Data Features using T-SQL](tutorials/sqldev-py4-create-data-features-using-t-sql.md)
-9. [Step 5: Train and Save a Model using T-SQL](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
-10. [Step 6: Operationalize the Model](tutorials/sqldev-py6-operationalize-the-model.md)
-11. [SQL Server Python Tutorials](tutorials/sql-server-python-tutorials.md)
-12. [SQL Server R Tutorials](tutorials/sql-server-r-tutorials.md)
+3. [SQL Server Python Tutorials](tutorials/sql-server-python-tutorials.md)
+4. [SQL Server R Tutorials](tutorials/sql-server-r-tutorials.md)
+
+
+
+
+&nbsp;
+
+<a name="compactupdatedlist"/>
+
+## Compact List of Articles Updated Recently
+
+This compact list provides links to all the updated articles which are listed in the Excerpts section.
 
 
 
@@ -123,9 +126,123 @@ To run Python code in SQL Server, you must have installed SQL Server 2017 togeth
 
 <a name="TitleNum_2"/>
 
-### 2. &nbsp; [Use Python with revoscalepy to Create a Model](tutorials/use-python-revoscalepy-to-create-model.md)
+### 2. &nbsp; [Step 5: Train and Save a Model using T-SQL](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-*Updated: 2017-06-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
+*Updated: 2017-06-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
+
+<!-- Source markdown line 121.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 5c1cbe92282b96105ffdb69efa803f58dc0ac7e2 e4077a2154a90de468c435efa5b2225125d5b0e7  (PR=1904  ,  Filename=sqldev-py5-train-and-save-a-model-using-t-sql.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=dbf91e0d6f8257227cfe8ac6d13c484d0a566f57) -->
+
+
+
+1. In [!INCLUDE[ssManStudio--../../includes/ssmanstudio-md.md)], open a new Query window and run the following statement to create the stored procedure _TrainTipPredictionModelRxPy_.  This model will be based on the training data you just prepared. Because the stored procedure already includes a definition of the input data, you don't need to provide an input query.
+
+    ```SQL
+    DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
+    GO
+
+    CREATE PROCEDURE [dbo].[TrainTipPredictionModelRxPy] (@trained_model varbinary(max) OUTPUT)
+    AS
+    BEGIN
+    EXEC sp_execute_external_script 
+      @language = N'Python',
+      @script = N'
+    import numpy
+    import pickle
+    import pandas
+    from revoscalepy.functions.RxLogit import rx_logit_ex
+    
+    ## Create a logistic regression model using rx_logit_ex function from revoscalepy package
+    logitObj = rx_logit_ex("tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance", data = InputDataSet);
+    
+    ## Serialize model
+    trained_model = pickle.dumps(logitObj)
+    ',
+    @input_data_1 = N'
+    select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, 
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance
+    from nyctaxi_sample_training
+    ',
+    @input_data_1_name = N'InputDataSet',
+    @params = N'@trained_model varbinary(max) OUTPUT',
+    @trained_model = @trained_model OUTPUT;
+    ;
+    END;
+    ```
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### 3. &nbsp; [Step 6: Operationalize the Model](tutorials/sqldev-py6-operationalize-the-model.md)
+
+*Updated: 2017-06-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
+
+<!-- Source markdown line 236.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 1eb50ac902d4e80bafb1dd7fdf8f607dcdf0d33f 57d5abdc6119db1ecd81587d625054a5bbfb5fc8  (PR=1904  ,  Filename=sqldev-py6-operationalize-the-model.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=dbf91e0d6f8257227cfe8ac6d13c484d0a566f57) -->
+
+
+
+Here is the definition of the stored procedure that performs scoring using the **revoscalepy** model.
+
+```
+CREATE PROCEDURE [dbo].[PredictTipSingleModeRxPy] (@model varchar(50), @passenger_count int = 0,
+  @trip_distance float = 0,
+  @trip_time_in_secs int = 0,
+  @pickup_latitude float = 0,
+  @pickup_longitude float = 0,
+  @dropoff_latitude float = 0,
+  @dropoff_longitude float = 0)
+AS
+BEGIN
+  DECLARE @inquery nvarchar(max) = N'
+    SELECT * FROM [dbo].[fnEngineerFeatures-- 
+      @passenger_count,
+      @trip_distance,
+      @trip_time_in_secs,
+      @pickup_latitude,
+      @pickup_longitude,
+      @dropoff_latitude,
+      @dropoff_longitude)
+    '
+  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
+  EXEC sp_execute_external_script 
+    @language = N'Python',
+    @script = N'
+      import pickle;
+      import numpy;
+      import pandas;
+      from revoscalepy.functions.RxPredict import rx_predict_ex;
+```
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_4"/>
+
+### 4. &nbsp; [Use Python with revoscalepy to Create a Model](tutorials/use-python-revoscalepy-to-create-model.md)
+
+*Updated: 2017-06-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3))
 
 <!-- Source markdown line 119.  ms.author= "jeannt".  -->
 
@@ -161,21 +278,7 @@ The overall process for creating and using a data source and compute context is 
 
 
 
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## Compact List of Articles Updated Recently
-
-This compact list provides links to all the updated articles which are listed in the preceding section.
-
-1. [Introducing revoscalepy](#TitleNum_1)
-2. [Use Python with revoscalepy to Create a Model](#TitleNum_2)
-
-
-
-
-<a name="sisters2"/>
+<a name="similars2"/>
 
 &nbsp;
 
@@ -183,23 +286,22 @@ This compact list provides links to all the updated articles which are listed in
 
 This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (12+2): **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (3+0):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8):  **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0):  **Tools for SQL** docs](../tools/new-updated-tools.md)
+- [New + Updated (4+4) : **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
+- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
+- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 #### Subject areas which have no new or recently updated articles
@@ -207,12 +309,13 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
 

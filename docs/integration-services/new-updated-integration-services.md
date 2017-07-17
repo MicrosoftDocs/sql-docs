@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
 ms.workload: integration-services
 ---
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-17** &nbsp; -to- &nbsp; **2017-06-30**
+- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
 - *Subject area:* &nbsp; **Integration Services for SQL Server**.
 
 
@@ -42,7 +42,18 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles which have been added recently.
 
 
-1. [Microsoft Connectors for Oracle and Teradata by Attunity for Integration Services (SSIS)](attunity-connectors.md)
+***There are no new articles to list, this time.***
+
+
+
+
+&nbsp;
+
+<a name="compactupdatedlist"/>
+
+## Compact List of Articles Updated Recently
+
+This compact list provides links to all the updated articles which are listed in the Excerpts section.
 
 
 
@@ -60,119 +71,11 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [Deploy Integration Services (SSIS) Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
-
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
-
-<!-- Source markdown line 67.  ms.author= "douglasl".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 0ed0da5bfcd515a39aec27ee69c7d48220c8cae2 568fcd18fd19eb01b814d5c477c5044dec1b0d4a  (PR=1768  ,  Filename=deploy-integration-services-ssis-projects-and-packages.md  ,  Dirpath=docs\integration-services\packages\  ,  MergeCommitSha40=926c0c51b5a55a2869b73666f5620fa56e139cca) -->
+***No articles in this area were updated recently, this time.***
 
 
 
-**Permissions Required to Deploy SSIS Projects and Packages**
-
-
-If you change the SSIS service account from the default, you may have to give additional permissions to the non-default service account before you can deploy packages successfully. If the non-default service account doesn't have the required permissions, you may see the following error message.
-
-*A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
-System.ComponentModel.Win32Exception: A required privilege is not held by the client.*
-
-This error is typically the result of missing DCOM permissions. To fix the error, do the following things.
-
-1.  Open the **Component Services** console (or run Dcomcnfg.exe).
-2.  In the **Component Services** console, expand **Component Services** > **Computers** > **My Computer** > **DCOM Config**.
-3.  In the list, locate **Microsoft SQL Server Integration Services xx.0** for the version of SQL Server that you're using. For example, SQL Server 2016 is version 13.
-4.  Right-click and select **Properties**.
-5.  In the **Microsoft SQL Server Integration Services 13.0 Properties** dialog box, select the **Security** tab.
-6.  For each of the three sets of permissions - Launch and Activation, Access, and Configuration - select **Customize**, then select **Edit** to open the **Permission** dialog box.
-7.  In the **Permission** dialog box, add the non-default service account and grant **Allow** permissions as required. Typically, an account has **Local Launch** and **Local Activation** permissions.
-8.  Click **OK** twice, then close the **Component Services** console.
-
-For more info about the error described in this section and about the permissions required by the SSIS service account, see the following blog post.  
-[System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [What&#39;s New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
-
-*Updated: 2017-05-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
-
-<!-- Source markdown line 24.  ms.author= "douglasl".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 9e3cce3af1366495668cf3f34c0548b958b8d4dd c1d0860a94591bfd64311e38a56d27abb363d577  (PR=1737  ,  Filename=what-s-new-in-integration-services-in-sql-server-2017.md  ,  Dirpath=docs\integration-services\  ,  MergeCommitSha40=67c1c0f3a9da6cc5d050da5db8a493f5da934c2a) -->
-
-
-
-**New in SSIS in SQL Server 2017 CTP 2.1**
-
-
-**New features in Scale Out for SSIS**
-
-
-1.	You can now use the **Use32BitRuntime** parameter when you trigger execution in Scale Out.
-2.	The performance of logging to SSISDB for package executions in Scale Out has been improved. The Event Message and Message Context logs are now written to SSISDB in batch mode instead of one by one. Here are some additional notes about this improvement:        
-    - Some reports in the current version of SQL Server Management Studio (SSMS) don't currently display these logs for executions in Scale Out. We anticipate that they will be supported in the next release of SSMS. The affected reports include the *All Connections* report, the *Error Context* report, and the *Connection Information* section in the Integration Service Dashboard.
-    - A new column **event_message_guid** has been added. Use this column to join the [catalog].[event_message_context] view and the [catalog].[event_messages] view instead of using **event_message_id** when you query these logs of executions in Scale Out.
-
-**New in SSIS in SQL Server 2017 CTP 2.0**
-
-
-There are no new SSIS features in SQL Server 2017 CTP 2.0.
-
-**New in SSIS in SQL Server 2017 CTP 1.4**
-
-
-There are no new SSIS features in SQL Server 2017 CTP 1.4.
-
-**New in SSIS in SQL Server 2017 CTP 1.3**
-
-
-There are no new SSIS features in SQL Server 2017 CTP 1.3.
-
-**New in SSIS in SQL Server 2017 CTP 1.2**
-
-
-There are no new SSIS features in SQL Server 2017 CTP 1.2.
-
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## Compact List of Articles Updated Recently
-
-This compact list provides links to all the updated articles which are listed in the preceding section.
-
-1. [Deploy Integration Services (SSIS) Projects and Packages](#TitleNum_1)
-2. [What&#39;s New in Integration Services in SQL Server 2017](#TitleNum_2)
-
-
-
-
-<a name="sisters2"/>
+<a name="similars2"/>
 
 &nbsp;
 
@@ -180,23 +83,22 @@ This compact list provides links to all the updated articles which are listed in
 
 This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (12+2): **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (3+0):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8):  **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0):  **Tools for SQL** docs](../tools/new-updated-tools.md)
+- [New + Updated (4+4) : **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
+- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
+- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 #### Subject areas which have no new or recently updated articles
@@ -204,12 +106,13 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
 

@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   Minimum hard disk space: 2GB  
   
--   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  TCP/IP connectivity is disabled by default with SQL Server Developer and Express Editions. This must be manually enabled for PolyBase to be functional.
+-   TCP/IP must be enabled for Polybase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For Polybase to function correctly on the Developer and Express editions you must enable TCP/IP connectivity (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)
   
  **Notes**  
   

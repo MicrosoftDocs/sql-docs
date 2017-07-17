@@ -6,7 +6,7 @@ description: This topic describes how to use the mssql-conf tool to  configure S
 author: luisbosquez 
 ms.author: lbosq 
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 06/16/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -25,7 +25,7 @@ ms.custom: H1Hack27Feb2017
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 
-**mssql-conf** is a configuration script that installs with SQL Server 2017 CTP 2.1 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with SQL Server 2017 RC1 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 - [TCP port](#tcpport): Change the port where SQL Server will listen for connections.
 - [Default data directory](#datadir): Change the directory where the new SQL Server database data files (.mdf) are created.
@@ -34,10 +34,12 @@ ms.custom: H1Hack27Feb2017
 - [Default backup directory](#backupdir): Change the directory where SQL Server will send the backup files by default. 
 - [Mini and full dump preferences](#coredump): Specify whether to generate both mini dumps and full dumps.
 - [Core dump type](#coredump): Choose the type of dump memory dump file to collect.
+- [TLS settings](#tls): Configure Transport Level Security.
 - [High Availability](#hadr): Enable Availability Groups.
 - [Set traceflags](#traceflags): Set the traceflags that the service is going to use.
 - [Set collation](#collation): Set a new collation for SQL Server on Linux.
-
+- [Set customer feedback](sql-server-linux-customer-feedback.md): Choose whether or not SQL Server sends feedback to Microsoft.
+- [Set Local Audit directory](sql-server-linux-customer-feedback.md): Set a a directory to add Local Audit files.
 The following sections show examples of how to use mssql-conf for each of these scenarios.
 
 > [!TIP]
@@ -199,6 +201,21 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
     | **miniplus** | MiniPlus is similar to mini, but it includes additional memory. It understands the internals of SQLPAL and the host environment, adding the following memory regions to the dump:</br></br> - Various globals</br> - All memory above 64TB</br> - All named regions found in **/proc/$pid/maps**</br> - Indirect memory from threads and stacks</br> - Thread information</br> - Associated Teb’s and Peb’s</br> - Module Information</br> - VMM and VAD tree |
     | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
     | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. This is not controlled by **coredump.captureminiandfull** setting. |
+
+## <a id="tls"></a> Specify TLS settings  
+
+Use mssql-conf to configure TLS for an instance of SQL Server running on Linux. The following options are supported:  
+
+|Option |Description |
+|--- |--- |
+|`network.forceencryption` |If 1, then [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] forces all connections to be encrypted. By default, this option is 0. |  
+|`network.tlscert` |The absolute path to the certificate file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:   `/etc/ssl/certs/mssql.pem`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |  
+|`network.tlskey` |The absolute path to the private key file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:  `/etc/ssl/private/mssql.key`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. | 
+|`network.tlsprotocols` |A comma-separated list of which TLS protocols are allowed by SQL Server. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client does not support any allowed protocol, [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] rejects the connection attempt.  For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0).  If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |  
+|`network.tlsciphers` |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In general, you should not need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |   
+| `network.kerberoskeytabfile` |Path to the Kerberos keytab file |  
+| | |  
+For an example of using the TLS settings, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
 
 ## <a id="hadr"></a> High Availability
 

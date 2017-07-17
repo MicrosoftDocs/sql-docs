@@ -21,6 +21,9 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Create a Full Database Backup (SQL Server)
+
+ > For content related to previous versions of SQL Server, see [Create a Full Database Backup (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+
   This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
   
 >  For information on SQL Server backup to the Windows Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  

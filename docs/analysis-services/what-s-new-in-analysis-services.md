@@ -20,7 +20,7 @@ manager: "erikre"
 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] includes many new enhancements providing improved performance, easier solution authoring, automated database management,   enhanced relationships with bi-directional cross filtering, parallel partition processing, and much more. At the heart of most enhancements for this release is the new 1200 compatibility level for tabular model databases.     
 
 ## Azure Analysis Services
-Announced at the 2016 SQL PASS Conference, Analysis Services is now available in the cloud as an Azure service. **Azure Analysis Services** supports tabular models at the 1200 compatibility level. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. To learn more and give it a try for free, see [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
+Announced at the 2016 SQL PASS Conference, Analysis Services is now available in the cloud as an Azure service. **Azure Analysis Services** supports tabular models at the 1200 and higher compatibility levels. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. To learn more and give it a try for free, see [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
 
 ## What's new in SQL Server 2016 Service Pack 1 (SP1) Analysis Services
 

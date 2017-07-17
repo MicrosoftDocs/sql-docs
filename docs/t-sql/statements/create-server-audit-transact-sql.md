@@ -1,7 +1,7 @@
 ---
 title: "CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/11/2017"
+ms.date: "05/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -105,7 +105,8 @@ CREATE SERVER AUDIT audit_name
   
  FAIL_OPERATION  
  Database actions fail if they cause audited events. Actions which do not cause audited events can continue, but no audited events can occur. The audit continues to attempt to log events and will resume if the failure condition is resolved. Use this option when maintaining a complete audit is more important than full access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+
  AUDIT_GUID =*uniqueidentifier*  
  To support scenarios such as database mirroring, an audit needs a specific GUID that matches the GUID found in the mirrored database. The GUID cannot be modified after the audit has been created.  
   

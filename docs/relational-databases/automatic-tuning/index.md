@@ -1,3 +1,3 @@
 --- 
-redirect_url: /sql/relational-databases/automatic-tuning/automatic-tuning.md 
+redirect_url: /sql/relational-databases/automatic-tuning/automatic-tuning
 --- 

@@ -17,15 +17,15 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # DAX Formula Compatibility in DirectQuery Mode (SSAS 2016)
-Some of the most significant enhancements in [!INCLUDE[ssASCurrent_md](../../includes/ssascurrent-md.md)] are to DirectQuery mode functionality for tabular 1200 models. Many functional limitations in earlier versions no longer apply. For DAX formulas in-particular:
+Some of the most significant enhancements in [!INCLUDE[ssASCurrent_md](../../includes/ssascurrent-md.md)] are to DirectQuery mode functionality for tabular 1200 and higher models. Many functional limitations in earlier versions no longer apply. For DAX formulas in-particular:
 
 - DirectQuery now generates simpler queries, providing improved performance.
-- Row level security (RLS) is now supported for tabular 1200 models in DirectQuery mode.
-- Calculated columns are now supported for tabular 1200 models in DirectQuery mode.
+- Row level security (RLS) is now supported in DirectQuery mode.
+- Calculated columns are now supported for tabular models in DirectQuery mode.
 
 ## DAX functions in DirectQuery mode
 
-In short, all DAX functions are supported for tabular 1200 DirectQuery models. However, not all functions are supported for all formula types, and not all functions have been optimized for tabular 1200 DirectQuery models. At the most basic level, we can put DAX functions into two camps: Optimized and Non-optimized. Let's first take a closer look at optimized functions.
+In short, all DAX functions are supported for DirectQuery models. However, not all functions are supported for all formula types, and not all functions have been optimized for DirectQuery models. At the most basic level, we can put DAX functions into two camps: Optimized and Non-optimized. Let's first take a closer look at optimized functions.
 
 
 ### Optimized for DirectQuery
@@ -38,7 +38,7 @@ These are functions that primarily return scalar or aggregate results. These fun
 
 
 ### Non-optimized for DirectQuery
-These functions have not been optimized to work with DirectQuery in tabular 1200 models. These functions *are not* supported in calculated column and row-level security formulas at all. However, these functions *are supported* in measure and query formulas, albeit with uncertain performance.
+These functions have not been optimized to work with DirectQuery. These functions *are not* supported in calculated column and row-level security formulas at all. However, these functions *are supported* in measure and query formulas, albeit with uncertain performance.
 
  We're not going to list all of the functions here. Basically, if it's not in one of the lists of optimized functions above, it's a non-optimized function for DirectQuery.
 
@@ -47,7 +47,7 @@ The reasons a particular function might not be optimized for DirectQuery is beca
 To learn about all DAX functions, see the [DAX Function Reference].(https://msdn.microsoft.com/en-us/library/ee634396.aspx)
 
 ## DAX operators in DirectQuery mode
-All DAX comparison and arithmetic operators are fully supported in tabular 1200 models in DirectQuery mode. To learn more, see [DAX Operator Reference](https://msdn.microsoft.com/library/ee634237.aspx).
+All DAX comparison and arithmetic operators are fully supported in DirectQuery mode. To learn more, see [DAX Operator Reference](https://msdn.microsoft.com/library/ee634237.aspx).
 
 
  

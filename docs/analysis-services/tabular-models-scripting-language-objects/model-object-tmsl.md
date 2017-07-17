@@ -17,11 +17,11 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Model object (TMSL)
-  Defines a Tabular model at compatibility level 1200 or greater. There is one model per database, and only one database that can be specified in any given command. A Database object is the parent object.  
+  Defines a Tabular model. There is one model per database, and only one database that can be specified in any given command. A Database object is the parent object.  
   
  Model definitions are too large to reproduce the entire syntax in one topic. For this reason, a  partial syntax highlighting the main parts can be found below, with links to child objects.  
   
- Perhaps the best way to understand a model definition is to start with a Tabular model that you know well, upgrade it to compatibility level 1200, and then use the **View Code** option in SQL Server Data Tools to view its definition. Remember to install a JSON editor so that you can view the code. You can get a JSON editor in Visual Studio by [downloading the Community edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) or other edition of Visual Studio.  
+ Perhaps the best way to understand a model definition is to start with a Tabular model that you know well. Use the **View Code** option in SQL Server Data Tools to view its definition. Remember to install a JSON editor so that you can view the code. You can get a JSON editor in Visual Studio by [downloading the Community edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) or other edition of Visual Studio.  
   
 > [!NOTE]  
 >  In any script, only one database at the time can be referenced. For any object other than database itself, the Database property is optional if you specify the model. There is one-to-one mapping between a Model and a Database that can be used to deduce the Database name if it's not explicitly provided.   

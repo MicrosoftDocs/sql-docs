@@ -1,7 +1,7 @@
 ---
 title: "Compatibility Level for Tabular models in Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/19/2017"
+ms.date: "05/09/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,7 +29,7 @@ manager: "erikre"
 |||  
 |-|-|- 
 |**Compatibility level**|**Server version**| 
-|1400|SQL Server 2017 |  
+|1400|Azure Analysis Services, SQL Server 2017 |  
 |1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
 |1103|SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 

@@ -1314,6 +1314,21 @@
             "source_path": "docs/whitepapers/introducing-microsoft-technologies-for-data-storage-movement-and-transformation.md",
             "redirect_url": "sql/whitepapers/microsoft-white-papers",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshooting-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshoot-process-data-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
         }
     ]
 }

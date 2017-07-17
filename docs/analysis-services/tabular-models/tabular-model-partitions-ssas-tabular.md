@@ -68,7 +68,7 @@ manager: "erikre"
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] includes parallel processing for tables with two or more partitions, increasing processing performance. There are no configuration settings for parallel processing (see notes). Parallel processing occurs by default when you Process Table or you select multiple partitions for the same table and Process. You can still choose to process a tables partitions independently.  
   
 > [!NOTE]  
->  To specify whether refresh operations run sequentially or in parallel, you can use the **maxParallism** property option with the [Sequence command (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md). TMSL is supported for tabular 1200 models only.
+>  To specify whether refresh operations run sequentially or in parallel, you can use the **maxParallism** property option with the [Sequence command (TMSL)](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).
 
 > [!NOTE]  
 >  If re-encoding is detected, parallel processing can cause increased use of system resources. This is because multiple partition operations need to be interrupted and re-started with the new encoding in-parallel.  

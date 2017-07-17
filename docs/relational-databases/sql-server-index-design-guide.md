@@ -21,9 +21,9 @@ manager: "jhubbard"
 # SQL Server Index Design Guide
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks. Designing efficient indexes is paramount to achieving good database and application performance. This SQL Server index design guide contains information and best practices to help you design effective indexes to meet the needs of your application.  
+Poorly designed indexes and a lack of indexes are primary sources of database application bottlenecks. Designing efficient indexes is paramount to achieving good database and application performance. This SQL Server index design guide contains information and best practices to help you design effective indexes to meet the needs of your application.  
     
- This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](http://msdn.microsoft.com/library/ms175049.aspx).  
+This guide assumes the reader has a general understanding of the index types available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For a general description of index types, see [Index Types](http://msdn.microsoft.com/library/ms175049.aspx).  
   
   
 ##  <a name="Basics"></a> Index Design Basics  
@@ -77,7 +77,7 @@ manager: "jhubbard"
   
 -   Write queries that insert or modify as many rows as possible in a single statement, instead of using multiple queries to update the same rows. By using only one statement, optimized index maintenance could be exploited.  
   
--   Evaluate the query type and how columns are used in the query. For example, a column used in an exact-match query type would be a good candidate for a nonclustered or clustered index.  
+-   Evaluate the query type and how columns are used in the query. For example, a column used in an exact-match query type would be a good candidate for a nonclustered or clustered index.
   
 ### Column Considerations  
  When you design an index consider the following column guidelines:  
@@ -583,9 +583,8 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
   
 ##  <a name="Additional_Reading"></a> Additional Reading  
- [Improving Performance with SQL Server 2008 Indexed Views](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-  
- [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Improving Performance with SQL Server 2008 Indexed Views](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
 

@@ -1,7 +1,7 @@
 ---
 title: "Plan your adoption of In-Memory OLTP Features in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/10/2017"
+ms.date: "05/08/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -153,7 +153,7 @@ The READPAST hint is helpful in scenarios where several sessions are each access
 - No column can be tagged for [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) on a memory-optimized table.
 
 
-- A [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) object cannot be used with any memory-optimized table.
+- A [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) cannot be used with a constraint in a memory-optimized table. For example, you cannot create a DEFAULT constraint with a NEXT VALUE FOR clause. SEQUENCEs can be used with INSERT and UPDATE statements.
 
 
 ## C. Administrative maintenance

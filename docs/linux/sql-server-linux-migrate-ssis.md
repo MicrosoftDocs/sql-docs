@@ -6,7 +6,7 @@ description:
 author: sanagama
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 06/29/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -45,6 +45,19 @@ To run an SSIS package on a Linux computer, do the following things:
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
+## More about SSIS on Linux
+
+**Deploying packages**. You can only store packages in the file system on Linux in this release. The SSIS Catalog database and the legacy SSIS service are not available on Linux for package deployment and storage.
+
+**Scheduling packages**. You can't use SQL Agent on Linux to schedule package execution in this release.
+
+**Other limitations and known issues**. For other limitations and known issues with SSIS on Linux, see the [Release Notes](sql-server-linux-release-notes.md#ssis).
+
+For more info about SSIS on Linux, see the following blog posts:
+
+-   [SSIS on Linux is available in SQL Server 2017 CTP2.1](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
+-   [ODBC is supported in SSIS on Linux (SQL Server 2017 CTP 2.1 refresh)](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
+
 ## More about SSIS
 
 Microsoft SQL Server Integration Services (SSIS) is a platform for building high-performance data integration solutions, including extraction, transformation, and loading (ETL) packages for data warehousing. For more info about SSIS, see [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services.md).
@@ -57,15 +70,6 @@ SSIS includes the following features:
 - application programming interfaces (APIs) for extending SSIS with your own custom scripts and components
 
 To get started with SSIS, download the latest version of [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). Then follow the tutorial [SSIS How to Create an ETL Package](https://msdn.microsoft.com/en-us/library/ms169917.aspx).
-
-## More about SSIS on Linux
-
-For limitations and known issues with SSIS on Linux, see the [Release Notes](sql-server-linux-release-notes.md#ssis).
-
-For more info about SSIS on Linux, see the following blog posts:
-
--   [SSIS on Linux is available in SQL Server 2017 CTP2.1](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
--   [ODBC is supported in SSIS on Linux (SQL Server 2017 CTP 2.1 refresh)](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
 
 ## See also
 - [Learn more about SQL Server Integration Services](https://msdn.microsoft.com/en-us/library/ms141026.aspx)

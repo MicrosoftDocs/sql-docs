@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,6 +16,29 @@ ms.author: "sstein"
 manager: "jhubbard"
 ---
 # SQL Server Management Studio - Changelog (SSMS)
+
+## SSMS 17.2 release
+Generally available | Build number: TBD  
+
+- The connection dialog box now supports the following 5 authentication methods:  
+  - Windows Authentication  
+  - SQL Server Authentication  
+  - Active Directory - Universal with MFA support  
+  - Active Directory - Password  
+  - Active Directory - Integrated  
+- A new user credential input field was added for Universal Authentication with MFA method to support multi-user authentication.   
+- Database export/import for DacFx wizard using Universal Authentication with MFA.  
+- ADAL managed library used by Azure AD Universal Authentication with MFA was upgraded to 3.13.9 version.  
+- In addition a new CLI interface was delivered supporting Azure AD admin setting for SQL Database and SQL Data Warehouse.  
+
+For more information on the Active Directory authentication methods, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) and [Configure Azure SQL Database multi-factor authentication for SQL Server Management Studio](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure).   
+
+### Known issues in this release:  
+The following SSMS functionality is not supported for Azure AD auth using Universal Authentication with MFA:  
+• The **New Table** designer shows the old style login prompt and does not work for Azure AD authentication.  
+• The **Edit Top 200 Rows** feature doesn't support Azure Ad authentication.  
+• The **Registered Server** component does not support Azure AD authentication.  
+Our team continues to work on these issues for future versions of SSMS.  
 
 ## SSMS 17.1 release
 Generally available | Build number: 14.0.17119.0

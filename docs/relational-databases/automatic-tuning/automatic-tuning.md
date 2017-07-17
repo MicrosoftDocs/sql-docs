@@ -31,7 +31,7 @@ Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] enabl
 
 [!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] may use different SQL plans to execute the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries. Query plans
 depend on the statistics, indexes, and other factors. The optimal plan that should be used to execute some [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query might be changed
-over time. In some cases, the new plan might not be better than the previous one, and this might cause a performance regression.
+over time. In some cases, the new plan might not be better than the previous one, and the new plan might cause a performance regression.
 
  ![SQL plan choice regression](media/plan-choice-regression.png "SQL plan choice regression") 
 
@@ -70,7 +70,7 @@ The most important information shown in this view are:
  - Details about the issues such as id of the detected plan, id of the regressed plan, id of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
  script that might be applied to fix the issue, etc. Details are stored in [JSON format](../../relational-databases/json/index.md).
 
-Use the following query to obtain a script that will fix the issue:
+Use the following query to obtain a script that fixes the issue:
 
 ```   
 SELECT reason, score,
@@ -110,7 +110,7 @@ In addition to detection, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] can
 ![SQL plan choice correction](media/force-last-good-plan.png "SQL plan choice correction") 
 
 When the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] applies a recommendation, it automatically monitors the performance of the forced plan. The forced plan will be retained until
-a recompile (e.g. on next statistics or schema change) if it is better than the regressed plan. If the forced plan is not better than the regressed plan, the new plan will be unforced
+a recompile (for example, on next statistics or schema change) if it is better than the regressed plan. If the forced plan is not better than the regressed plan, the new plan will be unforced
 and the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will compile a new plan.
 
 The user can enable automatic tuning per database and specify that last good plan should be forced whenever some plan change regression is detected. Automatic tuning is enabled using

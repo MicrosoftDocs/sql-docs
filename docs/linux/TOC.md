@@ -37,7 +37,7 @@
 ### [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
 ### [Create and run jobs](sql-server-linux-run-sql-server-agent-job.md)
 ### [Use log shipping](sql-server-linux-use-log-shipping.md)
-#### [DB Mail and Email Alerts with SQL Agent on Linux](sql-server-linux-db-mail-sql-agent.md)
+### [Use DB Mail and email alerts](sql-server-linux-db-mail-sql-agent.md)
 
 ## [Migrate](sql-server-linux-migrate-overview.md)
 ### [Restore from Windows](sql-server-linux-migrate-restore-database.md)

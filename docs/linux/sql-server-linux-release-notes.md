@@ -91,7 +91,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
-| **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader , SSIS, SSAS, SSRS |
+| **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Log Reader Agent |
 | &nbsp; | Change Data Capture |
@@ -221,7 +221,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp21"> CTP 2.1 (May 2017) </a>
 The SQL Server engine version for this release is 14.0.600.250.
@@ -236,11 +236,11 @@ The SQL Server engine version for this release is 14.0.600.250.
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!NOTE]
-> You need at least 3.25GB of memory to run SQL Server on Linux.
+> You need at least 3.25 GB of memory to run SQL Server on Linux.
 > SQL Server Engine has been tested up to 1 TB of memory at this time.
 
 ### Package details
-Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the following installation guides:
+Package details and download locations for the RPM and Debian packages are listed in the following table. You do not need to download these packages directly if you use the steps in the following installation guides:
 
 - [Install SQL Server package](sql-server-linux-setup.md)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
@@ -378,7 +378,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp20"> CTP 2.0 (April 2017) </a>
 The SQL Server engine version for this release is 14.0.500.272.
@@ -477,7 +477,7 @@ The following sections describe known issues with this release of SQL Server 201
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### Always On Availability Group
-- All HA configurations - meaning availability group is added as a resource to a Pacemaker cluster - created with pre CTP2.0 packages are not backwards compatible with the new package. Delete all previousely configured clustered resources and create new availability groups with `CLUSTER_TYPE=EXTERNAL`. See [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
+- All HA configurations - meaning availability group is added as a resource to a Pacemaker cluster - created with pre CTP2.0 packages are not backwards compatible with the new package. Delete all previously configured clustered resources and create new availability groups with `CLUSTER_TYPE=EXTERNAL`. See [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
 - Availability groups created with `CLUSTER_TYPE=NONE` and not added as resources in the cluster will continue working after upgrade. Use for read-scale scenarios. See [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 - `sys.fn_hadr_backup_is_preffered_replica` does not work for `CLUSTER_TYPE=NONE` or `CLUSTER_TYPE=EXTERNAL` because it relies on the WSFC-replicated cluster registry key which not available. We are working on providing a similar functionality through a different function. 
 
@@ -525,7 +525,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp14"> CTP 1.4 (March 2017) </a>
 The SQL Server engine version for this release is 14.0.405.198.
@@ -704,7 +704,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp13"> CTP 1.3 (February 2017) </a>
 The SQL Server engine version for this release is 14.0.304.138.
@@ -862,7 +862,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp12"> CTP 1.2 (January 2017)
 The SQL Server engine version for this release is 14.0.200.24.
@@ -980,7 +980,7 @@ The following sections describe known issues with this release of SQL Server 201
 - SqlPackage shows the location of files with a "C:\\" prefix.
 
 #### Sqlcmd/BCP & ODBC 
-- If you have an older version of SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql), you might have installed a custom unixODBC Driver Manager (unixODBC-utf16). This could casue a potential conflict as we no longer use a custom driver manager. 
+- If you have an older version of SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql), you might have installed a custom unixODBC Driver Manager (unixODBC-utf16). This could cause a potential conflict as we no longer use a custom driver manager. 
 
     - **Resolution**: On Ubuntu and SLES, the conflict will be resolved automatically. When prompted if you would like to uninstall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC-utf16 unixODBC-utf16-devel` and retry the install.
     
@@ -1008,7 +1008,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp11"> CTP 1.1 (December 2016)
 The SQL Server engine version for this release is 14.0.100.187.
@@ -1144,7 +1144,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 v
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp10"> CTP 1.0 (November 2016)
 The SQL Server engine version for this release is 14.0.1.246.

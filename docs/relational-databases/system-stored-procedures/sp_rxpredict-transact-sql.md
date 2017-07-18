@@ -26,7 +26,7 @@ manager: "jhubbard"
 
 Generates a predicted value based on a stored model.
 
-Provides scoring on machine learning models in near real-time. `sp_rxPredict` is a stored procedure provided as a wrapper for the `rxPredict` function in [RevoScaleR]()https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler and [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). It is written in C+ and is optimized specifically for scoring operations. It supports both R or Python machine learning models.
+Provides scoring on machine learning models in near real-time. `sp_rxPredict` is a stored procedure provided as a wrapper for the `rxPredict` function in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). It is written in C+ and is optimized specifically for scoring operations. It supports both R or Python machine learning models.
 
 **This topic applies to**:  
 - SQL Server 2017  
@@ -71,7 +71,7 @@ Requires one of the following editions:
 
 ### Supported algorithms
 
-For a list of supported algorithms, see [Real-time scoring](real-time-scoring.md).
+For a list of supported algorithms, see [Real-time scoring](../../advanced-analytics/real-time-scoring.md).
 
 The following model types are **not** supported:  
 - Models containing other, unsupported types of R transformations  
@@ -94,5 +94,5 @@ In addition to being a valid SQL query, the input data in *@inputData* must incl
 
 `sp_rxPredict` supports only the following .NET column types: double, float, short, ushort, long, ulong and string. You may need to filter out unsupported types in your input data before using it for real-time scoring. 
 
-  For information about corresponding SQL types, see [SQL-CLR Type Mapping](https://msdn.microsoft.com/library/bb386947.aspx) or [Mapping CLR Parameter Data](../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
+  For information about corresponding SQL types, see [SQL-CLR Type Mapping](https://msdn.microsoft.com/library/bb386947.aspx) or [Mapping CLR Parameter Data](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

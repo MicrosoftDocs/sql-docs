@@ -43,7 +43,7 @@ The overall process of preparing the model and then generating scores is very si
 
 + If using sp\_rxPredict, some additional steps are required. See [Enable real-time scoring](#bkmk_enableRtScoring).
 
-+ At the time of this writing, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algorithms, see [Real-time scoring](real-time-scoring.md).
++ At the time of this writing, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algorithms, see [Real-time scoring](../real-time-scoring.md).
 
 ### Serialization and storage
 

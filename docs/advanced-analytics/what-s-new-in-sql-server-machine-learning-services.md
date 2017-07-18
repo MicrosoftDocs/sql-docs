@@ -76,7 +76,7 @@ If you installed an earlier version of RevoScaleR with SQL Server 2016, you can 
 
 Additionally, when you install the new R components, you can get a collection of pre-trained models in binary format. These models support machine learning in scenarios such as image recognition, where it might be difficult for customers to find large datasets to train a model. After you install one of the pre-trained models, you can use it for prediction on your own data without the time and expense involved in training such a large and complex model.
 
-For more information, see [Install pre-trained models in SQL Server](install-pretrained-models-sql-server.md)
+For more information, see [Install pre-trained models in SQL Server](r/install-pretrained-models-sql-server.md)
 
 > [!IMPORTANT]
 > 

@@ -174,6 +174,7 @@
 ## [sp_rename](sp-rename-transact-sql.md)  
 ## [sp_renamedb](sp-renamedb-transact-sql.md)  
 ## [sp_resetstatus](sp-resetstatus-transact-sql.md)  
+## [sp_rxpredict](sp_rxpredict-transact-sql.md)
 ## [sp_sequence_get_range](sp-sequence-get-range-transact-sql.md)  
 ## [sp_server_diagnostics](sp-server-diagnostics-transact-sql.md)  
 ## [sp_set_session_context](sp-set-session-context-transact-sql.md)  

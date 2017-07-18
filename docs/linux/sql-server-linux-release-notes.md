@@ -184,22 +184,20 @@ In RC1 the cluster resource agent sets the virtual server name like it does in a
 #### SQL Server Integration Services (SSIS)
 You can run SSIS packages on Linux. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
 
-- The **mssql-server-is** package is only supported on Ubuntu at this time.
+- The **mssql-server-is** package is supported on Ubuntu and Red Hat Enterprise Linux (RHEL) in this release.
 
 - The following features are not supported when running SSIS packages on Linux:
-  - SSIS Catalog DB
-  - Schedule Packages execution by SQL Agent
+  - SSIS Catalog database
+  - Scheduled package execution by SQL Agent
   - Windows Authentication
   - Third-party components
-  - Third-party ODBC drivers
-  - ODBC Connection Manager, Source, and Destination (supported with SSIS on Linux CTP 2.1 Refresh)
   - Change Data Capture (CDC)
-  - Scale Out
-  - Azure Feature Pack
-  - Hadoop and HDFS Support
+  - SSIS Scale Out
+  - Azure Feature Pack for SSIS
+  - Hadoop and HDFS support
   - Microsoft Connector for SAP BW
 
-With SSIS on Linux CTP 2.1 Refresh, your SSIS packages can use ODBC connections on Linux. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+With SSIS on Linux CTP 2.1 Refresh and later, your SSIS packages can use ODBC connections on Linux. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.

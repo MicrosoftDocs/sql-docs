@@ -63,6 +63,9 @@
 ##### [Operate](sql-server-linux-availability-group-failover-ha.md)
 #### [Create for read scale-out only]()
 ##### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
+### [DB Mail]()
+#### [DB Mail and Email Alerts with SQL Agent on Linux](sql-server-linux-db-mail-sql-agent.md)
+
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)

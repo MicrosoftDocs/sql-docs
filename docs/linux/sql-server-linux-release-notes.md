@@ -2,11 +2,11 @@
 # required metadata
 
 title: Release notes for SQL Server 2017 on Linux | Microsoft Docs
-description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for CTP 2.1 and prior versions.
+description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for RC1 and prior versions.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -97,10 +97,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Change Data Capture |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
-| **Security** | Active Directory Authentication |
-| &nbsp; | Windows Authentication |
-| &nbsp; | Extensible Key Management |
-| &nbsp; | Use of user-provided certificate for SSL or TLS |
+| **Security** | Extensible Key Management |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
@@ -110,7 +107,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Master Data Services |
 
 ### Known issues
-The following sections describe known issues with this release of SQL Server 2017 CTP 2.1 on Linux.
+The following sections describe known issues with this release of SQL Server 2017 RC1 on Linux.
 
 #### General
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 

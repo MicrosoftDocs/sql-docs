@@ -39,19 +39,17 @@ manager: "jhubbard"
   
 -   Cross-version instances of [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] are not supported. Version numbers of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components must be the same in an instance of [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
--   SQL Server 2016 is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
+-   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] is only available for 64-bit platforms. Cross-platform upgrade is not supported. You cannot upgrade a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to native 64-bit using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. However, you can back up or detach databases from a 32-bit instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and then restore or attach them to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-bit) if the databases are not published in replication. You must re-create any logins and other user objects in master, msdb, and model system databases.  
   
--   You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], you can add features by using the [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server 2016 &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+-   You cannot add new features during the upgrade of your existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], you can add features by using the [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Setup. For more information, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
  
 -   Failover Clusters are not supported in WOW mode.  
   
 -   Upgrade from an Evaluation edition of a previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version is not supported.
-
--   When upgrading from RC1 or previous versions of SQL Server 2016 to RC3 or later versions, PolyBase must be uninstalled before the upgrade and reinstalled after the upgrade.
   
 ## Upgrades from Earlier Versions to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]  
  
-SQL Server 2016 supports upgrade from the following versions of SQL Server:
+[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] supports upgrade from the following versions of SQL Server:
  
 - SQL Server 2008 SP4 or later
 - SQL Server 2008 R2 SP3 or later
@@ -146,7 +144,7 @@ SQL Server 2016 supports upgrade from the following versions of SQL Server:
 ## [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Edition Upgrade  
  The following table lists the supported edition upgrade scenarios in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
- For step-by-step instructions on how to perform an edition upgrade, see [Upgrade to a Different Edition of SQL Server 2016 &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
+ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade to a Different Edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
 |Upgrade From|Upgrade To|  
 |------------------|----------------|  
@@ -178,10 +176,10 @@ SQL Server 2016 supports upgrade from the following versions of SQL Server:
   
 ## See Also  
 
- [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-supported-features-for-sql-server-2017.md)
  
- [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  
- [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

@@ -31,11 +31,11 @@ The last three recent downloads are provided for the unlikely event that you exp
 
 |Release| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| \* n/a|
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|
 |16.4.1|[SSDT for VS2015 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828740)|[SSDT for VS2013 16.4.1](https://go.microsoft.com/fwlink/?LinkID=828737)|
-|16.3|[SSDT for VS2015 16.3](https://go.microsoft.com/fwlink/?LinkID=824659)|[SSDT for VS2013 16.3](https://go.microsoft.com/fwlink/?LinkID=824656)|
 
-
+\* SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2017, SSDT for VS2013 is no longer being updated. See the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/) for additional information.
 
   
 ## Links to Download pages  

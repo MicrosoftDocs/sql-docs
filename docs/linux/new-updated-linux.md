@@ -303,7 +303,7 @@ Package details and download locations for the RPM and Debian packages are liste
 
 <a name="TitleNum_6"/>
 
-### 6. &nbsp; [Install SQL Server on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
+### 6. &nbsp; Install SQL Server on Red Hat Enterprise Linux
 
 *Updated: 2017-05-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_5) | [Next](#TitleNum_7))
 
@@ -359,7 +359,7 @@ To manually install the SQL Server database engine package for Red Hat Enterpris
 
 <a name="TitleNum_7"/>
 
-### 7. &nbsp; [Install SQL Server on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
+### 7. &nbsp; Install SQL Server on SUSE Linux Enterprise Server
 
 *Updated: 2017-05-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_6) | [Next](#TitleNum_8))
 
@@ -415,7 +415,7 @@ To manually install the SQL Server database engine package for SUSE Linux Enterp
 
 <a name="TitleNum_8"/>
 
-### 8. &nbsp; [Install SQL Server on Ubuntu](sql-server-linux-setup-ubuntu.md)
+### 8. &nbsp; Install SQL Server on Ubuntu
 
 *Updated: 2017-06-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_7))
 

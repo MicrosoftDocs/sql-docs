@@ -6,7 +6,7 @@ description: This topic describes typical security actions.
 author: BYHAM   
 ms.author: rickbyh   
 manager: jhubbard  
-ms.date: 03/17/2017
+ms.date: 07/17/2017
 ms.topic: article  
 ms.prod: sql-linux   
 ms.technology: database-engine  
@@ -184,7 +184,7 @@ ALTER COLUMN EmailAddress
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
-Create a new user `TestUser` with `SEELCT` permission on the table, then execute a query as `TestUser` to view the masked data:   
+Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
 CREATE USER TestUser WITHOUT LOGIN;   

@@ -26,7 +26,7 @@ ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 
 # Configure SLES Cluster for SQL Server Availability Group
 
-This guide provides instructions to create a two-node cluster for SQL Server on SUSE Linux Enterprise Server (SLES) 12 SP2. The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](http://clusterlabs.org/). 
+This guide provides instructions to create a three-node cluster for SQL Server on SUSE Linux Enterprise Server (SLES) 12 SP2. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](http://clusterlabs.org/). 
 
 For more details on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
@@ -93,7 +93,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 
 ## Configure an Always On Availability Group
 
-On Linux servers configure the availability group and then configure the cluster resources. To configure the availability group, see [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-overview.md)
+On Linux servers configure the availability group and then configure the cluster resources. To configure the availability group, see [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
 
 ## Install and configure Pacemaker on each cluster node
 
@@ -152,7 +152,7 @@ If you have a cluster running with one or more nodes, add more cluster nodes wit
 
 If you have configured the existing cluster nodes with the `YaST` cluster module, make sure the following prerequisites are fulfilled before you run `ha-cluster-join`:
 - The root user on the existing nodes has SSH keys in place for passwordless login. 
-- Csync2 is configured on the existing nodes. For details, refer to Configuring Csync2 with YaST. 
+- `Csync2` is configured on the existing nodes. For details, refer to Configuring Csync2 with YaST. 
 
 1. Log in as root to the physical or virtual machine supposed to join the cluster. 
 2. Start the bootstrap script by executing: 
@@ -162,9 +162,13 @@ If you have configured the existing cluster nodes with the `YaST` cluster module
    ```
 
    If NTP has not been configured to start at boot time, a message appears. 
+
 3. If you decide to continue anyway, you will be prompted for the IP address of an existing node. Enter the IP address. 
+
 4. If you have not already configured a passwordless SSH access between both machines, you will also be prompted for the root password of the existing node. 
-After logging in to the specified node, the script will copy the Corosync configuration, configure SSH and Csync2, and will bring the current machine online as new cluster node. Apart from that, it will start the service needed for Hawk. If you have configured shared storage with OCFS2, it will also automatically create the mountpoint directory for the OCFS2 file system. 
+
+   After logging in to the specified node, the script will copy the Corosync configuration, configure SSH and `Csync2`, and will bring the current machine online as new cluster node. Apart from that, it will start the service needed for Hawk. If you have configured shared storage with `OCFS2`, it will also automatically create the mountpoint directory for the `OCFS2` file system. 
+
 5. Repeat the steps above for all machines you want to add to the cluster. 
 
 6. For details of the process, check `/var/log/ha-cluster-bootstrap.log`. 
@@ -178,7 +182,7 @@ After logging in to the specified node, the script will copy the Corosync config
    1 resource configured
    Online: [ SLES1 SLES2 SLES3]
    Full list of resources:   
-   admin_addr     (ocf::heartbeat:IPaddr2):       Started SLES1
+   admin_addr     (ocf::heartbeat:IPaddr2):       Started node1
    ```
 
    >[!NOTE]
@@ -250,6 +254,8 @@ ms ms-ag_cluster ag_cluster \
 commit
    ```
 
+[!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
+
 ### Create virtual IP resource
 
 If you did not create the virtual IP resource when you ran `ha-cluster-init` you can create this resource now. The following command creates a virtual IP resource. Replace `<**0.0.0.0**>` with an available address from your network and `<**24**>` with the number of bits in the CIDR subnet mask. Run on one node.
@@ -276,6 +282,7 @@ commit
 
 ### Add ordering constraint
 The colocation constraint has an implicit ordering constraint. It moves the virtual IP resource before it moves the availability group resource. By default the sequence of events is: 
+
 1. User issues resource migrate to the availability group master from node1 to node2.
 2. The virtual IP resource stops on node 1.
 3. The virtual IP resource starts on node 2. At this point, the IP address temporarily points to node 2 while node 2 is still a pre-failover secondary. 
@@ -302,12 +309,8 @@ For additional details see:
 - [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 
 
-[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]
+<!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
 
 ## Next steps
 
-[Configure availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
-
-[Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md)
-
-
+[Operate HA availability group](sql-server-linux-availability-group-failover-ha.md)

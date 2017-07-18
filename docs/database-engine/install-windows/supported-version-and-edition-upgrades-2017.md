@@ -115,36 +115,36 @@ manager: "jhubbard"
   
 -   Restore a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] instance of database engine from a backup.  
   
--   Back up a [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] cube and restoring on [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+-   Back up a [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] cube and restore it on [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
- When a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database is upgraded to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the database compatibility level will be changed from 90 to 100. (In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], valid values for the database compatibility level are 100, 110, 120, and 130.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) discusses how the compatibility level change could affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications.  
+When a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] database is upgraded to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the database compatibility level will be changed from 90 to 100. (In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], valid values for the database compatibility level are 100, 110, 120, 130, and 140.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) discusses how the compatibility level change could affect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applications.  
   
- Any scenarios not specified in the list above are not supported, including but not limited to the following:  
+Any scenarios not specified in the list above are not supported, including but not limited to the following:  
   
--   Installing [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] on same computer (side by side).  
+- Installing [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] on same computer (side by side).  
   
--   Using a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instance as a member of the replication topology that involves a [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] instance.  
+- Using a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instance as a member of the replication topology that involves a [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] instance.  
   
--   Configuring database mirroring between [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instances.  
+- Configuring database mirroring between [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instances.  
   
--   Backing up the transaction log with log shipping between [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instances.  
+- Backing up the transaction log with log shipping between [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instances.  
   
--   Configuring linked servers between [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instances.  
+- Configuring linked servers between [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] and [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instances.  
   
--   Managing a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instance from a [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Management Studio.  
+- Managing a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instance from a [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Management Studio.  
   
--   Attaching a [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] cube in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Management Studio.  
+- Attaching a [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] cube in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Management Studio.  
   
--   Connecting to [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] from [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Management Studio.  
+- Connecting to [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] from [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Management Studio.  
   
--   Managing a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] service from [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Management Studio.  
+- Managing a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] service from [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Management Studio.  
   
--   Support for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] third party custom Integration Services components, such as execute and upgrade.  
+- Support for [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] third party custom Integration Services components, such as execute and upgrade.  
   
 ## [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Edition Upgrade  
- The following table lists the supported edition upgrade scenarios in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+The following table lists the supported edition upgrade scenarios in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
- For step-by-step instructions on how to perform an edition upgrade, see [Upgrade to a Different Edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
+For step-by-step instructions on how to perform an edition upgrade, see [Upgrade to a Different Edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
   
 |Upgrade From|Upgrade To|  
 |------------------|----------------|  

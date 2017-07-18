@@ -114,5 +114,5 @@ New content can be added for a library only for a new platform. For example, if 
 ## See also  
 [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)
 [DROP EXTERNAL DATA SOURCE (Transact-SQL)](drop-external-data-source-transact-sql.md)  
-[sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files.md)  
+[sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

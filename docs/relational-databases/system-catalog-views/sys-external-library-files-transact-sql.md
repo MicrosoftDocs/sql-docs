@@ -36,4 +36,4 @@ Lists a row for each file that makes up an external library.
 
 ## See also  
 sys.external_libraries  
-[Package management for SQL Server R Services](../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[Package management for SQL Server R Services](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

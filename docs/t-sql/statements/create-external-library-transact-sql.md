@@ -144,5 +144,5 @@ DROP EXTERNAL LIBRARY ggplot2 <user_name>;
 ## See also  
 [ALTER EXTERNAL DATA SOURCE (Transact-SQL)](alter-external-data-source-transact-sql.md)  
 [DROP EXTERNAL DATA SOURCE (Transact-SQL)](drop-external-data-source-transact-sql.md)  
-[sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files.md)  
+[sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

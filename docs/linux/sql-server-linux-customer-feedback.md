@@ -37,7 +37,7 @@ Specifically, Microsoft does not send any of the following types of information 
 SQL Server 2017 always collects and sends information about the installation experience from the setup process so that we can quickly find and fix any installation problems that the customer is experiencing. SQL Server 2017 can be configured not to send information (on a per-server instance basis) to Microsoft through **mssql-conf**. mssql-conf is a configuration script that installs with SQL Server 2017 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. 
 
 > [!NOTE]
->  You can disable the sending of information to Microsoft only in paid versions of SQL Server. You cannot disable this functionality in Developer, Enterprise Evaluation, and Express editions of SQL Server 2016.
+>  You can disable the sending of information to Microsoft only in paid versions of SQL Server.
 
 ## Disable Customer Feedback
 This option lets you change if SQL Server sends feedback to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
@@ -45,7 +45,7 @@ This option lets you change if SQL Server sends feedback to Microsoft or not. By
 1. Run the mssql-conf script as root with the "set" command for "telemetry.customerfeedback":
 
    ```bash
-   sudo /opt/mssql/bin/mssql-conf set customerfeedback false
+   sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
    ```
 2. Restart the SQL Server service:
 

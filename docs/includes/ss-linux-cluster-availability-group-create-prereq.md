@@ -165,4 +165,7 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 >[!IMPORTANT]
 >The TCP port on the firewall needs to be open for the listener port.
 
+>[!IMPORTANT]
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
+
 For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

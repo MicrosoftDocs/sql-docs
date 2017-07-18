@@ -20,7 +20,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Supported Version and Edition Upgrades
+# Supported Version and Edition Upgrades for SQL Server 2017
   You can upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]. This topic lists the supported upgrade paths from these [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, and the supported edition upgrades for [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
 ## Pre upgrade Checklist  

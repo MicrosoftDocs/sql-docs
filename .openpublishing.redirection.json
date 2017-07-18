@@ -1964,6 +1964,11 @@
             "source_path": "docs/whitepapers/microsoft-white-papers.md",
             "redirect_url": "/sql/index",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/database-engine/install-windows/installation-for-sql-server-2016.md",
+            "redirect_url": "/sql/database-engine/install-windows/installation-for-sql-server",
+            "redirect_document_id": false
         }
     ]
 }

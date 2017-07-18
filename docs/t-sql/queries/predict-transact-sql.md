@@ -103,7 +103,7 @@ No permissions are required for `PREDICT`; however, the user needs `EXECUTE` per
 
 ## Examples
 
-The following examples demonstrate the sytax for calling `PREDICT`.
+The following examples demonstrate the syntax for calling `PREDICT`.
 
 ### Call a stored model and use it for prediction
 

@@ -3,7 +3,7 @@ title: Troubleshoot PolyBase Kerberos connectivity | Microsoft Docs
 description: 
 services: 
 documentationcenter: 
-author: 
+author: alazad
 manager: 
 editor: 
 tags: 
@@ -18,7 +18,7 @@ ms.topic: article
 ms.date: 07/18/2017
 ms.author: alazad
 ---
-# Troubleshoot PolyBase Kerbrsos connectivity
+# Troubleshoot PolyBase Kerberos connectivity
 You can use an interactive diagnostics tool, that has been built into PolyBase, to help troubleshoot authentication problems when using PolyBase against a Kerberos-secured Hadoop cluster. 
 
 This article serves as a guide to walk through the debugging process of such issues by leveraging this tool, which is built into PolyBase.
@@ -37,7 +37,7 @@ It helps to first understand the Kerberos protocol at a high-level. There are th
 Each one of Hadoop's secured resources is registered with the **Key Distribution Center (KDC)** with a unique **Service Principal Name (SPN)** as part of the Kerberization process of the Hadoop cluster. The goal is for the client to obtain a temporary user ticket, called a **Ticket Granting Ticket (TGT)**, in order to request another temporary ticket, called a **Service Ticket (ST)**, from the KDC against the particular SPN that it wants to access.  
 In PolyBase, when authentication is requested against any Kerberos-secured resource, the following four-round-trip handshake takes place:
 1. SQL Server connects to the KDC and obtains a TGT for the user. The TGT is encrypted using the KDC’s private key.
-1. SQL Server calls the Hadoop secured resource (e.g. HDFS) and determines which SPN it needs an ST.
+1. SQL Server calls the Hadoop secured resource (e.g. HDFS) and determines which SPN it needs a ST for.
 1. SQL Server goes back to the KDC, passes the TGT back, and requests a ST to access that particular secured resource. The ST is encrypted using the secured service’s private key.
 1. SQL Server forwards the ST to Hadoop and gets authenticated to have a session created against that service.
 
@@ -176,7 +176,7 @@ All the SPNs registered with the KDC, including the admins, can be viewed by run
 
 Also consider using the [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) tool to verify the admin credentials on the KDC locally. An example usage would be: *kinit identity@MYREALM.COM*. A prompt for a password indicates the identity exists.  
 The KDC logs are available in **/var/log/krb5kdc.log**, by default, which includes all of the requests for tickets including the client IP that made the request. There should be two requests from the SQL Server machine's IP wherein the tool was run: first for the TGT from the Authenticating Server as an **AS\_REQ**, followed by a **TGS\_REQ** for the ST from the Ticket Granting Server.
-```dos
+```apache
 | \[root@MY-KDC log\]\# tail -2 /var/log/krb5kdc.log 
  May 09 09:48:26 MY-KDC.local krb5kdc\[2547\](info): **AS\_REQ** (3 etypes {17 16 23}) 10.107.0.245: ISSUE: authtime 1494348506, etypes {rep=16 tkt=16 ses=16}, admin\_user@CONTOSO.COM for **krbtgt/CONTOSO.COM@CONTOSO.COM** 
  May 09 09:48:29 MY-KDC.local krb5kdc\[2547\](info): **TGS\_REQ** (3 etypes {17 16 23}) 10.107.0.245: ISSUE: authtime 1494348506, etypes {rep=16 tkt=16 ses=16}, admin\_user@CONTOSO.COM for **nn/hadoop-hdp25-00.local@CONTOSO.COM** |

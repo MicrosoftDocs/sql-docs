@@ -56,7 +56,7 @@
 ## [Set Parameter Value Dialog Box](service/set-parameter-value-dialog-box.md)  
 ## [Folder Properties Dialog Box](service/folder-properties-dialog-box.md)  
 
-# [Scale Out](integration-services-ssis-scale-out.md)
+# [Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md)
 
 # [Service (legacy)](../integration-services/service/integration-services-service-ssis-service.md)
 

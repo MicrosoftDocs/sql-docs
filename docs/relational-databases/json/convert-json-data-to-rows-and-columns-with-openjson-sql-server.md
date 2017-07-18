@@ -25,7 +25,7 @@ manager: "jhubbard"
 
 The **OPENJSON** rowset function converts JSON text into a set of rows and columns. After you transform a JSON collection into a rowset with **OPENJSON**, you can run any SQL query on the returned data or insert it into a SQL Server table. 
   
-The **OPENJSON** function takes a single JSON object or a collection of JSON objects and transforms them into one or more rows. By default, the **OPENJSON** function returns the following:
+The **OPENJSON** function takes a single JSON object or a collection of JSON objects and transforms them into one or more rows. By default, the **OPENJSON** function returns the following data:
 -   From a JSON object, the function returns all the key:value pairs that it finds at the first level.
 -   From a JSON array, the function returns all the elements of the array with their indexes.  
 
@@ -68,7 +68,7 @@ For syntax and usage, see [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/function
 
     
 ## Option 2 - OPENJSON output with an explicit structure
-When you specify a schema for the results by using the **WITH** clause of the **OPENJSON** function, the function returns a table with only the columns that you define in the **WITH** clause. In the optional **WITH** clause, you specify a set output columns, their types, and the paths of the JSON source properties for each output value. **OPENJSON** iterates through the array of JSON objects, reads the value on the specified path for each column, and converts the value to the specified type.  
+When you specify a schema for the results by using the **WITH** clause of the **OPENJSON** function, the function returns a table with only the columns that you define in the **WITH** clause. In the optional **WITH** clause, you specify a set of output columns, their types, and the paths of the JSON source properties for each output value. **OPENJSON** iterates through the array of JSON objects, reads the value on the specified path for each column, and converts the value to the specified type.  
 
 Here's a quick example that uses **OPENJSON** with a schema for the output that you explicitly specify in the **WITH** clause.  
   

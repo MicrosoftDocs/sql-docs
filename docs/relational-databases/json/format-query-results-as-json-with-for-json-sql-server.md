@@ -27,7 +27,7 @@ Format query results as JSON, or export data from SQL Server as JSON, by adding 
   
  When you use the **FOR JSON** clause, you can specify the structure of the JSON output explicitly, or let the structure of the SELECT statement determine the output.  
   
--   To maintain full control over the format of the JSON output, sse **FOR JSON PATH**. You can create wrapper objects and nest complex properties.  
+-   To maintain full control over the format of the JSON output, use **FOR JSON PATH**. You can create wrapper objects and nest complex properties.  
   
 -   To format the JSON output automatically based on the structure of the SELECT statement, use **FOR JSON AUTO**.  
   
@@ -88,7 +88,7 @@ Control the output of the **FOR JSON** clause by using the following additional 
 -   **WITHOUT_ARRAY_WRAPPER**. To remove the square brackets that surround the JSON output of the **FOR JSON** clause by default, specify the **WITHOUT_ARRAY_WRAPPER** option. Use this option to generate a single JSON object as output from a single-row result. If you don't specify this option, the JSON output is formatted as an array - that is, it's enclosed within square brackets. For more info, see [Remove Square Brackets from JSON Output with the WITHOUT_ARRAY_WRAPPER Option &#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md). 
    
 ## Output of the FOR JSON clause  
-The output of the **FOR JSON** clause has the following characteristics.  
+The output of the **FOR JSON** clause has the following characteristics:  
   
 1.  The result set contains a single column.
     -   A small result set may contain a single row.

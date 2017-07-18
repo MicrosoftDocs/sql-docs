@@ -95,7 +95,7 @@ It is not necessary that R, Python, or another machine learning language be inst
 
 ### Supported algorithms
 
-The model that you use must have been created using one of the supported algorithms from the RevoScaleR package. For a list of currently supported models, see [Real-time scoring](../advanced-analytics/real-time-scoring.md).
+The model that you use must have been created using one of the supported algorithms from the RevoScaleR package. For a list of currently supported models, see [Real-time scoring](../../advanced-analytics/real-time-scoring.md).
 
 ### Permissions
 

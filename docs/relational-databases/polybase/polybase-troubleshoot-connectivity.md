@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Polybase connectivty | Microsoft Docs
+title: Troubleshoot PolyBase Kerberos connectivity | Microsoft Docs
 description: 
 services: 
 documentationcenter: 
@@ -16,27 +16,28 @@ ms.tgt_pltfrm: na
 ms.devlang: 
 ms.topic: article
 ms.date: 07/18/2017
-ms.author: 
+ms.author: alazad
 ---
-# Troubleshoot PolyBase connectivity
-You can use An interactive diagnostics tool, that has been built into PolyBase, to help troubleshoot authentication problems when using PolyBase against a Kerberos-secured Hadoop cluster. 
+# Troubleshoot PolyBase Kerbrsos connectivity
+You can use an interactive diagnostics tool, that has been built into PolyBase, to help troubleshoot authentication problems when using PolyBase against a Kerberos-secured Hadoop cluster. 
 
-This article serves as a guide to walk through the debugging process of such issues by leveraging this tool.
+This article serves as a guide to walk through the debugging process of such issues by leveraging this tool, which is built into PolyBase.
 
-**Prerequisites**
+## Prerequisites
+
 1. SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 or higher with PolyBase installed
 1. A Hadoop cluster (Cloudera or Hortonworks) secured with Kerberos (Active Directory or MIT)
 
-**Introduction**
+## Introduction
 It helps to first understand the Kerberos protocol at a high-level. There are three actors involved:
-1. Kerberos Client (SQL Server)
-1. Secured Resource (HDFS, MR2, YARN, Job History, etc.)
-1. Key Distribution Center (referred to as a Domain Controller in Active Directory)
+1. Kerberos client (SQL Server)
+1. Secured resource (HDFS, MR2, YARN, Job History, etc.)
+1. Key distribution center (referred to as a domain controller in Active Directory)
 
 Each one of Hadoop's secured resources is registered with the **Key Distribution Center (KDC)** with a unique **Service Principal Name (SPN)** as part of the Kerberization process of the Hadoop cluster. The goal is for the client to obtain a temporary user ticket, called a **Ticket Granting Ticket (TGT)**, in order to request another temporary ticket, called a **Service Ticket (ST)**, from the KDC against the particular SPN that it wants to access.  
 In PolyBase, when authentication is requested against any Kerberos-secured resource, the following four-round-trip handshake takes place:
 1. SQL Server connects to the KDC and obtains a TGT for the user. The TGT is encrypted using the KDC’s private key.
-1. SQL Server calls the Hadoop secured resource (e.g. HDFS) and determines what SPN it needs a ST for.
+1. SQL Server calls the Hadoop secured resource (e.g. HDFS) and determines which SPN it needs an ST.
 1. SQL Server goes back to the KDC, passes the TGT back, and requests a ST to access that particular secured resource. The ST is encrypted using the secured service’s private key.
 1. SQL Server forwards the ST to Hadoop and gets authenticated to have a session created against that service.
 
@@ -45,31 +46,33 @@ In PolyBase, when authentication is requested against any Kerberos-secured resou
 Issues with authentication fall into one or more of the above four steps. To help with faster debugging, PolyBase has introduced an integrated diagnostics tool to help identify the point of failure.
 
 ## Troubleshooting
-PolyBase has multiple configuration XMLs containing properties of the Hadoop cluster. Namely, these are core-site.xml, hdfs-site.xml, hive-site.xml, jaas.conf, mapred-site.xml, and yarn-site.xml. They are located under "\[System Drive\]:*{{INSTALL\_PATH}}\\{{INSTANCE\_NAME}}*\\MSSQL\\Binn\\Polybase\\Hadoop\\conf". The default for SQL Server 2016, for instance, would be "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase\\Hadoop\\conf".
+PolyBase has multiple configuration XMLs containing properties of the Hadoop cluster. Namely, these are the following files:
+- core-site.xml
+- hdfs-site.xml
+- hive-site.xml
+- jaas.conf
+- mapred-site.xml
+- yarn-site.xml
+
+These files are located under:
+
+\\[System Drive\\]:{install path}\\{instance}\\{name}\\MSSQL\\Binn\\Polybase\\Hadoop\\conf
+
+For example, the default for SQL Server 2016, for instance, would be "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase\\Hadoop\\conf".
 
 Update one of the PolyBase configuration files, **core-site.xml**, with the three properties below with the values set according to the environment:
 ```xml
 <property>
-<name>polybase.kerberos.realm</name>
-<value>**CONTOSO.COM**</value>
-</property>
-<property>
-<name>polybase.kerberos.kdchost</name>
-<value>**kerberos.contoso.com**</value>
-</property>
-<property>
- <name>hadoop.security.authentication</name>
- <value>KERBEROS</value>
+  <name>polybase.kerberos.realm</name>
+  <value>**CONTOSO.COM**</value>
 </property>
 ```
 The other XMLs will later need to be updated as well if pushdown operations are desired, but with just this file configured, the HDFS file system should at least be able to be accessed.
 
 The tool runs independently of SQL Server, so it does not need to be running, nor does it need to be restarted if updates are made to the configuration XMLs. To run the tool, execute the following on the host with SQL Server installed:
 
-```dos
-> cd "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase"
-> java -classpath ".\\Hadoop\\conf;.\\Hadoop\\\*;.\\Hadoop\\HDP2\_2\\\*" com.microsoft.polybase.client.HdfsBridge <Name Node Address> <Name Node Port> <Service Principal> <Filepath containing Service Principal's Password> <Remote HDFS file path (optional)>
-```
+java -classpath ".\\Hadoop\\conf;.\\Hadoop\\\*;.\\Hadoop\\HDP2\_2\\\*" com.microsoft.polybase.client.HdfsBridge <Name Node Address> <Name Node Port> <Service Principal> <Filepath containing Service Principal's Password> <Remote HDFS file path (optional)>
+
 ## Arguments
 | Argument | Description|
 | --- | --- |
@@ -81,7 +84,9 @@ The tool runs independently of SQL Server, so it does not need to be running, no
 
 ## Example
 ```dos
-> java -classpath ".\\Hadoop\\conf;.\\Hadoop\\\*;.\\Hadoop\\HDP2\_2\\\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin\_user "C:\\temp\\kerberos\_pass.txt"
+> java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin\_user
+
+C:\temp\kerberos\_pass.txt
 ```
 The output is verbose for enhanced debugging, but there are only four main checkpoints to look for regardless of whether you are using MIT or AD. They correspond to the four steps outlined above. 
 
@@ -156,15 +161,15 @@ Reaching this point confirms that: (i) the three actors are able to communicate 
 ```
 ## Common Errors
 If the tool was run and the file properties of the target path were *not* printed (Checkpoint 4), there should be an exception thrown midway. Review it and consider the context of where in the four-step flow it occurred. Consider the following common issues that may have occurred, in order:
-| Exception API	| Message or display | Cause | 
-| --- | --- | --- |
-| org.apache.hadoop.security.AccessControlException | SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS] | The core-site.xml doesn't have the hadoop.security.authentication property set to "KERBEROS".|
-| javax.security.auth.login.LoginException | Client not found in Kerberos database (6) - CLIENT_NOT_FOUND |	The admin Service Principal supplied does not exist in the realm specified in core-site.xml.|
-| javax.security.auth.login.LoginException | Checksum failed |	Admin Service Principal exists, but bad password. |
-| N/A | Native config name: C:\Windows\krb5.ini<br>Loaded from native config | This is not an exception, but it indicates that Java's krb5LoginModule detected custom client configurations on your machine. Check your custom client settings as they may be causing the issue. |
-| javax.security.auth.login.LoginException:<br>java.lang.IllegalArgumentException |	Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin_user@CONTOSO.COM | Add the property “hadoop.security.auth_to_local” to core-site.xml with the appropriate rules per the Hadoop cluster. |
-| java.net.ConnectException |Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception |	Authentication against the KDC was successful, but it failed to access the Hadoop name node. Check the name node IP and port. Verify the firewall is disabled on Hadoop. |
-| java.io.FileNotFoundException |File does not exist: /test/data.csv |	Authentication was successful, but the location specified does not exist. Check the path or test with root "/" first. |
+| Exception and messages | Cause | 
+| --- | --- |
+| org.apache.hadoop.security.AccessControlException<br>SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS] | The core-site.xml doesn't have the hadoop.security.authentication property set to "KERBEROS".|
+|javax.security.auth.login.LoginException<br>Client not found in Kerberos database  (6) - CLIENT_NOT_FOUND |	The admin Service Principal supplied does not exist in the realm specified in core-site.xml.|
+| javax.security.auth.login.LoginException<br> Checksum failed |	Admin Service Principal exists, but bad password. |
+| Native config name: C:\Windows\krb5.ini<br>Loaded from native config | This is not an exception, but it indicates that Java's krb5LoginModule detected custom client configurations on your machine. Check your custom client settings as they may be causing the issue. |
+| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin_user@CONTOSO.COM | Add the property “hadoop.security.auth_to_local” to core-site.xml with the appropriate rules per the Hadoop cluster. |
+| java.net.ConnectException<br>Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception |	Authentication against the KDC was successful, but it failed to access the Hadoop name node. Check the name node IP and port. Verify the firewall is disabled on Hadoop. |
+| java.io.FileNotFoundException<br>File does not exist: /test/data.csv |	Authentication was successful, but the location specified does not exist. Check the path or test with root "/" first. |
 ## Debugging tips
 ### MIT KDC  
 All the SPNs registered with the KDC, including the admins, can be viewed by running **kadmin.local** > (admin login) > **listprincs** on the KDC host or any configured KDC client. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available in the cluster (e.g. nn, dn, rm, yarn, spnego, etc.) Their corresponding keytab files (password substitutes) can be seen under **/etc/security/keytabs**, by default. They are encrypted using the KDC's private key.  
@@ -178,135 +183,13 @@ The KDC logs are available in **/var/log/krb5kdc.log**, by default, which inclu
 ```
 ### Active Directory 
 In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available (e.g. nn, dn, rm, yarn, spnego, etc.)
-## References
-1. Sample output from an MIT KDC
-1. [Sample output from an AD KDC](file:///D:\Share\site\Sample_Polybase_AD.txt)
-1. Integrating PolyBase with Cloudera using Active Directory Authentication
+
+## Sample output
+For sample output, see the text file located on your computer, for example: \\{share}\\{site}\\Sample_Polybase_AD.txt)
+
+## See Also
+1. [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)
 1. [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)
 1. [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -40,7 +40,7 @@ Set up [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] Scale Ou
 
 To enable the functionality of Scale Out Master, you must install Database Engine Services, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)], and its Scale Out Master feature when you set up [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. 
 
-For information on setting up Database Engine Services and [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)], see [Install SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md), and [Install Integration Services](../../install-windows/install-integration-services.md).
+For information on setting up Database Engine Services and [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)], see [Install SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md), and [Install Integration Services](../install-windows/install-integration-services.md).
 > [!NOTE]
 > During Database Engine installation, select Mixed Mode for Authentication mode on the Database Engine Configuration page. 
 

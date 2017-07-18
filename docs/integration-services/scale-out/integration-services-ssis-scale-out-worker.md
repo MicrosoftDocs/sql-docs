@@ -16,7 +16,7 @@ manager: "jhubbard"
 ---
 # Integration Services (SSIS) Scale Out Worker
 
-Scale Out Worker runs a [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion_md](../includes/ssisnoversion-md.md)] Scale Out Worker service to pull execution tasks from Scale Out Master and executes the packages locally with ISServerExec.exe.
+Scale Out Worker runs a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] Scale Out Worker service to pull execution tasks from Scale Out Master and executes the packages locally with ISServerExec.exe.
 
 ## Configure SQL Server Integration Services Scale Out Worker service
 Scale Out Worker service can be configured using the \<driver\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config file. The service must be restarted after updating the configuration file.

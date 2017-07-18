@@ -17,7 +17,7 @@ manager: "jhubbard"
 # Integration Services (SSIS) Scale Out Master
 Scale Out Master manages the Scale Out system through the SSISDB Catalog and the Scale Out Master service. 
 
-The SSISDB Catalog stores all the information for Scale Out Workers, packages and executions. It provides the interface to enable a Scale Out Worker and execute packages in Scale Out. For more information, see [Walkthrough: Set up Integration Services Scale Out](walkthrough-set-up-integration-services-ssis-scale-out.md), [Run Packages in Integration Services](run-packages-in-integration-services-ssis-scale-out.md).
+The SSISDB Catalog stores all the information for Scale Out Workers, packages and executions. It provides the interface to enable a Scale Out Worker and execute packages in Scale Out. For more information, see [Walkthrough: Set up Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md), [Run Packages in Integration Services](run-packages-in-integration-services-ssis-scale-out.md).
 
 Scale Out Master service is a Windows service that is responsible for the communication with Scale Out Workers. It exchanges the status of package executions with Scale Out Workers through HTTPS and operates on the data in SSISDB. 
 

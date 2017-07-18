@@ -282,7 +282,7 @@ The overall process for creating and using a data source and compute context is 
 
 &nbsp;
 
-## Sister Articles
+## Similar Articles
 
 This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
@@ -290,7 +290,7 @@ This section lists very similar articles for recently updated articles in other 
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (4+4) : **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
 - [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
 - [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)

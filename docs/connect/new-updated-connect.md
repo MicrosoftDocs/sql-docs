@@ -43,24 +43,26 @@ The following links jump to new articles which have been added recently.
 
 
 1. [FIPS Mode](jdbc/fips-mode.md)
-2. [Custom Keystore Providers](odbc/custom-keystore-providers.md)
-3. [Connecting with bcp](odbc/linux-mac/connecting-with-bcp.md)
-4. [Connecting with sqlcmd](odbc/linux-mac/connecting-with-sqlcmd.md)
-5. [Connection String Keywords and Data Source Names (DSNs)](odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-6. [Data Access Tracing with the ODBC Driver on Linux and macOS](odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
-7. [Frequently Asked Questions (FAQ) for ODBC Linux and macOS](odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
-8. [Installing the Driver Manager](odbc/linux-mac/installing-the-driver-manager.md)
-9. [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-10. [Known Issues in this Version of the Driver](odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-11. [ODBC Driver on Linux and macOS Support for High Availability and Disaster Recovery](odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
-12. [Programming Guidelines](odbc/linux-mac/programming-guidelines.md)
-13. [Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](odbc/linux-mac/release-notes.md)
-14. [System Requirements](odbc/linux-mac/system-requirements.md)
-15. [Using Integrated Authentication](odbc/linux-mac/using-integrated-authentication.md)
-16. [Using Always Encrypted with the ODBC Driver 13.1 for SQL Server](odbc/using-always-encrypted-with-the-odbc-driver.md)
-17. [Using Azure Active Directory with the ODBC Driver](odbc/using-azure-active-directory.md)
-18. [Using Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md)
-
+ 
+<!-- Really just file moves.
+3. [Custom Keystore Providers](odbc/custom-keystore-providers.md)
+4. [Connecting with bcp](odbc/linux-mac/connecting-with-bcp.md)
+5. [Connecting with sqlcmd](odbc/linux-mac/connecting-with-sqlcmd.md)
+6. [Connection String Keywords and Data Source Names (DSNs)](odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
+7. [Data Access Tracing with the ODBC Driver on Linux and macOS](odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
+8. [Frequently Asked Questions (FAQ) for ODBC Linux and macOS](odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+9. [Installing the Driver Manager](odbc/linux-mac/installing-the-driver-manager.md)
+10. [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+11. [Known Issues in this Version of the Driver](odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+12. [ODBC Driver on Linux and macOS Support for High Availability and Disaster Recovery](odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
+13. [Programming Guidelines](odbc/linux-mac/programming-guidelines.md)
+14. [Release Notes for the Microsoft ODBC Driver for SQL Server on Linux and macOS](odbc/linux-mac/release-notes.md)
+15. [System Requirements](odbc/linux-mac/system-requirements.md)
+16. [Using Integrated Authentication](odbc/linux-mac/using-integrated-authentication.md)
+17. [Using Always Encrypted with the ODBC Driver 13.1 for SQL Server](odbc/using-always-encrypted-with-the-odbc-driver.md)
+18. [Using Azure Active Directory with the ODBC Driver](odbc/using-azure-active-directory.md)
+19. [Using Transparent Network IP Resolution](odbc/using-transparent-network-ip-resolution.md)
+-->
 
 
 
@@ -202,7 +204,7 @@ See also [Installing the Driver--../../connect/odbc/linux-mac/installing-the-mic
 
 &nbsp;
 
-## Sister Articles
+## Similar Articles
 
 This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
@@ -210,7 +212,7 @@ This section lists very similar articles for recently updated articles in other 
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (4+4) : **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
 - [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
 - [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)

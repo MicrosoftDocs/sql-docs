@@ -75,6 +75,7 @@
 ## [sys.dm_exec_query_memory_grants](sys-dm-exec-query-memory-grants-transact-sql.md)  
 ## [sys.dm_exec_query_optimizer_info](sys-dm-exec-query-optimizer-info-transact-sql.md)  
 ## [sys.dm_exec_query_optimizer_memory_gateways](sys-dm-exec-query-optimizer-memory-gateways.md)
+## [sys.dm_exec_query_parallel_workers](sys-dm-exec-query-parallel-workers-transact-sql.md)
 ## [sys.dm_exec_query_plan](sys-dm-exec-query-plan-transact-sql.md)  
 ## [sys.dm_exec_query_profiles](sys-dm-exec-query-profiles-transact-sql.md)  
 ## [sys.dm_exec_query_resource_semaphores](sys-dm-exec-query-resource-semaphores-transact-sql.md)  
@@ -150,13 +151,6 @@
 ## [sys.dm_io_pending_io_requests](sys-dm-io-pending-io-requests-transact-sql.md)  
 ## [sys.dm_io_virtual_file_stats](sys-dm-io-virtual-file-stats-transact-sql.md)  
 ## [sys.dm_io_cluster_valid_path_names](sys-dm-io-cluster-valid-path-names-transact-sql.md)
-
-# [Linux Process](linux-process-dynamic-management-views-transact-sql.md)  
-## [sys.dm_linux_proc_all_stat](sys-dm-linux-proc-all-stat-transact-sql.md)  
-## [sys.dm_linux_proc_cpuinfo](sys-dm-linux-proc-cpuinfo-transact-sql.md)  
-## [sys.dm_linux_proc_meminfo](sys-dm-linux-proc-meminfo-transact-sql.md)  
-## [sys.dm_linux_proc_sql_maps](sys-dm-linux-proc-sql-maps-transact-sql.md)  
-## [sys.dm_linux_proc_sql_threads](sys-dm-linux-proc-sql-threads-transact-sql.md)
 
 # [Memory-Optimized Table](memory-optimized-table-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_db_xtp_checkpoint_stats](sys-dm-db-xtp-checkpoint-stats-transact-sql.md)  

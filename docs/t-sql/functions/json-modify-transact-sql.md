@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
@@ -89,7 +89,7 @@ JSON_MODIFY escapes all special characters in the new value if the type of the v
   
  **Query**  
   
-```tsql  
+```sql  
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -147,7 +147,7 @@ PRINT @info
   
  **Query**  
   
-```tsql  
+```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -177,7 +177,7 @@ PRINT @info
   
  **Query**  
   
-```tsql  
+```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
 
 PRINT @product
@@ -211,7 +211,7 @@ PRINT @product
   
  **Query**  
   
-```tsql  
+```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
 
 PRINT @stats
@@ -239,7 +239,7 @@ PRINT @stats
   
  **Query**  
   
-```tsql  
+```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -267,7 +267,7 @@ PRINT @info
   
  **Query**  
   
-```tsql  
+```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -294,7 +294,7 @@ PRINT @info
 ### Example - Update a JSON column  
  The following example updates the value of a property in a table column that contains JSON.  
   
-```tsql  
+```sql  
 UPDATE Employee
 SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
 WHERE EmployeeID=17

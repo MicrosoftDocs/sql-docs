@@ -20,6 +20,9 @@ manager: "erikre"
   [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
   
   Sets the global properties of the PowerPivotSystemService object at the farm-level.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

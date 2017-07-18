@@ -1,7 +1,7 @@
 ---
 title: "Getting started with the ReportViewer 2016 control | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/18/2017"
+ms.date: "06/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,7 +30,7 @@ Learn how developers can embed paginated reports in ASP.Net web sites, and Windo
 2. Install the ReportViewer 2016 control nuget package via the **Nuget package manager console**.
 
     ```
-    Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms -Pre
+    Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
 3. Add a new .aspx page to the project and register the ReportViewer control assembly for use within the page.
 
@@ -43,31 +43,31 @@ Learn how developers can embed paginated reports in ASP.Net web sites, and Windo
 5. Add the ReportViewer control to the page. The snippet below can be updated to reference a report hosted on a remote report server.
 
     ```
-    \<rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
+    <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
       <ServerReport ReportPath="" ReportServerUrl="" />
-    \</rsweb:ReportViewer>
+    </rsweb:ReportViewer>
     ```
     
 The final page should look like the following.
 
 ```
-\<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
-\<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
-\<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    \<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-    \<asp:ScriptManager runat="server">\</asp:ScriptManager>        
-        \<rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
+    <asp:ScriptManager runat="server"></asp:ScriptManager>        
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
             <ServerReport ReportServerUrl="http://AContosoDepartment/ReportServer" ReportPath="/LatestSales" />
-        \</rsweb:ReportViewer>
+        </rsweb:ReportViewer>
     </form>
 </body>
 </html>
@@ -81,16 +81,16 @@ To make use of the ReportViewer 2016 control in an existing project, add the con
 ### Sample web.config changes
 
 ```
-\<?xml version="1.0"?>
-\<!--
+<?xml version="1.0"?>
+<!--
   For more information on how to configure your ASP.NET application, please visit
   http://go.microsoft.com/fwlink/?LinkId=169433
   -->
 <configuration>
-  \<system.web>
+  <system.web>
     <compilation debug="true" targetFramework="4.5.2">
       <assemblies>
-        \<!-- All assemblies updated to version 14.0.0.0. -->
+        <!-- All assemblies updated to version 14.0.0.0. -->
         <add assembly="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
         <add assembly="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
         <add assembly="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
@@ -100,40 +100,40 @@ To make use of the ReportViewer 2016 control in an existing project, add the con
         <add assembly="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </assemblies>
       <buildProviders>
-        \<!-- Version updated to 14.0.0.0. -->
+        <!-- Version updated to 14.0.0.0. -->
         <add extension=".rdlc"
           type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
     <httpRuntime targetFramework="4.5.2"/>
     <httpHandlers>
-      \<!-- Version updated to 14.0.0.0 -->
+      <!-- Version updated to 14.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
         type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"
         validate="false"/>
     </httpHandlers>
-  \</system.web>
-  \<system.webServer>
+  </system.web>
+  <system.webServer>
     <validation validateIntegratedModeConfiguration="false"/>
     <modules runAllManagedModulesForAllRequests="true"/>
     <handlers>
-      \<!-- Version updated to 14.0.0.0 -->
+      <!-- Version updated to 14.0.0.0 -->
       <add name="ReportViewerWebControlHandler" verb="*" path="Reserved.ReportViewerWebControl.axd" preCondition="integratedMode"
         type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
     </handlers>
-  \</system.webServer>
+  </system.webServer>
 </configuration>
 ```
 
 ### Sample .aspx
 
 ```
-\<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SampleAspx" %>
 
-\<!-- Update version to 14.0.0.0 -->
-\<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+<!-- Update version to 14.0.0.0 -->
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
-\<!DOCTYPE html>
+<!DOCTYPE html>
 ```
 
 ## Adding the ReportViewer control to a new Windows forms project
@@ -145,7 +145,7 @@ To make use of the ReportViewer 2016 control in an existing project, add the con
 2. Install the ReportViewer 2016 control nuget package via the **Nuget package manager console**.
 
     ```
-    Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms -Pre
+    Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
 3. Add a new control from code or [add the control to the toolbox](##adding-control-to-visual-studio-toolbar).
 

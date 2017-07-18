@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2017"
+ms.date: "06/5/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -251,11 +251,15 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   **ALTER ANY EXTERNAL DATA SOURCE**  
   
 -   **ALTER ANY EXTERNAL FILE FORMAT**  
+
+-   **CONTROL DATABASE**
   
  Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.  
-  
+
+
  > [!IMPORTANT]  
- >  The ALTER ANY EXTERNAL DATA SOURCE  permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
+
+>  The ALTER ANY EXTERNAL DATA SOURCE  permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
 
 ## Error Handling  
  While executing the CREATE EXTERNAL TABLE statement, PolyBase attempts to connect to the external data source. If the attempt to connect fails, the statement will fail and the external table will not be created. It can take a minute or more for the command to fail since PolyBase retries the connection before eventually failing the query.  
@@ -293,7 +297,13 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  Query limitations:  
   
  PolyBase can consume a maximum of 33k files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS which contain more than 33k files. We recommend that you keep external file paths short and use no more than 30k files per HDFS folder. When too many files are referenced, a Java Virtual Machine (JVM) out-of-memory exception might occur.  
-  
+
+Table width limitations:
+PolyBase in SQL Server 2016 has a row width limit of 32KB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 32KB, PolyBase will not be able to query the data. 
+
+In SQL Data Warehouse, this limitation has been raised to 1MB.
+
+
 ## Locking  
  Shared lock on the SCHEMARESOLUTION object.  
   

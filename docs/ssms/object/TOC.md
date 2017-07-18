@@ -1,3 +1,4 @@
+# [Object Explorer](object-explorer.md)
 # [Add Steps to a SQL Server Agent Master Job](add-steps-to-a-sql-server-agent-master-job.md)
 # [Manage Objects by Using Object Explorer](manage-objects-by-using-object-explorer.md)
 # [Use Custom Reports with Object Explorer Node Properties](use-custom-reports-with-object-explorer-node-properties.md)
@@ -13,7 +14,6 @@
 # [Options (SQL Server Object Explorer - Scripting Page)](options-sql-server-object-explorer-scripting-page.md)
 # [Filter Settings (Object Explorer and Utility Explorer)](filter-settings-object-explorer-and-utility-explorer.md)
 # [Delete Objects](delete-objects.md)
-# [Object Explorer](object-explorer.md)
 # [Add a Custom Report to Management Studio](add-a-custom-report-to-management-studio.md)
 # [Custom Reports in Management Studio](custom-reports-in-management-studio.md)
 # [Add Objects](add-objects.md)

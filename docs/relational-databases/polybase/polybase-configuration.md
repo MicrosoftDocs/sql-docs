@@ -1,7 +1,7 @@
 ---
 title: "PolyBase configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/08/2016"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,7 +21,7 @@ manager: "jhubbard"
   Use the procedures below to configure PolyBase.  
   
 ## External data source configuration  
- You must ensure connectivity to the external data source from SQL Server. The type of connectivity strongly influences the expected query performance. For example, a 10Gbit Ethernet link will result in a faster query response time for PolyBase queries than a 1Gbit Ethernet link.  
+ You must ensure connectivity to the external data source from SQL Server. The type of connectivity strongly influences query performance. For example, a 10Gbit Ethernet link will result in a faster query response time for PolyBase queries than a 1Gbit Ethernet link.  
   
  You must configure SQL Server to connect to  either your Hadoop version or Azure Blob storage using **sp_configure**. PolyBase supports two Hadoop distributions: Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH).  For a complete list of supported external data sources, see [PolyBase Connectivity Configuration &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
  
@@ -68,9 +68,9 @@ manager: "jhubbard"
 
 Yarn-site.xml with yarn.application.classpath and mapreduce.application.classpath configuration.
 ```
-\<?xml version="1.0" encoding="utf-8"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
  <configuration>
   <property>
      <name>yarn.resourcemanager.connect.max-wait.ms</name>
@@ -80,11 +80,11 @@ Yarn-site.xml with yarn.application.classpath and mapreduce.application.classpat
      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
      <value>30000</value>
   </property>
-\<!-- Applications' Configuration-->
+<!-- Applications' Configuration-->
   <property>
     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-     \<!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-     \<!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
      <name>yarn.application.classpath</name>
      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
   </property>
@@ -102,9 +102,9 @@ If you choose to break your two configuration settings into the mapred-site.xml 
 
 **yarn-site.xml**
 ```
-\<?xml version="1.0" encoding="utf-8"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
  <configuration>
   <property>
      <name>yarn.resourcemanager.connect.max-wait.ms</name>
@@ -114,11 +114,11 @@ If you choose to break your two configuration settings into the mapred-site.xml 
      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
      <value>30000</value>
   </property>
-\<!-- Applications' Configuration-->
+<!-- Applications' Configuration-->
   <property>
     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-     \<!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-     \<!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
      <name>yarn.application.classpath</name>
      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
   </property>
@@ -136,11 +136,11 @@ If you choose to break your two configuration settings into the mapred-site.xml 
 
 Note that we added the property mapreduce.application.classpath. In CDH 5.x you will find the configuration values under the same naming convention in Ambari.
 
-  ```
-  \<?xml version="1.0"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
-\<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
+```
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
   <property>
     <name>mapred.min.split.size</name>
       <value>1073741824</value>
@@ -167,7 +167,7 @@ Note that we added the property mapreduce.application.classpath. In CDH 5.x you 
 -->
 </configuration>
   
-  ```
+```
   
 ## Kerberos configuration  
 Please note, that when PolyBase authenticates to a Kerberos secured cluster, we require the hadoop.rpc.protection setting to be set to authentication. This will leave the data communication between Hadoop nodes unencrypted. 

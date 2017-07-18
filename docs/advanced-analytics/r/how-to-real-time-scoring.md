@@ -43,7 +43,7 @@ The overall process of preparing the model and then generating scores is very si
 
 + If using sp\_rxPredict, some additional steps are required. See [Enable real-time scoring](#bkmk_enableRtScoring).
 
-+ At the time of this writing, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algoriths, see [Real-time scoring](real-time-scoring.md).
++ At the time of this writing, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algorithms, see [Real-time scoring](real-time-scoring.md).
 
 ### Serialization and storage
 
@@ -161,7 +161,7 @@ SELECT d.*, p.*
 go
 ```
 
-If you get the error, "Error occurred during execution of the builtin function 'PREDICT'. Model is corrupt or invalid.", it usually means that your query didn't return a model. Check whether you typed the model name correctly, or if the models table is empty.
+If you get the error, "Error occurred during execution of the function PREDICT. Model is corrupt or invalid", it usually means that your query didn't return a model. Check whether you typed the model name correctly, or if the models table is empty.
 
 > [!NOTE]
 > Because the columns and values returned by **PREDICT** can vary by model type, you must define the schema of the returned data by using a **WITH** clause.
@@ -201,7 +201,7 @@ You must enable this feature for each database that you want to use for scoring.
 
 > [!NOTE]
 > 
-> In SQL Server 2017, additional security measures are in place to prevent problems with CLR integration. These measure impose additional restrictions on the use of this stored procedure as well.
+> In SQL Server 2017, additional security measures are in place to prevent problems with CLR integration. These measures impose additional restrictions on the use of this stored procedure as well.
 
 
 ### 2. Prepare and save the model

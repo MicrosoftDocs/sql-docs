@@ -16,7 +16,7 @@ manager: "jhubbard"
 
 # Native scoring and real-time scoring
 
-This topic describes features in SQL Server 2016 and SQL Server 2017 that provide scoring on machine learning models in near real-time.
+This topic describes features in SQL Server 2016 and SQL Server 2017 that provide scoring on machine learning models in near real time.
 
 + What is native scoring vs. real-time scoring
 + How fast scoring works
@@ -28,7 +28,7 @@ In SQL Server 2016, Microsoft created an extensibility framework that allows R s
 
 _Scoring_ is a two-step process: a pre-trained model is loaded from a table, and new input data, either tabular or single rows, is passed to the model, which generates new values (or _scores_). The output might be a single column value representing a probability, or several values, including a confidence interval, error, or other useful complement to the prediction.
 
-When scoring many rows of data, the new values are typically inserted into a table as part of the scoring procedure.  However, you can also retrieve a single score in real time. When scoring successive inputs, the model might be cached so that it can be reloaded into memory very fast.
+When scoring many rows of data, the new values are typically inserted into a table as part of the scoring procedure.  However, you can also retrieve a single score in real time. When scoring successive inputs, the model might be cached so that it can be reloaded into memory fast.
 
 To support fast scoring, SQL Server Machine Learning Services (and Microsoft Machine Learning Server) provide built-in scoring libraries that work in R or in T-SQL. There are different options depending on which version you have.
 
@@ -61,7 +61,7 @@ To generate scores using this library, you call one of the new scoring functions
 
 The function returns predictions for the input data, together with any columns of source data that you want to pass through.
 
-For code samples, along with instrucitons on how to prepare the models in the required binary format, see this article:
+For code samples, along with instructions on how to prepare the models in the required binary format, see this article:
 
 + [How to perform native scoring or real-time scoring](r/how-to-real-time-scoring.md)
 
@@ -74,7 +74,7 @@ Supported platforms for native scoring are as follows:
 + SQL Server 2017 Machine Learning Services (includes Microsoft R Server 9.1.0)
 + Native scoring works with any version of SQL Server 2017. However, the PREDICT function works only with models that were trained using one of the supported algorithms, and saved using the optimized serialization function.
 
-Real-time scoring is backward-compatible wth SQL Server 2016, and can also be run on Microsoft R Server. For more information, see [Real-time scoring](Real-time-scoring.md)
+Real-time scoring is backward-compatible with SQL Server 2016, and can also be run on Microsoft R Server. For more information, see [Real-time scoring](Real-time-scoring.md)
 
 ### Model preparation
 

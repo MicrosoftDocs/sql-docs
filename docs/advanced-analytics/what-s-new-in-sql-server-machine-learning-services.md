@@ -72,7 +72,7 @@ For more information, see [R Package Management for SQL Server R Services](../ad
 
 The RevoScaleR package is included in SQL Server 2016, SQL Server 2017, and Microsoft R Server. It includes transforms and algorithms that support distributed or parallel processing, and multiple compute contexts.
 
-If you installed an earlier version of RevoScaleR with SQL Server 2016, you can now upgrade to the very latest version by switching your server to use the Modern Lifecycle policy. By doing so you can take advantage of a faster release cycle for R and automatically upgrade all R components. For more information, see [Microsoft R Server 9.0.1](https://docs.microsoft.com/r-server/whats-new-in-r-server).
+If you installed an earlier version of RevoScaleR with SQL Server 2016, you can now upgrade to the latest version by switching your server to use the Modern Lifecycle policy. By doing so, you can take advantage of a faster release cycle for R and automatically upgrade all R components. For more information, see [Microsoft R Server 9.0.1](https://docs.microsoft.com/r-server/whats-new-in-r-server).
 
 Additionally, when you install the new R components, you can get a collection of pre-trained models in binary format. These models support machine learning in scenarios such as image recognition, where it might be difficult for customers to find large datasets to train a model. After you install one of the pre-trained models, you can use it for prediction on your own data without the time and expense involved in training such a large and complex model.
 
@@ -80,4 +80,4 @@ For more information, see [Install pre-trained models in SQL Server](install-pre
 
 > [!IMPORTANT]
 > 
-> Machine learning services, including use of R or Python, are currently not supported when running SQL Server on Linux. This feature will be added in a later release. However, native scoring is supported in the Linux edition.
+> Machine learning services, including use of R or Python, are currently not supported when running SQL Server on Linux. Look for changes in a later release. However, native scoring using the PREDICT function is currently supported in the Linux edition.

@@ -36,7 +36,7 @@ Real-time scoring is a multi-step process:
 
 ## Get started
 
-For code examples and instructions, see [How to:perform native scoring or real-time scoring](r/how-to-real-time-scoring.md).
+For code examples and instructions, see [How to perform native scoring or real-time scoring](r/how-to-real-time-scoring.md).
 
 For an example of how rxPredict can used for scoring, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
@@ -67,7 +67,7 @@ For information regarding real-time scoring in a distributed environment based o
 
   + RevoScaleR models that use an R transformation function, or a formula that contains a transformation, such as <code>A ~ log(B)</code> are not supported in real-time scoring. To use a model of this type, we recommend that you perform the transformation on the to input data before passing the data to real-time scoring.
 
-+ Real-time scoring is currently optimized for fast predictions on smaller data sets, ranging from a few rows to a hundreds of thousand of rows. On very large datasets, scoring in R using rxPredict might be faster.
++ Real-time scoring is currently optimized for fast predictions on smaller data sets, ranging from a few rows to  hundreds of thousand of rows. On very large datasets, scoring in R using rxPredict might be faster.
 
 ### <a name="bkmk_rt_supported_algos">Algorithms that support real-time scoring
 

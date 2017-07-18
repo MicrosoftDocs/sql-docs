@@ -43,5 +43,6 @@ The catalog view sys.external_libraries lists a row for each external library th
 
 
 ## See also  
-sys.external_library_files  
-[Package management for SQL Server R Services](../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[sys.external_library_files](sys-external-library-files-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)
+[Package management for SQL Server R Services](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

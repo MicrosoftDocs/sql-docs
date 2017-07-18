@@ -29,8 +29,7 @@
 ## [Develop](sql-server-linux-develop-overview.md)
 ### [Connectivity libraries](sql-server-linux-develop-connectivity-libraries.md)
 ### [Use Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-### [Use SSMS](sql-server-linux-develop-use-ssms.md)
-### [Use SSDT](sql-server-linux-develop-use-ssdt.md)
+### [Use SSMS](sql-server-linux-develop-use-ssms.md)### [Use SSDT](sql-server-linux-develop-use-ssdt.md)
 
 ## [Manage](sql-server-linux-management-overview.md)
 ### [Use SSMS to manage](sql-server-linux-manage-ssms.md)
@@ -64,7 +63,6 @@
 ##### [Operate](sql-server-linux-availability-group-failover-ha.md)
 #### [Create for read scale-out only]()
 ##### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
-
 
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)

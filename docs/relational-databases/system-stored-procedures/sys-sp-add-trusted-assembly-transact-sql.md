@@ -46,7 +46,7 @@ This procedure adds an assembly to  [sys.trusted_assemblies](../../relational-da
 ## Arguments
 
 [ @hash = ] '*value*'  
-The SHA2_512 hash value of the assembly to add to the list of trusted assemblies for the server. Trusted assemblies may load when CLR strict security is enabled, even if the assembly is unsigned or the database is not marked as trustworthy.
+The SHA2_512 hash value of the assembly to add to the list of trusted assemblies for the server. Trusted assemblies may load when [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md) is enabled, even if the assembly is unsigned or the database is not marked as trustworthy.
 
 [ @description = ] '*description*'  
 Optional user-defined description of the assembly. Microsoft recommends using the canonical name that encodes the simple name, version number, culture, public key, and architecture of the assembly to trust. This value uniquely identifies the assembly on the common language runtime (CLR) side and is the same as the clr_name value in sys.assemblies. 

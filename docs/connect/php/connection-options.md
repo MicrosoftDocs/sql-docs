@@ -1,11 +1,11 @@
 ---
 title: "Connection Options | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/10/2017"
+ms.date: "07/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
+ms.technology:
   - "drivers"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -19,12 +19,13 @@ manager: "jhubbard"
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 This topic lists the options that are permitted in the associative array (when using [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) in the SQLSRV driver) or the keywords that are permitted in the data source name (dsn) (when using [PDO::__construct](../../connect/php/pdo-construct.md) in the PDO_SQLSRV driver).  
-  
+
 |Key|Value|Description|Default|  
 |-------|---------|---------------|-----------|  
 |APP|String|Specifies the application name used in tracing.|No value set.|  
 |ApplicationIntent|String|Declares the application workload type when connecting to a server. Possible values are ReadOnly and ReadWrite.<br /><br />For more information about [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] support for [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [PHP Driver for SQL Server Support for High Availability, Disaster Recovery](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
 |AttachDBFileName|String|Specifies which database file the server should attach.|No value set.|  
+|Authentication|One of the following strings:<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|Specifies the authentication mode.|Not set.|  
 |CharacterSet<br /><br />(not supported in the PDO_SQLSRV driver)|String|Specifies the character set used to send data to the server.<br /><br />Possible values are SQLSRV_ENC_CHAR and UTF-8. For more information, see [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ConnectionPooling|1 or **true** for connection pooling on.<br /><br />0 or **false** for connection pooling off.|Specifies whether the connection is assigned from a connection pool (1 or **true**) or not (0 or **false**).<sup>1</sup>|**true** (1)|  
 |Database|String|Specifies the name of the database in use for the connection being established<sup>2</sup>.|The default database for the login being used.|  
@@ -46,16 +47,15 @@ This topic lists the options that are permitted in the associative array (when u
 |UID<br /><br />(not supported in the PDO_SQLSRV driver)|String|Specifies the User ID to be used when connecting with SQL Server Authentication<sup>4</sup>.|No value set.|  
 |WSID|String|Specifies the name of the computer for tracing.|No value set.|  
 
-1. The `ConnectionPooling` attribute cannot be used to enable/disable connection pooling in Linux and Mac. See [Connection Pooling (Microsoft Drivers for PHP for SQL Server)](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md). 
+1. The `ConnectionPooling` attribute cannot be used to enable/disable connection pooling in Linux and Mac. See [Connection Pooling (Microsoft Drivers for PHP for SQL Server)](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
 
 2. All queries executed on the established connection are made to the database that is specified by the *Database* attribute. However, if the user has the appropriate permissions, data in other databases can be accessed by using a fully qualified name. For example, if the *master* database is set with the *Database* connection attribute, it is still possible to execute a Transact-SQL query that accesses the *AdventureWorks.HumanResources.Employee* table by using the fully qualified name.  
-  
+
 3. Enabling *Encryption* can impact the performance of some applications due to the computational overhead required to encrypt data.  
-  
+
 4. The *UID* and *PWD* attributes must both be set when connecting with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication.  
-  
+
 Many of the supported keys are ODBC connection string attributes. For information about ODBC connection strings, see [Using Connection String Keywords with SQL Native Client](http://go.microsoft.com/fwlink/?LinkId=105504).  
-  
+
 ## See Also  
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
-  

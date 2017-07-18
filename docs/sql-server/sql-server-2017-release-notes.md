@@ -16,7 +16,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server 2017 Release Notes
-This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. For related informaiton, see the following:
+This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. For related information, see the following:
 
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 - [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
@@ -33,11 +33,6 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
 
 - **Issue and customer impact:** SQL Server Management Studio (SSMS) 17.1 and earlier versions can't trigger package execution in Scale Out in RC1. The error message is: "*@runincluster* is not a parameter for procedure **create_execution**." This issue is fixed in the next release of SSMS, version 17.2. Versions 17.2 and later of SSMS support the new parameter name and package execution in Scale Out. 
 - **Workaround:** Until SSMS version 17.2 is available, you can use your existing version of SSMS to generate the package execution script, then change the name of the *runincluster* parameter to *runinscaleout* in the script, and run the script.
-
-## SQL Server 2017 Release Candidate (RC0 - June 2017)
-### Documentation (RC0)
-- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] will be noted with **Applies To**. 
-- **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 CTP 2.1 (May  2017)

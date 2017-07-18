@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 2.  In the **Trace Template Properties** dialog box, on the **General** tab, you can modify the server type and template name, or choose to use a default template for the server type.  
   
-3.  On the **Events Selection**tab, use the grid control to add or remove events and data columns from the trace file as follows.  
+3.  On the **Events Selection** tab, use the grid control to add or remove events and data columns from the trace file as follows.  
   
     -   To add an event, expand the appropriate event category in the **Events** column, and then select the event name.  
   
@@ -40,20 +40,12 @@ manager: "jhubbard"
   
     -   To add filters, click the data column name and specify the filter criteria in the **Edit Filter** dialog box. You can also right-click the data column name, and click **Edit Column Filter** to launch the **Edit Filter** dialog box. Click **OK** to add the filter.  
   
-4.  Click **Save**, or click **Save As**to save the trace template under another name.  
-   **To create a trace template**  
+4.  Click **Save**, or click **Save As** to save the trace template under another name.  
   
 ## Next steps  
-  **To start a trace**  
-[Start a Trace](../../tools/sql-server-profiler/start-a-trace.md)  
- **To run a trace from a trace template**  
-   [Create a Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
-  
- **To modify a trace**
- [Using Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
-  
- **To add or remove events from a trace template or trace file**  
-  [Using SQL Server Profiler](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
-  
- [Using Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+[Start a trace](../../tools/sql-server-profiler/start-a-trace.md)  
+[Create a trace](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
+[Modify an existing trace using Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
+[Specify events and data columns for a trace using SQL Server Profiler](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+[sp-trace-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

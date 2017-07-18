@@ -87,7 +87,7 @@ CREATE AVAILABILITY GROUP group_name
 <add_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER = 'TCP://system-address:port',  
+       LISTENER_URL = 'TCP://system-address:port',  
        AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
        FAILOVER_MODE = MANUAL,  
        SEEDING_MODE = { AUTOMATIC | MANUAL }  

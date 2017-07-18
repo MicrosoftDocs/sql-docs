@@ -15,7 +15,7 @@ ms.workload:
 ms.tgt_pltfrm: na
 ms.devlang: 
 ms.topic: article
-ms.date: 07/14/2017
+ms.date: 07/18/2017
 ms.author: 
 ---
 # Troubleshoot PolyBase connectivity
@@ -156,15 +156,15 @@ Reaching this point confirms that: (i) the three actors are able to communicate 
 ```
 ## Common Errors
 If the tool was run and the file properties of the target path were *not* printed (Checkpoint 4), there should be an exception thrown midway. Review it and consider the context of where in the four-step flow it occurred. Consider the following common issues that may have occurred, in order:
-| **Exception** | **Cause** |
-| --- | --- |
-| Exception in thread "main" org.apache.hadoop.security.AccessControlException:<br>SIMPLE authentication is not enabled. Available:\[TOKEN, KERBEROS\]<br> | The **core-site.xml** doesn't have the **hadoop.security.authentication** property set to "KERBEROS". | | >>> KrbKdcReq send: error trying kerberos.contoso.com <br>java.net.UnknownHostException: kerberos.contoso.com | The machine can't reach the KDC specified in core-site.xml. If using a DNS name, try pinging it to ensure it resolves to the correct IP. If not, try using the IP address instead or add a host entry in "C:\\Windows\\System32\\drivers\\etc\\host". |
-| KRBError received: CLIENT\_NOT\_FOUND<br>javax.security.auth.login.LoginException: Client not found in Kerberos database (6) - CLIENT\_NOT\_FOUND | The admin Service Principal supplied does not exist in the realm specified in core-site.xml.|
-| javax.security.auth.login.LoginException: Checksum failed | Admin Service Principal exists, but bad password.|
-| Native config name: C:\\Windows\\krb5.ini<br>Loaded from native config | This is not an exception, but it indicates that Java's krb5LoginModule detected custom client configurations on your machine. Check your custom client settings as they may be causing the issue. |
-| \[2017-05-23 08:59:58,648\] WARN 3000\[main\] - <b r>com.microsoft.polybase.client.HdfsBridgeException.<init>(HdfsBridgeException.java:53) - failure to loginStack trace: javax.security.auth.login.LoginException: java.lang.IllegalArgumentException: Illegal principal name admin\_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin\_user@CONTOSO.COM | Add the property “hadoop.security.auth\_to\_local” to core-site.xml with the appropriate rules per the Hadoop cluster. |
-| \[2017-05-05 18:36:07,933\] INFO 1704\[main\] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1673) - Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020 Exception in thread "main" java.net.ConnectException: Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception: java.net.ConnectException: Connection refused: no further information; For more details see:<br>http://wiki.apache.org/hadoop/ConnectionRefused | Authentication against the KDC was successful, but it failed to access the Hadoop name node. Check the name node IP and port. Verify the firewall is disabled on Hadoop. |
-| Exception in thread "main" java.io.FileNotFoundException: File does not exist: /test/data.csv | Authentication was successful, but the location specified does not exist. Check the path or test with root "/" first. |
+| Exception API	| Message or display | Cause | 
+| --- | --- | --- |
+| org.apache.hadoop.security.AccessControlException | SIMPLE authentication is not enabled. Available:[TOKEN, KERBEROS] | The core-site.xml doesn't have the hadoop.security.authentication property set to "KERBEROS".|
+| javax.security.auth.login.LoginException | Client not found in Kerberos database (6) - CLIENT_NOT_FOUND |	The admin Service Principal supplied does not exist in the realm specified in core-site.xml.|
+| javax.security.auth.login.LoginException | Checksum failed |	Admin Service Principal exists, but bad password. |
+| N/A | Native config name: C:\Windows\krb5.ini<br>Loaded from native config | This is not an exception, but it indicates that Java's krb5LoginModule detected custom client configurations on your machine. Check your custom client settings as they may be causing the issue. |
+| javax.security.auth.login.LoginException:<br>java.lang.IllegalArgumentException |	Illegal principal name admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule: No rules applied to admin_user@CONTOSO.COM | Add the property “hadoop.security.auth_to_local” to core-site.xml with the appropriate rules per the Hadoop cluster. |
+| java.net.ConnectException |Attempting to access external filesystem at URI: hdfs://10.193.27.230:8020<br>Call From IAAS16981207/10.107.0.245 to 10.193.27.230:8020 failed on connection exception |	Authentication against the KDC was successful, but it failed to access the Hadoop name node. Check the name node IP and port. Verify the firewall is disabled on Hadoop. |
+| java.io.FileNotFoundException |File does not exist: /test/data.csv |	Authentication was successful, but the location specified does not exist. Check the path or test with root "/" first. |
 ## Debugging tips
 ### MIT KDC  
 All the SPNs registered with the KDC, including the admins, can be viewed by running **kadmin.local** > (admin login) > **listprincs** on the KDC host or any configured KDC client. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available in the cluster (e.g. nn, dn, rm, yarn, spnego, etc.) Their corresponding keytab files (password substitutes) can be seen under **/etc/security/keytabs**, by default. They are encrypted using the KDC's private key.  

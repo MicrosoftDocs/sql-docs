@@ -1,5 +1,5 @@
 ---
-title: "Create data features using R and SQL (alkthrough) | Microsoft Docs"
+title: "Create data features using R and SQL (walkthrough) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/15/2017"
 ms.prod: "sql-server-2016"

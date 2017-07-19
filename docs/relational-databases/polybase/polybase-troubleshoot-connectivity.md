@@ -193,8 +193,8 @@ The KDC logs are available in **/var/log/krb5kdc.log**, by default, which inclu
 In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available (e.g. nn, dn, rm, yarn, spnego, etc.)
 
 ## See Also
-[Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)
-[Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)
+[Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
+[Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)
 
 

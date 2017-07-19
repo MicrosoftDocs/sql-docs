@@ -41,13 +41,16 @@ The **revoscalepy** module is available only when you install one of the followi
 
 This section provides an overview of the Python data types and new Python functions supported in the **revoscalepy** module, beginning with SQL Server 2017 CTP 2.0 release. 
 
-For the latest list Python libraries, see these links:
+For the latest list of functions in the Python libraries released so far, see these links:
+ 
++ [revoscalepy function library for Python](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
 
-+ [Python function help](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference.md)
++ [microsoftml function library for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
-+ [revoscalepy function library for Python](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package.md)
-
-+ [microsoftml function library for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package.md)
+> [!TIP]
+> The Python community uses coding conventions that might be different than what you're used to, including all lowercase letters and underscores rather than camel casing for parameter names.
+> 
+> Also, you've probably noticed that the **revoscalepy** library is always lowercase. Check out the tips on the Microsoft R site: [Python function help][Python function help](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ### Data types, data sources, and compute contexts
 

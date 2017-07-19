@@ -76,7 +76,7 @@ From R code, there are two ways to save the model to a table:
 
 In this example, you'll create a model and then call the realtime prediction function from T-SQL.
 
-### 1. Prepare and save the model
+### Step 1. Prepare and save the model
 
 Run the following code to create the sample database and required tables.
 
@@ -145,7 +145,7 @@ SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
 
-### 2. Run PREDICT on the model
+### Step 2. Run PREDICT on the model
 
 The following simple PREDICT statement gets a classification from the decision tree model using the **native scoring** function. It predicts the iris species based on attributes you provide, petal length and width.
 
@@ -170,7 +170,7 @@ If you get the error, "Error occurred during execution of the function PREDICT. 
 
 This section describes the steps required to set up **realtime** prediction, and provides an example of how to call the function from T-SQL.
 
-### <a name ="bkmk_enableRtScoring"></a> 1. Enable the realtime scoring procedure
+### <a name ="bkmk_enableRtScoring"></a> Step 1. Enable the realtime scoring procedure
 
 You must enable this feature for each database that you want to use for scoring. The server administrator should run the command-line utility, RegisterRExt.exe, which is included with the RevoScaleR package.
 
@@ -204,7 +204,7 @@ You must enable this feature for each database that you want to use for scoring.
 > In SQL Server 2017, additional security measures are in place to prevent problems with CLR integration. These measures impose additional restrictions on the use of this stored procedure as well.
 
 
-### 2. Prepare and save the model
+### Step 2. Prepare and save the model
 
 The binary format required by sp\_rxPredict is the same as that for PREDICT.
 
@@ -214,7 +214,7 @@ Therefore, in your R code, include a call to [rxSerializeModel](https://docs.mic
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### 3. Call sp_rxPredict
+### Step 3. Call sp_rxPredict
 
 You call sp_rxPredict as you would any other stored procedure. In the current release, the stored procedure takes only two parameters: _@model_ for the model in binary format, and _@inputData_ for the data to use in scoring, defined as a valid SQL query.
 

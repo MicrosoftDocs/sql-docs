@@ -79,9 +79,9 @@ The other XMLs will later need to be updated as well if pushdown operations are 
 
 The tool runs independently of SQL Server, so it does not need to be running, nor does it need to be restarted if updates are made to the configuration XMLs. To run the tool, execute the following commands on the host with SQL Server installed:
 
-cd C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase
+\> cd C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase
 
-java -classpath ".\\Hadoop\\conf;.\\Hadoop\\*;.\\Hadoop\\HDP2_2\\*" com.microsoft.polybase.client.HdfsBridge {Name node address} {Name node port} {Service Principal} {Remote HDFS file path (optional)} 
+\> java -classpath ".\\Hadoop\\conf;.\\Hadoop\\*;.\\Hadoop\\HDP2_2\\*" com.microsoft.polybase.client.HdfsBridge {Name node address} {Name node port} {Service Principal} {Remote HDFS file path (optional)} 
 
 
 ## Arguments
@@ -95,7 +95,7 @@ java -classpath ".\\Hadoop\\conf;.\\Hadoop\\*;.\\Hadoop\\HDP2_2\\*" com.microsof
 
 ## Example
 ```dos
-java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin\_user C:\temp\kerberos\_pass.txt
+java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt
 ```
 The output is verbose for enhanced debugging, but there are only four main checkpoints to look for regardless of whether you are using MIT or AD. They correspond to the four steps outlined above. 
 

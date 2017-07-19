@@ -129,7 +129,7 @@ PolyBase does **not** support trust relationships between AD and MIT and must be
 ## Checkpoint 2
 PolyBase will make an attempt to access the HDFS and fail because the request did not contain the necessary Service Ticket.
 ```dos
-|[2017-04-25 21:34:34,501] INFO 1640[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1584) - Attempting to access external filesystem at URI: hdfs://10.193.27.232:8020 
+ [2017-04-25 21:34:34,501] INFO 1640[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1584) - Attempting to access external filesystem at URI: hdfs://10.193.27.232:8020 
  Found ticket for admin_user@CONTOSO.COM to go to krbtgt/CONTOSO.COM@CONTOSO.COM expiring on Wed Apr 26 21:34:33 UTC 2017 
  Entered Krb5Context.initSecContext with state=STATE_NEW 
  Found ticket for admin_user@CONTOSO.COM to go to krbtgt/CONTOSO.COM@CONTOSO.COM expiring on Wed Apr 26 21:34:33 UTC 2017 
@@ -138,7 +138,7 @@ PolyBase will make an attempt to access the HDFS and fail because the request di
 ## Checkpoint 3
 A second hex dump indicates that SQL Server successfully used the TGT and acquired the applicable Service Ticket for the name node's SPN from the KDC.
 ```bash
-|>>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, #bytes=664 
+ >>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, #bytes=664 
  >>> KDCCommunication: kdc=kerberos.contoso.com UDP:88, timeout=30000,Attempt =1, #bytes=664 
  >>> KrbKdcReq send: #bytes read=669 
  >>> KdcAccessibility: remove kerberos.contoso.com 
@@ -157,14 +157,14 @@ A second hex dump indicates that SQL Server successfully used the TGT and acquir
  0070: 02 01 10 A1 03 02 01 01 A2 82 01 08 04 82 01 04 ................ 
  *[…Condensed…]* 
  0240: 03 E3 68 72 C4 D2 8D C2 8A 63 52 1F AE 26 B6 88 ..hr.....cR..&.. 
- 0250: C4 . |
+ 0250: C4 . 
 ```
 ## Checkpoint 4
 Finally, the file properties of the target path should be printed along with a confirmation message. This indicates SQL Server was authenticated by Hadoop using the ST and a session was granted to access the secured resource.
 
 Reaching this point confirms that: (i) the three actors are able to communicate correctly, (ii) the core-site.xml and jaas.conf are correct, and (iii) your KDC recognized your credentials.
 ```dos
-| [2017-04-25 21:34:35,096] INFO 2235[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1586) - File properties for "/": FileStatus{path=hdfs://10.193.27.232:8020/; isDirectory=true; modification_time=1492028259862; access_time=0; owner=hdfs; group=hdfs; permission=rwxr-xr-x; isSymlink=false} 
+ [2017-04-25 21:34:35,096] INFO 2235[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1586) - File properties for "/": FileStatus{path=hdfs://10.193.27.232:8020/; isDirectory=true; modification_time=1492028259862; access_time=0; owner=hdfs; group=hdfs; permission=rwxr-xr-x; isSymlink=false} 
  [2017-04-25 21:34:35,098] INFO 2237[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1587) - Successfully accessed the external file system. 
 ```
 ## Common Errors
@@ -185,9 +185,9 @@ All the SPNs registered with the KDC, including the admins, can be viewed by run
 Also consider using the [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) tool to verify the admin credentials on the KDC locally. An example usage would be: *kinit identity@MYREALM.COM*. A prompt for a password indicates the identity exists.  
 The KDC logs are available in **/var/log/krb5kdc.log**, by default, which includes all of the requests for tickets including the client IP that made the request. There should be two requests from the SQL Server machine's IP wherein the tool was run: first for the TGT from the Authenticating Server as an **AS\_REQ**, followed by a **TGS\_REQ** for the ST from the Ticket Granting Server.
 ```bash
-| \[root@MY-KDC log\]\# tail -2 /var/log/krb5kdc.log 
- May 09 09:48:26 MY-KDC.local krb5kdc\[2547\](info): **AS\_REQ** (3 etypes {17 16 23}) 10.107.0.245: ISSUE: authtime 1494348506, etypes {rep=16 tkt=16 ses=16}, admin\_user@CONTOSO.COM for **krbtgt/CONTOSO.COM@CONTOSO.COM** 
- May 09 09:48:29 MY-KDC.local krb5kdc\[2547\](info): **TGS\_REQ** (3 etypes {17 16 23}) 10.107.0.245: ISSUE: authtime 1494348506, etypes {rep=16 tkt=16 ses=16}, admin\_user@CONTOSO.COM for **nn/hadoop-hdp25-00.local@CONTOSO.COM** |
+ [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
+ May 09 09:48:26 MY-KDC.local krb5kdc[2547](info): **AS_REQ** (3 etypes {17 16 23}) 10.107.0.245: ISSUE: authtime 1494348506, etypes {rep=16 tkt=16 ses=16}, admin_user@CONTOSO.COM for **krbtgt/CONTOSO.COM@CONTOSO.COM** 
+ May 09 09:48:29 MY-KDC.local krb5kdc[2547](info): **TGS_REQ** (3 etypes {17 16 23}) 10.107.0.245: ISSUE: authtime 1494348506, etypes {rep=16 tkt=16 ses=16}, admin_user@CONTOSO.COM for **nn/hadoop-hdp25-00.local@CONTOSO.COM** 
 ```
 ### Active Directory 
 In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available (e.g. nn, dn, rm, yarn, spnego, etc.)

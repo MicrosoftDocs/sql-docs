@@ -8,7 +8,6 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-
 ms.prod: sql-linux 
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
@@ -19,7 +18,8 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 # audience: ""
 # ms.devlang: ""
 # ms.reviewer: ""
-# ms.suite: ""# ms.tgt_pltfrm: ""
+# ms.suite: ""
+# ms.tgt_pltfrm: ""
 # ms.custom: ""
 ---
 

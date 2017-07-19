@@ -92,7 +92,7 @@ java -classpath ".\\Hadoop\\conf;.\\Hadoop\\\*;.\\Hadoop\\HDP2\_2\\\*" com.micro
 
 ## Example
 ```dos
-> java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin\_user
+java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin\_user
 
 C:\temp\kerberos\_pass.txt
 ```
@@ -137,7 +137,7 @@ PolyBase will make an attempt to access the HDFS and fail because the request di
 ```
 ## Checkpoint 3
 A second hex dump indicates that SQL Server successfully used the TGT and acquired the applicable Service Ticket for the name node's SPN from the KDC.
-```bash
+```dos
  >>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, #bytes=664 
  >>> KDCCommunication: kdc=kerberos.contoso.com UDP:88, timeout=30000,Attempt =1, #bytes=664 
  >>> KrbKdcReq send: #bytes read=669 
@@ -193,8 +193,8 @@ The KDC logs are available in **/var/log/krb5kdc.log**, by default, which inclu
 In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available (e.g. nn, dn, rm, yarn, spnego, etc.)
 
 ## See Also
-1. [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)
-1. [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)
-1. [Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)
+[Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)
+[Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)
+[Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)
 
 

@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "07/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  The following table provides information about these nodes.  
   
-> **NOTE:** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_nodes**.  
+> **NOTE:** To call this DMV from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_nodes**.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +42,7 @@ manager: "jhubbard"
 |io_completion_worker_address|**varbinary(8)**|Address of worker assigned to IO completion for this node. One-to-one relation to sys.dm_os_workers.worker_address.|  
 |memory_node_id|**smallint**|ID of the memory node this node belongs to. Many-to-one relation to sys.dm_os_memory_nodes.memory_node_id.|  
 |cpu_affinity_mask|**bigint**|Bitmap identifying the CPUs this node is associated with.|  
-|online_scheduler_count|**smallint**|Number of online schedulers that aremanaged by this node.|  
+|online_scheduler_count|**smallint**|Number of online schedulers that are managed by this node.|  
 |idle_scheduler_count|**smallint**|Number of online schedulers that have no active workers.|  
 |active_worker_count|**int**|Number of workers that are active on all schedulers managed by this node.|  
 |avg_load_balance|**int**|Average number of tasks per scheduler on this node.|  
@@ -51,6 +51,7 @@ manager: "jhubbard"
 |resource_monitor_state|**bit**|Each node has one resource monitor assigned to it. The resource monitor can be running or idle. A value of 1 indicates running, a value of 0 indicates idle.|  
 |online_scheduler_mask|**bigint**|Identifies the process affinity mask for this node.|  
 |processor_group|**smallint**|Identifies the group of processors for this node.|  
+|cpu_count |**int** |Number of CPUs available for this node. |
 |pdw_node_id|**int**|The identifier for the node that this distribution is on.<br /><br /> **Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## Permissions  

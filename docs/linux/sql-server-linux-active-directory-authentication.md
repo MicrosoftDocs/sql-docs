@@ -186,7 +186,7 @@ sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
 ```  
 Next, configure [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] to use this `keytab` file for Kerberos authentication:  
 ```bash  
-sudo /opt/mssql/bin/mssql-conf set auth.keytab /var/opt/mssql/secrets/mssql.keytab
+sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
 sudo systemctl restart mssql-server
 ```  
 

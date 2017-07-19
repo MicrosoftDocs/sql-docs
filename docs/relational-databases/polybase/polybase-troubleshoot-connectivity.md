@@ -77,9 +77,12 @@ Update one of the PolyBase configuration files, **core-site.xml**, with the thr
 ```
 The other XMLs will later need to be updated as well if pushdown operations are desired, but with just this file configured, the HDFS file system should at least be able to be accessed.
 
-The tool runs independently of SQL Server, so it does not need to be running, nor does it need to be restarted if updates are made to the configuration XMLs. To run the tool, execute the following on the host with SQL Server installed:
+The tool runs independently of SQL Server, so it does not need to be running, nor does it need to be restarted if updates are made to the configuration XMLs. To run the tool, execute the following commands on the host with SQL Server installed:
 
-java -classpath ".\\Hadoop\\conf;.\\Hadoop\\\*;.\\Hadoop\\HDP2\_2\\\*" com.microsoft.polybase.client.HdfsBridge <Name Node Address> <Name Node Port> <Service Principal> <Filepath containing Service Principal's Password> <Remote HDFS file path (optional)>
+cd C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase
+
+java -classpath ".\\Hadoop\\conf;.\\Hadoop\\*;.\\Hadoop\\HDP2_2\\*" com.microsoft.polybase.client.HdfsBridge {Name node address} {Name node port} {Service Principal} {Remote HDFS file path (optional)} 
+
 
 ## Arguments
 | Argument | Description|
@@ -92,13 +95,12 @@ java -classpath ".\\Hadoop\\conf;.\\Hadoop\\\*;.\\Hadoop\\HDP2\_2\\\*" com.micro
 
 ## Example
 ```dos
-java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin\_user
-
-C:\temp\kerberos\_pass.txt
+java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin\_user C:\temp\kerberos\_pass.txt
 ```
 The output is verbose for enhanced debugging, but there are only four main checkpoints to look for regardless of whether you are using MIT or AD. They correspond to the four steps outlined above. 
 
 The following excerpts are from an MIT KDC. You may refer to complete sample outputs from both MIT and AD at the end of this article in the References.
+
 ## Checkpoint 1
 There should be a hex dump of a ticket with Server Principal = krbtgt/*MYREALM.COM@MYREALM.COM*. This indicates SQL Server successfully authenticated against the KDC and received a TGT. If not, the problem lies strictly between SQL Server and the KDC, and not Hadoop.
 

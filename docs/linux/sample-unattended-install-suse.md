@@ -11,7 +11,7 @@ ms.technology: database-engine
 ---
 # Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server
 
-This sample Bash script installs SQL Server 2017 CTP 2.1 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
+This sample Bash script installs SQL Server 2017 RC1 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]
 > If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quick start tutorial for SLES](quickstart-install-connect-suse.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -23,7 +23,7 @@ This sample Bash script installs SQL Server 2017 CTP 2.1 on SUSE Linux Enterpris
 - For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 > [!IMPORTANT]
-> SQL Server 2017 CTP 2.1 requires libsss_nss_idmap0, which is not provided by the default SLES repositories. You can install it from the SLES v12 SP2 SDK.
+> SQL Server 2017 RC1 requires libsss_nss_idmap0, which is not provided by the default SLES repositories. You can install it from the SLES v12 SP2 SDK.
 
 ## Sample script
 

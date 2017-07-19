@@ -32,10 +32,10 @@ This article explains how to configure an availability group for distributed tra
 
 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] supports distributed transactions for databases in availability groups across multiple data sources, including SQL Server instances on different servers. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] adds support for all distributed transactions - including transactions between:
 
-- Databases on the same server
-- Databases on the same instance of SQL Server
-- Databases on different instances of SQL Server
-- Databases on different servers
+- Databases on the same server.
+- Databases on the same instance of SQL Server.
+- Databases on different instances of SQL Server.
+- Databases on different servers.
 
 In a distributed transaction, client applications work with Microsoft Distributed Transaction Coordinator (MS DTC or DTC) to guarantee transactional consistency across multiple data sources. DTC is a service available on supported Windows Server-based operating systems. For a distributed transaction, DTC is the *transaction coordinator*. Normally, a SQL Server instance is the *resource manager*. When a database is in an availability group, each database needs to be its own resource manager. 
 
@@ -119,7 +119,7 @@ The following list explains how the application works with DTC to complete distr
 
 3. The client does some work in the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance under the DTC transaction. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance holds locks, and preserves references to the DTC transaction.
 4. The client either disconnects or enlists in NULL. The client can disconnect from the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance unhooks the connection from the DTC transaction it is tracking. The transaction object remains in the list of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] transactions because it is active. It stays active until the DTC resource manager indicates either abort or commit.
-5. After the client has completed the work on all resources, DTC performs the 2-phase commit protocol to either abort or commit to the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance - and any other resources in the transaction.
+5. After the client has completed the work on all resources, DTC performs the two-phase commit protocol to either abort or commit to the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance - and any other resources in the transaction.
 6. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance either commits or aborts the transaction and releases the locks.
 
 ### Effects of configuring an availability group for distributed transactions

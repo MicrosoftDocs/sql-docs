@@ -21,7 +21,11 @@ manager: "jhubbard"
   To perform a successful [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] upgrade, regardless of approach, appropriate planning is required.  
   
 ## Release Notes and Known Upgrade issues  
- Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) and the [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md) topic.  
+ Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review:
+
+- [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
+- [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
+- [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md) topic.  
   
 ## Pre-Upgrade Planning Checklist  
  Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review the following checklist and the associated topics. These topics apply to all upgrades, regardless of upgrade method and will help you determine the most appropriate upgrade method: Rolling upgrade, new installation upgrade, or in-place upgrade. For example, you may not be able to perform an upgrade in-place or a rolling upgrade if you are upgrading the operating system, upgrading from SQL Server 2005, or upgrading from a 32-bit version of SQL Server. For a decision tree, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
@@ -89,7 +93,7 @@ manager: "jhubbard"
 ## Did this Article Help You? We’re Listening  
  What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Plan%20and%20Test%20the%20Database%20Engine%20Upgrade%20Plan%20page)  
   
-## See Also  
+## Next Steps  
  [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
   
   

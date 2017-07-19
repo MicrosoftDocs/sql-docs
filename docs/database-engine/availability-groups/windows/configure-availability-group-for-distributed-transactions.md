@@ -113,8 +113,10 @@ The following list explains how the application works with DTC to complete distr
 
 1. When an application requires a distributed transaction, it connects to a DTC to begin the transaction. The client owns the DTC transaction. DTC is the transaction manager. 
 2. The client then connects to a [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance and enlists in the DTC transaction and creates another resource manager. Normally, the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance this resource manager. If the database is in an availability group and registered for DTC support, the database is this resource manager. This resource manager exchanges transaction information with DTC. 
+
    >[!NOTE]
    >It is not necessary for the client to initiate the distributed transaction. If a client connects to an instance of SQL Server 2017, and the connection initiates a transaction that involves more than one database on the instance, SQL Server promotes the transaction to a distributed transaction. 
+
 3. The client does some work in the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance under the DTC transaction. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance holds locks, and preserves references to the DTC transaction.
 4. The client either disconnects or enlists in NULL. The client can disconnect from the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance unhooks the connection from the DTC transaction it is tracking. The transaction object remains in the list of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] transactions because it is active. It stays active until the DTC resource manager indicates either abort or commit.
 5. After the client has completed the work on all resources, DTC performs the 2-phase commit protocol to either abort or commit to the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance - and any other resources in the transaction.

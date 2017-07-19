@@ -2,11 +2,11 @@
 # required metadata
 
 title: Release notes for SQL Server 2017 on Linux | Microsoft Docs
-description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for CTP 2.1 and prior versions.
+description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for RC1 and prior versions.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -91,16 +91,13 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
-| **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader , SSIS, SSAS, SSRS |
+| **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alerts |
 | &nbsp; | Log Reader Agent |
 | &nbsp; | Change Data Capture |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
-| **Security** | Active Directory Authentication |
-| &nbsp; | Windows Authentication |
-| &nbsp; | Extensible Key Management |
-| &nbsp; | Use of user-provided certificate for SSL or TLS |
+| **Security** | Extensible Key Management |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
@@ -110,7 +107,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Master Data Services |
 
 ### Known issues
-The following sections describe known issues with this release of SQL Server 2017 CTP 2.1 on Linux.
+The following sections describe known issues with this release of SQL Server 2017 RC1 on Linux.
 
 #### General
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
@@ -139,12 +136,15 @@ The following sections describe known issues with this release of SQL Server 201
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### Remote database files 
+
 - Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
 
 #### Cross platform availability groups and distributed availability groups 
+
 - Due to a known issue, creating availability groups with replicas on instances hosted on both Windows and Linux is not working in this release. This includes distributed availability groups. The fix will be available in the upcoming release candidate build. 
 
 #### Server Collation 
+
 - When using the MSSQL_COLLATION override, OR when doing a localized (non English) install, it is possible SQL Server will hit a deadlock when trying to set the server collation, which generates a dump. Setup does complete successfully, however the server collation will not have been set. The workaround is to simply run ./mssql-conf set-collation and enter the collation name desired when prompted (the collation name can be found in the errorlog at the line: “Attempting to change default collation to …”). 
  
 #### Localization
@@ -160,8 +160,6 @@ The following sections describe known issues with this release of SQL Server 201
    ```bash
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
-
-- When using the MSSQL_COLLATION override, OR when doing a localized (non English) install, it is possible SQL Server will hit a deadlock when trying to set the server collation, which generates a dump. Setup does complete successfully, however the server collation will not have been set. The workaround is to simply run ./mssql-conf set-collation and enter the collation name desired when prompted (the collation name can be found in the errorlog at the line: “Attempting to change default collation to …”).
 
 #### <a name = "fci"></a>Shared disk cluster instance upgrade
 
@@ -186,22 +184,20 @@ In RC1 the cluster resource agent sets the virtual server name like it does in a
 #### SQL Server Integration Services (SSIS)
 You can run SSIS packages on Linux. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
 
-- The **mssql-server-is** package is only supported on Ubuntu at this time.
+- The **mssql-server-is** package is supported on Ubuntu and Red Hat Enterprise Linux (RHEL) in this release.
 
 - The following features are not supported when running SSIS packages on Linux:
-  - SSIS Catalog DB
-  - Schedule Packages execution by SQL Agent
+  - SSIS Catalog database
+  - Scheduled package execution by SQL Agent
   - Windows Authentication
   - Third-party components
-  - Third-party ODBC drivers
-  - ODBC Connection Manager, Source, and Destination (supported with SSIS on Linux CTP 2.1 Refresh)
   - Change Data Capture (CDC)
-  - Scale Out
-  - Azure Feature Pack
-  - Hadoop and HDFS Support
+  - SSIS Scale Out
+  - Azure Feature Pack for SSIS
+  - Hadoop and HDFS support
   - Microsoft Connector for SAP BW
 
-With SSIS on Linux CTP 2.1 Refresh, your SSIS packages can use ODBC connections on Linux. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+With SSIS on Linux CTP 2.1 Refresh and later, your SSIS packages can use ODBC connections on Linux. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
@@ -225,7 +221,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp21"> CTP 2.1 (May 2017) </a>
 The SQL Server engine version for this release is 14.0.600.250.
@@ -240,11 +236,11 @@ The SQL Server engine version for this release is 14.0.600.250.
 | Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!NOTE]
-> You need at least 3.25GB of memory to run SQL Server on Linux.
+> You need at least 3.25 GB of memory to run SQL Server on Linux.
 > SQL Server Engine has been tested up to 1 TB of memory at this time.
 
 ### Package details
-Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the following installation guides:
+Package details and download locations for the RPM and Debian packages are listed in the following table. You do not need to download these packages directly if you use the steps in the following installation guides:
 
 - [Install SQL Server package](sql-server-linux-setup.md)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
@@ -382,7 +378,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp20"> CTP 2.0 (April 2017) </a>
 The SQL Server engine version for this release is 14.0.500.272.
@@ -481,7 +477,7 @@ The following sections describe known issues with this release of SQL Server 201
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### Always On Availability Group
-- All HA configurations - meaning availability group is added as a resource to a Pacemaker cluster - created with pre CTP2.0 packages are not backwards compatible with the new package. Delete all previousely configured clustered resources and create new availability groups with `CLUSTER_TYPE=EXTERNAL`. See [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
+- All HA configurations - meaning availability group is added as a resource to a Pacemaker cluster - created with pre CTP2.0 packages are not backwards compatible with the new package. Delete all previously configured clustered resources and create new availability groups with `CLUSTER_TYPE=EXTERNAL`. See [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
 - Availability groups created with `CLUSTER_TYPE=NONE` and not added as resources in the cluster will continue working after upgrade. Use for read-scale scenarios. See [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 - `sys.fn_hadr_backup_is_preffered_replica` does not work for `CLUSTER_TYPE=NONE` or `CLUSTER_TYPE=EXTERNAL` because it relies on the WSFC-replicated cluster registry key which not available. We are working on providing a similar functionality through a different function. 
 
@@ -529,7 +525,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp14"> CTP 1.4 (March 2017) </a>
 The SQL Server engine version for this release is 14.0.405.198.
@@ -708,7 +704,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp13"> CTP 1.3 (February 2017) </a>
 The SQL Server engine version for this release is 14.0.304.138.
@@ -866,7 +862,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp12"> CTP 1.2 (January 2017)
 The SQL Server engine version for this release is 14.0.200.24.
@@ -984,7 +980,7 @@ The following sections describe known issues with this release of SQL Server 201
 - SqlPackage shows the location of files with a "C:\\" prefix.
 
 #### Sqlcmd/BCP & ODBC 
-- If you have an older version of SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql), you might have installed a custom unixODBC Driver Manager (unixODBC-utf16). This could casue a potential conflict as we no longer use a custom driver manager. 
+- If you have an older version of SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql), you might have installed a custom unixODBC Driver Manager (unixODBC-utf16). This could cause a potential conflict as we no longer use a custom driver manager. 
 
     - **Resolution**: On Ubuntu and SLES, the conflict will be resolved automatically. When prompted if you would like to uninstall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC-utf16 unixODBC-utf16-devel` and retry the install.
     
@@ -1012,7 +1008,7 @@ To get started, see the following quick start tutorials:
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp11"> CTP 1.1 (December 2016)
 The SQL Server engine version for this release is 14.0.100.187.
@@ -1148,7 +1144,7 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 v
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp10"> CTP 1.0 (November 2016)
 The SQL Server engine version for this release is 14.0.1.246.

@@ -37,6 +37,7 @@
 ### [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
 ### [Create and run jobs](sql-server-linux-run-sql-server-agent-job.md)
 ### [Use log shipping](sql-server-linux-use-log-shipping.md)
+### [Use DB Mail and email alerts](sql-server-linux-db-mail-sql-agent.md)
 
 ## [Migrate](sql-server-linux-migrate-overview.md)
 ### [Restore from Windows](sql-server-linux-migrate-restore-database.md)
@@ -67,6 +68,7 @@
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)
 ### [Encrypting Connections](sql-server-linux-encrypted-connections.md)
+### [Active Directory Authentication](sql-server-linux-active-directory-authentication.md)
 
 ## [Optimize Performance](sql-server-linux-performance-get-started.md)
 

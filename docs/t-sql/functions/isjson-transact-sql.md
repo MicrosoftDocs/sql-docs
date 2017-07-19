@@ -1,7 +1,7 @@
 ---
 title: "ISJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2016"
+ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 ISJSON ( expression )  
 ```  
   
@@ -49,9 +49,9 @@ ISJSON ( expression )
 ## Examples  
   
 ### Example 1  
- The following example runs a statement block conditionally if the parameter value contains valid JSON.  
+The following example runs a statement block conditionally if the parameter value `@param` contains valid JSON.  
   
-```tsql  
+```sql  
 DECLARE @param <data type>
 SET @param = <value>
 
@@ -63,12 +63,12 @@ END
 ```  
   
 ### Example 2  
- The following example returns the JSON text if the column contains valid JSON.  
+The following example returns rows in which the column `json_col` contains valid JSON.  
   
-```tsql  
-SELECT id,json_col
+```sql  
+SELECT id, json_col
 FROM tab1
-WHERE ISJSON(json_col)>0 
+WHERE ISJSON(json_col) > 0 
 ```  
   
 ## See Also  

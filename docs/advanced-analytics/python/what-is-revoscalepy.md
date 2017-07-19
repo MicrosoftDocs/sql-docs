@@ -1,7 +1,7 @@
 ---
 title: "Introducing revoscalepy | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/22/2017"
+ms.date: "07/19/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,13 +24,11 @@ It is based on the **RevoScaleR** package for R, which was provided in Microsoft
 + Provides Python versions of RevoScaleR machine learning algorithms for distributed or parallel processing
 + Improved performance, including use of the Intel math libraries
 
-CTP 2.0 also includes the MicrosoftML packages for R and Python. for more information, see [Using MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
+MicrosoftML packages are also proided for both R and Python. For more information, see [Using MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
 
 > [!WARNING]
 > 
 > Python support is a new feature in SQL Server 2017 and is currently supported for preview purposes only.
-> 
-> The **revoscalepy** module contains only a subset of the functionality provided in the corresponding **RevoScaleR** package for R.
 
 ## Versions and supported platforms
 
@@ -41,18 +39,23 @@ The **revoscalepy** module is available only when you install one of the followi
 
 ## Supported functions and data types
 
-This section lists the Python data types and new Python functions supported in the **revoscalepy** module.
+This section provides an overview of the Python data types and new Python functions supported in the **revoscalepy** module, beginning with SQL Server 2017 CTP 2.0 release. 
 
-> [!IMPORTANT] 
-> This list describes functionality available in the SQL Server 2017 CTP 2.0 release. Some additional functions might be included in subsequent updates, but have not been extensively tested.
+For the latest list Python libraries, see these links:
 
-### Data types
++ [Python function help](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference.md)
 
-For a list of mappings between SQL and Python data types, see [Python Libraries and Data Types](python-libraries-and-data-types.md).
++ [revoscalepy function library for Python](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package.md)
 
-### <a name="bkmk_cc"></a>Data sources and compute contexts
++ [microsoftml function library for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package.md)
 
-You can work with data from an ODBC database, SQL Server, or XDF file by using the data source functions listed in the following table. After defining the data source, you load or transform the data by using an appropriate [ETL function](#bkmk_etl).
+### Data types, data sources, and compute contexts
+
+SQL Server and Python use different data types in some cases. For a list of mappings between SQL and Python data types, see [Python Libraries and Data Types](python-libraries-and-data-types.md).
+
+Data sources supported for machine learning with Python in SQL Server includes ODBC data sources, SQL Server database, and XDF files.
+
+You create the data source object by using functions listed in the following table. After defining the data source, you load or transform the data by using an appropriate [ETL function](#bkmk_etl).
 
 |Function|Description|Availability|
 |----|----|----|
@@ -61,7 +64,6 @@ You can work with data from an ODBC database, SQL Server, or XDF file by using t
 |RxFileData|Constructor for creating external files (RevoScaleR)|CTP 2.0|
 |RxXdfData| Create XDF files (RevoScaleR)|CTP 2.0|
 |RxOdbcData| Create ODBC connections (RevoScaleR)|CTP 2.0|
-
 
 If you are new to the idea of remote compute contexts, we recommend that you start by reading about distributed computing works for machine learning in [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction).
 
@@ -82,7 +84,7 @@ The following machine learning algorithms are included in SQL Server 2017 CTP 2.
 
 ### <a name="bkmk_etl"></a>Data movement and transformation
 
-The following machine learning algorithms are included in SQL Server 2017 CTP 2.0.
+The following functions support movement and transformation of data.
 
 | Function| Description|Availability|
 | ------ | ------ |------ |
@@ -141,4 +143,4 @@ If you use Python Tools for Visual Studio, you can use Intellisense to get synta
 
 ## See Also
 
-[Python Tutorials](../tutorials/sql-server-python-tutorials.md)
+[Python tutorials](../tutorials/sql-server-python-tutorials.md)

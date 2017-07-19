@@ -1,5 +1,5 @@
 ---
-title: "Real-time scoring and native scoring| Microsoft Docs"
+title: "Native scoring| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
 ms.prod: "sql-server-2016"
@@ -14,15 +14,15 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 
-# Native scoring and real-time scoring
+# Native scoring
 
-This topic describes features in SQL Server 2016 and SQL Server 2017 that provide scoring on machine learning models in near real time.
+This topic describes features in SQL Server 2017 that provide scoring on machine learning models in near realtime.
 
-+ What is native scoring vs. real-time scoring
-+ How fast scoring works
-+ Supported platforms
++ What is native scoring vs. realtime scoring
++ How it works
++ Supported platforms and requirements
 
-## What is native scoring and how is it different from real-time scoring?
+## What is native scoring and how is it different from realtime scoring?
 
 In SQL Server 2016, Microsoft created an extensibility framework that allows R scripts to be executed from T-SQL. This framework supports any operation you might perform in R, ranging from simple functions to training complex machine learning models. However, the dual-process architecture that pairs R with SQL Server means that external R processes must be invoked for every call, regardless of the complexity of the operation. If you are loading a pre-trained model from a table and scoring against it on data already in SQL Server, the overhead of calling the external R process represents an unnecessary performance cost.
 
@@ -34,47 +34,52 @@ To support fast scoring, SQL Server Machine Learning Services (and Microsoft Mac
 
 **Native scoring**
 
-+ The PREDICT function in Transact-SQL can be used for native scoring from any instance of SQL Server 2017. It requires only that you have a model already trained and saved in a table or can be called via T-SQL.
++ The PREDICT function in Transact-SQL can be used for _native scoring_ from any instance of SQL Server 2017. It requires only that you have a model already trained and saved in a table or can be called via T-SQL. It is a kind of realtime scoring that uses native T-SQL functions; no additional configuration required.
 
    The R runtime is not called and does not need to be installed.
 
-**Real-time scoring**
+**Realtime scoring**
 
-+ The sp_rxPredict stored procedure can be used to generates scores from any supported model type, without calling the R runtime. 
++ **sp_rxPredict** is a stored procedure for realtime scoring that can be used to generates scores from any supported model type, without calling the R runtime.
 
-  The option to use real-time scoring is available in SQL Server 2016, if you upgrade the R components using the standalone installer of Microsoft R Server. This option is also supported in SQL Server 2017, and might be a good option if you are scoring on a model type not supported by the PREDICT function.
+  This option to use realtime scoring is also available in SQL Server 2016, if you upgrade the R components using the standalone installer of Microsoft R Server. sp_rxPredict is also supported in SQL Server 2017, and might be a good option if you are scoring on a model type not supported by the PREDICT function.
 
-+ The rxPredict function can be used for fast scoring within R code. However, to use rxPredict also requires that you use a model that was trained using one of the supported RevoScaleR or MicrosoftML algorithms.
++ The rxPredict function can be used for fast scoring within R code.
 
-For an example of real-time scoring in action, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
+For all of these scoring methods, you must use a model that was trained using one of the supported RevoScaleR or MicrosoftML algorithms.
 
-## How real-time and native scoring work
+For an example of realtime scoring in action, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
-Both real-time scoring and native scoring use native C++ libraries from Microsoft that support scoring from multiple machine learning algorithms.
+## How native scoring works
 
-Because a model can be published and used for scoring without having to call the R interpreter, the overhead of multiple process interactions is reduced. This supports much faster prediction performance in enterprise production scenarios.
+Native scoring uses native C++ libraries from Microsoft that can read the model from a special binary format and generate scores. Because a model can be published and used for scoring without having to call the R interpreter, the overhead of multiple process interactions is reduced. This supports much faster prediction performance in enterprise production scenarios.
 
-To generate scores using this library, you call one of the new scoring functions, and pass the following required inputs:
+To generate scores using this library, you call the scoring function, and pass the following required inputs:
 
 + A compatible model. See the [Requirements](#Requirements) section for details.
-+ A SQL query that defines the input data
++ Input data, typically defined as a SQL query
 
 The function returns predictions for the input data, together with any columns of source data that you want to pass through.
 
 For code samples, along with instructions on how to prepare the models in the required binary format, see this article:
 
-+ [How to perform native scoring or real-time scoring](r/how-to-real-time-scoring.md)
-
- SQL Server R Services 2016, with an upgrade of the R Services instance to Microsoft R Server 9.1.0 or later
++ [How to perform realtime scoring](r/how-to-real-time-scoring.md)
 
 ## Requirements
 
-Supported platforms for native scoring are as follows:
+Supported platforms are as follows:
 
 + SQL Server 2017 Machine Learning Services (includes Microsoft R Server 9.1.0)
-+ Native scoring works with any version of SQL Server 2017. However, the PREDICT function works only with models that were trained using one of the supported algorithms, and saved using the optimized serialization function.
+    
+    Native scoring using PREDICT requires SQL Server 2017.
+    It works on any version of SQL Server 2017, including Linux.
 
-Real-time scoring is backward-compatible with SQL Server 2016, and can also be run on Microsoft R Server. For more information, see [Real-time scoring](Real-time-scoring.md)
+    You can also perform realtime scoring using sp_rxPredict, which requires that SQL CLR be enabled.
+
++ SQL Server 2016
+
+   Real-time scoring using sp_rxPredict is possible with SQL Server 2016, and can also be run on Microsoft R Server. This option requires SQLCLR to be enabled, and that you install the Microsoft R Server upgrade.
+   For more information, see [Realtime scoring](Real-time-scoring.md)
 
 ### Model preparation
 
@@ -90,6 +95,8 @@ Real-time scoring is backward-compatible with SQL Server 2016, and can also be r
   + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+
+If you need to use models from MicrosoftML, use realtime scoring with sp_rxPredict.
 
 ### Restrictions
 

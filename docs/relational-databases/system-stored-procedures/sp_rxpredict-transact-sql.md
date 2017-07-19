@@ -85,9 +85,10 @@ The following model types are **not** supported:
 ```sql
 DECLARE @model = SELECT @model 
 FROM model_table 
-WHERE model_name = 'rxLogit trained'
-sp_rxPredict @model = @model,
-@inputData = N'SELECT * FROM data'
+WHERE model_name = 'rxLogit trained';
+
+EXEC sp_rxPredict @model = @model,
+@inputData = N'SELECT * FROM data';
 ```
 
 In addition to being a valid SQL query, the input data in *@inputData* must include columns compatible with the columns in the stored model.

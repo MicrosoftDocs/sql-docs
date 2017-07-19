@@ -26,7 +26,7 @@ manager: "jhubbard"
 ## Why upgrade?  
   
 > [!IMPORTANT]  
->  Extended support for SQL Server 2005 ends on April 12, 2016. If you're still running SQL Server 2005 after April 12, 2016, you'll no longer receive security updates.  
+>  Extended support for SQL Server 2005 ended on April 12, 2016. If you're still running SQL Server 2005 after April 12, 2016, you no longer receive security updates.  
   
 ## Choose your upgrade option  
 If you’re upgrading relational databases from SQL Server 2005, here are your options for relational storage on the Microsoft platform.  
@@ -71,7 +71,7 @@ To see a more comprehensive analysis of these options, [click here](http://sql05
 ## Get SQL Server  
  To download an evaluation copy of SQL Server, [click here](http://www.microsoft.com/evalcenter/evaluate-sql-server-2016).  
   
-## Next Steps Also  
+## Next Steps  
  [SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)   
  [SQL Server 2005 end of support](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
   

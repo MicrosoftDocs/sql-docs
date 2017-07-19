@@ -15,7 +15,7 @@ ms.workload:
 ms.tgt_pltfrm: na
 ms.devlang: 
 ms.topic: article
-ms.date: 07/18/201"
+ms.date: 07/19/2017"
 ms.author: alazad
 ---
 # Troubleshoot PolyBase Kerberos connectivity
@@ -72,7 +72,7 @@ Update one of the PolyBase configuration files, **core-site.xml**, with the thr
 </property>
 <property>
 	<name>hadoop.security.authentication</name>
-  <value>KERBEROS</value>
+    <value>KERBEROS</value>
 </property>
 ```
 The other XMLs will later need to be updated as well if pushdown operations are desired, but with just this file configured, the HDFS file system should at least be able to be accessed.
@@ -104,43 +104,43 @@ There should be a hex dump of a ticket with Server Principal = krbtgt/*MYREALM.C
 
 PolyBase does **not** support trust relationships between AD and MIT and must be configured against the same KDC as configured in the Hadoop cluster. In such environments, manually creating a service account on that KDC and using that to perform authentication will work.
 ```dos
-| >>> KrbAsReq creating message 
- >>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, \#bytes=143 
- >>> KDCCommunication: kdc=kerberos.contoso.com UDP:88, timeout=30000,Attempt =1, \#bytes=143 
- >>> KrbKdcReq send: \#bytes read=646 
+|>>> KrbAsReq creating message 
+ >>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, #bytes=143 
+ >>> KDCCommunication: kdc=kerberos.contoso.com UDP:88, timeout=30000,Attempt =1, #bytes=143 
+ >>> KrbKdcReq send: #bytes read=646 
  >>> KdcAccessibility: remove kerberos.contoso.com 
  >>> EType: sun.security.krb5.internal.crypto.Des3CbcHmacSha1KdEType 
  >>> KrbAsRep cons in KrbAsReq.getReply myuser 
- \[2017-04-25 21:34:33,548\] INFO 687\[main\] - com.microsoft.polybase.client.KerberosSecureLogin.secureLogin(KerberosSecureLogin.java:97) - Subject: 
- Principal: admin\_user@CONTOSO.COM 
+ [2017-04-25 21:34:33,548] INFO 687[main] - com.microsoft.polybase.client.KerberosSecureLogin.secureLogin(KerberosSecureLogin.java:97) - Subject: 
+ Principal: admin_user@CONTOSO.COM 
  Private Credential: Ticket (hex) = 
  0000: 61 82 01 48 30 82 01 44 A0 03 02 01 05 A1 0E 1B a..H0..D........ 
  0010: 0C 41 50 53 48 44 50 4D 53 2E 43 4F 4D A2 21 30 .CONTOSO.COM.!0 
  0020: 1F A0 03 02 01 02 A1 18 30 16 1B 06 6B 72 62 74 ........0...krbt 
  0030: 67 74 1B 0C 41 50 53 48 44 50 4D 53 2E 43 4F 4D gt..CONTOSO.COM 
  0040: A3 82 01 08 30 82 01 04 A0 03 02 01 10 A1 03 02 ....0........... 
- *\[…Condensed…\]* 
+ *[…Condensed…]* 
  0140: 67 6D F6 41 6C EB E0 C3 3A B2 BD B1 gm.Al...:... 
- Client Principal = admin\_user@CONTOSO.COM 
+ Client Principal = admin_user@CONTOSO.COM 
  Server Principal = krbtgt/CONTOSO.COM@CONTOSO.COM 
- *\[…Condensed…\]* 
- \[2017-04-25 21:34:34,500\] INFO 1639\[main\] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1579) - Successfully authenticated against KDC server. 
+ *[…Condensed…]* 
+ [2017-04-25 21:34:34,500] INFO 1639[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1579) - Successfully authenticated against KDC server. 
 ```
 ## Checkpoint 2
 PolyBase will make an attempt to access the HDFS and fail because the request did not contain the necessary Service Ticket.
 ```dos
-| \[2017-04-25 21:34:34,501\] INFO 1640\[main\] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1584) - Attempting to access external filesystem at URI: hdfs://10.193.27.232:8020 
- Found ticket for admin\_user@CONTOSO.COM to go to krbtgt/CONTOSO.COM@CONTOSO.COM expiring on Wed Apr 26 21:34:33 UTC 2017 
- Entered Krb5Context.initSecContext with state=STATE\_NEW 
- Found ticket for admin\_user@CONTOSO.COM to go to krbtgt/CONTOSO.COM@CONTOSO.COM expiring on Wed Apr 26 21:34:33 UTC 2017 
+|[2017-04-25 21:34:34,501] INFO 1640[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1584) - Attempting to access external filesystem at URI: hdfs://10.193.27.232:8020 
+ Found ticket for admin_user@CONTOSO.COM to go to krbtgt/CONTOSO.COM@CONTOSO.COM expiring on Wed Apr 26 21:34:33 UTC 2017 
+ Entered Krb5Context.initSecContext with state=STATE_NEW 
+ Found ticket for admin_user@CONTOSO.COM to go to krbtgt/CONTOSO.COM@CONTOSO.COM expiring on Wed Apr 26 21:34:33 UTC 2017 
  Service ticket not found in the subject 
 ```
 ## Checkpoint 3
 A second hex dump indicates that SQL Server successfully used the TGT and acquired the applicable Service Ticket for the name node's SPN from the KDC.
-```dos
-|>>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, \#bytes=664 
- >>> KDCCommunication: kdc=kerberos.contoso.com UDP:88, timeout=30000,Attempt =1, \#bytes=664 
- >>> KrbKdcReq send: \#bytes read=669 
+```bash
+|>>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, #bytes=664 
+ >>> KDCCommunication: kdc=kerberos.contoso.com UDP:88, timeout=30000,Attempt =1, #bytes=664 
+ >>> KrbKdcReq send: #bytes read=669 
  >>> KdcAccessibility: remove kerberos.contoso.com 
  >>> EType: sun.security.krb5.internal.crypto.Des3CbcHmacSha1KdEType 
  >>> KrbApReq: APOptions are 00100000 00000000 00000000 00000000 
@@ -149,13 +149,13 @@ A second hex dump indicates that SQL Server successfully used the TGT and acquir
  Created InitSecContextToken: 
  0000: 01 00 6E 82 02 4B 30 82 02 47 A0 03 02 01 05 A1 ..n..K0..G...... 
  0010: 03 02 01 0E A2 07 03 05 00 20 00 00 00 A3 82 01 ......... ...... 
- 0020: 63 61 82 01 5F 30 82 01 5B A0 03 02 01 05 A1 0E ca..\_0..\[....... 
+ 0020: 63 61 82 01 5F 30 82 01 5B A0 03 02 01 05 A1 0E ca.._0..[....... 
  0030: 1B 0C 41 50 53 48 44 50 4D 53 2E 43 4F 4D A2 26 ..CONTOSO.COM.& 
  0040: 30 24 A0 03 02 01 00 A1 1D 30 1B 1B 02 6E 6E 1B 0$.......0...nn. 
  0050: 15 73 68 61 73 74 61 2D 68 64 70 32 35 2D 30 30 .hadoop-hdp25-00 
  0060: 2E 6C 6F 63 61 6C A3 82 01 1A 30 82 01 16 A0 03 .local....0..... 
  0070: 02 01 10 A1 03 02 01 01 A2 82 01 08 04 82 01 04 ................ 
- *\[…Condensed…\]* 
+ *[…Condensed…]* 
  0240: 03 E3 68 72 C4 D2 8D C2 8A 63 52 1F AE 26 B6 88 ..hr.....cR..&.. 
  0250: C4 . |
 ```
@@ -164,8 +164,8 @@ Finally, the file properties of the target path should be printed along with a c
 
 Reaching this point confirms that: (i) the three actors are able to communicate correctly, (ii) the core-site.xml and jaas.conf are correct, and (iii) your KDC recognized your credentials.
 ```dos
-| \[2017-04-25 21:34:35,096\] INFO 2235\[main\] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1586) - File properties for "/": FileStatus{path=hdfs://10.193.27.232:8020/; isDirectory=true; modification\_time=1492028259862; access\_time=0; owner=hdfs; group=hdfs; permission=rwxr-xr-x; isSymlink=false} 
- \[2017-04-25 21:34:35,098\] INFO 2237\[main\] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1587) - Successfully accessed the external file system. 
+| [2017-04-25 21:34:35,096] INFO 2235[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1586) - File properties for "/": FileStatus{path=hdfs://10.193.27.232:8020/; isDirectory=true; modification_time=1492028259862; access_time=0; owner=hdfs; group=hdfs; permission=rwxr-xr-x; isSymlink=false} 
+ [2017-04-25 21:34:35,098] INFO 2237[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1587) - Successfully accessed the external file system. 
 ```
 ## Common Errors
 If the tool was run and the file properties of the target path were *not* printed (Checkpoint 4), there should be an exception thrown midway. Review it and consider the context of where in the four-step flow it occurred. Consider the following common issues that may have occurred, in order:
@@ -184,7 +184,7 @@ All the SPNs registered with the KDC, including the admins, can be viewed by run
 
 Also consider using the [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) tool to verify the admin credentials on the KDC locally. An example usage would be: *kinit identity@MYREALM.COM*. A prompt for a password indicates the identity exists.  
 The KDC logs are available in **/var/log/krb5kdc.log**, by default, which includes all of the requests for tickets including the client IP that made the request. There should be two requests from the SQL Server machine's IP wherein the tool was run: first for the TGT from the Authenticating Server as an **AS\_REQ**, followed by a **TGS\_REQ** for the ST from the Ticket Granting Server.
-```apache
+```bash
 | \[root@MY-KDC log\]\# tail -2 /var/log/krb5kdc.log 
  May 09 09:48:26 MY-KDC.local krb5kdc\[2547\](info): **AS\_REQ** (3 etypes {17 16 23}) 10.107.0.245: ISSUE: authtime 1494348506, etypes {rep=16 tkt=16 ses=16}, admin\_user@CONTOSO.COM for **krbtgt/CONTOSO.COM@CONTOSO.COM** 
  May 09 09:48:29 MY-KDC.local krb5kdc\[2547\](info): **TGS\_REQ** (3 etypes {17 16 23}) 10.107.0.245: ISSUE: authtime 1494348506, etypes {rep=16 tkt=16 ses=16}, admin\_user@CONTOSO.COM for **nn/hadoop-hdp25-00.local@CONTOSO.COM** |

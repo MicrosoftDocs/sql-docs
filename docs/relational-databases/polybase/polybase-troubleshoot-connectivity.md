@@ -63,8 +63,16 @@ For example, the default for SQL Server 2016, for instance, would be "C:\\Progra
 Update one of the PolyBase configuration files, **core-site.xml**, with the three properties below with the values set according to the environment:
 ```xml
 <property>
-  <name>polybase.kerberos.realm</name>
-  <value>**CONTOSO.COM**</value>
+	<name>polybase.kerberos.realm</name>
+	<value>CONTOSO.COM</value>
+</property>
+<property>
+	<name>polybase.kerberos.kdchost</name>
+	<value>kerberos.contoso.com</value>
+</property>
+<property>
+	<name>hadoop.security.authentication</name>
+  <value>KERBEROS</value>
 </property>
 ```
 The other XMLs will later need to be updated as well if pushdown operations are desired, but with just this file configured, the HDFS file system should at least be able to be accessed.
@@ -183,9 +191,6 @@ The KDC logs are available in **/var/log/krb5kdc.log**, by default, which inclu
 ```
 ### Active Directory 
 In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available (e.g. nn, dn, rm, yarn, spnego, etc.)
-
-## Sample output
-For sample output, see the text file located on your computer, for example: \\{share}\\{site}\\Sample_Polybase_AD.txt)
 
 ## See Also
 1. [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)

@@ -58,7 +58,11 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
    > [!TIP]
-   > When installing RC1, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select: `This is an evaluation version.  There are [175] days left in the evaluation period.` This does not mean that you have set up the Evaluation edition unless you selected that option.
+   > When installing RC1, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
+   >
+   >    This is an evaluation version.  There are [175] days left in the evaluation period.
+   >
+   > This does not reflect the edition you selected. It relates to the preview period for RC1.
 
 1. Once the configuration is done, verify that the service is running:
 

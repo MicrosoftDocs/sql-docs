@@ -1,7 +1,7 @@
 ---
 title: "PATINDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/07/2016"
+ms.date: "07/19/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 PATINDEX ( '%pattern%' , expression )  
 ```  
   
@@ -86,11 +84,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------`  
-  
- `64`  
-  
- `(1 row(s) affected)`  
+```
+-----------  
+64  
+(1 row(s) affected)
+```  
   
  If you do not restrict the rows to be searched by using a `WHERE` clause, the query returns all rows in the table and reports nonzero values for those rows in which the pattern was found, and zero for all rows in which the pattern was not found.  
   
@@ -99,16 +97,13 @@ GO
   
 ```  
 SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- -----------\-  
-  
-```  
+```
+-----------  
 8  
-  
 ```  
   
  `PATINDEX` works just like `LIKE`, so you can use any of the wildcards. You do not have to enclose the pattern between percents. `PATINDEX('a%', 'abc')` returns 1 and `PATINDEX('%a', 'cba')` returns 3.  
@@ -137,55 +132,12 @@ WHERE DocumentNode = 0x7B40;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------`  
+ ```
+ ------------  
+ 22
+ ```  
   
- `22`  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### F. Using a pattern with PATINDEX  
- The following example finds the position at which the pattern `wheel` starts in the `EnglishDescription` column in the `dbo.DimProduct` table for every row that contains the characters `wheel`. If you do not restrict the rows to be searched by using a WHERE clause, the query returns all rows in the table and reports nonzero values for those rows in which the pattern was found and zero for all rows in which the pattern was not found.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT ProductKey,   
-    PATINDEX('%wheel%',EnglishDescription)AS StartingPosition,  
-EnglishDescription  
-FROM dbo.DimProduct  
-WHERE EnglishDescription LIKE '%wheel%'  
-ORDER BY ProductKey;  
-```  
-  
- Here is a partial result set.  
-  
- `ProductKey  StartingPosition  EnglishDescription`  
-  
- `----------  ----------------  ----------------------------`  
-  
- `410         22                Replacement mountain wheel for entry-level rider.`  
-  
- `411         22                Replacement mountain wheel for the casual to serious rider.`  
-  
- `412         39                High-performance mountain replacement wheel.`  
-  
- `413         24                Replacement road front wheel for entry-level cyclist.`  
-  
- `415         8                 Strong wheel with double-walled rim.`  
-  
-### G. Using wildcard characters with PATINDEX  
- The following example uses wildcard characters to find the position at which the pattern `whe_l` starts in the `EnglishDescription` column in the `dbo.DimProduct` table, where the underscore is a wildcard representing any character. If you do not restrict the rows to be searched, the query returns all rows in the table and reports nonzero values for those rows in which the pattern was found.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT ProductKey,   
-    PATINDEX('%whe_l%',EnglishDescription)AS StartingPosition,  
-EnglishDescription  
-FROM dbo.DimProduct  
-WHERE EnglishDescription LIKE '%wheel%'  
-ORDER BY ProductKey;  
-```  
+
   
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

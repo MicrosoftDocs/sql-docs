@@ -31,7 +31,7 @@ manager: "jhubbard"
   
  The following table provides information about these nodes.  
   
-> **NOTE:** To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_nodes**.  
+> **NOTE:** To call this DMV from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_os_nodes**.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -51,7 +51,7 @@ manager: "jhubbard"
 |resource_monitor_state|**bit**|Each node has one resource monitor assigned to it. The resource monitor can be running or idle. A value of 1 indicates running, a value of 0 indicates idle.|  
 |online_scheduler_mask|**bigint**|Identifies the process affinity mask for this node.|  
 |processor_group|**smallint**|Identifies the group of processors for this node.|  
-|cpu_count |**int** |Number of CPU's available for this node. |
+|cpu_count |**int** |Number of CPUs available for this node. |
 |pdw_node_id|**int**|The identifier for the node that this distribution is on.<br /><br /> **Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## Permissions  

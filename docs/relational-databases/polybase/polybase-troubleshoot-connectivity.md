@@ -81,7 +81,7 @@ The tool runs independently of SQL Server, so it does not need to be running, no
 
 \> cd C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\Polybase
 
-\> java -classpath ".\\Hadoop\\conf;.\\Hadoop\\*;.\\Hadoop\\HDP2_2\\*" com.microsoft.polybase.client.HdfsBridge {Name node address} {Name node port} {Service Principal} {Remote HDFS file path (optional)} 
+\> java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 
 
 ## Arguments

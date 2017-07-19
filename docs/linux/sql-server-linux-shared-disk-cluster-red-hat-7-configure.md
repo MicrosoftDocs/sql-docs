@@ -8,6 +8,7 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
+
 ms.prod: sql-linux 
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
@@ -18,8 +19,7 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 # audience: ""
 # ms.devlang: ""
 # ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
+# ms.suite: ""# ms.tgt_pltfrm: ""
 # ms.custom: ""
 ---
 
@@ -34,11 +34,11 @@ As the diagram below shows storage is presented to two servers. Clustering compo
 
 ![Red Hat Enterprise Linux 7 Shared Disk SQL Cluster](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
- For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+For more details on cluster configuration, resource agents options, and management, visit [RHEL reference documentation](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
-> At this point, SQL Server's integration with Pacemaker is not as coupled as with WSFC on Windows. From within SQL, there is noknowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also for example, cluster dmvs sys.dm_os_cluster_nodes and sys.dm_os_cluster_properties will no records.
+> At this point, SQL Server's integration with Pacemaker is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also for example, cluster dmvs sys.dm_os_cluster_nodes and sys.dm_os_cluster_properties will no records.
 To use a connection string that points to a string server name and not use the IP, they will have to register in their DNS server the IP used to create the virtual IP resource (as explained below) with the chosen server name.
 
 The following sections walk through the steps to set up a failover cluster solution. 
@@ -54,6 +54,7 @@ The first step is to configure the operating system on the cluster nodes. For th
 ## Install and configure SQL Server on each cluster node
 
 1. Install and setup SQL Server on both nodes.  For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
+
 1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.  
 
 1. On the secondary node, stop and disable SQL Server.
@@ -66,7 +67,6 @@ The first step is to configure the operating system on the cluster nodes. For th
    ```
 > [!NOTE] 
 > At setup time, a Server Master Key is generated for the SQL Server instance and placed at var/opt/mssql/secrets/machine-key. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key. 
-
 
 1. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
 

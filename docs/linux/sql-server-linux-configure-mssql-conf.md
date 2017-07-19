@@ -20,10 +20,10 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 |---|---|
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
-| [Default data directory](#datadir) | Change the directory where the new SQL Server database data files (.mdf) are created. |
-| [Default log directory](#datadir) | Changes the directory where the new SQL Server database log (.ldf) files are created. |
-| [Default dump directory](#dumpdir) | Change the directory where SQL Server deposits the memory dumps and other troubleshooting files by default. |
-| [Default backup directory](#backupdir) | Change the directory where SQL Server sends the backup files by default. |
+| [Default data directory](#datadir) | Change the default directory for new SQL Server database data files (.mdf). |
+| [Default log directory](#datadir) | Changes the default directory for new SQL Server database log (.ldf) files. |
+| [Default dump directory](#dumpdir) | Change the default directory for new memory dumps and other troubleshooting files. |
+| [Default backup directory](#backupdir) | Change the default directory for new backup files. |
 | [Dump type](#coredump) | Choose the type of dump memory dump file to collect. |
 | [High availability](#hadr) | Enable Availability Groups. |
 | [Local Audit directory](#localaudit) | Set a a directory to add Local Audit files. |
@@ -36,16 +36,16 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 The following sections show examples of how to use mssql-conf for each of these scenarios.
 
 > [!TIP]
-> These examples run mssql-conf by specify the full path: `/opt/mssql/bin/mssql-conf`. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: `./mssql-conf`.
+> These examples run mssql-conf by specify the full path: **/opt/mssql/bin/mssql-conf**. If you choose to navigate to that path instead, run mssql-conf in the context of the current directory: **./mssql-conf**.
 
 > [!NOTE]
 > Some of these settings can also be configured with environment variables. For more information, see [Configure SQL Server settings with environment variables](sql-server-linux-configure-environment-variables.md).
 
 ## <a id="collation"></a> Change the SQL Server collation
 
-The `set-collation` option changes the collation value to any of the supported collations:
+The **set-collation** option changes the collation value to any of the supported collations:
 
-1. Run the `set-collation` option and follow the prompts:
+1. Run the **set-collation** option and follow the prompts:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set-collation
@@ -57,9 +57,9 @@ For a list of supported collations, run the [sys.fn_helpcollations](../relationa
 
 ## <a id="customerfeedback"></a> Configure customer feedback
 
-The `telemetry.customerfeedback` setting changes whether SQL Server sends feedback to Microsoft or not. By default, this value is set to `true`. To change the value, run the following commands:
+The **telemetry.customerfeedback** setting changes whether SQL Server sends feedback to Microsoft or not. By default, this value is set to **true**. To change the value, run the following commands:
 
-1. Run the mssql-conf script as root with the `set` command for `telemetry.customerfeedback`. The following example turns off customer feedback by specifying `false`.
+1. Run the mssql-conf script as root with the **set** command for **telemetry.customerfeedback**. The following example turns off customer feedback by specifying **false**.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -75,15 +75,15 @@ For more information, see [Customer Feedback for SQL Server on Linux](sql-server
 
 ## <a id="datadir"></a> Change the default data or log directory location
 
-The `filelocation.defaultdatadir` and `filelocation.defaultlogdir` settings change the location where the new database and log files are created. By default, this location is /var/opt/mssql/data. To change these settings, use the following steps:
+The **filelocation.defaultdatadir** and **filelocation.defaultlogdir** settings change the location where the new database and log files are created. By default, this location is /var/opt/mssql/data. To change these settings, use the following steps:
 
-1. Create the target directory for new database data and log files. The following example creates a new `/tmp/data` directory:
+1. Create the target directory for new database data and log files. The following example creates a new **/tmp/data** directory:
 
    ```bash
    sudo mkdir /tmp/data
    ```
 
-1. Change the owner and group of the directory to the `mssql` user:
+1. Change the owner and group of the directory to the **mssql** user:
 
    ```bash
    sudo chown mssql /tmp/data
@@ -108,21 +108,21 @@ The `filelocation.defaultdatadir` and `filelocation.defaultlogdir` settings chan
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultlogdir /tmp/log
    ```
 
-1. This command also assumes that a /tmp/log directory exists, and that it is under the user and group "mssql".
+1. This command also assumes that a /tmp/log directory exists, and that it is under the user and group **mssql**.
 
 ## <a id="dumpdir"></a> Change the default dump directory location
 
-The `filelocation.defaultdumpdir` setting changes the default location where the memory and SQL dumps are generated whenever there is a crash. By default, these files are generated in /var/opt/mssql/log.
+The **filelocation.defaultdumpdir** setting changes the default location where the memory and SQL dumps are generated whenever there is a crash. By default, these files are generated in /var/opt/mssql/log.
 
 To set up this new location, use the following commands:
 
-1. Create the target directory for new dump files. The following example creates a new `/tmp/dump` directory:
+1. Create the target directory for new dump files. The following example creates a new **/tmp/dump** directory:
 
    ```bash
    sudo mkdir /tmp/dump
    ```
 
-1. Change the owner and group of the directory to the `mssql` user:
+1. Change the owner and group of the directory to the **mssql** user:
 
    ```bash
    sudo chown mssql /tmp/dump
@@ -143,17 +143,17 @@ To set up this new location, use the following commands:
 
 ## <a id="backupdir"></a> Change the default backup directory location
 
-The `filelocation.defaultbackupdir` setting changes the default location where the backup files are generated. By default, these files are generated in /var/opt/mssql/data.
+The **filelocation.defaultbackupdir** setting changes the default location where the backup files are generated. By default, these files are generated in /var/opt/mssql/data.
 
 To set up this new location, use the following commands:
 
-1. Create the target directory for new backup files. The following example creates a new `/tmp/backup` directory:
+1. Create the target directory for new backup files. The following example creates a new **/tmp/backup** directory:
 
    ```bash
    sudo mkdir /tmp/backup
    ```
 
-1. Change the owner and group of the directory to the "mssql" user:
+1. Change the owner and group of the directory to the **mssql** user:
 
    ```bash
    sudo chown mssql /tmp/backup
@@ -207,7 +207,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
 
 ## <a id="hadr"></a> High Availability
 
-The `hadr.hadrenabled` option enables availability groups on your SQL Server instance. The following command enables availability groups by setting **hadr.hadrenabled** to 1. You must restart SQL Server for the setting to take effect.
+The **hadr.hadrenabled** option enables availability groups on your SQL Server instance. The following command enables availability groups by setting **hadr.hadrenabled** to 1. You must restart SQL Server for the setting to take effect.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -221,22 +221,22 @@ For information how this is used with availability groups, see the following two
 
 ## <a id="localaudit"></a> Set local audit directory
 
-The `telemetry.userrequestedlocalauditdirectory` setting enables Local Audit and lets you set the directory where the Local Audit logs are created.
+The **telemetry.userrequestedlocalauditdirectory** setting enables Local Audit and lets you set the directory where the Local Audit logs are created.
 
-1. Create a target directory for new Local Audit logs. The following example creates a new `/tmp/audit` directory:
+1. Create a target directory for new Local Audit logs. The following example creates a new **/tmp/audit** directory:
 
    ```bash
    sudo mkdir /tmp/audit
    ```
 
-1. Change the owner and group of the directory to the "mssql" user:
+1. Change the owner and group of the directory to the **mssql** user:
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-1. Run the mssql-conf script as root with the `set` command for `telemetry.userrequestedlocalauditdirectory`:
+1. Run the mssql-conf script as root with the **set** command for **telemetry.userrequestedlocalauditdirectory**:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
@@ -250,9 +250,9 @@ The `telemetry.userrequestedlocalauditdirectory` setting enables Local Audit and
 
 For more information, see [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md).
 
-## <a id="lcid></a> Change the SQL Server locale
+## <a id="lcid"></a> Change the SQL Server locale
 
-The `language.lcid` setting changes the SQL Server locale to any supported language identifier (LCID). 
+The **language.lcid** setting changes the SQL Server locale to any supported language identifier (LCID). 
 
 1. The following example changes the locale to French (1036):
 
@@ -268,9 +268,9 @@ The `language.lcid` setting changes the SQL Server locale to any supported langu
 
 ## <a id="memorylimit"></a> Set the memory limit
 
-The `memory.memorylimitmb` setting controls the amount physical memory (in MB) available to SQL Server. The default is 80% of the physical memory.
+The **memory.memorylimitmb** setting controls the amount physical memory (in MB) available to SQL Server. The default is 80% of the physical memory.
 
-1. Run the mssql-conf script as root with the `set` command for `memory.memorylimitmb`. The following example changes the memory available to SQL Server to 3.25 GB (3328 MB).
+1. Run the mssql-conf script as root with the **set** command for **memory.memorylimitmb**. The following example changes the memory available to SQL Server to 3.25 GB (3328 MB).
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set memory.memorylimitmb 3328
@@ -284,7 +284,7 @@ The `memory.memorylimitmb` setting controls the amount physical memory (in MB) a
 
 ## <a id="tcpport"></a> Change the TCP port
 
-The `network.tcpport` setting changes the TCP port where SQL Server listens for connections. By default, this port is set to 1433. To change the port, run the following commands:
+The **network.tcpport** setting changes the TCP port where SQL Server listens for connections. By default, this port is set to 1433. To change the port, run the following commands:
 
 1. Run the mssql-conf script as root with the "set" command for "network.tcpport":
 
@@ -310,18 +310,18 @@ The following options configure TLS for an instance of SQL Server running on Lin
 
 |Option |Description |
 |--- |--- |
-|`network.forceencryption` |If 1, then [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] forces all connections to be encrypted. By default, this option is 0. |
-|`network.tlscert` |The absolute path to the certificate file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:   `/etc/ssl/certs/mssql.pem`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
-|`network.tlskey` |The absolute path to the private key file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:  `/etc/ssl/private/mssql.key`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
-|`network.tlsprotocols` |A comma-separated list of which TLS protocols are allowed by SQL Server. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client does not support any allowed protocol, [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] rejects the connection attempt.  For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0).  If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |
-|`network.tlsciphers` |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In general, you should not need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
-| `network.kerberoskeytabfile` |Path to the Kerberos keytab file |
+|**network.forceencryption** |If 1, then [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] forces all connections to be encrypted. By default, this option is 0. |
+|**network.tlscert** |The absolute path to the certificate file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:   `/etc/ssl/certs/mssql.pem`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlskey** |The absolute path to the private key file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:  `/etc/ssl/private/mssql.key`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlsprotocols** |A comma-separated list of which TLS protocols are allowed by SQL Server. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client does not support any allowed protocol, [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] rejects the connection attempt.  For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0).  If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |
+|**network.tlsciphers** |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In general, you should not need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+| **network.kerberoskeytabfile** |Path to the Kerberos keytab file |
 
 For an example of using the TLS settings, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
 
 ## <a id="traceflags"></a> Enable/Disable traceflags
 
-This `traceflag` option enables or disables traceflags for the startup of the SQL Server service. To enable/disable a traceflag use the following commands:
+This **traceflag** option enables or disables traceflags for the startup of the SQL Server service. To enable/disable a traceflag use the following commands:
 
 1. Enable a traceflag using the following command. For example, for Traceflag 1234:
 
@@ -335,7 +335,7 @@ This `traceflag` option enables or disables traceflags for the startup of the SQ
    sudo /opt/mssql/bin/mssql-conf traceflag 2345 3456 on
    ```
 
-1. In a similar way, you can disable one or more enabled traceflags by specifying them and adding the `off` parameter:
+1. In a similar way, you can disable one or more enabled traceflags by specifying them and adding the **off** parameter:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf traceflag 1234 2345 3456 off

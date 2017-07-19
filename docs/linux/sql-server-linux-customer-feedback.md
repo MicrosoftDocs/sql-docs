@@ -30,7 +30,7 @@ SQL Server 2017 always collects and sends information about the installation exp
 
 This option lets you change if SQL Server sends feedback to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
 
-1. Run the mssql-conf script as root with the `set` command for `telemetry.customerfeedback`. The following example turns off customer feedback by specifying `false`.
+1. Run the mssql-conf script as root with the **set** command for **telemetry.customerfeedback**. The following example turns off customer feedback by specifying **false**.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -52,20 +52,20 @@ In SQL Server on Linux, Local Audit is configurable at instance level for SQL Se
 
 This option enables Local Audit and lets you set the directory where the Local Audit logs are created.
 
-1. Create a target directory for new Local Audit logs. The following example creates a new `/tmp/audit` directory:
+1. Create a target directory for new Local Audit logs. The following example creates a new **/tmp/audit** directory:
 
    ```bash
    sudo mkdir /tmp/audit
    ```
 
-1. Change the owner and group of the directory to the "mssql" user:
+1. Change the owner and group of the directory to the **mssql** user:
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-1. Run the mssql-conf script as root with the `set` command for `telemetry.userrequestedlocalauditdirectory`:
+1. Run the mssql-conf script as root with the **set** command for **telemetry.userrequestedlocalauditdirectory**:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit

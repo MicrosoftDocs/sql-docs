@@ -39,14 +39,14 @@ To install the `mssql-server-is` package on Ubuntu, follow these steps:
 1.  Import the public repository GPG keys.
 
     ```bash
-    curl httpspackages.microsoft.comkeysmicrosoft.asc  sudo apt-key add –
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
     ```
 
 
 2.  Register the Microsoft SQL Server Ubuntu repository.
 
     ```bash
-    curl httpspackages.microsoft.comconfigubuntu16.04mssql-server.list sudo tee etcaptsources.list.dmssql-server.list
+    curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
     ```
 
 
@@ -61,7 +61,7 @@ To install the `mssql-server-is` package on Ubuntu, follow these steps:
 4.  After installing Integration Services, run `ssis-conf`.
 
     ```bash
-    sudo /opt/ssis/bin/ssis-conf
+    sudo /opt/ssis/bin/ssis-conf setup
     ```
 
 
@@ -95,7 +95,7 @@ sudo apt-get install mssql-server-is
 Copy the SSIS package to the Linux computer. Then use the following command to run the package.
 
 ```bash
-dtexec F <package name> DE <protection password>
+dtexec /F <package name> /DE <protection password>
 ```
 
 ## Next steps

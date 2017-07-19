@@ -5,7 +5,7 @@ description:  This quick start tutorial shows how to install SQL Server 2017 on 
 author: sabotta 
 ms.author: carlasab 
 manager: craigg
-ms.date: 07/17/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -17,7 +17,7 @@ In this quick start tutorial, you first install SQL Server 2017 RC1 on Red Hat E
 
 ## Prerequisites
 
-You must have a RHEL 7.3 machine with at least 3.25 GB of memory. 
+You must have a RHEL 7.3 machine with **at least 3.25 GB** of memory.
 
 To install Red Hat Enterprise Linux, go to [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. For the basic process, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
 
@@ -54,11 +54,16 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    sudo yum install -y mssql-server
    ```
    
-1. After the package installation finishes, run **mssql-conf setup** and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+1. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and chose your edition.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
+   > [!TIP]
+   > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+
+   > [!TIP]
+   > When installing RC1, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select: `This is an evaluation version.  There are [175] days left in the evaluation period.` This does not mean that you have set up the Evaluation edition unless you selected that option.
 
 1. Once the configuration is done, verify that the service is running:
 

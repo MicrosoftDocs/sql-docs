@@ -1,7 +1,7 @@
 ---
-title: "Build an R Model and Save using SQL | Microsoft Docs"
+title: "Build an R model and save to SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2016"
+ms.date: "07/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,21 +14,14 @@ applies_to:
 dev_langs: 
   - "R"
 ms.assetid: 69b374c1-2042-4861-8f8b-204a6297c0db
-caps.latest.revision: 20
+caps.latest.revision: 21
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Build an R model and save it to SQL (walkthrough)
+# Build an R model and save to SQL Server
 
-In this part of the data science walkthrough, you learn how to build a machine learning model using R, and save the model in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
-
-These columns can be used as the features in the model:
-
-+ passenger\_count
-+ trip\_distance
-+ trip\_time\_in\_secs
-+ direct\_distance
+In this step, you'll learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Create a classification model using rxLogit
 
@@ -50,42 +43,38 @@ The model you build is a binary classifier that predicts whether the taxi driver
 
      *Results*
 
-    ```
-    rxLogit(formula = tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = sql_feature_ds)
-    
-    Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance
-    Data: sql_feature_ds (RxSqlServerData Data Source)
-    Dependent variable(s): tipped
-    Total independent variables: 5
-    Number of valid observations: 1703957
-    Number of missing observations: 0
-    -2*LogLikelihood: 2356636.8033 (Residual deviance on 1703952 degrees of freedom)
-     
-    Coefficients:
-                        Estimate Std. Error z value Pr(>|z|)
-    (Intercept)        1.253e-01  2.787e-03  44.954 2.22e-16 ***
-    passenger_count   -3.130e-02  1.111e-03 -28.177 2.22e-16 ***
-    trip_distance     -1.193e-07  2.460e-07  -0.485    0.628
-    trip_time_in_secs  7.014e-08  8.861e-08   0.792    0.429
-    direct_distance    1.129e-02  6.450e-04  17.507 2.22e-16 ***
-    ---
-    Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-    
-    Condition number of final variance-covariance matrix: 1.0592
-    Number of iterations: 7
-    ```
+     *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs +*
+     <br/>*direct_distance*
+     <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
+     <br/>*Dependent variable(s): tipped*
+     <br/>*Total independent variables: 5*
+     <br/>*Number of valid observations: 17068*
+     <br/>*Number of missing observations: 0*
+     <br/>*-2\*LogLikelihood: 23540.0602 (Residual deviance on 17063 degrees of freedom)*
+     <br/>*Coefficients:*
+     <br/>*Estimate Std. Error z value Pr(>|z|)*
+     <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
+     <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
+     <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
+     <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
+     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
+     <br/>*---*
+     <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
+     <br/>*Condition number of final variance-covariance matrix: 48.3933*
+     <br/>*Number of iterations: 4*
 
 ## Use the logistic regression model for scoring
 
 Now that the model is built, you can use to predict whether the driver is likely to get a tip on a particular drive or not.
 
-1. First, use the [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) function to define a data source object for storing the scoring results:
+1. First, use the [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) function to define a data source object for storing the scoring resul
 
     ```R
     scoredOutput <- RxSqlServerData(
       connectionString = connStr,
       table = "taxiScoreOutput"  )
     ```
+
     + To make this example simpler, the input to the logistic regression model is the same feature data source (`sql_feature_ds`) that you used to train the model.  More typically, you might have some new data to score with, or you might have set aside some data for testing vs. training.
   
     + The prediction results will be saved in the table, _taxiscoreOutput_. Notice that the schema for this table is not defined when you create it using rxSqlServerData. The schema is obtained from the rxPredict output.
@@ -181,7 +170,7 @@ Therefore, moving a trained model from R to SQL Server includes these steps:
 
 + Transmitting the serialized object to the database
 
-+ Saving the model in a **varbinary(max)** column
++ Saving the model in a varbinary(max) column
 
 In this section, you learn how to persist the model, and how to call it to make predictions.
 
@@ -242,3 +231,4 @@ In the next and final lesson, you learn how to perform scoring against the saved
 ## Previous lesson
 
 [Create data features using R and SQL](/walkthrough-create-data-features.md)
+

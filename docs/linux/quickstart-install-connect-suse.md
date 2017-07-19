@@ -5,7 +5,7 @@ description:  This quick start tutorial shows how to install SQL Server 2017 on 
 author: sabotta 
 ms.author: carlasab 
 manager: craigg
-ms.date: 07/17/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -17,7 +17,7 @@ In this quick start tutorial, you first install SQL Server 2017 RC1 on SUSE Linu
 
 ## Prerequisites
 
-You must have a SLES v12 SP2 machine with at least 3.25 GB of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
+You must have a SLES v12 SP2 machine with **at least 3.25 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
 To install SUSE Linux Enterprise Server, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. For the basic process, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
 
@@ -44,20 +44,29 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    sudo zypper install mssql-server
    ```
 
-1. After the package installation finishes, run **mssql-conf setup** and follow the prompts. Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+1. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and chose your edition.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-   > [!IMPORTANT]
-   > If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
+   > [!TIP]
+   > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+
+   > [!TIP]
+   > When installing RC1, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
+   >
+   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
+   >
+   > This does not reflect the edition you selected. It relates to the preview period for RC1.
 
 1. Once the configuration is done, verify that the service is running:
 
    ```bash
    systemctl status mssql-server
    ```
+
+1. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
 
 At this point, SQL Server is running on your SLES machine and is ready to use!
 

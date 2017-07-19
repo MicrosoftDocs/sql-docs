@@ -70,7 +70,7 @@ This topic describes improvements made to the [!INCLUDE[ssdenoversion-md](../../
 - We have made several performance and language enhancements to Memory-Optimized objects:
     - `sp_spaceused` is now supported for memory-optimized tables.
     - `sp_rename` is now supported for memory-optimized tables and natively compiled T-SQL modules.
-    - `CASE` statements are now supported for natively compiled T-SQL modules.
+    - `CASE` expressions are now supported for natively compiled T-SQL modules.
     - The limitation of 8 indexes on memory-optimized tables has been eliminated.
     - `TOP (N) WITH TIES` is now supported in natively compiled T-SQL modules.
     - `ALTER TABLE` against memory-optimized tables is now usually substantially faster.

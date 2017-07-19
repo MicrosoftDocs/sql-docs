@@ -5,7 +5,7 @@ description:  This quick start tutorial shows how to install SQL Server 2017 on 
 author: sabotta 
 ms.author: carlasab 
 manager: craigg
-ms.date: 07/17/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

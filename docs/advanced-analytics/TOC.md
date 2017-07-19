@@ -119,7 +119,7 @@
 ### [Native scoring](sql-native-scoring.md)
 ### [Real-time scoring](real-time-scoring.md)
 ### [Predictive modeling with R](r/data-exploration-and-predictive-modeling-with-r.md)
-### [How to perform real-time or native scoring](r/how-to-real-time-scoring.md)
+### [How to perform real-time or native scoring](r/how-to-do-real-time-scoring.md)
 ### [Load R objects using ODBC](r/save-and-load-r-objects-from-sql-server-using-odbc.md)
 ### [Converting R Code for Use in Machine Learning Services](r/converting-r-code-for-use-in-sql-server.md)
 ### [Creating multiple models using rxExecBy](r/creating-multiple-models-using-rxexecby.md)

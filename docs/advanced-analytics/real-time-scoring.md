@@ -36,7 +36,7 @@ Realtime scoring is a multi-step process:
 
 ## Get started
 
-For code examples and instructions, see [How to perform native scoring or realtime scoring](r/how-to-real-time-scoring.md).
+For code examples and instructions, see [How to perform native scoring or realtime scoring](r/how-to-do-real-time-scoring.md).
 
 For an example of how rxPredict can used for scoring, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 

@@ -2,7 +2,7 @@
 title: "JSON_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
+ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,28 +28,28 @@ manager: "jhubbard"
 
   Extracts a scalar value from a JSON string.  
   
- To extract an object or an array from a JSON string, see [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md). For info about the differences between **JSON_VALUE** and **JSON_QUERY**, see [Compare JSON_VALUE and JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
+ To extract an object or an array from a JSON string instead of a scalar value, see [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md). For info about the differences between **JSON_VALUE** and **JSON_QUERY**, see [Compare JSON_VALUE and JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```tsql  
+```sql  
 JSON_VALUE ( expression , path )  
 ```  
   
 ## Arguments  
  *expression*  
  An expression. Typically the name of a variable or a column that contains JSON text.  
-  
- **JSON_VALUE** returns an error if it finds JSON that is not valid in *expression* before it finds the value identified by *path*. If **JSON_VALUE** doesn't find the value identified by *path*, it scans the entire text and returns an error if it finds JSON that is not valid anywhere in *expression*.  
+ 
+ If **JSON_VALUE** finds JSON that is not valid in *expression* before it finds the value identified by *path*, the function returns an error. If **JSON_VALUE* doesn't find the value identified by *path*, it scans the entire text and returns an error if it finds JSON that is not valid anywhere in *expression*.
   
  *path*  
  A JSON path that specifies the property to extract. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
  
 In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
   
- **JSON_VALUE** returns an error if the format of *path* isn't valid.  
+ If the format of *path* isn't valid, **JSON_VALUE** returns an error .  
   
 ## Return Value  
  Returns a single text value of type nvarchar(4000). The collation of the returned value is the same as the collation of the input expression.  
@@ -60,9 +60,12 @@ In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDS
   
 -   In strict mode, **JSON_VALUE** returns an error.  
   
- If you have to return scalar values greater than 4000 characters, use **OPENJSON**. For more info, see [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
+ If you have to return scalar values greater than 4000 characters, use **OPENJSON** instead of **JSON_VALUE**. For more info, see [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
-## Remarks  
+## Remarks
+
+### Lax mode and strict mode
+
  Consider the following JSON text:  
   
 ```json  
@@ -97,9 +100,9 @@ SET @jsonInfo=N'{
 ## Examples  
   
 ### Example 1  
- The following example uses the values of JSON properties in query results. Since **JSON_VALUE** preserves the collation of the source, the sort order of the results depends on the collation of the jsonInfo column.  
+ The following example uses the values of the JSON properties `town` and `state` in query results. Since **JSON_VALUE** preserves the collation of the source, the sort order of the results depends on the collation of the `jsonInfo` column.  
   
-```tsql  
+```sql  
 SELECT FirstName,LastName,
  JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
 FROM Person.Person
@@ -108,9 +111,9 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ```  
   
 ### Example 2  
- The following example extracts the value of a JSON property into a local variable.  
+ The following example extracts the value of the JSON property `town` into a local variable.  
   
-```tsql  
+```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 
@@ -122,14 +125,14 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
 ### Example 3  
  The following example creates computed columns based on the values of JSON properties.  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Store
  (
   StoreID INT IDENTITY(1,1) NOT NULL,
   Address VARCHAR(500),
   jsonContent NVARCHAR(8000),
-  Longitude AS JSON_VALUE(jsonContent,'$.address[0].longitude'),
-  Latitude AS JSON_VALUE(jsonContent,'$.address[0].latitude')
+  Longitude AS JSON_VALUE(jsonContent, '$.address[0].longitude'),
+  Latitude AS JSON_VALUE(jsonContent, '$.address[0].latitude')
  )
 ```  
   

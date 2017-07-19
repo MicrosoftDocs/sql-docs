@@ -56,7 +56,7 @@ For more information, see these articles:
 
 + [Realtime scoring](real-time-scoring.md)
 + [Native scoring](sql-native-scoring.md)
-+ [How to perform realtime scoring or native scoring](r/how-to-do-real-time-scoring.md)
++ [How to perform realtime scoring or native scoring](r/how-to-do-realtime-scoring.md)
 
 ## Other updates
 

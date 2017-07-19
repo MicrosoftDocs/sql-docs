@@ -63,7 +63,7 @@ The function returns predictions for the input data, together with any columns o
 
 For code samples, along with instructions on how to prepare the models in the required binary format, see this article:
 
-+ [How to perform realtime scoring](r/how-to-do-real-time-scoring.md)
++ [How to perform realtime scoring](r/how-to-do-realtime-scoring.md)
 
 ## Requirements
 

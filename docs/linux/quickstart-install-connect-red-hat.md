@@ -65,7 +65,7 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    > [!TIP]
    > When installing RC1, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
    >
-   >    This is an evaluation version.  There are [175] days left in the evaluation period.
+   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
    >
    > This does not reflect the edition you selected. It relates to the preview period for RC1.
 

@@ -182,7 +182,12 @@ In RC1 the cluster resource agent sets the virtual server name like it does in a
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
 
 #### SQL Server Integration Services (SSIS)
-You can run SSIS packages on Linux. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
+You can run SSIS packages on Linux. For more info, see the following articles:
+-   [Blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
+-   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
+-   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
+
+Please note the following known issues with this release.
 
 - The **mssql-server-is** package is supported on Ubuntu and Red Hat Enterprise Linux (RHEL) in this release.
 

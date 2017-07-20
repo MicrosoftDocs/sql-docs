@@ -37,7 +37,7 @@ over time. In some cases, the new plan might not be better than the previous one
 
 In order to prevent unexpected performance issues, users must periodically monitor system and look for the queries that regressed. If any plan regressed, user should find some
 previous good plan and force it instead of the current one using `sp_query_store_force_plan` procedure. The best practice would be to force last known good plan because older plans might be invalid due to statistic or index changes.
-When user forces last known good plan, he should monitor performance of the query that is executed using the forced plan and verify that forced plan works as expected. Depending on
+The user who forces the last known good plan should monitor performance of the query that is executed using the forced plan and verify that forced plan works as expected. Depending on
 the results of monitoring and analysis, plan should be forced or user should find some other way to optimize the query.
 Manually forced plans should not be forced forever, because the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] should be able to apply optimal plans. The user or DBA should eventually
 unforce the plan using `sp_query_store_unforce_plan` procedure, and let the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] find the optimal plan.
@@ -59,12 +59,12 @@ be executed to fix the problem.
 
 | type | description | datetime | score | details | … |
 | --- | --- | --- | --- | --- | --- |
-| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 4 ms to 14 ms | 3/17/2017 | 83 | `queryId` `forcedPlanId` `regressedPlanId` `T-SQL` |   |
-| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 37 ms to 84 ms | 3/16/2017 | 26 | `queryId` `forcedPlanId` `regressedPlanId` `T-SQL` |   |
+| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 4 ms to 14 ms | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
+| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 37 ms to 84 ms | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 
-Some information from this view are described in the following list:
+Some columns from this view are described in the following list:
  - Type of the recommended action - `FORCE_LAST_GOOD_PLAN`.
- - Description that contains information why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] thinks that this is a potential performance regression.
+ - Description that contains information why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] thinks that this plan change is a potential performance regression.
  - Datetime when the potential regression is detected.
  - Score of this recommendation. 
  - Details about the issues such as id of the detected plan, id of the regressed plan, id of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
@@ -102,7 +102,7 @@ FROM sys.dm_db_tuning_recommendations
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CPU time changed from 3 ms to 46 ms | 36 | EXEC sp\_query\_store\_force\_plan 12, 17; | 12 | 28 | 17 | 11.59 | 0
 
-`estimated\_gain` represents the estimated number of seconds that would be saved if recommended plan is executed instead of the current plan. Recommended plan should be forced instead of the current plan if the gain is greater than 10 seconds. The current plan is error prone if there are more errors (for example, time-outs or aborted executions) in this plan than in the recommended plan. In that case `error\_prone` column would be set to the value 1, and this is another reason why the recommended plan should be forced instead of the current one.
+`estimated\_gain` represents the estimated number of seconds that would be saved if the recommended plan would be executed instead of the current plan. The recommended plan should be forced instead of the current plan if the gain is greater than 10 seconds. If there are more errors (for example, time-outs or aborted executions) in the current plan than in the recommended plan, the column `error\_prone` would be set to the value 1. Error prone plan is another reason why the recommended plan should be forced instead of the current one.
 
 ## Automatic plan choice correction
 

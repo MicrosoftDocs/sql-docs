@@ -249,6 +249,10 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
 
 After upgrading all servers, you can failback - failover back to the original primary - if necessary. 
 
+## Drop an availability group
+
+To delete an availability group, run the following transact SQL command
+
 ## Next steps
 
 [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-rhel.md)

@@ -227,5 +227,5 @@ manager: "jhubbard"
 
 To troubleshoot external table errors, see Murshed Zaman's blog [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions").
 
-## See Also
+## See also
 [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)

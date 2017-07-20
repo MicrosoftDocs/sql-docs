@@ -176,6 +176,79 @@ If you cannot failover the availability group with the cluster management tools,
 
 For `CLUSTER_TYPE=EXTERNAL`, the  failover trigger semantics are different compared to WSFC. When the availability group is on an instance of SQL Server in a WSFC, transitioning out of `ONLINE` state for the database causes the availability group health to report a fault. This will signal the cluster manager to trigger a failover action. On Linux, the SQL Server instance cannot communicate with the cluster. Monitoring for database health is done "outside-in". If user opted in for database level failover monitoring and failover (by setting the option `DB_FAILOVER=ON` when creating the availability group), the cluster will check if the database state is `ONLINE` every time when it runs a monitoring action. The cluster queries the state in `sys.databases`. For any state different than `ONLINE`, it will trigger a failover automatically (if automatic failover conditions are met). The actual time of the failover depends on the frequency of the monitoring action as well as the database state being updated in sys.databases.
 
+## Upgrade availability group
+
+Before you upgrade an availability group, review the best practices at [Upgrading availability group replica instances](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
+
+The following sections explain how to upgrade SQL Server instances on Linux with availability groups. 
+
+### Upgrade steps on Linux
+
+When availability group replicas are on instances of SQL Server in Linux, the cluster type of the availability group is either EXTERNAL or NONE. An availability group that is managed by a cluster manager besides Windows Server Failover Cluster (WSFC) is EXTERNAL. Pacemaker with Corosync is an example of an external cluster manager. The upgrade steps outlined here are specific for availability groups of cluster type EXTERNAL or NONE.
+
+1. Before you begin, backup each database.
+2. Upgrade instances of SQL Server that host secondary replicas.
+    a. Upgrade asynchronous secondary replicas first.
+    b. Upgrade synchronous secondary replicas.
+
+   >[!NOTE]
+   >If an availability group only has asynchronous replicas - to avoid any data loss change one replica to synchronous and wait until it is synchronized. Then upgrade this replica.
+
+   The following example upgrades `mssql-server` and `mssql-server-ha` packages.
+
+   ```bash
+   sudo yum update mssql-server
+   sudo yum update mssql-server-ha
+   ```
+
+1. After all secondary replicas are upgraded, manually fail over to one of the synchronous secondary replicas.
+
+   For availability groups with EXTERNAL cluster type, use the cluster management tools to fail over. The following example fails over an availability group. Replace `<targetReplicaName>` with the name of the synchronous secondary replica that will become primary:
+
+   ```bash
+   sudo pcs resource move ag_cluster-master <targetReplicaName> --master  
+   ``` 
+   
+   If the availability group cluster type is NONE, manually failover the availability group with Transact-SQL.
+
+   >[!IMPORTANT]
+   >This procedure only applies to availability groups that do not have a cluster manager. Run the following steps in order: 
+
+   a. The following command sets the primary replica to secondary. Replace `AG1` with the name of your availability group. Run the Transact-SQL command on the instance of SQL Server that hosts the primary replica.
+
+   ```transact-sql
+   ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
+   ```
+
+   b. The following command sets a synchronous secondary replica to primary. Run the following Transact-SQL command on the target instance of SQL Server - the instance that hosts the synchronous secondary replica.
+
+   ```transact-sql
+   ALTER AVAILABILITY GROUP [ag1] FAILOVER;
+   ```
+
+1. After failover, upgrade SQL Server on the old primary replica. 
+
+   The following example upgrades `mssql-server` and `mssql-server-ha` packages.
+
+   ```bash
+   sudo yum update mssql-server
+   sudo yum update mssql-server-ha
+   ```
+
+1. For an availability groups with an external cluster manager - where cluster type is EXTERNAL, cleanup the location constraint that was caused by the manual failover. 
+
+   ```bash
+   sudo pcs constraint remove cli-prefer-ag_cluster-master  
+   ```
+
+1. Resume data movement for the newly upgraded secondary replica - the former primary replica. This is required when a higher version instance of SQL Server is transferring log blocks to a lower version instance in an availability group. Run the following command on the new secondary replica (the previous primary replica).
+
+   ```transact-sql
+   ALTER DATABASE database_name SET HADR RESUME;
+   ```
+
+After upgrading all servers, you can failback - failover back to the original primary - if necessary. 
+
 ## Next steps
 
 [Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources](sql-server-linux-availability-group-cluster-rhel.md)

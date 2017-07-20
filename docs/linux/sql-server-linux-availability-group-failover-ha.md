@@ -184,7 +184,7 @@ The following sections explain how to upgrade SQL Server instances on Linux with
 
 ### Upgrade steps on Linux
 
-When availability group replicas are on instances of SQL Server in Linux, the cluster type of the availability group is either EXTERNAL or NONE. An availability group that is managed by a cluster manager besides Windows Server Failover Cluster (WSFC) is EXTERNAL. Pacemaker with Corosync is an example of an external cluster manager. The upgrade steps outlined here are specific for availability groups of cluster type EXTERNAL or NONE.
+When availability group replicas are on instances of SQL Server in Linux, the cluster type of the availability group is either `EXTERNAL` or `NONE`. An availability group that is managed by a cluster manager besides Windows Server Failover Cluster (WSFC) is `EXTERNAL`. Pacemaker with Corosync is an example of an external cluster manager. An availability group with no cluster manager has cluster type `NONE` The upgrade steps outlined here are specific for availability groups of cluster type `EXTERNAL` or `NONE`.
 
 1. Before you begin, backup each database.
 2. Upgrade instances of SQL Server that host secondary replicas.
@@ -203,13 +203,13 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
 
 1. After all secondary replicas are upgraded, manually fail over to one of the synchronous secondary replicas.
 
-   For availability groups with EXTERNAL cluster type, use the cluster management tools to fail over. The following example fails over an availability group. Replace `<targetReplicaName>` with the name of the synchronous secondary replica that will become primary:
+   For availability groups with `EXTERNAL` cluster type, use the cluster management tools to fail over. The following example fails over an availability group. Replace `<targetReplicaName>` with the name of the synchronous secondary replica that will become primary:
 
    ```bash
    sudo pcs resource move ag_cluster-master <targetReplicaName> --master  
    ``` 
    
-   If the availability group cluster type is NONE, manually failover the availability group with Transact-SQL.
+   If the availability group cluster type is `NONE`, manually failover the availability group with Transact-SQL.
 
    >[!IMPORTANT]
    >This procedure only applies to availability groups that do not have a cluster manager. Run the following steps in order: 

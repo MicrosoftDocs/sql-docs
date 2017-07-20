@@ -1,6 +1,7 @@
 # [SQL Server Installation](installation-for-sql-server.md)  
 # [Upgrade SQL Server](upgrade-sql-server.md)  
-## [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)  
+## [Supported Version and Edition Upgrades SQL Server 2017](supported-version-and-edition-upgrades-2017.md)  
+## [Supported Version and Edition Upgrades SQL Server 2016](supported-version-and-edition-upgrades.md)  
 ## [Prepare for upgrade by running Data Migration Assistant](prepare-for-upgrade-by-running-data-migration-assistant.md)  
 ## [Are you upgrading from SQL Server 2005?](are-you-upgrading-from-sql-server-2005.md)  
 ## [Upgrade Analysis Services](upgrade-analysis-services.md)  

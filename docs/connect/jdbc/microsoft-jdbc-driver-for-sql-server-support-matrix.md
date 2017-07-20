@@ -29,7 +29,7 @@ manager: "jhubbard"
   
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|  
-|Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.0.jre8.jar<br> mssql-jdbc-6.2.0.jre7.jar|June 30, 2022|    
+|Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.1.jre8.jar<br> mssql-jdbc-6.2.1.jre7.jar|June 30, 2022|    
 |Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|July 14, 2021|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|August 24, 2020|  
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|December 12, 2019|  

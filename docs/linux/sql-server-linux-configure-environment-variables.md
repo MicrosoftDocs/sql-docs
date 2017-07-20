@@ -42,7 +42,7 @@ You can use several different environment variables to configure SQL Server 2017
 | **MSSQL_PID** | Set the SQL Server edition or product key. Possible values include: Evaluation, Developer, Express, Web, Standard, Enterprise, or a product key in the form of #####-#####-#####-#####-#####, where '#' is a number or a letter. |
 | **MSSQL_LCID** | Sets the language ID to use for SQL Server. For example 1036 is French. |
 | **MSSQL_COLLATION** | Sets the default collation for SQL Server. This overrides the default mapping of language id (LCID) to collation. |
-| **MSSQL_MEMORY_LIMIT_MB** | Sets the maximum amount of memory SQL Server can use. By default it is 80% of the total physical memory. |
+| **MSSQL_MEMORY_LIMIT_MB** | Sets the maximum amount of memory (in MB) that SQL Server can use. By default it is 80% of the total physical memory. |
 | **MSSQL_TCP_PORT** | Configure the TCP port that SQL Server listens on (default 1433). |
 | **MSSQL_IP_ADDRESS** | Set the IP address. Currently, the IP address must be IPv4 style (0.0.0.0). |
 | **MSSQL_BACKUP_DIR** | Set the Default backup directory location. |

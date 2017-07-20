@@ -6,7 +6,7 @@ description: This topic describes how SQL Server runs on Linux and provides info
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -36,7 +36,7 @@ To get started, install SQL Server on Linux using one of the following quick sta
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Run on Docker](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-docker.md)
 
 > [!NOTE]
 > Docker itself runs on multiple platforms, which means that you can run the Docker image on Linux, Mac, and Windows.

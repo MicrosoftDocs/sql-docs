@@ -1,7 +1,7 @@
 ---
-title: "Create data features using R and T-SQL (SQL-R walkthrough)| Microsoft Docs"
+title: "Create data features using R and SQL (walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2017"
+ms.date: "07/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Create data features using R and SQL
+# Create data features using R and SQL (walkthrough)
 
 Data engineering is an important part of machine learning. Data often needs to be transformed before you can use it for predictive modeling. If the data does not have the features you need, you can engineer them from existing values.
 
@@ -71,12 +71,9 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
       return (d)
     }
     ```
-
-    + The first line defines a new environment. In R, an environment can be used to encapsulate name spaces in packages and such. You can use the `search()` function to view the environments in your workspace. To view the objects in a specific environment, type `ls(<envname>)`.
-
+  
+    + The first line defines a new environment. In R, an environment can be used to encapsulate name spaces in packages and such.  You can use the `search()` function to view the environments in your workspace. To view the objects in a specific environment, type `ls(<envname>)`.
     + The lines beginning with `$env.ComputeDistance` contain the code that defines the haversine formula, which calculates the *great-circle distance* between two points on a sphere.
-
-    
 
 4. Having defined the function, you apply it to the data to create a new feature column, *direct_distance*. but before you run the transformation, change the compute context to local.
 
@@ -172,24 +169,28 @@ Now you'll create a custom SQL function, *ComputeDist*, to accomplish the same t
         trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
         pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
-        FROM nyctaxi_sample"
+        FROM nyctaxi_sample
+        tablesample (1 percent) repeatable (98052)"
     ```
-
-5. Use the following lines of code to call the [!INCLUDE[tsql](../../includes/tsql-md.md)] function from your R environment and apply it to the data defined in *featureEngineeringQuery*. At this point, you should be in the local compute context.
-
+  
+    > [!TIP]
+    > This query has been modified to get a smaller sample of data, to make this walkthrough faster. You can remove the tablesample clause if you want to get all the data.
+  
+5. Use the following lines of code to call the [!INCLUDE[tsql](../../includes/tsql-md.md)] function from your R environment and apply it to the data defined in *featureEngineeringQuery*.
+  
     ```R
-    sql_feature_ds = RxSqlServerData(sqlQuery = featureEngineeringQuery,
+    featureDataSource = RxSqlServerData(sqlQuery = featureEngineeringQuery,
       colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric",
              dropoff_longitude = "numeric", dropoff_latitude = "numeric",
              passenger_count  = "numeric", trip_distance  = "numeric",
               trip_time_in_secs  = "numeric", direct_distance  = "numeric"),
       connectionString = connStr)
     ```
-
-5. Now that the new feature has been added to the data source, call rxGetVarInfo to create a summary of the feature table.
-
+  
+6.  Now that the new feature is created, call **rxGetVarsInfo** to create a summary of the data in the feature table.
+  
     ```R
-    rxGetVarInfo(data = sql_feature_ds)
+    rxGetVarInfo(data = featureDataSource)
     ```
 
     *Results*
@@ -240,3 +241,4 @@ Your times might vary significantly, depending on your network speed, and your h
 ## Previous lesson
 
 [View and summarize data using R](/walkthrough-view-and-summarize-data-using-r.md)
+

@@ -14,12 +14,12 @@ applies_to:
 dev_langs: 
   - "R"
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 29
+caps.latest.revision: 30
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Prepare the data using PowerShell
+# Prepare the data using PowerShell (walkthrough)
 
 By this time, you should have one of the following installed:
 

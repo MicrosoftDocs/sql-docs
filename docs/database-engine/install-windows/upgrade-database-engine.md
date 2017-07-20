@@ -1,8 +1,10 @@
 ---
 title: "Upgrade Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/17/2015"
-ms.prod: "sql-server-2016"
+ms.date: "07/18/2017"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,6 +32,6 @@ manager: "jhubbard"
   
 4.  [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) One of the steps to take after your databases have been upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is to enable new features by changing the database compatibility mode and then using the query store to monitor performance. This topic discusses this process and provides a recommended workflow.  
   
-5.  [Take Advantage of New SQL Server 2016 Features](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16) Finally, after you have completed the previous steps, you are ready to explore taking advantage of specific new database engine enhancements. This topic suggests a few of these enhancements and provides links for more information.  
+5.  [Take Advantage of New SQL Server Features](http://www.microsoft.com/sql-server/sql-server-2017) Finally, after you have completed the previous steps, you are ready to explore taking advantage of specific new database engine enhancements. This topic suggests a few of these enhancements and provides links for more information.  
   
   

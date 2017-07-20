@@ -114,7 +114,7 @@ The following list explains how the application works with DTC to complete distr
 1. The SQL Server instance enlists in the DTC transaction. This can happen when there is more than one resource manager in the transaction or if the client requests a transaction be promoted to DTC transaction.
 2. The client does some work in the SQL Server instance under the DTC transaction.
 3. The client issues commit or abort for the DTC transaction.
-    - If the client issues abort, the transaction is aborted immediatley.
+    - If the client issues abort, the transaction is aborted immediately.
     - If the client issues commit, DTC begins the two-phase commit protocol by asking all the resource managers in the transaction to prepare the transaction.
 4. DTC informs all resource managers to commit the transaction after all resource managers successfully acknowledge the prepare phase. If anything prevents successful acknowledgement, DTC aborts the transaction. 
 

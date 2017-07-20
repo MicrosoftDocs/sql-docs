@@ -1,7 +1,7 @@
 ---
 title: "sp_rxPredict | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/14/201"
+ms.date: "07/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

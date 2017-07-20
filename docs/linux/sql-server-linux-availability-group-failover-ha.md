@@ -212,19 +212,21 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    If the availability group cluster type is `NONE`, manually failover the availability group with Transact-SQL.
 
    >[!IMPORTANT]
-   >This procedure only applies to availability groups that do not have a cluster manager. Run the following steps in order: 
+   >This procedure only applies to availability groups that do not have a cluster manager.  
 
-   a. The following command sets the primary replica to secondary. Replace `AG1` with the name of your availability group. Run the Transact-SQL command on the instance of SQL Server that hosts the primary replica.
+   Run the following steps in order:
 
-   ```transact-sql
-   ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
-   ```
+      a. The following command sets the primary replica to secondary. Replace `AG1` with the name of your availability group. Run the Transact-SQL command on the instance of SQL Server that hosts the primary replica.
 
-   b. The following command sets a synchronous secondary replica to primary. Run the following Transact-SQL command on the target instance of SQL Server - the instance that hosts the synchronous secondary replica.
+      ```transact-sql
+      ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
+      ```
 
-   ```transact-sql
-   ALTER AVAILABILITY GROUP [ag1] FAILOVER;
-   ```
+      b. The following command sets a synchronous secondary replica to primary. Run the following Transact-SQL command on the target instance of SQL Server - the instance that hosts the synchronous secondary replica.
+
+      ```transact-sql
+      ALTER AVAILABILITY GROUP [ag1] FAILOVER;
+      ```
 
 1. After failover, upgrade SQL Server on the old primary replica. 
 

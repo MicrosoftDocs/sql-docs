@@ -2,7 +2,7 @@
 title: "SQL Server R Tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/20/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,19 +25,19 @@ This article provides a list of tutorials and samples that demonstrate the use o
 
 + How to run R from T-SQL
 + What are remote and local compute contexts, and how you can execute R code using the SQL Server computer
-+ How to wrap Python code in a stored procedure
-+ Optimizing Python code for a SQL production environment
++ How to wrap R code in a stored procedure
++ Optimizing R code for a SQL production environment
 + Real-world scenarios for embedding machine learning in applications
 
 For information about requirements and setup, see [Prerequisites](#bkmk_Prerequisites).
 
 ## <a name="bkmk_sqltutorials"></a>R Tutorials
 
-This section lists tutorials that were developed for SQL Server 2016 R Services. Unless otherwise indicated, these tutorials are expected to work without modification in SQL Server 2017. All tutorials make extensive use of features in the RevoScaleR package for SQL Server compute contexts.
+This section lists tutorials that were developed for SQL Server 2016 R Services. Unless otherwise indicated, these tutorials are expected to work without modification in SQL Server 2017 Machine Learning Services. All tutorials make extensive use of features in the RevoScaleR package for SQL Server compute contexts.
 
 + [Data Science Deep Dive with R and SQL Server](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 
-  Learn how to use the functions in the RevoScaleR packages. Move data between R and SQL, and switch compute contexts to suit a particular task. Create models and plots, and move them between your development environment and SQL Server.
+  Learn how to use the functions in the RevoScaleR packages. Move data between R and SQL Server, and switch compute contexts to suit a particular task. Create models and plots, and move them between your development environment and the database server.
 
   **Audience:** For data scientists or developers who are already familiar with the R language, and who want to learn about the enhanced R packages and functions in Microsoft R by Revolution Analytics.
 
@@ -78,7 +78,7 @@ This section lists tutorials that were developed for SQL Server 2016 R Services.
 
 ## <a name ="bkmk_samples"></a>R Samples
 
-These samples and demos provided by the SQL Server development team highlight ways that you can use embedded analytics in real-world applications.
+These samples and demos are provided by the SQL Server development team to highlight the many ways that you can use embedded analytics in real-world applications.
 
 + [Build a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
 
@@ -107,4 +107,4 @@ After running SQL Server setup, don't forget these important steps:
 + Ensure that the service that calls the external runtime has necessary permissions
 + Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample
 
-If you run into trouble, see this article for some common issues: [Upgrade and Installation of SQL Server R Services](../../advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md)
+If you run into trouble, see this article for some common issues: [Upgrade and Installation of SQL Server R Services](../../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md)

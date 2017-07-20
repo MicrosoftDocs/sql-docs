@@ -1,8 +1,10 @@
 ---
-title: "Choose a Database Engine Upgrade Method | Microsoft Docs"
+title: "Choose a database engine upgrade method | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
+ms.date: "07/19/2017"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,7 +17,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Choose a Database Engine Upgrade Method
+# Choose a database engine upgrade method
   There are several approaches to consider when you are planning to upgrade the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from a prior release of SQL Server in order to minimize downtime and risk. You can perform an upgrade in-place, migrate to a new installation, or perform a rolling upgrade. The following diagram will help you to choose amongst these approaches. Each of the approaches in the diagram are also discussed below. To assist you with the decision points in the diagram, please also review [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Database Engine Upgrade Method Decision Tree](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Database Engine Upgrade Method Decision Tree")  
@@ -57,7 +59,8 @@ manager: "jhubbard"
  With this approach, you maintain the current environment while you build a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment, frequently on new hardware and with a new version of the operating system. After installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the new environment, you perform a number of steps to prepare the new environment so that you can migrate the existing user databases from the existing environment to the new environment and minimize downtime. These steps include migrating the following:  
   
 -   **System objects:** Some applications depend on information, entities, and/or objects that are outside of the scope of a single user database. Typically, an application has dependencies on the master and msdb databases, and also on the user database. Anything stored outside of a user database that is required for the correct functioning of that database must be made available on the destination server instance. For example, the logins for an application are stored as metadata in the master database, and they must be re-created on the destination server. If an application or database maintenance plan depends on SQL Server Agent jobs, whose metadata is stored in the msdb database, you must re-create those jobs on the destination server instance. Similarly, the metadata for a server-level trigger is stored in master.  
-    When you move the database for an application to another server instance, you must re-create all the metadata of the dependant entities and objects in master and msdb on the destination server instance. For example, if a database application uses server-level triggers, just attaching or restoring the database on the new system is not enough. The database will not work as expected unless you manually re-create the metadata for those triggers in the master database. For detailed information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
+ 
+   When you move the database for an application to another server instance, you must re-create all the metadata of the dependant entities and objects in master and msdb on the destination server instance. For example, if a database application uses server-level triggers, just attaching or restoring the database on the new system is not enough. The database will not work as expected unless you manually re-create the metadata for those triggers in the master database. For detailed information, see [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 -   **Integration Services packages stored in MSDB:** If you are storing packages in MSDB, you will need to either script out those packages using the [dtutil Utility](../../integration-services/dtutil-utility.md) or redeploy them to the new server. Before using the packages on the new server, you will need to upgrade the packages to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
@@ -110,10 +113,7 @@ manager: "jhubbard"
   
 -   A SQL Server Reporting Services scale-out environment: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Choose%20a%20Database%20Engine%20Upgrade%20Method%20page).  
-  
-## Next Steps
+## Next steps
  [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Complete the Database Engine Upgrade](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   

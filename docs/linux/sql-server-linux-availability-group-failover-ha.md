@@ -251,7 +251,12 @@ After upgrading all servers, you can failback - failover back to the original pr
 
 ## Drop an availability group
 
-To delete an availability group, run the following transact SQL command
+To delete an availability group, run [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md). If the cluster type is `EXTERNAL` or `NONE` run the command on every instance of SQL Server that hosts a replica. For example, to drop an availability group named `group_name` run the following command:
+
+   ```transact-sql
+   DROP AVAILABILITY GROUP group_name
+   ```
+ 
 
 ## Next steps
 

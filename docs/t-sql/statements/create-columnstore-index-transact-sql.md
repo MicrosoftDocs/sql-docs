@@ -2,7 +2,7 @@
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/26/2017"
+ms.date: "07/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -73,9 +73,9 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name   
     ON [database_name. [schema_name ] . | schema_name . ] table_name   
         ( column  [ ,...n ] )  
+    [ WHERE <filter_expression> [ AND <filter_expression> ] ]
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]  
-    [ WHERE <filter_expression> [ AND <filter_expression> ] ]  
+    [ ON <on_option> ]   
 [ ; ]  
   
 <with_option> ::=  

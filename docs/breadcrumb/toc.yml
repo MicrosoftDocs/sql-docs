@@ -42,19 +42,19 @@
         - name: ADOX API
           href: /sql/ado/reference/adox-api/
           homepage: /sql/ado/reference/adox-api/adox-object-model
-        - name: ADO RDS API
-          href: /sql/ado/reference/ado-rds-api/
+        - name: ADO RDS API (Deprecated)
+          href: /sql/ado/reference/rds-api/
           homepage: /sql/ado/reference/rds-api/rds-api-reference
     - name: Connect your client to SQL
       href: /sql/connect/
-      homepage: /sql/connect/sql-server-driver-documentation
+      homepage: /sql/connect/sql-server-drivers
       items:
       - name: ADO.NET
         href: /sql/connect/ado-net/
         homepage: /sql/connect/ado-net/microsoft-ado-net-for-sql-server
       - name: JDBC
         href: /sql/connect/jdbc/
-        homepage: /sql/connect/jdbc/overview-of-the-jdbc-driver
+        homepage: /sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server
         items:
         - name: Code samples
           href: /sql/connect/jdbc/code-samples/
@@ -69,15 +69,12 @@
         href: /sql/connect/odbc/
         homepage: /sql/connect/odbc/microsoft-odbc-driver-for-sql-server
         items:
-        - name: Linux
-          href: /sql/connect/odbc/linux/
-          homepage: /sql/connect/odbc/linux/microsoft-odbc-driver-for-sql-server-on-linux
-        - name: Mac
-          href: /sql/connect/odbc/mac/
-          homepage: /sql/connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac
+        - name: Linux and Mac
+          href: /sql/connect/odbc/linux-mac/
+          homepage: /sql/connect/odbc/linux-mac/connecting-with-bcp
         - name: Windows
           href: /sql/connect/odbc/windows/
-          homepage: /sql/connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows
+          homepage: /sql/connect/odbc/windows/asynchronous-execution-notification-method-sample
         - name: ODBC advanced
           href: /sql/odbc/
           homepage: /sql/odbc/microsoft-open-database-connectivity-odbc
@@ -86,25 +83,25 @@
             href: /sql/odbc/admin/
             homepage: /sql/odbc/admin/odbc-data-source-administrator
           - name: Microsoft
-            href    : /sql/odbc/microsoft/
+            href: /sql/odbc/microsoft/
             homepage: /sql/odbc/microsoft/microsoft-supplied-odbc-drivers
           - name: Reference
-            href    : /sql/odbc/reference/
+            href: /sql/odbc/reference/
             homepage: /sql/odbc/reference/introduction-to-odbc
           - name: Appendixes
-            href    : /sql/odbc/reference/appendixes/
-            homepage: /sql/odbc/reference/appendixes/sqlgetdata-cursor-library
+            href: /sql/odbc/reference/appendixes/
+            homepage: /sql/odbc/reference/appendixes/odbc-appendixes
           - name: Develop an application
-            href    : /sql/odbc/reference/develop-app/
+            href: /sql/odbc/reference/develop-app/
             homepage: /sql/odbc/reference/develop-app/checking-feature-support-and-variability
           - name: Develop a driver
-            href    : /sql/odbc/reference/develop-driver/
-            homepage: /sql/odbc/reference/develop-driver/upgrading-a-3-5-driver-to-a-3-8-driver
+            href: /sql/odbc/reference/develop-driver/
+            homepage: /sql/odbc/reference/develop-driver/developing-an-odbc-driver
           - name: Install
-            href    : /sql/odbc/reference/install/
+            href: /sql/odbc/reference/install/
             homepage: /sql/odbc/reference/install/odbc-subkey
           - name: Syntax
-            href    : /sql/odbc/reference/syntax/
+            href: /sql/odbc/reference/syntax/
             homepage: /sql/odbc/reference/syntax/odbc-reference
       - name: PHP
         href: /sql/connect/php/
@@ -135,9 +132,9 @@
       href: /sql/sql-server/
       homepage: /sql/sql-server/sql-server-technical-documentation
       items:
-      - name: Failover clusters 
+      - name: Failover clusters
         href: /sql/sql-server/failover-clusters/
-        homepage: /sql/sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring
+        homepage: /sql/sql-server/failover-clusters/high-availability-solutions-sql-server
       - name: Install
         href: /sql/sql-server/install/
         homepage: /sql/sql-server/install/planning-a-sql-server-installation
@@ -159,11 +156,11 @@
           homepage: /sql/analysis-services/instances/install-windows/install-analysis-services
         - name: Scripting
           href: /sql/analysis-services/scripting/
-          homepage: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla?toc=%2fsql%2fanalysis-services%2fscripting%2ftoc.json
+          homepage: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
           items:
           - name: Data type
             href: /sql/analysis-services/scripting/data-type/
-            homepage: /sql/analysis-services/scripting/data-type/action-data-type-assl?toc=%2fsql%2fanalysis-services%2fscripting%2fdata-type%2ftoc.json
+            homepage: /sql/analysis-services/scripting/data-type/action-data-type-assl
           - name: Objects
             href: /sql/analysis-services/scripting/objects/
             homepage: /sql/analysis-services/scripting/objects/account-element-assl
@@ -175,10 +172,10 @@
             homepage: /sql/analysis-services/scripting/properties/access-element-assl
         - name: Tabular models scripting language objects
           href: /sql/analysis-services/tabular-models-scripting-language-objects/
-          homepage: /sql/analysis-services/tabular-models-scripting-language-objects/database-object-tmsl
+          homepage: /sql/analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects
         - name: Tabular models scripting language commands
           href: /sql/analysis-services/tabular-models-scripting-language-commands/
-          homepage: /sql/analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl
+          homepage: /sql/analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands
         - name: Multidimensional models
           href: /sql/analysis-services/multidimensional-models/
           homepage: /sql/analysis-services/multidimensional-models/multidimensional-models-ssas
@@ -243,10 +240,10 @@
           homepage: /sql/analysis-services/trace-events/analysis-services-trace-events
         - name: Tabular model programming compatibility level 1200
           href: /sql/analysis-services/tabular-model-programming-compatibility-level-1200/
-          homepage: /sql/analysis-services/tabular-model-programming-compatibility-level-1200/add-a-data-source-to-tabular-model-analysis-services-amo-tom
+          homepage: /sql/analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200
         - name: Tabular model programming compatibility levels 1050 1103
           href: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/
-          homepage: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi
+          homepage: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103
           items:
           - name: Representation
             href: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/
@@ -272,27 +269,27 @@
             homepage: /sql/analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets
         - name: XMLA
           href: /sql/analysis-services/xmla/
-          homepage: /sql/analysis-services/xmla/xml-elements-methods-discover
+          homepage: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference
           items:
           - name: XML elements headers
             href: /sql/analysis-services/xmla/xml-elements-headers/
-            homepage: /sql/analysis-services/xmla/xml-elements-headers/beginsession-element-xmla
+            homepage: /sql/analysis-services/xmla/xml-elements-headers/xml-elements-headers
           - name: XML elements commands
             href: /sql/analysis-services/xmla/xml-elements-commands/
-            homepage: /sql/analysis-services/xmla/xml-elements-commands/alter-element-xmla
+            homepage: /sql/analysis-services/xmla/xml-elements-commands/xml-elements-commands
           - name: XML elements properties
             href: /sql/analysis-services/xmla/xml-elements-properties/
-            homepage: /sql/analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla
+            homepage: /sql/analysis-services/xmla/xml-elements-properties/xml-elements-properties
           - name: XML data types
             href: /sql/analysis-services/xmla/xml-data-types/
-            homepage: /sql/analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla
+            homepage: /sql/analysis-services/xmla/xml-data-types/xml-data-types-xmla
       - name: Database Engine
         href: /sql/database-engine/
         homepage: /sql/database-engine/sql-server-database-engine-backward-compatibility
         items:
         - name: Availability groups
           href: /sql/database-engine/availability-groups/windows/
-          homepage: /sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server
+          homepage: /sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server
         - name: Configure on Windows
           href: /sql/database-engine/configure-windows/
           homepage: /sql/database-engine/configure-windows/sql-server-database-engine
@@ -340,7 +337,7 @@
           homepage: /sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard
         - name: Install on Windows
           href: /sql/integration-services/install-windows/
-          homepage: /sql/integration-services/install-windows/upgrade-integration-services
+          homepage: /sql/integration-services/install-windows/install-integration-services
         - name: Packages
           href: /sql/integration-services/packages/
           homepage: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
@@ -364,44 +361,44 @@
           homepage: /sql/integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages
         - name: Extending packages scripting
           href: /sql/integration-services/extending-packages-scripting/
-          homepage: /sql/integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects
+          homepage: /sql/integration-services/extending-packages-scripting/extending-packages-with-scripting
           items:
           - name: Task
             href: /sql/integration-services/extending-packages-scripting/task/
-            homepage: /sql/integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task
+            homepage: /sql/integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task
             items:
             - name: Examples
               href: /sql/integration-services/extending-packages-scripting-task-examples/
-              homepage: /sql/integration-services/extending-packages-scripting-task-examples/detecting-an-empty-flat-file-with-the-script-task
+              homepage: /sql/integration-services/extending-packages-scripting-task-examples/script-task-examples
           - name: Data flow script component
             href: /sql/integration-services/extending-packages-scripting/data-flow-script-component/
-            homepage: /sql/integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component
+            homepage: /sql/integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component
             items:
             - name: Types
               href: /sql/integration-services/extending-packages-scripting-data-flow-script-component-types/
-              homepage: /sql/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component
+              homepage: /sql/integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components
             - name: Examples
               href: /sql/integration-services/extending-packages-scripting-data-flow-script-component-examples/
               homepage: /sql/integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples
         - name: Extending packages custom objects
           href: /sql/integration-services/extending-packages-custom-objects/
-          homepage: /sql/integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects
+          homepage: /sql/integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects
           items:
           - name: Task
             href: /sql/integration-services/extending-packages-custom-objects/task/
-            homepage: /sql/integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task
+            homepage: /sql/integration-services/extending-packages-custom-objects/task/developing-a-custom-task
           - name: Connection manager
             href: /sql/integration-services/extending-packages-custom-objects/connection-manager/
-            homepage: /sql/integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager
+            homepage: /sql/integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager
           - name: Log provider
             href: /sql/integration-services/extending-packages-custom-objects/log-provider/
-            homepage: /sql/integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider
+            homepage: /sql/integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider
           - name: Foreach enumerator
             href: /sql/integration-services/extending-packages-custom-objects/foreach-enumerator/
-            homepage: /sql/integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator
+            homepage: /sql/integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator
           - name: Data flow
             href: /sql/integration-services/extending-packages-custom-objects/data-flow/
-            homepage: /sql/integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component
+            homepage: /sql/integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component
             items:
             - name: Types
               href: /sql/integration-services/extending-packages-custom-objects-data-flow-types/
@@ -411,20 +408,23 @@
           homepage: /sql/integration-services/building-packages-programmatically/adding-connections-programmatically
         - name: Run and manage packages programmatically
           href: /sql/integration-services/run-manage-packages-programmatically/
-          homepage: /sql/integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically
+          homepage: /sql/integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically
       - name: Master Data Services
         href: /sql/master-data-services/
-        homepage: /sql/master-data-services/master-data-services-installation-and-configuration
+        homepage: /sql/master-data-services/master-data-services-overview-mds
         items:
-        - name: Install on Windows
-          href: /sql/master-data-services/install-windows/
-          homepage: /sql/master-data-services/install-windows/install-master-data-services
-        - name: Excel add-in
-          href: /sql/master-data-services/microsoft-excel-add-in/
-          homepage: /sql/master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel
         - name: Develop
           href: /sql/master-data-services/develop/
           homepage: /sql/master-data-services/develop/categorized-web-service-operations-master-data-services
+        - name: Install on Windows
+          href: /sql/master-data-services/install-windows/
+          homepage: /sql/master-data-services/install-windows/install-master-data-services
+        - name: Install MDS in AlwaysOn
+          href: /sql/master-data-services/installing-mds-in-an-alwayson-group-environment/
+          homepage: /sql/master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment
+        - name: Excel add-in
+          href: /sql/master-data-services/microsoft-excel-add-in/
+          homepage: /sql/master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel
       - name: Reporting Services
         href: /sql/reporting-services/
         homepage: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
@@ -474,28 +474,28 @@
           homepage: /sql/reporting-services/application-integration/integrating-reporting-services-into-applications
         - name: Report server web service
           href: /sql/reporting-services/report-server-web-service/
-          homepage: /sql/reporting-services/report-server-web-service/accessing-the-soap-api
+          homepage: /sql/reporting-services/report-server-web-service/report-server-web-service
           items:
           - name: Methods
             href: /sql/reporting-services/report-server-web-service/methods/
-            homepage: /sql/reporting-services/report-server-web-service/methods/authorization-methods
+            homepage: /sql/reporting-services/report-server-web-service/methods/report-server-web-service-methods
           - name: Net framework
             href: /sql/reporting-services/report-server-web-service/net-framework/
             homepage: /sql/reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework
             items:
             - name: Soap headers
               href: /sql/reporting-services/report-server-web-service-net-framework-soap-headers/
-              homepage: /sql/reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods
+              homepage: /sql/reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers
             - name: Exception handling
               href: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/
-              homepage: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services
+              homepage: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services
               items:
               - name: Best practices
                 href: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/
                 homepage: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/best-practices-for-reporting-services-exception-handling
               - name: SoapException class
                 href: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/
-                homepage: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property
+                homepage: /sql/reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class
         - name: Extensions
           href: /sql/reporting-services/extensions/
           homepage: /sql/reporting-services/extensions/reporting-services-extension-library
@@ -616,7 +616,7 @@
           homepage: /sql/relational-databases/replication/agents/replication-agents
         - name: Developer concepts
           href: /sql/relational-databases/replication/concepts/
-          homepage: /sql/relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication
+          homepage: /sql/relational-databases/replication/concepts/replication-developer-documentation
         - name: Merge
           href: /sql/relational-databases/replication/merge/
           homepage: /sql/relational-databases/replication/merge/merge-replication
@@ -631,7 +631,7 @@
           homepage: /sql/relational-databases/replication/publish/publish-data-and-database-objects
         - name: Security
           href: /sql/relational-databases/replication/security/
-          homepage: /sql/relational-databases/replication/security/security-and-protection-replication
+          homepage: /sql/relational-databases/replication/security/security-overview-replication
         - name: Transactional
           href: /sql/relational-databases/replication/transactional/
           homepage: /sql/relational-databases/replication/transactional/transactional-replication
@@ -722,22 +722,22 @@
         homepage: /sql/relational-databases/xml/xml-data-sql-server
       - name: Express LocalDB error messages
         href: /sql/relational-databases/express-localdb-error-messages/
-        homepage: /sql/relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required
+        homepage: /sql/relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages
       - name: Express LocalDB instance apis
         href: /sql/relational-databases/express-localdb-instance-apis/
-        homepage: /sql/relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe
+        homepage: /sql/relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis
       - name: Extended stored procedures programming
         href: /sql/relational-databases/extended-stored-procedures-programming/
-        homepage: /sql/relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server
+        homepage: /sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming
       - name: Extended stored procedures reference
         href: /sql/relational-databases/extended-stored-procedures-reference/
-        homepage: /sql/relational-databases/extended-stored-procedures-reference/odbc-api-implementation-details
+        homepage: /sql/relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference
       - name: WMI provider server events
         href: /sql/relational-databases/wmi-provider-server-events/
-        homepage: /sql/relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider
+        homepage: /sql/relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts
       - name: WMI provider configuration classes
         href: /sql/relational-databases/wmi-provider-configuration-classes/
-        homepage: /sql/relational-databases/wmi-provider-configuration-classes/cinstance-class-instancename-property
+        homepage: /sql/relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes
         items:
         - name: ClientNetLibInfo class
           href: /sql/relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/
@@ -771,7 +771,7 @@
           homepage: /sql/relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagname-property-serversettingsgeneralflag-class
         - name: SInstance class
           href: /sql/relational-databases/wmi-provider-configuration-classes/sinstance-class/
-          homepage: /sql/relational-databases/wmi-provider-configuration-classes/sinstance-class/aliasname-property-sqlserveralias-class
+          homepage: /sql/relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class
         - name: SqlServerAlias class
           href: /sql/relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/
           homepage: /sql/relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/aliasname-property-sqlserveralias-class
@@ -783,10 +783,10 @@
           homepage: /sql/relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class
       - name: WMI provider configuration
         href: /sql/relational-databases/wmi-provider-configuration/
-        homepage: /sql/relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript
+        homepage: /sql/relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management
       - name: Server management objects (SMO)
         href: /sql/relational-databases/server-management-objects-smo/
-        homepage: /sql/relational-databases/server-management-objects-smo/backward-compatibility-in-smo
+        homepage: /sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide
         items:
         - name: Create program
           href: /sql/relational-databases/server-management-objects-smo/create-program/
@@ -796,7 +796,7 @@
           homepage: /sql/relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs
       - name: CLR integration
         href: /sql/relational-databases/clr-integration/
-        homepage: /sql/relational-databases/clr-integration/assemblies-database-engine
+        homepage: /sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts
         items:
         - name: Database objects
           href: /sql/relational-databases/clr-integration/database-objects/
@@ -804,205 +804,208 @@
           items:
           - name: Types .NET Framework
             href: /sql/relational-databases/clr-integration-database-objects-types-net-framework/
-            homepage: /sql/relational-databases/clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types
+            homepage: /sql/relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework
           - name: User defined functions (UDF)
             href: /sql/relational-databases/clr-integration-database-objects-user-defined-functions/
-            homepage: /sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions
+            homepage: /sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions
           - name: User defined types (UDT)
             href: /sql/relational-databases/clr-integration-database-objects-user-defined-types/
-            homepage: /sql/relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net
+            homepage: /sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types
         - name: Data access
           href: /sql/relational-databases/clr-integration/data-access/
-          homepage: /sql/relational-databases/clr-integration/data-access/context-connection
+          homepage: /sql/relational-databases/clr-integration/data-access/data-access-from-clr-database-objects
           items:
           - name: In-process ADO.NET
             href: /sql/relational-databases/clr-integration-data-access-in-process-ado-net/
             homepage: /sql/relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net
           - name: Transactions
             href: /sql/relational-databases/clr-integration-data-access-transactions/
-            homepage: /sql/relational-databases/clr-integration-data-access-transactions/accessing-the-current-transaction
+            homepage: /sql/relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions
         - name: Security
           href: /sql/relational-databases/clr-integration/security/
           homepage: /sql/relational-databases/clr-integration/security/clr-integration-code-access-security
           items:
           - name: Host protection attributes
             href: /sql/relational-databases/clr-integration-security-host-protection-attributes/
-            homepage: /sql/relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll
+            homepage: /sql/relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming
         - name: Assemblies
           href: /sql/relational-databases/clr-integration/assemblies/
-          homepage: /sql/relational-databases/clr-integration/assemblies/altering-an-assembly
+          homepage: /sql/relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies
       - name: Native client
         href: /sql/relational-databases/native-client/
-        homepage: /sql/relational-databases/native-client/finding-more-sql-server-native-client-information
+        homepage: /sql/relational-databases/native-client/sql-server-native-client-programming
         items:
         - name: Features
           href: /sql/relational-databases/native-client/features/
-          homepage: /sql/relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log
+          homepage: /sql/relational-databases/native-client/features/sql-server-native-client-features
         - name: Applications
           href: /sql/relational-databases/native-client/applications/
           homepage: /sql/relational-databases/native-client/applications/building-applications-with-sql-server-native-client
         - name: OLE DB
           href: /sql/relational-databases/native-client/ole-db/
-          homepage: /sql/relational-databases/native-client/ole-db/filestream-support-ole-db
+          homepage: /sql/relational-databases/native-client/ole-db/sql-server-native-client-ole-db
           items:
           - name: Provider
             href: /sql/relational-databases/native-client-ole-db-provider/
-            homepage: /sql/relational-databases/native-client-ole-db-provider/about-ole-db-properties
+            homepage: /sql/relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application
           - name: Data source objects
             href: /sql/relational-databases/native-client-ole-db-data-source-objects/
-            homepage: /sql/relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties
+            homepage: /sql/relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db
           - name: Commands
             href: /sql/relational-databases/native-client-ole-db-commands/
-            homepage: /sql/relational-databases/native-client-ole-db-commands/command-parameters
+            homepage: /sql/relational-databases/native-client-ole-db-commands/commands
           - name: Rowsets
             href: /sql/relational-databases/native-client-ole-db-rowsets/
-            homepage: /sql/relational-databases/native-client-ole-db-rowsets/bookmarks
+            homepage: /sql/relational-databases/native-client-ole-db-rowsets/rowsets
           - name: Blobs
             href: /sql/relational-databases/native-client-ole-db-blobs/
             homepage: /sql/relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects
           - name: Tables and indexes
             href: /sql/relational-databases/native-client-ole-db-tables-indexes/
-            homepage: /sql/relational-databases/native-client-ole-db-tables-indexes/adding-a-column-to-a-sql-server-table
+            homepage: /sql/relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes
           - name: Data types
             href: /sql/relational-databases/native-client-ole-db-data-types/
-            homepage: /sql/relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition
+            homepage: /sql/relational-databases/native-client-ole-db-data-types/data-types-ole-db
           - name: Table valued parameters
             href: /sql/relational-databases/native-client-ole-db-table-valued-parameters/
-            homepage: /sql/relational-databases/native-client-ole-db-table-valued-parameters/executing-commands-containing-table-valued-parameters
+            homepage: /sql/relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db
           - name: Date time
             href: /sql/relational-databases/native-client-ole-db-date-time/
-            homepage: /sql/relational-databases/native-client-ole-db-date-time/comparability-for-irowsetfind
+            homepage: /sql/relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db
           - name: Transactions
             href: /sql/relational-databases/native-client-ole-db-transactions/
-            homepage: /sql/relational-databases/native-client-ole-db-transactions/isolation-levels-ole-db
+            homepage: /sql/relational-databases/native-client-ole-db-transactions/transactions
           - name: Errors
             href: /sql/relational-databases/native-client-ole-db-errors/
             homepage: /sql/relational-databases/native-client-ole-db-errors/errors
           - name: Interfaces
             href: /sql/relational-databases/native-client-ole-db-interfaces/
-            homepage: /sql/relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db
+            homepage: /sql/relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces
           - name: How to
             href: /sql/relational-databases/native-client-ole-db-how-to/
-            homepage: /sql/relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db
+            homepage: /sql/relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics
             items:
             - name: Results
               href: /sql/relational-databases/native-client-ole-db-how-to/results/
-              homepage: /sql/relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db
+              homepage: /sql/relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db
             - name: FileStream
               href: /sql/relational-databases/native-client-ole-db-how-to/filestream/
               homepage: /sql/relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db
         - name: ODBC
           href: /sql/relational-databases/native-client/odbc/
-          homepage: /sql/relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel
+          homepage: /sql/relational-databases/native-client/odbc/sql-server-native-client-odbc
           items:
           - name: Extensions bulk copy functions
             href: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/
-            homepage: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch
+            homepage: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions
           - name: API
             href: /sql/relational-databases/native-client-odbc-api/
             homepage: /sql/relational-databases/native-client-odbc-api/odbc-api-implementation-details
           - name: Communication
             href: /sql/relational-databases/native-client-odbc-communication/
-            homepage: /sql/relational-databases/native-client-odbc-communication/allocating-a-connection-handle
+            homepage: /sql/relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc
           - name: Queries
             href: /sql/relational-databases/native-client-odbc-queries/
-            homepage: /sql/relational-databases/native-client-odbc-queries/allocating-a-statement-handle
+            homepage: /sql/relational-databases/native-client-odbc-queries/executing-queries-odbc
             items:
             - name: Executing statements
               href: /sql/relational-databases/native-client-odbc-queries/executing-statements/
-              homepage: /sql/relational-databases/native-client-odbc-queries/executing-statements/batches-of-statements
+              homepage: /sql/relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc
           - name: Native client ODBC results
             href: /sql/relational-databases/native-client-odbc-results/
-            homepage: /sql/relational-databases/native-client-odbc-results/assigning-storage
+            homepage: /sql/relational-databases/native-client-odbc-results/processing-results-odbc
           - name: Native client ODBC cursors
             href: /sql/relational-databases/native-client-odbc-cursors/
-            homepage: /sql/relational-databases/native-client-odbc-cursors/cursor-behaviors
+            homepage: /sql/relational-databases/native-client-odbc-cursors/using-cursors-odbc
             items:
             - name: Implementation
               href: /sql/relational-databases/native-client-odbc-cursors/implementation/
               homepage: /sql/relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented
             - name: Properties
               href: /sql/relational-databases/native-client-odbc-cursors/properties/
-              homepage: /sql/relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc
+              homepage: /sql/relational-databases/native-client-odbc-cursors/properties/cursor-properties
             - name: Programming
               href: /sql/relational-databases/native-client-odbc-cursors/programming/
               homepage: /sql/relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc
           - name: Error messages
             href: /sql/relational-databases/native-client-odbc-error-messages/
-            homepage: /sql/relational-databases/native-client-odbc-error-messages/diagnostic-records-and-fields
+            homepage: /sql/relational-databases/native-client-odbc-error-messages/handling-errors-and-messages
           - name: Stored procedures
             href: /sql/relational-databases/native-client-odbc-stored-procedures/
-            homepage: /sql/relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls
+            homepage: /sql/relational-databases/native-client-odbc-stored-procedures/running-stored-procedures
           - name: Bulk copy operations
             href: /sql/relational-databases/native-client-odbc-bulk-copy-operations/
-            homepage: /sql/relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables
+            homepage: /sql/relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc
           - name: Text and image columns
             href: /sql/relational-databases/native-client-odbc-text-image-columns/
-            homepage: /sql/relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns
+            homepage: /sql/relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns
           - name: Table valued parameters
             href: /sql/relational-databases/native-client-odbc-table-valued-parameters/
-            homepage: /sql/relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata
+            homepage: /sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc
           - name: Date time
             href: /sql/relational-databases/native-client-odbc-date-time/
-            homepage: /sql/relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc
+            homepage: /sql/relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc
           - name: How to
             href: /sql/relational-databases/native-client-odbc-how-to/
-            homepage: /sql/relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc
+            homepage: /sql/relational-databases/native-client-odbc-how-to/odbc-how-to-topics
             items:
             - name: Execute queries
               href: /sql/relational-databases/native-client-odbc-how-to/execute-queries/
-              homepage: /sql/relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc
+              homepage: /sql/relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc
             - name: Cursors
               href: /sql/relational-databases/native-client-odbc-how-to/cursors/
-              homepage: /sql/relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc
+              homepage: /sql/relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc
             - name: Bulk copy
               href: /sql/relational-databases/native-client-odbc-how-to/bulk-copy/
-              homepage: /sql/relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copy-a-select-result-set-odbc
+              homepage: /sql/relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc
       - name: SQLXML
         href: /sql/relational-databases/sqlxml/
         homepage: /sql/relational-databases/sqlxml/requirements-for-running-sqlxml-examples
         items:
         - name: Formatting
           href: /sql/relational-databases/sqlxml/formatting/
-          homepage: /sql/relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0
+          homepage: /sql/relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0
         - name: Annotated xsd schemas
           href: /sql/relational-databases/sqlxml/annotated-xsd-schemas/
-          homepage: /sql/relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0
+          homepage: /sql/relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0
           items:
           - name: Using
             href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-using/
-            homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0
+            homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0
           - name: XPath queries
             href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/
-            homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0
+            homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0
             items:
             - name: .NET Framework classes
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/
-              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment
+              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes
             - name: Diffgram
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/
-              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0
+              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/sqlxml-4-0-net-framework-support-using-diffgrams-to-modify-data
             - name: Location path
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/
               homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0
             - name: Samples
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/
-              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0
+              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0
             - name: Updategrams
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/
-              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/deleting-data-using-xml-updategrams-sqlxml-4-0
+              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0
             - name: Bulk load XML
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/
-              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations
+              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0
             - name: Data access components provider
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/
-              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider
+              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider
             - name: Caching templates XML schemas
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/
               homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0
             - name: Security
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
-              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0
+              homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
+    - name: SQL Server Release Notes
+      href: /sql/release-notes/
+      homepage: /sql/release-notes/sql-server-release-notes
     - name: DMX
       href: /sql/dmx/
       homepage: /sql/dmx/data-mining-extensions-dmx-reference
@@ -1082,7 +1085,7 @@
       homepage: /sql/xquery/xquery-language-reference-sql-server
     - name: SSDT (SQL Server Data Tools)
       href: /sql/ssdt/
-      homepage: /sql/ssdt/download-sql-server-data-tools-ssdt?toc=%2fsql%2fssdt%2ftoc.json
+      homepage: /sql/ssdt/download-sql-server-data-tools-ssdt
     - name: SSMA (SQL Server Migration Assistant)
       href: /sql/ssma/
       homepage: /sql/ssma/sql-server-migration-assistant
@@ -1104,7 +1107,7 @@
         homepage: /sql/ssma/sybase/installing-ssma-for-sybase-sybasetosql
     - name: SSMS
       href: /sql/ssms/
-      homepage: /sql/ssms/download-sql-server-management-studio-ssms?toc=%2fsql%2fssms%2ftoc.json
+      homepage: /sql/ssms/download-sql-server-management-studio-ssms
       items:
       - name: Agent
         href: /sql/ssms/agent/
@@ -1118,12 +1121,18 @@
       - name: Object
         href: /sql/ssms/object/
         homepage: /sql/ssms/object/object-explorer
+      - name: Register Servers
+        href: /sql/ssms/register-servers/
+        homepage: /sql/ssms/register-servers/register-servers
       - name: Solution
         href: /sql/ssms/solution/
         homepage: /sql/ssms/solution/solution-explorer
       - name: Template
         href: /sql/ssms/template/
         homepage: /sql/ssms/template/template-explorer
+      - name: Tutorials
+        href: /sql/ssms/tutorials/
+        homepage: /sql/ssms/tutorials/tutorial-sql-server-management-studio
       - name: Visual DB tools
         href: /sql/ssms/visual-db-tools/
         homepage: /sql/ssms/visual-db-tools/visual-database-tools

@@ -198,3 +198,4 @@
 
 ## [Data science solution templates](tutorials/data-science-scenarios-and-solution-templates.md)
 ## [SQL Server samples](https://github.com/Microsoft/sql-server-samples)
+

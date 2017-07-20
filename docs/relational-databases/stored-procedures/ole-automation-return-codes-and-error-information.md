@@ -1,7 +1,7 @@
 ---
 title: "OLE Automation Return Codes and Error Information | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "07/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,7 +87,7 @@ AS
     DECLARE @Source nvarchar(255);  
     DECLARE @Description nvarchar(255);  
     PRINT N'OLE Automation Error Information';  
-    EXEC HexToChar @HResult, @HRHex OUT;  
+    EXEC sp_HexToChar @HResult, @HRHex OUT;  
     SELECT @Output = N'  HRESULT: ' + @HRHex;  
     PRINT @Output;  
     EXEC @HR = sp_OAGetErrorInfo  

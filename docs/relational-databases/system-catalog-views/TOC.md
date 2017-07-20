@@ -148,6 +148,8 @@
 ## [sys.event_notifications](sys-event-notifications-transact-sql.md)  
 ## [sys.event_notification_event_types](sys-event-notification-event-types-transact-sql.md)  
 ## [sys.extended_procedures](sys-extended-procedures-transact-sql.md)  
+## [sys.external_libraries](sys-external-libraries-transact-sql.md)
+## [sys.external_library_files](sys-external-library-files-transact-sql.md)
 ## [sys.foreign_keys](sys-foreign-keys-transact-sql.md)  
 ## [sys.foreign_key_columns](sys-foreign-key-columns-transact-sql.md)  
 ## [sys.function_order_columns](sys-function-order-columns-transact-sql.md)  
@@ -322,6 +324,7 @@
 ## [sys.pdw_nodes_partitions](sys-pdw-nodes-partitions-transact-sql.md)  
 ## [sys.pdw_nodes_pdw_physical_databases](sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
 ## [sys.pdw_nodes_tables](sys-pdw-nodes-tables-transact-sql.md)  
+## [sys.pdw_replicated_table_cache_state](sys-pdw-replicated-table-cache-state-transact-sql.md)
 ## [sys.pdw_table_distribution_properties](sys-pdw-table-distribution-properties-transact-sql.md)  
 ## [sys.pdw_table_mappings](sys-pdw-table-mappings-transact-sql.md)  
 

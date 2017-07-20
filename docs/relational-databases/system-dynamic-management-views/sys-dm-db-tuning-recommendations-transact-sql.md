@@ -2,7 +2,7 @@
 title: "sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs"
 description: Learn how to find potential performance issues and recommended fixes in SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "04/06/2017"
+ms.date: "07/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,10 +36,10 @@ manager: "jhubbard"
 | **Column name** | **Data type** | **Description** |
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | Unique name of recommendation. |
-| **type** | **nvarchar(4000)** | `FORCE_LAST_GOOD_PLAN` |
+| **type** | **nvarchar(4000)** | The name of the automatic tuning option that produced the recommendation, for example, `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | Reason why this recommendation was provided. |
-| **valid\_since** | **datetime2** | The first time this recommendation was generated |
-| **last\_refresh** | **datetime2** | The last time this recommendation was generated |
+| **valid\_since** | **datetime2** | The first time this recommendation was generated. |
+| **last\_refresh** | **datetime2** | The last time this recommendation was generated. |
 | **state** | **nvarchar(4000)** | JSON document that describes the state of the recommendation. Following fields are available:<br />-   `currentValue` - current state of the recommendation.<br />-   `reason` – constant that describes why the recommendation is in the current state.|
 | **is\_executable\_action** | **bit** | 1 = The recommendation can be executed against the database via [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = The recommendation cannot be executed against the database (for example: information only or reverted recommendation) |
 | **is\_revertable\_action** | **bit** | 1 = The recommendation can be automatically monitored and reverted by Database engine.<br />0 = The recommendation cannot be automatically monitored and reverted. Most &quot;executable&quot; actions will be &quot;revertable&quot;. |

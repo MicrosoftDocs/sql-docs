@@ -2,7 +2,7 @@
 title: "sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs"
 description: Learn how to view automatic tuning options on a SQL Database
 ms.custom: ""
-ms.date: "04/10/2017"
+ms.date: "07/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,21 +33,21 @@ manager: "jhubbard"
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**option**|**nvarchar(64)**|`FORCE_LAST_GOOD_PLAN`|  
+|**name**|**nvarchar(128)**|The name of the automatic tuning option, for example, `FORCE_LAST_GOOD_PLAN`|  
 |**desired_state**|**smallint**|Indicates the desired operation mode for Automatic Tuning option, explicitly set by user.|  
-|**desired_state_desc**|**nvarchar(64)**|Textual description of the desired operation mode of Automatic Tuning option:<br />`OFF` (0)<br />`ON` (1)|  
+|**desired_state_desc**|**nvarchar(60)**|Textual description of the desired operation mode of Automatic Tuning option:<br />`OFF` (0)<br />`ON` (1)|  
 |**actual_state**|**smallint**|Indicates the operation mode of Automatic Tuning option.|  
-|**actual_state_desc**|**nvarchar(64)**|Textual description of the actual operation mode of Automatic Tuning option.<br />`OFF` (0)<br />`ON` (1)|  
-|**reason\_code**|**smallint**|Indicates why actual and desired state are different.|  
-|**reason\_desc**|**nvarchar(64)**|Textual description of the reason why actual and desired state are different.|  
+|**actual_state_desc**|**nvarchar(60)**|Textual description of the actual operation mode of Automatic Tuning option.<br />`OFF` (0)<br />`ON` (1)|  
+|**reason**|**smallint**|Indicates why actual and desired state are different.|  
+|**reason_desc**|**nvarchar(60)**|Textual description of the reason why actual and desired state are different.|  
   
 ## Permissions  
  Requires the `VIEW DATABASE STATE` permission.  
   
 ## Remarks
- The values in `reason_code` and `reason_desc` columns might be:
+ The values in `reason` and `reason_desc` columns might be:
 
-|reason\_code|reason\_desc|Description|
+|reason|reason\_desc|Description|
 |-----------------|---------------|-----------------| 
 | 2	| `DISABLED`	| Option is disabled by system.|
 | 11	| `QUERY_STORE_OFF`	| Query Store is turned off.|

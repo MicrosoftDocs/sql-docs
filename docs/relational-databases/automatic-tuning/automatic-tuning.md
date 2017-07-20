@@ -2,7 +2,7 @@
 title: "Automatic tuning | Microsoft Docs"
 description: Learn about automatic tuning in SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: "4/16/2017"
+ms.date: "07/20/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -70,7 +70,7 @@ The most important information shown in this view are:
  - Details about the issues such as id of the detected plan, id of the regressed plan, id of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
  script that might be applied to fix the issue, etc. Details are stored in [JSON format](../../relational-databases/json/index.md).
 
-Use the following query to obtain a script that fixes the issue:
+Use the following query to obtain a script that fixes the issue and additional information about the estimated gain:
 
 ```   
 SELECT reason, score,
@@ -82,7 +82,7 @@ SELECT reason, score,
 FROM sys.dm_db_tuning_recommendations
   CROSS APPLY OPENJSON (Details, '$.planForceDetails')
     WITH (  [query_id] int '$.queryId',
-            [new plan_id] int '$.regressedPlanId',
+            [current plan_id] int '$.regressedPlanId',
             [recommended plan_id] int '$.recommendedPlanId',
 
             regressedPlanErrorCount int,
@@ -98,10 +98,11 @@ FROM sys.dm_db_tuning_recommendations
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | script | query\_id | new plan\_id | recommended plan\_id | estimated\_gain | error\_prone
+| reason | score | script | query\_id | current plan\_id | recommended plan\_id | estimated\_gain | error\_prone
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CPU time changed from 3ms to 46ms | 36 | EXEC sp\_query\_store\_force\_plan 12, 17; | 12 | 28 | 17 | 11.59 | 0
 
+`estimated\_gain` represents the estimated number of seconds that would be saved if recommended plan is executed instead of the current plan. Recommended plan should be forced instead of the current plan if the gain is greater than 10 seconds. The current plan is error prone if there are more errors (for example, time-outs or aborted executions) in this plan than in the recommended plan. In that case `error\_prone` column would be set to the value 1, and this is another reason why the recommended plan should be forced instead of the current one.
 
 ## Automatic plan choice correction
 
@@ -120,8 +121,9 @@ the following command:
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
+Once you turn-on this option, SQL Database Engine will automatically force any recommendation where the gain is higher than 10 seconds, or the number of errors in the new plan is higher than the number of errors in the recommended plan, and verify that the forced plan is better than the current one.
 
-The status of advisor is shown in the following view:
+The status of the automatic tuning option is shown in the following view:
 
 ```    
 SELECT name, desired_state_desc, actual_state_desc, reason_desc
@@ -134,10 +136,10 @@ FROM sys.database_automatic_tuning_options;
 | FORCE\_LAST\_GOOD\_PLAN | ON | OFF | QUERY_STORE_OFF |
 
 `FORCE_LAST_GOOD_PLAN` option might be in `OFF` state even if the user specified `ON`. The option might be disabled if Query Store is disabled or in read-only mode. Column `actual_state_desc`
-gives information about the current state of automatic tuning option, and column `reason_desc` gives information why is actual state diferent that desired state. Values in `reason_desc` column
- are shown in the following table:
+gives information about the current state of automatic tuning option, and column `reason_desc` gives information why is actual state diferent that desired state.
+Values in `reason_desc` column are shown in the following table:
 
-| reason\_code | reason\_desc | description |
+| reason | reason\_desc | description |
 | --- | --- | --- |
 | 2 | `DISABLED` | Option is disabled by system. |
 | 11 | `QUERY_STORE_OFF` | Query Store is turned off. |

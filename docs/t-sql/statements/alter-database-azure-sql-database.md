@@ -215,7 +215,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 |1024 GB|N/A|N/A|√|√|√ (D)|
 |From 1024 GB up to 4096 GB in increments of 256 GB|N/A|N/A|N/A|N/A| √ \* |√|  
   
- \* Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Single databases](sql-database-single-database-limits) and [Elastic pools](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-pool).  
+ \* Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources) and [Elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).  
 
   
  The following rules apply to MAXSIZE and EDITION arguments:  

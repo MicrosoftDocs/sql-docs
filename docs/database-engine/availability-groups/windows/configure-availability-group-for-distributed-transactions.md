@@ -30,12 +30,12 @@ This article explains how to configure an availability group for distributed tra
 
 ## Support for distributed transactions
 
-[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] supports distributed transactions for databases in availability groups across multiple data sources, including SQL Server instances on different servers. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] adds support for all distributed transactions - including transactions between:
+[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group.
 
-- Databases on the same server.
-- Databases on the same instance of SQL Server.
-- Databases on different instances of SQL Server.
-- Databases on different servers.
+In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers. This article explains how to configure an availability group for distributed transactions. 
+
+>[!NOTE]
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] also supports distributed transactions, however support in [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] is limited. In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] a distributed transaction with a database in an availability group can not be guaranteed if it includes any other databases on the same server. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation.
 
 In a distributed transaction, client applications work with Microsoft Distributed Transaction Coordinator (MS DTC or DTC) to guarantee transactional consistency across multiple data sources. DTC is a service available on supported Windows Server-based operating systems. For a distributed transaction, DTC is the *transaction coordinator*. Normally, a SQL Server instance is the *resource manager*. When a database is in an availability group, each database needs to be its own resource manager. 
 

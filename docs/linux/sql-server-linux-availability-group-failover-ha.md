@@ -214,7 +214,7 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    ``` 
    
    >[!IMPORTANT]
-   >This procedure only applies to availability groups that do not have a cluster manager.  
+   >The following steps only apply to availability groups that do not have a cluster manager.  
 
    If the availability group cluster type is `NONE`, manually fail over. Complete the following steps in order:
 

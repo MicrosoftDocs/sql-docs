@@ -147,7 +147,7 @@ New-ADUser mssql -AccountPassword (Read-Host -AsSecureString "Enter Password") -
 
 Now set the ServicePrincipalName (SPN) for this account using the `setspn.exe` tool. The SPN must be formatted exactly as specified in the following example: You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host, and the TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] to use a different port number.  
 ```PowerShell   
-setspn -A MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>** mssql
+setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
 ```   
 
 >  [!NOTE]  
@@ -163,16 +163,16 @@ First, check the Key Version Number (kvno) for the AD account created in the pre
 ```bash
 kinit user@CONTOSO.COM
 
-kvno MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>**
+kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
 ```
 
 Now create a keytab file for the AD user you created in the previous step. When prompted, enter the password for that AD account. 
 ```bash  
 sudo ktutil
 
-ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
+ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
 
-ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
 
 ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
 

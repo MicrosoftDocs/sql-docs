@@ -7,4 +7,4 @@
 # [T-SQL objects](polybase-t-sql-objects.md)  
 # [Queries](polybase-queries.md)  
 # [Troubleshooting](polybase-troubleshooting.md) 
-# [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)   
+## [Troubleshoot PolyBase Kerberos connectivity](polybase-troubleshoot-connectivity.md)   

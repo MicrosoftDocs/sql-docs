@@ -19,9 +19,9 @@ ms.date: 07/19/2017"
 ms.author: alazad
 ---
 # Troubleshoot PolyBase Kerberos connectivity
-You can use an interactive diagnostics tool, that has been built into PolyBase, to help troubleshoot authentication problems when using PolyBase against a Kerberos-secured Hadoop cluster. 
+You can use an interactive diagnostics tool that has been built into PolyBase to help troubleshoot authentication problems when using PolyBase against a Kerberos-secured Hadoop cluster. 
 
-This article serves as a guide to walk through the debugging process of such issues by leveraging this tool, which is built into PolyBase.
+This article serves as a guide to walk through the debugging process of such issues by leveraging this tool.
 
 ## Prerequisites
 
@@ -169,7 +169,7 @@ Reaching this point confirms that: (i) the three actors are able to communicate 
  [2017-04-25 21:34:35,096] INFO 2235[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1586) - File properties for "/": FileStatus{path=hdfs://10.193.27.232:8020/; isDirectory=true; modification_time=1492028259862; access_time=0; owner=hdfs; group=hdfs; permission=rwxr-xr-x; isSymlink=false} 
  [2017-04-25 21:34:35,098] INFO 2237[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1587) - Successfully accessed the external file system. 
 ```
-## Common Errors
+## Common errors
 If the tool was run and the file properties of the target path were *not* printed (Checkpoint 4), there should be an exception thrown midway. Review it and consider the context of where in the four-step flow it occurred. Consider the following common issues that may have occurred, in order:
 | Exception and messages | Cause | 
 | --- | --- |
@@ -194,9 +194,10 @@ The KDC logs are available in **/var/log/krb5kdc.log**, by default, which inclu
 ### Active Directory 
 In Active Directory, the SPNs can be viewed by browsing to Control Panel > Active Directory Users and Computers > *MyRealm* > *MyOrganizationalUnit*. If the Hadoop cluster was properly Kerberized, there should be one SPN for each one of the numerous services available (e.g. nn, dn, rm, yarn, spnego, etc.)
 
-## See Also
+## See also
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [Cloudera’s Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
-[Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)
+[Hortonworks’ Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
+[Polybase troubleshooting](polybase-troubleshooting.md)
 
 

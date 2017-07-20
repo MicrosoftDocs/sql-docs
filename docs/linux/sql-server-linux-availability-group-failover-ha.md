@@ -188,7 +188,9 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
 
 1. Before you begin, backup each database.
 2. Upgrade instances of SQL Server that host secondary replicas.
+
     a. Upgrade asynchronous secondary replicas first.
+
     b. Upgrade synchronous secondary replicas.
 
    >[!NOTE]
@@ -203,7 +205,9 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
 
 1. After all secondary replicas are upgraded, manually fail over to one of the synchronous secondary replicas.
 
-   For availability groups with `EXTERNAL` cluster type, use the cluster management tools to fail over. The following example fails over an availability group. Replace `<targetReplicaName>` with the name of the synchronous secondary replica that will become primary:
+   For availability groups with `EXTERNAL` cluster type, use the cluster management tools to fail over; availability groups with `NONE` cluster type should use Transact-SQL to fail over. 
+
+   The following example fails over an availability group with the cluster management tools. Replace `<targetReplicaName>` with the name of the synchronous secondary replica that will become primary:
 
    ```bash
    sudo pcs resource move ag_cluster-master <targetReplicaName> --master  

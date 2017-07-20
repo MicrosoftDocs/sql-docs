@@ -27,7 +27,7 @@ In SQL Server 2017, machine learning becomes even more powerful, with addition o
 SQL Server 2017 builds on Microsoft's commitment to making it easy to build and deploy machine learning solutions, with the following new features:
 
 - Improved and expanded Python libraries
-- Updates to realtime scoring, plus a new native scoring function
+- Updates to realtime scoring, plus a new native T-SQL scoring function
 - Updates to Microsoft R
 - Installation of pre-trained models
 - New package management capabilities for the DBA
@@ -46,11 +46,11 @@ For more information, see these topics:
 
 + [MicrosoftML for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
-### Native scoring and realtime scoring
+### Realtime scoring and native scoring
 
 _Realtime scoring_ is supported for scoring in SQL Server and in Machine Learning Server (Standalone). This feature relies on native C++ libraries to read a model stored in an optimized binary format. From the model, the function can generate predictions without having to call the R runtime. This makes batch scoring much faster.
 
-Additionally, this release of SQL Server 2017 includes a native T-SQL function for realtime scoring that can be run on any edition of SQL Server, even on Linux. The function is available by default, and requires no installation of R or extra configuration. This means you can train a model elsewhere, save it in SQL Server, and then perform scoring without ever calling R.
+Additionally, this release of SQL Server 2017 includes a native T-SQL function for fast scoring that can be run on any edition of SQL Server, even on Linux. The function is available by default, and requires no installation of R or extra configuration. This means you can train a model elsewhere, save it in SQL Server, and then perform scoring without ever calling R. This feature is referred to as _native scoring_.
 
 For more information, see these articles:
 
@@ -66,7 +66,7 @@ This section lists features that were released previously, but that have been up
 
 To provide better support for databases administrators who must manage R package libraries, SQL Server now supports the CREATE EXTERNAL LIBRARY command.
 
-For more information, see [R Package Management for SQL Server R Services](../advanced-analytics/r/r-package-management-for-sql-server-r-services.md).
+For more information, see [R package management for SQL Server R Services](../advanced-analytics/r/r-package-management-for-sql-server-r-services.md).
 
 ### Upgrade your R experience with pre-trained models
 

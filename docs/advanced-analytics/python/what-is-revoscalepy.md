@@ -2,7 +2,7 @@
 title: "Introducing revoscalepy | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -41,58 +41,76 @@ The **revoscalepy** module is available only when you install one of the followi
 
 This section provides an overview of the Python data types and new Python functions supported in the **revoscalepy** module, beginning with SQL Server 2017 CTP 2.0 release. 
 
-For the latest list of functions in the Python libraries released so far, see these links:
- 
-+ [revoscalepy function library for Python](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
+For the latest list of functions in the Python libraries released to date, see these links:
 
-+ [microsoftml function library for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
++ [revoscalepy for Python](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
 
-> [!TIP]
-> The Python community uses coding conventions that might be different than what you're used to, including all lowercase letters and underscores rather than camel casing for parameter names.
-> 
-> Also, you've probably noticed that the **revoscalepy** library is always lowercase. Check out the tips on the Microsoft R site: [Python function help][Python function help](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
++ [microsoftml for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
 ### Data types, data sources, and compute contexts
 
-SQL Server and Python use different data types in some cases. For a list of mappings between SQL and Python data types, see [Python Libraries and Data Types](python-libraries-and-data-types.md).
+SQL Server and Python use different data types in some cases. For a list of mappings between SQL and Python data types, see [Python libraries and data Types](python-libraries-and-data-types.md).
 
-Data sources supported for machine learning with Python in SQL Server includes ODBC data sources, SQL Server database, and XDF files.
+Data sources supported for machine learning with Python in SQL Server includes ODBC data sources, SQL Server database, and local files, including XDF files.
 
 You create the data source object by using functions listed in the following table. After defining the data source, you load or transform the data by using an appropriate [ETL function](#bkmk_etl).
 
-|Function|Description|Availability|
-|----|----|----|
-|RxLocalSeq|Define local compute context|CTP 2.0|
-|RxInSqlServer|Create SQL Server compute context|CTP 2.0|
-|RxFileData|Constructor for creating external files (RevoScaleR)|CTP 2.0|
-|RxXdfData| Create XDF files (RevoScaleR)|CTP 2.0|
-|RxOdbcData| Create ODBC connections (RevoScaleR)|CTP 2.0|
+> [!IMPORTANT]
+> Many function names have changed since the initial release of Python in CTP 2.0.
 
-If you are new to the idea of remote compute contexts, we recommend that you start by reading about distributed computing works for machine learning in [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction).
+**SQL Server data**
 
-### <a name="bkmk_algorithms"></a>Machine learning
++ Use [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) to define a data source from a query or table
++ Use [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserver) to create a SQL Server compute context
++ Use [RxOdbcData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxodbbcdata) to create a data source from an ODBC connection
 
-The following machine learning algorithms are included in SQL Server 2017 CTP 2.0.
+**revoscalepy** also supports the [XDF data source](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxxdfdata), used for moving data between memory and other data sources.
 
-| Function| Description|Availability|
+> [!TIP]
+> If you are new to the idea of data sources or compute contexts, we recommend that you start by reading about distributed computing works for machine learning in [RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction).
+
+
+### <a name="bkmk_algorithms"></a>Machine learning and summary functions
+
+The following machine learning algorithms and summary functions from RevoScaleR are included in SQL Server 2017, beginning with CTP 2.0.
+
+| Function| Description|Notes|
 | ------ | ------ |------ |
-|`rx_btrees_ex` | create and train model (RevoScaleR)|CTP 2.0|
-|`rx_dforest_ex` | create and train model (RevoScaleR)|CTP 2.0|
-|`rx_dtree_ex` | create and train model (RevoScaleR)|CTP 2.0|
-|`rx_lin_mod_ex` | create and train model (RevoScaleR)|CTP 2.0|
-|`rx_logit_ex` | create and train model (RevoScaleR)|CTP 2.0|
-|`rx_predict_ex` | generate predictions from trained model (RevoScaleR)|CTP 2.0|
-|`rx_summary` | print summary of model  (RevoScaleR)|CTP 2.0|
+|`rx_btrees` | Fit stochastic gradient boosted decision trees|`rx_btrees_ex` in CTP 2.0|
+|`rx_dforest` | Fit classification and regression decision forests|`rx_dforest_ex` in CTP 2.0|
+|`rx_dtree` | Fit classification and regression trees |`rx_dtree_ex` in CTP 2.0|
+|`rx_lin_mod` | Create a linear model|`rx_lin_mod_ex` in CTP 2.0|
+|`rx_logit` | Create a logistic regression model|`rx_logit_ex` in CTP 2.0|
+|`rx_predict` | Generate predictions from a trained model|`rx_predict_ex` in CTP 2.0|
+|`rx_summary` | Generate a summary of the model||
+
+New machine learning algorithms are also provided by the Python version of [MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+
+| Function| Description|
+| ------ | ------ |
+|`rx_fast_forest` |Create a decision forest model|
+|`rx_fast_linear` | Linear regression with stochastic dual coordinate ascent|
+|`rx_fast_trees` | Create a boosted tree model |
+|`rx_logistic_regression` | Create a logistic regression model|
+|`rx_neural_network` | Create a customizable neural network model |
+|`rx_oneclass_svm` | Creates a SVM model for imabalnced datsets, for use in anomaly detection|
+
+> [!TIP]
+> Many of these algorithms are already provided as modules in Azure Machine Learning.
+
+MicrosoftML for Python also includes a variety of transformations and helper functions, such as:
+
++ `rx_predict` generates predictions from a trained model and can be used for realtime scoring
++ image featurization functions
++ functions for text processing and sentiment extraction
+
+For details, see [Introduction to MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
 
-### <a name="bkmk_etl"></a>Data movement and transformation
-
-The following functions support movement and transformation of data.
-
-| Function| Description|Availability|
-| ------ | ------ |------ |
-|`rx_data_step_ex` | ETL (RevoScaleR) | CTP 2.0|
-|`rx_import_datasource` | ETL (RevoScaleR)|CTP 2.0|
+> [!NOTE]
+> The Python community uses coding conventions that might be different than what you're used to, including all lowercase letters and underscores rather than camel casing for parameter names. Also, maybe you've noticed that the **revoscalepy** library is always lowercase. That's right! Another Python convention.
+> 
+> Check out the tips on the Python reference documentation for Microsoft R: [Python function help][Python function help](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## Examples
 
@@ -142,7 +160,7 @@ Complete documentation for these APIs will be available when the product is rele
 
 You can get help on any Python function by importing the module, and then calling `help()`. For example, running `help(revoscalepy)` from your Python IDE returns a list of all functions in the revoscalepy module, with their signatures.
 
-If you use Python Tools for Visual Studio, you can use Intellisense to get syntax and argument help. For more information, see [Installing Python Support in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions.
+If you use Python Tools for Visual Studio, you can use IntelliSense to get syntax and argument help. For more information, see [Python support in Visual Studio](http://docs.microsoft.com/visualstudio/python/installation), and download the extension that matches your version of Visual Studio. You can use Python with Visual Studio 2015 and 2017, or earlier versions.
 
 ## See Also
 

@@ -19,7 +19,7 @@ manager: "jhubbard"
 This topic describes a feature available in SQL Server 2016 and SQL Server 2017 that supports scoring on machine learning models in near realtime.
 
 > [!TIP]
-> Native scoring is a related feature available only in SQL Server 2017, that uses the native T-SQL PREDICT function for very fast scoring. For more information, see [Native scoring](sql-native-scoring.md).
+> Native scoring is a special implementation of realtime scoring that uses the native T-SQL PREDICT function for very fast scoring, and is available only in SQL Server 2017. For more information, see [Native scoring](sql-native-scoring.md).
 
 ## How realtime scoring works
 
@@ -78,6 +78,8 @@ For information regarding realtime scoring in a distributed environment based on
   + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees) \*
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree) \*
   + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest) \*
+  
+  Models marked with \* also support native scoring with the PREDICT function.
 
 + MicrosoftML models
 
@@ -96,10 +98,6 @@ For information regarding realtime scoring in a distributed environment based on
   + [categoricalHash](https://docs.microsoft.com/r-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/r-server/r-reference/microsoftml/selectFeatures)
 
-> [!NOTE]
-> 
-> Models marked with \* also support native scoring with the PREDICT function.
-
 ### Unsupported model types
 
 The following model types are not supported:
@@ -113,3 +111,7 @@ The following model types are not supported:
 ### Known issues
 
 + `sp_rxPredict` returns an inaccurate message when a NULL value is passed as the model: "System.Data.SqlTypes.SqlNullValueException:Data in Null".
+
+## Next steps
+
+[How to do realtime scoring](r/how-to-do-realtime-scoring.md)

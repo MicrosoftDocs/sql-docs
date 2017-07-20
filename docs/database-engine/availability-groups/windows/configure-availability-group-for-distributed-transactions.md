@@ -26,9 +26,7 @@ manager: "jhubbard"
 # Configure availability group for distributed transactions
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
-This article explains how to configure an availability group for distributed transactions  
-
-[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group.
+[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group. This article explains how to configure an availability group for distributed transactions  
 
 In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers.  
 

@@ -97,6 +97,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Change Data Capture |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
+| &nbsp; | Availability group rolling upgrade |
 | **Security** | Extensible Key Management |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
@@ -177,6 +178,10 @@ In RC1 the cluster resource agent sets the virtual server name like it does in a
    - Upgrade **mssql-server-ha** package.
 1. Remove the constraint added by the manual resource move. See [Failover cluster manually](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md#failManual).
 2. If desired, fail back to the original primary node. 
+
+#### Availability group
+
+On Linux, rolling upgrade to SQL Server 2017 RC1 is not supported. After you upgrade the secondary replica, it will disconnect from the primary replica until the primary replica is upgraded. Microsoft is planning to resolve this for a future release. 
 
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).

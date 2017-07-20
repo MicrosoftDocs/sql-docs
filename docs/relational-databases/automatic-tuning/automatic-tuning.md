@@ -59,10 +59,10 @@ be executed to fix the problem.
 
 | type | description | datetime | score | details | … |
 | --- | --- | --- | --- | --- | --- |
-| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 4ms to 14ms | 3/17/2017 | 83 | `queryId` `forcedPlanId` `regressedPlanId` `T-SQL` |   |
-| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 37ms to 84ms | 3/16/2017 | 26 | `queryId` `forcedPlanId` `regressedPlanId` `T-SQL` |   |
+| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 4 ms to 14 ms | 3/17/2017 | 83 | `queryId` `forcedPlanId` `regressedPlanId` `T-SQL` |   |
+| `FORCE_LAST_GOOD_PLAN` | CPU time changed from 37 ms to 84 ms | 3/16/2017 | 26 | `queryId` `forcedPlanId` `regressedPlanId` `T-SQL` |   |
 
-The most important information shown in this view are:
+Some information from this view are described in the following list:
  - Type of the recommended action - `FORCE_LAST_GOOD_PLAN`.
  - Description that contains information why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] thinks that this is a potential performance regression.
  - Datetime when the potential regression is detected.
@@ -100,7 +100,7 @@ FROM sys.dm_db_tuning_recommendations
 
 | reason | score | script | query\_id | current plan\_id | recommended plan\_id | estimated\_gain | error\_prone
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| CPU time changed from 3ms to 46ms | 36 | EXEC sp\_query\_store\_force\_plan 12, 17; | 12 | 28 | 17 | 11.59 | 0
+| CPU time changed from 3 ms to 46 ms | 36 | EXEC sp\_query\_store\_force\_plan 12, 17; | 12 | 28 | 17 | 11.59 | 0
 
 `estimated\_gain` represents the estimated number of seconds that would be saved if recommended plan is executed instead of the current plan. Recommended plan should be forced instead of the current plan if the gain is greater than 10 seconds. The current plan is error prone if there are more errors (for example, time-outs or aborted executions) in this plan than in the recommended plan. In that case `error\_prone` column would be set to the value 1, and this is another reason why the recommended plan should be forced instead of the current one.
 
@@ -121,7 +121,7 @@ the following command:
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON ); 
 ```
-Once you turn-on this option, SQL Database Engine will automatically force any recommendation where the gain is higher than 10 seconds, or the number of errors in the new plan is higher than the number of errors in the recommended plan, and verify that the forced plan is better than the current one.
+Once you turn-on this option, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will automatically force any recommendation where the gain is higher than 10 seconds, or the number of errors in the new plan is higher than the number of errors in the recommended plan, and verify that the forced plan is better than the current one.
 
 The status of the automatic tuning option is shown in the following view:
 
@@ -136,7 +136,7 @@ FROM sys.database_automatic_tuning_options;
 | FORCE\_LAST\_GOOD\_PLAN | ON | OFF | QUERY_STORE_OFF |
 
 `FORCE_LAST_GOOD_PLAN` option might be in `OFF` state even if the user specified `ON`. The option might be disabled if Query Store is disabled or in read-only mode. Column `actual_state_desc`
-gives information about the current state of automatic tuning option, and column `reason_desc` gives information why is actual state diferent that desired state.
+gives information about the current state of automatic tuning option, and column `reason_desc` gives information why is actual state different that desired state.
 Values in `reason_desc` column are shown in the following table:
 
 | reason | reason\_desc | description |

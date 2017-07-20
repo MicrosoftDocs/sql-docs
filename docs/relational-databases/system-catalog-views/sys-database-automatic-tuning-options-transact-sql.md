@@ -38,8 +38,8 @@ manager: "jhubbard"
 |**desired_state_desc**|**nvarchar(60)**|Textual description of the desired operation mode of Automatic Tuning option:<br />`OFF` (0)<br />`ON` (1)|  
 |**actual_state**|**smallint**|Indicates the operation mode of Automatic Tuning option.|  
 |**actual_state_desc**|**nvarchar(60)**|Textual description of the actual operation mode of Automatic Tuning option.<br />`OFF` (0)<br />`ON` (1)|  
-|**reason**|**smallint**|Indicates why actual and desired state are different.|  
-|**reason_desc**|**nvarchar(60)**|Textual description of the reason why actual and desired state are different.|  
+|**reason**|**smallint**|Indicates why actual and desired states are different.|  
+|**reason_desc**|**nvarchar(60)**|Textual description of the reason why actual and desired states are different.|  
   
 ## Permissions  
  Requires the `VIEW DATABASE STATE` permission.  

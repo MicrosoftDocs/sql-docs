@@ -50,7 +50,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 <edition_options> ::=   
 {  
-      MAXSIZE = { 100 MB | 500 MB | 1 | 5 | 10 | 20 | 30 … 150…500 } GB    
+      MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 | 5 | 10 | 20 | 30 … 150…4096 } GB    
     | ( EDITION = {  'basic' | 'standard' | 'premium' | 'premiumrs'}   
     | SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3'   
@@ -63,7 +63,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 ```  
   
 ```  
-To copy a database in Azure SQL Database V12:  
+To copy a database:  
 CREATE DATABASE database_name  
     AS COPY OF [source_server_name.] source_database_name  
     [ ( SERVICE_OBJECTIVE =   
@@ -94,27 +94,31 @@ CREATE DATABASE database_name
  *MAXSIZE*  
  Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.  
   
-|**MAXSIZE**|**Basic**|**Standard**|**Premium**| **Premium RS** 
-|-----------------|---------------|------------------|-----------------|-----------------|  
-|100 MB|√|√|√|√|  
-|500 MB|√|√|√|√|  
-|1 GB|√|√|√|√|  
-|2 GB|√ (D)|√|√|√|  
-|5 GB||√|√|√|  
-|10 GB||√|√|√|  
-|20 GB||√|√|√|  
-|30 GB||√|√|√|  
-|40 GB||√|√|√|  
-|50 GB||√|√|√|  
-|100 GB||√|√|√|  
-|150 GB||√|√|√|  
-|200 GB||√|√|√|  
-|250 GB||√ (D)|√|√|  
-|300 GB|||√|√|  
-|400 GB|||√|√|  
-|500 GB|||√ (D) \* |√|  
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3**|**P1-P6 and PRS1-PRS6**| **P11-P15** 
+|-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
+|100 MB|√|√|√|√|√|  
+|250 MB|√|√|√|√|√|  
+|500 MB|√|√|√|√|√|  
+|1 GB|√|√|√|√|√|  
+|2 GB|√ (D)|√|√|√|√|  
+|5 GB|N/A|√|√|√|√|  
+|10 GB|N/A|√|√|√|√|  
+|20 GB|N/A|√|√|√|√|  
+|30 GB|N/A|√|√|√|√|  
+|40 GB|N/A|√|√|√|√|  
+|50 GB|N/A|√|√|√|√|  
+|100 GB|N/A|√|√|√|√|  
+|150 GB|N/A|√|√|√|√|  
+|200 GB|N/A|√|√|√|√|  
+|250 GB|N/A|√ (D)|√ (D)|√|√|  
+|300 GB|N/A|N/A|√|√|√|  
+|400 GB|N/A|N/A|√|√|√|
+|500 GB|N/A|N/A|√|√ (D)|√|
+|750 GB|N/A|N/A|√|√|√|
+|1024 GB|N/A|N/A|√|√|√ (D)|
+|From 1024 GB up to 4096 GB in increments of 256 GB|N/A|N/A|N/A|N/A| √ \* |√|  
   
- \* Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, West Europe, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Current 4 TB limitations](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#current-limitations-of-p11-and-p15-databases-with-4-tb-maxsize).  
+ \* Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Single databases](sql-database-single-database-limits) and [Elastic pools](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-pool).  
   
  The following rules apply to MAXSIZE and EDITION arguments:  
   

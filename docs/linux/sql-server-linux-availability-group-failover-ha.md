@@ -6,7 +6,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 04/12/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

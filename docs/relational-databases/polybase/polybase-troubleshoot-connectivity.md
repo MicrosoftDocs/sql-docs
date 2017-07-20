@@ -3,7 +3,7 @@ title: Troubleshoot PolyBase Kerberos connectivity | Microsoft Docs
 description: 
 services: 
 documentationcenter: 
-author: "Alec Azad"
+author: alazad
 manager: 
 editor: 
 tags: 

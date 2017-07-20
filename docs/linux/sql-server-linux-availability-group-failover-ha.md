@@ -183,7 +183,7 @@ Before you upgrade an availability group, review the best practices at [Upgradin
 The following sections explain how to perform a rolling upgrade with SQL Server instances on Linux with availability groups. 
 
 >[!WARNING]
->On Linux, rolling upgrade to SQL Server 2017 RC1 does not work. Microsoft is planning to resolve this for a future release. 
+>On Linux, rolling upgrade to SQL Server 2017 RC1 is not supported. After you upgrade the secondary replica, it will disconnect from the primary replica until the primary replica is upgraded. Microsoft is planning to resolve this for a future release. 
 
 ### Upgrade steps on Linux
 

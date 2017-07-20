@@ -44,7 +44,7 @@ ALTER DATABASE { database_name }
   
 <edition_options> ::=   
 {  
-      MAXSIZE = { 100 MB | 500 MB |1 | 5 | 10 | 20 | 30 … 150 … 4096 } GB    
+      MAXSIZE = { 100 MB | 250 MB | 500 MB |1 | 5 | 10 | 20 | 30 … 150 … 4096 } GB    
     | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
     | SERVICE_OBJECTIVE =   
                  {  'S0' | 'S1' | 'S2' | 'S3'|
@@ -213,7 +213,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 |500 GB|N/A|N/A|√|√ (D)|√|
 |750 GB|N/A|N/A|√|√|√|
 |1024 GB|N/A|N/A|√|√|√ (D)|
-|From 1024 GB up to 4096 GB in increments of 256 GB|N/A|N/A|N/A|N/A| √ \* |√|  
+|From 1024 GB up to 4096 GB in increments of 256 GB \*|N/A|N/A|N/A|N/A| √  |√|  
   
  \* Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
 

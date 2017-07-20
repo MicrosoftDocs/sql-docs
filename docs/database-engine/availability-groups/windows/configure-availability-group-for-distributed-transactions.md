@@ -32,7 +32,7 @@ This article explains how to configure an availability group for distributed tra
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group.
 
-In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers. This article explains how to configure an availability group for distributed transactions. 
+In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers. 
 
 >[!NOTE]
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] also supports distributed transactions, however support in [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] is limited. In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] a distributed transaction with a database in an availability group can not be guaranteed if it includes any other databases on the same server. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation. 

@@ -90,5 +90,8 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
   
 DBCC PDW_SHOWSPACEUSED;  
 ```  
-  
+ ## See also
+[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
+
   

@@ -93,5 +93,7 @@ Based on the results of the preceding query, use the sql_spid and pdw_node_id as
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  
 ```  
-  
-  
+
+## See also
+[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
+[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspacedused-transact-sql.md)

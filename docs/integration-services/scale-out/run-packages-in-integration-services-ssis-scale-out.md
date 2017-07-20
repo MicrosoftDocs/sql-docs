@@ -32,7 +32,11 @@ After the packages are deployed to the Integration Services server, you can exec
     On the **Machine Selection** page, you select the Scale Out Worker machines to run the packages. By default, any machine is allowed to run the packages. 
 
    >Note: 
-   > The packages are executed with the credential of the user accounts of the Scale Out Worker services, which are shown on the **Machine Selection** page. By default, the account is NT Service\SSISScaleOutWorker140. You may want to change to your own lab accounts.
+   > The packages are executed with the credential of the user accounts of the Scale Out Worker services, which are shown on the **Machine Selection** page. 
+   >By default, the account is NT Service\SSISScaleOutWorker140. You may want to change to your own lab accounts.
+   
+   >Waring:
+   >Package executions triggered by different users on the same worker are run with the same account. There are no security boundary among them. 
 
 4. ### Run the packages and view reports 
     Click **OK** to start the package executions. To view the execution report for a package, right-click the package in Object Explorer, click **Reports**, click **All Executions**, and find the execution.

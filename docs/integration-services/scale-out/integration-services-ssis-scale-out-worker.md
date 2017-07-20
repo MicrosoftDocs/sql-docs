@@ -48,7 +48,7 @@ ExecutionLogRetryCount|The retry count if execution logging fails.|3
 ExecutionLogRetryTimeout|The retry timeout if execution logging fails. ExecutionLogRetryCount is ignored if ExecutionLogRetryTimeout is reached.|7.00:00:00 (7 days)        
 AgentId|Worker agent Id of the Scale Out Worker|Generated automatically        
 
-### View Scale Out Worker log
+## View Scale Out Worker log
 The log file of Scale Out Worker service is in the \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\Cluster\Agent folder path.
 
 The log location of each individual task is configured in the WorkerSettings.config file by TasksRootFolder. If it is not specified, the log is in the \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\Cluster\Tasks folder path. 

@@ -120,8 +120,5 @@ SQL Server Management Studio 17.1 Upgrade Package (upgrades 17.0 to 17.1):<br>
 ## See Also  
 [Tutorial: SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
 [SQL Server Management Studio documentation](https://msdn.microsoft.com/library/hh213248(v=sql.130).aspx)  
-[Microsoft SQL Server](https://msdn.microsoft.com/library/bb545450.aspx)  
 [Additional updates and service packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)  
 [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
-
-

@@ -138,8 +138,8 @@ Verify that the external script execution service is enabled.
     ```SQL
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'OutputDataSet<-InputDataSet',
-    @input_data_1 =N'select 1 as hello'
-    WITH RESULT SET (([hello] int not null));
+    @input_data_1 =N'SELECT 1 as hello'
+    WITH RESULT SETS (([hello] int not null));
     GO
     ```
   

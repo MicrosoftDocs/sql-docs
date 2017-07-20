@@ -1,4 +1,4 @@
----
+#---
 title: "sys.external_library_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
@@ -34,7 +34,7 @@ Lists a row for each file that makes up an external library.
 |platform |tinyint |ID of the host platform on which SQL Server is installed. |
 |platform_desc | nvarchar(60) |Name of the host platform. Valid values are 'WINDOWS', 'LINUX'. |
 
-## See also  
+### See also  
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)
 [Package management for SQL Server R Services](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

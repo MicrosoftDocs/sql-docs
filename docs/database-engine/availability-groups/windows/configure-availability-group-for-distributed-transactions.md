@@ -32,7 +32,7 @@ This article explains how to configure an availability group for distributed tra
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group.
 
-In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers. 
+In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers.  
 
 >[!NOTE]
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] also supports distributed transactions, however support in [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] is limited. In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] a distributed transaction with a database in an availability group can not be guaranteed if it includes any other databases on the same server. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] does not have this limitation. 
@@ -120,8 +120,6 @@ The following list explains how the application works with DTC to complete distr
     - If the client issues commit, DTC begins the two-phase commit protocol by asking all the resource managers in the transaction to prepare the transaction.
 4. DTC informs all resource managers to commit the transaction after all resource managers successfully acknowledge the prepare phase. If anything prevents successful acknowledgement, DTC aborts the transaction. 
 
-For additional information about DTC and SQL Server, see [How It Works: Session/SPID (–2) for DTC Transactions](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/).
-
 ### Effects of configuring an availability group for distributed transactions
 
 Each entity participating in a distributed transaction is called a resource manager. Examples of resource managers include:
@@ -145,7 +143,7 @@ The outcome for the active transactions that exists during RMID change cannot be
 * Add or remove a database from an availability group. 
 * Drop an availability group.
 
-If the preceding cases happen while `DTC_SUPPORT = NONE`, and the primary replica fails over to a new instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], the instance tries to contact DTC to identify the transaction result. DTC cannot return the outcome because the RMID that the database is using to get the outcome for in-doubt transactions during recovery was not enlisted before. Therefore the database goes into SUSPECT state.
+In the preceding cases, if the primary replica fails over to a new instance of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], the instance tries to contact DTC to identify the transaction result. DTC cannot return the outcome because the RMID that the database is using to get the outcome for in-doubt transactions during recovery was not enlisted before. Therefore the database goes into SUSPECT state.
 
 The new [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] error log has an entry like the following example:
 

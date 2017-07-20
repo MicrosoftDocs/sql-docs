@@ -34,6 +34,9 @@ Before you configure AD Authentication, you need to:
   - [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   - [Ubuntu](quickstart-install-connect-ubuntu.md)
 
+>  [!IMPORTANT]  
+>   At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release
+
 ## Step 1: Join [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host to AD domain
 Numerous tools exist to help you join the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine to your AD domain. This walkthrough uses [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html), a popular open source package. If you haven't already, install both the **realmd** and Kerberos client packages on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:  
 ```bash  

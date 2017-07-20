@@ -95,9 +95,9 @@ ALTER AVAILABILITY GROUP MyaAG
 
 A distributed transaction spans two or more databases. As the transaction manager, DTC coordinates the transaction between SQL Server instances, and other data sources. Each instance of the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] database engine can operate as a resource manager. When an availability group is configured with `DTC_SUPPORT = PER_DB`, the databases can operate as resource managers. For more information, see the MS DTC documentation.
 
-A transaction with two or more databases in a single instance of the database engine is actually a distributed transaction. The instance manages the distributed transaction internally; to the user, it operates as a local transaction. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] promotes all cross-database transactions to distributed transactions when databases are in an availability group configured with `DTC_SUPPORT = PER_DB` - even within a single instance of SQL Server. 
+A transaction with two or more databases in a single instance of the database engine is actually a distributed transaction. The instance manages the distributed transaction internally; to the user, it operates as a local transaction. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] promotes all cross-database transactions to DTC when databases are in an availability group configured with `DTC_SUPPORT = PER_DB` - even within a single instance of SQL Server. 
 
-At the application, a distributed transaction is managed much the same as a local transaction. At the end of the transaction, the application requests the transaction to be either committed or rolled back. A distributed commit must be managed differently by the transaction manager to minimize the risk that a network failure may result in some resource managers successfully committing while others roll back the transaction. This is achieved by managing the commit process in two phases (the prepare phase and the commit phase), which is known as a two-phase commit (2PC).
+At the application, a distributed transaction is managed much the same as a local transaction. At the end of the transaction, the application requests the transaction to be either committed or rolled back. A distributed commit must be managed differently by the transaction manager to minimize the risk that a network failure may result in some resource managers successfully committing while others roll back the transaction. This is achieved by managing the commit process in two phases (the prepare phase and the commit phase), which is known as a two-phase commit.
 
 - **Prepare phase**
    
@@ -111,16 +111,14 @@ At the application, a distributed transaction is managed much the same as a loca
 
 The following list explains how the application works with DTC to complete distributed transactions.
 
-1. When an application requires a distributed transaction, it connects to a DTC to begin the transaction. The client owns the DTC transaction. DTC is the transaction manager. 
-2. The client then connects to a [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance and enlists in the DTC transaction and creates another resource manager. Normally, the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance this resource manager. If the database is in an availability group and registered for DTC support, the database is this resource manager. This resource manager exchanges transaction information with DTC. 
+1. The SQL Server instance enlists in the DTC transaction. This can happen when there is more than one resource manager in the transaction or if the client requests a transaction be promoted to DTC transaction.
+2. The client does some work in the SQL Server instance under the DTC transaction.
+3. The client issues commit or abort for the DTC transaction.
+    - If the client issues abort, the transaction is aborted immediatley.
+    - If the client issues commit, DTC begins the two-phase commit protocol by asking all the resource managers in the transaction to prepare the transaction.
+4. DTC informs all resource managers to commit the transaction after all resource managers successfully acknowledge the prepare phase. If anything prevents successful acknowledgement, DTC aborts the transaction. 
 
-   >[!NOTE]
-   >SQL Server can also promote a transaction to DTC. If a client connects to an instance of SQL Server 2017, and the connection initiates a transaction that involves more than one database, SQL Server promotes the transaction to a distributed transaction when one of the databases is in an availability group. 
-
-3. The client does some work in the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance under the DTC transaction. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance holds locks, and preserves references to the DTC transaction.
-4. The client either disconnects or enlists in NULL. The client can disconnect from the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance unhooks the connection from the DTC transaction it is tracking. The transaction object remains in the list of [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] transactions because it is active. It stays active until the DTC resource manager indicates either abort or commit.
-5. After the client has completed the work on all resources, DTC performs the two-phase commit protocol to either abort or commit to the [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance - and any other resources in the transaction.
-6. The [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] instance either commits or aborts the transaction and releases the locks.
+For additional information about DTC and SQL Server, see [How It Works: Session/SPID (–2) for DTC Transactions](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/).
 
 ### Effects of configuring an availability group for distributed transactions
 

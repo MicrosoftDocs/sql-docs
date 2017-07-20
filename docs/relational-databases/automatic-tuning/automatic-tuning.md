@@ -78,7 +78,7 @@ SELECT reason, score,
       planForceDetails.*,
       estimated_gain = (regressedPlanExecutionCount+recommendedPlanExecutionCount)
                   *(regressedPlanCpuTimeAverage-recommendedPlanCpuTimeAverage)/1000000,
-      error_prone = IIF(regressedPlanErrorCount>recommendedPlanErrorCount), 'YES','NO'),
+      error_prone = IIF(regressedPlanErrorCount>recommendedPlanErrorCount, 'YES','NO')
 FROM sys.dm_db_tuning_recommendations
   CROSS APPLY OPENJSON (Details, '$.planForceDetails')
     WITH (  [query_id] int '$.queryId',
@@ -102,7 +102,7 @@ FROM sys.dm_db_tuning_recommendations
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CPU time changed from 3 ms to 46 ms | 36 | EXEC sp\_query\_store\_force\_plan 12, 17; | 12 | 28 | 17 | 11.59 | 0
 
-`estimated\_gain` represents the estimated number of seconds that would be saved if the recommended plan would be executed instead of the current plan. The recommended plan should be forced instead of the current plan if the gain is greater than 10 seconds. If there are more errors (for example, time-outs or aborted executions) in the current plan than in the recommended plan, the column `error\_prone` would be set to the value 1. Error prone plan is another reason why the recommended plan should be forced instead of the current one.
+`estimated\_gain` represents the estimated number of seconds that would be saved if the recommended plan would be executed instead of the current plan. The recommended plan should be forced instead of the current plan if the gain is greater than 10 seconds. If there are more errors (for example, time-outs or aborted executions) in the current plan than in the recommended plan, the column `error\_prone` would be set to the value `YES`. Error prone plan is another reason why the recommended plan should be forced instead of the current one.
 
 ## Automatic plan choice correction
 

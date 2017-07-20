@@ -28,8 +28,6 @@ manager: "jhubbard"
 
 This article explains how to configure an availability group for distributed transactions  
 
-## Support for distributed transactions
-
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] supports all distributed transactions including databases in an availability group.
 
 In order to guarantee distributed transactions, the availability group must be configured to register databases as distributed transaction resource managers.  

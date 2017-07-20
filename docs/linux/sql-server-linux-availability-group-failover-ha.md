@@ -209,12 +209,10 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    sudo pcs resource move ag_cluster-master <targetReplicaName> --master  
    ``` 
    
-   If the availability group cluster type is `NONE`, manually failover the availability group with Transact-SQL.
-
    >[!IMPORTANT]
    >This procedure only applies to availability groups that do not have a cluster manager.  
 
-   Run the following steps in order:
+   If the availability group cluster type `NONE`, manually fail over. Complete the following steps in order:
 
       a. The following command sets the primary replica to secondary. Replace `AG1` with the name of your availability group. Run the Transact-SQL command on the instance of SQL Server that hosts the primary replica.
 

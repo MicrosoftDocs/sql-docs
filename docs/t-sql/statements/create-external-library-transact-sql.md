@@ -139,8 +139,7 @@ DROP EXTERNAL LIBRARY ggplot2 <user_name>;
 ```
 
 > [!NOTE]
-> Unlike other `DROP` statements in SQL Server, this statement supports an optional parameter that specifies the user authority. This option allows users with ownership roles to delete libraries uploaded by regular users. 
-
+> Unlike other `DROP` statements in SQL Server, this statement supports an optional parameter that specifies the user authority. This option allows users with ownership 
 ## See also  
 [ALTER EXTERNAL DATA SOURCE (Transact-SQL)](alter-external-data-source-transact-sql.md)  
 [DROP EXTERNAL DATA SOURCE (Transact-SQL)](drop-external-data-source-transact-sql.md)  

@@ -45,22 +45,7 @@
 # [Event Handlers](integration-services-ssis-event-handlers.md)
 # [Queries](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
-
-# [Catalog and Server](service/integration-services-ssis-server-and-catalog.md)  
-## [SSIS Catalog](service/ssis-catalog.md)  
-## [Integration Services (SSIS) Catalog Transact-SQL Reference](service/integration-services-ssis-catalog-transact-sql-reference.md)  
-## [View the List of Packages on the Integration Services Server](service/view-the-list-of-packages-on-the-integration-services-server.md)  
-## [Project Properties Dialog Box](service/project-properties-dialog-box.md)  
-## [Project Versions Dialog Box](service/project-versions-dialog-box.md)  
-## [Browse All Principals Dialog Box](service/browse-all-principals-dialog-box.md)  
-## [Package Properties Dialog Box](service/package-properties-dialog-box.md)  
-## [Validate Dialog Box](service/validate-dialog-box.md)  
-## [Configure Dialog Box](service/configure-dialog-box.md)  
-## [Set Parameter Value Dialog Box](service/set-parameter-value-dialog-box.md)  
-## [Folder Properties Dialog Box](service/folder-properties-dialog-box.md)  
-
 # [Deploy Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
-
 # [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
 # [Service (legacy)](../integration-services/service/integration-services-service-ssis-service.md)

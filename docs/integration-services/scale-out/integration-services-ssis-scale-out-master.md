@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) Scale Out Master | Microsoft Docs"
+title: "SQL Server Integration Services (SSIS) Scale Out Master | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"

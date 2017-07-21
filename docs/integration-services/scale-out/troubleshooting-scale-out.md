@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting Scale Out | Microsoft Docs"
+title: "Troubleshooting SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"
@@ -70,7 +70,7 @@ Step 1: Install Scale Out Master certificate to Root certificate store of local 
 
 Step 2: Check if the host name in master endpoint is included in the CNs of Scale Out Master certificate. If not, reset the master endpoint in Scale Out Worker configuration file and restart Scale Out Worker service. 
 
-> ![Note]
+> [!Note]
 > If it is not possible to change the host name of master endpoint due to DNS settings, you have to change the Scale Out Master certificate. See [Deal with certificates in SSIS Scale Out](deal-with-certificates-in-ssis-scale-out.md).
 
 Step 3: Check if the master thumbprint specified in Scale Out Worker configuration matches the thumbprint of Scale Out Master certificate. 
@@ -139,5 +139,5 @@ Check the status of the machines you selected to run the package in [SSISDB].[ca
 
 Check if SQL Server Authentication is allowed by the Sql Server hosting SSISDB.
 
-> ![Note]  
+> [!Note]  
 > If you have changed the account for Scale Out logging, see [Change the Account for Scale Out Logging](change-logdb-account.md) and verify the connection string used for logging.

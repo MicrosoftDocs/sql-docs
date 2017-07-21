@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Set Up Integration Services Scale Out | Microsoft Docs"
+title: "Walkthrough: Set Up SQL Server Integration Services Scale Out | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"
@@ -14,7 +14,7 @@ author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
 ---
-# Walkthrough: Set Up Integration Services Scale Out
+# Walkthrough: Set up Integration Services Scale Out
 Set up [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] Scale Out by completing the following tasks. 
 
 > [!NOTE]
@@ -65,7 +65,7 @@ For information on setting up Database Engine Services and [!INCLUDE[ssISnoversi
   1.  Add IS_Master to the parameter /FEATURES
   2.  Configure Scale Out Master by specifying the following parameters and their values: /ISMASTERSVCACCOUNT, /ISMASTERSVCPASSWORD, /ISMASTERSVCSTARTUPTYPE, /ISMASTERSVCPORT, /ISMasterSVCSSLCertCN(optional), /ISMASTERSVCTHUMBPRINT(optional).
 
-> ![Note]
+> [!Note]
 > If Scale Out Master is not installed together with Database Engine and the Database Engine is a named instance, you need to configure SqlServerName in Scale Out Master service configuration file after installation. See [Scale Out Master](integration-services-ssis-scale-out-master.md) for details.
 
 ## <a name="InstallWorker"></a> Install Scale Out Worker
@@ -80,7 +80,7 @@ To enable the functionality of Scale Out Worker, you must install [!INCLUDE[ssIS
   2. On the **Server Configuration** page, select the account to run **SQL Server Integration Services Scale Out Worker service** and select the **Startup Type**.    
   ![Server Config 2](media/server-config-2.PNG "Server Config 2")
   3. On the **Integration Services Scale Out Worker Configuration** page, specify the endpoint to connect to Scale Out Master. 
-      > Note:
+      > [!Note]
       > You can skip Worker Node configuration (step 3&4) here and associate the Scale Out Worker to Scale Out Master with [Scale Out Manager](integration-services-ssis-scale-out-manager.md) after installation.
 
     - For a **one computer** environment, the endpoint is automatically generated when Scale Out Master and Scale Out Worker are installed at the same time. 
@@ -89,7 +89,7 @@ To enable the functionality of Scale Out Worker, you must install [!INCLUDE[ssIS
 
   4. For a **multiple computers** environment, specify the client SSL certificate that is used to validate Scale Out Master. For a **one computer** environment, there's no need to specify the client SSL certificate. 
   
-     > NOTE:
+     > [!NOTE]
      > When the SSL certificate used by Scale Out Master is self-signed, a corresponding client SSL certificate is required to be installed on the computer with Scale Out Worker. If you provide the file path for the client SSL Certificate on the **Integration Services Scale Out Worker Configuration** page, the certificate will be installed automatically; otherwise, you have to install the certificate manually later. 
      
      Click **Browse** to find the certificate file (*.cer). To use the default SSL certificate, select the SSISScaleOutMaster.cer file located under \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn on the computer on which Scale Out Master is installed.   
@@ -116,7 +116,7 @@ Open the port specified during the Scale Out Master installation and the port of
 
 If the startup type of the services is not set to Automatic during installation, start the services: SQL Server Integration Services Scale Out Master 14.0 (SSISScaleOutMaster140) and SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140). 
 
-> Note:
+> [!Note]
 > After you open the firewall port, you also need to restart the Scale Out Worker service.
    
 ## <a name="EnableMaster"></a> Enable Scale Out Master
@@ -148,5 +148,5 @@ GO
 EXEC [catalog].[enable_worker_agent] '6583054A-E915-4C2A-80E4-C765E79EF61D'
 GO 
 ```
-## Next Steps
+## Next steps
 The set up of the Scale Out feature is finished. You can now run packages in Scale Out. For more information, see [Execute Packages in Integration Services (SSIS) Scale Out](run-packages-in-integration-services-ssis-scale-out.md).

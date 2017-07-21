@@ -14,7 +14,7 @@ author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
 ---
-# Deal with certificates in Sql Server Integration Services Scale Out
+# Deal with certificates in SQL Server Integration Services Scale Out
 
 To secure the communication between Scale Out Master and Scale Out Worker, two certificates are used in Scale Out, i.e. Scale Out Master certificate and Scale Out Worker certificate. 
 

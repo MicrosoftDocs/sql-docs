@@ -1,5 +1,5 @@
 ---
-title: "Change the Account for Scale Out Logging | Microsoft Docs"
+title: "Change the account for SQL Server Integration Services (SSIS) Scale Out logging | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"
@@ -14,7 +14,7 @@ author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
 ---
-# Change the Account for Scale Out Logging
+# Change the account for Scale Out logging
 When executing packages in Scale Out, the event messages are logged into SSISDB with an auto-created user **##MS_SSISLogDBWorkerAgentLogin##**. 
 The login of this user uses SQL Server authentication. To change the account, follows the steps below:
 
@@ -36,6 +36,7 @@ EXEC [internal].[update_logdb_info] @serverName, @connectionString
 GO
 ```
 
-## 4. Restart Scale Out Woker service
+## 4. Restart Scale Out Worker service
 
-> Note: If you use a Windows user account for logging, it must be the same account running Scale Out Worker service. Otherwise, the login to SQL Server will fail.
+> [!NOTE]
+> If you use a Windows user account for logging, it must be the same account running Scale Out Worker service. Otherwise, the login to SQL Server will fail.

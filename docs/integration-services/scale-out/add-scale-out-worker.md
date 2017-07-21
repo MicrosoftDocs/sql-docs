@@ -1,5 +1,5 @@
 ---
-title: "Add a Scale Out Worker with Scale Out Manager | Microsoft Docs"
+title: "Add a SQL Server Integration Services (SSIS) Scale Out Worker with SQL Server Integration Services (SSIS) Scale Out Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"
@@ -18,7 +18,7 @@ manager: "jhubbard"
 
 Integration Services Scale Out Manager greatly relieves the complexity to add Scale Out Worker to your existing Scale Out environment. 
 
-The below steps allow you to add a scale out worker to your scale out topology:
+The below steps allow you to add a Scale Out Worker to your Scale Out topology:
 
 ## 1. Install Scale Out Worker
 In the SQL Server installation wizard, select Integration Services and Scale Out Worker on the **Feature Selection** page. 

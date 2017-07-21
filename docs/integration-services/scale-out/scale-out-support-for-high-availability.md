@@ -1,5 +1,5 @@
 ---
-title: "Scale Out Support for High Availability | Microsoft Docs"
+title: "SQL Server Integration Services (SSIS) Scale Out Support for High Availability | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"
@@ -14,10 +14,10 @@ author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
 ---
-# Scale Out Support for High Availability
+# Scale Out support for high availability
 
 In SSIS Scale Out, worker-side high availability is provided through executing packages with multiple Scale Out Workers.
-Master-side high availability is achieved with [Always On for SSIS Catalog](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) and Windows Failover Cluster. Multiple instances of Scale Out Master are hosted in a Windows Failover Cluster. When the Scale Out Master service or SSISDB is down on primary node, the service or SSISDB on secondary node will continue to accept user requests and communicate with Scale Out Workers. 
+Master-side high availability is achieved with [Always On for SSIS Catalog](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) and Windows failover cluster. Multiple instances of Scale Out Master are hosted in a Windows failover cluster. When the Scale Out Master service or SSISDB is down on primary node, the service or SSISDB on secondary node will continue to accept user requests and communicate with Scale Out Workers. 
 
 To set up the master-side high availability, follow the steps below.
 
@@ -46,7 +46,8 @@ You should use the same Scale Out Master certificate with primary node. Export t
 
 ![HA master config 2](media/ha-master-config2.PNG)
 
-> Note: You can set up multiple backup Scale Out Masters by repeating the operations for secondary Scale Out Master.
+> [!Note]
+> You can set up multiple backup Scale Out Masters by repeating the operations for secondary Scale Out Master.
 
 ## 4. Set up SSISDB always on
 
@@ -72,7 +73,7 @@ and @connection_string = 'Data Source=*[Availability Group Listener DNS name]*,*
 
 ## 7. Congifure Scale Out Master service role of Windows failover cluster
 
-In Failover Cluster Manager, connect to the cluster for Scale Out. Select the cluster and click **Action** in menu and then **Configure Role...**.
+In failover cluster Manager, connect to the cluster for Scale Out. Select the cluster and click **Action** in menu and then **Configure Role...**.
 
 In the popped up **High Availability Wizard**, select **Generic Service** 
 in **Select Role** page and choose SQL Server Integration Services Scale Out Master 14.0 in **Select Service** page.

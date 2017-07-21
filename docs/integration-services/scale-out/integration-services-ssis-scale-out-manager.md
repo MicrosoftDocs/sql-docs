@@ -1,5 +1,5 @@
 ---
-title: "Integration Services Scale Out Manager | Microsoft Docs"
+title: "SQL Server Integration Services Scale Out Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"
@@ -26,7 +26,8 @@ Open SQL Server Management Studio and connect to the SQL Server instance of Scal
 Right-click **SSISDB** in the object explorer and select **Manage Scale Out...**. 
 ![Manage Scale Out](media/manage-scale-out.PNG)
 
-> Note: It is suggested to run SQL Server Management Studio as administrator  as some of the Scale Out management operations such as "adding a Scale Out Worker" will require administrative privilege.
+> [!NOTE]
+> It is suggested to run SQL Server Management Studio as administrator  as some of the Scale Out management operations such as "adding a Scale Out Worker" will require administrative privilege.
 
 
 ## 2. Open Scale Out Manager by runing ISManager.exe directly
@@ -73,7 +74,7 @@ After gathering all information, Scale Out Manager will provide the actions to b
 
 ![Portal Add Confirm 1](media/portal-add-confirm1.PNG)
 
-In case the worker certificate is not accessible, you need to update it manually by yourself and restart the worker serive.
+In case the worker certificate is not accessible, you need to update it manually by yourself and restart the worker service.
 
 ![Portal Add Confirm 2](media/portal-add-confirm2.PNG)
 

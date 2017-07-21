@@ -1,5 +1,5 @@
 ---
-title: "Run Packages in Integration Services (SSIS) Scale Out | Microsoft Docs"
+title: "Run Packages in SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"
@@ -17,39 +17,52 @@ f1_keywords:
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"
 ---
 
-# Run Packages in Integration Services (SSIS) Scale Out
+# Run packages in Integration Services (SSIS) Scale Out
 After the packages are deployed to the Integration Services server, you can execute them in Scale Out.
 
-## Run packages with **Execute Package In Scale Out** dialog 
+## Run packages with Execute Package In Scale Out dialog 
 
-1. ### Open the Execute Package In Scale Out dialog box ###
+1. Open the Execute Package In Scale Out dialog box
+
     In [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)], connect to the Integration Services server. In Object Explorer, expand the tree to display the nodes under **Integration Services Catalogs**. Right-click the **SSISDB** node or the project or the package you want to run, and then click **Execute in Scale Out**.
-2. ### Select packages and set the options ###
+
+2. Select packages and set the options
+
     On the **Package Selection** page, you select multiple packages to run and set the environment, parameters, connection managers, and advanced options for each package. Click a package to set these options.
     
     In the **Advanced** tab, you set a Scale Out option called **Retry count**. It sets the number of times a package execution will retry if it fails.
-3. ### Select machines ###
+
+3. Select machines
+
     On the **Machine Selection** page, you select the Scale Out Worker machines to run the packages. By default, any machine is allowed to run the packages. 
 
-   >Note: 
+   > [!Note] 
    > The packages are executed with the credential of the user accounts of the Scale Out Worker services, which are shown on the **Machine Selection** page. 
    >By default, the account is NT Service\SSISScaleOutWorker140. You may want to change to your own lab accounts.
-   
-   >Waring:
-   >Package executions triggered by different users on the same worker are run with the same account. There are no security boundary among them. 
 
-4. ### Run the packages and view reports 
+   >[!WARNING]
+   >Package executions triggered by different users on the same worker are run with the same account. There is no security boundary among them. 
+
+4. Run the packages and view reports 
+
     Click **OK** to start the package executions. To view the execution report for a package, right-click the package in Object Explorer, click **Reports**, click **All Executions**, and find the execution.
     
 ## Run packages with stored procedures
 
-1. ### Create executions ###
+1. Create executions
+
     Call [catalog].[create_execution] for each package. Set parameter **@runinscaleout** to True. If not all Scale Out Worker machines are allowed to run the package, set parameter **@useanyworker** to False.   
-2. ### Set execution parameters ###
+
+2. Set execution parameters
+
     Call [catalog].[set_execution_parameter_value] for each execution.
-3. ### Set Scale Out Workers ###
+
+3. Set Scale Out Workers
+
     Call [catalog].[add_execution_worker]. If any machine is allowed to run the package, you do not need to call this stored procedure. 
-4. ### Start executions ###
+
+4. Start executions
+
     Call [catalog].[start_execution]. Set parameter **@retry_count** to set the number of times a package execution will retry if it fails.
     
 #### Example

@@ -1,5 +1,5 @@
 ---
-title: "Get Started with Integration Services (SSIS) Scale Out on a Single Computer| Microsoft Docs"
+title: "Get Started with SQL Server Integration Services (SSIS) Scale Out on a Single Computer| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"
@@ -14,17 +14,20 @@ author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
 ---
-# Get Started with Integration Services (SSIS) Scale Out on a Single Computer
+# Get started with Integration Services (SSIS) Scale Out on a single computer
 This section provides the guidance of setting up Integration Services Scale Out in an one-box environment with default settings.
 
 ## 1. Install SQL Server features
 In the SQL Server installation wizard, select Database Engine Services, Integration Services, Scale Out Master and Scale Out Worker on the **Feature Selection** page.
+
 ![Feature Select Onebox 1](media/feature-select-onebox1.PNG)
+
 ![Feature Select Onebox 2](media/feature-select-onebox2.PNG)
 
 On the **Server Configuration** page, simply click "Next" to use default service accounts and startup types.
 
 On the **Database Engine Configuration** page, select "**Mixed Mode**" and click "**Add Current User**" button. 
+
 ![Engine Configuration](media/engine-config.PNG)
 
 One the **Integration Services Scale Out Configuration - Master Node** and **Integration Services Scale Out Configuration - Worker Node** pages, simply click "Next" to apply the default settings of port and certificates.

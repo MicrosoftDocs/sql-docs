@@ -1,7 +1,7 @@
 ---
 title: "DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "7/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,21 +31,18 @@ manager: "jhubbard"
 # DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Defragments indexes of the specified table or view.  
+Defragments indexes of the specified table or view.
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instead.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
-  
+```sql
 DBCC INDEXDEFRAG  
 (  
     { database_name | database_id | 0 }   
@@ -72,38 +69,34 @@ DBCC INDEXDEFRAG
  Suppresses all informational messages that have severity levels from 0 through 10.  
   
 ## Remarks  
- DBCC INDEXDEFRAG defragments the leaf level of an index so that the physical order of the pages matches the left-to-right logical order of the leaf nodes, therefore improving index-scanning performance.  
+DBCC INDEXDEFRAG defragments the leaf level of an index so that the physical order of the pages matches the left-to-right logical order of the leaf nodes, therefore improving index-scanning performance.
   
 > [!NOTE]  
 >  When DBCC INDEXDEFRAG is run, index defragmentation occurs serially. This means that the operation on a single index is performed using a single thread. No parallelism occurs. Also, operations on multiple indexes from the same DBCC INDEXDEFRAG statement are performed on one index at a time.  
   
- DBCC INDEXDEFRAG also compacts the pages of an index, taking into consideration the fill factor specified when the index was created. Any empty pages created because of this compaction are removed. For more information, see [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
+DBCC INDEXDEFRAG also compacts the pages of an index, taking into consideration the fill factor specified when the index was created. Any empty pages created because of this compaction are removed. For more information, see [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).
   
- If an index spans more than one file, DBCC INDEXDEFRAG defragments one file at a time. Pages do not migrate between files.  
+If an index spans more than one file, DBCC INDEXDEFRAG defragments one file at a time. Pages do not migrate between files.
   
- DBCC INDEXDEFRAG reports the estimated percentage completed every five minutes. DBCC INDEXDEFRAG can be stopped at any point in the process, and any completed work is retained.  
+DBCC INDEXDEFRAG reports the estimated percentage completed every five minutes. DBCC INDEXDEFRAG can be stopped at any point in the process, and any completed work is retained.
   
- Unlike DBCC DBREINDEX, or the index building operation generally, DBCC INDEXDEFRAG is an online operation. It does not hold locks long term. Therefore, DBCC INDEXDEFRAG does not block running queries or updates. Because the time to defragment is related to the level of fragmentation, a relatively unfragmented index can be defragmented faster than a new index can be built. A very fragmented index might take considerably longer to defragment than to rebuild.  
+Unlike DBCC DBREINDEX, or the index building operation generally, DBCC INDEXDEFRAG is an online operation. It does not hold locks long term. Therefore, DBCC INDEXDEFRAG does not block running queries or updates. Because the time to defragment is related to the level of fragmentation, a relatively unfragmented index can be defragmented faster than a new index can be built. A very fragmented index might take considerably longer to defragment than to rebuild.
   
- The defragmentation is always fully logged, regardless of the database recovery model setting. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). The defragmentation of a very fragmented index can generate more log than a fully logged index creation. However, the defragmentation is performed as a series of short transactions, so a large log is unnecessary if log backups are taken frequently or if the recovery model setting is SIMPLE.  
+The defragmentation is always fully logged, regardless of the database recovery model setting. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). The defragmentation of a very fragmented index can generate more log than a fully logged index creation. However, the defragmentation is performed as a series of short transactions, so a large log is unnecessary if log backups are taken frequently or if the recovery model setting is SIMPLE.
   
 ## Restrictions  
- DBCC INDEXDEFRAG shuffles index leaf pages in place. Therefore, if an index is interleaved with other indexes on disk, running DBCC INDEXDEFRAG against that index does not make all leaf pages in the index contiguous. To improve the clustering of pages, rebuild the index.  
-  
- DBCC INDEXDEFRAG cannot be used to defragment the following indexes:  
-  
+DBCC INDEXDEFRAG shuffles index leaf pages in place. Therefore, if an index is interleaved with other indexes on disk, running DBCC INDEXDEFRAG against that index does not make all leaf pages in the index contiguous. To improve the clustering of pages, rebuild the index.
+DBCC INDEXDEFRAG cannot be used to defragment the following indexes:
 -   A disabled index.  
-  
 -   An index with page locking set to OFF.  
-  
 -   A spatial index.  
   
- DBCC INDEXDEFRAG is not supported for use on system tables.  
+DBCC INDEXDEFRAG is not supported for use on system tables.
   
 ## Result Sets  
- DBCC INDEXDEFRAG returns the following result set (values may vary) if an index is specified in the statement (unless WITH NO_INFOMSGS is specified):  
+DBCC INDEXDEFRAG returns the following result set (values may vary) if an index is specified in the statement (unless WITH NO_INFOMSGS is specified):
   
-```  
+```sql
 Pages Scanned Pages Moved Pages Removed  
 ------------- ----------- -------------  
 359           346         8  
@@ -114,14 +107,13 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## Permissions  
- Caller must own the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.  
+Caller must own the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.
   
 ## Examples  
-  
 ### A. Using DBCC INDEXDEFRAG to defragment an index  
- The following example defragments all partitions of the `PK_Product`_`ProductID` index in the `Production.Product` table in the `AdventureWorks` database.  
+The following example defragments all partitions of the `PK_Product`_`ProductID` index in the `Production.Product` table in the `AdventureWorks` database.
   
-```tsql  
+```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  
 GO  
 ```  
@@ -129,7 +121,7 @@ GO
 ### B. Using DBCC SHOWCONTIG and DBCC INDEXDEFRAG to defragment the indexes in a database  
  The following example shows a simple way to defragment all indexes in a database that are fragmented above a declared threshold.  
   
-```tsql  
+```sql  
 /*Perform a 'USE <database name>' to select the database in which to run the script.*/  
 -- Declare variables  
 SET NOCOUNT ON;  
@@ -234,10 +226,11 @@ GO
 ```  
   
 ## See Also  
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
   
   
+

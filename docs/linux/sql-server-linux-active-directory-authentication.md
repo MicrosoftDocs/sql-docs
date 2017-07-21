@@ -134,11 +134,7 @@ Default principal: user@CONTOSO.COM
 
 For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
-
-
-
 ## Step 2: Create AD user for [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] and set SPN  
-
 
 >  [!NOTE]  
 >  In the next steps we will use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you will have to **[create one](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed. 

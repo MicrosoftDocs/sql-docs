@@ -41,7 +41,7 @@ The following are issues and limitations with this release of SQL Server Managem
     
     As a workaround, you can use the other forms of authentication provided in SSMS - Active Directory Password Authentication, Active Directory Integrated Authentication or SQL Server Authentication.
 
-5. **SSMS can only connect to SQL Server 2016 Integrated Services (SSIS 2016) instances.**  
+5. **SSMS 17.x can only connect to SQL Server 2017 Integrated Services (SSIS 2017) instances.**  
     There is a known compatibility limitation with SQL Server Integration Services that prevents connecting to previous versions.
     
     As a workaround for this problem, you can connect to your SQL Server Integration Service instance by using the [SSMS release aligned with your SSIS instance.](../ssms/previous-sql-server-management-studio-releases.md) 

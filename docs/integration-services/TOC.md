@@ -46,7 +46,7 @@
 # [Queries](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
 # [Deploy Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
-# [Scale Out](integration-services-ssis-scale-out.md)
+# [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
 # [Service (legacy)](../integration-services/service/integration-services-service-ssis-service.md)
 # [Security](../integration-services/security/security-overview-integration-services.md)

@@ -38,7 +38,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 1. Register the Microsoft SQL Server Ubuntu repository:
 
    ```bash
-   curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list | sudo tee /etc/apt/sources.list.d/mssql-server.list
+   sudo add-apt-repository "$(https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list)
    ```
 
 1. Run the following commands to install SQL Server:
@@ -87,7 +87,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 1. Register the Microsoft Ubuntu repository:
 
    ```bash
-   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   sudo add-apt-repository "$(https://packages.microsoft.com/config/ubuntu/16.04/prod.list)
    ```
 
 1. Update the sources list and run the installation command with the unixODBC developer package:

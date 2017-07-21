@@ -1,7 +1,7 @@
 ---
 title: "Plan and Test the Database Engine Upgrade Plan | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2016"
+ms.date: "07/20/2016"
 ms.prod: 
    - "sql-server-2016"
    - "sql-server-2017"
@@ -17,17 +17,17 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Plan and Test the Database Engine Upgrade Plan
+# Plan and test the database engine upgrade plan
   To perform a successful [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] upgrade, regardless of approach, appropriate planning is required.  
   
-## Release Notes and Known Upgrade issues  
+## Release notes and known upgrade issues  
  Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review:
 
 - [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) 
 - [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) 
 - [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md) topic.  
   
-## Pre-Upgrade Planning Checklist  
+## Pre-upgrade planning checklist  
  Before upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review the following checklist and the associated topics. These topics apply to all upgrades, regardless of upgrade method and will help you determine the most appropriate upgrade method: Rolling upgrade, new installation upgrade, or in-place upgrade. For example, you may not be able to perform an upgrade in-place or a rolling upgrade if you are upgrading the operating system, upgrading from SQL Server 2005, or upgrading from a 32-bit version of SQL Server. For a decision tree, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 -   **Hardware and software requirements:** Review the hardware and software requirements to for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These requirements can be found at: [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). A part of any upgrade planning cycle is to consider upgrading hardware (newer hardware is faster and may reduce licensing either due to fewer processors or due to database and server consolidation)and upgrading the operating system. These types of hardware and software changes will affect the type of upgrade method you choose.  
@@ -79,7 +79,7 @@ manager: "jhubbard"
     where data_space_id in (select data_space_id from sys.filegroups where type=N'FX')  
     ```  
   
-## Develop and Test the Upgrade Plan  
+## Develop and test the upgrade plan  
  The best approach is to treat your upgrade like you would any IT project. You should organize an upgrade team that has the database administration, network, extraction, transformation, and loading (ETL), and other skills required for the upgrade. The team needs to:  
   
 -   **Choose the upgrade method:** See [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
@@ -90,10 +90,7 @@ manager: "jhubbard"
   
 -   **Test the upgrade plan:** To test performance using your actual workload, use the Microsoft SQL Server Distributed Replay Utility. This utility can use multiple computers to replay trace data, simulating a mission-critical workload. By performing a replay on a test server before and after a SQL Server upgrade, you can measure performance differences and look for any incompatibilities your application may have with the upgrade. For more information, see [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md) and [Administration Tool Command-line Options &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md).  
   
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Plan%20and%20Test%20the%20Database%20Engine%20Upgrade%20Plan%20page)  
-  
-## Next Steps  
+## Next steps  
  [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "7/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,14 +34,13 @@ manager: "jhubbard"
 # DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Checks the consistency of disk space allocation structures for a specified database.  
+Checks the consistency of disk space allocation structures for a specified database.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
-  
+```sql
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -60,69 +59,60 @@ DBCC CHECKALLOC
 ```  
   
 ## Arguments  
- *database_name* | *database_id* | 0  
- Is the name or the ID of the database for which to check allocation and page usage. If not specified, or if 0 is specified, the current database is used.  
-  
- Database names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
-  
+ *database_name* | *database_id* | 0   
+ The name or the ID of the database for which to check allocation and page usage.
+ If not specified, or if 0 is specified, the current database is used.
+ Database names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).
+
  NOINDEX  
- Specifies that nonclustered indexes for user tables should not be checked.  
-  
-> [!NOTE]  
->  NOINDEX is maintained for backward compatibility only and does not affect DBCC CHECKALLOC.  
-  
- REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
- Specifies that DBCC CHECKALLOC repair the found errors. *database_name* must be in single-user mode.  
-  
+ Specifies that nonclustered indexes for user tables should not be checked.<br>NOINDEX is maintained for backward compatibility only and does not affect DBCC CHECKALLOC.
+
+ REPAIR_ALLOW_DATA_LOSS \| REPAIR_FAST \| REPAIR_REBUILD  
+ Specifies that DBCC CHECKALLOC repair the found errors. *database_name* must be in single-user mode.
+
  REPAIR_ALLOW_DATA_LOSS  
- Tries to repair any errors that are found. These repairs can cause some data loss. REPAIR_ALLOW_DATA_LOSS is the only option that allows for allocation errors to be repaired.  
-  
+ Tries to repair any errors that are found. These repairs can cause some data loss. REPAIR_ALLOW_DATA_LOSS is the only option that allows for allocation errors to be repaired.
+
  REPAIR_FAST  
- Syntax is maintained for backward compatibility only. No repair actions are performed.  
-  
+ Syntax is maintained for backward compatibility only. No repair actions are performed.
+
  REPAIR_REBUILD  
  Not applicable.  
-  
-> [!IMPORTANT]  
->  Use the REPAIR options only as a last resort. To repair errors, we recommend restoring from a backup. Repair operations do not consider any of the constraints that may exist on or between tables. If the specified table is involved in one or more constraints, we recommend running DBCC CHECKCONSTRAINTS after a repair operation. If you must use REPAIR, run DBCC CHECKDB without a repair option to find the repair level to use. If you use the REPAIR_ALLOW_DATA_LOSS level, we recommend that you back up the database before you run DBCC CHECKDB with this option.  
-  
+ Use the REPAIR options only as a last resort. To repair errors, we recommend restoring from a backup. Repair operations do not consider any of the constraints that may exist on or between tables. If the specified table is involved in one or more constraints, we recommend running DBCC CHECKCONSTRAINTS after a repair operation. If you must use REPAIR, run DBCC CHECKDB without a repair option to find the repair level to use. If you use the REPAIR_ALLOW_DATA_LOSS level, we recommend that you back up the database before you run DBCC CHECKDB with this option.
+
  WITH  
- Enables options to be specified.  
-  
+ Enables options to be specified.
+
  ALL_ERRORMSGS  
- Displays all error messages. All error messages are displayed by default. Specifying or omitting this option has no effect.  
-  
+ Displays all error messages. All error messages are displayed by default. Specifying or omitting this option has no effect.
+
  NO_INFOMSGS  
- Suppresses all informational messages and the report of space used.  
-  
+ Suppresses all informational messages and the report of space used.
+
  TABLOCK  
- Causes the DBCC command to obtain an exclusive database lock.  
-  
+ Causes the DBCC command to obtain an exclusive database lock.
+
  ESTIMATE ONLY  
- Displays the estimated amount of tempdb space that is required to run DBCC CHECKALLOC when all the other options are specified.  
+ Displays the estimated amount of tempdb space that is required to run DBCC CHECKALLOC when all the other options are specified.
   
 ## Remarks  
- DBCC CHECKALLOC checks the allocation of all pages in the database, regardless of the type of page or type of object to which they belong. It also validates the various internal structures that are used to keep track of these pages and the relationships between them.  
-  
- If NO_INFOMSGS is not specified, DBCC CHECKALLOC collects space usage information for all objects in the database. This information will then be printed together with any errors that are found.  
-  
-> [!NOTE]  
->  The DBCC CHECKALLOC functionality is included in [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). This means that you do not have to run DBCC CHECKALLOC separately from these statements.  
+DBCC CHECKALLOC checks the allocation of all pages in the database, regardless of the type of page or type of object to which they belong. It also validates the various internal structures that are used to keep track of these pages and the relationships between them.
+If NO_INFOMSGS is not specified, DBCC CHECKALLOC collects space usage information for all objects in the database. This information will then be printed together with any errors that are found.
   
 > [!NOTE]  
->  DBCC CHECKALLOC does not check FILESTREAM data. FILESTREAM stores binary large objects (BLOBS) on the file system.  
+>The DBCC CHECKALLOC functionality is included in [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). This means that you do not have to run DBCC CHECKALLOC separately from these statements.   DBCC CHECKALLOC does not check FILESTREAM data. FILESTREAM stores binary large objects (BLOBS) on the file system.  
   
 ## Internal Database Snapshot  
- DBCC CHECKALLOC uses an internal database snapshot to provide the transactional consistency that it needs to perform these checks. If a snapshot cannot be created, or TABLOCK is specified, DBCC CHECKALLOC tries to acquire an exclusive (X) lock on the database to obtain the required consistency.  
+DBCC CHECKALLOC uses an internal database snapshot to provide the transactional consistency that it needs to perform these checks. If a snapshot cannot be created, or TABLOCK is specified, DBCC CHECKALLOC tries to acquire an exclusive (X) lock on the database to obtain the required consistency.
   
 > [!NOTE]  
->  Running DBCC CHECKALLOC against tempdb does not perform any checks. This is because, for performance reasons, database snapshots are not available on tempdb. This means that the required transactional consistency cannot be obtained. Stop and start the MSSQLSERVER service to resolve any tempdb allocation issues. This action drops and re-creates the tempdb database.  
+> Running DBCC CHECKALLOC against tempdb does not perform any checks. This is because, for performance reasons, database snapshots are not available on tempdb. This means that the required transactional consistency cannot be obtained. Stop and start the MSSQLSERVER service to resolve any tempdb allocation issues. This action drops and re-creates the tempdb database.  
   
 ## Understanding DBCC Error Messages  
- After the DBCC CHECKALLOC command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.  
+After the DBCC CHECKALLOC command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.
   
 |State|Description|  
-|-----------|-----------------|  
+|---|---|  
 |0|Error number 8930 was raised. This indicates a metadata corruption that caused the DBCC command to terminate.|  
 |1|Error number 8967 was raised. There was an internal DBCC error.|  
 |2|A failure occurred during emergency mode database repair.|  
@@ -131,30 +121,28 @@ DBCC CHECKALLOC
 |5|An unknown error occurred that terminated the DBCC command.|  
   
 ## Error Reporting  
- A mini-dump file (SQLDUMP*nnnn*.txt) is created in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG directory whenever DBCC CHECKALLOC detects a corruption error. When the Feature Usage data collection and Error Reporting features are enabled for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality.  
-  
- The dump file contains the results of the DBCC CHECKALLOC command and additional diagnostic output. The file has restricted discretionary access-control lists (DACLs). Access is limited to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and members of the sysadmin role. By default, the sysadmin role contains all members of the Windows BUILTIN\Administrators group and the local administrator's group. The DBCC command does not fail if the data collection process fails.  
+A mini-dump file (SQLDUMP*nnnn*.txt) is created in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG directory whenever DBCC CHECKALLOC detects a corruption error. When the Feature Usage data collection and Error Reporting features are enabled for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the file is automatically forwarded to [!INCLUDE[msCoName](../../includes/msconame-md.md)]. The collected data is used to improve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] functionality.
+The dump file contains the results of the DBCC CHECKALLOC command and additional diagnostic output. The file has restricted discretionary access-control lists (DACLs). Access is limited to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and members of the sysadmin role. By default, the sysadmin role contains all members of the Windows BUILTIN\Administrators group and the local administrator's group. The DBCC command does not fail if the data collection process fails.
   
 ## Resolving Errors  
- If DBCC CHECKALLOC reports any errors, we recommend that you restore the database from the database backup instead of running a repair. If a backup does not exist, running a repair can correct the reported errors; however, correcting the errors might require some pages, and therefore data, to be deleted.  
-  
- A repair can be performed in a user transaction. This allows for changes to be rolled back. If changes are rolled back, the database will still contain errors and must be restored from a backup. After the repairs finish, back up the database.  
+If DBCC CHECKALLOC reports any errors, we recommend that you restore the database from the database backup instead of running a repair. If a backup does not exist, running a repair can correct the reported errors; however, correcting the errors might require some pages, and therefore data, to be deleted.
+A repair can be performed in a user transaction. This allows for changes to be rolled back. If changes are rolled back, the database will still contain errors and must be restored from a backup. After the repairs finish, back up the database.
   
 ## Result Sets  
- The following tables describe the information that DBCC CHECKALLOC returns.  
+The following tables describe the information that DBCC CHECKALLOC returns.
   
 |Item|Description|  
-|----------|-----------------|  
+|---|---|  
 |FirstIAM|Internal use only.|  
 |Root|Internal use only.|  
 |Dpages|Data page count.|  
 |Pages used|Allocated pages.|  
 |Dedicated extents|Extents allocated to the object.<br /><br /> If mixed allocation pages are used, there might be pages allocated without extents.|  
   
- DBCC CHECKALLOC also reports an allocation summary for each index and partition in each file. This summary describes the distribution of the data.  
+DBCC CHECKALLOC also reports an allocation summary for each index and partition in each file. This summary describes the distribution of the data.
   
 |Item|Description|  
-|----------|-----------------|  
+|---|---|  
 |Reserved pages|Pages allocated to the index and the unused pages in allocated extents.|  
 |Used pages|Pages allocated and being used by the index.|  
 |Partition ID|Internal use only.|  
@@ -163,9 +151,9 @@ DBCC CHECKALLOC
 |LOB data|Pages contain **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml**, and **image** data.|  
 |Row-overflow data|Pages contain variable-length column data that has been pushed off-row.|  
   
- DBCC CHECKALLOC returns the following result set (values may vary), except when ESTIMATEONLY or NO_INFOMSGS is specified.  
+DBCC CHECKALLOC returns the following result set (values may vary), except when ESTIMATEONLY or NO_INFOMSGS is specified.
   
-```  
+```sql
 DBCC results for 'master'.  
 ***************************************************************  
 Table sysobjects                Object ID 1.  
@@ -225,9 +213,9 @@ CHECKALLOC found 0 allocation errors and 0 consistency errors in database 'maste
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
- When ESTIMATEONLY is specified, DBCC CHECKALLOC returns the following result set.  
+When ESTIMATEONLY is specified, DBCC CHECKALLOC returns the following result set.
   
-```  
+```sql
 Estimated TEMPDB space needed for CHECKALLOC (KB)   
 -------------------------------------------------   
 34  
@@ -238,12 +226,12 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## Permissions  
- Requires membership in the sysadmin fixed server role or the db_owner fixed database role.  
+Requires membership in the sysadmin fixed server role or the db_owner fixed database role.
   
 ## Examples  
- The following example executes `DBCC CHECKALLOC` for the current database and for the `AdventureWorks2012` database.  
+The following example executes `DBCC CHECKALLOC` for the current database and for the `AdventureWorks2012` database.
   
-```tsql  
+```sql  
 -- Check the current database.  
 DBCC CHECKCATALOG;  
 GO  
@@ -253,6 +241,7 @@ GO
 ```  
   
 ## See Also  
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   
+

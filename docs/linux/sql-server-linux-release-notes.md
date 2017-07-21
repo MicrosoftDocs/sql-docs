@@ -97,6 +97,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Change Data Capture |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
+| &nbsp; | Availability group rolling upgrade |
 | **Security** | Extensible Key Management |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
@@ -178,11 +179,20 @@ In RC1 the cluster resource agent sets the virtual server name like it does in a
 1. Remove the constraint added by the manual resource move. See [Failover cluster manually](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md#failManual).
 2. If desired, fail back to the original primary node. 
 
+#### Availability group
+
+On Linux, rolling upgrade to SQL Server 2017 RC1 is not supported. After you upgrade the secondary replica, it will disconnect from the primary replica until the primary replica is upgraded. Microsoft is planning to resolve this for a future release. 
+
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
 
 #### SQL Server Integration Services (SSIS)
-You can run SSIS packages on Linux. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
+You can run SSIS packages on Linux. For more info, see the following articles:
+-   [Blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
+-   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
+-   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
+
+Please note the following known issues with this release.
 
 - The **mssql-server-is** package is supported on Ubuntu and Red Hat Enterprise Linux (RHEL) in this release.
 

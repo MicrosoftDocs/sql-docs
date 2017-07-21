@@ -1,34 +1,21 @@
 ---
-# required metadata
-
 title: Configure SQL Server settings with environment variables | Microsoft Docs
 description: This topic describes how to use environment variables to configure specific SQL Server 2017 settings on Linux.
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 07/21/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
 ---
 # Configure SQL Server settings with environment variables on Linux
 
 You can use several different environment variables to configure SQL Server 2017 RC1 on Linux. These variables are used in two scenarios:
 
-- Initial unprompted setup with `mssql-conf -n setup` command.
-- Configuring a new [SQL Server container in Docker](quickstart-install-connect-docker.md).
+- To configure initial setup with the `mssql-conf setup` command.
+- To configure a new [SQL Server container in Docker](quickstart-install-connect-docker.md).
 
 > [!TIP]
 > If you need to configure SQL Server after these setup scenarios, see [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
@@ -53,7 +40,7 @@ You can use several different environment variables to configure SQL Server 2017
 
 ## Example: initial setup
 
-This example runs `mssql-conf setup` without prompts (`-n`). This mode looks for environment variables to use for configuration. The following environment variables are specified:
+This example runs `mssql-conf setup` with configured environment variables. The following environment variables are specified:
 
 - **ACCEPT_EULA** accepts the end user license agreement.
 - **MSSSQL_PID** specifies the freely licensed Developer Edition of SQL Server for non-production use.
@@ -61,7 +48,7 @@ This example runs `mssql-conf setup` without prompts (`-n`). This mode looks for
 - **MSSQL_TCP_PORT** sets the TCP port that SQL Server listens on to 1234.
 
 ```bash
-sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf -n setup
+sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
 ```
 
 ## Example: Docker

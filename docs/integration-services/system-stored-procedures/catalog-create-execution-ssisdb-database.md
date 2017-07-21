@@ -30,7 +30,7 @@ create_execution [ @folder_name = folder_name
      , [ @package_name = ] package_name  
   [  , [ @reference_id = ] reference_id ]  
   [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runincluster = ] runincluster ]
+  [  , [ @runinscaleout = ] runinscaleout ]
   [  , [ @useanyworker = ] useanyworker ] 
      , [ @execution_id = ] execution_id OUTPUT  
 ```  
@@ -51,8 +51,8 @@ create_execution [ @folder_name = folder_name
  [ @use32bitruntime = ] *use32bitruntime*  
  Indicates if the 32-bit runtime should be used to run the package on a 64-bit operating system. Use the value of 1 to execute the package with the 32-bit runtime when running on a 64-bit operating system. Use the value of 0 to execute the package with the 64-bit runtime when running on a 64-bit operating system. This parameter is optional. The *Use32bitruntime* is **bit**.  
  
- [ @runincluster = ] *runincluster*  
- Indicate whether the execution is in Scale Out. Use the value of 1 to execute the package in Scale Out. Use the value of 0 to execute the package without Scale Out. This parameter is optional. It is set to 0, if not specified. The *runincluster* is **bit**. 
+ [ @runinscaleout = ] *runinscaleout*  
+ Indicate whether the execution is in Scale Out. Use the value of 1 to execute the package in Scale Out. Use the value of 0 to execute the package without Scale Out. This parameter is optional. It is set to DEFAULT_EXECUTION_MODE in [SSISDB].[catalog].[catalog_properties], if not specified. The *runinscaleout* is **bit**. 
  
  [ @useanyworker = ] *useanyworker*  
   Indicate whether any Scale Out Worker is allowed to do the execution. Use the value of 1 to execute the package with any Scale Out Worker. Use the value of 0 to indicate that not all Scale Out Workers are allowed to execute the package. This parameter is optional. It is set to 1, if not specified. The *useanyworker* is **bit**. 
@@ -101,7 +101,7 @@ GO
   
 -   Membership to the **sysadmin** server role  
 
- If @runincluster is 1, the stored procedure requires one of the following permissions:
+ If @runinscaleout is 1, the stored procedure requires one of the following permissions:
  
 -   Membership to the **ssis_admin** database role
 

@@ -73,7 +73,7 @@ The Scale Out feature makes it much easier to run [!INCLUDE[ssIS_md](../includes
    
 After installing the Scale Out Master and Workers, the package can be distributed to execute on different Workers automatically. If the execution is terminated unexpectedly, the execution is retried automatically. Also, all the executions and Workers can be centrally managed using the Master.
    
-For more information, see [Integration Services Scale Out](../integration-services/integration-services-ssis-scale-out.md).
+For more information, see [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
    
 ### Support for Microsoft Dynamics Online Resources
 

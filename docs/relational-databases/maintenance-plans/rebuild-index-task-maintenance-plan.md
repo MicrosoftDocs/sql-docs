@@ -29,12 +29,15 @@ The **Rebuild Index Task** uses the ALTER INDEX statement. For more info about t
 ## Options
 
 **Connection**
+
 Select the server connection to use when performing this task.
 
 **New**
+
 Create a new server connection to use when performing this task. The **New Connection** dialog box is described below.
 
 **Databases**
+
 Specify the databases affected by this task.
 
 - **All databases**
@@ -81,30 +84,38 @@ Drop the indexes on the tables in the database and re-create them with a new, au
 Use the `SORT_IN_TEMPDB` option, which determines where the intermediate sort results, generated during index creation, are temporarily stored. If a sort operation is not required, or if the sort can be performed in memory, the `SORT_IN_TEMPDB`option is ignored.
 
 **Pad index**
+
 Specify index padding
 
 **Keep index online**
+
 Use the `ONLINE` option which allows users to access the underlying table or clustered index data and any associated nonclustered indexes during index operations.
 
 > [!NOTE]
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
 **Do not rebuild indexes | Rebuild indexes offline**
+
 Specify what to do for index types that cannot be rebuilt while they are online.
 
 **MAXDOP**
+
 Specify a value to limit the number of processors used in a parallel plan execution.
 
 **Low Priority Used**
+
 Select this option to wait for low priority locks.
 
 **Abort after Wait**
+
 Specify what to do after the time specified by **Max Duration** has elapsed.
 
 **Max Duration**
+
 Specify how long to wait for low priority locks.
 
 **View T-SQL**
+
 View the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements performed against the server for this task, based on the selected options.
 
 > [!NOTE]
@@ -115,36 +126,52 @@ View the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements performed agains
 
 
 ## New Connection Dialog Box
+
 **Connection name**
+
 Enter a name for the new connection.
 
 **Select or enter a server name**
+
 Select a server to connect to when performing this task.
 
 **Refresh**
+
 Refresh the list of available servers.
 
 **Enter information to log on to the server**
+
 Specify how to authenticate against the server.
 
 **Use Windows integrated security**
+
 Connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] with Windows Authentication.
 
 **Use a specific user name and password**
+
 Connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. This option is not available.
 
 **User name**
+
 Provide a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to use when authenticating. This option is not available.
 
 **Password**
+
 Provide a password to use when authenticating. This option is not available.
 
 ## See Also
+
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
+
 [DBCC DBREINDEX &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)
+
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+
 [SORT_IN_TEMPDB Option For Indexes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)
+
 [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
+
 [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md)
+
 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)
 

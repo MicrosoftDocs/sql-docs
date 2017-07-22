@@ -18,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Upgrade Master Data Services
-  The following are the scenarios for upgrading Microsoft [!INCLUDE[ssnoversion](../../includes/noversion-md.md)] Master Data Services.  
+  The following are the scenarios for upgrading Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services.  
   
 -   [Upgrade without Database Engine Upgrade](../../database-engine/install-windows/upgrade-master-data-services.md#noengine)  
   

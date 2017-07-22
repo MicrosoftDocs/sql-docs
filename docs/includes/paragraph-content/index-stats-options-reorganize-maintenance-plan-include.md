@@ -2,11 +2,11 @@
 ### Index stats options
 
 <!--
-This includes/ file was created when processing vsts sqlbuvsts01 2999014.  genemi  2017-07-21
+This includes/ file was created when processing vsts sqlbuvsts01 2999014 (5589131).  genemi  2017-07-21
 
 Initially used in:
-- relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md
-- relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md
+- relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md
+- relational-databases/maintenance-plans/reorganize-index-task-maintenance-plan.md
 -->
 
 In earlier versions of Microsoft SQL Server it could cause system slowdown to reorganize or rebuild a large index. SQL Server 2015 implemented major performance improvements for these index operations.
@@ -16,14 +16,14 @@ Also, in earlier versions the granularity of control was less refined. This caus
 - [sys.dm_db_index_usage_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)
 - [sys.dm_db_index_physical_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
 
-**Scan type**
+ **Scan type**  
  The system must consume resources to gather index statistics. You can choose between consuming relatively less or more resources depending on how much precision you feel is needed for index statistics. The UI offers the following list of precision levels from which you must choose one:
 
 - Fast
 - Sampled
 - Detailed
 
-**Optimize index only if:**
+ **Optimize index only if:**  
  The UI offers the following tuneable filters that you can use to avoid refreshing indexes which do not yet strongly need refreshing:
 
 - Fragmentation &gt; *(%)*

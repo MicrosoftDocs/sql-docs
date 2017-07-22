@@ -17,16 +17,14 @@ Also, in earlier versions the granularity of control was less refined. This caus
 - [sys.dm_db_index_physical_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
 
 **Scan type**
-
-The system must consume resources to gather index statistics. You can choose between consuming relatively less or more resources depending on how much precision you feel is needed for index statistics. The UI offers the following list of precision levels from which you must choose one:
+ The system must consume resources to gather index statistics. You can choose between consuming relatively less or more resources depending on how much precision you feel is needed for index statistics. The UI offers the following list of precision levels from which you must choose one:
 
 - Fast
 - Sampled
 - Detailed
 
 **Optimize index only if:**
-
-The UI offers the following tuneable filters that you can use to avoid refreshing indexes which do not yet strongly need refreshing:
+ The UI offers the following tuneable filters that you can use to avoid refreshing indexes which do not yet strongly need refreshing:
 
 - Fragmentation &gt; *(%)*
 - Page Count &gt;

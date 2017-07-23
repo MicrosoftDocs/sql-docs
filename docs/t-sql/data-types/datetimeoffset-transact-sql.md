@@ -1,7 +1,7 @@
 ---
 title: "datetimeoffset (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/01/2015"
+ms.date: "07/22/2017
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,12 +30,12 @@ manager: "jhubbard"
 # datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Defines a date that is combined with a time of a day that has time zone awareness and is based on a 24-hour clock.  
+Defines a date that is combined with a time of a day that has time zone awareness and is based on a 24-hour clock.
   
-## datetimeoffset Description  
+## datetimeoffset description
   
 |Property|Value|  
-|--------------|-----------|  
+|---|---|
 |Syntax|**datetimeoffset** [ (*fractional seconds precision*) ]|  
 |Usage|DECLARE @MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Default string literal formats (used for down-level client)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows.|  
@@ -54,7 +54,7 @@ manager: "jhubbard"
 |Daylight saving aware|No|  
   
 |Specified scale|Result (precision, scale)|Column length (bytes)|Fractional seconds precision|  
-|---------------------|---------------------------------|-----------------------------|----------------------------------|  
+|---|---|---|---|
 |**datetimeoffset**|(34,7)|10|7|  
 |**datetimeoffset(0)**|(26,0)|8|0-2|  
 |**datetimeoffset(1)**|(28,1)|8|0-2|  
@@ -65,55 +65,51 @@ manager: "jhubbard"
 |**datetimeoffset(6)**|(33,6)|10|5-7|  
 |**datetimeoffset(7)**|(34,7)|10|5-7|  
   
-## Supported String Literal Formats for datetimeoffset  
- The following table lists the supported ISO 8601 string literal formats for **datetimeoffset**. For information about alphabetical, numeric, unseparated and time formats for the date and time parts of **datetimeoffset**, see [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) and [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).  
+## Supported string literal formats for datetimeoffset
+The following table lists the supported ISO 8601 string literal formats for **datetimeoffset**. For information about alphabetical, numeric, unseparated and time formats for the date and time parts of **datetimeoffset**, see [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) and [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
 |ISO 8601|Description|  
-|--------------|-----------------|  
+|---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|These two formats are not affected by the SET LANGUAGE and SET DATEFORMAT session locale settings. Spaces are not allowed between the **datetimeoffset** and the **datetime** parts.|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|This format by ISO definition indicates the **datetime** portion should be expressed in Coordinated Universal Time (UTC). For example, 1999-12-12 12:30:30.12345 -07:00 should be represented as 1999-12-12 19:30:30.12345Z.|  
   
-## Time Zone Offset  
- A time zone offset specifies the zone offset from UTC for a **time** or **datetime** value. The time zone offset can be represented as [+|-] hh:mm:  
-  
+## Time zone offset
+A time zone offset specifies the zone offset from UTC for a **time** or **datetime** value. The time zone offset can be represented as [+|-] hh:mm:
 -   hh is two digits that range from 00 to 14 and represent the number of hours in the time zone offset.  
-  
 -   mm is two digits, ranging from 00 to 59, that represent the number of additional minutes in the time zone offset.  
-  
 -   \+ (plus) or – (minus) is the mandatory sign for a time zone offset. This indicates whether the time zone offset is added or subtracted from the UTC time to obtain the local time. The valid range of time zone offset is from -14:00 to +14:00.  
   
- The time zone offset range follows the W3C XML standard for XSD schema definition and is slightly different from the SQL 2003 standard definition, 12:59 to +14:00.  
+The time zone offset range follows the W3C XML standard for XSD schema definition and is slightly different from the SQL 2003 standard definition, 12:59 to +14:00.
   
- The optional type parameter *fractional seconds precision* specifies the number of digits for the fractional part of the seconds. This value can be an integer with 0 to 7 (100 nanoseconds). The default *fractional seconds precision* is 100ns (seven digits for the fractional part of the seconds).  
+The optional type parameter *fractional seconds precision* specifies the number of digits for the fractional part of the seconds. This value can be an integer with 0 to 7 (100 nanoseconds). The default *fractional seconds precision* is 100ns (seven digits for the fractional part of the seconds).
   
- The data is stored in the database and processed, compared, sorted, and indexed in the server as in UTC. The time zone offset will be preserved in the database for retrieval.  
+The data is stored in the database and processed, compared, sorted, and indexed in the server as in UTC. The time zone offset will be preserved in the database for retrieval.
   
- The given time zone offset will be assumed to be daylight saving time (DST) aware and adjusted for any given **datetime** that is in the DST period.  
+The given time zone offset will be assumed to be daylight saving time (DST) aware and adjusted for any given **datetime** that is in the DST period.
   
- For **datetimeoffset** type, both UTC and local (to the persistent or converted time zone offset) **datetime** value will be validated during insert, update, arithmetic, convert, or assign operations. The detection of any invalid UTC or local (to the persistent or converted time zone offset) **datetime** value will raise an invalid value error. For example, 9999-12-31 10:10:00 is valid in UTC, but overflow in local time to the time zone offset +13:50.  
+For **datetimeoffset** type, both UTC and local (to the persistent or converted time zone offset) **datetime** value will be validated during insert, update, arithmetic, convert, or assign operations. The detection of any invalid UTC or local (to the persistent or converted time zone offset) **datetime** value will raise an invalid value error. For example, 9999-12-31 10:10:00 is valid in UTC, but overflow in local time to the time zone offset +13:50.
   
- To convert a date to a corresponding **datetimeoffset** value in a target time zone, see [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md).  
+To convert a date to a corresponding **datetimeoffset** value in a target time zone, see [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md).
   
-## ANSI and ISO 8601 Compliance  
- The ANSI and ISO 8601 Compliance sections of the [date](../../t-sql/data-types/date-transact-sql.md) and [time](../../t-sql/data-types/time-transact-sql.md) topics apply to **datetimeoffset**.  
+## ANSI and ISO 8601 compliance  
+The ANSI and ISO 8601 Compliance sections of the [date](../../t-sql/data-types/date-transact-sql.md) and [time](../../t-sql/data-types/time-transact-sql.md) topics apply to **datetimeoffset**.
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a> Backward Compatibility for Down-level Clients  
- Some down-level clients do not support the **time**, **date**, **datetime2** and **datetimeoffset** data types. The following table shows the type mapping between an up-level instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and down-level clients.  
+## Backward compatibility for down-level clients
+Some down-level clients do not support the **time**, **date**, **datetime2** and **datetimeoffset** data types. The following table shows the type mapping between an up-level instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and down-level clients.
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type|Default string literal format passed to down-level client|Down-level ODBC|Down-level OLEDB|Down-level JDBC|Down-level SQLCLIENT|  
-|-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
+|---|---|---|---|---|---|
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
 |**date**|YYYY-MM-DD|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
   
-## Converting Date and Time Data  
- When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+## Converting date and time data
+When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
- When converting to  
-                **date**, the year, month, and day are copied. The following code shows the results of converting a `datetimeoffset(4)` value to a `date` value.  
+When converting to  **date**, the year, month, and day are copied. The following code shows the results of converting a `datetimeoffset(4)` value to a `date` value.  
   
-```  
+```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10 +01:00';  
 DECLARE @date date= @datetimeoffset;  
   
@@ -128,9 +124,9 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
- If the conversion is to **time(n)**, the our, minute, second, and fractional seconds are copied. The time zone value is truncated. When the precision of the **datetimeoffset(n)** value is greater than the precision of the **time(n)** value, the value is rounded up. The following code shows the results of converting a `datetimeoffset(4)` value to a `time(3)` value.  
+If the conversion is to **time(n)**, the our, minute, second, and fractional seconds are copied. The time zone value is truncated. When the precision of the **datetimeoffset(n)** value is greater than the precision of the **time(n)** value, the value is rounded up. The following code shows the results of converting a `datetimeoffset(4)` value to a `time(3)` value.
   
-```  
+```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
 DECLARE @time time(3) = @datetimeoffset;  
   
@@ -146,9 +142,9 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @time AS 'time';
   
 ```  
   
- When converting to**datetime**, the date and time values are copied, and the time zone is truncated. When the fractional precision of the **datetimeoffset(n)** value is greater than three digits, the value is truncated. The following code shows the results of converting a `datetimeoffset(4)` value to a `datetime` value.  
+When converting to**datetime**, the date and time values are copied, and the time zone is truncated. When the fractional precision of the **datetimeoffset(n)** value is greater than three digits, the value is truncated. The following code shows the results of converting a `datetimeoffset(4)` value to a `datetime` value.
   
-```  
+```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
 DECLARE @datetime datetime = @datetimeoffset;  
   
@@ -162,10 +158,9 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
- For conversions to  
-                **smalldatetime**, the date and hours are copied. The minutes are rounded up with respect to the seconds value and seconds are set to 0. The following code shows the results of converting a `datetimeoffset(3)` value to a `smalldatetime` value.  
+For conversions to  **smalldatetime**, the date and hours are copied. The minutes are rounded up with respect to the seconds value and seconds are set to 0. The following code shows the results of converting a `datetimeoffset(3)` value to a `smalldatetime` value.  
   
-```  
+```sql
 DECLARE @datetimeoffset datetimeoffset(3) = '1912-10-25 12:24:32 +10:0';  
 DECLARE @smalldatetime smalldatetime = @datetimeoffset;  
   
@@ -179,9 +174,9 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
- If the conversion is to **datetime2(n)**, the date and time are copied to the **datetime2** value, and the time zone is truncated. When the precision of the **datetime2(n)** value is greater than the precision of the **datetimeoffset(n)** value, the fractional seconds are truncated to fit. The following code shows the results of converting a `datetimeoffset(4)` value to a `datetime2(3)` value.  
+If the conversion is to **datetime2(n)**, the date and time are copied to the **datetime2** value, and the time zone is truncated. When the precision of the **datetime2(n)** value is greater than the precision of the **datetimeoffset(n)** value, the fractional seconds are truncated to fit. The following code shows the results of converting a `datetimeoffset(4)` value to a `datetime2(3)` value.
   
-```  
+```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  
 DECLARE @datetime2 datetime2(3)=@datetimeoffset;  
   
@@ -195,14 +190,14 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 --(1 row(s) affected)  
 ```  
   
-### Converting datetimeoffset Data Type to Other Date and Time Types  
- The following table describes what occurs when a **datetimeoffset** data type is converted to other date and time data types.  
+### Converting datetimeoffset data type to other date and time types
+The following table describes what occurs when a **datetimeoffset** data type is converted to other date and time data types.
   
-### Converting String Literals to datetimeoffset  
- Conversions from string literals to date and time types are permitted if all parts of the strings are in valid formats. Otherwise, a runtime error is raised. Implicit conversions or explicit conversions that do not specify a style, from date and time types to string literals will be in the default format of the current session. The following table shows the rules for converting a string literal to the **datetimeoffset** data type.  
+### Converting string literals to datetimeoffset
+Conversions from string literals to date and time types are permitted if all parts of the strings are in valid formats. Otherwise, a runtime error is raised. Implicit conversions or explicit conversions that do not specify a style, from date and time types to string literals will be in the default format of the current session. The following table shows the rules for converting a string literal to the **datetimeoffset** data type.
   
 |Input string literal|**datetimeoffset(n)**|  
-|--------------------------|-----------------------------|  
+|---|---|
 |ODBC DATE|ODBC string literals are mapped to the **datetime** data type. Any assignment operation from ODBC DATETIME literals into **datetimeoffset** types will cause an implicit conversion between **datetime** and this type as defined by the conversion rules.|  
 |ODBC TIME|See previous ODBC DATE rule.|  
 |ODBC DATETIME|See previous ODBC DATE rule.|  
@@ -215,9 +210,9 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 |DATE + TIME + TIMEZONE|Trivial|  
   
 ## Examples  
- The following example compares the results of casting a string to each **date** and **time** data type.  
+The following example compares the results of casting a string to each **date** and **time** data type.
   
-```  
+```sql
 SELECT   
      CAST('2007-05-08 12:35:29. 1234567 +12:15' AS time(7)) AS 'time'   
     ,CAST('2007-05-08 12:35:29. 1234567 +12:15' AS date) AS 'date'   
@@ -232,10 +227,10 @@ SELECT
         'datetimeoffset IS08601';  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 |Data type|Output|  
-|---------------|------------|  
+|---|---|
 |**Time**|12:35:29. 1234567|  
 |**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
@@ -243,8 +238,8 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**Datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+## See also
+[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

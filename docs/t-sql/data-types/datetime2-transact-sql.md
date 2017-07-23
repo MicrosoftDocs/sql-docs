@@ -1,7 +1,7 @@
 ---
 title: "datetime2 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "07/22/2017
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,9 +29,9 @@ manager: "jhubbard"
 # datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Defines a date that is combined with a time of day that is based on 24-hour clock. **datetime2** can be considered as an extension of the existing **datetime** type that has a larger date range, a larger default fractional precision, and optional user-specified precision.  
+Defines a date that is combined with a time of day that is based on 24-hour clock. **datetime2** can be considered as an extension of the existing **datetime** type that has a larger date range, a larger default fractional precision, and optional user-specified precision.
   
-## datetime2 Description  
+## datetime2 description
   
 |Property|Value|  
 |--------------|-----------|  
@@ -52,41 +52,41 @@ manager: "jhubbard"
 |Time zone offset aware and preservation|No|  
 |Daylight saving aware|No|  
   
- For data type metadata, see [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) or [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Precision and scale are variable for some date and time data types. To obtain the precision and scale for a column, see [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md), or [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).  
+For data type metadata, see [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) or [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). Precision and scale are variable for some date and time data types. To obtain the precision and scale for a column, see [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md), or [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   
-## Supported String Literal Formats for datetime2  
- The following tables list the supported ISO 8601 and ODBC string literal formats for **datetime2**. For information about alphabetical, numeric, unseparated, and time formats for the date and time parts of **datetime2**, see [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) and [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).  
+## Supported string literal formats for datetime2
+The following tables list the supported ISO 8601 and ODBC string literal formats for **datetime2**. For information about alphabetical, numeric, unseparated, and time formats for the date and time parts of **datetime2**, see [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) and [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md).
   
 |ISO 8601|Descriptions|  
-|--------------|------------------|  
+|---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|This format is not affected by the SET LANGUAGE and SET DATEFORMAT session locale settings. The **T**, the colons (:) and the period (.) are included in the string literal, for example '2007-05-02T19:58:47.1234567'.|  
   
 |ODBC|Description|  
-|----------|-----------------|  
+|---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.fractional seconds]' }|ODBC API specific:<br /><br /> The number of digits to the right of the decimal point, which represents the fractional seconds, can be specified from 0 up to 7 (100 nanoseconds).|  
   
-## ANSI and ISO 8601 Compliance  
- The ANSI and ISO 8601 compliance of [date](../../t-sql/data-types/date-transact-sql.md) and [time](../../t-sql/data-types/time-transact-sql.md) apply to **datetime2**.  
+## ANSI and ISO 8601 compliance  
+The ANSI and ISO 8601 compliance of [date](../../t-sql/data-types/date-transact-sql.md) and [time](../../t-sql/data-types/time-transact-sql.md) apply to **datetime2**.
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a> Backward Compatibility for Down-level Clients  
- Some down-level clients do not support the **time**, **date**, **datetime2** and **datetimeoffset** data types. The following table shows the type mapping between an up-level instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and down-level clients.  
+##  Backward Compatibility for Down-level Clients  
+Some down-level clients do not support the **time**, **date**, **datetime2** and **datetimeoffset** data types. The following table shows the type mapping between an up-level instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and down-level clients.
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type|Default string literal format passed to down-level client|Down-level ODBC|Down-level OLEDB|Down-level JDBC|Down-level SQLCLIENT|  
-|-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
+| --- | --- | --- | --- | --- | --- |
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
 |**date**|YYYY-MM-DD|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR or SQL_VARCHAR|DBTYPE_WSTRor DBTYPE_STR|Java.sql.String|String or SqString|  
   
-## Converting Date and Time Data  
- When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+## Converting date and time data
+When you convert to date and time data types, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects all values it cannot recognize as dates or times. For information about using the CAST and CONVERT functions with date and time data, see [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
-### Converting Other Date and Time Types to the datetime2 Data Type  
+### Converting other date and time types to the datetime2 data type
 This section describes what occurs when other date and time data types are converted to the **datetime2** data type.  
   
 When the conversion is from **date**, the year, month and day are copied.  The time component is set to 00:00:00.0000000.  The following code shows the results of converting a `date` value to a `datetime2` value.  
   
-```  
+```sql
 DECLARE @date date = '12-21-16';
 DECLARE @datetime2 datetime2 = @date;
 
@@ -100,7 +100,7 @@ SELECT @datetime2 AS '@datetime2', @date AS '@date';
   
 When the conversion is from **time(n)**, the time component is copied, and the date component is set to '1900-01-01'. The following example shows the results of converting a `time(7)` value to a `datetime2` value.  
   
-```  
+```sql
 DECLARE @time time(7) = '12:10:16.1234567';
 DECLARE @datetime2 datetime2 = @time;
 
@@ -114,7 +114,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
   
 When the conversion is from **smalldatetime**, the hours and minutes are copied. The seconds and fractional seconds are set to 0. The following code shows the results of converting a `smalldatetime` value to a `datetime2` value.  
   
-```  
+```sql
 DECLARE @smalldatetime smalldatetime = '12-01-16 12:32';
 DECLARE @datetime2 datetime2 = @smalldatetime;
 
@@ -128,7 +128,7 @@ SELECT @datetime2 AS '@datetime2', @smalldatetime AS '@smalldatetime';
   
 When the conversion is from **datetimeoffset(n)**, the date and time components are copied. The time zone is truncated. The following example shows the results of converting a `datetimeoffset(7)` value to a `datetime2` value.  
   
-```  
+```sql
 DECLARE @datetimeoffset datetimeoffset(7) = '2016-10-23 12:45:37.1234567 +10:0';
 DECLARE @datetime2 datetime2 = @datetimeoffset;
 
@@ -142,7 +142,7 @@ SELECT @datetime2 AS '@datetime2', @datetimeoffset AS '@datetimeoffset';
 
 When the conversion is from **datetime**, the date and time are copied.  The fractional precision is extended to 7 digits.  The following example shows the results of converting a `datetime` value to a `datetime2` value.
 
-```  
+```sql
 DECLARE @datetime datetime = '2016-10-23 12:45:37.333';
 DECLARE @datetime2 datetime2 = @datetime;
 
@@ -155,10 +155,10 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ```  
   
 ### Converting String Literals to datetime2  
- Conversions from string literals to date and time types are permitted if all parts of the strings are in valid formats. Otherwise, a runtime error is raised. Implicit conversions or explicit conversions that do not specify a style, from date and time types to string literals will be in the default format of the current session. The following table shows the rules for converting a string literal to the **datetime2** data type.  
+Conversions from string literals to date and time types are permitted if all parts of the strings are in valid formats. Otherwise, a runtime error is raised. Implicit conversions or explicit conversions that do not specify a style, from date and time types to string literals will be in the default format of the current session. The following table shows the rules for converting a string literal to the **datetime2** data type.
   
 |Input string literal|**datetime2(n)**|  
-|--------------------------|------------------------|  
+|---|---|
 |ODBC DATE|ODBC string literals are mapped to the **datetime** data type. Any assignment operation from ODBC DATETIME literals into **datetime2** types will cause an implicit conversion between **datetime** and this type as defined by the conversion rules.|  
 |ODBC TIME|See previous ODBC DATE rule.|  
 |ODBC DATETIME|See previous ODBC DATE rule.|  
@@ -171,9 +171,9 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 |DATE + TIME + TIMEZONE|The local DATETIME will be used.|  
   
 ## Examples  
- The following example compares the results of casting a string to each **date** and **time** data type.  
+The following example compares the results of casting a string to each **date** and **time** data type.
   
-```  
+```sql
 SELECT   
      CAST('2007-05-08 12:35:29. 1234567 +12:15' AS time(7)) AS 'time'   
     ,CAST('2007-05-08 12:35:29. 1234567 +12:15' AS date) AS 'date'   
@@ -186,10 +186,10 @@ SELECT
         'datetimeoffset';  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 |Data type|Output|  
-|---------------|------------|  
+|---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
@@ -197,7 +197,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+## See also
+[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

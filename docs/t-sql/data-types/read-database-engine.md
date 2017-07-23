@@ -1,7 +1,7 @@
 ---
 title: "Read (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/22/2017
+ms.date: "03/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,31 +25,32 @@ manager: "jhubbard"
 # Read (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Read reads binary representation of **SqlHierarchyId** from the passed-in **BinaryReader** and sets the **SqlHierarchyId** object to that value. Read cannot be called by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use CAST or CONVERT instead.
+  Read reads binary representation of **SqlHierarchyId** from the passed-in **BinaryReader** and sets the **SqlHierarchyId** object to that value. Read cannot be called by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use CAST or CONVERT instead.  
   
 ## Syntax  
   
-```sql
+```  
+  
 void Read( BinaryReader r )   
 ```  
   
 ## Arguments  
-*r*  
-The **BinaryReader** object that produces a binary stream corresponding to a binary representation of a **hierarchyid** node.
+ *r*  
+ The **BinaryReader** object that produces a binary stream corresponding to a binary representation of a **hierarchyid** node.  
   
 ## Return Types  
-**CLR return type:void**
+ **CLR return type:void**  
   
 ## Remarks  
-Read does not validate its input. If an invalid binary input is given, Read might raise an exception. Or, it might succeed and produce an invalid **SqlHierarchyId** object whose methods can either give unpredictable results or raise an exception.
+ Read does not validate its input. If an invalid binary input is given, Read might raise an exception. Or, it might succeed and produce an invalid **SqlHierarchyId** object whose methods can either give unpredictable results or raise an exception.  
   
-Read can only be called on a newly created **SqlHierarchyId** object.
+ Read can only be called on a newly created **SqlHierarchyId** object.  
   
-Read is used internally by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when it is necessary, such as when writing data to **hierarchyid** column. Read is also called internally when a conversion is done between **varbinary** and **hierarchyid**.
+ Read is used internally by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when it is necessary, such as when writing data to **hierarchyid** column. Read is also called internally when a conversion is done between **varbinary** and **hierarchyid**.  
   
 ## Examples  
   
-```sql
+```  
 Byte[] encoding = new byte[] { 0x58 };  
 MemoryStream stream = new MemoryStream(encoding, false /*not writable*/);  
 BinaryReader br = new BinaryReader(stream);  
@@ -57,10 +58,10 @@ SqlHierarchyId hid = new SqlHierarchyId();
 hid.Read(br);   
 ```  
   
-## See also
-[Write &#40;Database Engine&#41;](../../t-sql/data-types/write-database-engine.md)  
-[ToString &#40;Database Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)  
-[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
+## See Also  
+ [Write &#40;Database Engine&#41;](../../t-sql/data-types/write-database-engine.md)   
+ [ToString &#40;Database Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)   
+ [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
   
   

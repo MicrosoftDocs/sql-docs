@@ -1,7 +1,7 @@
 ---
 title: "Data types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/22/2017
+ms.date: "07/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -9,7 +9,10 @@ ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: "TSQL"
-helpviewer_keywords: system data types [SQL Server]" "data types [SQL Server]" "data types [SQL Server], about data types"
+helpviewer_keywords: 
+ - "system data types [SQL Server]" 
+ - "data types [SQL Server]"
+ - "data types [SQL Server], about data types"
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 caps.latest.revision: 45
 author: "BYHAM"

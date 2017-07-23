@@ -1,7 +1,7 @@
 ---
 title: "Data Type Precedence (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/22/2017
+ms.date: "07/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

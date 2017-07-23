@@ -8,7 +8,8 @@ ms.suite: ""
 ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-dev_langs: "TSQL"
+dev_langs: 
+  - "TSQL"
 helpviewer_keywords: 
  - "system data types [SQL Server]" 
  - "data types [SQL Server]"

@@ -15,20 +15,20 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 
 In this quick start tutorial, you first install SQL Server 2017 RC1 on SUSE Linux Enterprise Server (SLES) v12 SP2. Then connect with **sqlcmd** to create your first database and run queries.
 
+> [!TIP]
+> This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+
 ## Prerequisites
 
 You must have a SLES v12 SP2 machine with **at least 3.25 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
-To install SUSE Linux Enterprise Server, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. For the basic process, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
+To install SUSE Linux Enterprise Server on your own machine, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image SLES` in the call to `az vm create`.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## <a id="install"></a>Install SQL Server
 
 To configure SQL Server on SLES, run the following commands in a terminal to install the **mssql-server** package:
-
-> [!TIP]
-> These commands involve user input and assume a connection to the internet. If you are interested in the unattended or offline installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 1. Download the Microsoft SQL Server SLES repository configuration file:
 
@@ -58,7 +58,7 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    >
    > `This is an evaluation version.  There are [175] days left in the evaluation period.`
    >
-   > This does not reflect the edition you selected. It relates to the preview period for RC1.
+   > This message does not reflect the edition you selected. It relates to the preview period for RC1.
 
 1. Once the configuration is done, verify that the service is running:
 
@@ -71,7 +71,8 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
 At this point, SQL Server is running on your SLES machine and is ready to use!
 
 ## <a id="tools"></a>Install the SQL Server command-line tools
-To create a database, you need to connect with a tool that can run Transact-SQL statements on the SQL Server. The following steps install the **mssql-tools** on SUSE Linux Enterprise Server. 
+
+To create a database, you need to connect with a tool that can run Transact-SQL statements on the SQL Server. The following steps install the SQL Server command-line tools: [sqlcmd](../tools/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
 
 1. Add the Microsoft SQL Server repository to Zypper.
 

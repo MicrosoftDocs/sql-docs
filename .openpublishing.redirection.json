@@ -1974,6 +1974,11 @@
             "source_path": "docs/integration-services/integration-services-ssis-scale-out.md",
             "redirect_url": "/sql/integration-services/scale-out/integration-services-ssis-scale-out",
             "redirect_document_id": false
+	    },
+		{
+            "source_path": "docs/ssdt/sql-server-tools.md",
+            "redirect_url": "/sql/tools/overview-sql-tools",
+            "redirect_document_id": false
 	    }
     ]
 }

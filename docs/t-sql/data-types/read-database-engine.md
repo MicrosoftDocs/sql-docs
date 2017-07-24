@@ -1,7 +1,7 @@
 ---
 title: "Read (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,20 +25,19 @@ manager: "jhubbard"
 # Read (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Read reads binary representation of **SqlHierarchyId** from the passed-in **BinaryReader** and sets the **SqlHierarchyId** object to that value. Read cannot be called by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use CAST or CONVERT instead.  
+Read reads binary representation of **SqlHierarchyId** from the passed-in **BinaryReader** and sets the **SqlHierarchyId** object to that value. Read cannot be called by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use CAST or CONVERT instead.
   
 ## Syntax  
   
-```  
-  
+```sql
 void Read( BinaryReader r )   
 ```  
   
 ## Arguments  
- *r*  
+*r*  
  The **BinaryReader** object that produces a binary stream corresponding to a binary representation of a **hierarchyid** node.  
   
-## Return Types  
+## Return types
  **CLR return type:void**  
   
 ## Remarks  
@@ -50,7 +49,7 @@ void Read( BinaryReader r )
   
 ## Examples  
   
-```  
+```sql
 Byte[] encoding = new byte[] { 0x58 };  
 MemoryStream stream = new MemoryStream(encoding, false /*not writable*/);  
 BinaryReader br = new BinaryReader(stream);  
@@ -59,9 +58,9 @@ hid.Read(br);
 ```  
   
 ## See Also  
- [Write &#40;Database Engine&#41;](../../t-sql/data-types/write-database-engine.md)   
- [ToString &#40;Database Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)   
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[Write &#40;Database Engine&#41;](../../t-sql/data-types/write-database-engine.md)  
+[ToString &#40;Database Engine&#41;](../../t-sql/data-types/tostring-database-engine.md)  
+[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
   

@@ -48,7 +48,7 @@ manager: "jhubbard"
 -   In [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], by default, the files are installed at *drive*:\Program Files\Microsoft SQL Server\Master Data Services.  
   
 ##  <a name="noengine"></a> Upgrade without Database Engine Upgrade  
- In this scenario you continue to use [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to host your MDS database. However, you must upgrade the schema of the MDS database, and then create a current [!INCLUDE[ssNoversion](../../includes/noversion-md.md)] web application to access the MDS database. After the upgrade, the MDS database can no longer be accessed by the earlier web application.  
+ In this scenario you continue to use [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to host your MDS database. However, you must upgrade the schema of the MDS database, and then create a current [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] web application to access the MDS database. After the upgrade, the MDS database can no longer be accessed by the earlier web application.  
   
  You can install the current [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and an earlier version of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on the same computer. The files are installed in different locations, as shown in [File Location](#fileLocation).  
   

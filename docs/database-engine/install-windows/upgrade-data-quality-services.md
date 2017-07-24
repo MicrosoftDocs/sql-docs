@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Data Quality Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "07/24/2017"
 ms.prod:
   - "sql-server-2016"
   - "sql-server-2017"
@@ -42,7 +42,7 @@ This topic provides information on how to upgrade your existing installation of 
   
     2.  In the left pane, click **Installation**.  
   
-    3.  In the right pane, click **Upgrade from SQL Server 2008, SQL Server 2008 R2, SQL Server 2012, or SQL Server 2014**.  
+    3.  In the right pane, click **Upgrade from...** a previous version of SQL Server.  
   
     4.  Complete the Setup wizard.  
   

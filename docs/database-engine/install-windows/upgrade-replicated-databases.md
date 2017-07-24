@@ -1,8 +1,10 @@
 ---
 title: "Upgrade Replicated Databases | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/16/2016"
-ms.prod: "sql-server-2016"
+ms.date: "07/24/2016"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

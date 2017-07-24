@@ -94,7 +94,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 
    ```bash
    sudo apt-get update
-   sudo apt-get install mssql-tools unixodbc-dev
+   sudo apt-get install -y mssql-tools unixodbc-dev
    ```
 
 1. For convenience, add `/opt/mssql-tools/bin/` to your **PATH** environment variable. This enables you to run the tools without specifying the full path. Run the following commands to modify the **PATH** for both login sessions and interactive/non-login sessions:

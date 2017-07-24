@@ -48,9 +48,9 @@ manager: "jhubbard"
 -   In [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], by default, the files are installed at *drive*:\Program Files\Microsoft SQL Server\Master Data Services.  
   
 ##  <a name="noengine"></a> Upgrade without Database Engine Upgrade  
- In this scenario you continue to use [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to host your MDS database. However, you must upgrade the schema of the MDS database, and then create a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] web application to access the MDS database. The MDS database can no longer be accessed by the [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], web application.  
+ In this scenario you continue to use [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] to host your MDS database. However, you must upgrade the schema of the MDS database, and then create a current [!INCLUDE[ssNoversion](../../includes/noversion-md.md)] web application to access the MDS database. After the upgrade, the MDS database can no longer be accessed by the earlier web application.  
   
- You can install [!INCLUDE[currentversion](../../includes/sscurrent-md.md)] and an earlier version of SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) on the same computer. The files are installed in different locations, as shown in [File Location](#fileLocation).  
+ You can install the current [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] and an earlier version of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on the same computer. The files are installed in different locations, as shown in [File Location](#fileLocation).  
   
  **To upgrade without Database Engine upgrade**  
   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 2.  Upgrade the MDS database schema.  
   
-    1.  Open the [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] version of [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Open the current [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
         > [!IMPORTANT]  
         >  To upgrade the MDS database schema, you must be logged in as the Administrator Account that was specified when the MDS database was created. In the MDS database, in mdm.tblUser, this user has the **ID** value of **1**.  
@@ -81,7 +81,7 @@ manager: "jhubbard"
   
 3.  Create a web application.  
   
-    1.  Open the [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] version of [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+    1.  Open the current [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
     2.  In the left pane, click **Web Configuration**.  
   

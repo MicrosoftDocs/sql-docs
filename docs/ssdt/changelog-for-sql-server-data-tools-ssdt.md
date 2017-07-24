@@ -18,7 +18,7 @@ manager: "craigg"
 # Changelog for SQL Server Data Tools (SSDT)
 This change log is for [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-For detailed posts about what's new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
 
 
@@ -30,7 +30,7 @@ Build number: **TBD**
 **General**
 
 **AS projects:**
-- Object Level Security can now be configured in the Roles dialog for advanced security in 1400-compatability level tabular models.
+- Object Level Security can now be configured in the Roles dialog for advanced security in 1400 compatability level tabular models.
 - New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
 - New AS Azure “Always Prompt” project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
 
@@ -50,11 +50,11 @@ Build number: **TBD**
 - Fixed an issue that left the table designer disabled after Import New Table from existing data source through Tabular Model Explorer.
 - Fixed an issue that may cause Model menu items Import from Datasource/Add Datasource to remain hidden in the wrong context.
 - Improved experience when creating a measure from the Tabular Model Explorer to avoid switching focus back to the column used to create a measure.
-- When switching from integrated workspace in AS tabular projects to explicit workspace server, the old database files will now be cleaned up.
+- When switching from integrated workspace in AS tabular projects to explicit workspace server, the old database files are now be cleaned up.
 - Fixed an issue in AS tabular 1400 models projects where the Row Level Security checkbox UI state initially showed as unchecked regardless of actual underlying object state.
 - Fixed a crash that could occur when importing text file or Excel file into 1400-compat mode tabular model using Power Query and unhandled exception thrown.
 - Fixed an issue that could occur with the scrollbar thumb in the DAX formula editing control in AS tabular model designer.
-- Fixed an issue that prevented modifying a PowerQuery mashup data source if it contained a username/password authentication.
+- Fixed an issue that prevented modifying a PowerQuery mashup data source when it contained a username/password authentication.
 - Fixed an issue that could prevent a data source to connect when additional properties set in connection string.
 - Fixed an issue that could crash VS when multiple AS tabular model projects loaded and closing the second model designer without interacting with anything in the designer first.
 - Fixed an issue where edits made to KPI formatting were not getting persisted in some cases.
@@ -63,7 +63,7 @@ Build number: **TBD**
 - Fixed an intermittent issue where loading a 1400 tabular model may show the error *'Could not load file or assembly 'Microsoft.ProBI.MashupLibrary'*.
 
 **RS projects**
-- User preferences for RS Ruler and Parameter box settings selection state will be remembered correctly across sessions 
+- User preferences for RS Ruler and Parameter box settings selection state is remembered correctly across sessions.
 
 **IS projects**
 - Fixed an issue that ADO/ADO.NET ForEachLoop Container can't show correctly
@@ -81,8 +81,8 @@ Build number: 14.0.61705.170
 **AS projects:**
 - Users can set encoding hints on columns in the UI on 1400 models
 - Non-model-related IntelliSense is now available in offline mode
-- Tabular Model Explorer now contains a node to represent named M expressions available across the model (1400 compat-level tabular models)
-- Azure Active Directory People Picker similar to Microsoft Azure Portal's IAM now available when setting up Role Members in Tabular Models
+- Tabular Model Explorer now contains a node to represent named M expressions available across the model (1400 compatibility level tabular models)
+- Azure Active Directory People Picker, similar to Microsoft Azure portal's IAM, now available when setting up Role Members in Tabular Models
 
 **Database projects:**
 - Updated to DacFx 17.1
@@ -90,7 +90,7 @@ Build number: 14.0.61705.170
 ### Bug Fixes
 - Fixed an issue where the Business Intelligence Designers group name was displayed incorrectly in Visual Studio Options in VS2017
 - Fixed an issue where a crash could occur generating a Code Map for a solution with a Report Project or AS Project
-- Fixed a number of issues with PowerQuery integration for Analysis Services 1400 compat-level tabular models
+- Fixed a number of issues with PowerQuery integration for Analysis Services 1400 compatibility level tabular models
 - Fixed an issue in the new DAX editor tool window where the assignment operator could not be on a separate line when defining a measure
 - Fixed an issue that prevented the tabular measure display from updating when renaming measures in perspective
 - Updated Analysis Services integrated workspace engine and Tabular Object Model that fixes a regression that caused 1200 tabular projects containing translations to fail on deploy to SQL Server 2016 Analysis Services server
@@ -120,7 +120,7 @@ Build number: 14.0.61704.140
 - Support for CDC Control Task, CDC Splitter and CDC Source when targeting SQL Server 2017. 
 
 **AS projects:**
-- Analysis Services PowerQuery Integration (1400 compat-level tabular models):
+- Analysis Services PowerQuery Integration (1400 compatibility level tabular models):
     - DirectQuery is available for SQL Oracle, And Teradata if user has installed 3rd Party drivers
     - Add columns by example in PowerQuery
     - Data access options in 1400 models (model-level properties used by M engine)
@@ -156,7 +156,7 @@ Build number: 14.0.61704.140
 - Tabular: Fixed an issue where Integrated Workspace mode was allowed on 32-bit machines even though it is not supported.
 - Tabular: Fixed an issue where clicking on anything while in semi-select mode (typing a DAX expression but clicking a measure, for example) could cause crashes.
 - Tabular: Fixed an issue where Deployment Wizard would reset the model's .Name property back to "Model". [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
-- Tabular: Fixed an issue where selecting a heirarchy in TME should display properties even if Diagram View is not selected.
+- Tabular: Fixed an issue where selecting a hirarchy in TME should display properties even if Diagram View is not selected.
 - Tabular: Fixed an issue where pasting into the DAX Formula bar would paste images or other content instead of text when pasting from certain applications.
 - Tabular: Fixed an issue where some old models in the 1103 couldn't be opened due to presence of measures with a specific definition.
 - Tabular: Fixed an issue where XEvent Sessions could not be deleted.
@@ -170,7 +170,7 @@ Build number: 14.0.61704.140
 - Deployment Wizard should apply changes to calculated table partitions even when the option to keep partitions is enabled
 - Fixed an issue where Advanced Properties dialog to existing AS Connection didn’t show full list until reselected
 - Fixed a few issues with clipped UI strings that appeared in some localized builds
-- Fixed a number of issues with PowerQuery integration in 1400 compat-level AS tabular models
+- Fixed a number of issues with PowerQuery integration in 1400 compatibility level AS tabular models
 - Fixed an issue with Report Wizard style templates not showing up correctly
 - Fixed an issue with the Report Wizard that could lead to incorrect data source settings when changing from SQL to AS
 - Fixed an issue causing Analysis Services (Tabular) project build failure from command line (devenv.com\exe)
@@ -374,7 +374,7 @@ Build number: 14.0.60812.0
         - Fixed a DAX expression issue that caused inconsistent behaviors based on how you commit the expression .
         - Fixed a VS crash issue when creating KPIs.
         - Fixed an issue that generated invalid reports for SQL Server 2008 R2, 2012 and 2014.
-        - Fixed a Hierarchy order issue that caused an infinite loop error for .dwpro project.
+        - Fixed a hierarchy order issue that caused an infinite loop error for .dwpro project.
         - Fixed a RS RDL issue where downgrading RDL required a full rebuild which caused user’s confusion.
         - Fixed a KPI issue where Hide From Client Tools had no effect.
         
@@ -406,7 +406,7 @@ Build number: 14.0.60629.0
 
  * **Analysis Services & Reporting Services:**
     * Fixed a SxS issue with MSOLAP OLEDB provider where only the 32-bit provider was getting installed, impacting 64-bit Excel 2016 connecting to SQL Server 2014 (did not repro with ClickOnce installs from Office365, only MSI Excel install).
-    * Fixed an issue for a corner case to be more robust when upgrading AS model with pasted tables from 1103 to 1200 compat-level that could give error "Relationship uses an invalid column ID".
+    * Fixed an issue for a corner case to be more robust when upgrading AS model with pasted tables from 1103 to 1200 compatibility level that could give error "Relationship uses an invalid column ID".
     * Fixed a SxS issue when SSDT-BI 2013 on same machine, could no longer import data in AS model after uninstalling SSDT 2015 (cartridges shared registry setting).
     * Improved robustness to address issues\crashes when the connection to the AS engine is lost (i.e. SSDT left open overnight and AS server recycled, or other cases where the connection is temporarily lost). 
     * Fixed issues with dialogs opening on different screens than VS in multi-monitor scenarios. 
@@ -421,7 +421,7 @@ Build number: 14.0.60629.0
     * Fixed an Object Reference not set exception when viewing the model.bim project file properties while in code view. 
     * Fixed an issue with pasting data into AS model grid to create pasted table yielded incorrect values on international locales using comma as decimal separator. 
     * Fixed an issue opening 2008 RS project in SSDT and choosing to not upgrade it. 
-    * Fixed issue in 1200 compat-level models calculated table UI when using default formatting for column type to allow changing the formatting type from the UI. 
+    * Fixed issue in 1200 compatibility level models calculated table UI when using default formatting for column type to allow changing the formatting type from the UI. 
     
 
 ## SSDT June (for SQL Server 2016)  
